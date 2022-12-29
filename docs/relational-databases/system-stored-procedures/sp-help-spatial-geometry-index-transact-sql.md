@@ -23,7 +23,7 @@ ms.author: maghan
 
   Returns the names and values for a specified set of properties about a **geometry** spatial index. The result is returned in a table format. You can choose to return a core set of properties or all properties of the index.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

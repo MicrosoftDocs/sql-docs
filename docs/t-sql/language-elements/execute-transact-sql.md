@@ -40,7 +40,7 @@ Executes a command string or character string within a [!INCLUDE[tsql](../../inc
 > [!IMPORTANT]  
 >  Before you call EXECUTE with a character string, validate the character string. Never execute a command constructed from user input that has not been validated.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 

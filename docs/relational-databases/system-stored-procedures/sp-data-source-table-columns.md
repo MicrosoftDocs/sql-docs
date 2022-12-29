@@ -29,7 +29,7 @@ Returns list of columns in external data source table.
 > [!NOTE]
 > This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-cumulative-updates-history.md#cu5).
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

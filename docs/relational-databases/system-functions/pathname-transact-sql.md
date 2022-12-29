@@ -23,7 +23,7 @@ ms.author: randolphwest
 
   Returns the path of a FILESTREAM binary large object (BLOB). The OpenSqlFilestream API uses this path to return a handle that an application can use to work with the BLOB data by using Win32 APIs. PathName is read-only.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

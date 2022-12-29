@@ -23,7 +23,7 @@ ms.author: maghan
 
   Closes and de-allocates the cursor, as well as releases all associated resources; that is, it drops the temporary table used in support of KEYSET or STATIC **cursor**. sp_cursorclose is invoked by specifying ID = 9 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -28,7 +28,7 @@ Provides transaction log space usage statistics for all databases. In [!INCLUDE[
 
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

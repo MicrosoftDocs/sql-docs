@@ -23,7 +23,7 @@ ms.date: "03/06/2017"
 
 Determines whether a user-defined trigger or stored procedure is being called in the context of a replication trigger that is used for immediate updating subscriptions. This stored procedure is executed at the Publisher on the publication database or at the Subscriber on the subscription database.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

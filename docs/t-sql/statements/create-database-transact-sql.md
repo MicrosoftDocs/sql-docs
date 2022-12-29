@@ -77,7 +77,7 @@ In SQL Server, this statement creates a new database and the files used and thei
 
 Create a database.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -928,7 +928,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this statement can be 
 
 ### Create a database
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
@@ -1377,7 +1377,7 @@ In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], this statement is u
 
 ## Syntax
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
@@ -1469,7 +1469,7 @@ In Azure Synapse, this statement can be used with an Azure SQL Database server t
 
 ## Syntax
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ### [Dedicated SQL pool](#tab/sqlpool)
 
@@ -1617,7 +1617,7 @@ In Analytics Platform System, this statement is used to create a new database on
 
 ## Syntax
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE DATABASE database_name

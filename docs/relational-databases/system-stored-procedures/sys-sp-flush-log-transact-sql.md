@@ -29,7 +29,7 @@ ms.author: vanto
   
  Executing `sys.sp_flush_log` guarantees that all previously committed delayed durable transactions are made durable. See the conceptual topic [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md) for more information.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

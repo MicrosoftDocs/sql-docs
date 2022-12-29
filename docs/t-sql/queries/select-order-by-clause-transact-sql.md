@@ -50,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Determine the order in which [ranking function](../../t-sql/functions/ranking-functions-transact-sql.md) values are applied to the result set.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].

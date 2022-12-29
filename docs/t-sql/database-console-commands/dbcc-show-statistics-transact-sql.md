@@ -50,7 +50,7 @@ Important updates in past versions of SQL Server:
 
 - Starting in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 CU 2, the [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) dynamic management view is available to programmatically retrieve histogram information contained in the statistics object.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

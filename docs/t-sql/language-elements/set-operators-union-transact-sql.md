@@ -40,7 +40,7 @@ The following are basic rules for combining the result sets of two queries by us
   
 -   The data types must be compatible.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

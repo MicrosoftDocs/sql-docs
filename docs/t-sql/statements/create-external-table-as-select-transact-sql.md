@@ -27,7 +27,7 @@ Creates an external table and then exports, in parallel, the results of a [!INCL
  - For [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], Hadoop or Azure Blob storage are supported.
  - Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Create External Table as Select (CETAS) is supported to create an external table and then export, in parallel, the result of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Azure Data Lake Storage (ADLS) Gen2, Azure Storage Account V2, and S3-compatible object storage.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

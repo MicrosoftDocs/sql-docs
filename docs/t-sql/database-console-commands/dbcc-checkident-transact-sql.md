@@ -34,7 +34,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 
 Checks the current identity value for the specified table in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and, if needed, changes the identity value. You can also use `DBCC CHECKIDENT` to manually set a new current identity value for the identity column.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

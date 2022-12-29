@@ -78,7 +78,7 @@ Modifies a table definition by altering, adding, or dropping columns and constra
 >   - [Syntax](#syntax-for-memory-optimized-tables)
 >   - [Examples](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax for disk-based tables
 

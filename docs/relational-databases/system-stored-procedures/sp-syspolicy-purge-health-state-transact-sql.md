@@ -23,7 +23,7 @@ ms.author: vanto
 
   Deletes the policy health states in Policy-Based Management. Policy health states are visual indicators (a scroll symbol with a red "X") within Object Explorer that enable you to determine which nodes have failed a policy evaluation.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

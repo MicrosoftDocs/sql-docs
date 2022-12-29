@@ -29,7 +29,7 @@ dev_langs:
 > [!WARNING]  
 >  The UuidCreateSequential function has hardware dependencies. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clusters of sequential values can develop when databases (such as contained databases) are moved to other computers. When using Always On and on [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], clusters of sequential values can develop if the database fails over to a different computer.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

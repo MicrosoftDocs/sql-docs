@@ -27,7 +27,7 @@ ms.author: maghan
 > [!IMPORTANT]
 > You can't use `sp_configure_peerconflictdetection` to enable `lastwriter`. To change the conflict resolution of an existing replication topology, drop the publication and recreate it.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

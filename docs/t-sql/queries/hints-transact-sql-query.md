@@ -73,7 +73,7 @@ Query hints specify that the indicated hints are used in the scope of a query. T
 - [UPDATE](../queries/update-transact-sql.md)
 - [MERGE](../statements/merge-transact-sql.md)
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

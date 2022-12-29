@@ -26,7 +26,7 @@ ms.author: maghan
 
   Updates an existing row or inserts a new row in the management data warehouse core.source_info_internal table. This procedure is called by the data collector run-time component every time an upload package starts uploading data to the management data warehouse.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

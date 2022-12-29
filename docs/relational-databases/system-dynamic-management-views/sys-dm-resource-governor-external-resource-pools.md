@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 Returns information about the current external resource pool state, the current configuration of resource pools, and resource pool statistics. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 |Column name      |Data type      |Description|  
 |----------------|---------------|-----------------| 

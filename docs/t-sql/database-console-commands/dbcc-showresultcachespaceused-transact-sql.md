@@ -19,7 +19,7 @@ monikerRange: "= azure-sqldw-latest"
 
 Shows the storage space used result set caching for an [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

@@ -350,11 +350,8 @@ Undocumented DBCC statements that are enabled in SQL Server aren't supported in 
 
 ### Distributed transactions
 
-Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is generally available. Distributed transactions are supported under following conditions (all of them must be met):
-* all transaction participants are Azure SQL Managed Instances that are part of the [Server trust group](./server-trust-group-overview.md).
-* transactions are initiated either from .NET (TransactionScope class) or Transact-SQL.
-
-Azure SQL Managed Instance currently does not support other scenarios that are regularly supported by MSDTC on-premises or in Azure Virtual Machines.
+[T-SQL and .NET based distributed transactions across managed instances](../database/elastic-transactions-overview?view=azuresql#transactions-for-sql-managed-instance) are generally available.
+Additional scenarios, such as XA transactions, distributed transactions between managed instances and other participants and more, are supported with [DTC for Azure SQL Managed Instance](./managed-instance/distributed-transaction-coordinator-dtc?view=azuresql), which is available in public preview.
 
 ### Extended Events
 
@@ -391,7 +388,6 @@ For more information, see [FILESTREAM](/sql/relational-databases/blob/filestream
 [Linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) in SQL Managed Instance support a limited number of targets:
 
 - Supported targets are SQL Managed Instance, SQL Database, Azure Synapse SQL [serverless](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/) and dedicated pools, and SQL Server instances. 
-- Distributed writable transactions are possible only among SQL Managed Instances. For more information, see [Distributed Transactions](../database/elastic-transactions-overview.md). However, MS DTC is not supported.
 - Targets that aren't supported are files, Analysis Services, and other RDBMS. Try to use native CSV import from Azure Blob Storage using `BULK INSERT` or `OPENROWSET` as an alternative for file import, or load files using a [serverless SQL pool in Azure Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/).
 
 Operations: 

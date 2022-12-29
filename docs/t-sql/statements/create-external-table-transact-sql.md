@@ -26,7 +26,7 @@ Creates an external table.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 

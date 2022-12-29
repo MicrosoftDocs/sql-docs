@@ -23,7 +23,7 @@ ms.author: maghan
 
   Displays the status of Database Mail queues. Use **sysmail_start_sp** to start the Database Mail queues and **sysmail_stop_sp** to stop the Database Mail queues.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

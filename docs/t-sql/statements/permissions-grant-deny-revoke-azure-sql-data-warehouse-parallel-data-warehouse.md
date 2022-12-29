@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
 -   **REVOKE** removes existing **GRANT** or **DENY** permissions.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -80,7 +80,7 @@ REVOKE
  The class type of the securable. This can be **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Permissions can also be granted to the **SERVER**_class\_type_, but **SERVER** is not specified for those permissions. **DATABASE** is not specified when the permission includes the word **DATABASE** (for example **ALTER ANY DATABASE**). When no *class_type* is specified and the permission type is not restricted to the server or database class, the class is assumed to be **OBJECT**.  
   
  *securable*  
- The name of the login, database, table, view, schema, procedure, role, or user on which to grant, deny, or revoke permissions. The object name can be specified with the three-part naming rules that are described in [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ The name of the login, database, table, view, schema, procedure, role, or user on which to grant, deny, or revoke permissions. The object name can be specified with the three-part naming rules that are described in [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  TO *principal* [ **,**...*n* ]  
  One or more principals being granted, denied, or revoked permissions. Principal is the name of a login, database user, or database role.  

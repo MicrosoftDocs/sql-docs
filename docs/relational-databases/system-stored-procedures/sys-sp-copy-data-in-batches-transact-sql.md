@@ -23,7 +23,7 @@ Copies data from the source table to the target table after verifying that their
 
 For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview)
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax  
   

@@ -34,7 +34,7 @@ To change the compatibility level of a database, refer to [View or Change the Co
 > [!NOTE]
 > Compatibility configuration is not needed for `STRING_SPLIT` in Azure Synapse Analytics.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 

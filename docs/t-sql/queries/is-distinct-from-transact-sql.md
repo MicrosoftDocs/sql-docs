@@ -30,7 +30,7 @@ Compares the equality of two expressions and guarantees a true or false result, 
 
 IS [NOT] DISTINCT FROM is a predicate used in the search condition of [WHERE](../../t-sql/queries/where-transact-sql.md) clauses and [HAVING](../../t-sql/queries/select-having-transact-sql.md) clauses, the join conditions of [FROM](../../t-sql/queries/from-transact-sql.md) clauses, and other constructs where a Boolean value is required.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   The Extended Events `event_file` target stores the data it receives in a binary format that is not human readable. Read the contents of the `.xel` file with the `sys.fn_xe_file_target_read_file` function. These files can also be read from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For a walkthrough, see [Quickstart: Extended events in SQL Server](../extended-events/quick-start-extended-events-in-sql-server.md).
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -30,7 +30,7 @@ dev_langs:
   
  By specifying the context in which the module is executed, you can control which user account the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses to validate permissions on objects that are referenced by the module. This provides additional flexibility and control in managing permissions across the object chain that exists between user-defined modules and the objects referenced by those modules. Permissions must be granted to users only on the module itself, without having to grant them explicit permissions on the referenced objects. Only the user that the module is running as must have permissions on the objects accessed by the module.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

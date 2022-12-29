@@ -33,7 +33,7 @@ Creates a database master key in the database.
 > - You should back up the master key by using [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md), and store the backup in a secure, off-site location. 
 > - In SQL Server, you should also back up the service master key using [BACKUP SERVICE MASTER KEY](../../relational-databases/security/encryption/back-up-the-service-master-key.md), and store the backup in a secure, off-site location.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

@@ -45,7 +45,7 @@ Restores SQL database backups taken using the [BACKUP](backup-transact-sql.md) c
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 

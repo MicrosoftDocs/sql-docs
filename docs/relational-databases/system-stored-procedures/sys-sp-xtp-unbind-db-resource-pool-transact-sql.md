@@ -26,7 +26,7 @@ ms.author: maghan
 
   This system procedure removes an existing binding between a database and a resource pool for purposes of tracking [!INCLUDE[inmemory](../../includes/inmemory-md.md)] memory usage.  If there is no pool currently bound to the specified database, success is returned. When the database is unbound, the previously allocated memory for memory-optimized objects stays allocated to the previous resource pool. You need to restart the database to free up the allocated memory. Once a database is unbound from the resource pool, the binding resorts to the DEFAULT resource pool.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

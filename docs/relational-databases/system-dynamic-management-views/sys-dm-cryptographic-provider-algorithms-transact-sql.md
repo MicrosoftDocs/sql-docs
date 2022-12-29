@@ -23,7 +23,7 @@ ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 
   Returns the algorithms supported by an Extensible Key Management (EKM) provider.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

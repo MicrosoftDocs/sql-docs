@@ -324,7 +324,7 @@ When called with the name of one securable class, `sys.fn_builtin_permissions` w
 
  `sys.fn_builtin_permissions` will return an empty set when it is called with a class name that is not valid.
 
-[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
+[!INCLUDE[database-engine-permissions](../includes/database-engine-permissions.md)]
 
 ## Permissions
 

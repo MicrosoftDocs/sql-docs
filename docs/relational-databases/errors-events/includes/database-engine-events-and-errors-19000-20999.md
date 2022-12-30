@@ -232,7 +232,7 @@ ms.topic: include
 |    20554    |    10    |    No    |    The replication agent has not logged a progress message in %ld minutes. This might indicate an unresponsive agent or high system activity. Verify that records are being replicated to the destination and that connections to the Subscriber, Publisher, and Distributor are still active.    |
 |    20555    |    10    |    No    |    6.x publication.    |
 |    20556    |    10    |    No    |    Heartbeats detected for all running replication agents.    |
-|    [20557](../../relational-databases/errors-events/mssqlserver-20557-database-engine-error.md)    |    10    |    Yes    |    Agent shutdown. For more information, see the SQL Server Agent job history for job '%s'.    |
+|    [20557](../mssqlserver-20557-database-engine-error.md)    |    10    |    Yes    |    Agent shutdown. For more information, see the SQL Server Agent job history for job '%s'.    |
 |    20558    |    10    |    No    |    Table '%s' passed full rowcount validation after failing the fast check. DBCC UPDATEUSAGE will be initiated automatically.    |
 |    20559    |    10    |    No    |    Conditional Fast Rowcount method requested without specifying an expected count. Fast method will be used.    |
 |    20560    |    10    |    No    |    An expected checksum value was passed, but checksums will not be compared because rowcount-only checking was requested.    |
@@ -244,9 +244,9 @@ ms.topic: include
 |    20569    |    10    |    No    |    Expired subscription clean up    |
 |    20570    |    10    |    No    |    Reinitialize subscriptions having data validation failures    |
 |    20571    |    10    |    No    |    Reinitializes all subscriptions that have data validation failures.    |
-|    [20572](../../relational-databases/errors-events/mssqlserver-20572-database-engine-error.md)    |    10    |    Yes    |    Subscriber '%s' subscription to article '%s' in publication '%s' has been reinitialized after a validation failure.    |
+|    [20572](../mssqlserver-20572-database-engine-error.md)    |    10    |    Yes    |    Subscriber '%s' subscription to article '%s' in publication '%s' has been reinitialized after a validation failure.    |
 |    20573    |    10    |    No    |    Replication: Subscription reinitialized after validation failure    |
-|    [20574](../../relational-databases/errors-events/mssqlserver-20574-database-engine-error.md)    |    10    |    Yes    |    Subscriber '%s' subscription to article '%s' in publication '%s' failed data validation.    |
+|    [20574](../mssqlserver-20574-database-engine-error.md)    |    10    |    Yes    |    Subscriber '%s' subscription to article '%s' in publication '%s' failed data validation.    |
 |    20575    |    10    |    No    |    Subscriber '%s' subscription to article '%s' in publication '%s' passed data validation.    |
 |    20576    |    10    |    No    |    Subscriber '%s' subscription to article '%s' in publication '%s' has been reinitialized after a synchronization failure.    |
 |    20577    |    10    |    No    |    No entries were found in msdb..sysreplicationalerts.    |

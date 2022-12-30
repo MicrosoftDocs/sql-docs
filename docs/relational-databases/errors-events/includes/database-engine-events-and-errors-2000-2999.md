@@ -16,7 +16,7 @@ ms.topic: include
 |    2011    |    16    |    No    |    Index hints cannot be specified within a schema-bound object.    |
 |    2013    |    10    |    No    |    Warning: 'is_ms_shipped' property is turned off for %S_MSG '%.*ls' because you do not have permission to create or alter an object with this property.    |
 |    2014    |    16    |    No    |    Remote access is not allowed from within a schema-bound object.    |
-|    [2020](../../relational-databases/errors-events/mssqlserver-2020-database-engine-error.md)    |    16    |    No    |    The dependencies reported for entity "%.*ls" do not include references to columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity. Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.    |
+|    [2020](../mssqlserver-2020-database-engine-error.md)    |    16    |    No    |    The dependencies reported for entity "%.*ls" do not include references to columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity. Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.    |
 |    2101    |    14    |    No    |    Cannot %S_MSG a server level %S_MSG for user '%.*ls' since there is no login corresponding to the user.    |
 |    2102    |    16    |    No    |    Cannot %S_MSG %S_MSG '%.*ls' since there is no user for login '%.*ls' in database '%.*ls'.    |
 |    2103    |    15    |    No    |    Cannot %S_MSG trigger '%.*s' because its schema is different from the schema of the target table or view.    |
@@ -198,50 +198,50 @@ ms.topic: include
 |    2397    |    16    |    No    |    %sIdentifiers may not contain more than %u characters    |
 |    2398    |    16    |    No    |    %sDuplicate id value found: '%ls'    |
 |    2399    |    16    |    No    |    %sAn attribute cannot have a value of type '%ls', a simple type was expected    |
-|    [2501](../../relational-databases/errors-events/mssqlserver-2501-database-engine-error.md)    |    16    |    No    |    Cannot find a table or object with the name "%.*ls". Check the system catalog.    |
+|    [2501](../mssqlserver-2501-database-engine-error.md)    |    16    |    No    |    Cannot find a table or object with the name "%.*ls". Check the system catalog.    |
 |    2502    |    16    |    No    |    Memory object list dump failed due to temporary inconsistency in the memory object structure. Please try again.    |
 |    2503    |    10    |    No    |    Successfully deleted the physical file '%ls'.    |
 |    2504    |    16    |    No    |    Could not delete the physical file '%ls'. The DeleteFile system function returned error %ls.    |
 |    2505    |    16    |    No    |    The device '%.*ls' does not exist. Use sys.backup_devices to show available devices.    |
 |    2506    |    16    |    No    |    Could not find a table or object name '%.*ls' in database '%.*ls'.    |
 |    2507    |    16    |    No    |    The CONCAT_NULL_YIELDS_NULL option must be set to ON to run DBCC CHECKCONSTRAINTS.    |
-|    [2508](../../relational-databases/errors-events/mssqlserver-2508-database-engine-error.md)    |    16    |    No    |    The %.*ls count for object "%.*ls", index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) is incorrect. Run DBCC UPDATEUSAGE.    |
+|    [2508](../mssqlserver-2508-database-engine-error.md)    |    16    |    No    |    The %.*ls count for object "%.*ls", index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) is incorrect. Run DBCC UPDATEUSAGE.    |
 |    2509    |    16    |    No    |    DBCC CHECKCONSTRAINTS failed due to an internal query error.    |
 |    2510    |    16    |    No    |    DBCC %ls error: %ls.    |
-|    [2511](../../relational-databases/errors-events/mssqlserver-2511-database-engine-error.md)    |    16    |    No    |    Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Keys out of order on page %S_PGID, slots %d and %d.    |
-|    [2512](../../relational-databases/errors-events/mssqlserver-2512-database-engine-error.md)    |    16    |    No    |    Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Duplicate keys on page %S_PGID slot %d and page %S_PGID slot %d.    |
+|    [2511](../mssqlserver-2511-database-engine-error.md)    |    16    |    No    |    Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Keys out of order on page %S_PGID, slots %d and %d.    |
+|    [2512](../mssqlserver-2512-database-engine-error.md)    |    16    |    No    |    Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Duplicate keys on page %S_PGID slot %d and page %S_PGID slot %d.    |
 |    2514    |    16    |    No    |    A DBCC PAGE error has occurred: %ls.    |
-|    [2515](../../relational-databases/errors-events/mssqlserver-2515-database-engine-error.md)    |    16    |    No    |    The page %S_PGID, object ID %d, index ID %d, partition ID %I64d, allocation unit ID %I64d (type %.*ls) has been modified, but is not marked as modified in the differential backup bitmap.    |
-|    [2516](../../relational-databases/errors-events/mssqlserver-2516-database-engine-error.md)    |    16    |    Yes    |    Repair has invalidated the differential bitmap for database %.*ls. The differential backup chain is broken. You must perform a full database backup before you can perform a differential backup.    |
+|    [2515](../mssqlserver-2515-database-engine-error.md)    |    16    |    No    |    The page %S_PGID, object ID %d, index ID %d, partition ID %I64d, allocation unit ID %I64d (type %.*ls) has been modified, but is not marked as modified in the differential backup bitmap.    |
+|    [2516](../mssqlserver-2516-database-engine-error.md)    |    16    |    Yes    |    Repair has invalidated the differential bitmap for database %.*ls. The differential backup chain is broken. You must perform a full database backup before you can perform a differential backup.    |
 |    2517    |    16    |    Yes    |    Bulk-logging has been turned on for database %.*ls. To ensure that all data has been secured, run backup log operations again.    |
-|    [2518](../../relational-databases/errors-events/mssqlserver-2518-database-engine-error.md)    |    10    |    No    |    Object ID %ld (object "%.*ls"): Computed columns and CLR types cannot be checked for this object because the common language runtime (CLR) is disabled.    |
-|    [2519](../../relational-databases/errors-events/mssqlserver-2519-database-engine-error.md)    |    10    |    No    |    Computed columns and CLR types cannot be checked for object ID %ld (object "%.*ls") because the internal expression evaluator could not be initialized.    |
+|    [2518](../mssqlserver-2518-database-engine-error.md)    |    10    |    No    |    Object ID %ld (object "%.*ls"): Computed columns and CLR types cannot be checked for this object because the common language runtime (CLR) is disabled.    |
+|    [2519](../mssqlserver-2519-database-engine-error.md)    |    10    |    No    |    Computed columns and CLR types cannot be checked for object ID %ld (object "%.*ls") because the internal expression evaluator could not be initialized.    |
 |    2520    |    16    |    No    |    Could not find database '%.*ls'. The database either does not exist, or was dropped before a statement tried to use it. Verify if the database exists by querying the sys.databases catalog view.    |
 |    2521    |    16    |    No    |    Could not find database ID %d. The database ID either does not exist, or the database was dropped before a statement tried to use it. Verify if the database ID exists by querying the sys.databases catalog view.    |
-|    [2522](../../relational-databases/errors-events/mssqlserver-2522-database-engine-error.md)    |    16    |    No    |    Unable to process index %.*ls of table %.*ls because filegroup %.*ls is invalid.    |
+|    [2522](../mssqlserver-2522-database-engine-error.md)    |    16    |    No    |    Unable to process index %.*ls of table %.*ls because filegroup %.*ls is invalid.    |
 |    2523    |    16    |    No    |    Filegroup %.*ls is invalid.    |
 |    2524    |    16    |    No    |    Cannot process object ID %ld (object "%.*ls") because it is a Service Broker queue. Try the operation again with the object ID of the corresponding internal table for the queue, found in sys.internal_tables.    |
 |    2525    |    16    |    No    |    Database file %.*ls is offline.    |
 |    2526    |    16    |    No    |    Incorrect DBCC statement. Check the documentation for the correct DBCC syntax and options.    |
-|    [2527](../../relational-databases/errors-events/mssqlserver-2527-database-engine-error.md)    |    16    |    No    |    Unable to process index %.*ls of table %.*ls because filegroup %.*ls is offline.    |
+|    [2527](../mssqlserver-2527-database-engine-error.md)    |    16    |    No    |    Unable to process index %.*ls of table %.*ls because filegroup %.*ls is offline.    |
 |    2528    |    10    |    No    |    DBCC execution completed. If DBCC printed error messages, contact your system administrator.    |
 |    2529    |    16    |    No    |    Filegroup %.*ls is offline.    |
-|    [2530](../../relational-databases/errors-events/mssqlserver-2530-database-engine-error.md)    |    16    |    No    |    The index "%.*ls" on table "%.*ls" is disabled.    |
+|    [2530](../mssqlserver-2530-database-engine-error.md)    |    16    |    No    |    The index "%.*ls" on table "%.*ls" is disabled.    |
 |    2531    |    16    |    No    |    Table error: object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) B-tree level mismatch, page %S_PGID. Level %d does not match level %d from the previous %S_PGID.    |
 |    2532    |    16    |    No    |    One or more WITH options specified are not valid for this command.    |
-|    [2533](../../relational-databases/errors-events/mssqlserver-2533-database-engine-error.md)    |    16    |    No    |    Table error: page %S_PGID allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) was not seen. The page may be invalid or may have an incorrect alloc unit ID in its header.    |
-|    [2534](../../relational-databases/errors-events/mssqlserver-2534-database-engine-error.md)    |    16    |    No    |    Table error: page %S_PGID, whose header indicates that it is allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), is allocated by another object.    |
-|    [2536](../../relational-databases/errors-events/mssqlserver-2536-database-engine-error.md)    |    10    |    No    |    DBCC results for '%.*ls'.    |
-|    [2537](../../relational-databases/errors-events/mssqlserver-2537-database-engine-error.md)    |    16    |    No    |    Table error: object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), page %S_PGID, row %d. The record check (%hs) failed. The values are %I64d and %I64d.    |
-|    [2538](../../relational-databases/errors-events/mssqlserver-2538-database-engine-error.md)    |    10    |    No    |    File %d. The number of extents = %I64d, used pages = %I64d, and reserved pages = %I64d.    |
-|    [2539](../../relational-databases/errors-events/mssqlserver-2539-database-engine-error.md)    |    10    |    No    |    The total number of extents = %I64d, used pages = %I64d, and reserved pages = %I64d in this database.    |
-|    [2540](../../relational-databases/errors-events/mssqlserver-2540-database-engine-error.md)    |    10    |    No    |    The system cannot self repair this error.    |
+|    [2533](../mssqlserver-2533-database-engine-error.md)    |    16    |    No    |    Table error: page %S_PGID allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) was not seen. The page may be invalid or may have an incorrect alloc unit ID in its header.    |
+|    [2534](../mssqlserver-2534-database-engine-error.md)    |    16    |    No    |    Table error: page %S_PGID, whose header indicates that it is allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), is allocated by another object.    |
+|    [2536](../mssqlserver-2536-database-engine-error.md)    |    10    |    No    |    DBCC results for '%.*ls'.    |
+|    [2537](../mssqlserver-2537-database-engine-error.md)    |    16    |    No    |    Table error: object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), page %S_PGID, row %d. The record check (%hs) failed. The values are %I64d and %I64d.    |
+|    [2538](../mssqlserver-2538-database-engine-error.md)    |    10    |    No    |    File %d. The number of extents = %I64d, used pages = %I64d, and reserved pages = %I64d.    |
+|    [2539](../mssqlserver-2539-database-engine-error.md)    |    10    |    No    |    The total number of extents = %I64d, used pages = %I64d, and reserved pages = %I64d in this database.    |
+|    [2540](../mssqlserver-2540-database-engine-error.md)    |    10    |    No    |    The system cannot self repair this error.    |
 |    2541    |    10    |    No    |    DBCC UPDATEUSAGE: Usage counts updated for table '%.*ls' (index '%.*ls', partition %ld):    |
 |    2542    |    10    |    No    |    DATA pages %.*ls: changed from (%I64d) to (%I64d) pages.    |
 |    2543    |    10    |    No    |    USED pages %.*ls: changed from (%I64d) to (%I64d) pages.    |
 |    2544    |    10    |    No    |    RSVD pages %.*ls: changed from (%I64d) to (%I64d) pages.    |
 |    2545    |    10    |    No    |    ROWS count: changed from (%I64d) to (%I64d) rows.    |
-|    [2546](../../relational-databases/errors-events/mssqlserver-2546-database-engine-error.md)    |    10    |    No    |    Index '%.*ls' on table '%.*ls' is marked as disabled. Rebuild the index to bring it online.    |
+|    [2546](../mssqlserver-2546-database-engine-error.md)    |    10    |    No    |    Index '%.*ls' on table '%.*ls' is marked as disabled. Rebuild the index to bring it online.    |
 |    2547    |    16    |    No    |    Unable to process object ID %ld (object "%.*ls") because it is a synonym. If the object referenced by the synonym is a table or view, retry the operation using the base object that the synonym references.    |
 |    2548    |    10    |    No    |    DBCC: Compaction phase of index '%.*ls' is %d%% complete.    |
 |    2549    |    10    |    No    |    DBCC: Defrag phase of index '%.*ls' is %d%% complete.    |
@@ -261,15 +261,15 @@ ms.topic: include
 |    2566    |    14    |    No    |    DBCC DBREINDEX cannot be used on system tables.    |
 |    2567    |    14    |    No    |    DBCC INDEXDEFRAG cannot be used on system table indexes    |
 |    2568    |    16    |    No    |    Page %S_PGID is out of range for this database or is in a log file.    |
-|    [2570](../../relational-databases/errors-events/mssqlserver-2570-database-engine-error.md)    |    16    |    No    |    Page %S_PGID, slot %d in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type "%.*ls"). Column "%.*ls" value is out of range for data type "%.*ls". Update column to a legal value.    |
+|    [2570](../mssqlserver-2570-database-engine-error.md)    |    16    |    No    |    Page %S_PGID, slot %d in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type "%.*ls"). Column "%.*ls" value is out of range for data type "%.*ls". Update column to a legal value.    |
 |    2571    |    14    |    No    |    User '%.*ls' does not have permission to run DBCC %.*ls.    |
 |    2572    |    16    |    No    |    DBCC cannot free DLL '%.*ls'. The DLL is in use.    |
 |    2573    |    16    |    No    |    Could not find table or object ID %.*ls. Check system catalog.    |
-|    [2574](../../relational-databases/errors-events/mssqlserver-2574-database-engine-error.md)    |    16    |    No    |    Table error: Page %S_PGID is empty in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). This is not permitted at level %d of the B-tree.    |
-|    [2575](../../relational-databases/errors-events/mssqlserver-2575-database-engine-error.md)    |    16    |    No    |    The Index Allocation Map (IAM) page %S_PGID is pointed to by the next pointer of IAM page %S_PGID in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), but it was not detected in the scan.    |
-|    [2576](../../relational-databases/errors-events/mssqlserver-2576-database-engine-error.md)    |    16    |    No    |    The Index Allocation Map (IAM) page %S_PGID is pointed to by the previous pointer of IAM page %S_PGID in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), but it was not detected in the scan.    |
-|    [2577](../../relational-databases/errors-events/mssqlserver-2577-database-engine-error.md)    |    16    |    No    |    Chain sequence numbers are out of order in the Index Allocation Map (IAM) chain for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Page %S_PGID with sequence number %d points to page %S_PGID with sequence number %d.    |
-|    [2579](../../relational-databases/errors-events/mssqlserver-2579-database-engine-error.md)    |    16    |    No    |    Table error: Extent %S_PGID in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) is beyond the range of this database.    |
+|    [2574](../mssqlserver-2574-database-engine-error.md)    |    16    |    No    |    Table error: Page %S_PGID is empty in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). This is not permitted at level %d of the B-tree.    |
+|    [2575](../mssqlserver-2575-database-engine-error.md)    |    16    |    No    |    The Index Allocation Map (IAM) page %S_PGID is pointed to by the next pointer of IAM page %S_PGID in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), but it was not detected in the scan.    |
+|    [2576](../mssqlserver-2576-database-engine-error.md)    |    16    |    No    |    The Index Allocation Map (IAM) page %S_PGID is pointed to by the previous pointer of IAM page %S_PGID in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), but it was not detected in the scan.    |
+|    [2577](../mssqlserver-2577-database-engine-error.md)    |    16    |    No    |    Chain sequence numbers are out of order in the Index Allocation Map (IAM) chain for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Page %S_PGID with sequence number %d points to page %S_PGID with sequence number %d.    |
+|    [2579](../mssqlserver-2579-database-engine-error.md)    |    16    |    No    |    Table error: Extent %S_PGID in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) is beyond the range of this database.    |
 |    2580    |    16    |    No    |    Table '%.*ls' is either a system or temporary table. DBCC CLEANTABLE cannot be applied to a system or temporary table.    |
 |    2581    |    10    |    No    |    DBCC cannot free the DLL "%.*ls". The DLL is not loaded.    |
 |    2583    |    16    |    No    |    An incorrect number of parameters was given to the DBCC statement.    |
@@ -280,10 +280,10 @@ ms.topic: include
 |    2589    |    16    |    No    |    Repair could not fix all errors on the first attempt.    |
 |    2590    |    10    |    Yes    |    User "%.*ls" is modifying bytes %d to %d of page %S_PGID in database "%.*ls".    |
 |    2591    |    16    |    No    |    Cannot find a row in the system catalog with the index ID %d for table "%.*ls".    |
-|    [2592](../../relational-databases/errors-events/mssqlserver-2592-database-engine-error.md)    |    10    |    No    |    Repair: The %ls index successfully rebuilt for the object "%.*ls" in database "%.*ls".    |
-|    [2593](../../relational-databases/errors-events/mssqlserver-2593-database-engine-error.md)    |    10    |    No    |    There are %I64d rows in %I64d pages for object "%.*ls".    |
+|    [2592](../mssqlserver-2592-database-engine-error.md)    |    10    |    No    |    Repair: The %ls index successfully rebuilt for the object "%.*ls" in database "%.*ls".    |
+|    [2593](../mssqlserver-2593-database-engine-error.md)    |    10    |    No    |    There are %I64d rows in %I64d pages for object "%.*ls".    |
 |    2594    |    10    |    No    |    Cannot process rowset ID %I64d of object "%.*ls" (ID %d), index "%.*ls" (ID %d), because it resides on filegroup "%.*ls" (ID %d), which was not checked.    |
-|    [2596](../../relational-databases/errors-events/mssqlserver-2596-database-engine-error.md)    |    16    |    No    |    The repair statement was not processed. The database cannot be in read-only mode.    |
+|    [2596](../mssqlserver-2596-database-engine-error.md)    |    16    |    No    |    The repair statement was not processed. The database cannot be in read-only mode.    |
 |    2597    |    10    |    No    |    Ignoring trace flag %d. It is either an invalid trace flag or a trace flag that can only be specified during server startup.    |
 |    2599    |    16    |    No    |    Cannot switch to in row text in table "%.*ls".    |
 |    2601    |    14    |    No    |    Cannot insert duplicate key row in object '%.*ls' with unique index '%.*ls'.    |
@@ -372,5 +372,5 @@ ms.topic: include
 |    2809    |    18    |    No    |    The request for %S_MSG '%.*ls' failed because '%.*ls' is a %S_MSG object.    |
 |    2812    |    16    |    No    |    Could not find stored procedure '%.*ls'.    |
 |    2813    |    16    |    No    |    %.*ls is not supported on this edition of SQL Server.    |
-|    [2814](../../relational-databases/errors-events/mssqlserver-2814-database-engine-error.md)    |    10    |    No    |    A possible infinite recompile was detected for SQLHANDLE %hs, PlanHandle %hs, starting offset %d, ending offset %d. The last recompile reason was %d.    |
+|    [2814](../mssqlserver-2814-database-engine-error.md)    |    10    |    No    |    A possible infinite recompile was detected for SQLHANDLE %hs, PlanHandle %hs, starting offset %d, ending offset %d. The last recompile reason was %d.    |
 |    2628    |    16    |    No    |    String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.    |

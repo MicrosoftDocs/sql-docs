@@ -307,8 +307,8 @@ ms.topic: include
 |    14417    |    16    |    No    |    Cannot delete the monitor server while databases are participating in log shipping.    |
 |    14418    |    16    |    No    |    The specified \@backup_file_name was not created from database '%s'.    |
 |    14419    |    16    |    No    |    The specified \@backup_file_name is not a database backup.    |
-|    [14420](../../relational-databases/errors-events/mssqlserver-14420-database-engine-error.md)    |    16    |    Yes    |    The log shipping primary database %s.%s has backup threshold of %d minutes and has not performed a backup log operation for %d minutes. Check agent log and logshipping monitor information.    |
-|    [14421](../../relational-databases/errors-events/mssqlserver-14421-database-engine-error.md)    |    16    |    Yes    |    The log shipping secondary database %s.%s has restore threshold of %d minutes and is out of sync. No restore was performed for %d minutes. Restored latency is %d minutes. Check agent log and logshipping monitor information.    |
+|    [14420](../mssqlserver-14420-database-engine-error.md)    |    16    |    Yes    |    The log shipping primary database %s.%s has backup threshold of %d minutes and has not performed a backup log operation for %d minutes. Check agent log and logshipping monitor information.    |
+|    [14421](../mssqlserver-14421-database-engine-error.md)    |    16    |    Yes    |    The log shipping secondary database %s.%s has restore threshold of %d minutes and is out of sync. No restore was performed for %d minutes. Restored latency is %d minutes. Check agent log and logshipping monitor information.    |
 |    14422    |    16    |    No    |    Supply either \@plan_id or \@plan_name.    |
 |    14423    |    16    |    No    |    Other databases are enlisted on this plan and must be removed before the plan can be deleted.    |
 |    14424    |    16    |    No    |    The database '%s' is already involved in log shipping.    |
@@ -446,7 +446,7 @@ ms.topic: include
 |    14622    |    16    |    No    |    Parameter \@importance does not support the value "%s". Mail importance must be one of LOW, NORMAL, or HIGH.    |
 |    14623    |    16    |    No    |    Parameter \@sensitivity does not support the value "%s". Mail sensitivity must be one of NORMAL, PERSONAL, PRIVATE, or CONFIDENTIAL.    |
 |    14624    |    16    |    No    |    At least one of the following parameters must be specified. "%s".    |
-|    [14265](../../relational-databases/errors-events/mssqlserver-14265-database-engine-error.md)    |    16    |    No    |    Parameter \@attach_query_result_as_file cannot be 1 (true) when no value is specified for parameter \@query. A query must be specified to attach the results of the query.    |
+|    [14265](../mssqlserver-14265-database-engine-error.md)    |    16    |    No    |    Parameter \@attach_query_result_as_file cannot be 1 (true) when no value is specified for parameter \@query. A query must be specified to attach the results of the query.    |
 |    14626    |    16    |    No    |    Parameter \@mailformat does not support the value "%s". The mail format must be TEXT or HTML.    |
 |    14627    |    16    |    No    |    Received error %d while sending a message as part of the %s operation. Database Mail may not be available, or may have encountered an error. Check the Database Mail error log for more information.    |
 |    14628    |    16    |    No    |    The format of the parameter \@attachments is incorrect. The file names must be separated by a semicolon ";".    |

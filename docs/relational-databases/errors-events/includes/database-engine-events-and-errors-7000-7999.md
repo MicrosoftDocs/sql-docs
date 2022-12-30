@@ -20,7 +20,7 @@ ms.topic: include
 |    7101    |    16    |    No    |    You need an active user transaction in order to use text pointers for a table with the option "text in row" set to ON.    |
 |    7102    |    20    |    Yes    |    Internal Error: Text manager cannot continue with current statement. Run DBCC CHECKTABLE.    |
 |    7104    |    16    |    No    |    Offset or size of data type is not valid. Data type must be of type int or smallint.    |
-|    [7105](../../relational-databases/errors-events/mssqlserver-7105-database-engine-error.md)    |    22    |    Yes    |    The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE.    |
+|    [7105](../mssqlserver-7105-database-engine-error.md)    |    22    |    Yes    |    The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE.    |
 |    7106    |    16    |    Yes    |    Internal error: An attempt was made to update a LOB data type using a read-only text pointer.    |
 |    7107    |    16    |    No    |    You can have only 1,024 in-row text pointers in one transaction    |
 |    7108    |    22    |    Yes    |    Database ID %d, page %S_PGID, slot %d, link number %d is invalid. Run DBCC CHECKTABLE.    |
@@ -57,7 +57,7 @@ ms.topic: include
 |    7305    |    16    |    No    |    Cannot create a statement object using OLE DB provider "%ls" for linked server "%ls".    |
 |    7306    |    16    |    No    |    Cannot open the table "%ls" from OLE DB provider "%ls" for linked server "%ls". %ls    |
 |    7307    |    16    |    No    |    Cannot obtain the data source of a session from OLE DB provider "%ls" for linked server "%ls". This action must be supported by the provider.    |
-|    [7308](../../relational-databases/errors-events/mssqlserver-7308-database-engine-error.md)    |    16    |    No    |    OLE DB provider '%ls' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.    |
+|    [7308](../mssqlserver-7308-database-engine-error.md)    |    16    |    No    |    OLE DB provider '%ls' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.    |
 |    7310    |    16    |    No    |    Cannot obtain the set of schema rowsets supported by OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used.    |
 |    7311    |    16    |    No    |    Cannot obtain the schema rowset "%ls" for OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used.    |
 |    7312    |    16    |    No    |    Invalid use of schema or catalog for OLE DB provider "%ls" for linked server "%ls". A four-part name was supplied, but the provider does not expose the necessary interfaces to use a catalog or schema.    |
@@ -242,7 +242,7 @@ ms.topic: include
 |    7708    |    16    |    No    |    Duplicate range boundary values are not allowed in partition function boundary values list. Partition boundary values at ordinal %d and %d are equal.    |
 |    7709    |    10    |    No    |    Warning: Range value list for partition function '%.*ls' is not sorted by value. Mapping of partitions to filegroups during CREATE PARTITION SCHEME will use the sorted boundary values if the function '%.*ls' is referenced in CREATE PARTITION SCHEME.    |
 |    7710    |    10    |    No    |    Warning: The partition scheme '%.*ls' does not have any next used filegroup. Partition scheme has not been changed.    |
-|    [7711](../../relational-databases/errors-events/mssqlserver-7711-database-engine-error.md)    |    16    |    No    |    The DATA_COMPRESSION option was specified more than once for the table, or for at least one of its partitions if the table is partitioned.    |
+|    [7711](../mssqlserver-7711-database-engine-error.md)    |    16    |    No    |    The DATA_COMPRESSION option was specified more than once for the table, or for at least one of its partitions if the table is partitioned.    |
 |    7712    |    10    |    No    |    Partition scheme '%.*ls' has been created successfully. '%.*ls' is marked as the next used filegroup in partition scheme '%.*ls'.    |
 |    7713    |    10    |    No    |    %d filegroups specified after the next used filegroup are ignored.    |
 |    7714    |    16    |    No    |    Partition range value is missing.    |
@@ -357,28 +357,28 @@ ms.topic: include
 |    7897    |    10    |    No    |    Creating and altering SOAP endpoints will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.    |
 |    7898    |    10    |    Yes    |    SQL Server native SOAP support is now deprecated and will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.    |
 |    7899    |    16    |    No    |    The return value uses a data type not supported by SOAP. SOAP only supports data types supported in SQL Server 2005 or earlier.    |
-|    [7901](../../relational-databases/errors-events/mssqlserver-7901-database-engine-error.md)    |    16    |    No    |    The repair statement was not processed. This level of repair is not supported when the database is in emergency mode.    |
-|    [7903](../../relational-databases/errors-events/mssqlserver-7903-database-engine-error.md)    |    16    |    No    |    Table error: The orphaned file "%.*ls" was found in the FILESTREAM directory ID %.*ls for object ID %d, index ID %d, partition ID %I64d, column ID %d.    |
-|    [7904](../../relational-databases/errors-events/mssqlserver-7904-database-engine-error.md)    |    16    |    No    |    Table error: Cannot find the FILESTREAM file "%.*ls" for column ID %d (column directory ID %.*ls) in object ID %d, index ID %d, partition ID %I64d, page ID %S_PGID, slot ID %d.    |
-|    [7905](../../relational-databases/errors-events/mssqlserver-7905-database-engine-error.md)    |    16    |    No    |    Database error: The directory "%.*ls" is not a valid FILESTREAM directory.    |
-|    [7906](../../relational-databases/errors-events/mssqlserver-7906-database-engine-error.md)    |    16    |    No    |    Database error: The file "%.*ls" is not a valid FILESTREAM file.    |
-|    [7907](../../relational-databases/errors-events/mssqlserver-7907-database-engine-error.md)    |    16    |    No    |    Table error: The directory "%.*ls" under the rowset directory ID %.*ls is not a valid FILESTREAM directory.    |
-|    [7908](../../relational-databases/errors-events/mssqlserver-7908-database-engine-error.md)    |    16    |    No    |    Table error: The file "%.*ls" in the rowset directory ID %.*ls is not a valid FILESTREAM file.    |
+|    [7901](../mssqlserver-7901-database-engine-error.md)    |    16    |    No    |    The repair statement was not processed. This level of repair is not supported when the database is in emergency mode.    |
+|    [7903](../mssqlserver-7903-database-engine-error.md)    |    16    |    No    |    Table error: The orphaned file "%.*ls" was found in the FILESTREAM directory ID %.*ls for object ID %d, index ID %d, partition ID %I64d, column ID %d.    |
+|    [7904](../mssqlserver-7904-database-engine-error.md)    |    16    |    No    |    Table error: Cannot find the FILESTREAM file "%.*ls" for column ID %d (column directory ID %.*ls) in object ID %d, index ID %d, partition ID %I64d, page ID %S_PGID, slot ID %d.    |
+|    [7905](../mssqlserver-7905-database-engine-error.md)    |    16    |    No    |    Database error: The directory "%.*ls" is not a valid FILESTREAM directory.    |
+|    [7906](../mssqlserver-7906-database-engine-error.md)    |    16    |    No    |    Database error: The file "%.*ls" is not a valid FILESTREAM file.    |
+|    [7907](../mssqlserver-7907-database-engine-error.md)    |    16    |    No    |    Table error: The directory "%.*ls" under the rowset directory ID %.*ls is not a valid FILESTREAM directory.    |
+|    [7908](../mssqlserver-7908-database-engine-error.md)    |    16    |    No    |    Table error: The file "%.*ls" in the rowset directory ID %.*ls is not a valid FILESTREAM file.    |
 |    7909    |    20    |    No    |    The emergency-mode repair failed.You must restore from backup.    |
-|    [7910](../../relational-databases/errors-events/mssqlserver-7910-database-engine-error.md)    |    10    |    No    |    Repair: The page %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
-|    [7911](../../relational-databases/errors-events/mssqlserver-7911-database-engine-error.md)    |    10    |    No    |    Repair: The page %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
-|    [7912](../../relational-databases/errors-events/mssqlserver-7912-database-engine-error.md)    |    10    |    No    |    Repair: The extent %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
-|    [7913](../../relational-databases/errors-events/mssqlserver-7913-database-engine-error.md)    |    10    |    No    |    Repair: The extent %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
-|    [7914](../../relational-databases/errors-events/mssqlserver-7914-database-engine-error.md)    |    10    |    No    |    Repair: %ls page at %S_PGID has been rebuilt.    |
-|    [7915](../../relational-databases/errors-events/mssqlserver-7915-database-engine-error.md)    |    10    |    No    |    Repair: IAM chain for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), has been truncated before page %S_PGID and will be rebuilt.    |
-|    [7916](../../relational-databases/errors-events/mssqlserver-7916-database-engine-error.md)    |    10    |    No    |    Repair: Deleted record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), on page %S_PGID, slot %d. Indexes will be rebuilt.    |
+|    [7910](../mssqlserver-7910-database-engine-error.md)    |    10    |    No    |    Repair: The page %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
+|    [7911](../mssqlserver-7911-database-engine-error.md)    |    10    |    No    |    Repair: The page %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
+|    [7912](../mssqlserver-7912-database-engine-error.md)    |    10    |    No    |    Repair: The extent %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
+|    [7913](../mssqlserver-7913-database-engine-error.md)    |    10    |    No    |    Repair: The extent %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
+|    [7914](../mssqlserver-7914-database-engine-error.md)    |    10    |    No    |    Repair: %ls page at %S_PGID has been rebuilt.    |
+|    [7915](../mssqlserver-7915-database-engine-error.md)    |    10    |    No    |    Repair: IAM chain for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), has been truncated before page %S_PGID and will be rebuilt.    |
+|    [7916](../mssqlserver-7916-database-engine-error.md)    |    10    |    No    |    Repair: Deleted record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), on page %S_PGID, slot %d. Indexes will be rebuilt.    |
 |    7917    |    10    |    No    |    Repair: Converted forwarded record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), at page %S_PGID, slot %d to a data row.    |
 |    7918    |    10    |    No    |    Repair: Page %S_PGID next and %S_PGID previous pointers have been set to match each other in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls).    |
 |    7919    |    16    |    No    |    Repair statement not processed. Database needs to be in single user mode.    |
-|    [7920](../../relational-databases/errors-events/mssqlserver-7920-database-engine-error.md)    |    10    |    No    |    Processed %ld entries in system catalog for database ID %d.    |
+|    [7920](../mssqlserver-7920-database-engine-error.md)    |    10    |    No    |    Processed %ld entries in system catalog for database ID %d.    |
 |    7921    |    16    |    No    |    Repair statement not processed. Database cannot be a snapshot.    |
 |    7922    |    16    |    No    |    ***************************************************************    |
-|    [7923](../../relational-databases/errors-events/mssqlserver-7923-database-engine-error.md)    |    10    |    No    |    Table %.*ls Object ID %ld.    |
+|    [7923](../mssqlserver-7923-database-engine-error.md)    |    10    |    No    |    Table %.*ls Object ID %ld.    |
 |    7924    |    10    |    No    |    Index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). FirstIAM %S_PGID. Root %S_PGID. Dpages %I64d.    |
 |    7925    |    10    |    No    |    Index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). %I64d pages used in %I64d dedicated extents.    |
 |    7926    |    16    |    No    |    Check statement aborted. The database could not be checked as a database snapshot could not be created and the database or table could not be locked. See Books Online for details of when this behavior is expected and what workarounds exist. Also see previous errors for more details.    |
@@ -386,13 +386,13 @@ ms.topic: include
 |    7928    |    16    |    No    |    The database snapshot for online checks could not be created. Either the reason is given in a previous error or one of the underlying volumes does not support sparse files or alternate streams. Attempting to get exclusive access to run checks offline.    |
 |    7929    |    16    |    No    |    Check statement aborted. Database contains deferred transactions.    |
 |    7930    |    16    |    No    |    Mirroring must be removed from the database for this DBCC command.    |
-|    [7931](../../relational-databases/errors-events/mssqlserver-7931-database-engine-error.md)    |    16    |    No    |    Database error: The FILESTREAM directory ID %.*ls for a partition was seen two times.    |
-|    [7932](../../relational-databases/errors-events/mssqlserver-7932-database-engine-error.md)    |    16    |    No    |    Table error: The FILESTREAM directory ID %.*ls for object ID %d, index ID %d, partition ID %I64d is in filegroup %d, but should be in filegroup %d.    |
-|    [7933](../../relational-databases/errors-events/mssqlserver-7933-database-engine-error.md)    |    16    |    No    |    Table error: A FILESTREAM directory ID %.*ls exists for a partition, but the corresponding partition does not exist in the database.    |
-|    [7934](../../relational-databases/errors-events/mssqlserver-7934-database-engine-error.md)    |    16    |    No    |    Table error: The FILESTREAM directory ID %.*ls for object ID %d, index ID %d, partition ID %I64d was not found.    |
-|    [7935](../../relational-databases/errors-events/mssqlserver-7935-database-engine-error.md)    |    16    |    No    |    Table error: A FILESTREAM directory ID %.*ls exists for a column of object ID %d, index ID %d, partition ID %I64d, but that column does not exist in the partition.    |
-|    [7936](../../relational-databases/errors-events/mssqlserver-7936-database-engine-error.md)    |    16    |    No    |    Table error: The FILESTREAM directory ID %.*ls exists for column ID %d of object ID %d, index ID %d, partition ID %I64d, but that column is not a FILESTREAM column.    |
-|    [7937](../../relational-databases/errors-events/mssqlserver-7937-database-engine-error.md)    |    16    |    No    |    Table error: The FILESTREAM directory ID %.*ls for column ID %d of object ID %d, index ID %d, partition ID %I64d was not found.    |
+|    [7931](../mssqlserver-7931-database-engine-error.md)    |    16    |    No    |    Database error: The FILESTREAM directory ID %.*ls for a partition was seen two times.    |
+|    [7932](../mssqlserver-7932-database-engine-error.md)    |    16    |    No    |    Table error: The FILESTREAM directory ID %.*ls for object ID %d, index ID %d, partition ID %I64d is in filegroup %d, but should be in filegroup %d.    |
+|    [7933](../mssqlserver-7933-database-engine-error.md)    |    16    |    No    |    Table error: A FILESTREAM directory ID %.*ls exists for a partition, but the corresponding partition does not exist in the database.    |
+|    [7934](../mssqlserver-7934-database-engine-error.md)    |    16    |    No    |    Table error: The FILESTREAM directory ID %.*ls for object ID %d, index ID %d, partition ID %I64d was not found.    |
+|    [7935](../mssqlserver-7935-database-engine-error.md)    |    16    |    No    |    Table error: A FILESTREAM directory ID %.*ls exists for a column of object ID %d, index ID %d, partition ID %I64d, but that column does not exist in the partition.    |
+|    [7936](../mssqlserver-7936-database-engine-error.md)    |    16    |    No    |    Table error: The FILESTREAM directory ID %.*ls exists for column ID %d of object ID %d, index ID %d, partition ID %I64d, but that column is not a FILESTREAM column.    |
+|    [7937](../mssqlserver-7937-database-engine-error.md)    |    16    |    No    |    Table error: The FILESTREAM directory ID %.*ls for column ID %d of object ID %d, index ID %d, partition ID %I64d was not found.    |
 |    7938    |    16    |    No    |    Table error: object ID %d, index ID %d, partition ID %I64d processing encountered file name "%.*ls" twice in the column directory %d (for column ID %d).    |
 |    7939    |    16    |    No    |    Cannot detach database '%.*ls' because it does not exist.    |
 |    7940    |    16    |    No    |    System databases master, model, msdb, and tempdb cannot be detached.    |
@@ -433,14 +433,14 @@ ms.topic: include
 |    7980    |    10    |    No    |    Oldest distributed LSN : (%d:%d:%d)    |
 |    7982    |    10    |    No    |    Oldest non-distributed LSN : (%d:%d:%d)    |
 |    7983    |    14    |    No    |    User '%.*ls' does not have permission to run DBCC %ls for database '%.*ls'.    |
-|    [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md)    |    16    |    No    |    System table pre-checks: Object ID %d. Page %S_PGID has unexpected page type %d. Check statement terminated due to unrepairable error.    |
+|    [7984](../mssqlserver-7984-database-engine-error.md)    |    16    |    No    |    System table pre-checks: Object ID %d. Page %S_PGID has unexpected page type %d. Check statement terminated due to unrepairable error.    |
 |    7985    |    16    |    No    |    System table pre-checks: Object ID %d. Could not read and latch page %S_PGID with latch type %ls. Check statement terminated due to unrepairable error.    |
-|    [7986](../../relational-databases/errors-events/mssqlserver-7986-database-engine-error.md)    |    16    |    No    |    System table pre-checks: Object ID %d has cross-object chain linkage. Page %S_PGID points to %S_PGID in alloc unit ID %I64d (should be %I64d). Check statement terminated due to unrepairable error.    |
-|    [7987](../../relational-databases/errors-events/mssqlserver-7987-database-engine-error.md)    |    16    |    No    |    System table pre-checks: Object ID %d has chain linkage mismatch. %S_PGID->next = %S_PGID, but %S_PGID->prev = %S_PGID. Check statement terminated due to unrepairable error.    |
-|    [7988](../../relational-databases/errors-events/mssqlserver-7988-database-engine-error.md)    |    16    |    No    |    System table pre-checks: Object ID %d. Loop in data chain detected at %S_PGID. Check statement terminated due to unrepairable error.    |
+|    [7986](../mssqlserver-7986-database-engine-error.md)    |    16    |    No    |    System table pre-checks: Object ID %d has cross-object chain linkage. Page %S_PGID points to %S_PGID in alloc unit ID %I64d (should be %I64d). Check statement terminated due to unrepairable error.    |
+|    [7987](../mssqlserver-7987-database-engine-error.md)    |    16    |    No    |    System table pre-checks: Object ID %d has chain linkage mismatch. %S_PGID->next = %S_PGID, but %S_PGID->prev = %S_PGID. Check statement terminated due to unrepairable error.    |
+|    [7988](../mssqlserver-7988-database-engine-error.md)    |    16    |    No    |    System table pre-checks: Object ID %d. Loop in data chain detected at %S_PGID. Check statement terminated due to unrepairable error.    |
 |    7992    |    16    |    No    |    Cannot shrink 'read only' database '%.*ls'.    |
 |    7993    |    10    |    No    |    Cannot shrink file '%d' in database '%.*ls' to %u pages as it only contains %u pages.    |
-|    [7995](../../relational-databases/errors-events/mssqlserver-7995-database-engine-error.md)    |    16    |    No    |    Database '%.*ls': consistency errors in system catalogs prevent further DBCC %ls processing.    |
+|    [7995](../mssqlserver-7995-database-engine-error.md)    |    16    |    No    |    Database '%.*ls': consistency errors in system catalogs prevent further DBCC %ls processing.    |
 |    7996    |    16    |    No    |    Extended stored procedures can only be created in the master database.    |
 |    7997    |    16    |    No    |    '%.*ls' does not contain an identity column.    |
 |    7998    |    16    |    No    |    Checking identity information: current identity value '%.*hs', current column value '%.*hs'.    |

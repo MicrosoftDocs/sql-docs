@@ -20,7 +20,8 @@ ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_column (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+
+[!INCLUDE[sql-asa](../../includes/applies-to-version/sql-asa.md)]
 
   Specifies whether or not a particular column of a table participates in full-text indexing.  
   

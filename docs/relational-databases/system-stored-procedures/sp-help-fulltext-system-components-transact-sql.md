@@ -20,7 +20,8 @@ ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help_fulltext_system_components (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+
+[!INCLUDE[sql-asa](../../includes/applies-to-version/sql-asa.md)]
 
   Returns information for the registered word-breakers, filter, and protocol handlers. **sp_help_fulltext_system_components** also returns a list of identifiers of databases and full-text catalogs that have used the specified component.  
   

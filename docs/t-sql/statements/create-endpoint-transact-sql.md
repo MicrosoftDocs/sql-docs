@@ -240,7 +240,7 @@ FOR DATABASE_MIRRORING (
  Enables the endpoint to perform in the role of a witness in the mirroring process.  
   
 > [!NOTE]  
->  For [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)], WITNESS is the only option available.  
+>  For [!INCLUDE[ssexpress-2005-md](../../includes/ssexpress-2005-md.md)], WITNESS is the only option available.  
   
  PARTNER  
  Enables the endpoint to perform in the role of a partner in the mirroring process.  

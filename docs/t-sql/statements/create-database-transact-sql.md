@@ -557,7 +557,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permission
 The permissions prevent the files from being accidentally tampered with if they reside in a directory that has open permissions.
 
 > [!NOTE]
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] does not set data and log file permissions.
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssexpress-2005-md](../../includes/ssexpress-2005-md.md)] does not set data and log file permissions.
 
 ## Examples
 

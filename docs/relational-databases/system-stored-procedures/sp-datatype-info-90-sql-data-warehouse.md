@@ -73,7 +73,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## Permissions  
  Requires membership in the public role.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example retrieves information for the **sysname** and **nvarchar** data types by specifying the *data_type* value of `-9`.  
   
 ```sql  

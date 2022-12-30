@@ -855,7 +855,7 @@ SELECT @notastring + '1'
 
 In this case, the string `'1'` can be converted to the integer value 1, so this SELECT statement will return the value 2. When the data types provided are integers, the + operator becomes addition mathematical operator, rather than a string concatenation.
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### L. Use CAST and CONVERT
 

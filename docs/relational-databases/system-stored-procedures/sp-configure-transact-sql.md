@@ -158,7 +158,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- The result returns the option name followed by the minimum and maximum values for the option. The **config_value** is the value that [!INCLUDE[ssDW](../../includes/ssdw-md.md)] will use when reconfiguration is complete. The **run_value** is the value that is currently being used. The **config_value** and **run_value** are usually the same unless the value is in the process of being changed.  
+ The result returns the option name followed by the minimum and maximum values for the option. The **config_value** is the value that [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] will use when reconfiguration is complete. The **run_value** is the value that is currently being used. The **config_value** and **run_value** are usually the same unless the value is in the process of being changed.  
   
 ### D. List the configuration settings for one configuration name  
   

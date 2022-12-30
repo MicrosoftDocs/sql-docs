@@ -66,7 +66,7 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### B. Set the lock timeout to wait forever for a lock to be released.  
  The following example sets the lock timeout to wait forever and never expire. This is the default behavior that is already set at the beginning of each connection.  
@@ -75,7 +75,7 @@ GO
 SET LOCK_TIMEOUT -1;  
 ```  
   
- The following example sets the lock time-out period to `1800` milliseconds. In this release, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] will parse the statement successfully, but will ignore the value 1800 and continue to use the default behavior.  
+ The following example sets the lock time-out period to `1800` milliseconds. In this release, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] will parse the statement successfully, but will ignore the value 1800 and continue to use the default behavior.  
   
 ```sql  
 SET LOCK_TIMEOUT 1800;  

@@ -57,7 +57,7 @@ The COS of the angle is: -0.599465
 (1 row(s) affected)  
 ```  
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
 This example returns the COS values of the specified angles:

@@ -92,7 +92,7 @@ The following describes the general conventions that are followed for naming per
 
 ## Chart of SQL Server permissions
 
-[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
+[!INCLUDE[database-engine-permissions](../includes/database-engine-permissions.md)]
 
 ## Permissions applicable to specific securables
 

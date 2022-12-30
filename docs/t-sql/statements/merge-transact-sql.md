@@ -191,7 +191,7 @@ If *target_table* is a view, any actions against it must satisfy the conditions 
 Hints can be specified as a <merge_hint>. 
 
 ::: moniker range="=azure-sqldw-latest"
-Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 ::: moniker-end
   
 #### [ AS ] *table_alias*  

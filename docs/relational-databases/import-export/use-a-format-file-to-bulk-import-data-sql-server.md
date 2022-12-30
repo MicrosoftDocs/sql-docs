@@ -30,7 +30,7 @@ This article illustrates the use of a format file in bulk-import operations.  A 
   * [Load data into Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Load data from SQL Server into Azure Synapse Analytics (flat files)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Migrate Your Data](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
-* This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE[Use ADF or PolyBase instead of Synapse Bulk Insert](../../includes/paragraph-content/bulk-insert-synapse.md)]
+* This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE [Use ADF or PolyBase instead of Synapse Bulk Insert](includes/bulk-insert-synapse.md)]
 
 ## Example test conditions
 

@@ -110,7 +110,7 @@ You must be connected to the master database to drop a database.
 
  The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.
 
-### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+### [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 You must be connected to the master database to drop a database.
 

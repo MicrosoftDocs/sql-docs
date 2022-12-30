@@ -19,7 +19,8 @@ author: markingmyname
 ms.author: maghan
 ---
 # sp_datatype_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+
+[!INCLUDE[sql-asa](../../includes/applies-to-version/sql-asa.md)]
 
   Returns information about the data types supported by the current environment.  
   

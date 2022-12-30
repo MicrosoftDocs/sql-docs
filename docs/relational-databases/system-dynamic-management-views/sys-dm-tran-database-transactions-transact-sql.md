@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns information about transactions at the database level.  
   
 > [!NOTE]  
->  To call this DMV from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_tran_database_transactions**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+>  To call this DMV from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_tran_database_transactions**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |database_transaction_commit_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> LSN of the commit log record for the transaction in the database log.|  
 |database_transaction_last_rollback_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> LSN that was most recently rolled back to. If no rollback has taken place, the value is MaxLSN.|  
 |database_transaction_next_undo_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> LSN of the next record to undo.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions
 

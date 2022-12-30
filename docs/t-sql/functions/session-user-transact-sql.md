@@ -132,7 +132,7 @@ Order #   Customer #  When Delivered       Received By
 (5 row(s) affected)
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C: Using SESSION_USER to return the user name of the current session  
  The following example returns the session user for the current session.  

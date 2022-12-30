@@ -41,7 +41,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## Arguments  
 
-For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
+For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
 
 `[ @objname = ] 'objname'`
    
@@ -49,7 +49,7 @@ For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../
 If *objname* is not specified, results are returned for the whole database.  
 *objname* is **nvarchar(776)**, with a default of NULL.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
+> [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
   
 `[ @updateusage = ] 'updateusage'`
  Indicates DBCC UPDATEUSAGE should be run to update space usage information. When *objname* is not specified, the statement is run on the whole database; otherwise, the statement is run on *objname*. Values can be **true** or **false**. *updateusage* is **varchar(5)**, with a default of **false**.  

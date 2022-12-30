@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 ---
 # RESTORE Statements - FILELISTONLY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a result set containing a list of the database and log files contained in the backup set in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 

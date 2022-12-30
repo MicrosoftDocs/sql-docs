@@ -40,7 +40,7 @@ Limits the rows returned in a query result set to a specified number of rows or 
 ]  
 ```  
 
-Following is syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Following is syntax for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```syntaxsql  
 [   
@@ -311,7 +311,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 The following example returns the top 31 rows that match the query criteria. The **ORDER BY** clause ensures that the 31 returned rows are the first 31 rows based on an alphabetical ordering of the `LastName` column.  
   
 Using **TOP** without specifying ties.  

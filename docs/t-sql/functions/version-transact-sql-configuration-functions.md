@@ -85,9 +85,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### B. Return the current version of [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### B. Return the current version of [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
   
 ```sql
 SELECT @@VERSION AS 'SQL Server PDW Version';  

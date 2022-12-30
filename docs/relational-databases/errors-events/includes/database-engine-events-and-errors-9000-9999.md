@@ -7,10 +7,10 @@ ms.topic: include
 ---
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
-|    [9001](../../relational-databases/errors-events/mssqlserver-9001-database-engine-error.md)    |    10    |    Yes    |    The log for database '%.*ls' is not available. Check the event log for related error messages. Resolve any errors and restart the database.    |
-|    [9002](../../relational-databases/errors-events/mssqlserver-9002-database-engine-error.md)    |    17    |    Yes    |    The transaction log for database '%.*ls' is full. To find out why space in the log cannot be reused, see the log_reuse_wait_desc column in sys.databases    |
-|    [9003](../../relational-databases/errors-events/mssqlserver-9003-database-engine-error.md)    |    20    |    Yes    |    The log scan number %S_LSN passed to log scan in database '%.*ls' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication. Otherwise, restore from backup if the problem results in a failure during startup.    |
-|    [9004](../../relational-databases/errors-events/mssqlserver-9004-database-engine-error.md)    |    21    |    Yes    |    An error occurred while processing the log for database '%.*ls'. If possible, restore from backup. If a backup is not available, it might be necessary to rebuild the log.    |
+|    [9001](../mssqlserver-9001-database-engine-error.md)    |    10    |    Yes    |    The log for database '%.*ls' is not available. Check the event log for related error messages. Resolve any errors and restart the database.    |
+|    [9002](../mssqlserver-9002-database-engine-error.md)    |    17    |    Yes    |    The transaction log for database '%.*ls' is full. To find out why space in the log cannot be reused, see the log_reuse_wait_desc column in sys.databases    |
+|    [9003](../mssqlserver-9003-database-engine-error.md)    |    20    |    Yes    |    The log scan number %S_LSN passed to log scan in database '%.*ls' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication. Otherwise, restore from backup if the problem results in a failure during startup.    |
+|    [9004](../mssqlserver-9004-database-engine-error.md)    |    21    |    Yes    |    An error occurred while processing the log for database '%.*ls'. If possible, restore from backup. If a backup is not available, it might be necessary to rebuild the log.    |
 |    9005    |    16    |    No    |    Either start LSN or end LSN specified in OpenRowset(DBLog, ...) is invalid.    |
 |    9006    |    10    |    No    |    Cannot shrink log file %d (%s) because total number of logical log files cannot be fewer than %d.    |
 |    9007    |    10    |    No    |    Cannot shrink log file %d (%s) because requested size (%dKB) is larger than the start of the last logical log file.    |
@@ -23,7 +23,7 @@ ms.topic: include
 |    9014    |    21    |    Yes    |    An error occurred while processing the log for database '%.*ls'. THe log block version is higher than this server allows.    |
 |    9015    |    24    |    Yes    |    The log record at LSN %S_LSN is corrupted.    |
 |    9016    |    21    |    Yes    |    An error occurred while processing the log for database '%.*ls'. The log block could not be decrypted.    |
-|    [9017](../../relational-databases/errors-events/mssqlserver-9017-database-engine-error.md)    |    10    |    No    |    Database %ls has more than %d virtual log files which is excessive. Too many virtual log files can cause long startup and backup times. Consider shrinking the log and using a different growth increment to reduce the number of virtual log files.  |
+|    [9017](../mssqlserver-9017-database-engine-error.md)    |    10    |    No    |    Database %ls has more than %d virtual log files which is excessive. Too many virtual log files can cause long startup and backup times. Consider shrinking the log and using a different growth increment to reduce the number of virtual log files.  |
 |    9100    |    23    |    Yes    |    Possible index corruption detected. Run DBCC CHECKDB.    |
 |    9101    |    16    |    No    |    auto statistics internal    |
 |    9104    |    16    |    No    |    auto statistics internal    |
@@ -199,7 +199,7 @@ ms.topic: include
 |    9521    |    16    |    No    |    Error processing XML data type. The XML data type instance contains a negative xs:date or xs:dateTime value.    |
 |    9522    |    16    |    No    |    The XQuery modify method is not allowed on sparse column sets.    |
 |    9523    |    16    |    No    |    Cannot update the sparse column set '%.*ls' because the XML content supplied references the non-sparse column '%.*ls' which does not belong to this column set. The XML data used to update a sparse column set cannot reference columns that don't belong to the column set.    |
-|    [9524](../../relational-databases/errors-events/mssqlserver-9524-database-engine-error.md)    |    16    |    No    |    The XML content provided does not conform to the required XML format for sparse column sets.    |
+|    [9524](../mssqlserver-9524-database-engine-error.md)    |    16    |    No    |    The XML content provided does not conform to the required XML format for sparse column sets.    |
 |    9525    |    16    |    No    |    The XML content that is supplied for the sparse column set '%.*ls' contains duplicate references to the column '%.*ls'. A column can only be referenced once in XML content supplied to a sparse column set.    |
 |    9526    |    16    |    No    |    In the XML content that is supplied for the sparse column set '%.*ls', the '%.*ls' attribute value on the element '%.*ls' is out of range. The valid range is from 1 to %d.    |
 |    9527    |    16    |    No    |    In the XML content that is supplied for the column set '%.*ls', the sqltypes:scale attribute value on the element '%.*ls' is out of range. The valid range for the scale is from 0 to the specified precision.    |
@@ -207,7 +207,7 @@ ms.topic: include
 |    9529    |    16    |    No    |    In the XML content that is supplied for the column set column '%.*ls', the sqlDBType:base64Encoded attribute on the element '%.*ls' is not valid. The base64Encoded attribute can only be used when the corresponding sparse column is of character data type (char, varchar, nchar, nvarchar), or if the sparse column is of data type sql_variant and the value of the xsi:type attribute is "Char", "VarChar", "NChar", or "NVarChar".    |
 |    9530    |    16    |    No    |    In the XML content that is supplied for the column set column '%.*ls, the '%.*ls' attribute on the element '%.*ls' is not valid. Remove the attribute.    |
 |    9531    |    16    |    No    |    In the XML content that is supplied for the column set column '%.*ls', the '%.*ls' attribute value on the element '%.*ls' is not valid.    |
-|    [9532](../../relational-databases/errors-events/mssqlserver-9532-database-engine-error.md)    |    16    |    No    |    In the query/DML operation involving column set '%.*ls', conversion failed when converting from the data type '%ls' to the data type '%ls' for the column '%.*ls'.    |
+|    [9532](../mssqlserver-9532-database-engine-error.md)    |    16    |    No    |    In the query/DML operation involving column set '%.*ls', conversion failed when converting from the data type '%ls' to the data type '%ls' for the column '%.*ls'.    |
 |    9533    |    16    |    No    |    In the XML that is supplied for the column set '%.*ls', the element '%.*ls' should reside in the global namespace. Remove the default namespace declaration or the prefix on the element.    |
 |    9534    |    16    |    No    |    In the query/DML operation involving column set '%.*ls', conversion failed when converting from the data type '%ls' to the data type '%ls' for the column '%.*ls'. Please refer to the Books-on-line for more details on providing XML conversion methods for CLR types.    |
 |    9601    |    16    |    No    |    Cannot relate to %S_MSG %.*ls because it is %S_MSG.    |
@@ -294,7 +294,7 @@ ms.topic: include
 |    9689    |    10    |    No    |    Service Broker manager has shut down.    |
 |    9690    |    10    |    Yes    |    The %S_MSG protocol transport is now listening for connections.    |
 |    9691    |    10    |    No    |    The %S_MSG protocol transport has stopped listening for connections.    |
-|    [9692](../../relational-databases/errors-events/mssqlserver-9692-database-engine-error.md)    |    16    |    No    |    The %S_MSG protocol transport cannot listen on port %d because it is in use by another process.    |
+|    [9692](../mssqlserver-9692-database-engine-error.md)    |    16    |    No    |    The %S_MSG protocol transport cannot listen on port %d because it is in use by another process.    |
 |    9693    |    16    |    No    |    The %S_MSG protocol transport could not listen for connections due to the following error: '%.*ls'.    |
 |    9694    |    16    |    No    |    Could not start Service Broker manager. Check the SQL Server error log and the Windows error log for additional error messages.    |
 |    9695    |    16    |    No    |    Could not allocate enough memory to start the Service Broker task manager. This message is a symptom of another problem. Check the SQL Server error log for additional messages, and address the underlying problem.    |
@@ -384,7 +384,7 @@ ms.topic: include
 |    9787    |    10    |    No    |    An error occurred while processing broker mirroring routes. Error: %i. State: %i.    |
 |    9788    |    10    |    No    |    Unable to route the incoming message. The system database msdb containing routing information is not available.    |
 |    9789    |    10    |    No    |    Unable to route the incoming message. The system database msdb containing routing information is not available. The broker is disabled in msdb.    |
-|    [9790](../../relational-databases/errors-events/mssqlserver-9790-database-engine-error.md)    |    10    |    No    |    Unable to route the incoming message. The system database msdb containing routing information is in SINGLE USER mode.    |
+|    [9790](../mssqlserver-9790-database-engine-error.md)    |    10    |    No    |    Unable to route the incoming message. The system database msdb containing routing information is in SINGLE USER mode.    |
 |    9791    |    10    |    No    |    The broker is disabled in the sender's database.    |
 |    9792    |    10    |    No    |    Could not forward the message because forwarding is disabled in this SQL Server instance.    |
 |    9793    |    10    |    No    |    The target service name could not be found. Ensure that the service name is specified correctly and/or the routing information has been supplied.    |
@@ -463,7 +463,7 @@ ms.topic: include
 |    9952    |    10    |    No    |    Informational: Full-text auto change tracking is turned off for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') due to fatal crawl error.    |
 |    9953    |    16    |    No    |    The path '%.*ls' has invalid attributes. It needs to be a directory. It must not be hidden, read-only, or on a removable drive.    |
 |    9954    |    16    |    No    |    SQL Server failed to communicate with filter daemon launch service (Windows error: %ls). Full-Text filter daemon process failed to start. Full-text search functionality will not be available.    |
-|    [9955](../../relational-databases/errors-events/mssqlserver-9955-database-engine-error.md)    |    16    |    No    |    SQL Server failed to create named pipe '%ls' to communicate with the full-text filter daemon (Windows error: %d). Either a named pipe already exists for a filter daemon host process, the system is low on resources, or the security identification number (SID) lookup for the filter daemon account group failed. To resolve this error, terminate any running full-text filter daemon processes, and if necessary reconfigure the full-text daemon launcher service account.    |
+|    [9955](../mssqlserver-9955-database-engine-error.md)    |    16    |    No    |    SQL Server failed to create named pipe '%ls' to communicate with the full-text filter daemon (Windows error: %d). Either a named pipe already exists for a filter daemon host process, the system is low on resources, or the security identification number (SID) lookup for the filter daemon account group failed. To resolve this error, terminate any running full-text filter daemon processes, and if necessary reconfigure the full-text daemon launcher service account.    |
 |    9959    |    16    |    No    |    Cannot perform requested task because full-text memory manager is not initialized.    |
 |    9960    |    16    |    No    |    View '%.*ls' is not an indexed view. Full-text index is not allowed to be created on it.    |
 |    9961    |    16    |    No    |    Logical name, size, maxsize, filegrowth, and offline properties of full-text catalog cannot be modified.    |

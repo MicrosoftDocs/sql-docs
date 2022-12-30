@@ -348,10 +348,10 @@ ms.topic: include
 |    15397    |    16    |    No    |    The %S_MSG is not protected by a password. A decryption password cannot be used for this operation.    |
 |    15398    |    11    |    No    |    Only objects in the master database owned by dbo can have the startup setting changed.    |
 |    15399    |    11    |    No    |    Could not change startup option because this option is restricted to objects that have no parameters.    |
-|    [15401](../../relational-databases/errors-events/mssqlserver-15401-database-engine-error.md)    |    11    |    No    |    Windows NT user or group '%s' not found. Check the name again.    |
+|    [15401](../mssqlserver-15401-database-engine-error.md)    |    11    |    No    |    Windows NT user or group '%s' not found. Check the name again.    |
 |    15402    |    11    |    No    |    '%s' is not a fixed server role.    |
 |    15403    |    16    |    No    |    The server principal "%.*ls" does not exist, does not have server access, or you do not have permission.    |
-|    [15404](../../relational-databases/errors-events/mssqlserver-15404-database-engine-error.md)    |    16    |    No    |    Could not obtain information about Windows NT group/user '%ls', error code %#lx.    |
+|    [15404](../mssqlserver-15404-database-engine-error.md)    |    16    |    No    |    Could not obtain information about Windows NT group/user '%ls', error code %#lx.    |
 |    15405    |    11    |    No    |    Cannot use the special principal '%s'.    |
 |    15406    |    16    |    No    |    Cannot execute as the server principal because the principal "%.*ls" does not exist, this type of principal cannot be impersonated, or you do not have permission.    |
 |    15407    |    11    |    No    |    '%s' is not a valid Windows NT name. Give the complete name: <domain\username>.    |
@@ -431,7 +431,7 @@ ms.topic: include
 |    15514    |    10    |    No    |    Rule bound to table column.    |
 |    15515    |    10    |    No    |    Rule bound to data type.    |
 |    15516    |    10    |    No    |    The new rule has been bound to column(s) of the specified user data type.    |
-|    [15517](../../relational-databases/errors-events/mssqlserver-15517-database-engine-error.md)    |    16    |    No    |    Cannot execute as the database principal because the principal "%.*ls" does not exist, this type of principal cannot be impersonated, or you do not have permission.    |
+|    [15517](../mssqlserver-15517-database-engine-error.md)    |    16    |    No    |    Cannot execute as the database principal because the principal "%.*ls" does not exist, this type of principal cannot be impersonated, or you do not have permission.    |
 |    15518    |    16    |    No    |    Cannot execute as the Windows token. It is not valid, or you do not have permission.    |
 |    15519    |    10    |    No    |    Default unbound from table column.    |
 |    15520    |    10    |    No    |    Default unbound from data type.    |
@@ -472,7 +472,7 @@ ms.topic: include
 |    15578    |    16    |    No    |    There is already a master key in the database. Please drop it before performing this statement.    |
 |    15579    |    16    |    No    |    Adding an encryption to the symmetric key failed. An encryption by the same %S_MSG '%.*s' may already exist.    |
 |    15580    |    16    |    No    |    Cannot drop %S_MSG because %S_MSG '%.*s' is encrypted by it.    |
-|    [15581](../../relational-databases/errors-events/mssqlserver-15581-database-engine-error.md)    |    16    |    No    |    Please create a master key in the database or open the master key in the session before performing this operation.    |
+|    [15581](../mssqlserver-15581-database-engine-error.md)    |    16    |    No    |    Please create a master key in the database or open the master key in the session before performing this operation.    |
 |    15583    |    10    |    No    |    The module being signed is marked to execute as owner. If the owner changes the signature will not be valid.    |
 |    15584    |    10    |    No    |    An error occurred while decrypting %S_MSG '%.*ls' that was encrypted by the old master key. The error was ignored because the FORCE option was specified.    |
 |    15585    |    10    |    No    |    The current master key cannot be decrypted. The error was ignored because the FORCE option was specified.    |
@@ -489,7 +489,7 @@ ms.topic: include
 |    15596    |    10    |    No    |    Warning: use of a UNIQUE index, PRIMARY KEY constraint, or UNIQUE constraint on a table with row-level security can allow information disclosure.    |
 |    15597    |    10    |    No    |    Warning: use of an IDENTITY column on a table with row-level security can allow information disclosure.    |
 |    15598    |    10    |    No    |    Warning: use of an indexed view on a table with row-level security can allow information disclosure.    |
-|    [15599](../../relational-databases/errors-events/mssqlserver-15599-database-engine-error.md)    |    10    |    No    |    Warning: use of a FOREIGN KEY constraint on a table with row-level security enabled can allow information disclosure, modification, or deletion not authorized at the row level.    |
+|    [15599](../mssqlserver-15599-database-engine-error.md)    |    10    |    No    |    Warning: use of a FOREIGN KEY constraint on a table with row-level security enabled can allow information disclosure, modification, or deletion not authorized at the row level.    |
 |    15600    |    15    |    No    |    An invalid parameter or option was specified for procedure '%s'.    |
 |    15601    |    16    |    No    |    Full-Text Search is not enabled for the current database. Use sp_fulltext_database to enable Full-Text Search. The functionality to disable and enable full-text search for a database is deprecated. Please change your application.    |
 |    15612    |    16    |    No    |    DBCC DBCONTROL error. Database was not made read-only.    |
@@ -512,5 +512,5 @@ ms.topic: include
 |    15658    |    16    |    No    |    Cannot run sp_resetstatus against a database snapshot.    |
 |    15659    |    16    |    No    |    The schema '%ls' specified for parameter schema_name does not exist.    |
 |    15660    |    16    |    No    |    Compressing XML index is not supported by the stored procedure sp_estimate_data_compression_savings.    |
-|    [15661](../../relational-databases/errors-events/mssqlserver-15661-database-engine-error.md)    |    16    |    No    |    Compressing temporary tables is not supported by the stored procedure sp_estimate_data_compression_savings.    |
+|    [15661](../mssqlserver-15661-database-engine-error.md)    |    16    |    No    |    Compressing temporary tables is not supported by the stored procedure sp_estimate_data_compression_savings.    |
 |    15662    |    16    |    No    |    Compressing tables with sparse columns or column sets is not supported by the stored procedure sp_estimate_data_compression_savings.    |

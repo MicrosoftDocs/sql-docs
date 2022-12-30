@@ -9,12 +9,12 @@ ms.topic: include
 | :--- | :--- | :--- | :--- |
 | 21 | 20 | No | Warning: Fatal error %d occurred at %S_DATE. Note the error and time, and contact your system administrator. |
 | 101 | 15 | No | Query not allowed in Wait for. |
-| [102](../../relational-databases/errors-events/mssqlserver-102-database-engine-error.md) | 15 | No | Incorrect syntax near '%.*ls'. |
+| [102](../mssqlserver-102-database-engine-error.md) | 15 | No | Incorrect syntax near '%.*ls'. |
 | 103 | 15 | No | The %S_MSG that starts with '%.*ls' is too long. Maximum length is %d. |
 | 104 | 15 | No | ORDER BY items must appear in the select list if the statement contains a UNION, INTERSECT or EXCEPT operator. |
 | 105 | 15 | No | Unclosed quotation mark after the character string '%.*ls'. |
 | 106 | 16 | No | Too many table names in the query. The maximum allowable is %d. |
-| [107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md) | 15 | No | The column prefix '%.*ls' does not match with a table name or alias name used in the query. |
+| [107](../mssqlserver-107-database-engine-error.md) | 15 | No | The column prefix '%.*ls' does not match with a table name or alias name used in the query. |
 | 108 | 15 | No | The ORDER BY position number %ld is out of range of the number of items in the select list. |
 | 109 | 15 | No | There are more columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. |
 | 110 | 15 | No | There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. |
@@ -43,7 +43,7 @@ ms.topic: include
 | 134 | 15 | No | The variable name '%.*ls' has already been declared. Variable names must be unique within a query batch or stored procedure. |
 | 135 | 15 | No | Cannot use a BREAK statement outside the scope of a WHILE statement. |
 | 136 | 15 | No | Cannot use a CONTINUE statement outside the scope of a WHILE statement. |
-| [137](../../relational-databases/errors-events/mssqlserver-137-database-engine-error.md) | 15 | No | Must declare the scalar variable "%.*ls". |
+| [137](../mssqlserver-137-database-engine-error.md) | 15 | No | Must declare the scalar variable "%.*ls". |
 | 138 | 15 | No | Correlation clause in a subquery not permitted. |
 | 139 | 15 | No | Cannot assign a default value to a local variable. |
 | 140 | 15 | No | Can only use IF UPDATE within a CREATE TRIGGER statement. |
@@ -111,8 +111,8 @@ ms.topic: include
 | 204 | 20 | Yes | Normalization error in node %ls. |
 | 205 | 16 | No | All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists. |
 | 206 | 16 | No | Operand type clash: %ls is incompatible with %ls |
-| [207](../../relational-databases/errors-events/mssqlserver-207-database-engine-error.md) | 16 | No | Invalid column name '%.*ls'. |
-| [208](../../relational-databases/errors-events/mssqlserver-208-database-engine-error.md) | 16 | No | Invalid object name '%.*ls'. |
+| [207](../mssqlserver-207-database-engine-error.md) | 16 | No | Invalid column name '%.*ls'. |
+| [208](../mssqlserver-208-database-engine-error.md) | 16 | No | Invalid object name '%.*ls'. |
 | 209 | 16 | No | Ambiguous column name '%.*ls'. |
 | 210 | 16 | No | Conversion failed when converting datetime from binary/varbinary string. |
 | 211 | 23 | Yes | Possible schema corruption. Run DBCC CHECKCATALOG. |
@@ -138,7 +138,7 @@ ms.topic: include
 | 231 | 11 | No | No such default. ID = %ld, database ID = %d. |
 | 232 | 16 | No | Arithmetic overflow error for type %ls, value = %f. |
 | 233 | 16 | No | The column '%.*ls' in table '%.*ls' cannot be null. |
-| [233](../../relational-databases/errors-events/mssqlserver-233-database-engine-error.md) | | | A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 233) |
+| [233](../mssqlserver-233-database-engine-error.md) | | | A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 233) |
 | 234 | 16 | No | There is insufficient result space to convert a money value to %ls. |
 | 235 | 16 | No | Cannot convert a char value to money. The char value has incorrect syntax. |
 | 236 | 16 | No | The conversion from char data type to money resulted in a money overflow error. |
@@ -257,7 +257,7 @@ ms.topic: include
 | 357 | 15 | No | The target table '%.*ls' of the INSERT statement cannot have any enabled rules when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. Found rule '%ls'. |
 | 358 | 15 | No | The target table '%.*ls' of the MERGE statement cannot have any enabled rules. Found rule '%ls'. |
 | 359 | 15 | No | The target '%.*ls' of an OUTPUT INTO clause has an index with the ignore_dup_key option and cannot be used when an OUTPUT clause is also used. |
-| [360](../../relational-databases/errors-events/mssqlserver-360-database-engine-error.md) | 15 | No | The target column list of an INSERT, UPDATE, or MERGE statement cannot contain both a sparse column and the column set that contains the sparse column. Rewrite the statement to include either the sparse column or the column set, but not both. |
+| [360](../mssqlserver-360-database-engine-error.md) | 15 | No | The target column list of an INSERT, UPDATE, or MERGE statement cannot contain both a sparse column and the column set that contains the sparse column. Rewrite the statement to include either the sparse column or the column set, but not both. |
 | 361 | 16 | No | The number of target columns that are specified in an INSERT, UPDATE, or MERGE statement exceeds the maximum of %d. This total number includes identity, timestamp, and columns that have default values. To correct this error, change the query to target a sparse column set instead of single sparse columns. |
 | 401 | 16 | No | Unimplemented statement or expression %ls. |
 | 402 | 16 | No | The data types %s and %s are incompatible in the %s operator. |
@@ -353,7 +353,7 @@ ms.topic: include
 | 507 | 16 | No | Invalid argument for SET ROWCOUNT. Must be a non-null non-negative integer. |
 | 509 | 11 | No | User name '%.*ls' not found. |
 | 510 | 16 | No | Cannot create a worktable row larger than allowable maximum. Resubmit your query with the ROBUST PLAN hint. |
-| [511](../../relational-databases/errors-events/mssqlserver-511-database-engine-error.md) | 16 | No | Cannot create a row of size %d which is greater than the allowable maximum row size of %d. |
+| [511](../mssqlserver-511-database-engine-error.md) | 16 | No | Cannot create a row of size %d which is greater than the allowable maximum row size of %d. |
 | 512 | 16 | No | Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. |
 | 513 | 16 | No | A column insert or update conflicts with a rule imposed by a previous CREATE RULE statement. The statement was terminated. The conflict occurred in database '%.*ls', table '%.*ls', column '%.*ls'. |
 | 515 | 16 | No | Cannot insert the value NULL into column '%.*ls', table '%.*ls'; column does not allow nulls. %ls fails. |
@@ -426,18 +426,18 @@ ms.topic: include
 | 597 | 16 | No | The execution of in-proc data access is being terminated due to errors in the User Datagram Protocol (UDP). |
 | 598 | 16 | No | An error occurred while executing CREATE/ALTER DB. Please look at the previous error for more information. |
 | 599 | 16 | No | %.*ls: The length of the result exceeds the length limit (2GB) of the target large type. |
-| [601](../../relational-databases/errors-events/mssqlserver-601-database-engine-error.md) | 12 | No | Could not continue scan with NOLOCK due to data movement. |
+| [601](../mssqlserver-601-database-engine-error.md) | 12 | No | Could not continue scan with NOLOCK due to data movement. |
 | 602 | 21 | Yes | Could not find an entry for table or index with partition ID %I64d in database %d. This error can occur if a stored procedure references a dropped table, or metadata is corrupted. Drop and re-create the stored procedure, or execute DBCC CHECKDB. |
 | 603 | 21 | Yes | Could not find an entry for table or index with object ID %d (partition ID %I64d) in database %d. This error can occur if a stored procedure references a dropped table, or metadata is corrupted. Drop and re-create the stored procedure, or execute DBCC CHECKDB. |
-| [605](../../relational-databases/errors-events/mssqlserver-605-database-engine-error.md) | 21 | Yes | Attempt to fetch logical page %S_PGID in database %d failed. It belongs to allocation unit %I64d not to %I64d. |
+| [605](../mssqlserver-605-database-engine-error.md) | 21 | Yes | Attempt to fetch logical page %S_PGID in database %d failed. It belongs to allocation unit %I64d not to %I64d. |
 | 606 | 21 | Yes | Metadata inconsistency. Filegroup id %ld specified for table '%.*ls' does not exist. Run DBCC CHECKDB or CHECKCATALOG. |
 | 608 | 16 | Yes | No catalog entry found for partition ID %I64d in database %d. The metadata is inconsistent. Run DBCC CHECKDB to check for a metadata corruption. |
 | 609 | 16 | No | B+ tree is not empty when waking up on RowsetBulk. |
 | 610 | 16 | Yes | Invalid header value from a page. Run DBCC CHECKDB to check for a data corruption. |
-| [611](../../relational-databases/errors-events/mssqlserver-611-database-engine-error.md) | 16 | No | Cannot insert or update a row because total variable column size, including overhead, is %d bytes more than the limit. |
+| [611](../mssqlserver-611-database-engine-error.md) | 16 | No | Cannot insert or update a row because total variable column size, including overhead, is %d bytes more than the limit. |
 | 613 | 21 | No | Could not find an entry for worktable rowset with partition ID %I64d in database %d. |
 | 615 | 21 | Yes | Could not find database ID %d, name '%.*ls'. The database may be offline. Wait a few minutes and try again. |
-| [617](../../relational-databases/errors-events/mssqlserver-617-database-engine-error.md) | 20 | Yes | Descriptor for object ID %ld in database ID %d not found in the hash table during attempt to unhash it. A work table is missing an entry. Rerun the query. If a cursor is involved, close and reopen the cursor. |
+| [617](../mssqlserver-617-database-engine-error.md) | 20 | Yes | Descriptor for object ID %ld in database ID %d not found in the hash table during attempt to unhash it. A work table is missing an entry. Rerun the query. If a cursor is involved, close and reopen the cursor. |
 | 622 | 16 | No | The filegroup "%.*ls" has no files assigned to it. Tables, indexes, text columns, ntext columns, and image columns cannot be populated on this filegroup until a file is added. |
 | 627 | 16 | No | Cannot use SAVE TRANSACTION within a distributed transaction. |
 | 628 | 16 | No | Cannot issue SAVE TRANSACTION when there is no active transaction. |
@@ -462,10 +462,10 @@ ms.topic: include
 | 683 | 22 | No | An internal error occurred while trying to convert between variable-length and fixed-length decimal formats. Run DBCC CHECKDB to check for any database corruption. |
 | 684 | 22 | No | An internal error occurred while attempting to convert between compressed and uncompressed storage formats. Run DBCC CHECKDB to check for any corruption. |
 | 685 | 22 | No | An internal error occurred while attempting to retrieve a backpointer for a heap forwarded record. |
-| [701](../../relational-databases/errors-events/mssqlserver-701-database-engine-error.md) | 19 | Yes | There is insufficient system memory in resource pool '%ls' to run this query. |
+| [701](../mssqlserver-701-database-engine-error.md) | 19 | Yes | There is insufficient system memory in resource pool '%ls' to run this query. |
 | 708 | 10 | Yes | Server is running low on virtual address space or machine is running low on virtual memory. Reserved memory used %d times since startup. Cancel query and re-run, decrease server load, or cancel other applications. |
 | 801 | 20 | Yes | A buffer was encountered with an unexpected status of 0x%x. |
-| [802](../../relational-databases/errors-events/mssqlserver-802-database-engine-error.md) | 17 | No | There is insufficient memory available in the buffer pool. |
+| [802](../mssqlserver-802-database-engine-error.md) | 17 | No | There is insufficient memory available in the buffer pool. |
 | 803 | 10 | Yes | simulated failure (DEBUG only) |
 | 805 | 10 | Yes | restore pending |
 | 806 | 10 | Yes | audit failure (a page read from disk failed to pass basic integrity checks) |
@@ -473,29 +473,29 @@ ms.topic: include
 | 808 | 10 | Yes | insufficient bytes transferred |
 | 821 | 20 | Yes | Could not unhash buffer at 0x%p with a buffer page number of %S_PGID and database ID %d with HASHED status set. The buffer was not found. %S_PAGE. Contact Technical Support. |
 | 822 | 21 | Yes | Could not start I/O operation for request %S_BLKIOPTR. Contact Technical Support. |
-| [823](../../relational-databases/errors-events/mssqlserver-823-database-engine-error.md) | 24 | Yes | The operating system returned error %ls to SQL Server during a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and system event log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
-| [824](../../relational-databases/errors-events/mssqlserver-824-database-engine-error.md) | 24 | Yes | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
-| [825](../../relational-databases/errors-events/mssqlserver-825-database-engine-error.md) | 10 | Yes | A read of the file '%ls' at offset %#016I64x succeeded after failing %d time(s) with error: %ls. Additional messages in the SQL Server error log and system event log may provide more detail. This error condition threatens database integrity and must be corrected. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
+| [823](../mssqlserver-823-database-engine-error.md) | 24 | Yes | The operating system returned error %ls to SQL Server during a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and system event log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
+| [824](../mssqlserver-824-database-engine-error.md) | 24 | Yes | SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
+| [825](../mssqlserver-825-database-engine-error.md) | 10 | Yes | A read of the file '%ls' at offset %#016I64x succeeded after failing %d time(s) with error: %ls. Additional messages in the SQL Server error log and system event log may provide more detail. This error condition threatens database integrity and must be corrected. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online. |
 | 826 | 10 | Yes | incorrect pageid (expected %d:%d; actual %d:%d) |
 | 829 | 21 | Yes | Database ID %d, Page %S_PGID is marked RestorePending, which may indicate disk corruption. To recover from this state, perform a restore. |
 | 830 | 10 | No | stale page (a page read returned a log sequence number (LSN) (%u:%u:%u) that is older than the last one that was written (%u:%u:%u)) |
 | 831 | 20 | No | Unable to deallocate a kept page. |
-| [832](../../relational-databases/errors-events/mssqlserver-832-database-engine-error.md) | 24 | Yes | A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption. |
-| [833](../../relational-databases/errors-events/mssqlserver-833-database-engine-error.md) | 10 | No | SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file '%ls' in database '%ls' (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x |
-| [844](../../relational-databases/errors-events/mssqlserver-844-database-engine-error.md) | 10 | No | Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait. |
-| [845](../../relational-databases/errors-events/mssqlserver-845-database-engine-error.md) | 17 | No | Time-out occurred while waiting for buffer latch type %d for page %S_PGID, database ID %d. |
-| [846](../../relational-databases/errors-events/mssqlserver-846-database-engine-error.md) | 10 | No | A time-out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit Id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Not continuing to wait. |
-| [847](../../relational-databases/errors-events/mssqlserver-847-database-engine-error.md) | 10 | Yes | Timeout occurred while waiting for latch: class '%ls', id %p, type %d, Task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait. |
+| [832](../mssqlserver-832-database-engine-error.md) | 24 | Yes | A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption. |
+| [833](../mssqlserver-833-database-engine-error.md) | 10 | No | SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file '%ls' in database '%ls' (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x |
+| [844](../mssqlserver-844-database-engine-error.md) | 10 | No | Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait. |
+| [845](../mssqlserver-845-database-engine-error.md) | 17 | No | Time-out occurred while waiting for buffer latch type %d for page %S_PGID, database ID %d. |
+| [846](../mssqlserver-846-database-engine-error.md) | 10 | No | A time-out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit Id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Not continuing to wait. |
+| [847](../mssqlserver-847-database-engine-error.md) | 10 | Yes | Timeout occurred while waiting for latch: class '%ls', id %p, type %d, Task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait. |
 | 848 | 10 | Yes | Using large pages for buffer pool. |
 | 849 | 10 | Yes | Using locked pages for buffer pool. |
 | 850 | 10 | Yes | %I64u MB of large page memory allocated. |
 | 851 | 10 | No | the page is in an OFFLINE file which cannot be read |
-| [854](../../relational-databases/errors-events/mssqlserver-854-database-engine-error.md) | 10 | Yes | Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption. |
-| [855](../../relational-databases/errors-events/mssqlserver-855-database-engine-error.md) | 10 | Yes | Uncorrectable hardware memory corruption detected. Your system may become unstable. Check the Windows event log for more details. |
-| [856](../../relational-databases/errors-events/mssqlserver-856-database-engine-error.md) | 10 | Yes | SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page. |
+| [854](../mssqlserver-854-database-engine-error.md) | 10 | Yes | Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption. |
+| [855](../mssqlserver-855-database-engine-error.md) | 10 | Yes | Uncorrectable hardware memory corruption detected. Your system may become unstable. Check the Windows event log for more details. |
+| [856](../mssqlserver-856-database-engine-error.md) | 10 | Yes | SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page. |
 | 902 | 16 | No | To change the %ls, the database must be in state in which a checkpoint can be executed. |
 | 904 | 16 | No | Database %ld cannot be autostarted during server shutdown or startup. |
-| [905](../../relational-databases/errors-events/mssqlserver-905-database-engine-error.md) | 21 | Yes | Database '%.*ls' cannot be started in this edition of SQL Server because it contains a partition function '%.*ls'. Only Enterprise edition of SQL Server supports partitioning. |
+| [905](../mssqlserver-905-database-engine-error.md) | 21 | Yes | Database '%.*ls' cannot be started in this edition of SQL Server because it contains a partition function '%.*ls'. Only Enterprise edition of SQL Server supports partitioning. |
 | 907 | 16 | No | The database "%ls" has inconsistent database or file metadata. |
 | 908 | 10 | Yes | Filegroup %ls in database %ls is unavailable because it is %ls. Restore or alter the filegroup to be available. |
 | 909 | 21 | Yes | Database '%.*ls' cannot be started in this edition of SQL Server because part or all of object '%.*ls' is enabled with data compression or vardecimal storage format. Data compression and vardecimal storage format are only supported on SQL Server Enterprise Edition. |
@@ -505,7 +505,7 @@ ms.topic: include
 | 913 | 22 | Yes | Could not find database ID %d. Database may not be activated yet or may be in transition. Reissue the query once the database is available. If you do not think this error is due to a database that is transitioning its state and this error continues to occur, contact your primary support provider. Please have available for review the Microsoft SQL Server error log and any additional information relevant to the circumstances when the error occurred. |
 | 914 | 21 | No | Script level upgrade for database '%.*ls' failed because upgrade step '%.*ls' was aborted before completion. If the abort happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion. |
 | 915 | 21 | No | Unable to obtain the current script level for database '%.*ls'. If the error happened during startup of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that script upgrade may run to completion. |
-| [916](../../relational-databases/errors-events/mssqlserver-916-database-engine-error.md) | 14 | No | The server principal "%.*ls" is not able to access the database "%.*ls" under the current security context. |
+| [916](../mssqlserver-916-database-engine-error.md) | 14 | No | The server principal "%.*ls" is not able to access the database "%.*ls" under the current security context. |
 | 917 | 21 | No | An upgrade script batch failed to execute for database '%.*ls' due to compilation error. Check the previous error message for the line which caused compilation to fail. |
 | 918 | 21 | No | Failed to load the engine script metadata from script DLL '%.*ls'. The error code reported by Windows was %d. This is a serious error condition, which usually indicates a corrupt or incomplete installation. Repairing the SQL Server instance may help resolve this error. |
 | 919 | 10 | No | User '%.*ls' is changing database script level entry %d to a value of %d. |
@@ -515,7 +515,7 @@ ms.topic: include
 | 923 | 14 | No | Database '%.*ls' is in restricted mode. Only the database owner and members of the dbcreator and sysadmin roles can access it. |
 | 924 | 14 | No | Database '%.*ls' is already open and can only have one user at a time. |
 | 925 | 19 | Yes | Maximum number of databases used for each query has been exceeded. The maximum allowed is %d. |
-| [926](../../relational-databases/errors-events/mssqlserver-926-database-engine-error.md) | 14 | No | Database '%.*ls' cannot be opened. It has been marked SUSPECT by recovery. See the SQL Server errorlog for more information. |
+| [926](../mssqlserver-926-database-engine-error.md) | 14 | No | Database '%.*ls' cannot be opened. It has been marked SUSPECT by recovery. See the SQL Server errorlog for more information. |
 | 927 | 14 | No | Database '%.*ls' cannot be opened. It is in the middle of a restore. |
 | 928 | 20 | Yes | During upgrade, database raised exception %d, severity %d, state %d, address %p. Use the exception number to determine the cause. |
 | 929 | 20 | Yes | Unable to close a database that is not currently open. The application should reconnect and try again. If this action does not correct the problem, contact your primary support provider. |
@@ -528,10 +528,10 @@ ms.topic: include
 | 942 | 14 | No | Database '%.*ls' cannot be opened because it is offline. |
 | 943 | 14 | No | Database '%.*ls' cannot be opened because its version (%d) is later than the current server version (%d). |
 | 944 | 10 | No | Converting database '%.*ls' from version %d to the current version %d. |
-| [945](../../relational-databases/errors-events/mssqlserver-945-database-engine-error.md) | 16 | No | Database '%.*ls' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details. |
+| [945](../mssqlserver-945-database-engine-error.md) | 16 | No | Database '%.*ls' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details. |
 | 946 | 14 | No | Cannot open database '%.*ls' version %d. Upgrade the database to the latest version. |
 | 947 | 16 | Yes | Error while closing database '%.*ls'. Check for previous additional errors and retry the operation. |
-| [948](../../relational-databases/errors-events/mssqlserver-948-database-engine-error.md) | 20 | Yes | The database '%.*ls' cannot be opened because it is version %d. This server supports version %d and earlier. A downgrade path is not supported. |
+| [948](../mssqlserver-948-database-engine-error.md) | 20 | Yes | The database '%.*ls' cannot be opened because it is version %d. This server supports version %d and earlier. A downgrade path is not supported. |
 | 949 | 16 | No | tempdb is skipped. You cannot run a query that requires tempdb |
 | 950 | 20 | Yes | Database '%.*ls' cannot be upgraded because its non-release version (%d) is not supported by this version of SQL Server. You cannot open a database that is incompatible with this version of sqlservr.exe. You must re-create the database. |
 | 951 | 10 | No | Database '%.*ls' running the upgrade step from version %d to version %d. |

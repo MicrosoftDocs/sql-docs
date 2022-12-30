@@ -38,7 +38,7 @@ ms.topic: include
 |    4061    |    11    |    No    |    Neither the database "%.*ls" requested by the login nor the user default database could be opened. The master database is being used instead.    |
 |    4062    |    11    |    No    |    Cannot open user default database. Using master database instead.    |
 |    4063    |    11    |    No    |    Cannot open database "%.*ls" that was requested by the login. Using the user default database "%.*ls" instead.    |
-|    [4064](../../relational-databases/errors-events/mssqlserver-4064-database-engine-error.md)    |    11    |    No    |    Cannot open user default database. Login failed.    |
+|    [4064](../mssqlserver-4064-database-engine-error.md)    |    11    |    No    |    Cannot open user default database. Login failed.    |
 |    4065    |    16    |    Yes    |    User is trying to use '%.*ls' through ODS, which is not supported any more.    |
 |    4066    |    16    |    No    |    Type IDs larger than 65535 cannot be sent to clients shipped in SQL Server 2000 or earlier.    |
 |    4067    |    16    |    No    |    CLR type serialization failed because an invalid cookie was specified.    |
@@ -57,7 +57,7 @@ ms.topic: include
 |    4101    |    16    |    No    |    Aggregates on the right side of an APPLY cannot reference columns from the left side.    |
 |    4102    |    15    |    No    |    The READPAST lock hint is only allowed on target tables of UPDATE and DELETE and on tables specified in an explicit FROM clause.    |
 |    4103    |    15    |    No    |    %.*ls: Temporary views are not allowed.    |
-|    [4104](../../relational-databases/errors-events/mssqlserver-4104-database-engine-error.md)    |    16    |    No    |    The multi-part identifier "%.*ls" could not be bound.    |
+|    [4104](../mssqlserver-4104-database-engine-error.md)    |    16    |    No    |    The multi-part identifier "%.*ls" could not be bound.    |
 |    4105    |    16    |    No    |    User-defined functions, partition functions, and column references are not allowed in expressions in this context.    |
 |    4106    |    16    |    No    |    Non-ANSI outer joins (*= and =*) are not allowed when a table that contains a column set is used in a query. Change the query to use ANSI outer joins.    |
 |    4107    |    16    |    No    |    Inserting into remote tables or views is not allowed by using the BCP utility or by using BULK INSERT.    |
@@ -130,11 +130,11 @@ ms.topic: include
 |    4177    |    16    |    No    |    The FROM clause of a PROB_MATCH query must consist of a single derived table.    |
 |    4184    |    16    |    No    |    Cannot retrieve table data for the query operation because the table "%.*ls" schema is being altered too frequently. Because the table "%.*ls" contains a filtered index or filtered statistics, changes to the table schema require a refresh of all table data. Retry the query operation, and if the problem persists, use SQL Server Profiler to identify what schema-altering operations are occurring.    |
 |    4185    |    16    |    No    |    This action cannot be performed on a system type.    |
-|    [4186](../../relational-databases/errors-events/mssqlserver-4186-database-engine-error.md)    |    16    |    No    |    Column '%ls.%.*ls' cannot be referenced in the OUTPUT clause because the column definition contains a subquery or references a function that performs user or system data access. A function is assumed by default to perform data access if it is not schemabound. Consider removing the subquery or function from the column definition or removing the column from the OUTPUT clause.    |
+|    [4186](../mssqlserver-4186-database-engine-error.md)    |    16    |    No    |    Column '%ls.%.*ls' cannot be referenced in the OUTPUT clause because the column definition contains a subquery or references a function that performs user or system data access. A function is assumed by default to perform data access if it is not schemabound. Consider removing the subquery or function from the column definition or removing the column from the OUTPUT clause.    |
 |    4202    |    16    |    No    |    BACKUP LOG is not possible because bulk logged changes exist in the database and one or more filegroups are unavailable.    |
 |    4208    |    16    |    No    |    The statement %hs is not allowed while the recovery model is SIMPLE. Use BACKUP DATABASE or change the recovery model using ALTER DATABASE.    |
 |    4212    |    16    |    No    |    Cannot back up the log of the master database. Use BACKUP DATABASE instead.    |
-|    [4214](../../relational-databases/errors-events/mssqlserver-4214-database-engine-error.md)    |    16    |    No    |    BACKUP LOG cannot be performed because there is no current database backup.    |
+|    [4214](../mssqlserver-4214-database-engine-error.md)    |    16    |    No    |    BACKUP LOG cannot be performed because there is no current database backup.    |
 |    4215    |    10    |    No    |    The log was not truncated because records at the beginning of the log are pending replication or Change Data Capture. Ensure the Log Reader Agent or capture job is running or use sp_repldone to mark transactions as distributed or captured.    |
 |    4217    |    10    |    No    |    BACKUP LOG cannot modify the database because the database is read-only. The backup will continue, although subsequent backups will duplicate the work of this backup.    |
 |    4218    |    16    |    No    |    Bulk-logged operations exist in the database. Perform a BACKUP LOG.    |
@@ -325,7 +325,7 @@ ms.topic: include
 |    4843    |    16    |    No    |    The bulk data source provider string has a syntax error ('%lc') near character position %d.    |
 |    4844    |    16    |    No    |    The bulk data source provider string has an unsupported property name (%ls).    |
 |    4845    |    16    |    No    |    The bulk data source provider string has a syntax error near character position %d. Expected '%lc', but found '%lc'.    |
-|    [4846](../../relational-databases/errors-events/mssqlserver-4846-database-engine-error.md)    |    16    |    No    |    The bulk data provider failed to allocate memory.    |
+|    [4846](../mssqlserver-4846-database-engine-error.md)    |    16    |    No    |    The bulk data provider failed to allocate memory.    |
 |    4847    |    16    |    No    |    Bulk copying into a table with bigint columns is not supported for versions earlier than SQL Server 2000.    |
 |    4848    |    16    |    No    |    Bulk copying into a table with sql_variant columns is not supported for versions earlier than SQL Server 2000.    |
 |    4855    |    16    |    No    |    Line %d in format file "%ls": unexpected element "%ls".    |

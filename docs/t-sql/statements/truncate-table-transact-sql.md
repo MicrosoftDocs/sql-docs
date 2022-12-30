@@ -121,7 +121,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  TRUNCATE TABLE cannot activate a trigger because the operation does not log individual row deletions. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md). 
  
- In [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+ In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
 
 - `TRUNCATE TABLE` is not allowed within the EXPLAIN statement.
 

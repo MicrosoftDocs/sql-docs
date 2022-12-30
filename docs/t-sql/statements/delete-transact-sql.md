@@ -447,7 +447,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### K. Delete all rows from a table  
  The following example deletes all rows from the `Table1` table because a WHERE clause is not used to limit the number of rows deleted.  

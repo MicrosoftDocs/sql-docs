@@ -68,7 +68,7 @@ WHERE ISNUMERIC(PostalCode) <> 1;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses `ISNUMERIC` to return all the postal codes that are not numeric values.  
   
 ```sql

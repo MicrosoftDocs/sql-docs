@@ -100,7 +100,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## Permissions  
  Requires SELECT permission on the schema.  
   
-## Example: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Example: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns information about the `DimEmployee` table from the `AdventureWorks` sample database.  
   
 ```sql  

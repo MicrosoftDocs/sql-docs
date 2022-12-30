@@ -84,7 +84,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## Permissions  
  Requires SELECT permission on the schema.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns information about the column that uniquely identifies rows in the `FactFinance` table.  
   
 ```sql  

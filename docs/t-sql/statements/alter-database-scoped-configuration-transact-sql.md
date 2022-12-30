@@ -59,7 +59,7 @@ The following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssd
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
 - Enable or disable uploading ledger digests to Azure Blob Storage.
 
-This setting is only available in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+This setting is only available in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 - Set the compatibility level of a user database
 
@@ -437,7 +437,7 @@ Allows you to control whether a [Row-Level Security](../../relational-databases/
 
 #### DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 9000 }
 
-**Applies to:** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] only
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only
 
 Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised. At each compatibility level, various query processing enhancements are supported. Each level absorbs the functionality of the preceding level. A database's compatibility level is set to AUTO by default when it's first created and this is the recommended setting. The compatibility level is preserved even after database pause/resume, backup/restore operations.  The default is **AUTO**. 
 

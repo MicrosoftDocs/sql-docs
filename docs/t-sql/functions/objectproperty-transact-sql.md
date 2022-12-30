@@ -223,7 +223,7 @@ ORDER BY type_desc, name;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D: Verifying that an object is a table  
  The following example tests whether `dbo.DimReseller` is a table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  

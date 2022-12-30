@@ -103,8 +103,8 @@ ms.topic: include
 |    1097    |    15    |    No    |    Cannot use If UPDATE within this CREATE TRIGGER statement.    |
 |    1098    |    15    |    No    |    The specified event type(s) is/are not valid on the specified target object.    |
 |    1099    |    15    |    No    |    The ON clause is not valid for this statement.    |
-|    [1101](../../relational-databases/errors-events/mssqlserver-1101-database-engine-error.md)    |    17    |    Yes    |    Could not allocate a new page for database '%.*ls' because of insufficient disk space in filegroup '%.*ls'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.    |
-|    [1105](../../relational-databases/errors-events/mssqlserver-1105-database-engine-error.md)    |    17    |    Yes    |    Could not allocate space for object '%.*ls'%.*ls in database '%.*ls' because the '%.*ls' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.    |
+|    [1101](../mssqlserver-1101-database-engine-error.md)    |    17    |    Yes    |    Could not allocate a new page for database '%.*ls' because of insufficient disk space in filegroup '%.*ls'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.    |
+|    [1105](../mssqlserver-1105-database-engine-error.md)    |    17    |    Yes    |    Could not allocate space for object '%.*ls'%.*ls in database '%.*ls' because the '%.*ls' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.    |
 |    1119    |    16    |    No    |    Removing IAM page %S_PGID failed because someone else is using the object that this IAM page belongs to.    |
 |    1121    |    17    |    No    |    Space allocator cannot allocate page in database %d.    |
 |    1122    |    14    |    No    |    Table error: Page %S_PGID. Test (%hs) failed. Address 0x%x is not aligned.    |
@@ -118,9 +118,9 @@ ms.topic: include
 |    1130    |    10    |    Yes    |    Error while allocating extent for a worktable. Extent %S_PGID in TEMPDB may have been lost.    |
 |    1131    |    10    |    Yes    |    Failed to truncate AppendOnlyStorageUnit 0x%p. Will retry next time. This is an informational message only. No user action is required.    |
 |    1202    |    16    |    No    |    The database-principal '%.*ls' does not exist or user is not a member.    |
-|    [1203](../../relational-databases/errors-events/mssqlserver-1203-database-engine-error.md)    |    20    |    Yes    |    Process ID %d attempted to unlock a resource it does not own: %.*ls. Retry the transaction, because this error may be caused by a timing condition. If the problem persists, contact the database administrator.    |
-|    [1204](../../relational-databases/errors-events/mssqlserver-1204-database-engine-error.md)    |    19    |    Yes    |    The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions.    |
-|    [1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)    |    13    |    No    |    Transaction (Process ID %d) was deadlocked on %.*ls resources with another process and has been chosen as the deadlock victim. Rerun the transaction.    |
+|    [1203](../mssqlserver-1203-database-engine-error.md)    |    20    |    Yes    |    Process ID %d attempted to unlock a resource it does not own: %.*ls. Retry the transaction, because this error may be caused by a timing condition. If the problem persists, contact the database administrator.    |
+|    [1204](../mssqlserver-1204-database-engine-error.md)    |    19    |    Yes    |    The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions.    |
+|    [1205](../mssqlserver-1205-database-engine-error.md)    |    13    |    No    |    Transaction (Process ID %d) was deadlocked on %.*ls resources with another process and has been chosen as the deadlock victim. Rerun the transaction.    |
 |    1206    |    18    |    No    |    The Microsoft Distributed Transaction Coordinator (MS DTC) has cancelled the distributed transaction.    |
 |    1207    |    10    |    Yes    |    Can't allocate %u locks on startup, reverting to %u and turning on dynamic lock allocation. Maximum allowed memory usage at startup is %I64u KB.    |
 |    1208    |    21    |    Yes    |    Could not allocate initial %u lock blocks during startup. Can not start the server.    |
@@ -131,7 +131,7 @@ ms.topic: include
 |    1214    |    17    |    Yes    |    Internal Error. There are too many parallel transactions.    |
 |    1220    |    17    |    No    |    No more lock classes available from transaction.    |
 |    1221    |    20    |    Yes    |    The Database Engine is attempting to release a group of locks that are not currently held by the transaction. Retry the transaction. If the problem persists, contact your support provider.    |
-|    [1222](../../relational-databases/errors-events/mssqlserver-1222-database-engine-error.md)    |    16    |    No    |    Lock request time out period exceeded.    |
+|    [1222](../mssqlserver-1222-database-engine-error.md)    |    16    |    No    |    Lock request time out period exceeded.    |
 |    1223    |    16    |    No    |    Cannot release the application lock (Database Principal: '%.*ls', Resource: '%.*ls') because it is not currently held.    |
 |    1224    |    16    |    No    |    An invalid application lock resource was passed to %ls.    |
 |    1225    |    16    |    No    |    An invalid application lock mode was passed to %ls.    |
@@ -139,12 +139,12 @@ ms.topic: include
 |    1227    |    16    |    No    |    An invalid application lock time-out was passed to %ls.    |
 |    1228    |    16    |    No    |    An invalid parameter "%ls" was passed to the application lock function or procedure.    |
 |    1230    |    16    |    No    |    An invalid database principal was passed to %ls.    |
-|    [1401](../../relational-databases/errors-events/mssqlserver-1401-database-engine-error.md)    |    21    |    Yes    |    Startup of the database-mirroring master thread routine failed for the following reason: %ls. Correct the cause of this error, and restart the SQL Server service.    |
+|    [1401](../mssqlserver-1401-database-engine-error.md)    |    21    |    Yes    |    Startup of the database-mirroring master thread routine failed for the following reason: %ls. Correct the cause of this error, and restart the SQL Server service.    |
 |    1402    |    20    |    Yes    |    Witness did not find an entry for database mirroring GUID {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. A configuration mismatch exists. Retry the command, or reset the witness from one of the database mirroring partners.    |
 |    1403    |    16    |    Yes    |    The witness for the mirroring session received error response %d (state %d) from server instance %.*ls for database %.*ls. For more information about the error, refer to the error log on this server instance and the partner server instance.    |
 |    1404    |    16    |    No    |    The command failed because the database mirror is busy. Reissue the command later.    |
 |    1405    |    16    |    No    |    The database "%.*ls" is already enabled for database mirroring.    |
-|    [1406](../../relational-databases/errors-events/mssqlserver-1406-database-engine-error.md)    |    16    |    No    |    Unable to force service safely. Remove database mirroring and recover database "%.*ls" to gain access.    |
+|    [1406](../mssqlserver-1406-database-engine-error.md)    |    16    |    No    |    Unable to force service safely. Remove database mirroring and recover database "%.*ls" to gain access.    |
 |    1407    |    16    |    No    |    The remote copy of database "%.*ls" is not related to the local copy of the database.    |
 |    1408    |    16    |    No    |    The remote copy of database "%.*ls" is not recovered far enough to enable database mirroring.    |
 |    1409    |    16    |    No    |    Database mirroring cannot be enabled for the remote copy of database "%.*ls". Restore database logs to the remote copy.    |
@@ -156,7 +156,7 @@ ms.topic: include
 |    1415    |    16    |    No    |    The database mirroring operation for database "%.*ls" failed. The requested operation could not be performed.    |
 |    1416    |    16    |    No    |    Database "%.*ls" is not configured for database mirroring.    |
 |    1417    |    16    |    No    |    Database mirroring has been disabled by the administrator for database "%.*ls".    |
-|    [1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md)    |    16    |    No    |    The server network address "%.*ls" can not be reached or does not exist. Check the network address name and that the ports for the local and remote endpoints are operational.    |
+|    [1418](../mssqlserver-1418-database-engine-error.md)    |    16    |    No    |    The server network address "%.*ls" can not be reached or does not exist. Check the network address name and that the ports for the local and remote endpoints are operational.    |
 |    1419    |    16    |    No    |    The remote copy of database "%.*ls" cannot be opened. Check the database name and ensure that it is in the restoring state, and then reissue the command.    |
 |    1420    |    16    |    No    |    Database mirroring was unable to obtain the network hostname. Operating system error %ls encountered. Verify the network configuration.    |
 |    1421    |    16    |    Yes    |    Communications to the remote server instance '%.*ls' failed to complete before its timeout. The ALTER DATABASE command may have not completed. Retry the command.    |
@@ -195,12 +195,12 @@ ms.topic: include
 |    1454    |    17    |    Yes    |    Database mirroring will be suspended. Server instance '%.*ls' encountered error %d, state %d, severity %d when it was acting as a mirroring partner for database '%.*ls'. The database mirroring partners might try to recover automatically from the error and resume the mirroring session. For more information, view the error log for additional error messages.    |
 |    1455    |    16    |    No    |    The database mirroring service cannot be forced for database "%.*ls" because the database is not in the correct state to become the principal database.    |
 |    1456    |    16    |    Yes    |    The ALTER DATABASE command could not be sent to the remote server instance '%.*ls'. The database mirroring configuration was not changed. Verify that the server is connected, and try again.    |
-|    [1457](../../relational-databases/errors-events/mssqlserver-1457-database-engine-error.md)    |    23    |    Yes    |    Synchronization of the mirror database, '%.*ls', was interrupted, leaving the database in an inconsistent state. The ALTER DATABASE command failed. Ensure that the principal database, if available, is back up and online, and then reconnect the mirror server instance and allow the mirror database to finish synchronizing.    |
+|    [1457](../mssqlserver-1457-database-engine-error.md)    |    23    |    Yes    |    Synchronization of the mirror database, '%.*ls', was interrupted, leaving the database in an inconsistent state. The ALTER DATABASE command failed. Ensure that the principal database, if available, is back up and online, and then reconnect the mirror server instance and allow the mirror database to finish synchronizing.    |
 |    1458    |    17    |    Yes    |    The principal copy of the '%.*ls' database encountered error %d, status %d, severity %d while sending page %S_PGID to the mirror. Database mirroring has been suspended. Try to resolve the error condition, and resume mirroring.    |
 |    1459    |    24    |    Yes    |    An error occurred while accessing the database mirroring metadata. Drop mirroring (ALTER DATABASE database_name SET PARTNER OFF) and reconfigure it.    |
 |    1460    |    16    |    No    |    The database "%.*ls" is already configured for database mirroring on the remote server. Drop database mirroring on the remote server to establish a new partner.    |
-|    [1461](../../relational-databases/errors-events/mssqlserver-1461-database-engine-error.md)    |    10    |    No    |    Database mirroring successfully repaired physical page %S_PGID in database "%.*ls" by obtaining a copy from the partner.    |
-|    [1462](../../relational-databases/errors-events/mssqlserver-1462-database-engine-error.md)    |    16    |    No    |    Database mirroring is disabled due to a failed redo operation. Unable to resume.    |
+|    [1461](../mssqlserver-1461-database-engine-error.md)    |    10    |    No    |    Database mirroring successfully repaired physical page %S_PGID in database "%.*ls" by obtaining a copy from the partner.    |
+|    [1462](../mssqlserver-1462-database-engine-error.md)    |    16    |    No    |    Database mirroring is disabled due to a failed redo operation. Unable to resume.    |
 |    1463    |    16    |    No    |    Database mirroring is not available in the edition of this SQL Server instance. See books online for more details on feature support in different SQL Server editions.    |
 |    1464    |    16    |    No    |    Database mirroring cannot be enabled for the remote copy of database "%.*ls" because the database is not in a recovering state. The remote database must be restored using WITH NORECOVERY.    |
 |    1465    |    16    |    No    |    Database mirroring cannot be enabled because the "%.*ls" database is not in full recovery mode on both partners.    |
@@ -227,7 +227,7 @@ ms.topic: include
 |    1489    |    10    |    No    |    Database Mirroring is disabled on this server due to error %d. Check the errorlog and configuration for more information.    |
 |    1499    |    16    |    Yes    |    Database mirroring error: status %u, severity %u, state %u, string %.*ls.    |
 |    1501    |    20    |    Yes    |    Sort failure. Contact Technical Support.    |
-|    [1505](../../relational-databases/errors-events/mssqlserver-1505-database-engine-error.md)    |    16    |    No    |    The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name '%.*ls' and the index name '%.*ls'. The duplicate key value is %ls.    |
+|    [1505](../mssqlserver-1505-database-engine-error.md)    |    16    |    No    |    The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name '%.*ls' and the index name '%.*ls'. The duplicate key value is %ls.    |
 |    1509    |    20    |    Yes    |    Row comparison failed during sort because of an unknown data type on a key column. Metadata might be corrupt. Contact Technical Support.    |
 |    1510    |    17    |    No    |    Sort failed. Out of space or locks in database '%.*ls'.    |
 |    1511    |    20    |    Yes    |    Sort cannot be reconciled with transaction log.    |
@@ -306,19 +306,19 @@ ms.topic: include
 |    1779    |    16    |    No    |    Table '%.*ls' already has a primary key defined on it.    |
 |    1781    |    16    |    No    |    Column already has a DEFAULT bound to it.    |
 |    1784    |    16    |    No    |    Cannot create the foreign key '%.*ls' because the referenced column '%.*ls.%.*ls' is a non-persisted computed column.    |
-|    [1785](../../relational-databases/errors-events/mssqlserver-1785-database-engine-error.md)    |    16    |    No    |    Introducing FOREIGN KEY constraint '%.*ls' on table '%.*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.    |
+|    [1785](../mssqlserver-1785-database-engine-error.md)    |    16    |    No    |    Introducing FOREIGN KEY constraint '%.*ls' on table '%.*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.    |
 |    1786    |    16    |    No    |    Either column '%.*ls.%.*ls' or referencing column '%.*ls.%.*ls' in foreign key '%.*ls' is a timestamp column. This data type cannot be used with cascading referential integrity constraints.    |
 |    1787    |    16    |    No    |    Cannot define foreign key constraint '%.*ls' with cascaded DELETE or UPDATE on table '%.*ls' because the table has an INSTEAD OF DELETE or UPDATE TRIGGER defined on it.    |
 |    1788    |    16    |    No    |    Cascading foreign key '%.*ls' cannot be created where the referencing column '%.*ls.%.*ls' is an identity column.    |
 |    1789    |    16    |    No    |    Cannot use CHECKSUM(*) in a computed column definition.    |
 |    1790    |    16    |    No    |    The name of a user-defined table type cannot start with a number (#) sign.    |
 |    1791    |    16    |    No    |    A DEFAULT constraint cannot be created on the column '%.*ls' in the table '%.*ls' because the column is a sparse column or sparse column set. Sparse columns or sparse column sets cannot have a DEFAULT constraint.    |
-| [1793](../../relational-databases/errors-events/mssqlserver-1793-database-engine-error.md) | 16   | No  | Cannot drop index '%.*ls' since a partition scheme is not specified for FILESTREAM data.
+| [1793](../mssqlserver-1793-database-engine-error.md) | 16   | No  | Cannot drop index '%.*ls' since a partition scheme is not specified for FILESTREAM data.
 |    1801    |    16    |    No    |    Database '%.*ls' already exists. Choose a different database name.    |
 |    1802    |    16    |    No    |    CREATE DATABASE failed. Some file names listed could not be created. Check related errors.    |
-|    [1803](../../relational-databases/errors-events/mssqlserver-1803-database-engine-error.md)    |    17    |    No    |    The CREATE DATABASE statement failed. The primary file must be at least %d MB to accommodate a copy of the model database.    |
+|    [1803](../mssqlserver-1803-database-engine-error.md)    |    17    |    No    |    The CREATE DATABASE statement failed. The primary file must be at least %d MB to accommodate a copy of the model database.    |
 |    1806    |    16    |    No    |    CREATE DATABASE failed. The default collation of database '%.*ls' cannot be set to '%.*ls'.    |
-|    [1807](../../relational-databases/errors-events/mssqlserver-1807-database-engine-error.md)    |    17    |    No    |    Could not obtain exclusive lock on database '%.*ls'. Retry the operation later.    |
+|    [1807](../mssqlserver-1807-database-engine-error.md)    |    17    |    No    |    Could not obtain exclusive lock on database '%.*ls'. Retry the operation later.    |
 |    1810    |    16    |    No    |    The model database must be updatable before a new database can be created.    |
 |    1812    |    16    |    No    |    CREATE DATABASE failed. COLLATE clause cannot be used with the FOR ATTACH option.    |
 |    1813    |    16    |    No    |    Could not open new database '%.*ls'. CREATE DATABASE is aborted.    |
@@ -357,7 +357,7 @@ ms.topic: include
 |    1849    |    16    |    No    |    CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABASE to add FILESTREAM filegroups and files.    |
 |    1901    |    16    |    No    |    Cannot create index or statistics '%.*ls' on view '%.*ls' because key column '%.*ls' is imprecise, computed and not persisted. Consider removing reference to column in view index or statistics key or changing column to be precise. If column is computed in base table consider marking it PERSISTED there.    |
 |    1902    |    16    |    No    |    Cannot create more than one clustered index on %S_MSG '%.*ls'. Drop the existing clustered index '%.*ls' before creating another.    |
-|    [1904](../../relational-databases/errors-events/mssqlserver-1904-database-engine-error.md)    |    16    |    No    |    The %S_MSG '%.*ls' on table '%.*ls' has %d column names in %S_MSG key list. The maximum limit for index or statistics key column list is %d.    |
+|    [1904](../mssqlserver-1904-database-engine-error.md)    |    16    |    No    |    The %S_MSG '%.*ls' on table '%.*ls' has %d column names in %S_MSG key list. The maximum limit for index or statistics key column list is %d.    |
 |    1907    |    16    |    No    |    Cannot recreate index '%.*ls'. The new index definition does not match the constraint being enforced by the existing index.    |
 |    1908    |    16    |    No    |    Column '%.*ls' is partitioning column of the index '%.*ls'. Partition columns for a unique index must be a subset of the index key.    |
 |    1909    |    16    |    No    |    Cannot use duplicate column names in %S_MSG. Column name '%.*ls' listed more than once.    |

@@ -210,7 +210,7 @@ ms.topic: include
 |    6519    |    16    |    No    |    Type '%.*ls' is not yet supported for CLR operations.    |
 |    6520    |    16    |    No    |    A .NET Framework error occurred during statement execution.    |
 |    6521    |    16    |    No    |    A .NET Framework error occurred during statement execution: %.*ls.    |
-|    [6522](../../relational-databases/errors-events/mssqlserver-6522-database-engine-error.md)    |    16    |    No    |    A .NET Framework error occurred during execution of user-defined routine or aggregate "%.*ls": %ls.    |
+|    [6522](../mssqlserver-6522-database-engine-error.md)    |    16    |    No    |    A .NET Framework error occurred during execution of user-defined routine or aggregate "%.*ls": %ls.    |
 |    6523    |    16    |    No    |    Method, property or field '%ls' of class '%ls' in assembly '%.*ls' is static.    |
 |    6524    |    16    |    No    |    Cannot use computed column in the result table of a streaming user-defined function (column '%.*ls').    |
 |    6525    |    16    |    No    |    Cannot use '%s' constraint in the result table of a streaming user-defined function.    |
@@ -290,7 +290,7 @@ ms.topic: include
 |    6599    |    16    |    No    |    Found an empty native serialization class '%.*ls'. Empty native serialization classes are not allowed.    |
 |    6600    |    16    |    No    |    XML error: %.*ls    |
 |    6601    |    10    |    No    |    The XML parse error 0x%x occurred on line number %d, near the XML text "%.*ls".    |
-|    [6602](../../relational-databases/errors-events/mssqlserver-6602-database-engine-error.md)    |    16    |    No    |    The error description is '%.*ls'.    |
+|    [6602](../mssqlserver-6602-database-engine-error.md)    |    16    |    No    |    The error description is '%.*ls'.    |
 |    6603    |    16    |    No    |    XML parsing error: %.*ls    |
 |    6605    |    16    |    No    |    %.*ls: Failed to obtain an IPersistStream interface on the XML text.    |
 |    6607    |    16    |    No    |    %.*ls: The value supplied for parameter number %d is invalid.    |

@@ -9,7 +9,7 @@ ms.topic: include
 | :------ | :------| :------| :----------------------------- |
 |    11000    |    16    |    No    |    Unknown status code for this column.    |
 |    11001    |    16    |    No    |    Non-NULL value successfully returned.    |
-|    [11001](../../relational-databases/errors-events/mssqlserver-11001-database-engine-error.md)    |        |        |    An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: TCP Provider, error: 0 - No such host is known.) (.Net SqlClient Data Provider    |
+|    [11001](../mssqlserver-11001-database-engine-error.md)    |        |        |    An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: TCP Provider, error: 0 - No such host is known.) (.Net SqlClient Data Provider    |
 |    11002    |    16    |    No    |    Deferred accessor validation occurred. Invalid binding for this column.    |
 |    11003    |    16    |    No    |    Could not convert the data value due to reasons other than sign mismatch or overflow.    |
 |    11004    |    16    |    No    |    Successfully returned a NULL value.    |
@@ -161,7 +161,7 @@ ms.topic: include
 |    11406    |    16    |    No    |    ALTER TABLE SWITCH statement failed. Source and target partitions have different values for the DATA_COMPRESSION option.    |
 |    11407    |    16    |    No    |    Vardecimal storage format can not be enabled for '%.*ls'. Only Enterprise edition of SQL Server supports vardecimal.    |
 |    11408    |    16    |    No    |    Cannot modify the column '%.*ls' in the table '%.*ls' to add or remove the COLUMN_SET attribute. To change a COLUMN_SET attribute of a column, either modify the table to remove the column and then add the column again, or drop and re-create the table.    |
-|    [11409](../../relational-databases/errors-events/mssqlserver-11409-database-engine-error.md)    |    16    |    No    |    Cannot remove the column set '%.*ls' in the table '%.*ls' because the table contains more than 1025 columns. Reduce the number of columns in the table to less than 1025.    |
+|    [11409](../mssqlserver-11409-database-engine-error.md)    |    16    |    No    |    Cannot remove the column set '%.*ls' in the table '%.*ls' because the table contains more than 1025 columns. Reduce the number of columns in the table to less than 1025.    |
 |    11410    |    16    |    No    |    Cannot modify the column '%.*ls' in the table '%.*ls' to a sparse column because the column has a default or rule bound to it. Unbind the rule or default from the column before designating the column as sparse.    |
 |    11411    |    16    |    No    |    Cannot add the sparse column '%.*ls' to the table '%.*ls' because the data type of the column has a default or rule bound to it. Unbind the rule or default from the data type before adding the sparse column to the table.    |
 |    11412    |    16    |    No    |    ALTER TABLE SWITCH statement failed because column '%.*ls' does not have the same sparse storage attribute in tables '%.*ls' and '%.*ls'.    |
@@ -195,16 +195,16 @@ ms.topic: include
 |    12025    |    10    |    No    |    Could not find required binary spatial method in a condition    |
 |    12026    |    10    |    No    |    Could not find required comparison predicate    |
 |    12100    |    16    |    No    |    ALTER DATABASE failed because FILESTREAM filegroups cannot be added to a database that has either the READ_COMMITTED_SNAPSHOT or the ALLOW_SNAPSHOT_ISOLATION option set to ON. To add FILESTREAM filegroups, you must set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF.    |
-|    [12300](../../relational-databases/errors-events/mssqlserver-12300-database-engine-error.md)    |        |        |    Computed columns are not supported with '*construct*'.    |
-|    [12301](../../relational-databases/errors-events/mssqlserver-12301-database-engine-error.md)    |        |        |    Nullable columns in the index key are not supported with '*construct*'.    |
-|    [12302](../../relational-databases/errors-events/mssqlserver-12302-database-engine-error.md)    |        |        |    Updating columns that are part of the PRIMARY KEY constraint is not supported with '*construct*'.    |
-|    [12303](../../relational-databases/errors-events/mssqlserver-12303-database-engine-error.md)    |        |        |    The 'number' clause is not supported with '*construct*'.    |
-|    [12304](../../relational-databases/errors-events/mssqlserver-12304-database-engine-error.md)    |        |        |    Using a memory optimized table type that uses the IDENTITY property with any of its columns is not supported when using the type outside the context of a natively compiled stored procedure.    |
-|    [12305](../../relational-databases/errors-events/mssqlserver-12305-database-engine-error.md)    |        |        |    Inline table variables are not supported with '*construct*'.    |
-|    [12306](../../relational-databases/errors-events/mssqlserver-12306-database-engine-error.md)    |        |        |    Cursors are not supported with '*construct*'.    |
-|    [12307](../../relational-databases/errors-events/mssqlserver-12307-database-engine-error.md)    |        |        |    Default values for parameters in '*construct*' must be constants.    |
-|    [12308](../../relational-databases/errors-events/mssqlserver-12308-database-engine-error.md)    |        |        |    Table-valued functions are not supported with '*construct*'.    |
-|    [12329](../../relational-databases/errors-events/mssqlserver-12329-database-engine-error.md)    |        |        |    The data types char(n) and varchar(n) using a collation that has a code page other than 1252 are not supported with  *construct*.    |
+|    [12300](../mssqlserver-12300-database-engine-error.md)    |        |        |    Computed columns are not supported with '*construct*'.    |
+|    [12301](../mssqlserver-12301-database-engine-error.md)    |        |        |    Nullable columns in the index key are not supported with '*construct*'.    |
+|    [12302](../mssqlserver-12302-database-engine-error.md)    |        |        |    Updating columns that are part of the PRIMARY KEY constraint is not supported with '*construct*'.    |
+|    [12303](../mssqlserver-12303-database-engine-error.md)    |        |        |    The 'number' clause is not supported with '*construct*'.    |
+|    [12304](../mssqlserver-12304-database-engine-error.md)    |        |        |    Using a memory optimized table type that uses the IDENTITY property with any of its columns is not supported when using the type outside the context of a natively compiled stored procedure.    |
+|    [12305](../mssqlserver-12305-database-engine-error.md)    |        |        |    Inline table variables are not supported with '*construct*'.    |
+|    [12306](../mssqlserver-12306-database-engine-error.md)    |        |        |    Cursors are not supported with '*construct*'.    |
+|    [12307](../mssqlserver-12307-database-engine-error.md)    |        |        |    Default values for parameters in '*construct*' must be constants.    |
+|    [12308](../mssqlserver-12308-database-engine-error.md)    |        |        |    Table-valued functions are not supported with '*construct*'.    |
+|    [12329](../mssqlserver-12329-database-engine-error.md)    |        |        |    The data types char(n) and varchar(n) using a collation that has a code page other than 1252 are not supported with  *construct*.    |
 |    12980    |    16    |    No    |    Supply either %s or %s to identify the log entries.    |
 |    12981    |    16    |    No    |    You must specify %s when creating a subplan.    |
 |    12982    |    16    |    No    |    Supply either %s or %s to identify the plan or sub-plan to be run.    |

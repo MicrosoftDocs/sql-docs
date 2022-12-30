@@ -13,7 +13,7 @@ ms.topic: include
 |    5004    |    16    |    No    |    To use ALTER DATABASE, the database must be in a writable state in which a checkpoint can be executed.    |
 |    5006    |    16    |    No    |    Could not get exclusive use of %S_MSG '%.*ls' to perform the requested operation.    |
 |    5008    |    16    |    No    |    This ALTER DATABASE statement is not supported. Correct the syntax and execute the statement again.    |
-|    [5009](../../relational-databases/errors-events/mssqlserver-5009-database-engine-error.md)    |    16    |    No    |    One or more files listed in the statement could not be found or could not be initialized.    |
+|    [5009](../mssqlserver-5009-database-engine-error.md)    |    16    |    No    |    One or more files listed in the statement could not be found or could not be initialized.    |
 |    5010    |    16    |    No    |    Log file name cannot be generated from a raw device. The log file name and path must be specified.    |
 |    5011    |    14    |    No    |    User does not have permission to alter database '%.*ls', the database does not exist, or the database is not in a state that allows access checks.    |
 |    5012    |    16    |    No    |    The name of the primary filegroup cannot be changed.    |
@@ -111,7 +111,7 @@ ms.topic: include
 |    5115    |    16    |    No    |    Only SQL Server database files can be specified for database snapshots. '%.*ls' is not a SQL Server database file.    |
 |    5118    |    16    |    No    |    The file "%ls" is compressed but does not reside in a read-only database or filegroup. The file must be decompressed.    |
 |    5119    |    16    |    No    |    Cannot make the file "%.*ls" a sparse file. Make sure the file system supports sparse files.    |
-|    [5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md)    |    16    |    No    |    Unable to open the physical file "%.*ls". Operating system error %d: "%ls".    |
+|    [5120](../mssqlserver-5120-database-engine-error.md)    |    16    |    No    |    Unable to open the physical file "%.*ls". Operating system error %d: "%ls".    |
 |    5121    |    16    |    No    |    The path specified by "%.*ls" is not in a valid directory.    |
 |    5123    |    16    |    No    |    CREATE FILE encountered operating system error %ls while attempting to open or create the physical file '%.*ls'.    |
 |    5124    |    16    |    Yes    |    The file header in '%ls' does not match the expected contents for file '%ls' of database '%ls'. The mismatch is possibly between the full-text catalog files and the related database. Perform a restore if necessary.    |
@@ -143,7 +143,7 @@ ms.topic: include
 |    5177    |    16    |    Yes    |    An unexpected error occurred while checking the sector size for file '%.*ls'. Move the file to a local NTFS volume, where the sector size can be retrieved. Check the SQL Server error log for more information.    |
 |    5178    |    16    |    Yes    |    Cannot use file '%.*ls' because it was originally formatted with sector size %d and is now on a volume with sector size %d. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.    |
 |    5179    |    16    |    Yes    |    Cannot use file '%.*ls', because it is on a volume with sector size %d. SQL Server supports a maximum sector size of 4096 bytes. Move the file to a volume with a compatible sector size.    |
-|    [5180](../../relational-databases/errors-events/mssqlserver-5180-database-engine-error.md)    |    22    |    Yes    |    Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.    |
+|    [5180](../mssqlserver-5180-database-engine-error.md)    |    22    |    Yes    |    Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.    |
 |    5181    |    16    |    No    |    Could not restart database "%.*ls". Reverting to the previous status.    |
 |    5182    |    10    |    Yes    |    New log file '%.*ls' was created.    |
 |    5183    |    16    |    No    |    Cannot create the file "%ls". Use WITH MOVE to specify a usable physical file name. Use WITH REPLACE to overwrite an existing file.    |
@@ -186,35 +186,35 @@ ms.topic: include
 |    5225    |    10    |    No    |    %.*ls: Not all ghost records on the large object page %d:%d could be removed.    |
 |    5226    |    10    |    No    |    %.*ls: Page %d:%d (type UNLINKED_REORG_PAGE) could not be deallocated.    |
 |    5227    |    10    |    No    |    %.*ls: Page %d:%d (type BULK_OPERATION_PAGE) could not be deallocated.    |
-|    [5228](../../relational-databases/errors-events/mssqlserver-5228-database-engine-error.md)    |    16    |    No    |    Table error: object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), page %S_PGID, row %d. DBCC detected incomplete cleanup from an online index build operation. (The anti-matter column value is %d.)    |
-|    [5229](../../relational-databases/errors-events/mssqlserver-5229-database-engine-error.md)    |    16    |    No    |    Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) contains an anti-matter column, but is not a nonclustered index.    |
+|    [5228](../mssqlserver-5228-database-engine-error.md)    |    16    |    No    |    Table error: object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls), page %S_PGID, row %d. DBCC detected incomplete cleanup from an online index build operation. (The anti-matter column value is %d.)    |
+|    [5229](../mssqlserver-5229-database-engine-error.md)    |    16    |    No    |    Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) contains an anti-matter column, but is not a nonclustered index.    |
 |    5230    |    10    |    No    |    The check statement was aborted. DBCC CHECKCATALOG cannot be run on TEMPDB.    |
-|    [5231](../../relational-databases/errors-events/mssqlserver-5231-database-engine-error.md)    |    10    |    No    |    Object ID %ld (object '%.*ls'): A deadlock occurred while trying to lock this object for checking. This object has been skipped and will not be processed.    |
+|    [5231](../mssqlserver-5231-database-engine-error.md)    |    10    |    No    |    Object ID %ld (object '%.*ls'): A deadlock occurred while trying to lock this object for checking. This object has been skipped and will not be processed.    |
 |    5232    |    10    |    No    |    DBCC CHECKDB will not check SQL Server catalog or Service Broker consistency because a database snapshot could not be created or because WITH TABLOCK was specified.    |
-|    [5233](../../relational-databases/errors-events/mssqlserver-5233-database-engine-error.md)    |    16    |    No    |    Table error: alloc unit ID %I64d, page %S_PGID. The test (%hs) failed. The values are %ld and %ld.    |
+|    [5233](../mssqlserver-5233-database-engine-error.md)    |    16    |    No    |    Table error: alloc unit ID %I64d, page %S_PGID. The test (%hs) failed. The values are %ld and %ld.    |
 |    5234    |    10    |    No    |    DBCC SHRINKDATABASE: File ID %d of database ID %d was skipped because trying to adjust the space allocation for the file was failed.    |
-|    [5235](../../relational-databases/errors-events/mssqlserver-5235-database-engine-error.md)    |    10    |    No    |    %lsDBCC %ls (%ls%ls%ls)%ls executed by %ls terminated abnormally due to error state %d. Elapsed time: %d hours %d minutes %d seconds.    |
+|    [5235](../mssqlserver-5235-database-engine-error.md)    |    10    |    No    |    %lsDBCC %ls (%ls%ls%ls)%ls executed by %ls terminated abnormally due to error state %d. Elapsed time: %d hours %d minutes %d seconds.    |
 |    5236    |    10    |    No    |    Unable to process object '%ls' because it is a four-part name, which is not supported by any DBCC command.    |
-|    [5237](../../relational-databases/errors-events/mssqlserver-5237-database-engine-error.md)    |    10    |    No    |    DBCC cross-rowset check failed for object '%.*ls' (object ID %d) due to an internal query error.    |
+|    [5237](../mssqlserver-5237-database-engine-error.md)    |    10    |    No    |    DBCC cross-rowset check failed for object '%.*ls' (object ID %d) due to an internal query error.    |
 |    5238    |    16    |    No    |    Unable to process object ID %ld (object '%.*ls') because it is a stored procedure or user-defined function, which is not supported by any DBCC command.    |
 |    5239    |    16    |    No    |    Unable to process object ID %ld (object '%.*ls') because this DBCC command does not support objects of this type.    |
 |    5240    |    10    |    No    |    File ID %d of database ID %d cannot be shrunk as it is either being shrunk by another process or is empty.    |
 |    5241    |    10    |    No    |    File ID %d of database ID %d cannot be shrunk as the target shrink size (%I64d KB) is greater than the actual file size (%I64d KB).    |
-|    [5242](../../relational-databases/errors-events/mssqlserver-5242-database-engine-error.md)    |    16    |    No    |    An inconsistency was detected during an internal operation in database '%.*ls'(ID:%d) on page %S_PGID. Please contact technical support.    |
-|    [5243](../../relational-databases/errors-events/mssqlserver-5243-database-engine-error.md)    |    16    |    No    |    An inconsistency was detected during an internal operation. Please contact technical support.    |
+|    [5242](../mssqlserver-5242-database-engine-error.md)    |    16    |    No    |    An inconsistency was detected during an internal operation in database '%.*ls'(ID:%d) on page %S_PGID. Please contact technical support.    |
+|    [5243](../mssqlserver-5243-database-engine-error.md)    |    16    |    No    |    An inconsistency was detected during an internal operation. Please contact technical support.    |
 |    5244    |    16    |    No    |    Repair statement not processed. One or more files in the database are read-only and must be made writeable in order to run repair.    |
-|    [5245](../../relational-databases/errors-events/mssqlserver-5245-database-engine-error.md)    |    16    |    No    |    Object ID %ld (object '%.*ls'): DBCC could not obtain a lock on this object because the lock request timeout period was exceeded. This object has been skipped and will not be processed.    |
+|    [5245](../mssqlserver-5245-database-engine-error.md)    |    16    |    No    |    Object ID %ld (object '%.*ls'): DBCC could not obtain a lock on this object because the lock request timeout period was exceeded. This object has been skipped and will not be processed.    |
 |    5246    |    16    |    No    |    Repair operations cannot be performed on the MSSQLSYSTEMRESOURCE database. Consult Books Online topic "Resource Database" for more information.    |
 |    5247    |    16    |    No    |    Repair: insert a secondary index row based on its base table row.    |
 |    5248    |    10    |    No    |    Repair: Successfully %ls row in index "%ls" in database "%ls".    |
 |    5249    |    10    |    No    |    %.*ls: Page %d:%d could not be moved because shrink could not lock the page.    |
-|    [5250](../../relational-databases/errors-events/mssqlserver-5250-database-engine-error.md)    |    16    |    No    |    Database error: %ls page %S_PGID for database '%.*ls' (database ID %d) is invalid. This error cannot be repaired. You must restore from backup.    |
+|    [5250](../mssqlserver-5250-database-engine-error.md)    |    16    |    No    |    Database error: %ls page %S_PGID for database '%.*ls' (database ID %d) is invalid. This error cannot be repaired. You must restore from backup.    |
 |    5251    |    10    |    No    |    %.*ls: Heap page %d:%d could not be moved because maintaining NC indexes associated with the heap failed.    |
 |    5252    |    10    |    No    |    File ID %d of database ID %d cannot be shrunk to the expected size. The high concurrent workload is leading to too many deadlocks during the shrink operation. Re-run the shrink operation when the workload is lower.    |
 |    5253    |    10    |    No    |    The check statement was aborted. DBCC CHECKALLOC cannot be run on TEMPDB.    |
 |    5254    |    10    |    No    |    %.*ls: Heap page %d:%d could not be moved because the table to which it belonged was building the heap by another process.    |
 |    5255    |    10    |    No    |    %.*ls: Page %d:%d could not be moved because it is a sort page.    |
-|    [5256](../../relational-databases/errors-events/mssqlserver-5256-database-engine-error.md)    |    16    |    No    |    Table error: alloc unit ID %I64d, page %S_PGID contains an incorrect page ID in its page header. The PageId in the page header = %S_PGID.    |
+|    [5256](../mssqlserver-5256-database-engine-error.md)    |    16    |    No    |    Table error: alloc unit ID %I64d, page %S_PGID contains an incorrect page ID in its page header. The PageId in the page header = %S_PGID.    |
 |    5257    |    10    |    No    |    %.*ls: File ID %d of database ID %d was skipped because the file size was changed in the middle of shrink operation.    |
 |    5258    |    10    |    No    |    %.*ls: Heap page %d:%d could not be moved because building computed column expression failed.    |
 |    5259    |    10    |    No    |    %.*ls: Heap page %d:%d could not be moved because populating computed column expression failed.    |
@@ -279,10 +279,10 @@ ms.topic: include
 |    5509    |    15    |    No    |    The properties SIZE, MAXSIZE, or FILEGROWTH cannot be specified for the FILESTREAM data file '%.*ls'.    |
 |    5510    |    15    |    No    |    LOG ON cannot be used for non-FILESTREAM file group '%.*ls'.    |
 |    5511    |    23    |    No    |    FILESTREAM's file system log record '%.*ls' under log folder '%.*ls' is corrupted.    |
-|    [5512](../../relational-databases/errors-events/mssqlserver-5512-database-engine-error.md)    |    16    |    Yes    |    Error 0x%x (%ls) was encountered while directory '%.*ls' was being truncated.    |
+|    [5512](../mssqlserver-5512-database-engine-error.md)    |    16    |    Yes    |    Error 0x%x (%ls) was encountered while directory '%.*ls' was being truncated.    |
 |    5513    |    16    |    No    |    The name that is specified for the associated log filegroup for FILESTREAM filegroup '%.*ls' is not valid.    |
 |    5514    |    16    |    No    |    Transactional replication/Change Data Capture cannot proceed because Transactional File System Resource Manager at '%.*ls' is not started.    |
-|    [5515](../../relational-databases/errors-events/mssqlserver-5515-database-engine-error.md)    |    20    |    No    |    Cannot open the container directory '%.*ls' of the FILESTREAM file. The operating system has returned the Windows status code 0x%x.    |
+|    [5515](../mssqlserver-5515-database-engine-error.md)    |    20    |    No    |    Cannot open the container directory '%.*ls' of the FILESTREAM file. The operating system has returned the Windows status code 0x%x.    |
 |    5516    |    16    |    No    |    The FILESTREAM log filegroup '%.*ls' cannot be referred to by more than one FILESTREAM data filegroup.    |
 |    5517    |    16    |    No    |    Too few or too many files specified for FILESTREAM(LOG) filegroup '%.*ls'.    |
 |    5518    |    16    |    No    |    FILESTREAM path '%.*ls' is too long.    |
@@ -310,7 +310,7 @@ ms.topic: include
 |    5542    |    16    |    No    |    The FILESTREAM filegroup '%.*ls' has no files assigned to it. FILESTREAM data cannot be populated on this filegroup until a file is added.    |
 |    5552    |    16    |    No    |    FILESTREAM file named with GUID '%.*ls' that belongs to FILESTREAM data file ID 0x%x does not exist or cannot be opened.    |
 |    5553    |    16    |    No    |    SQL Server internal error. FILESTREAM manager cannot continue with current command.    |
-|    [5554](../../relational-databases/errors-events/mssqlserver-5554-database-engine-error.md)    |    16    |    No    |    The total number of versions for a single file has reached the maximum limit set by the file system.    |
+|    [5554](../mssqlserver-5554-database-engine-error.md)    |    16    |    No    |    The total number of versions for a single file has reached the maximum limit set by the file system.    |
 |    5555    |    16    |    No    |    The operation has failed because the FILESTREAM data cannot be renamed.    |
 |    5570    |    16    |    No    |    FILESTREAM Failed to find the garbage collection table.    |
 |    5571    |    23    |    No    |    Internal FILESTREAM error: failed to access the garbage collection table.    |

@@ -28,7 +28,7 @@ ms.topic: include
 |    18227    |    10    |    Yes    |    Unnamed tape (family ID %d, sequence %d, media_set_guid %s) is mounted on tape drive '%s'. This is an informational message only. No user action required.    |
 |    18228    |    10    |    Yes    |    Tape mount request on drive '%s' is cancelled. This is an informational message only. No user action is required.    |
 |    18257    |    10    |    Yes    |    %s: Device or media does not support %s. To access this feature, use a different device or media.    |
-|    [18264](../../relational-databases/errors-events/mssqlserver-18264-database-engine-error.md)    |    10    |    Yes    |    Database backed up. Database: %s, creation date(time): %s(%s), pages dumped: %I64d, first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required.    |
+|    [18264](../mssqlserver-18264-database-engine-error.md)    |    10    |    Yes    |    Database backed up. Database: %s, creation date(time): %s(%s), pages dumped: %I64d, first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required.    |
 |    18265    |    10    |    Yes    |    Log was backed up. Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required.    |
 |    18266    |    10    |    Yes    |    Database file was backed up. Database: %s, creation date(time): %s(%s), file list: (%s), pages dumped: %I64d, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required.    |
 |    18267    |    10    |    Yes    |    Database was restored: Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). Informational message. No user action required.    |
@@ -103,11 +103,11 @@ ms.topic: include
 |    18400    |    16    |    Yes    |    The background checkpoint thread has encountered an unrecoverable error. The checkpoint process is terminating so that the thread can clean up its resources. This is an informational message only. No user action is required.    |
 |    18401    |    14    |    Yes    |    Login failed for user '%.*ls'. Reason: Server is in script upgrade mode. Only administrator can connect at this time.%.*ls    |
 |    18451    |    14    |    Yes    |    Login failed for user '%.*ls'. Only administrators may connect at this time.%.*ls    |
-|    [18452](../../relational-databases/errors-events/mssqlserver-18452-database-engine-error.md)    |    14    |    Yes    |    Login failed. The login is from an untrusted domain and cannot be used with Windows Authentication.%.*ls    |
+|    [18452](../mssqlserver-18452-database-engine-error.md)    |    14    |    Yes    |    Login failed. The login is from an untrusted domain and cannot be used with Windows Authentication.%.*ls    |
 |    18453    |    10    |    Yes    |    Login succeeded for user '%.*ls'. Connection made using Windows Authentication.%.*ls    |
 |    18454    |    10    |    Yes    |    Login succeeded for user '%.*ls'. Connection made using SQL Server Authentication.%.*ls    |
 |    18455    |    10    |    Yes    |    Login succeeded for user '%.*ls'.%.*ls    |
-|    [18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md)    |    14    |    Yes    |    Login failed for user '%.*ls'.%.*ls%.*ls    |
+|    [18456](../mssqlserver-18456-database-engine-error.md)    |    14    |    Yes    |    Login failed for user '%.*ls'.%.*ls%.*ls    |
 |    18458    |    14    |    Yes    |    Login failed. The number of simultaneous users already equals the %d registered licenses for this server. To increase the maximum number of simultaneous users, obtain additional licenses and then register them through the Licensing item in Control Panel.%.*ls    |
 |    18459    |    14    |    Yes    |    Login failed. The workstation licensing limit for SQL Server access has already been reached.%.*ls    |
 |    18460    |    14    |    Yes    |    Login failed. The number of simultaneous users has already reached the limit of %d licenses for this '%ls' server. Additional licenses should be obtained and installed or you should upgrade to a full version.%.*ls    |
@@ -122,8 +122,8 @@ ms.topic: include
 |    18469    |    10    |    No    |    [CLIENT: %.*hs]    |
 |    18470    |    14    |    Yes    |    Login failed for user '%.*ls'. Reason: The account is disabled.%.*ls    |
 |    18471    |    14    |    No    |    The login failed for user "%.*ls". The password change failed. The user does not have permission to change the password. %.*ls    |
-|    [18482](../../relational-databases/errors-events/mssqlserver-18482-database-engine-error.md)    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote server. Verify that you have specified the correct server name. %.*ls.    |
-|    [18483](../../relational-databases/errors-events/mssqlserver-18483-database-engine-error.md)    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.    |
+|    [18482](../mssqlserver-18482-database-engine-error.md)    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote server. Verify that you have specified the correct server name. %.*ls.    |
+|    [18483](../mssqlserver-18483-database-engine-error.md)    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.    |
 |    18485    |    16    |    Yes    |    Could not connect to server '%.*ls' because it is not configured to accept remote logins. Use the remote access configuration option to allow remote logins.%.*ls    |
 |    18486    |    14    |    Yes    |    Login failed for user '%.*ls' because the account is currently locked out. The system administrator can unlock it. %.*ls    |
 |    18487    |    14    |    Yes    |    Login failed for user '%.*ls'. Reason: The password of the account has expired.%.*ls    |
@@ -141,7 +141,7 @@ ms.topic: include
 |    18599    |    16    |    No    |    %.*ls could not find the specified named instance (%.*ls) - error %d. Please specify the name of an existing instance on the invocation of sqlservr.exe.\n\nIf you believe that your installation is corrupt or has been tampered with, uninstall then re-run setup to correct this problem.    |
 |    18750    |    16    |    No    |    %ls: The parameter '%ls' is not valid.    |
 |    18751    |    16    |    No    |    %ls procedure was called with the wrong number of parameters.    |
-|    [18752](../../relational-databases/errors-events/mssqlserver-18752-database-engine-error.md)    |    16    |    No    |    Only one Log Reader Agent or log-related procedure (sp_repldone, sp_replcmds, and sp_replshowcmds) can connect to a database at a time. If you executed a log-related procedure, drop the connection over which the procedure was executed or execute sp_replflush over that connection before starting the Log Reader Agent or executing another log-related procedure.    |
+|    [18752](../mssqlserver-18752-database-engine-error.md)    |    16    |    No    |    Only one Log Reader Agent or log-related procedure (sp_repldone, sp_replcmds, and sp_replshowcmds) can connect to a database at a time. If you executed a log-related procedure, drop the connection over which the procedure was executed or execute sp_replflush over that connection before starting the Log Reader Agent or executing another log-related procedure.    |
 |    18755    |    16    |    No    |    Could not allocate memory for replication. Verify that SQL Server has sufficient memory for all operations.    |
 |    18756    |    16    |    No    |    Could not retrieve replication information for table %d. Verify that the table has a primary key, and then rerun the Log Reader Agent.    |
 |    18757    |    16    |    No    |    Unable to execute procedure. The database is not published. Execute the procedure in a database that is published for replication.    |

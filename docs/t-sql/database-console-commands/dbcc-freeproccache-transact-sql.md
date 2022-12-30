@@ -42,7 +42,7 @@ Syntax for SQL Server and Azure SQL Database:
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]
 ```
 
-Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
@@ -141,7 +141,7 @@ Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 - Requires membership in server role **##MS_ServerStateManager##**.
 
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]
 
 - Requires membership in the **db_owner** fixed server role.
 
@@ -149,9 +149,9 @@ Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 
 Multiple `DBCC FREEPROCCACHE` commands can be run concurrently.
 
-In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], clearing the plan cache can cause a temporary decrease in query performance as incoming queries compile a new plan, instead of reusing any previously cached plan.
+In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], clearing the plan cache can cause a temporary decrease in query performance as incoming queries compile a new plan, instead of reusing any previously cached plan.
 
-`DBCC FREEPROCCACHE (COMPUTE)` only causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recompile queries when they are run on the Compute nodes. It doesn't cause [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to recompile the parallel query plan that is generated on the Control node.
+`DBCC FREEPROCCACHE (COMPUTE)` only causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recompile queries when they are run on the Compute nodes. It doesn't cause [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to recompile the parallel query plan that is generated on the Control node.
 
 `DBCC FREEPROCCACHE` can be canceled during execution.
 

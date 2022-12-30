@@ -65,7 +65,7 @@ SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns `4`. This is the number of the month.  
   
 ```sql  

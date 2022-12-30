@@ -1094,7 +1094,7 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ## Examples
 
-### A. Import Data from ADLS Gen 2 into Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)].
+### A. Import Data from ADLS Gen 2 into [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 For examples for Gen ADLS Gen 1, see [Create external data source](create-external-data-source-transact-sql.md).
 

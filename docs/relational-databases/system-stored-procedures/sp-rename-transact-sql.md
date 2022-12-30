@@ -30,7 +30,7 @@ Changes the name of a user-created object in the current database. This object c
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.
 
 > [!NOTE]  
-> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a COLUMN in a user object.
+> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a COLUMN in a user object.
 
 [!INCLUDE[synapse-analytics-severless-sql-pools-tsql](Includes/synapse-analytics-severless-sql-pools-tsql.md)]
 
@@ -87,7 +87,7 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 
 **Applies to**: Azure Synapse Analytics
 
-In `sp_rename` (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It is a **varchar(13)** with no default value and must always be included in the `sp_rename` (preview) statement. A column can only be renamed if it is a non-distribution column.
+In `sp_rename` (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse-md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It is a **varchar(13)** with no default value and must always be included in the `sp_rename` (preview) statement. A column can only be renamed if it is a non-distribution column.
 
 ## Return code values
 
@@ -234,14 +234,14 @@ CREATE STATISTICS ContactMail1
 EXEC sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
 ```
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### G. Rename a column
 
 The following example renames the `c1` column in the `table1` table to `col1`.
 
 > [!NOTE]  
-> This [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] feature is still in preview for dedicated SQL pools and is currently available only for objects in the **dbo** schema.
+> This [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse-md.md)] feature is still in preview for dedicated SQL pools and is currently available only for objects in the **dbo** schema.
 
 ```sql
 CREATE TABLE table1 (c1 INT, c2 INT);

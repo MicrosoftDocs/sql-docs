@@ -60,8 +60,8 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- This example returns the [!INCLUDE[ssDW](../../includes/ssdw-md.md)] session ID, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Control node session ID, login name, and user name for the current user process.  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ This example returns the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] session ID, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Control node session ID, login name, and user name for the current user process.  
   
 ```sql  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  

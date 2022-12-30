@@ -52,7 +52,7 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
 match_expression [ NOT ] LIKE pattern  
 ```  
 >[!NOTE]
-> Currently ESCAPE and STRING_ESCAPE are not supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+> Currently ESCAPE and STRING_ESCAPE are not supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -311,7 +311,7 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### E. Using LIKE with the % wildcard character  
  The following example finds all employees in the `DimEmployee` table with telephone numbers that start with `612`.  

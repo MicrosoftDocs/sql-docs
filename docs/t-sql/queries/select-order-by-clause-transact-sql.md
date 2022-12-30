@@ -53,7 +53,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
->  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+>  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 ## Syntax  
   
@@ -489,7 +489,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.  
   
 ```sql

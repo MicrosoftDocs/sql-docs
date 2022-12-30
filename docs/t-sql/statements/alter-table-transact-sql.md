@@ -1872,7 +1872,7 @@ DROP PERIOD FOR SYSTEM_TIME ;
 DROP TABLE DepartmentHistory ;
 ```
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 The following examples A through C use the `FactResellerSales` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
 

@@ -71,7 +71,7 @@ WHERE CountryRegionName = 'Australia';
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the number of characters in the column `FirstName` and the first and last names of employees located in `Australia`.  
   
 ```sql  

@@ -243,11 +243,11 @@ If all the settings are correct, your configuration finishes successfully.
 
 ## Generating scripts on Azure Synapse Analytics
 
-If the syntax generated when using "Script As..." does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
+If the syntax generated when using "Script As..." does not look like [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ### How to set default scripting options to SQL Data Warehouse
 
-In order to script objects with [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax, set the default scripting option to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] as follows:
+In order to script objects with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] syntax, set the default scripting option to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] as follows:
 
 1. Select **Tools** then **Options**. 
 1. Select **SQL Server Object Explorer**, and **Scripting**.
@@ -258,7 +258,7 @@ In order to script objects with [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]
 
 ### How to generate scripts for SQL Data Warehouse when it is not the default scripting option
 
-If you set [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] as your default scripting option as shown above, these instructions can be ignored. However, if you choose to use different default scripting options, you may encounter an error. To avoid errors, follow these steps in order to Generate and Publish Scripts for [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]:
+If you set [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] as your default scripting option as shown above, these instructions can be ignored. However, if you choose to use different default scripting options, you may encounter an error. To avoid errors, follow these steps in order to Generate and Publish Scripts for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 1. In **Object Explorer**, right-click your dedicated SQL pool under **Databases**.
 2. Select **Generate Scripts**.

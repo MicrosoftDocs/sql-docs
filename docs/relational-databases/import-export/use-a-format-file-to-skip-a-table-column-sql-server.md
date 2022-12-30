@@ -22,7 +22,7 @@ This article describes how to use a format file to skip importing a table column
 - The skipped column has a default value.
 
 > [!NOTE]  
-> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE[Use ADF or PolyBase instead of Synapse Bulk Insert](../../includes/paragraph-content/bulk-insert-synapse.md)]
+> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE [Use ADF or PolyBase instead of Synapse Bulk Insert](includes/bulk-insert-synapse.md)]
 
 ## Sample table and data file
 

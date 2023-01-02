@@ -39,6 +39,7 @@ Consider the following when working with ledger.
 - In-memory tables aren't supported.
 - Sparse column sets aren't supported.
 - SWITCH IN/OUT partition isn't supported.
+- DBCC CLONEDATABASE isn't supported.
 - Ledger tables can't have full-text indexes.
 - Ledger tables can't be graph table.
 - Ledger tables can't be FileTables.

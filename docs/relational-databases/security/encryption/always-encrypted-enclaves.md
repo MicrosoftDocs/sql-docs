@@ -4,7 +4,7 @@ description: Learn about the Always Encrypted with secure enclaves feature for S
 ms.custom:
 - seo-lt-2019
 - event-tier1-build-2022
-ms.date: 10/25/2022
+ms.date: 02/01/2023
 ms.service: sql
 ms.reviewer: "vanto"
 ms.subservice: security

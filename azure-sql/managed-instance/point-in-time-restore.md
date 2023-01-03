@@ -17,7 +17,7 @@ ms.custom: devx-track-azurepowershell
 Use point-in-time restore (PITR) to create a database as a copy of another database from some time in the past. This article describes how to do a point-in-time restore of a database in Azure SQL Managed Instance.
 
 > [!NOTE]
-> The [Create or Update v02.01.2022](/rest/api/sql/2022-02-01-preview/managed-databases/create-or-update) is being deprecated. Starting January 2022, use the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) replacement API call for all database restore operations. 
+> The [Create or Update v02.01.2022](/rest/api/sql/2022-02-01-preview/managed-databases/create-or-update) has been deprecated. Starting in January 2023, use the replacement [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) API call for all database restore operations. 
 
 ## Overview
 

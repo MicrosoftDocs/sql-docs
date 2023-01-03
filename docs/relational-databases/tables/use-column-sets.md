@@ -88,7 +88,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ## Inserting or modifying data in a column set  
  Data manipulation of a sparse column can be performed by using the name of the individual columns, or by referencing the name of the column set and specifying the values of the column set by using the XML format of the column set. Sparse columns can appear in any order in the XML column.  
   
- When sparse column values are inserted or updated by using the XML column set, the values that are inserted into the underlying sparse columns are implicitly converted from the **xml** data type. In the case of numeric columns, a blank value in the XML for the numeric column converts to an empty string. This causes a zero to be inserted into the numeric column as shown in the following example.  
+ When sparse column values are inserted or updated by using the XML column set, the values that are inserted into the underlying sparse columns are implicitly converted from the **xml** data type. In the case of integer columns, a blank value in the XML for the integer column converts to an empty string. This causes a zero to be inserted into the integer column as shown in the following example. 
   
 ```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  

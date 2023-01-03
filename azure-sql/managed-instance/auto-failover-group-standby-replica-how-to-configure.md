@@ -14,14 +14,17 @@ ms.custom:
 # Configure a license-free standby replica for Azure SQL Managed Instance (preview)
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+This article describes how you can save on licensing costs by designating your read-only secondary managed instance for stand-by when using Azure SQL Managed Instance. 
 
+Currently, the feature to designate a managed instance as standby is in preview.
+
+## Overview
 If you use a secondary Azure SQL Managed Instance deployment as a standby for disaster recovery and the secondary instance doesn't have any read workloads or applications connected to it, you can save on licensing costs by designating the replica as a *standby instance*.
 
 When a secondary instance is designated as a standby instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary instance uses.
 
 Auto-failover groups for a SQL Managed Instance deployment support only one replica. The replica must be either a readable replica or be designated as a standby replica.
 
-Currently, the feature to designate a managed instance as standby is in preview.
 
 ## Cost benefit
 
@@ -39,8 +42,8 @@ The following table describes the functional capabilities of a standby secondary
 
 |Functionality  |Description  |
 |---------|---------|
-|Limited read workloads     | After you designate your instance as standby, you can run only a limited number of read workloads on the secondary instance, such as Dynamic Management Views, backups, and Database Console Commands (DBCC) queries.      |
-|Planned failover | All planned failover scenarios, including recovery drills, relocating databases to different regions, and returning databases to the primary, are supported by the standby replica. When the secondary switches to the primary, it can serve read and write queries. The original primary and new secondary becomes the standby replica and shouldn't be used for read workloads.     |
+|Limited read workloads     | After you designate your instance as standby, you can run only a limited number of read workloads on the secondary instance, such as Dynamic Management Views (DMVs), backups, and Database Console Commands (DBCC) queries.      |
+|Planned failover | All planned failover scenarios, including recovery drills, relocating databases to different regions, and returning databases to the primary, are supported by the standby replica. When the secondary switches to the primary, it can serve read and write queries. The new secondary (the original primary) becomes the standby replica and shouldn't be used for read workloads.     |
 |Unplanned failover | During an unplanned failover, after the secondary switches to the primary role, it can serve read and write queries. After the outage is mitigated and the original primary reconnects, it becomes the new secondary standby replica and shouldn't be used for read workloads.   |
 |Backup and restore| The backup and restore behavior in a standby replica and a readable secondary managed instance are the same.         |
 |Monitoring     | All monitoring operations that are supported by a readable secondary replica are supported by the standby replica.         |
@@ -87,7 +90,7 @@ To update the failover rights for an existing failover group:
 
 1. Select **Apply** to save your new settings and close the configuration pane.
 
-Alternatively, you can enable failover rights in **Compute + storage** for your *secondary* managed instance. To learn more, see [View licensing rights](#view-licensing-rights).
+Alternatively, you can enable failover rights in **Compute + storage** for your *secondary* managed instance. To learn more, review [View licensing rights](#view-licensing-rights).
 
 ## View licensing rights
 

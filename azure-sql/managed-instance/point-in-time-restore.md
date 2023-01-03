@@ -112,7 +112,7 @@ Currently, you can restore your database to a managed instance in a different su
 
 # [PowerShell](#tab/azure-powershell)
 
-Use Azure PowerShell to restore your database. For more information, see [Install the Azure PowerShell module](/powershell/azure/install-az-ps).
+Use Azure PowerShell to restore your database. For more information, review [Install the Azure PowerShell module](/powershell/azure/install-az-ps).
 
 Run one of the following code options with your values substituted for the parameters.
 
@@ -262,7 +262,7 @@ To overwrite an existing database, you must do the following:
 
 You can drop the database by using the Azure portal, PowerShell, or the Azure CLI.
 
-Another option to drop the database is to connect to your managed instance directly, open SQL Server Management Studio, and then use the `DROP` Transact-SQL (T-SQL) command:
+Another option to drop the database is to connect to your managed instance directly in SQL Server Management Studio (SSMS), and then use the `DROP` Transact-SQL (T-SQL) command:
 
 ```sql
 DROP DATABASE WorldWideImporters;
@@ -305,7 +305,7 @@ az sql midb delete -g mygroupname --mi myinstancename -n mymanageddbname
 
 ### Change the new database name to match the original database name
 
-Connect directly to your managed instance and start SQL Server Management Studio. Then run the following T-SQL query. The query changes the name of the restored database to the name of the dropped database you intend to overwrite.
+Use SQL Server Management Studio (SSMS) to connect directly to your managed instance. Then run the following T-SQL query. The query changes the name of the restored database to the name of the dropped database you intend to overwrite.
 
 ```sql
 ALTER DATABASE WorldWideImportersPITR MODIFY NAME = WorldWideImporters;

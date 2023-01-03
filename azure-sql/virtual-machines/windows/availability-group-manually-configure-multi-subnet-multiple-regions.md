@@ -313,7 +313,7 @@ To assign additional secondary IPs to the VMs, follow these steps:
 
 1. Select **+ Add** again to configure an additional IP address for the availability group listener (with a name such as **availability-group-listener**), again specifying an unused IP address in **SQL-subnet-1** such as `10.19.1.11`.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-secondary-ips.png" alt-text="Screenshot of the Azure portal that shows a Connected status for virtual network peering." lightbox="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-secondary-ips.png":::
+   :::image type="content" source="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-secondary-ips.png" alt-text="Screenshot of the Azure portal that shows the IP configurations on the network interface." lightbox="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-secondary-ips.png":::
 
 Now you are ready to join the **corp.contoso.com**.
 

@@ -7,7 +7,7 @@ ms.topic: include
 ---
 Changes an existing Resource Governor workload group configuration, and optionally assigns it to a Resource Governor resource pool.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax
 

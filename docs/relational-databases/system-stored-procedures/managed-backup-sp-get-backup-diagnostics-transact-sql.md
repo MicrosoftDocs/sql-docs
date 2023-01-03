@@ -28,7 +28,7 @@ ms.author: maghan
   
  Use this stored procedure to monitor Extended Events logged by Smart Admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] events are logged in this system and can be reviewed  and monitored using this stored procedure.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

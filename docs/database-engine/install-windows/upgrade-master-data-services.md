@@ -103,7 +103,7 @@ monikerRange: ">=sql-server-2016"
   
  **To upgrade with Database Engine upgrade**  
   
-1.  **For [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] only**: Open **Control Panel** > **Programs and Features** and uninstall Microsoft [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **For [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] only**: Open **Control Panel** > **Programs and Features** and uninstall Microsoft [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Upgrade the database engine to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)]. For more information, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   

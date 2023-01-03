@@ -3,7 +3,7 @@ title: Start, stop, pause, resume, and restart SQL Server services
 description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/07/2022
+ms.date: 12/16/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -51,7 +51,7 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux, see [Sta
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components are executable programs that run as Windows services. Windows services can run without displaying any activity on the computer screen and without user interaction on the command line.
 
-### [!INCLUDE[ssDE](../../includes/ssde-md.md)] service
+### Database Engine service
 
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] service can be the default instance (limit one per computer) or can be one of many named instances on the computer. Use [**SQL Server Configuration Manager**](../../relational-databases/sql-server-configuration-manager.md) to find out which instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are installed on the computer. The default instance (if you install it) is listed as **SQL Server (MSSQLSERVER)**. Named instances (if you install them) are listed as **SQL Server (<instance_name>)**. By default, [!INCLUDE[ssNoVersion](../../includes/ssexpress-md.md)] is installed as **SQL Server (SQLEXPRESS)**.
 
@@ -94,7 +94,7 @@ On the **Start** menu, select **All Programs > Microsoft SQL Server > Configurat
 
 The SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program, and it may not appear as an application in some versions of Windows. For more information, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-### <a id="configmande"></a> Start, stop, pause, resume, or restart an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]
+### <a id="configmande"></a> Start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
 1. Start SQL Server Configuration Manager, using the instructions above.
 
@@ -129,7 +129,7 @@ The SQL Server Configuration Manager is a snap-in for the Microsoft Management C
 
 ## SQL Server Management Studio
 
-### <a id="ssmsde"></a> Start, stop, pause, resume, or restart an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]
+### <a id="ssmsde"></a> Start, stop, pause, resume, or restart an instance of the Database Engine
 
 1. In Object Explorer, connect to the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], right-click the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] you want to start, and then select **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
 
@@ -151,7 +151,7 @@ The SQL Server Configuration Manager is a snap-in for the Microsoft Management C
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be started, stopped, or paused by using Windows **net** commands.
 
-### <a id="dbDefault"></a> Start the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]
+### <a id="dbDefault"></a> Start the default instance of the Database Engine
 
 - From a command prompt, enter one of the following commands:
 
@@ -165,7 +165,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
   net start MSSQLSERVER
   ```
 
-### <a id="dbNamed"></a> Start a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]
+### <a id="dbNamed"></a> Start a named instance of the Database Engine
 
 - From a command prompt, enter one of the following commands. Replace *\<instancename>* with the name of the instance you want to manage.
 
@@ -179,7 +179,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
    net start MSSQL$instancename
    ```
 
-### <a id="dbStartup"></a> Start the [!INCLUDE[ssDE](../../includes/ssde-md.md)] with startup options
+### <a id="dbStartup"></a> Start the Database Engine with startup options
 
 - Add startup options to the end of the **net start "SQL Server (MSSQLSERVER)"** statement, separated by a space. When started using **net start**, startup options use a slash (/) instead of a hyphen (-).
 
@@ -252,7 +252,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
 
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be stopped by using the **SHUTDOWN** statement.
 
-### Stop the [!include[ssde](../../includes/ssde-md.md)] using transact-sql
+### Stop the Database Engine using Transact-SQL
 
 - To wait for currently running Transact-SQL statements and stored procedures to finish, and then stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute the following statement.
 
@@ -270,7 +270,7 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN (Transact-S
 
 ## <a id="PowerShellProcedure"></a> PowerShell
 
-### Start and stop [!INCLUDE[ssDE](../../includes/ssde-md.md)] services
+### Start and stop Database Engine services
 
 1. In a Command Prompt window, start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell by executing the following command.
 

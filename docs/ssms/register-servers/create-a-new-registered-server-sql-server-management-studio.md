@@ -38,10 +38,6 @@ This topic describes how to save the connection information for servers that you
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To automatically register the local server instances  
-  
--   In Registered Servers, right-click any node in the Registered Servers tree, and then click **Update Local Server Registration**.  
-  
 #### To create a new registered server  
   
 1.  If Registered Servers is not visible in SQL Server Management Studio, on the **View** menu, click **Registered Servers**.  

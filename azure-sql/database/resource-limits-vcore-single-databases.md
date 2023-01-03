@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 11/28/2022
+ms.date: 12/26/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -817,7 +817,7 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Business Critical M-series hardware (part 2 of 2)
-=======
+
 |Compute size (service objective)|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
 |:---| ---:|---:|---:|---:|---:|
 |Hardware|M-series|M-series|M-series|M-series|M-series|

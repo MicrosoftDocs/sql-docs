@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Returns the integer value, as defined by the Unicode standard, for the first character of the input expression.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ Is an **nchar** or **nvarchar** expression.
 **int**  
   
 ## Remarks  
-In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 000000 through 00FFFF which is capable of representing the 65,535 characters in the Unicode Basic Multilingual Plane (BMP). Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collations, UNICODE returns a UTF-16 codepoint in the range 000000 through 10FFFF. For more information on Unicode support in the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
+In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 000000 through 00FFFF which is capable of representing the 65,535 characters in the Unicode Basic Multilingual Plane (BMP). Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collations, UNICODE returns a UTF-16 codepoint in the range 000000 through 10FFFF. For more information on Unicode support in the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)], see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
   
 ## Examples  
   

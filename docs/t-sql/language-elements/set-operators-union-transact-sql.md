@@ -40,7 +40,7 @@ The following are basic rules for combining the result sets of two queries by us
   
 -   The data types must be compatible.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -242,7 +242,7 @@ GO
   
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### E. Using a simple UNION  
 In the following example, the result set includes the contents of the `CustomerKey` columns of both the `FactInternetSales` and `DimCustomer` tables. Since the ALL keyword isn't used, duplicates are excluded from the results.  

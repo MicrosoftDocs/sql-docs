@@ -48,13 +48,13 @@ Always Encrypted supports the following enclave technologies (or enclave types):
 - [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (also known as Virtual Secure Mode, or VSM enclaves) - a software-based technology that relies on Windows hypervisor and doesn't require any special hardware.
 - [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) - a hardware-based trusted execution environment technology.
 
-The type of the enclave available for your database depends on the SQL product hosting it ([!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] vs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) and (in the case of [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)])) the configuration of your database.
+The type of the enclave available for your database depends on the SQL product hosting it ([!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] vs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) and (in the case of [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]) the configuration of your database.
 
 - In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, Always Encrypted supports VBS enclaves. (Intel SGX enclaves are not supported.)
 - In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], a database can use either an Intel SGX enclave or a VBS enclave, depending on the hardware the database is configured to run on:
 
-  - Databases using the [DC-series](azure/azure-sql/database/service-tiers-sql-database-vcore#dc-series) hardware configuration (available with the [vCore purchasing model](azure/azure-sql/database/service-tiers-vcore)) use Intel SGX enclaves.
-  - Databases using a configuration other than DC-series with the vCore purchasing model and databases using the [DTU purchasing model](azure/azure-sql/database/service-tiers-dtu) can be configured to use VBS enclaves.
+  - Databases using the [DC-series](/azure/azure-sql/database/service-tiers-sql-database-vcore#dc-series) hardware configuration (available with the [vCore purchasing model](/azure/azure-sql/database/service-tiers-vcore)) use Intel SGX enclaves.
+  - Databases using a configuration other than DC-series with the vCore purchasing model and databases using the [DTU purchasing model](/azure/azure-sql/database/service-tiers-dtu) can be configured to use VBS enclaves.
 
   > [!IMPORTANT]
   > VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.

@@ -37,28 +37,60 @@ When parsing a Transact-SQL statement submitted by an application, the [!INCLUDE
 
 During statement processing, both the data and the column encryption keys aren't exposed in plaintext in the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] outside of the secure enclave.
 
-## Supported enclave technologies
-
-Always Encrypted uses one of the two enclave technologies, depending on the environment hosting your database:
-
-- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) - a software-based technology that relies on Windows hypervisor and doesn't require any special hardware.
-
-- In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], Always Encrypted with secure enclaves uses [Intel Software Guard Extensions (Intel SGX)](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) enclaves - a hardware-based trusted execution environment technology. Intel SGX is available only in databases using the [DC-series](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration.
-
-## Secure enclave attestation
-
-Enclave attestation is a workflow that allows a client application to establish trust with a secure enclave for the database and the application it's connected to, before sharing cryptographic keys and using the enclave for processing sensitive data. The attestation workflow verifies the enclave is a genuine VBS or Intel SGX enclave and the code running inside it is the genuine Microsoft-signed enclave library for Always Encrypted. Enclave attestation can help detect attacks that involve tampering with the enclave code or its environment by malicious administrators.
-
-To attest the enclave, both the client driver within the application and the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)], the application it's connected to, communicate with an external attestation service using a client-specified endpoint.
-
-A valid attestation service depends on the enclave type and your database environment:
-
-- VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] require [Windows Defender System Guard runtime attestation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) using Host Guardian Service (HGS) as an attestation service. For more information, see [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md).
-- Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (DC-series databases) require [Microsoft Azure Attestation](/azure/attestation/overview). For more information, see [Plan for Intel SGX enclaves and attestation in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-plan).
-
 ## Supported client drivers
 
 To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. Configure the application and the client driver to enable enclave computations and enclave attestation. For details, including the list of supported client drivers, see [Develop applications using Always Encrypted](always-encrypted-client-development.md).
+
+## Supported enclave technologies
+
+Always Encrypted supports the following enclave technologies (or enclave types):
+
+- [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (also known as Virtual Secure Mode, or VSM enclaves) - a software-based technology that relies on Windows hypervisor and doesn't require any special hardware.
+- [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) - a hardware-based trusted execution environment technology.
+
+The type of the enclave available for your database depends on the SQL product hosting it ([!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] vs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) and (in the case of [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)])) the configuration of your database.
+
+- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, Always Encrypted supports VBS enclaves. (Intel SGX enclaves are not supported.)
+- In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], a database can use either an Intel SGX enclave or a VBS enclave, depending on the hardware the database is configured to run on:
+
+  - Databases using the [DC-series](azure/azure-sql/database/service-tiers-sql-database-vcore#dc-series) hardware configuration (available with the [vCore purchasing model](azure/azure-sql/database/service-tiers-vcore)) use Intel SGX enclaves.
+  - Databases using a configuration other than DC-series with the vCore purchasing model and databases using the [DTU purchasing model](azure/azure-sql/database/service-tiers-dtu) can be configured to use VBS enclaves.
+
+  > [!IMPORTANT]
+  > VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
+
+  > [!NOTE]
+  > VBS enclaves are currently available in all [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] regions **except**: Australia Central, Australia Central 2,  Korea Central, Korea South, UAE Central, Jio India Central, Jio India West.
+
+## Secure enclave attestation
+
+Enclave attestation is a defense-in-depth mechanism that can help detect attacks that involve tampering with the enclave code or its environment by malicious administrators.
+
+Enclave attestation allows a client application to establish trust with the secure enclave for the database, the application is connected to, before the app uses the enclave for processing sensitive data. The attestation workflow verifies the enclave is a genuine VBS or Intel SGX enclave and the code running inside it is the genuine Microsoft-signed enclave library for Always Encrypted. During attestation, both the client driver within the application and the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] communicate with an external attestation service using a client-specified endpoint.
+
+Always Encrypted can use one of the two attestation services:
+
+- [Microsoft Azure Attestation](/azure/attestation/overview) - a cloud-based attestation solution.
+- Host Guardian Service (HGS) that implements [Windows Defender System Guard runtime attestation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/).
+
+To enable Always Encrypted with secure enclaves for your application, you need to set an **attestation protocol** in the configuration of the client driver in your application. An attestation protocol value determines whether 1) the client app will use attestation, and, if so, 2) it specifies the type of the attestation service to it will use. The below table captures the supported attestation protocols for the valid SQL product and enclave type combinations:
+
+| Hosting product | Enclave type | Supported attestation protocols |
+|:---|:---|:---|
+| [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | HGS, No attestation |
+| [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | SGX enclaves (DC-series databases) | Microsoft Azure Attestation |
+| [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves  | No attestation |
+
+A few important points to call out:
+
+- Attesting VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later requires HGS. You can also use VBS enclaves without attestation (the latest client drivers are required).
+- With Intel SGX enclaves (in DC-series databases) in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], attestation is mandatory and it requires Microsoft Azure Attestation.
+- VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (in preview) currently do not support attestation. 
+
+For more details, see:
+
+- [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md).
+- [Plan for Intel SGX enclaves and attestation in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-plan).
 
 ## Terminology
 
@@ -145,7 +177,7 @@ With the [traditional database recovery process](/azure/sql-database/sql-databas
 
 The following security considerations apply to Always Encrypted with secure enclaves.
 
-- The security of your data inside the enclave depends on an attestation protocol and an attestation service. Therefore, you need to ensure the attestation service and attestation policies, the attestation service enforces, are managed by a trusted administrator. Also, attestation services typically support different policies and attestation protocols, some of which perform minimal verification of the enclave and its environment, and are designed for testing and development. Closely follow the guidelines specific to your attestation service to ensure you're using the recommended configurations and policies for your production deployments.
+- Using enclave attestation is recommended if it is available for your environment and if you're concerned about protecting your data from attacks by users the OS-level access to the machine hosting your database. If you use attestation, you need to ensure the attestation service and its configuration are managed by a trusted administrator. Also, attestation services typically support different policies and attestation modes, some of which perform minimal verification of the enclave and its environment, and are designed for testing and development. Closely follow the guidelines specific to your attestation service to ensure you're using the recommended configurations and policies for your production deployments.
 - Encrypting a column using randomized encryption with an enclave-enabled column encryption key may result in leaking the order of data stored in the column, as such columns support range comparisons. For example, if an encrypted column, containing employee salaries, has an index, a malicious DBA could scan the index to find the maximum encrypted salary value and identify a person with the maximum salary (assuming the name of the person isn't encrypted).
 - If you use Always Encrypted to protect sensitive data from unauthorized access by DBAs, don't share the column master keys or column encryption keys with the DBAs. A DBA can manage indexes on encrypted columns without having direct access to the keys by using the cache of column encryption keys inside the enclave.
 

@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 # sp_refreshsqlmodule (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-dedicated-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-dedicated-poolonly.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-dedicated-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-sql-poolonly-pdw.md)]
 
 Updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. Persistent metadata for these objects, such as data types of parameters, can become outdated because of changes to their underlying objects. For example, you might see an error like `The definition for user-defined data type 'typename' has changed`. Refreshing the metadata for the module that uses the type specified in the error might resolve the problem.
   
@@ -66,14 +66,14 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  0 (success) or a nonzero number (failure)  
   
 ## Remarks  
- **sp_refreshsqlmodule** should be run when changes are made to the objects underlying the module that affect its definition. Otherwise, the module might produce unexpected results when it is queried or invoked. To refresh a view, you can use either **sp_refreshsqlmodule** or **sp_refreshview** with the same results.  
+The system stored procedure `sp_refreshsqlmodule` should be run when changes are made to the objects underlying the module that affect its definition. Otherwise, the module might produce unexpected results when it is queried or invoked. To refresh a view, you can use either `sp_refreshsqlmodule` or `sp_refreshview` with the same results.  
   
- **sp_refreshsqlmodule** does not affect any permissions, extended properties, or SET options that are associated with the object.  
+ `sp_refreshsqlmodule` does not affect any permissions, extended properties, or SET options that are associated with the object.  
   
  To refresh a server-level DDL trigger, execute this stored procedure from the context of any database.  
   
 > [!NOTE]  
->  Any signatures that are associated with the object are dropped when you run **sp_refreshsqlmodule**.  
+>  Any signatures that are associated with the object are dropped when you run `sp_refreshsqlmodule`.  
   
 ## Permissions  
  Requires ALTER permission on the module and REFERENCES permission on any CLR user-defined types and XML schema collections that are referenced by the object. Requires ALTER ANY DATABASE DDL TRIGGER permission in the current database when the specified module is a database-level DDL trigger. Requires CONTROL SERVER permission when the specified module is a server-level DDL trigger.  

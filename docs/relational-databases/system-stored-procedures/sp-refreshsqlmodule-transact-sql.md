@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 # sp_refreshsqlmodule (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-dedicated-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-sql-poolonly-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-dedicated-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-dedicated-poolonly.md)]
 
 Updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. Persistent metadata for these objects, such as data types of parameters, can become outdated because of changes to their underlying objects. For example, you might see an error like `The definition for user-defined data type 'typename' has changed`. Refreshing the metadata for the module that uses the type specified in the error might resolve the problem.
   

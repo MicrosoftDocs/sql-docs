@@ -49,7 +49,7 @@ Use the SQL Server VM marketplace images with the storage configuration in the p
 Currently, the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) provides the highest I/O throughput-to-vCore ratio available in Azure. If you do not know the I/O requirements for your SQL Server workload, this series is the one most likely to meet your needs. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more. 
 
 > [!NOTE]
-> If you are interested in participating in the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) public preview, please sign up at [https://aka.ms/signupEbsv5Preview](https://aka.ms/signupEbsv5Preview).
+> If you are interested in participating in the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) public preview for the new large NVMe sizes, please sign up at [https://aka.ms/Ebsv5NVMePublicPreview](https://aka.ms/Ebsv5NVMePublicPreview).
 
 SQL Server data warehouse and mission critical environments will often need to scale beyond the 8 memory-to-vCore ratio. For medium environments, you may want to choose a 16 memory-to-vCore ratio, and a 32 memory-to-vCore ratio for larger data warehouse environments.
 

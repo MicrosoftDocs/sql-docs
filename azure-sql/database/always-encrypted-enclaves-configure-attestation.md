@@ -33,7 +33,7 @@ To use Azure Attestation for attesting Intel SGX enclaves used for [Always Encry
 2. Determine the attestation URL and share it with application administrators.
 
 > [!NOTE]
-> Configuring attestation is the responsibility of the attestation administrator. See [Roles and responsibilities when configuring SGX enclaves and attestation](always-encrypted-enclaves-plan.md#roles-and-responsibilities-when-configuring-sgx-enclaves-and-attestation).
+> Configuring attestation is the responsibility of the attestation administrator. See [Roles and responsibilities when configuring Intel SGX enclaves and attestation](always-encrypted-enclaves-plan.md#roles-and-responsibilities-when-configuring-intel-sgx-enclaves-and-attestation).
 
 ## Create and configure an attestation provider
 

@@ -120,7 +120,7 @@ ms.author: mathoma
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] may have some limitations when it is configured with other technologies supporting backup, high availability, or disaster recovery.  
 
--   Backups of databases in an Availability Groups will be a [**copy_only** backup](../../backup-restore/copy-only-backups-sql-server.md).
+-   Backups of databases in an Availability Groups will be a [**copy_only** backup](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
   
 ## See Also  
 - [Enable SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   

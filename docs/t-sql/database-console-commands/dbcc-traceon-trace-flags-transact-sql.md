@@ -4,7 +4,7 @@ description: "Learn how to set specific server characteristics or to alter a par
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 12/12/2022
+ms.date: 1/3/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"

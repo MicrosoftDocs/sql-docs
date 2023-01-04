@@ -1,6 +1,6 @@
 ---
-title: Overview of Log Replay Service with Azure SQL Managed Instance
-description: Learn about Log Replay Service with Azure SQL Managed Instance
+title: Overview of Log Replay Service
+description: Learn about Log Replay Service with Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma
@@ -17,9 +17,9 @@ ms.custom:
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides an overview of the Log Replay Service (LRS), which you can use to migrate databases from a SQL Server instance to a SQL Managed Instance deployment. LRS is a free cloud service that's enabled for Azure SQL Managed Instance and based on SQL Server log-shipping technology.
+This article provides an overview of the Log Replay Service (LRS), which you can use to migrate databases from SQL Server to Azure SQL Managed Instance. LRS is a free cloud service that's available for Azure SQL Managed Instance and based on SQL Server log-shipping technology.
 
-To get started, review [Migrate databases from a SQL Server instance to a SQL Managed Instance deployment by using Log Replay Service](log-replay-service-migrate.md). 
+To get started, review [Migrate databases from SQL Server to Azure SQL Managed Instance by using Log Replay Service](log-replay-service-migrate.md). 
 
 ## When to use Log Replay Service
 
@@ -41,15 +41,14 @@ Consider using LRS in the following cases, when:
 
 The following sources are supported: 
 
-- SQL Server hosted on-premises 
-- SQL Server on virtual machines  
-- Amazon Web Services (AWS) EC2
-- Amazon Web Services (AWS) RDS
-- Compute Engine (Google Cloud Platform - GCP)  
-- Cloud SQL for SQL Server (Google Cloud Platform – GCP) 
+- SQL Server on Virtual Machines
+- Amazon EC2 (Elastic Compute Cloud)
+- Amazon RDS (Relational Database Service) for SQL Server
+- Google Compute Engine
+- Cloud SQL for SQL Server - GCP (Google Cloud Platform) 
 
 > [!NOTE]
-> - We recommend that you automate the migration of databases from SQL Server instances to SQL Managed Instance deployments by using Database Migration Service. Consider using LRS to orchestrate migrations when Database Migration Service doesn't fully support your scenarios.
+> - We recommend that you automate the migration of databases from SQL Server to Azure SQL Managed Instance by using Database Migration Service. Consider using LRS to orchestrate migrations when Database Migration Service doesn't fully support your scenarios.
 > - LRS is the only method to restore differential backups on managed instances. It isn't possible to manually restore differential backups on managed instances or to manually set the `NORECOVERY` mode by using T-SQL.
 >
 
@@ -57,7 +56,7 @@ The following sources are supported:
 
 Building a custom solution to migrate databases to the cloud with LRS requires several orchestration steps, as shown in the diagram and table later in this section.
 
-Migration consists of taking database backups on a SQL Server instance, and copying backup files to an Azure Blob Storage account. Full, log, and differential backups are supported. You then use the LRS cloud service to restore backup files from the Azure Blob Storage account to the SQL Managed Instance deployment. The Blob Storage account serves as intermediary storage for backup files between your SQL Server instance and your SQL Managed Instance deployment.
+Migration consists of taking database backups on SQL Server, and copying backup files to an Azure Blob Storage account. Full, log, and differential backups are supported. You then use the LRS cloud service to restore backup files from the Azure Blob Storage account to SQL Managed Instance. The Blob Storage account serves as intermediary storage for backup files between SQL Server and SQL Managed Instance.
 
 LRS monitors your Blob Storage account for any new differential or log backups that are added after the full backup has been restored. LRS then automatically restores these new files. You can use the service to monitor the progress of backup files that are being restored to the SQL Managed Instance deployment, and stop the process if necessary.
 

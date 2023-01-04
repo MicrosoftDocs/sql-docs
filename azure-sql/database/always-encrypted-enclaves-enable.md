@@ -9,12 +9,13 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ---
-# Enable Intel SGX for Always Encrypted for your Azure SQL Database 
+# Enable Always Encrypted with secure enclaves for your Azure SQL Database 
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
+# [Intel SGX enclaves](#tab/IntelSGXenclaves)
 
-[Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database uses [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclaves. For Intel SGX to be available, the database must use the [vCore model](service-tiers-vcore.md) and [DC-series](service-tiers-sql-database-vcore.md#dc-series) hardware.
+[Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database can use [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclaves. For Intel SGX to be available, the database must use the [vCore model](service-tiers-vcore.md) and [DC-series](service-tiers-sql-database-vcore.md#dc-series) hardware.
 
 Configuring the DC-series hardware to enable Intel SGX enclaves is the responsibility of the Azure SQL Database administrator. See [Roles and responsibilities when configuring Intel SGX enclaves and attestation](always-encrypted-enclaves-plan.md#roles-and-responsibilities-when-configuring-intel-sgx-enclaves-and-attestation).
 
@@ -26,6 +27,17 @@ Configuring the DC-series hardware to enable Intel SGX enclaves is the responsib
 
 For detailed instructions for how to configure a new or existing database to use a specific hardware configuration, see [Hardware configuration](service-tiers-sql-database-vcore.md#hardware-configuration).
    
+
+# [VBS enclaves](#tab/VBSenclaves)
+Customer can specify PreferredEnclaveType value as “VBS” or “Default” or skip this property in API call 
+(customer can either specify “Default” as the value OR if property is not specified then this is the default value taken by the system)
+
+If customer has not explicitly selected “VBS” as value for this property, the system default behavior will kick in:
+- Depending on capacity constraints and Gen2 VM availability in the selected region, database will be placed in Gen2 VM and VBS enclave will be initialized 
+OR
+- Database will be placed on Gen1 VM and no enclave initialization will occur
+
+
 ## Next steps
 
 - [Configure Azure Attestation for your Azure SQL database server](always-encrypted-enclaves-configure-attestation.md)

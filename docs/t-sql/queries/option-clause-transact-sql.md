@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  This clause can be specified in the SELECT, DELETE, UPDATE and MERGE statements.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [ OPTION ( <query_hint> [ ,...n ] ) ]   
 ```  
   
-### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+### Syntax for [!INCLUDE[ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 
 ```syntaxsql
 OPTION ( <query_option> [ ,...n ] )  
@@ -88,10 +88,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### B. SELECT statement with a label in the OPTION clause  
- The following example shows a simple [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT statement with a label in the OPTION clause.  
+ The following example shows an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] SELECT statement with a label in the OPTION clause.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -113,7 +113,7 @@ OPTION (HASH JOIN);
 ```  
   
 ### D. SELECT statement with a label and multiple query hints in the OPTION clause  
- The following example is a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT statement that contains a label and multiple query hints. When the query is run on the Compute nodes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will apply a hash join or merge join, according to the strategy that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decides is the most optimal.  
+ The following example is a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] SELECT statement that contains a label and multiple query hints. When the query is run on the Compute nodes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will apply a hash join or merge join, according to the strategy that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decides is the most optimal.  
   
 ```sql
 -- Uses AdventureWorks  

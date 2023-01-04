@@ -26,7 +26,7 @@ ms.author: randolphwest
 
   Returns the column ordinal of the specified column as it appears in the [change table](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associated with the specified capture instance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

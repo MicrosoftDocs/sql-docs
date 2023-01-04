@@ -6,5 +6,5 @@ ms.service: sql
 ms.topic: include
 ---
 
-:::image type="icon" source="../media/yes-icon.svg" border="false"::: [!INCLUDE [ssazuresynapse_md](../ssazuresynapse_md.md)]
+:::image type="icon" source="../media/yes-icon.svg" border="false"::: [!INCLUDE [ssazuresynapse-md](../ssazuresynapse-md.md)]
 

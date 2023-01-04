@@ -25,7 +25,7 @@ dev_langs:
 
 This stored procedure allows you to manually clean the side table (`change_tracking_objectid`) for a table in a database for which change tracking is enabled. If the *TableToClean* parameter is not passed, then this process cleans all side tables for all tables in the database where change tracking is enabled.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

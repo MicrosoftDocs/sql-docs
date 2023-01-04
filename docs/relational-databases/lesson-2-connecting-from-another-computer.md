@@ -51,7 +51,7 @@ If you plan to connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] from anot
   
 2.  In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, and then click **Protocols for** _\<InstanceName\>_.  
   
-    The default instance (an unnamed instance) is listed as **MSSQLSERVER**. If you installed a named instance, the name you provided is listed. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] installs as **SQLEXPRESS**, unless you changed the name during setup.  
+    The default instance (an unnamed instance) is listed as **MSSQLSERVER**. If you installed a named instance, the name you provided is listed. [!INCLUDE[ssexpress-2012-md](../includes/ssexpress-2012-md.md)] installs as **SQLEXPRESS**, unless you changed the name during setup.  
   
 3.  In the list of protocols, right-click the protocol you want to enable (**TCP/IP**), and then click **Enable**.  
   

@@ -26,7 +26,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
 
 Concatenates the values of string expressions and places separator values between them. The separator isn't added at the end of string. 
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

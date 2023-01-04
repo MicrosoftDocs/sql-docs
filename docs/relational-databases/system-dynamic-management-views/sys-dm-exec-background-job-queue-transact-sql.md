@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns a row for each query processor job that is scheduled for asynchronous (background) execution.  
   
 > [!NOTE]
-> To call this from **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** or **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, use the name `sys.dm_pdw_nodes_exec_background_job_queue`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from **[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]** or **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, use the name `sys.dm_pdw_nodes_exec_background_job_queue`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**retry_count**|**smallint**|Number of times the job was picked from the queue and reinserted because of lack of resources or other reasons.|  
 |**in_progress**|**smallint**|Indicates whether the job has started execution.<br /><br /> 1 = Started<br /><br /> 0 = Still waiting|  
 |**session_id**|**smallint**|Session identifier.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions
 

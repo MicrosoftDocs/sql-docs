@@ -44,7 +44,7 @@ PolyBase provides these same functionalities for the following SQL products from
 - [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions (Windows)
 - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Windows and Linux)
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[pdw](../../includes/sspdw-md.md)]
-- [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]
+- [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 > [!NOTE]
 > Data virtualization using PolyBase feature is available in preview for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
@@ -67,7 +67,7 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 
  The PolyBase feature provides connectivity to the following external data sources:
 
-| External data sources     | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] with PolyBase | APS PDW | [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] |
+| External data sources     | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] with PolyBase | APS PDW | [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
 |:---------------------------|:-------------|:--|:------------|:---------------|
 | Oracle, MongoDB, Teradata                                 | Read               | Read               | **No**     | **No**     |  
 | Generic ODBC                                              | Read (Windows Only)| Read (Windows Only)| **No**     | **No**     |  
@@ -103,7 +103,7 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 
 ### Azure integration
 
-With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
+With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
 
 ## Why use PolyBase?
 

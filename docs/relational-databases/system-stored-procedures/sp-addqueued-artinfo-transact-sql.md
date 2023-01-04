@@ -28,7 +28,7 @@ ms.author: maghan
   
  Creates the [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md) table at the Subscriber that is used to track article subscription information (Queued Updating and Immediate Updating with Queued Updating as Failover). This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

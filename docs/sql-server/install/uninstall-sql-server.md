@@ -26,7 +26,7 @@ Follow these articles to uninstall an existing instance of [!INCLUDE[ssnoversion
 
 - [Uninstall Power Pivot for SharePoint](uninstall-power-pivot-for-sharepoint.md)
 
-  This article describes how to manually uninstall [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.
+  This article describes how to manually uninstall [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint.
 
 - [Uninstall Reporting Services](uninstall-reporting-services.md)
 

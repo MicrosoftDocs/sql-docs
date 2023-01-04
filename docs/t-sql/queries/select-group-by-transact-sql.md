@@ -41,7 +41,7 @@ A SELECT statement clause that divides the query result into groups of rows, usu
   
 ## Syntax  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database   
@@ -291,7 +291,7 @@ Applies to: SQL Server and Azure SQL Database
 >This syntax is provided for backward compatibility only. Avoid using this syntax in new development work, and plan to modify applications that currently use this syntax.
 
 ### WITH (DISTRIBUTED_AGG)
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 The DISTRIBUTED_AGG query hint forces the massively parallel processing (MPP) system to redistribute a table on a specific column before performing an aggregation. Only one column in the GROUP BY clause can have a DISTRIBUTED_AGG query hint. After the query finishes, the redistributed table is dropped. The original table is not changed.  
 
@@ -318,7 +318,7 @@ NULL values:
   
 ## Limitations and Restrictions
 
-Applies to: SQL Server (starting with 2008) and [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
+Applies to: SQL Server (starting with 2008) and [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]
 
 ### Maximum capacity
 

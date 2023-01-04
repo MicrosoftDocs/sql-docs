@@ -25,7 +25,7 @@ Returns the Showplan in XML format for the batch specified by the plan handle. T
   
 The XML schema for the Showplan is published and available at [this Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). It is also available in the directory where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

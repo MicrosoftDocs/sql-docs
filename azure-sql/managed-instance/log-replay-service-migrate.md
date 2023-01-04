@@ -21,13 +21,11 @@ This article explains how to migrate databases to Azure SQL Managed Instance by 
 
 The following sources are supported: 
 
-- SQL Server on-premises 
-- SQL Server on Virtual Machines  
-- Amazon Web Services (AWS) EC2
-- Amazon Web Services (AWS) RDS
-- Compute Engine (Google Cloud Platform - GCP)  
-- Cloud SQL for SQL Server (Google Cloud Platform – GCP) 
-
+- SQL Server on Virtual Machines
+- Amazon EC2 (Elastic Compute Cloud)
+- Amazon RDS (Relational Database Service) for SQL Server
+- Google Compute Engine
+- Cloud SQL for SQL Server - GCP (Google Cloud Platform)
 
 ## Prerequisites
 

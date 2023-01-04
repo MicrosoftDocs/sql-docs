@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], Always Encrypted with secure enclaves can use either [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) or [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/).
+In Azure SQL Database, Always Encrypted with secure enclaves can use either [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) or [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/).
 
 ## Intel SGX enclaves
 
@@ -35,17 +35,17 @@ Considering the above, SGX enclaves are recommended for workloads that require t
 
 ## VBS enclaves
 
-VBS enclaves (also known as Virtual Secure Mode, or VSM enclaves) is a software-based technology that relies on Windows hypervisor and doesn't require any special hardware. Therefore, VBS enclaves are available in all [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] offerings, providing you with the flexibility to use Always Encrypted with secure enclaves with a compute size, service tier, purchasing model, hardware configuration and region that best meets your workload requirements. 
+VBS enclaves (also known as Virtual Secure Mode, or VSM enclaves) is a software-based technology that relies on Windows hypervisor and doesn't require any special hardware. Therefore, VBS enclaves are available in all Azure SQL Database offerings, providing you with the flexibility to use Always Encrypted with secure enclaves with a compute size, service tier, purchasing model, hardware configuration and region that best meets your workload requirements. 
 
 VBS enclaves are the recommended solution for customers who seek protection for data in use from high-privileged users in the customer’s organization, including DBAs. Without having the cryptographic keys protecting the data, a DBA will not be able to access the data in plaintext.
 
-VBS enclaves can also help prevent some OS-level threats, such as exfiltrating sensitive data from memory dumps – the plaintext data processed in an enclave does not show up in memory dumps, providing the code inside the enclave and its properties have not been maliciously altered. However, VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] cannot address more sophisticated attacks, such as replacing the enclave binary with malicious code, due to the current lack of enclave attestation. It is important to note that Microsoft has implemented multiple layers of security controls to detect and prevent such attacks in the Azure cloud, including just-in-time access, multi-factor authentication, and security monitoring. Nevertheless, customers who require strong security isolation may prefer Intel SGX enclaves with the DC-series hardware configuration over VBS enclaves.
+VBS enclaves can also help prevent some OS-level threats, such as exfiltrating sensitive data from memory dumps – the plaintext data processed in an enclave does not show up in memory dumps, providing the code inside the enclave and its properties have not been maliciously altered. However, VBS enclaves in Azure SQL Database cannot address more sophisticated attacks, such as replacing the enclave binary with malicious code, due to the current lack of enclave attestation. It is important to note that Microsoft has implemented multiple layers of security controls to detect and prevent such attacks in the Azure cloud, including just-in-time access, multi-factor authentication, and security monitoring. Nevertheless, customers who require strong security isolation may prefer Intel SGX enclaves with the DC-series hardware configuration over VBS enclaves.
 
 > [!IMPORTANT]
-> VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
+> VBS enclaves in Azure SQL Database are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
 > [!NOTE]
-> VBS enclaves are currently available in all [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] regions **except**: Australia Central, Australia Central 2, Jio India Central, Jio India West, Korea Central, Korea South, UAE Central.
+> VBS enclaves are currently available in all Azure SQL Database regions **except**: Australia Central, Australia Central 2, Jio India Central, Jio India West, Korea Central, Korea South, UAE Central.
 
 ## Plan for enclave attestation in Azure SQL Database
 
@@ -54,7 +54,7 @@ Configuring attestation using [Microsoft Azure Attestation](/azure/attestation/o
 > [!NOTE]
 > Attestation is currently not supported for VBS enclaves. The remainder of this section applies only to Intel SGX enclaves in DC-series databases.
 
-To use Microsoft Azure Attestation for attesting Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], you need to create an [attestation provider](/azure/attestation/basic-concepts#attestation-provider) and configure it with the Microsoft-provided attestation policy. See [Configure attestation for Always Encrypted using Azure Attestation](always-encrypted-enclaves-configure-attestation.md)
+To use Microsoft Azure Attestation for attesting Intel SGX enclaves in Azure SQL Database, you need to create an [attestation provider](/azure/attestation/basic-concepts#attestation-provider) and configure it with the Microsoft-provided attestation policy. See [Configure attestation for Always Encrypted using Azure Attestation](always-encrypted-enclaves-configure-attestation.md)
 
 ### Roles and responsibilities when configuring Intel SGX enclaves and attestation
 

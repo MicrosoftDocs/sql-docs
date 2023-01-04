@@ -58911,7 +58911,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/ssms/menu-help/output-window.md",
+      "source_path": "docs/ssms/output-window.md",
       "redirect_url": "/sql/ssms/menu-help/options-output-window-page",
       "redirect_document_id": true
     },

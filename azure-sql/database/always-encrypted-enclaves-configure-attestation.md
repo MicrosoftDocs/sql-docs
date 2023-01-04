@@ -32,6 +32,10 @@ To use Azure Attestation for attesting Intel SGX enclaves used for [Always Encry
 
 2. Determine the attestation URL and share it with application administrators.
 
+> [!IMPORTANT]
+>With Intel SGX enclaves in Azure SQL Database, attestation is mandatory and it requires Microsoft Azure Attestation.
+VBS enclaves in Azure SQL Database (in preview) currently do not support attestation. There is no need to create and configure an attestation provider.
+
 > [!NOTE]
 > Configuring attestation is the responsibility of the attestation administrator. See [Roles and responsibilities when configuring Intel SGX enclaves and attestation](always-encrypted-enclaves-plan.md#roles-and-responsibilities-when-configuring-intel-sgx-enclaves-and-attestation).
 

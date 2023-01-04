@@ -428,7 +428,7 @@
           - name: Plan for Intel SGX enclaves and attestation
             href: database/always-encrypted-enclaves-plan.md
           - name: Enable Intel SGX
-            href: database/always-encrypted-enclaves-enable-sgx.md
+            href: database/always-encrypted-enclaves-enable.md
           - name: Configure Azure Attestation
             href: database/always-encrypted-enclaves-configure-attestation.md
         - name: Azure SQL Auditing

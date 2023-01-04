@@ -68,7 +68,7 @@ In production environments (handling real sensitive data), it is important your 
 
 ## Next steps
 
-- [Enable Intel SGX for your Azure SQL database](always-encrypted-enclaves-enable-sgx.md)
+- [Enable Intel SGX for your Azure SQL database](always-encrypted-enclaves-enable.md)
 
 ## See also
 

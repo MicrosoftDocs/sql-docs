@@ -39,10 +39,10 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Plan for Intel SGX enclaves and attestation in Azure SQL Database
+          - text: Plan for secure enclaves in Azure SQL Database
             url: always-encrypted-enclaves-plan.md
-          - text: Enable Intel SGX for your Azure SQL Database
-            url: always-encrypted-enclaves-enable-sgx.md
+          - text: Enable Always Encrypted with secure enclaves for your Azure SQL Database
+            url: always-encrypted-enclaves-enable.md
           - text: Configure attestation for Always Encrypted using Azure Attestation 
             url: always-encrypted-enclaves-configure-attestation.md
 

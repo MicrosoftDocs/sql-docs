@@ -72,4 +72,4 @@ In production environments (handling real sensitive data), it is important your 
 
 ## See also
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](always-encrypted-enclaves-getting-started.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](always-encrypted-enclaves-getting-started-sgx.md)

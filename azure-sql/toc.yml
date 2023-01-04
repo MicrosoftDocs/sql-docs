@@ -341,7 +341,7 @@
     - name: Security
       items:
       - name: Always Encrypted with secure enclaves
-        href: database/always-encrypted-enclaves-getting-started.md
+        href: database/always-encrypted-enclaves-getting-started-sgx.md
       - name: Configure security
         href: database/secure-database-tutorial.md
       - name: Create users using service principals

@@ -29,21 +29,19 @@ For detailed instructions for how to configure a new or existing database to use
 
 ## [VBS enclaves](#tab/VBSenclaves)
 
-To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases#databaseproperties) to **VBS**. This ensures the database runs on a machine that supports VBS and activates the VBS enclave.
+To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**. This ensures the database runs on a machine that supports VBS and activates the VBS enclave. You can set **preferredEnclaveType** when you create your database or you by updating an existing database.
 
-> [!NOTE] By default, a new database is created with **preferredEnclaveType** set to **Default**, which doesn't support VBS enclaves.
+> [!NOTE]
+> By default, a new database is created with **preferredEnclaveType** set to **Default**, which doesn't support VBS enclaves.
 
 You can set the **preferredEnclaveType** using Azure PowerShell.
 
 ## Enabling VBS enclaves using Azure PowerShell
 
-Create a new database with a VBS enclave with the [New-AzSqlDatabase](/powershell/module/az.sql/New-AzSqlDatabase) cmdlet. 
-
-The below example creates a serverless database with a VBS enclave.
+Create a new database with a VBS enclave with the [New-AzSqlDatabase](/powershell/module/az.sql/New-AzSqlDatabase) cmdlet. The below example creates a serverless database with a VBS enclave.
 
 ```azurepowershell-interactive
-Write-host "Creating a Gen5 2 vCore serverless database with a VBS enclave..."
-$database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
+New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
     -ServerName "Server01" `
     -DatabaseName "Database01" `
     -Edition GeneralPurpose `
@@ -52,8 +50,17 @@ $database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
     -VCore 2 `
     -MinimumCapacity 2 `
     -PreferredEnclaveType VBS
-$database
 ```
+
+To enable a VBS enclave for an existing database use the [Set-AzSqlDatabase](/powershell/module/az.sql/Set-AzSqlDatabase) cmdlet - see the below example.
+
+```azurepowershell-interactive
+Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" `
+    -DatabaseName "Database01" `
+    -ServerName "Server01" `
+    -PreferredEnclaveType VBS
+```
+
 
 ---
 

@@ -1,17 +1,14 @@
 ---
 title: Resolving T-SQL differences-migration
 description: T-SQL statements that are less than fully supported in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: migration
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: reference
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/17/2021
+ms.service: sql-database
+ms.subservice: migration
+ms.topic: reference
+ms.custom: sqldbrb=1
 ---
 # T-SQL differences between SQL Server and Azure SQL Database
 
@@ -63,7 +60,7 @@ In addition to T-SQL statements related to the unsupported features described in
 - `sp_configure` and `RECONFIGURE`. [ALTER DATABASE SCOPED CONFIGURATION](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql) is supported.
 - `sp_helpuser`
 - `sp_migrate_user_to_contained`
-- SQL Server Agent: Syntax that relies upon the SQL Server Agent or the MSDB database: alerts, operators, central management servers. Use scripting, such as PowerShell, instead.
+- SQL Server Agent: Syntax that relies upon the SQL Server Agent or the `msdb` database: alerts, operators, central management servers. Use scripting, such as PowerShell, instead.
 - SQL Server audit: Use SQL Database [auditing](auditing-overview.md) instead.
 - SQL Server trace.
 - Trace flags.

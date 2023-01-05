@@ -3,10 +3,9 @@ title: "Effective Boolean Value (XQuery) | Microsoft Docs"
 description: Learn about effective Boolean values in XQuery.
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

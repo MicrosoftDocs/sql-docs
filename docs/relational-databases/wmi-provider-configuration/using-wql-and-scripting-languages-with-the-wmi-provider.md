@@ -3,10 +3,9 @@ title: "Access the WMI Provider with WQL and scripting"
 description: Learn how to access SQL Server services and network settings using the WMI Provider by using a WQL editor or query tool or a scripting language.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: wmi
+ms.subservice: wmi
 ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [WMI]"

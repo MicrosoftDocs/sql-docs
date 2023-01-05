@@ -1,16 +1,12 @@
 ---
-description: Learn how row locking is used to control how concurrent users access data at the same time from different connections.
 title: Understanding row locking
-ms.custom: ""
-ms.date: "12/08/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
+description: Learn how row locking is used to control how concurrent users access data at the same time from different connections.
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "12/08/2020"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 
 # Understanding row locking
@@ -25,7 +21,7 @@ The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] uses [!INCLUDE
 Locking is used to assure transactional integrity and database consistency. Locking prevents users from reading data that is being changed by other users, and prevents multiple users from changing the same data at the same time. If locking is not used, data within the database might become logically incorrect, and queries run against that data might produce unexpected results.
 
 > [!NOTE]  
-> For more information about row locking in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Locking in the [!INCLUDE[ssDE](../../includes/ssde_md.md)]](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine).
+> For more information about row locking in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Locking in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine).
 
 ## See also
 

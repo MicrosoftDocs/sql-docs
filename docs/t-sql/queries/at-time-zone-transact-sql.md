@@ -2,11 +2,10 @@
 description: "AT TIME ZONE (Transact-SQL)"
 title: AT TIME ZONE (Transact-SQL)
 ms.date: "06/11/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
 ms.custom: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "AT TIME ZONE"
@@ -29,7 +28,7 @@ Converts an *inputdate* to the corresponding *datetimeoffset* value in the targe
 
 **AT TIME ZONE** implementation relies on a Windows mechanism to convert **datetime** values across time zones.  
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax
 

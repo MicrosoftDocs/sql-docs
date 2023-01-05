@@ -1,22 +1,19 @@
 ---
 title: Use table-valued parameters (OLE DB driver)
 description: Learn how to creates table-valued parameters in OLE DB Driver for SQL Server in this example that then shows how to work with the parameters.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: "reference"
 ---
 # Use Table-Valued Parameters (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This sample works with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later. This sample does the following:  
+  This sample works with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions. This sample does the following:  
   
 -   Creates table-valued parameters by using dynamic discovery though IOpenRowset::OpenRowset.  
   

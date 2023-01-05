@@ -1,13 +1,13 @@
-﻿---
+---
 title: Remote Service Bindings
 description: "A remote service binding establishes a relationship between a local database user, the certificate for the user, and the name of a remote service."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Remote Service Bindings

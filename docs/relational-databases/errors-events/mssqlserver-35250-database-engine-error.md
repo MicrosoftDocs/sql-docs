@@ -3,9 +3,9 @@ description: "MSSQLSERVER_35250"
 title: "MSSQLSERVER_35250 | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/06/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "35250 (Database Engine error)"
@@ -176,7 +176,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 - Compare endpoint_url and port from each query and ensure the port from the endpoint_url matches the port defined for the endpoint on each respective replica
 
   > [!NOTE]  
-  > If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
+  > If you are using specific IP addresses for the endpoint to listen on, versus the default of "listen all", then you may have to define URLs that use the specific IP address rather than the FQDN.
 
 #### 5. Check whether the network service account has CONNECT permission to the endpoint
 

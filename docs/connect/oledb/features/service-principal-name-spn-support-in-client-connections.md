@@ -1,19 +1,16 @@
 ---
 title: Service Principal Name (SPN) Support in Client Connections
 description: Learn about how SQL Server supports Service Principal Name in client connections. See the most common usage scenarios.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB Driver for SQL Server, SPNs"
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Service Principal Name (SPN) Support in Client Connections
 
@@ -21,7 +18,7 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], support for service principal names (SPNs) has been extended to enable mutual authentication across all protocols. In previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SPNs were only supported for Kerberos over TCP when the default SPN for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance was registered with Active Directory.
+Beginning with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], support for service principal names (SPNs) has been extended to enable mutual authentication across all protocols. In previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SPNs were only supported for Kerberos over TCP when the default SPN for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance was registered with Active Directory.
 
 SPNs are used by the authentication protocol to determine the account in which a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance runs. If the instance account is known, Kerberos authentication can be used to provide mutual authentication by the client and server. If the instance account isn't known, NTLM authentication, which only provides authentication of the client by the server, is used. Currently, OLE DB Driver for SQL Server does the authentication lookup, deriving the SPN from the instance name and network connection properties. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances will attempt to register SPNs on startup, or they can be registered manually. However, registration will fail if there are insufficient access rights for the account that attempts to register the SPNs.
 

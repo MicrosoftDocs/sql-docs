@@ -2,8 +2,8 @@
 title: Subqueries
 description: Subqueries in Azure Synapse Analytics and Parallel Data Warehouse
 titleSuffix: "Azure Synapse Analytics"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 author: MikeRayMSFT
 ms.author: mikeray
@@ -16,7 +16,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-This topic gives examples of using subqueries in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+This topic gives examples of using subqueries in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
@@ -36,8 +36,8 @@ For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/querie
  Correlated subquery  
  A subquery that refers to a table in the outer query.  
   
-##  <a name="Examples"></a> Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- This section provides examples of subqueries supported in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+##  <a name="Examples"></a> Examples: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ This section provides examples of subqueries supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### A. TOP and ORDER BY in a subquery  
   

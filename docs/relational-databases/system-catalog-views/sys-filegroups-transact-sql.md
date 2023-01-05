@@ -4,9 +4,8 @@ description: sys.filegroups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/24/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.filegroups_TSQL"

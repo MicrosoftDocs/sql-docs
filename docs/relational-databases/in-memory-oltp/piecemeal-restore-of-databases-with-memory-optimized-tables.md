@@ -4,9 +4,8 @@ description: Databases with memory-optimized tables support piecemeal restore in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f

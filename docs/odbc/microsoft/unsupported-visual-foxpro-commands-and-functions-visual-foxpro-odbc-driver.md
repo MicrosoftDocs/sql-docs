@@ -3,10 +3,9 @@ description: "Unsupported Visual FoxPro Commands and Functions (Visual FoxPro OD
 title: "Unsupported Visual FoxPro Commands and Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FoxPro ODBC driver [ODBC], commands and functions"

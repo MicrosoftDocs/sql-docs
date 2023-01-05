@@ -1,9 +1,8 @@
 ---
 description: "Modify the Target Servers for a Job"
 title: "Modify the Target Servers for a Job"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying target servers"
@@ -56,7 +55,7 @@ By default, members of the sysadmin fixed server role can execute this stored pr
   
 #### To modify the target servers for a job  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

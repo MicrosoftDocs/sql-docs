@@ -3,10 +3,9 @@ title: "Complete Database Restores (Full Recovery Model) | Microsoft Docs"
 description: Learn about a complete SQL Server database restore, where all data is recovered to a consistent point in time.
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "complete database restores"

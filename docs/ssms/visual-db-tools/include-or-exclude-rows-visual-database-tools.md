@@ -3,9 +3,8 @@ description: "Include or Exclude Rows (Visual Database Tools)"
 title: Include or Exclude Rows
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], excluding rows"
@@ -31,7 +30,7 @@ To restrict the number of rows a SELECT query should return, you create search c
 > [!NOTE]  
 > You can also use search conditions to indicate which rows are affected by an Update, Insert Results, Insert Values, Delete, or Make Table query.  
   
-When the query runs, the [!INCLUDE[ssDE](../../includes/ssde_md.md)] examines and applies the search condition to each row in the tables you are searching. If the row meets the condition, it is included in the query. For example, a search condition that would find all the employees in a particular region might be:  
+When the query runs, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] examines and applies the search condition to each row in the tables you are searching. If the row meets the condition, it is included in the query. For example, a search condition that would find all the employees in a particular region might be:  
   
 ```  
 region = 'UK'  

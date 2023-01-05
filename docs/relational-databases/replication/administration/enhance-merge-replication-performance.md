@@ -3,10 +3,9 @@ description: "Enhance Merge Replication Performance"
 title: "Enhance Merge Replication Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"

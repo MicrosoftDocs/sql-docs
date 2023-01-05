@@ -2,12 +2,12 @@
 title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Oracle (OracleToSQL) for each release.
 author: cpichuka
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-whats-new
 ms.date: "04/29/2021"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: cpichuka
@@ -15,6 +15,16 @@ ms.author: cpichuka
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v9.2
+
+The v9.2 release of SSMA for Oracle contains the following changes:
+ * Added Support for legacy unicode string literals
+ * Added Support for arbitary expressions in ESCAPE clause
+ * Conversion Support for EXTRACT(XML) and XMLQUERY
+ * Enhanced data pipeline monitoring for at scale migration
+ * Conversion Support for EXTRACT(XML),EXTRACTVALUE and XMLQUERY
+ * Support for Azure Data Factory (ADF) pipeline monitoring
 
 ## SSMA v9.1
 

@@ -3,9 +3,9 @@ title: "Recover from failover cluster instance failure"
 description: Learn how to recover from a failover of a failover cluster instance by using the Failover Cluster Manager snap-in after a failover occurs in SQL Server.
 ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "clusters [SQL Server], recovery from failure"

@@ -3,17 +3,16 @@ description: "Reserved Words (Master Data Services)"
 title: Reserved Words
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reserved words [Master Data Services]"
   - "Master Data Services, reserved words"
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Reserved Words (Master Data Services)
 

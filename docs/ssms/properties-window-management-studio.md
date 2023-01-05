@@ -1,9 +1,8 @@
 ---
 title: "Properties Window (Management Studio)"
 description: "Properties Window (Management Studio)"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "viewing properties"

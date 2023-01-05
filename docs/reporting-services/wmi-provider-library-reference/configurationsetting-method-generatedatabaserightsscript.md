@@ -2,9 +2,8 @@
 description: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting)"
 title: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
 
 
 ms.topic: conceptual
@@ -104,7 +103,7 @@ out Int32 HRESULT);
   
  If the report server does not have a report server database specified, calling GrantRightsToDatabaseUser returns an error.  
   
- The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ The generated script supports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

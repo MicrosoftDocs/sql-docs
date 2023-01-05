@@ -1,18 +1,16 @@
 ---
 title: Configure streaming export of metrics and resource logs
 description: Learn how to configure streaming export of metrics and resource logs, including intelligent diagnostic analysis from Azure SQL Database and Azure SQL Managed Instance to the destination of your choice to store information about resource utilization and query execution statistics.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "seoapril2019"
-  - "devx-track-azurepowershell"
-ms.topic: how-to
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 3/10/2022
+ms.date: 11/2/2022
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: how-to
+ms.custom:
+  - "seoapril2019"
+  - "devx-track-azurepowershell"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -36,7 +34,7 @@ In addition to streaming the export of the Intelligent Insights log, you can als
 | Diagnostic telemetry for databases | Azure SQL Database support | Azure SQL Managed Instance support |
 | :------------------- | ----- | ----- |
 | [Basic metrics](#basic-metrics): Contains DTU/CPU percentage, DTU/CPU limit, physical data read percentage, log write percentage, Successful/Failed/Blocked by firewall connections, sessions percentage, workers percentage, storage, storage percentage, and XTP storage percentage. | Yes | No |
-| [Instance and App Advanced](#advanced-metrics): Contains tempdb system database data and log file size and tempdb percent log file used. | Yes | No |
+| [Instance and App Advanced](#advanced-metrics): Contains `tempdb` system database data and log file size and `tempdb` percent log file used. | Yes | No |
 | [QueryStoreRuntimeStatistics](#query-store-runtime-statistics): Contains information about the query runtime statistics such as CPU usage and query duration statistics. | Yes | Yes |
 | [QueryStoreWaitStatistics](#query-store-wait-statistics): Contains information about the query wait statistics (what your queries waited on) such are CPU, LOG, and LOCKING. | Yes | Yes |
 | [Errors](#errors-dataset): Contains information about SQL errors on a database. | Yes | Yes |
@@ -203,7 +201,7 @@ You can set up an instance database resource to collect the following diagnostic
 
 | Resource | Monitoring telemetry |
 | :------------------- | ------------------- |
-| **Instance database** | [ResourceUsageStats](#resource-usage-stats-for-managed-instances) contains vCores count, average CPU percentage, IO requests, bytes read/written, reserved storage space, and used storage space. |
+| **Instance database** | [Query Store Runtime Statistics](#query-store-runtime-statistics) and [Query Store Wait Statistics](#query-store-wait-statistics) contain [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) data for the database. [SQL Insights](intelligent-insights-use-diagnostics-log.md) contains Intelligent Insights data for the database. [Errors](#errors-dataset) contains the errors data for this database.|
 
 To enable streaming of diagnostic telemetry for an instance database, follow these steps:
 
@@ -456,9 +454,9 @@ Refer to the following table for details about advanced metrics.
 |---|---|---|
 |sqlserver_process_core_percent<sup>1</sup>|SQL process core percent|CPU usage percentage for the SQL process, as measured by the operating system.|
 |sqlserver_process_memory_percent<sup>1</sup> |SQL process memory percent|Memory usage percentage for the SQL  process, as measured by the operating system.|
-|tempdb_data_size<sup>2</sup>| Tempdb Data File Size Kilobytes |Tempdb Data File Size Kilobytes.|
-|tempdb_log_size<sup>2</sup>| Tempdb Log File Size Kilobytes |Tempdb Log File Size Kilobytes.|
-|tempdb_log_used_percent<sup>2</sup>| Tempdb Percent Log Used |Tempdb Percent Log Used.|
+|tempdb_data_size<sup>2</sup>|Tempdb Data File Size Kilobytes |Tempdb Data File Size Kilobytes.|
+|tempdb_log_size<sup>2</sup>|Tempdb Log File Size Kilobytes |Tempdb Log File Size Kilobytes.|
+|tempdb_log_used_percent<sup>2</sup>|Tempdb Percent Log Used |Tempdb Percent Log Used.|
 
 <sup>1</sup> This metric is available for databases using the vCore purchasing model with 2 vCores and higher, or 200 DTU and higher for DTU-based purchasing models.
 

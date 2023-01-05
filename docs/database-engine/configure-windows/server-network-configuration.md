@@ -1,14 +1,13 @@
 ---
-title: "Server Network Configuration | Microsoft Docs"
+title: "Server Network Configuration"
 description: Become familiar with SQL Server network configuration tasks. View information on enabling protocols, configuring encryption, registering SPNs, and other actions.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/27/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Named Pipes [SQL Server], configuring"
   - "connections [SQL Server], server network configuration"
   - "Database Engine [SQL Server], network configurations"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "protocols [SQL Server], choosing"
   - "ports [SQL Server], changing"
   - "server configuration [SQL Server]"
-ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Server Network Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

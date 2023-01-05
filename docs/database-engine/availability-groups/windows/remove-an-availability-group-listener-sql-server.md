@@ -1,19 +1,17 @@
 ---
 title: "Remove an availability group listener"
-description: Describes how to remove an Always On availability group listener with SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. 
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removeaglistener.default.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], listeners"
-ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
+description: Describes how to remove an Always On availability group listener with SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.availabilitygroup.removeaglistener.default.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], listeners"
 ---
 # Remove an availability group listener (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -2,10 +2,9 @@
 description: "Post-migration Validation and Optimization Guide"
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
 ms.date: 01/09/2019
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022

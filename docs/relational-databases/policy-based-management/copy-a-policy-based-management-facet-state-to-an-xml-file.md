@@ -3,10 +3,9 @@ title: "Copy a Policy-Based Management facet state to XML File"
 description: Describes how to copy the state 0f a Policy-Based Management facet to an XML file using SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, copy facet state to XML file"

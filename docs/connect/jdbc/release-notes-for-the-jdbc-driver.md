@@ -1,16 +1,12 @@
 ---
 title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
-ms.custom: ""
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 12/13/2022
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Release notes for the Microsoft JDBC Driver for SQL Server
 
@@ -18,15 +14,15 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ## <a id="112"></a> 11.2
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2202911)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2203102)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2220143)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2220142)**
 
-Release number: 11.2.0  
-Released: August 4, 2022
+Release number: 11.2.2  
+Released: December 15, 2022
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
-For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2202911&clcid=0x40a)  
-For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2203102&clcid=0x40a)
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x40a)
 
 ### 11.2 Compliance
 
@@ -35,9 +31,34 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Download the latest updates for JDBC Driver 11.2. | &bull; &nbsp; [GitHub, 11.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v11.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 11.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-11.20.jre17.jar file from the 11.2 package should be used with Java 17. |
 | Compatible with Java Development Kit (JDK) version 18.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 11.2 for SQL Server is now compatible with Java Development Kit (JDK) version 18.0 in addition to JDK 17.0, 11.0 and 1.8. |
-| &nbsp; | &nbsp; |
 
 ### 11.2 Releases
+
+Release number: 11.2.2  
+Released: December 15, 2022
+
+Fixed issues in 11.2.2:
+
+- Fixed Idle Connection Resiliency bug
+- Clear prepared statement handle cache on idle reconnect
+- Fixed callable statement index out of bounds error 
+- Fixed check for DONE token when fetching result sets 
+- Fixed intermittent error: "Internal error during decryption: Tag mismatch!"
+
+Release number: 11.2.1  
+Released: September 8, 2022
+
+Fixed issues in 11.2.1:
+
+- Made `com.microsoft.azure:msal4j` an optional dependency
+- Fixed a query cancellation bug that intermittently occurred in batch queries
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2217800)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2217551)**
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2217551&clcid=0x40a)
 
 Release number: 11.2.0  
 Released: August 4, 2022
@@ -57,7 +78,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Added Configurable IPv6 Support | The IP address preference for the client application can now be set between IPv4 and IPv6. Use the new `ipaddresspreference` connection setting to control the behavior. For more information, see [Setting the connection properties](setting-the-connection-properties.md). |
 | Added support for prepare method selection | Added new connection string property prepareMethod to toggle between use of sp_prepare and sp_prepexec. Use the new `prepareMethod` connection setting to control the behavior. For more information, see [Setting the connection properties](setting-the-connection-properties.md). |
 | Cache parameter metadata calls | Encryption-related information for parameterized queries can now be cached. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
-| &nbsp; | &nbsp; |
 
 ### Changes in 11.2
 
@@ -69,7 +89,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Allow serverName to be re-ordered in connection string | Validate that the serverName field of the connection string does not have an equal sign. |
 | `msal4j` dependency is now explicit | Added an explicit dependency for `msal4j` (was a transitive dependency in previous releases). |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`. |
-| &nbsp; | &nbsp; |
 
 ### Fixes in 11.2
 
@@ -79,17 +98,26 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Exception is not thrown as expected when the session is killed in SQL database | Added check for DONE_ERROR status token which may occur from a killed session on the server [GitHub Issue #1846](https://github.com/microsoft/mssql-jdbc/issues/1846). |
 | Assertion fails when canceling "insert into" statement | Fixed issue where the driver may assert when canceling a statement [GitHub Issue #1849](https://github.com/microsoft/mssql-jdbc/issues/1849). |
 | Establishing multiple connections in parallel can throw an IndexOutOfBoundsException | Fixed race condition with addressList which may result in IndexOutOfBoundsException when establishing multiple connections [GitHub Issue #1852](https://github.com/microsoft/mssql-jdbc/issues/1852). |
-| &nbsp; | &nbsp; |
 
 ## Previous releases
 
 ## <a id="102"></a> 10.2
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2195718)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2195832)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2220052)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2220051)**
+
+Release number: 10.2.2 
+Released: Dec 13, 2022
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220051&clcid=0x40a)
 
 Release number: 10.2.1  
 Released: May 12, 2022
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2195718)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2195832)**
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x40a)  
@@ -102,9 +130,20 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Download the latest updates for JDBC Driver 10.2. | &bull; &nbsp; [GitHub, 10.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v10.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 10.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-10.20.jre17.jar file from the 10.2 package should be used with Java 17. |
 | Compatible with Java Development Kit (JDK) version 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 10.2 for SQL Server is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
-| &nbsp; | &nbsp; |
 
 ### 10.2 Releases
+
+Release number: 10.2.2  
+Released: Dec 13, 2022
+
+Fixed issues in 10.2.2:
+
+- Clear prepared statement cache on idle connection resiliency reconnections
+- Fix for setting KeepAlive extended options 
+- Fixed issue where the driver may assert when canceling a statement
+- Fixed callable statement index out of bounds error
+- Fixed issue not checking for DONE token errors so exceptions are ignored
+- Fixed query cancellation bug
 
 Release number: 10.2.1  
 Released: May 12, 2022
@@ -132,7 +171,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Java 17 support | The driver is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
 | Idle Connection Resiliency support | Idle Connection Resiliency is now supported. See [Idle Connection Resiliency](connection-resiliency.md). |
 | Multi-user Key Store Providers | The driver now supports Key Store providers at the connection and statement level to support multi-user scenarios. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
-| &nbsp; | &nbsp; |
 
 ### Changes in 10.2
 
@@ -146,14 +184,12 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Non-blocking random in Linux | Updated to use a non-blocking random call when generating a GUID for enclave packages. |
 | CNAME resolution for realm | Added CNAME resolution when realm is specified. |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, and `bouncycastle`. |
-| &nbsp; | &nbsp; |
 
 ### Fixes in 10.2
 
 | Fix | Details |
 | :---------- | :----------- |
 | TDSParser stuck on TDS_COLMETADATA | Fixed: TDSParser stuck on TDS_COLMETADATA, which could result in a hang for certain queries. [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) |
-| &nbsp; | &nbsp; |
 
 ## <a id="94"></a> 9.4
 
@@ -174,7 +210,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Download the latest updates for JDBC Driver 9.4. | &bull; &nbsp; [GitHub, 9.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 9.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-9.4.0.jre16.jar file from the 9.4 package should be used with Java 16. |
 | Compatible with Java Development Kit (JDK) version 16.0, 11.0, and 1.8. | Microsoft JDBC Driver 9.4 for SQL Server is now compatible with Java Development Kit (JDK) version 16.0 in addition to JDK 11.0 and 1.8. |
-| &nbsp; | &nbsp; |
 
 ### 9.4 Releases
 
@@ -204,7 +239,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Replication connection support | Replication connections are now supported. See [Setting the connection properties](setting-the-connection-properties.md). |
 | Custom Kerberos authentication realm | The driver now supports specifying a custom authentication realm when using Kerberos authentication. See [Setting the connection properties](setting-the-connection-properties.md). |
 | Open Connection Retry | The `connectRetryCount` and `connectRetryInterval` connection properties have been added to configure automatic retries when opening connections. See [Setting the connection properties](setting-the-connection-properties.md) for details on these new properties. |
-| &nbsp; | &nbsp; |
 
 ### Changes in 9.4
 
@@ -216,7 +250,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Client process ID | The client process ID is now sent to the server when running on Java 9+. Java 8 keeps the previous functionality of sending `0` for the client process ID. |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, `antlr`, and `bouncycastle`. |
 | Removed unnecessary references | Removed unused Java 9-specific class references from the Java 8 jar |
-| &nbsp; | &nbsp; |
 
 ### Fixes in 9.4
 
@@ -227,7 +260,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | [GitHub Issue #1565](https://github.com/microsoft/mssql-jdbc/issues/1565) | Fixed an issue where trustStorePassword is null when using applicationIntent=ReadOnly |
 | [GitHub Issue #1568](https://github.com/microsoft/mssql-jdbc/issues/1568) | Fixed an issue where redirected token contains named instance in servername |
 | [GitHub Issue #1531](https://github.com/microsoft/mssql-jdbc/issues/1531) | Fixed potential integer overflow in TDSWriter.writeString() |
-| &nbsp; | &nbsp; |
 
 ## <a id="92"></a> 9.2
 
@@ -248,7 +280,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Download the latest updates for JDBC Driver 9.2. | &bull; &nbsp; [GitHub, 9.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 9.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-9.2.1.jre15.jar file from the 9.2 package should be used with Java 15. |
 | Compatible with Java Development Kit (JDK) version 15.0, 11.0, and 1.8. | Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development Kit (JDK) version 15.0 in addition to JDK 11.0 and 1.8. |
-| &nbsp; | &nbsp; |
 
 ### 9.2 Releases
 
@@ -278,28 +309,24 @@ Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development
 | Authentication type addition | Details |
 | :---------- | :------ |
 | Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault via interactive authentication. | See [Connecting using Azure Active Directory authentication](connecting-using-azure-active-directory-authentication.md). |
-| &nbsp; | &nbsp; |
 
 ### Added support for Azure Active Directory Service Principal Authentication
 
 | Authentication type addition | Details |
 | :---------- | :------ |
 | Microsoft JDBC Driver 9.2 for SQL Server now supports authentication to Azure Key Vault using the client ID and secret of a service principal identity. | See [Connecting using Azure Active Directory authentication](connecting-using-azure-active-directory-authentication.md). |
-| &nbsp; | &nbsp; |
 
 ### Updated Azure Key Vault library to use modern Azure Key Vault library
 
 | Library changes for Azure Key Vault | Details |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 9.2 migrated from the previous-generation Azure Key Vault library and ADAL libraries to the more modern Azure Key Vault and Azure Identity equivalents. | **DEPENDENCY CHANGE** Make sure you update your application dependencies if you take advantage of Azure Active Directory authentication or Azure Key Vault. See the dependency requirements when [work with the Azure Key Vault provider](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#work-with-the-azure-key-vault-provider) or [Azure Active Directory authentication](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#work-with-azure-active-directory-authentication) |
-| &nbsp; | &nbsp; |
 
 ### Enabled useBulkCopyForBatchInsert for non-Azure Synapse Analytics servers
 
 | useBulkCopyForBatchInsert changes for non Azure Synapse Analytics servers | Details |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 9.2 now allows bulk copy API for batch insert operation against non-Azure Synapse Analytics servers. | See [Using bulk copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md). |
-| &nbsp; | &nbsp; |
 
 ## <a id="84"></a> 8.4
 
@@ -320,7 +347,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Download the latest updates for JDBC Driver 8.4. | &bull; &nbsp; [GitHub, 8.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 8.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.4.1.jre14.jar file from the 8.4 package should be used with Java 14. |
 | Compatible with Java Development Kit (JDK) version 14.0, 11.0, and 1.8. | Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development Kit (JDK) version 14.0 in addition to JDK 11.0 and 1.8. |
-| &nbsp; | &nbsp; |
 
 ### 8.4 Releases
 
@@ -344,28 +370,24 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 | Authentication type addition | Details |
 | :---------- | :------ |
 | Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
-| &nbsp; | &nbsp; |
 
 ### Extended support for bulk copy for Azure Data Warehouse
 
 | Bulk copy changes for Azure Data Warehouse | Details |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 8.4 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](using-bulk-copy-with-the-jdbc-driver.md). |
-| &nbsp; | &nbsp; |
 
 ### Added support for Azure SQL DNS caching
 
 | DNS Caching | Details |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 8.4 for SQL Server now supports DNS caching against Azure SQL Servers. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ### Added backwards compatibility for streaming LOB objects
 
 | LOB Streaming | Details |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 8.4 for SQL Server added a new connection property `delayLoadingLobs`. | Setting `delayLoadingLobs` to FALSE will cause all LOB objects retrieved from the ResultSet to not be streamed. This means that the driver will load the entire LOB object into memory at once, similar to how the driver was functioning before version 6.4 release. |
-| &nbsp; | &nbsp; |
 
 ### Added support for client certificate authentication for loopback scenarios
 
@@ -392,7 +414,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Download the latest updates for JDBC Driver 8.2. | &bull; &nbsp; [GitHub, 8.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 8.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.2.2.jre11.jar file from the 8.2 package should be used with Java 11. |
 | Compatible with Java Development Kit (JDK) version 13.0, 11.0, and 1.8. | Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development Kit (JDK) version 13.0 in addition to JDK 11.0 and 1.8. |
-| &nbsp; | &nbsp; |
 
 ### 8.2 Releases
 
@@ -421,7 +442,6 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server now supports Always Encrypted with secure enclaves. The details can be found here: Always Encrypted with secure enclaves. |
 | More details and sample code. | See [Always Encrypted with secure enclaves](using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
-| &nbsp; | &nbsp; |
 
 ### Performance Improvement when Retrieving Temporal Datatypes from SQL Server <sup>1</sup>
 
@@ -429,7 +449,6 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | :---------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server has improved performance when retrieving temporal datatypes from SQL Server. | This change eliminates unnecessary temporal datatype conversions by eliminating the use of java.util.Calendar wherever possible. |
 | The following is a list of the temporal datatypes that have been affected by this performance improvement; in format SQL Server datatype followed by the respective Java mapping. | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp), and time (java.sql.Time). |
-| &nbsp; | &nbsp; |
 
 <sup>1</sup> Due to the differences in how time zones are handled between java.util.Calendar and java.time.LocalDateTime API, temporal datatypes with a user provided java.util.Calendar object associated with it or microsoft.sql.DateTimeOffset datatypes do not benefit from this improvement.
 
@@ -439,14 +458,12 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | :------------------- | :------ |
 | Starting from Microsoft JDBC Driver 8.2 for SQL Server, the driver relies on mssql-jdbc_auth-\<version>-\<arch>.dll instead of sqljdbc_auth.dll to use Azure Active Directory Authentication feature. | &nbsp; |
 | The DLL has also been uploaded to Maven repository for easier access. | See [this page](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
-| &nbsp; | &nbsp; |
 
 ### 8.2 Known issues
 
 | Known issues | Details |
 | :----------- | :------ |
 | When using Always Encrypted with secure enclaves with Java 8. | Users must include BouncyCastle Provider as a dependency OR map/load a security provider which supports the RSASSA-PSS signature algorithm. |
-| &nbsp; | &nbsp; |
 
 ## <a id="74"> 7.4.1
 
@@ -467,7 +484,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Download the latest updates for JDBC Driver 7.4. | &bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 7.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.4.1.jre11.jar file from the 7.4 package should be used with Java 11. |
 | Compatible with Java Development Kit (JDK) version 12.0, 11.0, and 1.8. | Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11.0 and 1.8. |
-| &nbsp; | &nbsp; |
 
 ### 7.4 Releases
 
@@ -490,7 +506,6 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | :--------- | :------ |
 | Supports NTLM authentication mode. | This mode of authentication allows both Windows and non-Windows clients to authenticate themselves against SQL Server using Windows domain users. |
 | More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](using-ntlm-authentication-to-connect-to-sql-server.md). |
-| &nbsp; | &nbsp; |
 
 ### Introduces querying ParameterMetaData via _useFmtOnly_
 
@@ -498,7 +513,6 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | :---------- | :------ |
 | **useFmtOnly** connection property added. | This feature allows users to optionally query ParameterMetaData via the `SET FMTONLY ON` legacy API. This is useful for scenarios where `sp_describe_undeclared_parameters` doesn't perform as expected. |
 | More details and limitations. | See [Using useFmtOnly](using-usefmtonly.md) |
-| &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.1
 
@@ -507,7 +521,6 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | Updated its Maven dependency on _Microsoft Azure Key Vault SDK for Java_ to version 1.2.1. | &nbsp; |
 | Removes _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency. | &nbsp; |
 | Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
-| &nbsp; | &nbsp; |
 
 ### 7.4 Known issues
 
@@ -515,7 +528,6 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | :----------- | :------ |
 | When using NTLM Authentication. | Enabling Extended Protection and encrypted connections at the same time is currently not supported. |
 | When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. See [Using useFmtOnly](using-usefmtonly.md) for more details and workaround suggestions. |
-| &nbsp; | &nbsp; |
 
 ## <a id="72"> 7.2.2
 
@@ -536,7 +548,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Download the latest updates for JDBC Driver 7.2. | &bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 7.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.2.2.jre11.jar file from the 7.2 package should be used with Java 11. |
 | Compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8. | Microsoft JDBC Driver 7.2 for SQL Server is now compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8. |
-| &nbsp; | &nbsp; |
 
 ### 7.2 Releases
 
@@ -561,7 +572,6 @@ Released: January 31, 2019
 | :--------- | :------ |
 | Supports Active Directory Managed Identity (MSI) authentication mode. | This mode of authentication is applicable on Azure Resources with support for the "Identity" feature enabled.<br/><br/>Both types of Managed Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection. |
 | More details and a sample application to use this authentication mode. | See [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md). |
-| &nbsp; | &nbsp; |
 
 ### Introduces _Open Service Gateway Initiative_ (OSGi) support
 
@@ -569,7 +579,6 @@ Released: January 31, 2019
 | :---------- | :------ |
 | **DataSourceFactory** implementation added. | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
 | **Activator** implementation added. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
-| &nbsp; | &nbsp; |
 
 ### Introduces _SQLServerError_ APIs
 
@@ -577,7 +586,6 @@ Released: January 31, 2019
 | :--------------- | :------ |
 | SQLServerError API introduced. | Getter APIs to retrieve additional details about the error generated from the server.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
 | Additional details. | See [Handling Errors](handling-errors.md). |
-| &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java_, version 1.6.3
 
@@ -586,7 +594,6 @@ Released: January 31, 2019
 | Updated its Maven dependency on ADAL4J to version 1.6.3. | &nbsp; |
 | Introduces _Java Client Runtime for AutoRest_ as a Maven dependency, version 1.6.5. | &nbsp; |
 | Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
-| &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.0
 
@@ -595,7 +602,6 @@ Released: January 31, 2019
 | Updated its Maven dependency on _Microsoft Azure Key Vault SDK for Java_ to version 1.2.0. | &nbsp; |
 | Introduces _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency, version 1.2.0. | &nbsp; |
 | Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
-| &nbsp; | &nbsp; |
 
 ### 7.2 Known issues
 
@@ -603,7 +609,6 @@ Released: January 31, 2019
 | :----------- | :------ |
 | Parameterized queries, in certain cases. | An update of the 7.2.0 version, v7.2.1, was released in February 2019 to address this issue. |
 | Cleaning up of ActivityIds. | An update of the 7.2.1 version, v7.2.2, was released in April 2019 to address this issue. |
-| &nbsp; | &nbsp; |
 
 ## 7.0
 
@@ -823,7 +828,7 @@ Microsoft JDBC Driver 6.0 for SQL Server is fully compliant with JDBC specificat
 To ensure that you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 6.0.7507.100", you have the JDBC Driver 6.0 package.
 
 ```java
-Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
+Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;encrypt=true;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
 
@@ -870,7 +875,7 @@ Microsoft JDBC Driver 4.2 for SQL Server is fully compliant with JDBC specificat
 To ensure you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 4.2.6420.100", you have the JDBC Driver 4.2 package.
 
 ```java
-Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
+Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;encrypt=true;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
 

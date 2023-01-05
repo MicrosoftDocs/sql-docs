@@ -1,14 +1,13 @@
 ---
-title: "Enable or Disable a Server Network Protocol | Microsoft Docs"
+title: "Enable or Disable a Server Network Protocol"
 description: Find out how to enable or disable a server network protocol. See how to use SQL Server Configuration Manager or PowerShell for this task.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "network protocols [SQL Server], disabling"
   - "remote connections [SQL Server], enabling using Configuration Manager"
   - "protocols [SQL Server], enabling using Configuration Manager"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "enabling network protocols, Configuration Manager"
   - "surface area configuration [SQL Server], connection protocols"
   - "connections [SQL Server], enabling remote using Configuration Manager"
-ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Enable or Disable a Server Network Protocol
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

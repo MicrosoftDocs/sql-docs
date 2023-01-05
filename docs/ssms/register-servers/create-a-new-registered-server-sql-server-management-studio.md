@@ -1,9 +1,8 @@
 ---
 description: "Create a New Registered Server (SQL Server Management Studio)"
 title: Create a New Registered Server
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.registerserver.general.sqlce.f1"
@@ -35,13 +34,9 @@ This topic describes how to save the connection information for servers that you
   
 -   Central Management Servers  
   
-     Central Management Servers store server registrations in the Central Management Server instead of on the file system. Central Management Servers and subordinate registered servers can be registered only by using Windows Authentication. After a Central Management Server has been registered, its associated registered servers will be automatically displayed. For more information about Central Management Servers, see [Administer Multiple Servers Using Central Management Servers](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] cannot be designated as a Central Management Server.  
+     Central Management Servers store server registrations in the Central Management Server instead of on the file system. Central Management Servers and subordinate registered servers can be registered only by using Windows Authentication. After a Central Management Server has been registered, its associated registered servers will be automatically displayed. For more information about Central Management Servers, see [Administer Multiple Servers Using Central Management Servers](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] cannot be designated as a Central Management Server.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
-  
-#### To automatically register the local server instances  
-  
--   In Registered Servers, right-click any node in the Registered Servers tree, and then click **Update Local Server Registration**.  
   
 #### To create a new registered server  
   

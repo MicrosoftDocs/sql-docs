@@ -3,10 +3,9 @@ description: "Change a SQL Server Native Client Authentication User Password (OL
 title: "SQL Authentication User Password (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: markingmyname

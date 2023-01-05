@@ -3,9 +3,8 @@ description: "Adding Data Flow Components Programmatically"
 title: "Adding Data Flow Components Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.technology: integration-services 
+ms.service: sql
+ms.subservice: integration-services 
 ms.reviewer: ""
 ms.topic: "reference"
 dev_langs: 

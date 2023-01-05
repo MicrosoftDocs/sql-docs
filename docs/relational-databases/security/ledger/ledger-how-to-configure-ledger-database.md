@@ -10,7 +10,7 @@ ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.date: "10/20/2022"
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 zone_pivot_groups: as1-azuresql-sql
 ---
@@ -21,7 +21,7 @@ zone_pivot_groups: as1-azuresql-sql
 
 ::: zone pivot="as1-azure-sql-database"
 
-This article provides information on configuring a [ledger database](ledger-overview.md) using the Azure portal, T-SQL, PowerShell, or the Azure CLI for **Azure SQL Database**. For information on creating a ledger database in SQL Server 2022, use the switch at the top of this page to toggle over to SQL Server.
+This article provides information on configuring a [ledger database](ledger-overview.md) using the Azure portal, T-SQL, PowerShell, or the Azure CLI for **Azure SQL Database**. For information on creating a ledger database in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], use the switch at the top of this page to toggle over to SQL Server.
 
 ## Prerequisites
 
@@ -32,12 +32,13 @@ This article provides information on configuring a [ledger database](ledger-over
 
 # [Portal](#tab/Portal)
 
-1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) if you don't already have one.
-1. In the **Security** tab, select the **Ledger** option. 
+1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) .
+
+1. On the **Security** tab, select **Configure ledger**. 
 
    :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected.":::
 
-1. In the **Ledger** pane, select **Enable for all future tables in this database**. 
+1. On the **Configure ledger** pane, select **Enable for all future tables in this database**. 
 
    :::image type="content" source="media/ledger/enable-ledger-database.png" alt-text="Screenshot that shows the selection for enabling a ledger database.":::
 
@@ -106,16 +107,16 @@ az sql db create \
 
 ::: zone pivot="as1-sql-server"
 
-This article provides information on creating a [ledger database](ledger-overview.md) using T-SQL in **SQL Server 2022**. For information on creating a ledger database in Azure SQL Database, use the switch at the top of this page to toggle over to Azure SQL Database.
+This article provides information on creating a [ledger database](ledger-overview.md) using T-SQL in **[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]**. For information on creating a ledger database in Azure SQL Database, use the switch at the top of this page to toggle over to Azure SQL Database.
 
 ## Prerequisites
 
-- SQL Server 2022
+- [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]
 - [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md)
 
 ## Create a ledger database using T-SQL
 
-1. Sign into your SQL Server 2022 instance using SSMS or Azure Data Studio.
+1. Sign into your [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] instance using SSMS or Azure Data Studio.
 1. Create a ledger database using the following T-SQL statement:
 
    ```sql

@@ -4,8 +4,8 @@ description: sys.dm_xtp_transaction_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/12/2021"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_xtp_transaction_stats_TSQL"

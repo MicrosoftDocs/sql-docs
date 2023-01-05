@@ -1,18 +1,16 @@
 ---
 title: Provision new tenants in a multitenant app
 description: Learn how to provision and catalog new tenants in an Azure SQL Database multitenant SaaS app
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scenario
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 09/24/2018
+ms.service: sql-database
+ms.subservice: scenario
+ms.topic: tutorial
+ms.custom:
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 ---
 # Learn how to provision new tenants and register them in the catalog
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

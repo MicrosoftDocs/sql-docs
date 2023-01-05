@@ -3,10 +3,9 @@ description: "sp_can_tlog_be_applied (Transact-SQL)"
 title: "sp_can_tlog_be_applied (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_can_tlog_be_applied_TSQL"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Verifies whether a transaction log backup can be applied to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. **sp_can_tlog_be_applied** requires that the database be in the Restoring state.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

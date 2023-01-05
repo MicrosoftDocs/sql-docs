@@ -3,10 +3,9 @@ description: "Lesson 4-1: Copy the Lesson 3 package"
 title: "Step 1: Copy the Lesson 3 package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: chugugrace

@@ -3,8 +3,7 @@ description: "sp_datatype_info_90 (Azure Synapse Analytics)"
 title: "sp_datatype_info_90 (Azure Synapse Analytics)"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
 ms.topic: "reference"
 dev_langs: 
@@ -19,7 +18,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
   Returns information about the data types supported by the current environment.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -74,7 +73,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## Permissions  
  Requires membership in the public role.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example retrieves information for the **sysname** and **nvarchar** data types by specifying the *data_type* value of `-9`.  
   
 ```sql  

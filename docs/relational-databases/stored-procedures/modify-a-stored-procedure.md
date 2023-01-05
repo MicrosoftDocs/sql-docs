@@ -1,8 +1,8 @@
 ---
 title: "Modify a Stored Procedure"
 description: Learn how to modify a stored procedure in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying stored procedures"

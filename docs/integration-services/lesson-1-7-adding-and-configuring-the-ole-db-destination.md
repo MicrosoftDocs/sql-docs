@@ -3,10 +3,9 @@ description: "Lesson 1-7: Add and configure the OLE DB destination"
 title: "Step 7: Add and configure the OLE DB destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace

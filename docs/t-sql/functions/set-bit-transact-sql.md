@@ -5,9 +5,8 @@ author: thesqlsith
 ms.author: derekw
 ms.reviewer: randolphwest
 ms.date: 07/26/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET_BIT"
@@ -24,7 +23,7 @@ monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 
 SET_BIT returns *expression_value* offset by the bit defined by *bit_offset*. The bit value defaults to 1, or is set by *bit_value*.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 

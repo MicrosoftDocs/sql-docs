@@ -3,10 +3,9 @@ title: "SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs
 description: "Learn details about the Scale Out Master component of SQL Server Integration Services (SSIS) Scale Out."
 ms.custom: performance
 ms.date: 01/19/2019
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
@@ -48,7 +47,6 @@ You can configure the Scale Out Worker service by using the `\<drive\>:\Program 
 |ExecutionLogRetryCount|The retry count if execution logging fails.|3|
 |ExecutionLogRetryTimeout|The retry timeout if execution logging fails. i\If ExecutionLogRetryTimeout is reached, ExecutionLogRetryCount is ignored. |7.00:00:00 (7 days)|
 |AgentId|Worker agent ID of the Scale Out Worker|Generated automatically|
-||||    
 
 ## View the Scale Out Worker log
 The log file of the Scale Out Worker service is in the `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent` folder.

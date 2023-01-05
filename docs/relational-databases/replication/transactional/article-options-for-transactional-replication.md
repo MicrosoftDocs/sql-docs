@@ -3,10 +3,9 @@ description: "Article Options for Transactional Replication"
 title: "Article Options for Transactional Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "articles [SQL Server replication], transactional replication options"

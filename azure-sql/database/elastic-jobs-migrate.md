@@ -1,18 +1,16 @@
 ---
 title: Migrate to new Elastic Database Jobs (preview)
 description: Migrate to the new Elastic Database Jobs.
-services:
-  - "sql-database"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 03/13/2019
 ms.service: sql-database
 ms.subservice: scale-out
+ms.topic: how-to
 ms.custom:
   - "seo-lt-2019"
   - "sqldbrb=1"
   - "devx-track-azurepowershell"
-ms.topic: how-to
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.date: 03/13/2019
 ---
 # Migrate to the new Elastic Database jobs (preview)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

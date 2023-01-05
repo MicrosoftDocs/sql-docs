@@ -1,21 +1,15 @@
 ---
 title: Provision SQL Server on Azure VM (Azure portal)
-description: This detailed guide explains available configuration options when deploying your SQL Server on Azure VM by using the Azure portal. 
-services: virtual-machines-windows
-documentationcenter: na
+description: This detailed guide explains available configuration options when deploying your SQL Server on Azure VM by using the Azure portal.
 author: bluefooted
-tags: azure-resource-manager
-ms.assetid: 1aff691f-a40a-4de2-b6a0-def1384e086e
-ms.service: virtual-machines-sql
-ms.subservice: deployment
-
-ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: infrastructure-services
-ms.date: 12/21/2021
 ms.author: pamela
 ms.reviewer: mathoma
+ms.date: 12/21/2021
+ms.service: virtual-machines-sql
+ms.subservice: deployment
+ms.topic: how-to
 ms.custom: contperf-fy22q1-portal
+tags: azure-resource-manager
 ---
 # Provision SQL Server on Azure VM (Azure portal)
 
@@ -193,7 +187,7 @@ Under **Log storage**, you can choose to use the same drive as the data drive fo
 
 ![Screenshot that shows where you can configure the transaction log storage for your SQL VM](./media/create-sql-vm-portal/storage-configuration-log-storage.png)
 
-Configure your tempdb database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, the max number of tempdb files. Currently, during deployment, the max number of tempdb files is 8, but more files can be added after the SQL Server VM is deployed.
+Configure your `tempdb` database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, the max number of `tempdb` files. Currently, during deployment, the max number of `tempdb` files is 8, but more files can be added after the SQL Server VM is deployed.
 
 ![Screenshot that shows where you can configure the tempdb storage for your SQL VM](./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png)
 

@@ -1,21 +1,19 @@
 ---
 title: "Perform a planned manual failover of an availability group"
 description: "This topic describes how to perform a planned manual failover of an Always On availability group."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "10/25/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seodec18
+f1_keywords:
   - "sql13.swb.availabilitygroup.manualfailover.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
   - "failover [SQL Server], Always On Availability Groups"
-ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # Perform a planned manual failover of an Always On availability group (SQL Server)

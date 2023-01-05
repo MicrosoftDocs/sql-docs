@@ -4,8 +4,8 @@ description: sys.pdw_nodes_tables (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |is_tracked_by_cdc|**bit**|1 = Table is enabled for change data capture|Always 0; no CDC support.|  
 |lock_escalation|**tinyint**|The value of the LOCK_ESCALATION option for the table: 2 = AUTO|Always 2.|  
 |lock_escalation_desc|**nvarchar(60)**|A text description of the lock_escalation option.|Always ꞌAUTOꞌ.|  
-|pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|NOT NULL|  
+|pdw_node_id|**int**|Unique identifier of a [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] node.|NOT NULL|  
   
 ## See Also  
  [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

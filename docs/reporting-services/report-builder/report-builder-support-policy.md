@@ -2,9 +2,8 @@
 title: "Microsoft Report Builder support policy | Microsoft Docs"
 description: Learn about the Microsoft Report Builder support policy.
 ms.date: 06/22/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
 ms.assetid: 
 author: maggiesMSFT

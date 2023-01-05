@@ -4,8 +4,8 @@ description: With the CLR hosted in SQL Server, you can author using supported .
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], .NET Framework libraries"
@@ -43,7 +43,7 @@ ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 
 <!--
 Any modifications to the list above should be duplicated on the following page:
-https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
+https://learn.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
 -->
 
 ## Unsupported Libraries  

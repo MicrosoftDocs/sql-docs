@@ -3,9 +3,8 @@ description: "Create an Alert Using an Error Number"
 title: "Create an Alert Using an Error Number"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server], creating"
@@ -66,7 +65,7 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
   
 #### To create an alert using an error number  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -3,7 +3,6 @@ title: "Accessing the SOAP API | Microsoft Docs"
 description: The Report Server Web service uses SOAP over HTTP and acts as a communications interface between clients and the report server. Use WSDL to call the service.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
 
 
@@ -32,7 +31,7 @@ ms.author: maggies
  The Report Server Web services are exposed in three different endpoints. The name of the WSDL file is different for each endpoint. The <xref:ReportService2010> endpoint contains methods for managing objects in a Report Server in either native or SharePoint integrated mode. The WSDL for this endpoint is accessed through `ReportService2010.asmx?wsdl.`  
   
 > [!NOTE]  
->  The <xref:ReportService2005> and <xref:ReportService2006> endpoints are deprecated in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. The <xref:ReportService2010> endpoint includes the functionalities of both endpoints and contains additional management features.  
+>  The <xref:ReportService2005> and <xref:ReportService2006> endpoints are deprecated in [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. The <xref:ReportService2010> endpoint includes the functionalities of both endpoints and contains additional management features.  
   
 -   The <xref:ReportExecution2005> endpoint allows developers to programmatically process and render reports in a Report Server. The WSDL for this endpoint is accessed through `ReportExecution2005.asmx?wsdl`.  
   

@@ -1,9 +1,8 @@
 ---
 title: Download SQL Server Management Studio (SSMS)
 description: Download the latest version of SQL Server Management Studio (SSMS).
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 keywords: 
   - "install ssms, download ssms, latest ssms"
@@ -35,7 +34,7 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-To download SSMS 19 Preview 3, visit [Download SSMS 19](download-sql-server-management-studio-ssms-19.md).
+To download SSMS 19 Preview 4, visit [Download SSMS 19](download-sql-server-management-studio-ssms-19.md).
 
 :::image type="icon" source="../includes/media/download.svg" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
 

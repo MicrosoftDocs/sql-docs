@@ -2,10 +2,9 @@
 description: "LineString"
 title: "LineString | Microsoft Docs"
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "LineString geometry subtype [SQL Server]"

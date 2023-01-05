@@ -3,10 +3,9 @@ description: "Temporal Table Security"
 title: "Temporal Table Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: markingmyname

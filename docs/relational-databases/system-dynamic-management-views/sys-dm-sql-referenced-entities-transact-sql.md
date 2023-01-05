@@ -4,9 +4,8 @@ description: sys.dm_sql_referenced_entities (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/01/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_sql_referenced_entities_TSQL"
@@ -73,7 +72,7 @@ sys.dm_sql_referenced_entities (
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|Column ID when the referencing entity is a column; otherwise 0. Is not nullable.|  
-|referenced_server_name|**sysname**|Name of the server of the referenced entity.<br /><br /> This column is populated for cross-server dependencies that are made by specifying a valid four-part name. For information about multipart names, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL for non-schema-bound dependencies for which the entity was referenced without specifying a four-part name.<br /><br /> NULL for schema-bound entities because they must be in the same database and therefore can only be defined using a two-part (*schema.object*) name.|  
+|referenced_server_name|**sysname**|Name of the server of the referenced entity.<br /><br /> This column is populated for cross-server dependencies that are made by specifying a valid four-part name. For information about multipart names, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL for non-schema-bound dependencies for which the entity was referenced without specifying a four-part name.<br /><br /> NULL for schema-bound entities because they must be in the same database and therefore can only be defined using a two-part (*schema.object*) name.|  
 |referenced_database_name|**sysname**|Name of the database of the referenced entity.<br /><br /> This column is populated for cross-database or cross-server references that are made by specifying a valid three-part or four-part name.<br /><br /> NULL for non-schema-bound references when specified using a one-part or two-part name.<br /><br /> NULL for schema-bound entities because they must be in the same database and therefore can only be defined using a two-part (*schema.object*) name.|  
 |referenced_schema_name|**sysname**|Schema in which the referenced entity belongs.<br /><br /> NULL for non-schema-bound references in which the entity was referenced without specifying the schema name.<br /><br /> Never NULL for schema-bound references.|  
 |referenced_entity_name|**sysname**|Name of the referenced entity. Is not nullable.|  
@@ -90,7 +89,6 @@ sys.dm_sql_referenced_entities (
 |is_all_columns_found|**bit**|1 = All column dependencies for the object could be found.<br /><br /> 0 = Column dependencies for the object could not be found.|
 |is_insert_all|**bit**|1 = The object is used in an INSERT statement without a column list (object-level only).<br /><br />This column was added in SQL Server 2016.|  
 |is_incomplete|**bit**|1 = The object or column has a binding error and is incomplete.<br /><br />This column was added in SQL Server 2016 SP2.|
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Exceptions  
  Returns an empty result set under any of the following conditions:  
@@ -130,7 +128,6 @@ sys.dm_sql_referenced_entities (
 |Type (alias and CLR user-defined type)|No|Yes|  
 |XML schema collection|No|Yes|  
 |Partition function|No|Yes|  
-| &nbsp; | &nbsp; | &nbsp; |
 
  \* A table is tracked as a referencing entity only when it references a [!INCLUDE[tsql](../../includes/tsql-md.md)] module, user-defined type, or XML schema collection in the definition of a computed column, CHECK constraint, or DEFAULT constraint.  
   

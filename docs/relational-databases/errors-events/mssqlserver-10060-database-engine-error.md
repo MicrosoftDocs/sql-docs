@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_10060"
 description: The SQL Server client cannot connect to the server. See an explanation of error 10060 and possible resolutions.
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "10060"

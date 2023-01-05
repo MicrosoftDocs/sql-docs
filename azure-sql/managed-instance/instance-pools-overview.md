@@ -1,17 +1,14 @@
 ---
-title: "What is an Azure SQL Managed Instance pool?" 
+title: "What is an Azure SQL Managed Instance pool?"
 titleSuffix: Azure SQL Managed Instance
-description: Learn about Azure SQL Managed Instance pools (preview), a feature that provides a convenient and cost-efficient way to migrate smaller SQL Server databases to the cloud at scale, and manage multiple managed instances.  
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: 
-ms.devlang: 
-ms.topic: conceptual
+description: Learn about Azure SQL Managed Instance pools (preview), a feature that provides a convenient and cost-efficient way to migrate smaller SQL Server databases to the cloud at scale, and manage multiple managed instances.
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 10/25/2021
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: conceptual
 ---
 # What is an Azure SQL Managed Instance pool (preview)?
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -67,7 +64,7 @@ Every instance pool creates a separate virtual cluster underneath. Instances wit
 
 There are several resource limitations regarding instance pools and instances inside pools:
 
-- Instance pools are available only on Gen5 hardware.
+- Instance pools are available only on standard-series (Gen5) hardware.
 - Managed instances within a pool have dedicated CPU and RAM, so the aggregated number of vCores across all instances must be less than or equal to the number of vCores allocated to the pool.
 - All [instance-level limits](resource-limits.md#service-tier-characteristics) apply to instances created within a pool.
 - In addition to instance-level limits, there are also two limits imposed *at the instance pool level*:
@@ -110,7 +107,7 @@ Optional features or features that require you to choose specific values (such a
 
 ## Performance considerations
 
-Although managed instances within pools do have dedicated vCore and RAM, they share local disk (for tempdb usage) and network resources. It's not likely, but it is possible to experience the *noisy neighbor* effect if multiple instances in the pool have high resource consumption at the same time. If you observe this behavior, consider deploying these instances to a bigger pool or as single instances.
+Although managed instances within pools do have dedicated vCore and RAM, they share local disk (for `tempdb` usage) and network resources. It's not likely, but it is possible to experience the *noisy neighbor* effect if multiple instances in the pool have high resource consumption at the same time. If you observe this behavior, consider deploying these instances to a bigger pool or as single instances.
 
 ## Security considerations
 

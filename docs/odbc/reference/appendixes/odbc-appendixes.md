@@ -3,10 +3,9 @@ description: "ODBC Appendixes"
 title: "ODBC Appendixes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 author: David-Engel

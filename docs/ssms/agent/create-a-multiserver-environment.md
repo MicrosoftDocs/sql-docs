@@ -3,9 +3,8 @@ description: "Create a Multiserver Environment"
 title: "Create a Multiserver Environment"
 ms.custom: seo-lt-2019
 ms.date: "01/30/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, multiserver environments"

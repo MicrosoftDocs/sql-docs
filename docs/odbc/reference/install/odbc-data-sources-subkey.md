@@ -3,10 +3,9 @@ description: "ODBC Data Sources subkey"
 title: "ODBC Data Sources subkey | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/23/2019"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "subkeys [ODBC], for data sources"
@@ -23,7 +22,6 @@ The values under the `ODBC Data Sources` subkey list the data sources. The forma
 | Name | Data type | Data |
 | :--- | :-------- | :--- |
 | *data-source-name* | REG_SZ | *driver-description* |
-| &nbsp; | &nbsp; | &nbsp; |
 
 The *data-source-name* value is defined by the administration program (which usually prompts the user for it), and *driver-description* is defined by the driver developer (it is usually the name of the DBMS associated with the driver).
 

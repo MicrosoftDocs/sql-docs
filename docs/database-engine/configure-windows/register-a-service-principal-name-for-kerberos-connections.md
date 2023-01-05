@@ -1,22 +1,18 @@
 ---
 title: Register a Service Principal Name for Kerberos Connections
 description: "Find out how to register a Service Principal Name (SPN) with Active Directory. This registration is required for using Kerberos authentication with SQL Server."
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 08/12/2020
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [SQL Server], SPNs"
   - "network connections [SQL Server], SPNs"
   - "registering SPNs"
   - "Server Principal Names"
   - "SPNs [SQL Server]"
-ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
-ms.date: 08/12/2020
 ---
 
 # Register a Service Principal Name for Kerberos Connections
@@ -65,7 +61,7 @@ When the Database Engine service starts, it attempts to register the Service Pri
 
 ##  <a name="Formats"></a> SPN Formats
 
-Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the SPN format is changed in order to support Kerberos authentication on TCP/IP, named pipes, and shared memory. The supported SPN formats for named and default instances are as follows.  
+Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], the SPN format is changed in order to support Kerberos authentication on TCP/IP, named pipes, and shared memory. The supported SPN formats for named and default instances are as follows.  
   
 **Named instance**  
   
@@ -159,7 +155,9 @@ For a named instance, use:
 ```  
 setspn -S MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
-  
+
+For more information about Always On availability group configurations, see [Listeners and Kerberos (SPNs)](../availability-groups/windows/listeners-client-connectivity-application-failover.md#SPNs).
+
 ##  <a name="Client"></a> Client Connections  
 
 User-specified SPNs are supported in client drivers. However, if an SPN isn't provided, it will be generated automatically based on the type of a client connection. For a TCP connection, an SPN in the format *MSSQLSvc*/*FQDN*:[*port*] is used for both the named and default instances.  

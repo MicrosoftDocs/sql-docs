@@ -3,10 +3,9 @@ description: "Integration Services Error and Message Reference"
 title: "Integration Services Error and Message Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2020"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: "vanto"
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: reference
 helpviewer_keywords: 
   - "error numbers [Integration Services]"

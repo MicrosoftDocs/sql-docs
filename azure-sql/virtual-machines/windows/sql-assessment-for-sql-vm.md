@@ -3,10 +3,10 @@ title: SQL best practices assessment
 description: "Identify performance issues and assess that your SQL Server VM is configured to follow best practices by using the SQL best practices assessment feature in the Azure portal."
 author: ebruersan
 ms.author: ebrue
+ms.reviewer: mathoma
+ms.date: 11/02/2021
 ms.service: virtual-machines
 ms.topic: how-to
-ms.date: 11/02/2021
-ms.reviewer: mathoma
 ms.custom: ignite-fall-2021
 ---
 

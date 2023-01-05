@@ -3,9 +3,9 @@ title: "ALTER DATABASE (Transact-SQL)"
 description: ALTER DATABASE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: 12/09/2021
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 10/10/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: references_regions
 f1_keywords:
@@ -32,9 +32,9 @@ Modifies certain configuration options of a database.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -254,9 +254,9 @@ GO
 
 ### B. Changing the collation of a database
 
-The following example creates a database named `testdb` with the `SQL_Latin1_General_CP1_CI_A`S collation, and then changes the collation of the `testdb` database to `COLLATE French_CI_AI`.
+The following example creates a database named `testdb` with the `SQL_Latin1_General_CP1_CI_AS` collation, and then changes the collation of the `testdb` database to `COLLATE French_CI_AI`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 USE master;
@@ -384,7 +384,7 @@ ALTER DATABASE { database_name | CURRENT }
       | 'BC_M_8' | 'BC_M_10' | 'BC_M_12' | 'BC_M_14' | 'BC_M_16' | 'BC_M_18'
       | 'BC_M_20' | 'BC_M_24' | 'BC_M_32' | 'BC_M_64' | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_40' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) }
       }
 
@@ -1045,7 +1045,8 @@ Renames the database with the name specified as *new_database_name*.
 The 'MODIFY NAME' option has some support limitations in Azure Synapse:
  - Unsupported with Azure Synapse serverless pools
  - Unsupported with dedicated SQL pools created in your Azure Synapse Workspace
- - Supported with dedicated SQL pools (formerly SQL DW) created via the [Azure portal](https://portal.azure.com/#create/Microsoft.SQLDataWarehouse)
+ - Supported with dedicated SQL pools (formerly SQL DW) created via the [Azure portal](https://portal.azure.com/#create/Microsoft.SQLDataWarehouse), including those with a [connected workspace](/azure/synapse-analytics/sql-data-warehouse/workspace-connected-create)
+
 
 #### MAXSIZE   
 The default is 245,760 GB (240 TB).

@@ -1,17 +1,14 @@
 ---
 title: "Configure the remote access Server Configuration Option"
 description: Learn about alternatives to the deprecated remote access option. View other sources for troubleshooting issues with SQL Server connections.
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "remote servers [SQL Server], stored procedure execution"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "03/28/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "remote servers [SQL Server], stored procedure execution"
 ---
 
 # Configure the remote access Server Configuration Option

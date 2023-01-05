@@ -1,21 +1,19 @@
 ---
 title: "Add an encrypted database to an availability group"
 description: "Learn the steps to add an encrypted (or recently decrypted) database to an Always On availability group."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+ms.custom: seodec18
+helpviewer_keywords:
   - "Transparent Data Encryption, AlwaysOn Availability Groups"
   - "Transparent Data Encryption, Always On Availability Groups"
   - "TDE, AlwaysOn Availability Groups"
   - "TDE, Always On Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
-ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Add an encrypted database to an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

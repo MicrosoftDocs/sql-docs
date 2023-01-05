@@ -3,9 +3,8 @@ description: "Create a SQL Server Agent Proxy in SQL Server Management Studio"
 title: "Create a SQL Server Agent Proxy"
 ms.custom: seo-lt-2019
 ms.date: "05/03/2022"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "proxies [SQL Server Agent], creating"
@@ -71,7 +70,7 @@ On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instanc
   
 #### To create a SQL Server Agent proxy  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, select **New Query**.  
   

@@ -1,8 +1,8 @@
 ---
 title: Collation and Unicode support
 description: Learn about collation and Unicode support in SQL Server.
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "binary collations [SQL Server]"
@@ -273,7 +273,7 @@ The following table shows the default collation designations, as determined by t
 |Lithuanian (Lithuania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Lower Sorbian (Germany)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxembourgish (Luxembourg)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedonian (North Macedonia, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedonian (North Macedonia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malay (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malay (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|Not available at server level|
@@ -455,7 +455,7 @@ It would be difficult to select a code page for character data types that will s
 If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later), use Unicode data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). 
 
 > [!NOTE]
-> For Unicode data types, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can represent up to 65,536 characters using UCS-2, or the full Unicode range (‭1,114,112‬ characters) if supplementary characters are used. For more information about enabling supplementary characters, see [Supplementary Characters](#Supplementary_Characters).
+> For Unicode data types, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] can represent up to 65,536 characters using UCS-2, or the full Unicode range (‭1,114,112‬ characters) if supplementary characters are used. For more information about enabling supplementary characters, see [Supplementary Characters](#Supplementary_Characters).
 
 Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, previously non-Unicode data types (**char** and **varchar**) become Unicode data types using UTF-8 encoding. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] doesn't change the behavior of previously existing Unicode data types (**nchar**, **nvarchar**, and **ntext**), which continue to use UCS-2 or UTF-16 encoding. For more information, see [Storage differences between UTF-8 and UTF-16](#storage_differences).
 
@@ -501,7 +501,7 @@ The Unicode Consortium allocates to each character a unique code point, which is
 
 But the Unicode Consortium has established 16 additional "planes" of characters, each the same size as the BMP. This definition allows Unicode the potential to represent 1,114,112 characters (that is, 2<sup>16</sup> * 17 characters) within the code point range 000000–10FFFF. Characters with code point values larger than 00FFFF require two to four consecutive 8-bit words (UTF-8), or two consecutive 16-bit words (UTF-16). These characters located beyond the BMP are called *supplementary characters*, and the additional consecutive 8-bit or 16-bit words are called *surrogate pairs*. For more information about supplementary characters, surrogates, and surrogate pairs, refer to [the Unicode Standard](http://www.unicode.org/standard/standard.html).    
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides data types such as **nchar** and **nvarchar** to store Unicode data in the BMP range (000000–00FFFF), which the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] encodes using UCS-2. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides data types such as **nchar** and **nvarchar** to store Unicode data in the BMP range (000000–00FFFF), which the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] encodes using UCS-2. 
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced a new family of supplementary character (\_SC) collations that can be used with the **nchar**, **nvarchar**, and **sql_variant** data types to represent the full Unicode character range (000000–10FFFF). For example: **Latin1_General_100_CI_AS_SC** or, if you're using a Japanese collation, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
  
@@ -566,7 +566,7 @@ WHERE  COLLATIONPROPERTY(name, 'Version') = 3;
 
 All the new collations have built-in support for supplementary characters, so none of the new **140** collations has (or needs) the SC flag.
 
-These collations are supported in [!INCLUDE[ssde_md](../../includes/ssde_md.md)] indexes, memory-optimized tables, columnstore indexes, and natively compiled modules.
+These collations are supported in [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] indexes, memory-optimized tables, columnstore indexes, and natively compiled modules.
 
 <a name="ctp23"></a>
 
@@ -604,7 +604,7 @@ As you've just seen, choosing the appropriate Unicode encoding and data type mig
 
 Before you choose whether to use UTF-8 or UTF-16 encoding for a database or column, consider the distribution of string data that will be stored:
 -  If it's mostly in the ASCII range 0–127 (such as English), each character requires 1 byte with UTF-8 and 2 bytes with UTF-16. Using UTF-8 provides storage benefits. Changing an existing column data type with ASCII characters in the range 0–127 from `NCHAR(10)` to `CHAR(10)`, and using an UTF-8 enabled collation, translates into a 50 percent reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, compared with `CHAR(10)`, which requires 10 bytes for the same Unicode string representation.    
--  Above the ASCII range, almost all Latin-based script, and Greek, Cyrillic, Coptic, Armenian, Hebrew, Arabic, Syriac, Tāna, and N’Ko, require 2 bytes per character in both UTF-8 and UTF-16. In these cases, there aren't significant storage differences for comparable data types (for example, between using **char** or **nchar**).
+-  Above the ASCII range, almost all Latin-based script, and Greek, Cyrillic, Coptic, Armenian, Hebrew, Arabic, Syriac, Tāna, and N'Ko, require 2 bytes per character in both UTF-8 and UTF-16. In these cases, there aren't significant storage differences for comparable data types (for example, between using **char** or **nchar**).
 -  If it's mostly East Asian script (such as Korean, Chinese, and Japanese), each character requires 3 bytes with UTF-8 and 2 bytes with UTF-16. Using UTF-16 provides storage benefits. 
 -  Characters in the range 010000–10FFFF require 4 bytes in both UTF-8 and UTF-16. In these cases, there aren't storage differences for comparable data types (for example, between using **char** or **nchar**).
 

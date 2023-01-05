@@ -1,13 +1,13 @@
 ---
 title: Service Broker Configuration Notice Service
 description: "You can create a Broker Configuration Notice (BCN) service on an initiating server which will automatically bind conversations to a specific user on a target server."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Service Broker Configuration Notice Service

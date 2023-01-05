@@ -1,13 +1,12 @@
 ---
 title: "Python driver for SQL Server"
 description: "Connect to a SQL Database using Python on Windows, Linux, or macOS."
-ms.custom: ""
-ms.date: "03/24/2022"
-ms.prod: sql
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/24/2022"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 
 # Python SQL driver

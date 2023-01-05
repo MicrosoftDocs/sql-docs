@@ -1,19 +1,17 @@
 ---
 title: Scale single database resources
 description: This article describes how to scale the compute and storage resources available for a single database in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=1"
-  - "references_regions"
-  - "devx-track-azurepowershell"
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/01/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=1"
+  - "references_regions"
+  - "devx-track-azurepowershell"
 ---
 # Scale single database resources in Azure SQL Database
 
@@ -161,7 +159,7 @@ More than 1 TB of storage in the Premium tier is currently available in all regi
 - For active geo-replication scenarios:
   - Setting up a geo-replication relationship: If the primary database is P11 or P15, the secondary(ies) must also be P11 or P15. Lower compute size are rejected as secondaries since they aren't capable of supporting more than 1 TB.
   - Upgrading the primary database in a geo-replication relationship: Changing the maximum size to more than 1 TB on a primary database triggers the same change on the secondary database. Both upgrades must be successful for the change on the primary to take effect. Region limitations for the more than 1-TB option apply. If the secondary is in a region that doesn't support more than 1 TB, the primary isn't upgraded.
-- Using the Import/Export service for loading P11/P15 databases with more than 1 TB isn't supported. Use SqlPackage.exe to [import](database-import.md) and [export](database-export.md) data.
+- Using the Import/Export service for loading P11/P15 databases with more than 1 TB isn't supported. Use SqlPackage to [import](database-import.md) and [export](database-export.md) data.
 
 ## Next steps
 

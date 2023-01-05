@@ -1,21 +1,19 @@
 ---
 title: "Failover modes for availability groups"
 description: "A description of the different failover modes available for databases participating in an Always On availability group."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seodec18
+helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], failover"
   - "Availability Groups [SQL Server], failover modes"
   - "failover [SQL Server], AlwaysOn Availability Groups"
   - "failover [SQL Server], Always On Availability Groups"
-ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Failover and Failover Modes (Always On Availability Groups)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -3,10 +3,9 @@ description: "Use Table-Valued Parameters in SQL Server Native Client (OLE DB)"
 title: Use table-valued parameters (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname
@@ -16,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Use Table-Valued Parameters in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later. This sample does the following:  
+  This sample works with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later. This sample does the following:  
   
 -   Creates table-valued parameters by using dynamic discovery though IOpenRowset::OpenRowset.  
   

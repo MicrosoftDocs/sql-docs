@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: ""
 ms.date: "09/09/2016"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: ""
 f1_keywords:
@@ -35,7 +34,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Marks the end of a successful implicit or explicit transaction. If @@TRANCOUNT is 1, COMMIT TRANSACTION makes all data modifications since the start of the transaction a permanent part of the database, frees the transaction's resources, and decrements @@TRANCOUNT to 0. When @@TRANCOUNT is greater than 1, COMMIT TRANSACTION decrements @@TRANCOUNT only by 1 and the transaction stays active.  
   
- ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,17 +57,17 @@ COMMIT [ TRAN | TRANSACTION ]
 
 ## Arguments
  *transaction_name*  
- **APPLIES TO:** SQL Server and Azure SQL Database
+ **Applies to:** SQL Server and Azure SQL Database
  
  Is ignored by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* specifies a transaction name assigned by a previous BEGIN TRANSACTION. *transaction_name*must conform to the rules for identifiers, but can't exceed 32 characters. *transaction_name* indicates to programmers which nested BEGIN TRANSACTION the COMMIT TRANSACTION is associated with.  
   
  *\@tran_name_variable*  
- **APPLIES TO:** SQL Server and Azure SQL Database  
+ **Applies to:** SQL Server and Azure SQL Database  
  
 Is the name of a user-defined variable containing a valid transaction name. The variable must be declared with a char, varchar, nchar, or nvarchar data type. If more than 32 characters are passed to the variable, only 32 characters will be used; the remaining characters are truncated.  
   
  DELAYED_DURABILITY  
- **APPLIES TO:** SQL Server and Azure SQL Database   
+ **Applies to:** SQL Server and Azure SQL Database   
 
  Option that requests this transaction should be committed with delayed durability. The request is ignored if the database has been altered with `DELAYED_DURABILITY = DISABLED` or `DELAYED_DURABILITY = FORCED`. For more information, see [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).  
   
@@ -91,7 +90,7 @@ Is the name of a user-defined variable containing a valid transaction name. The 
 ## Examples  
   
 ### A. Committing a transaction  
-**APPLIES TO:** SQL Server, Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+**Applies to:** SQL Server, Azure SQL Database, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
 
 The following example deletes a job candidate. It uses AdventureWorks. 
   
@@ -103,7 +102,7 @@ COMMIT TRANSACTION;
 ```  
   
 ### B. Committing a nested transaction  
-**APPLIES TO:** SQL Server and Azure SQL Database    
+**Applies to:** SQL Server and Azure SQL Database    
 
 The following example creates a table, generates three levels of nested transactions, and then commits the nested transaction. Although each `COMMIT TRANSACTION` statement has a *transaction_name* parameter, there's no relationship between the `COMMIT TRANSACTION` and `BEGIN TRANSACTION` statements. The *transaction_name* parameters help the programmer ensure that the correct number of commits are coded to decrement `@@TRANCOUNT` to 0 and so to commit the outer transaction. 
   

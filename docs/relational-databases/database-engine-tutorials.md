@@ -3,10 +3,9 @@ title: "Database Engine Tutorials | Microsoft Docs"
 description: Use these tutorials to learn about the SQL Server Database Engine, including getting started and using the SQL Server Management Studio.
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: WilliamDAssafMSFT
@@ -41,11 +40,11 @@ This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/s
 [Tutorial: Administering Servers by Using Policy-Based Management](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 This tutorial teaches how to create policies that enforce site administration standards.  
   
-[Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-This tutorial illustrates how to do a SQL Server backup and restore to the Azure Blob Storage Service.  
+[Tutorial: SQL Server Backup and Restore to Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+This tutorial illustrates how to do a SQL Server backup and restore to Azure Blob Storage.  
   
-[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-This tutorial helps you understand how to store SQL Server data files in the Azure Blob storage service directly.  
+[Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+This tutorial helps you understand how to store SQL Server data files in Azure Blob Storage directly.  
   
 ## See Also  
 [Tutorials for SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  

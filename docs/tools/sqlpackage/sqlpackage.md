@@ -1,9 +1,8 @@
 ---
-title: SqlPackage.exe
-description: Learn how to automate database development tasks with SqlPackage.exe. View examples and available parameters, properties, and SQLCMD variables.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+title: SqlPackage
+description: Learn how to automate database development tasks with SqlPackage. View examples and available parameters, properties, and SQLCMD variables.
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
@@ -11,9 +10,9 @@ ms.reviewer: "maghan"
 ms.date: 6/1/2022
 ---
 
-# SqlPackage.exe
+# SqlPackage
 
-**SqlPackage.exe** is a command-line utility that automates the following database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs:  
+**SqlPackage** is a command-line utility that automates the following database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs:  
   
 - [Version](#version): Returns the build number of the SqlPackage application.  Added in version 18.6.
 
@@ -31,13 +30,13 @@ ms.date: 6/1/2022
   
 - [Script](sqlpackage-script.md): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.  
   
-The **SqlPackage.exe** command line tool allows you to specify these actions along with action-specific parameters and properties.  
+The **SqlPackage** command line tool allows you to specify these actions along with action-specific parameters and properties.  
 
 **[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
   
 ## Command-Line Syntax
 
-**SqlPackage.exe** initiates the actions specified using the [parameters](#parameters), [properties](#properties), and SQLCMD variables specified on the command line.  
+**SqlPackage** initiates the actions specified using the [parameters](#parameters), [properties](#properties), and SQLCMD variables specified on the command line.  
   
 ```bash
 SqlPackage {parameters} {properties} {SQLCMD variables}
@@ -57,7 +56,7 @@ Further examples are available on the individual action pages.
 **Creating a .dacpac file of the current database schema:**
 
 ```cmd
-sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+SqlPackage /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
 ```
 
 ### Parameters
@@ -113,7 +112,7 @@ SqlPackage actions support a large number of properties to modify the default be
 Displays the sqlpackage version as a build number.  Can be used in interactive prompts as well as in [automated pipelines](sqlpackage-pipelines.md).
 
 ```cmd
-sqlpackage.exe /Version
+SqlPackage /Version
 ```
 
 ### Help
@@ -121,14 +120,60 @@ sqlpackage.exe /Version
 You can display SqlPackage usage information by using `/?` or `/help:True`.
 
 ```cmd
-sqlpackage.exe /?
+SqlPackage /?
 ```
 
 For parameter and property information specific to a particular action, use the help parameter in addition to that action's parameter.
 
 ```cmd
-sqlpackage.exe /Action:Publish /?
+SqlPackage /Action:Publish /?
 ```
+
+## Authentication
+
+SqlPackage authenticates using methods available in [SqlClient](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). Configuring the authentication type can be accomplished via the connection string parameters for each SqlPackage action (`/SourceConnectionString` and `/TargetConnectionString`) or through individual parameters for connection properties. The following authentication methods are supported in a connection string:
+
+- SQL Server authentication
+- Active Directory (Windows) authentication
+- [Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
+    - Username/password
+    - Integrated authentication
+    - Universal authentication
+    - **Managed identity**
+    - Service principal
+
+
+### Managed identity
+
+In automated environments [Azure Active Directory Managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is the recommended authentication method.  This method does not require passing credentials to SqlPackage at runtime.  The managed identity is configured for the environment where the SqlPackage action is run and the SqlPackage action will use that identity to authenticate to Azure SQL.  For more information on configuring Managed identity for your environment, please see the [Managed identity documentation](/azure/active-directory/managed-identities-azure-resources/overview).
+
+An example connection string using system-assigned managed identity is:
+
+```bash
+Server=sampleserver.database.windows.net; Authentication=Active Directory Managed Identity; Database=sampledatabase;
+```
+
+
+## Environment variables
+
+### Connection pooling
+
+Connection pooling can be enabled for all connections made by SqlPackage by setting the `CONNECTION_POOLING_ENABLED` environment variable to `True`.  This setting is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling.
+
+
+### Temporary files
+
+During SqlPackage operations the table data is written to temporary files before compression or after decompression. For large databases these temporary files can take up a significant amount of disk space but their location can be specified.  The export and extract operations include an optional property to specify `/p:TempDirectoryForTableData` to override the SqlPackage's default value.
+
+The default value is established by [GetTempPath](/dotnet/api/system.io.path.gettemppath) within SqlPackage.
+
+For Windows, the following environment variables are checked in the following order and the first path that exists is used:
+1. The path specified by the TMP environment variable.
+2. The path specified by the TEMP environment variable.
+3. The path specified by the USERPROFILE environment variable.
+4. The Windows directory.
+
+For Linux and macOS, if the path is not specified in the TMPDIR environment variable, the default path /tmp/ is used.
 
 ## SqlPackage and database users
 

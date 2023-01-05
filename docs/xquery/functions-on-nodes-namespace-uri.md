@@ -3,10 +3,9 @@ title: "namespace-uri Function (XQuery) | Microsoft Docs"
 description: Learn how to use the namespace-uri function in an XQuery to return the namespace URI of a specified QName.
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

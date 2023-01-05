@@ -22,7 +22,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 # Firewall Rules Stored Procedures (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-  This section contains the following stored procedures that set or delete firewall rules. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] firewall rules can be used with [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. For more information, see [Configure Azure SQL Database firewall rules - overview](/azure/azure-sql/database/firewall-configure).
+  This section contains the following stored procedures that set or delete firewall rules. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] firewall rules can be used with [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For more information, see [Configure Azure SQL Database firewall rules - overview](/azure/azure-sql/database/firewall-configure).
 
 :::row:::
     :::column:::

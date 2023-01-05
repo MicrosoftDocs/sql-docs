@@ -1,18 +1,13 @@
 ---
 title: Overview of SQL Server on Azure Windows Virtual Machines
 description: Learn how to run full editions of SQL Server on Azure Virtual Machines in the cloud without having to manage any on-premises hardware.
-services: virtual-machines-windows
-documentationcenter: ''
 author: MashaMSFT
-tags: azure-service-management
-ms.assetid: c505089e-6bbf-4d14-af0e-dd39a1872767
+ms.author: mathoma
+ms.date: 03/10/2022
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: overview
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 03/10/2022
-ms.author: mathoma
+tags: azure-service-management
 ---
 # What is SQL Server on Windows Azure Virtual Machines?
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -25,7 +20,7 @@ This article provides an overview of SQL Server on Azure Virtual Machines (VMs) 
 
 If you're new to SQL Server on Azure VMs, check out the *SQL Server on Azure VM Overview* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
 
-> [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61/player]
+> [!VIDEO https://learn.microsoft.com/shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61/player]
 
 ## Overview
 
@@ -92,6 +87,7 @@ The following table provides a matrix of pay-as-you-go SQL Server images.
 
 | Version | Operating system | Edition |
 | --- | --- | --- |
+| **SQL Server 2022** | Windows Server 2022 | [Enterprise](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022enterprise-gen2), [Standard](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022standard-gen2), [Web](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022web-gen2), [Developer](https://portal.azure.com/#create/microsoftsqlserver.sql2022-ws2022sqldev-gen2) | 
 | **SQL Server 2019** | Windows Server 2019 | [Enterprise](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019enterprise), [Standard](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019standard), [Web](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019web), [Developer](https://portal.azure.com/#create/microsoftsqlserver.sql2019-ws2019sqldev) | 
 | **SQL Server 2017** |Windows Server 2016 |[Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2017EnterpriseWindowsServer2016), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2017StandardonWindowsServer2016), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2017WebonWindowsServer2016), [Express](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017ExpressonWindowsServer2016), [Developer](https://portal.azure.com/#create/Microsoft.FreeSQLServerLicenseSQLServer2017DeveloperonWindowsServer2016) |
 | **SQL Server 2016 SP2** |Windows Server 2016 |[Enterprise](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2EnterpriseWindowsServer2016), [Standard](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2StandardWindowsServer2016), [Web](https://portal.azure.com/#create/Microsoft.SQLServer2016SP2WebWindowsServer2016), [Express](https://portal.azure.com/#create/Microsoft.FreeLicenseSQLServer2016SP2ExpressWindowsServer2016), [Developer](https://portal.azure.com/#create/Microsoft.FreeLicenseSQLServer2016SP2DeveloperWindowsServer2016) |

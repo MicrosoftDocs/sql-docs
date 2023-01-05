@@ -3,10 +3,9 @@ description: "Azure Blob Upload Task"
 title: "Azure Blob Upload Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpblobuptask.f1"

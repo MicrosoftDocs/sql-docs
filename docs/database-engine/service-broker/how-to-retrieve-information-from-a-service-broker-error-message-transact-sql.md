@@ -1,13 +1,13 @@
 ---
-title: 'How to: Retrieve Information from a Service Broker Error Message (Transact SQL)'
+title: "How to: Retrieve Information from a Service Broker Error Message (Transact SQL)"
 description: "A message of type https://schemas.microsoft.com/SQL/ServiceBroker/Error is a Service Broker error message."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # How to: Retrieve Information from a Service Broker Error Message (Transact SQL)

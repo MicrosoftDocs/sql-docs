@@ -1,16 +1,12 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using Ruby"
 description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Ruby. The basic examples demonstrate selecting and inserting data."
-ms.custom: ""
-ms.date: 06/22/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 06/22/2020
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using Ruby
 

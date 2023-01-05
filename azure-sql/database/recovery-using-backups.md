@@ -2,16 +2,14 @@
 title: Restore a database from a backup
 titleSuffix: Azure SQL Database
 description: Learn about point-in-time restore, which enables you to roll back a database in Azure SQL Database up to 35 days.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: backup-restore
-ms.topic: how-to
-ms.custom: "azure-sql-split"
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
 ms.date: 07/20/2022
+ms.service: sql-database
+ms.subservice: backup-restore
+ms.topic: how-to
+ms.custom: azure-sql-split
 monikerRange: "= azuresql || = azuresql-db"
 ---
 # Restore a database from a backup in Azure SQL Database
@@ -65,8 +63,6 @@ For a single subscription, you have the following limitations on the number of c
 |Single database (per subscription)|30|100|
 |Elastic pool (per pool)|4|2,000|
 
-There's no built-in method to restore the entire server. For an example of how to accomplish this task, see [Azure SQL Database: Full server recovery](https://gallery.technet.microsoft.com/Azure-SQL-Database-Full-82941666).
-
 ## Permissions
 
 To recover by using automated backups, you must be either:
@@ -90,6 +86,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 > - You can run a restore only on the same server. Point-in-time restore doesn't support cross-server restoration.
 > - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
 > - The `BackupFrequency` parameter isn't supported for Hyperscale databases. 
+> - Database restore operations are resource-intensive and may require a service tier of S3 or greater for the restoring (target) database. Once restore completes, the database or elastic pool may be scaled down, if required.
 
 - **Database replacement**
 
@@ -183,7 +180,7 @@ To restore a database by using the REST API:
 You can restore a deleted database to the deletion time, or an earlier point in time, on the same server by using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API.
 
 > [!IMPORTANT]
-> If you delete a server, all its databases are also deleted and can't be recovered. You can't restore a deleted server.
+> If you delete a server, all its databases are also deleted and can't be recovered. You can't restore a deleted server. If LTR backups were taken, individual databases can be restored to a different server.
 
 ### [Azure portal](#tab/azure-portal)
 

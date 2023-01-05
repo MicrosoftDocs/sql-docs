@@ -1,15 +1,13 @@
 ---
 title: "SQL Server to Azure SQL Database: Migration overview"
 description: Learn about the tools and options available to migrate your SQL Server databases to Azure SQL Database.
-ms.service: sql-database
-ms.subservice: migration-guide
-ms.custom: 
-ms.devlang: 
-ms.topic: how-to
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma, kendralittle
 ms.date: 11/06/2020
+ms.service: sql-database
+ms.subservice: migration-guide
+ms.topic: how-to
 ---
 # Migration overview: SQL Server to Azure SQL Database
 [!INCLUDE[appliesto--sqldb](../../includes/appliesto-sqldb.md)]
@@ -70,7 +68,7 @@ Consider general guidelines to help you choose the right deployment model and se
 
 - [General Purpose/standard service tier](../../database/service-tier-general-purpose.md) offers a balanced budget-oriented option with compute and storage suitable to deliver applications in the middle and lower tiers. Redundancy is built in at the storage layer to recover from failures. It's designed for most database workloads. 
 - [Business Critical/premium service tier](../../database/service-tier-business-critical.md) is for high-tier applications that require high transaction rates, low-latency I/O, and a high level of resiliency. Secondary replicas are available for failover and to offload read workloads.
-- [Hyperscale service tier](../../database/service-tier-hyperscale.md) is for databases that have growing data volumes and need to automatically scale up to 100 TB in database size. It's designed for very large databases. 
+- [Hyperscale service tier](../../database/service-tier-hyperscale.md) is intended for all customers who require higher performance and availability, fast backup and restore, and/or fast storage and compute scalability. This includes customers who are moving to the cloud to modernize their applications as well as customers who are already using other service tiers in Azure SQL Database. The Hyperscale service tier supports a broad range of database workloads, from pure OLTP to pure analytics. It is optimized for OLTP and hybrid transaction and analytical processing (HTAP) workloads.
 
 > [!IMPORTANT]
 > [Transaction log rate is governed](../../database/resource-limits-logical-server.md#transaction-log-rate-governance) in Azure SQL Database to limit high ingestion rates. As such, during migration, you might have to scale target database resources (vCores or DTUs) to ease pressure on CPU or throughput. Choose the appropriately sized target database, but plan to scale resources up for the migration if necessary. 
@@ -105,7 +103,7 @@ The following table lists alternative migration tools:
 |Technology |Description  |
 |---------|---------|
 |[Transactional replication](../../database/replication-to-sql-database.md)|Replicate data from source SQL Server database tables to Azure SQL Database by providing a publisher-subscriber type migration option while maintaining transactional consistency. Incremental data changes are propagated to subscribers as they occur on the publishers.|
-|[Import Export Service/BACPAC](../../database/database-import.md)|[BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) is a Windows file with a .bacpac extension that encapsulates a database's schema and data. You can use BACPAC to both export data from a SQL Server source and import the data into Azure SQL Database. A BACPAC file can be imported to a new SQL database through the Azure portal. </br></br> For scale and performance with large databases sizes or a large number of databases, consider using the [SqlPackage](../../database/database-import.md#using-sqlpackage) command-line tool to export and import databases.|
+|[Import Export Service/BACPAC](../../database/database-import.md)|[BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) is a Windows file with a .bacpac extension that encapsulates a database's schema and data. You can use BACPAC to both export data from a SQL Server source and import the data into Azure SQL Database. A BACPAC file can be imported to a new SQL database through the Azure portal. </br></br> For scale and performance with large databases sizes or a large number of databases, consider using the [SqlPackage](../../database/database-import.md#use-sqlpackage) command-line tool to export and import databases.|
 |[Bulk copy](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server)|The [bulk copy program (bcp) tool](/sql/tools/bcp-utility) copies data from an instance of SQL Server into a data file. Use the tool to export the data from your source and import the data file into the target SQL database. </br></br> For high-speed bulk copy operations to move data to Azure SQL Database, you can use the [Smart Bulk Copy tool](/samples/azure-samples/smartbulkcopy/smart-bulk-copy/) to maximize transfer speed by taking advantage of parallel copy tasks.|
 |[Azure Data Factory](/azure/data-factory/connector-azure-sql-database)|The [Copy activity](/azure/data-factory/copy-activity-overview) in Azure Data Factory migrates data from source SQL Server databases to Azure SQL Database by using built-in connectors and an [integration runtime](/azure/data-factory/concepts-integration-runtime).</br> </br> Data Factory supports a wide range of [connectors](/azure/data-factory/connector-overview) to move data from SQL Server sources to Azure SQL Database.|
 |[SQL Data Sync](../../database/sql-data-sync-data-sql-server-sql-database.md)|SQL Data Sync is a service built on Azure SQL Database that lets you synchronize selected data bidirectionally across multiple databases, both on-premises and in the cloud.</br>Data Sync is useful in cases where data needs to be kept updated across several databases in Azure SQL Database or SQL Server.|

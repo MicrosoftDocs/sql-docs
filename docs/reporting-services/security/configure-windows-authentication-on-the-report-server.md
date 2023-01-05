@@ -2,9 +2,8 @@
 description: "Configure Windows Authentication on the Report Server"
 title: "Configure Windows Authentication on the Report Server | Microsoft Docs"
 ms.date: 06/22/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
+ms.service: reporting-services
+ms.subservice: security
 
 
 ms.topic: conceptual
@@ -42,7 +41,7 @@ ms.author: maggies
  The following instructions are intended for a native mode report server. If the report server is deployed in SharePoint integrated mode, you must use the default authentication settings that specify Windows integrated security. The report server uses internal features in the default Windows Authentication extension to support report servers in SharePoint integrated mode.  
   
 ## Extended Protection for Authentication  
- Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection is determined by settings in the RSReportServer.config file. The file can be updated by either editing the file or using WMI APIs. For more information, see [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
+ Beginning with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection is determined by settings in the RSReportServer.config file. The file can be updated by either editing the file or using WMI APIs. For more information, see [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
 ### To configure a report server to use Windows integrated security  
   

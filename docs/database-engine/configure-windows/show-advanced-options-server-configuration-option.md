@@ -1,19 +1,15 @@
 ---
-title: "show advanced options Server Configuration Option | Microsoft Docs"
-description: 'Learn about the "show advanced options" option. See how to use it to list advanced options when you run the SQL Server system stored procedure "sp_configure."'
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "sp_configure"
-  - "show advanced options option"
-ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
+title: "show advanced options Server Configuration Option"
+description: "Learn about the show advanced options option. See how to use it to list advanced options when you run the SQL Server system stored procedure sp_configure."
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "sp_configure"
+  - "show advanced options option"
 ---
 # show advanced options Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

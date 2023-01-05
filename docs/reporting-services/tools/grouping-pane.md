@@ -2,9 +2,8 @@
 title: "Grouping Pane | Microsoft Docs"
 description: Learn about the Grouping pane on the Report menu in Reporting Services that displays the row groups and column groups for the currently selected Tablix data region.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 
 
 ms.topic: conceptual

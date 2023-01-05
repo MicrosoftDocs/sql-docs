@@ -5,8 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 07/25/2022
 ms.reviewer: wiassaf
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 dev_langs:
@@ -22,7 +22,7 @@ Returns distribution information for columns.
 |-----------------|---------------|-----------------|-----------|  
 |**object_id**|**int**|ID of the object to which the column belongs.||  
 |**column_id**|**int**|ID of the column.||  
-|**distribution_ordinal**|**tinyint**|Ordinal (1-based) within set of distribution.| = 0: Not a distribution column. <br /><br /> = 1 or >1: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is using this column to distribute the parent table.|  
+|**distribution_ordinal**|**tinyint**|Ordinal (1-based) within set of distribution.| = 0: Not a distribution column. <br /><br /> = 1 or >1: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] is using this column to distribute the parent table.|  
   
 ## Next steps 
 

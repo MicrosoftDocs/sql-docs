@@ -2,9 +2,8 @@
 title: "SAP NetWeaver BI Connection Type | Microsoft Docs"
 description: Use the information in this article about the SAP NetWeaver BI connection type to learn how to build a data source.
 ms.date: 03/17/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual

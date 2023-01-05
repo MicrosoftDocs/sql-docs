@@ -3,10 +3,9 @@ description: "Troubleshoot Integration Services (SSIS) Packages"
 title: "Troubleshoot Integration Services (SSIS) Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
 author: chugugrace

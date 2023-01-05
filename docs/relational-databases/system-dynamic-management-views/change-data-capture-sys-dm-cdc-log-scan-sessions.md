@@ -4,8 +4,8 @@ description: The Change Data Capture DMV sys.dm_cdc_log_scan_sessions returns st
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/10/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:

@@ -1,17 +1,14 @@
 ---
 title: Data Sync Agent for SQL Data Sync
 description: Learn how to install and run the Data Sync Agent for SQL Data Sync in Azure to sync data with SQL Server databases
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: sql-data-sync
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/20/2018
+ms.service: sql-database
+ms.subservice: sql-data-sync
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Data Sync Agent for SQL Data Sync
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

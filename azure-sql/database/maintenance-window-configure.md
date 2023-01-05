@@ -1,15 +1,13 @@
 ---
 title: Configure maintenance window
 description: Learn how to set the time when planned maintenance should be performed on your Azure SQL databases, elastic pools, and managed instance databases.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: deployment-configuration
-ms.topic: how-to
 author: scott-kim-sql
 ms.author: scottkim
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/07/2022
+ms.service: sql-db-mi
+ms.subservice: deployment-configuration
+ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Configure maintenance window
@@ -96,7 +94,7 @@ The following example creates a new database and sets the maintenance window usi
     # Set selected maintenance window
     $maintenanceConfig = "SQL_EastUS2_DB_1"
 
-    Write-host "Creating a gen5 2 vCore database with maintenance window ${maintenanceConfig} ..."
+    Write-host "Creating a standard-series (Gen5) 2 vCore database with maintenance window ${maintenanceConfig} ..."
     $database = New-AzSqlDatabase `
       -ResourceGroupName $resourceGroupName `
       -ServerName $serverName `

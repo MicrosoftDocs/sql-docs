@@ -3,9 +3,9 @@ description: "MSSQLSERVER_15401"
 title: MSSQLSERVER_15401
 ms.custom: ""
 ms.date: 12/25/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "15401 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|SEC_INVALIDLOGINORGROUP|
 |Message Text|Windows NT user or group '%s' not found. Check the name again.|
-||
 
 ## Explanation
 

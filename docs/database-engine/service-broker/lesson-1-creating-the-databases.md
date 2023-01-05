@@ -1,13 +1,13 @@
 ---
-title: 'Lesson 1: Creating the Databases'
+title: "Lesson 1: Creating the Databases"
 description: "In this lesson, you will learn to create the databases and enable the trustworthy option."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Lesson 1: Creating the Databases

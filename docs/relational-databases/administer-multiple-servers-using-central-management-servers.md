@@ -2,10 +2,9 @@
 title: "Administer multiple servers using Central Management Servers"
 description: Learn to administer multiple servers in SQL Server by designating Central Management Servers and creating server groups.
 ms.date: "08/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiserver queries"
@@ -26,7 +25,7 @@ ms.custom: "seo-lt-2019"
 ## What is a Central Management Server and server groups?  
  An instance of SQL Server designated as a Central Management Server maintains server groups that contain the connection information for one or more instances. You can execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements and Policy-Based Management policies at the same time against server groups. You can also view the log files on instances managed through a Central Management Server. 
  
- Basically, a Central Management Server is a central repository containing a list of your managed servers. Versions earlier than [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] cannot be designated as a Central Management Server.  
+ Basically, a Central Management Server is a central repository containing a list of your managed servers. Versions earlier than [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] cannot be designated as a Central Management Server.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] statements can also be executed against local server groups in Registered Servers.  
   

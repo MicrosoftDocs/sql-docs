@@ -1,19 +1,15 @@
 ---
 title: "Installing the Driver Manager"
 description: "This article contains instructions to install the unixODBC Driver Manager for use with all versions of Microsoft ODBC Driver for SQL Server on Linux and macOS."
-ms.custom:
-  - intro-installation
-ms.date: "02/15/2022"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords:
-  - "Driver Manager, installing"
-ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "02/15/2022"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+ms.custom: intro-installation
+helpviewer_keywords:
+  - "Driver Manager, installing"
 ---
 # Installing the Driver Manager
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +38,7 @@ To install the driver manager:
   
 1.  Make sure that you have root permission.  
   
-2.  Go to the directory where the [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver download placed the file called `msodbcsql-11.0.2270.0.tar.gz`. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Go to the directory where the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver download placed the file called `msodbcsql-11.0.2270.0.tar.gz`. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
 3.  Change to the `msodbcsql-11.0.2270.0` directory and there you should see a file called `build_dm.sh`. You can run `build_dm.sh` to install the unixODBC Driver Manager.
 

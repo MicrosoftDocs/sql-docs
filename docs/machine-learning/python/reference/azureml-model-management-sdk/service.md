@@ -6,12 +6,10 @@ description: "The Service class is for SQL Machine Learning Services and Machine
 keywords: "" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: "09/20/2017" 
 ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
+ms.service: sql
+ms.subservice: "machine-learning-services" 
 ms.assetid: "" 
  
 # optional metadata 
@@ -21,7 +19,7 @@ ms.devlang: "Python"
 ms.reviewer: "" 
 ms.suite: "" 
 ms.tgt_pltfrm: "" 
-#ms.technology: "" 
+#ms.subservice: "" 
 ms.custom: ""
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
  
@@ -76,7 +74,7 @@ high of a number because it might negatively impact performance.
 
 ### Returns
 
-The [`Batch`](batch.md) instance to control this service’s
+The [`Batch`](batch.md) instance to control this service's
 batching lifecycle.
 
 
@@ -121,7 +119,7 @@ service:
 
 * *operation_id* - The function `alias`. 
 
-* *swagger* - The API REST endpoint to this service’s *swagger.json* document. 
+* *swagger* - The API REST endpoint to this service's *swagger.json* document. 
 
 
 ### Returns
@@ -152,7 +150,7 @@ The identifier of the batch execution.
 
 ### Returns
 
-The [`Batch`](batch.md) instance to control this service’s
+The [`Batch`](batch.md) instance to control this service's
 batching lifecycle.
 
 

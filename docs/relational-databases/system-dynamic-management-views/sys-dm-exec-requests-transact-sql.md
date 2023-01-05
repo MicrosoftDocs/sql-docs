@@ -5,9 +5,8 @@ author: akatesmith
 ms.author: katsmith
 ms.reviewer: mikeray
 ms.date: 1/18/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -29,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 Returns information about each request that is executing in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
 
 > [!NOTE]
-> To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests  (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool use `sys.dm_exec_requests`.
+> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests  (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool use `sys.dm_exec_requests`.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -94,7 +93,6 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 |is_resumable |**bit** |**Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later.<br /><br /> Indicates whether the request is a resumable index operation. |  
 |page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Applies to**: Azure SQL Database Hyperscale<br /><br /> Number of page server reads performed by this request. isn't nullable.|  
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Remarks
 

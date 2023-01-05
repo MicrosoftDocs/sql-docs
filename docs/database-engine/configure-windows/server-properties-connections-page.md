@@ -1,18 +1,14 @@
 ---
-title: "Server Properties (Connections Page) | Microsoft Docs"
+title: "Server Properties (Connections Page)"
 description: Get acquainted with connection settings in SQL Server. Learn about options that determine deferred constraint checking, NULL handling, and other behavior.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.serverproperties.connections.f1"
-ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.serverproperties.connections.f1"
 ---
 # Server Properties - Connections Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

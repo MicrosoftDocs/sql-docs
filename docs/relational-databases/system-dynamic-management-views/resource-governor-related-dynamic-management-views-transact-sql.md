@@ -4,8 +4,8 @@ description: Resource Governor Related Dynamic Management Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/28/2018"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "Resource Governor, dynamic management views"

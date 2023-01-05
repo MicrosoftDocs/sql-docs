@@ -2,24 +2,21 @@
 title: Configure multi-factor authentication
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to use multi-factored authentication with SSMS for Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=3"
-ms.topic: how-to
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 08/27/2019
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: how-to
+ms.custom: sqldbrb=3
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Configure multi-factor authentication for SQL Server Management Studio and Azure AD
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article shows you how to use Azure Active Directory (Azure AD) multi-factor authentication (MFA) with SQL Server Management Studio (SSMS). Azure AD MFA can be used when connecting SSMS or SqlPackage.exe to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). For an overview of multi-factor authentication, see [Universal Authentication with SQL Database, SQL Managed Instance, and Azure Synapse (SSMS support for MFA)](../database/authentication-mfa-ssms-overview.md).
+This article shows you how to use Azure Active Directory (Azure AD) multi-factor authentication (MFA) with SQL Server Management Studio (SSMS). Azure AD MFA can be used when connecting SSMS or SqlPackage[Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). For an overview of multi-factor authentication, see [Universal Authentication with SQL Database, SQL Managed Instance, and Azure Synapse (SSMS support for MFA)](../database/authentication-mfa-ssms-overview.md).
 
 > [!IMPORTANT]
 > Databases in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse are referred to collectively in the remainder of this article as databases, and the server is referring to the [server](logical-servers.md) that hosts databases for Azure SQL Database and Azure Synapse.

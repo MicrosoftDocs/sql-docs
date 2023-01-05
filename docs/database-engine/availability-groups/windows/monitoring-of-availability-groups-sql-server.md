@@ -1,18 +1,16 @@
 ---
 title: "Tools to monitor availability groups"
 description: "A reference for the various tools available to monitor the performance and health of Always On availability groups. "
-ms.custom: "seodec18"
-ms.date: 10/05/2021
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], monitoring"
-  - "Availability Groups [SQL Server], troubleshooting"
-ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+ms.custom: seodec18
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], monitoring"
+  - "Availability Groups [SQL Server], troubleshooting"
 ---
 # Tools to monitor Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

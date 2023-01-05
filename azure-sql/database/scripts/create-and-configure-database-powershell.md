@@ -1,20 +1,17 @@
 ---
 title: "PowerShell: Create a single database"
 description: Use an Azure PowerShell example script to create a single database in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: deployment-configuration
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-ms.devlang:
-  - "PowerShell"
-ms.topic: sample
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
+ms.date: 09/29/2022
+ms.service: sql-database
+ms.subservice: deployment-configuration
+ms.topic: sample
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+ms.devlang: PowerShell
 ---
 # Use PowerShell to create a single database and configure a server-level firewall rule
 
@@ -52,6 +49,11 @@ This script uses the following commands. Each command in the table links to comm
 | [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) | Creates a database in a server. |
 | [Remove-AzResourceGroup](/powershell/module/az.resources/remove-azresourcegroup) | Deletes a resource group including all nested resources. |
 
+## Configure managed identities
+
+For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Azure AD for Azure SQL](../authentication-azure-ad-user-assigned-managed-identity.md).
+
+To configure the system-assigned managed identity (SMI) or user-assigned managed identity or identities (UMI) of an Azure SQL Database, see [Get or set a managed identity for a logical server or managed instance](../authentication-azure-ad-user-assigned-managed-identity.md#get-or-set-a-managed-identity-for-a-logical-server-or-managed-instance).
 
 ## Next steps
 

@@ -1,27 +1,25 @@
 ---
 title: "Supported version and edition upgrades (SQL Server 2017)"
-description: The supported version and edition upgrades for SQL Server 2017. 
-ms.custom: "seo-lt-2019"
+description: The supported version and edition upgrades for SQL Server 2017.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/13/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Supported version & edition upgrades (SQL Server 2017)
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
-  You can upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]. This article lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)].  
+  You can upgrade from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]. This article lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)].  
   
 ## Pre upgrade Checklist  
   
@@ -64,21 +62,21 @@ monikerRange: ">=sql-server-2016"
   
 |Upgrade from|Supported upgrade path|  
 |:------|:------|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Enterprise|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Developer|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Developer|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Standard|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Small Business|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Web|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Workgroup|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Express |[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Express|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP3 Datacenter|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP3 Enterprise|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP3 Developer|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Developer|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP3 Small Business|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP3 Standard|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP3 Web|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP3 Workgroup|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP3 Express |[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Express|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP4 Enterprise|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP4 Developer|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Developer|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP4 Standard|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP4 Small Business|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP4 Web|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP4 Workgroup|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP4 Express |[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Express|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] SP3 Datacenter|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] SP3 Enterprise|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] SP3 Developer|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Developer|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] SP3 Small Business|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] SP3 Standard|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] SP3 Web|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] SP3 Workgroup|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] SP3 Express |[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Express|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Enterprise|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Developer|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Developer <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Standard|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard|  
@@ -174,7 +172,7 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
 ## See Also  
 
- [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+ [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
  
  [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  

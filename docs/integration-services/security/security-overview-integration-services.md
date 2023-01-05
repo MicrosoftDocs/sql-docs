@@ -3,10 +3,9 @@ description: "Security Overview (Integration Services)"
 title: "Security Overview (Integration Services) | Microsoft Docs"
 ms.custom: security
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS packages, security"

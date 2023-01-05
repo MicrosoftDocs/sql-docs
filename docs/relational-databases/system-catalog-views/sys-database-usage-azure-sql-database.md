@@ -3,9 +3,8 @@ title: "sys.database_usage (Azure SQL Database)"
 description: sys.database_usage (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/30/2022"
+ms.date: "08/11/2022"
 ms.service: sql-database
-ms.prod_service: "sql-database"
 ms.topic: "reference"
 f1_keywords:
   - "database_usage"
@@ -17,16 +16,15 @@ helpviewer_keywords:
   - "sys.database_usage"
 dev_langs:
   - "TSQL"
-ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 monikerRange: "=azuresqldb-current"
 ---
 # sys.database_usage (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
 >[!IMPORTANT]
-> This view is unused and is preserved for backwards compatibility.
+> This view is deprecated and is preserved only for backwards compatibility.
   
- The **sys.database_usage** view contains the following columns.  
+ The `sys.database_usage` view contains the following columns.  
   
 |Column Name|Description|  
 |-----------------|-----------------|  

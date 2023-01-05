@@ -2,23 +2,21 @@
 title: Network Access Controls
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Overview of how to manage and control network access for Azure SQL Database and Azure Synapse Analytics.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=3"
-  - "devx-track-azurepowershell"
-ms.topic: conceptual
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 07/18/2022
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=3"
+  - "devx-track-azurepowershell"
 ---
 
 # Azure SQL Database and Azure Synapse Analytics network access controls
 
-When you create a logical SQL server from the [Azure portal](single-database-create-quickstart.md) for Azure SQL Database and Azure Synapse Analytics, the result is a public endpoint in the format, *yourservername.database.windows.net*.
+When you create a logical server from the [Azure portal](single-database-create-quickstart.md) for Azure SQL Database and Azure Synapse Analytics, the result is a public endpoint in the format, *yourservername.database.windows.net*.
 
 You can use the following network access controls to selectively allow access to a database via the public endpoint:
 
@@ -28,20 +26,20 @@ You can use the following network access controls to selectively allow access to
 You can also allow private access to the database from [virtual networks](/azure/virtual-network/virtual-networks-overview) via:
 
 - Virtual network firewall rules: Use this feature to allow traffic from a specific virtual network within the Azure boundary
-- Private Link: Use this feature to create a private endpoint for [logical SQL server](logical-servers.md) within a specific virtual network
+- Private Link: Use this feature to create a private endpoint for [logical server in Azure](logical-servers.md) within a specific virtual network
 
 > [!IMPORTANT]
 > This article does *not* apply to **SQL Managed Instance**. For more information about the networking configuration, see [connecting to Azure SQL Managed Instance](../managed-instance/connect-application-instance.md) .
 
 See the below video for a high-level explanation of these access controls and what they do:
 
-> [!VIDEO https://docs.microsoft.com/shows/Data-Exposed/Data-Exposed--SQL-Database-Connectivity-Explained/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/shows/Data-Exposed/Data-Exposed--SQL-Database-Connectivity-Explained/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Allow Azure services
 
-By default during creation of a new logical SQL server [from the Azure portal](single-database-create-quickstart.md), this setting is set to **OFF**. This setting appears when connectivity is allowed using public service endpoint.
+By default during creation of a new logical server [from the Azure portal](single-database-create-quickstart.md), this setting is set to **OFF**. This setting appears when connectivity is allowed using public service endpoint.
 
-You can also change this setting via the firewall pane after the logical SQL server is created as follows.
+You can also change this setting via the **Networking** setting after the logical server is created as follows: 
   
 ![Screenshot of manage server firewall][2]
 
@@ -53,7 +51,7 @@ However, doing so affects the following features that run on virtual machines in
 
 ### Import Export Service
 
-Import Export Service doesn't work when **Allow access to Azure services** is set to **OFF**. However you can work around the problem [by manually running sqlpackage.exe from an Azure VM or performing the export](./database-import-export-azure-services-off.md) directly in your code by using the DACFx API.
+Import Export Service doesn't work when **Allow access to Azure services** is set to **OFF**. However you can work around the problem [by manually running SqlPackage from an Azure VM or performing the export](./database-import-export-azure-services-off.md) directly in your code by using the DACFx API.
 
 ### Data Sync
 
@@ -103,14 +101,14 @@ You can now add these as distinct firewall rules and then set **Allow Azure serv
 
 ## IP firewall rules
 
-Ip based firewall is a feature of the logical SQL server in Azure that prevents all access to your server until you explicitly [add IP addresses](firewall-create-server-level-portal-quickstart.md) of the client machines.
+Ip based firewall is a feature of the logical server in Azure that prevents all access to your server until you explicitly [add IP addresses](firewall-create-server-level-portal-quickstart.md) of the client machines.
 
 ## Virtual network firewall rules
 
 In addition to IP rules, the server firewall allows you to define *virtual network rules*.  
 To learn more, see [Virtual network service endpoints and rules for Azure SQL Database](vnet-service-endpoint-rule-overview.md) or watch this video:
 
-> [!VIDEO https://docs.microsoft.com/shows/Data-Exposed/Data-Exposed--Demo--Vnet-Firewall-Rules-for-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/shows/Data-Exposed/Data-Exposed--Demo--Vnet-Firewall-Rules-for-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 ### Azure Networking terminology
 

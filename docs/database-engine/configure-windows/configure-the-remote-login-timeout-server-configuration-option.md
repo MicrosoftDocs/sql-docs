@@ -1,18 +1,14 @@
 ---
-title: "Configure the remote login timeout Server Configuration Option | Microsoft Docs"
-description: 'Learn about the "remote login timeout" option. See how it limits the number of seconds that SQL Server allots for connecting to a remote server.'
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "remote login timeout option"
-ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
+title: "Configure the remote login timeout Server Configuration Option"
+description: "Learn about the remote login timeout option. See how it limits the number of seconds that SQL Server allots for connecting to a remote server."
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "remote login timeout option"
 ---
 # Configure the remote login timeout Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -20,7 +16,7 @@ ms.author: randolphwest
   This topic describes how to configure the **remote login timeout** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **remote login timeout** option specifies the number of seconds to wait before returning from a failed attempt to log in to a remote server. For example, if you are trying to log in to a remote server and that server is down, **remote login timeout** helps make sure that you do not have to wait indefinitely before your computer stops trying to log in. The default value for this option is 10 seconds. A value of 0 allows for an infinite wait.  
   
 > [!NOTE]  
->  The default value for this option is 20 seconds in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+>  The default value for this option is 20 seconds in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
  **In This Topic**  
   

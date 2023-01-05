@@ -3,10 +3,9 @@ title: "String Search in XQuery | Microsoft Docs"
 description: Learn how to search text in XML documents by viewing an example of string search in XQuery. 
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

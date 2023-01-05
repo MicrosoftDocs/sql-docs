@@ -1,14 +1,13 @@
 ---
-title: "Database Mirroring (SQL Server) | Microsoft Docs"
+title: "Database Mirroring (SQL Server)"
 description: Learn about database mirroring, which is a solution for increasing the availability of a SQL Server database and is implemented on a per-database basis.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/16/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "partners [SQL Server]"
   - "standby servers [SQL Server]"
   - "principal database [SQL Server]"
@@ -21,9 +20,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], about database mirroring"
   - "mirror database [SQL Server]"
   - "mirror server [SQL Server] See database mirroring"
-ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Database Mirroring (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,7 +113,7 @@ ms.author: mikeray
   
  The principal and mirror servers communicate and cooperate as *partners* in a *database mirroring session*. The two partners perform complementary roles in the session: the *principal role* and the *mirror role*. At any given time, one partner performs the principal role, and the other partner performs the mirror role. Each partner is described as *owning* its current role. The partner that owns the principal role is known as the *principal server*, and its copy of the database is the current principal database. The partner that owns the mirror role is known as the *mirror server*, and its copy of the database is the current mirror database. When database mirroring is deployed in a production environment, the principal database is the *production database*.  
   
- Database mirroring involves *redoing* every insert, update, and delete operation that occurs on the principal database onto the mirror database as quickly as possible. Redoing is accomplished by sending a stream of active transaction log records to the mirror server, which applies log records to the mirror database, in sequence, as quickly as possible. Unlike replication, which works at the logical level, database mirroring works at the level of the physical log record. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the principal server compresses the stream of transaction log records before sending it to the mirror server. This log compression occurs in all mirroring sessions.  
+ Database mirroring involves *redoing* every insert, update, and delete operation that occurs on the principal database onto the mirror database as quickly as possible. Redoing is accomplished by sending a stream of active transaction log records to the mirror server, which applies log records to the mirror database, in sequence, as quickly as possible. Unlike replication, which works at the logical level, database mirroring works at the level of the physical log record. Beginning in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], the principal server compresses the stream of transaction log records before sending it to the mirror server. This log compression occurs in all mirroring sessions.  
   
 > [!NOTE]  
 >  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -157,7 +153,7 @@ ms.author: mikeray
  For more information, see [Role Switching](#RoleSwitching), later in this topic.  
   
 > [!NOTE]  
->  Establishing a new mirroring session or adding a witness to an existing mirroring configuration requires that all involved server instances run the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, when you are upgrading to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version, the versions of the involved instances can vary. For more information, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
+>  Establishing a new mirroring session or adding a witness to an existing mirroring configuration requires that all involved server instances run the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, when you are upgrading to [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or a later version, the versions of the involved instances can vary. For more information, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
   
 ####  <a name="TxnSafety"></a> Transaction Safety and Operating Modes  

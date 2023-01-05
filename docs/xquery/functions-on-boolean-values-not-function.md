@@ -3,10 +3,9 @@ title: "not Function (XQuery) | Microsoft Docs"
 description: Learn how the XQuery not() function is used with Boolean values.
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

@@ -1,18 +1,15 @@
 ---
 title: "Include Witness Server (Configure Database Mirroring Security Wizard)"
-description: Describes the 'Include Witness Server' page of the 'Configure Database Mirroring Security' Wizard within the SQL Server Management Studio (SSMS) GUI. 
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.inclwitness.f1"
-ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
+description: Describes the 'Include Witness Server' page of the 'Configure Database Mirroring Security' Wizard within the SQL Server Management Studio (SSMS) GUI.
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.configdbmsecurwiz.inclwitness.f1"
 ---
 # Include Witness Server (Configure Database Mirroring Security Wizard)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

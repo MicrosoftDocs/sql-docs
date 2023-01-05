@@ -3,10 +3,9 @@ description: "SQLGetInfo Function"
 title: "SQLGetInfo Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/28/2020"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 apiname: 
   - "SQLGetInfo"

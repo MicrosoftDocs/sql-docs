@@ -1,20 +1,18 @@
 ---
 title: "Building applications with OLE DB Driver for SQL Server"
 description: "Learn about common issues when building applications with OLE DB Driver for SQL Server and what to expect when upgrading from an older OLE DB driver."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: mikeray
 ms.date: "02/12/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], building applications"
   - "MSOLEDBSQL, building applications"
   - "applications [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, building applications"
-author: David-Engel
-ms.author: v-davidengel
-ms.reviewer: mikeray
 ---
 # Building applications with OLE DB Driver for SQL Server
 

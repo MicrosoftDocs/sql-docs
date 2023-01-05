@@ -1,11 +1,11 @@
 ---
 description: "New GUI Features in SSMA for MySQL (MySQLToSQL)"
 title: "New GUI Features in SSMA for MySQL (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: cpichuka 

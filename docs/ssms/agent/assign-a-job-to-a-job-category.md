@@ -1,9 +1,8 @@
 ---
 description: "Assign a Job to a Job Category"
 title: "Assign a Job to a Job Category"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], assigning"
@@ -57,7 +56,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To assign a job to a job category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

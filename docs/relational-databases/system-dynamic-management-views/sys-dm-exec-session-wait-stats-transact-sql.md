@@ -4,8 +4,8 @@ description: sys.dm_exec_session_wait_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/24/2018"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_session_wait_stats"

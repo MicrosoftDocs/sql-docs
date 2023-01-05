@@ -3,9 +3,9 @@ description: "Creating Script Files (SybaseToSQL)"
 title: "Creating Script Files (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Configuring Settings"

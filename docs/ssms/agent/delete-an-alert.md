@@ -1,9 +1,8 @@
 ---
 title: "Delete an Alert"
 description: "Delete an Alert"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, alerts"
@@ -60,7 +59,7 @@ By default, only members of the **sysadmin** fixed server role can delete alerts
 
 ### To delete an alert
 
-1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. On the Standard bar, select **New Query**.  
 

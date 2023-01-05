@@ -1,11 +1,11 @@
 ---
 description: "Mapping MySQL and SQL Server Data Types (MySQLToSQL)"
 title: "Mapping MySQL and SQL Server Data Types (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Mapping, customize data type mapping"

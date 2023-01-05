@@ -3,10 +3,9 @@ description: "catalog.environments (SSISDB Database)"
 title: "catalog.environments (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace

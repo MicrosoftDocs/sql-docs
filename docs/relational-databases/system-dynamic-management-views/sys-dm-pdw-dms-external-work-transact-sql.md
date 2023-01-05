@@ -4,8 +4,8 @@ description: sys.dm_pdw_dms_external_work (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 # sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] system view that holds information about all Data Movement Service (DMS) steps for external operations.
+  [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] system view that holds information about all Data Movement Service (DMS) steps for external operations.
 
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  

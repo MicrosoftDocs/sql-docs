@@ -1,19 +1,15 @@
 ---
-title: Prepare virtual machines for an FCI  
-description: "Prepare your Azure virtual machines to use them with a failover cluster instance (FCI) and SQL Server on Azure Virtual Machines." 
-services: virtual-machines
-documentationCenter: na
-author: adbadram
-editor: monicar
-tags: azure-service-management
+title: Prepare virtual machines for an FCI
+description: "Prepare your Azure virtual machines to use them with a failover cluster instance (FCI) and SQL Server on Azure Virtual Machines."
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.reviewer: mathoma
+editor: monicar
+tags: azure-service-management
 ---
 
 # Prepare virtual machines for an FCI (SQL Server on Azure VMs)
@@ -249,7 +245,7 @@ This table details the ports that you might need to open, depending on your FCI 
    | Purpose | Port | Notes
    | ------ | ------ | ------
    | SQL Server | TCP 1433 | Normal port for default instances of SQL Server. If you used an image from the gallery, this port is automatically opened. </br> </br> **Used by**: All FCI configurations. |
-   | Health probe | TCP 59999 | Any open TCP port. Configure the load balancer [health probe](failover-cluster-instance-vnn-azure-load-balancer-configure.md#configure-health-probe) and the cluster  to use this port. </br> </br> **Used by**: FCI with load balancer in single subnet scenario. |
+   | Health probe | TCP 59999 | Any open TCP port. Configure the load balancer [health probe](failover-cluster-instance-vnn-azure-load-balancer-configure.md#configure-a-health-probe) and the cluster  to use this port. </br> </br> **Used by**: FCI with load balancer in single subnet scenario. |
    | File share | UDP 445 | Port that the file share service uses. </br> </br> **Used by**: FCI with Premium file share. |
 
 ## Join the domain

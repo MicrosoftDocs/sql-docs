@@ -6,9 +6,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
 ms.date: 01/04/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: language-reference
 f1_keywords:
   - "COPY_TSQL"
@@ -22,7 +21,7 @@ monikerRange: "=azure-sqldw-latest"
 # COPY (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Use COPY for the following capabilities:
+This article explains how to use the COPY statement in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]. Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse
 - Execute a single T-SQL statement without having to create any additional database objects
@@ -140,7 +139,7 @@ Multiple file locations can only be specified from the same storage account and 
 
 |                          |                CSV                |                      Parquet                       |                        ORC                         |
 | :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
-|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+|  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
 1: The .blob endpoint (**.blob**.core.windows.net) in your external location path is required for this authentication method.
@@ -294,7 +293,7 @@ The user executing the COPY command must have the following permissions:
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 
 ## Examples  
 
@@ -333,7 +332,7 @@ The default values of the COPY command are:
 
 ### B. Load authenticating via Share Access Signature (SAS)
 
-The following example loads files that use the line feed as a row terminator such as a UNIX output. This example also uses a SAS key to authenticate to Azure blob storage.
+The following example loads files that use the line feed as a row terminator such as a UNIX output. This example also uses a SAS key to authenticate to Azure Blob Storage.
 
 ```sql
 COPY INTO test_1
@@ -476,4 +475,4 @@ Follow these steps to work around this issue by re-registering the workspace's m
 
 ## See also  
 
- [Loading overview with [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Loading overview with [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

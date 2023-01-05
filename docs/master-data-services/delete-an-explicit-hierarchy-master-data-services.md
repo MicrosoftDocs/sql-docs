@@ -3,17 +3,16 @@ description: "Delete an Explicit Hierarchy (Master Data Services)"
 title: Delete an Explicit Hierarchy
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "explicit hierarchies, deleting"
   - "deleting explicit hierarchies [Master Data Services]"
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Delete an Explicit Hierarchy (Master Data Services)
 

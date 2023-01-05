@@ -5,9 +5,8 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:
@@ -34,7 +33,7 @@ This article introduces the basic backup-media terminology of [!INCLUDE[ssNoVers
 This article describes the format that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses for backup media, the correspondence between backup media and backup devices, the organization of backups on backup media, and several considerations for media sets and media families. The article also describes the steps initializing or formatting backup media before you use it for the first time or replace an old media set with a new media set, how to overwrite old backup sets in a media set, and how to append new backup sets to a media set.  
   
 > [!NOTE]  
-> For more information on SQL Server backup to the Azure Blob storage service,, see, [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+> For more information on SQL Server backup to Azure Blob Storage,, see, [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
 ##  <a name="TermsAndDefinitions"></a> Terms  
  **media set**  
@@ -57,7 +56,7 @@ This article describes the format that [!INCLUDE[ssNoVersion](../../includes/ssn
 > [!NOTE]  
 > Media sets can be mirrored to protect against a damaged media volume (a tape or disk file). For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
- Compressed and uncompressed backups can't occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+ Compressed and uncompressed backups can't occur together in a media set. Any edition of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
   
 ## Media Families  
@@ -101,7 +100,7 @@ In a mirrored media set, each media family is mirrored. For example, if six back
   
 -   The number of mirrors in the set (1-4); 1 indicates an unmirrored device.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] can process media formatted by earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] can process media formatted by earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Backup sets  
  A successful backup operation adds a single *backup set* to the media set. The backup set is described in terms of the media set to which the backup belongs. If the backup media consists of only one media family, that family contains the entire backup set. If the backup media consists of multiple media families, the backup set is distributed among them. On each medium, the backup set contains a header that describes the backup set.  
@@ -204,7 +203,7 @@ Appending, which is the default behavior of the BACKUP, can be explicitly specif
  Microsoft Windows backups and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups can share the same media, but they aren't interoperable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup can't back up Windows data.  
   
 > [!IMPORTANT]  
-> Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+> Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  
 ##  <a name="Overwriting"></a> Overwriting backup sets  

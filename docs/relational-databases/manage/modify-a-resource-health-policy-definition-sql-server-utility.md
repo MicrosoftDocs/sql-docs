@@ -3,10 +3,9 @@ title: "Modify a Resource Health Policy Definition (SQL Server Utility) | Micros
 description: Learn how to use SQL Server Management Studio to modify a resource health policy definition so that you can better evaluate SQL Server performance data.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.UE.UTILITY.ADMINISTRATION.F1"

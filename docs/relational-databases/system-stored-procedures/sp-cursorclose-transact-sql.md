@@ -3,10 +3,9 @@ description: "sp_cursorclose (Transact-SQL)"
 title: "sp_cursorclose (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_cursor_close_TSQL"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Closes and de-allocates the cursor, as well as releases all associated resources; that is, it drops the temporary table used in support of KEYSET or STATIC **cursor**. sp_cursorclose is invoked by specifying ID = 9 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

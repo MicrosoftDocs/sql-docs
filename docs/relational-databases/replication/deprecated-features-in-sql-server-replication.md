@@ -3,10 +3,9 @@ description: "Deprecated Features in SQL Server Replication"
 title: "Deprecated Features in SQL Server Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [SQL Server replication]"
@@ -23,7 +22,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 |Feature|Description|  
 |-------------|-----------------|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not support replication to or from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not support replication to or from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)].|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not support replication to or from [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
   
 ## See Also  

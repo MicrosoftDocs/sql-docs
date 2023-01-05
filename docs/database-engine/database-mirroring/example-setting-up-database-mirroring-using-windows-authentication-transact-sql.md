@@ -1,21 +1,18 @@
 ---
 title: "Configure database mirroring with Windows authentication (T-SQL)"
 description: This article contains an example of creating a database mirroring session with a witness using Windows Authentication with Transact-SQL in SQL Server.
-ms.custom: "seo-lt-2019"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database mirroring [SQL Server], deployment"
   - "Windows authentication [SQL Server]"
   - "authentication [SQL Server], database mirroring"
   - "database mirroring [SQL Server], security"
-ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Configure database mirroring using Windows authentication (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

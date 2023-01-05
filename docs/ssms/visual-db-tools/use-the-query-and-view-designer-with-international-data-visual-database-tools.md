@@ -3,9 +3,8 @@ description: "Use the Query and View Designer with International Data (Visual Da
 title: Use the Query and View Designer with International Data
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], international data"

@@ -3,19 +3,15 @@ description: "How to Create the SQL Server Change Database Instance"
 title: "How to Create the SQL Server Change Database Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: chugugrace
 ms.author: chugu
 ---
 # How to Create the SQL Server Change Database Instance
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   This procedure describes how to use the CDC Designer Console to create CDC instances.  
   

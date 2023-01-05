@@ -3,10 +3,9 @@ title: "Monitoring the Error Logs"
 description: Use the SQL Server error log, the Windows application log, and the SQL Server Management Studio Log File Viewer to troubleshoot problems related to SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server]"

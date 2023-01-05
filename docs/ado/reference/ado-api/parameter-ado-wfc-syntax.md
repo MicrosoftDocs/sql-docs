@@ -4,8 +4,8 @@ description: "Parameter (ADO - WFC Syntax)"
 author: rothja
 ms.author: jroth
 ms.date: "02/15/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "Parameter collection [ADO], ADO/WFC syntax"

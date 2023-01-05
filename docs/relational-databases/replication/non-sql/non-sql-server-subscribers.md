@@ -3,10 +3,9 @@ description: "Non-SQL Server Subscribers"
 title: "Non-SQL Server Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
@@ -48,7 +47,6 @@ Oracle version information:
   |:-----------|:---------------|:-------------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
   |Replication to Oracle |Up to Oracle 12c |Not supported |
-  | &nbsp; | &nbsp; | &nbsp; |
 
 
  Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

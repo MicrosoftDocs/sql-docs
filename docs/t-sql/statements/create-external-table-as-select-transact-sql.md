@@ -3,9 +3,8 @@ title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 description: "CREATE EXTERNAL TABLE AS SELECT creates an external table and then exports, in parallel, the results of a T-SQL SELECT statement."
 author: markingmyname
 ms.author: maghan
-ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.date: 12/13/2022
+ms.service: sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL TABLE AS SELECT"
@@ -18,17 +17,17 @@ helpviewer_keywords:
   - "PolyBase, create table as select"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest>=sql-server-ver16||>=sql-server-linux-ver16"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/sqlserver2022-asa-pdw](../../includes/applies-to-version/sqlserver2022-asa-pdw.md)]
 
 Creates an external table and then exports, in parallel, the results of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement.
 
- - For [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], Hadoop or Azure Blob storage are supported.
+ - For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], Hadoop or Azure Blob storage are supported.
  - Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Create External Table as Select (CETAS) is supported to create an external table and then export, in parallel, the result of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Azure Data Lake Storage (ADLS) Gen2, Azure Storage Account V2, and S3-compatible object storage.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -65,7 +64,7 @@ CREATE EXTERNAL TABLE {[ [database_name  . [ schema_name ] . ] | schema_name . ]
   is the name of a table column.
   
 ####  **LOCATION**
-**Applies to:** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
 
 '*hdfs_folder*'**
  specifies where to write the results of the SELECT statement on the external data source. The location is a folder name and can optionally include a path that's relative to the root folder of the Hadoop cluster or Blob storage. PolyBase will create the path and folder if it doesn't already exist.
@@ -76,7 +75,7 @@ CREATE EXTERNAL TABLE {[ [database_name  . [ schema_name ] . ] | schema_name . ]
 
  `prefix://path[:port]` provides the connectivity protocol (prefix), path and optionally the port, to the external data source, where the result of the SELECT statement will write.
   
- If the destination is a S3-compliant object storage a bucket must first exist, but PolyBase can create subfolders if necessary. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compliant object storage. ORC files are not currently supported.
+ If the destination is S3-compatible object storage, a bucket must first exist, but PolyBase can create subfolders if necessary. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compatible object storage. ORC files are not currently supported.
 
 #### **DATA_SOURCE = *external_data_source_name***
  specifies the name of the external data source object that contains the location where the external data is stored or will be stored. The location is either a Hadoop cluster or an Azure Blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
@@ -145,11 +144,13 @@ You cannot specify any other column options such as data types, collation, or nu
 - **ADMINISTER BULK OPERATIONS**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], **Write** permission to read and write to the external folder on the Hadoop cluster or in Blob storage 
-- In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], **Write** permission to read and write to the external location.
+- In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], **Write** permission to read and write to the external folder on the Hadoop cluster or in Blob storage.
+- In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], it is also required to set proper permissions on the external location.**Write** permission to output the data to the location and **Read** permission to access it.
+- For Azure Blob Storage and Azure Data Lake Gen2 the `SHARED ACCESS SIGNATURE` token must be granted the following privileges on the container: **Read**, **Write**, **Create**.
 
-  > [!IMPORTANT]
+ > [!IMPORTANT]
  >  The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, so it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged and must be granted only to trusted principals in the system.
+
 
 ## Error handling
  When CREATE EXTERNAL TABLE AS SELECT exports data to a text-delimited file, there's no rejection file for rows that fail to export.
@@ -158,7 +159,7 @@ You cannot specify any other column options such as data types, collation, or nu
 
  If CREATE EXTERNAL TABLE AS SELECT is canceled or fails, the database will make a one-time attempt to remove any new files and folders already created on the external data source.
 
- In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], the database will report any Java errors that occur on the external data source during the data export.
+ In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], the database will report any Java errors that occur on the external data source during the data export.
 
 ##  <a name="GeneralRemarks"></a> General remarks
  After the CREATE EXTERNAL TABLE AS SELECT statement finishes, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] queries on the external table. These operations will import data into the database for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.
@@ -167,9 +168,9 @@ You cannot specify any other column options such as data types, collation, or nu
 
  The CREATE EXTERNAL TABLE AS SELECT statement always creates a nonpartitioned table, even if the source table is partitioned.
 
- For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the option `allow polybase export` must be enabled on `sp_configure`. For more information, see [Set `allow polybase export` configuration option](../../database-engine/configure-windows/allow-polybase-export.md).
+ For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the option `allow polybase export` must be enabled by using `sp_configure`. For more information, see [Set `allow polybase export` configuration option](../../database-engine/configure-windows/allow-polybase-export.md).
 
- For query plans in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], created with EXPLAIN, the database uses these query plan operations for external tables: External shuffle move, External broadcast move, External partition move.
+ For query plans in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], created with EXPLAIN, the database uses these query plan operations for external tables: External shuffle move, External broadcast move, External partition move.
 
  In [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], as a prerequisite for creating an external table, the appliance administrator needs to configure Hadoop connectivity. For more information, see "Configure Connectivity to External Data (Analytics Platform System)" in the Analytics Platform System documentation, which you can download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=48241).
 
@@ -184,11 +185,11 @@ You cannot specify any other column options such as data types, collation, or nu
 
  CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW, and DROP VIEW are the only data definition language (DDL) operations allowed on external tables.
 
- External tables for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] serverless SQL pool cannot be created in a location where you currently have data. To reuse a location that has been used to store data, the location must be manually deleted on ADLS.
+ External tables for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] serverless SQL pool cannot be created in a location where you currently have data. To reuse a location that has been used to store data, the location must be manually deleted on ADLS.
 
- In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], PolyBase can consume a maximum of 33,000 files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33,000 files. We recommend that users of Hadoop and PolyBase keep file paths short and use no more than 30,000 files per HDFS folder. When too many files are referenced, a JVM out-of-memory exception occurs. 
+ In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], PolyBase can consume a maximum of 33,000 files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33,000 files. We recommend that users of Hadoop and PolyBase keep file paths short and use no more than 30,000 files per HDFS folder. When too many files are referenced, a JVM out-of-memory exception occurs. 
 
- In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], when CREATE EXTERNAL TABLE AS SELECT selects from an RCFile, the column values in the RCFile must not contain the pipe "|" character.
+ In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], when CREATE EXTERNAL TABLE AS SELECT selects from an RCFile, the column values in the RCFile must not contain the pipe "|" character.
  
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on this CREATE EXTERNAL TABLE AS SELECT. To achieve a similar behavior, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).
 
@@ -196,7 +197,7 @@ You cannot specify any other column options such as data types, collation, or nu
 
  The following characters present in data may cause errors including rejected records with CREATE EXTERNAL TABLE AS SELECT to Parquet files.
 
- In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], this also applies to ORC files.
+ In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], this also applies to ORC files.
 
 - `|`
 - `"` (quotation mark character)
@@ -213,7 +214,7 @@ To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must fir
 
 
 ### A. Create a Hadoop table by using CREATE EXTERNAL TABLE AS SELECT
-**Applies to:** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
 
  The following example creates a new external table named `hdfsCustomer` that uses the column definitions and data from the source table `dimCustomer`.
 
@@ -239,7 +240,7 @@ WITH (
 ```
 
 ### B. Use a query hint with CREATE EXTERNAL TABLE AS SELECT
-**Applies to:** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
 
  This query shows the basic syntax for using a query join hint with the CREATE EXTERNAL TABLE AS SELECT statement. After the query is submitted, the database uses the hash join strategy to generate the query plan. For more information on join hints and how to use the OPTION clause, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).
 
@@ -261,7 +262,7 @@ OPTION ( HASH JOIN );
 ```
 
 ### C. Use CETAS to change column attributes
-**Applies to:** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)]
 
 This example uses CETAS to change data types, nullability, and collation for several columns in the `FactInternetSales` table.
 
@@ -288,21 +289,21 @@ OPTION ( HASH JOIN );
 ### D. Use CREATE EXTERNAL TABLE AS SELECT exporting data as parquet
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
- The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database.
+ The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database. Note that the [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
-The result of the SELECT statement will be saved on an S3-compliant object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
+The result of the SELECT statement will be saved on S3-compatible object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
 
 > [!NOTE]
 > Delta format is currently only supported as read-only.
 
 ```sql  
--- Credential to access the s3-compliant object storage
+-- Credential to access the S3-compatible object storage
 CREATE DATABASE SCOPED CREDENTIAL s3_dsc
 WITH IDENTITY = 'S3 Access Key',
 SECRET = '<accesskeyid>:<secretkeyid>'
 GO
 
--- S3-compliant object storage data source
+-- S3-compatible object storage data source
 CREATE EXTERNAL DATA SOURCE s3_eds
 WITH
 ( LOCATION = 's3://<ip>:<port>'
@@ -323,7 +324,7 @@ WITH
 ### E. Use CREATE EXTERNAL TABLE AS SELECT from delta table to parquet
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
-The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-Compliant object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command.
+The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-compatible object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command. Note that the [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
 ```sql
 -- External File Format for PARQUET

@@ -1,15 +1,14 @@
 ---
 title: Connection types
-titleSuffix: Azure SQL Managed Instance 
+titleSuffix: Azure SQL Managed Instance
 description: Learn about Azure SQL Managed Instance connection types
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: connect
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: vanto
-ms.date: 12/01/2021 
+ms.date: 12/01/2021
+ms.service: sql-managed-instance
+ms.subservice: connect
+ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -32,7 +31,7 @@ In the redirect connection type, after the TCP session is established to the SQL
 ![Diagram shows an on-premises network with redirect-find-db connected to a gateway in an Azure virtual network and a redirect-query connected to a database primary node in the virtual network.](./media/connection-types-overview/redirect.png)
 
 > [!IMPORTANT]
-> The redirect connection type currently works only for a private endpoint. Regardless of the connection type setting, connections coming through the public endpoint would be through a proxy.
+> The redirect connection type currently works only for the VNet-local endpoint. Regardless of the connection type setting, connections coming through the public endpoint would be through a proxy.
 
 ## Proxy connection type
 

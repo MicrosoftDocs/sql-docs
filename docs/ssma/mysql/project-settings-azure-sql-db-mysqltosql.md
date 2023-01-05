@@ -1,11 +1,11 @@
 ---
 description: "Project Settings (Azure SQL Database) (MySQLToSQL)"
 title: "Project Settings (Azure SQL Database) (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: cpichuka 

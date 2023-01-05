@@ -3,9 +3,9 @@ description: "MSSQLSERVER_854"
 title: MSSQLSERVER_854
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "854 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|HARDWARE_MEMORY_SCRUBBER|
 |Message Text|Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption|
-||
 
 ## Explanation
 

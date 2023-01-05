@@ -4,9 +4,9 @@ description: "Plan Host Guardian Service attestation for SQL Server Always Encry
 ms.custom:
 - event-tier1-build-2022
 ms.date: "05/24/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas

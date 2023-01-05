@@ -4,9 +4,8 @@ description: RESTORE Statements - HEADERONLY (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/30/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "HEADERONLY"
@@ -23,14 +22,15 @@ dev_langs:
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - HEADERONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
+
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a result set containing all the backup header information for all backup sets on a particular backup device in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
 > [!NOTE]  
 >  For the descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -42,6 +42,7 @@ FROM <backup_device>
 --Backup Set Options  
    FILE = { backup_set_file_number | @backup_set_file_number }   
  | PASSWORD = { password | @password_variable }   
+ | [ METADATA_ONLY | SNAPSHOT ] [ DBNAME = { database_name | @database_name_variable } ]
   
 --Media Set Options  
  | MEDIANAME = { media_name | @media_name_variable }   
@@ -140,7 +141,7 @@ FROM <backup_device>
 |**KeyAlgorithm**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The encryption algorithm used to encrypt the backup. NO_Encryption indicates that the backup was not encrypted. When the correct value cannot be determined the value should be NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The thumbprint of the encryptor which can be used to find certificate or the asymmetric key in the database. When the backup was not encrypted, this value is NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The type of encryptor used: Certificate or Asymmetric Key. When the backup was not encrypted, this value is NULL.|
-|**CompressionAlgorithm**|**nvarchar(32)**|**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] through current version.  Identifies the compression algorithm used to compress the backup file. Default is MS_XPRESS. See [BACKUP (Transact-SQL)](backup-transact-sql.md#compression).|
+|**CompressionAlgorithm**|**nvarchar(32)**|**Applies beginning with**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Identifies the compression algorithm used to compress the backup file. Default is MS_XPRESS. See [BACKUP (Transact-SQL)](backup-transact-sql.md#compression).|
   
 > [!NOTE]  
 >  If passwords are defined for the backup sets, RESTORE HEADERONLY shows complete information for only the backup set whose password matches the specified PASSWORD option of the command. RESTORE HEADERONLY also shows complete information for unprotected backup sets. The **BackupName** column for the other password-protected backup sets on the media is set to '**_Password Protected_**', and all other columns are NULL.  

@@ -1,13 +1,13 @@
 ---
 title: Troubleshooting Tools (Service Broker)
 description: "Service Broker provides several tools to diagnose configuration and conversation problems."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Troubleshooting Tools (Service Broker)

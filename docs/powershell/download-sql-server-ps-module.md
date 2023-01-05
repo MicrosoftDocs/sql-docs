@@ -1,8 +1,8 @@
 ---
 title: Download SQL Server PowerShell Module
 description: Learn how to install the SqlServer PowerShell module, which provides cmdlets that support the latest SQL features, and also contains updated versions of the cmdlets in the SQLPS module.
-ms.prod: sql
-ms.technology: sql-server-powershell
+ms.service: sql
+ms.subservice: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
@@ -97,7 +97,7 @@ Update-Module -Name SqlServer -AllowClobber
 
 You can use the `Update-Module` command to install the newest version of the SQLServer PowerShell module, but that doesn't remove older versions. It installs the newer version side by side to allow you the ability to experiment with the latest version, yet still have older modules installed.
 
-However, if you don’t want to keep older module versions, then you can use the `Uninstall-Module` command to remove previous versions.
+However, if you don't want to keep older module versions, then you can use the `Uninstall-Module` command to remove previous versions.
 
 You can use the following command to list if more than one version is installed:
 

@@ -1,18 +1,14 @@
 ---
-title: "Configure the locks Server Configuration Option | Microsoft Docs"
+title: "Configure the locks Server Configuration Option"
 description: Learn about the locks option. See how to use it to limit the amount of memory that the SQL Server Database Engine uses for locks.
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "locks option [SQL Server]"
-ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "locks option [SQL Server]"
 ---
 # Configure the locks Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

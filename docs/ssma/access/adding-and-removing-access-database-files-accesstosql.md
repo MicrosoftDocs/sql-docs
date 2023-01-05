@@ -1,11 +1,11 @@
 ---
 title: "Adding and Removing Access Database Files (AccessToSQL) | Microsoft Docs"
 description: Learn how to add or remove Access databases to or from the SSMA project to migrate Access data to SQL Server or Azure SQL Database.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Access databases"

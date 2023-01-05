@@ -1,23 +1,19 @@
 ---
-title: "Soft-NUMA (SQL Server) | Microsoft Docs"
+title: "Soft-NUMA (SQL Server)"
 description: Learn about soft-NUMA in SQL Server 2014 SP2 and newer versions. See how to use automatic soft-NUMA and how to manually configure SQL Server to use soft-NUMA.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/13/2018"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "NUMA"
   - "soft-NUMA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "NUMA"
   - "non-uniform memory access"
   - "soft-NUMA"
-ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Soft-NUMA (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

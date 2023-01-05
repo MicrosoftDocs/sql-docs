@@ -3,10 +3,9 @@ description: "BinaryPath Property (SqlService Class )"
 title: "BinaryPath Property (SqlService Class )"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: wmi
+ms.subservice: wmi
 ms.topic: "reference"
 apiname: 
   - "BinaryPath Property (SqlService Class )"

@@ -3,9 +3,9 @@ description: "Connect to a MySQL Data Source (SQL Server Import and Export Wizar
 title: "Connect to a MySQL Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
@@ -35,7 +35,6 @@ After you select **.NET Framework Data Provider for MySQL** on the **Choose a Da
 |Server name|**Server**|
 |Database name|**Database**|
 |Authentication (login) info|**User Id** and **Password**|
-|||
 
 You don't have to enter the connection string in the **ConnectionString** field of the list. After you enter individual values for the MySQL server name (**Server**) and login info, the wizard assembles the connection string from the individual properties and their values. 
 

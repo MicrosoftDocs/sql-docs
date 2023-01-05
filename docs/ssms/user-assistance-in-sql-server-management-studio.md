@@ -1,9 +1,8 @@
 ---
 description: "User Assistance in SQL Server Management Studio"
 title: "User Assistance in SQL Server Management Studio"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Help [SQL Server Management Studio]"

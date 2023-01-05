@@ -3,10 +3,9 @@ title: "Automatic page repair for availability groups & database mirroring"
 description: Learn how to automatically repair certain types of page corruption when a database participates in an Always On availability group or database mirroring.
 ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
+ms.service: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.subservice: high-availability
 ms.topic: troubleshooting
 helpviewer_keywords: 
   - "automatic page repair"

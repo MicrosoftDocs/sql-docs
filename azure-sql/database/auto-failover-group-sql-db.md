@@ -1,17 +1,14 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of a group of databases on a server for both single and pooled database in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: high-availability
-ms.custom:
-  - "azure-sql-split"
-ms.topic: conceptual
-author: rajeshsetlem
-ms.author: rsetlem
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/01/2022
+ms.service: sql-database
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: azure-sql-split
 ---
 
 # Auto-failover groups overview & best practices (Azure SQL Database)

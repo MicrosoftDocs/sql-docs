@@ -3,9 +3,9 @@ title: "Using Encryption Without Validation | Microsoft Docs"
 description: Learn how the SQL Server Native Client OLE DB provider and ODBC driver support encryption without validation and recommendations for when to use it.
 ms.custom: ""
 ms.date: "12/21/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], encryption"
@@ -20,6 +20,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Using Encryption Without Validation in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] always encrypts network packets associated with logging in. If no certificate has been provisioned on the server when it starts up, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generates a self-signed certificate which is used to encrypt login packets.  
 
@@ -42,7 +45,6 @@ For information about connection string keywords, see [Using Connection String K
 |Yes|Yes|No (default)|Ignored|Encryption always occurs, but may use a self-signed server certificate.|  
 |Yes|Yes|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
 |Yes|Yes|Yes|Yes|Encryption always occurs, but might use a self-signed server certificate.|  
-||||||
 
 > [!CAUTION]
 > The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption. Also ensure that the server has a verifiable certificate, and that the **TrustServerCertificate** setting on the client is set to FALSE.

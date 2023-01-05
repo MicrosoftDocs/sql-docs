@@ -1,15 +1,15 @@
 ---
 title: "Identify waits associated with availability groups"
 description: "Identify waits associated with Always On availability groups using Transact-SQL (T-SQL) and extended events."
-ms.custom: "ag-guide, seodec18"
-ms.date: "06/13/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/13/2017"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: how-to
+ms.custom:
+  - ag-guide
+  - seodec18
 ---
 # Identify waits associated with availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

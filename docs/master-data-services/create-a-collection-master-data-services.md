@@ -3,17 +3,16 @@ description: "Create a Collection (Master Data Services)"
 title: Create a Collection
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "creating collections [Master Data Services]"
   - "collections [Master Data Services], creating"
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Collection (Master Data Services)
 

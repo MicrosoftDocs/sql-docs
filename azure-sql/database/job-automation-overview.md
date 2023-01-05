@@ -1,20 +1,18 @@
 ---
 title: Job automation overview with Elastic Jobs
-description: 'Use Elastic Jobs for Job Automation to run Transact-SQL (T-SQL) scripts across a set of one or more databases'
-services:
-  - "sql-database"
+description: "Use Elastic Jobs for Job Automation to run Transact-SQL (T-SQL) scripts across a set of one or more databases"
+author: williamdassafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
+ms.date: 2/1/2021
 ms.service: sql-database
 ms.subservice: elastic-pools
+ms.topic: conceptual
 ms.custom:
   - "sqldbrb=1"
   - "contperf-fy21q3"
 dev_langs:
   - "TSQL"
-ms.topic: conceptual
-author: williamdassafMSFT
-ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
-ms.date: 2/1/2021
 ---
 # Automate management tasks using elastic jobs (preview)
 
@@ -113,8 +111,8 @@ During job agent creation, a schema, tables, and a role called *jobs_reader* are
 
 A *target group* defines the set of databases a job step will execute on. A target group can contain any number and combination of the following:
 
-- **Logical SQL server** - if a server is specified, all databases that exist in the server at the time of the job execution are part of the group. The master database credential must be provided so that the group can be enumerated and updated prior to job execution. For more information on logical servers, see [What is a server in Azure SQL Database and Azure Synapse Analytics?](logical-servers.md).
-- **Elastic pool** - if an elastic pool is specified, all databases that are in the elastic pool at the time of the job execution are part of the group. As for a server, the master database credential must be provided so that the group can be updated prior to the job execution.
+- **Logical SQL server** - if a server is specified, all databases that exist in the server at the time of the job execution are part of the group. The `master` database credential must be provided so that the group can be enumerated and updated prior to job execution. For more information on logical servers, see [What is a server in Azure SQL Database and Azure Synapse Analytics?](logical-servers.md).
+- **Elastic pool** - if an elastic pool is specified, all databases that are in the elastic pool at the time of the job execution are part of the group. As for a server, the `master` database credential must be provided so that the group can be updated prior to the job execution.
 - **Single database** - specify one or more individual databases to be part of the group.
 - **Shard map** - databases of a shard map.
 

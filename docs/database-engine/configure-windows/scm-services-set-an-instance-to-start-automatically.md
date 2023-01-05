@@ -1,20 +1,16 @@
 ---
-title: "SCM Services - Set an Instance to Start Automatically | Microsoft Docs"
+title: "SCM Services - Set an Instance to Start Automatically"
 description: Find out how to set an instance of SQL Server to start automatically. Learn about the default configuration, and see how to set the start mode to automatic.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/06/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "automatic SQL Server startup"
   - "SQL Server, automatic startup"
   - "starting SQL Server, automatically"
-ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # SCM Services - Set an Instance to Start Automatically
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -3,10 +3,9 @@ description: "sp_adddistributor (Transact-SQL)"
 title: "sp_adddistributor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords: 
   - "sp_adddistributor"
@@ -24,7 +23,7 @@ ms.author: mathoma
 
   Creates an entry in the [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) table (if there is not one), marks the server entry as a Distributor, and stores property information. This stored procedure is executed at the Distributor on the master database to register and mark the server as a distributor. In the case of a remote distributor, it is also executed at the Publisher from the master database to register the remote distributor.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

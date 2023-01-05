@@ -3,10 +3,9 @@ description: "sp_showpendingchanges (Transact-SQL)"
 title: "sp_showpendingchanges (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Returns a result set showing the changes that are waiting to be replicated. This stored procedure is executed at the Publisher on the publication database and at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  This procedure provides an approximation of the number of changes and the rows that are involved in those changes. For example, the procedure retrieves information from either the Publisher or Subscriber, but not both at the same time. Information that is stored at the other node might result in a smaller set of changes to synchronize than the procedure estimates.  

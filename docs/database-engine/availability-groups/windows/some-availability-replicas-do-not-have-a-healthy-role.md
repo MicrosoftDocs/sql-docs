@@ -1,19 +1,16 @@
 ---
-title: "Some availability replicas do not have a healthy role | Microsoft Docs"
-description: Availability Replicas Role State checks if there are any availability replicas that are not in a healthy role. 
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp6allroleshealthy.issues.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], policies"
-ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
+title: "Some availability replicas do not have a healthy role"
+description: Availability Replicas Role State checks if there are any availability replicas that are not in a healthy role.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.agdashboard.agp6allroleshealthy.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Some availability replicas do not have a healthy role
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

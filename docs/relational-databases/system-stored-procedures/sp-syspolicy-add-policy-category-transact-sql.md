@@ -3,10 +3,9 @@ description: "sp_syspolicy_add_policy_category (Transact-SQL)"
 title: "sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_syspolicy_add_policy_category"
@@ -24,7 +23,7 @@ ms.author: vanto
 
   Adds a policy category that can be used with Policy-Based Management. Policy categories enable you to organize policies, and to set policy scope.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

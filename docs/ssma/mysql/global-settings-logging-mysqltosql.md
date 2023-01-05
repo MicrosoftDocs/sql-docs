@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Logging)  (MySQLToSQL)"
 title: "Global Settings (Logging)  (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: cpichuka 

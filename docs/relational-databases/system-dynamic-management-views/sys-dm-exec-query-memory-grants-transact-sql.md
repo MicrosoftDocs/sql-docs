@@ -4,9 +4,8 @@ description: sys.dm_exec_query_memory_grants (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/05/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_query_memory_grants_TSQL"
@@ -27,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out. In addition, the values in the columns `scheduler_id`, `wait_order`, `pool_id`, `group_id` are filtered; the column value is set to NULL.  
   
 > [!NOTE]  
-> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_exec_query_memory_grants`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_exec_query_memory_grants`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |**Column name**|**Data type**|**Description**|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**max_used_memory_kb**|**bigint**|Maximum physical memory used up to this moment in kilobytes.|  
 |**query_cost**|**float**|Estimated query cost.|  
 |**timeout_sec**|**int**|Time-out in seconds before this query gives up the memory grant request.|  
-|**resource_semaphore_id**|**smallint**|Non-unique ID of the resource semaphore on which this query is waiting.<br /><br /> **Note:** This ID is unique in versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. This change can affect troubleshooting query execution. For more information, see the "Remarks" section later in this article.|  
+|**resource_semaphore_id**|**smallint**|Non-unique ID of the resource semaphore on which this query is waiting.<br /><br /> **Note:** This ID is unique in versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. This change can affect troubleshooting query execution. For more information, see the "Remarks" section later in this article.|  
 |**queue_id**|**smallint**|ID of waiting queue where this query waits for memory grants. NULL if the memory is already granted.|  
 |**wait_order**|**int**|Sequential order of waiting queries within the specified `queue_id`. This value can change for a given query if other queries get memory grants or time out. NULL if memory is already granted.|  
 |**is_next_candidate**|**bit**|Candidate for next memory grant.<br /><br /> 1 = Yes<br /><br /> 0 = No<br /><br /> NULL = Memory is already granted.|  
@@ -55,7 +54,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**pool_id**|**int**|ID of the resource pool that this workload group belongs to.|  
 |**is_small**|**tinyint**|When set to 1, indicates that this grant uses the small resource semaphore. When set to 0, indicates that a regular semaphore is used.|  
 |**ideal_memory_kb**|**bigint**|Size, in kilobytes (KB), of the memory grant to fit everything into physical memory. This is based on the cardinality estimate.|  
-|**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
 |**reserved_worker_count**|**bigint**|Number of reserved [worker threads](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling).<br /><br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 |**used_worker_count**|**bigint**|Number of [worker threads](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) used at this moment.<br /><br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**max_used_worker_count**|**bigint**|Maximum number of [worker threads](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) used up to this moment.<br /><br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -70,7 +69,7 @@ On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requires the `VIEW DAT
 
  Queries that use dynamic management views that include `ORDER BY` or aggregates may increase memory consumption and thus contribute to the problem they are troubleshooting.  
   
- The Resource Governor feature enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools. Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], each pool behaves like a small independent server instance and requires two semaphores. The number of rows that are returned from `sys.dm_exec_query_resource_semaphores` can be up to 20 times more than the rows that are returned in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ The Resource Governor feature enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools. Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], each pool behaves like a small independent server instance and requires two semaphores. The number of rows that are returned from `sys.dm_exec_query_resource_semaphores` can be up to 20 times more than the rows that are returned in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
 
 ## Examples 
 

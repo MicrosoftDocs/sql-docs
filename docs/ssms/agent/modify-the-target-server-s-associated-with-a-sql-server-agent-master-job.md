@@ -1,9 +1,8 @@
 ---
 description: "Modify the Target Server(s) Associated with a SQL Server Agent Master Job"
 title: Modify Target Server Associated with Agent Master Job
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 author: markingmyname
@@ -53,7 +52,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 #### To delete a target server currently associated with a SQL Server Agent master job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -75,7 +74,7 @@ For more information, see [sp_delete_jobserver (Transact-SQL)](../../relational-
   
 #### To associate a target server with the current SQL Server Agent master job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

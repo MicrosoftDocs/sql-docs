@@ -1,8 +1,8 @@
 ---
 title: Change Target Platform and Publish a Database Project
 description: Find out how to change the platform for a SQL Server Data Tools database project to a supported instance of SQL Server. Learn how to publish a database project.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.publish.dialog"
@@ -10,7 +10,6 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ---

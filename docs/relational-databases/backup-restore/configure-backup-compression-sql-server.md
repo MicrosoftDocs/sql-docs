@@ -3,22 +3,23 @@ title: "Configure Backup Compression (SQL Server) | Microsoft Docs"
 description: This article describes how to over override the server-level default when creating a single backup or scheduling a series of routine backups in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure Backup Compression (SQL Server)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  At installation, backup compression is off by default. The default behavior for backup compression is defined by the **backup compression default** Option server-level configuration option. However, you can override the server-level default when creating a single backup or scheduling a series of routine backups. To change the server-level default, see [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+ At installation, backup compression is off by default. The **backup compression default** server-level configuration option sets the default behavior for backup compression. However, you can override the server-level default when creating a single backup or scheduling a series of routine backups. To change the server-level default, see [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
 
 ## Use integrated acceleration and offloading
 
-Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], use [Integrated offloading and acceleration](../integrated-acceleration/overview.md) to compress backups with Intel&reg; QuickAssist Technology.
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], use [Integrated acceleration and offloading](../integrated-acceleration/overview.md) to compress backups with Intel&reg; QuickAssist Technology.
   
 ## Override the Backup Compression Default  
  You can change the backup compression behavior for an individual backup, backup job, or log shipping configuration.  

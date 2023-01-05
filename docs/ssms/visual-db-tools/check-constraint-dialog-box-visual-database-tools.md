@@ -1,9 +1,8 @@
 ---
 description: "Check Constraint Dialog Box (Visual Database Tools)"
 title: Check Constraint Dialog Box
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.checkconstraint"

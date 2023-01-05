@@ -3,9 +3,9 @@ description: "MSSQLSERVER_125"
 title: "MSSQLSERVER_125 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "125"

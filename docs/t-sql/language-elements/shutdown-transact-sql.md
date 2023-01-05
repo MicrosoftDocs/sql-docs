@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: ""
 f1_keywords:
@@ -27,7 +26,7 @@ dev_langs:
 
   Immediately stops SQL Server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -42,7 +41,7 @@ SHUTDOWN [ WITH NOWAIT ]
  Optional. Shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without performing checkpoints in every database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exits after attempting to terminate all user processes. When the server restarts, a rollback operation occurs for uncompleted transactions.  
   
 ## Remarks  
- Unless the WITHNOWAIT option is used, SHUTDOWN shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by:  
+ Unless the WITH NOWAIT option is used, SHUTDOWN shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by:  
   
 1.  Disabling logins (except for members of the **sysadmin** and **serveradmin** fixed server roles).  
   

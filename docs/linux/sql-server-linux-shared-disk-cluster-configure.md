@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)
@@ -219,7 +219,7 @@ This example will create an FCI in the group NewLinFCIGrp. The name of the resou
 
     \<Password> is the password for the user
 
-    \<ADDomain> is the AD DS domain (if applicable when using a Windows Server-based SMB share)
+    \<ADDomain> is the Active Directory DS domain (if applicable when using a Windows Server-based SMB share)
 
     \<mssqlUID> is the UID of the mssql user
 

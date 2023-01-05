@@ -3,10 +3,9 @@ description: "SMO Object Model Namespaces"
 title: "SMO Namespaces | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -24,7 +23,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) has various namespaces. The different namespaces represent different areas of functionality within SMO.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies folder.  
+ In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\160\SDK\Assemblies folder.  
   
 ## Namespaces  
  The SMO namespaces are:  

@@ -3,10 +3,9 @@ title: "sp_repldone (Transact-SQL) | Microsoft Docs"
 description: Updates the record that identifies the last distributed transaction of the server. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -27,7 +26,7 @@ ms.author: maghan
 > [!CAUTION]  
 >  If you execute **sp_repldone** manually, you can invalidate the order and consistency of delivered transactions. **sp_repldone** should only be used for troubleshooting replication as directed by an experienced replication support professional.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,13 +1,13 @@
 ---
 title: Loading server capacity planning
-description: This capacity planning worksheet helps you to determine the requirements for a loading server for loading data to Analytics Platform System Parallel Data Warehouse."
-author: charlesfeddersen 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
+description: This capacity planning worksheet helps you to determine the requirements for a loading server for loading data to Analytics Platform System Parallel Data Warehouse.
+author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ms.custom: seo-dt-2019
 ---
 

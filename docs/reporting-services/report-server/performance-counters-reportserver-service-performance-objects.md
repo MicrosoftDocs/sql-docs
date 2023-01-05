@@ -2,9 +2,8 @@
 title: "Performance Counters - ReportServer Service, Performance Objects | Microsoft Docs"
 description: Learn about performance counters for the ReportServer:Service and ReportServerSharePoint:Service performance objects, part of a SQL Server 2012 deployment.
 ms.date: 06/26/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual
@@ -37,7 +36,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service Performance Counters (Native Mode Report Server)  
  The **ReportServer:Service** performance object includes a collection of counters to track HTTP-related events and memory-related events for a report server instance. This performance object appears one time for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance on the computer, and you can add or remove counters from the performance object for each instance. Counters for the default instance appear in the format **ReportServer:Service**. Counters for named instances appear in the format **ReportServer$\<***instance_name***>:Service**.  
   
- The **ReportServer:Service** performance object was new in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and it provides a subset of counters that were included with Internet Information Services (IIS) and [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] in previous versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. These new counters are specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and they track HTTP-related events for the report server, such as requests, connections, and logon attempts. Additionally, this performance object includes counters to track memory management events.  
+ The **ReportServer:Service** performance object was new in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and it provides a subset of counters that were included with Internet Information Services (IIS) and [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] in previous versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. These new counters are specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and they track HTTP-related events for the report server, such as requests, connections, and logon attempts. Additionally, this performance object includes counters to track memory management events.  
   
  The following table lists the counters that are included in the **ReportServer:Service** performance object.  
   

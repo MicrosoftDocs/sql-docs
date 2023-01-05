@@ -3,9 +3,9 @@ description: "MSSQLSERVER_5009"
 title: MSSQLSERVER_5009
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "5009 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|ALT_BADDISKS|
 |Message Text|One or more files listed in the statement could not be found or could not be initialized|
-||
 
 ## Explanation
 

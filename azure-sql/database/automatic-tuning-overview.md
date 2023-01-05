@@ -1,17 +1,14 @@
 ---
 title: Automatic tuning overview
 description: Azure SQL Database and Azure SQL Managed Instance analyzes SQL query and automatically adapts to user workload.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: conceptual
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma
 ms.date: 6/6/2022
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Automatic tuning in Azure SQL Database and Azure SQL Managed Instance

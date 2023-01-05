@@ -3,17 +3,16 @@ description: "Consolidated Member Staging Table (Master Data Services)"
 title: Consolidated Member Staging Table
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database [Master Data Services], attributes staging table"
   - "attributes staging table [Master Data Services]"
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Consolidated Member Staging Table (Master Data Services)
 

@@ -3,10 +3,9 @@ description: "FILESTREAM Support"
 title: "FILESTREAM Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], SQL Server Native Client"
@@ -17,6 +16,9 @@ ms.author: maghan
 ---
 # FILESTREAM Support
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   FILESTREAM provides a way to store and access large binary values, either through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or by direct access to the Windows file system. A large binary value is a value larger than 2 gigabytes (GB). For more information about enhanced FILESTREAM support, see [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
@@ -53,7 +55,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## Down-Level Compatibility  
- If your client was compiled using the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that was included with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], and the application connects to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], **varbinary(max)** behavior will be compatible with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. That is, the maximum size of returned data will be limited to 2 GB. For result values larger that 2 GB, truncation will occur and a "string data right truncation" warning will be returned.  
+ If your client was compiled using the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client that was included with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], and the application connects to a newer version of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], **varbinary(max)** behavior will be compatible with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. That is, the maximum size of returned data will be limited to 2 GB. For result values larger that 2 GB, truncation will occur and a "string data right truncation" warning will be returned.  
   
  When data-type compatibility is set to 80, client behavior will be consistent with down-level client behavior.  
   

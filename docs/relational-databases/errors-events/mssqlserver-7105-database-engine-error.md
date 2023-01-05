@@ -3,9 +3,9 @@ description: "MSSQLSERVER_7105"
 title: MSSQLSERVER_7105
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "7105 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|TXT_PGNOTEXIST|
 |Message Text|The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE|
-||
 
 ## Explanation
 
@@ -49,7 +48,7 @@ See the Resolution and [More information](#more-information) sections to determi
 1. As the message indicates, the first step you should take is to run `DBCC CHECKDB` against the database or `DBCC CHECKTABLE` against the table where the problem was encountered.
 
     - The database ID is provided in the message.
-    - To find out the exact affected table without running `DBCC CHECKDB`, you will need to find out what tables were accessed by the query that encountered the error. One method is to use SQL Profiler to trace the query. However, in [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 you may be able to find the query using the system_health Extended Events session. See this link for more information on how to use the system_health session: [Use the system_health Session](../extended-events/use-the-system-health-session.md).
+    - To find out the exact affected table without running `DBCC CHECKDB`, you will need to find out what tables were accessed by the query that encountered the error. One method is to use SQL Profiler to trace the query. However, in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] R2 you may be able to find the query using the system_health Extended Events session. See this link for more information on how to use the system_health session: [Use the system_health Session](../extended-events/use-the-system-health-session.md).
 
     - As with any database consistency problem, you can resolve these errors by restoring from a known good Backup that does not contain this problem.
 

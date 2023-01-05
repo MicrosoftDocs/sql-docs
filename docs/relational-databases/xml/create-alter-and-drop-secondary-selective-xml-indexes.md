@@ -2,10 +2,9 @@
 title: "Create, alter, and drop secondary selective XML index"
 description: Learn how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,7 +12,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Create, alter, and drop secondary selective XML indexes
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Describes how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.
 

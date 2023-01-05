@@ -1,19 +1,17 @@
 ---
 title: "Troubleshoot Always On Availability Groups Configuration (SQL Server)"
 description: Troubleshoot typical problems with configuring server instances for Always On availability groups in SQL Server.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: troubleshooting
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "troubleshooting [SQL Server], deploying"
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], configuring"
-ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Troubleshoot Always On Availability Groups Configuration (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -178,6 +176,9 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
 
     For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
+> [!NOTE]
+> To use Kerberos authentication for the communication between availability group (AG) endpoints, [register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) for the database mirroring endpoints used by the AG.
+ 
 ##  <a name="NetworkAccess"></a> Network Access  
  Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that don't trust each other (untrusted domains).  Check if you can connect to the endpoints by following these steps:
 

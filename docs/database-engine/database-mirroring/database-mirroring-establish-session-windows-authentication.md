@@ -1,19 +1,16 @@
 ---
 title: "Configure database mirroring"
 description: "Steps to configure a database mirroring relationship between a principal and mirror using Windows authentication."
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Windows authentication [SQL Server]"
-  - "database mirroring [SQL Server], security"
-ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Windows authentication [SQL Server]"
+  - "database mirroring [SQL Server], security"
 ---
 # Configure database mirroring
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -3,10 +3,9 @@ title: "Type Casting Rules in XQuery | Microsoft Docs"
 description: Learn about the rules that are applied when explicitly or implicitly casting from one data type to another in XQuery. 
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

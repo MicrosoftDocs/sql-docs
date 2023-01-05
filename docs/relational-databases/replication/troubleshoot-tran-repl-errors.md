@@ -3,9 +3,9 @@ title: "Find errors with transactional replication"
 description: Describes how to locate and identify errors with Transactional Replication, as well as the troubleshooting methodology for addressing issues with replication.
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"

@@ -4,9 +4,8 @@ description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new ta
 author: markingmyname
 ms.author: maghan
 ms.reviewer: vanto, xiaoyul
-ms.date: 08/16/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.date: 09/12/2022
+ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
@@ -30,7 +29,7 @@ CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features availa
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
 
@@ -104,7 +103,7 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 > - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
 >     - To regain access to MCD tables, opt-in the preview again. 
 >     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
-> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is supported in [SSMS 19 Preview 3](../../ssms/download-sql-server-management-studio-ssms.md).
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
 
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 
@@ -146,7 +145,7 @@ For details, see [General Remarks](./create-table-azure-sql-data-warehouse.md#Ge
 
 ## Limitations and Restrictions  
 
-An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] except for string columns.  
+An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] except for string columns.  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on CTAS. To achieve a similar behavior, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
  
@@ -175,7 +174,7 @@ To avoid data movement in subsequent queries, you can specify `REPLICATE` at the
 <a name="ctas-copy-table-bk"></a>
 
 ### A. Use CTAS to copy a table 
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Perhaps one of the most common uses of `CTAS` is creating a copy of a table so that you can change the DDL. If, for example,  you originally created your table as `ROUND_ROBIN` and now want change it to a table distributed on a column, `CTAS` is how you would change the distribution column. `CTAS` can also be used to change partitioning, indexing, or column types.
 
@@ -251,7 +250,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### B. Use CTAS to change column attributes 
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This example uses CTAS to change data types, nullability, and collation for several columns in the `DimCustomer2` table.  
   
@@ -312,7 +311,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### C. Use CTAS to change the distribution method for a table
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This simple example shows how to change the distribution method for a table. To show the mechanics of how to do this, it changes a hash-distributed table to round-robin and then changes the round-robin table back to hash distributed. The final table matches the original table. 
 
@@ -363,7 +362,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### D. Use CTAS to convert a table to a replicated table  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This example applies for converting round-robin or hash-distributed tables to a replicated table. This particular example takes the previous method of changing the distribution type one step further.  Since `DimSalesTerritory` is a dimension and likely a smaller table, you can choose to re-create the table as replicated to avoid data movement when joining to other tables. 
 
@@ -387,7 +386,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### E. Use CTAS to create a table with fewer columns
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 The following example creates a round-robin distributed table named `myTable (c, ln)`. The new table only has two columns. It uses the column aliases in the SELECT statement for the names of the columns.  
   
@@ -409,9 +408,9 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### F. Use a Query Hint with CREATE TABLE AS SELECT (CTAS)  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] applies the hash join strategy when it generates the query plan for each individual distribution. For more information on the hash join query hint, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] applies the hash join strategy when it generates the query plan for each individual distribution. For more information on the hash join query hint, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```sql  
 CREATE TABLE dbo.FactInternetSalesNew  
@@ -432,14 +431,14 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### G. Use CTAS to import data from Azure Blob storage  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is the same as the syntax for selecting data from a regular table.  
+To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] is the same as the syntax for selecting data from a regular table.  
   
- The following example defines an external table on data in an Azure blob storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure blob storage text-delimited files and stores the data into a new [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] table.  
+ The following example defines an external table on data in an Azure Blob Storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure Blob Storage text-delimited files and stores the data into a new [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] table.  
   
 ```sql  
---Use your own processes to create the text-delimited files on Azure blob storage.  
+--Use your own processes to create the text-delimited files on Azure Blob Storage.  
 --Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
     url VARCHAR(50),  
@@ -452,7 +451,7 @@ WITH (
     FILE_FORMAT = TextFileFormat)  
 ;  
   
---Use CREATE TABLE AS SELECT to import the Azure blob storage data into a new   
+--Use CREATE TABLE AS SELECT to import the Azure Blob Storage data into a new   
 --Synapse Analytics table called ClickStreamData  
 CREATE TABLE ClickStreamData   
 WITH  
@@ -513,7 +512,7 @@ Use CTAS to work around some unsupported features. Besides being able to run you
 <a name="ctas-replace-select-into-bk"></a>
 
 ### I. Use CTAS instead of SELECT..INTO  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 SQL Server code typically uses SELECT..INTO to populate a table with the results of a SELECT statement. This is an example of a SQL Server SELECT..INTO statement.
 
@@ -523,7 +522,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-This syntax is not supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and Parallel Data Warehouse. This example shows how to rewrite the previous SELECT..INTO statement as a CTAS statement. You can choose any of the DISTRIBUTION options described in the CTAS syntax. This example uses the ROUND_ROBIN distribution method.
+This syntax is not supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and Parallel Data Warehouse. This example shows how to rewrite the previous SELECT..INTO statement as a CTAS statement. You can choose any of the DISTRIBUTION options described in the CTAS syntax. This example uses the ROUND_ROBIN distribution method.
 
 ```sql
 CREATE TABLE #tmp_fct
@@ -539,7 +538,7 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 ### J. Use CTAS to simplify merge statements  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 Merge statements can be replaced, at least in part, by using `CTAS`. You can consolidate the `INSERT` and the `UPDATE` into a single statement. Any deleted records would need to be closed off in a second statement.
 
@@ -578,9 +577,9 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### K. Explicitly state data type and nullability of output  
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-When migrating SQL Server code to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], you might find you run across this type of coding pattern:
+When migrating SQL Server code to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], you might find you run across this type of coding pattern:
 
 ```sql
 DECLARE @d DECIMAL(7,2) = 85.455

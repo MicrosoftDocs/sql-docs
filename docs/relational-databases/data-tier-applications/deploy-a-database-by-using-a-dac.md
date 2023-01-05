@@ -4,10 +4,9 @@ title: "Deploy a Database By Using a DAC | Microsoft Docs"
 ms.custom:
   - intro-deployment
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.dbdeployment.settings.f1"

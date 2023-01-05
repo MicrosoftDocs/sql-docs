@@ -4,9 +4,9 @@ description: "LTRIM (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/22/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 09/14/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "LTRIM"
@@ -34,7 +34,7 @@ Returns a character string after truncating all leading spaces.
 Removes space character `char(32)` or other specified characters from the start of a string.
 ::: moniker-end
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -46,6 +46,9 @@ LTRIM ( character_expression )
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later:
+
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the optional *characters* argument.
 
 ```syntaxsql
 LTRIM ( character_expression , [ characters ] )
@@ -128,6 +131,9 @@ Original string	                                        Without spaces
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 ### C. Remove specified characters from the beginning of a string
+
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the optional *characters* argument.
 
 The following example removes the characters `123` from the beginning of the `123abc.` string.
 

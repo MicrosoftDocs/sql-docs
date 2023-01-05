@@ -1,8 +1,8 @@
 ---
 title: "SQL Server 2012 Service Pack release notes | Microsoft Docs"
 description: This article contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.custom: ""
 ms.date: 07/22/2020
 ms.reviewer: ""
@@ -159,7 +159,7 @@ For a complete list of bugs and known issues fixed in this service pack, see [th
 **Workaround:**  If you installed [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode before the SharePoint farm was configured, the required work around depends on what other components are installed.  
   
 #### Power View in SharePoint Server 2013 Requires Microsoft.AnalysisServices.SPClient.dll  
-**Issue:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not install a required component, **Microsoft.AnalysisServices.SPClient.dll**. If you install SharePoint Server 2013 Preview and [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, but do not download and install the PowerPivot for SharePoint 2013 installer package, **spPowerPivot.msi** then Power View will not work and Power View will exhibit the following symptoms.  
+**Issue:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not install a required component, **Microsoft.AnalysisServices.SPClient.dll**. If you install SharePoint Server 2013 Preview and [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, but do not download and install the PowerPivot for SharePoint 2013 installer package, **spPowerPivot.msi** then Power View will not work and Power View will exhibit the following symptoms.  
   
 **Symptoms:** When you attempt to create a Power View report, you see an error message similar to the following:  
   
@@ -222,7 +222,7 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 -   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
   
--   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
+-   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premises SQL Server to Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
   
 -   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Azure SQL Database.  
   

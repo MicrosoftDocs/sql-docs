@@ -9340,7 +9340,7 @@ items:
         - name: Properties Window F1 Help (Management Studio)
           href: ssms/menu-help/properties-window-f1-help-management-studio.md
         - name: Options (Output window)
-          href: ssms/menu-help/options-output-window.md
+          href: ssms/menu-help/options-output-window-page.md
         - name: Options (Environment - Fonts & Colors Page)
           href: ssms/menu-help/options-environment-fonts-and-colors-page.md
         - name: Options (Environment - Help - General Page)

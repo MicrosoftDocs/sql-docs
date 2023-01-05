@@ -29,6 +29,11 @@ Configuring the DC-series hardware to enable Intel SGX enclaves is the responsib
 
 For detailed instructions for how to configure a new or existing database to use a specific hardware configuration, see [Hardware configuration](service-tiers-sql-database-vcore.md#hardware-configuration).
 
+## Next steps
+
+- [Configure Azure Attestation for your Azure SQL database server](always-encrypted-enclaves-configure-attestation.md)
+
+
 ## [VBS enclaves](#tab/VBSenclaves)
 
 > [!IMPORTANT]
@@ -65,11 +70,6 @@ Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" `
     -ServerName "Server01" `
     -PreferredEnclaveType VBS
 ```
-
-## Next steps
-
-- [Configure Azure Attestation for your Azure SQL database server](always-encrypted-enclaves-configure-attestation.md)
-
 
 ---
 

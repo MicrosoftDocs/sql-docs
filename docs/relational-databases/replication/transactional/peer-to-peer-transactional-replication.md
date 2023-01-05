@@ -144,7 +144,7 @@ Peer-to-peer replication supports the core features of transactional replication
 
 - Peer-to-Peer transactional replication doesn't support creating a one-way transactional subscription to a Peer-to-Peer publication
 
-- Peer-to-Peer Transactional Replication doesn't support publishing tables with computed columns as part of their primary key.
+- Peer-to-Peer transactional replication doesn't support publishing tables with computed columns as part of their primary key.
   
 The following properties have special considerations:  
   

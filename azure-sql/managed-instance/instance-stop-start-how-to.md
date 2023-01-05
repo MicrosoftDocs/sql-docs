@@ -27,7 +27,7 @@ To save on billing costs, you can stop your General Purpose managed instance whe
 
 Stopping a managed instance clears all cached data. 
 
-This features introduces three new managed instance states, as the following diagram indicates:
+This feature introduces three new managed instance states, as the following diagram indicates:
 
 :::row:::
     :::column:::

@@ -143,6 +143,8 @@ Peer-to-peer replication supports the core features of transactional replication
 - The article properties `@destination_owner` and `@destination_table`.
 
 - Peer-to-Peer transactional replication does not support creating a one-way transactional subscription to a Peer-to-Peer publication
+
+- Peer-to-Peer Transactional Replication does not support publishing tables with computed columns as part of their primary key.
   
 The following properties have special considerations:  
   

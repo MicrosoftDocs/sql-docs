@@ -29,7 +29,7 @@ Conversely, when you *move* a database, the source database gets dropped after t
 
 You can run multiple database copy and move operations from the source managed instance to one or more target instances. 
 
-Copying and moving a database is different from point-in-time restore (PITR), because it creates a copy of the database after the operation is completed. PITR creates a copy of the database from a specified moment in the past. 
+Copying and moving a database is different from point-in-time restore (PITR) because it creates a copy of the database after the operation is completed. PITR creates a copy of the database from a specified moment in the past. 
 
 > [!IMPORTANT]
 > When you move a database to a new destination, existing PITR backups don't move with the database, and they're not available. The database starts a new backup chain on the destination instance the moment the move operation is completed. 
@@ -51,11 +51,11 @@ Here's the workflow for copying or moving a database:
 1. Choose the database, source managed instance, and destination instance, and then start the operation. 
    
    The database gets seeded to the destination server. Check the status to determine whether the operation is in progress or whether it has succeeded. 
-1. After the seeding is completed, the operation state shows as *ready for completion*. 
+1. After the seeding finishes, the operation state shows as *ready for completion*. 
 
-   Until the operation is complete, all changes that happen to the source database are applied to the destination database. You can cancel the operation at any time. You have 24 hours to explicitly complete the operation. If you don't complete the operation within 24 hours, it's automatically canceled, and the destination database is dropped. 
-1. When the operation is completed, your destination database comes online and is ready for read/write workloads. 
-1. If you've chosen to *move* the database, the source database gets dropped. If you've chosen to *copy* the database, the source database remains online, but data replication stops. 
+   Until the operation has been manually completed, all changes that happen to the source database are applied to the destination database. You can cancel the operation at any time. You have 24 hours to explicitly complete the operation. If you don't complete the operation within 24 hours, it's automatically canceled and the destination database is dropped. 
+1. After you've manually completed the operation, your destination database comes online and is ready for read/write workloads. 
+1. If you've chosen to *move* the database, the source database gets dropped. If you've chosen to *copy* the database, the source database remains online, but data synchronization stops. 
 
 An example workflow for a move operation is illustrated in the following diagram: 
 

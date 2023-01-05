@@ -13,9 +13,11 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
+In Azure SQL Database, [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) can use either [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) or [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/). See [Plan for secure enclaves in Azure SQL Database](always-encrypted-enclaves-plan.md) for more information.
+
 ## [Intel SGX enclaves](#tab/IntelSGXenclaves)
 
-[Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database can use [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclaves. For Intel SGX to be available, the database must use the [vCore model](service-tiers-vcore.md) and [DC-series](service-tiers-sql-database-vcore.md#dc-series) hardware.
+For Intel SGX to be available, the database must use the [vCore model](service-tiers-vcore.md) and [DC-series](service-tiers-sql-database-vcore.md#dc-series) hardware.
 
 Configuring the DC-series hardware to enable Intel SGX enclaves is the responsibility of the Azure SQL Database administrator. See [Roles and responsibilities when configuring Intel SGX enclaves and attestation](always-encrypted-enclaves-plan.md#roles-and-responsibilities-when-configuring-intel-sgx-enclaves-and-attestation).
 
@@ -28,6 +30,9 @@ Configuring the DC-series hardware to enable Intel SGX enclaves is the responsib
 For detailed instructions for how to configure a new or existing database to use a specific hardware configuration, see [Hardware configuration](service-tiers-sql-database-vcore.md#hardware-configuration).
 
 ## [VBS enclaves](#tab/VBSenclaves)
+
+> [!IMPORTANT]
+> VBS enclaves in Azure SQL Database are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
 To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**. This ensures the database runs on a machine that supports VBS and activates the VBS enclave. You can set **preferredEnclaveType** when you create your database or you by updating an existing database.
 

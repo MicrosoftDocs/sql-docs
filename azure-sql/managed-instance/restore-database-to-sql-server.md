@@ -60,8 +60,7 @@ In the following example, note that `Managed Identity` is a hard-coded string, a
 
 ```sql
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
-WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
-SECRET = '<SAS_TOKEN>';  
+WITH IDENTITY = 'MANAGED IDENTITY'  
 ```
 ### [SAS token](#tab/sas-token)
 
@@ -69,7 +68,8 @@ To create a credential using an [SAS token](/sql/relational-databases/tutorial-u
 
 ```sql
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
-WITH IDENTITY = 'MANAGED IDENTITY'
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+SECRET = '<SAS_TOKEN>';
 ```
 
 ---
@@ -86,7 +86,7 @@ WITH COPY_ONLY
 
 ## Restore to SQL Server 
 
-Restore the database to SQL Server by using the `WITH MOVE` option of the RESTORE DATABASE T-SQL command, and then provide explicit file paths for your files on the destination server.
+Restore the database to SQL Server by using the `WITH MOVE` option of the RESTORE DATABASE T-SQL command and providing explicit file paths for your files on the destination server.
 
 To restore your database to SQL Server, run the following sample T-SQL command with file paths appropriate to your environment: 
 

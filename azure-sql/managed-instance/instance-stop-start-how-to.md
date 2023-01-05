@@ -157,7 +157,7 @@ You can stop the instance by using either the Azure portal or Azure PowerShell.
 
 ### [Portal](#tab/azure-portal)
 
-To stop your managed instance by using the [Azure portal](https://portal.azure.com), go to the **Overview** pane of your instance, and then select the **Stop** button, as shown here: 
+To stop your managed instance by using the [Azure portal](https://portal.azure.com), go to the **Overview** pane of your instance, and then select the **Stop** button. 
 
 :::image type="content" source="media/instance-stop-start-how-to/manual-instance-stop.png" alt-text="Screenshot of the managed instance 'Overview' pane in the Azure portal, with the 'Stop' button highlighted. ":::
 
@@ -210,7 +210,7 @@ You can start your instance by using either the Azure portal or Azure PowerShell
 
 ### [Portal](#tab/azure-portal)
 
-After your managed instance is stopped, to start it by using the [Azure portal](https://portal.azure.com), go to the **Overview** pane of your instance, and then select the **Start** button, as shown here: 
+After your managed instance is stopped, to start it by using the [Azure portal](https://portal.azure.com), go to the **Overview** pane of your instance, and then select the **Start** button. 
 
 :::image type="content" source="media/instance-stop-start-how-to/manual-instance-start.png" alt-text="Screenshot of the managed instance 'Overview' pane in the Azure portal, with the 'Start' button highlighted. ":::
 
@@ -264,11 +264,11 @@ You can manage a stop and start schedule by using either the Azure portal or Azu
 
 ### [Portal](#tab/azure-portal)
 
-To manage a stop and start schedule by using the [Azure portal](https://portal.azure.com), go to your instance, and then, on the left pane, select **Start/Stop Schedule**. 
+To manage a stop and start schedule by using the [Azure portal](https://portal.azure.com), go to your instance, and then select **Start/Stop Schedule** on the left pane. 
 
 :::image type="content" source="media/instance-stop-start-how-to/start-stop-schedule.png" alt-text="Screenshot of the 'Start/Stop schedule' pane of the managed instance." lightbox="media/instance-stop-start-how-to/start-stop-schedule.png":::
 
-On the **Start/Stop Schedule** pane you can:
+On the **Start/Stop Schedule** pane, you can:
 
 - View existing schedules.
 - Specify the time zone of your scheduled events in the **Time zone** dropdown list. 

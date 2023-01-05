@@ -66,12 +66,12 @@ Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" `
     -PreferredEnclaveType VBS
 ```
 
-
----
-
 ## Next steps
 
 - [Configure Azure Attestation for your Azure SQL database server](always-encrypted-enclaves-configure-attestation.md)
+
+
+---
 
 ## See also
 

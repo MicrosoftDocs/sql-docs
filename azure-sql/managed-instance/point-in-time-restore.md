@@ -283,7 +283,7 @@ Use one of the following methods to connect to the database in your managed inst
 
 # [PowerShell](#tab/azure-powershell)
 
-To delete an existing database from your managed instance, run the following PowerShell code with your values substituted for the parameters;
+To delete an existing database from your managed instance, run the following PowerShell code with your values substituted for the parameters:
 
 ```powershell
 $resourceGroupName = "<resource group name>"
@@ -295,7 +295,7 @@ Remove-AzSqlInstanceDatabase -Name $databaseName -InstanceName $managedInstanceN
 
 # [Azure CLI](#tab/azure-cli)
 
-To delete an existing database from your managed instance, run the following Azure CLI code with your values substituted for the parameters;
+To delete an existing database from your managed instance, run the following Azure CLI code with your values substituted for the parameters:
 
 ```azurecli-interactive
 az sql midb delete -g mygroupname --mi myinstancename -n mymanageddbname

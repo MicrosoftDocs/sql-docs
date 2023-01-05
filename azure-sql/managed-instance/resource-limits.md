@@ -8,10 +8,10 @@ ms.subservice: service-overview
 ms.custom: references_regions, ignite-fall-2021
 ms.devlang: 
 ms.topic: reference
-author: vladai78
-ms.author: vladiv
-ms.reviewer: mathoma, vladiv, sachinp, wiassaf
-ms.date: 06/02/2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma, vladiv, sachinp, nnikolic
+ms.date: 01/05/2023
 ---
 # Overview of Azure SQL Managed Instance resource limits
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -23,14 +23,14 @@ ms.date: 06/02/2022
 This article provides an overview of the technical characteristics and resource limits for Azure SQL Managed Instance, and provides information about how to request an increase to these limits.
 
 > [!NOTE]
-> For differences in supported features and T-SQL statements see [Feature differences](../database/features-comparison.md) and [T-SQL statement support](transact-sql-tsql-differences-sql-server.md). For general differences between service tiers for Azure SQL Database and SQL Managed Instance review [General Purpose](../database/service-tier-general-purpose.md) and [Business Critical](../database/service-tier-business-critical.md) service tiers. 
+> For differences in supported features and T-SQL statements see [Feature differences](../database/features-comparison.md) and [T-SQL statement support](transact-sql-tsql-differences-sql-server.md). For general differences between service tiers for Azure SQL Database and SQL Managed Instance review [General Purpose](../database/service-tier-general-purpose.md) and [Business Critical](../database/service-tier-business-critical.md) service tiers.
 
 ## Hardware configuration characteristics
 
 SQL Managed Instance has characteristics and resource limits that depend on the underlying infrastructure and architecture. SQL Managed Instance can be deployed on multiple hardware configurations.
 
 > [!NOTE]
-> The Gen5 hardware has been renamed to the **standard-series (Gen5)**. We are introducing the **memory optimized premium-series** hardware configuration in limited preview.
+> The Gen5 hardware has been renamed to the **standard-series (Gen5)**.
 
 For information on previously available hardware, see [Previously available hardware](#previously-available-hardware) later in this article.
 
@@ -135,7 +135,7 @@ Storage for database backups is allocated to support the [point-in-time restore 
 
 In the General Purpose service tier, every database file gets dedicated IOPS and throughput that depend on the file size. Larger files get more IOPS and throughput. IO characteristics of database files are shown in the following table:
 
-| **File size** | **>=0 and <=128 GB** | **>128 and <= 512 GB** | **>0.5 and <=1 TB**    | **>1 and <=2 TB**    | **>2 and <=4 TB** | **>4 and <=8 TB** |
+| **File size** | **>=0 and <=129 GiB** | **>129 and <=513 GiB** | **>513 and <=1025 GiB**  | **>1025 and <=2049 GiB**    | **>2049 and <=4097 GiB** | **>4097 GiB and <=8 TiB** |
 |:--|:--|:--|:--|:--|:--|:--|
 | IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 12,500   |
 | Throughput per file | 100 MiB/s | 150 MiB/s | 200 MiB/s | 250 MiB/s| 250 MiB/s | 250 MiB/s |

@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-# [Intel SGX enclaves](#tab/IntelSGXenclaves)
+## [Intel SGX enclaves](#tab/IntelSGXenclaves)
 
 [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database can use [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclaves. For Intel SGX to be available, the database must use the [vCore model](service-tiers-vcore.md) and [DC-series](service-tiers-sql-database-vcore.md#dc-series) hardware.
 
@@ -26,17 +26,36 @@ Configuring the DC-series hardware to enable Intel SGX enclaves is the responsib
 > Before you configure the DC-series hardware for your database, check the regional availability of DC-series and make sure you understand its performance limitations. For more information, see [DC-series](service-tiers-sql-database-vcore.md#dc-series).
 
 For detailed instructions for how to configure a new or existing database to use a specific hardware configuration, see [Hardware configuration](service-tiers-sql-database-vcore.md#hardware-configuration).
-   
 
-# [VBS enclaves](#tab/VBSenclaves)
-Customer can specify PreferredEnclaveType value as “VBS” or “Default” or skip this property in API call 
-(customer can either specify “Default” as the value OR if property is not specified then this is the default value taken by the system)
+## [VBS enclaves](#tab/VBSenclaves)
 
-If customer has not explicitly selected “VBS” as value for this property, the system default behavior will kick in:
-- Depending on capacity constraints and Gen2 VM availability in the selected region, database will be placed in Gen2 VM and VBS enclave will be initialized 
-OR
-- Database will be placed on Gen1 VM and no enclave initialization will occur
+To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases#databaseproperties) to **VBS**. This ensures the database runs on a machine that supports VBS and activates the VBS enclave.
 
+> [!NOTE] By default, a new database is created with **preferredEnclaveType** set to **Default**, which doesn't support VBS enclaves.
+
+You can set the **preferredEnclaveType** using Azure PowerShell.
+
+## Enabling VBS enclaves using Azure PowerShell
+
+Create a new database with a VBS enclave with the [New-AzSqlDatabase](/powershell/module/az.sql/New-AzSqlDatabase) cmdlet. 
+
+The below example creates a serverless database with a VBS enclave.
+
+```azurepowershell-interactive
+Write-host "Creating a Gen5 2 vCore serverless database with a VBS enclave..."
+$database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
+    -ServerName "Server01" `
+    -DatabaseName "Database01" `
+    -Edition GeneralPurpose `
+    -ComputeModel Serverless `
+    -ComputeGeneration Gen5 `
+    -VCore 2 `
+    -MinimumCapacity 2 `
+    -PreferredEnclaveType VBS
+$database
+```
+
+---
 
 ## Next steps
 

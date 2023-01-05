@@ -35,14 +35,14 @@ Considering the above, SGX enclaves are recommended for workloads that require t
 
 ## VBS enclaves
 
+> [!IMPORTANT]
+> VBS enclaves in Azure SQL Database are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
+
 VBS enclaves (also known as Virtual Secure Mode, or VSM enclaves) is a software-based technology that relies on Windows hypervisor and doesn't require any special hardware. Therefore, VBS enclaves are available in all Azure SQL Database offerings, providing you with the flexibility to use Always Encrypted with secure enclaves with a compute size, service tier, purchasing model, hardware configuration and region that best meets your workload requirements. 
 
 VBS enclaves are the recommended solution for customers who seek protection for data in use from high-privileged users in the customer’s organization, including DBAs. Without having the cryptographic keys protecting the data, a DBA will not be able to access the data in plaintext.
 
 VBS enclaves can also help prevent some OS-level threats, such as exfiltrating sensitive data from memory dumps – the plaintext data processed in an enclave does not show up in memory dumps, providing the code inside the enclave and its properties have not been maliciously altered. However, VBS enclaves in Azure SQL Database cannot address more sophisticated attacks, such as replacing the enclave binary with malicious code, due to the current lack of enclave attestation. It is important to note that Microsoft has implemented multiple layers of security controls to detect and prevent such attacks in the Azure cloud, including just-in-time access, multi-factor authentication, and security monitoring. Nevertheless, customers who require strong security isolation may prefer Intel SGX enclaves with the DC-series hardware configuration over VBS enclaves.
-
-> [!IMPORTANT]
-> VBS enclaves in Azure SQL Database are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
 > [!NOTE]
 > VBS enclaves are currently available in all Azure SQL Database regions **except**: Australia Central, Australia Central 2, Jio India Central, Jio India West, Korea Central, Korea South, UAE Central.
@@ -58,17 +58,17 @@ To use Microsoft Azure Attestation for attesting Intel SGX enclaves in Azure SQL
 
 ### Roles and responsibilities when configuring Intel SGX enclaves and attestation
 
-Configuring your environment to support Intel SGX enclaves and attestation for Always Encrypted in Azure SQL Database involves setting up components of different types: Microsoft Azure Attestation, Azure SQL Database, and applications that trigger enclave attestation. Configuring components of each type is performed by users assuming one of the below distinct roles:
+Configuring your environment to support Intel SGX enclaves and attestation for Always Encrypted in Azure SQL Database involves setting different components: an attestation provider, a database, and applications that trigger enclave attestation. Configuring components of each type is performed by users assuming one of the below distinct roles:
 
 - Attestation administrator - creates an attestation provider in Microsoft Azure Attestation, authors the attestation policy, grants Azure SQL logical server access to the attestation provider, and shares the attestation URL that points to the policy to application administrators.
-- Azure SQL Database administrator - enables SGX enclaves in databases by selecting the DC-series hardware, and provides the attestation administrator with the identity of the Azure SQL logical server that needs to access the attestation provider.
+- Database administrator (DBA) - enables SGX enclaves in databases by selecting the DC-series hardware, and provides the attestation administrator with the identity of the Azure SQL logical server that needs to access the attestation provider.
 - Application administrator - configures applications with the attestation URL obtained from the attestation administrator.
 
-In production environments (handling real sensitive data), it is important your organization adheres to role separation when configuring attestation, where each distinct role is assumed by different people. In particular, if the goal of deploying Always Encrypted in your organization is to reduce the attack surface area by ensuring Azure SQL Database administrators cannot access sensitive data, Azure SQL Database administrators should not control attestation policies.
+In production environments (handling real sensitive data), it is important your organization adheres to role separation when configuring attestation, where each distinct role is assumed by different people. In particular, if the goal of deploying Always Encrypted in your organization is to reduce the attack surface area by ensuring database administrators cannot access sensitive data, database administrators should not control attestation policies.
 
 ## Next steps
 
-- [Enable Intel SGX for your Azure SQL database](always-encrypted-enclaves-enable.md)
+- [Enable Always Encrypted with secure enclaves for your Azure SQL Database](always-encrypted-enclaves-enable.md)
 
 ## See also
 

@@ -154,6 +154,8 @@ Analysis Services | *.asazure.windows.net
 IoT Central | *.azureiotcentral.com
 API Management| *.azure-api.net
 
+[Outbound Firewall Rules](https://learn.microsoft.com/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints. 
+
 > [!NOTE]  
 > If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make it available to `sp_invoke_external_rest_endpoint`.
 

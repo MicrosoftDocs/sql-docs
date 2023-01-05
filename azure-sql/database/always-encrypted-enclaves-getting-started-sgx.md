@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Getting started with Always Encrypted with secure enclaves"
-description: Tutorial on how to create a basic environment for Always Encrypted with secure enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
+title: "Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves"
+description: Tutorial on how to create a basic environment for Always Encrypted with secure Intel SGX enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
@@ -9,14 +9,14 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
 ---
-# Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database
+# Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. It will show you:
+This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. You will use [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html). It will show you:
 
 > [!div class="checklist"]
-> - How to create an environment for testing and evaluating Always Encrypted with secure enclaves.
+> - How to create an environment for testing and evaluating Always Encrypted with secure Intel SGX enclaves.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
@@ -25,7 +25,7 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 - Optional, but recommended for storing your column master key for Always Encrypted: a key vault in Azure Key Vault. For information on how to create a key vault, see [Quickstart: Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal). 
   - If your key vault uses the access policy permissions model, make sure you have the following key permissions in the key vault: `get`, `list`, `create`, `unwrap key`, `wrap key`, `verify`, `sign`. See [Assign a Key Vault access policy](/azure/key-vault/general/assign-access-policy).
   - If you're using the Azure role-based access control (RBAC) permission model, make you sure you're a member of the [Key Vault Crypto Officer](/azure/role-based-access-control/built-in-roles#key-vault-crypto-officer) role for your key vault. See [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](/azure/key-vault/general/rbac-migration).
-- [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
+- [Download SQL Server Management Studio (SSMS) 19 or later](/sql/ssms/download-sql-server-management-studio-ssms)
 
 ### PowerShell requirements
 
@@ -68,11 +68,13 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. For **Database name** enter *ContosoHR*.
 1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
    - **Server name**: Enter *mysqlserver*, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like mysqlserver135, and the portal lets you know if it's available or not.
-   - **Server admin login**: Enter an admin login name, for example: *azureuser*.
-   - **Password**: Enter a password that meets requirements, and enter it again in the **Confirm password** field.
    - **Location**: Select a location from the dropdown list.
       > [!IMPORTANT]
       > You need to select a location (an Azure region) that supports both the DC-series hardware and Microsoft Azure Attestation. For the list of regions supporting DC-series, see [DC-series availability](service-tiers-sql-database-vcore.md#dc-series). [Here](https://azure.microsoft.com/global-infrastructure/services/?products=azure-attestation) is the regional availability of Microsoft Azure Attestation.
+   - **Authentication method**: Select *Use SQL Authentication*
+   - **Server admin login**: Enter an admin login name, for example: *azureuser*.
+   - **Password**: Enter a password that meets requirements, and enter it again in the **Confirm password** field.
+   
 
    Select **OK**.
 1. Leave **Want to use SQL elastic pool** set to **No**.
@@ -86,12 +88,15 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 
 1. Select **Apply**. 
 1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose**, **DC, 2 vCores, 32 GB storage**.
+1. For **Backup storage redundancy** select *Locally-redundant backup storage*.
 1. Select **Next: Networking** at the bottom of the page.
 
    :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database-basics.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database - basics.":::
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
+1. For **Connection policy**, leave **Connection policy** to **Default - Uses Redirect policy for all client connections originating inside of Azure and Proxy for all client connections originating outside Azure**
+1. For **Encrypted connections**, leave **Minimum TLS version** to **TLS 1.2**.
 1. Select **Review + create** at the bottom of the page.
 
    :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database-networking.png" alt-text="New SQL database - networking":::
@@ -129,7 +134,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 
    ```powershell
    $serverName = "<your server name>" 
-   New-AzSqlServer -ServerName $serverName -ResourceGroupName $resourceGroupName -Location $location 
+   New-AzSqlServer -ServerName $serverName -ResourceGroupName $resourceGroupName -Location $location -SqlAdministratorCredentials (Get-Credential)
    ```
 
 1. Create a server firewall rule that allows access from the specified IP range.
@@ -339,7 +344,7 @@ In this step, you'll create a column master key and a column encryption key that
 1. Using the SSMS instance from the previous step, in **Object Explorer**, expand your database and navigate to **Security** > **Always Encrypted Keys**.
 1. Provision a new enclave-enabled column master key:
     1. Right-click **Always Encrypted Keys** and select **New Column Master Key...**.
-    2. Select your column master key name: **CMK1**.
+    2. Enter a name for the new column master key: **CMK1**.
     3. Verify **Allow enclave computations** is selected. (It's selected by default if a secure enclave is enabled for the database - it should be enabled since your database uses the DC-series hardware configuration.)
     4. Select either **Azure Key Vault** (recommended) or **Windows Certificate Store** (**Current User** or **Local Machine**).
       - If you select Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Select **Generate Key** to create a new key.

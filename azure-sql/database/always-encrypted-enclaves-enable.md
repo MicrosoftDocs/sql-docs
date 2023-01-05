@@ -39,7 +39,7 @@ For detailed instructions for how to configure a new or existing database to use
 > [!IMPORTANT]
 > VBS enclaves in Azure SQL Database are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
-To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**. This ensures the database runs on a machine that supports VBS and activates the VBS enclave. You can set **preferredEnclaveType** when you create your database or you by updating an existing database.
+To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**, which activates the VBS enclave for the database. You can set **preferredEnclaveType** when you create your database or you by updating an existing database.
 
 > [!NOTE]
 > By default, a new database is created with **preferredEnclaveType** set to **Default**, which doesn't support VBS enclaves.

@@ -5,7 +5,7 @@ description: Enable several database configuration settings at the individual da
 author: markingmyname
 ms.author: maghan
 ms.reviewer: katsmith, jovanpop, wiassaf
-ms.date: 11/01/2022
+ms.date: 1/5/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

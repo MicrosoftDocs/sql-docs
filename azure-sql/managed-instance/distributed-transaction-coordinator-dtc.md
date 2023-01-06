@@ -111,7 +111,7 @@ Select-AzSubscription -SubscriptionName $SubscriptionID
 $azContext = Get-AzContext 
 $azProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile 
 $profileClient = New-Object -TypeName Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient -ArgumentList ($azProfile) 
-Write-Host "Get authentication token for REST API call ..." 
+Write-Host "Getting authentication token for REST API call ..." 
 $token = $profileClient.AcquireAccessToken($azContext.Subscription.TenantId) 
 $authHeader = @{'Content-Type'='application/json';'Authorization'='Bearer ' + $token.AccessToken} 
 
@@ -119,7 +119,7 @@ $authHeader = @{'Content-Type'='application/json';'Authorization'='Bearer ' + $t
 # Invoke API call to start the operation 
 # 
 
-Write-Host "Start API call..." 
+Write-Host "Starting API call..." 
 $startMoveResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri $startMoveUri 
 Write-Host "Response:" $startMoveResp 
 
@@ -161,7 +161,7 @@ Consider the following limitations when you use DTC with SQL Managed Instance:
 - Running distributed T-SQL transactions between SQL Managed Instance and a third-party RDBMS isn't supported. SQL Managed Instance doesn't support linked servers that have third-party RDBMSs. Conversely, running distributed T-SQL transactions between managed instances and SQL Server and other SQL Server-based products is supported.
 - Host names in external environment can't be longer than 15 characters.
 - Distributed transactions to Azure SQL Database aren't supported with DTC.
-- For authentication, DTC supports only the no authentication option. Mutual authentication and incoming caller authentication options aren't available. Because DTC exchanges only synchronization messages and not user data, and because it communicates solely with the virtual network, this limitation isn't a security risk.
+- For authentication, DTC supports only the *no authentication* option. Mutual authentication and incoming caller authentication options aren't available. Because DTC exchanges only synchronization messages and not user data, and because it communicates solely with the virtual network, this limitation isn't a security risk.
 
 ## Next steps
 

@@ -4,7 +4,7 @@ description: "DBCC SHRINKFILE shrinks the size of a database file."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, dpless
-ms.date: "05/24/2022"
+ms.date: "01/06/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"

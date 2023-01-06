@@ -4,7 +4,7 @@ description: Learn about the tools and options available to migrate your SQL Ser
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma, danil, randolphwest
-ms.date: 04/11/2022
+ms.date: 01/06/2023
 ms.service: sql-managed-instance
 ms.subservice: migration-guide
 ms.topic: how-to

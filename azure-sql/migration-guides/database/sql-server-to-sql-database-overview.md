@@ -4,7 +4,7 @@ description: Learn about the tools and options available to migrate your SQL Ser
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma, kendralittle
-ms.date: 01/04/2022
+ms.date: 01/06/2023
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to

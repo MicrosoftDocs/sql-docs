@@ -4,7 +4,7 @@ description: Follow this guide to migrate your SQL Server databases to Azure SQL
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: randolphwest
-ms.date: 12/29/2022
+ms.date: 01/06/2023
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
@@ -61,7 +61,7 @@ The [Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-u
 
 You can use the Azure SQL Migration extension for Azure Data Studio to assess databases to get:
 
-- [Migration readiness - Assessment rules](sql-server-to-sql-database-assessment-rules)
+- [Migration readiness - Assessment rules](/azure-sql/migration-guides/database/sql-server-to-sql-database-assessment-rules)
 - [Azure right-sized recommendations](/azure/dms/ads-sku-recommend)
 
 To assess your environment using the Azure SQL Migration extension, follow these steps:

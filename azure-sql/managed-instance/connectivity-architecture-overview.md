@@ -49,7 +49,7 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 SQL Managed Instance is a single-tenant, platform as a service offering that operates in two planes: a data plane and a control plane.
 
-The *data plane* is deployed inside the customer's subnet for compatibility, connectivity, and network isolation. The data plane typically is accessed through its [virtual network-local endpoint](#virtual-network-local-endpoint). The data plane depends on Azure services like Azure Storage, Azure Active Directory (Azure AD) for authentication, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
+The *data plane* is deployed inside the customer's subnet for compatibility, connectivity, and network isolation. The data plane typically is accessed through its [VNet-local endpoint](#vnet-local-endpoint). The data plane depends on Azure services like Azure Storage, Azure Active Directory (Azure AD) for authentication, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
 
 The *control plane* carries the deployment, management, and core service maintenance functions via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All control plane communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 
@@ -59,7 +59,7 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 :::image type="content" source="media/connectivity-architecture-overview/01-connectivity-architecture-entities.png" border="false" alt-text="Diagram that shows entities in the connectivity architecture for SQL Managed Instance before November 2022.":::
 
-SQL Managed Instance is a single-tenant, platform as a service offering. Its compute and networking elements are deployed inside the customer's subnet. SQL Managed Instance typically is accessed via its [virtual network-local endpoint](connectivity-architecture-overview.md#virtual-network-local-endpoint). SQL Managed Instance depends on Azure services like Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, Azure Event Hubs, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
+SQL Managed Instance is a single-tenant, platform as a service offering. Its compute and networking elements are deployed inside the customer's subnet. SQL Managed Instance typically is accessed via its [VNet-local endpoint](#vnet-local-endpoint). SQL Managed Instance depends on Azure services like Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, Azure Event Hubs, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
 
 Deployment, management, and core service maintenance operations are carried out via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All internal communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 
@@ -77,11 +77,11 @@ Customer applications can connect to SQL Managed Instance and can query and upda
 
 :::image type="content" source="media/connectivity-architecture-overview/2-connectivity-architecture-diagram-sql-managed-instance.png" border="false" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance after November 2022.":::
 
-To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: a virtual network-local endpoint and a public endpoint.
+To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: a VNet-local endpoint and a public endpoint.
 
 ### VNet-local endpoint
 
-The *virtual network-local endpoint* is the default way to connect to SQL Managed Instance. The virtual network-local endpoint is a domain name that has the form `<mi_name>.<dns_zone>.database.windows.net` and resolves to an IP address from the subnet's address pool. The endpoint is local to the virtual network. You can use a virtual network-local endpoint to connect a managed instance in all standard connectivity scenarios.
+The *VNet-local endpoint* is the default way to connect to SQL Managed Instance. The VNet-local endpoint is a domain name that has the form `<mi_name>.<dns_zone>.database.windows.net` and resolves to an IP address from the subnet's address pool. The endpoint is local to the virtual network. You can use a VNet-local endpoint to connect a managed instance in all standard connectivity scenarios.
 
 ### Public endpoint
 
@@ -97,11 +97,11 @@ Customer applications can connect to SQL Managed Instance and can query and upda
 
 :::image type="content" source="media/connectivity-architecture-overview/02-connectivity-architecture-sql-managed-instance.png" border="false" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance before November 2022.":::
 
-To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: a virtual network-local endpoint and a public endpoint.
+To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: a VNet-local endpoint and a public endpoint.
 
-### Virtual network-local endpoint
+### VNet-local endpoint
 
-The *virtual network-local endpoint* is the default way to connect to SQL Managed Instance. The virtual network-local endpoint is a domain name that has the form `<managed-instance-name>.<dns-zone>.database.windows.net` and resolves to an IP address from the subnet's address pool. The endpoint is local to the virtual network. You can use a virtual network-local endpoint to connect a managed instance in all standard connectivity scenarios.
+The *VNet-local endpoint* is the default way to connect to SQL Managed Instance. The VNet-local endpoint is a domain name that has the form `<managed-instance-name>.<dns-zone>.database.windows.net` and resolves to an IP address from the subnet's address pool. The endpoint is local to the virtual network. You can use a VNet-local endpoint to connect a managed instance in all standard connectivity scenarios.
 
 ### Public endpoint
 
@@ -109,7 +109,7 @@ The [public endpoint](public-endpoint-configure.md) is an optional domain name t
 
 ### Management endpoint
 
-To facilitate communication between the control plane and components that are deployed inside the customer's subnet, managed instances that haven't enrolled in the November 2022 feature wave use a management endpoint. This means that elements of the virtual network's infrastructure can harm management traffic by making the instance fail and become unavailable. Management and deployment services connect to the SQL Managed Instance management endpoint that maps to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the management components of SQL Managed Instance use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP address ranges. Certificates mutually authenticate all communication between management components and the management plane.
+To facilitate communication between the control plane and components that are deployed inside the customer's subnet, managed instances that haven't enrolled in the November 2022 feature wave use a management endpoint. Elements of the virtual network's infrastructure can harm management traffic by making the instance fail and become unavailable. Management and deployment services connect to the SQL Managed Instance management endpoint that maps to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the management components of SQL Managed Instance use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP address ranges. Certificates mutually authenticate all communication between management components and the management plane.
 
 > [!NOTE]
 > Traffic that goes to Azure services that are inside the SQL Managed Instance region is optimized. Because the traffic is optimized, traffic isn't sent by Network Address Translation (NAT) to the public IP address for the management endpoint. If you need to use IP-based firewall rules, most commonly for storage, the service must be in a different region than SQL Managed Instance.
@@ -263,7 +263,7 @@ The following virtual network features are currently *not supported* with SQL Ma
 
 - **Microsoft peering**: Enabling [Microsoft peering](/azure/expressroute/expressroute-faqs#microsoft-peering) on ExpressRoute circuits that are peered directly or transitively with a virtual network in which SQL Managed Instance resides affects traffic flow between SQL Managed Instance components inside the virtual network and services it depends on. Availability issues result. SQL Managed Instance deployments to a virtual network that already has Microsoft peering enabled are expected to fail.
 - **Global virtual network peering**: [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview) connectivity across Azure regions doesn't work for instances of SQL Managed Instance that are placed in subnets that were created before September 9, 2020.
-- **AzurePlatformDNS**: Using the AzurePlatformDNS [service tag](/azure/virtual-network/service-tags-overview) to block platform DNS resolution would render SQL Managed Instance unavailable. Although SQL Managed Instance supports customer-defined DNS for DNS resolution inside the engine, there is a dependency on platform DNS for platform operations.
+- **AzurePlatformDNS**: Using the AzurePlatformDNS [service tag](/azure/virtual-network/service-tags-overview) to block platform DNS resolution would render SQL Managed Instance unavailable. Although SQL Managed Instance supports customer-defined DNS for DNS resolution inside the engine, there's a dependency on platform DNS for platform operations.
 - **NAT gateway**: Using [Azure Virtual Network NAT](/azure/virtual-network/nat-gateway/nat-overview) to control outbound connectivity with a specific public IP address renders SQL Managed Instance unavailable. The SQL Managed Instance service is currently limited to use the basic load balancer, which doesn't provide coexistence of inbound and outbound flows with Azure Virtual Network NAT.
 - **IPv6 for Azure Virtual Network**: Deploying SQL Managed Instance to [dual stack IPv4/IPv6 virtual networks](/azure/virtual-network/ip-services/ipv6-overview) is expected to fail. Associating a network security group or a route table with user-defined routes (UDRs) that contains IPv6 address prefixes to a SQL Managed Instance subnet renders SQL Managed Instance unavailable. Also, adding IPv6 address prefixes to a network security group or UDR that's already associated with a managed instance subnet renders SQL Managed Instance unavailable. SQL Managed Instance deployments to a subnet with a network security group and UDR that already have IPv6 prefixes are expected to fail.
 - **Azure DNS private zones with a name reserved for Microsoft services**: The following domain names are reserved names: `windows.net`, `database.windows.net`, `core.windows.net`, `blob.core.windows.net`, `table.core.windows.net`, `management.core.windows.net`, `monitoring.core.windows.net`, `queue.core.windows.net`, `graph.windows.net`, `login.microsoftonline.com`, `login.windows.net`, `servicebus.windows.net`, and `vault.azure.net`. Deploying SQL Managed Instance to a virtual network that has an associated [Azure DNS private zone](/azure/dns/private-dns-privatednszone) that uses a name reserved for Microsoft services fails. Associating an Azure DNS private zone that uses a reserved name with a virtual network that contains a managed instance renders SQL Managed Instance unavailable. For information about Private Link configuration, see [Azure Private Endpoint DNS configuration](/azure/private-link/private-endpoint-dns).

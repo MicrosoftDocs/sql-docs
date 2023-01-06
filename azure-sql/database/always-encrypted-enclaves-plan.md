@@ -40,12 +40,12 @@ Considering the above, SGX enclaves are recommended for workloads that require t
 
 VBS enclaves (also known as Virtual Secure Mode, or VSM enclaves) is a software-based technology that relies on Windows hypervisor and doesn't require any special hardware. Therefore, VBS enclaves are available in all Azure SQL Database offerings, providing you with the flexibility to use Always Encrypted with secure enclaves with a compute size, service tier, purchasing model, hardware configuration and region that best meets your workload requirements. 
 
+> [!NOTE]
+> In the current state of the preview, VBS enclaves are **not** available in elastic pools. VBS enclaves are available in all Azure SQL Database regions **except**: Australia Central, Australia Central 2, Jio India Central, Jio India West, Korea Central, Korea South, UAE Central.
+
 VBS enclaves are the recommended solution for customers who seek protection for data in use from high-privileged users in the customer’s organization, including DBAs. Without having the cryptographic keys protecting the data, a DBA will not be able to access the data in plaintext.
 
 VBS enclaves can also help prevent some OS-level threats, such as exfiltrating sensitive data from memory dumps – the plaintext data processed in an enclave does not show up in memory dumps, providing the code inside the enclave and its properties have not been maliciously altered. However, VBS enclaves in Azure SQL Database cannot address more sophisticated attacks, such as replacing the enclave binary with malicious code, due to the current lack of enclave attestation. It is important to note that Microsoft has implemented multiple layers of security controls to detect and prevent such attacks in the Azure cloud, including just-in-time access, multi-factor authentication, and security monitoring. Nevertheless, customers who require strong security isolation may prefer Intel SGX enclaves with the DC-series hardware configuration over VBS enclaves.
-
-> [!NOTE]
-> VBS enclaves are currently available in all Azure SQL Database regions **except**: Australia Central, Australia Central 2, Jio India Central, Jio India West, Korea Central, Korea South, UAE Central.
 
 ## Plan for enclave attestation in Azure SQL Database
 

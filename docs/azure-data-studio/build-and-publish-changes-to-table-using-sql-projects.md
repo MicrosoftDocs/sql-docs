@@ -5,7 +5,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.date: 09/24/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: tutorial
 ---
 
@@ -20,7 +20,7 @@ With the help of the SQL Database Projects extension (preview), projects (tables
 2. Make and deploy changes to a table in the ***AdventureWorks2019*** database using SQL Database Projects and confirming this change in the locally connected server instance where this database resides.
 
 > [!NOTE]
-> Please note that you will need to have the [AdventureWorks sample database](../samples/adventureworks-install-configure.md) downloaded and available in Azure Data Studio to follow along this tutorial. You will also need to have the SQL Database Projects extension installed. Refer to the [SQL Database Projects documentation](/docs/azure-data-studio/extensions/sql-database-project-extension.md) to learn more about this extension.
+> Please note that you will need to have the [AdventureWorks sample database](../samples/adventureworks-install-configure.md) downloaded and available in Azure Data Studio to follow along this tutorial. You will also need to have the SQL Database Projects extension installed. Refer to the [SQL Database Projects documentation](extensions/sql-database-project-extension.md) to learn more about this extension.
 
 ## Create a SQL Database Project
 

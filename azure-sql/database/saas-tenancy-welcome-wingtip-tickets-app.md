@@ -22,7 +22,7 @@ Three versions of the app are available; each explores a different database tena
 
 ![Three tenancy patterns][image-three-tenancy-patterns]
 
- Each sample includes the application code, plus management scripts and tutorials that explore a range of design and management patterns.  Each sample deploys in less that five minutes.  All three can be deployed side-by-side so you can compare the differences in design and management.
+ Each sample includes the application code, plus management scripts and tutorials that explore a range of design and management patterns.  Each sample deploys in less than five minutes.  All three can be deployed side-by-side so you can compare the differences in design and management.
 
 ## Standalone application per tenant pattern
 

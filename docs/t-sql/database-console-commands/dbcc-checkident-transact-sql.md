@@ -1,9 +1,9 @@
 ---
 title: DBCC CHECKIDENT (Transact-SQL)
-description: "DBCC CHECKIDENT (Transact-SQL)"
+description: DBCC CHECKIDENT checks the current identity value for the specified table in SQL Server, and changes the value if needed.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/28/2022
+ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -34,28 +34,28 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 
 Checks the current identity value for the specified table in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and, if needed, changes the identity value. You can also use `DBCC CHECKIDENT` to manually set a new current identity value for the identity column.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
-### Syntax for SQL Server and Azure SQL Database
+Syntax for SQL Server and Azure SQL Database:
 
 ```syntaxsql
 DBCC CHECKIDENT
  (
     table_name
-        [, { NORESEED | { RESEED [, new_reseed_value ] } } ]
+        [ , { NORESEED | { RESEED [ , new_reseed_value ] } } ]
 )
 [ WITH NO_INFOMSGS ]
 ```
 
-### Syntax for Azure Synapse Analytics
+Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
 DBCC CHECKIDENT
  (
     table_name
-        [RESEED, new_reseed_value ]
+        [ RESEED , new_reseed_value ]
 )
 [ WITH NO_INFOMSGS ]
 ```
@@ -68,7 +68,7 @@ DBCC CHECKIDENT
 
 The name of the table for which to check the current identity value. The table specified must contain an identity column. Table names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Two or three part names must be delimited, such as `Person.AddressType` or `[Person].[AddressType]`.
 
-#### NORESEED  
+#### NORESEED
 
 Specifies that the current identity value shouldn't be changed.
 
@@ -129,7 +129,7 @@ When `DBCC CHECKIDENT` is used to specify a new seed value by using `RESEED <new
 
 Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
 
-[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] requires **db_owner** permissions.
+[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] requires **db_owner** permissions.
 
 ## Examples
 
@@ -160,7 +160,7 @@ GO
 The following example forces the current identity value in the `AddressTypeID` column in the `AddressType` table to a value of 10. Because the table has existing rows, the next row inserted will use 11 as the value. The new current identity value defined for the column plus 1 (which is the column's increment value).
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 DBCC CHECKIDENT ('Person.AddressType', RESEED, 10);
 GO
@@ -171,7 +171,7 @@ GO
 The following example assumes a table identity of `(1, 1)` and forces the current identity value in the `ErrorLogID` column in the `ErrorLog` table to a value of 1, after deleting all records from table. Because the table has no existing rows, the next row inserted will use 1 as the value, that is, the new current identity value *without* adding the increment value defined for the column after TRUNCATE, or adding the increment value after DELETE.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 TRUNCATE TABLE dbo.ErrorLog
 GO
@@ -188,7 +188,7 @@ GO
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 - [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [IDENTITY &#40;Property&#41; (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)
+- [IDENTITY (Property) (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)
 - [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)
 - [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)
 - [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)

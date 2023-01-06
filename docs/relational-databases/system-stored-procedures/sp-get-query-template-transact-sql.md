@@ -23,7 +23,7 @@ ms.author: maghan
 
   Returns the parameterized form of a query. The results returned mimic the parameterized form of a query that results from using forced parameterization. sp_get_query_template is used primarily when you create TEMPLATE plan guides.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

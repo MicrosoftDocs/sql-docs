@@ -1,7 +1,7 @@
 ---
 title: Deploy availability group with DH2i cluster on Azure Kubernetes Services (AKS)
 description: This tutorial shows how to deploy a SQL Server Always On availability group with DH2i Clustering solution for SQL Server containers on Azure Kubernetes Service (AKS).
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: amitkh, vanto
 ms.date: 04/01/2022
@@ -23,7 +23,7 @@ This tutorial explains how to configure SQL Server Always On availability group 
 > - Configure the DxEnterprise cluster
 > - Configure Read_Write_Routing_URL for listener functionality - Optional
 
-For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterpriseha_ms/).
+For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-high-availability/).
 
 > [!NOTE]
 > Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.

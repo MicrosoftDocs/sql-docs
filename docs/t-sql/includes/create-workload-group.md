@@ -7,7 +7,7 @@ ms.topic: include
 ---
 Creates a Resource Governor workload group and associates the workload group with a Resource Governor resource pool. Resource Governor isn't available in every edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md).
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax
 

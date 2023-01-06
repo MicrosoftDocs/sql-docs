@@ -20,7 +20,7 @@ ms.author: chugu
 After you've created the connection managers for the source and destination data, you add a Data Flow task to your package. The Data Flow task defines the data flow engine that moves data between sources and destinations, and provides the functionality for transforming, cleaning, and modifying data as it is moved. The Data Flow task is where most of the work of an extract, transform, and load (ETL) process occurs.  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separates data flow from control flow.  
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separates data flow from control flow.  
   
 ## Add a Data Flow task  
   

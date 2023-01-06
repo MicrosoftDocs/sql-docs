@@ -1,7 +1,7 @@
 ---
 title: Understanding Active Directory authentication for SQL Server on Linux and containers
 description: Understand Active Directory authentication with SQL Server on Linux and containers. Includes LDAP, Kerberos, keytabs and DNS.
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: randolphwest
 ms.date: 09/27/2022

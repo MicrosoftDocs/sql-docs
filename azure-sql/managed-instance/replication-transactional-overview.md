@@ -166,7 +166,7 @@ If a **publisher** or **distributor** SQL Managed Instance is in a [failover gro
    EXEC sp_removedbreplication
    ```
 
-1. Forcefully drop old distributor from original primary SQL Managed Instance (if failing back over to an old primary that used to have a distributor). Run the following script on the master database in old distributor SQL Managed Instance:
+1. Forcefully drop old distributor from original primary SQL Managed Instance (if failing back over to an old primary that used to have a distributor). Run the following script on the `master` database in old distributor SQL Managed Instance:
 
    ```sql
    EXEC sp_dropdistributor 1,1

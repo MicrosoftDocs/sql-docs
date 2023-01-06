@@ -1,7 +1,7 @@
 ---
 title: "Export a paginated report to a PDF File (Report Builder) | Microsoft Docs"
 description: In Report Builder, the PDF rendering extension renders paginated reports to files that can be opened in Adobe Acrobat and other third-party PDF viewers.
-ms.date: 03/29/2022
+ms.date: 01/03/2023
 ms.service: reporting-services
 ms.subservice: report-builder
 
@@ -53,8 +53,11 @@ The PDF rendering extension renders paginated reports to files that can be opene
   
  The fonts that are embedded in the PDF file are included in the Fonts property that is saved with the file, as metadata.
  
-Windows 10 introduced a recommended Universal Windows Platform (UWP) font set that's common across all editions that support UWP, including Desktop, Server, and Xbox. Check this list for supported fonts: [Font List Windows 10 - Typography | Microsoft Docs](/typography/fonts/windows_10_font_list#introduction).
-  
+Windows 10 and 11 introduced a recommended Universal Windows Platform (UWP) font set that's common across all editions that support UWP, including Desktop, Server, and Xbox. Check this list for supported fonts: [Font List Windows 11 - Typography | Microsoft Docs](/typography/fonts/windows_11_font_list#introduction).
+
+> [!IMPORTANT]  
+> When using paginated reports in the Power BI service and exporting to a PDF file, the only fonts supported are those included in the **Introduction** font list of [Font List Windows 11 - Typography | Microsoft Docs](/typography/fonts/windows_11_font_list#introduction). 
+
 ##  <a name="Metadata"></a> Metadata  
  In addition to the report layout, the PDF rendering extension writes the following metadata to the PDF Document Information Dictionary.  
   

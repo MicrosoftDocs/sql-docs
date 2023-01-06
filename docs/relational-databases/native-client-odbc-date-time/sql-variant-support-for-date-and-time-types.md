@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   This topic describes how the **sql_variant** data type supports enhanced date and time functionality.  
   
- The column attribute SQL_CA_SS_VARIANT_TYPE is used to return the C type of a variant result column. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduces an additional attribute, SQL_CA_SS_VARIANT_SQL_TYPE, which sets the SQL type of a variant result column in the implementation row descriptor (IRD). SQL_CA_SS_VARIANT_SQL_TYPE can also be used in the implementation parameter descriptor (IPD) to specify the SQL type of a SQL_SS_TIME2 or SQL_SS_TIMESTAMPOFFSET parameter that has SQL_C_BINARY C type bound with type SQL_SS_VARIANT.  
+ The column attribute SQL_CA_SS_VARIANT_TYPE is used to return the C type of a variant result column. [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] introduces an additional attribute, SQL_CA_SS_VARIANT_SQL_TYPE, which sets the SQL type of a variant result column in the implementation row descriptor (IRD). SQL_CA_SS_VARIANT_SQL_TYPE can also be used in the implementation parameter descriptor (IPD) to specify the SQL type of a SQL_SS_TIME2 or SQL_SS_TIMESTAMPOFFSET parameter that has SQL_C_BINARY C type bound with type SQL_SS_VARIANT.  
   
  The new types SQL_SS_TIME2 and SQL_SS_TIMESTAMPOFFSET can be set by SQLColAttribute. SQL_CA_SS_VARIANT_SQL_TYPE can be returned by SQLGetDescField.  
   

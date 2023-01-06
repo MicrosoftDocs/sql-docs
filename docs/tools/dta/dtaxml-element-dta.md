@@ -27,7 +27,7 @@ The root element of a Database Engine Tuning Advisor XML input or output file, *
   
 <DTAXML   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
-    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
+    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">  
     ...code removed here...  
 </DTAXML>  
 ```  

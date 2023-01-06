@@ -23,7 +23,7 @@ ms.author: maghan
 
   Specifies a redirected publisher for an existing publisher/database pair. If the publisher database belongs to an Always On Availability Group, the redirected publisher is the availability group listener name associated with the availability group.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

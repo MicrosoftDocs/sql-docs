@@ -31,7 +31,7 @@ Sets a local variable to the value of an expression.
 
 For assigning variables, we recommend that you use [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) instead of SELECT @*local_variable*.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

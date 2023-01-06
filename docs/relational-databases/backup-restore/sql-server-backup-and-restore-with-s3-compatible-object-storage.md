@@ -43,21 +43,21 @@ There are many providers of S3-compatible object storage in the market today. Ob
 
 The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
-| **Vendor (alphabetical)**       | **Offering**                  | 
-|---------------------------------|-------------------------------|
-| [AWS][aws_webs]                 | AWS Simple Cloud Storage (S3) |
-| [Ceph][ceph_webs]               | Ceph                          |
-| [Cloudian][cloudian_webs]       | HyperStore                    |
-| [Dell Technologies][dell_webs]  | ECS Enterprise Object Storage |
-| [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform      |
-| [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric       |
-| [MinIO][minio_webs]             | Multi-Cloud Object Storage    |
-| [NetApp][netapp_webs]           | StorageGRID<br>ONTAP          |
-| [Nutanix][nutanix_webs]         | Nutanix Object Storage        |
-| [Pure Storage][pure_webs]       | Pure FlashBlade               |
-| [Red Hat][redhat_webs]          | OpenShift Container Storage   |
-| [Scality][scality_webs]         | Scality Artesca               |
-| [Weka][weka_webs]               | Weka S3                       |
+| **Vendor (alphabetical)**       | **Offering**                             | 
+|---------------------------------|------------------------------------------|
+| [AWS][aws_webs]                 | AWS Simple Cloud Storage (S3)            |
+| [Ceph][ceph_webs]               | Ceph                                     |
+| [Cloudian][cloudian_webs]       | HyperStore                               |
+| [Dell Technologies][dell_webs]  | ECS Enterprise Object Storage            |
+| [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform for Cloud Scale |
+| [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric                  |
+| [MinIO][minio_webs]             | Multi-Cloud Object Storage               |
+| [NetApp][netapp_webs]           | StorageGRID<br>ONTAP                     |
+| [Nutanix][nutanix_webs]         | Nutanix Object Storage                   |
+| [Pure Storage][pure_webs]       | Pure FlashBlade                          |
+| [Red Hat][redhat_webs]          | OpenShift Container Storage              |
+| [Scality][scality_webs]         | Scality Artesca                          |
+| [Weka][weka_webs]               | Weka S3                                  |
 
 ## Prerequisites for the S3 endpoint
 

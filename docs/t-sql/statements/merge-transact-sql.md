@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 ---
 # MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Runs insert, update, or delete operations on a target table from the results of a join with a source table. For example, synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table.
 
@@ -60,7 +60,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 > ```  
 ::: moniker-end
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"  
@@ -191,7 +191,7 @@ If *target_table* is a view, any actions against it must satisfy the conditions 
 Hints can be specified as a <merge_hint>. 
 
 ::: moniker range="=azure-sqldw-latest"
-Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 ::: moniker-end
   
 #### [ AS ] *table_alias*  

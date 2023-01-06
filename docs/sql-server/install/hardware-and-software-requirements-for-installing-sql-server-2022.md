@@ -102,6 +102,7 @@ The following table shows which editions of [!INCLUDE [sssql22-md](../../include
 | Windows Server 2022 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2022 Datacenter: Azure Edition|    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2022 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |

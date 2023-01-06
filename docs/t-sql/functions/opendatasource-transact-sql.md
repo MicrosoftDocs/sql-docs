@@ -26,7 +26,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-li
 
   Provides ad hoc connection information as part of a four-part object name without using a linked server name.  
 
- ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

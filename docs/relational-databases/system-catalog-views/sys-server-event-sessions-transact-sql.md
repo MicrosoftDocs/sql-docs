@@ -20,7 +20,7 @@ dev_langs:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 ---
 # sys.server_event_sessions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Lists all the server-scoped event session definitions that exist in SQL Server or Azure SQL Managed Instance.
 

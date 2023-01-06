@@ -105,7 +105,7 @@ A subquery is subject to the following restrictions:
 - If the `WHERE` clause of an outer query includes a column name, it must be join-compatible with the column in the subquery select list.
 - The **ntext**, **text**, and **image** data types can't be used in the select list of subqueries.
 - Because they must return a single value, subqueries introduced by an unmodified comparison operator (one not followed by the keyword `ANY` or `ALL`) can't include `GROUP BY` and `HAVING` clauses.
-- The `DISTINCT` keyword can't be used with subqueries that include `GROUP BY.
+- The `DISTINCT` keyword can't be used with subqueries that include `GROUP BY`.
 - The `COMPUTE` and `INTO` clauses can't be specified.
 - `ORDER BY` can only be specified when `TOP` is also specified.
 - A view created by using a subquery can't be updated.

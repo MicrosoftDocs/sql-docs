@@ -26,7 +26,7 @@ ms.author: randolphwest
 
   Returns the start_lsn column value for the specified capture instance from the [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) system table. This value represents the low endpoint of the validity interval for the capture instance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

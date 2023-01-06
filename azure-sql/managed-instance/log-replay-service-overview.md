@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides an overview of the Log Replay Service (LRS), which you can use to migrate databases from SQL Server to Azure SQL Managed Instance. LRS is a free cloud service that's available for Azure SQL Managed Instance and based on SQL Server log-shipping technology.
+This article provides an overview of Log Replay Service (LRS), which you can use to migrate databases from SQL Server to Azure SQL Managed Instance. LRS is a free cloud service that's available for Azure SQL Managed Instance and based on SQL Server log-shipping technology.
 
 To get started, review [Migrate databases from SQL Server to Azure SQL Managed Instance by using Log Replay Service](log-replay-service-migrate.md). 
 

@@ -80,7 +80,7 @@ When you're using LRS, consider the following best practices:
 
 System updates for SQL Managed Instance take precedence over database migrations in progress. During a system update on an instance, all pending LRS migrations are suspended and resumed only after the update is applied. This system behavior might prolong migration time, especially for large databases. 
 
-To achieve a predictable time for database migrations, consider configuring a [maintenance window](../database/maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designaged maintenance window timeframe.
+To achieve a predictable time for database migrations, consider configuring a [maintenance window](../database/maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designated maintenance window timeframe.
 
 
 > [!IMPORTANT]
@@ -118,18 +118,18 @@ You use an Azure Blob Storage account as intermediary storage for backup files b
 
 ## Authenticate to your Blob Storage account
 
-Use either an SAS token or a managed identity to access your Azure Blob Storage account. 
+Use either a SAS token or a managed identity to access your Azure Blob Storage account. 
 
 > [!WARNING]
-> You can't use both an SAS token and a managed identity in parallel on the same storage account. You can use *either* an SAS token *or* a managed identity, but not both. 
+> You can't use both a SAS token and a managed identity in parallel on the same storage account. You can use *either* a SAS token *or* a managed identity, but not both. 
 
 ### [SAS token](#tab/sas-token)
 
 ### Generate a Blob Storage SAS authentication token for LRS
 
-Access your Azure Blob Storage account by using an SAS token. 
+Access your Azure Blob Storage account by using a SAS token. 
 
-You can use an Azure Blob Storage account as intermediary storage for backup files between your SQL Server instance and your SQL Managed Instance deployment. Generate an SAS authentication token for LRS with only Read and List permissions. The token enables LRS to access your Blob Storage account, and it uses the backup files to restore them to your managed instance. 
+You can use an Azure Blob Storage account as intermediary storage for backup files between your SQL Server instance and your SQL Managed Instance deployment. Generate a SAS authentication token for LRS with only Read and List permissions. The token enables LRS to access your Blob Storage account, and it uses the backup files to restore them to your managed instance. 
 
 Follow these steps to generate the token:
 
@@ -137,7 +137,7 @@ Follow these steps to generate the token:
 1. Expand **Blob Containers**.
 1. Right-click the blob container, and then select **Get Shared Access Signature**.
 
-   :::image type="content" source="./media/log-replay-service-migrate/lrs-sas-token-01.png" alt-text="Screenshot that shows selections for generating an SAS authentication token.":::
+   :::image type="content" source="./media/log-replay-service-migrate/lrs-sas-token-01.png" alt-text="Screenshot that shows selections for generating a SAS authentication token.":::
 
 1. Select the time frame for token expiration. Ensure that the token is valid during your migration.
 

@@ -271,7 +271,7 @@ The following virtual network features are currently *not supported* with SQL Ma
 
 ## Next steps
 
-- For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
+- For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md).
 - Learn how to [set up a new Azure virtual network](virtual-network-subnet-create-arm-template.md) or an [existing Azure virtual network](vnet-existing-add-subnet.md) where you can deploy SQL Managed Instance.
 - [Calculate the size of the subnet](vnet-subnet-determine-size.md) where you want to deploy SQL Managed Instance.
 - Learn how to create a managed instance:

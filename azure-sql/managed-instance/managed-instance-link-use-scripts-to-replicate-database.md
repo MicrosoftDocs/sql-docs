@@ -18,7 +18,7 @@ ms.topic: how-to
 This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts to replicate your database from SQL Server to Azure SQL Managed Instance by using a [Managed Instance link](managed-instance-link-feature-overview.md).
 
 > [!NOTE]
-> - Some functionality of the link is generally available, while some is currently in preview. Review the [requirements](managed-instance-link-feature-overview.md#requirements) to learn more. 
+> - Some functionality of the link is generally available, while some is currently in preview. Review the [prerequisites](managed-instance-link-feature-overview.md#prerequisites) to learn more. 
 > - You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-replicate-database.md) to set up the link to replicate your database. 
 
 ## Prerequisites 
@@ -26,7 +26,7 @@ This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts 
 To replicate your databases to SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 - PowerShell module [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher
 - A properly [prepared environment](managed-instance-link-preparation.md).

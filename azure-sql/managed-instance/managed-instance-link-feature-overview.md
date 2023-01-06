@@ -119,16 +119,13 @@ This feature is currently in limited public preview. [You must sign up for limit
 
 ## Use the link feature
 
-* [Replicate a database by using the link feature in SSMS](managed-instance-link-use-ssms-to-replicate-database.md), or alternatively
-* [Replicate a database with the link feature via T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-replicate-database.md)
-
 After you've created the link, to ensure that you're following the best practices for maintaining the link, see [Best practices for the link feature in Azure SQL Managed Instance](managed-instance-link-best-practices.md).
 
 When you're ready to migrate a database to Azure with minimal downtime, you can do so by using an automated wizard in SSMS or manually by using scripts.
 
 Do either of the following:
 
-- [Replicate a database by using the link feature in SSMS](managed-instance-link-use-ssms-to-replicate-database.md).
+- [Replicate a database by using the link feature in SSMS](managed-instance-link-use-ssms-to-replicate-database.md)
 - [Replicate a database by using the Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-replicate-database.md)
 
 ## Limitations
@@ -180,10 +177,10 @@ For the full list of differences between SQL Server and SQL Managed Instance, se
 
 For more information about the link feature, see:
 
-- [Managed Instance link: Connecting SQL Server to Azure reimagined](https://aka.ms/mi-link-techblog).
-- [Prepare for the Managed Instance link](./managed-instance-link-preparation.md).
-- [Use a Managed Instance link via SSMS to replicate a database](./managed-instance-link-use-ssms-to-replicate-database.md).
-- [Use a Managed Instance link via SSMS to migrate a database](./managed-instance-link-use-ssms-to-failover-database.md).
+- [Managed Instance link: Connecting SQL Server to Azure reimagined](https://aka.ms/mi-link-techblog)
+- [Prepare for the Managed Instance link](./managed-instance-link-preparation.md)
+- [Use a Managed Instance link via SSMS to replicate a database](./managed-instance-link-use-ssms-to-replicate-database.md)
+- [Use a Managed Instance link via SSMS to migrate a database](./managed-instance-link-use-ssms-to-failover-database.md)
 
 For other replication and migration scenarios, consider:
 

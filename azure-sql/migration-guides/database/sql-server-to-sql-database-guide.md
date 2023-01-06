@@ -61,8 +61,8 @@ The [Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-u
 
 You can use the Azure SQL Migration extension for Azure Data Studio to assess databases to get:
 
-- [Migration readiness report - Assessment](/azure/migration-guides/database/sql-server-to-sql-database-assessment-rules)
-- [Azure SKU recommendations](/dms/ads-sku-recommend)
+- [Migration readiness - Assessment rules](sql-server-to-sql-database-assessment-rules)
+- [Azure right-sized recommendations](/azure/dms/ads-sku-recommend)
 
 To assess your environment using the Azure SQL Migration extension, follow these steps:
 
@@ -236,9 +236,9 @@ You may encounter a wide variety of compatibility issues, depending both on the 
 
 ## Next steps
 
-- See [Service and tools for data migration](/azure/dms/dms-tools-matrix) for a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks.
+See [Service and tools for data migration](/azure/dms/dms-tools-matrix) for a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks.
 
-- To learn more about the Azure SQL Migration extension see:
+To learn more about the Azure SQL Migration extension see:
 
    - [Migrate databases with Azure SQL Migration extension for Azure Data Studio](/azure/dms/dms-overview#migrate-databases-with-azure-sql-migration-extension-for-azure-data-studio)
 

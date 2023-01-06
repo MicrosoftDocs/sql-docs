@@ -23,7 +23,7 @@ ms.author: mlandzic
 
   Returns a public key of the certificate used for authentication on endpoint of specified type with certificate-based trust configured. Supported types of endpoints are Database Mirroring endpoint (also used for Link feature of Azure SQL Managed Instance) and Service Broker endpoint.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

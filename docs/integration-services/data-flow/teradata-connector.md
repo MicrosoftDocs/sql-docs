@@ -23,8 +23,9 @@ This new connector supports databases with 1MB-enabled tables.
 Microsoft Connector supports the following Microsoft SQL Server products for Teradata:
 
 - Microsoft SQL Server 2019
-- Microsoft SQL Server Data Tools (SSDT) 15.8.1 or later for Visual Studio 2017
-- Microsoft SQL Server Data Tools (SSDT) for Visual Studio 2019
+- Microsoft SQL Server 2022
+- SQL Server Integration Services Projects for Visual Studio 2019
+- SQL Server Integration Services Projects for Visual Studio 2022
 
 Microsoft Connector for Teradata uses ODBC Driver for Teradata, and Teradata Parallel Transporter shipped with Teradata Tools and Utilities (TTU). Supported TTU versions are 16.20 and 17.10.
 
@@ -33,6 +34,9 @@ Microsoft Connector for Teradata uses ODBC Driver for Teradata, and Teradata Par
 Install TTU from [Teradata site](https://downloads.teradata.com/download/database/teradata-tools-and-utilities-13-10). Make sure that ODBC Driver for Teradata and Teradata Parallel Transporter features is selected during the installation.
 
 To install the connector for the Teradata database, download and run the installer from [the latest version of Microsoft connector for Teradata](https://www.microsoft.com/download/details.aspx?id=100599). Then follow the directions in the installation wizard.
+
+> [!NOTE]
+> To design packages with SQL Server Integration Services Projects, you will need to install the connector for both the target and the latest SQL Server version.
 
 After you install the connector, you must restart the SQL Server Integration Service to be sure that the Teradata source and destination work correctly.
 
@@ -78,6 +82,18 @@ To design the SSIS package in SSDT *targeting SQL Server 2017 and below*, you'll
 You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
+
+### Rev. 275
+
+**Bug fixes**
+
+- Teradata Destination will crash under certain circumstances.
+- Teradata Destination will report success despite errors occurred under certain circumstances.
+- Teradata Destination will report a larger number of rows written than reality under certain circumstances.
+
+**Improvements**
+
+- When error occurred, Teradata Destination will retain and direct user to TPT error tables for investigation.
 
 ### Rev. 257
 

@@ -55,15 +55,15 @@ The following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssd
 - Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Enable or disable the new `String or binary data would be truncated` error message.
 - Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
-- Specify the number of minutes that a paused resumable index operation is paused before it is automatically aborted by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+- Specify the number of minutes that a paused resumable index operation is paused before it is automatically aborted by the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)].
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
 - Enable or disable uploading ledger digests to Azure Blob Storage.
 
-This setting is only available in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+This setting is only available in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 - Set the compatibility level of a user database
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -437,7 +437,7 @@ Allows you to control whether a [Row-Level Security](../../relational-databases/
 
 #### DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 9000 }
 
-**Applies to:** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] only
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only
 
 Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised. At each compatibility level, various query processing enhancements are supported. Each level absorbs the functionality of the preceding level. A database's compatibility level is set to AUTO by default when it's first created and this is the recommended setting. The compatibility level is preserved even after database pause/resume, backup/restore operations.  The default is **AUTO**. 
 

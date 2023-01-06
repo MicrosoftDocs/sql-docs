@@ -201,7 +201,7 @@ Geo-replication for Hyperscale database has following current limitations:
 
 - Only one geo-replica can be created (in the same or different region).
 - Point in time restore of the geo-replica is not supported.
-- Secondary of a secondary (also known as "geo-replica chaining") is not supported.
+- Creating geo-replica of a geo-replica (also known as "geo-replica chaining") is not supported.
 
 ## Next steps
 

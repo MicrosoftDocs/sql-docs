@@ -38,20 +38,20 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 ## Known issues
 **Version 4.3**
 - Known issues:
-    1. **Cannot design Oracle and Teradata Components.**
+    1. **Cannot design Oracle Components.**
    
 **Version 4.2**
 - Known issues:
-    1. **Cannot design Oracle and Teradata Components.**
+    1. **Cannot design Oracle Components.**
  
 **Version 4.1**
 - Known issues:
-    1. **Cannot design Oracle and Teradata Components.**
+    1. **Cannot design Oracle Components.**
     2. **Due to a limitation of VS marketplace, the version 4.1.2 does not introduce new binaries to download. Version 4.1 contains the latest binaries.**
     
 **Version 4.0 preview:**
 - Known issues:
-    1. **Cannot design Oracle and Teradata Components.**
+    1. **Cannot design Oracle Components.**
     2. CDC source component in target [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] can't do preview.
     3. **When executing SSIS project targeting SqlServer 2019 on the environment that SQL Server 2019 are also installed**, the execution will fail with error "Unable to cast COM object of type System._ComObject to interface type Microsoft.SqlServer.Dts.Runtime.Wrapper.Sql2019.IDTSApplication160".
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
@@ -75,7 +75,7 @@ If you get an error during installation, and find **"Bundle action failed: Inval
    1. Repair the VS2019
    1. Restart and reinstall
 - When the error is "Object reference not set to an instance of an object.":
-  - delete the broken instance folder “%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
+  - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
 - When the error is "Error 0x80091007: Failed to verify hash of payload":
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
 - When it isn't above error in ISVsix.log, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.

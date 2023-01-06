@@ -8,10 +8,10 @@ ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
-  - "sys.dm_hadr_database_states_TSQL"
-  - "sys.dm_hadr_database_states"
-  - "dm_hadr_database_states"
-  - "dm_hadr_database_states_TSQL"
+  - "sys.dm_hadr_database_replica_states_TSQL"
+  - "sys.dm_hadr_database_replica_states"
+  - "dm_hadr_database_replica_states"
+  - "dm_hadr_database_replica_states_TSQL"
 helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_database_replica_states dynamic management view"

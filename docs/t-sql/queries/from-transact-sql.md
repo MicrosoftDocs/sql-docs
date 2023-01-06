@@ -56,7 +56,7 @@ This article also discusses the following keywords that can be used on the FROM 
 - APPLY
 - [PIVOT](from-using-pivot-and-unpivot.md)
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax  
   
@@ -196,13 +196,13 @@ FROM { <table_source> [ ,...n ] }
  Specifies that the query optimizer use an optimization or locking strategy with this table and for this statement. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 *rowset_function*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Specifies one of the rowset functions, such as OPENROWSET, that returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions &#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md).  
   
  Using the OPENROWSET and OPENQUERY functions to specify a remote object depends on the capabilities of the OLE DB provider that accesses the object.  
   
  *bulk_column_alias*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
  Is an optional alias to replace a column name in the result set. Column aliases are allowed only in SELECT statements that use the OPENROWSET function with the BULK option. When you use *bulk_column_alias*, specify an alias for every table column in the same order as the columns in the file.  
   
 > [!NOTE]  
@@ -212,7 +212,7 @@ Specifies one of the rowset functions, such as OPENROWSET, that returns an objec
  Specifies a table-valued function.  
   
 OPENXML \<openxml_clause>  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Provides a rowset view over an XML document. For more information, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
  *derived_table*  
@@ -253,12 +253,12 @@ Specifies that a sample of data from the table is returned. The sample may be ap
  Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
   
 ### Tablesample clause
-**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
+**Applies to:** [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]
 
  Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT or UPDATE statement. TABLESAMPLE cannot be specified with views. 
 
  PERCENT  
- Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] returns an approximate of the percent specified. When PERCENT is specified, the *sample_number* expression must evaluate to a value from 0 to 100.  
+ Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] returns an approximate of the percent specified. When PERCENT is specified, the *sample_number* expression must evaluate to a value from 0 to 100.  
 
 
 ### Joined table 
@@ -282,7 +282,7 @@ Specifies the type of join operation.
 ### Join hint  
 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer use one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
- For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], these join hints apply to INNER joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. The allowable join hints for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] are as follows:  
+ For [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], these join hints apply to INNER joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. The allowable join hints for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] are as follows:  
   
  REDUCE  
  Reduces the number of rows to be moved for the table on the right side of the join in order to make two distribution incompatible tables compatible. The REDUCE hint is also called a semi-join hint.  
@@ -670,7 +670,7 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### N. Using the INNER JOIN syntax  
  The following example returns the `SalesOrderNumber`, `ProductKey`, and `EnglishProductName` columns from the `FactInternetSales` and `DimProduct` tables where the join key, `ProductKey`, matches in both tables. The `SalesOrderNumber` and `EnglishProductName` columns each exist in one of the tables only, so it is not necessary to specify the table alias with these columns, as is shown; these aliases are included for readability. The word **AS** before an alias name is not required but is recommended for readability and to conform to the ANSI standard.  

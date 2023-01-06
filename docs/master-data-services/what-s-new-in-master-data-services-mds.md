@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New
+title: What's New
 description: Learn about the changes, improvements, and updates in the SQL Server 2019 release of Master Data Services.
 ms.custom: ""
 ms.date: "07/08/2016"
@@ -11,7 +11,7 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: CordeliaGrey
 ms.author: jiwang6
 ---
-# What&#39;s New in Master Data Services (MDS)
+# What's New in Master Data Services (MDS)
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
@@ -74,7 +74,7 @@ ms.author: jiwang6
   
  In this release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], we're providing more levels of permissions by introducing the following new permissions: Read, Create, Update and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update and Delete permissions.  
   
- When you upgrade to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], old permissions are converted to new permissions as shown in the following table.  
+ When you upgrade to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], old permissions are converted to new permissions as shown in the following table.  
   
 |Permission in previous release|New permission|  
 |------------------------------------|--------------------|  
@@ -106,7 +106,7 @@ ms.author: jiwang6
   
 ## Improved Troubleshooting  
   
- In [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], features have been added to improve debugging and make it easier to troubleshoot issues. For more information, see [Tracing &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
+ In [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], features have been added to improve debugging and make it easier to troubleshoot issues. For more information, see [Tracing &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
   
 ## Improved Manageability  
   

@@ -29,7 +29,7 @@ ms.author: mikeray
  The function is used to report health status of services under Smart Admin.  Currently [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is supported under the Smart Admin umbrella. So the errors returned are related to [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

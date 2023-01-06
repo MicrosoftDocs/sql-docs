@@ -23,7 +23,7 @@ ms.author: maghan
 
   Returns information on past sessions for a given replication Merge Agent, with one row returned for each session that matches the filtering criterion. This stored procedure, which is used to monitor merge replication, is executed at the Distributor on the distribution database or at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

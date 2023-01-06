@@ -25,9 +25,9 @@ ms.author: maghan
   
 ||  
 |-|  
-|**Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).|  
+|**Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).|  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

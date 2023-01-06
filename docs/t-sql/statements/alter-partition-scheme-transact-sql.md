@@ -30,7 +30,7 @@ Learn more about filegroups and partitioning strategies in [Filegroups](../../re
 >[!NOTE]
 >In Azure SQL Database only primary filegroups are supported.  
   
-![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

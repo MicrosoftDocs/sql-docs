@@ -14,7 +14,7 @@ ms.topic: reference
 
 ## Overview
 
-The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides an API that can be used within Java programming code to connect to and interact with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.
+The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides an API that can be used within Java programming code to connect to and interact with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.
 
 ### JavaDoc.io website is primary
 

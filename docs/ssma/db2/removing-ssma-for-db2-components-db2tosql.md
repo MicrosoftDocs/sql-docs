@@ -21,12 +21,12 @@ You can uninstall SSMA by using **Add or Remove Programs**.
   
 1.  In Control Panel, open **Add or Remove Programs**.  
   
-2.  Select **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2**, and then click **Remove**.  
+2.  Select **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2**, and then click **Remove**.  
   
 3.  To confirm that you want to uninstall SSMA, click **Yes**.  
   
 ## Uninstalling the Extension Pack  
-If you are sure your migrated databases do not use objects in the **sysdb.ssma_DB2** schema, you can remove the extension pack by deleting it from the schema - there are is no Windows uninstall  
+If you are sure your migrated databases do not use objects in the **sysdb.ssma_DB2** schema, you can remove the extension pack by deleting it from the schema - there is no Windows uninstall.  
   
 ## See Also  
 [Installing SSMA for DB2 Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  

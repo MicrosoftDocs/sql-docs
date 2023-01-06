@@ -23,7 +23,7 @@ ms.author: maghan
 
   Scripts the custom INSERT, UPDATE, and DELETE procedures for all table articles in a publication in which the auto-generate custom procedure schema option is enabled. **sp_scriptpublicationcustomprocs** is particularly useful for setting up subscriptions for which the snapshot is applied manually.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

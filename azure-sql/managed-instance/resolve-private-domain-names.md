@@ -22,16 +22,16 @@ In this article, learn how Azure SQL Managed Instance resolves private domain na
 
 In certain situations, it's necessary for the SQL Server database engine to resolve domain names that don't exist in public DNS records. For example, the following scenarios are likely to involve private domain names:
 
-* Sending emails by using [database mail](/../sql/relational-databases/database-mail/database-mail.md)
-* Accessing remote data sources by using [linked servers](/../sql/relational-databases/linked-servers/linked-servers-database-engine.md)
+* Sending emails by using [database mail](/sql/relational-databases/database-mail/database-mail)
+* Accessing remote data sources by using [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine)
 * Replicating data to the cloud by using the [Managed Instance Link](managed-instance-link-feature-overview.md).
 
-Azure SQL Managed Instance is deployed in an Azure [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview.md) and uses Azure-provided name resolution by default to resolve Internet addresses. 
+Azure SQL Managed Instance is deployed in an Azure [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) and uses Azure-provided name resolution by default to resolve Internet addresses. 
 
 To change the default name resolution behavior and enable the resolution of private domain names, you can do one of the following: 
 
 - Use Azure private DNS zones: [What is Azure Private DNS?](/azure/dns/private-dns-overview)
-- Use a custom DNS server: [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances.md#name-resolution-that-uses-your-own-dns-server)
+- Use a custom DNS server: [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server)
 
 ## Considerations
 

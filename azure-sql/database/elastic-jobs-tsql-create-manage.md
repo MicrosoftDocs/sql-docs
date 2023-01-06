@@ -1340,11 +1340,8 @@ Shows all members of all target groups.
 |**elastic_pool_name**|nvarchar(128)|Name of the Elastic pool contained in the target group. Specified only when target_type is 'SqlElasticPool'.|
 |**shard_map_name**|nvarchar(128)|Name of the shard maps contained in the target group. Specified only when target_type is 'SqlShardMap'.|
 
-## Resources
-
-- ![Topic link icon](/sql/database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
-
 ## Next steps
 
+- [Transact-SQL syntax conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
 - [Create and manage Elastic Jobs using PowerShell](elastic-jobs-powershell-create.md)
 - [Authorization and Permissions](/dotnet/framework/data/adonet/sql/authorization-and-permissions-in-sql-server)

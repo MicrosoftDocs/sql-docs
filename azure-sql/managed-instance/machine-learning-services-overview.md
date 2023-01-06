@@ -53,7 +53,7 @@ If the SQL Managed Instance you're using is part of a failover group, do the fol
 
 - Run the `sp_configure` and `RECONFIGURE` commands on each instance of the failover group to enable Machine Learning Services.
 
-- Install the R/Python libraries on a user database rather than the master database.
+- Install the R/Python libraries on a user database rather than the `master` database.
 
 ## Next steps
 

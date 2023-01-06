@@ -86,7 +86,7 @@ To understand the permissions that are granted to each role, see the role descri
 
 This system is flexible, which means it can be complicated if the people setting it up want to be precise. To simplify matters it helps to create roles, assign permissions to roles, and then add groups of people to the roles. And it's easier if the database development team separates activity by schema and then grants role permissions to a whole schema instead of to individual tables or procedures. Real world scenarios are complex and business needs can create unexpected security requirements.
 
-[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+[!INCLUDE[database-engine-permissions](../../includes/database-engine-permissions.md)]
 
 ### Security classes
 

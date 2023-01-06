@@ -21,13 +21,13 @@ author: rwestMSFT
 ms.author: randolphwest
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Verifies the validity of the specified plan guide. The `sys.fn_validate_plan_guide` function returns the first error message that is encountered when the plan guide is applied to its query. An empty rowset is returned when the plan guide is valid. Plan guides can become invalid after changes are made to the physical design of the database. For example, if a plan guide specifies a particular index and that index is subsequently dropped, the query will no longer be able to use the plan guide.  
   
  By validating a plan guide, you can determine whether the guide can be used by the optimizer without modification. Based on the results of the function, you can decide to drop the plan guide and retune the query or modify the database design, for example, by re-creating the index specified in the plan guide.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

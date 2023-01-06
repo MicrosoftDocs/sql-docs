@@ -24,7 +24,7 @@ dev_langs:
 
   Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and generate detailed information about how the statements were executed in the form of a well-defined XML document.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

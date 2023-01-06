@@ -19,7 +19,7 @@ summary: |
   This article provides answers to frequently asked questions for customers considering a database in the Azure SQL Database Hyperscale service tier, referred to as just Hyperscale in the remainder of this FAQ. This article describes the scenarios that Hyperscale supports and the features that are compatible with Hyperscale.
   
   - This FAQ is intended for readers who have a brief understanding of the Hyperscale service tier and are looking to have their specific questions and concerns answered.
-  - This FAQ isn’t meant to be a guidebook or answer questions on how to use a Hyperscale database. For an introduction to Hyperscale, we recommend you refer to the [Azure SQL Database Hyperscale](service-tier-hyperscale.md) documentation.
+  - This FAQ isn't meant to be a guidebook or answer questions on how to use a Hyperscale database. For an introduction to Hyperscale, we recommend you refer to the [Azure SQL Database Hyperscale](service-tier-hyperscale.md) documentation.
   
 
 sections:
@@ -103,7 +103,7 @@ sections:
       - question: |
           Can I bring my on-premises or IaaS SQL Server license to Hyperscale?
         answer: |
-          Yes, [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) is available for Hyperscale. Every SQL Server Standard core can map to 1 Hyperscale vCores. Every SQL Server Enterprise core can map to 4 Hyperscale vCores. You don’t need a SQL license for secondary replicas. The Azure Hybrid Benefit price will be automatically applied to Read Scale-out (secondary) replicas.
+          Yes, [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) is available for Hyperscale. Every SQL Server Standard core can map to 1 Hyperscale vCores. Every SQL Server Enterprise core can map to 4 Hyperscale vCores. You don't need a SQL license for secondary replicas. The Azure Hybrid Benefit price will be automatically applied to Read Scale-out (secondary) replicas.
           
       - question: |
           What kind of workloads is Hyperscale designed for?

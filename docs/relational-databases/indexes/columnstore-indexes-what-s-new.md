@@ -14,13 +14,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Learn about which columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+  Learn about which columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 ## Feature summary for product releases
 
  This table summarizes key features for columnstore indexes and the products in which they are available.
 
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<sup>1</sup>|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]<sup>1</sup>|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<sup>1</sup>|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]<sup>1</sup>|[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]|
 |*----|---|---|---|---|---|---|---|---|
 |Batch mode execution for multi-threaded queries<sup>2</sup>|yes|yes|yes|yes|yes|yes|yes|yes|
 |Batch mode execution for single-threaded queries|||yes|yes|yes|yes|yes|yes|
@@ -102,7 +102,7 @@ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the tup
 
 - String Predicate pushdown speeds up queries that compare strings of type VARCHAR/CHAR or NVARCHAR/NCHAR. This applies to the common comparison operators and includes operators such as `LIKE` that use bitmap filters. This works with all supported collations. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition.
 
-- Enhancements for batch mode operations by leveraging vector based hardware capabilities. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects the level of CPU support for AVX 2 (Advanced Vector Extensions) and SSE 4 (Streaming SIMD Extensions 4) hardware extensions, and uses them if supported. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition.
+- Enhancements for batch mode operations by leveraging vector based hardware capabilities. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] detects the level of CPU support for AVX 2 (Advanced Vector Extensions) and SSE 4 (Streaming SIMD Extensions 4) hardware extensions, and uses them if supported. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition.
 
 ### Performance for database compatibility level 130
 

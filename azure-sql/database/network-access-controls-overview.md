@@ -51,7 +51,7 @@ However, doing so affects the following features that run on virtual machines in
 
 ### Import Export Service
 
-Import Export Service doesn't work when **Allow access to Azure services** is set to **OFF**. However you can work around the problem [by manually running sqlpackage.exe from an Azure VM or performing the export](./database-import-export-azure-services-off.md) directly in your code by using the DACFx API.
+Import Export Service doesn't work when **Allow access to Azure services** is set to **OFF**. However you can work around the problem [by manually running SqlPackage from an Azure VM or performing the export](./database-import-export-azure-services-off.md) directly in your code by using the DACFx API.
 
 ### Data Sync
 

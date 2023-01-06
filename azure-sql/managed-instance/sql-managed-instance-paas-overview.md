@@ -172,9 +172,9 @@ SQL Managed Instance authentication refers to how users prove their identity whe
 
   This authentication method uses identities managed by Azure Active Directory and is supported for managed and integrated domains. Use Active Directory authentication (integrated security) [whenever possible](/sql/relational-databases/security/choose-an-authentication-mode).
 
-- **Windows Authentication for Azure AD Principals (Preview)**:
+- **Windows Authentication for Azure AD Principals**:
 
-    [Kerberos authentication for Azure AD Principals](../managed-instance/winauth-azuread-overview.md) (Preview) enables Windows Authentication for Azure SQL Managed Instance. Windows Authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
+    [Kerberos authentication for Azure AD Principals](../managed-instance/winauth-azuread-overview.md) enables Windows Authentication for Azure SQL Managed Instance. Windows Authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
 
 ### Authorization
 

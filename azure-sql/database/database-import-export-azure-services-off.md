@@ -61,7 +61,7 @@ The following steps show you how to connect to your virtual machine using a remo
 
 [Download and install the latest version of SqlPackage](/sql/tools/sqlpackage-download).
 
-For additional information, see [SqlPackage.exe](/sql/tools/sqlpackage).
+For additional information, see [SqlPackage](/sql/tools/sqlpackage).
 
 ## Create a firewall rule to allow the VM access to the database
 
@@ -91,10 +91,10 @@ To export an Azure SQL Database using the [SqlPackage](/sql/tools/sqlpackage) co
 
 We recommend the use of the SqlPackage utility for scale and performance in most production environments. For a SQL Server Customer Advisory Team blog about migrating using BACPAC files, see [Migrating from SQL Server to Azure SQL Database using BACPAC Files](/archive/blogs/sqlcat/migrating-from-sql-server-to-azure-sql-database-using-bacpac-files).
 
-This example shows how to export a database using SqlPackage.exe with Active Directory Universal Authentication. Replace with values that are specific to your environment.
+This example shows how to export a database using SqlPackage with Active Directory Universal Authentication. Replace with values that are specific to your environment.
 
 ```cmd
-SqlPackage.exe /a:Export /tf:testExport.bacpac /scs:"Data Source=<servername>.database.windows.net;Initial Catalog=MyDB;" /ua:True /tid:"apptest.onmicrosoft.com"
+SqlPackage /a:Export /tf:testExport.bacpac /scs:"Data Source=<servername>.database.windows.net;Initial Catalog=MyDB;" /ua:True /tid:"apptest.onmicrosoft.com"
 ```
 
 ## Import a database using SqlPackage
@@ -106,7 +106,7 @@ For scale and performance, we recommend using SqlPackage in most production envi
 The following SqlPackage command imports the **AdventureWorks2017** database from local storage to an Azure SQL Database. It creates a new database called **myMigratedDatabase** with a **Premium** service tier and a **P6** Service Objective. Change these values as appropriate for your environment.
 
 ```cmd
-sqlpackage.exe /a:import /tcs:"Data Source=<serverName>.database.windows.net;Initial Catalog=myMigratedDatabase>;User Id=<userId>;Password=<password>" /sf:AdventureWorks2017.bacpac /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
+SqlPackage /a:import /tcs:"Data Source=<serverName>.database.windows.net;Initial Catalog=myMigratedDatabase>;User Id=<userId>;Password=<password>" /sf:AdventureWorks2017.bacpac /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
 ```
 
 > [!IMPORTANT]
@@ -115,7 +115,7 @@ sqlpackage.exe /a:import /tcs:"Data Source=<serverName>.database.windows.net;Ini
 This example shows how to import a database using SqlPackage with Active Directory Universal Authentication.
 
 ```cmd
-sqlpackage.exe /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.database.windows.net /ua:True /tid:"apptest.onmicrosoft.com"
+SqlPackage /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.database.windows.net /ua:True /tid:"apptest.onmicrosoft.com"
 ```
 
 ## Performance considerations

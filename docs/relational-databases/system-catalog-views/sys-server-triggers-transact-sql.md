@@ -19,7 +19,7 @@ dev_langs:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 ---
 # sys.server_triggers (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains the set of all server-level DDL triggers with object_type of TR or TA. In the case of CLR triggers, the assembly must be loaded into the **master** database. All server-level DDL trigger names exist in a single, global scope.  
   

@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 |Feature|Description|  
 |-------------|-----------------|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not support replication to or from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not support replication to or from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)].|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not support replication to or from [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
   
 ## See Also  

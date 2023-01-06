@@ -24,7 +24,7 @@ dev_langs:
 
   Creates a full-text index on a table or indexed view in a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Only one full-text index is allowed per table or indexed view, and each full-text index applies to a single table or indexed view. A full-text index can contain up to 1024 columns.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -13,7 +13,7 @@ ms.custom:
   - "sqldbrb=1"
 ---
 
-# Azure SQL Database and Managed Instance Import/Export service takes a long time to import or export a database
+# Azure SQL Database and SQL Managed Instance Import/Export service takes a long time to import or export a database
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
@@ -21,7 +21,7 @@ When you use the Import/Export service, the process might take longer than expec
 
 ## Azure SQL Database Import/Export service
 
-The Azure SQL Database Import/Export service is a REST-based web service that runs in every Azure data center. This service is called when you use either the [Import database](database-import.md#using-azure-portal) or [Export](./database-import.md#using-azure-portal) option to move your database in the Azure portal. The service provides free request queuing and compute services to perform imports and exports between Azure SQL Database and Azure Blob storage.
+The Azure SQL Database Import/Export service is a REST-based web service that runs in every Azure data center. This service is called when you use either the [Import or Export a database](database-import.md#use-azure-portal) option to move your database in the Azure portal. The service provides free request queuing and compute services to perform imports and exports between Azure SQL Database and Azure Blob storage.
 
 The import and export operations don't represent a traditional physical database backup but instead a logical backup of the database that uses a special BACPAC format. The BACPAC format lets you avoid having to use a physical format that might vary between versions of Microsoft SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 

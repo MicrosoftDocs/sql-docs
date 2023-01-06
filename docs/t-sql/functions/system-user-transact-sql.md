@@ -31,7 +31,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || 
 
   Allows a system-supplied value for the current login to be inserted into a table when no default value is specified.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -124,7 +124,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Using SYSTEM_USER to return the current system user name  
  The following example returns the current value of `SYSTEM_USER`.  

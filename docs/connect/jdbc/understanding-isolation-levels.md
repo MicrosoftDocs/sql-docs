@@ -68,7 +68,7 @@ or you can use:
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 ```
 
-For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isolation levels, see "Isolation Levels in the [!INCLUDE[ssDE](../../includes/ssde_md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
+For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isolation levels, see "Isolation Levels in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
 
 ## See also
 

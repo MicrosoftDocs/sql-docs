@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 
 Specifies ISO compliant behavior of the Equals (=) and Not Equal To (<>) comparison operators when they are used with null values in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 
@@ -37,7 +37,7 @@ Specifies ISO compliant behavior of the Equals (=) and Not Equal To (<>) compari
 SET ANSI_NULLS { ON | OFF }
 ```
 
-### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+### Syntax for [!INCLUDE[ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
 SET ANSI_NULLS ON
 ```

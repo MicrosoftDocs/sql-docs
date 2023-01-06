@@ -90,7 +90,7 @@ Supported version and edition upgrades:
 - [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true)
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md)
-- [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2022.md)
+- [SQL Server 2022](../../database-engine/install-windows/supported-version-and-edition-upgrades-2022.md)
 
 Tools:
 
@@ -149,7 +149,7 @@ If you're not ready to upgrade, and you're not ready to move to the cloud, you h
 
 - **Application support**: This is the best option if your application requires recertification on a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is common for applications that don't use [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 - **Consistent infrastructure**: You don't have to change your infrastructure in any way.
-- **Technical support**: If you have Software Assurance, or another support plan, you can continue receiving technical support from [!INCLUDE[msCoName](../../includes/msconame-md.md)] on your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product. This is the only way to get support for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)].
+- **Technical support**: If you have Software Assurance, or another support plan, you can continue receiving technical support from [!INCLUDE[msCoName](../../includes/msconame-md.md)] on your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product. This is the only way to get support for [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)].
 - **Time**: This option is available for three years, giving you extra time to certify your applications.
 
 ### Considerations
@@ -173,10 +173,10 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 
 ### Benefits
 
-- **Free Extended Security Updates**: If you choose to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as-is, using [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], you can get free Extended Security Updates for three years past the end of support date, even without having Software Assurance.
+- **Free Extended Security Updates**: If you choose to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as-is, using [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], you can get free Extended Security Updates for three years past the end of support date, even without having Software Assurance.
 
   > [!TIP]  
-  > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+  > Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/sql2008r2-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
 
 - **Cost-saving**: You save the cost of hardware and server software, only paying for hourly usage.
 - **Lift-and-shift**: You can lift-and-shift your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and application infrastructure into the cloud with minimal or no changes.
@@ -250,33 +250,6 @@ Tools:
 - [Data Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## Non-SQL options
-
-For certain types of applications, you may also consider a non-relational or NoSQL solution, such as Azure Cosmos DB or Azure table storage.
-
-### Azure Cosmos DB
-
-Consider Azure Cosmos DB for modern, scalable, mobile, and web applications that use JSON data and require a combination of robust querying and transactional data processing. For more info, see [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/). For info about importing data, see [Import data to Cosmos DB](/azure/cosmos-db/import-data/).
-
-Azure Cosmos DB has the following benefits:
-
-- Your documents are indexed and you can use familiar SQL syntax to query them.
-- The database is schema-free.
-- You can add properties to documents without having to rebuild indexes.
-- You get JSON and JavaScript support right inside the database engine.
-- You get native support for geospatial data and integration with other Azure Services including Azure Search, HDInsight, and Data Factory.
-- You get low latency, high-performance storage with reserved throughput levels.
-
-### Azure table storage
-
-Consider Azure table storage to store petabytes of semi-structured data in a cost-effective solution. For more info, see [Table Storage](https://azure.microsoft.com/services/storage/tables/).
-
-Azure table storage has the following benefits:
-
-- You can evolve your apps and your table schema without taking the data offline.
-- You can scale up without sharding your dataset.
-- You get geo-redundant storage that replicates data across multiple regions.
-
 ## Lifecycle dates
 
 The following table provides an approximation of lifecycle dates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](/lifecycle/products/?terms=sql%20server) page.
@@ -295,7 +268,7 @@ The following table provides an approximation of lifecycle dates for [!INCLUDE[s
 | [SQL Server 2000](/lifecycle/products/?terms=SQL%20Server%202000) | 2000 | 2005 | 2013 |
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+> Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/sql2008r2-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
 
 > [!IMPORTANT]  
 > If any discrepancy exists between this table, and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle page, then the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.

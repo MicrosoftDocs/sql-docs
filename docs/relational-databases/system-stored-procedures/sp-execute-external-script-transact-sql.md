@@ -56,7 +56,7 @@ For Machine Learning Services, [Python](../../machine-learning/concepts/extensio
 To execute **sp_execute_external_script**, you must first enable Machine Learning Services. For more information, see the [Machine Learning Services in Azure SQL Managed Instance documentation](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ## Syntax

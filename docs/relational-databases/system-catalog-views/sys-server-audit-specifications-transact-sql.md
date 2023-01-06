@@ -19,7 +19,7 @@ dev_langs:
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 ---
 # sys.server_audit_specifications (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains information about the server audit specifications in a SQL Server audit on a server instance. For more information on SQL Server Audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

@@ -32,14 +32,14 @@ dev_langs:
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (SQL Graph)
-[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Creates a new SQL graph table as either a `NODE` or an `EDGE` table. 
   
 > [!NOTE]   
 >  For standard Transact-SQL statements, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

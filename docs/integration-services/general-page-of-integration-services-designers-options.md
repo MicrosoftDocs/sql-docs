@@ -40,7 +40,7 @@ ms.author: chugu
  Select the default scripting language for new Script tasks and Script components.  
   
  **Update connection strings to use new provider names**  
- When opening or upgrading [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] packages, update connection strings to use the names for the following providers, for the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
+ When opening or upgrading [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] packages, update connection strings to use the names for the following providers, for the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB provider  
   

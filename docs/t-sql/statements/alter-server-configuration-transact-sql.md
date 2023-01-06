@@ -23,7 +23,7 @@ dev_langs:
 
 Modifies global configuration settings for the current server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 
@@ -230,7 +230,7 @@ For more information, see [Change the HADR Cluster Context of Server Instance &#
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 ON  
-Enables the buffer pool extension option. This option extends the size of the buffer pool by using nonvolatile storage. Nonvolatile storage such as solid-state drives (SSD) persist clean data pages in the pool. For more information about this feature, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).The buffer pool extension isn't available in every SQL Server edition. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+Enables the buffer pool extension option. This option extends the size of the buffer pool by using nonvolatile storage. Nonvolatile storage such as solid-state drives (SSD) persist clean data pages in the pool. For more information about this feature, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).The buffer pool extension isn't available in every SQL Server edition. For more information, see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
 Defines the directory path and name of the buffer pool extension cache file. The file extension must be specified as .BPE. Turn off BUFFER POOL EXTENSION before you modify FILENAME.  
@@ -328,7 +328,7 @@ Requires:
 - `CONTROL SERVER` permission for the HADR cluster context option.  
 - `ALTER SERVER STATE` permission for the buffer pool extension option.  
   
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
   
 ## Examples  
   

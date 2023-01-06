@@ -59,7 +59,7 @@ By default, only members of the **sysadmin** fixed server role can delete alerts
 
 ### To delete an alert
 
-1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. On the Standard bar, select **New Query**.  
 

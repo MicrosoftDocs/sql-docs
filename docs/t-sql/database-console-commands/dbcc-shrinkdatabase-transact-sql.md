@@ -4,7 +4,7 @@ description: "DBCC SHRINKDATABASE shrinks the size of the data and log files in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, KevinConanMSFT, dplessMSFT
-ms.date: "08/30/2022"
+ms.date: "01/06/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"

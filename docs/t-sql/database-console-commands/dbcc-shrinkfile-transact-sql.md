@@ -131,7 +131,8 @@ If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due 
 
 This is an optional parameter. The default value when not specified = 1 minute. 
 
-It is the wait time (an integer value specified in minutes) that the shrink operation Sch-M lock request will wait with low priority when executing the command. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed. MAX_DURATION time is always in minutes, and the word MINUTES can be omitted. 
+The shrink operation's Sch-M lock request will wait with low priority when executing the command for the MAX_DURATION in minutes. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed. MAX_DURATION time is always in minutes, and the word MINUTES can be omitted. 
+
 
 #### ABORT_AFTER_WAIT = [ **SELF** | BLOCKERS ]
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

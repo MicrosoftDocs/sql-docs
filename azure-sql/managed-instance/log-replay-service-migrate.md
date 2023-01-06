@@ -243,9 +243,10 @@ WITH IDENTITY = 'MANAGED IDENTITY'
 
 ## Upload backups to your Blob Storage account
 
-When your blob container is ready and you've confirmed that your managed instance can access the container, you can begin uploading your backups to your Blob Storage account. You can either copy your backups to your Blob Storage account or, if your environment allows it, starting with SQL Server versions 2012 SP1 CU2 and SQL Server 2014, you can take backups from SQL Server directly to your Blob Storage account by using the [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) command. 
+When your blob container is ready and you've confirmed that your managed instance can access the container, you can begin uploading your backups to your Blob Storage account. You can either:
 
-
+- Copy your backups to your Blob Storage account.
+- Take backups from SQL Server directly to your Blob Storage account by using the [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) command, if your environment allows it (starting with SQL Server versions 2012 SP1 CU2 and SQL Server 2014). 
 
 ### Copy existing backups to your Blob Storage account
 

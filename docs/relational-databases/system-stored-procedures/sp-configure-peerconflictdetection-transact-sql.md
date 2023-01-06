@@ -27,7 +27,7 @@ ms.author: maghan
 > [!IMPORTANT]
 > You can't use `sp_configure_peerconflictdetection` to enable `lastwriter`. To change the conflict resolution of an existing replication topology, drop the publication and recreate it.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,7 +78,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- sp_configure_peerconflictdetection is used in peer-to-peer transactional replication. To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions; and detection must be enabled for all nodes.  
+ sp_configure_peerconflictdetection is used in peer-to-peer transactional replication. To use conflict detection, all nodes must be running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later versions; and detection must be enabled for all nodes.  
   
 ## Permissions  
  Requires membership in the sysadmin fixed server role or db_owner fixed database role.  

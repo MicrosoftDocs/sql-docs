@@ -31,7 +31,7 @@ This function returns the amount of time that [!INCLUDE[ssNoVersion](../../inclu
 > [!NOTE]  
 >  If the time returned in @@CPU_BUSY or @@IO_BUSY exceeds 49 days (approximately) of cumulative CPU time, you may receive an arithmetic overflow warning. In that case, the value of the `@@CPU_BUSY`, `@@IO_BUSY` and `@@IDLE` variables are not accurate.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

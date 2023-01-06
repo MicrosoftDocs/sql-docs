@@ -40,7 +40,7 @@ If you have not used Elastic jobs, [learn more about the job automation concepts
 
 ## Credentials for running jobs
 
-Jobs use [database scoped credentials](/sql/t-sql/statements/create-database-scoped-credential-transact-sql) to connect to the databases specified by the target group upon execution. If a target group contains servers or pools, these database scoped credentials are used to connect to the master database to enumerate the available databases.
+Jobs use [database scoped credentials](/sql/t-sql/statements/create-database-scoped-credential-transact-sql) to connect to the databases specified by the target group upon execution. If a target group contains servers or pools, these database scoped credentials are used to connect to the `master` database to enumerate the available databases.
 
 Setting up the proper credentials to run a job can be a little confusing, so keep the following points in mind:
 
@@ -58,7 +58,7 @@ A few best practice considerations for working with Elastic Jobs:
 
 - Limit usage of the APIs to trusted individuals.
 - Credentials should have the least privileges necessary to perform the job step. For more information, see [Authorization and Permissions](/dotnet/framework/data/adonet/sql/authorization-and-permissions-in-sql-server).
-- When using a server and/or pool target group member, it is highly suggested to create a separate credential with rights on the master database to view/list databases that is used to expand the database lists of the server(s) and/or pool(s) prior to the job execution.
+- When using a server and/or pool target group member, it is highly suggested to create a separate credential with rights on the `master` database to view/list databases that is used to expand the database lists of the server(s) and/or pool(s) prior to the job execution.
 
 ## Agent performance, capacity, and limitations
 

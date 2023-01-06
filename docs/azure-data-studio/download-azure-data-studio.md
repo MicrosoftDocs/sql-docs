@@ -1,11 +1,11 @@
 ---
 title: Download and install Azure Data Studio
 description: Download and install Azure Data Studio for Windows, macOS, or Linux. This article provides release dates, version numbers, system requirements, and download links.
-author: tdoshin
-ms.author: timioshin
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 11/23/2022
-ms.prod: azure-data-studio
+ms.date: 12/27/2022
+ms.service: azure-data-studio
 ms.topic: overview
 ms.custom:
   - seodec18
@@ -25,16 +25,30 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.41 is the latest general availability (GA) version.
+Azure Data Studio 1.40.2 is the latest general availability (GA) version.
 
-- Release number: 1.41
-- Release date: November 23, 2022
+- Release number: 1.40.2
+- Release date: December 27, 2022
 
-| Platform | Download |
-|----------|----------|
-| Windows | [User installer](https://go.microsoft.com/fwlink/?linkid=2215273) (recommended)<br>[System installer](https://go.microsoft.com/fwlink/?linkid=2215525)<br>[.zip file](https://go.microsoft.com/fwlink/?linkid=2215526) |
-| macOS | [universal](https://go.microsoft.com/fwlink/?linkid=2215527) <br> [x64](https://go.microsoft.com/fwlink/?linkid=2215420)<br>[arm64](https://go.microsoft.com/fwlink/?linkid=2215346) |
-| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2215528)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2215347)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=2215421) |
+|Platform |Type             |Download |
+| --------|-----------------|-------- |
+|Windows  |User Installer   |[64 bit][win-user] |
+|         |System Installer |[64 bit][win-system] |
+|         |.zip             |[64 bit][win-zip] |
+|Linux    |.tar.gz          |[64 bit][linux-zip] |
+|         |.deb             |[64 bit][linux-deb] |
+|         |.rpm             |[64 bit][linux-rpm] |
+|Mac      |.zip             |[Universal][osx-universal]&emsp;[Intel Chip][osx-zip]&emsp;[Apple Silicon][osx-arm64]|
+
+[win-user]: https://go.microsoft.com/fwlink/?linkid=2215273
+[win-system]: https://go.microsoft.com/fwlink/?linkid=2215525
+[win-zip]: https://go.microsoft.com/fwlink/?linkid=2215526
+[osx-universal]: https://go.microsoft.com/fwlink/?linkid=2215527
+[osx-zip]: https://go.microsoft.com/fwlink/?linkid=2215420
+[osx-arm64]: https://go.microsoft.com/fwlink/?linkid=2215346
+[linux-zip]: https://go.microsoft.com/fwlink/?linkid=2215421
+[linux-rpm]: https://go.microsoft.com/fwlink/?linkid=2215347
+[linux-deb]: https://go.microsoft.com/fwlink/?linkid=2215528
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 
@@ -72,7 +86,7 @@ We recommend the *user installer*, which simplifies installations and updates an
 
 You can also install Azure Data Studio by using a command prompt script.
 
-For Windows, install Azure Data Studio in the background without prompts by doing the following:
+For Windows, install Azure Data Studio in the background without prompts using the following steps:
 
 1. Open the command prompt window with elevated permissions.
 
@@ -107,6 +121,12 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 3. To make Azure Data Studio available in Launchpad, drag the *Azure Data Studio.app* file to the *Applications* folder.
 
+> [!NOTE]
+> For Apple Silicon users, please make sure you have Rosetta 2 installed. Some backend services are yet to be converted to native ARM64 binaries. You can run the following command in a Terminal window to install Rosetta 2.
+> ```bash
+> /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+> ```
+  
 ### Linux installation
 
 #### Install with a .deb file
@@ -244,7 +264,7 @@ To apply environment updates offline, [install the latest version](#download-and
 
 ## Move user settings
 
-If you're updating SQL Operations Studio to Azure Data Studio and want to keep your settings, keyboard shortcuts, or code snippets, do the following:
+If you're updating SQL Operations Studio to Azure Data Studio and want to keep your settings, keyboard shortcuts, or code snippets, complete the following steps:
 
 > [!NOTE]
 > If you've already installed Azure Data Studio or you've never installed or customized SQL Operations Studio, you can ignore this section.
@@ -273,7 +293,7 @@ If you installed Azure Data Studio with a .zip file or other archive, delete tha
 
 ## Uninstall Azure Data Studio from macOS
 
-You can [uninstall apps](https://support.apple.com/guide/mac-help/install-and-uninstall-other-apps-mh35835/mac) from the internet or disc on Mac by doing the following:
+You can [uninstall apps](https://support.apple.com/guide/mac-help/install-and-uninstall-other-apps-mh35835/mac) from the internet or disc on Mac by completeing the following steps:
 
 1. Select the **Finder icon** in the Dock, and then select **Applications** in the **Finder** sidebar.
 

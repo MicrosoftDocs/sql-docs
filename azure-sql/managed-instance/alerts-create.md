@@ -102,7 +102,7 @@ The following managed instance metrics are available for alerting configuration:
 
       | Option | Behavior |
       | ------ | -------- |
-      | Global | The action groups service decides where to store the action group. The action group is persisted in at least two regions to ensure regional resiliency. Processing of actions may be done in any [geographic region](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).<br></br>Voice, SMS and email actions performed as the result of [service health alerts](/azure/azure-monitor/service-health/alerts-activity-log-service-notifications-portal.md) are resilient to Azure live-site-incidents. |
+      | Global | The action groups service decides where to store the action group. The action group is persisted in at least two regions to ensure regional resiliency. Processing of actions may be done in any [geographic region](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).<br></br>Voice, SMS and email actions performed as the result of [service health alerts](/azure/service-health/alerts-activity-log-service-notifications-portal) are resilient to Azure live-site-incidents. |
       | Regional | The action group is stored within the selected region. The action group is [zone-redundant](/azure/availability-zones/az-region#highly-available-services). Processing of actions is performed within the region.</br></br>Use this option if you want to ensure that the processing of your action group is performed within a specific [geographic boundary](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview). |
 
       :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-annotated.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-annotated.png" alt-text="Screenshot of Basics tab of the Create an action group dialog box in the Azure portal.":::
@@ -117,7 +117,7 @@ The following managed instance metrics are available for alerting configuration:
 
          * **Details**: Based on the selected notification type, enter an email address, phone number, or other information.
 
-         * **Common alert schema**: You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor. For more information about this schema, see [Common alert schema](/azure/azure-monitor/alerts/alerts-common-schema.md).
+         * **Common alert schema**: You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor. For more information about this schema, see [Common alert schema](/azure/azure-monitor/alerts/alerts-common-schema).
 
        :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-notifications.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-notifications.png" alt-text="Screenshot of the Notifications tab of the Create action group dialog box. Configuration information for an email notification is visible.":::
 

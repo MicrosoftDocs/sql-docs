@@ -93,16 +93,16 @@ The following tips and tools can help you plan and implement your migration.
 
 - **Migration tools.** Migration is supported through [Data Migration Assistant (DMA)](../../dma/dma-overview.md).
 
-- **Backup and restore.** A backup taken on [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] and later, can be restored to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] without changing its compatibility level, as long as the database backup has a compatibility level of `100` or higher.
+- **Backup and restore.** A backup taken on [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, can be restored to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] without changing its compatibility level, as long as the database backup has a compatibility level of `100` or higher.
 
   Databases with a compatibility level of `90`, including backups taken on [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)], are automatically upgraded to a compatibility level of `100` when restored to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
-- **Log shipping.** Log shipping is supported if the primary is running [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] SP3 or later, or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] SP2 or later, and the secondary is running [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
+- **Log shipping.** Log shipping is supported if the primary is running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP3 or later, or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] SP2 or later, and the secondary is running [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
    > [!WARNING]
-   > If an automatic or manual failover happens and the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] instance becomes primary, [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] instance becomes secondary and cannot receive changes from primary.
+   > If an automatic or manual failover happens and the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] instance becomes primary, [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] instance becomes secondary and cannot receive changes from primary.
 
-- **Bulk load.** Tables can be bulk copied from [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
+- **Bulk load.** Tables can be bulk copied from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
 ## [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] edition upgrade
 

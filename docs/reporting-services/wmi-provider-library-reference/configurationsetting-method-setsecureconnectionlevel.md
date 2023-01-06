@@ -48,7 +48,7 @@ public void SetSecureConnectionLevel(Int32 Level,
   
 -   When the value is set, the SecureConnectionLevel element in the report server configuration file is changed, and the **URLRoot** element in the configuration file is set to use "https://" if the specified *Level* is greater than or equal to 1, or "http://" if the specified *Level* is 0.  
   
- In [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SecureConnectionLevel is made an on/off switch, default value is 0. For any value greater than or equal to 1 passed through SetSecureConnectionLevel method API, TLS is considered on and the configuration property SecureConnectionLevel is set accordingly in the rsreportserver.config file. Values of 2 and 3 are still allowed for backward compatibility.  
+ In [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], SecureConnectionLevel is made an on/off switch, default value is 0. For any value greater than or equal to 1 passed through SetSecureConnectionLevel method API, TLS is considered on and the configuration property SecureConnectionLevel is set accordingly in the rsreportserver.config file. Values of 2 and 3 are still allowed for backward compatibility.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

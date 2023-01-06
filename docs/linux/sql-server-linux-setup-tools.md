@@ -211,7 +211,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools unixodbc-dev
 
 ## Offline installation
 
-[!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
+[!INCLUDE [offline-package-install-intro](includes/offline-package-install-intro.md)]
 
 1. First, locate and copy the **mssql-tools** package for your Linux distribution:
 

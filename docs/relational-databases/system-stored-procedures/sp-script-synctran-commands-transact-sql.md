@@ -23,7 +23,7 @@ ms.author: maghan
 
   Generates a script that contains the **sp_addsynctrigger** calls to be applied at Subscribers for updatable subscriptions. There is one **sp_addsynctrigger** call for each article in the publication. The generated script also contains the **sp_addqueued_artinfo** calls that create the **MSsubsciption_articles** table that is needed to process queued publications. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

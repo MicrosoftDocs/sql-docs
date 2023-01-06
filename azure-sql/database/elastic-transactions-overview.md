@@ -265,9 +265,9 @@ The following limitations currently apply to elastic database transactions in *S
 * Only client-coordinated transactions from a .NET application are supported. Server-side support for T-SQL such as BEGIN DISTRIBUTED TRANSACTION is planned, but not yet available.
 * Transactions across WCF services aren't supported. For example, you have a WCF service method that executes a transaction. Enclosing the call within a transaction scope will fail as a [System.ServiceModel.ProtocolException](/dotnet/api/system.servicemodel.protocolexception).
 
-The following limitations currently apply to distributed transactions in *SQL Managed Instance*:
+The following limitations currently apply to distributed transactions (also known as elastic transactions or natively supported distributed transactions) in *SQL Managed Instance*:
 
-* Only transactions across databases in managed instances are supported. Other [X/Open XA](https://en.wikipedia.org/wiki/X/Open_XA) resource providers and databases outside of Azure SQL Managed Instance can't participate in distributed transactions. That means that distributed transactions can't stretch across on-premises SQL Server and Azure SQL Managed Instance. For distributed transactions on premises, continue to use MSDTC.
+* With this technology, only transactions across databases in managed instances are supported. For all other scenarios that may include [X/Open XA](https://en.wikipedia.org/wiki/X/Open_XA) resource providers and databases outside of Azure SQL Managed Instance you should configure [DTC for Azure SQL Managed Instance](../managed-instance/distributed-transaction-coordinator-dtc.md).
 * Transactions across WCF services aren't supported. For example, you have a WCF service method that executes a transaction. Enclosing the call within a transaction scope will fail as a [System.ServiceModel.ProtocolException](/dotnet/api/system.servicemodel.protocolexception).
 * Azure SQL Managed Instance must be part of a [Server trust group](../managed-instance/server-trust-group-overview.md) in order to participate in distributed transaction.
 * Limitations of [Server trust groups](../managed-instance/server-trust-group-overview.md) affect distributed transactions.

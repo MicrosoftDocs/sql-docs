@@ -128,7 +128,7 @@ The following tables show the resources available for a single database at each 
 
 ## Tempdb sizes
 
-The following table lists tempdb sizes for single databases in Azure SQL Database: 
+The following table lists `tempdb` sizes for single databases in Azure SQL Database: 
 
 |Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
 |---|---:|---:|---:|

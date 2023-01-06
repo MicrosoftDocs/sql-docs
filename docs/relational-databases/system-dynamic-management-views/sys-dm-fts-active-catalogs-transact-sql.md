@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**is_importing**|**bit**|Indicates whether the full-text catalog is being imported:<br /><br /> 1 = The catalog is being imported.<br /><br /> 2 = The catalog is not being imported.|  
   
 ## Remarks  
- The `is_importing` column was introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ The `is_importing` column was introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
 ## Permissions  
 

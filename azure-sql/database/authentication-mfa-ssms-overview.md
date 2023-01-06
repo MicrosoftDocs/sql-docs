@@ -75,7 +75,7 @@ After the database user or group is created, then the user `steve@gmail.com` can
 
 ## Universal Authentication limitations
 
-- SSMS and SqlPackage.exe are the only tools currently enabled for MFA through Active Directory Universal Authentication.
+- SSMS and SqlPackage are the only tools currently enabled for MFA through Active Directory Universal Authentication.
 - SSMS version 17.2 supports multi-user concurrent access using Universal Authentication with MFA. For SSMS version 17.0 and 17.1, the tool restricts a login for an instance of SSMS using Universal Authentication to a single Azure Active Directory account. To sign in as another Azure AD account, you must use another instance of SSMS. This restriction is limited to Active Directory Universal Authentication; you can sign into a different server using `Azure Active Directory - Password` authentication, `Azure Active Directory - Integrated` authentication, or `SQL Server Authentication`.
 - SSMS supports Active Directory Universal Authentication for Object Explorer, Query Editor, and Query Store visualization.
 - SSMS version 17.2 provides DacFx Wizard support for Export/Extract/Deploy Data database. Once a specific user is authenticated through the initial authentication dialog using Universal Authentication, the DacFx Wizard functions the same way it does for all other authentication methods.
@@ -91,7 +91,7 @@ After the database user or group is created, then the user `steve@gmail.com` can
 - [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](authentication-aad-configure.md)
 - [Create Azure AD guest users and set as an Azure AD admin](authentication-aad-guest-users.md) 
 - [Microsoft SQL Server Data-Tier Application Framework (17.0.0 GA)](https://www.microsoft.com/download/details.aspx?id=55088)  
-- [SQLPackage.exe](/sql/tools/sqlpackage)  
+- [SqlPackage](/sql/tools/sqlpackage)  
 - [Import a BACPAC file to a new database](database-import.md)  
 - [Export a database to a BACPAC file](database-export.md)  
 - C# interface [IUniversalAuthProvider Interface](/dotnet/api/microsoft.sqlserver.dac.iuniversalauthprovider)

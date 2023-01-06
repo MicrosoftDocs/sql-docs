@@ -33,7 +33,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
  This section provides an introduction to word breakers and stemmers, and discusses how full-text search uses the LCID of the column-level language.  
   
 ### Introduction to Word Breakers and Stemmers  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions include a complete new family of word breakers and stemmers that are significantly better than those previously available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions include a complete new family of word breakers and stemmers that are significantly better than those previously available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  The Microsoft Natural Language Group (MS NLG) implemented and supports these new linguistic components.  

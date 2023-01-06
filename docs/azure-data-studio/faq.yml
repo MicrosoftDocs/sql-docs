@@ -2,7 +2,7 @@
 metadata:
   title: Azure Data Studio FAQ
   description: 'Get answers to questions frequently asked about Azure Data Studio, such as "What does it do?", "Who should use it?", and "How much does it cost?".'
-  ms.prod: azure-data-studio
+  ms.service: azure-data-studio
   ms.topic: conceptual
   author: dzsquared
   ms.author: drskwier
@@ -85,11 +85,11 @@ sections:
         answer: |
           The SMO APIs aren't yet available on Linux or macOS in a consumable way. We ported over a subset of the SMO APIs to .NET Core that we needed for Azure Data Studio and we plan to expand as part of the roadmap. The SQL Tools Service is on GitHub: [https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice).
           
-      - question: Do you plan to port the DACFx APIs and/or sqlpackage.exe and/or SSDT to Linux and macOS?
+      - question: Do you plan to port the DACFx APIs and/or SqlPackage and/or SSDT to Linux and macOS?
         answer: |
           Yes.
           
-          [SqlPackage.exe](../tools/sqlpackage/sqlpackage-download.md) is now available on .NET Core for Windows, macOS, and Linux.  SQL Projects (SSDT) functionality is enabled in Azure Data Studio in the [SQL Database Projects extension](extensions/sql-database-project-extension.md).
+          [SqlPackage](../tools/sqlpackage/sqlpackage-download.md) is now available on .NET Core for Windows, macOS, and Linux.  SQL Projects (SSDT) functionality is enabled in Azure Data Studio in the [SQL Database Projects extension](extensions/sql-database-project-extension.md).
           
       - question: Will SQL PowerShell cmdlets be available on Linux and macOS?
         answer: |

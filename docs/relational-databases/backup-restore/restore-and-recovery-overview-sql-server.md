@@ -58,13 +58,13 @@ The following table introduces the possible restore scenarios that are supported
 
 ### Steps to restore a database
 
-To perform a file restore, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] executes two steps:
+To perform a file restore, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] executes two steps:
 
 - Creates any missing database file(s).
 
 - Copies the data from the backup devices to the database file(s).
 
-To perform a database restore, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] executes three steps:
+To perform a database restore, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] executes three steps:
 
 - Creates the database and transaction log files if they don't already exist.
 

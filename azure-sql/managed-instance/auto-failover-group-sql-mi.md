@@ -1,10 +1,10 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of all user databases on a managed instance in Azure SQL Managed Instance.
-author: MladjoA
-ms.author: mlandzic
+author: MilanMSFT
+ms.author: mlazic
 ms.reviewer: mathoma
-ms.date: 09/29/2022
+ms.date: 12/28/2022
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -73,7 +73,7 @@ There is some overlap of content in the following articles, be sure to make chan
 
 ## Failover group architecture
 
-The auto-failover group must be configured on the primary instance and will connect it to the secondary instance in a different Azure region.  All user databases in the instance will be replicated to the secondary instance. System databases like **master** and **msdb** will not be replicated.
+The auto-failover group must be configured on the primary instance and will connect it to the secondary instance in a different Azure region.  All user databases in the instance will be replicated to the secondary instance. System databases like `master` and `msdb` will not be replicated.
 
 The following diagram illustrates a typical configuration of a geo-redundant cloud application using managed instance and auto-failover group:
 
@@ -262,7 +262,9 @@ Be aware of the following limitations:
 - Failover groups can't be created between two instances in the same Azure region.
 - Failover groups can't be renamed. You will need to delete the group and re-create it with a different name.
 - A failover group contains exactly two managed instances. Adding additional instances to the failover group is unsupported. 
-- An instance can participate only in one failover group at any moment. 
+- An instance can participate only in one failover group at any moment.
+- A failover group can't be created between two instances belonging to different Azure tenants.
+- A failover group between two instances belonging to different Azure subscriptions can't be created using Azure portal or Azure CLI. Use Azure PowerShell or REST API instead to create such a failover group. Once created, cross-subscription failover group is regularly visible in Azure portal and all subsequent operations including failovers can be inititiated from Azure portal or Azure CLI. 
 - Database rename isn't supported for databases in failover group. You will need to temporarily delete failover group to be able to rename a database.
 - System databases aren't replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however will not be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
 - Failover groups can't be created between instances if any of them are in an instance pool.

@@ -60,7 +60,7 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 ![Diagram showing entities in connectivity architecture for SQL Managed Instance.](./media/connectivity-architecture-overview/01-connectivity-architecture-entitites.png)
 
-SQL Managed Instance is a single-tenant Platform-as-a-Service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet, and it is typically accessed via its VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services such as Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, Event Hubs, and telemetry collection services. Customers will observe traffic to those services originating from subnets containing SQL Managed Instance.
+SQL Managed Instance is a single-tenant Platform-as-a-Service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet, and it is typically accessed via its [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services such as Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, Event Hubs, and telemetry collection services. Customers will observe traffic to those services originating from subnets containing SQL Managed Instance.
 
 Deployment, management and core service maintenance operations are carried out via automated agents. These agents have exclusive access to the compute resources operating the service: it is not possible to `ssh` or RDP to those hosts. All internal communications are encrypted and signed using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates through certificate revocation lists.
 
@@ -183,9 +183,10 @@ The subnet in which SQL Managed Instance is deployed must meet the following cha
 
 These rules are necessary to ensure inbound management traffic flow. They are enforced by the network intent policy and don't need to be deployed by the customer. See the previous [high level connectivity architecture](#high-level-connectivity-architecture) section for more information on connectivity architecture and management traffic.
 
-|Name        |Port                        |Protocol|Source           |Destination|Action|
-|------------|----------------------------|--------|-----------------|-----------|------|
-|internal-in |Any                         |Any     |_subnet_         |_subnet_   |Allow |
+|Name          |Port                        |Protocol|Source           |Destination|Action|
+|--------------|----------------------------|--------|-----------------|-----------|------|
+|healthprobe-in|Any                         |Any     |AzureLoadBalancer|_subnet_   |Allow |
+|internal-in   |Any                         |Any     |_subnet_         |_subnet_   |Allow |
 
 These rules are necessary to ensure outbound management traffic flow. See the [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 

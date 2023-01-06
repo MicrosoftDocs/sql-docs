@@ -26,7 +26,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  You should not have to execute this procedure manually. **sp_replflush** should only be used for troubleshooting replication as directed by an experienced replication support professional.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

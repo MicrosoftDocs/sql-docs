@@ -1,6 +1,6 @@
 ---
-description: "Visual FoxPro ODBC Driver Programmer&#39;s Reference"
-title: "Visual FoxPro ODBC Driver Programmer&#39;s Reference | Microsoft Docs"
+description: "Visual FoxPro ODBC Driver Programmer's Reference"
+title: "Visual FoxPro ODBC Driver Programmer's Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.service: sql
@@ -14,7 +14,7 @@ ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
 author: David-Engel
 ms.author: v-davidengel
 ---
-# Visual FoxPro ODBC Driver Programmer&#39;s Reference
+# Visual FoxPro ODBC Driver Programmer's Reference
 This section of the Visual FoxPro ODBC Driver documentation contains the following topics:  
   
 -   [Bookmark Support](../../odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver.md)  

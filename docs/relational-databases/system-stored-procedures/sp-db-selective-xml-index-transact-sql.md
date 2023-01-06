@@ -25,7 +25,7 @@ ms.author: maghan
 > [!NOTE]  
 > Starting with [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)], the Selective XML Index functionality cannot be disabled. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)], in order to disable the Selective XML Index feature using this stored procedure, the database must be put in the SIMPLE recovery model by using the [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) command.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

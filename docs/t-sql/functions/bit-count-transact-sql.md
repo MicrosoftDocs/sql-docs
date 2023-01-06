@@ -23,7 +23,7 @@ monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 
 BIT_COUNT takes one parameter and returns the number of bits set to 1 in that parameter as a **bigint** type.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 

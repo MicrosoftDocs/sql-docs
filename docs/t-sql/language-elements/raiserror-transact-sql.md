@@ -37,7 +37,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 Generates an error message and initiates error processing for the session. `RAISERROR` can either reference a user-defined message stored in the `sys.messages` catalog view, or build a message dynamically. The message is returned as a server error message to the calling application or to an associated `CATCH` block of a `TRY...CATCH` construct. New applications should use [THROW](../../t-sql/language-elements/throw-transact-sql.md) instead.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

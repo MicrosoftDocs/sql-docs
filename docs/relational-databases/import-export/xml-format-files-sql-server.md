@@ -25,7 +25,7 @@ You can use an XML format file with a **bcp** command, BULK INSERT statement, or
 >  Two types of format files are supported for bulk exporting and importing: *non-XML format files* and *XML format files*. XML format files provide a flexible and powerful alternative to non-XML format files. For information about non-XML format files, see [Non-XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).
 
 > [!NOTE]  
-> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE[Use ADF or PolyBase instead of Synapse Bulk Insert](../../includes/paragraph-content/bulk-insert-synapse.md)]
+> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE [Use ADF or PolyBase instead of Synapse Bulk Insert](includes/bulk-insert-synapse.md)]
 
 ## <a id="BenefitsOfXmlFFs"></a> Benefits of XML format files
 

@@ -63,7 +63,7 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
   
 #### To delete a SQL Server Agent proxy account  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

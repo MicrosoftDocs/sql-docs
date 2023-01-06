@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 11/16/2022
+ms.date: 12/15/2022
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
@@ -16,6 +16,13 @@ tags: azure-service-management
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 When you deploy an Azure virtual machine (VM) with SQL Server installed on it, either manually, or through a built-in image, you can use Azure features to improve your experience. This article summarizes the documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md). 
+
+## December 2022
+
+| Changes | Details |
+| --- | --- |
+| **Troubleshoot SQL IaaS agent extension** | We've added an article to help you troubleshoot and address some known issues with the SQL Server IaaS agent extension. To learn more, read [Troubleshoot known issues](sql-agent-extension-troubleshoot-known-issues.md). |
+
 
 ## November 2022
 
@@ -29,7 +36,7 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 | Changes | Details |
 | --- | --- |
 | **Azure AD authentication** | It's now possible to configure Azure Active Directory (Azure AD) authentication to your SQL Server 2022 on Azure VM by using the Azure portal. This feature is currently in preview. To get started, review [Azure AD with SQL Server VMs](security-considerations-best-practices.md#azure-ad-authentication-preview). | 
-| **Least privilege permission model for SQL IaaS Agent extension** | There is a new permissions model available for the SQL Server IaaS Agent extension that grants the least privileged permission for each feature used by the extension. To learn more, review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions). | 
+| **Least privilege permission model for SQL IaaS Agent extension** | There is a new permissions model available for the SQL Server IaaS Agent extension that grants the least privileged permission for each feature used by the extension. To learn more, review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models). | 
 
 
 ## September 2022
@@ -43,7 +50,7 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 | Changes | Details |
 | --- | --- |
 | **Azure CLI for SQL best practices assessment**| It's now possible to configure the [SQL best practices assessment](sql-assessment-for-sql-vm.md) feature using the Azure CLI. |
-| **Configure tempdb from Azure portal** | It's now possible to configure your tempdb settings, such as the number of files, initial size, and autogrowth ratio for an existing SQL Server instance by using the Azure portal. See [manage SQL Server VM from portal](manage-sql-vm-portal.md#storage) to learn more. |
+| **Configure tempdb from Azure portal** | It's now possible to configure your `tempdb` settings, such as the number of files, initial size, and autogrowth ratio for an existing SQL Server instance by using the Azure portal. See [manage SQL Server VM from portal](manage-sql-vm-portal.md#storage) to learn more. |
 
 
 ## May 2022
@@ -74,9 +81,9 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 | Changes | Details |
 | --- | --- |
-| **Deployment configuration improvements** | It's now possible to configure the following options when deploying your SQL Server VM from an Azure Marketplace image: System database location, number of tempdb data files, collation, max degree of parallelism, min and max server memory settings, and optimize for ad hoc workloads. Review [Deploy SQL Server VM](create-sql-vm-portal.md) to learn more. | 
+| **Deployment configuration improvements** | It's now possible to configure the following options when deploying your SQL Server VM from an Azure Marketplace image: System database location, number of `tempdb` data files, collation, max degree of parallelism, min and max server memory settings, and optimize for ad hoc workloads. Review [Deploy SQL Server VM](create-sql-vm-portal.md) to learn more. | 
 | **Automated backup improvements** | The possible maximum automated backup retention period has changed from 30 days to 90, and you're now able to choose a specific container within the storage account. Review [automated backup](automated-backup.md) to learn more.  | 
-| **Tempdb configuration** | You can now modify tempdb settings directly from the [SQL virtual machines](manage-sql-vm-portal.md) blade in the Azure portal, such as increasing the size, and adding data files. |
+| **Tempdb configuration** | You can now modify `tempdb` settings directly from the [SQL virtual machines](manage-sql-vm-portal.md) blade in the Azure portal, such as increasing the size, and adding data files. |
 | **Eliminate need for HADR Azure Load Balancer or DNN** | Deploy your SQL Server VMs to multiple subnets to eliminate the dependency on the Azure Load Balancer or distributed network name (DNN) to route traffic to your high availability / disaster recovery (HADR) solution! See the [multi-subnet availability group](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) tutorial, or [prepare SQL Server VM for FCI](failover-cluster-instance-prepare-vm.md#subnets) article to learn more. | 
 | **SQL Assessment** | It's now possible to assess the health of your SQL Server VM in the Azure portal using [SQL Assessment](sql-assessment-for-sql-vm.md) to surface recommendations that improve performance, and identify missing best practices configurations. This feature is currently in preview. |
 | **SQL IaaS extension now supports Ubuntu** | Support has been added to [register](../linux/sql-iaas-agent-extension-register-vm-linux.md) your SQL Server VM running on Ubuntu Linux with the [SQL Server IaaS Extension](../linux/sql-server-iaas-agent-extension-linux.md) for limited functionality. | 

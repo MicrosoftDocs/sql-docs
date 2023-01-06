@@ -58,6 +58,9 @@ To ensure that your backups stay within the same region where your database is d
 
 You can configure backup storage redundancy when you create your instance, and you can update it at a later time at the instance level. The changes that you make to an existing instance apply to future backups only. After you update the backup storage redundancy of an existing instance, it might take up to 24 hours for the changes to be applied. Changes made to backup storage redundancy apply to short-term backups only. Long-term retention policies inherit the redundancy option of short-term backups when the policy is created. The redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
 
+> [!NOTE]
+> Please note that the Backup redundancy change causes an upgrade step which initiates a failover.
+
 You can choose one of the following storage redundancies for backups:
 
 - **Locally redundant storage (LRS)**: Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but we don't recommend it for applications that require high availability or durability.
@@ -173,7 +176,7 @@ Backup storage consumption up to the maximum data size for a database is not cha
 - Avoid doing large write operations, like index rebuilds, more frequently than you need to.
 - For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance). Also consider reducing the number of non-clustered indexes.
 - In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
-- Use TempDB instead of permanent tables in your application logic for storing temporary results or transient data.
+- Use `tempdb` instead of permanent tables in your application logic for storing temporary results or transient data.
 - Use locally redundant backup storage whenever possible (for example, dev/test environments).
 
 ## Backup retention

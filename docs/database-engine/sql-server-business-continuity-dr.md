@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[sqlserver2016](../includes/applies-to-version/sqlserver2016.md)]
 
-[!INCLUDE[sql-server-business-continuity](../includes/sql-server-business-continuity.md)]
+[!INCLUDE[business-continuity](../includes/business-continuity/business-continuity.md)]
 
 ## Next steps
 

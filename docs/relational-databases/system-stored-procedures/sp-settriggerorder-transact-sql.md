@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Specifies the AFTER triggers that are fired first or last. The AFTER triggers that are fired between the first and last triggers are executed in undefined order.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,7 +60,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  **\@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
  When *triggername* is a DDL trigger, **\@namespace** specifies whether *triggername* was created with database scope or server scope. If *triggername* is a logon trigger, SERVER must be specified. For more information about DDL trigger scope, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md). If not specified, or if NULL is specified, *triggername* is a DML trigger.  
   
-* SERVER applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+* SERVER applies to: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
   
 ## Return Code Values  
  0 (success) and 1 (failure)  

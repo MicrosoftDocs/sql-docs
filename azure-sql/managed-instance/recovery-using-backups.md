@@ -36,7 +36,7 @@ This article provides steps to recover a database from a backup in Azure SQL Man
 - Create a database on the same managed instance or a different managed instance, recovered to the deletion time for a deleted database.
 - Create a new database on any managed instance in same subscription or different subscription in same tenant and in the same region, recovered to the point of the most recent backups.
 
-Cross-region restore for SQL Managed Instance isn't currently supported. Additionally, when [service endpoint policies](/service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores (PITR) from instances in different subnets. 
+Cross-region restore for SQL Managed Instance isn't currently supported. Additionally, when [service endpoint policies](service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores (PITR) from instances in different subnets. 
 
 If you configured [long-term retention (LTR)](../database/long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any instance.
 

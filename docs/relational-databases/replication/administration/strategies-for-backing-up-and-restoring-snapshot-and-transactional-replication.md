@@ -48,7 +48,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
  If you perform regular log backups, any replication-related changes should be captured in the log backups. If you do not perform log backups, a backup should be performed whenever a setting relevant to replication is changed. For more information, see [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
   
 ## Backup Settings for Transactional Replication  
- Transactional replication includes using the **sync with backup** option, which can be set on the distribution database and the publication database:  
+
+Transactional replication includes using the **sync with backup** option, which can be set on the distribution database and the publication database:  
   
 -   We recommend that you always set this option on the distribution database.  
   
@@ -67,9 +68,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
     >
     > Setting the sync with backup option on distribution database is not compatible when publisher database is part of availability group. This could lead to following error when log reader agent runs after failover.
     >
-    >*The process could not execute 'sp_repldone/sp_replcounters' on 'machinename\instance'. (Source: MSSQL_REPL, Error number: MSSQL_REPL20011)
-    >Get help: http://help/MSSQL_REPL20011
-    >Possible inconsistent state in the distribution database: dist_backup_lsn {nnnnnnnn:nnnnnnnn:nnnn}, dist_last_lsn {nnnnnnnn:nnnnnnnn:nnnn}. Execute "sp_repldone NULL, NULL, 0, 0, 1", and then execute sp_replflush. Reinitialize all subscriptions to the publication. (Source: MSSQLServer, Error number: 18846)*
+    >   *The process could not execute 'sp_repldone/sp_replcounters' on 'machinename\instance'. (Source: MSSQL_REPL, Error number: MSSQL_REPL20011)
+    >   Get help: [http://help/MSSQL_REPL20011](../mssql-repl020011.md)
+    >   Possible inconsistent state in the distribution database: dist_backup_lsn {nnnnnnnn:nnnnnnnn:nnnn}, dist_last_lsn {nnnnnnnn:nnnnnnnn:nnnn}. Execute "sp_repldone NULL, NULL, 0, 0, 1", and then execute sp_replflush. Reinitialize all subscriptions to the publication. (Source: MSSQLServer, Error number: 18846)*
 
  
   

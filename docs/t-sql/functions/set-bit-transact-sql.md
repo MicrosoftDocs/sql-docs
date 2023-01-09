@@ -12,7 +12,7 @@ f1_keywords:
   - "SET_BIT"
   - "SET_BIT_TSQL"
 helpviewer_keywords:
-- "bit manipulation [SQL Server], set bit"
+  - "bit manipulation [SQL Server], set bit"
   - "SET_BIT function"
   - "bit shifting [SQL Server], set bit"
 dev_langs:

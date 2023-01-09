@@ -20,6 +20,7 @@ dev_langs:
 monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 # BIT_COUNT (Transact SQL)
+[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 BIT_COUNT takes one parameter and returns the number of bits set to 1 in that parameter as a **bigint** type.
 

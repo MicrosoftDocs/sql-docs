@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Getting started with Always Encrypted with secure VBS enclaves"
 description: Tutorial on how to create a basic environment for Always Encrypted with secure VBS enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
-author: pivanho
-ms.author: pivanho
+author: pietervanhove
+ms.author: pietervanhove
 ms.reviewer: vanto
 ms.date: 1/5/2023
 ms.service: sql-database
@@ -66,8 +66,6 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
    - **Server name**: Enter *mysqlserver*, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like mysqlserver135, and the portal lets you know if it's available or not.
    - **Location**: Select a location from the dropdown list.
-      > [!IMPORTANT]
-      > You need to select a location (an Azure region) that supports both the DC-series hardware and Microsoft Azure Attestation. For the list of regions supporting DC-series, see [DC-series availability](service-tiers-sql-database-vcore.md#dc-series). [Here](https://azure.microsoft.com/global-infrastructure/services/?products=azure-attestation) is the regional availability of Microsoft Azure Attestation.
    - **Authentication method**: Select *Use only Azure Active Directory (Azure AD) authentication*
    - **Set Azure AD admin**: Click *Set admin* and search for the correct user or group that should be the server administrator.
    

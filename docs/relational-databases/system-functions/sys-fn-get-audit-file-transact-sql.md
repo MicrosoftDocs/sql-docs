@@ -180,7 +180,7 @@ For information on setting up Azure SQL Database auditing, see [Get Started with
 
 ## Limitations
 
-Selecting rows from `sys.fn_get_audit_file` within a Create Table As Select (CTAS) is a limitation when running on Azure Synapse Analytics. Although the query completes successfully and no error messages appear, there are no rows present in the table created using CTAS.
+Selecting rows from `sys.fn_get_audit_file` within a Create Table As Select (CTAS) or INSERT INTO is a limitation when running on Azure Synapse Analytics. Although the query completes successfully and no error messages appear, there are no rows present in the table created using CTAS or INSERT INTO.
 
 ## See also
 

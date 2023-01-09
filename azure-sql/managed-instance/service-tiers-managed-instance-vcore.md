@@ -32,11 +32,7 @@ The virtual core (vCore) purchasing model used by Azure SQL Managed Instance pro
 
 ## Compute cost 
 
-The vCore-based purchasing model has a provisioned compute tier for both Azure SQL Database and Azure SQL Managed Instance, and a serverless compute tier for Azure SQL Database. 
-
-In the provisioned compute tier, the compute cost reflects the total compute capacity continuously provisioned for the application independent of workload activity. Choose the resource allocation that best suits your business needs based on vCore and memory requirements, then scale resources up and down as needed by your workload.
-
-In the serverless compute tier for Azure SQL database, compute resources are auto-scaled based on workload capacity and billed for the amount of compute used, per second. 
+SQL Managed Instance compute provides a specific amount of compute resources that are continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour.
 
 Since three additional replicas are automatically allocated in the Business Critical service tier, the price is approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage price per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
 
@@ -91,7 +87,7 @@ The architectural model for the General Purpose service tier is based on a separ
 
 The following figure shows four nodes in standard architectural model with the separated compute and storage layers.
 
-![Separation of compute and storage](./media/service-tier-general-purpose/general-purpose-service-tier.png)
+![Separation of compute and storage](../database/media/service-tier-general-purpose/general-purpose-service-tier.png)
 
 In the architectural model for the General Purpose service tier, there are two layers:
 
@@ -113,7 +109,7 @@ Azure upgrades and patches underlying operating system, drivers, and SQL Server 
 
 In the Business Critical model, compute and storage is integrated on each node. High availability is achieved by replication of data between database engine processes on each node of a four node cluster, with each node using locally attached SSD as data storage. This technology is similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
-![Cluster of database engine nodes](./media/service-tier-business-critical/business-critical-service-tier.png)
+![Cluster of database engine nodes](../database/media/service-tier-business-critical/business-critical-service-tier.png)
 
 Both the SQL Server database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Every database is a cluster of database nodes with one primary database that is accessible for customer workloads, and a three secondary processes containing copies of data. The primary node constantly pushes changes to the secondary nodes in order to ensure that the data is available on secondary replicas if the primary node fails for any reason. Failover is handled by the SQL Server database engine – one secondary replica becomes the primary node and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary node.
 
@@ -135,7 +131,7 @@ The key reasons why you should choose Business Critical service tier instead of 
 
 ## Compute
 
-SQL Managed Instance compute provides a specific amount of compute resources that are continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour.
+
 
 ## Hardware configurations
 

@@ -2,7 +2,7 @@
 title: "Tutorial: Getting started with Always Encrypted with secure VBS enclaves"
 description: Tutorial on how to create a basic environment for Always Encrypted with secure VBS enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 author: pietervanhove
-ms.author: pietervanhove
+ms.author: pivanho
 ms.reviewer: vanto
 ms.date: 1/5/2023
 ms.service: sql-database

@@ -27,10 +27,14 @@ This tutorial teaches you how to create and use indexes on enclave-enabled colum
 
 ## Prerequisites
 
+[Download SQL Server Management Studio (SSMS) 19 or later](/sql/ssms/download-sql-server-management-studio-ssms)
+
 Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
+- [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
+
 
 ## Step 1: Enable Accelerated Database Recovery (ADR) in your database
 
@@ -62,7 +66,8 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
    1. Start a new instance of SSMS.
    1. In the **Connect to Server** dialog, specify your server name, select an   authentication method, and specify your credentials.
    1. Click **Options >>** and select the **Always Encrypted** tab.
-   1. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL (for example, `http://hgs.bastion.local/Attestation` or `https://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave`).
+   1. Select the checkboxes **Enable Always Encrypted (column encryption)** and **Enable Secure Enclaves** 
+   1. Specify the correct **Enclave Attestation Protocol** and fill in the enclave attestation URL (for example, `http://hgs.bastion.local/Attestation` or `https://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave`) if applicable.
    1. Select **Connect**.
    1. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
 1. If you weren't prompted to enable Parameterization for Always Encrypted, verify it's enabled.
@@ -100,7 +105,7 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
        GO
       ```
 
-   1. In the **Live Query Statistics** tab (in the bottom part of the query window), observe that the query uses the index.
+   1. In the **Live Query Statistics** tab, observe that the query uses the index.
 
 ## Step 3: Create an index with role separation
 
@@ -152,7 +157,7 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
         GO
         ```
 
-   1. In the **Live Query Statistics** (in the bottom part of the query window), observe that the query uses the index.
+   1. In the **Live Query Statistics**, observe that the query uses the index.
 
 ## Next steps
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)

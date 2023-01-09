@@ -4,7 +4,7 @@ description: "The sys.fn_get_audit_file system function returns information from
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: wiassaf, randolphwest
-ms.date: 12/21/2022
+ms.date: 1/9/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"

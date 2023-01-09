@@ -13,8 +13,6 @@
   items:
   - name: Billing options
     items:
-    - name: vCore purchasing model 
-      href: database/service-tiers-vcore.md
     - name: Azure Hybrid Benefit
       href: azure-hybrid-benefit.md
     - name: Reserved capacity

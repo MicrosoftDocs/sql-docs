@@ -1,22 +1,22 @@
 ---
-title: "Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves"
-description: Tutorial on how to create a basic environment for Always Encrypted with secure Intel SGX enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
-author: jaszymas
-ms.author: jaszymas
+title: "Tutorial: Getting started with Always Encrypted with secure VBS enclaves"
+description: Tutorial on how to create a basic environment for Always Encrypted with secure VBS enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
+author: pivanho
+ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 10/25/2022
+ms.date: 1/5/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
 ---
-# Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database
+# Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. You will use [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html). It will show you:
+This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. You will use [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/en-us/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/). It will show you:
 
 > [!div class="checklist"]
-> - How to create an environment for testing and evaluating Always Encrypted with secure Intel SGX enclaves.
+> - How to create an environment for testing and evaluating Always Encrypted with secure VBS enclaves.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
@@ -29,10 +29,7 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 
 ### PowerShell requirements
 
-> [!NOTE]
-> The prerequisites listed in this section apply only if you choose to use PowerShell for some of the steps in this tutorial. If you plan to use Azure portal instead, you can skip this section.
-
-Make sure the following PowerShell modules are installed on your machine.
+Make sure the following PowerShell module is installed on your machine.
 
 1. Az PowerShell module version 9.3.0 or later. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
 
@@ -51,9 +48,9 @@ To continue to interact with the PowerShell Gallery, run the following command b
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 ```
 
-## Step 1: Create and configure a server and a DC-series database
+## Step 1: Create and configure a server and a database
 
-In this step, you'll create a new Azure SQL Database logical server and a new database using DC-series hardware, required for Always Encrypted with secure enclaves. For more information, see [DC-series](service-tiers-sql-database-vcore.md#dc-series).
+In this step, you'll create a new Azure SQL Database logical server and a new database.
 
 # [Portal](#tab/azure-portal)
 
@@ -77,20 +74,16 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 
    Select **OK**.
 1. Leave **Want to use SQL elastic pool** set to **No**.
-1. Under **Compute + storage**, select **Configure database**, and select **Change configuration**.
+1. Under **Compute + storage**, select **Configure database**. Set the **Compute tier** to **Serverless**. The hardware configuration should be set to **Standard-series (Gen5)**. Leave the **Max vCores** to 2, the **Min vCores** to 0.5 and **Data max size (GB)** to 32. Optionally, you can enable **Auto-pause delay**.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database.png" alt-text="Screenshot of Azure portal, hardware configuration, where to configure database." lightbox="./media/always-encrypted-enclaves/portal-configure-database.png":::
-
-1. Select the **DC-series** hardware configuration, and then select **OK**.
-
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database.":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-serverless-database.png" alt-text="Screenshot of Azure portal, hardware configuration, where to configure database." lightbox="./media/always-encrypted-enclaves/portal-configure-serverless-database.png":::
 
 1. Select **Apply**. 
-1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose**, **DC, 2 vCores, 32 GB storage**.
+1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose - Serverless**, **Standard-series (Gen5), 2 vCores, 32 GB storage**.
 1. For **Backup storage redundancy** select *Locally-redundant backup storage*.
 1. Select **Next: Networking** at the bottom of the page.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database-basics.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database - basics.":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-serverless-database-basics.png" alt-text="Screenshot of Azure portal, showing Configure serverless database - basics.":::
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
@@ -107,7 +100,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. Open a PowerShell console and import the required version of the Az PowerShell module.
 
    ```PowerShell
-   Import-Module "Az" -MinimumVersion "5.6.0"
+   Import-Module "Az" -MinimumVersion "9.3.0"
    ```
 
 1. Sign into Azure. If needed, [switch to the subscription](/powershell/azure/manage-subscriptions-azureps) you're using for this tutorial.
@@ -119,9 +112,6 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
    ```
 
 1. Create a new resource group.
-
-   > [!IMPORTANT]
-   > You need to create your resource group in a region (location) that supports both the DC-series hardware and Microsoft Azure Attestation. For the list of regions supporting DC-series, see [DC-series availability](service-tiers-sql-database-vcore.md#dc-series). [Here](https://azure.microsoft.com/global-infrastructure/services/?products=azure-attestation) is the regional availability of Microsoft Azure Attestation.
 
    ```powershell
    $resourceGroupName = "<your new resource group name>"
@@ -146,138 +136,39 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
     -FirewallRuleName "AllowedIPs" -StartIpAddress $startIp -EndIpAddress $endIp
    ```
 
-1. Create a DC-series database.
+1. Create a General Purpose Gen5 database.
 
    ```powershell
    $databaseName = "ContosoHR"
    $edition = "GeneralPurpose"
    $vCore = 2
-   $generation = "DC"
+   $generation = "Gen5"
+   $computemodel = "Serverless"
    New-AzSqlDatabase -ResourceGroupName $resourceGroupName `
     -ServerName $serverName `
     -DatabaseName $databaseName `
     -Edition $edition `
     -Vcore $vCore `
     -ComputeGeneration $generation
+    -ComputeModel $computemodel
    ```
 
 ---
 
-## Step 2: Configure an attestation provider
+## Step 2: Enable VBS enclave
+In this step, you will  enable VBS enclaves in the database which is required for Always Encrypted with secure enclaves. To enable VBS enclaves in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**.
 
-In this step, you'll create and configure an attestation provider in Microsoft Azure Attestation. This is needed to attest the secure enclave your database uses.
+> [!NOTE]
+> Only PowerShell can be used to enable your database for VBS enclave.
 
-# [Portal](#tab/azure-portal)
+```powershell
+$resourceGroupName = "<your new resource group name>"
+$serverName = "<your server name>"
+$databaseName = "ContosoHR"
 
-1. Browse to the [Create attestation provider](https://portal.azure.com/#create/Microsoft.Attestation) page.
-1. On the **Create attestation provider** page, provide the following inputs:
-
-   - **Subscription**: Choose the same subscription you created the Azure SQL logical server in.
-   - **Resource Group**: Choose the same resource group you created the Azure SQL logical server in.
-   - **Name**: Enter *myattestprovider*, and add some characters for uniqueness. We can't provide an exact attestation provider name to use because names must be globally unique. So enter something like myattestprovider12345, and the portal lets you know if it's available or not.
-   - **Location**: Choose the same location as your Azure SQL logical server.
-   - **Policy signer certificates file**: Leave this field empty, as you'll configure an unsigned policy.
-
-1. After you provide the required inputs, select **Review + create**.
-
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-create-attestation-provider-basics.png" alt-text="Create attestation provider":::
-
-1. Select **Create**.
-1. Once the attestation provider is created, select **Go to resource**.
-1. On the **Overview** tab for the attestation provider, copy the value of the **Attest URI** property to clipboard and save it in a file. This is the attestation URL, you'll need in later steps.  
-
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-attest-uri.png" alt-text="Attestation URL":::
-
-1. Select **Policy** on the resource menu on the left side of the window or on the lower pane.
-1. Set **Attestation Type** to **SGX-IntelSDK**.
-1. Select **Configure** on the upper menu.
-
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-attestation-policy.png" alt-text="Configure attestation policy":::
-
-1. Set **Policy Format** to **Text**. Leave  **Policy options** set to **Enter policy**.
-1. In the **Policy text** field, replace the default policy with the below policy. For information about the below policy, see [Create and configure an attestation provider](always-encrypted-enclaves-configure-attestation.md#create-and-configure-an-attestation-provider).
-
-    ```output
-    version= 1.0;
-    authorizationrules 
-    {
-           [ type=="x-ms-sgx-is-debuggable", value==false ]
-            && [ type=="x-ms-sgx-product-id", value==4639 ]
-            && [ type=="x-ms-sgx-svn", value>= 2 ]
-            && [ type=="x-ms-sgx-mrsigner", value=="e31c9e505f37a58de09335075fc8591254313eb20bb1a27e5443cc450b6e33e5"] 
-        => permit();
-    };
-    ```
-
-1. Select **Save**.
-
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-edit-attestation-policy.png" alt-text="Edit attestation policy":::
-
-1. Select **Refresh** on the upper menu to view the configured policy.
-
-# [PowerShell](#tab/azure-powershell)
-
-1. Copy the below attestation policy and save the policy in a text file (txt). For information about the below policy, see [Create and configure an attestation provider](always-encrypted-enclaves-configure-attestation.md#create-and-configure-an-attestation-provider).
-
-    ```output
-    version= 1.0;
-    authorizationrules 
-    {
-           [ type=="x-ms-sgx-is-debuggable", value==false ]
-            && [ type=="x-ms-sgx-product-id", value==4639 ]
-            && [ type=="x-ms-sgx-svn", value>= 2 ]
-            && [ type=="x-ms-sgx-mrsigner", value=="e31c9e505f37a58de09335075fc8591254313eb20bb1a27e5443cc450b6e33e5"] 
-        => permit();
-    };
-    ```
-
-1. Import the required version of `Az.Attestation`.  
-
-   ```powershell
-   Import-Module "Az.Attestation" -MinimumVersion "2.0.0"
-   ```
-  
-1. Create an attestation provider.
-
-   ```powershell
-   $attestationProviderName = "<your attestation provider name>" 
-   New-AzAttestationProvider -Name $attestationProviderName -ResourceGroupName $resourceGroupName -Location $location
-   ```
-1. Assign yourself to the Attestation Contributor role for the attestation provider, to ensure you have permissions to configure an attestation policy.
-
-   ```powershell
-   New-AzRoleAssignment -SignInName $context.Account.Id `
-    -RoleDefinitionName "Attestation Contributor" `
-    -ResourceName $attestationProviderName `
-    -ResourceType "Microsoft.Attestation/attestationProviders" `
-    -ResourceGroupName $resourceGroupName
-   ```
-   
-3. Configure your attestation policy.
-  
-   ```powershell
-   $policyFile = "<the pathname of the file from step 1 in this section>"
-   $teeType = "SgxEnclave"
-   $policyFormat = "Text"
-   $policy=Get-Content -path $policyFile -Raw
-   Set-AzAttestationPolicy -Name $attestationProviderName `
-    -ResourceGroupName $resourceGroupName `
-    -Tee $teeType `
-    -Policy $policy `
-    -PolicyFormat  $policyFormat
-   ```
-
-1. Retrieve the attestation URL (the Attest URI of your attestation provider).
-
-   ```powershell
-   $attestationUrl = (Get-AzAttestationProvider -Name $attestationProviderName -ResourceGroupName $resourceGroupName).AttestUri
-   Write-Host "Your attestation URL is: $attestationUrl"
-   ```
-
-   The attestation URL should look like this: `https://myattestprovider12345.eus.attest.azure.net`
-
+Set-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName -PreferredEnclaveType VBS
+```
 ---
-
 
 ## Step 3: Populate your database
 
@@ -368,11 +259,10 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     3. Select **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, `master` database). 
     4. Select the **Always Encrypted** tab.
     5. Select the **Enable Always Encrypted (column encryption)** checkbox.
-    6. Select **Enable secure enclaves**. (This step applies to SSMS 19 or later.)
-    7. Set **Protocol** to **Microsoft Azure Attestation**. (This step applies to SSMS 19 or later.)
-    8. Specify your enclave attestation URL that you've obtained by following the steps in [Step 2: Configure an attestation provider](#step-2-configure-an-attestation-provider). See the below screenshot.
+    6. Select **Enable secure enclaves**. 
+    7. Set **Protocol** to **None**. See the below screenshot.
 
-        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-microsoft-azure-attestation.png" alt-text="Connect with attestation":::
+        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-vbs-protocol-none.png" alt-text="Connect with Protocol None":::
 
     9. Select **Connect**.
     10. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

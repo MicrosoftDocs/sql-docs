@@ -151,6 +151,24 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | VNet Global peering | Yes, using [Private IP and service endpoints](vnet-service-endpoint-rule-overview.md) | Yes, using [Virtual network peering](https://techcommunity.microsoft.com/t5/azure-sql/new-feature-global-vnet-peering-support-for-azure-sql-managed/ba-p/1746913). |
 | [Private connectivity](/azure/private-link/private-link-overview) | Yes, using [Private Link](/azure/private-link/private-endpoint-overview) | Yes, using VNet. | 
 
+## Resource limits
+
+The following table compares the maximum resource limits available for Azure SQL Database and Azure SQL Managed Instance: 
+
+| **Category** | **Azure SQL Database** | **Azure SQL Managed Instance** |
+|:--|:--|:--|
+| **Compute size**| 1 to 128 vCores  | 4, 8, 16, 24, 32, 40, 64, 80 vCores| 
+| **Storage type** |Local SSD storage|Local SSD storage | 
+| **Storage size** | 1 GB – 100 TB |32 GB – 16 TB | 
+| **Tempdb size** | [32 GB per vCore](resource-limits-vcore-single-databases.md) |Up to 4 TB - [limited by storage size](../managed-instance/resource-limits.md#service-tier-characteristics) |
+| **Log write throughput** | Single databases: [12 MB/s per vCore (max 96 MB/s)](resource-limits-vcore-single-databases.md) <br> Elastic pools: [15 MB/s per vCore (max 120 MB/s)](resource-limits-vcore-elastic-pools.md) | [4 MB/s per vCore (max 48 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) |
+| **Availability** | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) <br> 99.995% SLA with [zone redundancy](high-availability-sla.md#premium-and-business-critical-service-tier-zone-redundant-availability) | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)|
+| **Backups** | RA-GRS, 1-35 days (7 days by default) | RA-GRS, 1-35 days (7 days by default)| 
+| [**Read-only replicas**](read-scale-out.md) |1 built-in high availability replica is readable <br> 0 - 4 [geo-replicas](active-geo-replication-overview.md) |1 built-in high availability replica is readable <br> 0 - 1 geo-replicas using [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md)  | 
+| **Pricing/Billing** |[vCore, reserved storage, backup storage, and geo-replicas](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/> High availability replicas aren't charged. <br/>IOPS isn't charged. |[vCore, reserved storage, backup storage, and geo-replicas](https://azure.microsoft.com/pricing/details/sql-database/managed/) are charged. <br/> High availability replicas aren't charged. <br/>IOPS isn't charged.  | 
+| **Discount models** |[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions | 
+
+
 ## Tools
 
 Azure SQL Database and Azure SQL Managed Instance support various data tools that can help you manage your data.

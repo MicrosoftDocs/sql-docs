@@ -9287,8 +9287,6 @@ items:
           href: ssms/property-pages-in-sql-server-management-studio.md
         - name: Properties Window in SSMS
           href: ssms/properties-window-management-studio.md
-        - name: Output Window in SSMS
-          href: ssms/output-window.md
         - name: Use the Toolbox
           href: ssms/use-the-toolbox.md
       - name: F1 help
@@ -9341,14 +9339,14 @@ items:
           href: ssms/menu-help/sql-server-management-studio-menu-help.md
         - name: Properties Window F1 Help (Management Studio)
           href: ssms/menu-help/properties-window-f1-help-management-studio.md
+        - name: Options (Output window)
+          href: ssms/menu-help/options-output-window-page.md
         - name: Options (Environment - Fonts & Colors Page)
           href: ssms/menu-help/options-environment-fonts-and-colors-page.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
         - name: Options (Query Execution options - Help - General Page)
           href: ssms/menu-help/options-query-execution.md
-        - name: Options (Output Window)
-          href: ssms/menu-help/options-output-window-page.md
         - name: Options (Azure Service - Help - General Page)
           href: ssms/menu-help/options-azure-services.md
         - name: External Tools

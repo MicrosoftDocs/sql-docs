@@ -36,7 +36,7 @@ Exact-number data types that use integer data. To save space in the database, us
 |**bigint**|-2^63 (-9,223,372,036,854,775,808) to 2^63-1 (9,223,372,036,854,775,807)|8 Bytes|  
 |**int**|-2^31 (-2,147,483,648) to 2^31-1 (2,147,483,647)|4 Bytes|  
 |**smallint**|-2^15 (-32,768) to 2^15-1 (32,767)|2 Bytes|  
-|**tinyint**|0 to 255|1 Byte|  
+|**tinyint**|2^0-1 (0) to 2^8-1 (255)|1 Byte|  
   
 ## Remarks  
 The **int** data type is the primary integer data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The **bigint** data type is intended for use when integer values might exceed the range that is supported by the **int** data type.

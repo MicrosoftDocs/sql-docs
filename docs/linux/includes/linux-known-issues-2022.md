@@ -32,6 +32,10 @@ The following sections describe known issues with [!INCLUDE[sssql22](../../inclu
 
   - **Resolution**: No action is required. The OLEDB provider is signed using SHA256. SQL Server Database engine doesn't validate the signed .dll correctly.
 
+- The Reset password command using mssql-conf throws an error 'Unable to set the system administrator password. Please consult the ERRORLOG in /path for more information.'
+
+  - **Resolution**: The reset of password in reality is successful, the error message is a false negative. Kindly ignore it and use the new password which was attempted to reset. This issue only applies to SQL Server 2022 container images, this issue is not seen in the previous versions of SQL Server.
+
 ### Databases
 
 - The `master` database can't be moved with the **mssql-conf** utility. Other system databases can be moved with **mssql-conf**.

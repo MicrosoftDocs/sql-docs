@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "sys.dm_server_suspend_status dynamic management view"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2022"
 ---
 
 # sys.dm_server_suspend_status (Transact-SQL)

@@ -50,7 +50,7 @@ Nvarchar(max). String of query options beginning with `'OPTION`. For more inform
 
 #### [ @query_hint_scope ] 
 
-Tinyint. By default, the scope of a new Query Store hint is the local replica only. This optional parameter determines the scope at which the hint will be applied on a secondary replica when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. The argument defaults to the local replica, but you can optionally specify a `replica_group_id` column as per the [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md) system catalog view.
+Tinyint. By default, the scope of a new Query Store hint is the local replica only. This optional parameter determines the scope at which the hint will be applied on a secondary replica when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. The optional *query_hint_scope* argument defaults only to the local replica (primary or secondary), but you can optionally specify a `replica_group_id` referencing [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
 
 ## Return Values  
  0 (success) or 1 (failure)  

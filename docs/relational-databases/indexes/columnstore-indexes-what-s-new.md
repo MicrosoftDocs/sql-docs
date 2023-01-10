@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Specify columnstore index when creating a table|||yes|yes|yes|yes|yes|yes|
 |Always On supports columnstore indexes|yes|yes|yes|yes|yes|yes|yes|yes|
 |Always On readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|yes|
-|Always On readable secondary supports updateable columnstore indexes|||yes|yes|yes|yes||| 
+|Always On readable secondary supports updateable columnstore indexes|||yes|yes|yes|yes|||
 |Read-only nonclustered columnstore index on heap or B-tree|yes|yes|yes <sup>3</sup>|yes <sup>3</sup>|yes <sup>3</sup>|yes <sup>3</sup>|yes <sup>3</sup>|yes <sup>3</sup>|
 |Updateable nonclustered columnstore index on heap or B-tree|||yes|yes|yes|yes|yes|yes|
 |Additional B-tree indexes allowed on a heap or B-tree that has a nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|yes|

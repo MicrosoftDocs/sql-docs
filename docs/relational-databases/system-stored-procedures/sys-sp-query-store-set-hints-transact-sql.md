@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 sp_query_store_set_hints
     @query_id = 'query_id',
     @query_hints = 'query_hints'
-    [, @query_hint_scope = 'query_hint_scope' ] [;]  
+    [, @query_hint_scope = 'replica_group_id' ] [;]  
 ```  
 
 ## Arguments

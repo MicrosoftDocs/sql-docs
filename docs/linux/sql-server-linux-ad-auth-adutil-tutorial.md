@@ -121,7 +121,7 @@ To install **adutil**, follow the steps explained in the article [Introduction t
 1. Add an entry in the keytab for the principal name and its password that will be used by SQL Server to connect to Active Directory:
 
     ```bash
-    adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd!'
+    adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd'
     ```
 
     - `-k`: Path where you would like the `mssql.keytab` file to be created.

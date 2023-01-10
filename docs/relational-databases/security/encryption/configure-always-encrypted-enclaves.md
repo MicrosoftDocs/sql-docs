@@ -21,11 +21,12 @@ monikerRange: ">= sql-server-ver15"
 For tutorials that show you how to quickly get started with Always Encrypted with secure enclaves, see:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
+- [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
 
 ## Set up the secure enclave and attestation
 
-Before you can use Always Encrypted with secure enclaves, you need to configure your environment to ensure the secure enclave is available for the database. You also need to set up [enclave attestation](always-encrypted-enclaves.md#secure-enclave-attestation). 
+Before you can use Always Encrypted with secure enclaves, you need to configure your environment to ensure the secure enclave is available for the database. You also need to set up [enclave attestation](always-encrypted-enclaves.md#secure-enclave-attestation), if applicable. 
 
 The process for setting up your environment depends on whether you're using [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
@@ -40,9 +41,12 @@ For details, see the following articles:
 ### Set up the secure enclave and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
 
 For details, see the following articles:
-- [Plan for Intel SGX enclaves and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
-- [Enable Intel SGX for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)
+- [Plan for secure enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [Enable Always Encrypted with secure enclaves for your [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-enable)
 - [Configure Azure Attestation for your Azure SQL Database logical server](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
+
+> [!IMPORTANT]
+>VBS enclaves in Azure SQL Database (in preview) currently do not support attestation. Configure Azure Attestation only applies to SGX enclaves.
 
 ## Manage keys for Always Encrypted with secure enclaves
 See the following articles for details:

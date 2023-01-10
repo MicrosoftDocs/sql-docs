@@ -54,44 +54,9 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 
 # [Portal](#tab/azure-portal)
 
-1. Browse to the [Select SQL deployment option](https://portal.azure.com/#create/Microsoft.AzureSQL) page.
-1. If you aren't already signed in to the Azure portal, sign in when prompted.
-1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
-
-   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Screenshot of Azure portal, showing the Add to Azure SQL deployment option.":::
-
-1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the desired Azure **Subscription**.
-1. For **Resource group**, select **Create new**, enter a name for your resource group, and select **OK**.
-1. For **Database name** enter *ContosoHR*.
-1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
-   - **Server name**: Enter *mysqlserver*, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like mysqlserver135, and the portal lets you know if it's available or not.
-   - **Location**: Select a location from the dropdown list.
-   - **Authentication method**: Select *Use only Azure Active Directory (Azure AD) authentication*
-   - **Set Azure AD admin**: Click *Set admin* and search for the correct user or group that should be the server administrator.
-   
-
-   Select **OK**.
-1. Leave **Want to use SQL elastic pool** set to **No**.
-1. Under **Compute + storage**, select **Configure database**. Set the **Compute tier** to **Serverless**. The hardware configuration should be set to **Standard-series (Gen5)**. Leave the **Max vCores** to 2, the **Min vCores** to 0.5 and **Data max size (GB)** to 32. Optionally, you can enable **Auto-pause delay**.
-
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-serverless-database.png" alt-text="Screenshot of Azure portal, hardware configuration, where to configure database." lightbox="./media/always-encrypted-enclaves/portal-configure-serverless-database.png":::
-
-1. Select **Apply**. 
-1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose - Serverless**, **Standard-series (Gen5), 2 vCores, 32 GB storage**.
-1. For **Backup storage redundancy** select *Locally-redundant backup storage*.
-1. Select **Next: Networking** at the bottom of the page.
-
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-serverless-database-basics.png" alt-text="Screenshot of Azure portal, showing Configure serverless database - basics.":::
-
-1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
-1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
-1. For **Connection policy**, leave **Connection policy** to **Default - Uses Redirect policy for all client connections originating inside of Azure and Proxy for all client connections originating outside Azure**
-1. For **Encrypted connections**, leave **Minimum TLS version** to **TLS 1.2**.
-1. Select **Review + create** at the bottom of the page.
-
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database-networking.png" alt-text="New SQL database - networking":::
-
-1. On the **Review + create** page, after reviewing, select **Create**.
+1. Go to [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md) to create a new Azure SQL Database logical server and a new database. 
+> [!IMPORTANT]
+> Make sure that you create an **empty database** with the name **ContosoHR**.
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -117,11 +82,11 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
    New-AzResourceGroup -Name $resourceGroupName -Location $location
    ```
 
-1. Create an Azure SQL logical server with Active Directory Only Authentication. 
+1. Create an Azure SQL logical server. When prompted, enter the server administrator name and a password. Make sure you remember the admin name and the password - you'll need them later to connect to the server. 
 
    ```powershell
    $serverName = "<your server name>" 
-   New-AzSqlServer -ServerName $serverName -ResourceGroupName $resourceGroupName -Location $location -EnableActiveDirectoryOnlyAuthentication -ExternalAdminName $context.Account.Id
+   New-AzSqlServer -ServerName $serverName -ResourceGroupName $resourceGroupName -Location $location -SqlAdministratorCredentials (Get-Credential)
    ```
 
 1. Create a server firewall rule that allows access from the specified IP range.
@@ -157,7 +122,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 In this step, you will  enable VBS enclaves in the database which is required for Always Encrypted with secure enclaves. To enable VBS enclaves in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**.
 
 > [!NOTE]
-> Only PowerShell can be used to enable your database for VBS enclave.
+> Currently, only PowerShell supports enabling a VBS enclave in a database.
 
 ```powershell
 $resourceGroupName = "<your new resource group name>"

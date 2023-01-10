@@ -71,8 +71,9 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
    - **Location**: Select a location from the dropdown list.
       > [!IMPORTANT]
       > You need to select a location (an Azure region) that supports both the DC-series hardware and Microsoft Azure Attestation. For the list of regions supporting DC-series, see [DC-series availability](service-tiers-sql-database-vcore.md#dc-series). [Here](https://azure.microsoft.com/global-infrastructure/services/?products=azure-attestation) is the regional availability of Microsoft Azure Attestation.
-   - **Authentication method**: Select *Use only Azure Active Directory (Azure AD) authentication*
-   - **Set Azure AD admin**: Click *Set admin* and search for the correct user or group that should be the server administrator.
+   - **Authentication method**: Select *Use SQL Authentication*
+   - **Server admin login**: Enter an admin login name, for example: *azureuser*.
+   - **Password**: Enter a password that meets requirements, and enter it again in the **Confirm password** field.
    
 
    Select **OK**.
@@ -129,11 +130,11 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
    New-AzResourceGroup -Name $resourceGroupName -Location $location
    ```
 
-1. Create an Azure SQL logical server with Active Directory Only Authentication. 
+1. Create an Azure SQL logical server. When prompted, enter the server administrator name and a password. Make sure you remember the admin name and the password - you'll need them later to connect to the server. 
 
    ```powershell
    $serverName = "<your server name>" 
-   New-AzSqlServer -ServerName $serverName -ResourceGroupName $resourceGroupName -Location $location -EnableActiveDirectoryOnlyAuthentication -ExternalAdminName $context.Account.Id
+   New-AzSqlServer -ServerName $serverName -ResourceGroupName $resourceGroupName -Location $location -SqlAdministratorCredentials (Get-Credential)
    ```
 
 1. Create a server firewall rule that allows access from the specified IP range.

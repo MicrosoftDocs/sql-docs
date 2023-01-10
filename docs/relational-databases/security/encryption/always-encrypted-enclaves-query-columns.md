@@ -61,21 +61,21 @@ Your environment needs to meet the following requirements to support executing s
 - Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database and server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
 - You need to obtain an attestation URL from your environment from your attestation service administrator.
 
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves (in preview) currently do not support attestation. 
+
   - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
 
 - If you're connecting to your database using your application, it must use a client driver that supports Always Encrypted with secure enclaves. The application must connect to the database with Always Encrypted enabled for the database connection and the attestation protocol and the attestation URL properly configured. For detailed information, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md).
-- If you're using SQL Server Management Studio (SSMS) or Azure SQL Data Studio, you need to enable Always Encrypted and configure the attestation protocol and the attestation URL when connecting to your database. See the following sections for details.
+- If you're using SQL Server Management Studio (SSMS) or Azure Data Studio, you need to enable Always Encrypted, configure the attestation protocol and the attestation URL (if applicable) when connecting to your database. See the following sections for details.
 
 > [!NOTE]
 > Connecting to the database with Always Encrypted and attestation configured is not required for the following operations if you are using cached column encryption keys: DDL queries that create or alter indexes, DML queries that update indexes, and DBCC commands that check index integrity. For more information, see [Invoke indexing operations using cached column encryption keys](always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
 
 ### Prerequisites for running T-SQL statements using enclaves in SSMS
 
-Minimum version requirements for SQL Server Management Studio:
-
-- SSMS 18.3 when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-- SSMS 18.8 when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+[Download SQL Server Management Studio (SSMS) 19 or later](/sql/ssms/download-sql-server-management-studio-ssms)
 
 Make sure you run your statements from a query window that uses a connection that has Always Encrypted and attestation parameters correctly configured.
 
@@ -83,9 +83,12 @@ Make sure you run your statements from a query window that uses a connection tha
 2. Click **Options >>** and select the **Connection Properties** tab. Specify your database name.
 3. Select the **Always Encrypted** tab.
 4. Select **Enable Always Encrypted (column encryption)**.
-5. (This step applies to SSMS 19 or later.) Select **Enable secure enclaves**.
-6. (This step applies to SSMS 19 or later.) Set **Protocol** to **Host Guardian Service** (if you're using  [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]) or **Microsoft Azure Attestation** (if you're using a DC-series database with Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]). 
-7. Specify your enclave attestation URL. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
+5. Select **Enable secure enclaves**.
+6. Set **Protocol** to 
+    1. **Host Guardian Service** if you're using  [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+    1. **Microsoft Azure Attestation** if you're using [!INCLUDE[ssSDSfull].(../../../includes/sssdsfull-md.md)] with Intel SGX enclaves.
+    1. **None** if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves.
+1. Specify your enclave attestation URL. Not applicable when the Protocol is set to *None*. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
 
     ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/ssms-connect-microsoft-azure-attestation.png)
 
@@ -97,6 +100,8 @@ For additional information, see [Enabling and disabling Always Encrypted for a d
 ### Prerequisites for running T-SQL statements using enclaves in Azure Data Studio
 
 The minimum recommended version **1.23** or higher is recommended.
+>!NOTE
+>Azure Data Studio currently does not support VBS enclaves in Azure SQL Database (in preview). This section only applies to SGX enclaves and Host Guardian Service.
 
 Make sure you run your statements from a query window that uses a connection that has Always Encrypted enabled and both the correct attestation protocol and the attestation URL configured.
 
@@ -206,6 +211,7 @@ GO
 
 - [Troubleshoot common issues for Always Encrypted with secure enclaves](always-encrypted-enclaves-troubleshooting.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
+- [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)

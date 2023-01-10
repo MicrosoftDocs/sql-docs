@@ -59476,6 +59476,46 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/tools/sqlcmd-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md",
+      "redirect_url": "/sql/tools/sqlcmd/edit-sqlcmd-scripts-with-query-editor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-start-the-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-start-the-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-connect-to-the-database-engine.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-connect-to-the-database-engine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-run-transact-sql-script-files.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-run-transact-sql-script-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-use-the-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-the-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-use-with-scripting-variables.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-with-scripting-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/go-sqlcmd-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/go-sqlcmd-utility",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
       "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
       "redirect_document_id": false

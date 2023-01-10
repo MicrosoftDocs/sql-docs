@@ -3,7 +3,7 @@ title: Microsoft Defender for SQL
 description: Learn about functionality for managing your database vulnerabilities and detecting anomalous activities that could indicate a threat to your database in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
 author: bmansheim
 ms.author: benmansheim
-ms.date: 12/14/2022
+ms.date: 01/10/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -47,7 +47,7 @@ To enable Microsoft Defender for Azure SQL Database at the subscription level fr
 1. Select the relevant subscription.
 1. Change the plan setting to **On**.
 
-    :::image type="content" source="media/azure-defender-for-sql/defender-sql-subsription-level.png" alt-text="Screenshot showing enabling Microsoft Defender for Azure SQL Database at the subscription level." lightbox="media/azure-defender-for-sql/defender-sql-subsription-level.png":::
+    :::image type="content" source="media/azure-defender-for-sql/defender-sql-subscription-level.png" alt-text="Screenshot showing enabling Microsoft Defender for Azure SQL Database at the subscription level." lightbox="media/azure-defender-for-sql/defender-sql-subscription-level.png":::
 
 1. Select **Save**.
 

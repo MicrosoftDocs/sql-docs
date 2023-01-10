@@ -47,7 +47,7 @@ To enable Microsoft Defender for Azure SQL Database at the subscription level fr
 1. Select the relevant subscription.
 1. Change the plan setting to **On**.
 
-    :::image type="content" source="media/azure-defender-for-sql/defender-sql-subsription-level.png" alt-text="Screenshot showing enabling Microsoft Defender for Azure SQL Database at the subscription level." lightbox="media/azure-defender-for-sql/defender-sql-subsription-level.png":::
+    :::image type="content" source="media/azure-defender-for-sql/defender-sql-subscription-level.png" alt-text="Screenshot showing enabling Microsoft Defender for Azure SQL Database at the subscription level." lightbox="media/azure-defender-for-sql/defender-sql-subscription-level.png":::
 
 1. Select **Save**.
 

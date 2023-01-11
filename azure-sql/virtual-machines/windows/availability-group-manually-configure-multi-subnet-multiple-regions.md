@@ -17,7 +17,7 @@ tags: azure-service-management
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This tutorial explains how to configure an Always On availability group replica for SQL Server on Azure Virtual Machines (VMs) in an Azure region that is remote to the primary replica. You can use this configuration for the purpose of disaster recovery (DR).
+This tutorial explains how to configure an Always On availability group replica for SQL Server on Azure Virtual Machines (VMs) in an Azure region that is remote to the primary replica. You can use this configuration for disaster recovery (DR).
 
 You can also use the steps in this article to extend an existing on-premises availability group to Azure.
 
@@ -27,7 +27,7 @@ This tutorial builds on the [tutorial to manually deploy an availability group i
 
 The following image shows a common deployment of an availability group on Azure virtual machines:
 
-:::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/multi-subnet-availability-group-diagram.png" alt-text="The following diagram illustrates the resources you deploy in this tutorial":::
+:::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/multi-subnet-availability-group-diagram.png" alt-text="Diagram showing the resources that are deployed in this tutorial. ":::
 
 In the deployment shown in the diagram, all virtual machines are in one Azure region. The availability group replicas can have synchronous commit with automatic failover on SQL-VM-1 and SQL-VM-2. To build this architecture, see the [availability group template or tutorial](availability-group-overview.md).
 
@@ -91,7 +91,7 @@ To create a virtual network and subnet in the new region in the Azure portal:
       
       For example, if your address range is **10.19.0.0/16**, enter these values for the **DC-Subnet** subnet: **10.19.1.0** for **Starting address** and **/24** for **Subnet size**.
    1. Select **Add** to add your new subnet.
-   1. Repeat the process for the **SQL-subnet1**. When complete, you should have a subnet for the domain controller in the remote region and a subnet for each SQL Server in the remote region. For example, in this tutorial the remote region virtual network contains:
+   1. Repeat the process for the **SQL-subnet1**. When complete, you should have a subnet for the domain controller in the remote region and a subnet for each SQL Server in the remote region. For example, in this tutorial, the remote region virtual network contains:
 
      :::image type="content" source="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-configure-virtual-network.png" alt-text="Screenshot of the Azure portal that shows selections for adding a subnet to a virtual network." lightbox="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-configure-virtual-network.png":::
 
@@ -147,7 +147,7 @@ This tutorial uses virtual network peering. To configure virtual network peering
 
 ## Create a domain controller
 
-A [domain controller in the new region](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100) is necessary to provide authentication if the primary site is not available. To create the domain controller in the new region:
+A [domain controller in the new region](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100) is necessary to provide authentication if the primary site isn't available. To create the domain controller in the new region:
 
 1. Return to the **SQL-HA-RG** resource group.
 1. Select **+ Create**.
@@ -182,7 +182,7 @@ In the following steps, configure the **DC-VM-3** machine as a domain controller
 
 #### Set preferred DNS server address
 
-The preferred DNS server address [should not be updated](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#specify-dns-servers) directly within a VM, it should be edited from the [Azure portal, or Powershell, or Azure CLI](/azure/virtual-network/virtual-network-network-interface?tabs=network-interface-portal#change-dns-servers). The steps below are to make the change inside of the Azure portal:
+The preferred DNS server address [shouldn't be updated](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#specify-dns-servers) directly within a VM, it should be edited from the [Azure portal, or PowerShell, or Azure CLI](/azure/virtual-network/virtual-network-network-interface?tabs=network-interface-portal#change-dns-servers). The steps below are to make the change inside of the Azure portal:
 
 1. Sign-in to the [Azure portal](https://portal.azure.com).
 
@@ -192,7 +192,7 @@ The preferred DNS server address [should not be updated](/azure/virtual-network/
 
 1. In **Settings**, select **DNS servers**.
 
-1. Since this domain controller is not in the same virtual network as the primary domain controller select **Custom** and input the IP address of the local domain controller, such as `10.38.0.4`. The DNS server address you specify is assigned only to this network interface and overrides any DNS setting for the virtual network the network interface is assigned to.
+1. Since this domain controller isn't in the same virtual network as the primary domain controller select **Custom** and input the IP address of the local domain controller, such as `10.38.0.4`. The DNS server address you specify is assigned only to this network interface and overrides any DNS setting for the virtual network the network interface is assigned to.
 
 1. Select **Save**.
 1. Return to the virtual machine in the Azure portal and restart the VM. Once the virtual machine has restarted, you can join the VM to the domain.
@@ -217,7 +217,7 @@ Once your server has joined the domain, you can configure it as the second domai
 1. If you're not already connected, open an RDP session to your secondary domain controller, and open **Server Manager Dashboard** (which may be open by default).
 1. Select the **Add roles and features** link on the dashboard.
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/09-add-features.png" alt-text="Server Manager - Add roles":::
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/09-add-features.png" alt-text="Screenshot of the Server Manager - Add roles highlighted.":::
 
 1. Select **Next** until you get to the **Server Roles** section.
 1. Select the **Active Directory Domain Services** and **DNS Server** roles. When you're prompted, add any additional features that are required by these roles.
@@ -226,7 +226,7 @@ Once your server has joined the domain, you can configure it as the second domai
 1. Select the **More** link on the yellow warning bar.
 1. In the **Action** column of the **All Server Task Details** dialog, select **Promote this server to a domain controller**.
 1. Under **Deployment Configuration**, select **Add a domain controller to an existing domain**.
-1. Click **Select**.
+1. Select **Select**.
 1. Connect by using the administrator account (**CORP.CONTOSO.COM\domainadmin**) and password (**Contoso!0000**).
 1. In **Select a domain from the forest**, choose your domain and then select **OK**.
 1. In **Domain Controller Options**, use the default values and set a DSRM password.
@@ -251,7 +251,7 @@ Before you proceed, consider the following design decisions:
 
 **Availability - Availability Zones**   
 
-For the highest level of redundancy, resiliency and availability deploy the VMs within separate Availability Zones. Availability Zones are unique physical locations within an Azure region. Each zone is made up of one or more datacenters with independent power, cooling, and networking. For Azure regions that do not support Availability Zones yet, use Availability Sets instead. Place all the VMs within the same Availability Set. 
+For the highest level of redundancy, resiliency and availability deploy the VMs within separate Availability Zones. Availability Zones are unique physical locations within an Azure region. Each zone is made up of one or more datacenters with independent power, cooling, and networking. For Azure regions that don't support Availability Zones yet, use Availability Sets instead. Place all the VMs within the same Availability Set. 
 
 **Storage - Azure Managed Disks**   
 
@@ -297,7 +297,8 @@ On Windows Server 2016 and earlier, you need to assign an additional secondary I
 
 If you're on Windows Server 2016 and prior, follow the steps in this section to assign a secondary IP address to each SQL Server VM for *both* the availability group listener, *and* the cluster.
 
-If you're on Windows Server 2019 or later, only assign a secondary IP address for the availability group listener, and skip the steps to assign a windows cluster IP, unless you plan to configure your cluster with a virtual network name (VNN), in which case assign both IP addresses to each SQL Server VM as you would for Windows Server 2016.
+> [!IMPORTANT]
+> If you're on Windows Server 2019 or later, only assign a secondary IP address for the availability group listener, and skip the steps to assign a windows cluster IP, unless you plan to configure your cluster with a virtual network name (VNN), in which case assign both IP addresses to each SQL Server VM as you would for Windows Server 2016.
 
 To assign additional secondary IPs to the VMs, follow these steps:
 
@@ -315,7 +316,7 @@ To assign additional secondary IPs to the VMs, follow these steps:
 
    :::image type="content" source="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-secondary-ips.png" alt-text="Screenshot of the Azure portal that shows the IP configurations on the network interface." lightbox="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-secondary-ips.png":::
 
-Now you are ready to join the **corp.contoso.com**.
+Now you're ready to join the **corp.contoso.com**.
 
 ### <a name="joinDomain"></a>Join the server to the domain
 
@@ -449,7 +450,7 @@ To open these ports on a Windows Firewall, follow these steps:
 1. For **Rule Type**, choose **Port**.
 1. For the port, specify **TCP** and type the appropriate port numbers. See the following example:
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/17-firewall-tcp-ports.png" alt-text="SQL firewall":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/17-firewall-tcp-ports.png" alt-text="Screenshot of configuring a new rule for the Windows firewall.":::
 
 1. Select **Next**.
 1. On the **Action** page, select **Allow the connection** , and then select **Next**.

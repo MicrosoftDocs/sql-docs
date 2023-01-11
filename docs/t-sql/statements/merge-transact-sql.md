@@ -60,7 +60,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 > ```  
 ::: moniker-end
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"  
@@ -191,7 +191,7 @@ If *target_table* is a view, any actions against it must satisfy the conditions 
 Hints can be specified as a <merge_hint>. 
 
 ::: moniker range="=azure-sqldw-latest"
-Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 ::: moniker-end
   
 #### [ AS ] *table_alias*  

@@ -35,7 +35,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Marks the starting point of an explicit, local transaction. Explicit transactions start with the BEGIN TRANSACTION statement and end with the COMMIT or ROLLBACK statement.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -140,7 +140,7 @@ COMMIT TRAN T1;
 ## Examples  
   
 ### A. Using an explicit transaction
-**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], Parallel Data Warehouse
 
 This example uses AdventureWorks. 
 
@@ -153,7 +153,7 @@ COMMIT;
 
 ### B. Rolling back a transaction
 **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
-, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
+, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], Parallel Data Warehouse
 
 The following example shows the effect of rolling back a transaction. In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.
 

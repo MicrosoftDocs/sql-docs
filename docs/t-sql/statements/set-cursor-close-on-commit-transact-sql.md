@@ -26,7 +26,7 @@ dev_langs:
 
   Controls the behavior of the [!INCLUDE[tsql](../../includes/tsql-md.md)] COMMIT TRANSACTION statement. The default value for this setting is OFF. This means that the server will not close cursors when you commit a transaction.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

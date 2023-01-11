@@ -59,7 +59,7 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
 
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] 
 
 ```sql
 --Query provides underlying distribution encryption status

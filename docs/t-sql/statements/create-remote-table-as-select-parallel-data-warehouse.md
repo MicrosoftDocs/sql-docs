@@ -20,7 +20,7 @@ monikerRange: ">=aps-pdw-2016"
   
  To configure the remote server, see "Remote Table Copy" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

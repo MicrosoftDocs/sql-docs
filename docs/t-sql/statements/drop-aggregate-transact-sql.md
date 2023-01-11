@@ -25,7 +25,7 @@ dev_langs:
 
   Removes a user-defined aggregate function from the current database. User-defined aggregate functions are created by using [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

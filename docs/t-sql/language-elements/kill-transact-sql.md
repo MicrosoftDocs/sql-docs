@@ -41,7 +41,7 @@ Ends a user process that is based on the session ID or unit of work (UOW). If th
   
 KILL ends a normal connection, which internally stops the transactions that are associated with the specified session ID. At times, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) might be in use. If MS DTC is in use, you can also use the statement to end orphaned and in-doubt distributed transactions.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

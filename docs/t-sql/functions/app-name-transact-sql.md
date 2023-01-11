@@ -27,7 +27,7 @@ This function returns the application name for the current session, if the appli
 > [!IMPORTANT]  
 >  The client provides the application name, and `APP_NAME` does not verify the application name value in any way. Do not use `APP_NAME` as part of a security check.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

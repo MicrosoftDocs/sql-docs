@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Removes one or more user databases or database snapshots from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -110,7 +110,7 @@ You must be connected to the master database to drop a database.
 
  The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.
 
-### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+### [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 You must be connected to the master database to drop a database.
 

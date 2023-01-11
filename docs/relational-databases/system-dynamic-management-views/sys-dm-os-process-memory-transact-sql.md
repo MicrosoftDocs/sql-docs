@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
  The following table provides a complete picture of the process address space.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_process_memory**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+>  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_process_memory**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |**available_commit_limit_kb**|**bigint**|Indicates the amount of memory that is available to be committed by the process. Not nullable.|  
 |**process_physical_memory_low**|**bit**|Indicates that the process is responding to low physical memory notification. Not nullable.|  
 |**process_virtual_memory_low**|**bit**|Indicates that low virtual memory condition has been detected. Not nullable.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
  On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires VIEW SERVER STATE permission on the server.  

@@ -51,7 +51,7 @@ This means that the `DBCC CHECKALLOC`, `DBCC CHECKTABLE`, or `DBCC CHECKCATALOG`
 
 Since DBCC repair options aren't available for memory-optimized tables, you must back up your databases regularly and test the backups. If data integrity issues occur in a memory-optimized table, you must restore from the last known good backup.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

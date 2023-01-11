@@ -40,7 +40,7 @@ dev_langs:
 
 Generates a schema-only clone of a database by using `DBCC CLONEDATABASE` in order to investigate performance issues related to the query optimizer.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

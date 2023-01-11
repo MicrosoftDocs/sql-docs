@@ -17,7 +17,7 @@ Azure SQL Managed Instance can provide user connectivity over [public endpoints]
 
 ## Scenarios
 
-Azure SQL Managed Instance provides a VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) to allow connectivity from inside its virtual network. The default option is to provide maximum isolation. However, there are scenarios where you need to provide a public endpoint connection:
+Azure SQL Managed Instance provides a [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) to allow connectivity from inside its virtual network. The default option is to provide maximum isolation. However, there are scenarios where you need to provide a public endpoint connection:
 
 - The managed instance must integrate with multi-tenant-only platform-as-a-service (PaaS) offerings.
 - You need higher throughput of data exchange than is possible when you're using a VPN.

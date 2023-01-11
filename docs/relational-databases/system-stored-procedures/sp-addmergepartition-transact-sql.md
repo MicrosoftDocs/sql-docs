@@ -23,7 +23,7 @@ ms.author: maghan
 
   Creates a dynamically filtered partition for a subscription that is filtered by the values of [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) or [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) at the Subscriber. This stored procedure is executed at the Publisher on the database that is being published, and is used to manually generate partitions.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

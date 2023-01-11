@@ -6,4 +6,4 @@ ms.service: sql
 ms.topic: include
 ---
 
-[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server 2019](_azdata.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [azdata](_azdata.md)]

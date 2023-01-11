@@ -14,7 +14,7 @@ ms.author: mikeray
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] provides tutorials to help you learn new technologies and features. Tutorials for earlier versions can usually be used with more recent versions. When tutorials address a newer feature, they will indicate the minimum version to complete the tutorial.  
      
 -   If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).    
--   Download a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook and Power View reports to use with Power View tutorials, go to [Power View Samples for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734).
+-   Download a [!INCLUDE[power-pivot-md](../includes/power-pivot-md.md)] workbook and Power View reports to use with Power View tutorials, go to [Power View Samples for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734).
 
     > [!NOTE]
     > Power View support is no longer available after SQL Server 2017.

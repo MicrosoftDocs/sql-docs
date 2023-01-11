@@ -27,7 +27,7 @@ Removes the space character `char(32)` or other specified characters from the st
 Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], optionally remove the space character `char(32)` or other specified characters from the start, end, or both sides of a string.
 ::: moniker-end
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

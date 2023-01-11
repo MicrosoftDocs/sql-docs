@@ -29,7 +29,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Encloses a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements so that a group of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can be executed. BEGIN and END are control-of-flow language keywords.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -73,7 +73,7 @@ Rolled back the transaction.
 */  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  In the following example, `BEGIN` and `END` define a series of [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statements that run together. If the `BEGIN...END` block are not included, the following example will be in a continuous loop.  
   
 ```sql

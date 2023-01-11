@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 Returns information about all the waits encountered by threads that executed. You can use this aggregated view to diagnose performance issues with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and also with specific queries and batches. [sys.dm_exec_session_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) provides similar information by session.
 
 > [!NOTE]  
-> To call this from **[!INCLUDE [ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]**, use the name `sys.dm_pdw_nodes_os_wait_stats`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from **[!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]**, use the name `sys.dm_pdw_nodes_os_wait_stats`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -36,7 +36,7 @@ Returns information about all the waits encountered by threads that executed. Yo
 | wait_time_ms | **bigint** | Total wait time for this wait type in milliseconds. This time is inclusive of signal_wait_time_ms. |
 | max_wait_time_ms | **bigint** | Maximum wait time on this wait type. |
 | signal_wait_time_ms | **bigint** | Difference between the time that the waiting thread was signaled and when it started running. |
-| pdw_node_id | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] |
+| pdw_node_id | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] |
 
 ## Permissions
 

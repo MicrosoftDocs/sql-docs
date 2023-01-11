@@ -23,7 +23,7 @@ ms.author: mathoma
 
   **sp_validate_replica_hosts_as_publishers** is an extension of **sp_validate_redirected_publisher** that allows all secondary replicas to be validated, rather than just the current primary replica. **sp_validate_replicat_hosts_as_publisher** validates an entire Always On replication topology. **sp_validate_replica_hosts_as_publishers** must be executed directly on the distributor by using a remote desktop session to avoid a double-hop security error (21892).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

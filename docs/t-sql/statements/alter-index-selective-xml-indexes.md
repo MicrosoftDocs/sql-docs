@@ -23,7 +23,7 @@ dev_langs:
   
  You cannot alter secondary selective XML indexes. For more information, see [Create, Alter, and Drop Secondary Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

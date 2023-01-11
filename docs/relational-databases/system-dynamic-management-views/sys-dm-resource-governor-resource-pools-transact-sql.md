@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
   Returns information about the current resource pool state, the current configuration of resource pools, and resource pool statistics.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_resource_governor_resource_pools**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+>  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_resource_governor_resource_pools**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -76,7 +76,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |total_cpu_violation_delay_ms|**bigint**|Total CPU violation delays (in milliseconds). That is, total CPU time delay that was lower than the minimum guaranteed delay between a runnable worker yields, and the operating system gives back control to another runnable worker in the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)].<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])|
 |total_cpu_violation_sec|**bigint**|Total CPU violations (in seconds). That is, total time accrued when a CPU time violation was in-flight.<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])|
 |total_cpu_usage_preemptive_ms|**bigint**|Total CPU time used while in preemptive mode scheduling for the workload group (in milliseconds). Is not nullable.<br /><br />To execute code that is outside the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode.<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])|
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Remarks  
  Resource Governor workload groups and Resource Governor resource pools have a many-to-one mapping. As a result, many of the resource pool statistics are derived from the workload group statistics.  

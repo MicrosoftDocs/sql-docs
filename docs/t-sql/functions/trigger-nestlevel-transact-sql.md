@@ -24,7 +24,7 @@ dev_langs:
 
   Returns the number of triggers executed for the statement that fired the trigger. TRIGGER_NESTLEVEL is used in DML and DDL triggers to determine the current level of nesting.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

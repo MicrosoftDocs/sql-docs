@@ -23,7 +23,7 @@ A data file can contain fields arranged in a different order from the correspond
 > Either a non-XML or XML format file can be used to bulk import a data file into the table by using a [bcp utility](../../tools/bcp-utility.md) command, [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement, or INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) statement. For more information, see [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
 > [!NOTE]  
-> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE[Use ADF or PolyBase instead of Synapse Bulk Insert](../../includes/paragraph-content/bulk-insert-synapse.md)]
+> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE [Use ADF or PolyBase instead of Synapse Bulk Insert](includes/bulk-insert-synapse.md)]
 
 ## <a id="etc"></a> Example test conditions
 

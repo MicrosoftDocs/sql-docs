@@ -2,6 +2,7 @@
 title: Resource limits
 titleSuffix: Azure SQL Managed Instance
 description: This article provides an overview of the resource limits for Azure SQL Managed Instance.
+services: sql-database
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
@@ -23,7 +24,7 @@ ms.custom:
 This article provides an overview of the technical characteristics and resource limits for Azure SQL Managed Instance, and provides information about how to request an increase to these limits.
 
 > [!NOTE]
-> For differences in supported features and T-SQL statements see [Feature differences](../database/features-comparison.md) and [T-SQL statement support](transact-sql-tsql-differences-sql-server.md). For general differences between service tiers for Azure SQL Database and SQL Managed Instance review [General Purpose](../database/service-tier-general-purpose.md) and [Business Critical](../database/service-tier-business-critical.md) service tiers. 
+> For differences in supported features and T-SQL statements see [Feature differences](../database/features-comparison.md) and [T-SQL statement support](transact-sql-tsql-differences-sql-server.md). For general differences between service tiers for Azure SQL Database and SQL Managed Instance review [General Purpose](../database/service-tier-general-purpose.md) and [Business Critical](../database/service-tier-business-critical.md) service tiers.
 
 ## Hardware configuration characteristics
 
@@ -79,7 +80,7 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 SQL Managed Instance has two service tiers: [General Purpose](../database/service-tier-general-purpose.md) and [Business Critical](../database/service-tier-business-critical.md). 
 
 > [!Important]
-> The Business Critical service tier provides an additional built-in copy of the SQL Managed Instance (secondary replica) that can be used for read-only workload. If you can separate read-write queries and read-only/analytic/reporting queries, you are getting twice the vCores and memory for the same price. The secondary replica might lag a few seconds behind the primary instance, so it is designed to offload reporting/analytic workloads that don't need exact current state of data. In the table below, **read-only queries** are the queries that are executed on secondary replica.
+> The Business Critical service tier provides an additional built-in copy of the SQL Managed Instance (secondary replica) that can be used for read-only workload. If you can separate read-write queries and read-only/analytic/reporting queries, you are getting twice the vCores and memory for the same price. The secondary replica might lag a few seconds behind the primary instance, so it is designed to offload reporting/analytic workloads that don't need exact current state of data. In the following table, **read-only queries** are the queries that are executed on secondary replica.
 
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |
@@ -94,8 +95,8 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 | Max data file size | Maximum size of each data file is 8 TB. Use at least two data files for databases larger than 8 TB. | Up to currently available instance size (depending on the number of vCores). |
 | Max log file size | Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. |
 | Data/Log IOPS (approximate) | 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)| 16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. |
-| Log write throughput limit (per instance) | 3 MB/s per vCore<br/>Max 120 MB/s per instance<br/>22 - 65 MB/s per DB (depending on log file size)<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4 MB/s per vCore<br/>Max 96 MB/s |
-| Data throughput (approximate) | 100 - 250 MB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Not limited. |
+| Log write throughput limit (per instance) | 3 MiB/s per vCore<br/>Max 120 MiB/s per instance<br/>22 - 65 MiB/s per DB (depending on log file size)<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4 MiB/s per vCore<br/>Max 96 MiB/s |
+| Data throughput (approximate) | 100 - 250 MiB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Not limited. |
 | Storage IO latency (approximate) | 5-10 ms | 1-2 ms |
 | In-memory OLTP | Not supported | Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
 | Max sessions | 30000 | 30000 |
@@ -110,7 +111,7 @@ A few additional considerations:
 - Both data and log file size in the user and system databases are included in the instance storage size that is compared with the max storage size limit. Use the [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) system view to determine the total used space by databases. Error logs are not persisted and not included in the size. Backups are not included in storage size.
 - Throughput and IOPS in the General Purpose tier also depend on the [file size](#file-io-characteristics-in-general-purpose-tier) that is not explicitly limited by the SQL Managed Instance.
   You can create another readable replica in a different Azure region using [auto-failover groups](auto-failover-group-configure-sql-mi.md)
-- Max instance IOPS depend on the file layout and distribution of workload. As an example, if you create 7 x 1 TB files with max 5 K IOPS each and seven small files (smaller than 128 GB) with 500 IOPS each, you can get 38500 IOPS per instance (7x5000+7x500) if your workload can use all files. Note that some IOPS are also used for auto-backups.
+- Max instance IOPS depend on the file layout and distribution of workload. As an example, if you create 7 x 1-TB files with max 5 K IOPS each and seven small files (smaller than 128 GB) with 500 IOPS each, you can get 38500 IOPS per instance (7x5000+7x500) if your workload can use all files. Note that some IOPS are also used for auto-backups.
 - Names of `tempdb`files cannot have more than 16 characters.
 
 Find more information about the [resource limits in SQL Managed Instance pools in this article](instance-pools-overview.md#resource-limitations).
@@ -142,14 +143,14 @@ Storage for database backups is allocated to support the [point-in-time restore 
 
 In the General Purpose service tier, every database file gets dedicated IOPS and throughput that depend on the file size. Larger files get more IOPS and throughput. IO characteristics of database files are shown in the following table:
 
-| **File size** | **>=0 and <=128 GiB** | **>128 and <= 512 GiB** | **>0.5 and <=1 TiB**    | **>1 and <=2 TiB**    | **>2 and <=4 TiB** | **>4 and <=8 TiB** |
+| **File size** | **>=0 and <=129 GiB** | **>129 and <=513 GiB** | **>513 and <=1025 GiB**  | **>1025 and <=2049 GiB**    | **>2049 and <=4097 GiB** | **>4097 GiB and <=8 TiB** |
 |:--|:--|:--|:--|:--|:--|:--|
 | IOPS per file       | 500   | 2300              | 5000  | 7500              | 7500              | 12,500   |
 | Throughput per file | 100 MiB/s | 150 MiB/s | 200 MiB/s | 250 MiB/s| 250 MiB/s | 250 MiB/s |
 
 If you notice high IO latency on some database file or you see that IOPS/throughput is reaching the limit, you might improve performance by [increasing the file size](https://techcommunity.microsoft.com/t5/Azure-SQL-Database/Increase-data-file-size-to-improve-HammerDB-workload-performance/ba-p/823337).
 
-There is also an instance-level limit on the max log write throughput (see above for values, e.g.,  22 MB/s), so you may not be able to reach the max file throughout on the log file because you are hitting the instance throughput limit.
+There is also an instance-level limit on the max log write throughput (see the previous table for values, for example 22 MiB/s), so you may not be able to reach the max file throughout on the log file because you are hitting the instance throughput limit.
 
 ## Supported regions
 
@@ -179,7 +180,7 @@ Supported subscription types can contain a limited number of resources per regio
 > [!Note]
 > These limits are default settings and not technical limitations. The limits can be increased on-demand by creating a special [support request in the Azure portal](../database/quota-increase-request.md) if you need more instances in the current region. As an alternative, you can create new instances of SQL Managed Instance in another Azure region without sending support requests.
 
-The following table shows the **default regional limits** for supported subscription types (default limits can be extended using support request described below):
+The following table shows the **default regional limits** for supported subscription types (default limits can be extended using [a support request](#request-a-quota-increase)):
 
 |Subscription type| Default limit for SQL Managed Instance subnets | Default limit for vCore units* |
 | :---| :--- | :--- |
@@ -255,8 +256,8 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 | Max data file size |  Limited to currently available instance storage size (max 2 TB - 8 TB) and [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files). Use at least two data files for databases larger than 8 TB. |   Limited to currently available instance storage size (up to 1 TB - 4 TB). |
 | Max log file size |  Limited to 2 TB and currently available instance storage size. |  Limited to 2 TB and currently available instance storage size. |
 | Data/Log IOPS (approximate) |  Up to 30-40 K IOPS per instance*, 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)|  16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. | 
-| Log write throughput limit (per instance) |  3 MB/s per vCore<br/>Max 120 MB/s per instance<br/>22 - 65 MB/s per DB<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |   4 MB/s per vCore<br/>Max 96 MB/s |
-| Data throughput (approximate) |  100 - 250 MB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |  Not limited. |
+| Log write throughput limit (per instance) |  3 MiB/s per vCore<br/>Max 120 MiB/s per instance<br/>22 - 65 MiB/s per DB<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |   4 MiB/s per vCore<br/>Max 96 MB/s |
+| Data throughput (approximate) |  100 - 250 MiB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |  Not limited. |
 | Storage IO latency (approximate) |  5-10 ms |  1-2 ms |
 | In-memory OLTP |  Not supported |  Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
 | Max sessions |  30000 |  30000 |

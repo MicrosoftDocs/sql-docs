@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current"
 
   Specifies a search condition for a graph, which is searched recursively or repetitively. SHORTEST_PATH can be used inside MATCH with graph node and edge tables, in the SELECT statement.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Shortest Path
 

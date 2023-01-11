@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 
 Removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -40,7 +40,7 @@ Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  [!INCLUDE
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]
 ```
 
-Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
@@ -52,7 +52,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
 
 #### WITH NO_INFOMSGS
 
-Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 #### COMPUTE
 
@@ -87,7 +87,7 @@ Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 - Requires membership in server role **##MS_ServerStateManager##**
 
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]
 
 - Requires membership in the **db_owner** fixed server role
 

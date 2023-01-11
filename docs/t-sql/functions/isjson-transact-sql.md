@@ -42,7 +42,7 @@ ISJSON ( expression [, json_type_constraint] )
   Specifies the JSON type to check in the input. Valid values are VALUE, ARRAY, OBJECT or SCALAR. Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 > [!NOTE]
-> The argument *json_type_constraint* is not supported in Azure Synapse Analytics
+> The argument *json_type_constraint* is not supported in Azure Synapse Analytics Dedicated pools
 
 ## Return value
 

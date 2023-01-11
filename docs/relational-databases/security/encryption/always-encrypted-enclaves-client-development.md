@@ -69,14 +69,14 @@ The following client drivers support Always Encrypted with secure enclaves:
 
 ## [VBS enclaves](#tab/VBSenclaves)
 
-- Microsoft .NET Data Provider for SQL Server in .NET Framework X.X or higher and .NET Core 3.1 or higher. 
+- Microsoft.Data.SqlClient version 3.1 or 4.1+. The library is compatible with .NET Framework and .NET Core. 
     - For more information, see [Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md).
     - For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md).
     - Also, see [Example demonstrating use of Azure Key Vault provider and Always Encrypted with secure enclaves](../../../connect/ado-net/sql/azure-key-vault-enclave-example.md).
-- Microsoft ODBC Driver for SQL Server, version XX.X or higher. 
+- Microsoft ODBC Driver for SQL Server, version 18.1 or higher. 
     - For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md). 
     - For information on how to enable enclave computations for a database connection using ODBC, see the [Enabling Always Encrypted with Secure Enclaves](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) section.
-- Microsoft JDBC Driver for SQL Server, version 11.1.1 or higher.
+- Microsoft JDBC Driver for SQL Server, version 11.2.1 or higher.
     - For more information, see [Using Always Encrypted with secure enclaves with the JDBC driver](../../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)
 - .NET Framework Data Provider for SQL Server in .NET Framework X.X.X or higher. 
     - For more information, see [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md).

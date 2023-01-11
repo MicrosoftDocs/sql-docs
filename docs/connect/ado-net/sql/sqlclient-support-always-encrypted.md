@@ -21,16 +21,20 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 - Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md).
 - If you're using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for more prerequisites.
-- Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for both .NET Framework and .NET Core. Make sure [.NET Framework 4.6](/dotnet/framework/) or higher, or [.NET Core 2.1](/dotnet/core/) or higher is configured as the target .NET platform version in your development environment. With Microsoft.Data.SqlClient version 2.1.0 and higher, the Always Encrypted feature is also supported for [.NET Standard 2.0](/dotnet/standard/net-standard). To use Always Encrypted with secure enclaves, [.NET Standard 2.1](/dotnet/standard/net-standard) is required. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
+- Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for .NET Framework, .NET Core and .NET Standard. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 The following table summarizes the required .NET platforms to use Always Encrypted with **Microsoft.Data.SqlClient**.
 
-| Support Always Encrypted | Support Always Encrypted with Secure Enclave  | Target Framework | Microsoft.Data.SqlClient Version | Operating System |
-|:--|:--|:--|:--:|:--:|
-| Yes | Yes | .NET Framework 4.6+ | 1.1.0+ | Windows |
-| Yes | Yes | .NET Core 2.1+ | 2.1.0+<sup>1</sup> | Windows, Linux, macOS |
-| Yes | No | .NET Standard 2.0 | 2.1.0+ | Windows, Linux, macOS |
-| Yes | Yes | .NET Standard 2.1+ | 2.1.0+ | Windows, Linux, macOS |
+| Support Always Encrypted | Support Always Encrypted with Secure Enclaves for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Intel SGX Secure Enclaves for [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]  | Support Always Encrypted with VBS Secure Enclaves for [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | Target Framework | Microsoft.Data.SqlClient Version | Operating System |
+|:--|:--|:--|:--:|:--:|:--:|
+| Yes | Yes | No | .NET Framework 4.6+ | 1.1.0+ | Windows |
+| Yes | Yes | No | .NET Core 2.1+ | 2.1.0+<sup>1</sup> | Windows, Linux, macOS |
+| Yes | No | No | .NET Standard 2.0 | 2.1.0+ | Windows, Linux, macOS |
+| Yes | Yes | No | .NET Standard 2.1+ | 2.1.0+ | Windows, Linux, macOS |
+| Yes | Yes | Yes | .NET Framework 4.6.1+ | 4.1.0+ | Windows, Linux, macOS |
+| Yes | Yes | Yes | .NET Core 3.1+ | 4.1.0+ | Windows, Linux, macOS |
+| Yes | Yes | Yes| .NET Standard 2.0 | 4.1.0+ | Windows, Linux, macOS |
+
 
 > [!NOTE]
 > <sup>1</sup> Before Microsoft.Data.SqlClient version 2.1.0, Always Encrypted is only supported on Windows.
@@ -66,8 +70,6 @@ Enabling Always Encrypted isn't sufficient for encryption or decryption to succe
 
 ## Enabling Always Encrypted with secure enclaves
 
-Beginning with Microsoft.Data.SqlClient version 1.1.0, the driver supports [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
-
 For general information on developing applications using enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md).
 
 To enable enclave computations for a database connection, you must set the following connection string keywords, in addition to enabling Always Encrypted (as explained in the previous section):
@@ -75,8 +77,12 @@ To enable enclave computations for a database connection, you must set the follo
 - `Attestation Protocol` - specifies an attestation protocol.
   - If this keyword isn't specified, secure enclaves are disabled on the connection.
   - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
-  - If you're using Virtualization-based security (VBS) enclaves and want to forgo attestation, the value of this keyword should be `None`.
+  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and want to forgo attestation, the value of this keyword should be `None`.
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX secure enclaves and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS secure enclaves, the value of this keyword should be `None`.
+
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves (in preview) currently do not support attestation.
 
 - `Enclave Attestation URL` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 

@@ -39,19 +39,20 @@ For detailed instructions for how to configure a new or existing database to use
 > [!IMPORTANT]
 > VBS enclaves in Azure SQL Database are currently in preview. The [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability.
 
-To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**, which activates the VBS enclave for the database. You can set **preferredEnclaveType** when you create your database or you by updating an existing database.
+To enable a VBS enclave in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**, which activates the VBS enclave for the database. You can set **preferredEnclaveType** when you create a new database or by updating an existing database.
 
 > [!NOTE]
 > By default, a new database is created with **preferredEnclaveType** set to **Default**, which doesn't support VBS enclaves.
 
 You can set the **preferredEnclaveType** using Azure PowerShell.
 
-## Enabling VBS enclaves using Azure PowerShell
+## Enabling VBS enclaves
+## [Azure PowerShell](#tab/PowerShell)
 
 Create a new database with a VBS enclave with the [New-AzSqlDatabase](/powershell/module/az.sql/New-AzSqlDatabase) cmdlet. The below example creates a serverless database with a VBS enclave.
 
 ```azurepowershell-interactive
-New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
+New-AzSqlDatabase  -ResourceGroupName "ResourceGroup01" `
     -ServerName "Server01" `
     -DatabaseName "Database01" `
     -Edition GeneralPurpose `
@@ -70,7 +71,34 @@ Set-AzSqlDatabase -ResourceGroupName "ResourceGroup01" `
     -ServerName "Server01" `
     -PreferredEnclaveType VBS
 ```
+## [Azure CLI](#tab/CLI)
 
+Create a new database with a VBS enclave with the [az sql db create](/cli/azure/sql/db) cmdlet. The below example creates a serverless database with a VBS enclave.
+```azurecli-interactive
+az sql db create -g ResourceGroup01 `
+    -s Server01 `
+    -n Database01 `
+    -e GeneralPurpose `
+    --compute-model Serverless `
+    -f Gen5 `
+    -c 2 `
+    --min-capacity 2 `
+    --preferred-enclave-type VBS 
+```
+To enable a VBS enclave for an existing database use the [az sql db update](/cli/azure/sql/db) cmdlet - see the below example.
+
+```azurecli-interactive
+az sql db create -g ResourceGroup01 `
+    -s Server01 `
+    -n Database01 `
+    -e GeneralPurpose `
+    --compute-model Serverless `
+    -f Gen5 `
+    -c 2 `
+    --min-capacity 2 `
+    --preferred-enclave-type VBS 
+```
+---
 ---
 
 ## See also

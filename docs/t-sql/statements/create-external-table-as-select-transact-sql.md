@@ -20,7 +20,8 @@ dev_langs:
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
-[!INCLUDE[applies-to-version/sqlserver2022-asa-pdw](../../includes/applies-to-version/sqlserver2022-asa-pdw.md)]
+
+[!INCLUDE[applies-to-version/sql-asdb-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 Creates an external table and then exports, in parallel, the results of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement.
 

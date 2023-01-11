@@ -42,7 +42,7 @@ sp_fulltext_database [@action=] 'action'
   
 |Value|Description|  
 |-----------|-----------------|  
-|**enable**|Supported for backward compatibility only.|  
+|**enable**|Supported for backward compatibility only. It will rebuild all Fulltext catalogs for this database.|  
 |**disable**|Supported for backward compatibility only.|  
   
 ## Return Code Values  

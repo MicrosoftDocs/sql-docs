@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_102
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   
 ## Details  
   

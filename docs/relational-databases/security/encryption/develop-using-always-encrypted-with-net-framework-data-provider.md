@@ -19,6 +19,9 @@ This article provides information on how to develop .NET applications using [Alw
 
 Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the .NET Framework Data Provider for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md).
 
+> [!NOTE]
+> .NET Framework does not support Always Encrypted with secure VBS enclaves in Azure SQL Database. This article is only applicable for Always Encrypted with secure enclaves in SQL Server and Always Encrypted with secure Intel SGX enclaves in Azure SQL Database.
+
 ## Prerequisites
 
 - Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](always-encrypted-tutorial-getting-started.md).

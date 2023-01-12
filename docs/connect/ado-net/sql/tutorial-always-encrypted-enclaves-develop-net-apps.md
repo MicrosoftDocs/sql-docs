@@ -30,11 +30,11 @@ Make sure you've completed one of the below tutorials before following the below
 - [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
 - [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
 
-In addition, you need Visual Studio (version 2022 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development environment must use .NET Framework 4.6 or later or .NET Core 3.1 or later.
+In addition, you need Visual Studio (version 2022 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development environment must use .NET Framework 4.6.1 or later or .NET Core 3.1 or later.
 
 ## Step 1: Set up your Visual Studio Project
 
-To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application targets .NET Framework 4.6 or higher. To use Always Encrypted with secure enclaves in a .NET Core application, you need to make sure your application targets .NET Core 3.1 or higher.
+To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application targets .NET Framework 4.6.1 or higher. To use Always Encrypted with secure enclaves in a .NET Core application, you need to make sure your application targets .NET Core 3.1 or higher.
 
 In addition, if you store your column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider).
 
@@ -47,7 +47,7 @@ In addition, if you store your column master key in Azure Key Vault, you also ne
 4. Install the following NuGet package by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
    ```powershell
-   Install-Package Microsoft.Data.SqlClient -Version 5.0.0
+   Install-Package Microsoft.Data.SqlClient -Version 4.1.0
    ```
 
 5. If you use Azure Key Vault for storing your column master keys, install the following NuGet packages by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.

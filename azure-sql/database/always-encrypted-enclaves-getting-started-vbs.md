@@ -70,7 +70,7 @@ Go to [Quickstart: Create a single database - Azure SQL Database](single-databas
 In this step, you will enable a VBS enclave in the database which is required for Always Encrypted with secure enclaves. To enable VBS enclaves in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**.
 
 > [!NOTE]
-> Currently, only PowerShell and Azure CLI supports enabling a VBS enclave in a database.
+> Currently, only PowerShell and Azure CLI support enabling a VBS enclave in a database.
 
 # [PowerShell](#tab/azure-powershell)
 

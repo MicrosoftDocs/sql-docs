@@ -20,24 +20,26 @@ monikerRange: ">= sql-server-ver15"
 
 This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). 
 
+> [!NOTE]
+> .NET Framework does not support Always Encrypted with secure VBS enclaves in Azure SQL Database. This tutorial is only applicable for Always Encrypted with secure enclaves in SQL Server and Always Encrypted with secure Intel SGX enclaves in Azure SQL Database.
+
 ## Prerequisites
 Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
-- [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
 
-You'll also need Visual Studio (version 2022 is recommended) - download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development machine must run .NET Framework X.X.X or later.
+You'll also need Visual Studio (version 2022 is recommended) - download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development machine must run .NET Framework 4.7.2 or later.
 
 ## Step 1: Set up your Visual Studio Project
 
-To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework X.X.X and is integrated with the [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders). In addition, if you store your column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.4.0 or later. 
+To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework 4.7.2 and is integrated with the [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders). In addition, if you store your column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.4.0 or later. 
 
 1. Open Visual Studio.
 
 2. Create a new C\# Console App (.NET Framework) project.
 
-3. Make sure your project targets at least .NET Framework X.X.X. Right-click on the project in Solution Explorer, select **Properties** and set **Target framework** to .NET Framework X.X.X.
+3. Make sure your project targets at least .NET Framework 4.7.2. Right-click on the project in Solution Explorer, select **Properties** and set **Target framework** to .NET Framework 4.7.2.
 
 4. Install the following NuGet package by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
@@ -122,34 +124,6 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
         <SqlColumnEncryptionEnclaveProviders>
           <providers>
             <add name="SGX" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-          </providers>
-        </SqlColumnEncryptionEnclaveProviders>
-        <startup> 
-         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
-        </startup>
-      </configuration>
-      ```
-    1. If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] with VBS enclaves and Microsoft Azure Attestation (you're using the database from [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)), add the below section.
-
-      ```xml
-      <SqlColumnEncryptionEnclaveProviders>
-        <providers>
-          <add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-        </providers>
-      </SqlColumnEncryptionEnclaveProviders>
-      ```
-
-      Here's a complete example of an app.config file for a simple console application.
-
-      ```xml
-      <?xml version="1.0" encoding="utf-8" ?>
-      <configuration>
-        <configSections>
-          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-        </configSections>
-        <SqlColumnEncryptionEnclaveProviders>
-          <providers>
-            <add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
           </providers>
         </SqlColumnEncryptionEnclaveProviders>
         <startup> 

@@ -67,7 +67,7 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
    1. In the **Connect to Server** dialog, specify your server name, select an   authentication method, and specify your credentials.
    1. Click **Options >>** and select the **Always Encrypted** tab.
    1. Select the checkboxes **Enable Always Encrypted (column encryption)** and **Enable Secure Enclaves** 
-   1. Specify the correct **Enclave Attestation Protocol** and fill in the enclave attestation URL (for example, `http://hgs.bastion.local/Attestation` or `https://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave`) if applicable.
+   1. If you're using attestation for your database, specify the correct **Enclave Attestation Protocol** (Host Guardian Service or Microsoft Azure Attestation) and fill in the enclave attestation URL. Otherwise, select None.
    1. Select **Connect**.
    1. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
 1. If you weren't prompted to enable Parameterization for Always Encrypted, verify it's enabled.

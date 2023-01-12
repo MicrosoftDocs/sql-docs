@@ -20,7 +20,7 @@ If the application doesn't request encryption, the [!INCLUDE[jdbcNoVersion](../.
 > [!NOTE]
 > Make sure the value passed to **serverName** exactly matches the Common Name (CN) or DNS name in the Subject Alternate Name (SAN) in the server certificate for a TLS connection to succeed.
 >
-> For more information about how to configure TLS for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Enable encrypted connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+> For more information about how to configure TLS for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/configure-sql-server-encryption).
 
 ## Remarks
 
@@ -71,4 +71,4 @@ For use of TDS 8.0 with `strict` encryption, the **serverCertifcate** property v
 ## See also
 
 [Using encryption](using-ssl-encryption.md)  
-[Securing JDBC driver applications](securing-jdbc-driver-applications.md)  
+[Securing JDBC driver applications](securing-jdbc-driver-applications.md)

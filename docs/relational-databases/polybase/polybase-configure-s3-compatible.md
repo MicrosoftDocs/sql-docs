@@ -39,7 +39,7 @@ To use the S3-compatible object storage integration features, you will need the 
 * *ListBucket* permission on S3 user for browse privileges.
 * *ReadOnly* permission on S3 user for read privileges.
 * *WriteOnly* permission on S3 user for write privileges.
-* TLS must have been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint will be validated by a certificate installed on the SQL Server OS Host. For more information on TLS and certificates, see [Enable encrypted connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+* TLS must have been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint will be validated by a certificate installed on the SQL Server OS Host. For more information on TLS and certificates, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/configure-sql-server-encryption).
 
 ### Permissions
 

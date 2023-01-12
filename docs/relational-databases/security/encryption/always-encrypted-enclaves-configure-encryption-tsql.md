@@ -65,14 +65,14 @@ The below example assumes:
 - `CEK1` is an enclave-enabled column encryption key.
 - The `SSN` column is plaintext and is currently using the default database collation, such as Latin1, non-BIN2 collation (for example, `Latin1_General_CI_AI_KS_WS`).
 
-The statement encrypts the `SSN` column using randomized encryption and the enclave-enabled column encryption key in-place. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
+The statement encrypts the `SSN` column using deterministic encryption and the enclave-enabled column encryption key in-place. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
 
 The operation is performed online (`ONLINE = ON`). Also note the call to `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`, which recreates the plans of the queries is affected by the table schema change.
 
 ```sql
 ALTER TABLE [dbo].[Employees]
-ALTER COLUMN [SSN] [char] COLLATE Latin1_General_BIN2
-ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+ALTER COLUMN [SSN] [char](11) COLLATE Latin1_General_BIN2
+ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Deterministic, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
 WITH
 (ONLINE = ON);
 GO

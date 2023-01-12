@@ -196,7 +196,7 @@ Indicates whether or not a customer can export underlying data from Power BI vis
 
 *Power BI Report Server September 2022, Reporting Services 2022 and later only*
 
-Enables .rdl report migrations to Power BI using the publish feature in the web portal. The default is **false**. The valid values are as follows:
+Enables .rdl report migrations to Power BI using the publish feature in the web portal. The default is **true**. The valid values are as follows:
 
 |Values |Description  |
 |---------|---------|

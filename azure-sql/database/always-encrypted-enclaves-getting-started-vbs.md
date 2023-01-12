@@ -27,15 +27,15 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
   - If you're using the Azure role-based access control (RBAC) permission model, make you sure you're a member of the [Key Vault Crypto Officer](/azure/role-based-access-control/built-in-roles#key-vault-crypto-officer) role for your key vault. See [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](/azure/key-vault/general/rbac-migration).
 - [Download SQL Server Management Studio (SSMS) 19 or later](/sql/ssms/download-sql-server-management-studio-ssms)
 
-### PowerShell requirements
+### Requirements
 
-Make sure the following PowerShell module is installed on your machine.
+# [PowerShell](#tab/azure-powershellrequirements)
 
-1. Az PowerShell module version 9.3.0 or later. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
+Make sure that Az PowerShell module version 9.3.0 or later is installed on your machine. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version of the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
 
-    ```powershell
-    Get-InstalledModule -Name Az
-    ```
+```azurepowershell-interactive
+Get-InstalledModule -Name Az
+```
 
 The PowerShell Gallery has deprecated Transport Layer Security (TLS) versions 1.0 and 1.1. TLS 1.2 or a later version is recommended. You may receive the following errors if you're using a TLS version lower than 1.2:
 
@@ -44,93 +44,82 @@ The PowerShell Gallery has deprecated Transport Layer Security (TLS) versions 1.
 
 To continue to interact with the PowerShell Gallery, run the following command before the Install-Module commands
 
-```powershell
+```azurepowershell-interactive
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 ```
+
+# [Azure CLI](#tab/azure-clirequirements)
+
+Make sure that Azure CLI 2.44.0 or later is installed on your machine. For details on how to install Azure CLI, see [How to install the Azure CLI](/cli/azure/install-azure-cli). To find your installed version and see if you need to update, run az version.
+
+```azurecli-interactive
+az version
+```
+---
 
 ## Step 1: Create and configure a server and a database
 
 In this step, you'll create a new Azure SQL Database logical server and a new database.
 
-# [Portal](#tab/azure-portal)
-
-1. Go to [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md) to create a new Azure SQL Database logical server and a new database. 
+Go to [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md) to create a new Azure SQL Database logical server and a new database. 
 > [!IMPORTANT]
 > Make sure that you create an **empty database** with the name **ContosoHR**.
+
+## Step 2: Enable a VBS enclave
+
+In this step, you will enable a VBS enclave in the database which is required for Always Encrypted with secure enclaves. To enable VBS enclaves in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**.
+
+> [!NOTE]
+> Currently, only PowerShell and Azure CLI supports enabling a VBS enclave in a database.
 
 # [PowerShell](#tab/azure-powershell)
 
 1. Open a PowerShell console and import the required version of the Az PowerShell module.
 
-   ```PowerShell
+   ```azurepowershell-interactive
    Import-Module "Az" -MinimumVersion "9.3.0"
    ```
 
 1. Sign into Azure. If needed, [switch to the subscription](/powershell/azure/manage-subscriptions-azureps) you're using for this tutorial.
 
-   ```PowerShell
+   ```azurepowershell-interactive
    Connect-AzAccount
    $subscriptionId = "<your subscription ID>"
    $context = Set-AzContext -Subscription $subscriptionId
    ```
 
-1. Create a new resource group.
+1. Enable a VBS enclave in your database.
 
-   ```powershell
-   $resourceGroupName = "<your new resource group name>"
-   $location = "<Azure region supporting DC-series and Microsoft Azure Attestation>"
-   New-AzResourceGroup -Name $resourceGroupName -Location $location
-   ```
+    ```azurepowershell-interactive
+    $resourceGroupName = "<your resource group name>"
+    $serverName = "<your server name>"
+    $databaseName = "ContosoHR"
+    
+    Set-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName -PreferredEnclaveType VBS
+    ```
 
-1. Create an Azure SQL logical server. When prompted, enter the server administrator name and a password. Make sure you remember the admin name and the password - you'll need them later to connect to the server. 
+# [Azure CLI](#tab/azure-cli)
 
-   ```powershell
-   $serverName = "<your server name>" 
-   New-AzSqlServer -ServerName $serverName -ResourceGroupName $resourceGroupName -Location $location -SqlAdministratorCredentials (Get-Credential)
-   ```
+1. Open either a Windows Command Prompt or PowerShell and sign into Azure. If needed, [switch to the subscription](cli/azure/manage-azure-subscriptions-azure-cli) you're using for this tutorial.
 
-1. Create a server firewall rule that allows access from the specified IP range.
-  
-   ```powershell
-   $startIp = "<start of IP range>"
-   $endIp = "<end of IP range>"
-   $serverFirewallRule = New-AzSqlServerFirewallRule -ResourceGroupName $resourceGroupName `
-    -ServerName $serverName `
-    -FirewallRuleName "AllowedIPs" -StartIpAddress $startIp -EndIpAddress $endIp
-   ```
+    ```azurecli-interactive
+    az login
+    $subscriptionId = "<your subscription ID>"
+    az account set --subscription $subscriptionId
+    ```
 
-1. Create a General Purpose Gen5 database.
+1. Enable a VBS enclave in your database.
 
-   ```powershell
-   $databaseName = "ContosoHR"
-   $edition = "GeneralPurpose"
-   $vCore = 2
-   $generation = "Gen5"
-   $computemodel = "Serverless"
-   New-AzSqlDatabase -ResourceGroupName $resourceGroupName `
-    -ServerName $serverName `
-    -DatabaseName $databaseName `
-    -Edition $edition `
-    -Vcore $vCore `
-    -ComputeGeneration $generation
-    -ComputeModel $computemodel
-   ```
+    ```azurecli-interactive
+    $resourceGroupName = "<your resource group name>"
+    $serverName = "<your server name>"
+    $databaseName = "ContosoHR"
 
----
-
-## Step 2: Enable VBS enclave
-In this step, you will  enable VBS enclaves in the database which is required for Always Encrypted with secure enclaves. To enable VBS enclaves in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**.
-
-> [!NOTE]
-> Currently, only PowerShell supports enabling a VBS enclave in a database.
-
-```powershell
-$resourceGroupName = "<your new resource group name>"
-$serverName = "<your server name>"
-$databaseName = "ContosoHR"
-
-Set-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName -PreferredEnclaveType VBS
-```
+    az sql db update -g $resourceGroupName `
+        -s $serverName `
+        -n $databaseName `
+        --preferred-enclave-type VBS
+    ```
 ---
 
 ## Step 3: Populate your database

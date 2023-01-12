@@ -90,7 +90,7 @@ az sql db create -g ResourceGroup01 `
 To enable a VBS enclave for an existing database use the [az sql db update](/cli/azure/sql/db) cmdlet - see the below example.
 
 ```azurecli-interactive
-az sql db update -g $ResourceGroup01 `
+az sql db update -g ResourceGroup01 `
     -s Server01 `
     -n Database01 `
     --preferred-enclave-type VBS

@@ -516,7 +516,7 @@ The IP address for the listener in the remote region needs to be added to the cl
 
    :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/configure-listener-ip-cluster.png" alt-text="Screenshot of Failover Cluster Manager that shows selections for opening properties for a resource. ":::
 
-1. For **Name**, enter a name for the new resource. For **Network**, select the network from the remote datacenter. Select **Static IP Address**, and then in the **Address** box, assign the static IP address from the new Azure load balancer.
+1. For **Name**, enter a name for the new resource. For **Network**, select the network from the remote datacenter. Select **Static IP Address**, and then in the **Address** box, assign the static IP address that you previously selected for the listener, in this tutorial is it **10.19.1.11**.
 
    :::image type="content" source="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-assign-listener-ip-cluster.png" alt-text="Screenshot of the dialog for IP address properties, showing assignment of the listener IP in the cluster." lightbox="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-assign-listener-ip-cluster.png":::
 
@@ -571,7 +571,7 @@ After SQL Server has restarted on the newly created virtual machine, you can add
    :::image type="content" source="./media/availability-group-manually-configure-multi-subnet-multiple-regions/multi-subnet-multi-region-ag-validation.png" alt-text="Screenshot of the page that displays results of availability group validation in SSMS.":::
 
     >[!NOTE]
-    >A warning for the listener configuration says you haven't configured an availability group listener. You can ignore this warning because the listener is already set up. It was created after you created the Azure load balancer in the local region.
+    >A warning for the listener configuration says you haven't configured an availability group listener. You can ignore this warning because the listener is already set up. 
 
 1. On the **Summary** page, select **Finish**, and then wait while the wizard configures the new availability group. On the **Progress** page, you can select **More details** to view the detailed progress. 
 

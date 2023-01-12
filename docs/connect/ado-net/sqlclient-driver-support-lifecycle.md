@@ -3,7 +3,7 @@ title: SqlClient driver support lifecycle
 description: Product support lifecycle information for the Microsoft.Data.SqlClient .NET library.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 10/24/2022
+ms.date: 01/10/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -30,17 +30,17 @@ New stable (GA) releases are published every six months on a regular cadence beg
 | 5.0 | July 29, 2022 | 5.0.1 | October 11, 2022 | Current | - |
 | 4.1 | January 31, 2022 | 4.1.1 | September 13, 2022 | Current | January 29, 2023 |
 | 4.0 | November 18, 2021 | 4.0.2 | September 13, 2022 | LTS | November 19, 2024 |
-| 3.1 | March 30, 2022 | 3.1.1 | August 12, 2022 | Current | January 29, 2023 |
+| 3.1 | March 30, 2022 | 3.1.1 | August 12, 2022 | LTS | March 30, 2025 |
 | 2.1 | November 19, 2020 | 2.1.5 | August 30, 2022 | LTS | November 20, 2023 |
-| 1.1 | November 20, 2019 | 1.1.4 | March 10, 2021 | LTS | November 21, 2022 |
 
 ### Out of support releases
 
-| Version | Release Date | Last Patch Version | Last Patch Release Date | Support Ended |
-|--|--|--|--|--|
-| 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | May 18, 2022 |
-| 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 | May 19, 2021 |
-| 1.0 | August 28, 2019 | 1.0.19269.1 | September 26, 2019 | May 20, 2020 |
+| Version | Release Date | Last Patch Version | Last Patch Release Date | Support Level | Support Ended |
+|--|--|--|--|--|--|
+| 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | Current | May 18, 2022 |
+| 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 | Current | May 19, 2021 |
+| 1.1 | November 20, 2019 | 1.1.4 | March 10, 2021 | LTS | November 21, 2022 |
+| 1.0 | August 28, 2019 | 1.0.19269.1 | September 26, 2019 | Current | May 20, 2020 |
 
 ## Azure Key Vault Provider release cadence
 

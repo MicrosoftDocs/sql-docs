@@ -43,6 +43,8 @@ The following examples are some of the common login failures. Select the exact e
 
 - [Login failed for user '(null)'](#login-failed-for-user-null)
 
+## Login failed for user '\<username>' or login failed for user '\<domain>\\\<username>'
+
 If the domain name isn't specified, the problem is a failing SQL Server login attempt. If the domain name is specified, the problem is a failing Windows user account login. For potential causes and suggested resolutions, see:
 
 | Potential cause | Suggested resolution |

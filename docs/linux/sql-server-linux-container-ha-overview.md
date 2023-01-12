@@ -12,6 +12,8 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # High availability for SQL Server containers
 
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
 Create and manage your SQL Server instances natively in Kubernetes.
 
 Deploy SQL Server to docker containers managed by [Kubernetes](https://kubernetes.io/). In Kubernetes, a container with a SQL Server instance can automatically recover in case a cluster node fails.

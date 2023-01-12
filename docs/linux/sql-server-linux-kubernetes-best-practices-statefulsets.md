@@ -12,6 +12,8 @@ ms.topic: conceptual
 
 # Deploy SQL Server Linux containers on Kubernetes with StatefulSets
 
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
 This article contains best practices and guidance for running SQL Server containers on Kubernetes with StatefulSets. We recommend deploying one SQL Server container (instance) per pod in Kubernetes. Thus, you have one SQL Server instance deployed per pod in the Kubernetes cluster.
 
 Similarly, the deployment script recommendation is to deploy one SQL Server instance by setting the `replicas` value to `1`. If you enter a number greater than `1` as the `replicas` value, you will get that many SQL Server instances with co-related names. For example, in the below script, if you assigned the number `2` as the value for `replicas`, you would deploy two SQL Server pods, with the names `mssql-0` and `mssql-1` respectively.

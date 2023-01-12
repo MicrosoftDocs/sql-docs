@@ -11,6 +11,8 @@ ms.reviewer: vanto
 ---
 # Manage SQL Server on Linux with PowerShell Core
 
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
 This article introduces [SQL Server PowerShell](../powershell/sql-server-powershell.md) and walks you through a couple of examples on how to use it with PowerShell Core (PS Core) on macOS & Linux. PowerShell Core is now an Open Source project on [GitHub](https://github.com/powershell/powershell).
 
 ## Cross-platform editor options

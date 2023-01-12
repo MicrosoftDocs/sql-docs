@@ -50,7 +50,7 @@ Before the Azure storage administrator writes a backup file to a storage account
 1. In the Azure portal, on the **Access Control (IAM)** pane of a storage account, select **Add role assignment**.  
 1. Select the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role. This provides read/write access to the managed identity for the necessary Azure Blob Storage containers.
    
-    Instead of granting the managed identity the Storage Blob Data Contributor Azure RBAC role, you can grant more granular permissions. To learn more, see [Set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl.md).
+    Instead of granting the managed identity the Storage Blob Data Contributor Azure RBAC role, you can grant more granular permissions. To learn more, see [Set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl).
 1. On the next page, for **Assign access to**, select **Managed identity**. 
 1. Choose **Select members** and then, in the **Managed identity** dropdown list, select the appropriate managed identity. For more information, see [Assign Azure roles by using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 

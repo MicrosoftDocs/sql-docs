@@ -20,7 +20,7 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asa-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns information about all latch waits organized by class. 
   

@@ -11,6 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "18456 (Database Engine error)"
 ---
+
 # MSSQLSERVER_18456
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,11 +72,11 @@ See the note below the table for an explanation of the term *double hop*.
 
 |Potential causes  |Suggested resolutions  |
 |---------|---------|
-|Configuration on a single computer requires a [double hop](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/understanding-kerberos-double-hop/ba-p/395463) (constraint delegation). You're trying to use double hop, but NT LAN Manager (NTLM) credentials are being used instead of Kerberos. NTLM doesn't support double-hop delegation     | For double-hop scenarios on the same computer, add the [DisableLoopbackCheck or BackConnectionHostNames](/troubleshoot/windows-server/networking/accessing-server-locally-with-fqdn-cname-alias-denied) registry entries.        |
+|You're trying to pass NT LAN Manager (NTLM) credentials from one service to another service on the same computer (for example: from IIS to SQL server), but a failure occurs in the process.| Add the [DisableLoopbackCheck or BackConnectionHostNames](/troubleshoot/windows-server/networking/accessing-server-locally-with-fqdn-cname-alias-denied) registry entries.        |
 |There are [double-hop](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/understanding-kerberos-double-hop/ba-p/395463) (constraint delegation) scenarios across multiple computers. The error could occur if the Kerberos connection fails because of Service Principal Names (SPN) issues.     | Run [SQLCheck](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) on each SQL Server and the web server. Use the troubleshooting guides: [0600 Credential Delegation Issue](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0600-Credential-Delegation-Issue) and [0650 SQL Server Linked Server Delegation Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0650-SQL-Server-Linked-Server-Delegation-Issues).        |
 |If no double-hop (constraint delegation) is involved, then likely duplicate SPNs exist, and the client is running as a LocalSystem or another machine account that gets NTLM credentials instead of Kerberos credentials.     | Use [SQLCheck](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) or [Setspn.exe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) to diagnose and fix any SPN-related issues. Also review [Overview of the Kerberos Configuration Manager for SQL Server](/troubleshoot/sql/connect/using-kerberosmngr-sqlserver).        |
 |Windows Local Security policy may have been configured to prevent the use of the machine account for remote authentication requests.     | Navigate to **Local Security Policy** > **Local Policies** > **Security Options** > **Network security: Allow Local System to use computer identity for NTLM**, select the **Enabled** option if the setting is disabled, and then select **OK**.<br />**Note**: As detailed on the **Explain** tab, this policy is enabled in Windows 7 and later versions by default.        |
-
+|Intermittent occurrence of this issue when using constrained delegation can indicate presence of an expired ticket that cannot be renewed by middle tier. This is an expected behavior with either linked server scenario or any application that is holding a logon session for more than 10 hours.|Change delegation settings on your middle-tier server from **Trust this computer for delegation to specified services only – Use Kerberos Only** to **Trust this computer for delegation to specified services only - Use any protocol.** For more information review [Intermittent ANONYMOUS LOGON of SQL Server linked server double hop](https://techcommunity.microsoft.com/t5/sql-server-support-blog/intermittent-anonymous-logon-of-sql-server-linked-server-double/ba-p/3694876).|
 
 > [!NOTE]  
 > A double-hop typically involves delegation of user credentials across multiple remote computers. For example, assume you have a SQL Server instance named *SQL1* where you created a linked server for a remote SQL Server named *SQL2*. In linked server security configuration, you selected the option **[Be made using the login's current security context](../linked-servers/create-linked-servers-sql-server-database-engine.md#specify-the-default-security-context-for-logins-not-present-in-the-mapping-list)**. When using this configuration, if you execute a linked server query on *SQL1* from a remote client computer named *Client1*, the windows credentials will first have to hop from *Client1* to *SQL1* and then from *SQL1* to *SQL2* (hence, it's called a double-hop). For more information, see [Understanding Kerberos Double Hop](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/understanding-kerberos-double-hop/ba-p/395463) and [Kerberos Constrained Delegation Overview](/windows-server/security/kerberos/kerberos-constrained-delegation-overview)
@@ -174,3 +175,4 @@ In this example, the authentication error state is 8. This indicates that the pa
 ## See also
 
 - [0420 Reasons for Consistent Auth Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0420-Reasons-for-Consistent-Auth-Issues)
+

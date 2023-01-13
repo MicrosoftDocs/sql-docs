@@ -3,7 +3,7 @@ description: "Develop applications using Always Encrypted with secure enclaves"
 title: "Develop applications using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: "02/01/2023"
 ms.service: sql
 ms.reviewer: vanto
 ms.subservice: security
@@ -22,18 +22,30 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 ## Prerequisites
 
-- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database and server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
-- You need to obtain an attestation URL for your environment from your attestation service administrator.
+Your environment needs to meet the following requirements to support Always Encrypted with secure enclaves.
 
-> [!NOTE]
-> [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves (in preview) currently do not support attestation.
+- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation, if applicable/required. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
+- Make sure your application:
+  - Uses a client driver version supports Always Encrypted with secure enclaves. See [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) for information about client drivers supporting Always Encrypted with secure enclaves.
+  - Enables Always Encrypted for your database connections.
+  - Sets an attestation protocol, which determines whether the client driver must attest the enclave before submitting enclave queries, and if so, which attestation service it should use. Most recent driver versions support the following attestation protocols:
 
-  - If you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
+    - Microsoft Azure Attestation - enforces attestation using Microsoft Azure Attestation.
+    - Host Guardian Service - enforces attestation using Host Guardian Service.
+    - None - allows using enclaves without attestation.
 
-- Your application must use a SQL client driver version that supports secure enclaves. See the below sections for more details.
+    The below table specifies attestation protocols valid for particular SQL products and enclave technologies:
 
-- You need to configure an attestation protocol and, if applicable, an attestation URL for a database connection. The details for how you configure the attestation protocol and the attestation URL depend on the client driver you're using.
+    | Product | Enclave technology | Supported attestation protocols |
+    |:---|:---|:---|
+    | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | Host Guardian Service, None |
+    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
+    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves (in preview)  | None |
+
+  - Sets an attestation URL that is valid for your environment, if you're using attestation.
+
+    - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+    - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
 
 ## Client drivers for Always Encrypted with secure enclaves
 

@@ -1,51 +1,43 @@
 ---
-title: "Tutorial: Getting started with Always Encrypted with secure VBS enclaves"
-description: Tutorial on how to create a basic environment for Always Encrypted with secure VBS enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
+title: "Tutorial: Getting started with Always Encrypted with VBS enclaves"
+description: Tutorial on how to create a basic environment for Always Encrypted with VBS enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 author: pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 1/5/2023
+ms.date: 2/1/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
 ---
-# Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database
+# Tutorial: Getting started with Always Encrypted with VBS enclaves in Azure SQL Database
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. You will use [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/en-us/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/). It will show you:
+This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. You will use [virtualization-based security (VBS) enclaves](https://www.microsoft.com/en-us/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/). It will show you:
 
 > [!div class="checklist"]
-> - How to create an environment for testing and evaluating Always Encrypted with secure VBS enclaves.
+> - How to create an environment for testing and evaluating Always Encrypted with VBS enclaves.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
 
-- An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/). You need to be a member of the Contributor role or the Owner role for the subscription to be able to create resources and configure an attestation policy.
+- An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/). You need to be a member of the Contributor role or the Owner role for the subscription to be able to create resources.
 - Optional, but recommended for storing your column master key for Always Encrypted: a key vault in Azure Key Vault. For information on how to create a key vault, see [Quickstart: Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal). 
   - If your key vault uses the access policy permissions model, make sure you have the following key permissions in the key vault: `get`, `list`, `create`, `unwrap key`, `wrap key`, `verify`, `sign`. See [Assign a Key Vault access policy](/azure/key-vault/general/assign-access-policy).
   - If you're using the Azure role-based access control (RBAC) permission model, make you sure you're a member of the [Key Vault Crypto Officer](/azure/role-based-access-control/built-in-roles#key-vault-crypto-officer) role for your key vault. See [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](/azure/key-vault/general/rbac-migration).
-- [Download SQL Server Management Studio (SSMS) 19 or later](/sql/ssms/download-sql-server-management-studio-ssms)
 
-### Requirements
+### Tool requirements
+
+# [SSMS](#tab/ssmsrequirements)
+
+[Download SQL Server Management Studio (SSMS) 19 or later](/sql/ssms/download-sql-server-management-studio-ssms).
 
 # [PowerShell](#tab/azure-powershellrequirements)
 
-Make sure that Az PowerShell module version 9.3.0 or later is installed on your machine. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version of the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
+Az PowerShell module version 9.3.0 or later is required. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
 
-```azurepowershell-interactive
+```powershell
 Get-InstalledModule -Name Az
-```
-
-The PowerShell Gallery has deprecated Transport Layer Security (TLS) versions 1.0 and 1.1. TLS 1.2 or a later version is recommended. You may receive the following errors if you're using a TLS version lower than 1.2:
-
-- `WARNING: Unable to resolve package source 'https://www.powershellgallery.com/api/v2'`
-- `PackageManagement\Install-Package: No match was found for the specified search criteria and module name.`
-
-To continue to interact with the PowerShell Gallery, run the following command before the Install-Module commands
-
-```azurepowershell-interactive
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 ```
 
 # [Azure CLI](#tab/azure-clirequirements)
@@ -61,9 +53,10 @@ az version
 
 In this step, you'll create a new Azure SQL Database logical server and a new database.
 
-Go to [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md) to create a new Azure SQL Database logical server and a new database. 
+Go to [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md) and follow the instructions in the [Create a single database](single-database-create-quickstart.md#create-a-single-database) section to create a new Azure SQL Database logical server and a new database.
+
 > [!IMPORTANT]
-> Make sure that you create an **empty database** with the name **ContosoHR**.
+> Make sure that you create an **empty database** with the name **ContosoHR** (and not a sample database).
 
 ## Step 2: Enable a VBS enclave
 

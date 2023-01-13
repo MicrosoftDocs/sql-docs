@@ -34,9 +34,9 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 
 Az PowerShell module version 9.3.0 or later is required. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
 
-    ```powershell
-    Get-InstalledModule -Name Az
-    ```
+```powershell
+Get-InstalledModule -Name Az
+```
 
 ## Step 1: Create and configure a server and a DC-series database
 

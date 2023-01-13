@@ -47,7 +47,7 @@ In addition, if you store your column master key in Azure Key Vault, you also ne
 4. Install the following NuGet package by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
    ```powershell
-   Install-Package Microsoft.Data.SqlClient -Version 4.1.0
+   Install-Package Microsoft.Data.SqlClient -Version 5.0.1
    ```
 
 5. If you use Azure Key Vault for storing your column master keys, install the following NuGet packages by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.

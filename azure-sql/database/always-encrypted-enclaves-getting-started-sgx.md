@@ -95,7 +95,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. Open a PowerShell console and import the required version of the Az PowerShell module.
 
    ```PowerShell
-   Import-Module "Az" -MinimumVersion "5.6.0"
+   Import-Module "Az" -MinimumVersion "9.3.0"
    ```
 
 1. Sign into Azure. If needed, [switch to the subscription](/powershell/azure/manage-subscriptions-azureps) you're using for this tutorial.
@@ -219,12 +219,6 @@ In this step, you'll create and configure an attestation provider in Microsoft A
     };
     ```
 
-1. Import the required version of `Az.Attestation`.  
-
-   ```powershell
-   Import-Module "Az.Attestation" -MinimumVersion "2.0.0"
-   ```
-  
 1. Create an attestation provider.
 
    ```powershell

@@ -90,7 +90,7 @@ Is the name of a user-defined variable containing a valid transaction name. The 
 ## Examples  
   
 ### A. Committing a transaction  
-**Applies to:** SQL Server, Azure SQL Database, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+**Applies to:** SQL Server, Azure SQL Database, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
 
 The following example deletes a job candidate. It uses AdventureWorks. 
   

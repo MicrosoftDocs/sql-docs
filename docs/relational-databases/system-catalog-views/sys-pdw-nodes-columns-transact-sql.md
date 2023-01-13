@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |rule_object_id|**int**|ID of the stand-alone rule bound to the column. <br />0 = No stand-alone rule.|Always 0.|  
 |is_sparse|**bit**|1 = Column is a sparse column.|Always 0.|  
 |is_column_set|**bit**|1 = Column is a column set.|Always 0.|  
-|pdw_node_id|**int**|Unique identifier of a [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] node.|NOT NULL|  
+|pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node.|NOT NULL|  
   
 ## Permissions  
  Requires CONTROL SERVER permission.  

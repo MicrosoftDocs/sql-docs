@@ -14,7 +14,7 @@ ms.custom: template-how-to
 ---
 # Restore the master database on Linux in single-user mode
 
-[!INCLUDE [sql-linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Under certain circumstances, you may need to restore the `master` database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode on Linux. Scenarios include migrating to a new instance, or recovering from inconsistencies.
 

@@ -1586,6 +1586,8 @@
               - name: Create availability group
                 displayName: Always On, alwayson, availability group
                 href: virtual-machines/windows/availability-group-manually-configure-tutorial-multi-subnet.md
+              - name: Extend AG to multiple regions
+                href: virtual-machines/windows/availability-group-manually-configure-multi-subnet-multiple-regions.md
               
           - name: Configure AG (single subnet)
             displayName: Always On, alwayson, availability group

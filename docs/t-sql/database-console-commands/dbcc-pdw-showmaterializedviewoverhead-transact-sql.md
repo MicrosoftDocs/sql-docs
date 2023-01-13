@@ -18,7 +18,7 @@ monikerRange: "= azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Displays the number of incremental changes in the base tables that are held for materialized views in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]. The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
+Displays the number of incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

@@ -63,7 +63,7 @@ Creates a user-defined function. A user-defined function is a [!INCLUDE[tsql](..
 > [!NOTE]
 >
 > - The integration of .NET Framework CLR into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is discussed in this topic. CLR integration does not apply to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-> - For [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], see [CREATE FUNCTION (Azure Synapse Analytics)](../../t-sql/statements/create-function-sql-data-warehouse.md).
+> - For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], see [CREATE FUNCTION (Azure Synapse Analytics)](../../t-sql/statements/create-function-sql-data-warehouse.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

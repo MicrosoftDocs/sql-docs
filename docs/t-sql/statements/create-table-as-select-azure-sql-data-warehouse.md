@@ -145,7 +145,7 @@ For details, see [General Remarks](./create-table-azure-sql-data-warehouse.md#Ge
 
 ## Limitations and Restrictions  
 
-An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] except for string columns.  
+An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] except for string columns.  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on CTAS. To achieve a similar behavior, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
  
@@ -174,7 +174,7 @@ To avoid data movement in subsequent queries, you can specify `REPLICATE` at the
 <a name="ctas-copy-table-bk"></a>
 
 ### A. Use CTAS to copy a table 
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Perhaps one of the most common uses of `CTAS` is creating a copy of a table so that you can change the DDL. If, for example,  you originally created your table as `ROUND_ROBIN` and now want change it to a table distributed on a column, `CTAS` is how you would change the distribution column. `CTAS` can also be used to change partitioning, indexing, or column types.
 
@@ -250,7 +250,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### B. Use CTAS to change column attributes 
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This example uses CTAS to change data types, nullability, and collation for several columns in the `DimCustomer2` table.  
   
@@ -311,7 +311,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### C. Use CTAS to change the distribution method for a table
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This simple example shows how to change the distribution method for a table. To show the mechanics of how to do this, it changes a hash-distributed table to round-robin and then changes the round-robin table back to hash distributed. The final table matches the original table. 
 
@@ -362,7 +362,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### D. Use CTAS to convert a table to a replicated table  
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This example applies for converting round-robin or hash-distributed tables to a replicated table. This particular example takes the previous method of changing the distribution type one step further.  Since `DimSalesTerritory` is a dimension and likely a smaller table, you can choose to re-create the table as replicated to avoid data movement when joining to other tables. 
 
@@ -386,7 +386,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### E. Use CTAS to create a table with fewer columns
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 The following example creates a round-robin distributed table named `myTable (c, ln)`. The new table only has two columns. It uses the column aliases in the SELECT statement for the names of the columns.  
   
@@ -408,9 +408,9 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### F. Use a Query Hint with CREATE TABLE AS SELECT (CTAS)  
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] applies the hash join strategy when it generates the query plan for each individual distribution. For more information on the hash join query hint, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] applies the hash join strategy when it generates the query plan for each individual distribution. For more information on the hash join query hint, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```sql  
 CREATE TABLE dbo.FactInternetSalesNew  
@@ -431,11 +431,11 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### G. Use CTAS to import data from Azure Blob storage  
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] is the same as the syntax for selecting data from a regular table.  
+To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] is the same as the syntax for selecting data from a regular table.  
   
- The following example defines an external table on data in an Azure Blob Storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure Blob Storage text-delimited files and stores the data into a new [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] table.  
+ The following example defines an external table on data in an Azure Blob Storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure Blob Storage text-delimited files and stores the data into a new [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] table.  
   
 ```sql  
 --Use your own processes to create the text-delimited files on Azure Blob Storage.  
@@ -512,7 +512,7 @@ Use CTAS to work around some unsupported features. Besides being able to run you
 <a name="ctas-replace-select-into-bk"></a>
 
 ### I. Use CTAS instead of SELECT..INTO  
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 SQL Server code typically uses SELECT..INTO to populate a table with the results of a SELECT statement. This is an example of a SQL Server SELECT..INTO statement.
 
@@ -522,7 +522,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-This syntax is not supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and Parallel Data Warehouse. This example shows how to rewrite the previous SELECT..INTO statement as a CTAS statement. You can choose any of the DISTRIBUTION options described in the CTAS syntax. This example uses the ROUND_ROBIN distribution method.
+This syntax is not supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and Parallel Data Warehouse. This example shows how to rewrite the previous SELECT..INTO statement as a CTAS statement. You can choose any of the DISTRIBUTION options described in the CTAS syntax. This example uses the ROUND_ROBIN distribution method.
 
 ```sql
 CREATE TABLE #tmp_fct
@@ -538,7 +538,7 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 ### J. Use CTAS to simplify merge statements  
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 Merge statements can be replaced, at least in part, by using `CTAS`. You can consolidate the `INSERT` and the `UPDATE` into a single statement. Any deleted records would need to be closed off in a second statement.
 
@@ -577,9 +577,9 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### K. Explicitly state data type and nullability of output  
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-When migrating SQL Server code to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], you might find you run across this type of coding pattern:
+When migrating SQL Server code to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], you might find you run across this type of coding pattern:
 
 ```sql
 DECLARE @d DECIMAL(7,2) = 85.455

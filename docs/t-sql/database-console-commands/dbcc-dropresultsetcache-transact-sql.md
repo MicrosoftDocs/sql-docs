@@ -17,7 +17,7 @@ monikerRange: "= azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Removes all result set cache entries from an [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] database.
+Removes all result set cache entries from an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

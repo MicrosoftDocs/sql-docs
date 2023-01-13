@@ -8246,8 +8246,6 @@ items:
         href: tools/distributed-replay/status-option-distributed-replay-administration-tool.md
       - name: Cancel Option
         href: tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md
-  - name: Go-SQLCMD
-    href: tools/go-sqlcmd-utility.md
   - name: SQL Server Configuration Manager
     href: tools/configuration-manager/sql-server-services.md
     items:
@@ -8399,17 +8397,19 @@ items:
   - name: SQLCMD
     items:
     - name: sqlcmd Overview
-      href: tools/sqlcmd-utility.md
+      href: tools/sqlcmd/sqlcmd-utility.md
+    - name: go-sqlcmd Overview
+      href: tools/sqlcmd/sgo-sqlcmd-utility.md
     - name: Start the Utility
-      href: ssms/scripting/sqlcmd-start-the-utility.md
+      href: tools/sqlcmd/sqlcmd-start-the-utility.md
     - name: Use the Utility
-      href: ssms/scripting/sqlcmd-use-the-utility.md
+      href: tools/sqlcmd/ssqlcmd-use-the-utility.md
     - name: Connect to the Database Engine
-      href: ssms/scripting/sqlcmd-connect-to-the-database-engine.md
+      href: tools/sqlcmd/ssqlcmd-connect-to-the-database-engine.md
     - name: Run T-SQL Script Files
-      href: ssms/scripting/sqlcmd-run-transact-sql-script-files.md
+      href: tools/sqlcmd/ssqlcmd-run-transact-sql-script-files.md
     - name: Use with Scripting Variables
-      href: ssms/scripting/sqlcmd-use-with-scripting-variables.md
+      href: tools/sqlcmd/ssqlcmd-use-with-scripting-variables.md
   - name: SSB Diagnose
     href: tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
     items:

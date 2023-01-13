@@ -106,7 +106,7 @@ For more in-depth information on sqlcmd syntax and use, see:
 - [Start the sqlcmd Utility](../../ssms/scripting/sqlcmd-start-the-utility.md)
 - [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md)
 
-```cmd
+```bash
 sqlcmd
    -a packet_size
    -A (dedicated administrator connection)
@@ -198,13 +198,13 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 
    When you want to use an Azure Active Directory user name and password, you can provide the **-G** option and also use the user name and password by providing the **-U** and **-P** options.
 
-   ```cmd
+   ```bash
    Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G
    ```
 
    The -G parameter generates the following connection string in the backend:
 
-   ```cmd
+   ```bash
     SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword
    ```
 
@@ -213,13 +213,13 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password.
 *AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).*.
 
-   ```cmd
+   ```bash
    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
    ```
 
    This generates the following connection string in the backend:
 
-   ```cmd
+   ```bash
    SERVER = Target_DB_or_DW.testsrv.database.windows.net Authentication = ActiveDirectoryIntegrated; Trusted_Connection=NO
    ```
 
@@ -238,19 +238,19 @@ For Azure Active Directory Integrated authentication, provide the **-G** option 
 
    Interactive mode requires a password to be manually entered, or for accounts with multi-factor authentication enabled, complete your configured MFA authentication method.
 
-   ```cmd
+   ```bash
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
    ```
 
    The previous command generates the following connection string in the backend:
 
-   ```cmd
+   ```bash
    SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive
    ```
 
    In case an Azure AD user is a domain federated user using a Windows account, the user name required in the command-line, contains its domain account (for example,  joe@contoso.com see below):
 
-   ```cmd
+   ```bash
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com
    ```
 
@@ -361,7 +361,7 @@ Code-page conversion rules:
 
 Path examples:
 
-```cmd
+```bash
 -i C:\<filename>
 -i \\<Server>\<Share$>\<filename>
 -i "C:\Some Folder\<file name>"
@@ -378,7 +378,7 @@ Path examples:
 
  Path examples:
 
-```cmd
+```bash
 -o C:< filename>
 -o \\<Server>\<Share$>\<filename>
 -o "C:\Some Folder\<file name>"
@@ -987,7 +987,7 @@ When you press ENTER, the following informational message is printed: "Changed d
 
 Examples using Azure Active Directory Authentication:
 
-```cmd
+```bash
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAADPassword -l 30
 ```

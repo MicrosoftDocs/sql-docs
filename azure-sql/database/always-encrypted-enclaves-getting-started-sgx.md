@@ -1,22 +1,22 @@
 ---
-title: "Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves"
-description: Tutorial on how to create a basic environment for Always Encrypted with secure Intel SGX enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
+title: "Tutorial: Getting started with Always Encrypted with Intel SGX enclaves"
+description: Tutorial on how to create a basic environment for Always Encrypted with Intel SGX enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: 10/25/2022
+ms.date: 02/01/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
 ---
-# Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database
+# Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. You will use [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html). It will show you:
 
 > [!div class="checklist"]
-> - How to create an environment for testing and evaluating Always Encrypted with secure Intel SGX enclaves.
+> - How to create an environment for testing and evaluating Always Encrypted with Intel SGX enclaves.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
@@ -32,24 +32,11 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 > [!NOTE]
 > The prerequisites listed in this section apply only if you choose to use PowerShell for some of the steps in this tutorial. If you plan to use Azure portal instead, you can skip this section.
 
-Make sure the following PowerShell modules are installed on your machine.
-
-1. Az PowerShell module version 9.3.0 or later. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
+Az PowerShell module version 9.3.0 or later is required. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
 
     ```powershell
     Get-InstalledModule -Name Az
     ```
-
-The PowerShell Gallery has deprecated Transport Layer Security (TLS) versions 1.0 and 1.1. TLS 1.2 or a later version is recommended. You may receive the following errors if you're using a TLS version lower than 1.2:
-
-- `WARNING: Unable to resolve package source 'https://www.powershellgallery.com/api/v2'`
-- `PackageManagement\Install-Package: No match was found for the specified search criteria and module name.`
-
-To continue to interact with the PowerShell Gallery, run the following command before the Install-Module commands
-
-```powershell
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-```
 
 ## Step 1: Create and configure a server and a DC-series database
 

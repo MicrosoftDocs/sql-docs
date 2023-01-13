@@ -100,4 +100,4 @@ az sql db update -g ResourceGroup01 `
 
 ## See also
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](always-encrypted-enclaves-getting-started-sgx.md)
+- [Tutorial: Getting started with Always Encrypted with Intel SGX enclaves](always-encrypted-enclaves-getting-started-sgx.md)

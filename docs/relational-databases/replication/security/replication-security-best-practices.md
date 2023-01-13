@@ -22,7 +22,7 @@ ms.author: "mathoma"
   
  The following information is relevant to replication in all environments:  
   
--   Encrypt the connections between computers in a replication topology using an industry standard method, such as Virtual Private Networks (VPN), Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), or IP Security (IPSEC). For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). For information about using VPN and TLS for replicating data over the Internet, see [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
+-   Encrypt the connections between computers in a replication topology using an industry standard method, such as Virtual Private Networks (VPN), Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), or IP Security (IPSEC). For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption). For information about using VPN and TLS for replicating data over the Internet, see [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
   
      If you use TLS to secure the connections between computers in a replication topology, specify a value of **1** or **2** for the **-EncryptionLevel** parameter of each replication agent (a value of **2** is recommended). A value of **1** specifies that encryption is used, but the agent does not verify that the TLS/SSL server certificate is signed by a trusted issuer; a value of **2** specifies that the certificate is verified. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
@@ -63,11 +63,10 @@ ms.author: "mathoma"
     -   In situations that require [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 ## See Also  
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption)   
  [Replication over the Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
  [Secure the Subscriber](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
-  
   

@@ -714,7 +714,7 @@ Proactively improve your database security by discovering and remediating potent
 **Further resources**
 
 - [SQL Vulnerability Assessment](/sql/relational-databases/security/sql-vulnerability-assessment)
-- [SQL Vulnerability Assessment service helps you identify database vulnerabilities](sql-vulnerability-assessment.md)
+- [SQL Vulnerability Assessment service helps you identify database vulnerabilities](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
 
 ### Identify and tag sensitive data
 

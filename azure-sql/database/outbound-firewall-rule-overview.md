@@ -17,7 +17,7 @@ ms.topic: conceptual
 Outbound firewall rules limit network traffic from the Azure SQL [logical server](logical-servers.md) to a customer defined list of Azure Storage accounts and Azure SQL logical servers. Any attempt to access storage accounts or databases not in this list is denied. The following [Azure SQL Database](sql-database-paas-overview.md) features support this feature:
 
 - [Auditing](auditing-overview.md)
-- [Vulnerability assessment](sql-vulnerability-assessment.md)
+- [Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
 - [Import/Export service](database-import-export-azure-services-off.md)
 - [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql)
 - [Bulk Insert](/sql/t-sql/statements/bulk-insert-transact-sql)

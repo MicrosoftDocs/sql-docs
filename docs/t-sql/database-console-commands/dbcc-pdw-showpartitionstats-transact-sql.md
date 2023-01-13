@@ -16,7 +16,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-Displays the size and number of rows for each partition of a table in a [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database.
+Displays the size and number of rows for each partition of a table in a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -54,7 +54,7 @@ This set is the results for the `DBCC PDW_SHOWPARTITIONSTATS` command.
 | pdw_node_id | int | Compute node for the data. |
 | distribution_id | int | Distribution identifier for the data. |
 
-## Examples: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### A. DBCC PDW_SHOWPARTITIONSTATS basic syntax examples
 

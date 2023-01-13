@@ -14,7 +14,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 # CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates a user-defined function in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], CREATE FUNCTION can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions. Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], CREATE FUNCTION can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions. Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
   
@@ -96,7 +96,7 @@ RETURNS TABLE
 >  ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
   
  *parameter_data_type*  
- Is the parameter data type. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all scalar data types supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] are allowed. The timestamp (rowversion) data type is not a supported type.  
+ Is the parameter data type. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all scalar data types supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] are allowed. The timestamp (rowversion) data type is not a supported type.  
   
  [ =*default* ]  
  Is a default value for the parameter. If a *default* value is defined, the function can be executed without specifying a value for that parameter.  
@@ -104,7 +104,7 @@ RETURNS TABLE
  When a parameter of the function has a default value, the keyword DEFAULT must be specified when the function is called to retrieve the default value. This behavior is different from using parameters with default values in stored procedures in which omitting the parameter also implies the default value.  
   
  *return_data_type*  
- Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all scalar data types supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] are allowed. The timestamp (rowversion) data type is not a supported type. The cursor and table nonscalar types are not allowed.  
+ Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all scalar data types supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] are allowed. The timestamp (rowversion) data type is not a supported type. The cursor and table nonscalar types are not allowed.  
   
  *function_body*  
  Series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  The function_body cannot contain a SELECT statement and cannot reference database data.  The function_body cannot reference tables or views. The function body can call other deterministic functions but cannot call nondeterministic functions. 

@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 # sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Returns information about the connections established to this instance of [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and the details of each connection. 
+  Returns information about the connections established to this instance of [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and the details of each connection. 
 
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] For serverless SQL pool use [sys.dm_exec_connections (Transact-SQL)](sys-dm-exec-connections-transact-sql.md).

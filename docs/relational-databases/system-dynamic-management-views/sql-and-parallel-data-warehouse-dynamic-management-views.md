@@ -15,15 +15,15 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 # SQL and Parallel Data Warehouse Dynamic Management Views
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-This topic lists the [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dynamic management views (DMVs).  
+This topic lists the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dynamic management views (DMVs).  
   
- All [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMVs begin with **sys.dm_pdw**.  
+ All [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMVs begin with **sys.dm_pdw**.  
   
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
-## [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dynamic Management Views  
- The following dynamic management views apply to both [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+## [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dynamic Management Views  
+ The following dynamic management views apply to both [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.dm_pdw_dms_cores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
   
@@ -61,8 +61,8 @@ This topic lists the [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md
   
  [sys.dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
 
-## [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] Dynamic Management Views 
- The following dynamic management views apply to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] only:
+## [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Dynamic Management Views 
+ The following dynamic management views apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only:
  
 [sys.dm_pdw_nodes_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
 

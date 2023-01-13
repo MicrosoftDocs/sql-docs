@@ -275,9 +275,9 @@ Up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], rebuilding a clustered 
 > Creating and rebuilding nonaligned indexes on a table with more than 1,000 partitions is possible, but is not supported. Doing so may cause degraded performance or excessive memory consumption during these operations. Microsoft recommends using only [aligned indexes](../partitions/partitioned-tables-and-indexes.md#aligned-index) when the number of partitions exceeds 1,000.
 
 <!--
-For an [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REBUILD` will re-sort the data using tempdb. Monitor tempdb during rebuild operations. If you need more tempdb space, scale up the data warehouse. Scale back down once the index rebuild is complete.
+For an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REBUILD` will re-sort the data using tempdb. Monitor tempdb during rebuild operations. If you need more tempdb space, scale up the data warehouse. Scale back down once the index rebuild is complete.
 
-For an [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort data, use `ALTER INDEX REBUILD`.
+For an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort data, use `ALTER INDEX REBUILD`.
 -->
 
 ### Statistics limitations

@@ -40,7 +40,7 @@ Limits the rows returned in a query result set to a specified number of rows or 
 ]  
 ```  
 
-Following is syntax for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Following is syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```syntaxsql  
 [   

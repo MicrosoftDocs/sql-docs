@@ -129,7 +129,7 @@ When `DBCC CHECKIDENT` is used to specify a new seed value by using `RESEED <new
 
 Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
 
-[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] requires **db_owner** permissions.
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] requires **db_owner** permissions.
 
 ## Examples
 

@@ -17,10 +17,10 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
- This topic lists the [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  
+ This topic lists the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  
   
-## [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views  
- The following catalog views apply to both [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+## [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views  
+ The following catalog views apply to both [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.pdw_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
   
@@ -54,9 +54,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] catalog views
+## [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] catalog views
 
- The following catalog views apply to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] only:
+ The following catalog views apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only:
 
  [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](./sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) 
 

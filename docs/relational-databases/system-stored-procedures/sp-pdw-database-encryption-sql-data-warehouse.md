@@ -16,7 +16,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # sp_pdw_database_encryption (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Use **sp_pdw_database_encryption** to enable transparent data encryption on for a [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] appliance. When **sp_pdw_database_encryption** set to 1, use the **ALTER DATABASE** statement to encrypt a database by using TDE.  
+  Use **sp_pdw_database_encryption** to enable transparent data encryption on for a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance. When **sp_pdw_database_encryption** set to 1, use the **ALTER DATABASE** statement to encrypt a database by using TDE.  
   
 ## Syntax  
   

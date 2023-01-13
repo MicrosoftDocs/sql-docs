@@ -1502,7 +1502,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ## Arguments
 
 #### *database_name*
-The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
+The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
 
 #### *collation_name*
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.
@@ -1521,7 +1521,7 @@ The maximum allowable size for the database. The database cannot grow beyond MAX
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
 #### *EDITION*
-Specifies the service tier of the database. For [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] use `datawarehouse`.
+Specifies the service tier of the database. For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] use `datawarehouse`.
 
 #### SERVICE_OBJECTIVE
 Specifies the compute size (service objective). The service levels for Gen2 are measured in compute data warehouse units (cDWU), for example `DW2000c`. Gen1 service levels are measured in DWUs, for example `DW2000`. For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective). Gen1 service objectives (no longer listed) are no longer supported, you may receive an error: `Azure SQL Data Warehouse Gen1 has been deprecated in this region. Please use SQL Analytics in Azure Synapse.`

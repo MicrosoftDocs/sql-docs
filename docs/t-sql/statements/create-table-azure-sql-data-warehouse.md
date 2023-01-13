@@ -15,12 +15,12 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates a new table in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Creates a new table in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
-To understand tables and how to use them, see [Tables in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview).
+To understand tables and how to use them, see [Tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview).
 
 > [!NOTE]
->  Discussions about [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] in this article apply to both [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] unless otherwise noted.
+>  Discussions about [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] in this article apply to both [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] unless otherwise noted.
 
 [!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
 
@@ -129,11 +129,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="TableOptions"></a> Table structure options
 
-For guidance on choosing the type of table, see [Indexing tables in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
+For guidance on choosing the type of table, see [Indexing tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
   
  `CLUSTERED COLUMNSTORE INDEX` 
  
-Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This behavior is the default for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].
+Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
  
  `HEAP`
   Stores the table as a heap. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
@@ -163,10 +163,10 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 > - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
 
 `DISTRIBUTION = ROUND_ROBIN`
-Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].
+Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 `DISTRIBUTION = REPLICATE`
-Stores one copy of the table on each Compute node. For [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Stores one copy of the table on each Compute node. For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
 For guidance on using table partitions, see [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
@@ -177,18 +177,18 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
 | Argument | Explanation |
 | -------- | ----------- |
-|*partition_column_name*| Specifies the column that [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] will use to partition the rows. This column can be any data type. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] sorts the partition column values in ascending order. The low-to-high ordering goes from `LEFT` to `RIGHT` in the `RANGE` specification. |  
+|*partition_column_name*| Specifies the column that [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] will use to partition the rows. This column can be any data type. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] sorts the partition column values in ascending order. The low-to-high ordering goes from `LEFT` to `RIGHT` in the `RANGE` specification. |  
 | `RANGE LEFT` | Specifies the boundary value belongs to the partition on the left (lower values). The default is LEFT. |
 | `RANGE RIGHT` | Specifies the boundary value belongs to the partition on the right (higher values). | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Specifies the boundary values for the partition. *boundary_value* is a constant expression. It can't be NULL. It must either match or be implicitly convertible to the data type of *partition_column_name*. It can't be truncated during implicit conversion so that the size and scale of the value don't match the data type of *partition_column_name*<br></br><br></br>If you specify the `PARTITION` clause, but don't specify a boundary value, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] will create a partitioned table with one partition. If applicable, you can split the table into two partitions at a later time.<br></br><br></br>If you specify one boundary value, the resulting table has two partitions; one for the values lower than the boundary value and one for the values higher than the boundary value. If you move a partition into a non-partitioned table, the non-partitioned table will receive the data, but will not have the partition boundaries in its metadata.| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Specifies the boundary values for the partition. *boundary_value* is a constant expression. It can't be NULL. It must either match or be implicitly convertible to the data type of *partition_column_name*. It can't be truncated during implicit conversion so that the size and scale of the value don't match the data type of *partition_column_name*<br></br><br></br>If you specify the `PARTITION` clause, but don't specify a boundary value, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] will create a partitioned table with one partition. If applicable, you can split the table into two partitions at a later time.<br></br><br></br>If you specify one boundary value, the resulting table has two partitions; one for the values lower than the boundary value and one for the values higher than the boundary value. If you move a partition into a non-partitioned table, the non-partitioned table will receive the data, but will not have the partition boundaries in its metadata.| 
 
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
 ### Ordered Clustered columnstore index option 
 
-Clustered columnstore index (CCI) is the default for creating tables in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. See [Performance Tuning with Ordered Clustered Columnstore Index](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest&preserve-view=true) for details.  
+Clustered columnstore index (CCI) is the default for creating tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. See [Performance Tuning with Ordered Clustered Columnstore Index](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest&preserve-view=true) for details.  
 
-An ordered CCI can be created on columns of any data types supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] except for string columns.  
+An ordered CCI can be created on columns of any data types supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] except for string columns.  
 
 Users can query **column_store_order_ordinal** column in **sys.index_columns** for the column(s) a table is ordered on and the sequence in the ordering.  
 
@@ -196,7 +196,7 @@ Check [Performance tuning with ordered clustered columnstore index](/azure/sql-d
 
 ### <a name="DataTypes"></a> Data type
 
-[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
 
 >[!NOTE]
 >Similar to SQL Server, there is an 8060 byte per row limit. This may become a blocking issue for tables that have many columns, or columns with large data types, such as `nvarchar(max)` or `varbinary(max)`. Inserts or updates that violate the 8060 byte limit will result in error codes 511 or 611. For more information, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md?view=azure-sqldw-latest&preserve-view=true#row-overflow-considerations).
@@ -243,9 +243,9 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 | 1-24   | 7 digits  | 4 bytes      |  
 | 25-53  | 15 digits | 8 bytes      |  
   
- [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] treats *n* as one of two possible values. If `1`<= *n* <= `24`, *n* is treated as `24`. If `25` <= *n* <= `53`, *n* is treated as `53`.  
+ [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] treats *n* as one of two possible values. If `1`<= *n* <= `24`, *n* is treated as `24`. If `25` <= *n* <= `53`, *n* is treated as `53`.  
   
- The [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] `float` data type complies with the ISO standard for all values of *n* from `1` through `53`. The synonym for double precision is `float(53)`.  
+ The [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] `float` data type complies with the ISO standard for all values of *n* from `1` through `53`. The synonym for double precision is `float(53)`.  
   
  `real` [ ( *n* ) ]  
  The definition of real is the same as float. The ISO synonym for `real` is `float(24)`.  
@@ -285,21 +285,21 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 | `tinyint` |1|  
   
  `bit`  
- An integer data type that can take the value of `1`, `0`, or `NULL. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] optimizes storage of bit columns. If there are 8 or fewer bit columns in a table, the columns are stored as 1 byte. If there are from 9-16 bit columns, the columns are stored as 2 bytes, and so on.  
+ An integer data type that can take the value of `1`, `0`, or `NULL. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] optimizes storage of bit columns. If there are 8 or fewer bit columns in a table, the columns are stored as 1 byte. If there are from 9-16 bit columns, the columns are stored as 2 bytes, and so on.  
   
- `nvarchar` [ ( *n* | `max` ) ]  -- `max` applies only to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].  
+ `nvarchar` [ ( *n* | `max` ) ]  -- `max` applies only to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
  Variable-length Unicode character data. *n* can be a value from 1 through 4000. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB). Storage size in bytes is two times the number of characters entered + 2 bytes. The data entered can be zero characters in length.  
   
  `nchar` [ ( *n* ) ]  
  Fixed-length Unicode character data with a length of *n* characters. *n* must be a value from `1` through `4000`. The storage size is two times *n* bytes.  
   
- `varchar` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].   
+ `varchar` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].   
  Variable-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB).The storage size is the actual length of data entered + 2 bytes.  
   
  `char` [ ( *n* ) ]  
  Fixed-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. The storage size is *n* bytes. The default for *n* is `1`.  
   
- `varbinary` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].  
+ `varbinary` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
  Variable-length binary data. *n* can be a value from `1` to `8000`. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB). The storage size is the actual length of data entered + 2 bytes. The default value for *n* is 7.  
   
  `binary` [ ( *n* ) ]  
@@ -323,10 +323,10 @@ Creating a partitioned table requires permission in the `db_ddladmin` fixed data
 <a name="GeneralRemarks"></a>  
 ## General Remarks  
  
-For minimum and maximum limits, see [[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits). 
+For minimum and maximum limits, see [[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits). 
  
 ### Determining the number of table partitions
-Each user-defined table is divided into multiple smaller tables that are stored in separate locations called distributions. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] uses 60 distributions. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the number of distributions depends on the number of Compute nodes.
+Each user-defined table is divided into multiple smaller tables that are stored in separate locations called distributions. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses 60 distributions. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the number of distributions depends on the number of Compute nodes.
  
 Each distribution contains all table partitions. For example, if there are 60 distributions and four table partitions plus one empty partition, there will be 300 partitions (5 x 60= 300). If the table is a clustered columnstore index, there will be one columnstore index per partition, which means you'll have 300 columnstore indexes.
 
@@ -335,7 +335,7 @@ We recommend using fewer table partitions to ensure each columnstore index has e
 
 ### Rowstore table (heap or clustered index)
 
-A rowstore table is a table stored in row-by-row order. It's a heap or clustered index. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] creates all rowstore tables with page compression; this behavior isn't user-configurable.
+A rowstore table is a table stored in row-by-row order. It's a heap or clustered index. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] creates all rowstore tables with page compression; this behavior isn't user-configurable.
 
 ### Columnstore table (columnstore index)
 
@@ -345,7 +345,7 @@ To change a rowstore table to a columnstore table, drop all existing indexes on 
 
 For more information, see these articles:
 - [Columnstore indexes versioned feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
-- [Indexing tables in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index)
+- [Indexing tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index)
 
 - [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
@@ -360,7 +360,7 @@ When using partitions, the partition column can't have a Unicode-only collation.
 CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
 ```  
  
- If *boundary_value* is a literal value that must be implicitly converted to the data type in *partition_column_name*, a discrepancy will occur. The literal value is displayed through the [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] system views, but the converted value is used for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations. 
+ If *boundary_value* is a literal value that must be implicitly converted to the data type in *partition_column_name*, a discrepancy will occur. The literal value is displayed through the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] system views, but the converted value is used for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations. 
 
 ### Temporary tables
 
@@ -368,12 +368,12 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
   
  Local temporary tables have the following limitations and restrictions:  
   
--   They're visible only to the current session. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] drops them automatically at the end of the session. To drop them explicitly, use the DROP TABLE statement.   
+-   They're visible only to the current session. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] drops them automatically at the end of the session. To drop them explicitly, use the DROP TABLE statement.   
 -   They can't be renamed. 
 -   They can't have partitions or views.  
 -   Their permissions can't be changed. `GRANT`, `DENY`, and `REVOKE` statements can't be used with local temporary tables.   
 -   Database console commands are blocked for temporary tables.   
--   If more than one local temporary table is used within a batch, each must have a unique name. If multiple sessions are running the same batch and creating the same local temporary table, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] internally appends a numeric suffix to the local temporary table name to maintain a unique name for each local temporary table.  
+-   If more than one local temporary table is used within a batch, each must have a unique name. If multiple sessions are running the same batch and creating the same local temporary table, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] internally appends a numeric suffix to the local temporary table name to maintain a unique name for each local temporary table.  
     
 <a name="LockingBehavior"></a>   
 ## Locking behavior  

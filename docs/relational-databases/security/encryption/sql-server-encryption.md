@@ -80,5 +80,4 @@ You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
- [Enable Encrypted Connections to the Database Engine](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
-  
+ [Enable Encrypted Connections to the Database Engine](/sql/database-engine/configure-windows/configure-sql-server-encryption)    

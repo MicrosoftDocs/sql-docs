@@ -135,7 +135,7 @@ Dynamic data masking limits sensitive data exposure by masking it to non-privile
 
 ### Vulnerability assessment
 
-[Vulnerability assessment](sql-vulnerability-assessment.md) is an easy to configure service that can discover, track, and help remediate potential database vulnerabilities with the goal to proactively improve overall database security. Vulnerability assessment (VA) is part of the Microsoft Defender for SQL offering, which is a unified package for advanced SQL security capabilities. Vulnerability assessment can be accessed and managed via the central Microsoft Defender for SQL portal.
+[Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview) is an easy to configure service that can discover, track, and help remediate potential database vulnerabilities with the goal to proactively improve overall database security. Vulnerability assessment (VA) is part of the Microsoft Defender for SQL offering, which is a unified package for advanced SQL security capabilities. Vulnerability assessment can be accessed and managed via the central Microsoft Defender for SQL portal.
 
 ### Data discovery and classification
 

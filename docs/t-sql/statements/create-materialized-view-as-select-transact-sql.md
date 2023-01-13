@@ -38,7 +38,7 @@ monikerRange: "=azure-sqldw-latest"
 
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] for developing solutions. The article also provides code examples.
+This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] for developing solutions. The article also provides code examples.
 
 A Materialized View persists the data returned from the view definition query and automatically gets updated as data changes in the underlying tables.   It improves the performance of complex queries (typically queries with joins and aggregations) while offering simple maintenance operations.   With its execution plan automatching capability, a materialized view does not have to be referenced in the query for the optimizer to consider the view for substitution.  This capability allows data engineers to implement materialized views as a mechanism for improving query response time, without having to change queries.  
   
@@ -141,7 +141,7 @@ ALTER TABLE SWITCH is not supported on tables that are referenced in materialize
 |AVG(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a)|Automatically added by materialized view creation.  No user action is required.|
 |STDEV(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
 
-Once created, materialized views are visible within [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) under the views folder of the [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] instance.
+Once created, materialized views are visible within [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) under the views folder of the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] instance.
 
 Users can run [SP_SPACEUSED](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) and [DBCC PDW_SHOWSPACEUSED](../database-console-commands/dbcc-pdw-showspaceused-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) to determine the space being consumed by a materialized view. There are also DMVs to provide more customizable queries to identify space and rows consumed. For more information, see [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries).
 
@@ -265,9 +265,9 @@ GO
 - [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
 - [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
 - [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-- [[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-- [System views supported in Azure [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-- [T-SQL statements supported in Azure [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+- [[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+- [System views supported in Azure [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+- [T-SQL statements supported in Azure [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
 
 ## Next steps
 

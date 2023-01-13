@@ -19,7 +19,7 @@ Microsoft Defender for SQL is a Defender plan in Microsoft Defender for Cloud. M
 ## What are the benefits of Microsoft Defender for SQL?
 
 Microsoft Defender for SQL provides a set of advanced SQL security capabilities, including SQL Vulnerability Assessment and Advanced Threat Protection.
-- [Vulnerability Assessment](sql-vulnerability-assessment.md) is an easy-to-configure service that can discover, track, and help you remediate potential database vulnerabilities. It provides visibility into your security state, and it includes actionable steps to resolve security issues and enhance your database fortifications.
+- [Vulnerability Assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview) is an easy-to-configure service that can discover, track, and help you remediate potential database vulnerabilities. It provides visibility into your security state, and it includes actionable steps to resolve security issues and enhance your database fortifications.
 - [Advanced Threat Protection](threat-detection-overview.md) detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit your database. It continuously monitors your database for suspicious activities, and it provides immediate security alerts on potential vulnerabilities, Azure SQL injection attacks, and anomalous database access patterns. Advanced Threat Protection alerts provide details of the suspicious activity and recommend action on how to investigate and mitigate the threat.
 
 Enable Microsoft Defender for SQL once to enable all these included features. With one click, you can enable Microsoft Defender for all databases on your [server](logical-servers.md) in Azure or in your SQL Managed Instance. Enabling or managing Microsoft Defender for SQL settings requires belonging to the [SQL security manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) role, or one of the database or server admin roles.
@@ -98,6 +98,6 @@ To view and manage Microsoft Defender for SQL settings:
 
 ## Next steps
 
-- Learn more about [Vulnerability Assessment](sql-vulnerability-assessment.md)
+- Learn more about [Vulnerability Assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
 - Learn more about [Advanced Threat Protection](threat-detection-configure.md)
 - Learn more about [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)

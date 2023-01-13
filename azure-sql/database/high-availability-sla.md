@@ -95,7 +95,7 @@ The zone-redundant version of the high availability architecture is illustrated 
 - For zone redundant availability, choosing a [maintenance window](./maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support).
 
 > [!IMPORTANT]  
-> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql&preserve-view=true#azure-region-support).
+> For zone redundant availability, choosing a [maintenance window](./maintenance-window.md) other than the default is currently available in [select regions](./maintenance-window.md?preserve-view=true&view=azuresql#azure-region-support).
 
 During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions:
 

@@ -21,7 +21,7 @@ monikerRange: "=azure-sqldw-latest"
 # COPY (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-This article explains how to use the COPY statement in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]. Use COPY for the following capabilities:
+This article explains how to use the COPY statement in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse
 - Execute a single T-SQL statement without having to create any additional database objects
@@ -293,7 +293,7 @@ The user executing the COPY command must have the following permissions:
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 
 ## Examples  
 
@@ -475,4 +475,4 @@ Follow these steps to work around this issue by re-registering the workspace's m
 
 ## See also  
 
- [Loading overview with [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

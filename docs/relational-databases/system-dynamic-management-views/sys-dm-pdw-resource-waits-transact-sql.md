@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 # sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Displays wait information for all resource types in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].
+  Displays wait information for all resource types in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  

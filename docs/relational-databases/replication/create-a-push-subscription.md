@@ -106,7 +106,7 @@ You can create push subscriptions programmatically by using replication stored p
    - A schedule for the Distribution Agent job for this subscription. For more information, see [Specify synchronization schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
 > [!IMPORTANT]
-> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before running this stored procedure. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before running this stored procedure. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 #### To create a push subscription to a merge publication  
   
@@ -142,7 +142,7 @@ You can create push subscriptions programmatically by using replication stored p
    - A schedule for the Merge Agent job for this subscription. For more information, see [Specify synchronization schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
 > [!IMPORTANT]
-> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before running this stored procedure. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before running this stored procedure. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example creates a push subscription to a transactional publication. Login and password values are supplied at runtime through **sqlcmd** scripting variables.  
@@ -197,7 +197,7 @@ You can create push subscriptions programmatically by using replication stored p
 8. Call the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method.  
   
 > [!IMPORTANT]
-> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 #### To create a push subscription to a merge publication  
   
@@ -237,7 +237,7 @@ You can create push subscriptions programmatically by using replication stored p
 8. Call the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method.  
   
 > [!IMPORTANT]  
-> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example creates a new push subscription to a transactional publication. The Windows account credentials that you use to run the Distribution Agent job are passed at runtime.  
@@ -260,4 +260,3 @@ You can create push subscriptions programmatically by using replication stored p
  [Synchronize a push subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Use sqlcmd with scripting variables](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
-  

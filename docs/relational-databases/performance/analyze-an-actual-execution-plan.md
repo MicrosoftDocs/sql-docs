@@ -17,7 +17,7 @@ ms.author: randolphwest
 ---
 # Analyze an Actual Execution Plan
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how you can analyze actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan Analysis feature. This feature is available starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4. We generally recommend that you [install the latest version of SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 

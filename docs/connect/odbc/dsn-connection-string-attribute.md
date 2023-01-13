@@ -320,7 +320,7 @@ In case if private key file is password protected then password keyword is requi
 
 ### HostnameInCertificate
 
-Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) is negotiated, if it's different from the default value derived from Addr/Address/Server.
+Specifies the hostname to be expected in the server's certificate when [encryption](/sql/database-engine/configure-windows/configure-sql-server-encryption) is negotiated, if it's different from the default value derived from Addr/Address/Server.
 
 ### IpAddressPreference
 

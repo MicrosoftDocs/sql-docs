@@ -54,7 +54,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Evaluation edition is
 For the latest release notes and what's new information, see the following:
 
 - [[!INCLUDE[sssql19-md](../includes/sssql19-md.md)] release notes](../sql-server/sql-server-version-15-release-notes.md)
-- [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+- [What's new in SQL Server 2019](/sql/sql-server/what-s-new-in-sql-server-2019)
 
 **Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!: [Download [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)**
 

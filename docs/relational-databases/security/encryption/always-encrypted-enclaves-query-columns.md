@@ -3,7 +3,7 @@ title: "Run Transact-SQL statements using secure enclaves"
 description: "Run Data Definition Language (DDL) statements to configure encryption for your column or manage indexes on encrypted columns, and query encrypted columns"
 ms.custom:
 - event-tier1-build-2022
-ms.date: 02/02/2023
+ms.date: 02/01/2023
 ms.reviewer: vanto
 ms.service: sql
 ms.subservice: security
@@ -58,18 +58,18 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
 
 Your environment needs to meet the following requirements to support executing statements that use a secure enclave.
 
-- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database and server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation, if applicable/required. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
+- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation, if applicable/required. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
 - When you're connecting to your database from an application or a tool (such as SQL Server Management Studio), make sure to:
 
   - Use a client driver version or a tool version that supports Always Encrypted with secure enclaves.
 
-    - See [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) for information about client drivers Always Encrypted with secure enclaves.
+    - See [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) for information about client drivers supporting Always Encrypted with secure enclaves.
     - See the following sections for information about tools supporting Always Encrypted with secure enclaves.
  
   - Enable Always Encrypted for the database connection.
   - Specify an attestation protocol, which determines whether your application/tool must attest the enclave before submitting enclave queries, and if so, which attestation service it should use. Most tools and drivers support the following attestation protocols:
 
-    - Microsoft Azure Attestation - enforces attestation using Microsoft Azure Attestation. That is the only option supported for Intel SGX enclaves in Azure SQL Database.
+    - Microsoft Azure Attestation - enforces attestation using Microsoft Azure Attestation.
     - Host Guardian Service - enforces attestation using Host Guardian Service.
     - None - allows using enclaves without attestation.
 
@@ -79,8 +79,7 @@ Your environment needs to meet the following requirements to support executing s
     |:---|:---|:---|
     | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | Host Guardian Service, None |
     | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
-    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves  | None |
-    |:---|:---|:---|
+    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves (in preview)  | None |
 
 - Specify an attestation URL that is valid for your environment, if you're using attestation.
 
@@ -100,8 +99,8 @@ Make sure you run your statements from a query window that uses a connection tha
 5. Select **Enable secure enclaves**.
 6. Set **Protocol** to: 
 
-    1. **Host Guardian Service** if you're using  [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
-    1. **Microsoft Azure Attestation** if you're using [!INCLUDE[ssSDSfull].(../../../includes/sssdsfull-md.md)] with Intel SGX enclaves.
+    1. **Host Guardian Service** if you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+    1. **Microsoft Azure Attestation** if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves.
     1. **None** if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves.
 
 7. Specify your enclave attestation URL. Not applicable when the Protocol is set to *None*. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
@@ -116,7 +115,7 @@ For additional information, see [Enabling and disabling Always Encrypted for a d
 ### Prerequisites for running T-SQL statements using enclaves in Azure Data Studio
 
 The minimum recommended version **1.23** or higher is recommended.
-> !NOTE
+> [!NOTE]
 > Azure Data Studio currently does not support using VBS enclaves without attestation.
 
 Make sure you run your statements from a query window that uses a connection that has Always Encrypted enabled and both the correct attestation protocol and the attestation URL configured.

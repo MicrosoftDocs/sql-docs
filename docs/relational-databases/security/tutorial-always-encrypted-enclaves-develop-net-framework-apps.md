@@ -26,7 +26,7 @@ This tutorial teaches you how to develop an application that issues database que
 ## Prerequisites
 Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
 
 You'll also need Visual Studio (version 2022 is recommended) - download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development machine must run .NET Framework 4.7.2 or later.

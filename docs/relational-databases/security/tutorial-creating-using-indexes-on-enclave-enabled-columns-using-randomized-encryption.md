@@ -4,7 +4,7 @@ description: This tutorial teaches you how to create and use index on enclave-en
 ms.custom:
 - seo-lt-2019
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 02/01/2022
 ms.service: sql
 ms.reviewer: vanto
 ms.suite: "sql"
@@ -32,8 +32,8 @@ This tutorial teaches you how to create and use indexes on enclave-enabled colum
 Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
-- [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
+- [Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
+- [Tutorial: Getting started with Always Encrypted with VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
 
 
 ## Step 1: Enable Accelerated Database Recovery (ADR) in your database
@@ -67,7 +67,7 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
    1. In the **Connect to Server** dialog, specify your server name, select an   authentication method, and specify your credentials.
    1. Click **Options >>** and select the **Always Encrypted** tab.
    1. Select the checkboxes **Enable Always Encrypted (column encryption)** and **Enable Secure Enclaves** 
-   1. If you're using attestation for your database, specify the correct **Enclave Attestation Protocol** (Host Guardian Service or Microsoft Azure Attestation) and fill in the enclave attestation URL. Otherwise, select None.
+   1. If you're using attestation for your database, select a value of **Enclave Attestation Protocol** that represents your attestation service (Host Guardian Service or Microsoft Azure Attestation) and fill in the enclave attestation URL. Otherwise, select None.
    1. Select **Connect**.
    1. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
 1. If you weren't prompted to enable Parameterization for Always Encrypted, verify it's enabled.

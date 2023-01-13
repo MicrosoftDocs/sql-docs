@@ -4,7 +4,7 @@ description: "Tutorial: Develop a .NET application using Always Encrypted with s
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 05/24/2022
+ms.date: 01/02/2022
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: tutorial
@@ -27,8 +27,8 @@ This tutorial teaches you how to develop an application that issues database que
 Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
-- [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
+- [Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
+- [Tutorial: Getting started with Always Encrypted with VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
 
 In addition, you need Visual Studio (version 2022 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development environment must use .NET Framework 4.6.1 or later or .NET Core 3.1 or later.
 
@@ -126,11 +126,7 @@ Your application will connect to the **ContosoHR** database that was created in 
 
 2. Update the database connection string.
     1. Set the valid server name and your database authentication settings.
-    2. Set the value of the `Attestation Protocol` keyword to:
-       - `HGS` - if you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS).
-       - `AAS` - if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves and Microsoft Azure Attestation.
-       - `None` - if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves.
-    3. Set `Enclave Attestation URL` to an attestation URL for your environment. This parameter is not needed for [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves and can be removed.
+    2. If you're using attestation for your database, set Enclave Attestation Protocol to the correct value for your attestation service (`HGS` for Host Guardian Service or `AAS` for Microsoft Azure Attestation). Otherwise, set Enclave Attestation Protocol to `None`.
 
 3. Build and run the application.
 

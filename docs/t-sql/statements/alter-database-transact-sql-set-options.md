@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 ---
 # ALTER DATABASE SET options (Transact-SQL)
 
-Sets database options in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Sets database options in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
 > [!NOTE]  
 > Setting some options with ALTER DATABASE may require exclusive database access. If the ALTER DATABASE statement does not complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
@@ -3822,7 +3822,7 @@ Controls whether the Query Store is enabled in this data warehouse.
   Disables the Query Store. OFF is the default value.
 
 > [!NOTE]  
-> For [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance isn't supported.
+> For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance isn't supported.
 
 > [!NOTE]  
 > For Azure Synapse Analytics, the Query Store can be enabled as on other platforms but additional configuration options are not supported.

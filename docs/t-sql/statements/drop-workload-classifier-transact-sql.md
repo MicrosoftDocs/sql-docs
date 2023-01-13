@@ -59,4 +59,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## See Also
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+[[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

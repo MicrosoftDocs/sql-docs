@@ -16,7 +16,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # SESSION_ID (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Returns the ID of the current [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] session.  
+  Returns the ID of the current [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] session.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

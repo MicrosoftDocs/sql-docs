@@ -373,7 +373,7 @@ Details:
 
 #### ENCODING = {'UTF8' | 'UTF16'}
 
-In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
 ## Permissions
 
@@ -381,7 +381,7 @@ In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUD
 
 ## Remarks
 
- The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
  The format options are all optional and only apply to delimited text files.
 
@@ -407,7 +407,7 @@ Takes a shared lock on the EXTERNAL FILE FORMAT object.
 
 Using compressed files always comes with the tradeoff between transferring less data between the external data source and SQL Server while increasing the CPU usage to compress and decompress the data.
 
-Gzip compressed text files aren't splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] Gen2, which is 20 readers per node. In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.
+Gzip compressed text files aren't splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Gen2, which is 20 readers per node. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.
 
 ## Examples
 

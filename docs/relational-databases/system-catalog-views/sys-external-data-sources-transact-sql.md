@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  Contains a row for each external data source in the current database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)], and [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].
+  Contains a row for each external data source in the current database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
  Contains a row for each external data source on the server for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 

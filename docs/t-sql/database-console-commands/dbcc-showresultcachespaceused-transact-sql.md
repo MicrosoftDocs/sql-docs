@@ -17,7 +17,7 @@ monikerRange: "= azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Shows the storage space used result set caching for an [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] database.
+Shows the storage space used result set caching for an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

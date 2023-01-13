@@ -1,15 +1,15 @@
 ---
-title: "Enable Always Encrypted with secure enclaves for your Azure SQL Database"
-description: Learn how to enable secure enclaves in Azure SQL Database by selecting SGX-enabled hardware or Virtualization-based Security (VBS)
+title: "Enable Always Encrypted with secure enclaves in Azure SQL Database"
+description: Learn how to enable secure enclaves in Azure SQL Database by selecting Intel SGX-enabled hardware or virtualization-based security (VBS)
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: 04/06/2022
+ms.date: 02/01/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ---
-# Enable Always Encrypted with secure enclaves for your Azure SQL Database 
+# Enable Always Encrypted with secure enclaves in Azure SQL Database 
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 

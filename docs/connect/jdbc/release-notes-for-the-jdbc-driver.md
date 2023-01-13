@@ -3,7 +3,7 @@ title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 1/12/2023
+ms.date: 01/12/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

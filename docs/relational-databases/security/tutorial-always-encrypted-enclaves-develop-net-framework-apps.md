@@ -3,7 +3,7 @@ description: "Tutorial: Develop a .NET Framework application using Always Encryp
 title: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 02/01/2023
 ms.service: sql
 ms.reviewer: vanto
 ms.suite: "sql"
@@ -21,13 +21,13 @@ monikerRange: ">= sql-server-ver15"
 This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). 
 
 > [!NOTE]
-> .NET Framework does not support Always Encrypted with secure VBS enclaves in Azure SQL Database. This tutorial is only applicable for Always Encrypted with secure enclaves in SQL Server and Always Encrypted with secure Intel SGX enclaves in Azure SQL Database.
+> .NET Framework does not support using Always Encrypted with VBS enclaves without attestation. This tutorial is only applicable if you're using attestation with Microsoft Azure Attestation (with Intel SGX enclaves in Azure SQL Database) or Host Guardian Service (with VBS enclaves in SQL Server).
 
 ## Prerequisites
 Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
+- [Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
 
 You'll also need Visual Studio (version 2022 is recommended) - download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development machine must run .NET Framework 4.7.2 or later.
 
@@ -153,8 +153,6 @@ Your application will connect to the **ContosoHR** database that was created in 
                 string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://hgs.bastion.local/Attestation; Integrated Security = true";
 
                 //string connectionString = "Data Source = myserver.database.windows.net; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://myattestationprovider.uks.attest.azure.net/attest/SgxEnclave; User ID=user; Password=password";
-
-                //string connectionString = "Data Source = myserver.database.windows.net; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled; User ID=user; Password=password";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {

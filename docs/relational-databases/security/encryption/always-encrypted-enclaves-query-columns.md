@@ -79,7 +79,7 @@ Your environment needs to meet the following requirements to support executing s
     |:---|:---|:---|
     | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | Host Guardian Service, None |
     | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
-    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves (in preview)  | None |
+    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves (preview)  | None |
 
 - Specify an attestation URL that is valid for your environment, if you're using attestation.
 

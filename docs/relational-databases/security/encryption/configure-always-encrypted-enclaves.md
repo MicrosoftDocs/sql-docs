@@ -3,7 +3,7 @@ title: "Configure and use Always Encrypted with secure enclaves| Microsoft Docs"
 description: Learn how to configure and use Always Encrypted with secure enclaves in SQL Server and Azure SQL Database, which enables richer functionality on sensitive data.
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 02/01/2023
 ms.service: sql
 ms.reviewer: "vanto"
 ms.subservice: security
@@ -20,7 +20,7 @@ monikerRange: ">= sql-server-ver15"
 
 For tutorials that show you how to quickly get started with Always Encrypted with secure enclaves, see:
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with secure Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
 - [Tutorial: Getting started with Always Encrypted with secure VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
 
@@ -46,7 +46,7 @@ For details, see the following articles:
 - [Configure Azure Attestation for your Azure SQL Database logical server](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 > [!IMPORTANT]
->VBS enclaves in Azure SQL Database (in preview) currently do not support attestation. Configure Azure Attestation only applies to Intel SGX enclaves.
+> VBS enclaves in Azure SQL Database (in preview) currently do not support attestation. Configuring Azure Attestation only applies to Intel SGX enclaves.
 
 ## Manage keys for Always Encrypted with secure enclaves
 See the following articles for details:

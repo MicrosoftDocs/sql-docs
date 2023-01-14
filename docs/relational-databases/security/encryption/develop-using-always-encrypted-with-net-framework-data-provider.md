@@ -2,7 +2,7 @@
 title: "Always Encrypted with .NET Framework Data Provider"
 description: Learn how to develop .NET applications using the Always Encrypted feature for SQL Server. 
 ms.custom: seo-lt-2019
-ms.date: "11/15/2022"
+ms.date: "02/01/2023"
 ms.service: sql
 ms.reviewer: vanto
 ms.subservice: security
@@ -15,12 +15,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Using Always Encrypted with the .NET Framework Data Provider for SQL Server
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article provides information on how to develop .NET applications using [Always Encrypted](always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) and the [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/).
-
-Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the .NET Framework Data Provider for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md).
+This article provides information on how to develop .NET Framework applications using [Always Encrypted](always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) and the [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/) ([System.Data.SqlClient](../../../connect/connect-history.md#systemdatasqlclient)).
 
 > [!NOTE]
-> .NET Framework does not support Always Encrypted with secure VBS enclaves in Azure SQL Database. This article is only applicable for Always Encrypted with secure enclaves in SQL Server and Always Encrypted with secure Intel SGX enclaves in Azure SQL Database.
+> Using the .NET Framework Data Provider for SQL Server (System.Data.SqlClient) isn't recommended for new development. See [System.Data.SqlClient](../../../connect/connect-history.md#systemdatasqlclient) for more information.
+
+Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the .NET Framework Data Provider for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results.
+
+> [!NOTE]
+> .NET Framework Data Provider for SQL Server (System.Data.SqlClient) doesn't support using VBS enclaves without attestation.
 
 ## Prerequisites
 
@@ -57,7 +60,7 @@ Enabling Always Encrypted isn't sufficient for encryption or decryption to succe
 - The application has the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions section in Always Encrypted (Database Engine)](./always-encrypted-database-engine.md#database-permissions).
 - The application can access the column master key that protects the column encryption keys, encrypting the queried database columns.
 
-## Enabling Always Encrypted with Secure Enclaves
+## Enabling Always Encrypted with secure enclaves
 
 Beginning with .NET Framework version 4.7.2, the driver supports [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). 
 
@@ -594,4 +597,4 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## See Also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [SQL Database tutorial: Protect sensitive data with Always Encrypted](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+- [Tutorial: Getting started with Always Encrypted](always-encrypted-tutorial-getting-started.md)

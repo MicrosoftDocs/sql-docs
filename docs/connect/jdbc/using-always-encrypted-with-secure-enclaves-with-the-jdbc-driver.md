@@ -4,7 +4,7 @@ description: "Using Always Encrypted with secure enclaves with the JDBC Driver"
 author: DavidEngel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 08/08/2022
+ms.date: 02/01/2022
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -43,7 +43,7 @@ To enable enclave computations for a database connection, you need to set the fo
 - **enclaveAttestationUrl:** - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
   - If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
   - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
-  - If you're using `NONE` attestation protocol, this property can be left blank.
+  - If you're using `NONE` attestation protocol, this property can be left blank. Requires JDBC 11.2.1 or later.
 
 Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 

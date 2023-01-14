@@ -3,7 +3,7 @@ title: Using Always Encrypted with SqlClient
 description: Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 10/25/2022
+ms.date: 02/01/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -21,23 +21,19 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 - Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md).
 - If you're using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for more prerequisites.
-- Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for both .NET Framework and .NET Core. Make sure [.NET Framework 4.6](/dotnet/framework/) or higher, or [.NET Core 2.1](/dotnet/core/) or higher is configured as the target .NET platform version in your development environment. With Microsoft.Data.SqlClient version 2.1.0 and higher, the Always Encrypted feature is also supported for [.NET Standard 2.0](/dotnet/standard/net-standard). To use Always Encrypted with secure enclaves, [.NET Standard 2.1](/dotnet/standard/net-standard) is required. If you want to use VBS enclaves without attestation, a more recent version of the driver is required. Install Microsoft.Data.SqlClient version 3.1 or 4.1+. The library is compatible with .NET Framework 4.6.1 or higher and .NET Core 3.1. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
+- Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for both .NET Framework and .NET Core. Make sure [.NET Framework 4.6](/dotnet/framework/) or higher, or [.NET Core 2.1](/dotnet/core/) or higher is configured as the target .NET platform version in your development environment. With Microsoft.Data.SqlClient version 2.1.0 and higher, the Always Encrypted feature is also supported for [.NET Standard 2.0](/dotnet/standard/net-standard). To use Always Encrypted with secure enclaves, [.NET Standard 2.1](/dotnet/standard/net-standard) is required. If you want to use VBS enclaves without attestation, Microsoft.Data.SqlClient version  4.1 or higher is required. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 The following table summarizes the required .NET platforms to use Always Encrypted with **Microsoft.Data.SqlClient**.
 
 | Support Always Encrypted | Support Always Encrypted with Secure Enclave  | Target Framework | Microsoft.Data.SqlClient Version | Operating System |
 |:--|:--|:--|:--:|:--:|
 | Yes | Yes | .NET Framework 4.6+ | 1.1.0+ | Windows |
-| Yes | Yes | .NET Framework 4.6.1+ | 4.1.0+ <sup>1</sup>| Windows, Linux, macOS |
-| Yes | Yes | .NET Core 2.1+ | 2.1.0+<sup>2</sup> | Windows, Linux, macOS |
-| Yes | Yes | .NET Core 3.1+ | 4.1.0+<sup>1</sup> | Windows, Linux, macOS |
+| Yes | Yes | .NET Core 2.1+ | 2.1.0+<sup>1</sup> | Windows, Linux, macOS |
 | Yes | No | .NET Standard 2.0 | 2.1.0+ | Windows, Linux, macOS |
 | Yes | Yes | .NET Standard 2.1+ | 2.1.0+ | Windows, Linux, macOS |
-| Yes | Yes | .NET Standard 2.1+ | 4.1.0+<sup>1</sup> | Windows, Linux, macOS |
 
 > [!NOTE]
-> <sup>1</sup> This version is needed if you want to use VBS enclaves without attestation.
-<sup>2</sup> Before Microsoft.Data.SqlClient version 2.1.0, Always Encrypted is only supported on Windows.
+> <sup>1</sup> Before Microsoft.Data.SqlClient version 2.1.0, Always Encrypted is only supported on Windows.
 
 ## Enabling Always Encrypted for application queries
 
@@ -78,10 +74,12 @@ To enable enclave computations for a database connection, you must set the follo
 
 - `Attestation Protocol` - specifies an attestation protocol.
   - If this keyword isn't specified, secure enclaves are disabled on the connection.
-  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
-  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and want to forgo attestation, the value of this keyword should be `None`.
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]  with secure Intel SGX enclaves and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
-  - If you're using Azure SQL Database with secure VBS enclaves, the value of this keyword should be `None`.
+  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] with Virtualization-based security (VBS) enclaves and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] with VBS enclaves and want to forgo attestation, the value of this keyword should be `None`. Requires version 4.1 or higher. 
+
+  > [!NOTE]
+  > 'None' (no attestation) is the only option currently supported for VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 - `Enclave Attestation URL` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 

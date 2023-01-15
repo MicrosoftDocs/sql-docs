@@ -5,16 +5,16 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/05/2022
+ms.date: 01/17/2023
 ms.service: sql
 ms.topic: conceptual
 ---
 
-# Billing through Microsoft Azure
+# SQL Server licensing and billing options
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-You may use a pay-as-you-go billing option to activate and run SQL Server with Azure Arc. This option is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
+You can use Arc-enabled SQL Server to accurately track your usage of the SQL Server software by your applications. You may also elect to pay for that usage directly through Microsoft Azure as a pay-as-you-go billing option. This option is an alternative to using a traditional license agreement. SQL Server 2022 (16.x) introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. For other versions of SQL Server you can control how you pay for SQL Server software through Azure Portal or API.
 
 ## Prerequisites
 
@@ -52,18 +52,51 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 ## Overview
 
-You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased product key. This option requires that you have an active [Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions). Once your SQL Server instance is connected to Azure and the [Azure extension for SQL Server](connect.md) is installed on the hosting server, the SQL Server instance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). The charges will be associated with a specific instance of SQL Server that requires a license. 
+Host license type is a configuration setting of Azure Extension for SQL Server that defines how you prefer to pay for the usage of SQL Server software installed on the physical or virtual machine. It allows you to track software usage Cost Management + Billing portal and ensure you are compliant with SQL Server license requirements. License type is a required parameter when you install Azure Extension for SQL Server. Every supported onboarding method includes the license type options. See [SQL Server privacy supplement]() for details of how we use that information. 
 
-The billing granularity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the hosting server at any time during that hour. The size is measured in cores if the SQL Server instance is installed on a physical server, and logical cores (vCores) if the SQL Server instance is installed on a  virtual machine.
+The following license types are supported:
 
-When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic uses the following rules to select instance to be licensed:
+| License type | Descripton  | Short form   |  
+|---|---|---|
+| PAYG | Standard or Enterprise edition with pay-as-you-go billing through Microsoft Azure | Pay-as-you-go |
+| Paid | Standard or Enterprise edition license with Software Assurance or SQL Subscription  | License with software assurance |
+| LicenseOnly | Developer, Evaluation, Express, Web, Standard or Enterprise edition license only without Software Assurance | License only |
+
+
+If "PAYG” is configured it enables paying for your SQL Server software usage on a pay-as-you-go basis though Microsoft Azure. See SQL Server pay-as-you-go prices here. “Paid” and “LicenseOnly” types mean that you are using an existing license agreement and already have the necessary licenses. In those cases, your software usage will be reported to you using $0 meters. You can analyze your usage in Cost Management + Billing to make sure you have enough licenses for all your installed SQL Server instances.
+
+The billing granularity is one hour. Pay-as-you-go charges are calculated based on the SQL Server edition and the size of the hosting server at any time during that hour. The size is measured in cores if the SQL Server instance is installed on a physical server, and logical cores (vCores) if the SQL Server instance is installed on a virtual machine. When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The following rules apply:
 
 - The instance with the highest edition of all instances installed on the same operating system determines the required license.
 - If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key, the pay-as-you-go instance is ignored because it is included in the customer's product key.
 - If two instances are installed with pay-as-you-go billing and same editions, the first instance in alphabetical order is billed.
 
-> [!IMPORTANT]
-> Pay-as-you-go billing option is only supported in SQL Server 2022 for Standard or Enterprise editions. 
+In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features are included with PAYG and Paid license type and not available if you are using a LicenseOnly  SQL Server. 
+
+- Licensing benefit for fail-over servers. Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group and reporting the usage with a separate meter. You can track the usage of the DR benefit in Cost Management + Billing. See SQL Server licensing guide for details of this benefit.
+- Detailed database inventory. You can manage your SQL database inventory in Azure portal. See <article> for details.
+- Azure active directory authentication. You can manage access to your SQL Sedrver databases using ADD credentials. This feature is only available in SQL Server 2022.
+- Best practices assessment. You can generate best practices reports and recommendations by periodic scans of your SQL Server configurations. See [Configure your SQL Server instance for Best practices assessment](assess.md)
+
+The following table shows the meters that are used to track usage and billing for different license types and SQL Server editions:
+
+| Installed edition | Projected edition | License type | AG replica | Meter SKU |
+|--|--|--|--|--|
+| Enterprise Core | Enterprise | PAYG | No | Ent edition - PAYG |
+|  Enterprise Core | Enterprise | Paid | No | Ent edition - AHB |
+| Standard | Standard | PAYG | No | Std edition - PAYG |
+|  Standard | Standard | Paid | No | Std edition - AHB |
+| Enterprise Core | Enterprise | LicenseOnly | Yes or No | Ent edition - License only |
+| Enterprise (Server/CAL) | Enterprise | LicenseOnly | Yes or No | n/a |
+|  Standard | Standard | LicenseOnly | No | Std edition - License only |
+| Enterprise Core | Enterprise | PAYG or Paid | Yes | Ent edition - DR replica |
+| Standard | Standard | PAYG or Paid | Yes | Std edition - DR replica |
+| Evaluation | Evaluation | LicenseOnly | Yes or No | Eval edition |
+| Developer | Developer | LicenseOnly | Yes or No | Dev edition |
+| Web | Web | LicenseOnly | n/a | Web edition |
+| Express | Express | LicenseOnly | n/a | Express edition |
+
+Enterprise Server/CAL is alowed to connect but we will emit any meters because it is not a core-based license.
 
 ## License types
 

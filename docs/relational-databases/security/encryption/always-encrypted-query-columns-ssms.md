@@ -80,22 +80,18 @@ You can enable or disable Always Encrypted when you create a new connection or y
 
 To enable (disable) Always Encrypted:
 1. Open **Connect To Server** dialog (see [Connect to a SQL Server instance](../../../ssms/quickstarts/ssms-connect-query-sql-server.md#connect-to-a-sql-server-instance) for details).
-1. Click **Options >>**.
-1. If you're using SSMS 18 or newer:
-    1. Select the **Always Encrypted** tab.
-    1. To enable Always Encrypted, select **Enable Always Encrypted (column encryption)**. To disable Always Encrypted, make sure **Enable Always Encrypted (column encryption)** isn't selected.
-1. If you are using SSMS 17 or older:
-    1. Select the **Additional Properties** tab.
-    1. To enable Always Encrypted, type `Column Encryption Setting = Enabled`. To disable Always Encrypted, specify `Column Encryption Setting = Disabled` or remove the setting of **Column Encryption Setting** from the **Additional Properties** tab (its default value is **Disabled**).   
+1. Click **Options**.
+1. Select the **Always Encrypted** tab. To enable Always Encrypted, select **Enable Always Encrypted (column encryption)**. To disable Always Encrypted, make sure **Enable Always Encrypted (column encryption)** isn't selected.
  1. Click **Connect**.
-
-To run statements that leverage a server-side secure enclave when you're using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), you need to specify an enclave attestation URL, in addition to enabling Always Encrypted for the connection. For detailed information, see  [Prerequisites for running T-SQL statements using enclaves in SSMS](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-ssms).
 
 > [!TIP]
 > To toggle between Always Encrypted being enabled and disabled for an existing Query Editor window:   
 > 1.	Right-click anywhere in the Query Editor window.
 > 2.	Select **Connection** > **Change Connection ...**. This will open the **Connect to Server** dialog for the current connection for the Query Editor window. 
 > 2.    Enable or disable Always Encrypted, following the above steps and click **Connect**.  
+
+> [!NOTE]
+> To run statements that leverage a server-side secure enclave when you're using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), see [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
    
 ## <a name="param"></a>Parameterization for Always Encrypted   
  

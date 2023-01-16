@@ -12,9 +12,7 @@ ms.topic: conceptual
 
 # SQL Server licensing and billing options
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
-
-You can use Arc-enabled SQL Server to accurately track your usage of the SQL Server software by your applications. You may also elect to pay for that usage directly through Microsoft Azure as a pay-as-you-go billing option. This option is an alternative to using a traditional license agreement. SQL Server 2022 (16.x) introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. For other versions of SQL Server you can control how you pay for SQL Server software through Azure Portal or API.
+You can use Arc-enabled SQL Server to accurately track your usage of the SQL Server software and manage your license compliance. You may also elect to pay for the SQL software usage directly through Microsoft Azure using a pay-as-you-go billing option. You can control how you pay for SQL Server software through Azure Portal or API. SQL Server 2022 (16.x) allows you to select a pay-as-you-go billing option during setup.
 
 ## Prerequisites
 

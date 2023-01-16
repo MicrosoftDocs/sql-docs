@@ -3,7 +3,7 @@ title: Microsoft Defender for SQL
 description: Learn about functionality for managing your database vulnerabilities and detecting anomalous activities that could indicate a threat to your database in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse.
 author: bmansheim
 ms.author: benmansheim
-ms.date: 01/10/2023
+ms.date: 01/16/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -20,7 +20,7 @@ Microsoft Defender for SQL is a Defender plan in Microsoft Defender for Cloud. M
 
 Microsoft Defender for SQL provides a set of advanced SQL security capabilities, including SQL Vulnerability Assessment and Advanced Threat Protection.
 
-- [Vulnerability Assessment](sql-vulnerability-assessment.md) is an easy-to-configure service that can discover, track, and help you remediate potential database vulnerabilities. It provides visibility into your security state, and it includes actionable steps to resolve security issues and enhance your database fortifications.
+- [Vulnerability Assessment](https://learn.microsoft.com/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview?view=azuresql&branch=pr-en-us-25242&viewFallbackFrom=azuresql-mi) is an easy-to-configure service that can discover, track, and help you remediate potential database vulnerabilities. It provides visibility into your security state, and it includes actionable steps to resolve security issues and enhance your database fortifications.
 - [Advanced Threat Protection](threat-detection-overview.md) detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit your database. It continuously monitors your database for suspicious activities, and it provides immediate security alerts on potential vulnerabilities, Azure SQL injection attacks, and anomalous database access patterns. Advanced Threat Protection alerts provide details of the suspicious activity and recommend action on how to investigate and mitigate the threat.
 
 Enable Microsoft Defender for SQL once to enable all these included features. With one select, you can enable Microsoft Defender for all databases on your [server](logical-servers.md) in Azure or in your SQL Managed Instance. Enabling or managing Microsoft Defender for SQL settings requires belonging to the [SQL security manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) role, or one of the database or server admin roles.
@@ -55,7 +55,7 @@ To enable Microsoft Defender for Azure SQL Database at the subscription level fr
 
 The flexibility of Azure allows for several programmatic methods for enabling Microsoft Defender plans.
 
-Use any of the following tools to enable Microsoft Defender for your subscription: 
+Use any of the following tools to enable Microsoft Defender for your subscription:
 
 | Method       | Instructions      |
 |--------------|----------------------|
@@ -63,7 +63,6 @@ Use any of the following tools to enable Microsoft Defender for your subscriptio
 | Azure CLI    | [az security pricing](/cli/azure/security/pricing)  |
 | PowerShell   | [Set-AzSecurityPricing](/powershell/module/az.security/set-azsecuritypricing)  |
 | Azure Policy | [Bundle Pricings](https://github.com/Azure/Azure-Security-Center/blob/master/Pricing%20%26%20Settings/ARM%20Templates/Set-ASC-Bundle-Pricing.json) |
-
 
 ### Enable Microsoft Defender for Azure SQL Database at the resource level
 

@@ -29,7 +29,7 @@ The secure enclaves feature is an addition to the existing [Always Encrypted](..
 
 ## Setting up secure enclaves
 
-Follow [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Follow [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md), [Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database](../../../azure-sql/database/always-encrypted-enclaves-getting-started-sgx.md), or [Tutorial: Getting started with Always Encrypted with VBS enclaves in Azure SQL Database](../../../azure-sql/database/always-encrypted-enclaves-getting-started-vbs.md) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Connection String properties
 

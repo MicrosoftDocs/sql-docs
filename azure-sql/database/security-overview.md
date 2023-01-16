@@ -21,7 +21,7 @@ This article outlines the basics of securing the data tier of an application usi
 
 ## Network security
 
-Microsoft Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics provide a relational database service for cloud and enterprise applications. To help protect customer data, firewalls prevent network access to the server until access is explicitly granted based on IP address or Azure Virtual network traffic origin.
+Microsoft Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics provide a relational database service for cloud and enterprise applications. To help protect customer data, firewalls prevent network access to the server until access is explicitly granted based on IP address or Azure Virtual network traffic origin.
 
 ### IP firewall rules
 

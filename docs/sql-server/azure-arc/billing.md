@@ -133,7 +133,7 @@ az connectedmachine extension update --machine-name "simple-vm" -g "arceeBilling
 
 > [!IMPORTANT]  
 > - The update command overwrites all settings. If you extension settings have a list of excluded SQL Server istances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a mchine extenstion](https://learn.microsoft.com/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade?tabs=azure-portal) for details. 
+> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a mchine extenstion](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
 ## Next steps
 

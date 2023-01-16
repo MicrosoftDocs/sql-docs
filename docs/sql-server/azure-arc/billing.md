@@ -127,13 +127,13 @@ New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupNam
 The following command will set the license type to "PAYG":
 
 ```azurecli
-az connectedmachine extension update --machine-name "simple-vm" -g "arceeBilling" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"LicenseType\":PAYG, \"SqlManagement\": {\"IsEnabled\":true}}'    
+az connectedmachine extension update --machine-name "simple-vm" -g "arceeBilling" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'    
 ```
 ---
 
 > [!IMPORTANT]  
 > - The update command overwrites all settings. If you extension settings have a list of excluded SQL Server istances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first and then use the update copmmands to set the correct license type. For details, see [How to upgrade Azure extenstion for SQL Serve](). 
+> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a mchine extenstion](https://learn.microsoft.com/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade?tabs=azure-portal) for details. 
 
 ## Next steps
 

@@ -52,26 +52,25 @@ As an alternative, you can install SSMS on another machine.
 
 1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and run msinfo32.exe. Check if VBS is running. If it us running skip the remaining steps in this section and go to the next section.
 
-   ![Connect to server with attestation using SSMS](./media/system-information-vbs.png)
-
+   ![System information - virtualization-based security](./encryption/media/system-information-vbs.png)
 
 2. Enable VBS by running the following comment in the PowerShell session.
 
    ```powershell
-   reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
+   Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name EnableVirtualizationBasedSecurity -Value 1
    ```
 
-4. If your SQL Server computer is a virtual machine, a physical machine that doesn't support UEFI Secure Boot, or a physical machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features. Remove the requirement for Secure Boot and IOMMU by running the following command on your SQL Server computer in an elevated PowerShell console:
+3. If your SQL Server computer is a virtual machine, a physical machine that doesn't support UEFI Secure Boot, or a physical machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features. Remove the requirement for Secure Boot and IOMMU by running the following command on your SQL Server computer in an elevated PowerShell console:
 
-        ```powershell
-       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
-       ```
+    ```powershell
+    Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+    ```
 
-5. Restart the SQL Server computer again to get VBS to come online.
+4. Restart the SQL Server computer again to get VBS to come online.
 
-        ```powershell
-       Restart-Computer
-       ```
+    ```powershell
+    Restart-Computer
+    ```
 
 5. Repeat step 1 to check if VBS is running.
 

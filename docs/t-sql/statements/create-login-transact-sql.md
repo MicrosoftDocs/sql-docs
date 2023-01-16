@@ -351,7 +351,7 @@ CREATE LOGIN login_name
 
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Azure AD Authentication.
@@ -488,7 +488,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 #### *login_name*
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Azure AD Authentication.

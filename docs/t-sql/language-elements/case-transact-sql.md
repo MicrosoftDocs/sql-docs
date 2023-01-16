@@ -133,6 +133,8 @@ FROM Data ;
 ```  
   
  You should only depend on order of evaluation of the WHEN conditions for scalar expressions (including non-correlated sub-queries that return scalars), not for aggregate expressions.  
+ 
+You must also ensure that at least one of the expressions in the THEN or ELSE blocks is not the NULL constant. While NULL can be returned from multiple result expressions, not all of these can explicitly be the NULL constant. If all result expressions use the NULL constant, error 8133 is returned.
   
 ## Examples  
   

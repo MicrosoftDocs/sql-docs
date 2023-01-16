@@ -20,7 +20,7 @@ ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_hosts (Transact-SQL)
-[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
+[!INCLUDE [sql-asa-pdw-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns all the hosts currently registered in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This view also returns the resources that are used by these hosts.  
   

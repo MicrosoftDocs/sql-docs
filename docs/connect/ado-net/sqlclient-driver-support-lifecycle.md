@@ -71,11 +71,12 @@ Current releases are supported for three months after a subsequent Current or LT
 |5.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |4.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |4.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|3.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|3.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|3.0|No|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |2.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|2.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|1.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|1.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|2.0|No|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|1.1|No|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|1.0|No|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 
 ## Supported OS versions
 

@@ -14,7 +14,7 @@ ms.date: 03/01/2017
 ---
 
 # Filter Server Process IDs (SPIDs) in a Trace (SQL Server Profiler)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to filter server process identifiers (SPIDs) in a trace by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### To filter system IDs in a trace  

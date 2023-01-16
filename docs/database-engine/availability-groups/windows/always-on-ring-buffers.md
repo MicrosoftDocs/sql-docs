@@ -22,13 +22,23 @@ SELECT * FROM sys.dm_os_ring_buffers WHERE ring_buffer_type LIKE '%HADR%'
  To make the data more manageable, filter the data by date and the ring buffer type. The following query retrieves records from the specified ring buffer that occurred today.  
   
 ```sql  
-DECLARE @runtime datetime  
-SET @runtime = GETDATE()  
-SELECT CONVERT (varchar(30), @runtime, 121) as data_collection_runtime,   
-DATEADD (ms, -1 * (inf.ms_ticks - ring.[timestamp]), GETDATE()) AS ring_buffer_record_time,   
-ring.[timestamp] AS record_timestamp, inf.ms_ticks AS cur_timestamp, ring.*   
-FROM sys.dm_os_ring_buffers ring  
-CROSS JOIN sys.dm_os_sys_info inf where ring_buffer_type='<RING_BUFFER_TYPE>'  
+DECLARE @start_of_today    DATETIME,
+        @start_of_tomorrow DATETIME;
+SET @start_of_today = CAST(FLOOR(CAST(GETDATE() AS FLOAT)) AS DATETIME);
+SET @start_of_tomorrow = DATEADD(DAY, 1, @start_of_today);
+
+DECLARE @runtime DATETIME;
+SET @runtime = GETDATE();
+SELECT CONVERT(VARCHAR(30), @runtime, 121) AS data_collection_runtime,
+       DATEADD(ms, -1 * (inf.ms_ticks - ring.timestamp), GETDATE()) AS ring_buffer_record_time,
+       ring.timestamp AS record_timestamp,
+       inf.ms_ticks AS cur_timestamp,
+       ring.*
+FROM sys.dm_os_ring_buffers ring
+    CROSS JOIN sys.dm_os_sys_info inf
+WHERE ring_buffer_type                                                 = '<RING_BUFFER_TYPE>'
+      AND DATEADD(ms, -1 * (inf.ms_ticks - ring.timestamp), GETDATE()) >= @start_of_today
+      AND DATEADD(ms, -1 * (inf.ms_ticks - ring.timestamp), GETDATE()) < @start_of_tomorrow;
 ```  
   
  The Record column in each record contains diagnostic data in XML format. The XML data differs between the ring buffer types. For more information on each ring buffer type, see [Availability groups ring buffer types](#BKMK_RingBufferTypes). To make the XML data more readable, you need to customize your T-SQL query to extract the desired XML elements. For example, the following query retrieves all events from the RING_BUFFER_HADRDBMGR_API ring buffer and formats the XML data into separate table columns.  

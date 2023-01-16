@@ -22,7 +22,7 @@ dev_langs:
 
 Compiles a plan for the submitted cursor statement or batch, then creates and populates the cursor. `sp_cursorprepexec` combines the functions of `sp_cursorprepare` and `sp_cursorexecute`. This procedure is invoked by specifying `ID = 5` in a tabular data stream (TDS) packet.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

@@ -21,9 +21,9 @@ ms.author: mathoma
 # sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Adds a log file to a file group when recovery cannot complete on a database due to insufficient log space (error 9002). After the file is added, **sp_add_log_file_recover_suspect_db** turns off the suspect setting and completes the recovery of the database. The parameters are the same as those for ALTER DATABASE *database_name* ADD LOG FILE.  
+  Adds a log file to a database when recovery cannot complete on a database due to insufficient log space (error 9002). After the file is added, **sp_add_log_file_recover_suspect_db** turns off the suspect setting and completes the recovery of the database. The parameters are the same as those for ALTER DATABASE *database_name* ADD LOG FILE.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

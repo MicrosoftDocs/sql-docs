@@ -98,6 +98,6 @@ To view and manage Microsoft Defender for SQL settings:
 
 ## Next steps
 
-- Learn more about [Vulnerability Assessment](sql-vulnerability-assessment.md)
+- Learn more about [Vulnerability Assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
 - Learn more about [Advanced Threat Protection](threat-detection-configure.md)
 - Learn more about [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)

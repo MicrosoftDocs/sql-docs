@@ -38,20 +38,20 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 ## Known issues
 **Version 4.3**
 - Known issues:
-    1. **Cannot design Oracle and Teradata Components.**
+    1. **Cannot design Oracle Components.**
    
 **Version 4.2**
 - Known issues:
-    1. **Cannot design Oracle and Teradata Components.**
+    1. **Cannot design Oracle Components.**
  
 **Version 4.1**
 - Known issues:
-    1. **Cannot design Oracle and Teradata Components.**
+    1. **Cannot design Oracle Components.**
     2. **Due to a limitation of VS marketplace, the version 4.1.2 does not introduce new binaries to download. Version 4.1 contains the latest binaries.**
     
 **Version 4.0 preview:**
 - Known issues:
-    1. **Cannot design Oracle and Teradata Components.**
+    1. **Cannot design Oracle Components.**
     2. CDC source component in target [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] can't do preview.
     3. **When executing SSIS project targeting SqlServer 2019 on the environment that SQL Server 2019 are also installed**, the execution will fail with error "Unable to cast COM object of type System._ComObject to interface type Microsoft.SqlServer.Dts.Runtime.Wrapper.Sql2019.IDTSApplication160".
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.

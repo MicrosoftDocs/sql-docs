@@ -22,7 +22,7 @@ Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../.
 > [!NOTE]   
 >  For standard Transact-SQL statements, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
-![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## INSERT Into Node Table Syntax 
 The syntax for inserting into a Node table is the same as for a regular table. 

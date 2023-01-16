@@ -23,7 +23,7 @@ ms.author: maghan
 
   Prepares and executes a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. sp_prepexec combines the functions of sp_prepare and sp_execute. This action is invoked by ID =13 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

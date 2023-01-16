@@ -26,7 +26,7 @@ Creates an external table.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
@@ -1094,7 +1094,7 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ## Examples
 
-### A. Import Data from ADLS Gen 2 into Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)].
+### A. Import Data from ADLS Gen 2 into [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 For examples for Gen ADLS Gen 1, see [Create external data source](create-external-data-source-transact-sql.md).
 

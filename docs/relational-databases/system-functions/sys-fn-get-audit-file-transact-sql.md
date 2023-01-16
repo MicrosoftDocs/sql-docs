@@ -4,7 +4,7 @@ description: "The sys.fn_get_audit_file system function returns information from
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: wiassaf, randolphwest
-ms.date: 12/21/2022
+ms.date: 1/9/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Returns information from an audit file created by a server audit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SQL Server Audit (Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -180,7 +180,7 @@ For information on setting up Azure SQL Database auditing, see [Get Started with
 
 ## Limitations
 
-Selecting rows from `sys.fn_get_audit_file` within a Create Table As Select (CTAS) is a limitation when running on Azure Synapse Analytics. Although the query completes successfully and no error messages appear, there are no rows present in the table created using CTAS.
+Selecting rows from `sys.fn_get_audit_file` within a Create Table As Select (CTAS) or INSERT INTO is a limitation when running on Azure Synapse Analytics. Although the query completes successfully and no error messages appear, there are no rows present in the table created using CTAS or INSERT INTO.
 
 ## See also
 

@@ -3,7 +3,7 @@ title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 12/13/2022
+ms.date: 01/12/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,15 +14,15 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ## <a id="112"></a> 11.2
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2220143)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2220142)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.3 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2221563)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.3 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2222207)**
 
-Release number: 11.2.2  
-Released: December 15, 2022
+Release number: 11.2.3  
+Released: January 12, 2023
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
-For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x40a)  
-For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x40a)
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2221563&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2222207&clcid=0x40a)
 
 ### 11.2 Compliance
 
@@ -34,6 +34,16 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ### 11.2 Releases
 
+Release number: 11.2.3  
+Released: January 12, 2023
+
+Fixed issues in 11.2.3:
+
+- Fixed null SQL state and zero error code when database exception is thrown
+- Fixed incorrect update counts when timeout occurs in batch queries
+- Fixed incorrect token expiration date when using Azure Functions
+- Fixed connecting to the wrong SQLServer host
+
 Release number: 11.2.2  
 Released: December 15, 2022
 
@@ -44,6 +54,14 @@ Fixed issues in 11.2.2:
 - Fixed callable statement index out of bounds error 
 - Fixed check for DONE token when fetching result sets 
 - Fixed intermittent error: "Internal error during decryption: Tag mismatch!"
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2220143)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2220142)**
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220143&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220142&clcid=0x40a)
+
 
 Release number: 11.2.1  
 Released: September 8, 2022
@@ -103,11 +121,21 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ## <a id="102"></a> 10.2
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2220052)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2220051)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.3 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2222206)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.3 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2221562)**
+
+Release number: 10.2.3 
+Released: Jan 12, 2023
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2222206&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2221562&clcid=0x40a)
 
 Release number: 10.2.2 
 Released: Dec 13, 2022
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2220052)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2220051)**
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220052&clcid=0x40a)  
@@ -132,6 +160,15 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Compatible with Java Development Kit (JDK) version 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 10.2 for SQL Server is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
 
 ### 10.2 Releases
+
+Release number: 10.2.3 
+Released: Jan 12, 2023
+
+Fixed issues in 10.2.3:
+
+- Fixed incorrect update counts when timeout occurs in batch queries 
+- Fixed incorrect token expiration date when using Azure Functions
+- Fixed null SQL state and zero error code when database exception is thrown
 
 Release number: 10.2.2  
 Released: Dec 13, 2022

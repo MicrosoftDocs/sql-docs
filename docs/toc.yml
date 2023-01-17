@@ -10360,6 +10360,8 @@ items:
         href: linux/sample-unattended-install-suse.md
       - name: Ubuntu
         href: linux/sample-unattended-install-ubuntu.md
+    - name: SQL Assessment API
+      href: linux/sql-server-linux-sql-assessment-api.md
   - name: Resources
     items:
     - name: Troubleshoot

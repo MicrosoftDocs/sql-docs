@@ -348,7 +348,7 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 | --- | --- |
 | Table Designer | Added functionality for creation and management of tables for SQL Servers. Built using DacFx framework |
 | Query Plan Viewer | Added functionality for users to view a graphic view of estimated and actual query plans without need for an extension |
-| Azure Arc Extension | Updated the Data Controller deployment wizard and the SQL Managed Instance - Azure Arc deployment wizard to reflect the deployment experience in Azure Portal |
+| Azure Arc Extension | Updated the Data Controller deployment wizard and the SQL Managed Instance - Azure Arc deployment wizard to reflect the deployment experience in Azure portal |
 
 #### Bug fixes in 1.35.0
 
@@ -444,7 +444,7 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 | Extension (new) | [Azure Monitor Logs](extensions/azure-monitor-logs-extension.md) |
 | Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
 | Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
-| Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
+| Extension update | [Machine Learning](extensions/machine-learning-extension.md) |
 | Extension update | [Azure Arc](extensions/azure-arc-extension.md) |
 | Extension update | Lang packs |
 
@@ -590,7 +590,7 @@ April 15, 2021 / version: 1.28.0
 | New item | Details |
 | --- | --- |
 | Extension update | [Kusto (KQL)](extensions/kusto-extension.md) |
-| Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
+| Extension update | [Machine Learning](extensions/machine-learning-extension.md) |
 | Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
 | Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
 | Notebook features | Added *Add Notebook* and *Remove Notebook commands* |
@@ -620,7 +620,7 @@ February 18, 2021 / version: 1.26.0
 | Change | Details |
 | --- | --- |
 | Bug Fixes | For a complete list of fixes, see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed). |
-| Extension(s) update | [Dacpac](extensions/sql-server-dacpac-extension.md)<br />[Kusto (KQL)](extensions/kusto-extension.md)<br />[MachineLearning](extensions/machine-learning-extension.md)<br />[Profiler](extensions/sql-server-profiler-extension.md)<br />[SchemaCompare](extensions/schema-compare-extension.md)<br />[SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Extension(s) update | [Dacpac](extensions/sql-server-dacpac-extension.md)<br />[Kusto (KQL)](extensions/kusto-extension.md)<br />[Machine Learning](extensions/machine-learning-extension.md)<br />[Profiler](extensions/sql-server-profiler-extension.md)<br />[SchemaCompare](extensions/schema-compare-extension.md)<br />[SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
 | New Azure Arc features | Multiple data controllers now supported<br />New connection dialog options like the *kube config file*<br />Postgres dashboard enhancements |
 | New Notebook features | Improved Jupyter server start-up time by 50% on Windows<br />Added support to edit Jupyter Books through right-click<br />Added URI notebook parameterization support and [added notebook parameterization documentation](./notebooks/parameterize-papermill.md) |
 
@@ -745,7 +745,7 @@ June 15, 2020 / version: 1.19.0
 | Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in Azure Data Studio. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it's capable of [in this article.](../tools/sql-assessment-api/sql-assessment-api-overview.md) |
 | [Machine Learning Extension improvements](./extensions/machine-learning-extension.md) | Now supports Azure SQL Managed Instance. |
 | Data Virtualization extension improvements | Now supports MongoDB and Teradata |
-| Postgres extension bug fixes | Fixed Azure MFA |
+| Postgres extension bug fixes | Fixed Azure AD Multi-Factor Authentication |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed). |
 
 ### May 2020 (hotfix)

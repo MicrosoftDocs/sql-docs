@@ -36,7 +36,7 @@ For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Windows, see [Star
 
 ### [!INCLUDE[ssDE](../includes/ssde-md.md)] service
 
-The [!INCLUDE[ssDE](../includes/ssde-md.md)] service is the default instance, with a limit of one per computer. Named instances aren't supported on Linux. To run multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a single computer using containers, see [Deploy and connect to SQL Server Docker containers](sql-server-linux-docker-container-deployment.md).
+The [!INCLUDE[ssDE](../includes/ssde-md.md)] service is the default instance, with a limit of one per computer. Named instances aren't supported on Linux. To run multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a single computer using containers, see [Deploy and connect to SQL Server in a container](sql-server-linux-docker-container-deployment.md).
 
 ### SQL Server Agent service
 
@@ -56,7 +56,7 @@ Stopping the [!INCLUDE[ssDE](../includes/ssde-md.md)] by using the Transact-SQL 
 
 ## <a name="CommandLine"></a> Using command-line tools
 
-The following steps show how to start, stop, restart, and check the status of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service on Linux. To manage a SQL Server Docker container, see [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md).
+The following steps show how to start, stop, restart, and check the status of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service on Linux. To manage a SQL Server container, see [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md).
 
 Check the status of the [!INCLUDE[ssDE](../includes/ssde-md.md)] service using this command:
 

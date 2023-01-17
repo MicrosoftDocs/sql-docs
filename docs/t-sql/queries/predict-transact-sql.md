@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||
 Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 
 > [!IMPORTANT]
-> Support for `PREDICT` is in Preview in Azure SQL Managed Instance.
+> Support for ONNX in `PREDICT` is in Preview in Azure SQL Managed Instance.
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 

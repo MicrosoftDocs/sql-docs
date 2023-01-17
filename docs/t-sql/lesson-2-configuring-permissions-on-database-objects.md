@@ -32,7 +32,7 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [Download SQL Server 2017 on Docker](../linux/quickstart-install-connect-docker.md) (Intel-based Mac only).
+- **Linux**: [Download SQL Server 2017 in a container](../linux/quickstart-install-connect-docker.md).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -71,7 +71,7 @@ conceptualContent:
         - text: Writing Transact-SQL
           url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: quickstart
-        - text: SQL Server Docker container
+        - text: SQL Server in a Linux container
           url: linux/quickstart-install-connect-docker.md
           itemType: quickstart
         - text: SQL Docs navigation tips

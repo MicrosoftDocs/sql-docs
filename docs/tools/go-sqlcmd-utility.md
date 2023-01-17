@@ -200,6 +200,6 @@ These environment variables can be set to configure some aspects of Azure Active
 
 ## Next steps
 - [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-sqlcmd)
-- [Run on Docker](../linux/quickstart-install-connect-docker.md)
+- [Run SQL Server on Linux containers](../linux/quickstart-install-connect-docker.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

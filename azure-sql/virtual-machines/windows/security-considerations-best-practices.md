@@ -109,7 +109,7 @@ Consider the following limitations
 - Once Azure AD authentication is enabled, there is no way to disable it by using the Azure portal. 
 - Currently, enabling Azure AD authentication is only possible through the Azure portal. 
 - Currently, Azure AD authentication is only available to SQL Server VMs deployed to the public cloud. 
-- Currently, Authenticating to SQL VM through AAD authentication using [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs.md) is not supported.
+- Currently, Authenticating to SQL VM through AAD authentication using [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) is not supported.
 
 
 ## Azure Advisor 

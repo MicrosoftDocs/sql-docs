@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Integration Servic
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan, randolphwest
-ms.date: 12/28/2022
+ms.date: 01/17/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -20,7 +20,7 @@ Follow the steps in this article to install SQL Server Integration Services (**m
 - [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md)
 - [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md)
 
-You can install SQL Server Integration Services (SSIS) on Red Hat Enterprise Linux (RHEL) and Ubuntu. SUSE Linux Enterprise Server (SLES) isn't supported.
+You can install SQL Server Integration Services (SSIS) on Red Hat Enterprise Linux (RHEL) and Ubuntu. SUSE Linux Enterprise Server (SLES) isn't supported. Installing SSIS on containers is also not supported.
 
 # [Red Hat Enterprise Linux](#tab/rhel)
 

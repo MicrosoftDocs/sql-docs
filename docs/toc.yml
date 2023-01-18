@@ -11450,6 +11450,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17084-database-engine-error.md
         - name: 17112
           href: relational-databases/errors-events/mssqlserver-17112-database-engine-error.md
+        - name: 17120
+          href: relational-databases/errors-events/mssqlserver-17120-database-engine-error.md
         - name: 17128
           href: relational-databases/errors-events/mssqlserver-17128-database-engine-error.md
         - name: 17130

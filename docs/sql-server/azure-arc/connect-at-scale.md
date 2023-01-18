@@ -22,12 +22,12 @@ This article describes how to connect multiple instances of SQL Server to Azure 
 
 * The user onboarding Arc-enabled SQL Server resources has the following permissions:
 
-   * Microsoft.AzureArcData/sqlServerInstances/read
-   * Microsoft.AzureArcData/sqlServerInstances/write
+  * Microsoft.AzureArcData/sqlServerInstances/read
+  * Microsoft.AzureArcData/sqlServerInstances/write
 
 * The subscription has registered the following resource providers
-   * **Microsoft.AzureArcData**
-   * **Microsoft.HybridCompute**
+  * **Microsoft.AzureArcData**
+  * **Microsoft.HybridCompute**
 
 ### Register resource providers
 
@@ -57,7 +57,9 @@ Run:
 az provider register --namespace 'Microsoft.AzureArcData'
 az provider register --namespace 'Microsoft.HybridCompute'
 ```
+
 ---
+
 ## Connect at-scale using Azure Policy
 
 You can automatically connect SQL Server instances on multiple Arc-enabled machines using an Azure policy definition called *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. This policy definition is not assigned to a scope by default. If you assign this policy definition to a scope of your choice, it installs the *Azure extension for SQL Server* on all Azure Arc-enabled servers where SQL Server is installed. Once installed, the extension connects the SQL Server instances on the machine with Azure. After that, the extension runs continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension automatically registers it with Azure.
@@ -92,11 +94,11 @@ If you have the `User Access Administrator` and `Resource Policy Contributor` ro
 
 To do this,
 
-1. Navigate to the **SQL Server - Azure Arc** view in the Azure portal 
-1. Click on the **Automatic Arc-enabled SQL Server registration** button at the top of the list.
+1. Navigate to the **SQL Server - Azure Arc** view in the Azure portal.
+1. Select the **Automatic Arc-enabled SQL Server registration** button at the top of the list.
 1. Select a subscription and optionally a resource group.  
-1. Check the **I accept the terms in the agreement** checkbox. 
-1. Select 'Enable'. 
+1. Check the **I accept the terms in the agreement** checkbox.
+1. Select **Enable**.
 
 These steps create a new Azure Policy assignment of the *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed* policy definition to the selected subscription and, optionally, a specific resource group scope. A new system assigned managed identity is created and granted the required permissions to onboard Arc-enabled SQL Servers. This new managed identity is used by the policy remediation to install the Azure extension for SQL Server.
 
@@ -187,13 +189,14 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
    ```
 
 1. Execute the script on each target machine
-   
+
    ```console
-sudo chmod +x ./RegisterSqlServerArc.sh
-./RegisterSqlServerArc.sh
-```
+   sudo chmod +x ./RegisterSqlServerArc.sh
+   ./RegisterSqlServerArc.sh
+   ```
 
 ---
+
 ## Validate successful onboarding
 
 After you connected the SQL Server instances to Azure, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You'll see a new `Server - Azure Arc` resource for each connected machine and a new `SQL Server - Azure Arc` resource for each connected SQL Server instance within approximately 1 minute. If these resources aren't created, it means something went wrong during the extension installation and activation process. See [Troubleshoot Azure extension for SQL Server](./connect-at-scale.md#troubleshoot-azure-extension-for-sql-server) for the troubleshooting options.
@@ -260,4 +263,3 @@ Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcD
 - Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
 
 - Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
-

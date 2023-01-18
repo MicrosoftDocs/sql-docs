@@ -28,7 +28,7 @@ helpviewer_keywords:
 
 ## Explanation
 
-Error 17120 is raised when a thread that performs system or background tasks fails to be created. Examples of background tasks include Checkpoint, Lazy Writer, Database Recovery task, Log Reader, Log Writer, Auto shrink task, Communication manager, Parallel Redo worker task, and many more. The `%s` in the error contains the name of the task. Here are examples of how this error may show up in the error logs:
+Error 17120 is raised when a thread that performs system or background tasks fails to be created. Examples of background tasks include Checkpoint, Lazy Writer, Database Recovery task, Log Reader, Log Writer, Auto shrink task, Communication manager, Parallel Redo worker task, and many more. The `%s` in the error contains the name of the task. Here are examples of how this error may appear in the error logs:
 
 ```output
 Error: 17120, Severity: 16, State: 1.

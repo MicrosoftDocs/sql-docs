@@ -30,8 +30,9 @@ This release is published January 17, 2023
   - Provides comprehensive mitigation guidance
   - To experience best practices assessment, upgrade to the latest extension version.
 
-- Azure Arc-enabled Database resource populates earliest restore time and last backup time for database resources as a resource
-- Pay-as-you-go (PAYG) licensing option now extended to SQL Server 2012 and above
+- Azure Arc-enabled Database resource populates the earliest restore time and last backup time for database resources as a resource
+- Pay-as-you-go (PAYG) licensing option is now extended to SQL Server 2012 and above
+- Ability to set the licensing type during onboarding Arc-enabled SQL Server.
 - Ability to skip instances during onboarding to Azure
 
 ## December 2022
@@ -239,3 +240,4 @@ The following issues apply to the September release:
 ## Next steps
 
 **Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+

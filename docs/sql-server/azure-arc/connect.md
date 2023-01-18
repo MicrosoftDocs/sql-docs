@@ -4,7 +4,7 @@ description: Connect an instance of SQL Server to Azure Arc. Allows you to manag
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, maghan
-ms.date: 12/06/2022
+ms.date: 01/12/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
@@ -25,6 +25,8 @@ You can connect your existing SQL Server instance to Azure Arc by following thes
    Microsoft.AzureArcData/sqlServerInstances/read
 
    Microsoft.AzureArcData/sqlServerInstances/write
+
+Users can be assigned to built-in roles that have these permissions, for example Contributor or Owner. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
 > [!NOTE]  
 > SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
@@ -64,7 +66,6 @@ If the machine with SQL Server is already connected to Azure Arc, you can connec
 
 > [!IMPORTANT]  
 >
-> - The Managed System Identity used by the Azure connected machine agent must have the *Azure Connected SQL Server Onboarding* role at the resource group level.
 > - The Azure resource with type `SQL Server - Azure Arc` representing the SQL Server instance installed on the machine uses the same region and resource group as the Azure resources for Arc-enabled servers.
 
 ## [Azure portal](#tab/azure)
@@ -75,7 +76,9 @@ To install the Azure extension for SQL Server, use the following steps:
 1. Search for the connected server with the SQL Server instance that you want to connect to Azure.
 1. Under **Extensions**, select **+ Add**.
 1. Select `Azure extension for SQL Server` and select **Next**.
-1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances installed on the server) and select **Review + Create**.
+1. Specify the SQL Server edition and license type you are using on this machine.
+1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances to skip, separate them by spaces) and select **Review + Create**.
+   :::image type="content" source="media/join/license-type-in-extension.png" alt-text="Screenshot for license type and exclude instances.":::
 1. Select **Create**.
 
 ## [PowerShell](#tab/powershell)
@@ -83,7 +86,8 @@ To install the Azure extension for SQL Server, use the following steps:
 To install *Azure extension for SQL Server*, run:
 
 ```powershell
-$Settings = @{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}
+$Settings = @{ SqlManagement = @{ IsEnabled = $true }; ExcludedSqlInstances = @(<Comma separated names of SQL Server instances, eg: "MSSQLSERVER01","MSSQLSERVER">); LicenseType="<License Type>"}
+
 New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName {your resource group name} -MachineName {your machine name} -Location {azure region} -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
 ```
 
@@ -92,14 +96,17 @@ New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupNam
 To install *Azure extension for SQL Server* for Windows Operating System, run:
 
 ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings "{\"SqlManagement\":{\"IsEnabled\":true}, \"LicenseType\":\"<License Type>\", \"ExcludedSqlInstances\":[]}"
 ```
 
 To install *Azure extension for SQL Server* for Linux operating system, run:
 
 ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "LinuxAgent.SqlServer" --resource-group "{your resource group name}" --type "LinuxAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+settings="{\"SqlManagement\":{\"IsEnabled\":true},\"LicenseType\":\"<License Type>\"}"
+az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "LinuxAgent.SqlServer" --resource-group "{your resource group name}" --type "LinuxAgent.SqlServer" --publisher "Microsoft.AzureData" --settings $settings
 ```
+
+The possible licensing types that you can set are, PAYG, Paid and LicenseOnly
 
 *Azure extension for SQL Server* for Linux is available for preview.
 
@@ -119,18 +126,31 @@ If the server that runs your SQL Server instance isn't yet connected to Azure, y
 
    :::image type="content" source="media/join/start-creation-of-sql-server-azure-arc-resource.png" alt-text="Screenshot of the start creation.":::
 
-1. Select **Connect SQL Server to Azure Arc**
+1. Under **Connect SQL Server to Azure Arc**, select **Connect Servers**
 
 1. Review the prerequisites and select **Next: Server details**
 
-1. Select the subscription, resource group, Azure region, and host operating system. If necessary, specify the proxy your network uses to connect to the Internet.
+1. Specify:
+
+    - **Subscription**
+    - **Resource group**
+    - **Region**
+    - **Operating system**
+
+    If necessary, specify the proxy your network uses to connect to the Internet.
+
+   :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details.":::
+
+1. Select the SQL Server edition and license type you are using on this machine. [Learn more:](billing.md).
+
+1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances installed on the server).  Separate each excluded instance by a space.
 
    > [!IMPORTANT]  
    > If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding **Server - Azure Arc** resource.
 
-   :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details.":::
+   :::image type="content" source="media/join/server-details-sql-server-management-azure-arc.png" alt-text="Screenshot of server management details.":::
 
-1. Select **Tags** to optionally add tags to the resource for your SQL Server instance.
+1. Select **Next: Tags** to optionally add tags to the resource for your SQL Server instance.
 
 1. Select **Run script** to generate the onboarding script.
 Screenshot of
@@ -182,15 +202,15 @@ Alternatively, you can also onboard your SQL Servers to Azure Arc by directly us
 
    If you use Azure Active Directory service principal to authenticate, execute the command below on the target SQL Server.
 
-   ```powershell
-   '& "$env:ProgramW6432\AzureExtensionForSQLServer\AzureExtensionForSQLServer.exe" --subId <subscriptionid> --resourceGroup <resourceGroupName> --location <AzureLocation> --tenantid <TenantId> --service-principal-app-id <servicePrincipalAppId> --service-principal-secret <servicePrincipalSecret> --proxy <proxy> --tags ""'
-   ```
+  ```powershell
+  '& "$env:ProgramW6432\AzureExtensionForSQLServer\AzureExtensionForSQLServer.exe" --subId <subscriptionid> --resourceGroup <resourceGroupName> --location <AzureRegion> --tenantid <TenantId> --service-principal-app-id <servicePrincipalAppId> --service-principal-secret <servicePrincipalSecret> --proxy <proxy> --licenseType <licenseType> --excluded-SQL-instances <"MSSQLSERVER01 MSSQLSERVER02 MSSQLSERVER15">'
+  ```
 
    Otherwise, execute the command below on the target SQL Server.
 
-   ```powershell
-   '& "$env:ProgramW6432\AzureExtensionForSQLServer\AzureExtensionForSQLServer.exe" --subId  <subscriptionid>--resourceGroup <resourceGroupName> --location <AzureLocation> --tenantid <TenantId>  --proxy  <proxy> --tags ""'
-   ```
+  ```powershell
+  '& "$env:ProgramW6432\AzureExtensionForSQLServer\AzureExtensionForSQLServer.exe" --subId <subscriptionid> --resourceGroup <resourceGroupName> --location $location --tenantid <TenantId> --proxy <proxy> --licenseType <licenseType> --excluded-SQL-instances <"MSSQLSERVER01 MSSQLSERVER02 MSSQLSERVER15">'
+  ```
 
  > [!IMPORTANT]  
  > Microsoft Azure Arc-enabled SQL Server is licensed to you as part of your or your company's subscription license for Microsoft Azure Services. You may only use the software with Microsoft Azure Services and are subject to the terms and conditions of the agreement under which you obtained Microsoft Azure Services. You may not use the software if you do not have an active subscription license for Microsoft Azure Services.  

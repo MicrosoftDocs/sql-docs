@@ -28,6 +28,7 @@ This release is published January 17, 2023
   - Identifies possible performance issues
   - Evaluates that your Azure Arc-enabled SQL Server is configured to follow best practices
   - Provides comprehensive mitigation guidance
+  - To experience best practices assessment, upgrade to the latest extension version.
 
 - Azure Arc-enabled Database resource populates earliest restore time and last backup time for database resources as a resource
 - Pay-as-you-go (PAYG) licensing option now extended to SQL Server 2012 and above

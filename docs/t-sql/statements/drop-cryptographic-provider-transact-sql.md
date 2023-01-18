@@ -16,7 +16,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -16,7 +16,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Database Properties (General Page)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
   Use this page to view or modify properties for the selected database.  
   
 ## Options  

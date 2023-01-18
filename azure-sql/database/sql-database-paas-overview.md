@@ -174,7 +174,7 @@ SQL Database provides a range of [built-in security and compliance features](/az
 
 Microsoft Defender for SQL is a unified package for advanced SQL security capabilities. It includes functionality for managing your database vulnerabilities, and detecting anomalous activities that might indicate a threat to your database. It provides a single location for enabling and managing these capabilities.
 
-- [Vulnerability assessment](sql-vulnerability-assessment.md):
+- [Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview):
 
   This service can discover, track, and help you remediate potential database vulnerabilities. It provides visibility into your security state, and includes actionable steps to resolve security issues, and enhance your database fortifications.
 - [Threat detection](threat-detection-configure.md):

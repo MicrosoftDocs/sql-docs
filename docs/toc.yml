@@ -10204,7 +10204,7 @@ items:
         href: linux/sql-server-linux-kubernetes-best-practices-statefulsets.md
       - name: Use MSDTC with containers
         href: linux/sql-server-linux-configure-msdtc-docker.md
-      - name: Troubleshoot Docker containers
+      - name: Troubleshoot containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
       - name: Setup AD Authentication using adutil
         href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
@@ -11508,6 +11508,10 @@ items:
         items:
         - name: 19407
           href: relational-databases/errors-events/mssqlserver-19407-database-engine-error.md
+        - name: 19419
+          href: relational-databases/errors-events/mssqlserver-19419-database-engine-error.md
+        - name: 19421
+          href: relational-databases/errors-events/mssqlserver-19421-database-engine-error.md
       - name: Errors 20,000 to 33,999
         items:
         - name: 20557

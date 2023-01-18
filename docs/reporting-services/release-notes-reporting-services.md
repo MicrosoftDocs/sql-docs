@@ -66,9 +66,9 @@ Initial release.
     - Ability to turn off size calculation for snapshots via configuration property **EnableListHistorySnapshotsSize** if History Snapshots page loads slow due to a large number of snapshots
     - Security enhancements
     - Bug fixes
-- [Deprecated features](/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs): 
+- [Deprecated features](./deprecated-features-in-sql-server-reporting-services-ssrs.md): 
     - Report Parts support 
-- [Discontinued features](/sql/reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server): 
+- [Discontinued features](./discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md): 
     - Pin to PowerBI functionality
     - Mobile Reports functionality (.rsmobile) and Mobile Report Publisher
 

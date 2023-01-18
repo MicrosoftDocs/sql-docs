@@ -44,7 +44,7 @@ TDE protects data at rest, which is the data and log files. It lets you follow m
 > TDE is not available for system databases. It can't be used to encrypt master, model, or `msdb`. `tempdb` is automatically encrypted when a user database enabled TDE, but can't be encrypted directly.
 
 > [!IMPORTANT]  
-> TDE doesn't provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+> TDE doesn't provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/configure-sql-server-encryption).
 >  
 > **Related topics:**
 >  
@@ -280,7 +280,7 @@ Replication doesn't automatically replicate data from a TDE-enabled database in 
 
 Snapshot replication can store data in unencrypted intermediate files like BCP files. The initial data distribution for transactional and merge replication can too. During such replication, you can enable encryption to protect the communication channel.
 
-For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/configure-sql-server-encryption).
 
 ## TDE and availability groups
 

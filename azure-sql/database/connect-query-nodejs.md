@@ -32,7 +32,7 @@ To complete this quickstart, you need:
   | Action | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
   |:--- |:--- |:---|:---|
   | Create| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  || [CLI](scripts/create-and-configure-database-cli.md) | [Bicep](/azure/azure-sql/managed-instance/create-bicep-quickstart) |
+  || [CLI](scripts/create-and-configure-database-cli.md) | [Bicep](../managed-instance/create-bicep-quickstart.md) |
   || [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
   | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)|
   |||[Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)

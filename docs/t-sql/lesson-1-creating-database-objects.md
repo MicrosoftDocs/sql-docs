@@ -38,7 +38,7 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 If you don't have a SQL Server instance, create one. To create one, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [Download SQL Server 2017 on Docker](../linux/quickstart-install-connect-docker.md) (Intel-based Mac only).
+- **Linux**: [Download SQL Server 2017 in a container](../linux/quickstart-install-connect-docker.md).
 
 ## Create a database
 

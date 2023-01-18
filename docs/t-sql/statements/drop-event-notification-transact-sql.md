@@ -20,7 +20,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes an event notification trigger from the current database.  
   

@@ -19,7 +19,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trusted_assemblies (Transact-SQL)  
-[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE[SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Contains a row for each trusted assembly for the server.
 

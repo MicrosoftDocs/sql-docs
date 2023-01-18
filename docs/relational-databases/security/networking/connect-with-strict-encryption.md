@@ -26,7 +26,7 @@ In this article, we'll show you how to connect to [!INCLUDE [sssql22-md](../../.
 - ODBC or OLE DB Driver for SQL Server
   - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.1.2.1 or higher
   - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.2.0 or higher
-- Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
+- Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/configure-sql-server-encryption)
 
 ## Connect to SQL Server using a .NET application
 

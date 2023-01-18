@@ -23,7 +23,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
 
-- Due to a limitation of VS marketplace, if we release the version 4.x.y. Minor version y just for document change. Version 4.x contains the latest binaries.
+- Due to a limitation of VS marketplace, the version 4.4.* does not introduce new binaries to download. Version 4.4 contains the latest binaries.
 
 - This extension doesn't support Visual Studio 2022. Please use [SQL Server Integration Services Projects extension 2022](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices). 
 

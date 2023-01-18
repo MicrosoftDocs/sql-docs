@@ -51,7 +51,8 @@ Resource group or Subscription of Arc Machine.
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 - The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
-
+- To enabled the latest best practice assessment feature, upgrade the Azure SQL Server extension version. Use the latest version from the [release notes](/sql/sql-server/azure-arc/release-notes). You can upgrade to latest version by updating the extension, in the extension management of Arc-Server.
+   
 ## Enable best practices assessment
 
 1. Sign into the [Azure portal](https://portal.azure.com/) and go to your [Arc-enabled SQL Server resource](https://portal.azure.com/#view/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/~/sqlServers)

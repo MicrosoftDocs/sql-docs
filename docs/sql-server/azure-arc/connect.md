@@ -43,6 +43,7 @@ To register the resource providers, use one of the methods below:
 Run:
 
 ```powershell
+Register-AzResourceProvider -ProviderNamespace Microsoft.HybridCompute
 Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData
 ```
 
@@ -51,6 +52,7 @@ Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData
 Run:
 
 ```azurecli
+az provider register --namespace 'Microsoft.HybridCompute'
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 

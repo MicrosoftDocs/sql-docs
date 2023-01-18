@@ -2,7 +2,7 @@
 title: "MSSQLSERVER_17120"
 description: "MSSQLSERVER_17120"
 author: MashaMSFT
-ms.author: pijocoder
+ms.author: jopilov
 ms.reviewer: pijocoder
 ms.date: 01/18/2023
 ms.service: sql

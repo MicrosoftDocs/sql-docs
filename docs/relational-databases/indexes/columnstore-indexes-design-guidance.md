@@ -130,7 +130,7 @@ For example, both rowstore and columnstore tables use partitions to:
 
 Additionally, with a columnstore index, you use partitioning to:
 
-* Save an additional 30% in storage costs. You can compress older partitions with the COLUMNSTORE_ARCHIVE compression options. The data will be slower for query performance, which is acceptable if the partition is queries infrequently.
+* Save an additional 30% in storage costs. You can compress older partitions with the COLUMNSTORE_ARCHIVE compression options. The data will be slower for query performance, which is acceptable if the partition is queried infrequently.
 
 ### Use partitions to improve query performance
 

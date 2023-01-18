@@ -76,14 +76,14 @@ This task requires CREATE TABLE permission in the database, and ALTER permission
     ```  
     CREATE TABLE dbo.PurchaseOrderDetail  
     (  
-        PurchaseOrderID int NOT NULL  
-        ,LineNumber smallint NOT NULL  
-        ,ProductID int NULL  
-        ,UnitPrice money NULL  
-        ,OrderQty smallint NULL  
-        ,ReceivedQty float NULL  
-        ,RejectedQty float NULL  
-        ,DueDate datetime NULL  
+        PurchaseOrderID int NOT NULL,  
+        LineNumber smallint NOT NULL,  
+        ProductID int NULL,  
+        UnitPrice money NULL,  
+        OrderQty smallint NULL,  
+        ReceivedQty float NULL,  
+        RejectedQty float NULL,  
+        DueDate datetime NULL  
     );  
     ```  
   

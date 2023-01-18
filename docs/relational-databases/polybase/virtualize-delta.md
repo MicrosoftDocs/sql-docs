@@ -74,7 +74,7 @@ For example, if your storage account is named `delta_lake_sample` and the contai
 CREATE EXTERNAL DATA SOURCE Delta_ED
 WITH
 (
- LOCATION = 'abs://sink@delta_lake_sample.dfs.core.windows.net'
+ LOCATION = 'adls://sink@delta_lake_sample.dfs.core.windows.net'
 ,CREDENTIAL = delta_storage_dsc
 )
 ```

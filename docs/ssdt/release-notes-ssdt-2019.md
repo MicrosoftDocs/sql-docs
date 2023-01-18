@@ -23,6 +23,8 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
 
+- Due to a limitation of VS marketplace, if we release the version 4.x.y. Minor version y just for document change. Version 4.x contains the latest binaries.
+
 - This extension doesn't support Visual Studio 2022. Please use [SQL Server Integration Services Projects extension 2022](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices). 
 
 - In the latest general availability (GA) version, to design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.

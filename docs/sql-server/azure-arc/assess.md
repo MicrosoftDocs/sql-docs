@@ -9,7 +9,7 @@ ms.service: sql
 ms.topic: conceptual
 ---
 
-# Configure best practices assessment | Azure Arc-enabled SQL Server
+# Configure SQL best practices assessment 
 
 Best practices assessment provides a mechanism to evaluate the configuration of your SQL Server. Once the best practices assessment feature is enabled, your SQL Server instance and databases are scanned to provide recommendations for things like SQL Server and database configurations, index management, deprecated features, enabled or missing trace flags, statistics, etc.
 
@@ -31,8 +31,7 @@ The Environment Health assessment is replaced with a much richer best practices 
 
 - [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
 
-- The user configuring SQL BPA must have following permissions.
-
+- The user configuring SQL BPA must have the following permissions.
   - Log Analytics Contributor role on Resource Group or Subscription of the Log Analytics workspace.
   - Azure Connected Machine Resource Administrator role on the Resource Group or Subscription of the Arc-enabled SQL Server.
   - Monitoring Contributor role on the Resource group or Subscription of Log Analytics Workspace &
@@ -62,7 +61,7 @@ Resource group or Subscription of Arc Machine.
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-launch.png" alt-text="Screenshot showing how to enable the best practices assessment screen of an Arc-enabled SQL Server resource.":::
 
-   If the Log Analytics Workspace is not created or current user does not have Log Analytics Contributor role assigned for the Resource Group or Subscription, you can't initiate the on-demand SQL Assessment.  Review the Prerequisites section above.
+1. If the Log Analytics Workspace is not created or the current user does not have Log Analytics Contributor role assigned for the Resource Group or Subscription, you can't initiate the on-demand SQL Assessment.  Review the Prerequisites section above.
 
    :::image type="content" source="media/assess/enable-log-analytics-workspace.png" alt-text="Screenshot showing how to specify the log analytics workspace for SQL Server best practices assessment..":::
 
@@ -119,10 +118,9 @@ If there are multiple runs in a single day, only the latest run is included in t
 
 - Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
-- The assessment is enabled on a default instance if present, otherwise on the very first named instance in registry. The assessment results of the instance where the assessment was enabled, is duplicated for every instance on that SQL Server resource.
-
-- It may take few seconds to populate the history of the previous execution of the assessments on best practices home page.
-
+- The assessment is enabled on a default instance if present, otherwise on the very first named instance in the registry. The assessment results of the instance where the assessment was enabled, are duplicated for every instance on that SQL Server resource.
+- It may take a few seconds to populate the history of the previous execution of the assessments on best practices home page.
+   
 ## Next steps
 
 - [Connect your SQL Server to Azure Arc](connect.md).

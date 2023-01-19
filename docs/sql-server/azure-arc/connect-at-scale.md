@@ -22,12 +22,12 @@ This article describes how to connect multiple instances of SQL Server to Azure 
 
 * The user onboarding Arc-enabled SQL Server resources has the following permissions:
 
-   * Microsoft.AzureArcData/sqlServerInstances/read
-   * Microsoft.AzureArcData/sqlServerInstances/write
+  * Microsoft.AzureArcData/sqlServerInstances/read
+  * Microsoft.AzureArcData/sqlServerInstances/write
 
 * The subscription has registered the following resource providers
-   * **Microsoft.AzureArcData**
-   * **Microsoft.HybridCompute**
+  * **Microsoft.AzureArcData**
+  * **Microsoft.HybridCompute**
 
 ### Register resource providers
 
@@ -57,6 +57,7 @@ Run:
 az provider register --namespace 'Microsoft.AzureArcData'
 az provider register --namespace 'Microsoft.HybridCompute'
 ```
+
 ---
 
 ## Connect at-scale using Azure Policy
@@ -82,34 +83,32 @@ If you want to select an existing user assigned managed identity or have more gr
 See [Azure Policy documentation](/azure/governance/policy) for general instructions about how to assign an Azure policy using Azure portal or an API of your choice.
 
 > [!IMPORTANT]
-> The Arc-enabled SQL Server resources for the `SQL Server - Azure Arc` resources are created in the same region and the resource group as the `Server - Azure Arc` resources on which they are hosted.
-
-> [!IMPORTANT]
-> Because Azure extension for SQL Server synchronizes with Azure once an hour, it may take up to one hour before these resources are created after you create the policy assignment.
+> - The Arc-enabled SQL Server resources for the `SQL Server - Azure Arc` resources are created in the same region and the resource group as the `Server - Azure Arc` resources on which they are hosted.
+> - Because Azure extension for SQL Server synchronizes with Azure once an hour, it may take up to one hour before these resources are created after you create the policy assignment.
+> - The current version of the policy does not set the license type property of Azure extension for SQL Server. By default, the value `LicenseOnly` is used. See [SQL Server licensing and billing options ](billing.md)for details. 
+> 
 
 ### Connect at-scale using the automatic Arc-enabled SQL Server registration method (Recommended)
 
-If you have the `User Access Administrator` and `Resource Policy Contributor` role assignments or have the subscription `Owner` role assignment, you can quickly enable at-scale registration using Azure Policy and a system assigned managed identity at the scope of an entire subscription or a specific resource group.
+If you have the `User Access Administrator` and `Resource Policy Contributor` role assignments or have the subscription `Owner` role assignment, you can quickly enable at-scale registration using Azure Policy and a system-assigned managed identity at the scope of an entire subscription or a specific resource group.
 
 To do this,
 
-1. Navigate to the **SQL Server - Azure Arc** view in the Azure portal 
-1. Select on the **Automatic Arc-enabled SQL Server registration** button at the top of the list.
+1. Navigate to the **SQL Server - Azure Arc** view in the Azure portal.
+1. Select the **Automatic Arc-enabled SQL Server registration** button at the top of the list.
 1. Select a subscription and optionally a resource group.  
-1. Check the **I accept the terms in the agreement** checkbox. 
-1. Select 'Enable'. 
+1. Check the **I accept the terms in the agreement** checkbox.
+1. Select **Enable**.
 
 These steps create a new Azure Policy assignment of the *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed* policy definition to the selected subscription and, optionally, a specific resource group scope. A new system assigned managed identity is created and granted the required permissions to onboard Arc-enabled SQL Servers. This new managed identity is used by the policy remediation to install the Azure extension for SQL Server.
 
-
-
 ## Connect multiple SQL Server instances using script
 
-You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect each machine and all installed SQL Server instances on it to Azure Arc.
+You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script you generated for a single machine](connect.md). The script will connect each machine and all installed SQL Server instances to Azure Arc.
 
 ### Use Azure Active Directory service principal
 
-For the best experience, use an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server. The service principal is safer than using a higher privileged account like a Tenant Administrator, and follows access control security best practices.
+For the best experience, use an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server. The service principal is safer than using a higher privileged account like a Tenant Administrator and follows access control security best practices.
 
 The installation methods to install and configure the Connected Machine agent requires that the automated method you use has administrator permissions on the machines. On Linux, use the root account. Windows, use a member of the Local Administrators group.
 
@@ -189,7 +188,7 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
    servicePrincipalTenant="{serviceprincipalTenant}"
    ```
 
-4. Execute the script on each target machines
+1. Execute the script on each target machine
 
    ```console
    sudo chmod +x ./RegisterSqlServerArc.sh
@@ -230,10 +229,6 @@ If you can't see it means the extension didn't install properly. Try the followi
 ### Extension installed but didn't start
 
 Check the log files for any application errors.
-
-### The extension SQL Server isn't present on the machine
-
-Check if SQL server installed.
 
 ### Server - Azure Arc ARM resource was manually deleted
 

@@ -70,10 +70,8 @@ landingContent:
             url: https://github.com/microsoft/sql-server-samples/tree/master/samples/features/security/always-encrypted-with-secure-enclaves
       - linkListType: tutorial
         links:
-          - text: Getting started with Always Encrypted with secure enclaves in SQL Server
+          - text: Getting started with Always Encrypted with secure enclaves
             url: /sql/relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves
-          - text: Getting started with Always Encrypted with secure enclaves in Azure SQL Database
-            url: always-encrypted-enclaves-getting-started-sgx.md
           - text: Create and use indexes on enclave-enabled columns using randomized encryption 
             url: /sql/relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption
           - text: Develop a .NET application using Always Encrypted with secure enclaves

@@ -202,7 +202,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     1. Select **Enable secure enclaves**. 
     1. Set **Protocol** to **None**. 
 
-          ![Connect to server with attestation using SSMS](./encryption/media/always-encrypted-enclaves/ssms-connect-hgs.png)
+          ![Connect to server without attestation using SSMS](./encryption/media/always-encrypted-enclaves/ssms-connect-none.png)
 
     1. Select **Connect**.
     1. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

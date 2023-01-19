@@ -22,18 +22,18 @@ The Microsoft.Data.SqlClient API details can be found in the [.NET API Browser](
 
 ### Breaking changes in 5.1
 
-- Add support for .NET 6.0 and Dropped support for .NET Core 3.1. [#1704](https://github.com/dotnet/SqlClient/pull/1704) [#1823](https://github.com/dotnet/SqlClient/pull/1823)
+- Dropped support for .NET Core 3.1. [#1704](https://github.com/dotnet/SqlClient/pull/1704) [#1823](https://github.com/dotnet/SqlClient/pull/1823)
 
 ### New features in 5.1
 
 - Added support for `DateOnly` and `TimeOnly` for `SqlParameter` value and `GetFieldValue`. [#1813](https://github.com/dotnet/SqlClient/pull/1813)
 - Added support for TLS 1.3 for .NET Core and SNI Native. [#1821](https://github.com/dotnet/SqlClient/pull/1821)
-- Added `ServerCertificate` support for `Encrypt=Mandatory` or `Encrypt=Strict`. [#1822](https://github.com/dotnet/SqlClient/pull/1822) [Read more](#server-certificate-support)
+- Added `ServerCertificate` setting for `Encrypt=Mandatory` or `Encrypt=Strict`. [#1822](https://github.com/dotnet/SqlClient/pull/1822) [Read more](#server-certificate-support)
 - Added Windows ARM64 support when targeting .NET Framework. [#1828](https://github.com/dotnet/SqlClient/pull/1828)
 
-### Server Certificate Support
+### Server Certificate setting
 
-The default value of the `ServerCertificate` connection setting is an empty string.  When `Encrypt` is set to `Mandatory` or `Strict`, `ServerCertificate` can be used to specify a path on the file system to a certificate file to match against the SQL Server's TLS/SSL certificate. The certificate specified must be an exact match to be valid. The accepted certificate formats are `PEM`, `DER`, and `CER`. Here's a usage example:
+The default value of the `ServerCertificate` connection setting is an empty string.  When `Encrypt` is set to `Mandatory` or `Strict`, `ServerCertificate` can be used to specify a path on the file system to a certificate file to match against the server's TLS/SSL certificate. The certificate specified must be an exact match to be valid. The accepted certificate formats are `PEM`, `DER`, and `CER`. Here's a usage example:
 
  ```cs
  "Data Source=...;Encrypt=Strict;ServerCertificate=C:\\certificates\\server.cer"

@@ -29,7 +29,8 @@ The Environment Health assessment is replaced with a much richer best practices 
   > [!NOTE]
   > Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
-- Make sure that the version of Azure Extension for SQL Server (WindowsAgent.SqlServerI is "**1.1.2202.47**" or above. Learn how to [check the "Azure Extension for SQL Server" version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal)
+- Make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServerI` is "**1.1.2202.47**" or above. Learn how to [check the **Azure Extension for SQL Server** version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
+
 - [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
 - The user configuring SQL BPA must have following permissions.
 
@@ -52,8 +53,7 @@ Resource group or Subscription of Arc Machine.
 
 - The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
 
-- Upgrade the Azure SQL Server extension version. Use the latest version from the [release notes](/sql/sql-server/azure-arc/release-notes). You can upgrade to latest version by updating the extension, in the extension management of Arc-Server. For details, see [Upgrade extensions](/en-us/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions).
-   
+  
 ## Enable best practices assessment
 
 1. Sign into the [Azure portal](https://portal.azure.com/) and go to your [Arc-enabled SQL Server resource](https://portal.azure.com/#view/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/~/sqlServers)

@@ -134,7 +134,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 9000 }
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 30 | 40 | 9000 }
 }
 ```
 
@@ -444,10 +444,10 @@ Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors 
 | Compatibility Level |   Comments|
 |-----------------------|--------------|
 |**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine and is represented by `0` in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).  AUTO currently maps to compatibility level **30** functionality. |
-|**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
-|**20**| First compatibility level that includes gated Transact-SQL and query processing behaviors. The system stored procedure [sp_describe_undeclared_parameters](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) is supported under this level.|
-|**30**| Second compatibility level that includes gated query processing behaviors.|
-|**40**| Third compatibility level that includes gated query processing behaviors.|
+|**10**| Exercises the Transact-SQL and query engine behaviors before the introduction of compatibility level support.|
+|**20**| First compatibility level that includes gated Transact-SQL and query engine behaviors. The system stored procedure [sp_describe_undeclared_parameters](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) is supported under this level.|
+|**30**| Includes new query engine behaviors.|
+|**40**| Includes new query engine behaviors.|
 |**9000**| Preview compatibility level. Preview features gated under this level are called out in feature-specific documentation. This level also includes abilities of highest non-9000 level.|
 
 #### EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }

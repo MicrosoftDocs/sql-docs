@@ -44,12 +44,12 @@ The following table compares message limits:
 
 # [New limits](#tab/new-limits)
 
-SQL Server 2022, and supported versions of SQL Server (starting with SQL Server 2019 CU9, SQL Server 2017 CU18, and SQL Server 2016 SP1 CU16) that enable trace flag 12310  see the following limits: 
+SQL Server 2022, and supported versions of SQL Server (starting with SQL Server 2019 CU9, SQL Server 2017 CU18, and SQL Server 2016 SP1 CU16) that enable trace flag 12310 see the following limits: 
 
 |Level|Number of gates|Number of messages|Useful metrics|  
 |-|-|-|-|  
-|Transport|1 per availability replica|8192|Extended event **database_transport_flow_control_action**|  
-|Database|1 per availability database|7168 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
+|Transport|1 per availability replica|16384|Extended event **database_transport_flow_control_action**|  
+|Database|1 per availability database|11200 (x64)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
 
 
 # [Old limits](#tab/old-limits)
@@ -58,8 +58,8 @@ Unsupported SQL Server versions, or supported SQL Server versions (starting with
 
 |Level|Number of gates|Number of messages|Useful metrics|  
 |-|-|-|-|  
-|Transport|1 per availability replica|16384|Extended event **database_transport_flow_control_action**|  
-|Database|1 per availability database|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
+|Transport|1 per availability replica|8192|Extended event **database_transport_flow_control_action**|  
+|Database|1 per availability database|7168 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
 
 ---
 

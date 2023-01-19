@@ -29,7 +29,7 @@ The Environment Health assessment is replaced with a much richer best practices 
   > [!NOTE]
   > Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
-- Make sure that the version of Azure Extension for SQL Server (WindowsAgent.SqlServerI is "**1.1.2202.47**" or above. Learn how to [check the Azure Extension for SQL Server and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal)
+- Make sure that the version of Azure Extension for SQL Server (WindowsAgent.SqlServerI is "**1.1.2202.47**" or above. Learn how to [check the "Azure Extension for SQL Server" version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal)
 - [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
 - The user configuring SQL BPA must have following permissions.
 

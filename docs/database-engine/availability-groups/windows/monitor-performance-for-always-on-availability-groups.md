@@ -49,7 +49,7 @@ SQL Server 2022, and supported versions of SQL Server (starting with SQL Server 
 |Level|Number of gates|Number of messages|Useful metrics|  
 |-|-|-|-|  
 |Transport|1 per availability replica|16384|Extended event **database_transport_flow_control_action**|  
-|Database|1 per availability database|11200 (x64)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
+|Database|1 per availability database|11200|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
 
 
 # [Old limits](#tab/old-limits)

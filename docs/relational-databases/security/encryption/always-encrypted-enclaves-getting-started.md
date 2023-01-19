@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
 ---
-# Getting started with Always Encrypted with secure enclaves
+# Tutorial: Getting started with Always Encrypted with secure enclaves
 These tutorials teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). They will show you:
 
 > [!div class="checklist"]

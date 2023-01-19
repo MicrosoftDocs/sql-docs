@@ -28,10 +28,10 @@ The Microsoft.Data.SqlClient API details can be found in the [.NET API Browser](
 
 - Added support for `DateOnly` and `TimeOnly` for `SqlParameter` value and `GetFieldValue`. [#1813](https://github.com/dotnet/SqlClient/pull/1813)
 - Added support for TLS 1.3 for .NET Core and SNI Native. [#1821](https://github.com/dotnet/SqlClient/pull/1821)
-- Added `ServerCertificate` setting for `Encrypt=Mandatory` or `Encrypt=Strict`. [#1822](https://github.com/dotnet/SqlClient/pull/1822) [Read more](#server-certificate-support)
+- Added `ServerCertificate` setting for `Encrypt=Mandatory` or `Encrypt=Strict`. [#1822](https://github.com/dotnet/SqlClient/pull/1822) [Read more](#server-certificate)
 - Added Windows ARM64 support when targeting .NET Framework. [#1828](https://github.com/dotnet/SqlClient/pull/1828)
 
-### Server Certificate setting
+### Server Certificate
 
 The default value of the `ServerCertificate` connection setting is an empty string.  When `Encrypt` is set to `Mandatory` or `Strict`, `ServerCertificate` can be used to specify a path on the file system to a certificate file to match against the server's TLS/SSL certificate. The certificate specified must be an exact match to be valid. The accepted certificate formats are `PEM`, `DER`, and `CER`. Here's a usage example:
 

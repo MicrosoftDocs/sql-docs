@@ -93,7 +93,7 @@ The following requirements apply to all installations:
 > [!IMPORTANT]  
 > There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).
 
-## Operate system support
+## Operating system support
 
 The following table shows which editions of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] are compatible with which versions of Windows:
 

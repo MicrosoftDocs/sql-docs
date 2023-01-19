@@ -4,7 +4,7 @@ description: In this article, you learn different ways of connecting SQL Server 
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/06/2022
+ms.date: 01/12/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -65,6 +65,22 @@ You can automatically connect SQL Server instances on multiple Arc-enabled machi
 
 To create an Azure Policy assignment, you need the `Resource Policy Contributor` role assignment on the scope - subscription or resource group - that you are targeting the assignment to. Further, if you are going to create a *new* system assigned managed identity, you need the `User Access Administrator` role assignment in the subscription.
 
+### Connect at-scale using Azure Policy assignment
+
+If you want to select an existing user assigned managed identity or have more granular control over the configuration of the at-scale onboarding policy, you can create the Azure Policy assignment. 
+
+1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**. 
+1. Search for *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed.* and click on the policy.
+1. Select **Assign**. 
+1. Choose a Scope. 
+1. Select **Next**, and **Next**.  
+1. On the **Remediation** tab, click **Create a remediation task**.
+1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity** and choose a managed identity which has *User Access Administration* and *Log Analytics Contributor* role assignments. 
+1. Click **Review + Create**.
+1. Click **Create**.
+
+See [Azure Policy documentation](/azure/governance/policy) for general instructions about how to assign an Azure policy using Azure portal or an API of your choice.
+
 > [!IMPORTANT]
 > The Arc-enabled SQL Server resources for the `SQL Server - Azure Arc` resources are created in the same region and the resource group as the `Server - Azure Arc` resources on which they are hosted.
 
@@ -85,21 +101,7 @@ To do this,
 
 These steps create a new Azure Policy assignment of the *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed* policy definition to the selected subscription and, optionally, a specific resource group scope. A new system assigned managed identity is created and granted the required permissions to onboard Arc-enabled SQL Servers. This new managed identity is used by the policy remediation to install the Azure extension for SQL Server.
 
-### Connect at-scale using Azure Policy assignment
 
-If you want to select an existing user assigned managed identity or have more granular control over the configuration of the at-scale onboarding policy, you can create the Azure Policy assignment. 
-
-1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**. 
-1. Search for *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed.* and click on the policy.
-1. Select **Assign**. 
-1. Choose a Scope. 
-1. Select **Next**, and **Next**.  
-1. On the **Remediation** tab, click **Create a remediation task**.
-1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity** and choose a managed identity which has *User Access Administration* and *Log Analytics Contributor* role assignments. 
-1. Click **Review + Create**.
-1. Click **Create**.
-
-See [Azure Policy documentation](/azure/governance/policy) for general instructions about how to assign an Azure policy using Azure portal or an API of your choice.
 
 ## Connect multiple SQL Server instances using script
 

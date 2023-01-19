@@ -11,6 +11,30 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
+## January 2023
+
+This release is published January 17, 2023
+
+### Extension version
+
+`1.1.2202.47`
+
+### Azure extension for SQL Server
+
+- [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server
+
+  The SQL best practices assessment feature of the Azure portal:
+
+  - Identifies possible performance issues
+  - Evaluates that your Azure Arc-enabled SQL Server is configured to follow best practices
+  - Provides comprehensive mitigation guidance
+  - To experience best practices assessment, upgrade to the latest extension version.
+
+- Azure Arc-enabled Database resource populates the earliest restore time and last backup time for database resources as a resource
+- Pay-as-you-go (PAYG) licensing option is now extended to SQL Server 2012 and above
+- Ability to set the licensing type during onboarding Arc-enabled SQL Server.
+- Ability to skip instances during onboarding to Azure
+
 ## December 2022
 
 This release is published December 13, 2022
@@ -37,8 +61,8 @@ This release is published November 12, 2022
 
 ### Azure extension for SQL Server
 
-- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server now support billing through Azure when pay-as-you-go activation is selected in [SQL 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). 
-- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] includes the pay-as-you-go activation option, that forces the installation of Azure extension for SQL Server during set up.
+- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server now support billing through Azure when pay-as-you-go activation is selected in [SQL 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] includes the pay-as-you-go activation option that forces the installation of Azure extension for SQL Server during setup.
 - Billing meters are introduced to support pay-as-you-go billing through Azure
 - SQL Server Azure Arc instance now shows the databases registered to the SQL server. To view this, navigate to the data management tab of the SQL Server Azure Arc resource. For more details, review [View databases](view-databases.md).
 
@@ -191,7 +215,7 @@ The October update includes the following improvements:
 
 - The register Azure Arc-enabled SQL Server pane now includes the **Tags** tab. The tags are included in the registration script and are reflected in the **SQL Server - Azure Arc** resource(s). For details, see [Connect your SQL Server to Azure Arc](connect.md).
 
-- The **Environment Health** entry now supports activation of **SQL Assessment** from the Portal by deploying a *CustomScriptExtension*. For details, see [Configure SQL Assessment](assess.md#run-on-demand-sql-assessment).
+- The **Environment Health** entry now supports activation of **SQL Assessment** from the Portal by deploying a *CustomScriptExtension*. For details, see [Configure SQL Assessment](assess.md#enable-best-practices-assessment).
 
 ### Known issues
 
@@ -216,3 +240,4 @@ The following issues apply to the September release:
 ## Next steps
 
 **Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+

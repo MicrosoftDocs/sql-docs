@@ -5,7 +5,7 @@ description: Learn about how Azure SQL Database, SQL Managed Instance, and Azure
 author: AndreasWolter
 ms.author: anwolter
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 03/23/2020
+ms.date: 01/20/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -40,6 +40,10 @@ When a user attempts to connect to a database, they provide a user account and a
 - [SQL authentication](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication).
 
   With this authentication method, the user submits a user account name and associated password to establish a connection. This password is stored in the `master` database for user accounts linked to a login or stored in the database containing the user accounts *not* linked to a login.
+  
+  > [!NOTE]
+  > Azure SQL Database only enforces password complexity for [password policy](/sql/relational-databases/security/password-policy). For password policy in Azure SQL Managed Instance, see [Azure SQL Managed Instance frequently asked questions (FAQ)](../managed-instance/frequently-asked-questions-faq.md#password-policy-).
+  
 - [Azure Active Directory Authentication](authentication-aad-overview.md)
 
   With this authentication method, the user submits a user account name and requests that the service use the credential information stored in Azure Active Directory (Azure AD).

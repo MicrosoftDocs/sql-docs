@@ -1049,7 +1049,8 @@ PolyBase can push some of the query computation to Hadoop to improve query perfo
 
 You can create many external tables that reference the same or different external data sources.
 
-Pay attention to source data using the UTF-8 collation. For any source data using the UTF-8 collation, you must manually provide a non-UTF-8 collation each UTF-8 column in the CREATE EXTERNAL TABLE statement. This is because UTF-8 support does not extend to external tables. When you attempt to create an external table with a UTF-8 collation, you will receive an `Unsupported collation` error message. If the external table's database collation is a UTF-8 collation, external table creation will fail unless with explicit collation will fail unless you provide a non-UTF-8 column collation, for example, `[UTF8_column] varchar(128) COLLATE LATIN1_GENERAL_100_CI_AS_KS_WS NOT NULL,`.
+Pay attention to source data using the UTF-8 collation. For any source data using the UTF-8 collation, you must manually provide a non-UTF-8 collation each UTF-8 column in the CREATE EXTERNAL TABLE statement. This is because UTF-8 support does not extend to external tables. When you attempt to create an external table with a UTF-8 collation, you will receive an `Unsupported collation` error message. If the external table's database collation is a UTF-8 collation, external table creation will fail unless you provide an explicit non-UTF-8 column collation, for example, `[UTF8_column] varchar(128) COLLATE LATIN1_GENERAL_100_CI_AS_KS_WS NOT NULL,`.
+
 
 ## Limitations and restrictions
 

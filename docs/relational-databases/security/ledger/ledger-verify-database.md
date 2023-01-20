@@ -118,8 +118,8 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 
    > [!TIP]
    > Running ledger verification with the latest digest will only verify the database from the time the digest was generated until the time the verification was run. To verify that the historical data in your database wasn't tampered with, run verification by using multiple database digest files. Start with the point in time for which you want to verify the database. An example of a verification passing multiple digests would look similar to the following query.
-
-Its worth stating that ledger database SNAPSHOT ISOLATION should be enabled before running the verification procedure sp_verify_database_ledger.
+   >
+   > **SNAPSHOT ISOLATION** should be enabled before running the verification procedure `sp_verify_database_ledger`.
 
    ```sql
    EXECUTE sp_verify_database_ledger N'

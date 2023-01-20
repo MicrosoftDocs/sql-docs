@@ -101,9 +101,9 @@ The following example shows encryption and decryption of the `AdventureWorks2012
 USE master;
 GO
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<UseStrongPasswordHere>';
-go
+GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My DEK Certificate';
-go
+GO
 USE AdventureWorks2012;
 GO
 CREATE DATABASE ENCRYPTION KEY

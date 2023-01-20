@@ -125,7 +125,7 @@ You start the migration by starting LRS. You can start the service in either aut
 
   We recommend using autocomplete mode for passive workloads for which data catch-up isn't required.
 
-* **Autocomplete mode**. When you use continuous mode, the service continuously scans the Azure Blob Storage folder and restores any new backup files that are added while the migration is in progress. 
+* **Continuous mode**. When you use continuous mode, the service continuously scans the Azure Blob Storage folder and restores any new backup files that are added while the migration is in progress. 
 
   The migration finishes only after the manual cutover has been requested. 
 

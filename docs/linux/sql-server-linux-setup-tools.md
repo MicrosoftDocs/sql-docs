@@ -217,7 +217,7 @@ brew install mssql-tools
 
 If you [run SQL Server in a Docker container](quickstart-install-connect-docker.md), the SQL Server command-line tools are already included in the SQL Server Linux container image. If you attach to a running container with an interactive bash shell, you can run the tools locally.
 
-If you are creating a container with the SQL Server command-line tools, it is recommended to add `ACCEPT_EULA=Y` to the installation command to silently accept the EULA and not interupt image creation.  An example final command as part of installation on an Ubuntu-based image is:
+If you are creating a container with the SQL Server command-line tools, it is recommended to add `ACCEPT_EULA=Y` to the installation command to silently accept the EULA and not interrupt image creation.  An example final command as part of installation on an Ubuntu-based image is:
 
 ```bash
 sudo ACCEPT_EULA=Y apt-get install mssql-tools unixodbc-dev

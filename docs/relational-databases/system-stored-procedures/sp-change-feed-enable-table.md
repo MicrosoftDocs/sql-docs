@@ -57,7 +57,7 @@ The source table name.
 
 ## Permissions  
 
- Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
+ Currently, a user with CONTROL database permissions or higher can execute this procedure.
 
 ## See also  
 

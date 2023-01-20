@@ -37,7 +37,9 @@ productDirectory:
       - url: /azure/azure-sql/virtual-machines/windows/
         text: On an Azure VM
       - url: /previous-versions/sql/
-        text: Previous Versions (SQL 2005-2012)  
+        text: Previous Versions (SQL 2005-2012) 
+      - url: /troubleshoot/sql/welcome-sql-server
+        text: Troubleshoot 
   - title: SQL on Azure 
     imageSrc: media/index/azure.svg
     links:

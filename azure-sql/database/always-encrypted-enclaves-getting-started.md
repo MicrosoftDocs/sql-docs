@@ -18,7 +18,7 @@ These tutorials teach you how to get started with [Always Encrypted with secure 
 
 ## Always Encrypted with secure enclaves in SQL Server
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server without attestation](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../docs/relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server with attestation using HGS](../../docs/relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves-hgs.md)
 
 ## Always Encrypted with secure enclaves in Azure SQL Database 

@@ -25,6 +25,8 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 > - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves with HGS configured for enclave attestation.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
+If you want to learn how to set up Always Encrypted with secure enclaves without attestation, see [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
+
 ## Prerequisites
 
 To get started with Always Encrypted with secure enclaves, you need at least two computers (they can be virtual machines):

@@ -25,7 +25,8 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 > - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves with no attestation configured for enclaves.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
-If you're want to learn how to set up Always Encrypted with secure enclaves using Host Guardian Service for enclave attestation, see [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server with attestation using HGS](tutorial-getting-started-with-always-encrypted-enclaves-hgs.md)
+If you want to learn how to set up Always Encrypted with secure enclaves using Host Guardian Service for enclave attestation, see [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server with attestation using HGS](tutorial-getting-started-with-always-encrypted-enclaves-hgs.md)
+
 ## Prerequisites
 
 The computer hosting your SQL Server instance (referred to as SQL Server computer) needs to meet the following requirements:
@@ -52,9 +53,9 @@ As an alternative, you can install SSMS on another machine.
 
 1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and run msinfo32.exe. Check if VBS is running. If it us running skip the remaining steps in this section and go to the next section.
 
-   ![System information - virtualization-based security](./encryption/media/system-information-vbs.png)
+   ![System information - virtualization-based security](./encryption/always-encrypted-enclaves/media/system-information-vbs.png)
 
-2. Enable VBS by running the following comment in the PowerShell session.
+2. Enable VBS by running the following cmdlet in the PowerShell session.
 
    ```powershell
    Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name EnableVirtualizationBasedSecurity -Value 1

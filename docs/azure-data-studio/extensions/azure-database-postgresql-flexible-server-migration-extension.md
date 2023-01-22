@@ -47,7 +47,7 @@ Once the assessment extension is installed, the next step is to [connect to Post
    1. Provide your database username in the **User Id** field.
    1. Provide your database password in the **Password** field.
 
-   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/connections-details.png" alt-text="connection details":::
+   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/connection-details.png" alt-text="connection details":::
 
 1. Select **Connect**.
 

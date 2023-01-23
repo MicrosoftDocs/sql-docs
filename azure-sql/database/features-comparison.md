@@ -6,7 +6,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
 ms.date: 10/10/2022
-ms.service: sql-db-mi
+ms.service: 01/31/2023
 ms.subservice: service-overview
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"

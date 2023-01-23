@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma
-ms.date: 12/13/2022
+ms.date: 01/31/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -45,7 +45,7 @@ The vCore-based purchasing model has a provisioned compute tier and a serverless
 
 In the provisioned compute tier, the compute cost reflects the total compute capacity continuously provisioned for the application independent of workload activity. Choose the resource allocation that best suits your business needs based on vCore and memory requirements, then scale resources up and down as needed by your workload.
 
-In the serverless compute tier for Azure SQL database, compute resources are auto-scaled based on workload capacity and billed for the amount of compute used, per second. 
+In the serverless compute tier for Azure SQL Database, compute resources are auto-scaled based on workload capacity and billed for the amount of compute used, per second. 
 
 Since three additional replicas are automatically allocated in the Business Critical service tier, the price is approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage price per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
 
@@ -118,7 +118,7 @@ Whenever the database engine or operating system is upgraded, some part of under
 
 ### When to choose this service tier
 
-The General Purpose service tier is a default service tier in Azure SQL Database and Azure SQL Managed Instance that is designed for most of generic workloads. If you need a fully managed database engine with a default SLA and storage latency between 5 and 10 ms, the General Purpose tier is the option for you.
+The General Purpose service tier is a default service tier in Azure SQL Database that is designed for most of generic workloads. If you need a fully managed database engine with a default SLA and storage latency between 5 and 10 ms, the General Purpose tier is the option for you.
 
 ### Business Critical
 

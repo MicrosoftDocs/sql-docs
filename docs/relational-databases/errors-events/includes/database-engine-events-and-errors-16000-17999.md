@@ -109,7 +109,7 @@ ms.topic: include
 |    17115    |    10    |    Yes    |    Command Line Startup Parameters:%.*ls    |
 |    17116    |    16    |    Yes    |    Failed to initialize distributed COM; DCOM is not installed. Heterogeneous queries and remote procedure calls are disabled. Check the DCOM configuration using Component Services in Control Panel.    |
 |    17119    |    10    |    Yes    |    The number of concurrent user connections was reduced to %ld, because it exceeded the allowable limit for this edition of SQL Server. To avoid this message in the future, use sp_configure to permanently adjust the number of user connections within the licensed limit.    |
-|    17120    |    16    |    Yes    |    SQL Server could not spawn %s thread. Check the SQL Server error log and the Windows event logs for information about possible related problems.    |
+|    [17120](../mssqlserver-17120-database-engine-error.md)    |    16    |    Yes    |    SQL Server could not spawn %s thread. Check the SQL Server error log and the Windows event logs for information about possible related problems.    |
 |    17121    |    10    |    Yes    |    SQL Server is started with trace flag %d, this may cause user to see some error messages masked using '%ls'.    |
 |    17123    |    10    |    Yes    |    Logging to event log is disabled. Startup option '-%c' is supplied, either from the registry or the command prompt.    |
 |    17124    |    10    |    Yes    |    SQL Server has been configured for lightweight pooling. This is an informational message; no user action is required.    |

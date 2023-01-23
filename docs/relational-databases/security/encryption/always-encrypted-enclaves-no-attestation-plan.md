@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-Setting up [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] without attestation provides an easy way to start with the feature, which recommended for proof of concepts, development, and testing. However, when you use secure enclaves a production environment, keep in mind the level of protection against OS administrators is reduced. For example, if a malicious OS admin tampered with the code running inside the enclave, a client application would be unable to detect it. If you're concerned about such attacks, consider setting up attestation with Host Guardian Service - see [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md).
+Setting up [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] without attestation provides an easy way to start with the feature, which we recommended for proof of concepts, development, and testing. However, when you use secure enclaves in a production environment, keep in mind the level of protection against OS administrators is reduced without attestation. For example, if a malicious OS admin tampered with the code running inside the enclave, a client application would be unable to detect it. If you're concerned about such attacks, consider setting up attestation with Host Guardian Service - see [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md).
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ These requirements include:
 
     ![System information - virtualization-based security](./media/always-encrypted-enclaves/system-information-vbs.png)
 
-  - For instructions on how to enable VBS, see ([Enable virtualization-based protection of code integrity](https://learn.microsoft.com/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity).
+  - For instructions on how to enable VBS, see [Enable virtualization-based protection of code integrity](https://learn.microsoft.com/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity).
 
 ### Tooling requirements
 

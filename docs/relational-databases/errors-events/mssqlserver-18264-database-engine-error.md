@@ -25,7 +25,7 @@ ms.author: mathoma
 |Event Source|MSSQLENGINE|  
 |Component|SQLEngine|  
 |Symbolic Name|STRMIO_DBDUMP|  
-|Message Text|Database backed up. Database: %s, creation date(time): %s(%s), pages dumped: %d, first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required.|  
+|Message Text|Database backed up. Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required.|  
   
 ## Explanation  
 By default, every successful backup adds this informational message to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and the system event log. If you very frequently back up the transaction log, these messages can accumulate quickly, creating very large error logs that can make finding other messages difficult.  

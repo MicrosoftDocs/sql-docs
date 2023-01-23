@@ -65,35 +65,19 @@ Once the assessment extension is installed, the next step is to [connect to Post
 
 There are three steps to complete before the assessment begins.
 
-### Step 1: Databases(s) for assessment
-
+1. **Databases(s) for assessment**
    1. Select what database(s) you want to assess for migration, then select **Next**.
-      1. For this example, the ***paymentapp*** database is selected
+   1. For this example, the ***paymentapp*** database is selected
 
-       :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/run-assessment-step-1.png" alt-text="Screenshot of step 1.":::
+      :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/run-assessment-step-1.png" alt-text="Screenshot of step 1.":::
 
-### Step 2: Assessment Parameters
-
-   Provide your assessment details.
-
+1. **Assessment Parameters***
    1. In the **Assessment name** field, enter a title, for example, `demo1`.
    1. Enter your **Assessment setting**.
    1. Enter the destination migration database in the **Target Platform** field. Currently, it supports Azure SQL and PostgreSQL as targets.
    1. In the **Performance data collection** section, either select **Run performance data collection on Oracle database (connected)** or **Add AWR report**.
 
-         The recommendation is to use the connected option if you're running this tool during a peak or realistic load. Otherwise, provide the AWR reports generated in the past for performance and sizing recommendations.
-
-      1. Enter the multiplier value in the **Scale factor** field.
-
-         1. If the recommended SKU needs to consider other peak loads, the scale factor multiplier should be greater than 1. For example, Burst Load, Seasonal usage, and future capacity planning. When a partial Oracle schema workload is migrated, the multiplier should be less than 1.
-
-      1. In the **Percentile utilization** field, enter the percentile value for sizing the Azure target.
-
-         1. The percentile value of the performance sample set to be considered for sizing the Azure target.
-
-   :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="Screenshot showing the assessment details screen.":::
-
-### Step 3: View Assessment Results
+1. **Step 3: View Assessment Results**
 
 Once the assessment is complete, a consolidated output is generated.
 

@@ -5,8 +5,8 @@ description: This article compares the database engine features of Azure SQL Dat
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
-ms.date: 10/10/2022
-ms.service: 01/31/2023
+ms.date: 01/31/2023
+ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"

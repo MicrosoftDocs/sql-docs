@@ -41,7 +41,7 @@ The vCore purchasing model used by Azure SQL Database provides several benefits 
 
 ## Compute cost 
 
-The vCore-based purchasing model has a provisioned compute tier for both Azure SQL Database and Azure SQL Managed Instance, and a serverless compute tier for Azure SQL Database. 
+The vCore-based purchasing model has a provisioned compute tier and a serverless compute tier for Azure SQL Database. 
 
 In the provisioned compute tier, the compute cost reflects the total compute capacity continuously provisioned for the application independent of workload activity. Choose the resource allocation that best suits your business needs based on vCore and memory requirements, then scale resources up and down as needed by your workload.
 
@@ -57,21 +57,21 @@ The following factors affect the amount of storage used for data and log files, 
 - When you configure maximum data size, an additional 30 percent of billable storage is automatically added for the log file.
 - In the General Purpose service tier, `tempdb` uses local SSD storage, and this storage cost is included in the vCore price.
 - In the Business Critical service tier, `tempdb` shares local SSD storage with data and log files, and `tempdb` storage cost is included in the vCore price.
-- In the General Purpose and Business Critical tiers, you are charged for the maximum storage size configured for a database, elastic pool, or managed instance.
-- For SQL Database, you can select any maximum data size between 1 GB and the supported storage size maximum, in 1 GB increments. For SQL Managed Instance, select data sizes in multiples of 32 GB up to the supported storage size maximum. 
+- In the General Purpose and Business Critical tiers, you are charged for the maximum storage size configured for a database or elastic pool.
+- For SQL Database, you can select any maximum data size between 1 GB and the supported storage size maximum, in 1 GB increments. 
 
 To monitor the current allocated and used data storage size in SQL Database, use the *allocated_data_storage* and *storage* Azure Monitor [metrics](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) respectively. 
 
-For both SQL Database and SQL Managed instance, to monitor the current allocated and used storage size of individual data and log files in a database by using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
+To monitor the current allocated and used storage size of individual data and log files in a database by using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
 
 > [!TIP]
 > Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 
 ## Backup storage
 
-Storage for database backups is allocated to support the [point-in-time restore (PITR)](recovery-using-backups.md) and [long-term retention (LTR)](long-term-retention-overview.md) capabilities of SQL Database and SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
+Storage for database backups is allocated to support the [point-in-time restore (PITR)](recovery-using-backups.md) and [long-term retention (LTR)](long-term-retention-overview.md) capabilities of SQL Database. This storage is separate from data and log file storage, and is billed separately.
 
-- **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [Azure storage](automated-backups-overview.md#restore-capabilities) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 1 and 35 days for SQL Database, and 0 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
+- **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [Azure storage](automated-backups-overview.md#restore-capabilities) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 1 and 35 days for SQL Database. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
 - **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in Azure Blob storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage will be used for LTR backups. For more information, see [Long-term backup retention](long-term-retention-overview.md).
 
 

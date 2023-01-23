@@ -36,6 +36,8 @@ SQL Managed Instance compute provides a specific amount of compute resources tha
 
 Since three additional replicas are automatically allocated in the Business Critical service tier, the price is approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage price per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
 
+For instances in the General Purpose service tier, it's possible to save on compute and licensing costs by stopping your instance when you're not using it. Review [Stop and start an instance (preview)](instance-stop-start-how-to.md) to learn more. 
+
 ## Data and log storage
 
 The following factors affect the amount of storage used for data and log files, and apply to General Purpose and Business Critical tiers. 
@@ -60,7 +62,7 @@ Storage for database backups is allocated to support the [point-in-time restore 
 
 Service tier options in the vCore purchasing model include General Purpose and Business Critical. The service tier generally defines the storage architecture, space and I/O limits, and business continuity options related to availability and disaster recovery. 
 
-For more details, review [resource limits](resource-limits.md). 
+
 
 |**Category**|**General Purpose**|**Business Critical**|
 |---|---|---|
@@ -70,6 +72,8 @@ For more details, review [resource limits](resource-limits.md).
 |**Read-only replicas with [failover groups](auto-failover-group-sql-mi.md) enabled**| One additional read-only replica. Two total readable replicas, which includes the primary replica. | Two additional read-only replicas, three total read-only replicas. Four total readable replicas, which includes the primary replica. |
 |**Pricing/billing**| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged.
 |**Discount models**| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
+
+For more details, review [resource limits](resource-limits.md). 
 
 
 > [!NOTE]
@@ -88,7 +92,7 @@ In the architectural model for the General Purpose service tier, there are two l
 - A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, column store pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
 - A stateful data layer with database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure Blob storage guarantees that there will be no data loss of any record that is placed in any database file. Azure Storage has built-in data availability/redundancy that ensures that every record in log file or page in data file will be preserved even if the process crashes.
 
-Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](../database/high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) is enabled. TThere may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
+Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](../database/high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) is enabled. There may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
 
 #### When to choose this service tier
 

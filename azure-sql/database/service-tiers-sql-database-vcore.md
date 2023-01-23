@@ -20,7 +20,8 @@ ms.custom:
 > * [Azure SQL Database](service-tiers-sql-database-vcore.md)
 > * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md)
 
-This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). For help with choosing between the vCore and DTU purchasing models, see the [differences between the vCore and DTU purchasing models](purchasing-models.md).
+This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). 
+
 
 ## Overview
 
@@ -29,7 +30,7 @@ This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [A
 > [!IMPORTANT]
 > Compute resources, I/O, and data and log storage are charged per database or elastic pool. Backup storage is charged per each database.
 
-The vCore purchasing model used by Azure SQL Database provides several benefits over the DTU purchasing model:
+The vCore purchasing model used by Azure SQL Database provides several benefits over the [DTU-based purchasing model](service-tiers-dtu.md):
 
 - Higher compute, memory, I/O, and storage limits.
 - Choice of hardware configuration to better match compute and memory requirements of the workload.
@@ -37,6 +38,8 @@ The vCore purchasing model used by Azure SQL Database provides several benefits 
 - Greater transparency in the hardware details that power the compute, that facilitates planning for migrations from on-premises deployments.
 - [Reserved instance pricing](reserved-capacity-overview.md) is only available for vCore purchasing model. 
 - Higher scaling granularity with multiple compute sizes available.
+
+For help with choosing between the vCore and DTU purchasing models, see the [differences between the vCore and DTU-based purchasing models](purchasing-models.md)
 
 
 ## Compute cost 
@@ -80,8 +83,6 @@ Storage for database backups is allocated to support the [point-in-time restore 
 
 Service tier options in the vCore purchasing model include General Purpose, Business Critical, and Hyperscale. The service tier generally defines hardware, storage type and IOPS, high availability and disaster recovery options, and other features like memory optimized object types.
 
-For greater details, review resource limits for [logical server](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), and [pooled databases](resource-limits-vcore-elastic-pools.md). 
-
 |**Use case**|**General Purpose**|**Business Critical**|**Hyperscale**|
 |---|---|---|---|
 |**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several isolated replicas, and provides the highest I/O performance per database replica.|Most business workloads with highly scalable storage and read-scale requirements.  Offers higher resilience to failures by allowing configuration of more than one isolated database replica. |
@@ -97,6 +98,7 @@ For greater details, review resource limits for [logical server](resource-limits
 <sup>1</sup> Elastic pools aren't supported in the Hyperscale service tier.   
 <sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.
 
+For greater details, review resource limits for [logical server](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), and [pooled databases](resource-limits-vcore-elastic-pools.md). 
 
 
 > [!NOTE]
@@ -161,8 +163,6 @@ The Hyperscale service tier removes many of the practical limits traditionally s
 ## Resource limits
 
 For vCore resource limits, see [logical servers](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), [pooled databases](resource-limits-vcore-elastic-pools.md). 
-
-
 
 
 ## Hardware configuration

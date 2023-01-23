@@ -48,8 +48,6 @@ The following factors affect the amount of storage used for data and log files, 
 
 To monitor the current allocated and used storage size of individual data and log files in a database by using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
 
-> [!TIP]
-
 ## Backup storage
 
 Storage for database backups is allocated to support the [point-in-time restore (PITR)](recovery-using-backups.md) and [long-term retention (LTR)](long-term-retention-overview.md) capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
@@ -79,7 +77,7 @@ For more details, review [resource limits](resource-limits.md).
 
 ### General Purpose
 
-The architectural model for the General Purpose service tier is based on a separation of compute and storage. This architectural model relies on high availability and reliability of Azure Blob storage that transparently replicates database files and guarantees no data loss if underlying infrastructure failure happens.
+The architectural model for the General Purpose service tier is based on a separation of compute and storage. This architectural model relies on the high availability and reliability of Azure Blob storage that transparently replicates database files and guarantees no data loss if underlying infrastructure failure happens.
 
 The following figure shows four nodes in standard architectural model with the separated compute and storage layers.
 
@@ -90,43 +88,40 @@ In the architectural model for the General Purpose service tier, there are two l
 - A stateless compute layer that is running the `sqlservr.exe` process and contains only transient and cached data (for example – plan cache, buffer pool, column store pool). This stateless node is operated by Azure Service Fabric that initializes process, controls health of the node, and performs failover to another place if necessary.
 - A stateful data layer with database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure Blob storage guarantees that there will be no data loss of any record that is placed in any database file. Azure Storage has built-in data availability/redundancy that ensures that every record in log file or page in data file will be preserved even if the process crashes.
 
-Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) is enabled. There may be some performance impacts on heavy workloads that are running due to transition time and the fact the new node starts with cold cache.
+Whenever the database engine or operating system is upgraded, some part of underlying infrastructure fails, or if some critical issue is detected in the `sqlservr.exe` process, Azure Service Fabric will move the stateless process to another stateless compute node. There is a set of spare nodes that is waiting to run new compute service if a failover of the primary node happens in order to minimize failover time. Data in Azure storage layer is not affected, and data/log files are attached to newly initialized process. This process guarantees 99.99% availability by default and 99.995% availability when [zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) is enabled. TThere may be some performance impacts to heavy workloads that are in-flight due to transition time and the fact the new node starts with cold cache.
 
 #### When to choose this service tier
 
-The General Purpose service tier is a default service tier in Azure SQL Managed Instance that is designed for most of generic workloads. If you need a fully managed database engine with a default SLA and storage latency between 5 and 10 ms, the General Purpose tier is the option for you.
+The General Purpose service tier is the default service tier in Azure SQL Managed Instance designed for most of generic workloads. If you need a fully managed database engine with a default SLA and storage latency between 5 and 10 ms, the General Purpose tier is the option for you.
 
 ### Business Critical 
 
-The Business Critical service tier model is based on a cluster of database engine processes. This architectural model relies on a fact that there's always a quorum of available database engine nodes and has minimal performance impact on your workload even during maintenance activities. 
+The Business Critical service tier model is based on a cluster of database engine processes. This architectural model relies on a quorum of always available database engine nodes to minimize performance impacts to your workload, even during maintenance activities. Azure upgrades and patches the underlying operating system, drivers, and SQL Server database engine transparently, with minimal down-time for end users. 
 
-Azure upgrades and patches underlying operating system, drivers, and SQL Server database engine transparently with the minimal down-time for end users. 
-
-
-In the Business Critical model, compute and storage is integrated on each node. High availability is achieved by replication of data between database engine processes on each node of a four node cluster, with each node using locally attached SSD as data storage. This technology is similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+In the Business Critical model, compute and storage is integrated on each node. Replication of data between database engine processes on each node of a four-node cluster achieves high availability, with each node using locally attached SSD as data storage. 
 
 ![Cluster of database engine nodes](../database/media/service-tier-business-critical/business-critical-service-tier.png)
 
-Both the SQL Server database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Every database is a cluster of database nodes with one primary database that is accessible for customer workloads, and a three secondary processes containing copies of data. The primary node constantly pushes changes to the secondary nodes in order to ensure that the data is available on secondary replicas if the primary node fails for any reason. Failover is handled by the SQL Server database engine – one secondary replica becomes the primary node and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary node.
+Both the SQL Server database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). 
 
-In addition, the Business Critical cluster has built-in [Read Scale-Out](read-scale-out.md) capability that provides free-of charge built-in read-only replica that can be used to run read-only queries (for example reports) that shouldn't affect performance of your primary workload.
+Every instance is a cluster of database engine nodes that contain copies of all the databases on an instance, with a primary database accessible for customer workloads, and three secondary databases containing copies of the data, ready for failover. The primary node constantly pushes changes to the secondary nodes in order to ensure the data is available on secondary replicas if the primary node fails for any reason. 
+
+Failover is handled by the SQL Server database engine – one secondary replica becomes the primary node and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary node.
+
+In addition, the Business Critical cluster has a built-in [Read Scale-Out](read-scale-out.md) capability that provides a free-of charge read-only replica used to run read-only queries (such as reports) that won't affect the performance of the workload on your primary replica.
 
 ### When to choose this service tier
 
-The Business Critical service tier is designed for applications that require low-latency responses from the underlying SSD storage (1-2 ms in average), fast recovery if the underlying infrastructure fails, or need to off-load reports, analytics, and read-only queries to the free of charge readable secondary replica of the primary database.
+The Business Critical service tier is designed for applications that require low-latency responses from the underlying SSD storage (1-2 ms in average), fast recovery if the underlying infrastructure fails, or need to off-load reports, analytics, and read-only queries to the free-of-charge readable secondary replica of the primary database.
 
 The key reasons why you should choose Business Critical service tier instead of General Purpose tier are:
+
 -    **Low I/O latency requirements** – workloads that need a fast response from the storage layer (1-2 milliseconds in average) should use Business Critical tier. 
 -    **Workload with reporting and analytic queries** that can be redirected to the free-of-charge secondary read-only replica.
-- **Higher resiliency and faster recovery from failures**. In a case of system failure, the database on primary instance will be disabled and one of the secondary replicas will be immediately became new read-write primary database that is ready to process queries. The database engine doesn't need to analyze and redo transactions from the log file and load all data in the memory buffer.
-- **Advanced data corruption protection**. The Business Critical tier leverages database replicas behind-the-scenes for business continuity purposes, and so the service also then leverages automatic page repair, which is the same technology used for SQL Server database [mirroring and availability groups](/sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring). In the event that a replica can't read a page due to a data integrity issue, a fresh copy of the page will be retrieved from another replica, replacing the unreadable page without data loss or customer downtime. This functionality is applicable in General Purpose tier if the database has geo-secondary replica.
-- **Higher availability** - The Business Critical tier in Multi-AZ configuration provides resiliency to zonal failures and a higher availability SLA.
-- **Fast geo-recovery** - When [active geo-replication](active-geo-replication-overview.md) is configured, the Business Critical tier has a guaranteed Recovery Point Objective (RPO) of 5 seconds and Recovery Time Objective (RTO) of 30 seconds for 100% of deployed hours.
-
-
-
-## Compute
-
+- **Higher resiliency and faster recovery from failures**. In case there is system failure, the databases on the primary instance are taken offline, and one of the secondary replicas will immediately became the new read-write primary instance, ready to process queries.  There is no need for the database engine to analyze and redo transactions from the log file or load data into memory buffers.
+- **Advanced data corruption protection**. Since the Business Critical tier uses databases replicas behind the scenes, the service leverages automatic page repair available with [mirroring and availability groups](/sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring) to help mitigate data corruption. If a replica can't read a page due to a data integrity issue, a fresh copy of the page is retrieved from another replica, replacing the unreadable page without data loss or customer downtime. This functionality is available in  the General Purpose tier if the managed instance has geo-secondary replica.
+- **Higher availability** - The Business Critical tier in a multi-availability zone configuration provides resiliency to zonal failures and a higher availability SLA.
+- **Fast geo-recovery** - If an [auto-failover group](auto-failover-group-sql-mi.md) is configured, the Business Critical tier has a guaranteed Recovery Point Objective (RPO) of 5 seconds and Recovery Time Objective (RTO) of 30 seconds for 100% of deployed hours.
 
 
 ## Hardware configurations

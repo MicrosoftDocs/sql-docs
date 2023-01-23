@@ -60,7 +60,7 @@
     - name: Azure Arc extension
       href: extensions/azure-arc-extension.md
     - name: Azure PostgreSQL migration extension
-      href: extensions/database-postgresql-migration-extension.md
+      href: extensions/azure-postgresql-migration-extension.md
     - name: Azure SQL migration extension
       href: extensions/azure-sql-migration-extension.md
     - name: Azure Monitor Logs extension

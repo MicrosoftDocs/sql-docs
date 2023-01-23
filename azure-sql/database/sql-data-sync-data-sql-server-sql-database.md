@@ -157,6 +157,7 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Using an Azure SQL Hyperscale database as a Hub or Sync Metadata database is not supported. However, a Hyperscale database can be a member database in a Data Sync topology.
 - Memory-optimized tables are not supported.
 - Schema changes aren't automatically replicated. A custom solution can be created to [automate the replication of schema changes](./sql-data-sync-update-sync-schema.md).
+- Index creation by Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of the original index (if any) like IGNORE_DUP_KEY, Where filter predicate etc are not supported.
 
 #### Unsupported data types
 

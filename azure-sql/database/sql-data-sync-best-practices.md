@@ -100,6 +100,7 @@ SQL Data Sync has the following limitations for autoprovisioning:
 -   Select only the columns that are created in the destination table. Any columns that aren't part of the sync group aren't provisioned in the destination tables.
 -   Indexes are created only for selected columns. If the source table index has columns that aren't part of the sync group, those indexes aren't provisioned in the destination tables.  
 -   Indexes on XML type columns aren't provisioned.  
+-   Index creation by Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of the original index (if any) like IGNORE_DUP_KEY, Where filter predicate etc are not supported.
 -   CHECK constraints aren't provisioned.  
 -   Existing triggers on the source tables aren't provisioned.  
 -   Views and stored procedures aren't created on the destination database.

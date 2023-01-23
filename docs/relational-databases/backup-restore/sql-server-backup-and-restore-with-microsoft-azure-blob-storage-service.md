@@ -62,5 +62,5 @@ ms.author: wiassaf
 ## Next steps
 
  - [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- - [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+ - [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
  - [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)

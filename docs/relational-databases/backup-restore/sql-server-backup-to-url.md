@@ -302,7 +302,7 @@ This section contains the following examples.
 - [Restoring to a point-in-time using STOPAT](#PITR)  
   
 > [!NOTE]  
-> For a tutorial on using SQL Server 2016 with Azure Blob Storage, see [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+> For a tutorial on using SQL Server 2016 with Azure Blob Storage, see [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### <a name="SAS"></a> Create a Shared Access Signature
 
@@ -440,4 +440,4 @@ The following example restores the AdventureWorks2016 sample database to its sta
 
 - [SQL Server Backup to URL for Azure Blob Storage best practices and troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+- [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)

@@ -13,7 +13,7 @@ ms.custom:
 
 # What's new for SQL Server 2017 on Linux
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [sqlserver2017-linux](../includes/applies-to-version/sqlserver2017-linux.md)]
 
 This article describes the major features and services available for SQL Server 2017 running on Linux.
 
@@ -65,7 +65,7 @@ To install SQL Server on Linux, use one of the following tutorials:
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-docker.md)
+- [Run on a Linux container](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json)
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml). To see other improvements introduced in SQL Server 2017, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).

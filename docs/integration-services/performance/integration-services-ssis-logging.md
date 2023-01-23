@@ -55,7 +55,8 @@ ms.author: chugu
     > [!NOTE]  
     >  You cannot use the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] log provider in a package that is running in 64-bit mode.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log provider, which writes log entries to the **sysssislog** table in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log provider, which writes log entries to the **sysssislog** table in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. You may experience decreased performance if you log to a system database such as master or msdb.
+A good practice is to create a separate database for Integration Services logging.  
   
 -   The Windows Event log provider, which writes entries to the Application log in the Windows Event log on the local computer.  
   

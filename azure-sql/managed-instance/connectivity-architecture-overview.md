@@ -85,7 +85,7 @@ The *VNet-local endpoint* is the default way to connect to SQL Managed Instance.
 
 ### Public endpoint
 
-The [public endpoint](public-endpoint-configure.md) is an optional domain name that has the form `<mi_name>.public.<dns_zone>.database.windows.net` and resolves to a public IP address that's reachable from the internet. This endpoint allows only TDS traffic to reach SQL Managed Instance and can't be used for integration scenarios like failover groups, Managed Instance link, and similar technologies.
+The [public endpoint](public-endpoint-configure.md) is an optional domain name that has the form `<mi_name>.public.<dns_zone>.database.windows.net` and resolves to a public IP address that's reachable from the internet. This endpoint allows only TDS traffic to reach SQL Managed Instance and can't be used for integration scenarios like failover groups, SQL Managed Instance link, and similar technologies.
 
 ## [Architecture before November 2022](#tab/before-feature-wave)
 
@@ -105,7 +105,7 @@ The *VNet-local endpoint* is the default way to connect to SQL Managed Instance.
 
 ### Public endpoint
 
-The [public endpoint](public-endpoint-configure.md) is an optional domain name that has the form `<mi_name>.public.<dns_zone>.database.windows.net` and resolves to a public IP address that's reachable from the internet. This endpoint allows only TDS traffic to reach SQL Managed Instance and can't be used for integration scenarios like failover groups, Managed Instance link, and similar technologies.
+The [public endpoint](public-endpoint-configure.md) is an optional domain name that has the form `<mi_name>.public.<dns_zone>.database.windows.net` and resolves to a public IP address that's reachable from the internet. This endpoint allows only TDS traffic to reach SQL Managed Instance and can't be used for integration scenarios like failover groups, SQL Managed Instance link, and similar technologies.
 
 ### Management endpoint
 

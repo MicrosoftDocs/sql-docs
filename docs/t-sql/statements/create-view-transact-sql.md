@@ -463,7 +463,7 @@ INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd'
 GO  
 ```  
   
-## Examples: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### F. Creating a simple view  
  The following example creates a view by selecting only some of the columns from the source table.  

@@ -36,7 +36,7 @@ Both [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) a
 Benefits of working with Azure SQL and SQL Server in VS Code include:
 
 - Single code editor for your SQL and other code (such as C#, Python, JavaScript, Java, PHP, and Go).
-- Broad extension marketplace with extensions for remote development, Docker, and more.
+- Broad extension marketplace with extensions for remote development, containers, and more.
 - Available for use in GitHub Codespaces.
 
 

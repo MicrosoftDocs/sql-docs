@@ -61,7 +61,7 @@ The [Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-u
 
 You can use the Azure SQL Migration extension for Azure Data Studio to assess databases to get:
 
-- [Migration readiness - Assessment rules](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-assessment-rules)
+- [Migration readiness - Assessment rules](./sql-server-to-sql-database-assessment-rules.md)
 - [Azure right-sized recommendations](/azure/dms/ads-sku-recommend)
 
 To assess your environment using the Azure SQL Migration extension, follow these steps:
@@ -111,7 +111,7 @@ If you have multiple servers and databases that need to be assessed and analyzed
 
 You can use the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](/azure/dms/ads-sku-recommend)
 
-Based on the information in the discover and assess phase, create an appropriately sized target Azure SQL Database. You can do so by using the [Quickstart: Create a single database - Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart).
+Based on the information in the discover and assess phase, create an appropriately sized target Azure SQL Database. You can do so by using the [Quickstart: Create a single database - Azure SQL Database](../../database/single-database-create-quickstart.md).
 
 ## Migrate
 

@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Configure Replication with T-SQL
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)] 
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 In this tutorial, configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL. The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
 

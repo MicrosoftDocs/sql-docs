@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 # sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contains information about ongoing and completed backup and restore operations in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], and about ongoing and completed backup, restore, and load operations in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. The information persists across system restarts.  
+  Contains information about ongoing and completed backup and restore operations in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and about ongoing and completed backup, restore, and load operations in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. The information persists across system restarts.  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

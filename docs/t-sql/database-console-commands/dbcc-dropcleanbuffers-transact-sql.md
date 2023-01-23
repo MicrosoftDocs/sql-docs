@@ -40,7 +40,7 @@ Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  [!INCLUDE
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]
 ```
 
-Syntax for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
@@ -52,7 +52,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
 
 #### WITH NO_INFOMSGS
 
-Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 #### COMPUTE
 
@@ -87,7 +87,7 @@ Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 - Requires membership in server role **##MS_ServerStateManager##**
 
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 - Requires membership in the **db_owner** fixed server role
 

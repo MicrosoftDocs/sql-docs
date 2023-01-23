@@ -16,7 +16,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # Version - Transact SQL Metadata functions
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
- Returns the version of [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] running on the appliance.  
+ Returns the version of [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] running on the appliance.  
   
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -63,7 +63,7 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
     STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM
 ```
 
-Syntax for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```syntaxsql
 DBCC SHOW_STATISTICS ( table_name , target )
@@ -90,7 +90,7 @@ Name of the table that contains the statistics to display. The table cannot be a
 
 Name of the index, statistics, or column for which to display statistics information. *target* is enclosed in brackets, single quotes, double quotes, or no quotes. If *target* is a name of an existing index or statistics on a table or indexed view, the statistics information about this target is returned. If *target* is the name of an existing column, and an automatically created statistics object on this column exists, information about that auto-created statistic is returned. If an automatically created statistic does not exist for a column target, error message 2767 is returned.  
 
-In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *target* cannot be a column name.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *target* cannot be a column name.
 
 #### NO_INFOMSGS
 
@@ -190,11 +190,11 @@ In versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pac
  > [!NOTE]  
  > To change the behavior back to the pre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 behavior, use Trace Flag 9485.
 
-## Permissions for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Permissions for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 `DBCC SHOW_STATISTICS` requires `SELECT` permission on the table or membership in the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
 
-## Limitations and Restrictions for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Limitations and Restrictions for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 `DBCC SHOW_STATISTICS` shows statistics stored in the `Shell` database at the Control node level. It does not show statistics that are auto-created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the Compute nodes.
 

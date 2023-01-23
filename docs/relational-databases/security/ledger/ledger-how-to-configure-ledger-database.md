@@ -30,6 +30,9 @@ This article provides information on configuring a [ledger database](ledger-over
 
 ## Enable ledger database
 
+> [!NOTE]
+> Enabling the ledger functionality at the database level will make all tables in this database updatable ledger tables. This option cannot be changed after the database is created. Creating a table with the option `LEDGER = OFF` will throw an error message.
+
 # [Portal](#tab/Portal)
 
 1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) .

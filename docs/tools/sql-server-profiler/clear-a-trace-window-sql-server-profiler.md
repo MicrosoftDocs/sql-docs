@@ -15,7 +15,7 @@ ms.date: 03/01/2017
 
 # Clear a Trace Window (SQL Server Profiler)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to clear the trace window for a trace that is running by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### To clear a trace window  

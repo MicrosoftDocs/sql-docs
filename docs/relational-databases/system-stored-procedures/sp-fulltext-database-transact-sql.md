@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # sp_fulltext_database (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Has no effect on full-text catalogs in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions and is supported for backward compatibility only. **sp_fulltext_database** does not disable the Full-Text Engine for a given database. All user-created databases in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] are always enabled for full-text indexing.  
+  This is supported for backward compatibility only. **sp_fulltext_database** does not disable the Full-Text Engine for a given database. All user-created databases in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] are always enabled for full-text indexing.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] instead.  
@@ -42,8 +42,8 @@ sp_fulltext_database [@action=] 'action'
   
 |Value|Description|  
 |-----------|-----------------|  
-|**enable**|Supported for backward compatibility only. Has no effect on full-text catalogs in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.|  
-|**disable**|Supported for backward compatibility only. Has no effect on full-text catalogs in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.|  
+|**enable**|Supported for backward compatibility only. It will rebuild all Fulltext catalogs of the database if the previous state of Fulltext is "disabled".|  
+|**disable**|Supported for backward compatibility only.|  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

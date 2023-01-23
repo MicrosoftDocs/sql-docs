@@ -17,7 +17,7 @@ helpviewer_keywords:
 
 # Query processing architecture guide
 
-[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following sections cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
@@ -1062,7 +1062,7 @@ Parameter values are sniffed during compilation or recompilation for the followi
 For more information on troubleshooting bad parameter sniffing issues, see:
 - [Investigate and resolve parameter-sensitive issues](/troubleshoot/sql/performance/troubleshoot-high-cpu-usage-issues#step-5-investigate-and-resolve-parameter-sensitive-issues)
 - [Parameters and Execution Plan Reuse](#parameters-and-execution-plan-reuse)
-- [Parameter Sensitive Plan optimization](performance/parameter-sensitivity-plan-optimization.md)
+- [Parameter Sensitive Plan optimization](/sql/relational-databases/performance/parameter-sensitive-plan-optimization)
 - [Troubleshoot queries with parameter sensitive query execution plan issues in Azure SQL Database](/azure/azure-sql/database/identify-query-performance-issues#parameter-sensitivity)
 - [Troubleshoot queries with parameter sensitive query execution plan issues in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues#parameter-sensitivity)
 

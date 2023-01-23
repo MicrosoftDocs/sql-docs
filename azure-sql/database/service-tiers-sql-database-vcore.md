@@ -77,7 +77,7 @@ Storage for database backups is allocated to support the [point-in-time restore 
 
 ## Service tiers
 
-Service tier options in the vCore purchasing model include General Purpose, Business Critical, and Hyperscale. The service tier generally service tier defines hardware, storage type and IOPS, high availability and disaster recovery options, and other features like memory optimized object types.
+Service tier options in the vCore purchasing model include General Purpose, Business Critical, and Hyperscale. The service tier generally defines hardware, storage type and IOPS, high availability and disaster recovery options, and other features like memory optimized object types.
 
 For greater details, review resource limits for [logical server](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), and [pooled databases](resource-limits-vcore-elastic-pools.md). 
 

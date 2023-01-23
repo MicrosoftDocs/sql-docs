@@ -230,7 +230,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information on PSP optimization, see [Parameter Sensitive Plan optimization](parameter-sensitivity-plan-optimization.md). For more information on surrounding topics of parameterization and parameter sensitivity, see [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
+Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information on PSP optimization, see [Parameter Sensitive Plan optimization](/sql/relational-databases/performance/parameter-sensitive-plan-optimization). For more information on surrounding topics of parameterization and parameter sensitivity, see [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
 ## Approximate query processing
 Approximate query processing is a new feature family. It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a `COUNT(DISTINCT())` across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important, but responsiveness is critical.
@@ -400,11 +400,10 @@ For information about optimized plan forcing with Query Store, visit [Optimized 
 - [Batch mode memory grant feedback](intelligent-query-processing-feedback.md#batch-mode-memory-grant-feedback)
 - [Row mode memory grant feedback](intelligent-query-processing-feedback.md#row-mode-memory-grant-feedback)
 - [Percentile and persistence mode memory grant feedback](intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback)
-- [Parameter Sensitivity Plan Optimization](parameter-sensitivity-plan-optimization.md)
+- [Parameter Sensitivity Plan Optimization](/sql/relational-databases/performance/parameter-sensitive-plan-optimization)
 - [Demonstrating Intelligent Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)
 - [Constant Folding and Expression Evaluation](../query-processing-architecture-guide.md#constant-folding-and-expression-evaluation)
 - [Intelligent query processing demos on GitHub](https://aka.ms/IQPDemos)
 - [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 - [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
 - [Best practices with Query Store](best-practice-with-the-query-store.md)
-

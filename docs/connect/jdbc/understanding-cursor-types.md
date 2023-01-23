@@ -38,12 +38,6 @@ The application has to make a single (forward) pass through the result set. This
 
 |Result Set (Cursor) Type|SQL Server Cursor Type|Characteristics|select Method|response Buffering|
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|
-|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|Forward-only, read-only|direct|full|
-
-The application has to make a single (forward) pass through the result set. This pass is the default behavior and behaves the same as a TYPE_SS_DIRECT_FORWARD_ONLY cursor. The driver reads the entire result set from the server into a memory during the statement execution time.
-
-|Result Set (Cursor) Type|SQL Server Cursor Type|Characteristics|select Method|response Buffering|
-|------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|Forward-only, read-only|direct|adaptive|
 
 The application has to make a single (forward) pass through the result set. It behaves the same as a TYPE_SS_DIRECT_FORWARD_ONLY cursor. The driver reads rows from the server as the application requests them and minimizes client-side memory usage.

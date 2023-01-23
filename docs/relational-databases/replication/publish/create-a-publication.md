@@ -116,7 +116,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 4.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 3 for **\@publication** and the Windows credentials under which the Snapshot Agent runs for **\@snapshot_job_name** and **\@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **\@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **\@publisher_login** and **\@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 5.  Add articles to the publication. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -136,7 +136,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 3.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 2 for **\@publication** and the Windows credentials under which the Snapshot Agent runs for **\@snapshot_job_name** and **\@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **\@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **\@publisher_login** and **\@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 4.  Add articles to the publication. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -197,7 +197,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 6.  Call the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method to create the publication.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 7.  Call the <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> method to create the Snapshot Agent job for the publication.  
   
@@ -227,7 +227,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 5.  Call the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method to create the publication.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 6.  Call the <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> method to create the Snapshot Agent job for the publication.  
   
@@ -253,4 +253,3 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)   
  [Secure the Distributor](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)  
-  

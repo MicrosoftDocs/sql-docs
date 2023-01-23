@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_11409
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   
@@ -25,7 +25,7 @@ ms.author: mathoma
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|ALTERCOL_COLSET_DROP|  
-|Message Text|Cannot drop column set '%.*ls' in table '%.\*ls' because the table contains more than 1025 columns.|  
+|Message Text|Cannot remove column set '%.*ls' in table '%.\*ls' because the table contains more than 1025 columns.|  
   
 ## Explanation  
 Tables can contain a maximum of 1024 columns that are not designated as sparse, or computed. When sparse columns cause the table to exceed 1024 columns, a column set must be defined for the table. The table referenced has more than 1024 columns and you have attempted to remove the column set.  

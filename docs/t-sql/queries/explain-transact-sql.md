@@ -15,7 +15,7 @@ monikerRange: "= azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  Returns the query plan for an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].
+  Returns the query plan for an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
   
 ## Syntax  
   

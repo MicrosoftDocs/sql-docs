@@ -97,7 +97,7 @@ SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));
 |For information about|See|  
 |---------------------------|---------|  
 |The encryption hierarchy in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)|  
-|Implementing secure connections|[Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
+|Implementing secure connections|[Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption)|  
 |Encryption functions|[Cryptographic Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)|  
   
  Certificates are software "keys" shared between two servers that enable secure communications by way of strong authentication. You can create and use certificates in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to enhance object and connection security. The following table contains information about how to use certificates with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -154,4 +154,4 @@ Windows Defender Application Control (WDAC) prevents unauthorized code execution
 [SQL Server Security Blog](/archive/blogs/sqlsecurity/)  
 [Security Best Practice and Label Security Whitepapers](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)  
 [Row-Level Security](../../relational-databases/security/row-level-security.md)   
-[Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
+[Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)

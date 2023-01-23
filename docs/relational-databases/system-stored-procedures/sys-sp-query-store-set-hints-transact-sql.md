@@ -35,10 +35,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 sp_query_store_set_hints
     @query_id = 'query_id',
     @query_hints = 'query_hints'
-    [, @query_hints_comment = 'query_hints_comment' ]
-    [, @override_plan_guide_and_hints = 'override_plan_guide_and_hints' ]
-    [, @fail_execution_on_error = 'fail_execution_on_error' ]
-    [, @query_hint_scope = 'query_hint_scope' ] [;]  
+    [, @query_hint_scope = 'replica_group_id' ] [;]  
 ```  
 
 ## Arguments
@@ -51,21 +48,9 @@ Bigint. Required. The Query Store `query_id` from [sys.query_store_query](../sys
 
 Nvarchar(max). String of query options beginning with `'OPTION`. For more information, see [Supported query hints](#supported-query-hints) in this article.
 
-#### [ @query_hints_comment ]
-
-Nvarchar(max). User-editable comment on query hint. Use to provide context, application, event, or other information useful to yourself and other administrators in the future.
-
-#### [ @override_plan_guide_and_hints ]
-
-Bit. Defaults to `1`. Controls whether the new Query Store hint will override an existing plan guide or an in-place hint in the code.
-
-#### [ @fail_execution_on_error ] 
-
-Bit. Default is `0`. Controls whether errors in applying a query hint will be surfaced to the client. The default for this argument is `0` which matches the existing Query Store plan forcing overall behavior where failing operations are silently logged and do not block query execution.
-
 #### [ @query_hint_scope ] 
 
-Tinyint. By default, the scope of a new Query Store hint is the local replica only. Determines the scope at which the hint will be applied, as per the `replica_group_id` column in [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
+Tinyint. By default, the scope of a new Query Store hint is the local replica only. This optional parameter determines the scope at which the hint will be applied on a secondary replica when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. The optional *query_hint_scope* argument defaults only to the local replica (primary or secondary), but you can optionally specify a `replica_group_id` referencing [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
 
 ## Return Values  
  0 (success) or 1 (failure)  

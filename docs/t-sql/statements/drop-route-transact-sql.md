@@ -20,7 +20,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP ROUTE (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a route, deleting the information for the route from the routing table of the current database.  
   

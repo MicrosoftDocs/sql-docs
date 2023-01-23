@@ -1,5 +1,5 @@
 ---
-title: Azure Database for PostgreSQL flexible server migration extension
+title: Azure PostgreSQL migration extension
 description: Learn how to install the Azure Data Studio Azure Database for PostgreSQL flexible server extension. This extension helps guide you choose the best Azure SQL database and Azure Database for PostgreSQL migration path.
 author: apduvuri
 ms.author: adityaduvuri
@@ -65,36 +65,68 @@ Once the assessment extension is installed, the next step is to [connect to Post
 
 There are three steps to complete before the assessment begins.
 
-1. **Step 1: Databases(s) for assessment**
+### Step 1: Databases(s) for assessment
+
    1. Select what database(s) you want to assess for migration, then select **Next**.
       1. For this example, the ***paymentapp*** database is selected
 
        :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/run-assessment-step-1.png" alt-text="Screenshot of step 1.":::
 
-1. **Step 2: Assessment Parameters**
+### Step 2: Assessment Parameters
 
-      The default page shows **Manual collection**, however, for this example we are using the **Automation collection** page.
+   Provide your assessment details.
 
-      1. Enter your IOPS value and select your **Scale factor**.
-      1. Next select **Run Assessment**.
+   1. In the **Assessment name** field, enter a title, for example, `demo1`.
+   1. Enter your **Assessment setting**.
+   1. Enter the destination migration database in the **Target Platform** field. Currently, it supports Azure SQL and PostgreSQL as targets.
+   1. In the **Performance data collection** section, either select **Run performance data collection on Oracle database (connected)** or **Add AWR report**.
 
-         :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/run-assessment-step-2-auto-values.png" alt-text="Screenshot of manual options for running te assessment.":::
+         The recommendation is to use the connected option if you're running this tool during a peak or realistic load. Otherwise, provide the AWR reports generated in the past for performance and sizing recommendations.
 
-1. **Step 3: View Assessment Results**
+      1. Enter the multiplier value in the **Scale factor** field.
+
+         1. If the recommended SKU needs to consider other peak loads, the scale factor multiplier should be greater than 1. For example, Burst Load, Seasonal usage, and future capacity planning. When a partial Oracle schema workload is migrated, the multiplier should be less than 1.
+
+      1. In the **Percentile utilization** field, enter the percentile value for sizing the Azure target.
+
+         1. The percentile value of the performance sample set to be considered for sizing the Azure target.
+
+   :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="Screenshot showing the assessment details screen.":::
+
+### Step 3: View Assessment Results
 
    Once the assessment is complete, a consolidated output is generated.
 
-      - On the top the two cards represent the recommended SKU in Azure.
-         - Target Platform – Currently, Assessment is performed and supported on Azure Database for PostgreSQL - Flexible server.
-         - SKU Recommendation – Based on the performance metrics, SKU available in Azure Database for PostgreSQL - Flexible server is recommended.
-         - Target Version – It is the latest version available in Azure Database for PostgreSQL -Flexible server.
-      - User can click on the Instance name; it shows the summary and the migration readiness of the PostgreSQL instance. Users can go through different server parameters and the features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
-      - User can click on the respective databases, understand the blockers, warnings   and go through the summary if the database is in Ready, Ready with conditions or Not Ready state for migration into Azure.
-      - Users can save the Assessment report on their machine for offline viewing by clicking on the “Save Assessment” action.
+- On the top the two cards represent the recommended SKU in Azure.
+  - **Target Platform** – Currently, Assessment is performed and supported on Azure Database for PostgreSQL - Flexible server.
+  - **SKU Recommendation** – Based on the performance metrics, SKU available in Azure Database for PostgreSQL - Flexible server is recommended.
+  - **Data Collection status** – Shows the number of cycles completed.
 
-      Now you can save the assessment report in a location of your choice.
+- User can select on the Instance name; it shows the summary and the migration readiness of the PostgreSQL instance. Users can go through different server parameters and the features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
+
+- User can select on the respective databases, understand the blockers, warnings   and go through the summary if the database is in Ready, Ready with conditions or Not Ready state for migration into Azure.
+
+- Users can save the Assessment report on their machine for offline viewing by selecting on the “Save Assessment” action.
+
+Now you can save the assessment report in a location of your choice.
 
    :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/run-assessment-step-3-view-assessment.png" alt-text="Screenshot of consolidated assessment report.":::
+
+## Known Issues
+
+- If the PostgreSQL user does not have the execute privilege on PG_READ_FILE function, then the ADS extension “Azure PostgreSQL Migration” does not throw any error while using automatic collection and the SKU is recommended based on the IOPS and Storage. In the report the source properties for vCores, Memory shows as “N/A”.
+- Collations used in source and not present in Azure Database for PostgreSQL – flexible server is shown as a blocker at the database level and Warning at the Server parameter level.
+
+### Get help from Microsoft support
+
+You can raise a support request to get Microsoft support assistance if you encounter issues or errors with your database migrations using the Azure SQL Migration extension.
+
+Select the **New support request** button in the upper section of the extension. It automatically takes you to the Azure portal, where you can fill in the details and then submit a support request.
+
+You can submit ideas/suggestions for improvement, and other feedback, including bugs, in the [Azure Community forum — Azure Database Migration Service](https://feedback.azure.com/d365community/forum/2dd7eb75-ef24-ec11-b6e6-000d3a4f0da0).
+
+> [!NOTE]  
+> You can also use the **Feedback** button or [email](mailto:epgsupport@microsoft.com) the product group if you have any suggestions or feedback to improve the extension.
 
 ## Next steps
 

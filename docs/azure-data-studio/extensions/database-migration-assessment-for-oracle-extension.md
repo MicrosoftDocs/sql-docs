@@ -217,7 +217,7 @@ To change the log directory, update the `LogDirectory` property in the extension
 |Linux|`~/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
 |macOS|`/Users/<username>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
 
-### Known issues
+### Known issues and limitations
 
 - **Path provided doesn't exist.**
 
@@ -236,6 +236,17 @@ To change the log directory, update the `LogDirectory` property in the extension
 
   - Check if firewall rules block the Oracle listening port.
   - Run `tnsping` and see if the Service ID gets resolved.
+
+### Get help from Microsoft support
+
+You can raise a support request to get Microsoft support assistance if you encounter issues or errors with your database migrations using the Azure SQL Migration extension.
+
+Select the **New support request** button in the upper section of the extension. It automatically takes you to the Azure portal, where you can fill in the details and then submit a support request.
+
+You can submit ideas/suggestions for improvement, and other feedback, including bugs, in the [Azure Community forum — Azure Database Migration Service](https://feedback.azure.com/d365community/forum/2dd7eb75-ef24-ec11-b6e6-000d3a4f0da0).
+
+> [!NOTE]  
+> You can also use the **Feedback** button if you have any suggestions or feedback to improve the extension.
 
 ## Next steps
 

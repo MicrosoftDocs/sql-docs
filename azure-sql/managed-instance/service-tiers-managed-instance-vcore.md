@@ -30,7 +30,7 @@ The virtual core (vCore) purchasing model used by Azure SQL Managed Instance pro
 - Greater transparency in the hardware details that power compute, helping facilitate planning for migrations from on-premises deployments.
 - Higher scaling granularity with multiple compute sizes available.
 
-## Compute cost 
+## Compute
 
 SQL Managed Instance compute provides a specific amount of compute resources that are continuously provisioned independent of workload activity, and bills for the amount of compute provisioned at a fixed price per hour.
 
@@ -52,7 +52,7 @@ To monitor the current allocated and used storage size of individual data and lo
 
 ## Backup storage
 
-Storage for database backups is allocated to support the [point-in-time restore (PITR)](recovery-using-backups.md) and [long-term retention (LTR)](..database/long-term-retention-overview.md) capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
+Storage for database backups is allocated to support the [point-in-time restore (PITR)](recovery-using-backups.md) and [long-term retention (LTR)](../database/long-term-retention-overview.md) capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
 
 - **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [Azure storage](automated-backups-overview.md#restore-capabilities) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 0 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
 - **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in Azure Blob storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage will be used for LTR backups. For more information, see [Long-term backup retention](../database/long-term-retention-overview.md).
@@ -112,7 +112,7 @@ Every instance is a cluster of database engine nodes that contain copies of all 
 
 Failover is handled by the SQL Server database engine – one secondary replica becomes the primary node and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary node.
 
-In addition, the Business Critical cluster has a built-in [Read Scale-Out](read-scale-out.md) capability that provides a free-of charge read-only replica used to run read-only queries (such as reports) that won't affect the performance of the workload on your primary replica.
+In addition, the Business Critical cluster has a built-in [Read Scale-Out](../database/read-scale-out.md) capability that provides a free-of charge read-only replica used to run read-only queries (such as reports) that won't affect the performance of the workload on your primary replica.
 
 ### When to choose this service tier
 

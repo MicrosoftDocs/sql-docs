@@ -42,7 +42,7 @@ The vCore purchasing model used by Azure SQL Database provides several benefits 
 For help with choosing between the vCore and DTU purchasing models, see the [differences between the vCore and DTU-based purchasing models](purchasing-models.md)
 
 
-## Compute cost 
+## Compute
 
 The vCore-based purchasing model has a provisioned compute tier and a [serverless](serverless-tier-overview.md) compute tier for Azure SQL Database. In the provisioned compute tier, the compute cost reflects the total compute capacity continuously provisioned for the application independent of workload activity. Choose the resource allocation that best suits your business needs based on vCore and memory requirements, then scale resources up and down as needed by your workload. In the serverless compute tier for Azure SQL Database, compute resources are auto-scaled based on workload capacity and billed for the amount of compute used, per second.
 

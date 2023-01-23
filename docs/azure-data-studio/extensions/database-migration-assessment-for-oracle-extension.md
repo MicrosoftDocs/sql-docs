@@ -253,4 +253,4 @@ You can submit ideas/suggestions for improvement, and other feedback, including 
 - [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [Oracle extension](extension-for-oracle.md)
 - [Data Schema Conversion](dsct/database-schema-conversion-toolkit.md)
-- [Add extensions](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)
+- [Azure Data Studio extensions](add-extensions.md)

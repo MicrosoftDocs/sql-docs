@@ -95,20 +95,26 @@ There are three steps to complete before the assessment begins.
 
 ### Step 3: View Assessment Results
 
-   Once the assessment is complete, a consolidated output is generated.
+Once the assessment is complete, a consolidated output is generated.
 
-- On the top the two cards represent the recommended SKU in Azure.
-  - **Target Platform** – Currently, Assessment is performed and supported on Azure Database for PostgreSQL - Flexible server.
+- The cards at the top represent the recommended SKU in Azure.
+  - **Target Platform** – Currently, the assessment is performed and supported on Azure Database for PostgreSQL - Flexible server.
   - **SKU Recommendation** – Based on the performance metrics, SKU available in Azure Database for PostgreSQL - Flexible server is recommended.
   - **Data Collection status** – Shows the number of cycles completed.
 
-- User can select on the Instance name; it shows the summary and the migration readiness of the PostgreSQL instance. Users can go through different server parameters and the features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
+The SKU recommendation provides the following:
 
-- User can select on the respective databases, understand the blockers, warnings   and go through the summary if the database is in Ready, Ready with conditions or Not Ready state for migration into Azure.
+- The suitable Azure target.
+- The service tier.
+- The metric thresholds are used to provide the recommended SKU.
 
-- Users can save the Assessment report on their machine for offline viewing by selecting on the “Save Assessment” action.
+The SKU recommendation evaluates various performance metrics, such as CPU, memory, IOPS, latency, and storage. Based on the usage and the configuration data, the recommender provides the suitable target and the appropriate service tier.
 
-Now you can save the assessment report in a location of your choice.
+User can select on the Instance name; it shows the summary and the migration readiness of the PostgreSQL instance. Users can go through different server parameters and the features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
+
+User can select on the respective databases, understand the blockers, warnings and go through the summary if the database is in Ready, Ready with conditions or Not Ready state for migration into Azure.
+
+Users can save the assessment report on their machine for offline viewing by selecting on the “Save Assessment” action.
 
    :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/run-assessment-step-3-view-assessment.png" alt-text="Screenshot of consolidated assessment report.":::
 
@@ -130,6 +136,9 @@ You can submit ideas/suggestions for improvement, and other feedback, including 
 
 ## Next steps
 
-- [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [PostgreSQL extension](postgres-extension.md)
-- [Data Schema Conversion](dsct/database-schema-conversion-toolkit.md)
+- [Azure Data Studio extensions](add-extensions.md)
+- [Azure Data Studio release notes](../release-notes-azure-data-studio.md)
+- [Database migrations using Azure Data Studio](/azure/dms/migration-using-azure-data-studio)
+- [Download Azure Data Studio](../download-azure-data-studio.md)
+- [Azure SQL Migration extension](azure-sql-migration-extension.md)

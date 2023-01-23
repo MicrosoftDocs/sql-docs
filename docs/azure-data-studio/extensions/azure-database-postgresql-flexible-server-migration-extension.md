@@ -9,9 +9,11 @@ ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 
-# Azure Database for PostgreSQL - Flexible Server extension (Preview)
+# Azure PostgreSQL - flexible server migration extension (Preview)
 
-The Azure PostgreSQL Migration extension in Azure Data Studio helps you assess your PostgreSQL workload for migrating to Azure Database for PostgreSQL flexible server. The extension identifies an appropriate PostgreSQL target with right-sizing recommendations and the complexity of the migration.
+[!INCLUDE [database-migration-services-ads](../../includes/database-migration-services-postgresql-ads.md)]
+
+The Azure PostgreSQL migration extension in Azure Data Studio helps you assess your PostgreSQL workload for migrating to Azure Database for PostgreSQL flexible server. The extension identifies an appropriate PostgreSQL target with right-sizing recommendations and the complexity of the migration.
 
 ## Prerequisites
 

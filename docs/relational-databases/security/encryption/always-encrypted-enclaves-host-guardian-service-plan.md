@@ -150,4 +150,4 @@ If you're using Always Encrypted with VBS enclaves in a development or test envi
 
 ## Next steps
 
-- [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)
+- Once you've made sure your environment meets the above prerequisites, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).

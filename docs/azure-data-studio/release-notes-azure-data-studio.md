@@ -72,7 +72,7 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) release.
 | Query Results | Addressed issue where a column would re-size incorrectly when auto-sizing in the results output. |
 | Query Results | Improved JSON cell handling from query results. |
 | Query Results | Fixed behavior where focus was incorrectly set on a cell using keyboard navigation. |
-| Resource Deployment | Remove ‘Preview’ flag for SQL Server 2022 deployment types. |
+| Resource Deployment | Remove 'Preview' flag for SQL Server 2022 deployment types. |
 | Schema Compare Extension | Fixed problem where differences in schema compare were not being highlighted. |
 | Schema Compare Extension | Permissions are now included in schema compare when the “Include Permissions” option is selected. |
 | SQL Projects Extension | Changes to db_datawriter or db_datareader roles are now supported. |

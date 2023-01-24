@@ -3,7 +3,7 @@ title: "Plan for Host Guardian Service attestation"
 description: "Plan Host Guardian Service attestation for SQL Server Always Encrypted with secure enclaves."
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: "02/01/2023"
 ms.service: sql
 ms.reviewer: vanto
 ms.subservice: security
@@ -17,10 +17,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-When you use [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), make sure that the client application is talking to a trustworthy enclave within the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] process. For a virtualization-based security (VBS) enclave, this requirement includes verifying both the code inside the enclave is valid and the computer hosting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is trustworthy. Remote attestation achieves this goal by introducing a third party that can validate the identity (and optionally, the configuration) of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer. Before [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] can use an enclave to run a query, it must provide information to the attestation service about its operating environment to obtain a health certificate. This health certificate is then sent to the client, which can independently verify its authenticity with the attestation service. Once the client trusts the health certificate, it knows it's talking to a trustworthy VBS enclave and will issue the query that will use that enclave.
+Attestation is a workflow that allows a client application to verify it is talking to a trustworthy enclave within the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] process when using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
-The Host Guardian Service (HGS) role in Windows Server 2019 or later provides remote attestation capabilities for Always Encrypted with VBS enclaves.
-This article will guide you through the pre-deployment decisions and requirements to use Always Encrypted with VBS enclaves and HGS attestation.
+In [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], Always Encrypted with secure enclaves uses [virtualization-based Security (VBS) enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (also known as Virtual Secure Mode, or VSM enclaves) - a software-based technology that relies on Windows hypervisor and doesn't require any special hardware. Attesting a VBS enclave involves verifying both the code inside the enclave is valid and the computer hosting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is trustworthy. Attestation achieves this goal by introducing a third party that can validate the identity (and optionally, the configuration) of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer. Before [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] can use an enclave to run a query, it must provide information to the attestation service about its operating environment to obtain a health certificate. This health certificate is then sent to the client, which can independently verify its authenticity with the attestation service. Once the client trusts the health certificate, it knows it's talking to a trustworthy VBS enclave and will issue the query that will use that enclave.
+
+Attestation helps detect certain attacks by malicious OS administrators, for example, attacks that involve tampering with the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] library running inside the enclave. If you're not concerned about such attacks (for example, you're using Always Encrypted with secure enclaves in a non-production environment), see [Plan for Always Encrypted with secure enclaves in SQL Server without attestation](always-encrypted-enclaves-no-attestation-plan.md).
+
+The Host Guardian Service (HGS) role in Windows Server 2019 or later provides remote attestation capabilities for Always Encrypted with VBS enclaves. This article will guide you through the pre-deployment decisions and requirements to use Always Encrypted with VBS enclaves and HGS attestation.
+
+> [!NOTE]
+> When [ssnoversion-md](../../../includes/ssnoversion-md.md)] is deployed in a VM, VBS enclaves help protect your data from attacks inside the VM. However, they do not provide any protection from attacks using privileged system accounts originating from the host. For example, a memory dump of the VM generated on the host machine may contain the memory of the enclave.
 
 ## Architecture overview
 
@@ -143,11 +149,13 @@ In production environments (handling real sensitive data), it's important your o
 
 If you're using Always Encrypted with VBS enclaves in a development or test environment and don't require high availability or strong protection of the computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], you can make any or all of the following concessions for a simplified deployment:
 
-- Deploy only one node of HGS. Even though HGS installs a failover cluster, you don't need to add additional nodes if high availability isn't a concern.
-- Use host key mode instead of TPM mode for a simpler setup experience.
-- Virtualize HGS and/or the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to save physical resources.
-- Run SSMS or other tools for configuring Always Encrypted with secure enclaves on the same computer as [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. This leaves the column master keys on the same computer as [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], so don't do this in a production environment.
+- Use Always Encrypted with secure enclaves without attestation - see [Plan for Always Encrypted with secure enclaves in SQL Server without attestation](always-encrypted-enclaves-no-attestation-plan.md).
+- Alternatively:
+  - Deploy only one node of HGS. Even though HGS installs a failover cluster, you don't need to add additional nodes if high availability isn't a concern.
+  - Use host key mode instead of TPM mode for a simpler setup experience.
+  - Virtualize HGS and/or the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to save physical resources.
+  - Run SSMS or other tools for configuring Always Encrypted with secure enclaves on the same computer as [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. This leaves the column master keys on the same computer as [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], so don't do this in a production environment.
 
 ## Next steps
 
-- Once you've made sure your environment meets the above prerequisites, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
+- [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)

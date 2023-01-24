@@ -4421,7 +4421,7 @@ items:
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
       - name: Latest updates for SQL Server
-        href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
+        href: /troubleshoot/sql/releases/download-and-install-latest-updates?toc=../toc.json&bc=../breadcrumb/toc.json#latest-updates-available-for-currently-supported-versions-of-sql-server
   - name: End of support
     items:
     - name: Overview

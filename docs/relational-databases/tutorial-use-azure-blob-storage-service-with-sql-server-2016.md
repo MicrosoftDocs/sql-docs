@@ -3,7 +3,7 @@ title: "Tutorial: Use Azure Blob Storage with SQL Server"
 description: "Tutorial: Use Azure Blob Storage with SQL Server"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 01/23/2023
+ms.date: 01/24/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: seo-dt-2019
@@ -344,16 +344,16 @@ To restore a database to a specified point in time from file snapshot backup set
 
 1. Launch SSMS.
 1. Open a new query window and connect to the SQL Server instance of the database engine in your Azure virtual machine.
-1. Copy, paste, and execute the following Transact-SQL script into the query window. Verify that the Production.Location table has 29,939 rows before we restore it to a point in time when there are fewer rows in step 5.
+1. Copy, paste, and execute the following Transact-SQL script into the query window. Verify that the `Production.Location` table has 29,939 rows before we restore it to a point in time when there are fewer rows in step 4.
 
     ```sql
     -- Verify row count at start
     SELECT COUNT (*) from AdventureWorks2016.Production.Location
     ```
 
-    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/29-thousand-rows.png" alt-text="Row count of 29,939 is displayed.":::
+    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/29-thousand-rows.png" alt-text="A screenshot of the SSMS results showing a row count of 29,939.":::
 
-1. Copy and paste the following Transact-SQL script into the query window. Select two adjacent log backup files and convert the file name into the date and time you will need for this script. Modify the URL appropriately for your storage account name and the container that you specified in section 1, provide the first and second backup file names, provide the STOPAT time  in the format of "June 26, 2018 01:48 PM" and then execute this script. This script will take a few minutes to complete
+1. Copy and paste the following Transact-SQL script into the query window. Select two adjacent log backup files and convert the file name into the date and time you will need for this script. Modify the URL appropriately for your storage account name and the container that you specified in section 1, provide the first and second backup file names, provide the STOPAT time in the format of "June 26, 2018 01:48 PM" and then execute this script. This script will take a few minutes to complete
 
     ```sql
     -- restore and recover to a point in time between the times of two transaction log backups, and then verify the row count
@@ -475,4 +475,5 @@ To delete the resource group, run the following powershell code:
 - [sys.credentials (Transact-SQL)](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
 - [sp_delete_backup (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)
 - [sys.fn_db_backup_file_snapshots (Transact-SQL)](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)
-- [sp_delete_backup_file_snapshot (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)
+- [sp_delete_backup_file_snapshot (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 
+- [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)

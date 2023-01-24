@@ -1,10 +1,15 @@
 ---
 title: Download SQL Server Management Studio (SSMS)
 description: Download the latest version of SQL Server Management Studio (SSMS).
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan
+ms.date: 01/23/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-keywords: 
+ms.custom: seo-lt-2019
+keywords:
   - "install ssms, download ssms, latest ssms"
   - "SQL Server Management Studio"
   - "ssms.exe"
@@ -17,11 +22,6 @@ keywords:
   - "ssms download"
   - "sql server ssms"
   - "ssms express"
-author: erinstellato-ms
-ms.author: erinstellato
-ms.reviewer: maghan
-ms.custom: seo-lt-2019
-ms.date: 06/21/2022
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -59,10 +59,10 @@ This release of SSMS can be installed in the following languages:
 SQL Server Management Studio 18.12.1:  
 [Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804) | [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404) | [English (United States)](https://aka.ms/ssmsfullsetup?clcid=0x409) | [French](https://aka.ms/ssmsfullsetup?clcid=0x40c) | [German](https://aka.ms/ssmsfullsetup?clcid=0x407) | [Italian](https://aka.ms/ssmsfullsetup?clcid=0x410) | [Japanese](https://aka.ms/ssmsfullsetup?clcid=0x411) | [Korean](https://aka.ms/ssmsfullsetup?clcid=0x412) | [Portuguese (Brazil)](https://aka.ms/ssmsfullsetup?clcid=0x416) | [Russian](https://aka.ms/ssmsfullsetup?clcid=0x419) | [Spanish](https://aka.ms/ssmsfullsetup?clcid=0x40a)
 
-> [!TIP]
+> [!TIP]  
 > If you are accessing this page from a non-English language version and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
-> [!NOTE]
+> [!NOTE]  
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](../powershell/download-sql-server-ps-module.md).
 
 ## What's new
@@ -85,7 +85,7 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
 1. Launch the command prompt with elevated permissions.
 
-2. Type the command below in the command prompt.
+1. Type the command below in the command prompt.
 
     ```command line
     start "" /w <path where SSMS-Setup-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
@@ -99,7 +99,7 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+1. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
 ### [PowerShell](#tab/azure-powershell/windows)
 
@@ -109,7 +109,7 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
 1. Launch the command prompt with elevated permissions.
 
-2. Type the command below in the command prompt.
+1. Type the command below in the command prompt.
 
     ```powershell
     $media_path = "<path where SSMS-Setup-ENU.exe file is located>"
@@ -131,7 +131,7 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+1. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
 ---
 
@@ -141,7 +141,7 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
 1. Launch the command prompt with elevated permissions.
 
-2. Type the command below in the command prompt.
+1. Type the command below in the command prompt.
 
     ```console
     start "" /w <path where SSMS-Setup-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
@@ -155,7 +155,7 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+1. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
 ## Installation with Azure Data Studio
 
@@ -210,7 +210,7 @@ Supported hardware:
 - 2 GB of RAM; 4 GB of RAM recommended (2.5 GB minimum if running on a virtual machine)
 - Hard disk space: Minimum of 2 GB up to 10 GB of available space
 
-> [!NOTE]
+> [!NOTE]  
 > SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Azure Data Studio is a cross-platform tool that runs on macOS, Linux, and Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]

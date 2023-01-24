@@ -98,16 +98,11 @@ The zone-redundant version of the high availability architecture is illustrated 
 > For zone redundant availability, choosing a [maintenance window](./maintenance-window.md) other than the default is currently available in [select regions](./maintenance-window.md?preserve-view=true&view=azuresql#azure-region-support).
 
 During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions:
-
-- Australia East
-- Brazil South
-- East US
-- Japan East
-- Korea Central
-- Norway East
-- South Africa North
-- Sweden Central
-- UAE North
+| Geography | Regions supporting zone redundancy for Business Critical service tier |
+|:-- |:-- |
+| Europe, Middle East, Africa | North Europe, Norway East, South Africa North, Sweden Central, Switzerland North, West Europe, UAE North, UK South |
+| Americas | Brazil South, Canada Central, East US, South Central US, West US 3 |
+| Asia Pacific | Australia East, East Asia, India Central, Japan East, Korea Central |
 
 ## Hyperscale service tier locally redundant availability
 

@@ -116,7 +116,7 @@ In addition, the Business Critical cluster has a built-in [Read Scale-Out](../da
 
 ### When to choose this service tier
 
-The Business Critical service tier is designed for applications that require low-latency responses from the underlying SSD storage (1-2 ms in average), fast recovery if the underlying infrastructure fails, or need to off-load reports, analytics, and read-only queries to the free-of-charge readable secondary replica of the primary database.
+The Business Critical service tier is designed for applications that require low-latency responses from the underlying SSD storage (1-2 ms in average), faster recovery if the underlying infrastructure fails, or need to off-load reports, analytics, and read-only queries to the free-of-charge readable secondary replica of the primary database.
 
 The key reasons why you should choose Business Critical service tier instead of General Purpose tier are:
 

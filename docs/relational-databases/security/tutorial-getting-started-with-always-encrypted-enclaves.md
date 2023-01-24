@@ -53,7 +53,7 @@ As an alternative, you can install SSMS on another machine.
 
 1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and run msinfo32.exe. Check if VBS is running. If it us running skip the remaining steps in this section and go to the next section.
 
-   ![System information - virtualization-based security](./encryption/media/always-encrypted-enclaves/system-information-vbs.png)
+   ![System information - virtualization-based security](./encryption/media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 
 2. Enable VBS by running the following cmdlet in the PowerShell session.
 

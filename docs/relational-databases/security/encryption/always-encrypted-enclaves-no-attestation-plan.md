@@ -99,7 +99,7 @@ If the computer is managed by your company, Group Policy or Microsoft Endpoint M
 
 ### Tooling requirements
 
-- [SQL Server Management Studio (SSMS) 19 or later](../../ssms/download-sql-server-management-studio-ssms.md).
+- [SQL Server Management Studio (SSMS) 19 or later](./../../ssms/download-sql-server-management-studio-ssms.md).
 
 ### Client driver requirements
 

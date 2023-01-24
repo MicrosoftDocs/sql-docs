@@ -24,7 +24,7 @@ highlightedContent:
      itemType: overview
      url: tools/overview-sql-tools.md
    - title: Troubleshoot
-     itemType: concept
+     itemType: reference
      url: /troubleshoot/sql/welcome-sql-server
 
 productDirectory:

@@ -26,11 +26,11 @@ ms.date: 06/21/2022
 
 # Download SQL Server Management Studio (SSMS)
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[SQL Server ASDB, ASDBMI, ASDW](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL Server and databases. Use SSMS to deploy, monitor, and upgrade the data-tier components used by your applications, and build queries and scripts.
+SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL Server and databases. Use SSMS to deploy, monitor, and upgrade the data-tier components used by your applications and build queries and scripts.
 
-Use SSMS to query, design, and manage your databases and data warehouses, wherever they are - on your local computer, or in the cloud.
+Use SSMS to query, design, and manage your databases and data warehouses, wherever they are - on your local computer or in the cloud.
 
 ## Download SSMS
 
@@ -44,9 +44,9 @@ SSMS 18.12.1 is the latest general availability (GA) version. If you have a prev
 - Build number: 15.0.18424.0
 - Release date: June 21, 2022
 
-By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
+By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 
-The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.12. You can see if you have the preview version by going to the **Help > About** window.
+The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs alongside previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.12. You can see if you have the preview version by going to the **Help > About** window.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**.
 
@@ -60,7 +60,7 @@ SQL Server Management Studio 18.12.1:
 [Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804) | [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404) | [English (United States)](https://aka.ms/ssmsfullsetup?clcid=0x409) | [French](https://aka.ms/ssmsfullsetup?clcid=0x40c) | [German](https://aka.ms/ssmsfullsetup?clcid=0x407) | [Italian](https://aka.ms/ssmsfullsetup?clcid=0x410) | [Japanese](https://aka.ms/ssmsfullsetup?clcid=0x411) | [Korean](https://aka.ms/ssmsfullsetup?clcid=0x412) | [Portuguese (Brazil)](https://aka.ms/ssmsfullsetup?clcid=0x416) | [Russian](https://aka.ms/ssmsfullsetup?clcid=0x419) | [Spanish](https://aka.ms/ssmsfullsetup?clcid=0x40a)
 
 > [!TIP]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](../powershell/download-sql-server-ps-module.md).
@@ -77,9 +77,67 @@ This article is for the latest version of SSMS only. To download previous versio
 
 ## Unattended install
 
+### [Command Line](#tab/command-line/windows)
+
 You can also install SSMS using a command prompt script.
 
-If you want to install SSMS in the background with no GUI prompts, then follow the steps below.
+If you want to install SSMS in the background with no GUI prompts, follow the steps below.
+
+1. Launch the command prompt with elevated permissions.
+
+2. Type the command below in the command prompt.
+
+    ```command line
+    start "" /w <path where SSMS-Setup-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    ```
+
+    Example:
+
+    ```command line
+    start "" /w %systemdrive%\SSMS\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    ```
+
+    You can also pass */Passive* instead of */Quiet* to see the setup UI.
+
+3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+
+### [PowerShell](#tab/azure-powershell/windows)
+
+You can also install SSMS using a PowerShell.
+
+If you want to install SSMS in the background with no GUI prompts, follow the steps below.
+
+1. Launch the command prompt with elevated permissions.
+
+2. Type the command below in the command prompt.
+
+    ```powershell
+    $media_path = "<path where SSMS-Setup-ENU.exe file is located>"
+    $install_path = "`"%systemdrive%\Program Files (x86)\Microsoft SQL Server Management Studio 18`""
+    $params = " /Install /Quiet SSMSInstallRoot=$install_path"
+
+    Start-Process -FilePath $media_path -ArgumentList $params -Wait
+    ```
+
+    Example:
+
+    ```powershell
+    $media_path = "C:\Installers\SSMS-Setup-ENU.exe"
+    $install_path = "`"C:\Program Files (x86)\Microsoft SQL Server Management Studio 18`""
+    $params = " /Install /Passive SSMSInstallRoot=$install_path"
+    
+    Start-Process -FilePath $media_path -ArgumentList $params -Wait
+    ```
+
+    You can also pass */Passive* instead of */Quiet* to see the setup UI.
+
+3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+
+---
+
+You can also install SSMS using a command prompt script.
+
+If you want to install SSMS in the background with no GUI prompts, follow the steps below.
 
 1. Launch the command prompt with elevated permissions.
 
@@ -97,19 +155,19 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and take a peek at the %TEMP%\SSMSSetup for the log file.
+3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
 ## Installation with Azure Data Studio
 
-- Starting with SSMS 18.7, SSMS installs a system version of Azure Data Studio by default. If an equal or greater system version of Azure Data Studio stable or insiders is already present on the workstation compared to the included version of Azure Data Studio, the installation of Azure Data Studio by SSMS is skipped. The Azure Data Studio version can be found in the release notes.
+- Starting with SSMS 18.7, SSMS installs a system version of Azure Data Studio by default. If an equal or higher version of Azure Data Studio, both the stable or the insiders version, is already present on the workstation compared to the included version of Azure Data Studio, the installation of Azure Data Studio by SSMS is skipped. The Azure Data Studio version can be found in the release notes.
 - The Azure Data Studio system installer requires the same security rights as the SSMS installer.
-- The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut isn't created and Azure Data Studio isn't registered as a default editor for any file types.
+- The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut isn't created, and Azure Data Studio isn't registered as a default editor for any file type.
 - Localization of Azure Data Studio is accomplished through Language Pack extensions. To localize Azure Data Studio, download the corresponding language pack from the [extension marketplace](../azure-data-studio/extensions/add-extensions.md).
 - At this time, the installation of Azure Data Studio can be skipped by launching the SSMS installer with the command line flag `DoNotInstallAzureDataStudio=1`.
 
 ## Uninstall
 
-SSMS may install shared components if it's determined that they're missing during SSMS installation. SSMS won't automatically uninstall these components when you uninstall SSMS.
+SSMS may install shared components if it's determined they're missing during SSMS installation. SSMS won't automatically uninstall these components when you uninstall SSMS.
 
 The shared components are:
 
@@ -126,7 +184,7 @@ These components aren't uninstalled because they can be shared with other produc
 
 ## Supported SQL offerings
 
-- This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](/lifecycle/products/?products=sql-server.md) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
+- This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](/lifecycle/products/?products=sql-server.md) and provides the most significant level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
 - Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 - SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side by side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
@@ -153,7 +211,7 @@ Supported hardware:
 - Hard disk space: Minimum of 2 GB up to 10 GB of available space
 
 > [!NOTE]
-> SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Azure Data Studio is a cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
+> SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Azure Data Studio is a cross-platform tool that runs on macOS, Linux, and Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

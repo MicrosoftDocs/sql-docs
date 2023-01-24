@@ -42,6 +42,7 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) release.
 | Object Explorer | Databases are no longer brought online in serverless Azure SQL when Databases node is expanded. |
 | Object Explorer | Added support for Ledger views. |
 | Object Explorer | Fixed issue with key binding for objectExplorer.manage not working. |
+| Query Editor | Fixes and updates to SQL grammar (colorization and auto-complete) |
 | Query Plan Viewer | Changed default folder to be user’s home directory when saving a query plan. |
 | Query Results | Added ability to only copy Column Headers, and only for cells that are highlighted. |
 | Query Results | Added option to show or hide the action bar in the results window. |

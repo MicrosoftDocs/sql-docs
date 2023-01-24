@@ -45,11 +45,57 @@ These requirements include:
     - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.
 
 - Virtualization-based security (VBS) must be enabled and running.
-  - To check the status of VBS, sign in to your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer as an administrator, open an elevated Windows PowerShell console, and run msinfo32.exe. 
 
-    ![System information - virtualization-based security](./media/always-encrypted-enclaves/system-information-vbs.png)
+#### Verify VBS is running
 
-  - For instructions on how to enable VBS, see [Enable virtualization-based protection of code integrity](https://learn.microsoft.com/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity).
+> [!NOTE]
+> This step should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
+
+To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the `Virtualization-based security` items towards the bottom of the System Summary.
+
+![System Information screenshot showing virtualization-based security status and configuration](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
+
+The first item to check is `Virtualization-based security`, which can have the following three values:
+
+- `Running` means VBS is configured correctly and was able to start successfully.
+- `Enabled but not running` means VBS is configured to run, but the hardware doesn't have the minimum security requirements to run VBS. You may need to change the configuration of the hardware in BIOS or UEFI to enable optional processor features like an IOMMU or, if the hardware truly doesn't support the required features, you may need to lower the VBS security requirements. Continue reading this section to learn more.
+- `Not enabled` means VBS isn't configured to run.
+
+#### Enable VBS
+
+If VBS is not enabled, run the following command in an elevated PowerShell console to enable it.
+
+```powershell
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name EnableVirtualizationBasedSecurity -Value 1
+```
+
+After changing the registry, restart the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and check if VBS is running again.
+
+For other ways to enable VBS, see [Enable virtualization-based protection of code integrity](https://learn.microsoft.com/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity).
+
+#### Run VBS if it's not running
+
+If VBS is enabled by not running on the computer, check `Virtualization-based security` properties. Compare the values in the `Required Security Properties` item to the values in the `Available Security Properties` item.
+The required properties must be equal to or a subset of the available security properties for VBS to run. The security properties have the following importance:
+
+- `Base virtualization support` is always required, as it represents the minimum hardware features needed to run a hypervisor.
+- `Secure Boot` is recommended but not required. Secure Boot protects against rootkits by requiring a Microsoft-signed bootloader to run immediately after UEFI initialization completes.
+- `DMA Protection` is recommended but not required. DMA protection uses an IOMMU to protect VBS and enclave memory from direct memory access attacks. In a production environment, you should always use computers with DMA protection. In a dev/test environment, it's okay to remove the requirement for DMA protection. If the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance is virtualized, you'll most likely not have DMA protection available and will need to remove the requirement for VBS to run.
+
+Before lowering the VBS required security features, check with your OEM or cloud service provider to confirm if there's a way to enable the missing platform requirements in UEFI or BIOS (for example, enabling Secure Boot, Intel VT-d or AMD IOV).
+
+To change the required platform security features for VBS, run the following command in an elevated PowerShell console:
+
+```powershell
+# Value 1 = Only Secure Boot is required
+# Value 2 = Only DMA protection is required (default configuration)
+# Value 3 = Both Secure Boot and DMA protection are required
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 1
+```
+
+After changing the registry, restart the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and check if VBS is running again.
+
+If the computer is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after rebooting. Contact your IT help desk to see if they deploy policies that manage your VBS configuration.
 
 ### Tooling requirements
 

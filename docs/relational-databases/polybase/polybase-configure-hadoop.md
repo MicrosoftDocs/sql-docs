@@ -17,7 +17,7 @@ ms.custom: seo-dt-2019
 
 The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
 
-## Prerequisites
+## Prerequisites only valid for < SQL2022
 
 - If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 

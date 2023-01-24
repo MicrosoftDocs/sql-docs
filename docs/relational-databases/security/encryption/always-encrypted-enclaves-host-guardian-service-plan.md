@@ -26,7 +26,7 @@ Attestation helps detect certain attacks by malicious OS administrators, for exa
 The Host Guardian Service (HGS) role in Windows Server 2019 or later provides remote attestation capabilities for Always Encrypted with VBS enclaves. This article will guide you through the pre-deployment decisions and requirements to use Always Encrypted with VBS enclaves and HGS attestation.
 
 > [!NOTE]
-> When [ssnoversion-md](../../../includes/ssnoversion-md.md)] is deployed in a VM, VBS enclaves help protect your data from attacks inside the VM. However, they do not provide any protection from attacks using privileged system accounts originating from the host. For example, a memory dump of the VM generated on the host machine may contain the memory of the enclave.
+> When [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is deployed in a VM, VBS enclaves help protect your data from attacks inside the VM. However, they do not provide any protection from attacks using privileged system accounts originating from the host. For example, a memory dump of the VM generated on the host machine may contain the memory of the enclave.
 
 ## Architecture overview
 

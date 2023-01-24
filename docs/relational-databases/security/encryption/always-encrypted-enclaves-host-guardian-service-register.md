@@ -3,7 +3,7 @@ title: "Register computer with Host Guardian Service"
 description: "Register the SQL Server computer with the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: "02/01/2023"
 ms.service: sql
 ms.reviewer: vanto
 ms.subservice: security
@@ -75,7 +75,7 @@ Before lowering the VBS required security features, check with your OEM or cloud
 To change the required platform security features for VBS, run the following command in an elevated PowerShell console:
 
 ```powershell
-# Value 0 = No security features required (use this for Azure VMs)
+# Value 0 = No security features required
 # Value 1 = Only Secure Boot is required
 # Value 2 = Only DMA protection is required (default configuration)
 # Value 3 = Both Secure Boot and DMA protection are required

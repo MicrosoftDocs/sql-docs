@@ -67,9 +67,10 @@ There are three steps to complete before the assessment begins.
 
 1. **Databases(s) for assessment**
 
+1. Assessment Parameters
    <waiting for info from Aditya to go here>
 
-1. **Step 3: View Assessment Results**
+1. **View Assessment Results**
 
 Once the assessment is complete, a consolidated output is generated.
 

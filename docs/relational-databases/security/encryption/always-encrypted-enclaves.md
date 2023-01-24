@@ -39,7 +39,7 @@ During statement processing, both the data and the column encryption keys aren't
 
 ## Supported client drivers
 
-To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. Configure the application and the client driver to enable enclave computations and enclave attestation. For details, including the list of supported client drivers, see [Develop applications using Always Encrypted](always-encrypted-client-development.md).
+To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. Configure the application and the client driver to enable enclave computations and enclave attestation (see the [Secure enclave attestation](#secure-enclave-attestation) section below). For details, including the list of supported client drivers, see [Develop applications using Always Encrypted](always-encrypted-client-development.md).
 
 ## Supported enclave technologies
 
@@ -61,6 +61,8 @@ The type of the enclave available for your database depends on the SQL product h
 
   > [!NOTE]
   > VBS enclaves are currently available in all [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] regions **except**: Australia Central, Australia Central 2,  Korea Central, Korea South, UAE Central, Jio India Central, Jio India West.
+
+See the [Security considerations](#security-considerations) section for important information on the level protection each enclave type provides.
 
 ## Secure enclave attestation
 
@@ -177,6 +179,7 @@ With the [traditional database recovery process](/azure/sql-database/sql-databas
 
 The following security considerations apply to Always Encrypted with secure enclaves.
 
+- VBS enclaves help protect your data from attacks inside the VM. However, they do not provide any protection from attacks using privileged system accounts originating from the host. For example, a memory dump of the VM generated on the host machine may contain the memory of the enclave. Intel SGX enclaves protect data from attacks originating from both the guest OS and host OS.
 - Using enclave attestation is recommended if it is available for your environment and if you're concerned about protecting your data from attacks by users with the OS-level admin access to the machine hosting your database. If you use attestation, you need to ensure the attestation service and its configuration are managed by a trusted administrator. Also, both supported attestation services offer different policies and attestation modes, some of which perform minimal verification of the enclave and its environment, and are designed for testing and development. Closely follow the guidelines specific to your attestation service to ensure you're using the recommended configurations and policies for your production deployments.
 - Encrypting a column using randomized encryption with an enclave-enabled column encryption key may result in leaking the order of data stored in the column, as such columns support range comparisons. For example, if an encrypted column, containing employee salaries, has an index, a malicious DBA could scan the index to find the maximum encrypted salary value and identify a person with the maximum salary (assuming the name of the person isn't encrypted).
 - If you use Always Encrypted to protect sensitive data from unauthorized access by DBAs, don't share the column master keys or column encryption keys with the DBAs. A DBA can manage indexes on encrypted columns without having direct access to the keys by using the cache of column encryption keys inside the enclave.

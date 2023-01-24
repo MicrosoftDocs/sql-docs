@@ -14,7 +14,7 @@ metadata:
   author: VanMSFT
   ms.author: vanto
   ms.reviewer: kendralittle, mathoma
-  ms.date: 07/14/2021
+  ms.date: 02/01/2021
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -51,6 +51,8 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
+          - text: Plan for Always Encrypted with secure enclaves without attestation
+            url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-no-attestation-plan
           - text: Plan for Host Guardian Service attestation
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan
           - text: Deploy the Host Guardian Service for SQL Server

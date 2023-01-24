@@ -32,12 +32,9 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) version.
 
 | Platform | Type | Download |
 | --- | --- | --- |
-| Windows | User Installer | [64 bit](https://go.microsoft.com/fwlink/?linkid=2222768) |
-| | System Installer | [64 bit](https://go.microsoft.com/fwlink/?linkid=2222769) |
-| | .zip | [64 bit](https://go.microsoft.com/fwlink/?linkid=2223104) |
-| Windows | User Installer | [arm64](https://go.microsoft.com/fwlink/?linkid=2222660) |
-| | System Installer | [arm64](https://go.microsoft.com/fwlink/?linkid=2222849) |
-| | .zip | [arm64](https://go.microsoft.com/fwlink/?linkid=2222850) |
+| Windows | User Installer | [64 bit](https://go.microsoft.com/fwlink/?linkid=2222768)&emsp;[ARM](https://go.microsoft.com/fwlink/?linkid=2222660)|
+| | System Installer | [64 bit](https://go.microsoft.com/fwlink/?linkid=2222769)&emsp;[ARM](https://go.microsoft.com/fwlink/?linkid=2222849)|
+| | .zip | [64 bit](https://go.microsoft.com/fwlink/?linkid=2223104)&emsp;[ARM](https://go.microsoft.com/fwlink/?linkid=2222850)|
 | Linux | .tar.gz | [64 bit](https://go.microsoft.com/fwlink/?linkid=2222918) |
 | | .deb | [64 bit](https://go.microsoft.com/fwlink/?linkid=2222875) |
 | | .rpm | [64 bit](https://go.microsoft.com/fwlink/?linkid=2223105) |

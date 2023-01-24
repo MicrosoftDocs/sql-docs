@@ -24,8 +24,7 @@ Before you begin, verify that the SQL Server instance that hosts the databases:
 * Is [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
 * Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
 * Is connected to the internet directly or through a proxy server.
-* Has `NT AUTHORITY\SYSTEM` in the `sysadmin` role.
-
+   
 ## Inventory databases
 
 1. Locate the Azure Arc-enabled SQL Server instance in Azure portal
@@ -49,3 +48,4 @@ After you create, modify, or delete a database, changes are visible in Azure por
 * [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
 
 * [Configure SQL Assessment | Azure Arc-enabled SQL Server](assess.md)
+

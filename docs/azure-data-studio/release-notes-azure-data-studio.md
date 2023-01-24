@@ -33,7 +33,7 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) release.
 | --- | --- |
 | Azure Subscriptions |  Introduced Azure Synapse Analytics and Dedicated SQL Pools nodes. |
 | Azure SQL Migration Extension | Premium series memory optimized SQL MI SKUs included in recommendations. |
-| Connection | Migration to MSAL from ADAL. |
+| Connection | Migrated Azure authentication library from ADAL to MSAL. MSAL is the library used by default starting with release 1.41.  However, if you encounter issues, you can change back to ADAL within **Settings > Azure: Authentication Library**. |
 | Connection | Added ability to provide a description when creating a firewall rule from Azure Data Studio. |
 | Connection | Include ability to change password for new or expired login. |
 | Connection | Add support for SQL Server Alias use when connecting to a server. |
@@ -84,7 +84,7 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) release.
 
 For a full list of bug fixes addressed for the January 2023 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/92?closed=1).
 
-#### Known issues in 1.41.1
+#### Known issues in 1.41.0
 
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 

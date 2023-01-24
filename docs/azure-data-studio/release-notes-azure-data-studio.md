@@ -62,7 +62,7 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) release.
 | Migration Extension | Added support for non-public clouds for migration scenarios. |
 | MySQL Extension | Updated resource endpoints to support AAD logins in the MySQL extension. |
 | Notebooks | Improve Intellisense refresh in Notebook cells. |
-| Notebooks | Address issue with “New Notebook Job” resulting in an empty form. |
+| Notebooks | Address issue with "New Notebook Job" resulting in an empty form. |
 | Object Explorer | Fixed issue with database list not loading. |
 | Query Execution | Fixed error generated when executing a query with LEFT JOIN and NULL values. |
 | Query Plan Viewer | When saving query plans (.sqlplan file), the filename will numerically increment to prevent duplicate filenames. |

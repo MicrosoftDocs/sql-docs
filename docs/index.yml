@@ -26,6 +26,9 @@ highlightedContent:
    - title: Educational SQL resources 
      itemType: learn
      url: sql-server/educational-sql-resources.yml
+   - title: Troubleshoot
+     itemType: conceptual
+     url: /troubleshoot/sql/welcome-sql-server
 
 productDirectory:
   items:
@@ -38,8 +41,6 @@ productDirectory:
         text: On an Azure VM
       - url: /previous-versions/sql/
         text: Previous Versions (SQL 2005-2012) 
-      - url: /troubleshoot/sql/welcome-sql-server
-        text: Troubleshoot 
   - title: SQL on Azure 
     imageSrc: media/index/azure.svg
     links:

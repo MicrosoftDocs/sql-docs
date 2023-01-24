@@ -77,6 +77,8 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
     sudo systemctl restart mssql-server
     ```
 
+## Install runtimes and packages
+
 ## Setup R support
 
 ### Install R runtime

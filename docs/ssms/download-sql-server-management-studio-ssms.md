@@ -99,11 +99,11 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-1. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+1. If all goes well, you can see SSMS installed at "%systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
 ### [PowerShell](#tab/azure-powershell/windows)
 
-You can also install SSMS using a PowerShell.
+You can also install SSMS using PowerShell.
 
 If you want to install SSMS in the background with no GUI prompts, follow the steps below.
 
@@ -124,14 +124,14 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
     ```powershell
     $media_path = "C:\Installers\SSMS-Setup-ENU.exe"
     $install_path = "`"C:\Program Files (x86)\Microsoft SQL Server Management Studio 18`""
-    $params = " /Install /Passive SSMSInstallRoot=$install_path"
+    $params = " /Install /Quiet SSMSInstallRoot=$install_path"
     
     Start-Process -FilePath $media_path -ArgumentList $params -Wait
     ```
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-1. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+1. If all goes well, you can see SSMS installed at "%systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
 ---
 

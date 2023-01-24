@@ -180,7 +180,7 @@ Starting with SQL Server 2014, a new SQL Server object has been added to be used
 **Database errors**  
   
 **Errors when creating a database**
-Resolution: Review the instructions given in Lesson 4 in [Tutorial: Use Microsoft Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#4----restore-database-to-virtual-machine-from-url).  
+Resolution: Review the instructions given in Lesson 4 in [Tutorial: Use Microsoft Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#4---restore-database-to-virtual-machine-from-url).  
   
 **Errors when running the Alter statement** 
 Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Use Microsoft Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  

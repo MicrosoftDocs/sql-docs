@@ -339,7 +339,7 @@ To view the logs for the deployment and check the deployment history:
 
    :::image type="content" source="media/availability-group-az-portal-configure/failed-deployment.png" alt-text="Screenshot of the Azure portal that shows a failed availability group deployment in a list of deployments." :::
 
-If the deployment fails and you want to redeploy by using the portal, you need to manually clean up the resources because the UX portal deployment isn't idempotent. These clean-up tasks include deleting VMs and removing entries in Active Directory and/or DNS. However, if you deployed an availability group by using the template for automation, clean-up of resources isn't necessary because the template is idempotent.
+If the deployment fails and you want to redeploy by using the portal, you need to manually cleanup the resources because deployment through the portal isn't idempotent (repeatable). These clean-up tasks include deleting VMs and removing entries in Active Directory and/or DNS. However, if you use the Azure portal to create a template to deploy your availability group, and then use the template for automation, clean-up of resources isn't necessary because the template is idempotent.
 
 ## Next steps
 

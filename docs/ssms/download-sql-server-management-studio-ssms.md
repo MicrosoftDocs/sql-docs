@@ -77,7 +77,7 @@ This article is for the latest version of SSMS only. To download previous versio
 
 ## Unattended install
 
-### [Command Line](#tab/command-line/windows)
+#### [Command Line](#tab/command-line/)
 
 You can also install SSMS using a command prompt script.
 
@@ -94,14 +94,14 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
     Example:
 
     ```command line
-    start "" /w %systemdrive%\SSMS\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    start "" /w %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
     ```
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-1. If all goes well, you can see SSMS installed at "%systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
-### [PowerShell](#tab/azure-powershell/windows)
+#### [PowerShell](#tab/azure-powershell)
 
 You can also install SSMS using PowerShell.
 
@@ -131,7 +131,7 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-1. If all goes well, you can see SSMS installed at "%systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
 ---
 

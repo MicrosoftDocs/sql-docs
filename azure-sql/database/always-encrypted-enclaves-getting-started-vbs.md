@@ -30,7 +30,7 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 
 # [SSMS](#tab/ssmsrequirements)
 
-[Download SQL Server Management Studio (SSMS) 19 or later](/sql/ssms/download-sql-server-management-studio-ssms).
+[Download the latest general availability (GA) version of SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 # [PowerShell](#tab/azure-powershellrequirements)
 

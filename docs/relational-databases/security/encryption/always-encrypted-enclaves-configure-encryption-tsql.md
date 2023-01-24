@@ -36,8 +36,7 @@ The remainder of this article describes how to trigger in-place encryption using
 ## Perform in-place encryption with Transact-SQL in SSMS
 ### Pre-requisites
 - Pre-requisites described in [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
-- SQL Server Management Studio 18.3 or higher when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-- SQL Server Management Studio 18.8 or higher when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+- Download [the latest general availability (GA) version of SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ### Steps
 1. Open a query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).
@@ -141,5 +140,4 @@ GO
 - [Troubleshoot common issues for Always Encrypted with secure enclaves](always-encrypted-enclaves-troubleshooting.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

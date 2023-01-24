@@ -25,7 +25,7 @@ Intel SGX is a hardware-based trusted execution environment technology. It is av
 
 Combined with attestation provided by [Microsoft Azure Attestation](/sql/relational-databases/security/encryption/always-encrypted-enclaves#secure-enclave-attestation), Intel SGX enclaves offer a stronger protection against attacks from actors with the OS-level admin access, compared to VBS enclaves. However, before you configure the DC-series hardware for your database, make sure you are aware of its performance properties and limitations:
 
-- Unlike other hardware configurations of the v-core purchasing model, DC-series uses physical processor cores, not logical cores. The [resource limits](service-tiers-vcore.md#resource-limits) of DC-series databases differ from the resource limits of the standard-series (Gen 5) hardware configuration.
+- Unlike other hardware configurations of the vCore purchasing model, DC-series uses physical processor cores, not logical cores. The [resource limits](service-tiers-vcore.md#resource-limits) of DC-series databases differ from the resource limits of the standard-series (Gen 5) hardware configuration.
 - The maximum number of processor cores you can set for a DC-series database is 8.
 - DC-series doesn't work with [serverless](serverless-tier-overview.md).
 

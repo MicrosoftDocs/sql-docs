@@ -27,14 +27,9 @@ This tutorial teaches you how to create and use indexes on enclave-enabled colum
 
 ## Prerequisites
 
-[Download SQL Server Management Studio (SSMS) 19 or later](/sql/ssms/download-sql-server-management-studio-ssms)
+[Download the latest general availability (GA) version of SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
-
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx)
-- [Tutorial: Getting started with Always Encrypted with VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs)
-
+Make sure you've completed one of the [Getting started with Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) tutorials before following the below steps in this tutorial.
 
 ## Step 1: Enable Accelerated Database Recovery (ADR) in your database
 

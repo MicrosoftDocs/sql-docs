@@ -74,7 +74,7 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) release.
 | Query Results | Fixed behavior where focus was incorrectly set on a cell using keyboard navigation. |
 | Resource Deployment | Remove 'Preview' flag for SQL Server 2022 deployment types. |
 | Schema Compare Extension | Fixed problem where differences in schema compare were not being highlighted. |
-| Schema Compare Extension | Permissions are now included in schema compare when the “Include Permissions” option is selected. |
+| Schema Compare Extension | Permissions are now included in schema compare when the "Include Permissions" option is selected. |
 | SQL Projects Extension | Changes to db_datawriter or db_datareader roles are now supported. |
 | SQL Projects Extension | Updated Database Projects Net Core SDK Location dialog to be more descriptive. |
 | Table Designer | Updated Table Designer to disable transaction support for Azure Synapse databases. |

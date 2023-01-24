@@ -48,9 +48,9 @@ items:
       href: ../machine-learning/install/custom-runtime-python.md
     - name: Install R custom runtime
       href: ../machine-learning/install/custom-runtime-r.md
-    - name: Install SQL Server 2022 ML runtimes and packages on Windows
+    - name: Install ML runtimes and packages on Windows
       href: ../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md#install-runtimes-and-packages
-    - name: Install SQL Server 2022 ML runtimes and packages on Linux
+    - name: Install ML runtimes and packages on Linux
       href: ../linux/sql-server-linux-setup-machine-learning-sql-2022.md?toc=/sql/machine-learning/toc.json#install-runtimes-and-packages      
     - name: Install Java custom runtime
       href: ../language-extensions/install/windows-java.md

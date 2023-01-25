@@ -161,7 +161,7 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 >     - To regain access to MCD tables, opt-in the preview again. 
 >     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
 > - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
-> Preview feature are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
+> - Preview feature are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].

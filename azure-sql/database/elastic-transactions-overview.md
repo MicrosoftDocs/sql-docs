@@ -261,7 +261,7 @@ These DMVs are particularly useful:
 
 The following limitations currently apply to elastic database transactions in *SQL Database*:
 
-* Only transactions across databases in SQL Database are supported. Other [X/Open XA](https://en.wikipedia.org/wiki/X/Open_XA) resource providers and databases outside of SQL Database can't participate in elastic database transactions. That means that elastic database transactions can't stretch across on premises SQL Server and Azure SQL Database. For distributed transactions on premises, continue to use MSDTC.
+* Only transactions across databases in SQL Database are supported. Other [X/Open XA](https://en.wikipedia.org/wiki/X/Open_XA) resource providers and databases outside of SQL Database can't participate in elastic database transactions. That means that elastic database transactions can't stretch across on-premises SQL Server and Azure SQL Database. For distributed transactions on premises, continue to use MSDTC.
 * Only client-coordinated transactions from a .NET application are supported. Server-side support for T-SQL such as BEGIN DISTRIBUTED TRANSACTION is planned, but not yet available.
 * Transactions across WCF services aren't supported. For example, you have a WCF service method that executes a transaction. Enclosing the call within a transaction scope will fail as a [System.ServiceModel.ProtocolException](/dotnet/api/system.servicemodel.protocolexception).
 

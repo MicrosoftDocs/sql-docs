@@ -90,6 +90,7 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 > - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
 > - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD materialized views will stay but become unreadable. 
 >     - To regain access to MCD materialized views, opt-in the preview again. 
+> - Preview feature are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
 
 #### *select_statement*   
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:

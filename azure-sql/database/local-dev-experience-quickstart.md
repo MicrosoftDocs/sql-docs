@@ -1,14 +1,12 @@
 ---
 title: "Quickstart: Create a local development environment for Azure SQL Database"
 description: Create a local development environment for Azure SQL Database using this hands-on guide.
-services:
-  - "sql-database"
-ms.service: sql-database
 author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
-ms.topic: quickstart
 ms.date: 05/24/2022
+ms.service: sql-database
+ms.topic: quickstart
 ---
 
 # Quickstart: Create a local development environment for Azure SQL Database
@@ -76,7 +74,7 @@ The steps for creating a new project using Visual Studio Code, or Azure Data Stu
  
     :::image type="content" source="./media/local-dev-experience-quickstart/connect-query-azure-sql-database.png" alt-text="Screenshot of connecting to and querying an Azure SQL Database emulator.":::
      
-1. Rebuild and deploy your Database project to one of the containerized instances running on your local machine with each iteration of adding or modifying objects in your Database Project, until it’s ready.
+1. Rebuild and deploy your Database project to one of the containerized instances running on your local machine with each iteration of adding or modifying objects in your Database Project, until it's ready.
  
      :::image type="content" source="./media/local-dev-experience-quickstart/deploy-dacpac-succeeded.png" alt-text="Screenshot of iterating on a Database Project.":::
     

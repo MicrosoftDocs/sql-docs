@@ -4,9 +4,8 @@ description: DENY Server Principal Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/09/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "DENY statement, impersonate"
@@ -19,15 +18,14 @@ helpviewer_keywords:
   - "logins [SQL Server], denying access"
 dev_langs:
   - "TSQL"
-ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 ---
 # DENY Server Principal Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Denies permissions granted on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

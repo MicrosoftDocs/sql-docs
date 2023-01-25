@@ -3,9 +3,8 @@ description: "Column Properties (Visual Database Tools)"
 title: Column Properties
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.Column.ColumnIdentitySpec"
@@ -21,7 +20,7 @@ ms.reviewer:
 ---
 # Column Properties (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
-There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
+There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
   
 > [!NOTE]  
 > The properties in this topic are ordered by category rather than alphabet.  

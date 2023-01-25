@@ -1,12 +1,11 @@
 ---
 title: "ALTER DATABASE Database Mirroring (Transact-SQL)"
 description: ALTER DATABASE Database Mirroring (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "02/21/2019"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "witness [SQL Server], establishing"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], Transact-SQL"
 dev_langs:
   - "TSQL"
-ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring
 
@@ -31,7 +29,7 @@ Controls database mirroring for a database. Values specified with the database m
 
 For ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). For ALTER DATABASE SET options, see [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

@@ -3,10 +3,9 @@ description: "Execute a SQL Server Native Client User-Defined Function and Proce
 title: "User-Defined Function, Return Code (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined functions [OLE DB]"

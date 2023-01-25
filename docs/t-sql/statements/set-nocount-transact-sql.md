@@ -4,9 +4,8 @@ description: SET NOCOUNT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/09/2021"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "NOCOUNT"
@@ -28,7 +27,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
   Stops the message that shows the count of the number of rows affected by a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or stored procedure from being returned as part of the result set.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

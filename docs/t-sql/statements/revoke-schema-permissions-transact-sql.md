@@ -4,9 +4,8 @@ description: REVOKE Schema Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "REVOKE statement, schema"
@@ -14,14 +13,13 @@ helpviewer_keywords:
   - "permissions [SQL Server], schemas"
 dev_langs:
   - "TSQL"
-ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 ---
 # REVOKE Schema Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on a schema.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -5,11 +5,10 @@ description: Grant permissions on an Always On availability group.
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/12/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Availability Groups [SQL Server], permissions"
   - "GRANT statement, availability groups"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "permissions [SQL Server], availability group"
 dev_langs:
   - "TSQL"
-ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 ---
 # GRANT Availability Group Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +23,7 @@ ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
   Grants permissions on an Always On availability group.  
   
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

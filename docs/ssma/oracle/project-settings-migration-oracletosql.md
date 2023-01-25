@@ -1,17 +1,16 @@
 ---
 description: "Project Settings (Migration) (OracleToSQL)"
 title: "Project Settings (Migration) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.oracle.projectsettingmigration.f1"
 

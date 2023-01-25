@@ -1,13 +1,12 @@
 ---
 title: ALTER TABLE (Transact-SQL)
 description: ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -79,7 +78,7 @@ Modifies a table definition by altering, adding, or dropping columns and constra
 >   - [Syntax](#syntax-for-memory-optimized-tables)
 >   - [Examples](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax for disk-based tables
 
@@ -515,7 +514,7 @@ The scale for the specified data type. For more information about valid scale va
 Applies only to the **varchar**, **nvarchar**, and **varbinary** data types for storing 2^31-1 bytes of character, binary data, and of Unicode data.
 
 #### *xml_schema_collection*  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Applies only to the **xml** data type for associating an XML schema with the type. Before typing an **xml** column to a schema collection, you first create the schema collection in the database by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
 
@@ -552,7 +551,7 @@ If you add a column with a user-defined data type, be sure to define the column 
 > If NULL or NOT NULL is specified with ALTER COLUMN, *new_data_type* [(*precision* [, *scale* ])] must also be specified. If the data type, precision, and scale are not changed, specify the current column values.
 
 #### [ {ADD | DROP} ROWGUIDCOL ]  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies that the ROWGUIDCOL property is added to or dropped from the specified column. ROWGUIDCOL indicates that the column is a row GUID column. You can set only one **uniqueidentifier** column per table as the ROWGUIDCOL column. And, you can only assign the ROWGUIDCOL property to a **uniqueidentifier** column. You can't assign ROWGUIDCOL to a column of a user-defined data type.
 
@@ -566,7 +565,7 @@ Specifies that the PERSISTED property is added to or dropped from the specified 
 Any computed column that's used as a partitioning column of a partitioned table must be explicitly marked PERSISTED.
 
 #### DROP NOT FOR REPLICATION  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies that values are incremented in identity columns when replication agents carry out insert operations. You can specify this clause only if *column_name* is an identity column.
 
@@ -689,7 +688,7 @@ Drops the specification for the columns that the system will use for system vers
 Specifies that one or more drop clustered constraint options are set.
 
 #### MAXDOP = *max_degree_of_parallelism*  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Overrides the **max degree of parallelism** configuration option only for the duration of the operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
@@ -709,7 +708,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
-> Parallel index operations aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Parallel index operations aren't available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), and [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 #### ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF. You can run REBUILD as an ONLINE operation.
@@ -725,10 +724,10 @@ Table locks apply for the duration of the index operation. An offline index oper
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
 > [!NOTE]
-> Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), and [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 #### MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ ,...*n* ] **)** | *filegroup* | **"**default**"** }  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies a location to move the data rows currently in the leaf level of the clustered index. The table is moved to the new location. This option applies only to constraints that create a clustered index.
 
@@ -751,7 +750,7 @@ Specifies that all triggers in the table are enabled or disabled.
 Specifies the name of the trigger to disable or enable.
 
 #### { ENABLE | DISABLE } CHANGE_TRACKING  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies whether change tracking is enabled disabled for the table. By default, change tracking is disabled.
 
@@ -760,12 +759,12 @@ This option is available only when change tracking is enabled for the database. 
 To enable change tracking, the table must have a primary key.
 
 #### WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies whether the [!INCLUDE[ssDE](../../includes/ssde-md.md)] tracks, which change tracked columns were updated. The default value is OFF.
 
 #### SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Switches a block of data in one of the following ways:
 
@@ -790,7 +789,7 @@ For **SWITCH** restriction when using replication, see [Replicate Partitioned Ta
 Nonclustered columnstore indexes were built in a read-only format before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 and for SQL Database before version V12. You must rebuild nonclustered columnstore indexes to the current format (which is updatable) before any PARTITION operations can be run.
 
 #### SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_name* \| **"**default**"** \| **"**NULL**"** }**)**  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] doesn't support `FILESTREAM`.
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] doesn't support `FILESTREAM`.
 
 Specifies where FILESTREAM data is stored.
 
@@ -831,7 +830,7 @@ RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \
 Specifies the retention period policy for the table. The retention period is specified as a combination of a positive integer value and the date part unit. 
 
 #### SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies the allowed methods of lock escalation for a table.
 
@@ -853,7 +852,7 @@ Use the REBUILD WITH syntax to rebuild an entire table including all the partiti
 Use the REBUILD PARTITION syntax to rebuild a single partition in a partitioned table.
 
 #### PARTITION = ALL  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Rebuilds all partitions when changing the partition compression settings.
 
@@ -865,7 +864,7 @@ When a specific compression setting isn't specified with the REBUILD operation, 
 For complete descriptions of the rebuild options, see [ALTER TABLE index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md).
 
 #### DATA_COMPRESSION  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:
 
@@ -915,7 +914,7 @@ OFF
 Table locks are applied for the duration of the index operation. This prevents all user access to the underlying table for the duration of the operation.
 
 #### *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 The name of the column set. A column set is an untyped XML representation that combines all of the sparse columns of a table into a structured output. A column set can't be added to a table that contains sparse columns. For more information about column sets, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).
 
@@ -935,7 +934,7 @@ Specifies the Windows-compatible FileTable directory name. This name should be u
 Enables or disables Stretch Database for a table. For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 **Enabling Stretch Database for a table**
 
@@ -1023,7 +1022,7 @@ Requires **ALTER ANY CONNECTION** permission.
 Conditionally drops the column or constraint only if it already exists.
 
 #### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
-**Applies to**: SQL Server 2022 and later.
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
 Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](./alter-table-index-option-transact-sql.md) in the [ALTER TABLE table_constraint](./alter-table-table-constraint-transact-sql.md).
 
@@ -1150,7 +1149,6 @@ Adding or altering a column that updates the rows of the table requires **UPDATE
 |[Disabling and enabling constraints and triggers](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 |[Online operations](#online)|ONLINE|
 |[System versioning](#system_versioning)|SYSTEM_VERSIONING|
-| &nbsp; | &nbsp; |
 
 ### <a name="add"></a>Adding columns and constraints
 
@@ -1282,7 +1280,7 @@ GO
 
 The following example creates the PRIMARY KEY constraint `PK_TransactionHistoryArchive_TransactionID` and sets the options `FILLFACTOR`, `ONLINE`, and `PAD_INDEX`. The resulting clustered index will have the same name as the constraint.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 USE AdventureWorks;
@@ -1584,7 +1582,7 @@ REBUILD WITH (DATA_COMPRESSION = PAGE) ;
 
 The following example changes the compression of a partitioned table. The `REBUILD PARTITION = 1` syntax causes only partition number `1` to be rebuilt.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 ALTER TABLE PartitionTable1
@@ -1594,7 +1592,7 @@ GO
 
 The same operation using the following alternate syntax causes all partitions in the table to be rebuilt.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 ALTER TABLE PartitionTable1
@@ -1645,7 +1643,7 @@ GO
 
 The following example enables lock escalation to the partition level on a partitioned table. If the table isn't partitioned, lock escalation is set at the TABLE level.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 ALTER TABLE dbo.T1 SET (LOCK_ESCALATION = AUTO) ;
@@ -1656,7 +1654,7 @@ GO
 
 The following example enables change tracking on the `Person.Person` table.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 USE AdventureWorks;
@@ -1666,7 +1664,7 @@ ENABLE CHANGE_TRACKING ;
 
 The following example enables change tracking and enables the tracking of the columns that are updated during a change.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 USE AdventureWorks;
@@ -1678,7 +1676,7 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
 
 The following example disables change tracking on the `Person.Person` table.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 USE AdventureWorks;
@@ -1874,7 +1872,7 @@ DROP PERIOD FOR SYSTEM_TIME ;
 DROP TABLE DepartmentHistory ;
 ```
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 The following examples A through C use the `FactResellerSales` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
 

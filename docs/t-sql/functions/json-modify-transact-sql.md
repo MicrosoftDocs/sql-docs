@@ -4,10 +4,9 @@ description: "JSON_MODIFY (Transact-SQL)"
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 dev_langs:
   - "TSQL"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
@@ -18,7 +17,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
 
   Updates the value of a property in a JSON string and returns the updated JSON string.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

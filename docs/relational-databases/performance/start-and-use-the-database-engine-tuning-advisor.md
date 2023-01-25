@@ -3,9 +3,9 @@ title: "Start and Use the Database Engine Tuning Advisor"
 description: Learn how to start and use Database Engine Tuning Advisor in SQL Server to create workloads, tune databases, and create XML input files.
 ms.custom: ""
 ms.date: "05/11/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dta.workload.f1"

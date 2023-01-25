@@ -4,8 +4,8 @@ title: "Connect to Azure SQL Database"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
-ms.prod: sql
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: markingmyname
@@ -14,6 +14,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Connecting to an Azure SQL Database Using SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   For a sample that shows how to connect to a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Development: How-to Topics (Azure SQL Database)](/previous-versions/azure/ee621787(v=azure.100)).  
   

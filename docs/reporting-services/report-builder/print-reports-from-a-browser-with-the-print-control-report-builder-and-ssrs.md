@@ -2,9 +2,8 @@
 title: "Print Reports from a Browser with the Print Control (Report Builder) | Microsoft Docs"
 description: To improve the print quality of reports viewed in a browser and to print multiple pages, use the client-side print features in SQL Server Reporting Services.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 
 
 ms.topic: conceptual
@@ -32,7 +31,7 @@ ms.author: maggies
  To preview a report, in the **Print** dialog box, click the **Preview** button. Clicking preview opens the first page of the report in a separate preview window. Additional pages are made available as the report is rendered on the report server. A previewed report is rendered in EMF format. You can navigate to the previous or next page until the last page is reached, and the **Next** button is disabled.  
   
 ### Adjusting Print Margins  
- You can modify the print margins in the rendered EMF report prior to printing the report. To do this, in the **Print** dialog box, click the **Preview** button. At the top of the preview page, click the **Margins** button. The Margins dialog box is displayed. Configure the top, bottom, right, and left margins as desired. [!INCLUDE[clickOK](../../includes/clickok-md.md)] The dialog box closes and the settings are stored for rendering preview and printing.  
+ You can modify the print margins in the rendered EMF report prior to printing the report. To do this, in the **Print** dialog box, click the **Preview** button. At the top of the preview page, click the **Margins** button. The Margins dialog box is displayed. Configure the top, bottom, right, and left margins as desired. Select **OK**. The dialog box closes and the settings are stored for rendering preview and printing.  
   
 ## See Also  
  [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   

@@ -5,11 +5,10 @@ description: Grants permissions on an XML schema collection.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "GRANT statement, XML schema collections"
   - "XML schema collections [SQL Server], permissions"
@@ -17,14 +16,13 @@ helpviewer_keywords:
   - "schema collections [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 ---
 # GRANT XML Schema Collection Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on an XML schema collection.   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

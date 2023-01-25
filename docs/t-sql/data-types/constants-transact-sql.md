@@ -1,16 +1,13 @@
 ---
+title: "Constants (Transact-SQL)"
 description: "Constants (Transact-SQL)"
-title: "Constants (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/09/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "uniqueidentifier data type"
   - "bit data type"
   - "constants [SQL Server]"
@@ -29,9 +26,8 @@ helpviewer_keywords:
   - "literals [SQL Server], constants"
   - "real data type"
   - "negative values"
-ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Constants (Transact-SQL)
@@ -203,7 +199,7 @@ Signed **money** expressions:
 ```
   
 ## Enhanced Collations  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md) clause.
+The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md) clause.
   
 ## See also
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

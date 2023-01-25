@@ -1,12 +1,11 @@
 ---
 title: "ALTER FUNCTION (Transact-SQL)"
 description: ALTER FUNCTION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_FUNCTION_TSQL"
@@ -17,15 +16,14 @@ helpviewer_keywords:
   - "functions [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Alters an existing [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR function that was previously created by executing the CREATE FUNCTION statement, without changing permissions and without affecting any dependent functions, stored procedures, or triggers.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -217,7 +215,7 @@ RETURNS return_data_type
  [ *type_schema_name.* ] *parameter_data_type*  
  Is the parameter data type and optionally, the schema to which it belongs. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types **cursor** and **table** cannot be specified as a parameter data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  
   
- If *type_schema_name* is not specified, the [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] looks for the *parameter_data_type* in the following order:  
+ If *type_schema_name* is not specified, the [!INCLUDE[ssdenoversion-md](../../includes/ssdenoversion-md.md)] looks for the *parameter_data_type* in the following order:  
   
 -   The schema that contains the names of SQL Server system data types.  
   
@@ -257,7 +255,7 @@ RETURNS return_data_type
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
   
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies the method of an assembly to bind with the function. *assembly_name* must match an existing assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current database with visibility on. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (**.**) to separate namespace parts, the class name must be delimited by using brackets (**[]**) or quotation marks (**""**). *method_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a static method in the specified class.  
   
@@ -271,7 +269,7 @@ RETURNS return_data_type
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints.  
   
 \< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)**
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types.  
   
@@ -294,7 +292,7 @@ RETURNS return_data_type
  Specifies the function will have one or more of the following options.  
   
  ENCRYPTION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encrypts the catalog view columns that contains the text of the ALTER FUNCTION statement. Using ENCRYPTION prevents the function from being published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. ENCRYPTION cannot be specified for CLR functions.  
   

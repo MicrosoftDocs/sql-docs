@@ -2,9 +2,8 @@
 title: "Add a subreport and parameters to a paginated report | Microsoft Docs"
 description: Learn how to add a subreport to a paginated report. Use subreports when you want to create a main report as a container for multiple related reports in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -42,7 +41,7 @@ ms.author: maggies
   
 6.  (Optional) Click **Yes** for **Omit border on page break** to prevent a border from being rendered in the middle of the subreport if the subreport spans more than one page.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ### To specify parameters to pass to a subreport  
   

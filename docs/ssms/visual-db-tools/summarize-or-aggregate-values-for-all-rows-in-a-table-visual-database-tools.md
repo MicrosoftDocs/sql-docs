@@ -3,9 +3,8 @@ description: "Summarize or Aggregate Values for All Rows in a Table (Visual Data
 title: Summarize or Aggregate Values for All Rows in a Table
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "summarizing query results"
@@ -37,7 +36,8 @@ FROM titles
   
 If you add a search condition, you can aggregate the subset of rows that meet that condition.  
 
-**Note!** You can also count all the rows in the table or the ones that meet a specific condition. For details, see [Count Rows in a Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md).  
+> [!NOTE]  
+> You can also count all the rows in the table or the ones that meet a specific condition. For details, see [Count Rows in a Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md).  
   
   
 When you create a single aggregation value for all rows in a table, you display only the aggregate values themselves. For example, if you are totaling the value of the `price` column of the `titles` table, you would not also display individual titles, publisher names, and so on.  

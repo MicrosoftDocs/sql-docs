@@ -3,17 +3,16 @@ description: "Create a Link Attribute (Master Data Services)"
 title: Create a Link Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], creating link attributes"
   - "creating link attributes [Master Data Services]"
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Link Attribute (Master Data Services)
 

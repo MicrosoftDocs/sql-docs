@@ -1,17 +1,14 @@
 ---
 title: Stream data using Azure Stream Analytics integration (preview)
 description: Use Azure Stream Analytics integration to stream data into Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: development
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: ajetasin
 ms.author: ajetasi
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/04/2019
+ms.service: sql-database
+ms.subservice: development
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 
 # Stream data into Azure SQL Database using Azure Stream Analytics integration (preview)
@@ -65,7 +62,7 @@ To complete the steps in this article, you need the following resources:
 5. Select which table you want to ingest your streaming data into. Once done, select **Create**.
 
    - **Username**, **Password**: Enter your credentials for SQL server authentication. Select **Validate**.
-   - **Table**: Select **Create new** or **Use existing**. In this flow, let’s select **Create**. This will create a new table when you start the stream Analytics job.
+   - **Table**: Select **Create new** or **Use existing**. In this flow, let's select **Create**. This will create a new table when you start the stream Analytics job.
 
      ![create Stream Analytics job](./media/stream-data-stream-analytics-integration/create.png)
 
@@ -93,7 +90,7 @@ To complete the steps in this article, you need the following resources:
 
    - **Output schema**: This contains schema of the table you selected in step 5 (new or existing).
 
-      - Create new: If you selected this option in step 5, you won’t see the schema yet until you start the streaming job. When creating a new table, select the appropriate table index. For more information about table indexing, see [Clustered and Nonclustered Indexes Described](/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described/).
+      - Create new: If you selected this option in step 5, you won't see the schema yet until you start the streaming job. When creating a new table, select the appropriate table index. For more information about table indexing, see [Clustered and Nonclustered Indexes Described](/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described/).
       - Use existing: If you selected this option in step 5, you'll see the schema of selected table.
 
 7. After you're done authoring & testing the query, select **Save query**. Select **Start Stream Analytics job** to start ingesting transformed data into the SQL table. Once you finalize the following fields, **start** the job.

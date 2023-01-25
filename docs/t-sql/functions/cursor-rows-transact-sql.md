@@ -3,13 +3,10 @@ title: "@@CURSOR_ROWS (Transact-SQL)"
 description: "@@CURSOR_ROWS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "08/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@CURSOR_ROWS"
   - "@@CURSOR_ROWS_TSQL"
@@ -26,7 +23,7 @@ dev_langs:
 
 This returns the number of qualifying rows currently in the last cursor opened on the connection. To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can populate large keyset and static cursors asynchronously. `@@CURSOR_ROWS` can be called to determine that the number of the rows that qualify for a cursor are retrieved at the time of the @@CURSOR_ROWS call.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

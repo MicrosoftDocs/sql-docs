@@ -2,12 +2,12 @@
 title: "Configuring TLS 1.2"
 description: "Recommendation to configure TLS 1.2 in APS"
 author: charlesfeddersen
-ms.prod: "sql"
-ms.technology: data-warehouse
-ms.topic: "conceptual"
-ms.date: "10/29/2018"
 ms.author: charlesf
 ms.reviewer: "martinle"
+ms.date: "10/29/2018"
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: "conceptual"
 ---
 
 # Configure TLS 1.2 in APS

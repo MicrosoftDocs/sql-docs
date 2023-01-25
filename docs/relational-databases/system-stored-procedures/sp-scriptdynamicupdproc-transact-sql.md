@@ -3,10 +3,9 @@ description: "sp_scriptdynamicupdproc (Transact-SQL)"
 title: "sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Generates the CREATE PROCEDURE statement that creates a dynamic update stored procedure. The UPDATE statement within the custom stored procedure is built dynamically based on the MCALL syntax that indicates which columns to change. Use this stored procedure if the number of indexes on the subscribing table is growing and the number of columns being changed is small. This stored procedure is run at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

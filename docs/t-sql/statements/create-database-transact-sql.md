@@ -1,12 +1,11 @@
 ---
 title: "CREATE DATABASE (Transact-SQL)"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: 06/01/2022
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom:
   - "references_regions"
@@ -44,7 +43,7 @@ Creates a new database.
 
 Select one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -78,7 +77,7 @@ In SQL Server, this statement creates a new database and the files used and thei
 
 Create a database.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -378,6 +377,9 @@ SIZE, MAXSIZE, and FILEGROWTH parameters can be set when a UNC path is specified
 
 If the file is on a raw partition, *os_file_name* must specify only the drive letter of an existing raw partition. Only one data file can be created on each raw partition.
 
+> [!NOTE]  
+> Raw partitions are not supported in SQL Server 2014 and later versions.
+
 Data files should not be put on compressed file systems unless the files are read-only secondary files, or the database is read-only. Log files should never be put on compressed file systems.
 
 **'** *filestream_path* **'**
@@ -555,7 +557,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permission
 The permissions prevent the files from being accidentally tampered with if they reside in a directory that has open permissions.
 
 > [!NOTE]
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] does not set data and log file permissions.
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssexpress-2005-md](../../includes/ssexpress-2005-md.md)] does not set data and log file permissions.
 
 ## Examples
 
@@ -926,7 +928,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this statement can be 
 
 ### Create a database
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
@@ -939,7 +941,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <with_options> ::=
 {
   CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
-  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' | 'GEOZONE'}
   | LEDGER = {ON | OFF}
 }
 
@@ -1381,7 +1383,7 @@ In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], this statement is u
 
 ## Syntax
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
@@ -1465,13 +1467,15 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&p
 
 ## Overview
 
-In Azure Synapse, this statement can be used with an Azure SQL Database server to create a SQL Analytics database. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
+In Azure Synapse, this statement can be used with an Azure SQL Database server to create a dedicated SQL pool. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
 
-The CREATE DATABASE statement is supported for standalone dedicated SQL pools (formerly SQL DW) using Gen2 service levels, but is not supported for dedicated SQL pools in an Azure Synapse Analytics workspace. Instead, [use the Azure portal](../../azure-data-studio/quickstart-sql-dw.md). CREATE DATABASE is supported for serverless SQL pools in Azure Synapse Analytics.
+ - CREATE DATABASE is supported for standalone dedicated SQL pools (formerly SQL DW) using Gen2 service levels.
+ - CREATE DATABASE is not supported for dedicated SQL pools in an Azure Synapse Analytics workspace. Instead, [use the Azure portal](../../azure-data-studio/quickstart-sql-dw.md). 
+ - CREATE DATABASE is supported for serverless SQL pools in Azure Synapse Analytics.
 
 ## Syntax
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ### [Dedicated SQL pool](#tab/sqlpool)
 
@@ -1504,7 +1508,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ## Arguments
 
 #### *database_name*
-The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
+The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
 
 #### *collation_name*
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.
@@ -1523,7 +1527,7 @@ The maximum allowable size for the database. The database cannot grow beyond MAX
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
 #### *EDITION*
-Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] use `datawarehouse`.
+Specifies the service tier of the database. For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] use `datawarehouse`.
 
 #### SERVICE_OBJECTIVE
 Specifies the compute size (service objective). The service levels for Gen2 are measured in compute data warehouse units (cDWU), for example `DW2000c`. Gen1 service levels are measured in DWUs, for example `DW2000`. For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective). Gen1 service objectives (no longer listed) are no longer supported, you may receive an error: `Azure SQL Data Warehouse Gen1 has been deprecated in this region. Please use SQL Analytics in Azure Synapse.`
@@ -1555,10 +1559,10 @@ The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](
 
 You cannot change the database collation after the database is created.
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### A. Simple example
-A simple example for creating a data warehouse database. This creates the database with the smallest max size (10,240 GB), the default collation (SQL_Latin1_General_CP1_CI_AS), and the smallest Gen2 service objective (DW100c).
+A simple example for creating a standalone dedicated SQL pool (formerly SQL DW). This creates the database with the smallest max size (10,240 GB), the default collation (SQL_Latin1_General_CP1_CI_AS), and the smallest Gen2 service objective (DW100c).
 
 ```sql
 CREATE DATABASE TestDW
@@ -1567,7 +1571,7 @@ CREATE DATABASE TestDW
 
 ### B. Create a data warehouse database with all the options
 
-An example of creating a 10-terabyte data warehouse.
+An example of creating a 10-terabyte standalone dedicated SQL pool (formerly SQL DW).
 
 ```sql
 CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
@@ -1619,7 +1623,7 @@ In Analytics Platform System, this statement is used to create a new database on
 
 ## Syntax
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE DATABASE database_name

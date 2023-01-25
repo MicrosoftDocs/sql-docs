@@ -3,10 +3,9 @@ title: Utility Explorer F1 Help
 description: Get acquainted with functionality that is offered in various areas of the SQL Server Utility. Learn about views, the dashboard, and the Utility Administration tabs.
 ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.ue.navigation.f1"
@@ -489,7 +488,8 @@ Use the Utility Administration tabs to manage policy, security, and data warehou
   
  The UMDW directory is configurable: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> is normally the C:\ drive. The log file, UMDW_\<GUID>_LOG, is located in the same directory.  
   
-> **NOTE:** The UMDW (sysutility_mdw) file location can be changed using detach/attach or ALTER DATABASE. We recommend the use of ALTER DATABASE. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> [!NOTE]  
+> The UMDW (sysutility_mdw) file location can be changed using detach/attach or ALTER DATABASE. We recommend the use of ALTER DATABASE. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Go back to out-of-the-box defaults  
  To reset settings on this tab to default values, click the **Restore Defaults** button, then click **Apply**.  

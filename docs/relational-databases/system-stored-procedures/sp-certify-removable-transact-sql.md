@@ -3,10 +3,9 @@ description: "sp_certify_removable (Transact-SQL)"
 title: "sp_certify_removable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_certify_removable_TSQL"
@@ -24,10 +23,11 @@ ms.author: maghan
 
   Verifies that a database is correctly configured for distribution on removable media and reports any problems to the user.  
   
-> **IMPORTANT!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-transact-sql.md) instead.  
+> [!IMPORTANT]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-transact-sql.md) instead.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

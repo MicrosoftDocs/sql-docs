@@ -4,9 +4,8 @@ description: Learn how srv_got_attention checks if the current connection or tas
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_got_attention"
@@ -21,7 +20,7 @@ ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Checks whether the current connection or task needs to be aborted and returns TRUE if the connection is killed or the batch is aborted  
   

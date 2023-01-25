@@ -3,7 +3,6 @@ title: "Report Server Web Service Endpoints | Microsoft Docs"
 description: The Report Server Web service provides three endpoints for managing a report server as well as executing and navigating reports.
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
 
 
@@ -28,7 +27,7 @@ ms.author: maggies
 >  When a report server is configured for SharePoint integrated mode, the <xref:ReportService2005> APIs will return an **rsOperationNotSupportedSharePointMode** error. If the report server is configured for native mode, the <xref:ReportService2006> APIs will return an **rsOperationNotSupportedNativeMode** error. Similarly, when mode-specific APIs in <xref:ReportService2010> are used on unintended modes, the APIs will return the respective errors.  
   
 > [!NOTE]  
->  The <xref:ReportService2005> and <xref:ReportService2006> endpoints are deprecated in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. The <xref:ReportService2010> endpoint includes the functionalities of both endpoints and contains additional management features.  
+>  The <xref:ReportService2005> and <xref:ReportService2006> endpoints are deprecated in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)]. The <xref:ReportService2010> endpoint includes the functionalities of both endpoints and contains additional management features.  
   
  If the report server is configured for native mode or SharePoint integrate mode, the WSDL for the management endpoint can be accessed using one of the following URL:  
   
@@ -60,7 +59,7 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
   
 |Proxy Endpoint|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Provides the APIs for managing a report server that is configured for SharePoint integrate mode.<br /><br /> Note: This endpoint is deprecated in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Provides the APIs for managing a report server that is configured for SharePoint integrate mode.<br /><br /> Note: This endpoint is deprecated in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)].|  
 |<xref:ReportService2010>|Provides the APIs for managing a report server that is configured for either native or SharePoint integrated mode.|  
 |<xref:ReportExecution2005>|Provides the APIs for running and navigating reports.|  
 |<xref:ReportServiceAuthentication>|Provides the APIs for authenticating users against a report server when the SharePoint Web application is configured for Forms Authentication.|  

@@ -4,9 +4,8 @@ description: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "02/27/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP DATABASE SCOPED CREDENTIAL"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest"
 ---
 # DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -24,7 +22,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest"
 
   Removes a database scoped credential from the server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

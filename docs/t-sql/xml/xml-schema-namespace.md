@@ -3,9 +3,9 @@ description: "xml_schema_namespace"
 title: xml_schema_namespace (Transact-SQL)
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "xml_schema_namespace_TSQL"
@@ -27,7 +27,7 @@ ms.author: mikeray
 
   Reconstructs all the schemas or a specific schema in the specified XML schema collection. This function returns an **xml** data type instance.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

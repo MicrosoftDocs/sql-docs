@@ -2,9 +2,8 @@
 title: "Report Designer F1 Help | Microsoft Docs"
 description: View information about F1 Help for the SQL Server Reporting Services Report Designer wizards, views, and dialog boxes in SQL Server Data Tools.
 ms.date: 05/31/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 
 
 ms.topic: reference
@@ -15,7 +14,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Report Designer F1 Help
-  This section provides F1 Help for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  
+  This section provides F1 Help for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  
   
 ## See Also  
 + [Install SQL Server Data Tools - Business Intelligence for Visual Studio](/previous-versions/sql/)

@@ -3,10 +3,9 @@ title: "Data type mappings for an Oracle Publisher"
 description: Describes how to specify data type mappings for an Oracle Publisher in SQL Server using SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle publishing [SQL Server replication], data type mapping"
@@ -43,7 +42,7 @@ ms.author: "mathoma"
   
     -   For some types, there is more than one type that you can select. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you use the default mapping unless your application requires a different mapping. For more information, see [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  You can specify custom data type mappings programmatically using replication stored procedures. You can also set the default mappings that are used when mapping data types between [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and a non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database management system (DBMS). For more information, see [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  

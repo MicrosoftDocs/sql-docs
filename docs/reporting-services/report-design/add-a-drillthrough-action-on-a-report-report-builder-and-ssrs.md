@@ -1,10 +1,9 @@
 ---
 title: "Add a drillthrough action on a paginated report | Microsoft Docs"
 description: Improve query performance with the addition of a drillthrough action link in a text box, an image, or data points on a chart.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.date: 08/30/2022
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -14,7 +13,7 @@ ms.author: maggies
 ---
 # Add a drillthrough action on a paginated report (Report Builder)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-not-pbi-rb](../../includes/ssrs-appliesto-not-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
   The paginated report that opens when you click the link in the main paginated report is known as a *drillthrough report*. This drillthrough link enables a drillthrough action.  
   

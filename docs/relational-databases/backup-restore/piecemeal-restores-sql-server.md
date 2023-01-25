@@ -3,10 +3,9 @@ title: "Piecemeal Restores (SQL Server) | Microsoft Docs"
 description: In SQL Server, piecemeal restore allows databases with multiple filegroups to be restored/recovered in stages. Piecemeal restore works with all recovery models.
 ms.custom: ""
 ms.date: "10/23/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partial updates [SQL Server]"
@@ -48,7 +47,7 @@ ms.author: mathoma
   
      Online piecemeal restores can involve deferred transactions. When only a subset of filegroups has been restored, transactions in the database that depend on online filegroups might become deferred. This is typical, because the whole database must be consistent. For more information, see [Deferred Transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   
--   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] piecemeal restore scenario  
+-   [!INCLUDE[inmemory-md](../../includes/inmemory-md.md)] piecemeal restore scenario  
   
      For information on Piecemeal Restores of In-Memory OLTP databases see [Piecemeal Backup and Restore of Databases With Memory-Optimized Tables](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   

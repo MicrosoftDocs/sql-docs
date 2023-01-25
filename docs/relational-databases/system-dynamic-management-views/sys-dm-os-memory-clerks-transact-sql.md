@@ -4,9 +4,8 @@ description: sys.dm_os_memory_clerks (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "02/18/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_os_memory_clerks"
@@ -25,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns the set of all memory clerks that are currently active in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_clerks**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+>  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_clerks**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -33,9 +32,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**type**|**nvarchar(60)**|Specifies the type of memory clerk. Every clerk has a specific type, such as CLR Clerks MEMORYCLERK_SQLCLR. Is not nullable.|  
 |**name**|**nvarchar(256)**|Specifies the internally assigned name of this memory clerk. A component can have several memory clerks of a specific type. A component might choose to use specific names to identify memory clerks of the same type. Is not nullable.|  
 |**memory_node_id**|**smallint**|Specifies the ID of the memory node. Not nullable.|  
-|**single_pages_kb**|**bigint**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. For more information, see [Changes to Memory Management starting with SQL Server 2012 (11.x)](../memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).|  
+|**single_pages_kb**|**bigint**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. For more information, see [Changes to Memory Management starting with SQL Server 2012 (11.x)](../memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).|  
 |**pages_kb**|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Specifies the amount of page memory allocated in kilobytes (KB) for this memory clerk. Is not nullable.|  
-|**multi_pages_kb**|**bigint**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. For more information, see [Changes to Memory Management starting with SQL Server 2012 (11.x)](../memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).<br /><br /> Amount of multipage memory allocated in KB. This is the amount of memory allocated by using the multiple page allocator of the memory nodes. This memory is allocated outside the buffer pool and takes advantage of the virtual allocator of the memory nodes. Is not nullable.|  
+|**multi_pages_kb**|**bigint**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. For more information, see [Changes to Memory Management starting with SQL Server 2012 (11.x)](../memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).<br /><br /> Amount of multipage memory allocated in KB. This is the amount of memory allocated by using the multiple page allocator of the memory nodes. This memory is allocated outside the buffer pool and takes advantage of the virtual allocator of the memory nodes. Is not nullable.|  
 |**virtual_memory_reserved_kb**|**bigint**|Specifies the amount of virtual memory that is reserved by a memory clerk. Is not nullable.|  
 |**virtual_memory_committed_kb**|**bigint**|Specifies the amount of virtual memory that is committed by a memory clerk. The amount of committed memory should always be less than the amount of reserved memory. Is not nullable.|  
 |**awe_allocated_kb**|**bigint**|Specifies the amount of memory in kilobytes (KB) locked in the physical memory and not paged out by the operating system. Is not nullable.|  
@@ -44,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**page_size_in_bytes**|**bigint**|Specifies the granularity of the page allocation for this memory clerk. Is not nullable.|  
 |**page_allocator_address**|**varbinary(8)**|Specifies the address of the page allocator. This address is unique for a memory clerk and can be used in **sys.dm_os_memory_objects** to locate memory objects that are bound to this clerk. Is not nullable.|  
 |**host_address**|**varbinary(8)**|Specifies the memory address of the host for this memory clerk. For more information, see [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Components, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory resources through the host interface.<br /><br /> 0x00000000 = Memory clerk belongs to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Is not nullable.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 
 ## Permissions
 
@@ -122,7 +121,7 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_HOST     |    This memory clerk is used for allocations by SQL OS functionality.     |
 |MEMORYCLERK_LANGSVC     |     This memory clerk is used for allocations by SQL T-SQL statements and commands (parser, algebrizer, etc.)    |
 |MEMORYCLERK_LWC     |   This memory clerk is used for allocations by Full-Text [Semantic Search](../search/semantic-search-sql-server.md) engine       |
-|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [Polybase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
+|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [PolyBase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
 |MEMORYCLERK_QSRANGEPREFETCH     |  This memory clerk is used for allocations during query execution for query scan range prefetch.      |
 |MEMORYCLERK_QUERYDISKSTORE     |     This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.    |
 |MEMORYCLERK_QUERYDISKSTORE_HASHMAP     |   This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.      |

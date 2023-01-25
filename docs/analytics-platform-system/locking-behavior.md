@@ -1,13 +1,13 @@
 ---
 title: Locking behavior
-description: Learn how Parallel Data Warehouse uses locking to ensure the integrity of transactions and to maintain the consistency of databases when multiple users are accessing data at the same time. 
-author: charlesfeddersen 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
+description: Learn how Parallel Data Warehouse uses locking to ensure the integrity of transactions and to maintain the consistency of databases when multiple users are accessing data at the same time.
+author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ms.custom: seo-dt-2019
 ---
 

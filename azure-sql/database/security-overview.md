@@ -2,17 +2,14 @@
 title: Security Overview
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about security in Azure SQL Database and Azure SQL Managed Instance, including how it differs from SQL Server.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: wiassaf, vanto, emlisa, mathoma
 ms.date: 08/23/2021
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # An overview of Azure SQL Database and SQL Managed Instance security capabilities
@@ -24,7 +21,7 @@ This article outlines the basics of securing the data tier of an application usi
 
 ## Network security
 
-Microsoft Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics provide a relational database service for cloud and enterprise applications. To help protect customer data, firewalls prevent network access to the server until access is explicitly granted based on IP address or Azure Virtual network traffic origin.
+Microsoft Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics provide a relational database service for cloud and enterprise applications. To help protect customer data, firewalls prevent network access to the server until access is explicitly granted based on IP address or Azure Virtual network traffic origin.
 
 ### IP firewall rules
 
@@ -138,7 +135,7 @@ Dynamic data masking limits sensitive data exposure by masking it to non-privile
 
 ### Vulnerability assessment
 
-[Vulnerability assessment](sql-vulnerability-assessment.md) is an easy to configure service that can discover, track, and help remediate potential database vulnerabilities with the goal to proactively improve overall database security. Vulnerability assessment (VA) is part of the Microsoft Defender for SQL offering, which is a unified package for advanced SQL security capabilities. Vulnerability assessment can be accessed and managed via the central Microsoft Defender for SQL portal.
+[Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview) is an easy to configure service that can discover, track, and help remediate potential database vulnerabilities with the goal to proactively improve overall database security. Vulnerability assessment (VA) is part of the Microsoft Defender for SQL offering, which is a unified package for advanced SQL security capabilities. Vulnerability assessment can be accessed and managed via the central Microsoft Defender for SQL portal.
 
 ### Data discovery and classification
 

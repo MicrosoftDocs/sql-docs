@@ -2,13 +2,13 @@
 title: Block T-SQL commands to create or modify Azure SQL resources
 titleSuffix: Block T-SQL commands to create or modify Azure SQL resources
 description: This article details a feature allowing Azure administrators to block T-SQL commands to create or modify Azure SQL resources
-ms.service: sql-database
-ms.subservice: security
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.topic: article
-ms.date: 03/31/2021
 ms.reviewer: wiassaf, mathoma
+ms.date: 03/31/2021
+ms.service: sql-database
+ms.subservice: security
+ms.topic: article
 ROBOTS: NOINDEX
 ---
 
@@ -35,9 +35,9 @@ The following section describes how you can register or unregister a preview fea
 ### Register Block T-SQL CRUD
 
 1. Go to your subscription on Azure portal.
-2. Select on **Preview Features** tab. 
+2. Select the **Preview Features** tab. 
 3. Select **Block T-SQL CRUD**.
-4. After you select on **Block T-SQL CRUD**, a new window will open, select **Register**, to register this block with Microsoft.Sql resource provider.
+4. After you select **Block T-SQL CRUD**, a new window will open, select **Register**, to register this block with Microsoft.Sql resource provider.
 
 ![Select "Block T-SQL CRUD" in the list of Preview Features](./media/block-tsql-crud/block-tsql-crud.png)
 
@@ -48,7 +48,7 @@ The following section describes how you can register or unregister a preview fea
 After you register the block of T-SQL CRUD with Microsoft.Sql resource provider, you must re-register the Microsoft.Sql resource provider for the changes to take effect. To re-register the Microsoft.Sql resource provider:
 
 1. Go to your subscription on Azure portal.
-2. Select on **Resource Providers** tab.
+2. Select the **Resource Providers** tab.
 3. Search and select **Microsoft.Sql** resource provider.
 4. Select **Re-register**. 
 

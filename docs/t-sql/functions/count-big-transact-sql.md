@@ -3,13 +3,10 @@ title: "COUNT_BIG (Transact-SQL)"
 description: "COUNT_BIG (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "COUNT_BIG_TSQL"
   - "COUNT_BIG"
@@ -28,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 This function returns the number of items found in a group. `COUNT_BIG` operates like the [COUNT](../../t-sql/functions/count-transact-sql.md) function. These functions differ only in the data types of their return values. `COUNT_BIG` always returns a **bigint** data type value. `COUNT` always returns an **int** data type value.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

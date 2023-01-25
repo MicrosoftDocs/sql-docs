@@ -4,9 +4,8 @@ description: Resource Governor Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "Resource Governor, catalog views"

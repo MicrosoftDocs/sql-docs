@@ -3,10 +3,9 @@ title: "Replicate Schema Changes | Microsoft Docs"
 description: Learn how to replicate schema changes in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], schema changes"
@@ -57,7 +56,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 1.  On the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box, set the value of the **Replicate schema changes** property to **False**.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
 
      To propagate only specific schema changes, set the property to **True** before a schema change, and then set it to **False** after the change is made. Conversely, to propagate most schema changes, but not a given change, set the property to **False** before the schema change, and then set it to **True** after the change is made.  
   

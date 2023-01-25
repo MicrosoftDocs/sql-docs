@@ -4,9 +4,8 @@ description: REVOKE Certificate Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "certificates [SQL Server], permissions"
@@ -14,14 +13,13 @@ helpviewer_keywords:
   - "REVOKE statement, certificates"
 dev_langs:
   - "TSQL"
-ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 ---
 # REVOKE Certificate Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on a certificate.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

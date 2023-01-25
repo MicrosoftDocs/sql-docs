@@ -1,9 +1,9 @@
 ---
 author: TDzakhov
+ms.author: v-tdzakhov
+ms.date: 3/10/2021
 ms.service: sql
 ms.topic: include
-ms.date: 3/10/2021
-ms.author: v-tdzakhov
 ---
 
 SQL Server on Azure Virtual Machines

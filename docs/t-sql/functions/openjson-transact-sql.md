@@ -4,10 +4,9 @@ description: "OPENJSON (Transact-SQL)"
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.date: 04/13/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "OPENJSON"
   - "OPENJSON_TSQL"
@@ -34,7 +33,7 @@ Use **OPENJSON** to import JSON data into [!INCLUDE[ssNoVersion](../../includes/
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false":::[Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -93,7 +92,6 @@ SELECT * FROM OpenJson(@json);
 | Null_value                         | NULL                  | 0 |
 | Array_value                        | ["a","r","r","a","y"] | 4 |
 | Object_value                       | {"obj":"ect"}         | 5 |
-| &nbsp; | &nbsp; | &nbsp; |
 
 - The DoublePrecisionFloatingPoint_value conforms to IEEE-754.
 

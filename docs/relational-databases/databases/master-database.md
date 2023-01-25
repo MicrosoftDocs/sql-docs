@@ -3,10 +3,9 @@ description: "master Database"
 title: "master Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "master database [SQL Server], about"

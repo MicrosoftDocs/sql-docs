@@ -3,10 +3,9 @@ title: "SQL Server data files in Microsoft Azure | Microsoft Docs"
 description: Discover concepts and considerations that are central to storing SQL Server data files in Microsoft Azure Storage and some advantages of using Azure Storage.
 ms.custom: ""
 ms.date: "12/04/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
@@ -35,7 +34,7 @@ For a practical hands-on experience on how to use this feature, see [Tutorial: U
 
 - **Security benefits:** With SQL Server data files in Azure, you can separate a compute instance from a storage instance. You can have a fully encrypted database with decryption only occurring on compute instance but not in a storage instance. In other words, you can encrypt all data in public cloud using Transparent Data Encryption (TDE)  certificates, which are physically separated from the data. The TDE keys can be stored in the master database, which is stored locally in your physically secure on-premises computer and backed up locally. You can use these local keys to encrypt the data, which resides in Microsoft Azure Storage. If your cloud storage account credentials are stolen, your data still stays secure as the TDE certificates always reside in on-premises.
 
-- **Snapshot backup:**  This feature enables you to use Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+- **Snapshot backup:**  This feature enables you to use Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using Azure Blob Storage. This capability enables you to simplify your backup and restore policies. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
 
 ## Concepts and Requirements  
   
@@ -64,7 +63,7 @@ Estimating the cost of using Azure Services is an important matter in the decisi
 
 To use Azure page blobs for SQL Server data files:
 
-- Create a policy on a container and also generate a shared access signature (SAS) key.
+- Create a policy on a container and also generate a shared access signature (SAS).
 
 - For each container used by a data or a log file, create a SQL Server credential whose name matches the container path.
 
@@ -96,7 +95,7 @@ For more information, see [Manage Access to Azure Storage Resources](/azure/stor
 ### Security  
  The following are security considerations and requirements when storing SQL Server Data Files in Azure Storage.
 
-- When creating a container for the Azure Blob storage service, we recommend that you set the access to private. When you set the access to private, container and blob data can be read by the Azure account owner only.
+- When creating a container for Azure Blob Storage, we recommend that you set the access to private. When you set the access to private, container and blob data can be read by the Azure account owner only.
 
 - When storing SQL Server database files in Azure Storage, you need to use a shared access signature, a URI that grants restricted access rights to containers, blobs, queues, and tables. By using a shared access signature, you can enable SQL Server to access resources in your storage account without sharing your Azure storage account key.
 
@@ -148,7 +147,7 @@ Starting with SQL Server 2014, a new SQL Server object has been added to be used
 ### SQL Server Management Studio support  
  SQL Server Management Studio allows you to use this feature via several dialog windows. For example, `https://teststorageaccnt.blob.core.windows.net/testcontainer/` represents the URL path of a storage container.
  
- as a **Path** in several dialog windows, such as **New Database**, **Attach Database**, and **Restore Database**. For more information, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ as a **Path** in several dialog windows, such as **New Database**, **Attach Database**, and **Restore Database**. For more information, see [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ### SQL Server Management Objects (SMO) support  
  When using the SQL Server Data Files in Azure feature, all SQL Server Management Objects (SMO) are supported. If an SMO object requires a file path, use the BLOB URL format instead of a local file path, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. For more information about SQL Server Management Objects (SMO), see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in SQL Server Books Online.  
@@ -169,10 +168,10 @@ Starting with SQL Server 2014, a new SQL Server object has been added to be used
     Resolution: You may see this error when you try to drop a credential that is still being used by an active database file in Azure Storage. To drop the credential, first you must delete the associated blob that has this database file. To delete a blob that has an active lease, you must first release the lease.  
   
 - *Shared Access Signature has not been created on the container correctly.*   
-     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature).  
+     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature).  
   
 - *SQL Server credential has not been not created correctly.*   
-    Resolution: Make sure that you have used 'Shared Access Signature' for the **Identity** field and created a secret correctly. Review the instructions given in Lesson 3 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url).  
+    Resolution: Make sure that you have used 'Shared Access Signature' for the **Identity** field and created a secret correctly. Review the instructions given in Lesson 3 in [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url).  
   
 **Lease blob errors:**  
   

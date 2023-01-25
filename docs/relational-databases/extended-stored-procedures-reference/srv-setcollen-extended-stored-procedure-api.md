@@ -4,9 +4,8 @@ description: Learn how srv_setcollen specifies the current data length in bytes 
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_setcollen"
@@ -21,7 +20,7 @@ ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Specifies the current data length in bytes of a variable-length column or a column that allows NULL values.  
   

@@ -3,10 +3,9 @@ description: "sp_add_notification (Transact-SQL)"
 title: "sp_add_notification (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_add_notification_TSQL"
@@ -71,7 +70,8 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## Examples  
  The following example adds an e-mail notification for the specified alert (`Test Alert`).  
   
-> **NOTE:** This example assumes that `Test Alert` already exists and that `François Ajenstat` is a valid operator name.  
+> [!NOTE]  
+> This example assumes that `Test Alert` already exists and that `François Ajenstat` is a valid operator name.  
   
 ```  
 USE msdb ;  

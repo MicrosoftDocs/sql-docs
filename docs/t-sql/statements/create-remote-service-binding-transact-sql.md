@@ -4,9 +4,8 @@ description: CREATE REMOTE SERVICE BINDING (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE REMOTE SERVICE BINDING"
@@ -35,14 +34,13 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a binding that defines the security credentials to use to initiate a conversation with a remote service.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

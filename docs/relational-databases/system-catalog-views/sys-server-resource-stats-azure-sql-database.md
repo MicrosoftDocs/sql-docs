@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "server_resource_stats"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
+monikerRange: " = azuresqldb-current || = azuresqldb-mi-current"
 ---
 # sys.server_resource_stats (Azure SQL Managed Instance)
 
-[!INCLUDE[Azure SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)]
+[!INCLUDE[Azure SQL Managed Instance](../../includes/applies-to-version/_asmi.md)]
 
 Returns CPU usage, IO, and storage data for Azure SQL Managed Instance. The data is collected, aggregated and updated within 5 to 10 minutes intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and SKU. Historical data is retained for approximately 14 days.
 
@@ -59,7 +59,7 @@ The following table describes the columns available:
  The data returned by `sys.server_resource_stats` are expressed as the total used in either bytes or megabytes (stated in column names) other than `avg_cpu`, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
  
 > [!NOTE]
-> For more information on troubleshooting CPU utilization using dynamic management views, see [Identify CPU performance issues in Microsoft Azure SQL Database and Azure SQL Managed Instance performance](/azure/azure-sql/database/monitoring-with-dmvs#identify-cpu-performance-issues). 
+> For more information on troubleshooting CPU utilization using dynamic management views, see [Identify CPU performance issues in Microsoft Azure SQL Managed Instance performance with DMVs](/azure/azure-sql/managed-instance/monitoring-with-dmvs#identify-cpu-performance-issues). 
 
 ## Examples  
 The following example returns the average CPU usage over the last seven days.  

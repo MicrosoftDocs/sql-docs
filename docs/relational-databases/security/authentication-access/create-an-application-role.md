@@ -3,10 +3,9 @@ title: "Create an Application Role | Microsoft Docs"
 description: Create an application role in SQL Server by using SQL Server Management Studio or Transact-SQL to restrict access to a database except through an application.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.approle.general.f1"
@@ -63,7 +62,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 8.  Under **Schemas owned by this role**, select or view schemas that will be owned by this role. A schema can be owned by only one schema or role.  
   
-9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+9. Select **OK**.
 
 ### Additional Options  
  The **Application Role - New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  

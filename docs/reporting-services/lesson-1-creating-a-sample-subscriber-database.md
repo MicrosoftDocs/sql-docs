@@ -2,9 +2,8 @@
 title: "Lesson 1: Creating a Sample Subscriber Database | Microsoft Docs"
 description: Learn how to create a small "subscriber" database to store subscription data that will be used by a data-driven subscription.
 ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
@@ -25,8 +24,9 @@ This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../includes/ssma
 2.  Right-click on Databases, select **New Database...**.  
   
 3.  In the New Database dialog box, in **Database Name**, type *Subscribers*. 
-4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
-  
+
+4.  Select **OK**.
+
 5.  Click the **New Query** button on the toolbar.  
   
 6.  Copy the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements into the empty query:  

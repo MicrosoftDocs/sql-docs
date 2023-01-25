@@ -3,10 +3,9 @@ description: "Registered Servers F1 Help"
 title: "Registered Servers F1 Help"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], Help"
@@ -58,7 +57,8 @@ ms.author: "maghan"
  **Remember password**  
  Store the password you have entered. This option is only available if you have clicked **Basic** or **Forms Authentication**.  
   
-> **NOTE:** If you have stored the password and want to stop storing it, clear this check box and then click **Save**.  
+> [!NOTE]  
+> If you have stored the password and want to stop storing it, clear this check box and then click **Save**.  
   
  **Registered server name**  
  The name you want to appear in Registered Servers. This name does not have to match the name in the **Server name** box.  

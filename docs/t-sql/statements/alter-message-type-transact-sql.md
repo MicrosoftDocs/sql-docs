@@ -1,12 +1,11 @@
 ---
 title: "ALTER MESSAGE TYPE (Transact-SQL)"
 description: ALTER MESSAGE TYPE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_MESSAGE_TYPE_TSQL"
@@ -17,14 +16,13 @@ helpviewer_keywords:
   - "message types [Service Broker], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a message type.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

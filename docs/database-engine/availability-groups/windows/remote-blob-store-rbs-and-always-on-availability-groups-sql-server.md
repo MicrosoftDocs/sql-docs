@@ -1,15 +1,13 @@
 ---
 title: "Remote Blob Store (RBS) with availability groups"
 description: "A description of how to use the Remote Blob Store (RBS) with databases that are part of an Always On availability group. "
-ms.custom: "seodec18"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+ms.custom: seodec18
 ---
 # Use Remote Blob Store (RBS) with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +33,7 @@ ms.author: mathoma
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Books Online)  
+-   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)] Books Online)  
   
 -   [Running RBS Maintainer](/archive/blogs/sqlrbs/running-rbs-maintainer) (blog)  
   

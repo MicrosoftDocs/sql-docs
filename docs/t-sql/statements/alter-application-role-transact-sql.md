@@ -4,9 +4,8 @@ description: ALTER APPLICATION ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_APPLICATION_ROLE_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "application roles [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 ---
 
 # ALTER APPLICATION ROLE (Transact-SQL)
@@ -27,7 +25,7 @@ ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 
   Changes the name, password, or default schema of an application role.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
   

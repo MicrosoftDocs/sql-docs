@@ -1,9 +1,8 @@
 ---
 title: sp_check_dynamic_filters (Transact-SQL)
 description: "sp_check_dynamic_filters (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords: 
   - "dynamic_filters_TSQL"
@@ -29,7 +28,7 @@ ms.date: "03/06/2017"
 
 Displays information on parameterized row filter properties for a publication, in particular the functions used to generate a filtered data partition for a publication and whether the publication qualifies for using precomputed partitions. This stored procedure is executed at the Publisher on the publication database.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

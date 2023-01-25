@@ -3,10 +3,9 @@ title: "Extensible Key Management (EKM) | Microsoft Docs"
 description: Learn how to configure and use Extensible Key Management and how it fits into the data encryption capabilities for SQL Server.
 ms.custom: ""
 ms.date: "07/25/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Key Management"
@@ -31,7 +30,7 @@ ms.author: jaszymas
  When running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an Azure VM, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can use keys stored in the [Azure Key Vault](/azure/key-vault/general/basic-concepts). For more information, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## EKM Configuration  
- Extensible Key Management is not available in every edition of [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Extensible Key Management is not available in every edition of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  By default, Extensible Key Management is off. To enable this feature, use the sp_configure command that has the following option and value, as in the following example:  
   

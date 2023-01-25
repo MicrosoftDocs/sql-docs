@@ -1,21 +1,18 @@
 ---
 title: Configure an availability group (PowerShell & Az CLI)
 description: "Use either PowerShell or the Azure CLI to create the Windows failover cluster, the availability group listener, and the internal load balancer on a SQL Server VM in Azure."
-services: virtual-machines-windows
-documentationcenter: na
-author: adbadram
-tags: azure-resource-manager
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.reviewer: mathoma
-ms.custom: "seo-lt-2019, devx-track-azurecli, devx-track-azurepowershell"
-
+ms.custom:
+  - seo-lt-2019
+  - devx-track-azurecli
+  - devx-track-azurepowershell
+tags: azure-resource-manager
 ---
 # Use PowerShell or Az CLI to configure an availability group for SQL Server on Azure VM 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -218,7 +215,7 @@ Manually create the availability group as you normally would, by using [SQL Serv
 
 [!INCLUDE [sql-ag-use-dnn-listener](../../includes/sql-ag-use-dnn-listener.md)]
 
-The Always On availability group listener requires an internal instance of Azure Load Balancer. The internal load balancer provides a “floating” IP address for the availability group listener that allows for faster failover and reconnection. If the SQL Server VMs in an availability group are part of the same availability set, you can use a Basic load balancer. Otherwise, you need to use a Standard load balancer.  
+The Always On availability group listener requires an internal instance of Azure Load Balancer. The internal load balancer provides a "floating" IP address for the availability group listener that allows for faster failover and reconnection. If the SQL Server VMs in an availability group are part of the same availability set, you can use a Basic load balancer. Otherwise, you need to use a Standard load balancer.  
 
 > [!NOTE]
 > The internal load balancer should be in the same virtual network as the SQL Server VM instances. 

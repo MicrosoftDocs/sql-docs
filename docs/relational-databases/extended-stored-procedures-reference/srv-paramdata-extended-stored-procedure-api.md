@@ -4,9 +4,8 @@ description: Learn about srv_paramdata. srv_paramdata returns the value of a rem
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_paramdata"
@@ -21,7 +20,7 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the value of a remote stored procedure call parameter. This function has been superseded by the **srv_paraminfo** function.  
   

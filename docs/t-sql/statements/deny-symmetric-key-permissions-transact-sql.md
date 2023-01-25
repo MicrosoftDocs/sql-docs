@@ -4,9 +4,8 @@ description: DENY Symmetric Key Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "denying permissions [SQL Server], symmetric keys"
@@ -17,14 +16,13 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 ---
 # DENY Symmetric Key Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on a symmetric key.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

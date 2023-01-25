@@ -3,10 +3,9 @@ title: "View and Modify Replication Security Settings | Microsoft Docs"
 description: Learn how to view and modify replication security settings in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying replication security settings"
@@ -80,7 +79,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 4.  In the **Update Replication Passwords** dialog box, specify the account and the new password.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 #### To change security settings for the Snapshot Agent  
   
@@ -101,7 +100,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     > [!NOTE]  
     >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. See below for the procedure to change the context.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 #### To change security settings for the Log Reader Agent  
   
@@ -122,7 +121,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     > [!NOTE]  
     >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. Change the context using the next procedure.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
     > [!NOTE]  
     >  There is one Log Reader Agent for each published database. Changing the security settings for the agent on one publication affects the settings for all publications in the publication database.  
@@ -133,7 +132,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Agent Connection to the Publisher** section, specify the login and password used by the replication administrative user schema you configured. For more information, see [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 #### To change security settings for the Distribution Agent for a push subscription  
   
@@ -145,7 +144,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
          If you use queued updating subscriptions, the Queue Reader Agent also uses the context specified here for connections to the Subscriber.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To change security settings for the Distribution Agent for a pull subscription  
   
@@ -157,7 +156,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To change the context under which the Distribution Agent connects to the Distributor, click the **Distributor Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To change security settings for the Merge Agent for a push subscription  
   
@@ -167,7 +166,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To change the context under which the Merge Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To change security settings for the Merge Agent for a pull subscription  
   
@@ -177,7 +176,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To change the context under which the Merge Agent connects to the Publisher and Distributor, click the **Publisher Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To change the account under which the Queue Reader Agent runs  
   
@@ -191,7 +190,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   Enter a new strong password in the **Password** and **Confirm Password** text boxes.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
     > [!NOTE]  
     >  There is one Queue Reader Agent for each distribution database. Changing the security settings for the agent affects the settings for all publications at all Publishers that use this distribution database.  
@@ -202,7 +201,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Agent Connection to the Publisher** section, specify a value of **Impersonate the agent process account** or **SQL Server Authentication** for the **Agent Connection Mode** option. If you specify **SQL Server Authentication**, also enter values for **Login** and **Password**.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
     > [!NOTE]  
     >  There is one Queue Reader Agent for each distribution database. Changing the security settings for the agent affects the settings for all publications at all Publishers that use this distribution database.  
@@ -221,7 +220,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   **Use SQL Server Authentication with the following login and password**. Select this option if you have not defined a remote server or linked server between the Subscriber and the Publisher. Replication will create a linked server for you. The account you specify must already exist at the Publisher.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 > [!NOTE]  
 >  This procedure changes the method that replication triggers use to connect from the Subscriber to the Publisher when changes are made at the Subscriber. You can also change settings associated with the Distribution Agent for an immediate updating subscription. For more information, see the procedures earlier in this topic.  
@@ -232,11 +231,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, enter a strong password in the **Password** and **Confirm Password** text boxes.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 3.  On the **General** page of the **Publisher Properties - \<Publisher>** dialog box, enter a strong password in the **Password** and **Confirm Password** text boxes.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -268,7 +267,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     -   When changing the security mode used when connecting to the Publisher from **1** to **0** or when changing a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login used for this connection, specify `@publisher_login` and `@publisher_password`.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 #### To change security settings for the Log Reader Agent  
   
@@ -286,7 +285,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     >  After changing an agent login or password, you must stop and restart the agent before the change takes effect.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 #### To change security settings for the Distribution Agent for a push subscription  
   
@@ -306,7 +305,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     >  After changing an agent login or password, you must stop and restart the agent before the change takes effect.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including **distrib_job_login** and **distrib_job_password**, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including **distrib_job_login** and **distrib_job_password**, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 #### To change security settings for the Distribution Agent for a pull subscription  
   
@@ -347,7 +346,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     >  After changing an agent login or password, you must stop and restart the agent before the change takes effect.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including **merge_job_login** and **merge_job_password**, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all properties, including **merge_job_login** and **merge_job_password**, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 #### To change security settings for the Merge Agent for a pull subscription  
   
@@ -377,7 +376,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 2.  At the Publisher, execute [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md), specifying `@publication`, the value obtained from step 1 for `dynamic_snapshot_jobname`, and a new password for `@job_password` or login and password for the Windows account under which the agent runs for `@job_login` and `@job_password`.  
   
     > [!IMPORTANT]  
-    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 #### To change security settings for the Queue Reader Agent  
   
@@ -574,4 +573,3 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
-  

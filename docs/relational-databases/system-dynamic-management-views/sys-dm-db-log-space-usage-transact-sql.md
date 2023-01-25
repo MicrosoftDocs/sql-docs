@@ -4,9 +4,8 @@ description: "The sys.dm_db_log_space_usage dynamic management view returns spac
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 06/20/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "sys.dm_db_log_space_usage"
@@ -34,7 +33,7 @@ Returns space usage information for the transaction log.
 |total_log_size_in_bytes |**bigint** |The size of the log  |
 |used_log_space_in_bytes |**bigint** |The occupied size of the log  |
 |used_log_space_in_percent |**real** |The occupied size of the log as a percent of the total log size |
-|log_space_in_bytes_since_last_backup |**bigint** |The amount of space used since the last log backup <br />**Applies to:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] through [!INCLUDE[sscurrent-md](../../includes/ssnoversion-md.md)],  [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|log_space_in_bytes_since_last_backup |**bigint** |The amount of space used since the last log backup <br />**Applies to:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] and later,  [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
     
   
 ## Permissions  

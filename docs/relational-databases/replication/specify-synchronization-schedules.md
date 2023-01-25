@@ -3,10 +3,9 @@ title: "Specify Synchronization Schedules | Microsoft Docs"
 description: Learn how to specify synchronization schedules in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], synchronizing"
@@ -89,7 +88,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 7.  If you select **Recurring**, specify a schedule for the agent.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 #### To modify a synchronization schedule for a push subscription in Management Studio  
   
@@ -111,7 +110,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 6.  If you select **Recurring**, specify a schedule for the agent.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 #### To modify a synchronization schedule for a pull subscription in Management Studio  
   
@@ -133,7 +132,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 6.  If you select **Recurring**, specify a schedule for the agent.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  You can define synchronization schedules programmatically using replication stored procedures. The stored procedures that you use depend on the type of replication and the type of subscription (pull or push).  

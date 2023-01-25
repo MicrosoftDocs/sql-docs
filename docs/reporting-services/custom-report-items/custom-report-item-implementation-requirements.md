@@ -3,7 +3,6 @@ title: "Custom Report Item Implementation Requirements | Microsoft Docs"
 description: Learn about the development and deployment requirements that you need for custom report item implementations.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: custom-report-items
 
 
@@ -22,7 +21,7 @@ ms.author: maggies
   
 -   Administrative access to a server running [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
--   [!INCLUDE[vsprvsext](../../includes/vsprvsext-md.md)] or above with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] software development kit (SDK) installed.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../includes/vsprvs2005-md.md)] or above with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] software development kit (SDK) installed.  
   
 -   Access to the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation.  
   

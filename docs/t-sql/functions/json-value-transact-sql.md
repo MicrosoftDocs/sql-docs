@@ -4,10 +4,9 @@ description: "JSON_VALUE (Transact-SQL)"
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "JSON_VALUE"
   - "JSON_VALUE_TSQL"
@@ -27,7 +26,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
   
  To extract an object or an array from a JSON string instead of a scalar value, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). For info about the differences between **JSON_VALUE** and **JSON_QUERY**, see [Compare JSON_VALUE and JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -95,7 +94,6 @@ SET @jsonInfo=N'{
 |$.info.tags|NULL|Error|Not a scalar value.<br /><br /> Use **JSON_QUERY** instead.|  
 |$.info.type[0]|NULL|Error|Not an array.|  
 |$.info.none|NULL|Error|Property does not exist.|  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## Examples  
   

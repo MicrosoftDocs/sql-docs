@@ -2,8 +2,7 @@
 description: "Configure E-mail for a Reporting Services Service Application"
 title: "Configure E-mail for a Reporting Services Service Application | Microsoft Docs"
 ms.date: 05/10/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint"
+ms.service: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
@@ -40,7 +39,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
      The account of the user specified in **From address** must be a managed account that you specified when you configured the application pool for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. If you have permission, you can view a list of existing managed accounts on the Service Accounts page in SharePoint Central Administration.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ### NTLM Authentication  
   

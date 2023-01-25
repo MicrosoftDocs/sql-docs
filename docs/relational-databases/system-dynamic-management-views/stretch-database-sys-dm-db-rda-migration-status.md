@@ -4,8 +4,8 @@ description: Learn how sys.dm_db_rda_migration_status contains one row for each 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_rda_migration_status"
@@ -24,7 +24,7 @@ dev_langs:
 Contains one row for each batch of migrated data from each Stretch-enabled table on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Batches are identified by their start time and end time.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 `sys.dm_db_rda_migration_status` is scoped to the current database context. Make sure you're in the database context of the Stretch-enable tables for which you want to see migration status.
 

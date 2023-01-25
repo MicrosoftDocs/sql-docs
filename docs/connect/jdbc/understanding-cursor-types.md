@@ -1,16 +1,12 @@
 ---
-description: Learn about the different cursor types you can use for your application queries and when to use them.
 title: Understanding cursor types
-ms.custom: ""
-ms.date: 03/22/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
+description: Learn about the different cursor types you can use for your application queries and when to use them.
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 03/22/2021
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Understanding cursor types
 
@@ -33,12 +29,6 @@ The JDBC specification provides support for forward-only and scrollable cursors 
 ## Remarks
 
 The JDBC driver supports the following result set and cursor types along with the specified behavior options.
-
-|Result Set (Cursor) Type|SQL Server Cursor Type|Characteristics|select Method|response Buffering|
-|------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|
-|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|Forward-only, read-only|direct|full|
-
-The application has to make a single (forward) pass through the result set. This pass is the default behavior and behaves the same as a TYPE_SS_DIRECT_FORWARD_ONLY cursor. The driver reads the entire result set from the server into a memory during the statement execution time.
 
 |Result Set (Cursor) Type|SQL Server Cursor Type|Characteristics|select Method|response Buffering|
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|

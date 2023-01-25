@@ -1,15 +1,13 @@
 ---
 title: "Availability group troubleshooting tools (content index)"
 description: A reference of articles describing tools that can be used to monitor and troubleshoot issues with availability groups.
-ms.custom: seo-lt-2019
-ms.date: "06/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/14/2017"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 # Useful tools for troubleshooting
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

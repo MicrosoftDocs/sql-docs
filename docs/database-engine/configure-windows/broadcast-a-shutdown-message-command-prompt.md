@@ -1,14 +1,13 @@
 ---
-title: "Broadcast a Shutdown Message (Command Prompt) | Microsoft Docs"
+title: "Broadcast a Shutdown Message (Command Prompt)"
 description: Find out how to use the net send command to broadcast a message in SQL Server. See how to determine which users are currently connected to SQL Server.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server, stopping"
   - "named instances [SQL Server], broadcasting shutdown messages"
   - "shutdown message broadcast"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "command prompt [SQL Server], broadcasting shutdown messages"
   - "default instances [SQL Server], broadcasting shutdown messages"
   - "stopping SQL Server"
-ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Broadcast a Shutdown Message (Command Prompt)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

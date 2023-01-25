@@ -3,13 +3,10 @@ title: "OBJECT_SCHEMA_NAME (Transact-SQL)"
 description: "OBJECT_SCHEMA_NAME (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "06/25/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "OBJECT_SCHEMA_NAME"
   - "OBJECT_SCHEMA_NAME_TSQL"
@@ -28,7 +25,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 
   Returns the database schema name for schema-scoped objects. For a list of schema-scoped objects, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

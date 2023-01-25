@@ -1,14 +1,14 @@
 ---
 title: Azure Active Directory-only authentication
-description: This article provides information on the Azure AD-only authentication feature with Azure SQL
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-ms.service: sql-db-mi
-ms.subservice: security
-ms.topic: conceptual
+description: This article provides information on the Azure AD-only authentication feature with Azure SQL
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/01/2022
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: conceptual
 ms.custom:
   - "ignite-fall-2021"
   - "devx-track-azurecli"

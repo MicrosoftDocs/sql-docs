@@ -4,9 +4,8 @@ description: Learn how srv_rpcname in the Extended Stored Procedure API returns 
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_rpcname"
@@ -21,7 +20,7 @@ ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the procedure name component for the current remote stored procedure.  
   

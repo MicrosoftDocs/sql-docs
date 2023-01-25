@@ -3,10 +3,9 @@ title: "XQuery Language Reference (SQL Server) | Microsoft Docs"
 description: Learn about the XQuery language for SQL Server and view a complete language reference.
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "XQuery"
@@ -57,7 +56,6 @@ WHERE ProductModelID=7
 |-----------|-----------------|  
 |[XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|Explains the support for the **xml**data type in the [!INCLUDE[ssDE](../includes/ssde-md.md)] and the methods you can use against this data type. The **xml** data type forms the input XQuery data model on which the XQuery expressions are executed.|  
 |[XML Schema Collections &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|Describes how the XML instances stored in a database can be typed. This means you can associate an XML schema collection with the **xml** type column. All the instances stored in the column are validated and typed against the schema in the collection and provide the type information for XQuery.|  
-|||  
   
 > [!NOTE]  
 >  The organization of this section is based on the World Wide Web Consortium (W3C) XQuery working draft specification. Some of the diagrams provided in this section are taken from that specification. This section compares the Microsoft XQuery implementation to the W3C specification, describes how Microsoft XQuery is different from the W3C and indicates what W3C features are not supported. The W3C specification is available at [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846).  

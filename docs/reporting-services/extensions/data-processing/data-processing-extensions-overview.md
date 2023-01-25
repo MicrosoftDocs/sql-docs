@@ -3,7 +3,6 @@ title: "Data Processing Extensions Overview | Microsoft Docs"
 description: See which data processing extensions are included with Reporting Services, and learn how to add custom data processing to your report server.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: extensions
 
 
@@ -65,7 +64,7 @@ The step-by-step process flow of a data extension that is called by the report s
   
 -   A deployment computer with Report Designer or a report server installed.  
   
--   A development computer with [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] or above, or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
+-   A development computer with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../../includes/vsprvs2005-md.md)] or above, or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
   
 -   An in-depth understanding of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] features and capabilities.  
   

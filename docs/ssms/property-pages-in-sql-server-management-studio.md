@@ -1,10 +1,9 @@
 ---
 title: "Property Pages in SQL Server Management Studio"
 description: "Property Pages in SQL Server Management Studio"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "property pages [SQL Server Management Studio]"
@@ -17,7 +16,7 @@ ms.date: "01/19/2017"
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Property page dialog boxes in [!INCLUDE[msCoName](../includes/msconame_md.md)] SQL Server Management Studio all use a common format displaying information with expanding and collapsing categories. The fields shown depend on the particular property. Properties shown in gray are read-only. Categorized and Alphabetic buttons are near the top of each property page.  
+Property page dialog boxes in [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server Management Studio all use a common format displaying information with expanding and collapsing categories. The fields shown depend on the particular property. Properties shown in gray are read-only. Categorized and Alphabetic buttons are near the top of each property page.  
   
 The following table describes the common elements of Management Studio property page dialog boxes.  
   

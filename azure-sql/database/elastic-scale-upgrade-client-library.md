@@ -1,17 +1,14 @@
 ---
 title: Upgrade to the latest elastic database client library
 description: Use NuGet to upgrade elastic database client library.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/03/2019
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 # Upgrade an app to use the latest elastic database client library
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -22,7 +19,7 @@ New versions of the [Elastic Database client library](elastic-database-client-li
 
 Rebuild your application with the new library, as well as change your existing Shard Map Manager metadata stored in your databases in Azure SQL Database to support new features.
 
-Performing these steps in order ensures that old versions of the client library are no longer present in your environment when metadata objects are updated, which means that old-version metadata objects won’t be created after upgrade.
+Performing these steps in order ensures that old versions of the client library are no longer present in your environment when metadata objects are updated, which means that old-version metadata objects won't be created after upgrade.
 
 ## Upgrade steps
 
@@ -48,7 +45,7 @@ Performing these steps in order ensures that old versions of the client library 
 3. Navigate to the subfolder containing the new client DLL version you have just downloaded, for example:
    `cd .\Microsoft.Azure.SqlDatabase.ElasticScale.Client.1.0.0\lib\net45`
 4. Download the elastic database client upgrade script from the [Script Center](https://gallery.technet.microsoft.com/scriptcenter/Azure-SQL-Database-Elastic-6442e6a9), and save it into the same folder containing the DLL.
-5. From that folder, run “PowerShell .\upgrade.ps1” from the command prompt and follow the prompts.
+5. From that folder, run `PowerShell .\upgrade.ps1` from the command prompt and follow the prompts.
 
 ***Option 2: Upgrade metadata using C#***
 

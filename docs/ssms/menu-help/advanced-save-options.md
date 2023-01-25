@@ -3,10 +3,9 @@ description: "Advanced Save Options"
 title: "Advanced Save Options"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords: 
   - "vs.advancedsaveoptions"
@@ -25,5 +24,5 @@ Use this dialog box to select a language encoding scheme and to specify the char
 Use this list box to apply a new language encoding scheme to the target file.  
   
 **Line Endings**  
-To ensure that the target file will run on a specific operating system, select whether a carriage return (for Macintosh systems), a line feed (for Unix systems), or both characters (for [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows systems) will mark the end of each line.  
+To ensure that the target file will run on a specific operating system, select whether a carriage return (for Macintosh systems), a line feed (for Unix systems), or both characters (for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows systems) will mark the end of each line.  
   

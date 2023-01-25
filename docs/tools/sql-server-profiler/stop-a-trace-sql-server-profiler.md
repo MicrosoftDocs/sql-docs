@@ -2,10 +2,9 @@
 title: Stop a Trace
 titleSuffix: SQL Server Profiler
 description: Discover how to stop a trace that is running in SQL Server Profiler, change any properties you want to adjust, and save the captured data.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 author: markingmyname
@@ -16,7 +15,7 @@ ms.date: 03/01/2017
 
 # Stop a Trace (SQL Server Profiler)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how to stop a trace that is running by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

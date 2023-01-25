@@ -4,9 +4,8 @@ description: cdc.change_tables (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "cdc.change_tables"
@@ -29,7 +28,7 @@ ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 |**source_object_id**|**int**|ID of the source table enabled for change data capture.|  
 |**capture_instance**|**sysname**|Name of the capture instance used to name instance-specific tracking objects. By default, the name is derived from the source schema name plus the source table name in the format *schemaname_sourcename*.|  
 |**start_lsn**|**binary(10)**|Log sequence number (LSN) representing the low endpoint when querying for change data in the change table.<br /><br /> NULL = the low endpoint has not been established.|  
-|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> For [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this column always returns NULL.|  
+|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> For [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], this column always returns NULL.|  
 |**supports_net_changes**|**bit**|Support for querying for net changes is enabled for the change table.|  
 |**has_drop_pending**|**bit**|Capture process has received notification that the source table has been dropped.|  
 |**role_name**|**sysname**|Name of the database role used to gate access to change data.<br /><br /> NULL = a role is not used.|  

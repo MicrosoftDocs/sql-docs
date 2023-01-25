@@ -3,9 +3,9 @@ title: "sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs"
 description: Learn about sys.sp_rda_reconcile_columns. Use this stored procedure to reconcile columns in remote Azure tables and Stretch-enabled SQL Server tables.
 ms.custom: ""
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_rda_reconcile_columns"
@@ -24,14 +24,14 @@ ms.author: maghan
   Reconciles the columns in the remote Azure table to the columns in the Stretch-enabled SQL Server table.  
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
     
   **sp_rda_reconcile_columns** adds columns to the remote table that exist in the Stretch-enabled SQL Server table but not in the remote table. These columns may be columns that you accidentally deleted from the remote table. However, **sp_rda_reconcile_columns** does not delete columns from the remote table that exist in the remote table but not in the SQL Server table.
   
   > [!IMPORTANT]
   > When **sp_rda_reconcile_columns** recreates columns that you accidentally deleted from the remote table, it does not restore the data that was previously in the deleted columns.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
    
 ## Syntax  
   

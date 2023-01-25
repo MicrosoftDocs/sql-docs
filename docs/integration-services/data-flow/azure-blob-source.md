@@ -3,10 +3,9 @@ description: "Azure Blob Source"
 title: "Azure Blob Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2018"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpblobsrc.f1"

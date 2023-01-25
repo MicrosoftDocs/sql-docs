@@ -2,20 +2,18 @@
 title: Configure Azure Active Directory authentication
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to connect to SQL Database, SQL Managed Instance, and Azure Synapse Analytics by using Azure Active Directory authentication, after you configure Azure AD.
-services:
-  - "sql-database"
+author: GithubMirek
+ms.author: mireks
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: 04/09/2022
 ms.service: sql-db-mi
 ms.subservice: security
+ms.topic: how-to
 ms.custom:
   - "azure-synapse"
   - "has-adal-ref"
   - "sqldbrb=2"
   - "devx-track-azurepowershell"
-ms.topic: how-to
-author: GithubMirek
-ms.author: mireks
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/09/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -67,7 +65,7 @@ For more information, see:
 
 ## Azure AD admin with a server in SQL Database
 
-Each [server](logical-servers.md) in Azure (which hosts SQL Database or Azure Synapse) starts with a single server administrator account that is the administrator of the entire server. Create a second administrator account as an Azure AD account. This principal is created as a contained database user in the master database of the server. Administrator accounts are members of the **db_owner** role in every user database, and enter each user database as the **dbo** user. For more information about administrator accounts, see [Managing Databases and Logins](logins-create-manage.md).
+Each [server](logical-servers.md) in Azure (which hosts SQL Database or Azure Synapse) starts with a single server administrator account that is the administrator of the entire server. Create a second administrator account as an Azure AD account. This principal is created as a contained database user in the `master` database of the server. Administrator accounts are members of the **db_owner** role in every user database, and enter each user database as the **dbo** user. For more information about administrator accounts, see [Managing Databases and Logins](logins-create-manage.md).
 
 When using Azure Active Directory with geo-replication, the Azure Active Directory administrator must be configured for both the primary and the secondary servers. If a server does not have an Azure Active Directory administrator, then Azure Active Directory logins and users receive a `Cannot connect` to server error.
 
@@ -79,7 +77,7 @@ When using Azure Active Directory with geo-replication, the Azure Active Directo
 > [!IMPORTANT]
 > Only follow these steps if you are provisioning an Azure SQL Managed Instance. This operation can only be executed by Global Administrator or a Privileged Role Administrator in Azure AD.
 >
-> In **public preview**, you can assign the **Directory Readers** role to a group in Azure AD. The group owners can then add the managed instance identity as a member of this group, which would allow you to provision an Azure AD admin for the SQL Managed Instance. For more information on this feature, see [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md).
+> You can assign the **Directory Readers** role to a group in Azure AD. The group owners can then add the managed instance identity as a member of this group, which would allow you to provision an Azure AD admin for the SQL Managed Instance. For more information on this feature, see [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md).
 
 Your SQL Managed Instance needs permissions to read Azure AD to successfully accomplish tasks such as authentication of users through security group membership or creation of new users. For this to work, you need to grant the SQL Managed Instance permission to read Azure AD. You can do this using the Azure portal or PowerShell.
 
@@ -276,7 +274,7 @@ The following two procedures show you how to provision an Azure Active Directory
 The process of changing the administrator may take several minutes. Then the new administrator appears in the **Active Directory admin** box.
 
    > [!NOTE]
-   > When setting up the Azure AD admin, the new admin name (user or group) cannot already be present in the virtual master database as a server authentication user. If present, the Azure AD admin setup will fail; rolling back its creation and indicating that such an admin (name) already exists. Since such a server authentication user is not part of the Azure AD, any effort to connect to the server using Azure AD authentication fails.
+   > When setting up the Azure AD admin, the new admin name (user or group) cannot already be present in the virtual `master` database as a server authentication user. If present, the Azure AD admin setup will fail; rolling back its creation and indicating that such an admin (name) already exists. Since such a server authentication user is not part of the Azure AD, any effort to connect to the server using Azure AD authentication fails.
 
 To later remove an Admin, at the top of the **Active Directory admin** page, select **Remove admin**, and then select **Save**.
 
@@ -376,7 +374,7 @@ You can meet these requirements by:
 
 Because SQL Managed Instance supports Azure AD server principals (logins), using contained database users is not required. Azure AD server principals (logins) enable you to create logins from Azure AD users, groups, or applications. This means that you can authenticate with your SQL Managed Instance by using the Azure AD server login rather than a contained database user. For more information, see [SQL Managed Instance overview](../managed-instance/sql-managed-instance-paas-overview.md#azure-active-directory-integration). For syntax on creating Azure AD server principals (logins), see [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
 
-However, using Azure Active Directory authentication with SQL Database and Azure Synapse requires using contained database users based on an Azure AD identity. A contained database user does not have a login in the master database, and maps to an identity in Azure AD that is associated with the database. The Azure AD identity can be either an individual user account or a group. For more information about contained database users, see [Contained Database Users- Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable).
+However, using Azure Active Directory authentication with SQL Database and Azure Synapse requires using contained database users based on an Azure AD identity. A contained database user does not have a login in the `master` database, and maps to an identity in Azure AD that is associated with the database. The Azure AD identity can be either an individual user account or a group. For more information about contained database users, see [Contained Database Users- Making Your Database Portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable).
 
 > [!NOTE]
 > Database users (with the exception of administrators) cannot be created using the Azure portal. Azure roles are not propagated to the database in SQL Database, the SQL Managed Instance, or Azure Synapse. Azure roles are used for managing Azure Resources, and do not apply to database permissions. For example, the **SQL Server Contributor** role does not grant access to connect to the database in SQL Database, the SQL Managed Instance, or Azure Synapse. The access permission must be granted directly in the database using Transact-SQL statements.
@@ -385,7 +383,7 @@ However, using Azure Active Directory authentication with SQL Database and Azure
 > Special characters like  colon `:` or ampersand `&` when included as user names in the T-SQL `CREATE LOGIN` and `CREATE USER` statements are not supported.
 
 > [!IMPORTANT]
-> Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+> Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
 
 To create an Azure AD-based contained database user (other than the server administrator that owns the database), connect to the database with an Azure AD identity, as a user with at least the **ALTER ANY USER** permission. Then use the following Transact-SQL syntax:
@@ -439,7 +437,7 @@ A federated domain user account that is imported into a managed domain as an ext
 
 ## Connect to the database using SSMS or SSDT  
 
-To confirm the Azure AD administrator is properly set up, connect to the **master** database using the Azure AD administrator account.
+To confirm the Azure AD administrator is properly set up, connect to the `master` database using the Azure AD administrator account.
 To provision an Azure AD-based contained database user (other than the server administrator that owns the database), connect to the database with an Azure AD identity that has access to the database.
 
 > [!IMPORTANT]

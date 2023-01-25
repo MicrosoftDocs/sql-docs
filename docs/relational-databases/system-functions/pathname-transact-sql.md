@@ -3,10 +3,9 @@ description: "PathName (Transact-SQL)"
 title: "PathName (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "PathName_TSQL"
@@ -24,7 +23,7 @@ ms.author: randolphwest
 
   Returns the path of a FILESTREAM binary large object (BLOB). The OpenSqlFilestream API uses this path to return a handle that an application can use to work with the BLOB data by using Win32 APIs. PathName is read-only.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

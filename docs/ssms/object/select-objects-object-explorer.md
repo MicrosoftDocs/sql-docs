@@ -3,10 +3,9 @@ description: "Select Objects (Object Explorer)"
 title: "Select Objects (Object Explorer)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.selectobjects.f1"
@@ -20,7 +19,7 @@ Use the **Select Objects** dialog box to add an object to a list in another dial
   
 ## Options  
 **Select these object types**  
-Displays a list of the types of which the objects to be selected belong. The types include [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] level and database level principals and securables. This box is populated from the selections made from the **Select Object Types** dialog box, accessed from the **Objects Type** button.  
+Displays a list of the types of which the objects to be selected belong. The types include [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] level and database level principals and securables. This box is populated from the selections made from the **Select Object Types** dialog box, accessed from the **Objects Type** button.  
   
 **Enter the object names to select**  
 Enter a semicolon-separated list of names of the objects to be selected. Objects to be selected must be of a type listed in the **Select these object types** box. Objects can be selected from a list accessed by clicking the **Browse** button.  

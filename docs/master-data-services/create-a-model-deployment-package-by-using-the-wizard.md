@@ -3,18 +3,17 @@ description: "Create a Model Deployment Package by Using the Wizard"
 title: Create a Model Deployment Package with Wizard
 ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deployment packages [Master Data Services], creating"
   - "models [Master Data Services], creating a deployment package"
   - "creating packages [Master Data Services]"
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Model Deployment Package by Using the Wizard
 

@@ -4,8 +4,8 @@ description: Learn how sys.dm_db_rda_schema_update_status contains a row for eac
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_rda_schema_update_status"
@@ -24,7 +24,7 @@ dev_langs:
 Contains one row for each schema update task for the remote data archive of each Stretch-enabled table in the current database. Tasks are identified by their task ids.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 `sys.dm_db_rda_schema_update_status` is scoped to the current database context. Make sure you are in the database context of the Stretch-enabled table for which you want to see schema update status.
 

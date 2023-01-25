@@ -3,9 +3,9 @@ title: "sys.sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs"
 description: Learn how to use sys.sp_rda_deauthorize_db to remove authenticated connections between local Stretch-enabled databases and remote Azure databases.
 ms.custom: ""
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_rda_deauthorize_db"
@@ -24,9 +24,9 @@ ms.author: maghan
   Removes the authenticated connection between a local Stretch-enabled database and the remote Azure database. Run **sp_rda_deauthorize_db**  when the remote database is unreachable or in an inconsistent state and you want to change query behavior for all Stretch-enabled tables in the database.  
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

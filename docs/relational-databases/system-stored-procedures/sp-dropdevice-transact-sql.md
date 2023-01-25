@@ -3,10 +3,9 @@ description: "sp_dropdevice (Transact-SQL)"
 title: "sp_dropdevice (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_dropdevice_TSQL"
@@ -23,9 +22,9 @@ ms.author: maghan
 # sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Drops a database device or backup device from an instance of the [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)], deleting the entry from **master.dbo.sysdevices**.  
+  Drops a database device or backup device from an instance of the [!INCLUDE[ssdenoversion-md](../../includes/ssdenoversion-md.md)], deleting the entry from **master.dbo.sysdevices**.  
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

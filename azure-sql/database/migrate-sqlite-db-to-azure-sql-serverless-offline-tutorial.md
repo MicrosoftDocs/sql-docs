@@ -1,17 +1,14 @@
 ---
 title: "Tutorial: How to migrate your SQLite database to Azure SQL Database serverless"
 description: Learn to perform an offline migration from SQLite to Azure SQL Database serverless by using Azure Data Factory.
-services:
-  - "sql-database"
-author: joplum
+author: joe-plumb
 ms.author: joplum
+ms.reviewer: wiassaf, mathoma
+ms.date: 08/11/2022
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: tutorial
-ms.date: 01/08/2020
-ms.custom:
-  - "sqldbrb=1"
-ms.reviewer: wiassaf, mathoma
+ms.custom: sqldbrb=1
 ---
 
 # How to migrate your SQLite database to Azure SQL Database serverless
@@ -29,59 +26,60 @@ Once you have followed the below steps, your database will be migrated into Azur
 - SQLite2 or SQLite3 database that you wish to migrate
 - A Windows environment
   - If you do not have a local Windows environment, you can use a Windows VM in Azure for the migration. Move and make your SQLite database file available on the VM using Azure Files and Storage Explorer.
+- Review [prerequisites for Azure Data Factory self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#prerequisites)
 
 ## Steps
 
-1. Provision a new Azure SQL Database in the Serverless compute tier.
+1. Provision a new Azure SQL Database in the [serverless compute tier](serverless-tier-overview.md?view=azuresql&preserve-view=true).
 
-    ![Screenshot of the Azure portal showing provisioning example for Azure SQL Database Serverless](./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/provision-serverless.png)
+    :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/provision-serverless.png" alt-text="Screenshot of the Azure portal showing provisioning example for Azure SQL Database Serverless.":::
 
 2. Ensure you have your SQLite database file available in your Windows environment. Install a SQLite ODBC Driver if you do not already have one (there are many available in Open Source, for example, http://www.ch-werner.de/sqliteodbc/).
 
-3. Create a System DSN for the database. Ensure you use the Data Source Administrator application that matches your system architecture (32-bit vs 64-bit). You can find which version you are running in your system settings.
+3. Create a System DSN for the database in your local Windows server. Ensure you use the Data Source Administrator application that matches your system architecture (32-bit vs 64-bit). You can find which version you are running in your system settings.
 
     - Open ODBC Data Source Administrator in your environment.
-    - Click the system DSN tab and click "Add"
-    - Select the SQLite ODBC connector you installed and give the connection a meaningful name, for example, sqlitemigrationsource
-    - Set the database name to the .db file
-    - Save and exit
+    - Select the system DSN tab and select "Add".
+    - Select the SQLite ODBC connector you installed and give the connection a meaningful name, for example, `sqlitemigrationsource`.
+    - Set the database name to the .db file.
+    - Save and exit.
 
-4. Download and install the self-hosted integration runtime. The easiest way to do this is the Express install option, as detailed in the documentation. If you opt for a manual install, you will need to provide the application with an authentication key, which can be located in your Data Factory instance by:
+4. Download and install the [self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory) on your local Windows server. The easiest way to do this is the **Option 1: Express setup** install option, as detailed in the documentation. If you opt for a manual install, you will need to provide the application with an authentication key, which can be located in your Azure Data Factory instance by:
 
-    - Starting up ADF (Author and Monitor from the service in the Azure portal)
-    - Click the "Author" tab (Blue pencil) on the left
-    - Click Connections (bottom left), then Integration runtimes
-    - Add new Self-Hosted Integration Runtime, give it a name, select *Option 2*.
+    - Start up the Azure Data Factory UI via the **Author and Monitor** link from the service in the Azure portal.
+    - Select the **Author** tab (Blue pencil) on the menu. For more information, see [Visual authoring in Azure Data Factory](/azure/data-factory/author-visually?tabs=data-factory).
+    - Select **Connections** (bottom left), then **Integration runtimes**.
+    - Add a new **Self-Hosted Integration Runtime**, give it a name, select **Option 2**.
 
 5. Create a new linked service for the source SQLite database in your Data Factory.
 
-    ![Screenshot showing empty linked services blade in Azure Data Factory](./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-create.png)
+    :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-create.png" alt-text="Screenshot showing empty linked services blade in Azure Data Factory.":::
 
-6. In **Connections**, under **Linked Service**, click **New**.
+6. In **Connections**, under **Linked Service**, select **New**.
 
-7. Search for and select the "ODBC" connector
+7. Search for and select the "ODBC" connector.
 
-   ![Screenshot showing ODBC connector logo in the linked services blade in Azure Data Factory](./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-odbc.png)
+   :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-odbc.png" alt-text="Screenshot showing ODBC connector logo in the linked services blade in Azure Data Factory.":::
 
-8. Give the linked service a meaningful name, for example, "sqlite_odbc". Select your integration runtime from the "Connect via integration runtime" dropdown. Enter the below into the connection string, replacing the Initial Catalog variable with the filepath for the .db file, and the DSN with the name of the system DSN connection:
+8. Give the linked service a meaningful name, for example, `sqlite_odbc`. Select your integration runtime from the "Connect via integration runtime" dropdown. Enter the below into the connection string, replacing the Initial Catalog variable with the filepath for the .db file, and the DSN with the name of the system DSN connection:
 
    ```
    Connection string: Provider=MSDASQL.1;Persist Security Info=False;Mode=ReadWrite;Initial Catalog=C:\sqlitemigrationsource.db;DSN=sqlitemigrationsource
     ```
 
-9. Set the authentication type to Anonymous
+9. Set the authentication type to **Anonymous**.
 
 10. Test the connection
 
-    ![Screenshot showing successful connection in Azure Data Factory](./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-test-successful.png)
+    :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-test-successful.png" alt-text="Screenshot showing successful connection in Azure Data Factory.":::
 
 11. Create another linked service for your Serverless SQL target. Select the database using the linked service wizard, and provide the SQL authentication credentials.
 
-    ![Screenshot showing Azure SQL Database selected in Azure Data Factory](./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-create-target.png)
+    :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/linked-services-create-target.png" alt-text="Screenshot showing Azure SQL Database selected in Azure Data Factory.":::
 
 12. Extract the CREATE TABLE statements from your SQLite database. You can do this by executing the below Python script on your database file.
 
-    ```
+    ```python
     #!/usr/bin/python
     import sqlite3
     conn = sqlite3.connect("sqlitemigrationsource.db")
@@ -98,13 +96,13 @@ Once you have followed the below steps, your database will be migrated into Azur
 
 13. Create the landing tables in your Serverless SQL target environment by copying the CREATE table statements from the CreateTables.sql file and running the SQL statements in the Query Editor in the Azure portal.
 
-14. Return to the home screen of your Data Factory and click "Copy Data" to run through the job creation wizard.
+14. Return to the home screen of your Data Factory and select **Copy Data** to run through the job creation wizard.
 
-    ![Screenshot showing the Copy Data wizard logo in Azure Data Factory](./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/copy-data.png)
+    :::image type="content" source="./media/migrate-sqlite-db-to-azure-sql-serverless-offline-tutorial/copy-data.png" alt-text="Screenshot showing the Copy Data wizard logo in Azure Data Factory.":::
 
 15. Select all tables from the source SQLite database using the check boxes, and map them to the target tables in Azure SQL. Once the job has run, you have successfully migrated your data from SQLite to Azure SQL!
 
 ## Next steps
 
 - To get started, see [Quickstart: Create a single database in Azure SQL Database using the Azure portal](single-database-create-quickstart.md).
-- For resource limits, see [Serverless compute tier resource limits](./resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).
+- For resource limits, see [Serverless compute tier resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).

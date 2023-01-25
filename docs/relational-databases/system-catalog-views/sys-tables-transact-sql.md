@@ -4,9 +4,8 @@ description: sys.tables (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -50,16 +49,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |temporal_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The text description of the type of table:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> When temporal_type = 2 or ledger_type = 2 returns object_id of the table that maintains historical data for a temporal table, otherwise returns NULL.|  
 |is_remote_data_archive_enabled|**bit**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indicates whether the table is Stretch-enabled.<br /><br /> 0 = The table isn't Stretch-enabled.<br /><br /> 1 = The table is Stretch-enabled.<br /><br /> For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
-|is_external|**bit**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)].<br /><br /> Indicates table is an external table.<br /><br /> 0 = The table isn't an external table.<br /><br /> 1 = The table is an external table.| 
+|is_external|**bit**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].<br /><br /> Indicates table is an external table.<br /><br /> 0 = The table isn't an external table.<br /><br /> 1 = The table is an external table.| 
 |history_retention_period|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing duration of the temporal history retention period in units specified with history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing type of temporal history retention period unit. <br /><br />-1: INFINITE <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6: YEAR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of type of temporal history retention period unit. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**Applies to**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = This is a graph Node table. <br /><br />0 = This isn't a graph Node table. |  
 |is_edge|**bit**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = This is a graph Edge table. <br /><br />0 = This isn't a graph Edge table. |  
-|ledger_type|**tinyint**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value indicates if the table is a ledger table.<br/><br/>0 = NON_LEDGER_TABLE<br/>1 = HISTORY_TABLE (associated with an updatable ledger table)<br/>2 = UPDATABLE_LEDGER_TABLE<br/>3 = APPEND_ONLY_LEDGER_TABLE<br /><br />For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).|
-|ledger_type_desc|**nvarchar(60)**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of a value in the ledger_type column:<br/><br/>NON_LEDGER_TABLE<br/>HISTORY_TABLE<br/>UPDATABLE_LEDGER_TABLE<br/>APPEND_ONLY_LEDGER_TABLE|  
-|ledger_view_id|**int**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>When ledger_type IN (2,3) returns object_id of the ledger view, otherwise returns NULL.|
-|is_dropped_ledger_table|**bit**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Indicates a ledger table that has been dropped.|
+|ledger_type|**tinyint**|**Applies to**: Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value indicates if the table is a ledger table.<br/><br/>0 = NON_LEDGER_TABLE<br/>1 = HISTORY_TABLE (associated with an updatable ledger table)<br/>2 = UPDATABLE_LEDGER_TABLE<br/>3 = APPEND_ONLY_LEDGER_TABLE<br /><br />For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).|
+|ledger_type_desc|**nvarchar(60)**|**Applies to**: Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of a value in the ledger_type column:<br/><br/>NON_LEDGER_TABLE<br/>HISTORY_TABLE<br/>UPDATABLE_LEDGER_TABLE<br/>APPEND_ONLY_LEDGER_TABLE|  
+|ledger_view_id|**int**|**Applies to**: Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>When ledger_type IN (2,3) returns object_id of the ledger view, otherwise returns NULL.|
+|is_dropped_ledger_table|**bit**|**Applies to**: Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Indicates a ledger table that has been dropped.|
 
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

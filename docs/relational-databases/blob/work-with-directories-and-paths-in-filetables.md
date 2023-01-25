@@ -3,10 +3,9 @@ title: "Work with Directories and Paths in FileTables | Microsoft Docs"
 description: The FileTables feature uses a directory structure to store files. Learn how to work with its directories, paths, restrictions, and semantics.
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: filestream
+ms.subservice: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], directories"
@@ -48,11 +47,13 @@ GO
   
 ###  <a name="nesting"></a> Nesting level  
   
-> **IMPORTANT!!** You cannot store more than 15 levels of subdirectories in the FileTable directory. When you store 15 levels of subdirectories, then the lowest level cannot contain files, since these files would represent an additional level.  
+> [!IMPORTANT]  
+> You cannot store more than 15 levels of subdirectories in the FileTable directory. When you store 15 levels of subdirectories, then the lowest level cannot contain files, since these files would represent an additional level.  
   
 ###  <a name="fqnlength"></a> Length of full path name  
   
-> **IMPORTANT!!** The NTFS file system supports path names that are much longer than the 260-character limit of the Windows shell and most Windows APIs. Therefore it is possible to create files in the file hierarchy of a FileTable by using Transact-SQL that you cannot view or open with Windows Explorer or many other Windows applications, because the full path name exceeds 260 characters. However you can continue to access these files by using Transact-SQL.  
+> [!IMPORTANT]  
+> The NTFS file system supports path names that are much longer than the 260-character limit of the Windows shell and most Windows APIs. Therefore it is possible to create files in the file hierarchy of a FileTable by using Transact-SQL that you cannot view or open with Windows Explorer or many other Windows applications, because the full path name exceeds 260 characters. However you can continue to access these files by using Transact-SQL.  
   
 ##  <a name="fullpath"></a> The full path to an item stored in a FileTable  
  The full path to a file or directory stored in a FileTable begins with the following elements:  

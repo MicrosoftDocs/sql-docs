@@ -3,10 +3,9 @@ description: "sp_prepexec (Transact-SQL)"
 title: "sp_prepexec (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_cursor_prepexec"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Prepares and executes a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. sp_prepexec combines the functions of sp_prepare and sp_execute. This action is invoked by ID =13 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

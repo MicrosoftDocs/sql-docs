@@ -3,13 +3,10 @@ title: "ODBC Scalar Functions (Transact-SQL)"
 description: "ODBC Scalar Functions (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "CURDATE ODBC function"
   - "DAYOFMONTH ODBC function"
@@ -173,7 +170,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D. Using an ODBC function in a stored procedure  
  The following example uses an ODBC function in a stored procedure:  

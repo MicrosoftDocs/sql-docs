@@ -3,10 +3,9 @@ description: "IBM DB2 Subscribers"
 title: "IBM DB2 Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "non-SQL Server Subscribers, IBM DB2"

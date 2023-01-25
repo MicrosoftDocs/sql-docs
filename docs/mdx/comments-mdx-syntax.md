@@ -2,8 +2,8 @@
 description: "Comments (MDX Syntax)"
 title: "Comments (MDX Syntax) | Microsoft Docs"
 ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.custom: mdx
 ms.topic: reference
 ms.author: owend
@@ -33,29 +33,22 @@ author: minewiskan
  These comment characters can be used on the same line as code to be run, on lines by themselves, or even within executable code. Everything from the open comment pair (/\*) to the close comment pair (\*/) is considered part of the comment. For a multiple-line comment, the open-comment character pair (/\*) must start the comment, and the close-comment character pair (\*/) must end the comment. No other comment characters can appear on any lines of the comment. For more information, see [/*...\*/ (Comment)](../mdx/comment-mdx.md).  
   
 ## Example  
- The following query shows examples of all three types of comment:  
-  
- `//An example of a comment using the double-forward slash`  
-  
- `--An example of a comment using the double-hypen`  
-  
- `/*An example of a`  
-  
- `multi-line`  
-  
- `comment*/`  
-  
- `SELECT`  
-  
- `{[Measures].[Internet Sales Amount]}`  
-  
- `ON Columns,`  
-  
- `[Date].[Calendar].MEMBERS`  
-  
- `ON Rows`  
-  
- `FROM [Adventure Works]`  
+ The following query shows examples of all three types of comment:
+ 
+```mdx
+//An example of a comment using the double-forward slash
+
+--An example of a comment using the double-hypen  
+
+/*An example of a  
+multi-line  
+comment*/  
+
+SELECT  
+  {[Measures].[Internet Sales Amount]} ON Columns,  
+  [Date].[Calendar].MEMBERS ON Rows  
+FROM [Adventure Works]
+```
   
 ## See Also  
  [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  

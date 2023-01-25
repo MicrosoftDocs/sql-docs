@@ -4,9 +4,8 @@ description: SET ANSI_DEFAULTS (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 04/16/2020
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET ANSI_DEFAULTS"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "SET ANSI_DEFAULTS statement"
 dev_langs:
   - "TSQL"
-ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_DEFAULTS (Transact-SQL)
@@ -26,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 
   Controls a group of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] settings that collectively specify some ISO standard behavior.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 
@@ -35,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 SET ANSI_DEFAULTS { ON | OFF }
 ```
 
-### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+### Syntax for [!INCLUDE[ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
 SET ANSI_DEFAULTS ON
 ```

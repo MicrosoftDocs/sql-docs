@@ -3,10 +3,9 @@ title: "Add & drop publication articles (SSMS)"
 description: Describes how to add articles to and drop articles from a publication using SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "articles [SQL Server replication], dropping"
@@ -31,13 +30,13 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  Select the check box next to each article you want to add.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To delete an article  
   
 1.  On the **Articles** page of the **Publication Properties - \<Publication>** dialog box, clear the check box next to each article you want to delete.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 ## See Also  
  [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   

@@ -5,11 +5,10 @@ description: Deny permissions on an Always On availability group.
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/15/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Availability Groups [SQL Server], permissions"
   - "permissions [SQL Server], availability group"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "denying permissions, [SQL Server], availability groups"
 dev_langs:
   - "TSQL"
-ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 ---
 # DENY Availability Group Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +23,7 @@ ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
   Denies permissions on an Always On availability group in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

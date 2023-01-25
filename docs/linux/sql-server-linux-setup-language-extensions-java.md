@@ -5,8 +5,8 @@ description: Learn how to install SQL Server Java Language Extension on Red Hat,
 author: rothja
 ms.author: jroth
 ms.topic: how-to
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 ms.custom:
 - intro-installation
 - event-tier1-build-2022
@@ -67,7 +67,7 @@ https://github.com/microsoft/sql-server-language-extensions/tree/main/language-e
 
 ::: monikerRange="=sql-server-linux-ver16"
 
-You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with SQL Server 2022, no Java runtime is installed by SQL Setup.
+You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], no Java runtime is installed by SQL Setup.
 
 To enable the Java Language Extension, build a custom binary by following the instructions from the [Java Language Extension page on GitHub](
 https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/java).

@@ -1,23 +1,16 @@
 ---
 title: Overview of SQL Server Always On availability groups
 description: This article introduces SQL Server Always On availability groups on Azure Virtual Machines.
-services: virtual-machines
-documentationCenter: na
-author: adbadram
-editor: monicar
-tags: azure-service-management
-
-ms.assetid: 601eebb1-fc2c-4f5b-9c05-0e6ffd0e5334
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-
 ms.topic: overview
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.custom: "seo-lt-2019"
-ms.reviewer: mathoma
+ms.custom: seo-lt-2019
+editor: monicar
+tags: azure-service-management
 ---
 
 # Always On availability group on SQL Server on Azure VMs
@@ -123,17 +116,17 @@ The following table provides a comparison of the options available:
 |**SQL Server edition** |Enterprise |Enterprise |Enterprise |Enterprise, Standard|Enterprise, Standard|
 |**Windows Server version**| 2016 + | 2016 + | 2016 + | All| All|
 |**Creates the cluster for you**|Yes|Yes | Yes |No| No| 
-|**Creates the availability group for you** |Yes |No|No|No| No| 
-|**Creates listener and load balancer independently** |No|No|No|Yes|N/A|
-|**Possible to create DNN listener using this method?**|No|No|No|Yes|N/A|
+|**Creates the availability group and listener for you** |Yes |No|No|No| No| 
+|**Creates listener and load balancer independently** |N/A|No|No|Yes|N/A|
+|**Possible to create DNN listener using this method?**|N/A|No|No|Yes|N/A|
 |**WSFC quorum configuration**|Cloud witness|Cloud witness|Cloud witness|All|All|
 |**DR with multiple regions** |No|No|No|Yes|Yes|
-|**Multisubnet support** |No|No|No|N/A|Yes|
+|**Multisubnet support** |Yes|No|No|N/A|Yes|
 |**Support for an existing AD**|Yes|Yes|Yes|Yes|Yes|
 |**DR with multizone in the same region**|Yes|Yes|Yes|Yes|Yes|
 |**Distributed AG with no AD**|No|No|No|Yes| Yes| 
 |**Distributed AG with no cluster** |No|No|No|Yes|Yes|
-|**Requires load balancer or DNN**| Yes | Yes | Yes | Yes | No|
+|**Requires load balancer or DNN**| No | Yes | Yes | Yes | No|
 
 ## Next steps
 

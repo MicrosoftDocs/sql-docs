@@ -1,9 +1,8 @@
 ---
 description: "View SQL Server Agent Error Log"
 title: View SQL Server Agent Error Log
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], SQL Server Agent"

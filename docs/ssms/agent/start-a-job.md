@@ -3,9 +3,8 @@ description: "Start a Job"
 title: "Start a Job"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], starting"
@@ -23,7 +22,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to start running a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio, [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
+This topic describes how to start running a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio, [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
   
 A job is a specified series of actions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent performs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs can run on one local server or on multiple remote servers.  
   
@@ -48,7 +47,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To start a job  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent,** and expand **Jobs**. Depending on how you want the job to start, do one of the following:  
   
@@ -64,7 +63,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To start a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -3,10 +3,9 @@ title: "Schedule SSIS packages in Azure with SSMS | Microsoft Docs"
 description: "Describes how to schedule SSIS packages deployed to Azure SQL Database by using the Schedule command in SQL Server Management Studio (SSMS)."
 ms.date: "09/23/2018"
 ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.custom: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
@@ -28,7 +27,6 @@ When you use SSMS to schedule a package, SSIS automatically creates three new Da
 | Pipeline | **Pipeline_MyPackage_2018-05-08T09_00_00Z** |
 | Execute SSIS Package activity | **Activity_MyPackage_2018-05-08T09_00_00Z** |
 | Trigger | **Trigger_MyPackage_2018-05-08T09_00_00Z** |
-|||
 
 ## Prerequisites
 

@@ -3,14 +3,11 @@ title: "LEAST (Transact-SQL)"
 description: "The LEAST logical functions returns the minimum value from a list of one or more expressions."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
 ms.date: "03/11/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom:
-  - "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "LEAST"
   - "LEAST_TSQL"
@@ -26,7 +23,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-
 
  This function returns the minimum value from a list of one or more expressions. 
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

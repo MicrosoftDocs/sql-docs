@@ -1,18 +1,16 @@
 ---
 title: "Tutorial: Geo-replication & failover in portal"
 description: Learn how to configure geo-replication for an SQL database using the Azure portal or Azure CLI, and initiate failover.
-services:
-  - "sql-database"
+author: AbdullahMSFT
+ms.author: amamun
+ms.reviewer: wiassaf, mathoma
+ms.date: 08/20/2021
 ms.service: sql-database
 ms.subservice: high-availability
+ms.topic: tutorial
 ms.custom:
   - "sqldbrb=1"
   - "devx-track-azurecli"
-ms.topic: tutorial
-author: rajeshsetlem
-ms.author: rsetlem
-ms.reviewer: wiassaf, mathoma
-ms.date: 08/20/2021
 ---
 # Tutorial: Configure active geo-replication and failover (Azure SQL Database)
 
@@ -41,7 +39,7 @@ To configure active geo-replication, you need a database in Azure SQL Database. 
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE [azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 ---
 

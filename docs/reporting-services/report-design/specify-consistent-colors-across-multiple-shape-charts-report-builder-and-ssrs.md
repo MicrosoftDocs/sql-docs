@@ -3,9 +3,8 @@ title: "Specify consistent colors in multiple shape charts in a paginated report
 description: Find out how choosing colors for a shape chart in a paginated report results in mapping each color in the palette to a data point in the dataset.
 
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -60,7 +59,7 @@ ms.author: maggies
     > [!NOTE]  
     >  You will need to replace the "Color1" strings with your own colors. You can use named colors, for example "Red", or you can use six-digit hexadecimal value that represent the color, such as "#FFFFFF" for black. If you have more than three colors defined, you will need to extend the array of colors so that the number of colors in the array matches the number of points in your shape chart. You can add new colors to the array by specifying a comma-separated list of string values that contain named colors or hexadecimal representations of colors.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 4.  Right-click on the shape chart and select **Series Properties**.  
   

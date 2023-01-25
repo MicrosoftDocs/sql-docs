@@ -1,17 +1,15 @@
 ---
 title: Automatic registration with SQL IaaS Agent extension
-description: Learn how to enable the automatic registration feature to automatically register all past and future SQL Server VMs with the SQL IaaS Agent extension using the Azure portal. 
+description: Learn how to enable the automatic registration feature to automatically register all past and future SQL Server VMs with the SQL IaaS Agent extension using the Azure portal.
 author: adbadram
 ms.author: adbadram
-tags: azure-service-management
+ms.reviewer: mathoma
+ms.date: 01/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 10/26/2021 
 ms.custom: devx-track-azurepowershell
-ms.reviewer: mathoma
+tags: azure-service-management
 ---
 # Automatic registration with SQL IaaS Agent extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -20,8 +18,7 @@ Enable the automatic registration feature in the Azure portal to automatically r
 
 This article teaches you to enable the automatic registration feature. Alternatively, you can [register a single VM](sql-agent-extension-manually-register-single-vm.md), or [register your VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md) with the SQL IaaS Agent extension. 
 
-> [!NOTE]
-> Starting in September 2021, registering with the SQL IaaS extension in full mode no longer requires restarting the SQL Server service. 
+[!INCLUDE [SQL VM feature benefits](../../includes/sql-vm-iaas-extension-permissions.md)]
 
 ## Overview
 
@@ -40,8 +37,21 @@ By default, Azure VMs with SQL Server 2016 or later installed will be automatica
 > [!IMPORTANT]
 > The SQL IaaS Agent extension collects data for the express purpose of giving customers optional benefits when using SQL Server within Azure Virtual Machines. Microsoft will not use this data for licensing audits without the customer's advance consent. See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information.
 
+## Integration with centrally managed Azure Hybrid Benefit
 
+Centrally managed Azure Hybrid Benefit (CM-AHB) is a service that helps customers optimize their Azure costs and use other benefits such as:
 
+- Moving all pay-as-you-go (full price) SQL PaaS/IaaS workloads to take advantage of your Hybrid Benefits without individually configuring them to enable Azure Hybrid Benefit
+- Ensuring that all your SQL workloads are licensed in compliance with the existing license agreements.
+- Separating the license compliance management roles from devops roles using RBAC
+- Take advantage of free business continuity by ensuring that your passive & DR environments are properly identified. 
+- Leverage your MSDN licenses in Azure for non-production environments. 
+
+CM-AHB uses data provided by the SQL IaaS Agent extension to account for the number of SQL Server licenses used by the individual Azure VMs and provides recommendations to the billing admin during the license assignment process. Using the recommendations ensures that you get the maximum discount by using Azure Hybrid Benefit. If your VMs are not registered with the SQL IaaS Agent extension when CM-AHB is enabled by your billing admin, the service will not receive the full usage data from your Azure subscriptions and therefore the CM-AHB recommendations will be inaccurate.  
+
+> [!IMPORTANT]
+> If automatic registration is activated after CM-AHB is enabled, you will run the risk of unnecessary pay-as-you-go charges for your SQL Server on Azure VM workloads.
+To mitigate this risk, you need to adjust your license assignments in CM-AHB to account for the additional usage that will be reported by the SQL IaaS Agent extension after auto-registration. We published an [open source tool](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-hybrid-benefit) that provides insights into the utilization of SQL Server licenses, including the utilization by the SQL Servers on Azure Virtual Machines that are not yet registered with the SQL IaaS Agent extension.    
 
 ## Prerequisites
 
@@ -49,7 +59,7 @@ To register your SQL Server VM with the extension, you'll need:
 
 - An [Azure subscription](https://azure.microsoft.com/free/) and, at minimum, [contributor role](/azure/role-based-access-control/built-in-roles#all) permissions.
 - An Azure Resource Model [Windows Server 2008 R2 (or later) virtual machine](/azure/virtual-machines/windows/quick-create-portal) with [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) deployed to the public or Azure Government cloud. Windows Server 2008 is not supported. 
-
+- The client credentials used to register the virtual machines exist in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**. 
 
 ## Enable
 
@@ -115,4 +125,6 @@ Failed registration errors are stored in `RegistrationErrors.csv` located in the
 
 ## Next steps
 
-Upgrade your manageability mode to [full](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full) to take advantage of the full feature set provided to you by the SQL IaaS Agent extension.
+Upgrade your manageability mode to [full](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full) to take advantage of the full feature set provided to you by the SQL IaaS Agent extension
+
+[Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).

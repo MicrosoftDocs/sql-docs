@@ -2,9 +2,8 @@
 title: "Keep headers visible when scrolling through a paginated report | Microsoft Docs"
 description: Freeze the row or column headings to prevent row and column labels from scrolling out of view after rendering a paginated report in Report Builder. 
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -42,7 +41,7 @@ ms.author: maggies
   
 2.  On the **General** tab, under **Row Headers** or **Column Headers**, select **Header should remain visible while scrolling**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To keep a static tablix member (row or column) visible while scrolling  
   

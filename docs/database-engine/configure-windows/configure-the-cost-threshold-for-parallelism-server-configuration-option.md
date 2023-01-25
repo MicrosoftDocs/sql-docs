@@ -1,18 +1,14 @@
 ---
-title: "Configure the cost threshold for parallelism Server Configuration Option | Microsoft Docs"
+title: "Configure the cost threshold for parallelism Server Configuration Option"
 description: Learn about the cost threshold for parallelism option. See how its value affects whether SQL Server runs parallel plans for queries, and find out how to set it.
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "cost threshold for parallelism option"
-ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "cost threshold for parallelism option"
 ---
 # Configure the cost threshold for parallelism Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

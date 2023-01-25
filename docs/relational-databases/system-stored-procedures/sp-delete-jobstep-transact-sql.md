@@ -3,10 +3,9 @@ description: "sp_delete_jobstep (Transact-SQL)"
 title: "sp_delete_jobstep (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_delete_jobstep"
@@ -25,7 +24,7 @@ ms.author: maghan
   Removes a job step from a job.  
   
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -42,7 +41,8 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 `[ @job_name = ] 'job_name'`
  The name of the job from which the step will be removed. *job_name*is **sysname**, with a default of NULL.  
   
-> **NOTE:** Either *job_id* or *job_name* must be specified; both cannot be specified.  
+> [!NOTE]  
+> Either *job_id* or *job_name* must be specified; both cannot be specified.  
   
 `[ @step_id = ] step_id`
  The identification number of the step being removed. *step_id*is **int**, with no default.  
@@ -58,7 +58,8 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  For more information about the steps associated with a particular job, run **sp_help_jobstep**.  
   
-> **NOTE:** Calling **sp_delete_jobstep** with a *step_id* value of zero deletes all job steps for the job.  
+> [!NOTE]  
+> Calling **sp_delete_jobstep** with a *step_id* value of zero deletes all job steps for the job.  
   
  Microsoft SQL Server Management Studio provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.  
   

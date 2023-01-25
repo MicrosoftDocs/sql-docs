@@ -1,17 +1,14 @@
 ---
 title: Set up SQL Data Sync
 description: This tutorial shows you how to set up SQL Data Sync for Azure
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: sql-data-sync
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/14/2019
+ms.date: 07/16/2022
+ms.service: sql-database
+ms.subservice: sql-data-sync
+ms.topic: tutorial
+ms.custom: sqldbrb=1
 ---
 # Tutorial: Set up SQL Data Sync between databases in Azure SQL Database and SQL Server
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -25,7 +22,7 @@ For an overview of SQL Data Sync, see [Sync data across cloud and on-premises da
 For PowerShell examples on how to configure SQL Data Sync, see [How to sync between databases in SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases.md) or [between databases in Azure SQL Database and SQL Server](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
 
 > [!IMPORTANT]
-> SQL Data Sync does **not** support Azure SQL Managed Instance at this time.
+> SQL Data Sync does **not** support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 ## Create sync group
 
@@ -223,9 +220,9 @@ When you change the data type of an existing column, Data Sync continues to work
 
 **How can I export and import a database with Data Sync?**
 
-After you export a database as a *.bacpac* file and import the file to create a database, do the following to use Data Sync in the new database:
+After you export a database as a `.bacpac` file and import the file to create a database, do the following to use Data Sync in the new database:
 
-1. Clean up the Data Sync objects and additional tables on the new database by using [this script](https://github.com/vitomaz-msft/DataSyncMetadataCleanup/blob/master/Data%20Sync%20complete%20cleanup.sql). The script deletes all the required Data Sync objects from the database.
+1. Clean up the Data Sync objects and additional tables on the new database by using [Data Sync complete cleanup.sql](https://github.com/vitomaz-msft/DataSyncMetadataCleanup/blob/master/Data%20Sync%20complete%20cleanup.sql). The script deletes all the required Data Sync objects from the database.
 1. Recreate the sync group with the new database. If you no longer need the old sync group, delete it.
 
 **Where can I find information on the client agent?**
@@ -238,7 +235,7 @@ Yes, you must manually approve the service managed private endpoint, in the Priv
 
 **Why do I get a firewall error when the Sync job is provisioning my Azure database?**
 
-This may happen because Azure resources are not allowed to access your server. Ensure that the firewall on the Azure database has "Allow Azure services and resources to access this server” setting set to "Yes".
+This may happen because Azure resources are not allowed to access your server. Ensure that the firewall on the Azure database has set "Allow Azure services and resources to access this server" to "Yes".
 
 
 ## Next steps

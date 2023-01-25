@@ -3,10 +3,9 @@ title: "Set propagation method for changes to articles (Transactional)"
 description: Describes how to set the propagation method for data changes to transactional articles for Transactional Replication using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
 ms.custom: seo-lt-2019
 ms.date: "12/16/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, propagation methods"
@@ -40,7 +39,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  On the **Properties** tab of the **Article Properties - \<Article>** dialog box, in the **Statement Delivery** section, specify the propagation method for each operation using the **INSERT delivery format**, **UPDATE delivery format**, and **DELETE delivery format** menus.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, select **OK** to save and close the dialog box.  
 
@@ -52,7 +51,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
      On the **Properties** tab of the **Article Properties - \<Article>** dialog box, in the **Statement Delivery** section, select the CALL syntax from the appropriate delivery format menu (**INSERT delivery format**, **UPDATE delivery format**, or **DELETE delivery format**), and then type the name of the procedure to use in **INSERT stored procedure**, **DELETE stored procedure**, or **UPDATE stored procedure**. For more information about CALL syntax, see the section "Call syntax for stored procedures" in [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 4.  If you are in the **Publication Properties - \<Publication>** dialog box, select **OK** to save and close the dialog box.  
   

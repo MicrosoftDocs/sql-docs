@@ -2,9 +2,8 @@
 title: "Enable Remote Errors (Reporting Services) | Microsoft Docs"
 description: Learn how to set server properties on a Reporting Services report server to return additional information about error conditions that occur on remote servers.
 ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual
@@ -67,7 +66,7 @@ ms.author: maggies
   
 4.  In the **Security** section, in **EnableRemoteErrors**, select **True**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="bkmk_script"></a> Enable remote errors through script (Native Mode)  
   

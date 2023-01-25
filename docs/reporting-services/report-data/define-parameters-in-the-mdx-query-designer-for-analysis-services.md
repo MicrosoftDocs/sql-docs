@@ -2,9 +2,8 @@
 title: "Define Parameters in the MDX Query Designer for Analysis Services | Microsoft Docs"
 description: Learn how to define query parameters in the Multidimensional Expression (MDX) query designer for Analysis Services.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual
@@ -42,7 +41,7 @@ ms.author: maggies
   
      After you run the query, click **Design** on the toolbar to toggle to Query mode to view the MDX query that was created. Do not change the query text in Query mode if you want to continue to use Design mode to develop the query. Click **Design** to toggle back to Design mode.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
      In the Report Data pane, expand the Parameters node to display the report parameter that was automatically created for the filter.  
   
@@ -66,11 +65,11 @@ ms.author: maggies
   
 8.  In the **Default** column, from the drop-down list, select a single value or multiple values depending on your choice in step 5.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 10. On the query designer toolbar, click **Run**.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. Select **OK**.
   
      In the Report Data pane, expand the Parameters node to display the report parameter that was automatically created for the filter.  
   

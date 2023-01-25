@@ -1,18 +1,14 @@
 ---
-title: "Server Properties (Advanced Page) | Microsoft Docs"
+title: "Server Properties (Advanced Page)"
 description: Get acquainted with SQL Server advanced server settings. Learn about FILESTREAM options, various thresholds, full-text upgrade alternatives, and other settings.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.serverproperties.advanced.f1"
-ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.serverproperties.advanced.f1"
 ---
 # Server Properties - Advanced Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +64,7 @@ ms.author: randolphwest
  The alternatives are as follows:  
   
  **Import**  
- Full-text catalogs are imported. This operation is significantly faster than **Rebuild**. However, an imported full-text catalog does not use the new and enhanced word breakers that are introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Therefore, you might want to rebuild your full-text catalogs eventually.  
+ Full-text catalogs are imported. This operation is significantly faster than **Rebuild**. However, an imported full-text catalog does not use the new and enhanced word breakers that are introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. Therefore, you might want to rebuild your full-text catalogs eventually.  
   
  If a full-text catalog is not available, the associated full-text indexes are rebuilt. This option is available for only [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] databases.  
   

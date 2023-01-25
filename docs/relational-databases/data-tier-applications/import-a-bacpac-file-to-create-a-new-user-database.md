@@ -2,8 +2,8 @@
 description: "Import a BACPAC File to Create a New User Database"
 title: "Import a BACPAC file to create a new user database"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology:
+ms.service: sql
+ms.subservice:
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb. importdac.results.f1"

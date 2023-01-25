@@ -2,9 +2,8 @@
 title: "Add gauges to mobile reports | Reporting Services | Microsoft Docs"
 description: You can add gauges to a Reporting Services mobile report. Gauges display a single value in a dataset by itself or compared to a goal.
 ms.date: 07/21/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: mobile-reports
+ms.service: reporting-services
+ms.subservice: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
@@ -41,7 +40,8 @@ You can filter gauge values by connecting them to navigators on the mobile repor
 
 4. [optional] To change the aggregation, select **Options** and select a different aggregation.
    
-   >**Note**: When you change the aggregation for the main value, you probably also want to change the aggregation for the comparison value, though in some cases you may want to mix aggregation methods.  
+   > [!NOTE]  
+   > When you change the aggregation for the main value, you probably also want to change the aggregation for the comparison value, though in some cases you may want to mix aggregation methods.  
 
 ## Filter a gauge
   

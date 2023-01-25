@@ -1,18 +1,14 @@
 ---
-title: "Register Mirrored Database | Microsoft Docs"
+title: "Register Mirrored Database"
 description: Learn how to register mirrored databases on a server instance by adding them to the Database Mirroring Monitor, which caches information about the databases.
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.registermirroreddb.f1"
-ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: database-mirroring
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dbmmonitor.registermirroreddb.f1"
 ---
 # Register Mirrored Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

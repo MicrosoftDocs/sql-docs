@@ -2,9 +2,8 @@
 title: "rsconfig Utility | Microsoft Docs"
 description: Learn about the rsconfig.exe utility that encrypts and stores report server database connection and account values in the RSReportServer.config file.
 ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 
 
 ms.topic: conceptual
@@ -89,7 +88,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### Specifying a Built-in Account  
- This example shows how to configure a report server to use a built-in account when connecting to a local report server database. Notice that **-u** is not used. Examples of supported built-in account values include NT AUTHORITY\SYSTEM for Local System and NT AUTHORITY\NETWORKSERVICE for Network Service ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] only).  
+ This example shows how to configure a report server to use a built-in account when connecting to a local report server database. Notice that **-u** is not used. Examples of supported built-in account values include NT AUTHORITY\SYSTEM for Local System and NT AUTHORITY\NETWORKSERVICE for Network Service ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winserver2003](../../includes/winserver2003-md.md)] only).  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  

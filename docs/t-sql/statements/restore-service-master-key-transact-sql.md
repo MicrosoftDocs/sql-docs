@@ -4,9 +4,8 @@ description: RESTORE SERVICE MASTER KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "RESTORE SERVICE MASTER KEY"
@@ -21,14 +20,13 @@ helpviewer_keywords:
   - "transferring Service Master Keys"
 dev_langs:
   - "TSQL"
-ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 ---
 # RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Imports a service master key from a backup file.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

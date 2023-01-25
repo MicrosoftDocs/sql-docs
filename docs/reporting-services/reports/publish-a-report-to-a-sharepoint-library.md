@@ -2,9 +2,8 @@
 title: "Publish a Report to a SharePoint Library | Microsoft Docs"
 description: Learn how to publish a report to a SharePoint library by setting the project properties in Report Designer.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reports
+ms.service: reporting-services
+ms.subservice: reports
 
 
 ms.topic: conceptual
@@ -39,7 +38,7 @@ ms.author: maggies
   
 7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used (for example, `https://servername`, `https://servername/site`, or `https://servername/site/subsite`).  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 9. In Solution Explorer, right-click the report you want to publish, and click **Deploy**. The report is published to the location specified in **TargetReportFolder**. Deployment errors appear in the Output window.  
   

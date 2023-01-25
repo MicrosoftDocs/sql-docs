@@ -3,9 +3,9 @@ description: "Table-Valued Parameters (SQL Server Native Client)"
 title: "Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, table-valued parameters"
@@ -18,7 +18,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Table-Valued Parameters (SQL Server Native Client)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Table-valued parameters were introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide functionality similar to parameter arrays, but they offer more flexibility and closer integration with [!INCLUDE[tsql](../../../includes/tsql-md.md)], and can frequently improve performance. Table-valued parameters can also participate in set-based operations, whereas parameter arrays cannot.  
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
+  Table-valued parameters were introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide functionality similar to parameter arrays, but they offer more flexibility and closer integration with [!INCLUDE[tsql](../../../includes/tsql-md.md)], and can frequently improve performance. Table-valued parameters can also participate in set-based operations, whereas parameter arrays cannot.  
   
  For information about table-valued parameters and ODBC, see [Table-Valued Parameters &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   

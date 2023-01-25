@@ -2,9 +2,8 @@
 title: "Upload a File or Report in the Report Server | Microsoft Docs"
 description: Learn how to add reports and other files to a report server without having to publish those items from a client application.
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reports
+ms.service: reporting-services
+ms.subservice: reports
 
 
 ms.topic: conceptual
@@ -35,7 +34,7 @@ The web portal of the report server provides an upload feature so that you can a
   
 6.  If you want to replace an existing item with the new item, select **Overwrite item if it exists**.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ## See Also   
 [Create, Modify, and Delete Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)

@@ -3,13 +3,10 @@ title: "IS_MEMBER (Transact-SQL)"
 description: "IS_MEMBER (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "07/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "IS_MEMBER"
   - "IS_MEMBER_TSQL"
@@ -33,7 +30,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Indicates whether the current user is a member of the specified [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows group or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database role. The IS_MEMBER function is not supported for Azure Active Directory Groups.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -45,7 +42,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 
 ## Arguments
  **'** *group* **'**  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Is the name of the Windows group that is being checked; must be in the format *Domain*\\*Group*. *group* is **sysname**.  
   

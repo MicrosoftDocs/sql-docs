@@ -1,28 +1,24 @@
 ---
-description: "float and real (Transact-SQL)"
 title: float and real (Transact-SQL)
-ms.custom: ""
+description: "float and real (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/10/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "float"
   - "real_TSQL"
   - "real"
   - "float_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "numeric data type, floating point"
   - "float data type"
   - "floating point data [SQL Server]"
   - "real data type"
-ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -32,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Approximate-number data types for use with floating point numeric data. Floating point data is approximate; therefore, not all values in the data type range can be represented exactly. The ISO synonym for **real** is **float(24)**.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
 **float** [ **(**_n_**)** ]

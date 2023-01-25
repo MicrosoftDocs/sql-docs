@@ -1,11 +1,11 @@
 ---
 description: "Loading Converted Database Objects into SQL Server (MySQLToSQL)"
 title: "Loading Converted Database Objects into SQL Server (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: cpichuka 
@@ -62,7 +62,7 @@ To save [!INCLUDE[tsql](../../includes/tsql-md.md)] definitions of the converted
   
     You can also script individual objects or categories of objects by right-clicking the object or its parent folder, and then clicking **Save as Script**.  
   
-2.  In the **Save As** dialog box, locate the folder where you want to save the script, enter a file name in the **File name** box, and then [!INCLUDE[clickOK](../../includes/clickok-md.md)] SSMA will append the .sql file name extension.  
+2.  In the **Save As** dialog box, locate the folder where you want to save the script, enter a file name in the **File name** box, and then select **OK**. SSMA will append the .sql file name extension.  
   
 ### Modifying Scripts  
 After you have saved the SQL Server or SQL Azure object definitions as a script, you can use SQL Server Management Studio to modify the script.  

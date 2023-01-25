@@ -3,10 +3,9 @@ title: "Create a Server Role | Microsoft Docs"
 description: Create a server role in SQL Server by using SQL Server Management Studio or Transact-SQL. Review limitations, restrictions, and necessary permissions.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.SERVERROLE.GENERAL.F1"
@@ -78,7 +77,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
   
 9. A user-defined server role can be a member of another server role. On the **Memberships** page, select a check box to make the current user-defined server role a member of a selected server role.  
   
-10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

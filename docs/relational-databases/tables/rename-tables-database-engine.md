@@ -1,10 +1,9 @@
 ---
 title: Rename Tables (Database Engine)
 description: "Rename Tables (Database Engine)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table renaming [SQL Server]"

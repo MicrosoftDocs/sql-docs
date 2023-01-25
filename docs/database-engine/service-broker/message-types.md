@@ -1,13 +1,13 @@
-﻿---
+---
 title: Message Types
 description: "Applications that use Service Broker communicate by sending messages to each other as part of a conversation."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Message Types

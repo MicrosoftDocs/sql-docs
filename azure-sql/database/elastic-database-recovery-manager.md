@@ -1,18 +1,16 @@
 ---
 title: Recovery Manager to fix shard map problems
 description: Use the RecoveryManager class to solve problems with shard maps
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
-ms.topic: how-to
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/03/2019
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
+ms.custom:
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 ---
 # Using the RecoveryManager class to fix shard map problems
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

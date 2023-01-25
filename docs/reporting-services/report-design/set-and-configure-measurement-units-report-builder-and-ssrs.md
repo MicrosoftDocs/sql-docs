@@ -2,9 +2,8 @@
 title: "Set and configure measurement units in a paginated report | Microsoft Docs"
 description: Learn how to set and configure measurement units in a paginated report using expressions in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -41,7 +40,7 @@ ms.author: maggies
     > [!NOTE]  
     >  The values in the **Start** and **End** text boxes must be numeric.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ## To use the percentage measurement unit  
   
@@ -67,7 +66,7 @@ ms.author: maggies
     > [!NOTE]  
     >  The values in the **Start** and **End** text boxes must be numeric.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

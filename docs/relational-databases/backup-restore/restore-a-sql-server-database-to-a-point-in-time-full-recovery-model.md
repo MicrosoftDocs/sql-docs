@@ -4,10 +4,9 @@ title: "Restore a SQL Server Database to a Point in Time (Full Recovery Model) |
 decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "STOPAT clause [RESTORE LOG statement]"
@@ -86,7 +85,7 @@ ms.author: mathoma
   
 7.  In the **Restore to** section, click **Specific date and time**.  
   
-8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. Select **OK**.
   
     > [!NOTE]  
     >  Use the **Timeline Interval** box to change the amount of time displayed on the timeline.  

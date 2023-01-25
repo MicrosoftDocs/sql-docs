@@ -1,20 +1,14 @@
 ---
 title: "Storage: Performance best practices & guidelines"
 description: Provides storage best practices and guidelines to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-editor: ''
-tags: azure-service-management
-ms.assetid: a0c85092-2113-4982-b73a-4e80160bac36
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 03/25/2021
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 03/25/2021
-ms.author: pamela
-ms.reviewer: mathoma
+tags: azure-service-management
 ---
 # Storage: Performance best practices for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -29,17 +23,17 @@ To learn more, see the other articles in this series: [Checklist](performance-gu
 
 Review the following checklist for a brief overview of the storage best practices that the rest of the article covers in greater detail: 
 
-- Monitor the application and [determine storage bandwidth and latency requirements](/azure/virtual-machines/premium-storage-performance#counters-to-measure-application-performance-requirements) for SQL Server data, log, and tempdb files before choosing the disk type. 
+- Monitor the application and [determine storage bandwidth and latency requirements](/azure/virtual-machines/premium-storage-performance#counters-to-measure-application-performance-requirements) for SQL Server data, log, and `tempdb` files before choosing the disk type. 
 - To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping](/azure/virtual-machines/premium-storage-performance#throttling).
-- Place data, log, and tempdb files on separate drives.
+- Place data, log, and `tempdb` files on separate drives.
     - For the data drive, only use [premium P30 and P40 or smaller disks](/azure/virtual-machines/disks-types#premium-ssds) to ensure the availability of cache support
     - For the log drive plan for capacity and test performance versus cost while evaluating the [premium P30 - P80 disks](/azure/virtual-machines/disks-types#premium-ssds)
       - If submillisecond storage latency is required, use [Azure ultra disks](/azure/virtual-machines/disks-types#ultra-disks) for the transaction log.
       - For M-series virtual machine deployments consider [write accelerator](/azure/virtual-machines/how-to-enable-write-accelerator) over using Azure ultra disks.
     - Place [tempdb](/sql/relational-databases/databases/tempdb-database) on the local ephemeral SSD (default `D:\`) drive for most SQL Server workloads that are not part of Failover Cluster Instance (FCI) after choosing the optimal VM size. 
-      - If the capacity of the local drive is not enough for tempdb, consider sizing up the VM. See [Data file caching policies](#data-file-caching-policies) for more information.
-    - For FCI place tempdb on the shared storage. 
-      - If the FCI workload is heavily dependent on tempdb disk performance, then as an advanced configuration place tempdb on the local ephemeral SSD (default `D:\`) drive which is not part of FCI storage. This configuration will need custom monitoring and action to ensure the local ephemeral SSD (default `D:\`) drive is available all the time as any failures of this drive will not trigger action from FCI.  
+      - If the capacity of the local drive is not enough for `tempdb`, consider sizing up the VM. See [Data file caching policies](#data-file-caching-policies) for more information.
+    - For FCI place `tempdb` on the shared storage. 
+      - If the FCI workload is heavily dependent on `tempdb` disk performance, then as an advanced configuration place `tempdb` on the local ephemeral SSD (default `D:\`) drive which is not part of FCI storage. This configuration will need custom monitoring and action to ensure the local ephemeral SSD (default `D:\`) drive is available all the time as any failures of this drive will not trigger action from FCI.  
 - Stripe multiple Azure data disks using [Storage Spaces](/windows-server/storage/storage-spaces/overview) to increase I/O bandwidth up to the target virtual machine's IOPS and throughput limits.
 - Set [host caching](/azure/virtual-machines/disks-performance#virtual-machine-uncached-vs-cached-limits) to read-only for data file disks.
 - Set [host caching](/azure/virtual-machines/disks-performance#virtual-machine-uncached-vs-cached-limits) to none for log file disks.
@@ -60,7 +54,7 @@ Choose a VM size with enough storage scalability for your workload and a mixture
 The type of disk depends on both the file type that's hosted on the disk and your peak performance requirements.
 
 > [!TIP]
-> Provisioning a SQL Server VM through the Azure portal helps guide you through the storage configuration process and implements most storage best practices such as creating separate storage pools for your data and log files, targeting tempdb to the `D:\` drive, and enabling the optimal caching policy. For more information about provisioning and configuring storage, see [SQL VM storage configuration](storage-configuration.md). 
+> Provisioning a SQL Server VM through the Azure portal helps guide you through the storage configuration process and implements most storage best practices such as creating separate storage pools for your data and log files, targeting `tempdb` to the `D:\` drive, and enabling the optimal caching policy. For more information about provisioning and configuring storage, see [SQL VM storage configuration](storage-configuration.md). 
 
 ## VM disk types
 
@@ -82,7 +76,7 @@ Many Azure virtual machines contain another disk type called the temporary disk 
 
 The temporary storage drive is not persisted to remote storage and therefore should not store user database files, transaction log files, or anything that must be preserved. 
 
-Place tempdb on the local temporary SSD `D:\` drive for SQL Server workloads unless consumption of local cache is a concern. If you are using a virtual machine that [does not have a temporary disk](/azure/virtual-machines/azure-vms-no-temp-disk) then it is recommended to place tempdb on its own isolated disk or storage pool with caching set to read-only. To learn more, see [tempdb data caching policies](performance-guidelines-best-practices-storage.md#data-file-caching-policies).
+Place `tempdb` on the local temporary SSD `D:\` drive for SQL Server workloads unless consumption of local cache is a concern. If you are using a virtual machine that [does not have a temporary disk](/azure/virtual-machines/azure-vms-no-temp-disk) then it is recommended to place `tempdb` on its own isolated disk or storage pool with caching set to read-only. To learn more, see [tempdb data caching policies](performance-guidelines-best-practices-storage.md#data-file-caching-policies).
 
 ### Data disks
 
@@ -192,7 +186,7 @@ The following table provides a summary of the recommended caching policies based
 | **Data disk** | Enable `Read-only` caching for the disks hosting SQL Server data files. <br/> Reads from cache will be faster than the uncached reads from the data disk. <br/> Uncached IOPS and throughput plus Cached IOPS and throughput will yield the total possible performance available from the virtual machine within the VMs limits, but actual performance will vary based on the workload's ability to use the cache (cache hit ratio). <br/>|
 |**Transaction log disk**|Set the caching policy to `None` for disks hosting the transaction log.  There is no performance benefit to enabling caching for the Transaction log disk, and in fact having either `Read-only` or `Read/Write` caching enabled on the log drive can degrade performance of the writes against the drive and decrease the amount of cache available for reads on the data drive.  |
 |**Operating OS disk** | The default caching policy is `Read/write` for the OS drive. <br/> It is not recommended to change the caching level of the OS drive.  |
-| **tempdb**| If tempdb cannot be placed on the ephemeral drive `D:\` due to capacity reasons, either resize the virtual machine to get a larger ephemeral drive or place tempdb on a separate data drive with `Read-only` caching configured. <br/> The virtual machine cache and ephemeral drive both use the local SSD, so keep this in mind when sizing as tempdb I/O will count against the cached IOPS and throughput virtual machine limits when hosted on the ephemeral drive.| 
+| **tempdb**| If `tempdb` cannot be placed on the ephemeral drive `D:\` due to capacity reasons, either resize the virtual machine to get a larger ephemeral drive or place `tempdb` on a separate data drive with `Read-only` caching configured. <br/> The virtual machine cache and ephemeral drive both use the local SSD, so keep this in mind when sizing as `tempdb` I/O will count against the cached IOPS and throughput virtual machine limits when hosted on the ephemeral drive.| 
 
 
 > [!IMPORTANT]

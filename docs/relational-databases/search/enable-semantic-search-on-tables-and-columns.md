@@ -3,9 +3,8 @@ description: "Enable Semantic Search on Tables and Columns"
 title: "Enable Semantic Search on Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], enabling"

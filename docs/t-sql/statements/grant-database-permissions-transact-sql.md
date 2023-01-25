@@ -4,9 +4,8 @@ description: GRANT Database Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/19/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "granting permissions [SQL Server]"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "GRANT statement, databases"
 dev_langs:
   - "TSQL"
-ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Permissions (Transact-SQL)
@@ -26,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Grants permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -76,27 +74,27 @@ Specifies a database user.
 Specifies a database role.
 
 *Application_role*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 Specifies an application role.
 
 *Database_user_mapped_to_Windows_User*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
 
 Specifies a database user mapped to a Windows user.
 
 *Database_user_mapped_to_Windows_Group*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
 
 Specifies a database user mapped to a Windows group.
 
 *Database_user_mapped_to_certificate*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
 
 Specifies a database user mapped to a certificate.
 
 *Database_user_mapped_to_asymmetric_key*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
 
 Specifies a database user mapped to an asymmetric key.
 
@@ -177,6 +175,7 @@ A database is a securable contained by the server that is its parent in the perm
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
 |DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
+|EXECUTE ANY EXTERNAL ENDPOINT <br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)].|CONTROL|CONTROL SERVER|
 |EXECUTE EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
@@ -230,7 +229,7 @@ GO
 
  The following example grants `SHOWPLAN` permission on the `AdventureWorks2012` database to application role `AuditMonitor`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 ```sql
 USE AdventureWorks2012;

@@ -1,18 +1,16 @@
 ---
 title: "Availability group wizard: Specify availability group options"
 description: "Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio."
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.newagwizard.specifyagname.f1"
-  - "sql13.swb.adddatabasewizard.specifyagname.f1"
-ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.newagwizard.specifyagname.f1"
+  - "sql13.swb.adddatabasewizard.specifyagname.f1"
 ---
 # Specify Availability Group Options Page for an Always On Availability Group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

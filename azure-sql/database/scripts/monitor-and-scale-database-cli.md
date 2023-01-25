@@ -1,20 +1,17 @@
 ---
 title: "Azure CLI example: Monitor and scale a single database in Azure SQL Database"
 description: Use an Azure CLI example script to monitor and scale a single database in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-ms.devlang:
-  - "azurecli"
-ms.topic: sample
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/26/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: sample
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+ms.devlang: azurecli
 ---
 
 # Monitor and scale a single database in Azure SQL Database using the Azure CLI
@@ -25,7 +22,7 @@ This Azure CLI script example scales a single database in Azure SQL Database to 
 
 [!INCLUDE [quickstarts-free-trial-note](../../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment.md)]
 
 ## Sample script
 

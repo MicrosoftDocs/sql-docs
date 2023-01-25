@@ -3,13 +3,10 @@ title: "DATABASE_PRINCIPAL_ID (Transact-SQL)"
 description: "DATABASE_PRINCIPAL_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "05/14/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "DATABASE_PRINCIPAL_ID_TSQL"
   - "DATABASE_PRINCIPAL_ID"
@@ -27,7 +24,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 
 This function returns the ID number of a principal in the current database. See [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md) for more information about principals.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

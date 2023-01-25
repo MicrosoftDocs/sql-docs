@@ -1,11 +1,11 @@
 ---
 title: "Partitioned tables and indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
-description: Partitioned tables and indexes
+description: "With partitioned tabled and indexes, the data can be divided into units that may be spread across more than one filegroup in a database or stored in a single filegroup."
 author: VanMSFT
 ms.author: vanto
-ms.date: "4/22/2022"
-ms.prod: sql
+ms.date: "8/17/2022"
+ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
   - "partitioned tables [SQL Server], about partitioned tables"
@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], architecture"
   - "partitioned indexes [SQL Server], about partitioned indexes"
   - "index partitions"
-ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Partitioned tables and indexes
@@ -21,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 SQL Server, Azure SQL Database, and Azure SQL Managed Instance support table and index partitioning. The data of partitioned tables and indexes is divided into units that may be spread across more than one filegroup in a database or stored in a single filegroup. When multiple files exist in a filegroup, data is spread across files using the [proportional fill algorithm](../databases/database-files-and-filegroups.md#file-and-filegroup-fill-strategy). The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. 
 
-Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1, partitioned tables and indexes were not available in every edition of SQL Server. For a list of features supported by the editions of SQL Server, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Partitioned tables and indexes are available in all service tiers of Azure SQL Database and Azure SQL Managed Instance.
+Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1, partitioned tables and indexes were not available in every edition of SQL Server. For a list of features supported by the editions of SQL Server, see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Partitioned tables and indexes are available in all service tiers of Azure SQL Database and Azure SQL Managed Instance.
 
 Table partitioning is also available in dedicated SQL pools in Azure Synapse Analytics, with some syntax differences. Learn more in [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
   
@@ -55,7 +54,7 @@ A range type (either LEFT or RIGHT), specifies how the boundary values of the pa
 - A LEFT range specifies that the boundary value belongs to the left side of the boundary value interval when interval values are sorted by the database engine in ascending order from left to right. In other words, the highest bounding value will be included within a partition.
 - A RIGHT range specifies that the boundary value belongs to the right side of the boundary value interval when interval values are sorted by the database engine in ascending order from left to right. In other words, the lowest bounding value will be included in each partition.
 
-If LEFT or RIGHT not specified, LEFT range is the default.
+If LEFT or RIGHT is not specified, LEFT range is the default.
 
 For example, the following partition function partitions a table or index into 12 partitions, one for each month of a year's worth of values in a **datetime** column. A RIGHT range is used, indicating that boundary values will serve as lower bounding values in each partition. RIGHT ranges are often simpler to work with when partitioning a table based on a column of **datetime** or **datetime2** data types, as rows with a value of midnight will be stored in the same partition as rows with later values on the same day. Similarly, if using the data type of **date** and  using partitions of a month or more, a RIGHT range keeps the first day of the month in the same partition as later days in that month. This aids in precise [Partition elimination](#partition-elimination) when querying an entire day's worth of data.
 
@@ -98,6 +97,7 @@ Find example code to create filegroups for SQL Server and Azure SQL Managed Inst
 The column of a table or index that a partition function uses to partition the table or index. The following considerations apply when selecting a partitioning column:
 
 - Computed columns that participate in a partition function must be explicitly created as PERSISTED.
+  - Since only one column can be used as the partition column, in some cases the concatenation of multiple columns with a computed column can be useful.
 - Columns of all data types that are valid for use as index key columns can be used as a partitioning column, except **timestamp**.
 - Columns of large object (LOB) data types, such as **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, and **varbinary(max)**, cannot be specified. 
 - Microsoft .NET Framework common language runtime (CLR) user-defined type and alias data type columns cannot be specified.
@@ -124,7 +124,7 @@ When partitioning a unique nonclustered index, the index key must contain the pa
 
 ### Non-aligned index  
 
-An index partitioned differently from its corresponding table. That is, the index has a different [partition scheme](#partition-scheme) that places it on a separate [filegroup or set of filegroups](#filegroups) from the base table. Designing a non-aligned partitioned index can be useful in the following cases:  
+A non-aligned index is partitioned differently from its corresponding table. That is, the index has a different [partition scheme](#partition-scheme) that places it on a separate [filegroup or set of filegroups](#filegroups) from the base table. Designing a non-aligned partitioned index can be useful in the following cases:  
 
 - The base table has not been partitioned.  
 - The index key is unique and it does not contain the partitioning column of the table.  

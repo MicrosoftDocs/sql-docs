@@ -2,9 +2,8 @@
 title: "Tutorial: Creating Drillthrough and Main Reports (Report Builder) | Microsoft Docs"
 description: "Learn how to create two kinds of Reporting Services paginated reports: a drillthrough report and a main report."
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
@@ -65,7 +64,7 @@ A data connection contains the information necessary to connect to an external d
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 9. Verify that **Connection string** contains the following syntax:  
   
@@ -80,7 +79,7 @@ A data connection contains the information necessary to connect to an external d
     > [!NOTE]  
     > Depending on how permissions are configured on the data source, you might need to change the default authentication options. For more information, see [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
-11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+11. Select **OK**.
   
     The **Choose a connection to a data source** page appears.  
   
@@ -88,7 +87,7 @@ A data connection contains the information necessary to connect to an external d
   
     The message **Connection created successfully** appears.  
   
-13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+13. Select **OK**.
   
 14. Click **Next**.  
   
@@ -232,7 +231,7 @@ Instead of showing sales and sales returns as currency values, the report shows 
   
 5.  In the **Select Sparkline Type** dialog box, verify that **Column** type is selected.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  Right-click the sparkline.  
   
@@ -296,7 +295,7 @@ By default parameters are visible, which is not appropriate for this report. You
   
 5.  Optionally, click **Available Values** and **Default Values** and review their options. Do not change any options on these tabs.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ## <a name="DSave"></a>6. Save the Report to a SharePoint Library  
 You can save the report to a SharePoint library, report server, or your computer. If you save the report to your computer, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available. In this tutorial, you will save the report to a SharePoint library.  
@@ -359,11 +358,11 @@ You will add an embedded data source to the main report.
   
 5.  In **Data source**, verify that the data source is **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is installed.  
+6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is installed.  
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 9. Verify that the **Connection string** contains the following syntax:  
   
@@ -375,11 +374,11 @@ You will add an embedded data source to the main report.
   
     Depending on how permissions are configured on the data source, you might need to change the default authentication.  
   
-11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+11. Select **OK**.
   
 12. To verify that you can connect to the data source, click **Test Connection**.  
   
-13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+13. Select **OK**.
   
 14. Click **Next**.  
   
@@ -552,7 +551,7 @@ To enable the drillthrough, specify an action on a text box in the main report.
     > [!IMPORTANT]  
     > You must include the **UniqueName** property because the drillthrough action requires a unique value.  
   
-9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+9. Select **OK**.
   
 #### To format the drillthrough field  
   
@@ -564,7 +563,7 @@ To enable the drillthrough, specify an action on a text box in the main report.
   
 4.  In the **Color** list, select **Blue**.  
   
-5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  To preview your report, click **Run**.  
   
@@ -614,7 +613,7 @@ By default, parameters are visible, which is not appropriate for this report. Yo
   
 4.  Optionally, click the **Available Values** and **Default Values** tabs and review their options. Do not change any options on these tabs.  
   
-5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ## <a name="MTitle"></a>6. Add a Report Title  
 Add a title to the main report.  

@@ -4,8 +4,8 @@ description: This article describes how to use the Setup program to install or u
 ms.custom: "seo-lt-2019"
 ms.date: 10/05/2021
 ms.reviewer: ""
-ms.prod: sql
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "adding nodes"
@@ -85,7 +85,7 @@ ms.author: mathoma
   
 2.  The Installation Wizard starts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To create a new cluster installation of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], select **New [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation** on the installation page.  
   
-3.  The System Configuration Checker runs a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
+3.  The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
   
 4.  To continue, select **Next**.  
   
@@ -104,7 +104,7 @@ ms.author: mathoma
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   
-     You can specify a custom directory for shared components by using the field at the bottom of this page. To change the installation path for shared components, either update the path in the field provided at the bottom of the dialog box, or select the ellipsis button to browse to an installation directory. The default installation path is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\.  
+     You can specify a custom directory for shared components by using the field at the bottom of this page. To change the installation path for shared components, either update the path in the field provided at the bottom of the dialog box, or select the ellipsis button to browse to an installation directory. The default installation path is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also supports installing system databases (`Master`, `Model`, `MSDB`, and `TempDB`), and [!INCLUDE[ssDE](../../../includes/ssde-md.md)] user databases on a Server Message Block (SMB) file share. For more information on installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with SMB file share as a storage, see [Install SQL Server with SMB Fileshare as a Storage Option](../../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
@@ -133,7 +133,7 @@ ms.author: mathoma
     > [!NOTE]  
     >  Typical stand-alone instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], whether default or named instances, do not use a nondefault value for the **Instance ID** box.  
   
-     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or select the ellipsis button to locate an installation folder.  
+     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or select the ellipsis button to locate an installation folder.  
   
      **Detected [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances and features on this computer** - The grid shows instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Select **Next** to continue.  
   
@@ -158,9 +158,9 @@ ms.author: mathoma
   
 15. Use this page to specify Cluster Security Policy.  
   
-    -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and later versions - Service SIDs (server security IDs) are the recommended and default setting. There is no option for changing this to security groups. For information about service SIDs functionality on [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). This has been tested in standalone and cluster setup on [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
+    -   [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] and later versions - Service SIDs (server security IDs) are the recommended and default setting. There is no option for changing this to security groups. For information about service SIDs functionality on [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). This has been tested in standalone and cluster setup on [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
   
-    -   On [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)], specify domain groups for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. All resource permissions are controlled by domain-level groups that include [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts as group members.  
+    -   On [!INCLUDE[winserver2003](../../../includes/winserver2003-md.md)], specify domain groups for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. All resource permissions are controlled by domain-level groups that include [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts as group members.  
   
      Select **Next** to continue.  
   
@@ -186,7 +186,7 @@ ms.author: mathoma
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrators - You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-     When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
   
 20. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, select **Next**.  
   
@@ -200,7 +200,7 @@ ms.author: mathoma
   
 22. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].
   
-     When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
   
 23. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, select **Next**.  
   
@@ -237,7 +237,7 @@ ms.author: mathoma
   
 3.  After the prerequisites are installed, the Installation Wizard starts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To prepare the node for clustering, move to the **Advanced** page and then select **Advanced cluster preparation**.  
   
-4.  The System Configuration Checker runs a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
+4.  The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
   
 5.  On the Setup Support Files page select **Install** to install the Setup support files.  
   
@@ -258,7 +258,7 @@ ms.author: mathoma
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   
-     You can specify a custom directory for shared components by using the field at the bottom of this page. To change the installation path for shared components, either update the path in the field provided at the bottom of the dialog box, or select the ellipsis button to browse to an installation directory. The default installation path is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
+     You can specify a custom directory for shared components by using the field at the bottom of this page. To change the installation path for shared components, either update the path in the field provided at the bottom of the dialog box, or select the ellipsis button to browse to an installation directory. The default installation path is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
   
     > [!NOTE]  
     >  When you select the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Services feature, both replication and full-text search are selected automatically. Unselecting any of these subfeatures also unselects the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Services feature.  
@@ -273,7 +273,7 @@ ms.author: mathoma
     > [!IMPORTANT]  
     >  Use the same InstanceID for all the nodes that are prepared for the failover cluster instance  
   
-     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or select the ellipsis button to locate an installation folder.  
+     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or select the ellipsis button to locate an installation folder.  
   
      **Installed instances** - The grid shows instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Select **Next** to continue.  
   
@@ -281,9 +281,9 @@ ms.author: mathoma
   
 13. Use this page to specify Cluster Security Policy.  
   
-    -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and later versions - Service SIDs (server security IDs) are the recommended and default setting. There is no option for changing this to security groups. For information about service SIDs functionality on [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). This has been tested in standalone and cluster setup on [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
+    -   [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] and later versions - Service SIDs (server security IDs) are the recommended and default setting. There is no option for changing this to security groups. For information about service SIDs functionality on [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). This has been tested in standalone and cluster setup on [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  
   
-    -   On [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)], specify domain groups for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. All resource permissions are controlled by domain-level groups that include [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts as group members.  
+    -   On [!INCLUDE[winserver2003](../../../includes/winserver2003-md.md)], specify domain groups for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. All resource permissions are controlled by domain-level groups that include [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts as group members.  
   
      Select **Next** to continue.  
   
@@ -325,7 +325,7 @@ ms.author: mathoma
   
 1.  After preparing all the nodes as described in the [prepare step](#prepare), run Setup on one of the prepared nodes, preferably the one that owns the shared disk. On the **Advanced** page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center, select **Advanced cluster completion**.  
   
-2.  The System Configuration Checker runs a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
+2.  The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
   
 3.  On the Setup Support Files page, select **Install** to install the Setup support files.  
   
@@ -369,7 +369,7 @@ ms.author: mathoma
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrators - You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-     When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
   
 13. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, select **Next**.  
   
@@ -379,7 +379,7 @@ ms.author: mathoma
   
 14. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-     When you are finished editing the list, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+     When you are finished editing the list, select **OK**.. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
   
 15. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, select **Next**.  
   

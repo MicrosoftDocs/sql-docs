@@ -5,9 +5,8 @@ description: sys.database_event_session_actions (Azure SQL Database and Azure SQ
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/18/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
@@ -47,5 +46,5 @@ This view has the following relationship cardinalities.
 Learn more about related concepts in the following articles:
 
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Monitoring Microsoft Azure SQL Database performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
 - [Extended events overview (SQL Server and Azure SQL Managed Instance)](../extended-events/extended-events.md)

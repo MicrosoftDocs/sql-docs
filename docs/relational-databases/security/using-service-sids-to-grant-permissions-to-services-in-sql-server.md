@@ -6,8 +6,7 @@ author: randomnote1
 ms.author: dareist
 ms.date: "05/02/2019"
 ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ---
 
 # Using Service SIDs to grant permissions to services in SQL Server
@@ -136,3 +135,5 @@ Read about additional options that are available when [creating a login](../../t
 To use Role-Based Security with Service SIDs, read about [creating roles](../../t-sql/statements/create-role-transact-sql.md) in SQL Server.
 
 Read about different ways to [grant permissions](../../t-sql/statements/grant-transact-sql.md) to Service SIDs in SQL Server.
+
+For more information on configuring service accounts for SQL server, read [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).

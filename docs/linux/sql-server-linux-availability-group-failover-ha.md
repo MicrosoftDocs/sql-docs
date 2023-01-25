@@ -6,8 +6,8 @@ ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 10/05/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 
 ---
 # Always On Availability Group failover on Linux
@@ -165,7 +165,7 @@ This process for forcing failover is specific to SQL Server on Linux.
    sudo pcs resource cleanup <resourceName>
    ```
 
-   If you deleted the cluster resource, recreate it. To recreate the cluster resource, follow the instructions at [Create availability group resource](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).
+   If you deleted the cluster resource, recreate it. To recreate the cluster resource, follow the instructions at [Create availability group resource](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel#create-availability-group-resource).
 
 >[!Important]
 >Do not use the preceding steps for disaster recovery drills because they risk data loss. Instead change the asynchronous replica to synchronous, and the instructions for [normal manual failover](#manualFailover).
@@ -178,8 +178,8 @@ Automatic failover requires at least one synchronous replica.
 
 ## Next steps
 
-[Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)
+[Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel)
 
-[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-sles.md)
+[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles)
 
-[Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu)

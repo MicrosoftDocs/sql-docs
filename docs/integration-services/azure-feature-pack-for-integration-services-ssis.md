@@ -3,10 +3,9 @@ description: "Azure Feature Pack for Integration Services (SSIS)"
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SSIS.AZURE.F1"
@@ -22,8 +21,9 @@ ms.author: chugu
 
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
 
-[![Download SSIS Feature Pack for Azure](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Download**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSIS Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)**
 
+- For SQL Server 2022 - [Microsoft SQL Server 2022 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=104811)
 - For SQL Server 2019 - [Microsoft SQL Server 2019 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - For SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - For SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
@@ -204,7 +204,7 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 #### Bugfixes
 
-1. When accessing Azure blob storage and the machine running SSIS is in a non en-US locale, package execution will fail with error message "String not recognized as a valid DateTime value".
+1. When accessing Azure Blob Storage and the machine running SSIS is in a non en-US locale, package execution will fail with error message "String not recognized as a valid DateTime value".
 1. For Azure Storage Connection Manager, secret is required (and unused) even when Data Factory managed identity is used to authenticate.
 
 ### Version 1.19.0
@@ -232,7 +232,7 @@ This is a hotfix version released for SQL Server 2019 only.
 
 #### Bugfixes
 
-1. In certain cases, package execution reports "Error: Could not load file or assembly ‘Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed’ or one of its dependencies."
+1. In certain cases, package execution reports "Error: Could not load file or assembly 'Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies."
 
 ### Version 1.15.0
 

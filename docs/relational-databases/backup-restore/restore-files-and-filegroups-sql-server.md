@@ -3,10 +3,9 @@ title: "Restore Files and Filegroups (SQL Server) | Microsoft Docs"
 description: This article shows you how to restore files and filegroups in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restorefilesandfilegrps.general.f1"

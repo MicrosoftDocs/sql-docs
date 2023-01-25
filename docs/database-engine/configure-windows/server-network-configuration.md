@@ -1,14 +1,13 @@
 ---
-title: "Server Network Configuration | Microsoft Docs"
+title: "Server Network Configuration"
 description: Become familiar with SQL Server network configuration tasks. View information on enabling protocols, configuring encryption, registering SPNs, and other actions.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/27/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Named Pipes [SQL Server], configuring"
   - "connections [SQL Server], server network configuration"
   - "Database Engine [SQL Server], network configurations"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "protocols [SQL Server], choosing"
   - "ports [SQL Server], changing"
   - "server configuration [SQL Server]"
-ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Server Network Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +34,7 @@ ms.author: randolphwest
  You can configure the named pipe protocol to listen on a designated named pipe. By default, the default instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] listens on pipe \\\\.\pipe\sql\query for the default instance and \\\\.\pipe\MSSQL$*\<instancename>*\sql\query for a named instance. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can only listen on one named pipe, but you can change the pipe to another name if you wish. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service helps clients identify the pipe when they connect. For more information, see [Configure a Server to Listen on an Alternate Pipe &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## Force Encryption  
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be configured to require encryption when communicating with client applications. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be configured to require encryption when communicating with client applications. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 ## Extended Protection for Authentication  
  Support for Extended Protection for Authentication by using channel binding and service binding is available for operating systems that support Extended Protection. For more information, see [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
@@ -61,5 +57,4 @@ ms.author: randolphwest
  [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md)  
   
  [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
-  
   

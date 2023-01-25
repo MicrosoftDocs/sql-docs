@@ -1,11 +1,11 @@
 ---
 title: "Explore SSMA for Oracle interface"
 description: Learn about the SQL Server Migration Assistant (SSMA) for Oracle installation process, and familiarize yourself with the SSMA user interface.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSMA for Oracle, Metadata Explorers"
@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Explore SSMA for Oracle interface
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle lets you quickly convert Oracle database schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemas, upload the resulting schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and migrate data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -21,7 +20,7 @@ manager: madhuriy
 This topic introduces the installation process, and then helps familiarize you with the SSMA user interface.  
   
 ## Installing SSMA  
-To use SSMA, you first must install the SSMA client program on a computer that can access both the source Oracle database and the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You then must install an extension pack and at least one of the Oracle providers (OLE DB or [!INCLUDE[vstecado](../../includes/vstecado_md.md)]) on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These components support data migration and the emulation of Oracle system functions. For installation instructions, see [Installing SSMA  for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md).  
+To use SSMA, you first must install the SSMA client program on a computer that can access both the source Oracle database and the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You then must install an extension pack and at least one of the Oracle providers (OLE DB or [!INCLUDE[vstecado](../../includes/vstecado-md.md)]) on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These components support data migration and the emulation of Oracle system functions. For installation instructions, see [Installing SSMA  for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md).  
   
 To start SSMA, click **Start**, point to **All Programs**, point to **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle**, and then click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle**.  
   

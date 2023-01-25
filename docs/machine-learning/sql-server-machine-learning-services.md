@@ -2,8 +2,8 @@
 title: What is SQL Server Machine Learning Services (Python and R)?
 titleSuffix: 
 description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. This article explains the basics of SQL Server Machine Learning Services and how to get started.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 05/24/2022
 ms.topic: overview
 author: WilliamDAssafMSFT
@@ -92,7 +92,7 @@ The following lists the versions of Python and R that are included in Machine Le
 You can use open-source packages and frameworks, in addition to Microsoft's enterprise packages. Most common open-source Python and R packages are pre-installed in Machine Learning Services. 
 
 > [!NOTE]
-> Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+> Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 The following Python and R packages from Microsoft are also included at installation:
 

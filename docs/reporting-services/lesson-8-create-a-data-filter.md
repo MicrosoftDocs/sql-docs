@@ -2,9 +2,8 @@
 title: "Lesson 8: Create a Data Filter | Microsoft Docs"
 description: Learn to create a data filter for the data table that you defined for the child report. Create a table-based filter or a query filter for the drillthrough report.
 ms.date: 05/18/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
@@ -31,7 +30,7 @@ You need to complete the following tasks to implement a table-based filter.
   
 2.  Select a column heading in the tablix, right-click the gray cell that appears above the column heading, and then select **Tablix Properties**.  
   
-3.  Select on the **Filters** page, and then select **Add**.  
+3.  Select the **Filters** page, and then select **Add**.  
   
 4.  In the **Expression** filed, select **ProductID** from the drop-down list. This is the column to which you apply the filter.  
   

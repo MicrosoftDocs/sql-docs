@@ -3,17 +3,16 @@ title: Create and Publish a Business Rule
 description: Learn how to create a business rule in Master Data Services to ensure the accuracy of your master data. After you create a rule, publish it to apply the rule.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "business rules [Master Data Services], creating"
   - "creating business rules [Master Data Services]"
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create and Publish a Business Rule (Master Data Services)
 

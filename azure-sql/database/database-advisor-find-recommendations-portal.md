@@ -1,17 +1,14 @@
 ---
 title: Apply performance recommendations
 description: Use the Azure portal to find performance recommendations that can optimize performance of your database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/19/2018
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 # Find and apply performance recommendations
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -86,7 +83,7 @@ If desired, you can add discarded items back to the **Recommendations** list:
 3. Optionally, click **Undo Discard** to add the index back to the main list of **Recommendations**.
 
 > [!NOTE]
-> Please note that if SQL Database [Automatic tuning](automatic-tuning-overview.md) is enabled, and if you have manually discarded a recommendation from the list, such recommendation will never be applied automatically. Discarding a recommendation is a handy way for users to have Automatic tuning enabled in cases when requiring that a specific recommendation shouldn’t be applied.
+> Please note that if SQL Database [Automatic tuning](automatic-tuning-overview.md) is enabled, and if you have manually discarded a recommendation from the list, such recommendation will never be applied automatically. Discarding a recommendation is a handy way for users to have Automatic tuning enabled in cases when requiring that a specific recommendation shouldn't be applied.
 > You can revert this behavior by adding discarded recommendations back to the Recommendations list by selecting the Undo Discard option.
 
 ### Enable automatic tuning

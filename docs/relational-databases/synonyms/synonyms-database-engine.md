@@ -3,10 +3,9 @@ description: "Synonyms (Database Engine)"
 title: "Synonyms (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: "conceptual"
 dev_langs: 
   - "TSQL"
@@ -18,7 +17,8 @@ ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Synonyms (Database Engine)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
   A synonym is a database object that serves the following purposes:  
   
 -   Provides an alternative name for another database object, referred to as the base object, that can exist on a local or remote server.  

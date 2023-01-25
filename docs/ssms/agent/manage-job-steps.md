@@ -3,9 +3,8 @@ description: "Manage Job Steps"
 title: "Manage Job Steps"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [SQL Server replication]"
@@ -41,17 +40,17 @@ A job step is an action that the job takes on a database or a server. Every job 
   
 -   PowerShell scripts.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] ActiveX scripts.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX scripts.  
   
 -   Replication tasks.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tasks.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tasks.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
   
 Every job step runs in a specific security context. If the job step specifies a proxy, the job step runs in the security context of the credential for the proxy. If a job step does not specify a proxy, the job step runs in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. Only members of the sysadmin fixed server role can create jobs that do not explicitly specify a proxy.  
   
-Because job steps run in the context of a specific [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows user, that user must have the permissions and configuration necessary for the job step to execute. For example, if you create a job that requires a drive letter or a Universal Naming Convention (UNC) path, the job steps may run under your Windows user account while testing the tasks. However, the Windows user for the job step must also have the necessary permissions, drive letter configurations, or access to the required drive. Otherwise, the job step fails. To prevent this problem, ensure that the proxy for each job step has the necessary permissions for the task that the job step performs. For more information, see [Security and Protection (Database Engine)](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
+Because job steps run in the context of a specific [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user, that user must have the permissions and configuration necessary for the job step to execute. For example, if you create a job that requires a drive letter or a Universal Naming Convention (UNC) path, the job steps may run under your Windows user account while testing the tasks. However, the Windows user for the job step must also have the necessary permissions, drive letter configurations, or access to the required drive. Otherwise, the job step fails. To prevent this problem, ensure that the proxy for each job step has the necessary permissions for the task that the job step performs. For more information, see [Security and Protection (Database Engine)](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## Job Step Logs  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can write output from some job steps either to an operating system file or to the sysjobstepslogs table in the msdb database. The following job step types can write output to both destinations:  
@@ -60,7 +59,7 @@ Because job steps run in the context of a specific [!INCLUDE[msCoName](../../inc
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tasks.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tasks.  
   
 Only job steps that are executed by users who are members of the sysadmin fixed server role can write job step output to operating system files. If job steps are executed by users who are members of the SQLAgentUserRole, SQLAgentReaderRole, or the SQLAgentOperatorRole fixed database roles in the msdb database, then the output from these job steps can be written only to the sysjobstepslogs table.  
   
@@ -107,7 +106,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell s
 ## ActiveX Scripting Job Steps  
   
 > [!IMPORTANT]
-> The ActiveX scripting job step will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+> The ActiveX scripting job step will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
 When you create an ActiveX scripting job step, you must:  
   
@@ -153,14 +152,14 @@ When replication is set up, you can specify to run the replication agents in one
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supports two distinct types of Analysis Services job steps, command job steps, and query job steps.  
   
 ### Analysis Services Command Job Steps  
-When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] command job step, you must:  
+When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] command job step, you must:  
   
 -   Identify the database OLAP server in which to run the job step.  
   
--   Type the statement to execute. The statement must be an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** method. The statement may not contain a complete SOAP envelope or an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** method. Notice that, while SQL Server Management Studio supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not.  
+-   Type the statement to execute. The statement must be an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** method. The statement may not contain a complete SOAP envelope or an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** method. Notice that, while SQL Server Management Studio supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not.  
   
 ### Analysis Services Query Job Steps  
-When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] query job step, you must:  
+When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] query job step, you must:  
   
 -   Identify the database OLAP server in which to run the job step.  
   

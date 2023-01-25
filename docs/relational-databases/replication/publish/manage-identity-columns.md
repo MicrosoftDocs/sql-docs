@@ -3,10 +3,9 @@ description: "Manage Identity Columns"
 title: "Manage Identity Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "identity values [SQL Server replication]"
@@ -73,7 +72,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     |**Maximum identity value**|Integer value. Read-only.|The largest value for the identity column. Determined by the base data type of the column.|  
     |**Increment**|Integer value. Read-only.|The amount by which the number in the identity column should increase or decrease for each insert: typically set to 1.|  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 #### To modify identity ranges and thresholds after a table is published  
   
@@ -83,7 +82,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  On the **Properties** tab of the **Article Properties - \<Article>** dialog box, in the **Identity Range Management** section, enter values for one or more of the following properties: **Publisher range size**, **Subscriber range size**, and **Range threshold percentage**.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Click **OK** on the **Publication Properties - \<Publication>** dialog box.  
   

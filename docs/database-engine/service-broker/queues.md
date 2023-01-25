@@ -1,13 +1,13 @@
 ---
 title: Queues
 description: "Queues store messages. When Service Broker receives a message for a service, Service Broker inserts the message into the queue for that service."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Queues

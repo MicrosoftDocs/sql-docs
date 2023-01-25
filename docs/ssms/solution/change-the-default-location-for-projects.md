@@ -3,10 +3,9 @@ description: "Change the Default Location for Projects"
 title: "Change the Default Location for Projects"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], default locations"
@@ -21,7 +20,7 @@ The default location for files and projects is the [!INCLUDE[ssManStudioFull](..
   
 ### To change the default location for projects  
   
-1.  Change the default location by opening or saving a file or project from another location. [!INCLUDE[msCoName](../../includes/msconame_md.md)] SQL Server Management Studio stores the location of the previously opened project and uses it for the next opening or saving of a project.  
+1.  Change the default location by opening or saving a file or project from another location. [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Management Studio stores the location of the previously opened project and uses it for the next opening or saving of a project.  
   
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  

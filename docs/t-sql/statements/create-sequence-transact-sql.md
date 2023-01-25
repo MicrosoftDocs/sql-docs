@@ -1,12 +1,11 @@
 ---
 title: CREATE SEQUENCE (Transact-SQL)
 description: CREATE SEQUENCE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "04/11/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SEQUENCE"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "number, sequence"
 dev_langs:
   - "TSQL"
-ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 ---
 
 # CREATE SEQUENCE (Transact-SQL)
@@ -33,7 +31,7 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
   
  For information and scenarios that use both **CREATE SEQUENCE** and the **NEXT VALUE FOR** function, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

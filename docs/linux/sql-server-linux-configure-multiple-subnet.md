@@ -7,8 +7,8 @@ ms.author: mikeray
 ms.reviewer: vanto, randolphwest
 ms.date: 04/11/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 
 # Configure multiple-subnet Always On Availability Groups and failover cluster instances

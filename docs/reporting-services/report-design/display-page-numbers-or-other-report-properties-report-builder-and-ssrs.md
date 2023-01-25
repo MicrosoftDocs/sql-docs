@@ -2,9 +2,8 @@
 title: "Display page numbers or other paginated report properties | Microsoft Docs"
 description:  Add properties of your paginated report including page numbers, filenames, and titles, for display in page headers or footers. 
 ms.date: 01/18/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -57,7 +56,7 @@ ms.author: maggies
   
      The expression is now  ="Page "&Globals!PageNumber  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## To add total number of pages after the page number  
   
@@ -69,7 +68,7 @@ ms.author: maggies
   
      The expression is now ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
 
 
 ## See also  

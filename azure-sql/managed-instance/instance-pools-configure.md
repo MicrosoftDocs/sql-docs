@@ -2,15 +2,16 @@
 title: Deploy SQL Managed Instance to an instance pool
 titleSuffix: Azure SQL Managed Instance
 description: This article describes how to create and manage Azure SQL Managed Instance pools (preview).
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: devx-track-azurepowershell, devx-track-azurecli
-ms.topic: how-to
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
 ms.date: 09/05/2019
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
+ms.custom:
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 ---
 # Deploy Azure SQL Managed Instance to an instance pool
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -54,7 +55,7 @@ For operations related to instances both inside pools and single instances, use 
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE [azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 Available [Azure CLI](/cli/azure/sql) commands:
 
@@ -89,7 +90,7 @@ After completing the previous steps, you are ready to create an instance pool.
 
 The following restrictions apply to instance pools:
 
-- Only General Purpose and Gen5 are available in public preview.
+- Only General Purpose and standard-series (Gen5) are available in public preview.
 - The pool name can contain only lowercase letters, numbers and hyphens, and can't start with a hyphen.
 - If you want to use Azure Hybrid Benefit, it is applied at the instance pool level. You can set the license type during pool creation or update it anytime after creation.
 

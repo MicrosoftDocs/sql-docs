@@ -3,9 +3,9 @@ description: "MSSQLSERVER_5235"
 title: "MSSQLSERVER_5235 | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "5235 (Database Engine error)"

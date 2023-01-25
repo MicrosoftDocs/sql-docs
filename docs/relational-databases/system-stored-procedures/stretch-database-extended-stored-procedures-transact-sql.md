@@ -4,9 +4,9 @@ description: Learn about extended stored procedures that you can use when you wo
 titleSuffix: SQL Server Stretch Database
 ms.custom: seo-dt-2019
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -22,7 +22,7 @@ ms.author: maghan
  This section describes the extended stored procedures that are related to Stretch Database.  
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
   
 ## In This Section  
 [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) 

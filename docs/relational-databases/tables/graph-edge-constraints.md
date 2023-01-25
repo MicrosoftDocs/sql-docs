@@ -3,10 +3,9 @@ description: "Graph edge constraints"
 title: "Graph edge constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/09/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "edge constraints [SQL Server]"

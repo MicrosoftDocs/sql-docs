@@ -2,9 +2,8 @@
 title: "Hide page header or footer on first or last page of a paginated report | Microsoft Docs"
 description: Do you want a header or footer on the first or last page of your report? If not, find out how to turn off display of the header or footer in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -31,7 +30,7 @@ ms.author: maggies
   
 4.  In the **Print options** section, clear the check box for each option to hide the display on the first or last page of the report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ### To hide a page footer on the first or last page  
   
@@ -43,7 +42,7 @@ ms.author: maggies
   
 4.  In the **Print options** section, clear the check box for each option to hide the display on the first or last page of the report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ## See Also  
  [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   

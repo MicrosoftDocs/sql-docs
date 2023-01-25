@@ -3,10 +3,9 @@ description: "sp_change_users_login (Transact-SQL)"
 title: "sp_change_users_login (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/13/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_change_users_login"
@@ -24,11 +23,11 @@ ms.author: vanto
 
   Maps an existing database user to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. 
   
- > [!IMPORTANT]
+ > [!IMPORTANT]  
  > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) instead.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,7 +59,8 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Password= ] '*password*'  
  Is the password assigned to a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that is created by specifying **Auto_Fix**. If a matching login already exists, the user and login are mapped and *password* is ignored. If a matching login does not exist, sp_change_users_login creates a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login and assigns *password* as the password for the new login. *password* is **sysname**, and must not be NULL.  
   
-> **IMPORTANT!!** Always use a [strong Password!](../../relational-databases/security/strong-passwords.md)
+> [!IMPORTANT]  
+> Always use a [strong Password!](../../relational-databases/security/strong-passwords.md)
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

@@ -5,11 +5,10 @@ description: Create a database audit specification object using the SQL Server a
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 f1_keywords:
   - "CREATE DATABASE AUDIT"
   - "DATABASE_AUDIT_SPECIFICATION_TSQL"
@@ -22,14 +21,13 @@ helpviewer_keywords:
   - "CREATE DATABASE AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a database audit specification object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

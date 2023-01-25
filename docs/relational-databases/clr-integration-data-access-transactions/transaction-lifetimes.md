@@ -4,8 +4,8 @@ description: Learn about transaction lifetimes in SQL Server CLR integration. Tr
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "lifetimes [SQL Server]"

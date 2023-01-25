@@ -3,10 +3,9 @@ description: "sp_detach_db (Transact-SQL)"
 title: "sp_detach_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2015"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_detach_db"
@@ -28,7 +27,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  For a replicated database to be detached, it must be unpublished. For more information, see the "Remarks" section later in this topic.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -3,10 +3,9 @@ title: "Media errors: Backup and Restore | Microsoft Docs"
 description: In SQL Server 2019, you can recover database despite detected errors. Use RESTORE and RESTORE VERIFYONLY with a backup checksum to check for errors.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "media errors [SQL Server]"
@@ -27,7 +26,8 @@ ms.author: mathoma
 ---
 # Possible Media Errors During Backup and Restore (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gives you the option of recovering a database despite detected errors. An important new error-detection mechanism is the optional creation of a backup checksum that can be created by a backup operation and validated by a restore operation. You can control whether an operation checks for errors and whether the operation stops or continues on encountering an error. If a backup contains a backup checksum, RESTORE and RESTORE VERIFYONLY statements can check for errors.  
+
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] gives you the option of recovering a database despite detected errors. An important new error-detection mechanism is the optional creation of a backup checksum that can be created by a backup operation and validated by a restore operation. You can control whether an operation checks for errors and whether the operation stops or continues on encountering an error. If a backup contains a backup checksum, RESTORE and RESTORE VERIFYONLY statements can check for errors.  
   
 > [!NOTE]  
 >  Mirrored backups provide up to four copies (mirrors) of a media set, providing alternative copies for recovering from errors caused by damaged media. For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  

@@ -2,9 +2,8 @@
 title: "Create a document map or table of contents in paginated reports | Microsoft Docs"
 description: Learn how to use a document map to provide a table of contents or a set of navigational links to report items in a rendered paginated report in Report Builder.
 ms.date: 09/02/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -68,7 +67,7 @@ Create a document map to provides a set of clickable links or table of contents 
   
 4.  In the **Document map** list box, type or select an expression that matches the group expression.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  Repeat steps 1-4 for every group that you want to appear in the document map.  
   

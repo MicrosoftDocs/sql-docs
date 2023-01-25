@@ -3,10 +3,9 @@ description: "Lesson 2: Connecting from Another Computer"
 title: "Lesson 2: Connecting from Another Computer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
@@ -52,7 +51,7 @@ If you plan to connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] from anot
   
 2.  In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, and then click **Protocols for** _\<InstanceName\>_.  
   
-    The default instance (an unnamed instance) is listed as **MSSQLSERVER**. If you installed a named instance, the name you provided is listed. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] installs as **SQLEXPRESS**, unless you changed the name during setup.  
+    The default instance (an unnamed instance) is listed as **MSSQLSERVER**. If you installed a named instance, the name you provided is listed. [!INCLUDE[ssexpress-2012-md](../includes/ssexpress-2012-md.md)] installs as **SQLEXPRESS**, unless you changed the name during setup.  
   
 3.  In the list of protocols, right-click the protocol you want to enable (**TCP/IP**), and then click **Enable**.  
   
@@ -60,7 +59,7 @@ If you plan to connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] from anot
     > You must restart the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service after you make changes to network protocols; however, this is completed in the next task.  
 
 ## <a name="port"></a>Configuring a Fixed Port  
-To enhance security, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], and Windows 7 all turn on the Windows Firewall. When you want to connect to this instance from another computer, you must open a communication port in the firewall. The default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] listens on port 1433; therefore, you do not have to configure a fixed port. However, named instances including [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] listen on dynamic ports. Before you can open a port in the firewall, you must first configure the [!INCLUDE[ssDE](../includes/ssde-md.md)] to listen on a specific port known as a fixed port or a static port; otherwise, the [!INCLUDE[ssDE](../includes/ssde-md.md)] might listen on a different port each time it is started. For more information about firewalls, the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+To enhance security, Windows Server 2008, [!INCLUDE[winvista](../includes/winvista-md.md)], and Windows 7 all turn on the Windows Firewall. When you want to connect to this instance from another computer, you must open a communication port in the firewall. The default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] listens on port 1433; therefore, you do not have to configure a fixed port. However, named instances including [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] listen on dynamic ports. Before you can open a port in the firewall, you must first configure the [!INCLUDE[ssDE](../includes/ssde-md.md)] to listen on a specific port known as a fixed port or a static port; otherwise, the [!INCLUDE[ssDE](../includes/ssde-md.md)] might listen on a different port each time it is started. For more information about firewalls, the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
 > Port number assignments are managed by the Internet Assigned Numbers Authority and are listed at [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844). Port numbers should be assigned from numbers 49152 through 65535.  
@@ -105,7 +104,7 @@ After you configure the [!INCLUDE[ssDE](../includes/ssde-md.md)] to use a fixed 
   
 7.  In the **Name** dialog box, type a name and description for this rule, and then click **Finish**.  
   
-For more information about configuring the firewall including instructions for [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], see [Configure a Windows Firewall for Database Engine Access](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). For more information about the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+For more information about configuring the firewall including instructions for [!INCLUDE[winvista](../includes/winvista-md.md)], see [Configure a Windows Firewall for Database Engine Access](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). For more information about the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="otherComp"></a>Connecting to the Database Engine from Another Computer  
 Now that you have configured the [!INCLUDE[ssDE](../includes/ssde-md.md)] to listen on a fixed port, and have opened that port in the firewall, you can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from another computer.  
@@ -120,8 +119,12 @@ When the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser service 
   
 3.  In the **Server name** box, type **tcp:** to specify the protocol, followed by the computer name, a comma, and the port number. To connect to the default instance, the port 1433 is implied and can be omitted; therefore, type **tcp:**_<computer_name>_. In our example for a named instance, type **tcp:**_<computer_name>_**,49172**.  
   
-    > [!NOTE]  
-    > If you omit **tcp:** from the **Server name** box, then the client will attempt all protocols that are enabled, in the order specified in the client configuration.  
+    > [!IMPORTANT]  
+    > - If you omit **tcp:** from the **Server name** box, then the client will attempt all protocols that are enabled, in the order specified in the client configuration.  
+    > - If an attempt is made to establish a connection with the instance name while connecting to the remote server, the [SQL Server Browser](../tools/configuration-manager/sql-server-browser-service.md) service must be running on the remote server. Instance name port mapping does not work if the SQL Server Browser service is not running.
+
+
+
   
 4.  In the **Authentication** box, confirm **Windows Authentication**, and then click **Connect**.  
   

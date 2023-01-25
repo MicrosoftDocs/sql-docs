@@ -1,15 +1,15 @@
 ---
-title: "Import data from Excel to SQL | Microsoft Docs"
+title: "Import data from Excel to SQL"
 description: This article describes methods to import data from Excel to SQL Server or Azure SQL Database. Some use a single step, others require an intermediate text file.
-ms.custom: sqlfreshmay19, FY22Q2Fresh
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+ms.custom:
+  - sqlfreshmay19
+  - FY22Q2Fresh
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
@@ -33,7 +33,6 @@ You can use the following tools to import data from Excel:
 | [BCP](#bcp)                                        |[OPENROWSET](#openrowset) function <br>            |
 | [Copy Wizard (Azure Data Factory)](#adf-wiz)       |                                                   |
 | [Azure Data Factory](#adf)                         |                                                   |
-| &nbsp; | &nbsp; |
 
 If you want to import multiple worksheets from an Excel workbook, you typically have to run any of these tools once for each sheet.
 
@@ -175,10 +174,9 @@ For more info about linked servers, see the following topics:
 - [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
 - [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
-For more examples and info about both linked servers and distributed queries, see the following topics:
+For more examples and info about both linked servers and distributed queries, see the following topic:
 
 - [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
-- [How to import data from Excel to SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
 ## <a name="prereq"></a> Prerequisite - Save Excel data as text
 

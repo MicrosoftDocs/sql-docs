@@ -3,11 +3,9 @@ title: "FORMAT (Transact-SQL)"
 description: "Transact-SQL reference for the FORMAT function."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "08/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "FORMAT_TSQL"
@@ -24,7 +22,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 
 Returns a value formatted with the specified format and optional culture. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -97,24 +95,24 @@ FORMAT( value, format [, culture ] )
 ```sql  
 DECLARE @d DATE = '11/22/2020';
 SELECT FORMAT( @d, 'd', 'en-US' ) 'US English'  
-      ,FORMAT( @d, 'd', 'en-gb' ) 'Great Britain English'  
+      ,FORMAT( @d, 'd', 'en-gb' ) 'British English'  
       ,FORMAT( @d, 'd', 'de-de' ) 'German'  
-      ,FORMAT( @d, 'd', 'zh-cn' ) 'Simplified Chinese (PRC)';  
+      ,FORMAT( @d, 'd', 'zh-cn' ) 'Chinese Simplified (PRC)';  
   
 SELECT FORMAT( @d, 'D', 'en-US' ) 'US English'  
-      ,FORMAT( @d, 'D', 'en-gb' ) 'Great Britain English'  
+      ,FORMAT( @d, 'D', 'en-gb' ) 'British English'  
       ,FORMAT( @d, 'D', 'de-de' ) 'German'  
-      ,FORMAT( @d, 'D', 'zh-cn' ) 'Chinese (Simplified PRC)';  
+      ,FORMAT( @d, 'D', 'zh-cn' ) 'Chinese Simplified (PRC)';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-US English  Great Britain English German     Simplified Chinese (PRC)  
+US English  British English       German     Simplified Chinese (PRC)  
 ----------  --------------------- ---------- ------------------------  
 11/22/2020  22/11/2020            22.11.2020 2020/11/22 
   
-US English                  Great Britain English  German                      Chinese (Simplified PRC)  
+US English                  British English        German                      Chinese (Simplified PRC)  
 --------------------------- ---------------------- --------------------------  ---------------------------------------  
 Sunday, November 22, 2020   22 November 2020       Sonntag, 22. November 2020  2020年11月22日  
   
@@ -145,7 +143,7 @@ Date        Custom Number
   
 ```sql  
 SELECT TOP(5) CurrencyRateID, EndOfDayRate  
-            ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Number Format'  
+            ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Numeric Format'  
             ,FORMAT(EndOfDayRate, 'G', 'en-us') AS 'General Format'  
             ,FORMAT(EndOfDayRate, 'C', 'en-us') AS 'Currency Format'  
 FROM Sales.CurrencyRate  

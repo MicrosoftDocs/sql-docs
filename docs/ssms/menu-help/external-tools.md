@@ -3,10 +3,9 @@ description: "External Tools"
 title: "External Tools"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "External Tools dialog box"
@@ -69,7 +68,7 @@ Close the window opened by the tool when the tool is closed.
   
 2.  In the **Title** box, type **SQL Server Configuration Manager**.  
   
-3.  In the **Command** box, type the path to the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Management Console executable, such as **C:\WINNT\system32\mmc.exe**  
+3.  In the **Command** box, type the path to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console executable, such as **C:\WINNT\system32\mmc.exe**  
   
 4.  In the **Arguments** box, type the path to the .msc file, such as **"C:\WINNT\system32\SQLServerManager.msc"**  
   

@@ -2,9 +2,8 @@
 title: "Reporting Services Tutorials | Microsoft Docs"
 description: Learn about the capabilities of SQL Server 2016 Reporting Services or later (SSRS), SQL Server Data Tools (SSDT), and Report Builder with sample data.
 ms.date: 11/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual
@@ -19,7 +18,7 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 
-Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull_md](../includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.
+Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.
 
 ## [Create a Basic Table Report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 

@@ -1,15 +1,12 @@
 ---
-description: "Building a Knowledge Base"
 title: "Building a Knowledge Base"
-ms.date: "07/31/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
+description: "Building a Knowledge Base"
 author: swinarko
 ms.author: sawinark
+ms.date: "07/31/2012"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Building a Knowledge Base
 

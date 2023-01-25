@@ -2,9 +2,8 @@
 title: "Tutorial: Add a Column Chart to Your Report (Report Builder) | Microsoft Docs"
 description: Learn how to create a Reporting Services paginated report with a column chart displaying a series as a set of vertical bars grouped by category.
 ms.date: 09/02/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
@@ -121,7 +120,7 @@ By default, the horizontal axis displays values in a general format that is auto
   
 5.  In the **Type** box, select **31 Jan 2000**.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  On the Home tab, click **Run** to preview the report.  
   
@@ -143,7 +142,7 @@ You can customize the label display by rotating the labels and specifying the in
   
 7.  In **Label rotation angle**, select **-90**.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
     The sample text for the horizontal axis rotates by 90 degrees.  
     
@@ -166,7 +165,7 @@ The legend is automatically created from category and series data. You can move 
   
     When the legend is placed at the top or bottom of a chart, the layout of the legend changes from vertical to horizontal. You can select a different layout in the **Layout** box.  
   
-4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  (Optional) Because there is only one category in this tutorial, the chart doesn't need a legend. To remove it, right-click the legend > **Delete Legend**.  
   
@@ -197,7 +196,7 @@ By default, the vertical axis displays values in a general format that is automa
   
 7.  Check **Show Values in**. **Thousands** is already selected.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 9. Right-click the vertical axis > **Show Axis Title**. 
 
@@ -205,7 +204,7 @@ By default, the vertical axis displays values in a general format that is automa
   
 10. Replace the text in the **Title text** field with **Sales Total (in Thousands)**. You can also specify a variety of options related to how the title is formatted.  
   
-11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+11. Select **OK**.
   
 12. Click **Run** to preview the report.  
 
@@ -249,7 +248,7 @@ A moving average is an average of the data in your series, calculated over time.
   
 6.  On the **Border** tab, in **Line width**, select **3pt**.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 9. Click **Run** to preview the report.  
   

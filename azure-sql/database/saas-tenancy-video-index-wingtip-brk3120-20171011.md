@@ -1,17 +1,14 @@
 ---
 title: SaaS SQL app video
 description: This article indexes various time points in our 81 minutes video about SaaS DB tenancy app design, from the Ignite conference held October 11, 2017. You can skip ahead to the part that interests you. At least 3 patterns are described. Azure features that simplify development and management are described.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scenario
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.custom:
-  - "sqldbrb=1"
 ms.date: 12/18/2018
+ms.service: sql-database
+ms.subservice: scenario
 ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Video indexed and annotated for multi-tenant SaaS app using Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

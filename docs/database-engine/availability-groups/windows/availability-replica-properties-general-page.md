@@ -1,17 +1,15 @@
 ---
 title: "General page (Availability Replica Properties)"
 description: "A description of the various properties found on the 'General' page of the 'Availability Replica Properties' page in SQL Server Management Studio."
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: end-user-help
-f1_keywords: 
-  - "sql13.swb.availabilityreplicaproperties.general.f1"
-ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: end-user-help
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.availabilityreplicaproperties.general.f1"
 ---
 # Availability replica properties (General Page) for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

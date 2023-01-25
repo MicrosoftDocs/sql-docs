@@ -4,9 +4,8 @@ description: Always On Availability Groups Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 04/11/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
@@ -18,7 +17,7 @@ ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This section contains catalog views and functions that are related to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
 

@@ -1,17 +1,15 @@
 ---
 title: "Add replica wizard: Enter Passwords Page for availability groups"
 description: "A description of the properties found on the 'Enter Passwords Page' of the 'Add Replica' wizard in SQL Server Management Studio."
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: end-user-help
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.enterpasswords.f1"
-ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: end-user-help
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.addreplicawizard.enterpasswords.f1"
 ---
 # Enter Passwords Page (Add Replica Wizard) for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

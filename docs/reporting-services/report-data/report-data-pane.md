@@ -4,9 +4,8 @@ description: Learn how to use the Report Data pane to view the currently defined
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018

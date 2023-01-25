@@ -1,17 +1,14 @@
 ---
 title: Disaster recovery
 description: Learn how to recover a database from a regional data center outage or failure with the Azure SQL Database active geo-replication, and geo-restore capabilities.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: high-availability
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
-author: rajeshsetlem
-ms.author: rsetlem
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/21/2019
+ms.service: sql-database
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Restore your Azure SQL Database or failover to a secondary
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -40,7 +37,7 @@ For success with recovery to another data region using either failover groups or
 - Identify the server in another region to become the new primary server. For geo-restore, this is generally a server in the [paired region](/azure/availability-zones/cross-region-replication-azure) for the region in which your database is located. This eliminates the additional traffic cost during the geo-restoring operations.
 - Identify, and optionally define, the server-level IP firewall rules needed on for users to access the new primary database.
 - Determine how you are going to redirect users to the new primary server, such as by changing connection strings or by changing DNS entries.
-- Identify, and optionally create, the logins that must be present in the master database on the new primary server, and ensure these logins have appropriate permissions in the master database, if any. For more information, see [SQL Database security after disaster recovery](active-geo-replication-security-configure.md)
+- Identify, and optionally create, the logins that must be present in the `master` database on the new primary server, and ensure these logins have appropriate permissions in the `master` database, if any. For more information, see [SQL Database security after disaster recovery](active-geo-replication-security-configure.md)
 - Identify alert rules that need to be updated to map to the new primary database.
 - Document the auditing configuration on the current primary database
 - Perform a [disaster recovery drill](disaster-recovery-drills.md). To simulate an outage for geo-restore, you can delete or rename the source database to cause application connectivity failure. To simulate an outage using failover groups, you can disable the web application or virtual machine connected to the database or failover the database to cause application connectivity failures.
@@ -109,6 +106,9 @@ For more information about database alert rules, see [Receive Alert Notification
 ### Enable auditing
 
 If auditing is required to access your database, you need to enable Auditing after the database recovery. For more information, see [Database auditing](./auditing-overview.md).
+
+> [!NOTE]
+> If you plan to use Geo-restore as disaster-recovery solution, it is recommended to conduct periodic drills to verify application tolerance to any loss of recent data modifications, as well as all operational aspects of the recovery procedure.
 
 ## Next steps
 

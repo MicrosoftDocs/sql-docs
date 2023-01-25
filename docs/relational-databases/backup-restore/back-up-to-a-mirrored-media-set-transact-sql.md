@@ -3,10 +3,9 @@ title: "Back Up to a Mirrored Media Set (Transact-SQL) | Microsoft Docs"
 description: This article describes how to use the Transact-SQL BACKUP statement to specify a mirrored media set when backing up a SQL Server database. 
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
 author: MashaMSFT

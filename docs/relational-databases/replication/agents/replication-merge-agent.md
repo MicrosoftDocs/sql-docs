@@ -3,10 +3,9 @@ title: "Replication Merge Agent | Microsoft Docs"
 description: The Replication Merge Agent applies the initial snapshot held in database tables to the Subscribers, merges incremental data changes, and reconciles conflicts.
 ms.custom: ""
 ms.date: "10/29/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Merge Agent, executables"
@@ -169,13 +168,13 @@ replmerg [-?]
 |**2**|Specifies that TLS is used, and that the certificate is verified.|  
 
  > [!NOTE]  
- >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
 
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the **\@subscriber_upload_options** of **sp_addmergearticle** instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] To restrict uploading, use the **\@subscriber_upload_options** of **sp_addmergearticle** instead.  
   
  Specifies the type of data exchange during synchronization, which can be one of the following:  
   
@@ -291,7 +290,7 @@ replmerg [-?]
 This parameter is on the list for possible deprecation soon. We recommend setting the **ParallelUploadDownload** parameter to 0 and avoiding use of the "High Volume Server-to-Server" Merge agent Profile, as **ParallelUploadDownload** is set to 1 in this profile.
 
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]
   
  **-PacketSize**  
  Is the packet size, in bytes. The default is 4096 (bytes).  

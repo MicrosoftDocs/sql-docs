@@ -1,12 +1,12 @@
 ---
 title: Configure and customize SQL Server Docker containers
 description: Understand the different ways to customize SQL Server Docker Containers and how you can configure it based on your requirements.
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 05/30/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: troubleshooting
 ms.custom: contperf-fy21q1
 zone_pivot_groups: cs1-command-shell
@@ -244,7 +244,7 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 
 ## <a id="tz"></a> Configure the time zone
 
-To run SQL Server in a Linux container with a specific time zone, configure the `TZ` environment variable. To find the right time zone value, run the `tzselect` command from a Linux bash prompt:
+To run SQL Server in a Linux container with a specific time zone, configure the `TZ` environment variable (see [Configure the time zone on Linux](sql-server-linux-configure-time-zone.md) for more information). To find the right time zone value, run the `tzselect` command from a Linux bash prompt:
 
 ```command
 tzselect
@@ -409,7 +409,7 @@ It's a good practice to keep your `tempdb` database separate from your user data
 
 ## <a id="changefilelocation"></a> Change the default file location
 
-Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker run` command, then mount a volume to that location that your container’s user has access to.
+Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker run` command, then mount a volume to that location that your container's user has access to.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -464,7 +464,7 @@ For examples of custom Docker containers, see <https://github.com/microsoft/mssq
 - [Dockerfile example with Full-Text Search](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-agent-fts-ha-tools/Dockerfile)
 - [Dockerfile example for RHEL 7 and SQL Server 2019](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-rhel7-sql2019)
 - [Dockerfile example for RHEL 8 and SQL Server 2017](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-rhel8-sql2017)
-- [Dockerfile example for Ubuntu 20.04 and SQL Server 2019 with Full-Text Search, Polybase, and Tools](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile)
+- [Dockerfile example for Ubuntu 20.04 and SQL Server 2019 with Full-Text Search, PolyBase, and Tools](https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile)
 
 For information on how to build and run Docker containers using Dockerfiles, see <https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices>.
 

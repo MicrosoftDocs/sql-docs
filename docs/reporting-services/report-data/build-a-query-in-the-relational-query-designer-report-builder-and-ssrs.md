@@ -1,9 +1,8 @@
 ---
 title: "Build a Query in the Relational Query Designer (Report Builder and SSRS"
 description: Learn how to build a query in the Relational Query Designer so that you can specify which data to retrieve from an external data source for a report dataset. 
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -51,9 +50,9 @@ A query designer helps you specify which data to retrieve from an external data 
   
      If you select fields from more than one related database table, use the Relationships pane to view the table relationships that were detected from the database schema.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
      The list of dataset fields appears in the Report Data pane.  
   
@@ -71,9 +70,9 @@ A query designer helps you specify which data to retrieve from an external data 
   
 6.  Select the parameter option in this row to create a dataset parameter to enable a user to specify a filter value. A report parameter that matches the dataset parameter is automatically created.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
  The list of dataset fields appears in the Report Data pane.  
   

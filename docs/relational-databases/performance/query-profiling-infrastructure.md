@@ -3,9 +3,9 @@ title: "Query Profling Infrastructure | Microsoft Docs"
 description: Learn how the SQL Server Database Engine accesses runtime information on query execution plans to understand the workload and how resource usage is driven.
 ms.custom: ""
 ms.date: 04/23/2019
-ms.prod: sql
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query plans [SQL Server]"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Query Profiling Infrastructure
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -167,7 +166,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-## Query Profiling Infrastruture usage guidance
+## Query Profiling Infrastructure usage guidance
 The following table summarizes the actions to enable either standard profiling or lightweight profiling, both globally (at the server level) or in a single session. Also includes the earliest version for which the action is available. 
 
 |Scope|Standard Profiling|Lightweight Profiling|

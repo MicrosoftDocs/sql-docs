@@ -3,10 +3,9 @@ description: "sp_enum_proxy_for_subsystem (Transact-SQL)"
 title: "sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_enum_proxy_for_subsystem_TSQL"
@@ -25,7 +24,7 @@ author: VanMSFT
 
   Lists permissions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies to access subsystems.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -61,7 +60,6 @@ sp_enum_proxy_for_subsystem
 |**subsystem_name**|**sysname**|The name of the subsystem.|  
 |**proxy_id**|**int**|Proxy identification number.|  
 |**proxy_name**|**sysname**|The name of the proxy.|  
-| &nbsp; | &nbsp; | &nbsp; |
   
 ## Remarks  
  When no parameters are provided, **sp_enum_proxy_for_subsystem** lists information about all proxies in the instance for every subsystem.  

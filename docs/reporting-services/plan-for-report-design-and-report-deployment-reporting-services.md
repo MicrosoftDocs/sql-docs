@@ -2,9 +2,8 @@
 title: "Plan for report design and report deployment | Reporting Services | Microsoft Docs"
 description:  Learn how to plan a report authoring and report server environment that work together using Reporting Services.
 ms.date: 09/12/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual
@@ -62,8 +61,8 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
 |Report server version|RDL schema version|  
 |---------------------------|------------------------|  
 |SQL Server 2016|2016 RDL<br /><br />2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[sql2008-md](../includes/sql2008-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
   
  When you upload a report definition to the report server or upgrade a report server that contains existing reports, the report server preserves the report definition in the original format. **On first use**, the report server upgrades the report in the report server database to a binary format that is preserved for subsequent views. The report definition (.rdl) itself is not upgraded.  
   
@@ -88,9 +87,9 @@ In a SharePoint mode deployment, browse to the document library, select the repo
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
 |SQL Server 2016 Report Builder|Authors 2016 RDL<br /><br /> Will upgrade older RDL versions to 2016 RDL|2016 RDL|SQL Server 2016|
 |Report Designer in SQL Server 2016 Data Tools - Business Intelligence for Microsoft Visual Studio 2015|Authors 2016 RDL<br /><br /> Will upgrade older RDL versions to 2016 RDL|2016 RDL|SQL Server 2016|
-|Report Designer in SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012<br /><br /> Or<br /><br /> Report Designer in SQL Server 2012 Data Tools - Business Intelligence for Microsoft Visual Studio 2012<br /><br /> Or<br /><br /> Report Designer in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, included in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Authors 2010 RDL<br /><br /> Will upgrade older RDL versions to 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
-|Report Designer in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Authors 2010 RDL<br /><br /> Will upgrade older RDL versions to 2010 RDL|2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
-|Report Designer in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Authors 2008 RDL<br /><br /> Will upgrade older RDL versions to 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|
+|Report Designer in SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012<br /><br /> Or<br /><br /> Report Designer in SQL Server 2012 Data Tools - Business Intelligence for Microsoft Visual Studio 2012<br /><br /> Or<br /><br /> Report Designer in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, included in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Authors 2010 RDL<br /><br /> Will upgrade older RDL versions to 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)]|  
+|Report Designer in [!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)] Business Intelligence Development Studio|Authors 2010 RDL<br /><br /> Will upgrade older RDL versions to 2010 RDL|2010 RDL|[!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)]|  
+|Report Designer in [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] Business Intelligence Development Studio|Authors 2008 RDL<br /><br /> Will upgrade older RDL versions to 2008 RDL|2008 RDL|[!INCLUDE[sql2008-md](../includes/sql2008-md.md)]|
   
  For more information on SQL Server Data Tools (SSDT), see the following:  
   
@@ -103,8 +102,8 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
 |ReportViewer control in product|Version of RDL for local preview|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>Or<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
-|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>Or<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010|2008 RDL|  
+|[!INCLUDE[vsprvs2005](../includes/vsprvs2005-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs2008](../includes/vsprvs2008-md.md)]|2005 RDL|  
   
  For more information, see the following:  
   

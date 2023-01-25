@@ -3,9 +3,9 @@ description: "MSSQLSERVER_3859"
 title: MSSQLSERVER_3859
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "3859 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DBCC_CHECKCAT_DIRECT_UPDATE|
 |Message Text|Warning: The system catalog was updated directly in database ID \%d, most recently at %S_DATE|
-||
 
 ## Explanation
 

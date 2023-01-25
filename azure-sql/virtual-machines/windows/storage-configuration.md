@@ -1,21 +1,14 @@
 ---
-title: Configure storage for SQL Server VMs | Microsoft Docs
+title: Configure storage for SQL Server VMs
 description: This topic describes how Azure configures storage for SQL Server VMs during provisioning (Azure Resource Manager deployment model). It also explains how you can configure storage for your existing SQL Server VMs.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
-
-ms.assetid: 169fc765-3269-48fa-83f1-9fe3e4e40947
-ms.service: virtual-machines-sql
-ms.subservice: management
-
-ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 12/21/2021
 ms.author: pamela
 ms.reviewer: mathoma
+ms.date: 12/21/2021
+ms.service: virtual-machines-sql
+ms.subservice: management
+ms.topic: how-to
+tags: azure-resource-manager
 ---
 # Configure storage for SQL Server VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -49,7 +42,7 @@ Choose the drive location for your data files and log files, specifying the disk
 
 The disk configuration is completely customizable so that you can configure the storage topology, disk type and IOPs you need for your SQL Server VM workload. You also have the ability to use UltraSSD (preview) as an option for the **Disk type** if your SQL Server VM is in one of the supported regions (East US 2, SouthEast Asia and North Europe) and you've enabled [ultra disks for your subscription](/azure/virtual-machines/disks-enable-ultra-ssd).
 
-Configure your tempdb database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, during deployment, the max number of tempdb files is 8, but more files can be added after the SQL Server VM is deployed.
+Configure your `tempdb` database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, during deployment, the max number of `tempdb` files is 8, but more files can be added after the SQL Server VM is deployed.
 
 ![Screenshot that shows where you can configure the tempdb storage for your SQL VM](./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png)
 
@@ -110,8 +103,7 @@ You can modify the disk settings for the drives that were configured during the 
 
 ![Configure Storage for Existing SQL Server VM](./media/storage-configuration/sql-vm-storage-extend-drive.png)
 
-You can also configure the settings for tempdb directly from the Azure portal, such as the number of data files, their intial size, and the autogrowth ratio. See [configure tempdb](manage-sql-vm-portal.md#storage) to learn more. 
-
+You can also configure the settings for `tempdb` directly from the Azure portal, such as the number of data files, their initial size, and the autogrowth ratio. See [configure tempdb](manage-sql-vm-portal.md#storage) to learn more. 
 
 
 ## Automated changes

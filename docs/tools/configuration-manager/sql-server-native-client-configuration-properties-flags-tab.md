@@ -3,10 +3,9 @@ title: "SQL Server Native Client Configuration Properties (Flags Tab)"
 description: Find out about the options on the Flags tab of the SQL Server Native Client Configuration Properties dialog box.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: 59af121d-c8b9-4faa-91a1-b664f2c9b441
 author: markingmyname

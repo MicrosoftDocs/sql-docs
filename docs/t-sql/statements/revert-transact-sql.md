@@ -4,9 +4,8 @@ description: REVERT (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "REVERT_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "COOKIE clause"
 dev_langs:
   - "TSQL"
-ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # REVERT (Transact-SQL)
@@ -28,7 +26,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 
   Switches the execution context back to the caller of the last EXECUTE AS statement.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

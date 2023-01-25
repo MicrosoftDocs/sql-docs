@@ -2,9 +2,8 @@
 description: "Use the Full-Text Indexing Wizard"
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.fulltextindexingwizard.welcome.f1"
@@ -42,15 +41,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 5.  **Type Column.** Select the name of the column that holds the document type of column being full-text indexed.  
 
-> **NOTE:** The  **Type Column** is enabled only when the column named in the **Available Columns** column is of type **varbinary(max)** or **image**.  
+    > [!NOTE]  
+    > The **Type Column** is enabled only when the column named in the **Available Columns** column is of type **varbinary(max)** or **image**.  
   
 6. **Statistical Semantics.** Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
->**NOTES** 
->
->If your selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is not enabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the drop-down combo box will be restricted to those for which there is Semantic Language Model support.  
->
-> Semantic Search is **not available for Azure SQL Database.** The Statistical Semantics option does not appear when running this Wizard on an Azure SQL Database.
+   > [!NOTE]  
+   > If your selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is not enabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the drop-down combo box will be restricted to those for which there is Semantic Language Model support.  
+   >
+   > Semantic Search is **not available for Azure SQL Database.** The Statistical Semantics option does not appear when running this Wizard on an Azure SQL Database.
   
 7. Select the change tracking options.  
   

@@ -1,12 +1,11 @@
 ---
 title: "ALTER DATABASE SET HADR (Transact-SQL)"
 description: ALTER DATABASE SET HADR (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET HADR"
@@ -22,14 +21,13 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 dev_langs:
   - "TSQL"
-ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains the ALTER DATABASE syntax for setting [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options on a secondary database. Only one SET HADR option is permitted per ALTER DATABASE statement. These options are supported only on secondary replicas.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -3,10 +3,9 @@ description: "Define and Modify a Column Filter"
 title: "Define and Modify a Column Filter | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication], column"
@@ -57,7 +56,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  Clear the check box next to each column you want to filter, and ensure that the check box is selected for each column that should be included in the article.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  When creating table articles, you can define which columns to include in the article and change the columns after the article has been defined. You can create and modify filtered columns programmatically using replication stored procedures.  

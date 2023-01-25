@@ -7,7 +7,7 @@ summary: Technical documentation to help you migrate to SQL Server on-premises a
 metadata:
   title: SQL Server migration documentation 
   description: Choose the SQL Server migration path you're interested in. 
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page
   author: cawrites
   ms.author: chadam
@@ -55,6 +55,8 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
+      - text: Migrating SQL Server Workloads FAQ
+        url: /azure/azure-sql/migration-guides/modernization
       - text: Azure SQL Database
         url: /azure/sql-database/sql-database-technical-overview
       - text: Azure SQL Server virtual machine

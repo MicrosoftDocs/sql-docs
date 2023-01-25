@@ -3,10 +3,9 @@ description: "Integration Services User Interface"
 title: "Integration Services User Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services, SSIS Designer"
@@ -46,7 +45,7 @@ ms.author: chugu
 |**Digital Signing**|Sign a package or remove the signature from the package.|On the **SSIS** menu, click **Digital Signing**.<br /><br /> -or-<br /><br /> Right-click anywhere on the design surface of the **Control Flow** tab, and then click **Digital Signing**.|  
 |**Set Breakpoints**|Enable breakpoints on tasks and set breakpoint properties.|On the design surface of the **Control Flow** tab, right-click a task or container, and then click **Edit Breakpoints**. To set a breakpoint on the package, right-click anywhere on the design surface of the **Control Flow** tab, and then click **Edit Breakpoints**.|  
   
- The **Getting Started** window provides links to samples, tutorials, and videos. To add links to additional content, modify the SamplesSites.xml file that is included with the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It is recommended that you not modify the \<GettingStartedSamples> element value that specifies the RSS feed URL. The file is located in the *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn folder. On a 64-bit computer, the file is located in the *\<drive>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn folder  
+ The **Getting Started** window provides links to samples, tutorials, and videos. To add links to additional content, modify the SamplesSites.xml file that is included with the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It is recommended that you not modify the \<GettingStartedSamples> element value that specifies the RSS feed URL. The file is located in the *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn folder. On a 64-bit computer, the file is located in the *\<drive>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn folder  
   
  If the SamplesSites.xml file does become corrupted, replace the xml in the file with the following default xml.  
   

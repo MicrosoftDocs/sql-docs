@@ -3,18 +3,17 @@ title: Overlapping User and Group Permissions
 description: Learn about how permissions from group membership and permissions assigned to users interact in the Models and Hierarchy Members tabs in Master Data Services.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "users [Master Data Services], resolving permissions"
   - "permissions [Master Data Services], user and group overlaps"
   - "groups [Master Data Services], resolving permissions"
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Overlapping User and Group Permissions (Master Data Services)
 

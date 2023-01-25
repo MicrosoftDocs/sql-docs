@@ -3,10 +3,9 @@ title: "Surface Area Configuration | Microsoft Docs"
 description: Learn how to change feature defaults for SQL Server installation and selectively enable or disable features of a running instance of SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: security
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reducing attackable surface area"
@@ -52,7 +51,7 @@ ms.author: vanto
   
 4.  In the **Facet properties** area, select the values that you want for each property.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
  To periodically check the configuration of a facet, use Policy-Based Management. For more information about Policy-Based Management, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   

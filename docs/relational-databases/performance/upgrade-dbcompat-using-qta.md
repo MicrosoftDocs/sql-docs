@@ -3,9 +3,9 @@ title: "Upgrade databases using Query Tuning Assistant"
 description: Learn how the Query Tuning Assistant guides you through the recommended workflow to keep performance stability during upgrades to newer SQL Server versions.
 ms.custom: seo-dt-2019
 ms.date: "02/13/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 f1_keywords: 
   - sql13.swb.querytuning.f1
@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 
 # Upgrading Databases by using the Query Tuning Assistant
@@ -69,7 +68,7 @@ The CE patterns searched by QTA are the following:
 
 - **Independence vs. Correlation**: If independence assumption provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using minimum selectivity when estimating `AND` predicates for filters to account for correlation. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
 - **Simple Containment vs. Base Containment**: If a different join containment provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using the Simple Containment assumption instead of the default Base Containment assumption. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
-- **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row: If the default fixed estimation for TVFs of 100 rows doesn't result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+- **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row: If the default fixed estimation for TVFs of 100 rows doesn't result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
 > As a last resort, if the narrow scoped hints aren't yielding good enough results for the eligible query patterns, then full use of CE 70 is also considered, by using the query hint `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` to generate an execution plan.
@@ -85,7 +84,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] open the Object Explorer and connect to [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-2. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select on **New Database Upgrade Session**.
+2. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select **New Database Upgrade Session**.
 
 3. In the QTA Wizard window, two steps are required to configure a session:
 
@@ -117,9 +116,9 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
 ### Executing the database upgrade workflow
 
-1. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select on **Monitor Sessions**.
+1. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select **Monitor Sessions**.
 
-2. The **session management** page lists current and past sessions for the database in scope. Select the desired session, and select on **Details**.
+2. The **session management** page lists current and past sessions for the database in scope. Select the desired session, and select **Details**.
 
     > [!NOTE]
     > If the current session isn't present, select the **Refresh** button.
@@ -226,4 +225,4 @@ Requires membership of **db_owner** role.
 - [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [Cardinality Estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
-- [Use the SQL Server Query Tuning Assistant](/learn/modules/use-sql-server-query-tuning-assistant/)
+- [Use the SQL Server Query Tuning Assistant](/training/modules/use-sql-server-query-tuning-assistant/)

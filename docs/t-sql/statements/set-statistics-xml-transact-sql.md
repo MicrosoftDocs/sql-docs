@@ -4,9 +4,8 @@ description: SET STATISTICS XML (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET_STATISTICS_XML_TSQL"
@@ -19,14 +18,13 @@ helpviewer_keywords:
   - "XML [SQL Server], statement execution information"
 dev_langs:
   - "TSQL"
-ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 ---
 # SET STATISTICS XML (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and generate detailed information about how the statements were executed in the form of a well-defined XML document.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

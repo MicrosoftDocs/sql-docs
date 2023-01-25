@@ -3,9 +3,8 @@ description: "Create a Schedule"
 title: "Create a Schedule"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scheduling jobs [SQL Server]"
@@ -47,7 +46,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To create a schedule  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, right-click **Jobs**, and select **Manage Schedules**.  
   
@@ -69,7 +68,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To create a schedule  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -4,8 +4,8 @@ description: sys.dm_os_child_instances (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/18/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_os_child_instances"
@@ -26,13 +26,16 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azur
 
   Returns a row for each user instance that has been created from the parent server instance.  
   
-> **IMPORTANT!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> [!IMPORTANT]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  The information returned from **sys.dm_os_child_instances** can be used to determine the state of each User Instance (heart_beat) and to obtain the pipe name (instance_pipe_name) that can be used to create a connection to the User Instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or SQLCmd. You can only connect to a User Instance after it has been started by an external process, such as a client application. SQL management tools cannot start a User Instance.  
   
-> **NOTE:** User Instances are a feature of [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] only.  
+> [!NOTE]  
+> User Instances are a feature of [!INCLUDE[ssexpress-2012-md](../../includes/ssexpress-2012-md.md)] only.  
 
-> **NOTE** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_child_instances**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]  
+> To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_child_instances**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column|Data type|Description|  
 |------------|---------------|-----------------|  
@@ -44,7 +47,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azur
 |**os_process_id**|**Int**|The process number of the Windows process for this user instance.|  
 |**os_process_creation_date**|**Datetime**|The date and time when this user instance process was last started.|  
 |**heart_beat**|**nvarchar(5)**|Current state of this user instance; either ALIVE or DEAD.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  

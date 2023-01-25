@@ -2,8 +2,8 @@
 title: "Tutorial: Develop a clustering model in R"
 titleSuffix: SQL Machine Learning
 description: In this four-part tutorial series, you'll develop a model to perform clustering in R with SQL machine learning.
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -74,7 +74,7 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
-1. Download the file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
+1. Download the file [tpcxbb_1gb.bak](https://rserverdistribution.blob.core.windows.net/production/sqlmldocument/tpcxbb_1gb.bak).
 
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
@@ -89,7 +89,7 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
     ```
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-1. Download the file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
+1. Download the file [tpcxbb_1gb.bak](https://rserverdistribution.blob.core.windows.net/production/sqlmldocument/tpcxbb_1gb.bak).
 
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 

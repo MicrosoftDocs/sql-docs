@@ -1,8 +1,8 @@
 ---
 title: "R tutorial: Build and save model"
 description: Learn details about how to build an R language machine learning model used for SQL Server in-database analytics.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 
 ms.date: 11/26/2018  
 ms.topic: tutorial
@@ -95,7 +95,7 @@ The model is a binary classifier that predicts whether the taxi driver is likely
      *trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
      *direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      *---*
-     *Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
+     *Signif. codes:  0 '\*\*\*' 0.001 '\*\*' 0.01 '\*' 0.05 '.' 0.1 ' ' 1*
      *Condition number of final variance-covariance matrix: 48.3933*
      *Number of iterations: 4*
    ```

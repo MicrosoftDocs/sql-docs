@@ -2,9 +2,8 @@
 title: "Set synchronization scope in a paginated report | Microsoft Docs"
 description: Set synchronization scope in a paginated report with indicators to convey data values by synchronizing across the range of indicator values in Report Builder.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -36,7 +35,7 @@ ms.author: maggies
   
      Optionally, click the **Expression** (*fx*) button to edit an expression that sets the scope.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

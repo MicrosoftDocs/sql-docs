@@ -3,10 +3,9 @@ description: "Options (Environment - Fonts and Colors Page)"
 title: "Options (Environment - Fonts and Colors Page)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: "markingmyname"
@@ -14,7 +13,7 @@ ms.author: "maghan"
 ---
 # Options (Environment - Fonts and Colors Page)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-The **Options** dialog box lets you establish a custom font and color scheme for various user interface elements in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. On the **Tools** menu, click **Options,** expand the **Environment** folder, and select **Fonts and Colors**.  
+The **Options** dialog box lets you establish a custom font and color scheme for various user interface elements in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. On the **Tools** menu, click **Options,** expand the **Environment** folder, and select **Fonts and Colors**.  
   
 Color scheme changes do not take effect during the session in which you make them. You can evaluate color changes by opening another instance of SQL Server Management Studio and producing the conditions under which you expect your changes to apply.  
   
@@ -30,7 +29,7 @@ Lists all the user interface elements for which you can change font and color sc
 |Find Results Window|Changes to font style, size, and color display settings for this item affect the appearance of text in the FindResults window.|  
 |Output Window|Changes to font style, size, and color display settings for this item affect the appearance of text in the Output window.|  
 |Grid Results|Changes to the font style, size, and color display settings for this item affect the appearance of text in the **Grid Results** area of the Query window.|  
-|Execution Plan|Changes to font style, size, and color display settings for this item affect the appearance of text in the Execution Plan of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssEW](../../includes/ssew-md.md)] queries.|  
+|Execution Plan|Changes to font style, size, and color display settings for this item affect the appearance of text in the Execution Plan of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssEW](../../includes/ssew-md.md)] queries.|  
 |Text Results|Changes to font style, size, and color display settings for this item affect the appearance of text in the **Text Results** area of the Query window.|  
 |Business Intelligence Designers|Changes to font style, size, and color display settings for this item affect the appearance of text in the BusinessIntelligenceDesignerswindow.|  
   

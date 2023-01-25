@@ -2,9 +2,8 @@
 title: "Sort data in a data region in a paginated report | Microsoft Docs"
 description: Learn how to change the sort order of data in a data region in a paginated report when a report first runs in Report Builder.
 ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -45,7 +44,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To sort values in a group, including the details group, for a Tablix  
   
@@ -63,7 +62,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ### To sort x-axis labels in alphabetical order on a chart  
   
@@ -79,7 +78,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending alphabetical order. **Z-A** sorts the expression in descending alphabetical order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To sort the data points in ascending or descending order on a chart  
   
@@ -95,7 +94,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To sort data in ascending or descending order for display on a gauge  
   
@@ -119,7 +118,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
  For more information about how data is grouped in a gauge, see [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   

@@ -1,12 +1,11 @@
 ---
 title: "ALTER PROCEDURE (Transact-SQL)"
 description: ALTER PROCEDURE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_PROCEDURE_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER PROCEDURE (Transact-SQL)
@@ -28,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Modifies a previously created procedure that was created by executing the CREATE PROCEDURE statement in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL Syntax Conventions (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -111,7 +109,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not cache a plan for this procedure and the procedure is recompiled at run time.  
   
  ENCRYPTION  
- **Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the ALTER PROCEDURE statement to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -139,7 +137,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For more information, see the Best Practices, General Remarks, and Limitations and Restrictions sections in [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies the method of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly for a CLR stored procedure to reference. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name uses a period (**.**) to separate namespace parts, the class name must be delimited by using brackets (**[]**) or quotation marks (**""**). The specified method must be a static method of the class.  
   

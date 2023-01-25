@@ -1,12 +1,11 @@
 ---
 title: "CREATE ROUTE (Transact-SQL)"
 description: CREATE ROUTE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/30/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_ROUTE_TSQL"
@@ -24,15 +23,15 @@ helpviewer_keywords:
   - "CREATE ROUTE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a new route to the routing table for the current database. For outgoing messages, [!INCLUDE[ssSB](../../includes/sssb-md.md)] determines routing by checking the routing table in the local database. For messages on conversations that originate in another instance, including messages to be forwarded, [!INCLUDE[ssSB](../../includes/sssb-md.md)] checks the routes in **msdb**.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -3,10 +3,9 @@ title: "Security considerations (Compact Replication)"
 description: Describes some security considerations for SQL Server Compact Replication.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], SQL Server Compact"

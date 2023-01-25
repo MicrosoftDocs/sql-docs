@@ -3,13 +3,10 @@ title: "NEWID (Transact-SQL)"
 description: "NEWID (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "07/29/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "NEWID"
   - "NEWID_TSQL"
@@ -27,7 +24,7 @@ monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi
 
 Creates a unique value of type **uniqueidentifier**.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -117,6 +114,18 @@ SET @myid = 'A972C577-DFB0-064E-1189-0154C99310DAAC12';
 SELECT @myid;  
 GO  
 ```  
+ 
+### D. Query random data with the NEWID() function
+
+The following example queries a random record from the `Production.Product` table using the `NEWID()` function. To query more records radomly, increase the `TOP` value.
+  
+```sql  
+SELECT TOP 1 ProductID, Name, ProductNumber
+FROM Production.Product
+ORDER BY NEWID()
+GO
+```
+
   
 ## See Also  
  [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   

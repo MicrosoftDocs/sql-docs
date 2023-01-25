@@ -3,10 +3,9 @@ description: "sp_changereplicationserverpasswords (Transact-SQL)"
 title: "sp_changereplicationserverpasswords (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -24,7 +23,7 @@ ms.author: vanto
 
   Changes stored passwords for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login used by replication agents when connecting to servers in a replication topology. You would normally have to change a password for each individual agent running at a server, even if they all use the same login or account. This stored procedure enables you to change the password for all instances of a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login or Windows account used by all replication agents that run at a server. This stored procedure is executed at any server in the replication topology on the master database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

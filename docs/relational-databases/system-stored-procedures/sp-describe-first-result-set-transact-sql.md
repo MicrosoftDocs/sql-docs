@@ -3,10 +3,9 @@ description: "sp_describe_first_result_set (Transact-SQL)"
 title: "sp_describe_first_result_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_describe_first_result_set"
@@ -25,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Returns the metadata for the first possible result set of the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Returns an empty result set if the batch returns no results. Raises an error if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot determine the metadata for the first query that will be executed by performing a static analysis. The dynamic management view [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) returns the same information.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

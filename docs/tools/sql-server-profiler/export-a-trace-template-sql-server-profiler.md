@@ -2,10 +2,9 @@
 title: Export a Trace Template 
 titleSuffix: SQL Server Profiler
 description: Learn how to use SQL Server Profiler to export a trace template as a template file so you can use the template with another instance of SQL Server Profiler.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: markingmyname
@@ -16,7 +15,7 @@ ms.date: "03/01/2017"
 
 # Export a Trace Template (SQL Server Profiler)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how to export an existing trace template to save as a template file (.tdf) by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. When you export a trace template and save it as a file, you can use the template with another instance of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

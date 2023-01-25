@@ -3,10 +3,9 @@ title: "Restore database: differential"
 description: This article describes how to restore a differential database backup in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full differential backups [SQL Server]"
@@ -128,7 +127,7 @@ ms.author: mathoma
   
 11. Optionally, use the **Files** page to restore the database to a new location. For help with moving a database, see [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md).  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

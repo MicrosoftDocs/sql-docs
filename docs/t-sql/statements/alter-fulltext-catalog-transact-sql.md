@@ -1,12 +1,11 @@
 ---
 title: "ALTER FULLTEXT CATALOG (Transact-SQL)"
 description: ALTER FULLTEXT CATALOG (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_FULLEXT_CATALOG_TSQL"
@@ -20,14 +19,13 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], reorganizing"
 dev_langs:
   - "TSQL"
-ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Changes the properties of a full-text catalog.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

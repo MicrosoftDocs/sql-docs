@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Output Window) (AccessToSQL)"
 title: "Global Settings (Output Window) (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 author: cpichuka 

@@ -1,20 +1,17 @@
 ---
 title: Configure availability group listeners and load balancer (PowerShell)
 description: Configure Availability Group listeners on the Azure Resource Manager model, using an internal load balancer with one or more IP addresses.
-services: virtual-machines
-documentationcenter: na
-author: adbadram
-editor: monicar
-ms.assetid: 14b39cde-311c-4ddf-98f3-8694e01a7d3b
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.custom: "seo-lt-2019, devx-track-azurepowershell"
-ms.reviewer: mathoma
+ms.custom:
+  - seo-lt-2019
+  - devx-track-azurepowershell
+editor: monicar
 ---
 # Configure one or more Always On availability group listeners
 
@@ -58,7 +55,7 @@ If you are restricting access with an Azure Network Security Group, ensure that 
 
 ## Determine the load balancer SKU required
 
-[Azure load balancer](/azure/load-balancer/load-balancer-overview) is available in two SKUs: Basic & Standard. The standard load balancer is recommended. If the virtual machines are in an availability set, basic load balancer is permitted. If the virtual machines are in an availability zone, a standard load balancer is required. Standard load balancer requires that all VM IP addresses use standard IP addresses.
+[Azure load balancer](/azure/load-balancer/load-balancer-overview) is available in two SKUs: Basic & Standard. The standard load balancer is recommended as the  Basic SKU is scheduled to be [retired on September 30, 2025](https://azure.microsoft.com/updates/azure-basic-load-balancer-will-be-retired-on-30-september-2025-upgrade-to-standard-load-balancer/). The standard load balancer is required for virtual machines in an availability zone.  Standard load balancer requires that all VM IP addresses use standard IP addresses.
 
 The current [Microsoft template](./availability-group-quickstart-template-configure.md) for an availability group uses a basic load balancer with basic IP addresses.
 

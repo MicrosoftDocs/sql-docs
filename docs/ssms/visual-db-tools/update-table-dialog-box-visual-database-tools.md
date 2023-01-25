@@ -1,9 +1,8 @@
 ---
 description: "Update Table Dialog Box (Visual Database Tools)"
 title: Update Table Dialog Box
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.updatetable"

@@ -4,8 +4,7 @@ description: "Delete User-defined Functions"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/28/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -27,9 +26,9 @@ Requires ALTER permission on the schema to which the function belongs, or CONTRO
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 
-1. Select on the plus sign next to the database that contains the function you wish to modify.
+1. Select the plus sign next to the database that contains the function you wish to modify.
 
-1. Select on the plus sign next to the **Programmability** folder.
+1. Select the plus sign next to the **Programmability** folder.
 
 1. Select the plus sign next to the folder that contains the function you wish to modify:
 

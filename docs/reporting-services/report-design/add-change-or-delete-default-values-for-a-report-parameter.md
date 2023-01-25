@@ -2,9 +2,8 @@
 title: "Add, change, or delete default values for a paginated report parameter | Microsoft Docs"
 description: Use these steps to customize your reports with added, changed, or deleted  default values for paginated report parameters.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -49,7 +48,7 @@ ms.author: maggies
   
          In **Value field**, choose the name of the field that provides parameter values.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To remove the default values for a report parameter  
   
@@ -59,7 +58,7 @@ ms.author: maggies
   
 3.  In **Select from one of the following options**, click **No default value**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## See Also  
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

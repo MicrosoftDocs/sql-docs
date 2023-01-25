@@ -4,9 +4,8 @@ description: Learn about the guidelines and limitations of working with SQLXML 4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "SQLXML, about SQLXML"

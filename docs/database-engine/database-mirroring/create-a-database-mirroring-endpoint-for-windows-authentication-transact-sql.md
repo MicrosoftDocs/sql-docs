@@ -1,22 +1,19 @@
 ---
 title: "Create a database mirroring endpoint (Transact-SQL)"
 description: Use Transact-SQL to create a database mirroring endpoint using Windows Authentication in SQL Server.
-ms.custom: seo-lt-2019
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database mirroring [SQL Server], deployment"
   - "database mirroring [SQL Server], endpoint"
   - "endpoints [SQL Server], database mirroring"
   - "Windows authentication [SQL Server]"
   - "database mirroring [SQL Server], security"
-ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +34,7 @@ ms.author: mikeray
  The authentication and encryption methods of the server instance are established by the system administrator.  
   
 > [!WARNING]  
->  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+>  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.  
   
 ####  <a name="Permissions"></a> Permissions  
  Requires `CREATE ENDPOINT` permission, or membership in the `sysadmin` fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
@@ -105,7 +102,10 @@ ms.author: mikeray
         >  Each server instance requires one and only one unique listener port.  
   
     -   For Windows Authentication, the AUTHENTICATION option is optional, unless you want the endpoint to use only NTLM or Kerberos to authenticate connections. *\<authorizationMethod>* specifies the method used to authenticate connections as one of the following: NTLM, KERBEROS, or NEGOTIATE. The default, NEGOTIATE, causes the endpoint to use the Windows negotiation protocol to choose either NTLM or Kerberos. Negotiation enables connections with or without authentication, depending on the authentication level of the opposite endpoint.  
-  
+
+        > [!NOTE]
+        > To use Kerberos authentication for the communication between availability group (AG) endpoints, [register a Service Principal Name for Kerberos Connections](../configure-windows/register-a-service-principal-name-for-kerberos-connections.md) for the database mirroring endpoints used by the AG. 
+
     -   ENCRYPTION is set to REQUIRED by default. This means that all connections to this endpoint must use encryption. However, you can disable encryption or make it optional on an endpoint. The alternatives are as follows:  
   
         |Value|Definition|  
@@ -121,7 +121,7 @@ ms.author: mikeray
          AES RC4 specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the AES algorithm. RC4 AES specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the RC4 algorithm. If both endpoints specify both algorithms but in different orders, the endpoint accepting the connection wins. Provide the same algorithm explicitly to avoid connection errors between different servers.
   
         > [!WARNING]  
-        >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+        >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.  
   
     -   *\<role>* defines the role or roles that the server can perform. Specifying ROLE is required. However, the role of the endpoint is relevant only for database mirroring. For [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the role of the endpoint is ignored.  
   

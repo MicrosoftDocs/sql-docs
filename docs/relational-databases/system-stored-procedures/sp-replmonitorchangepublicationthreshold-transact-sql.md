@@ -3,10 +3,9 @@ title: "sp_replmonitorchangepublicationthreshold (T-SQL)"
 description: Describes the sp_replmonitorchangepublicationthreshold stored procedure which changes the monitoring threshold metric for a publication.
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Changes the monitoring threshold metric for a publication. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

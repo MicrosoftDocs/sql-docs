@@ -3,10 +3,9 @@ title: "FileTable Compatibility | Microsoft Docs"
 description: Find out how FileTables work with other SQL Server features. Read about which features SQL Server supports with FileTables and which constraints it enforces.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: filestream
+ms.subservice: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], using with other features"
@@ -23,7 +22,8 @@ ms.author: mikeray
   
 -   FileTable functionality is partially supported by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. After a failover, FileTable data is accessible on the primary replica, but FileTable data is not accessible on readable secondary replicas.  
   
-    > **NOTE:**  Notice that after a failover all FILESTREAM functionality is supported. FILESTREAM data is accessible on both readable secondary replicas and on the new primary.  
+    > [!NOTE]  
+    > Notice that after a failover all FILESTREAM functionality is supported. FILESTREAM data is accessible on both readable secondary replicas and on the new primary.  
   
 -   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   

@@ -3,9 +3,9 @@ description: "MSSQLSERVER_825"
 title: "MSSQLSERVER_825 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "825 (Database Engine error)"

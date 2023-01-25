@@ -1,14 +1,12 @@
 ---
 title: Use Jupyter Notebooks views
 description: Learn how to use notebook views
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
 ms.date: 10/27/2021
+ms.service: azure-data-studio
+ms.topic: how-to
+ms.custom: seo-lt-2019
 ---
 
 # Notebook views (Preview)
@@ -18,6 +16,9 @@ Notebook Views is ideal for consumers of notebook results such as data analysis 
 One notebook can have multiple views and work for any kernel.
 
 Notebook Views is now available in [Azure Data Studio](../download-azure-data-studio.md), starting with the October 2021 release (1.33.0).
+
+
+[!INCLUDE [azure-data-studio-preview](../../includes/azure-data-studio-preview.md)]
 
 ## Get started
 

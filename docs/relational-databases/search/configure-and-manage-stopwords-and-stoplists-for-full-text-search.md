@@ -2,9 +2,8 @@
 description: "Configure and Manage Stopwords and Stoplists for Full-Text Search"
 title: "Configure & manage stopwords & stoplists for Full-Text Search"
 ms.date: "02/02/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stoplists [full-text search]"
@@ -65,7 +64,7 @@ Use [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-t
   
      For more information, see [New Full-Text Stoplist &#40;General Page&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130)).  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ##  Use a stoplist in full-text queries  
  To use a stoplist in queries, you must associate it with a full-text index. You can attach a stoplist to a full-text index when you create the index, or you can alter the index later to add a stoplist.  
@@ -98,7 +97,7 @@ Use [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alte
   
     3.  If the **Full-text language** list box is enabled for the selected action, select a language.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
 
 ## Manage stoplists and their usage
   

@@ -2,9 +2,8 @@
 title: "Bind a Report to a Shared Data Source | Microsoft Docs"
 description: Learn how to bind a report to a shared data source on a report server that is running in native mode or SharePoint integrated mode.
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual
@@ -53,7 +52,7 @@ ms.author: maggies
   
 8.  Select the data source and **click OK**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 10. Click **Close**.  
   

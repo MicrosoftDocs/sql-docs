@@ -1,12 +1,11 @@
 ---
 title: "SQL Server force failover for availability groups"
 description: "Force failover for availability groups with cluster type of NONE"
-services: ""
 author: MikeRayMSFT
-ms.topic: "include"
-ms.date: 02/05/2018
 ms.author: mikeray
-ms.custom: "include file"
+ms.date: 02/05/2018
+ms.topic: "include"
+ms.custom: include file
 ---
 Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In a typical availability group, the cluster manager automates the failover process. In an availability group with cluster type NONE, the failover process is manual.
 
@@ -59,7 +58,7 @@ To manually fail over without data loss:
    >[!NOTE]
    >This setting is not specific to failover and should be set based on the requirements of the environment.
 
-1. Set the primary replica offline to prepare for the role change: 
+1. Set the primary replica and the secondary replica(s) not participating in the failover offline to prepare for the role change: 
 
    ```SQL
    ALTER AVAILABILITY GROUP [AGRScale] OFFLINE
@@ -71,7 +70,7 @@ To manually fail over without data loss:
    ALTER AVAILABILITY GROUP AGRScale FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ```
 
-1. Update the role of the old primary to `SECONDARY`, run the following command on the SQL Server instance that hosts the old primary replica:
+1. Update the role of the old primary and other secondaries to `SECONDARY`, run the following command on the SQL Server instance that hosts the old primary replica:
 
    ```SQL
    ALTER AVAILABILITY GROUP [AGRScale] 

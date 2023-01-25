@@ -1,12 +1,11 @@
 ---
 title: "ALTER PARTITION SCHEME (Transact-SQL)"
 description: ALTER PARTITION SCHEME (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "4/5/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER PARTITION SCHEME"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "NEXT USED filegroups"
 dev_langs:
   - "TSQL"
-ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -32,7 +30,7 @@ Learn more about filegroups and partitioning strategies in [Filegroups](../../re
 >[!NOTE]
 >In Azure SQL Database only primary filegroups are supported.  
   
-![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

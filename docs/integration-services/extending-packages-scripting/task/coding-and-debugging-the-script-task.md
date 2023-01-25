@@ -3,10 +3,9 @@ description: "Coding and Debugging the Script Task"
 title: "Coding and Debugging the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -48,7 +47,7 @@ ms.author: chugu
 ### Project Items and Classes in the Script Task Project  
  By default, the Script task project displayed in the VSTA Project Explorer window contains a single item, **ScriptMain**. The **ScriptMain** item, in turn, contains a single class, also named **ScriptMain**. The code elements in the class vary depending on the programming language that you selected for the Script task:  
   
--   When the Script task is configured for the [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] programming language, the **ScriptMain** class has a public subroutine, **Main**. The **ScriptMain.Main** subroutine is the method that the runtime calls when you run your Script task.  
+-   When the Script task is configured for the [!INCLUDE [vbprvb-md](../../../includes/vbprvb-md.md)] programming language, the **ScriptMain** class has a public subroutine, **Main**. The **ScriptMain.Main** subroutine is the method that the runtime calls when you run your Script task.  
   
      By default, the only code in the **Main** subroutine of a new script is the line `Dts.TaskResult = ScriptResults.Success`. This line informs the runtime that the task was successful in its operation. The **Dts.TaskResult** property is discussed in [Returning Results from the Script Task](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   

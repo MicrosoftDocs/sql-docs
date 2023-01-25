@@ -1,9 +1,8 @@
 ---
 title: "Pin paginated report items to Power BI dashboards - Reporting Services | Microsoft Docs"
-ms.date: 01/14/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.date: 10/14/2022
+ms.service: reporting-services
+ms.subservice: reporting-services
 description: You can pin on-premises Reporting Services paginated report items to a dashboard in the Power BI service, as a new tile.
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,7 +20,9 @@ ms.author: maggies
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] paginated report item to a dashboard in the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] service, as a new tile.   To pin, your administrator needs to first integrate your report server with Azure Active Directory and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
-  
+ 
+[!INCLUDE [ssrs-no-pin-2-power-bi](../includes/ssrs-no-pin-2-power-bi.md)]
+ 
 ##  <a name="bkmk_requirements_to_pin"></a> Requirements to Pin  
   
 -   The report server is configured for [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] integration. For more information, see [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). If the report server has not been configured, you won't see the **Pin to Power BI Dashboard** button on the report viewer toolbar.  
@@ -110,7 +111,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
     "Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)"  
 
--   **Tiles in Power BI apps show stale data:** If you pin a Reporting Services report item to a dashboard, and then distribute that dashboard in an app, the pinned report item in that dashboard won’t update. 
+-   **Tiles in Power BI apps show stale data:** If you pin a Reporting Services report item to a dashboard, and then distribute that dashboard in an app, the pinned report item in that dashboard won't update. 
 
 ##  <a name="bkmk_subscription_management"></a> Subscription Management  
  In addition to the subscription-related issues described in the troubleshooting section, the following information will help you maintain [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] related subscriptions.

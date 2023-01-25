@@ -3,13 +3,10 @@ title: IS_SRVROLEMEMBER (Transact-SQL)
 description: "IS_SRVROLEMEMBER (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "IS_SRVROLEMEMBER_TSQL"
   - "IS_SRVROLEMEMBER"
@@ -27,7 +24,7 @@ dev_langs:
 
   Indicates whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of the specified server role.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

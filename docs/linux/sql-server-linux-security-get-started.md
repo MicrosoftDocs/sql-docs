@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom:
   - intro-get-started

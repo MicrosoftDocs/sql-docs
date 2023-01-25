@@ -1,17 +1,14 @@
 ---
 title: Intelligent Insights performance diagnostics log
 description: Intelligent Insights provides a diagnostics log of Azure SQL Database and Azure SQL Managed Instance performance issues
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/31/2022
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom: sqldbrb=2
 ---
 
 # Use the Intelligent Insights performance diagnostics log of Azure SQL Database and Azure SQL Managed Instance performance issues
@@ -86,7 +83,7 @@ Depending on the performance issue detected, the details outputted in the diagno
 | Missing Index | <li>Query hashes</li> |
 | New Query | <li>Query hash of the new queries</li> |
 | Unusual Wait Statistic | <li>Unusual wait types</li><li>Query hashes</li><li>Query wait times</li> |
-| TempDB Contention | <li>Query hashes of queries causing contention</li><li>Query attribution to the overall database pagelatch contention wait time [%]</li> |
+| `tempdb` Contention | <li>Query hashes of queries causing contention</li><li>Query attribution to the overall database pagelatch contention wait time [%]</li> |
 | Elastic pool DTU Shortage | <li>Elastic pool</li><li>Top DTU-consuming database</li><li>Percent of pool DTU used by the top consumer</li> |
 | Plan Regression | <li>Query hashes</li><li>Good plan IDs</li><li>Bad plan IDs</li> |
 | Database-Scoped Configuration Value Change | <li>Database-scoped configuration changes compared to the default values</li> |

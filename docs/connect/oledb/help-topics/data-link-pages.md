@@ -1,15 +1,13 @@
 ---
-title: "Universal Data Link (UDL) Configuration | Microsoft Docs"
+title: "Universal Data Link (UDL) Configuration"
 description: Learn how to use the Connection tab to specify how to connect to your data using the OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "02/18/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: conceptual
-ms.author: v-davidengel
 author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
+ms.date: "10/26/2022"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Universal Data Link (UDL) configuration
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,6 +50,7 @@ Use the Advanced tab to view and set additional initialization properties.
 |Connection encryption|When `Mandatory` or `Strict`, data that is passed through the connection will be encrypted. The `Strict` option additionally encrypts the PRELOGIN packets. This option is only available for versions 19.x.x.|
 |Host name in certificate|The host name to be used in validating the SQL Server TLS/SSL certificate. If not set, the driver uses the server name on the connection URL as the host name to validate the SQL Server TLS/SSL certificate. This option is only available for versions 19.x.x.|
 |Trust server certificate|When unchecked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority. This option is only available for versions 19.x.x.|
+|Server certificate|Specifies the path to a certificate file to match against the SQL Server TLS/SSL certificate. This option can only be used when `Strict` encryption is enabled.<br/><br/>Type the full path to the certificate file in the text box labeled `Server certificate`, or click on the `Browse` button to browse for the certificate file. This option is only available in versions 19.2+.|
 
 
 > [!NOTE]  

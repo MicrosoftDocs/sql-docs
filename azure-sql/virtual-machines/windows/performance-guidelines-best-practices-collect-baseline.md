@@ -1,20 +1,14 @@
 ---
 title: "Collect baseline: Performance best practices & guidelines"
 description: Provides steps to collect a performance baseline as guidelines to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-editor: ''
-tags: azure-service-management
-ms.assetid: a0c85092-2113-4982-b73a-4e80160bac36
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 03/25/2021
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 03/25/2021
-ms.author: pamela
-ms.reviewer: mathoma
+tags: azure-service-management
 ---
 # Collect baseline: Performance best practices for SQL Server on Azure VM
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -36,15 +30,15 @@ Use the performance analysis to select the [VM Size](/azure/virtual-machines/siz
 
 ## Storage
 
-SQL Server performance depends heavily on the I/O subsystem and storage performance is measured by IOPS and throughput. Unless your database fits into physical memory, SQL Server constantly brings database pages in and out of the buffer pool. The data files for SQL Server should be treated differently. Access to log files is sequential except when a transaction needs to be rolled back where data files, including tempdb, are randomly accessed. If you have a slow I/O subsystem, your users may experience performance issues such as slow response times and tasks that do not complete due to time-outs. 
+SQL Server performance depends heavily on the I/O subsystem and storage performance is measured by IOPS and throughput. Unless your database fits into physical memory, SQL Server constantly brings database pages in and out of the buffer pool. The data files for SQL Server should be treated differently. Access to log files is sequential except when a transaction needs to be rolled back where data files, including `tempdb`, are randomly accessed. If you have a slow I/O subsystem, your users may experience performance issues such as slow response times and tasks that do not complete due to time-outs. 
 
-The Azure Marketplace virtual machines have log files on a physical disk that is separate from the data files by default. The tempdb data files count and size meet best practices and are targeted to the ephemeral `D:\` drive. 
+The Azure Marketplace virtual machines have log files on a physical disk that is separate from the data files by default. The `tempdb` data files count and size meet best practices and are targeted to the ephemeral `D:\` drive. 
 
 The following PerfMon counters can help validate the IO throughput required by your SQL Server: 
 * **\LogicalDisk\Disk Reads/Sec** (read IOPS)
 * **\LogicalDisk\Disk Writes/Sec** (write IOPS) 
-* **\LogicalDisk\Disk Read Bytes/Sec** (read throughput requirements for the data, log, and tempdb files)
-* **\LogicalDisk\Disk Write Bytes/Sec** (write throughput requirements for the data, log, and tempdb files)
+* **\LogicalDisk\Disk Read Bytes/Sec** (read throughput requirements for the data, log, and `tempdb` files)
+* **\LogicalDisk\Disk Write Bytes/Sec** (write throughput requirements for the data, log, and `tempdb` files)
 
 Using IOPS and throughput requirements at peak levels, evaluate VM sizes that match the capacity from your measurements. 
 

@@ -2,11 +2,10 @@
 description: "msdb Database"
 title: "msdb Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.date: "11/16/2022"
+ms.service: sql
+ms.reviewer: "andreas.wolter"
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, msdb database"
@@ -18,7 +17,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # msdb Database
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+
 
   The **msdb** database is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling alerts and jobs and by other features such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] and Database Mail.  
   
@@ -27,7 +27,8 @@ ms.author: wiassaf
  By default, **msdb** uses the simple recovery model. If you use the [backup and restore history](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) tables, we recommend that you use the full recovery model for **msdb**. For more information, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md). Notice that when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed or upgraded and whenever Setup.exe is used to rebuild the system databases, the recovery model of **msdb** is automatically set to simple.  
   
 > [!IMPORTANT]  
->  After any operation that updates **msdb**, such as backing up or restoring any database, we recommend that you back up **msdb**. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+> - After any operation that updates **msdb**, such as backing up or restoring any database, we recommend that you back up **msdb**. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+> - There are differences to whats available in the **msdb** database in Azure SQL Managed Instance. Review [backup transparency](/azure/azure-sql/managed-instance/backup-transparency) to learn more. 
   
 ## Physical Properties of msdb  
  The following table lists the initial configuration values of the **msdb** data and log files. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -88,6 +89,20 @@ ms.author: wiassaf
 -   Renaming the database or primary filegroup.  
 -   Setting the database to OFFLINE.  
 -   Setting the primary filegroup to READ_ONLY.  
+
+## Recommendations  
+When you work with the **msdb** database, consider the following recommendations:  
+  
+- Always have a current backup of the **msdb** database available.  
+- Back up the **msdb** database as soon as possible after the following operations:  
+  
+  - Creating, modifying, or deleting any jobs, alerts, proxies or maintenance plans 
+  - Adding, changing or deleting database mail profiles  
+  - Adding, modifying or deleting Policy based management policies
+  
+- Do not create user objects in **msdb**. If you do, **msdb** must be backed up more frequently.  
+- Treat the **msdb** database as highly sensitive and do not grant access to anyone without a proper need. Especially keep in mind, that SQL Server Agent jobs are often owned by members of the sysadmin-role and therefore make sure that code that is executed cannot be tampered with. 
+- Audit any changes to objects in **msdb** 
   
 ## Related Content  
 - [System Databases](../../relational-databases/databases/system-databases.md)  

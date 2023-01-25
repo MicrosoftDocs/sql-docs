@@ -4,8 +4,7 @@ description: Create Extended Stored Procedures
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "warnings [SQL Server]"
@@ -18,7 +17,7 @@ ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR Integration instead.  
   
  An extended stored procedure is a C/C++ function with a prototype:  
   

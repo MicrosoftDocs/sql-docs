@@ -3,9 +3,8 @@ description: "Manage retention of historical data in system-versioned temporal t
 title: Manage historical data in System-Versioned Temporal Tables
 ms.custom: "seo-lt-2019"
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
@@ -33,7 +32,7 @@ Once you determine your data retention period, your next step is to develop a pl
 - [Stretch Database](#using-stretch-database-approach)
 
   > [!IMPORTANT]  
-  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 
 - [Table Partitioning](#using-table-partitioning-approach)
@@ -51,7 +50,7 @@ Once you determine your data retention period, your next step is to develop a pl
 > Using the Stretch Database approach only applies to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 [Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
 

@@ -3,10 +3,9 @@ description: "sp_notify_operator (Transact-SQL)"
 title: "sp_notify_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_notify_operator_TSQL"
@@ -25,7 +24,7 @@ ms.author: maghan
   Sends an e-mail message to an operator using Database Mail.  
   
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +50,8 @@ sp_notify_operator
 `[ @name = ] 'name'`
  The name of the operator to send the message to. *name* is **nvarchar(128)**, with a default of NULL. One of *id* or *name* must be specified.  
   
-> **NOTE:** An e-mail address must be defined for the operator before they can receive messages.  
+> [!NOTE]  
+> An e-mail address must be defined for the operator before they can receive messages.  
   
 `[ @subject = ] 'subject'`
  The subject for the e-mail message. *subject* is **nvarchar(256)** with no default.  

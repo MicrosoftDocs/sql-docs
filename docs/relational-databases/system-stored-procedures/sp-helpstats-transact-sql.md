@@ -3,10 +3,9 @@ description: "sp_helpstats (Transact-SQL)"
 title: "sp_helpstats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_helpstats"
@@ -26,9 +25,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   Returns statistics information about columns and indexes on the specified table.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] To obtain information about statistics, query the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) and [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) catalog views.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] To obtain information about statistics, query the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) and [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) catalog views.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

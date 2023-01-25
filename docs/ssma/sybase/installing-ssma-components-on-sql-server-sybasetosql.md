@@ -4,9 +4,9 @@ title: "Installing SSMA components on SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom:
   - intro-installation
 ms.date: "04/29/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: cpichuka 
@@ -28,8 +28,8 @@ Also, when you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 Before you install the SSMA for Sybase server components on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure that the system meets the following requirements:
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is installed.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.
-- The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
+- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Installer 3.1 or a later version.
+- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - The Sybase OLE DB/ADO.Net/ODBC provider and connectivity to the SAP ASE database server that contains the databases you want to migrate. You can install providers from the SAP ASE product media. For information about connectivity, see [Connecting to Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).
 - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service must be running during installation. This is used to populate a list of the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the Setup wizard. You can disable the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service after installation.
 

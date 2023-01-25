@@ -2,9 +2,8 @@
 title: "Add or delete a group in a paginated report chart | Microsoft Docs"
 description: Find out how to add or delete groups, and how to create groups or nested groups in a paginated report by dragging dataset fields in Report Builder.
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -35,7 +34,7 @@ In paginated reports, click in the chart data region to display the **Chart Data
   
 3.  Add or remove group expressions, filters, sort expressions, and group variables.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## To edit a series group on a chart  
   
@@ -45,7 +44,7 @@ In paginated reports, click in the chart data region to display the **Chart Data
   
 3.  Add or remove group expressions, filters, sort expressions, and group variables.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## To delete a group from a chart  
   

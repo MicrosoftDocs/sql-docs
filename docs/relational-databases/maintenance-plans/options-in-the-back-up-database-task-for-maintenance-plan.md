@@ -4,9 +4,8 @@ description: Learn how to add a backup task to a maintenance plan in SQL Server 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.maint.maintplanproperties.logbackup.f1"

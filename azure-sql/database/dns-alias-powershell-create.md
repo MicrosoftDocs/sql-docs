@@ -1,23 +1,19 @@
 ---
 title: DNS Alias (PowerShell & Azure CLI)
 description: PowerShell and Azure CLI cmdlets enable you to redirect new client connections to a different SQL server in Azure, without having to touch any client configuration.
-keywords:
-  - "dns sql database"
+author: rajeshsetlem
+ms.author: rsetlem
+ms.reviewer: wiassaf, mathoma, amagarwa, maboja, vanto
+ms.date: 05/14/2019
+ms.service: sql-database
+ms.subservice: high-availability
+ms.topic: how-to
 ms.custom:
   - "seo-lt-2019 sqldbrb=1"
   - "devx-track-azurecli"
   - "devx-track-azurepowershell"
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: high-availability
-ms.devlang:
-  - "PowerShell"
-ms.topic: how-to
-author: emlisa
-ms.author: emlisa
-ms.reviewer: wiassaf, mathoma, amagarwa, maboja, vanto
-ms.date: 05/14/2019
+keywords: dns sql database
+ms.devlang: PowerShell
 ---
 # PowerShell for DNS Alias to Azure SQL Database
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

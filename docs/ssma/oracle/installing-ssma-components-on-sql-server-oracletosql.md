@@ -1,12 +1,12 @@
 ---
 title: "Installing SSMA components on SQL Server (OracleToSQL) | Microsoft Docs"
 description: Learn how to install the SSMA extension pack and Oracle providers on the computer that runs SQL Server to support Oracle database conversion.
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-installation
 ms.date: "04/29/2021"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Installing the extension pack"
@@ -31,8 +31,8 @@ Also, when you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 Before you install the SSMA for Oracle server components on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure that the system meets the following requirements:
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is installed.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.
-- The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
+- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Installer 3.1 or a later version.
+- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - The OLE DB provider for Oracle (if using OLE DB), and connectivity to the Oracle database that you want to migrate. You can install providers from the Oracle product media or Oracle Web site.
 - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service must be running during installation. This is used to populate a list of the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the Setup wizard. You can disable the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service after installation.
 

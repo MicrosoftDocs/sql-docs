@@ -1,17 +1,16 @@
 ---
 title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
 description: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: wiassaf
 ms.date: 08/10/2017
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 monikerRange: ">=aps-pdw-2016"
 ---
 # CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
@@ -21,7 +20,7 @@ monikerRange: ">=aps-pdw-2016"
   
  To configure the remote server, see "Remote Table Copy" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

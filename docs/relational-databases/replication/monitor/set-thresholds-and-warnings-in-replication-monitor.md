@@ -3,10 +3,9 @@ title: "Set thresholds & warnings (Replication Monitor)"
 description: Learn how to enable warnings for various conditions that can occur with your replication using Replication Monitor within SQL Server Management Studio (SSMS). 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server replication]"
@@ -80,7 +79,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Click **Close**.  
   
@@ -122,7 +121,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Click **Close**.  
   
@@ -154,7 +153,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Click **Close**.  
   

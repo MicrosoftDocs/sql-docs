@@ -1,26 +1,23 @@
 ---
 title: Dynamic data masking
 description: Dynamic data masking limits sensitive data exposure by masking it to non-privileged users for Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
 author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/05/2022
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 tags: azure-synpase
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Dynamic data masking 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics support dynamic data masking. Dynamic data masking limits sensitive data exposure by masking it to non-privileged users. 
 
-Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It’s a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed.
+Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It's a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed.
 
 For example, a service representative at a call center might identify a caller by confirming several characters of their email address, but the complete email address shouldn't be revealed to the service representative. A masking rule can be defined that masks all the email address in the result set of any query. As another example, an appropriate data mask can be defined to protect personal data, so that a developer can query production environments for troubleshooting purposes without violating compliance regulations.
 
@@ -151,7 +148,7 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
        MemberID int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED, 
        Feedback varchar(100) MASKED WITH (FUNCTION = 'default()') NULL, 
        Rating int MASKED WITH (FUNCTION='default()'), 
-       Received_On datetime) 
+       Received_On datetime 
        );
    ```
 

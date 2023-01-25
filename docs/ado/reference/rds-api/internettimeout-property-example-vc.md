@@ -4,8 +4,8 @@ description: "InternetTimeout Property Example (VC++)"
 author: rothja
 ms.author: jroth
 ms.date: "01/20/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "InternetTimeout property [ADO], VC++ example"

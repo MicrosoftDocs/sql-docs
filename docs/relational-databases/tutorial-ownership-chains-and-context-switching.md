@@ -5,10 +5,9 @@ ms.custom:
   - seo-dt-2019
   - intro-quickstart
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: quickstart
 helpviewer_keywords:
   - "context switching [SQL Server], tutorials"
@@ -18,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Tutorial: Ownership Chains and Context Switching
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver-asdbmi](../includes/applies-to-version/sql-asdbmi.md)]
 This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  

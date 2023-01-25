@@ -2,9 +2,8 @@
 title: "Tutorial: Add a Pie Chart to Your Report (Report Builder) | Microsoft Docs"
 description: Learn how to create a pie chart in a Reporting Services paginated report, add percentages, and combine small slices into a single slice.
 ms.date: 06/15/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
@@ -118,7 +117,7 @@ On each slice of the pie, you can display a percentage for this slice compared t
     > [!NOTE]  
     > **Number Format** in the **Series Label Properties** dialog box has no effect when you format percentages. This formats the labels as percentages, but does not calculate the percentage of the pie that each slice represents.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  Click **Run** to preview the report.  
   

@@ -4,10 +4,9 @@ title: "sys.sp_query_store_set_hints (Transact-SQL)"
 ms.custom:
 - event-tier1-build-2022
 ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_query_store_set_hints_TSQL"
@@ -24,26 +23,41 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_set_hints (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
  Creates or updates [Query Store hints](../performance/query-store-hints.md) for a given `query_id`.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```syntaxsql
 sp_query_store_set_hints
-    @query_id bigint,
-    @query_hints nvarchar(max) [;]  
+    @query_id = 'query_id',
+    @query_hints = 'query_hints'
+    [, @query_hint_scope = 'replica_group_id' ] [;]  
 ```  
+
+## Arguments
+
+#### @query_id
+
+Bigint. Required. The Query Store `query_id` from [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md).
+
+#### @query_hints
+
+Nvarchar(max). String of query options beginning with `'OPTION`. For more information, see [Supported query hints](#supported-query-hints) in this article.
+
+#### [ @query_hint_scope ] 
+
+Tinyint. By default, the scope of a new Query Store hint is the local replica only. This optional parameter determines the scope at which the hint will be applied on a secondary replica when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. The optional *query_hint_scope* argument defaults only to the local replica (primary or secondary), but you can optionally specify a `replica_group_id` referencing [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
 
 ## Return Values  
  0 (success) or 1 (failure)  
   
 ## Remarks  
 
-Hints are specified in a valid T-SQL string format `N'OPTION (..)'`. 
+Hints are specified in a valid T-SQL string format `N'OPTION (..)'`.
 
 * If no Query Store hint exists for a specific `query_id`, a new Query Store hint will be created. 
 * If a Query Store hint already exists for a specific `query_id`, the last value provided will override previously specified values for the associated query. 
@@ -161,6 +175,7 @@ EXEC sys.sp_query_store_clear_hints @query_id = 39;
 ```
 
 ## Next steps
+
 - [Query Store hints](../performance/query-store-hints.md)
 - [Table Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
 - [sp_query_store_clear_hints (Transact-SQL)](sys-sp-query-store-clear-hints-transact-sql.md)   

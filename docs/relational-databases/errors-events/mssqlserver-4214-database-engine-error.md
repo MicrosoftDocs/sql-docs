@@ -3,9 +3,9 @@ description: "MSSQLSERVER_"
 title: MSSQLSERVER_4214
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "4214 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DMPX_NODBBACKUP|
 |Message Text|BACKUP LOG cannot be performed because there is no current database backup|
-||
 
 ## Explanation
 

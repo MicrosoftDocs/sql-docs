@@ -3,10 +3,9 @@ description: "Choose Toolbox Items (Maintenance Tasks Page)"
 title: "Choose Toolbox Items (Maintenance Tasks Page)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords: 
   - "vs.chooseitems.maintenance_tasks"
@@ -27,7 +26,7 @@ The **Maintenance Tasks** tab includes the following columns of information.
 Displays the names of available components. Preceding each name is a check box. If selected, a check box indicates that SQL Server Management Studio has found an entry for the component in your computer's registry. The component is either already displayed on the active **Toolbox** tab, or it will be added to it when you click **OK**. If cleared, a check box indicates that the component is not currently displayed in the **Toolbox**, or that it will be removed from the **Toolbox** when you click **OK**.  
   
 **Path**  
-Displays the full path to the component. To identify the default components that shipped with the product, sort on this column and then locate those stored on the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio installation path.  
+Displays the full path to the component. To identify the default components that shipped with the product, sort on this column and then locate those stored on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio installation path.  
   
 **Last Modified**  
 Displays the date when the component was last modified.  

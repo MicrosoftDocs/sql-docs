@@ -3,10 +3,9 @@ title: "Change the Configuration Settings for a Database | Microsoft Docs"
 description: "Learn how to change database-level options in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL."
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database configuration [SQL Server]"

@@ -2,9 +2,8 @@
 title: "Maps in a paginated report | Microsoft Docs"
 description: Get acquainted with how to add a map to your paginated report showing business data against a geographical background in your paginated report in Report Builder. 
 ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -32,7 +31,7 @@ ms.author: maggies
  To start to use a map immediately, see [Tutorial: Map Report &#40;Report Builder&#41;](../../reporting-services/tutorial-map-report-report-builder.md) or [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
->  You can save maps separate from a report as report parts. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
+>  You can save maps separate from a report as report parts. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
   
 ##  <a name="Process"></a> Adding a Map to Your Report  
  To add a map to your report, here is a list of the general steps to follow:  

@@ -3,17 +3,16 @@ description: "Delete a Subscription View (Master Data Services)"
 title: Delete a Subscription View
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting subscription views [Master Data Services]"
   - "subscription views [Master Data Services], deleting"
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Delete a Subscription View (Master Data Services)
 

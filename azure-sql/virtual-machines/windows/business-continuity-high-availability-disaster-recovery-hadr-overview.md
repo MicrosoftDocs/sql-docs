@@ -1,22 +1,14 @@
 ---
 title: High availability, disaster recovery, business continuity
-description: Learn about the high availability, disaster recovery (HADR), and business continuity options available for SQL Server on Azure VMs, such as Always On availability groups, failover cluster instance, database mirroring, log shipping, and backup & restore to Azure Storage.  
-services: virtual-machines-windows
-documentationcenter: na
-author: adbadram
-editor: ''
-tags: azure-service-management
-
-ms.assetid: 53981f7e-8370-4979-b26a-93a5988d905f
+description: Learn about the high availability, disaster recovery (HADR), and business continuity options available for SQL Server on Azure VMs, such as Always On availability groups, failover cluster instance, database mirroring, log shipping, and backup & restore to Azure Storage.
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma
+ms.date: 06/27/2020
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 06/27/2020
-ms.author: adbadram
-ms.reviewer: mathoma
+tags: azure-service-management
 ---
 # Business continuity and HADR for SQL Server on Azure Virtual Machines
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -98,7 +90,7 @@ Or you can configure a hybrid failover environment, with a licensed primary on-p
 
 For more information, see the [product licensing terms](https://www.microsoft.com/licensing/product-licensing/products). 
 
-To enable this benefit, go to your [SQL Server virtual machine resource](manage-sql-vm-portal.md#access-the-resource). Select **Configure** under **Settings**, and then choose the **Disaster Recovery** option under **SQL Server License**. Select the check box to confirm that this SQL Server VM will be used as a passive replica, and then select **Apply** to save your settings. 
+To enable this benefit, go to your [SQL Server virtual machine resource](manage-sql-vm-portal.md#access-the-resource). Select **Configure** under **Settings**, and then choose the **HA/DR** option under **SQL Server License**. Select the check box to confirm that this SQL Server VM will be used as a passive replica, and then select **Apply** to save your settings. Note that when all three replicas are hosted in Azure, pay-as-you-go customers are also entitled to use the **HA/DR** license type.
 
 ![Configure a disaster recovery replica in Azure](./media/business-continuity-high-availability-disaster-recovery-hadr-overview/dr-replica-in-portal.png)
 

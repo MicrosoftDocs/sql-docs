@@ -2,9 +2,8 @@
 title: "Troubleshoot Processing of Reporting Services Reports"
 description: In this article, troubleshoot issues occurring when the report processor combines data and layout information and evaluates report item property expressions.
 ms.date: 08/26/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: troubleshooting
+ms.service: reporting-services
+ms.subservice: troubleshooting
 
 
 ms.topic: conceptual
@@ -41,7 +40,7 @@ A data type error usually means the default or the specified data type is not su
   
 To eliminate the #Error message, you must rewrite the expression that causes it. To determine more details about the issue, view the detailed error message.   
   
-In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.md)], view the Output window. On the report server, view the call stack. 
+In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], view the Output window. On the report server, view the call stack. 
   
   
 ## See Also  

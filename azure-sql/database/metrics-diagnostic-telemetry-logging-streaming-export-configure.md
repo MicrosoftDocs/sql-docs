@@ -1,18 +1,16 @@
 ---
 title: Configure streaming export of metrics and resource logs
 description: Learn how to configure streaming export of metrics and resource logs, including intelligent diagnostic analysis from Azure SQL Database and Azure SQL Managed Instance to the destination of your choice to store information about resource utilization and query execution statistics.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "seoapril2019"
-  - "devx-track-azurepowershell"
-ms.topic: how-to
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 3/10/2022
+ms.date: 11/2/2022
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: how-to
+ms.custom:
+  - "seoapril2019"
+  - "devx-track-azurepowershell"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -36,7 +34,7 @@ In addition to streaming the export of the Intelligent Insights log, you can als
 | Diagnostic telemetry for databases | Azure SQL Database support | Azure SQL Managed Instance support |
 | :------------------- | ----- | ----- |
 | [Basic metrics](#basic-metrics): Contains DTU/CPU percentage, DTU/CPU limit, physical data read percentage, log write percentage, Successful/Failed/Blocked by firewall connections, sessions percentage, workers percentage, storage, storage percentage, and XTP storage percentage. | Yes | No |
-| [Instance and App Advanced](#advanced-metrics): Contains tempdb system database data and log file size and tempdb percent log file used. | Yes | No |
+| [Instance and App Advanced](#advanced-metrics): Contains `tempdb` system database data and log file size and `tempdb` percent log file used. | Yes | No |
 | [QueryStoreRuntimeStatistics](#query-store-runtime-statistics): Contains information about the query runtime statistics such as CPU usage and query duration statistics. | Yes | Yes |
 | [QueryStoreWaitStatistics](#query-store-wait-statistics): Contains information about the query wait statistics (what your queries waited on) such are CPU, LOG, and LOCKING. | Yes | Yes |
 | [Errors](#errors-dataset): Contains information about SQL errors on a database. | Yes | Yes |
@@ -60,10 +58,10 @@ This diagnostic telemetry can be streamed to one of the following Azure resource
   Data streamed to a [Log Analytics workspace](/azure/azure-monitor/essentials/resource-logs#send-to-log-analytics-workspace) can be consumed by [SQL Analytics](/azure/azure-monitor/insights/azure-sql). SQL Analytics is a cloud only monitoring solution that provides intelligent monitoring of your databases that includes performance reports, alerts, and mitigation recommendations. Data streamed to a Log Analytics workspace can be analyzed with other monitoring data collected and also enables you to leverage other Azure Monitor features such as alerts and visualizations
 - **[Azure Event Hubs](#stream-into-event-hubs)**:
 
-  Data streamed to an [Azure Event Hub](/azure/azure-monitor/essentials/resource-logs#send-to-azure-event-hubs)provides the following functionality:
+  Data streamed to an [Azure Event Hub](/azure/azure-monitor/essentials/resource-logs#send-to-azure-event-hubs) provides the following functionality:
 
   - **Stream logs to 3rd party logging and telemetry systems**: Stream all of your metrics and resource logs to a single event hub to pipe log data to a third-party SIEM or log analytics tool.
-  - **Build a custom telemetry and logging platform**: The highly scalable publish-subscribe nature of Azure Event Hubs allows you to flexibly ingest metrics and resource logs into a custom telemetry platform. See [Designing and Sizing a Global Scale Telemetry Platform on Azure Event Hubs](https://azure.microsoft.com/documentation/videos/build-2015-designing-and-sizing-a-global-scale-telemetry-platform-on-azure-event-Hubs/) for details.
+  - **Build a custom telemetry and logging platform**: The highly scalable publish-subscribe nature of Azure Event Hubs allows you to flexibly ingest metrics and resource logs into a custom telemetry platform. For more information, see [Azure Event Hubs](/azure/event-hubs/event-hubs-about).
   - **View service health by streaming data to Power BI**: Use Event Hubs, Stream Analytics, and Power BI to transform your diagnostics data into near real-time insights on your Azure services. See [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](/azure/stream-analytics/stream-analytics-power-bi-dashboard) for details on this solution.
 - **[Azure Storage](#stream-into-azure-storage)**:
 
@@ -203,7 +201,7 @@ You can set up an instance database resource to collect the following diagnostic
 
 | Resource | Monitoring telemetry |
 | :------------------- | ------------------- |
-| **Instance database** | [ResourceUsageStats](#resource-usage-stats-for-managed-instances) contains vCores count, average CPU percentage, IO requests, bytes read/written, reserved storage space, and used storage space. |
+| **Instance database** | [Query Store Runtime Statistics](#query-store-runtime-statistics) and [Query Store Wait Statistics](#query-store-wait-statistics) contain [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) data for the database. [SQL Insights](intelligent-insights-use-diagnostics-log.md) contains Intelligent Insights data for the database. [Errors](#errors-dataset) contains the errors data for this database.|
 
 To enable streaming of diagnostic telemetry for an instance database, follow these steps:
 
@@ -384,7 +382,7 @@ You can use streamed metrics in Event Hubs to:
 
 - **Build a custom telemetry and logging platform**
 
-  Do you already have a custom-built telemetry platform or are considering building one? The highly scalable publish-subscribe nature of Event Hubs allows you to flexibly ingest metrics and resource logs. See [Dan Rosanova's guide to using Event Hubs in a global-scale telemetry platform](https://azure.microsoft.com/documentation/videos/build-2015-designing-and-sizing-a-global-scale-telemetry-platform-on-azure-event-Hubs/).
+  Do you already have a custom-built telemetry platform or are considering building one? The highly scalable publish-subscribe nature of Event Hubs allows you to flexibly ingest metrics and resource logs. For more information, see [Azure Event Hubs](/azure/event-hubs/event-hubs-about).
 
 ## Stream into Azure Storage
 
@@ -427,7 +425,7 @@ If you are using Azure SQL Analytics, you can monitor your data ingestion consum
 
 ## Metrics and logs available
 
-The monitoring telemetry available for single databases, pooled databases, elastic pools, managed instance, and instance databases is documented in this section of the article. Collected monitoring telemetry inside SQL Analytics can be used for your own custom analysis and application development using [Azure Monitor log queries](/azure/azure-monitor/logs/get-started-queries) language.
+The monitoring telemetry available for single databases, pooled databases, elastic pools, managed instances, and instance databases is documented in this section of the article. Collected monitoring telemetry inside SQL Analytics can be used for your own custom analysis and application development using [Azure Monitor log queries](/azure/azure-monitor/logs/get-started-queries) language.
 
 ### Basic metrics
 
@@ -456,9 +454,9 @@ Refer to the following table for details about advanced metrics.
 |---|---|---|
 |sqlserver_process_core_percent<sup>1</sup>|SQL process core percent|CPU usage percentage for the SQL process, as measured by the operating system.|
 |sqlserver_process_memory_percent<sup>1</sup> |SQL process memory percent|Memory usage percentage for the SQL  process, as measured by the operating system.|
-|tempdb_data_size<sup>2</sup>| Tempdb Data File Size Kilobytes |Tempdb Data File Size Kilobytes.|
-|tempdb_log_size<sup>2</sup>| Tempdb Log File Size Kilobytes |Tempdb Log File Size Kilobytes.|
-|tempdb_log_used_percent<sup>2</sup>| Tempdb Percent Log Used |Tempdb Percent Log Used.|
+|tempdb_data_size<sup>2</sup>|Tempdb Data File Size Kilobytes |Tempdb Data File Size Kilobytes.|
+|tempdb_log_size<sup>2</sup>|Tempdb Log File Size Kilobytes |Tempdb Log File Size Kilobytes.|
+|tempdb_log_used_percent<sup>2</sup>|Tempdb Percent Log Used |Tempdb Percent Log Used.|
 
 <sup>1</sup> This metric is available for databases using the vCore purchasing model with 2 vCores and higher, or 200 DTU and higher for DTU-based purchasing models.
 

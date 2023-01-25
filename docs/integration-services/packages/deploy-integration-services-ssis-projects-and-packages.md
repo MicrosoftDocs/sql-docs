@@ -4,10 +4,9 @@ title: "Deploy Integration Services (SSIS) Projects and Packages | Microsoft Doc
 ms.custom:
   - intro-deployment
 ms.date: 09/26/2019
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: "vanto"
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.bids.converttolegacydeployment.f1"
@@ -296,7 +295,8 @@ Launch the wizard by either:
 
  - Search for the executable file **ISDeploymentWizard.exe** under the SQL Server installation folder; for example: "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
- > **NOTE:** If you see the **Introduction** page, click **Next** to switch to the **Select Source** page. 
+ > [!NOTE]  
+ > If you see the **Introduction** page, click **Next** to switch to the **Select Source** page. 
  
  The settings on this page are different for each deployment model. Follow  steps in the [Project Deployment Model](#ProjectModel) section or [Package Deployment Model](#PackageModel) section based on the model you selected in this page.  
   

@@ -1,10 +1,9 @@
 ---
 title: Feature benefits for the SQL Server on Azure VM
 description: Feature benefits unlocked by registering your SQL Server on Azure VM with the SQL IaaS agent extension
-ms.topic: include
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: 
+ms.topic: include
 ---
 
 | Feature | Description |

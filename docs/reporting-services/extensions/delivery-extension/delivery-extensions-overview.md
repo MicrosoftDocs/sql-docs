@@ -3,7 +3,6 @@ title: "Delivery Extensions Overview | Microsoft Docs"
 description: Read an overview of delivery extensions, which you can use to deliver Reporting Services reports in various ways, such as through email or file sharing.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: extensions
 
 
@@ -42,7 +41,7 @@ Reporting Services delivery extension architecture
   
 -   A deployment computer with a report server installed.  
   
--   A development computer with [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
+-   A development computer with [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)] or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
   
 -   An in-depth understanding of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] features and capabilities, specifically subscription and delivery.  
   

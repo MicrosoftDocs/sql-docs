@@ -4,9 +4,8 @@ description: sys.assembly_types (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "assembly_types"

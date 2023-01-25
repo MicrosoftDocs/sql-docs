@@ -2,9 +2,8 @@
 title: "Add HTML into a paginated report | Microsoft Docs"
 description: Find out how to import HTML using a placeholder from a field in your dataset to use in your paginated report in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -37,7 +36,7 @@ ms.author: maggies
   
 6.  Click **HTML - Interpret HTML tags as styles**. This causes the field to be evaluated as HTML.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ## See Also  
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   

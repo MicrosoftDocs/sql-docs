@@ -3,10 +3,9 @@ title: "Create a Database Schema"
 description: Learn how to create a schema in SQL Server by using SQL Server Management Studio or Transact-SQL, including limitations and restrictions.
 ms.custom: FY22Q2Fresh
 ms.date: 10/25/2021
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.schemas.general.f1"
@@ -54,7 +53,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 5.  In the **Schema owner** box, enter the name of a database user or role to own the schema. Alternately, click **Search** to open the **Search Roles and Users** dialog box.  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  Select **OK**.
 
 > [!NOTE]
 > A dialog box will not appear if you are creating a Schema using SSMS against an **Azure SQL Database** or an **Azure Synapse Analytics**. You will need to run the Create Schema Template T-SQL Statement that is generated.

@@ -2,9 +2,8 @@
 title: "Delete an Item (Management Studio) | Microsoft Docs"
 description: Learn how to delete role definitions and shared schedules in SQL Management Studio.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 
 
 ms.topic: conceptual
@@ -27,7 +26,7 @@ ms.author: maggies
   
 3.  Right-click the item, and click **Delete**.  
   
-4.  When prompted, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  When prompted, select **OK**.
   
 ## See Also  
  [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

@@ -10,7 +10,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: kendralittle, mathoma
   ms.custom: 
-  ms.date: 05/04/2022
+  ms.date: 12/01/2022
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 title: Maintenance window FAQ
@@ -32,29 +32,41 @@ sections:
 
       - question: Can I choose a specific time/day for the maintenance window?
         answer: |
-          No, you can choose between pre-scheduled weekday or weekend windows. The maintenance can happen any time or day within the window.  
+          No, you can choose between pre-scheduled weekday or weekend windows. The maintenance can happen anytime or day within the window.  
 
       - question: What happens once I choose a maintenance window? 
         answer: | 
-          Configuring maintenance window is a long running asynchronous operation, similar to changing the service tier of your Azure SQL resource. The resource is available during the process, except a short reconfiguration that happens at the end of the operation and typically lasts up to 8 seconds even in case of interrupted long-running transactions. To minimize the impact of the reconfiguration, you should perform the operation outside of the peak hours. In case of managed instance, IP address of the instance will change.
+          Configuring maintenance window is a long running asynchronous operation, similar to changing the service tier of your Azure SQL resource. The resource is available during the process, except a short reconfiguration that happens at the end of the operation and typically lasts up to 8 seconds even in case of interrupted long-running transactions. To minimize the impact of the reconfiguration, you should perform the operation outside of the peak hours. For Azure SQL Managed Instance, the IP address of the managed instance will change.
 
       - question: What types of updates are typically performed during a maintenance window? 
         answer: |
-          The maintenance event may contain updates for hardware, firmware, operating system, satellite software components, or the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events.
+          The maintenance event may contain updates for hardware, firmware, operating system, satellite software components, or the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events. In case of SQL Managed Instance, updates are combined in two batches, one focused on physical infrastructure, and another one focused on SQL engine and logical infrastructure.
 
+      - question: How frequent the updates are?
+        answer: |
+          Planned maintenance updates occur once every 35 days on average, which means customer can expect approximately one planned maintenance event per month per Azure SQL Database. In case of Azure SQL Managed Instance, customers can expect approximately two planned maintenance updates per month, but these updates can result with more than one maintenance event.
+      
       - question: What can I expect during a maintenance event?
         answer: |
-          During a maintenance update, databases are fully available and accessible but some of the maintenance updates require a reconfiguration as Azure takes SQL Databases offline for a short time to apply the maintenance updates (generally a few seconds in duration). Planned maintenance updates occur once every 35 days on average, which means customer can expect approximately one planned maintenance event per month per Azure SQL Database and managed instance, and only during the maintenance window slots selected by the customer.
+          Maintenance event represents a period during which the updates are applied on the resource. Maintenance event happens inside the defined maintenance window. During a maintenance event, databases are **fully available** and accessible but some of the maintenance updates require a reconfiguration as Azure takes SQL Databases **offline for a short time** to apply the maintenance updates (generally a few seconds in duration), and only during the maintenance window slots selected by the customer. As in case of SQL Managed Instance one update may result with multiple maintenance events, depending on the configured maintenance window and start day of the update, the update events might complete within one week or overflow to the next week. However, planned maintenance events are never executed outside of defined maintenance windows.
+
+      - question: How many reconfigurations can I expect during a maintenance event?
+        answer: |
+          If the maintenance update requires a reconfiguration, typically one reconfiguration happens during the window. In case of SQL Managed Instance, more than one reconfiguration may happen.
+  
+      - question: Can my application become resilient to reconfiguration events?
+        answer: |
+          Yes, for application resilience during [Gateway maintenance](maintenance-window.md#gateway-maintenance), make sure your client applications use the redirect connection policy. For resilience during reconfiguration, leverage [retry logic](planned-maintenance.md) concepts.
 
       - question: Are there any prerequisites for configuring maintenance window?
         answer: |
-          In case of managed instance [additional IP addresses](../managed-instance/vnet-subnet-determine-size.md#update-scenarios) are needed temporarily, as in scaling vCores scenario for corresponding service tier.
+          For Azure SQL Managed Instance, [additional IP addresses](../managed-instance/vnet-subnet-determine-size.md#update-scenarios) are needed temporarily, as in scaling vCores scenario for corresponding service tier.
 
-      - question: In which regions is choosing a maintenance window available?
+      - question: In which regions are choosing a maintenance window available?
         answer: | 
           For a list of available regions, see [Maintenance window availability](maintenance-window.md#feature-availability).
       
-      - question: I don’t see my region in the available regions list, what can I do? 
+      - question: I don't see my region in the available regions list, what can I do? 
         answer: |
           Contact [azsqlcmfeedback@microsoft.com](mailto:azsqlcmfeedback@microsoft.com) to share the feedback and check the plans for your region. 
       
@@ -84,7 +96,7 @@ sections:
 
       - question: What happens when a maintenance event fails?
         answer: |
-          Although rare, failures or interruptions during a maintenance event can occur.  In the event of a failure, changes are rolled back and the maintenance will be rescheduled to another time.    
+          Although rare, failures or interruptions during a maintenance event can occur. In the event of a failure, changes are rolled back and the maintenance will be rescheduled to another time.    
 
       - question: How do I validate that my databases are set up for maintenance window?
         answer: |
@@ -108,7 +120,7 @@ sections:
 
       - question: I'm not able to set up advance notifications for planned maintenance, will I still see planned maintenance event in Service Health dashboard?
         answer: |
-          No, if advance notifications aren't configured, Service Health won't show the planned maintenance events. 
+          In case of [Azure SQL Database](sql-database-paas-overview.md), if advance notifications aren't configured, Service Health won't show the planned maintenance events. In case of [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), you are able to see planned maintenance event in Service Health dashboard even if advance notifications aren't configured.
 
       - question: Does advance notification cover all maintenance events? 
         answer: | 
@@ -124,7 +136,7 @@ sections:
           
       - question: Can I check the list of resources that will be impacted by the event that I got notified for?
         answer: |
-          Yes, you can [retrieve the list of impacted resources](advance-notifications.md#retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview). You will receive an advance notification email which contains the notification ID and a link to the Azure Resource Graph Explorer. 
+          Yes, you can [retrieve the list of impacted resources](advance-notifications.md#retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph Explorer](/azure/governance/resource-graph/overview). You will receive an advance notification email that contains the notification ID and a link to the Azure Resource Graph Explorer. 
           
       - question: The notification says "In Progress", but window has not started yet?
         answer: |

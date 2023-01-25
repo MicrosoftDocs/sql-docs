@@ -3,13 +3,10 @@ title: "CHECKSUM (Transact-SQL)"
 description: "CHECKSUM (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "CHECKSUM_TSQL"
   - "CHECKSUM"
@@ -26,7 +23,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
 
 The `CHECKSUM` function returns the checksum value computed over a table row, or over an expression list. Use `CHECKSUM` to build hash indexes.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

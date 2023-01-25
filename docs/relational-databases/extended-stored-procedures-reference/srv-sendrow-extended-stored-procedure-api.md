@@ -4,9 +4,8 @@ description: Learn about srv_sendrow in the Extended Stored Procedure API. srv_s
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_sendrow"
@@ -21,7 +20,7 @@ ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Transmits a row of data to the client.  
   

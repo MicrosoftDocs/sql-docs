@@ -3,10 +3,9 @@ description: "SqlServiceType Property (SqlServiceAdvancedProperty Class)"
 title: "SqlServiceType Property (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: wmi
+ms.subservice: wmi
 ms.topic: "reference"
 apiname: 
   - "SqlServiceType Property (SqlServiceAdvancedProperty Class)"
@@ -51,8 +50,8 @@ object.SetBoolValue(NumValue)
 |*7*|SQLBrowser is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser service.|  
 |*8*|NsService is the [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Notification service.|  
 |*9*|MSSQLFDLauncher is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Full-text Filter Daemon Launcher service.|  
-|*10*|SQLPBENGINE is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase Engine service.|  
-|*11*|SQLPBDMS is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase Data Movement service.|  
+|*10*|SQLPBENGINE is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PolyBase Engine service.|  
+|*11*|SQLPBDMS is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PolyBase Data Movement service.|  
 |*12*|MSSQLLaunchpad is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Launchpad service.|  
   
 ## See Also  

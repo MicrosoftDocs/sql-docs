@@ -3,10 +3,9 @@ description: "SELECT Clause (Transact-SQL)"
 title: "SELECT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "SELECT Clause"
@@ -33,7 +32,7 @@ ms.author: vanto
 
   Specifies the columns to be returned by the query.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,8 +50,8 @@ SELECT [ ALL | DISTINCT ]
           | udt_column_name [ { . | :: } { { property_name | field_name }   
             | method_name ( argument [ ,...n] ) } ]  
           | expression  
-          [ [ AS ] column_alias ]   
          }  
+        [ [ AS ] column_alias ]   
       | column_alias = expression   
     } [ ,...n ]   
 ```  

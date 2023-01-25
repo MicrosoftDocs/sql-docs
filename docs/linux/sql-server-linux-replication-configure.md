@@ -7,9 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/20/2018
 ms.topic: article
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 titleSuffix: SQL Server on Linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
@@ -75,13 +74,13 @@ To configure the distributor:
 
 To create a publication and articles:
 
-1. In Object Explorer, click **Replication** > **Local Publications**> **New Publication...**.
+1. In Object Explorer, select **Replication** > **Local Publications**> **New Publication...**.
 
 1. Follow the instruction on the **New Publication Wizard** to configure the type of replication, and the articles that belong to the publication.
 
 ### Configure the subscription
 
-To configure the subscription in Object Explorer, click **Replication** > **Local Subscriptions**> **New subscriptions...**.
+To configure the subscription in Object Explorer, select **Replication** > **Local Subscriptions**> **New subscriptions...**.
 
 ### Monitor replication jobs
 

@@ -1,16 +1,12 @@
 ---
 title: Connect to an Azure SQL database
 description: This article discusses issues when you use the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database.
-ms.custom: ""
-ms.date: 07/26/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 07/26/2022
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Connect to an Azure SQL database
 
@@ -45,7 +41,7 @@ To address the second point and avoid the Gateway terminating idle connections, 
 
 - Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) to configure your Azure SQL data source.
 
-- Keep connections active via lightweight activity. This method isn’t recommended and should only be used if there are no other possible options.
+- Keep connections active via lightweight activity. This method isn't recommended and should only be used if there are no other possible options.
 
 To address the first point and avoid dropping idle connections by a network component, set the following registry settings or their non-Windows equivalents on the operating system where the driver is loaded:  
   

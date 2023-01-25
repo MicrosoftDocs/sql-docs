@@ -4,9 +4,8 @@ description: Learn about memory-optimized tables, which are durable and support 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -95,7 +94,7 @@ EXECUTE AS CALLER has a small (approximately10%) performance hit caused by permi
   
 ## Scenarios
 
-For a brief discussion of typical scenarios where [!INCLUDE[hek_1](../../includes/hek-1-md.md)] can improve performance, see [In-Memory OLTP](./overview-and-usage-scenarios.md).  
+For a brief discussion of typical scenarios where [!INCLUDE[inmemory-md](../../includes/inmemory-md.md)] can improve performance, see [In-Memory OLTP](./overview-and-usage-scenarios.md).  
   
 ## See Also
 

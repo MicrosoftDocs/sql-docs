@@ -4,9 +4,8 @@ description: SET SHOWPLAN_TEXT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SHOWPLAN_TEXT"
@@ -24,14 +23,13 @@ helpviewer_keywords:
   - "estimated execution information [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 ---
 # SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns detailed information about how the statements are executed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,7 +54,6 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |Column name|Description|  
 |-----------------|-----------------|  
 |**StmtText**|For rows which are not of type PLAN_ROW, this column contains the text of the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For rows of type PLAN_ROW, this column contains a description of the operation. This column contains the physical operator and may optionally also contain the logical operator. This column may also be followed by a description which is determined by the physical operator. For more information about physical operators, see the **Argument** column in [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
-|||
 
  For more information about the physical and logical operators that can be seen in Showplan output, see [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   

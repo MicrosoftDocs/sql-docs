@@ -6,8 +6,8 @@ author: rothja
 ms.author: jroth 
 ms.date: 10/09/2020
 ms.topic: reference
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Extensibility Framework API for SQL Server

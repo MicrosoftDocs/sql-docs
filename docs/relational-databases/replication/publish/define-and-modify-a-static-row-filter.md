@@ -3,10 +3,9 @@ description: "Define and Modify a Static Row Filter"
 title: "Define and Modify a Static Row Filter | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying filters, static row"
@@ -83,7 +82,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
 
@@ -93,7 +92,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Edit Filter** dialog box, modify the filter.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 #### To delete a static row filter  
   

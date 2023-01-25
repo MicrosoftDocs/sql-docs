@@ -4,9 +4,8 @@ description: SET STATISTICS TIME (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET_STATISTICS_TIME_TSQL"
@@ -22,14 +21,13 @@ helpviewer_keywords:
   - "execution processing time [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 ---
 # SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
   Displays the number of milliseconds required to parse, compile, and execute each statement.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

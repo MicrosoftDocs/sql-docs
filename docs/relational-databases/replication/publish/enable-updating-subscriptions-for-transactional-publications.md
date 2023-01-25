@@ -3,10 +3,9 @@ title: "Enable Updatable Subscriptions for Transactional Publications"
 description: Learn how to enable Updatable Subscriptions for a Transactional Publication in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, updatable subscriptions"
@@ -20,7 +19,8 @@ ms.author: "mathoma"
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to enable updating subscriptions for transactional publications in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-> **NOTE!!** [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+> [!NOTE]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -39,7 +39,8 @@ ms.author: "mathoma"
   
 2.  On the **Agent Security** page, specify security settings for the Queue Reader Agent in addition to the Snapshot Agent and Log Reader Agent. For more information about the permissions required for the account under which the Queue Reader Agent runs, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
 
-    > **NOTE:** The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
+    > [!NOTE]  
+    > The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  When creating a transactional publication programmatically using replication stored procedures, you can enable either immediate or queued updating subscriptions.  

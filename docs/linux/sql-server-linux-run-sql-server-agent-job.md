@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ---
 # Create and run SQL Server Agent jobs on Linux
@@ -21,7 +21,7 @@ SQL Server jobs are used to regularly perform the same sequence of commands in y
 > * Schedule and run the job
 > * Perform the same steps in SSMS (optional)
 
-For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-server-linux-release-notes.md).
+For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-server-linux-release-notes-2017.md).
 
 ## Prerequisites
 

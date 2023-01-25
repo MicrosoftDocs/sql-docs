@@ -3,10 +3,9 @@ description: "Solutions (SQL Server Management Studio)"
 title: "Solutions (SQL Server Management Studio)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "solutions [SQL Server Management Studio]"
@@ -23,7 +22,7 @@ ms.author: "maghan"
 A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution is a collection of one or more related projects. Projects are containers that developers use to organize related files, such as sets of commonly used administration scripts.  
   
 ## Solution Overview  
-You can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] as a script development platform for [!INCLUDE[ssDE](../../includes/ssde_md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Use the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] code editors to develop scripts and queries for relational and multidimensional databases, and collect related scripts and queries together in projects.  
+You can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] as a script development platform for [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Use the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] code editors to develop scripts and queries for relational and multidimensional databases, and collect related scripts and queries together in projects.  
   
 Projects can contain:  
   
@@ -33,7 +32,7 @@ Projects can contain:
   
 One or more related projects can be combined in a solution. Solutions and projects can be managed by using the Solution Explorer pane in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-Solutions and projects can be integrated into a [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual SourceSafe (VSS) database or other third-party source control providers, for development change tracking and life-cycle management.  
+Solutions and projects can be integrated into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe (VSS) database or other third-party source control providers, for development change tracking and life-cycle management.  
   
 ## Solution Tasks  
   

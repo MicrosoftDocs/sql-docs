@@ -1,15 +1,12 @@
 ---
-description: "Backing Up and Restoring DQS Databases"
 title: "Backing Up and Restoring DQS Databases"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
+description: "Backing Up and Restoring DQS Databases"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Backing Up and Restoring DQS Databases
 

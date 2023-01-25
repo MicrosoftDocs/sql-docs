@@ -1,16 +1,15 @@
 ---
 description: "Global Settings (Tester) (OracleToSQL)"
 title: "Global Settings (Tester) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.oracle.globalsettingtester.f1"
 

@@ -1,9 +1,8 @@
 ---
 title: "Configure IntelliSense (SQL Server Management Studio)"
 description: Most IntelliSense options are on by default. Learn how you can turn off an IntelliSense option and invoke it instead through a menu command or keystroke combination.
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Options [SQL Server Management Studio], IntelliSense"
@@ -49,6 +48,6 @@ Most [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options ar
   
 5.  To change the casing applied to function names in completion lists, select a casing specification from the **Casing for built-in function names** list.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
   

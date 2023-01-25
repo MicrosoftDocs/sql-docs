@@ -3,14 +3,13 @@ title: Import Data from Tables
 description: Import data from tables and make data changes to a model, in bulk. Use this procedure to add, update, and delete data in the Master Data Services database.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Import Data from Tables (Master Data Services)
 

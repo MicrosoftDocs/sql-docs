@@ -3,10 +3,9 @@ title: "Create a Database Snapshot (Transact-SQL) | Microsoft Docs"
 description: "Find out how to create a SQL Server database snapshot by using Transact-SQL. Learn about prerequisites and best practices for creating snapshots."
 ms.custom: ""
 ms.date: "08/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database snapshots [SQL Server], creating"
@@ -79,7 +78,8 @@ AdventureWorks_snapshot_evening
  Creating a series of snapshots over time captures sequential snapshots of the source database. Each snapshot persists until it is explicitly dropped. Because each snapshot will continue to grow as original pages are updated, you may want to conserve disk space by deleting an older snapshot after creating a new snapshot.  
   
 
-**Note!** To revert to a database snapshot, you need to delete any other snapshots from that database.  
+> [!NOTE]  
+> To revert to a database snapshot, you need to delete any other snapshots from that database.  
   
 ####  <a name="Client_Connections"></a> Best Practice: Client Connections to a Database Snapshot  
  To use a database snapshot, clients need to know where to find it. Users can read from one database snapshot while another is being created or deleted. However, when you substitute a new snapshot for an existing one, you need to redirect clients to the new snapshot. Users can manually connect to a database snapshot by means of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. However, to support a production environment, you should create a programmatic solution that transparently directs report-writing clients to the latest database snapshot of the database.  

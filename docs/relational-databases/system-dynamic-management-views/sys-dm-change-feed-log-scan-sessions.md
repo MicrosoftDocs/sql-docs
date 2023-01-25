@@ -4,8 +4,8 @@ description: sys.dm_change_feed_log_scan_sessions (Transact-SQL) shows activity 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -44,7 +44,7 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current"
 |**command_count** |**bigint**|Number of commands processed.<br /><br /> When `session_id` = 0, the number of commands processed in all sessions.|
 |**latency** | **int**|The difference, in seconds, between `end_time` and `currently_processed_commit_time`, in the session. This counter is populated at the end of `batch_processing_phase` 7.<br /><br /> When `session_id` = 0, the last nonzero latency value recorded by a session.|
 |**empty_scan_count** |**int**|Number of consecutive sessions that contained no captured transactions.|
-|**is_session_failed** |**int**|Number of sessions that failed.|
+|**failed_sessions_count** |**int**|Number of sessions that failed.|
 
 ## Permissions  
 

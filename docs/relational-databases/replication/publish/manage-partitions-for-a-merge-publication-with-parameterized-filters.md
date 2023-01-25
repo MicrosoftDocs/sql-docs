@@ -3,10 +3,9 @@ title: "Manage parameterized filters partition (Merge)"
 description: Manage partitions with parameterized filters used for SQL Server merge replication.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitions [SQL Server replication]"
@@ -57,7 +56,7 @@ ms.author: "mathoma"
   
     2.  Accept the default schedule for refreshing snapshots, or click **Change** to specify a different schedule.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
 
 #### To delete a partition  
   
@@ -69,7 +68,7 @@ ms.author: "mathoma"
   
 1.  On the **Data Partitions** page, select **Automatically define a partition and generate a snapshot if needed when a new Subscriber tries to synchronize**.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To generate a snapshot for a partition  
   

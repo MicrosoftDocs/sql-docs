@@ -3,13 +3,10 @@ title: "NEWSEQUENTIALID (Transact-SQL)"
 description: "NEWSEQUENTIALID (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "08/08/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "NEWSEQUENTIALID"
   - "NEWSEQUENTIALID_TSQL"
@@ -32,7 +29,7 @@ dev_langs:
 > [!WARNING]  
 >  The UuidCreateSequential function has hardware dependencies. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clusters of sequential values can develop when databases (such as contained databases) are moved to other computers. When using Always On and on [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], clusters of sequential values can develop if the database fails over to a different computer.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

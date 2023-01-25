@@ -3,9 +3,9 @@ description: "MSSQLSERVER_856"
 title: MSSQLSERVER_856
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "856 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|BAD_MEMORY_CLEAN_DATABASE_PAGE|
 |Message Text|SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page|
-||
 
 ## Explanation
 

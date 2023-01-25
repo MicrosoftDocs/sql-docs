@@ -3,10 +3,10 @@ title: "Plan Guides"
 description: Learn about plan guides, which let you optimize the performance of queries without directly changing the text of the query in SQL Server.
 ms.custom:
 - event-tier1-build-2022
-ms.date: "09/20/2021"
-ms.prod: sql
+ms.date: 08/01/2022
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TEMPLATE plan guide"
@@ -23,14 +23,16 @@ ms.author: wiassaf
 ---
 # Plan Guides
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  Plan guides let you optimize the performance of queries when you cannot or do not want to directly change the text of the actual query in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Plan guides influence the optimization of queries by attaching query hints or a fixed query plan to them. Plan guides can be useful when a small subset of queries in a database application provided by a third-party vendor are not performing as expected. In the plan guide, you specify the Transact-SQL statement that you want optimized and either an OPTION clause that contains the query hints you want to use or a specific query plan you want to use to optimize the query. When the query executes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] matches the Transact-SQL statement to the plan guide and attaches the OPTION clause to the query at run time or uses the specified query plan.  
+  Plan guides let you optimize the performance of queries when you cannot or do not want to directly change the text of the actual query in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Plan guides influence the optimization of queries by attaching query hints or a fixed query plan to them. Plan guides can be useful when a small subset of queries in a database application provided by a third-party vendor are not performing as expected. In the plan guide, you specify the Transact-SQL statement that you want optimized and either an OPTION clause that contains the query hints you want to use or a specific query plan you want to use to optimize the query. When the query executes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] matches the Transact-SQL statement to the plan guide and attaches the OPTION clause to the query at run time or uses the specified query plan. Because the SQL Server Query Optimizer typically selects the best execution plan for a query, we recommend only using plan guides as a last resort for experienced developers and database administrators. 
+
+ > [!NOTE]
+>  [Query Store hints](query-store-hints.md) provide an easier-to-use method for shaping query plans without changing application code. Query Store hints are simpler than plan guides. Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.
   
  The total number of plan guides you can create is limited only by available system resources. Nevertheless, plan guides should be limited to mission-critical queries that are targeted for improved or stabilized performance. Plan guides should not be used to influence most of the query load of a deployed application.  
   
  The resulting execution plan forced by this feature will be the same or similar to the plan being forced. Because the resulting plan may not be identical to the plan specified by the plan guide, the performance of the plans may vary. In rare cases, the performance difference may be significant and negative; in that case, the administrator must remove the forced plan.
 
-> [!NOTE]
->  Plan guides cannot be used in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Plan guides are visible in any edition. You can also attach a database that contains plan guides to any edition. Plan guides remain intact when you restore or attach a database to an upgraded version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Plan guides cannot be used in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Plan guides are visible in any edition. You can also attach a database that contains plan guides to any edition. Plan guides remain intact when you restore or attach a database to an upgraded version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Types of Plan Guides  
  The following types of plan guides can be created.  
@@ -53,7 +55,7 @@ BEGIN
 END;  
 ```  
   
- Assume that this stored procedure has been compiled and optimized for `@Country_region = N'AU'` (Australia). However, because there are relatively few sales orders that originate from Australia, performance decreases when the query executes using parameter values of countries with more sales orders. Because the most sales orders originate in the United States, a query plan that is generated for `@Country_region = N'US'` would likely perform better for all possible values of the `@Country_region` parameter.  
+ Assume that this stored procedure has been compiled and optimized for `@Country_region = N'AU'` (Australia). However, because there are relatively few sales orders that originate from Australia, performance decreases when the query executes using parameter values of countries/regions with more sales orders. Because the most sales orders originate in the United States, a query plan that is generated for `@Country_region = N'US'` would likely perform better for all possible values of the `@Country_region` parameter.  
   
  You could address this problem by modifying the stored procedure to add the `OPTIMIZE FOR` query hint to the query. However, because the stored procedure is in a deployed application, you cannot directly modify the application code. Instead, you can create the following plan guide in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   

@@ -3,10 +3,9 @@ title: "AUTO Mode Heuristics in Shaping Returned XML"
 description: Learn how to use AUTO mode heuristics with the FOR XML clause to compare column values in adjacent rows. Also, learn how the AUTO mode determines the shape of XML returned by a query.
 ms.custom: "fresh2019may"
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "AUTO FOR XML mode, heuristics in shaping returned XML"
@@ -16,7 +15,7 @@ ms.author: mikeray
 ---
 # AUTO mode heuristics in shaping returned XML
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 AUTO mode determines the shape of returned XML based on the query. In determining how elements are to be nested, AUTO mode heuristics compare column values in adjacent rows. Columns of all types, except **ntext**, **text**, **image**, and **xml**, are compared. Columns of type **(n)varchar(max)** and **varbinary(max)** are compared.
 

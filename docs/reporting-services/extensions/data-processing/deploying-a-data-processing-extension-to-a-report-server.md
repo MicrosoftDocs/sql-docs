@@ -3,7 +3,6 @@ title: "How to: Deploy a Data Processing Extension to a Report Server | Microsof
 description: Find out how to deploy a data processing extension to a report server by learning which entries to add to which configuration files.
 ms.date: 03/06/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: extensions
 ms.topic: reference
 helpviewer_keywords:

@@ -1,12 +1,11 @@
 ---
 title: "ALTER RESOURCE POOL (Transact-SQL)"
 description: ALTER RESOURCE POOL (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_RESOURCE_POOL_TSQL"
@@ -15,14 +14,13 @@ helpviewer_keywords:
   - "ALTER RESOURCE POOL"
 dev_langs:
   - "TSQL"
-ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes an existing Resource Governor resource pool configuration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -2,9 +2,8 @@
 title: "Create a recursive hierarchy group in a paginated report | Microsoft Docs"
 description: Learn about organizing data in a paginated report, from a single report dataset that includes hierarchical levels, by using a recursive hierarchy group.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -37,7 +36,7 @@ In paginated reports, a recursive hierarchy group organizes data from a single r
   
 6.  In the **Recursive Parent** list, enter or select the field to group on.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
      Run the report. The report displays the recursive hierarchy group, although there is no indent to show the hierarchy  
   
@@ -56,7 +55,7 @@ In paginated reports, a recursive hierarchy group organizes data from a single r
   
      The Padding properties all require a string in the format *nnyy*, where *nn* is a number and *yy* is the unit of measure. The example expression builds a string that uses the **Level** function to increase the size of the padding based on recursion level. For example, a row that has a level of 1 would result in a padding of (2 + (1\*10))=12pt, and a row that has a level of 3 would result in a padding of (2 + (3\*10))=32pt. For information about the **Level** function, see [Level](../../reporting-services/report-design/report-builder-functions-level-function.md).  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
      Run the report. The report displays a hierarchical view of the grouped data.  
   

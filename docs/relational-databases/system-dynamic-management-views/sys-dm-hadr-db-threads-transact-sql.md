@@ -4,9 +4,8 @@ description: sys.dm_hadr_db_threads (Transact-SQL)
 author: kfarlee
 ms.author: kfarlee
 ms.date: "02/08/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "language-reference"
 f1_keywords:
   - "sys.dm_hadr_db_threads_TSQL"

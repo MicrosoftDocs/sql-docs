@@ -2,8 +2,8 @@
 description: "JSON Path Expressions (SQL Server)"
 title: "JSON Path Expressions"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, path expressions"
@@ -16,7 +16,7 @@ ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON Path Expressions (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
  Use JSON path expressions to reference the properties of JSON objects.  
   

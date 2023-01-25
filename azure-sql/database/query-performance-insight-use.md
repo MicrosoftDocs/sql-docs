@@ -1,17 +1,14 @@
 ---
 title: Query Performance Insight
 description: Query performance monitoring identifies the most CPU-consuming and long-running queries for single and pooled databases in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma
 ms.date: 5/17/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 # Query Performance Insight for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -275,4 +272,4 @@ Applying these settings will eventually make Query Store collect telemetry for n
 
 ## Next steps
 
-Consider using [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql) for advanced performance monitoring of a large fleet of single and pooled databases, elastic pools, managed instances and instance databases.
+Consider using [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql) for advanced performance monitoring of a large fleet of single and pooled databases, elastic pools, managed instances, and instance databases.

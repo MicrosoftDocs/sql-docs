@@ -2,9 +2,8 @@
 description: "Improve the Performance of Full-Text Indexes"
 title: "Improve the Performance of Full-Text Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance [SQL Server], full-text search"
@@ -36,7 +35,7 @@ The main cause for reduced full-text indexing performance is hardware-resource l
 -   **Disk**. If the average disk-waiting queue length is more than two times the number of disk heads, there is a bottleneck on the disk. The primary workaround is to create full-text catalogs that are separate from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database files and logs. Put the logs, database files, and full-text catalogs on separate disks. Installing faster disks and using RAID can also help improve indexing performance.  
   
     > [!NOTE]  
-    > Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the Full-Text Engine can use AWE memory because the Full-Text Engine is part of the sqlservr.exe process. For more information, see [Full-Text Search architecture](../../relational-databases/search/full-text-search.md#architecture).  
+    > Beginning in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], the Full-Text Engine can use AWE memory because the Full-Text Engine is part of the sqlservr.exe process. For more information, see [Full-Text Search architecture](../../relational-databases/search/full-text-search.md#architecture).  
 
 ### Full-text batching issues
  If the system has no hardware bottlenecks, the indexing performance of full-text search mostly depends on the following:  

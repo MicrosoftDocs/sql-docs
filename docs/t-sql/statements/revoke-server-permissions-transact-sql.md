@@ -4,9 +4,8 @@ description: REVOKE Server Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "permissions [SQL Server], servers"
@@ -14,14 +13,13 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 ---
 # REVOKE Server Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes server-level GRANT and DENY permissions.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

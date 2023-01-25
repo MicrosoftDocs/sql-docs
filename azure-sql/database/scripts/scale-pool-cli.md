@@ -1,20 +1,17 @@
 ---
 title: "Azure CLI example: Scale an elastic pool"
 description: Use an Azure CLI example script to scale an elastic pool in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: elastic-pools
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-ms.devlang:
-  - "azurecli"
-ms.topic: sample
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/26/2022
+ms.service: sql-database
+ms.subservice: elastic-pools
+ms.topic: sample
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurecli"
+ms.devlang: azurecli
 ---
 
 # Scale an elastic pool in Azure SQL Database using the Azure CLI
@@ -25,7 +22,7 @@ This Azure CLI script example creates elastic pools in Azure SQL Database, moves
 
 [!INCLUDE [quickstarts-free-trial-note](../../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment.md)]
 
 ## Sample script
 

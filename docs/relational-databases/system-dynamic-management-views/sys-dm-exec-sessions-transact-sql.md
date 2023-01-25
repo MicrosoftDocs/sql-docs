@@ -4,9 +4,8 @@ description: sys.dm_exec_sessions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/03/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_sessions_TSQL"
@@ -21,7 +20,7 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns one row per authenticated session on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `sys.dm_exec_sessions` is a server-scope view that shows information about all active user connections and internal tasks. This information includes client version, client program name, client login time, login user, current session setting, and more. Use `sys.dm_exec_sessions` to first view the current system load and to identify a session of interest, and then learn more information about that session by using other dynamic management views or dynamic management functions.  
 
@@ -30,7 +29,7 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 
   
 > [!NOTE]
-> To call this from dedicated SQL pool in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). For serverless SQL pool use `sys.dm_exec_sessions`.
+> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). For serverless SQL pool use `sys.dm_exec_sessions`.
   
 |Column name|Data type|Description and version-specific information|  
 |-----------------|---------------|-----------------|  
@@ -43,8 +42,8 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 |client_interface_name|**nvarchar(32)**|Name of library/driver being used by the client to communicate with the server. The value is NULL for internal sessions. Is nullable.|  
 |security_id|**varbinary(85)**|Microsoft Windows security ID associated with the login. Is not nullable.|  
 |login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name under which the session is currently executing. For the original login name that created the session, see original_login_name. Can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authenticated login name or a Windows authenticated domain user name. Is not nullable.|  
-|nt_domain|**nvarchar(128)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Windows domain for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable.|  
-|nt_user_name|**nvarchar(128)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Windows user name for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable.|  
+|nt_domain|**nvarchar(128)**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> Windows domain for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable.|  
+|nt_user_name|**nvarchar(128)**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> Windows user name for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable.|  
 |status|**nvarchar(30)**|Status of the session. Possible values:<br /><br /> **Running** - Currently running one or more requests<br /><br /> **Sleeping** - Currently running no requests<br /><br /> **Dormant** - Session has been reset because of connection pooling and is now in prelogin state.<br /><br /> **Preconnect** - Session is in the Resource Governor classifier.<br /><br /> Is not nullable.|  
 |context_info|**varbinary(128)**|CONTEXT_INFO value for the session. The context information is set by the user by using the [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) statement. Is nullable.|  
 |cpu_time|**int**|CPU time, in milliseconds, that was used by this session. Is not nullable.|  
@@ -77,14 +76,14 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 |prev_error|**int**|ID of the last error returned on the session. Is not nullable.|  
 |original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security ID that is associated with the original_login_name. Is not nullable.|  
 |original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name that the client used to create this session. Can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authenticated login name, a Windows authenticated domain user name, or a contained database user. Note that the session could have gone through many implicit or explicit context switches after the initial connection. For example, if [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) is used. Is not nullable.|  
-|last_successful_logon|**datetime**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Time of the last successful logon for the original_login_name before the current session started.|  
-|last_unsuccessful_logon|**datetime**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Time of the last unsuccessful logon attempt for the original_login_name before the current session started.|  
-|unsuccessful_logons|**bigint**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Number of unsuccessful logon attempts for the original_login_name between the last_successful_logon and login_time.|  
+|last_successful_logon|**datetime**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> Time of the last successful logon for the original_login_name before the current session started.|  
+|last_unsuccessful_logon|**datetime**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> Time of the last unsuccessful logon attempt for the original_login_name before the current session started.|  
+|unsuccessful_logons|**bigint**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> Number of unsuccessful logon attempts for the original_login_name between the last_successful_logon and login_time.|  
 |group_id|**int**|ID of the workload group to which this session belongs. Is not nullable.|  
 |database_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> ID of the current database for each session.|  
 |authenticating_database_id|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> ID of the database authenticating the principal. For Logins, the value will be 0. For contained database users, the value will be the database ID of the contained database.|  
 |open_transaction_count|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Number of open transactions per session.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 |page_server_reads|**bigint**|**Applies to**: Azure SQL Database Hyperscale<br /><br /> Number of page server reads performed, by requests in this session, during this session. Is not nullable.|  
   
 ## Permissions  

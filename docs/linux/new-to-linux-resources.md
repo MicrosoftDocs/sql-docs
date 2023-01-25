@@ -6,11 +6,13 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 08/12/2020
 ms.topic: conceptual
-ms.prod: sql  
-ms.technology: linux
+ms.service: sql 
+ms.subservice: linux
 ms.assetid:
 ---
 # New to Linux resources for SQL users
+
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article is intended to provide a learning path through an introduction of Linux concepts. Use the sections in the article as a guided learning path to familiarize yourself with the Linux environment.
 

@@ -1,21 +1,20 @@
 ---
-title: "Database Engine Service Startup Options | Microsoft Docs"
+title: "Database Engine Service Startup Options"
 description: Become familiar with SQL Server Database Engine startup options. View tips on how to use them, and learn about the purpose of each option.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/01/2019"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "single-user mode [SQL Server], startup option"
   - "overriding default startup options"
   - "minimal configuration mode [SQL Server], startup option"
   - "default startup options"
   - "temporarily override default startup options [SQL Server]"
   - "startup options [SQL Server]"
-  - "starting SQL Server, options"  
+  - "starting SQL Server, options"
   - "single-user mode [SQL Server], startup parameter"
   - "overriding default startup parameters"
   - "minimal configuration mode [SQL Server], startup parameter"
@@ -23,9 +22,6 @@ helpviewer_keywords:
   - "temporarily override default startup parameters [SQL Server]"
   - "startup parameters [SQL Server]"
   - "starting SQL Server, parameters"
-ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: rwestMSFT
-ms.author: randolphwest
 ---
 
 # Database Engine Service Startup Options
@@ -64,7 +60,7 @@ Startup options designate certain file locations needed during startup, and spec
 |**-mClient Application Name**|Limits the connections to a specified client application. For example, `-mSQLCMD`  limits connections to a single connection and that connection must identify itself as the SQLCMD client program. Use this option when you are starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode and an unknown client application is taking the only available connection. Use `"Microsoft SQL Server Management Studio - Query"` to connect with the SSMS Query Editor. The SSMS Query Editor option cannot be configured by using [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager because it includes the dash character which is rejected by the tool.<br /><br /> Client Application Name is case sensitive. Double quotes are required if the application name contains spaces or special characters.<br /><br />**Examples when starting from the command line:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -mSQLCMD` <br /><br /> **Security Note:** Do not use this option as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.|  
 |**-n**|Does not use the Windows application log to record [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. If you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with **-n**, we recommend that you also use the **-e** startup option. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events are not logged.|  
 |**-s**|Allows you to start a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Without the **-s** parameter set, the default instance will try to start. You must switch to the appropriate BINN directory for the instance at a command prompt before starting **sqlservr.exe**. For example, if Instance1 were to use `\mssql$Instance1` for its binaries, the user must be in the `\mssql$Instance1\binn` directory to start **sqlservr.exe -s instance1**.|  
-|**-T**  *trace#*|Indicates that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be started with a specified trace flag (*trace#*) in effect. Trace flags are used to start the server with nonstandard behavior. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).<br /><br /> **Important:** When specifying a trace flag with the **-T** option, use an uppercase "T" to pass the trace flag number. A lowercase "t" is accepted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but this sets other internal trace flags that are required only by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support engineers. (Parameters specified in the Control Panel startup window are not read.)|  
+|**-T**  *trace#*|Indicates that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be started with a specified trace flag (*trace#*) in effect. Trace flags are used to start the server with nonstandard behavior. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).<br /><br /> **Important:** When specifying a trace flag with the **-T** option, use an uppercase `T` to pass the trace flag number and no space between the `-T` option and the number of the trace flag. A lowercase `t` is accepted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but this sets other internal trace flags that are required only by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support engineers. (Parameters specified in the Control Panel startup window are not read.)|  
 |**-x**|Disables the following monitoring features:<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance monitor counters<br /> - Keeping CPU time and cache-hit ratio statistics<br /> - Collecting information for the DBCC SQLPERF command<br /> - Collecting information for some dynamic management views<br /> - Many extended-events event points<br /><br /> **Warning:** When you use the **-x** startup option, the information that is available for you to diagnose performance and functional problems with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is greatly reduced.|  
 |**-E**|Increases the number of extents that are allocated for each file in a filegroup. This option may be helpful for data warehouse applications that have a limited number of users running index or data scans. It should not be used in other applications because it might adversely affect performance. This option is not supported in 32-bit releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   

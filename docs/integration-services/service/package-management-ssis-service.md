@@ -3,10 +3,9 @@ description: "Package Management (SSIS Service)"
 title: "Package Management (SSIS Service) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.dtsserver.importpackage.f1"
@@ -111,9 +110,9 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
  However, there are some restrictions on importing and exporting a package between different versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   On an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], you can import packages from an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], but you cannot export packages to an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+-   On an instance of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], you can import packages from an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], but you cannot export packages to an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
--   On an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], you cannot import packages from, or export packages to, an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+-   On an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], you cannot import packages from, or export packages to, an instance of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
  The following procedures describe how to use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to import or export a package.  
   
@@ -181,7 +180,7 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
     -   To export to the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package store, select the **SSIS Package Store** option, and specify the server.  
   
-         Click the browse button **(...)**, expand the **SSIS Packages** folder, and select the folder to which you want to save the package. Optionally, enter a new name for the package in the **Package Name** text box. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Click the browse button **(...)**, expand the **SSIS Packages** folder, and select the folder to which you want to save the package. Optionally, enter a new name for the package in the **Package Name** text box. Select **OK**.
   
 7.  To update the protection level of the package, click the browse button **(...)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
   

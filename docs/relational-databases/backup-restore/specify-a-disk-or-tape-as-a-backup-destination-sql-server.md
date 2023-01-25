@@ -3,10 +3,9 @@ title: "Specify disk or tape backup destination"
 description: This article shows you how to specify a disk or tape as a backup destination in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backup devices [SQL Server], tapes"

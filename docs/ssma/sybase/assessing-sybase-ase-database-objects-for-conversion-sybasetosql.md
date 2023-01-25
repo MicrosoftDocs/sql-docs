@@ -3,9 +3,9 @@ description: "Assessing SAP ASE Database Objects for Conversion (SybaseToSQL)"
 title: "Assessing SAP ASE Database Objects for Conversion (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: cpichuka 

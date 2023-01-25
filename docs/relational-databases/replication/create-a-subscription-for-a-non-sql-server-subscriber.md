@@ -3,10 +3,9 @@ title: "Create subscription for non-SQL Subscriber"
 description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
 ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
@@ -64,7 +63,7 @@ ms.author: "mathoma"
     > [!NOTE]  
     >  Selecting **True** sets the value of the **pre_creation_cmd** article property to 'drop'. This setting specifies that replication should drop a table at the Subscriber if it matches the name of the table in the article. If you have existing tables at the Subscriber that you want to keep, use the [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) stored procedure for each article; specify a value 'none' for **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] You will be prompted to create a new snapshot for the publication. If you do not want to create one at this time, use the steps described in the next "how to" procedure at a later time.  
+5.  Select **OK**. You will be prompted to create a new snapshot for the publication. If you do not want to create one at this time, use the steps described in the next "how to" procedure at a later time.  
   
 #### To create a subscription for a non-SQL Server Subscriber  
   
@@ -86,7 +85,7 @@ ms.author: "mathoma"
   
      The data source name entered in this step and the credentials specified in step 9 are not validated by this wizard. They are not used by replication until the Distribution Agent runs for the subscription. Ensure that all values have been tested by connecting to the Subscriber using a client tool (such as **sqlplus** for Oracle). For more information, see [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] On the **Subscribers** page of the wizard, the Subscriber is now displayed in the **Subscriber** column with a read-only **(default destination)** in the **Subscription Database** column:  
+7.  Select **OK**. On the **Subscribers** page of the wizard, the Subscriber is now displayed in the **Subscriber** column with a read-only **(default destination)** in the **Subscription Database** column:  
   
     -   For Oracle, a server has at most one database, so it is not necessary to specify the database.  
   
@@ -176,7 +175,7 @@ ms.author: "mathoma"
     -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption).  
   
 ## See Also  
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
@@ -184,5 +183,4 @@ ms.author: "mathoma"
  [Other Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

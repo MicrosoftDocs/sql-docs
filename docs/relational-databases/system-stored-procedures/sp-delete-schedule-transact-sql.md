@@ -3,10 +3,9 @@ description: "sp_delete_schedule (Transact-SQL)"
 title: "sp_delete_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_delete_schedule"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Deletes a schedule.  
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -38,12 +37,14 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 `[ @schedule_id = ] schedule_id`
  The schedule identification number of the schedule to delete. *schedule_id* is **int**, with a default of NULL.  
   
-> **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
+> [!NOTE]  
+> Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
 `[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to delete. *schedule_name* is **sysname**, with a default of NULL.  
   
-> **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
+> [!NOTE]  
+> Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
 `[ @force_delete = ] force_delete`
  Specifies whether the procedure should fail if the schedule is attached to a job. *Force_delete* is bit, with a default of **0**. When *force_delete* is **0**, the stored procedure fails if the schedule is attached to a job. When *force_delete* is **1**, the schedule is deleted regardless of whether the schedule is attached to a job.  

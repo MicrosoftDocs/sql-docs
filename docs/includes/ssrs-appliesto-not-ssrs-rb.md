@@ -1,13 +1,9 @@
 ---
- title: include file
- description: include file
- services: 
- author: maggiesMSFT
- ms.service: powerbi
- ms.topic: include
- ms.date: 10/18/2021
- ms.author: maggies
- ms.custom: include file
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: randolphwest
+ms.date: 01/12/2023
+ms.service: reporting-services
+ms.topic: include
 ---
-
-❌&nbsp;Microsoft&nbsp;Report&nbsp;Builder&nbsp;(SSRS)
+:::image type="content" source="media/no-icon.svg" border="false" alt-text="Not supported"::: Microsoft Report Builder (SSRS)

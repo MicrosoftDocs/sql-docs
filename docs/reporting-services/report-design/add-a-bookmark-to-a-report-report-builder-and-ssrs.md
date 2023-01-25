@@ -2,9 +2,8 @@
 title: "Add a bookmark to a paginated report | Microsoft Docs"
 description: Find out how to add bookmarks to a paginated report to provide a customized table of contents or to provide customized internal navigation links in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -46,7 +45,7 @@ ms.author: maggies
   
 4.  In the **Select bookmark** box, type or select a bookmark or an expression that evaluates to a bookmark. Using the previous example, type **BikePhoto** to create a link to the image in your report.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  (Optional) The text is not automatically formatted like a link. For text, it is helpful to change the color and effect of the text to indicate that the text is a link. For example, change the color to blue and the effect to underline in the **Font** section in the Home tab of the Ribbon.  
   

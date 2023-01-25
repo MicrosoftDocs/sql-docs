@@ -4,9 +4,8 @@ description: CREATE CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/25/2019"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREDENTIAL_TSQL"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "credentials [SQL Server], CREATE CREDENTIAL statement"
 dev_langs:
   - "TSQL"
-ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE CREDENTIAL (Transact-SQL)
@@ -33,7 +31,7 @@ Creates a server-level credential. A credential is a record that contains the au
 > [!NOTE]
 > To make the credential at the database-level use [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use a server-level credential when you need to use the same credential for multiple databases on the server. Use a database-scoped credential to make the database more portable. When a database is moved to a new server, the database scoped credential will move with it. Use database scoped credentials on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -136,7 +134,7 @@ DECLARE @AuthClientSecret varchar(200) = 'SECRET_DBEngine';
 DECLARE @pwd varchar(max) = REPLACE(CONVERT(varchar(36), @AuthClientId) , '-', '') + @AuthClientSecret;
 
 EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
-    WITH IDENTITY = 'ContosoKeyVault', SECRET = ''' + @PWD + '''
+    WITH IDENTITY = ''ContosoKeyVault'', SECRET = ''' + @PWD + '''
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;');
 ```
 

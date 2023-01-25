@@ -1,17 +1,14 @@
 ---
 title: Manage historical data in temporal tables
 description: Learn how to use temporal retention policy to keep historical data under your control.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: how-to
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/18/2021
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: how-to
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Manage historical data in Temporal tables with retention policy

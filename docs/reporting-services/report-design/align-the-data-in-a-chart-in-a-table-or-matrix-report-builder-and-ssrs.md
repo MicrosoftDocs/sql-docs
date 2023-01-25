@@ -2,9 +2,8 @@
 title: "Align the data in a paginated report chart in a table or matrix | Microsoft Docs"
 description: Discover uses for paginated report sparklines and data bars in Report Builder. These small, simple charts convey a lot of information with the minimum amount of detail.
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -30,7 +29,7 @@ ms.author: maggies
   
 2.  On the **Axis Options** tab, check the **Align axes in** box, and then in the dropdown box, select the group on which to align the axis.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## See Also  
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

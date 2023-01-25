@@ -3,10 +3,9 @@ title: "Local audit usage and diagnostic data collection"
 description: Learn about the local audit used by SQL Server to collect and send usage and diagnostic data to Microsoft.
 ms.custom: seo-lt-2019
 ms.date: 04/12/2022
-ms.prod: sql
-ms.prod_service: security
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Local Audit"
@@ -63,7 +62,7 @@ Do the following steps to get the SQL Server CEIP service logon account
 
 3. Right-click on the service and choose **Properties**. 
 
-4. Select on the **Log On** tab. The Logon account is in listed in **This Account**. 
+4. Select the **Log On** tab. The Logon account is in listed in **This Account**. 
 
 ### Configure a new folder for the local audit files.    
 
@@ -107,21 +106,18 @@ Create a new folder (local audit directory) where the local audit will write the
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Your-Instance-Name*\\CPE |
-   | &nbsp; | &nbsp; |
 
    | Version | ***Analysis Services*** - Registry key |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Your-Instance-Name*\\CPE |  
-   | &nbsp; | &nbsp; |
 
    | Version | ***Integration Services*** - Registry key |
    | :------ | :---------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
-   | &nbsp; | &nbsp; |
 
 1. Right-click the CPE path and choose **New**. Select **String Value**.
 

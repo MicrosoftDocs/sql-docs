@@ -4,17 +4,16 @@ title: Deploy a Model Deployment Package (Wizard)
 ms.custom:
   - intro-deployment
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "deployment packages [Master Data Services], deploying"
   - "models [Master Data Services], deploying a package"
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
-author: chugugrace
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Deploy a Model Deployment Package by Using the Wizard
 

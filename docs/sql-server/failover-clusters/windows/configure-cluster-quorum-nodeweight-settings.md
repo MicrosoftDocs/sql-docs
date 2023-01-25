@@ -3,9 +3,9 @@ title: "Configure cluster quorum NodeWeight settings"
 description: Describes how to configure the NodeWeight settings for a member node in a Windows Server Failover Cluster. 
 ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -28,12 +28,12 @@ ms.author: mathoma
 ##  <a name="BeforeYouBegin"></a> Before You Start  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- This feature is supported only in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] or later versions.  
+ This feature is supported only in [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] or later versions.  
   
 > [!IMPORTANT]  
 >  In order to use NodeWeight settings, the following hotfix must be applied to all servers in the WSFC cluster:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] and in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  If this hotfix is not installed, the examples in this topic will return empty or NULL values for NodeWeight.  

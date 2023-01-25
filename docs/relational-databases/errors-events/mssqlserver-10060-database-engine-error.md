@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_10060"
 description: The SQL Server client cannot connect to the server. See an explanation of error 10060 and possible resolutions.
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "10060"
@@ -16,7 +16,7 @@ ms.date: "04/04/2017"
 ---
 # MSSQLSERVER_10060
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

@@ -1,17 +1,14 @@
 ---
 title: Elastic Database tools glossary
 description: Explanation of terms used for elastic database tools
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/04/2018
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Elastic Database tools glossary
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -32,7 +29,7 @@ These terms are used in [Adding a shard using Elastic Database tools](elastic-sc
 
 **Local shard map**: Stored on a shard, the local shard map contains mappings for the shardlets that reside on the shard.
 
-**Multi-shard query**: The ability to issue a query against multiple shards; results sets are returned using UNION ALL semantics (also known as “fan-out query”). Compare to **data dependent routing**.
+**Multi-shard query**: The ability to issue a query against multiple shards; results sets are returned using UNION ALL semantics (also known as "fan-out query"). Compare to **data dependent routing**.
 
 **Multi-tenant** and **Single-tenant**: This shows a single-tenant database and a multi-tenant database:
 

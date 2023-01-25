@@ -4,9 +4,8 @@ description: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/24/2016"
-ms.prod: sql
-ms.prod_service: "pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DATABASE_ENCRYPTION_KEY_TSQL"
@@ -25,7 +24,6 @@ helpviewer_keywords:
   - "database encryption key, create"
 dev_langs:
   - "TSQL"
-ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -35,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 
  Creates an encryption key that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -80,7 +78,9 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
 Specifies the name of the asymmetric key used to encrypt the database encryption key. In order to encrypt the database encryption key with an asymmetric key, the asymmetric key must reside on an extensible key management provider.  
   
 ## Remarks  
-A database encryption key is required before a database can be encrypted by using *Transparent Database Encryption* (TDE). When a database is transparently encrypted, the whole database is encrypted at the file level, without any special code modifications. The certificate or asymmetric key that is used to encrypt the database encryption key must be located in the master system database.  
+A database encryption key is required before a database can be encrypted by using *Transparent Database Encryption* (TDE). When a database is transparently encrypted, the whole database is encrypted at the file level, without any special code modifications. The certificate or asymmetric key that is used to encrypt the database encryption key must be located in the master system database.
+
+Certificates or asymmetric keys used for TDE are limited to a private key size of 3072 bits.
   
 Database encryption statements are allowed only on user databases.  
   

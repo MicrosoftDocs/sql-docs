@@ -4,9 +4,8 @@ description: Learn how srv_rpcnumber in the Extended Stored Procedure API return
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_rpcnumber"
@@ -21,7 +20,7 @@ ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the number component for the current remote stored procedure call.  
   

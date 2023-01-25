@@ -2,11 +2,10 @@
 title: "sp_addsubscription (Transact-SQL) | Microsoft Docs"
 description: Adds a subscription to a publication and sets the Subscriber status. This stored procedure runs at the Publisher on the publication database.
 ms.date: "03/29/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
 ms.custom: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Adds a subscription to a publication and sets the Subscriber status. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -2,9 +2,8 @@
 title: "Add a gauge to a paginated report | Microsoft Docs"
 description: Learn how to summarize data in a paginated report in a visual format by creating a gauge data region and dragging report dataset fields to a pane on the gauge in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -24,7 +23,7 @@ ms.author: maggies
   
 2.  On the Insert tab, double-click Gauge. The **Select Gauge Type** dialog box opens.  
   
-3.  Select the type of gauge you want to add. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select the type of gauge you want to add. Select **OK**.
   
     > [!NOTE]  
     >  Unlike charts, gauges have only two types: linear and radial. The available gauges in the **Select a Gauge Type** dialog box are templates for these two types of gauges. For this reason, you cannot change the gauge type after you add the gauge to your report. You must delete and re-add a gauge to change its type.  

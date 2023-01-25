@@ -1,12 +1,11 @@
 ---
 title: "BEGIN DIALOG CONVERSATION (Transact-SQL)"
 description: BEGIN DIALOG CONVERSATION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DIALOG CONVERSATION"
@@ -28,14 +27,13 @@ helpviewer_keywords:
   - "starting conversations"
 dev_langs:
   - "TSQL"
-ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 ---
 # BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Begins a dialog from one service to another service. A dialog is a conversation that provides exactly-once-in-order messaging between two services.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

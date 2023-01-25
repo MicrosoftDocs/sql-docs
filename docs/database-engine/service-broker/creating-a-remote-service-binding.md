@@ -1,13 +1,13 @@
 ---
 title: Creating a Remote Service Binding
 description: "To exchange messages with Service Broker, you must create the appropriate user security context."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Creating a Remote Service Binding
@@ -28,7 +28,7 @@ Requests for remote service bindings use the message type `https://schemas.micro
 For example, the following message is a request for a remote service binding to the service **http://Adventure-Works.com/Elsewhere**:
 
 ```xml
-    <MissingRemoteServiceBinding xmlns="https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding">
+    <MissingRemoteServiceBinding xmlns="http://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding">
       <SERVICE_NAME>http://Adventure-Works.com/Elsewhere</SERVICE_NAME>
     </MissingRemoteServiceBinding>
 ```

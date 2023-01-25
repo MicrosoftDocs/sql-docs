@@ -3,9 +3,9 @@ title: "sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs"
 description: Learn how to use sys.sp_rda_reconcile_batch to reconcile the batch ID in the Stretch-enabled SQL Server table with the batch ID stored in the remote Azure table.
 ms.custom: ""
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_rda_reconcile_batch"
@@ -24,13 +24,13 @@ ms.author: maghan
   Reconciles the batch ID stored in the Stretch-enabled SQL Server table with the batch ID stored in the remote Azure table.  
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
   
  Typically you only have to run **sp_rda_reconcile_batch** if you have manually deleted the most recently migrated data from the remote table. When you manually delete remote data that includes the most recent batch, the batch IDs are out of sync and migration stops.  
  
  To delete data that has already been migrated to Azure, see the Remarks on this page.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
    
 ## Syntax  
   

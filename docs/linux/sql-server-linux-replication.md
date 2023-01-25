@@ -6,9 +6,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/09/2019
 ms.topic: article
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # SQL Server Replication on Linux
@@ -41,7 +40,7 @@ The following replication features are supported:
 * Snapshot replication
 * Transactional replication
 * Replication with non-default ports <!--Add link to explanation-->
-* Replication with AD authentication
+* Replication with Active Directory authentication
 * Replication configurations across Windows and Linux
 * Immediate updates for transactional replication
 

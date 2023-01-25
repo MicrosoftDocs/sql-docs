@@ -3,9 +3,9 @@ description: "Testing Migrated Database Objects (SybaseToSQL)"
 title: "Testing Migrated Database Objects (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/29/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: cpichuka 

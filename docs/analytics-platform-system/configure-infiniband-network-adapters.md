@@ -1,13 +1,13 @@
 ---
 title: Configure InfiniBand
-description: Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes automatically connect to the active InfiniBand network. 
-author: charlesfeddersen 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
+description: Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes automatically connect to the active InfiniBand network.
+author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ms.custom: seo-dt-2019
 ---
 

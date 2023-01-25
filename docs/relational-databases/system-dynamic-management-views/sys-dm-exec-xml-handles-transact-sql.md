@@ -4,9 +4,8 @@ description: sys.dm_exec_xml_handles (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_xml_handles"
@@ -21,7 +20,8 @@ ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_xml_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information about active handles that have been opened by **sp_xml_preparedocument**.  
   

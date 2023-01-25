@@ -1,13 +1,13 @@
 ---
 title: Managing Service Broker Identities
 description: "Each database contains a unique identifier that is used for routing Service Broker messages to that database."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Managing Service Broker Identities

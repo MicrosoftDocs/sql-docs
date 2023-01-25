@@ -3,17 +3,16 @@ title: Models
 description: A model defines the structure of data in your master data management solution. Models are the highest level of data organization in Master Data Services.
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], about models"
   - "models [Master Data Services]"
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Models (Master Data Services)
 
@@ -62,7 +61,7 @@ ms.author: lle
   
 -   Customer, which could include entities such as gender, education, occupation, and marital status.  
   
--   Geography, which could include entities such as postal codes, cities, counties, states, provinces, regions, territories, countries, and continents.  
+-   Geography, which could include entities such as postal codes, cities, counties, states, provinces, territories, countries/regions, and continents.  
   
 ## Related Tasks  
   

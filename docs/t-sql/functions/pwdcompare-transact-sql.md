@@ -5,9 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: ""
 f1_keywords:
@@ -25,7 +24,7 @@ dev_langs:
 
   Hashes a password and compares the hash to the hash of an existing password. PWDCOMPARE can be used to search for blank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login passwords or common weak passwords.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -48,7 +47,7 @@ PWDCOMPARE ( 'clear_text_password'
  Obsolete parameter that can be set to 1 if *password_hash* represents a value from a login earlier than [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] that was migrated to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later but never converted to the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] system. *version* is **int**.  
   
 > [!CAUTION]  
->  This parameter is provided for backwards compatibility, but is ignored because password hash blobs now contain their own version descriptions. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
+>  This parameter is provided for backwards compatibility, but is ignored because password hash blobs now contain their own version descriptions. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## Return Types  
  **int**  

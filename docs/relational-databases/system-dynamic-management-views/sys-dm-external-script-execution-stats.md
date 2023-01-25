@@ -3,10 +3,9 @@ title: "sys.dm_external_script_execution_stats"
 description: sys.dm_external_script_execution_stats
 author: rwestMSFT
 ms.author: randolphwest
-manager: cgronlun
 ms.date: "06/25/2020"
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_external_script_execution_stats"

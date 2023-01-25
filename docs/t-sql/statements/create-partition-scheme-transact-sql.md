@@ -1,12 +1,11 @@
 ---
 title: "CREATE PARTITION SCHEME (Transact-SQL)"
 description: CREATE PARTITION SCHEME (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "4/22/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE PARTITION SCHEME"
@@ -26,7 +25,6 @@ helpviewer_keywords:
   - "mapping partitions [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -36,7 +34,7 @@ Creates a scheme in the current database that maps the partitions of a partition
 >[!NOTE]
 >In Azure SQL Database only primary filegroups are supported. Learn more about filegroups and partitioning strategies in [Filegroups](../../relational-databases/partitions/partitioned-tables-and-indexes.md#filegroups).
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

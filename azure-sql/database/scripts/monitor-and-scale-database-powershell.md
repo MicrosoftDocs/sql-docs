@@ -1,20 +1,17 @@
 ---
 title: Use PowerShell to monitor and scale a single database in Azure SQL Database
 description: Use an Azure PowerShell example script to monitor and scale a single database in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-ms.devlang:
-  - "PowerShell"
-ms.topic: sample
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
+ms.date: 07/28/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: sample
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+ms.devlang: PowerShell
 ---
 
 # Use PowerShell to monitor and scale a single database in Azure SQL Database
@@ -56,7 +53,8 @@ This script uses the following commands. Each command in the table links to comm
 | [New-AzSqlServer](/powershell/module/az.sql/new-azsqlserver) | Creates a server that hosts a single database or elastic pool. |
 | [Get-AzMetric](/powershell/module/az.monitor/get-azmetric) | Shows the size usage information for the database.|
 | [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) | Updates database properties or moves the database into, out of, or between elastic pools. |
-| [Add-AzMetricAlertRule](/powershell/module/az.monitor/add-azmetricalertrule) | Sets an alert rule to automatically monitor metrics in the future. |
+| [Add-AzMetricAlertRule](/powershell/module/az.monitor/add-azmetricalertrule) | (*Deprecated*) Adds or updates an alert rule to automatically monitor metrics in the future. Applies only to classic metric-based alert rules. |
+| [Add-AzMetricAlertRuleV2](/powershell/module/az.monitor/add-azmetricalertruleV2) | Adds or updates an alert rule to automatically monitor metrics in the future. Applies only to non-classic metric-based alert rules. |
 | [Remove-AzResourceGroup](/powershell/module/az.resources/remove-azresourcegroup) | Deletes a resource group including all nested resources. |
 
 

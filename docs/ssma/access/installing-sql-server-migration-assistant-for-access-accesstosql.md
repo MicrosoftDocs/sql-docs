@@ -1,12 +1,12 @@
 ---
 title: "Installing SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
 description: Learn about installation prerequisites for SQL Server Migration Assistant (SSMA) for Access and how to install, license, upgrade, and uninstall.
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-installation
 ms.date: "07/14/2020"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords:
   - "installing SSMA"
@@ -28,15 +28,15 @@ ms.author: cpichuka
 
 # Installing SQL Server Migration Assistant for Access (AccessToSQL)
 
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access is installed by using a Windows Installer-based wizard. This topic provides information about installation prerequisites, a link to the latest version of SSMA, and instructions for installing, licensing, uninstalling, and upgrading SSMA.
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access is installed by using a Windows Installer-based wizard. This topic provides information about installation prerequisites, a link to the latest version of SSMA, and instructions for installing, licensing, uninstalling, and upgrading SSMA.
 
 ## Prerequisites
 
 Before you install SSMA, make sure that your system meets the following requirements:
 
 - Windows 7 or a later version, or Windows Server 2008 or a later version.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.
-- The [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.7.2 or a later version. The .NET Framework is available at [Microsoft .NET Guide](/dotnet/framework/).
+- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Installer 3.1 or a later version.
+- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework version 4.7.2 or a later version. The .NET Framework is available at [Microsoft .NET Guide](/dotnet/framework/).
 - Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] to which you will be migrating database objects and data.
 - Microsoft Data Access Object (DAO) provider version 12.0 or 14.0. You can install DAO provider from Microsoft Office 2010/2007 product or download it from Microsoft web site.
 - 4 GB RAM (recommended).

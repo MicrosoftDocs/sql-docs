@@ -3,10 +3,9 @@ title: "View or modify properties of a Policy-Based Management condition"
 description: Learn to view or modify properties of a Policy-Based Management condition using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
 ms.custom: ""
 ms.date: "10/05/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, view policy conditions"

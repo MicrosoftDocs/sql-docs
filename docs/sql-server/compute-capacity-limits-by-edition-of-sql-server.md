@@ -3,9 +3,9 @@ title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
 description: This article discusses compute capacity limits for SQL Server 2019 and how they differ in physical and virtualized environments with hyperthreaded processors.
 ms.custom: ""
 ms.date: "11/07/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"
@@ -72,7 +72,7 @@ These limits apply to a single instance of [!INCLUDE[ssNoVersion](../includes/ss
   
 The following table specifies the compute capacity limits for a single instance of each edition of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Maximum compute capacity for a single instance ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximum compute capacity for a single instance (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Maximum compute capacity for a single instance ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximum compute capacity for a single instance (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: Core-based Licensing\*|Operating system maximum|Operating system maximum|  
 |Developer|Operating system maximum|Operating system maximum|  

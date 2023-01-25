@@ -1,21 +1,17 @@
 ---
+title: "table (Transact-SQL)"
 description: "table (Transact-SQL)"
-title: "table (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/27/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "table data type [SQL Server]"
-  - "table variables [SQL Server]"
-ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "11/27/2019"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table data type [SQL Server]"
+  - "table variables [SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # table (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -23,9 +19,9 @@ ms.author: mikeray
 Is a special data type used to store a result set for processing at a later time. **table** is primarily used for temporarily storing a set of rows that are returned as the table-valued function result set. Functions and variables can be declared to be of type **table**. **table** variables can be used in functions, stored procedures, and batches. To declare variables of type **table**, use [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

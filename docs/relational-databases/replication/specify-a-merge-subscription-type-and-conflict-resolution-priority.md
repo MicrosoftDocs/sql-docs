@@ -3,10 +3,9 @@ title: "Specify type & conflict resolution priority (Merge)"
 description: Learn how to specify the type and conflict resolution policy used by a Merge Subscription for SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication conflict resolution [SQL Server replication], merge subscription resolvers"
@@ -31,7 +30,7 @@ ms.author: "mathoma"
   
 1.  In the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** at the Publisher, enter a value (0.00 to 99.99) for the **Priority** option.  
   
-2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 ## See Also  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

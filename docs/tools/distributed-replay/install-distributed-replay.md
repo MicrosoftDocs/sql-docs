@@ -2,8 +2,8 @@
 title: Install Distributed Replay
 titleSuffix: SQL Server Distributed Replay
 description: "This article describes the ways you can install Distributed Replay: using the Installation Wizard, the Command Prompt window, or a configuration file."
-ms.prod: sql
-ms.technology: distributed-replay
+ms.service: sql
+ms.subservice: distributed-replay
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
@@ -97,7 +97,8 @@ Assuming you use the default file locations and a standard installation, the bas
 
     - To install the client service, select **Distributed Replay Client**.
 
-     **Important**: When you configure Distributed Replay controller, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:
+      > [!IMPORTANT]  
+      > When you configure Distributed Replay controller, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:
 
     - Domain user account
 

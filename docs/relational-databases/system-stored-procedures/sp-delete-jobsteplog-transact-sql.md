@@ -3,10 +3,9 @@ description: "sp_delete_jobsteplog (Transact-SQL)"
 title: "sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_delete_jobsteplog"
@@ -25,7 +24,7 @@ ms.author: maghan
   Removes all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step logs that are specified with the arguments. Use this stored procedure to maintain the **sysjobstepslogs** table in the **msdb** database.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,7 +43,8 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 `[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
-> **NOTE:** Either *job_id* or *job_name* must be specified, but both cannot be specified.  
+> [!NOTE]  
+> Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
 `[ @step_id = ] step_id`
  The identification number of the step in the job for which the job step log is to be deleted. If not included, all job step logs in the job are deleted unless **\@older_than** or **\@larger_than** are specified. *step_id* is **int**, with a default of NULL.  
@@ -52,7 +52,8 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 `[ @step_name = ] 'step_name'`
  The name of the step in the job for which the job step log is to be deleted. *step_name* is **sysname**, with a default of NULL.  
   
-> **NOTE:** Either *step_id* or *step_name* can be specified, but both cannot be specified.  
+> [!NOTE]  
+> Either *step_id* or *step_name* can be specified, but both cannot be specified.  
   
 `[ @older_than = ] 'date'`
  The date and time of the oldest job step log you want to keep. All job step logs that are older than this date and time are removed. *date* is **datetime**, with a default of NULL. Both **\@older_than** and **\@larger_than** can be specified.  

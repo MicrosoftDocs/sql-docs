@@ -4,9 +4,8 @@ description: Learn how srv_paramstatus returns the status of a particular remote
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_paramstatus"
@@ -21,7 +20,7 @@ ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns the status of a particular remote stored procedure call parameter.  
   

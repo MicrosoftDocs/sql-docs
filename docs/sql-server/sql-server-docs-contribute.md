@@ -2,8 +2,8 @@
 description: "How to contribute to SQL Server Documentation"
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
 ms.date: "08/13/2018"
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.reviewer: ""
 ms.custom: ""
 ms.topic: conceptual
@@ -14,7 +14,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 # How to contribute to SQL Server Documentation
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
 Anyone can contribute to SQL Server documentation. This includes correcting typos, suggesting better explanations, and improving technical accuracy. This article explains how to get started with content contributions and how the process works.
 
@@ -23,15 +23,15 @@ There are two main workflows you can use to contribute:
 |Workflow|Description|
 |---|---|
 | [Edit in your browser](#githubui) | Good for small, quick edits of any article. |
-| [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions to docs.microsoft.com. |
+| [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions. |
 
-All public contributions are validated by the SQL content team for technical accuracy and consistency. 
+All public contributions are validated by the SQL content team for technical accuracy and consistency.
 
 ## <a id="githubui"></a> Edit in your browser
 
-You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. For more information, you can see the [Microsoft Docs contributor guide overview](/contribute/#quick-edits-to-existing-documents). 
+You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. For more information, see the [contributor guide overview](/contribute/#quick-edits-to-existing-documents).
 
-The following steps summarize the process: 
+The following steps summarize the process:
 
 1. On the page you have feedback about, select the **Edit** link at the top right.
 1. On the next page, select the **Pencil** icon at the top right.
@@ -50,7 +50,7 @@ The following GIF demonstrates the end-to-end process for submitting changes in 
 
 ## <a id="tools"></a> Edit locally with tools
 
-Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. This workflow is good for edits that are more complex or involve multiple files. It is also good for frequent contributors to docs.microsoft.com.
+Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. This workflow is good for edits that are more complex or involve multiple files. It is also good for frequent contributors to Microsoft technical documentation.
 
 To contribute with this method, see the following articles:
 
@@ -87,10 +87,10 @@ The [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository uses severa
 
 Each SQL Server article contains an **applies-to** include file after the title. This indicates what areas or versions of SQL Server the article applies to.
 
-Consider the following Markdown example that pulls in the **appliesto-ss-asdb-asdw-pdw-md.md** include file.
+Consider the following Markdown example that pulls in the **applies-to-version/sql-asdb-asa-pdw.md** include file.
 
 ```Markdown
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 This adds the following text at the top of the article:
@@ -107,7 +107,7 @@ To find the correct applies-to include file for your article, use the following 
 
 ## Contributor resources
 
-- [Contributor guide for docs.microsoft.com](/contribute/)
+- [Contributor guide](/contribute/)
 - [Microsoft Style Guide](/teamblog/style-guide)
 - [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
@@ -118,6 +118,6 @@ To find the correct applies-to include file for your article, use the following 
 
 Explore the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs) on GitHub.
 
-Find an article, submit a change, and help the SQL Server community. 
+Find an article, submit a change, and help the SQL Server community.
 
 Thank you!

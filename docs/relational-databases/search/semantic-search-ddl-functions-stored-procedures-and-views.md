@@ -2,9 +2,8 @@
 description: "Semantic Search DDL, Functions, Stored Procedures, and Views"
 title: "Semantic Search DDL, functions, stored procedures, & views"
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], database objects"

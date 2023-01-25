@@ -3,7 +3,6 @@ title: "Debugging Delivery Extension Code | Microsoft Docs"
 description: Discover how to use Microsoft .NET Framework debugging tools to analyze your delivery extension code and locate errors in it.
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: extensions
 
 
@@ -17,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Debugging Delivery Extension Code
-  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your delivery extension code and locate errors in it. The tool that works best will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  
+  The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your delivery extension code and locate errors in it. The tool that works best will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)].  
   
 #### To debug your delivery extension code  
   
-1.  Launch [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] and open your delivery extension project.  
+1.  Launch [!INCLUDE[vsprvs2008](../../../includes/vsprvs2008-md.md)] and open your delivery extension project.  
   
 2.  Build the project and deploy your delivery extension assembly and the accompanying .pdb file to the report server and Report Manager. For more information about deployment, see [Deploying a Delivery Extension](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md).  
   

@@ -4,9 +4,8 @@ description: SET STATISTICS PROFILE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "PROFILE"
@@ -21,14 +20,13 @@ helpviewer_keywords:
   - "statistical information [SQL Server], profiles"
 dev_langs:
   - "TSQL"
-ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 ---
 # SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Displays the profile information for a statement. STATISTICS PROFILE works for ad hoc queries, views, and stored procedures.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,9 +1,8 @@
 ---
 title: "Alert Properties (History Page)"
 description: "Alert Properties (History Page)"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.alert.history.f1"
@@ -24,7 +23,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 
-Use this page to view and modify the history of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts.  
+Use this page to view and modify the history of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts.  
 
 ## Options  
 **Date of last alert**  

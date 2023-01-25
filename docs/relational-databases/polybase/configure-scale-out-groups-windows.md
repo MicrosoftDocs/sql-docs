@@ -2,8 +2,8 @@
 title: "Configure PolyBase scale-out groups on Windows"
 description: Set up a PolyBase scale-out group to create a cluster of SQL Server instances. This improves query performance for large data sets from external sources.
 ms.date: 02/22/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: "tutorial"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -85,7 +85,7 @@ After setup is complete, both machines can function as PolyBase Group head nodes
 4. Shutdown the PolyBase engine and restart the PolyBase data movement service.
 
 > [!NOTE] 
-> When the Polybase Engine service gets restarted or stopped in the head node, the Data Movement Service (DMS) services gets stopped as soon as the communication channel is closed between DMS and Polybase Engine Service (DW). If the DW engine gets restarted more than two times, the DMS goes to a quiet period for 90 minutes and it must wait 90 minutes for the next auto start attempt. In such situation, you should start this service manually on all nodes.
+> When the PolyBase Engine service gets restarted or stopped in the head node, the Data Movement Service (DMS) services gets stopped as soon as the communication channel is closed between DMS and PolyBase Engine Service (DW). If the DW engine gets restarted more than two times, the DMS goes to a quiet period for 90 minutes and it must wait 90 minutes for the next auto start attempt. In such situation, you should start this service manually on all nodes.
 
 ## Optional: Remove a compute node  
   

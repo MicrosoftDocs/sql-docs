@@ -3,12 +3,11 @@ title: Free SQL Database with Azure free account
 description: Guidance on how to deploy an Azure SQL Database for free using an Azure free account.
 author: rajeshsetlem
 ms.author: rsetlem
+ms.date: 02/25/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: how-to
-ms.date: 02/25/2022
-ms.custom:
-  - "template-how-to"
+ms.custom: template-how-to
 ---
 
 
@@ -45,7 +44,7 @@ To create your database, follow these steps:
     :::image type="content" source="media/free-sql-db-free-account-how-to-deploy/free-services-sql-database.png" alt-text="Screenshot that shows a list of all free services on the Azure portal.":::
 
 1. Select **Create**.
-1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the free trial Azure **Subscription**.
+1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the free trial Azure Subscription, **Azure subscription 1**.
 1. For **Resource group**, select **Create new**, enter *myResourceGroup*, and select **OK**.
 1. For **Database name**, enter *mySampleDatabase*.
 1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:

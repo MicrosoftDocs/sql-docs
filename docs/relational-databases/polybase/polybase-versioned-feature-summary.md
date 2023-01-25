@@ -1,27 +1,25 @@
 ---
-description: "PolyBase features and limitations"
 title: "PolyBase features and limitations"
-descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 12/03/2021
-ms.prod: sql
-ms.technology: polybase
-ms.topic: conceptual
+description: "PolyBase features available for SQL Server products and services, including a list of T-SQL operators supported for pushdown and known limitations."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
+ms.date: 08/30/2022
+ms.service: sql
+ms.subservice: polybase
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
 
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-This article is a summary of PolyBase features available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products and services.  
-  
+This article is a summary of PolyBase features available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products and services.
+
 ## Feature summary for product releases
 
-This table lists the key features for PolyBase and the products in which they're available.  
+This table lists the key features for PolyBase and the products in which they're available.
 
-|**Feature** |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (Beginning with 2016) |**Azure SQL Database** |**[!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]** |**Parallel Data Warehouse** |
+|**Feature** |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (Beginning with 2016) |**Azure SQL Database** |**[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]** |**Parallel Data Warehouse** |
 |---------|---------|---------|---------|---------|
 |Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|No|Yes|
 |Import data from Hadoop|Yes|No|No|Yes|
@@ -37,14 +35,13 @@ This table lists the key features for PolyBase and the products in which they're
 <sup>*</sup> Introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], see [Examples of bulk access to data in Azure Blob storage](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 
-
 ## Known limitations
 
 PolyBase has the following limitations:
 
-- Before [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or 1 MB in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]. Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], this limitation is lifted. The limit remains 1 MB for Hadoop data sources, but is limited only by the maximum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limit for other data sources.
+- Before [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or 1 MB in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], this limitation is lifted. The limit remains 1 MB for Hadoop data sources, but is limited only by the maximum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limit for other data sources.
 
-- When data is exported into an ORC file format from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.
+- When data is exported into an ORC file format from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.
 
 - PolyBase can't connect to any Hadoop instance if Knox is enabled.
 
@@ -59,6 +56,10 @@ PolyBase has the following limitations:
 - If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing `sp_polybase_join_group`, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
 
 - Oracle synonyms are not supported for usage with PolyBase.
+
+- UTF-8 collations are not supported for Hadoop external data sources.
+
+- Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop is no longer supported.
 
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "

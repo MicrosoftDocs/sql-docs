@@ -1,16 +1,15 @@
 ---
 description: "Global Settings (Output Window)  (OracleToSQL)"
 title: "Global Settings (Output Window)  (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.oracle.globalsettingoutputwindow.f1"
 

@@ -1,13 +1,13 @@
 ---
 title: Create a domain admin
-description: Some operations require Analytics Platform System domain administrator privileges. This explains how to create additional appliance domain administrators.  
-author: charlesfeddersen 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
+description: Some operations require Analytics Platform System domain administrator privileges. This explains how to create additional appliance domain administrators.
+author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ms.custom: seo-dt-2019
 ---
 

@@ -4,9 +4,8 @@ description: Geo-Replication Dynamic Management Views and Functions (Azure SQL D
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/24/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "dynamic management objects [Azure SQL Database]"

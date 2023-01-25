@@ -3,10 +3,9 @@ description: "sp_enum_login_for_proxy (Transact-SQL)"
 title: "sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_enum_login_for_proxy_TSQL"
@@ -25,7 +24,7 @@ author: VanMSFT
 
   Lists associations between security principals and proxies.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -57,7 +56,6 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|The name of the proxy.|  
 |**name**|**sysname**|Name of the security principal for the association.|  
 |**flags**|**int**|Type of the security principal.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login<br /><br /> **1** = Fixed system role<br /><br /> **2** = Database role in **msdb**|  
-| &nbsp; | &nbsp; | &nbsp; |
   
 ## Remarks  
  When no parameters are provided, **sp_enum_login_for_proxy** lists information about all logins in the instance for every proxy.  

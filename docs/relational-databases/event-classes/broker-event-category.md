@@ -3,9 +3,9 @@ description: "Broker Event Category"
 title: "Broker Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "SQL Server event classes, Broker event category"

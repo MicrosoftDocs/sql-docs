@@ -1,9 +1,8 @@
 ---
 description: "Make a Target Server"
 title: "Make a Target Server"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.tsxwiz.complete.f1"
@@ -57,7 +56,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
   
 #### To make a target server  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, point to **Multi Server Administration**, and then click **Make this a Target**. The **Target Server Wizard** guides you through the process of making a target server.  
   
@@ -78,7 +77,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
   
 #### To make a target server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

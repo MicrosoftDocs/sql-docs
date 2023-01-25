@@ -3,10 +3,9 @@ title: "SQL Server, Columnstore object"
 description: Learn about the SQLServer:Columnstore object, which provides counters to monitor columnstore index execution in SQL Server.
 ms.custom: ""
 ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf

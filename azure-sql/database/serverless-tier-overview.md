@@ -1,19 +1,17 @@
 ---
 title: Serverless compute tier
 description: This article describes the new serverless compute tier and compares it with the existing provisioned compute tier for Azure SQL Database.
-services:
-  - "sql-database"
+author: oslake
+ms.author: moslake
+ms.reviewer: wiassaf, mathoma
+ms.date: 10/28/2022
 ms.service: sql-database
 ms.subservice: service-overview
+ms.topic: conceptual
 ms.custom:
   - "test sqldbrb=1"
   - "devx-track-azurecli"
   - "devx-track-azurepowershell"
-ms.topic: conceptual
-author: oslake
-ms.author: moslake
-ms.reviewer: wiassaf, mathoma
-ms.date: 04/06/2022
 ---
 # Serverless compute tier for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -214,8 +212,13 @@ The latency to auto-resume and auto-pause a serverless database is generally ord
 
 ### Customer managed transparent data encryption (BYOK)
 
+#### Key deletion or revocation
+
 If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state.  In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
 
+#### Key rotation
+
+If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused, then automated key rotation is deferred until the database is auto-resumed.
 
 ## <a name="create-serverless-db"></a> Create a new serverless database 
 
@@ -224,7 +227,7 @@ Creating a new database or moving an existing database into a serverless compute
 1. Specify the service objective. The service objective prescribes the service tier, hardware configuration, and max vCores. For service objective options, see [serverless resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5)
 
 
-2. Optionally, specify the min vCores and auto-pause delay to change their default values. The following table shows the available values for these parameters.
+2. Optionally, specify the min vCores and auto-pause delay to change their default values. The following table shows the available values for these parameters. 
 
    |Parameter|Value choices|Default value|
    |---|---|---|---|
@@ -527,22 +530,22 @@ In this example, the compute billed for the database is summation of the compute
 
 **Primary replica**
 
-| Time Interval	| vCores used each second	| GB used each second	| Compute dimension billed | vCore seconds billed over time interval | 
+| Time Interval    | vCores used each second    | GB used each second    | Compute dimension billed | vCore seconds billed over time interval | 
 |---|---|---|---|---|
-|0:00-2:00 | 8	| 15 |	vCores used	| 8 vCores * 7200 seconds = 57600 vCore seconds |
-|2:00-14:00 |	1.5	| 6	 | Memory used |	6 GB * 1/3 * 43200 seconds = 86400 vCore seconds |
-|14:00-24:00 |	0.5	| 2	 | Min vCores provisioned	| 1 vCore * 36000 seconds = 36000 vCore seconds | 
+|0:00-2:00 | 8    | 15 |    vCores used    | 8 vCores * 7200 seconds = 57600 vCore seconds |
+|2:00-14:00 |    1.5    | 6     | Memory used |    6 GB * 1/3 * 43200 seconds = 86400 vCore seconds |
+|14:00-24:00 |    0.5    | 2     | Min vCores provisioned    | 1 vCore * 36000 seconds = 36000 vCore seconds | 
 |**Total vCore seconds billed over 24 hours** |||| 180000 vCore seconds |
 
 Suppose the compute unit price for the primary replica is $0.000163/vCore/second. Then the compute billed for the primary replica over this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000163/vCore/second * 180000 vCore seconds ~ $29.34.
 
 **HA replica**
 
-|Time Interval	| vCores used each second	| GB used each second	| Compute dimension billed	| vCore seconds billed over time interval |
+|Time Interval    | vCores used each second    | GB used each second    | Compute dimension billed    | vCore seconds billed over time interval |
 |---|---|---|---|---|
-|0:00-2:00 |	8 |	9	| vCores used	| 8 vCores * 7200 seconds = 57600 vCore seconds |
-| 2:00-8:00	| 1.5	 | 3	| Memory used	| 3 GB * 1/3 * 43200 seconds = 43200 vCore seconds|
-|8:00-24:00|	0|	2	|Min memory provisioned	|3 GB * 1/3 * 36000 seconds = 36000 vCore seconds|
+|0:00-2:00 |    8 |    9    | vCores used    | 8 vCores * 7200 seconds = 57600 vCore seconds |
+| 2:00-8:00    | 1.5     | 3    | Memory used    | 3 GB * 1/3 * 43200 seconds = 43200 vCore seconds|
+|8:00-24:00|    0|    2    |Min memory provisioned    |3 GB * 1/3 * 36000 seconds = 36000 vCore seconds|
 |Total vCore seconds billed over 24 hours||||136800 vCore seconds |
 
 Suppose the compute unit price for an HA replica is $0.000105/vCore/second. Then the compute billed for the HA replica over this 24-hour period is $0.000105/vCore/second * 136800 vCore seconds ~ $14.36.
@@ -561,7 +564,15 @@ Azure Hybrid Benefit (AHB) and reserved capacity discounts do not apply to the s
 
 ## Available regions
 
-The serverless compute tier is available worldwide except the following regions: China East, China North, Germany Central, Germany Northeast, and US Gov Central (Iowa).
+The serverless compute tier with support up to 40 max vCores is available worldwide except the following regions: China East, China North, Germany Central, Germany Northeast, and US Gov Central (Iowa).
+
+### Regions supporting 80 max vCores
+
+Currently, 80 max vCores in serverless is supported in the following regions with more regions planned: Australia East, Australia Southeast, Canada Central, Central US, East Asia, East US, East US 2, France Central, France South, India Central, Japan East, Japan West, North Central US, North Europe, Norway East, Qatar Central, South Africa North, South Central US, Switzerland North, UK South, UK West, West Europe, West US, West US 2, and West US 3.
+
+### Regions supporting availability zones for 80 max vCores
+
+Currently, 80 max vCores in serverless with availability zone support is limited to the following regions with more regions planned: East US, West Europe, West US 2, and West US 3.
 
 ## Next steps
 

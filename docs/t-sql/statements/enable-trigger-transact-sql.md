@@ -4,9 +4,8 @@ description: ENABLE TRIGGER (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ENABLE TRIGGER"
@@ -20,14 +19,13 @@ helpviewer_keywords:
   - "ENABLE TRIGGER statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 ---
 # ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Enables a DML, DDL, or logon trigger.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -55,7 +53,7 @@ DATABASE
 For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
 ALL SERVER  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -102,7 +100,7 @@ GO
 ### C. Enabling all triggers that were defined with the same scope  
 The following example enables all DDL triggers that were created at the server scope.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 ```sql  
 ENABLE Trigger ALL ON ALL SERVER;  

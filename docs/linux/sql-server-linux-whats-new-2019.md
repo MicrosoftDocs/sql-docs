@@ -5,15 +5,15 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 11/22/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.custom:
   - intro-whats-new
 ---
 
 # What's new for SQL Server 2019 on Linux
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [sqlserver2019-linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 This article describes the major features and services available for SQL Server 2019 running on Linux. For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md).
 
@@ -39,7 +39,7 @@ The updates have been made in SQL Server 2019 on Linux:
 |:-----|:-----|
 |Replication support |[SQL Server Replication on Linux](sql-server-linux-replication.md)
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](sql-server-linux-configure-msdtc.md) |
-|OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) |
+|OpenLDAP support for third-party Active Directory providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) |
 |Machine Learning on Linux |[Configure Machine Learning on Linux](sql-server-linux-setup-machine-learning.md) |
 |`tempdb` improvements | By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each `tempdb` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
 | PolyBase on Linux | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
@@ -54,7 +54,7 @@ To install SQL Server on Linux, use one of the following tutorials:
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true)
-- [Run on Docker](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
+- [Run on a Linux container](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json)
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml). To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md?preserve-view=true&view=sql-server-ver15).

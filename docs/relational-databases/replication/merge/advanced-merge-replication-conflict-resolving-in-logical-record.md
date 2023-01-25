@@ -3,10 +3,9 @@ title: "Detect & resolve conflicts in logical records (Merge)"
 description: Learn about the various combinations of conflict detection and conflict resolution approaches possible when using logical records with Merge replication. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logical records [SQL Server replication]"

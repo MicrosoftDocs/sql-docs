@@ -3,10 +3,9 @@ description: "Common errors with database mail"
 title: "Common errors with database mail| Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "architecture [SQL Server], Database Mail"

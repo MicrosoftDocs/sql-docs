@@ -3,10 +3,9 @@ title: "Configure alerts to notify admins of policy failures"
 description: Learn how to configure alerts to notify policy administrators when a SQL Server fails a policy evaluation.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, configure alerts"

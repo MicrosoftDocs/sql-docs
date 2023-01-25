@@ -3,13 +3,10 @@ title: "ERROR_SEVERITY (Transact-SQL)"
 description: "ERROR_SEVERITY (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "ERROR_SEVERITY_TSQL"
   - "ERROR_SEVERITY"
@@ -28,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 This function returns the severity value of the error where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +50,7 @@ When called in a CATCH block where an error occurs, `ERROR_SEVERITY` returns the
   
 `ERROR_SEVERITY` typically operates in a nested `CATCH` block. `ERROR_SEVERITY` returns the error severity value specific to the scope of the `CATCH` block that referenced that `CATCH` block. For example, the `CATCH` block of an outer TRY...CATCH construct could have an inner `TRY...CATCH` construct. Inside that inner `CATCH` block, `ERROR_SEVERITY` returns the severity value of the error that invoked the inner `CATCH` block. If `ERROR_SEVERITY` runs in the outer `CATCH` block, it returns the error severity value of the error that invoked that outer `CATCH` block.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### A. Using ERROR_SEVERITY in a CATCH block  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_SEVERITY` returns the severity value of that error.  

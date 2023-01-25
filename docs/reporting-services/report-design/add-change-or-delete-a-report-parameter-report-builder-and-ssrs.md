@@ -2,9 +2,8 @@
 title: "Add, change, or delete a paginated report parameter | Microsoft Docs"
 description: Choose report data, connect related reports, and vary the report presentation with the addition of report parameters in a paginated report in Report Builder.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -51,7 +50,7 @@ ms.author: maggies
   
     -   To hide the parameter and protect it from being modified on the report server after the report is published, select **Internal**. The report parameter can then only be viewed in the report definition. For this option, you must set a default value or allow the parameter to accept a null value.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. Select **OK**.
   
 ### To delete a report parameter  
   

@@ -3,10 +3,9 @@ description: "Add a Custom Report to Management Studio"
 title: "Add a Custom Report to Management Studio"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], custom reports"
@@ -16,7 +15,7 @@ ms.author: "maghan"
 ---
 # Add a Custom Report to Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that is saved as an .rdl file, and then add that rdl file to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as a custom report. [!INCLUDE[ssRS](../../includes/ssrs.md)] can create a wide variety of sophisticated reports. To create a report by using this topic, you must have [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] installed on the computer. You do not have to install [!INCLUDE[ssRS](../../includes/ssrs.md)] on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run a custom report using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that is saved as an .rdl file, and then add that rdl file to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as a custom report. [!INCLUDE[ssRS](../../includes/ssrs.md)] can create a wide variety of sophisticated reports. To create a report by using this topic, you must have [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] installed on the computer. You do not have to install [!INCLUDE[ssRS](../../includes/ssrs.md)] on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run a custom report using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  
 ### To create a simple report saved as an .rdl file  
@@ -33,15 +32,15 @@ This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../inclu
   
 6.  On the **Report Wizard** introduction page, click **Next**.  
   
-7.  On the **Select the Data Source** page, in the Name box type a name for this connection to your [!INCLUDE[ssDE](../../includes/ssde_md.md)], and then click **Edit**.  
+7.  On the **Select the Data Source** page, in the Name box type a name for this connection to your [!INCLUDE[ssDE](../../includes/ssde-md.md)], and then click **Edit**.  
   
-8.  In the **Connection Properties** dialog box, in the **Server name** box, type the name of your instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+8.  In the **Connection Properties** dialog box, in the **Server name** box, type the name of your instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 9. In the **Select or enter a database name** box, type the name of any database on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], such as [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], and then click **OK**.  
   
 10. On the **Select the Data Source** page, click **Next**.  
   
-11. On the **Design the Query** page, in the **Query string** box, type the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that lists the current connections to your [!INCLUDE[ssDE](../../includes/ssde_md.md)], and then click **Next**. The Report Wizard Query string box will not accept report parameters. More complex custom reports must be created manually.  
+11. On the **Design the Query** page, in the **Query string** box, type the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that lists the current connections to your [!INCLUDE[ssDE](../../includes/ssde-md.md)], and then click **Next**. The Report Wizard Query string box will not accept report parameters. More complex custom reports must be created manually.  
   
     **SELECT session_id, net_transport FROM sys.dm_exec_connections;**  
   

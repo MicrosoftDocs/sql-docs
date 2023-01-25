@@ -3,16 +3,15 @@ title: Web Application Requirements
 description: Find out about the requirements to install and run the Master Data Services web application hosted by Internet Information Services.
 ms.custom: ""
 ms.date: "02/13/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 keywords: 
   - "master data services"
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Web Application Requirements (Master Data Services)
 
@@ -32,7 +31,8 @@ ms.author: lle
 ### Operating System  
  Before you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], review the following requirements:    
     
--   [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
+-   [Hardware and Software Requirements for Installing SQL Server 2016 and 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
+-   [Hardware and Software Requirements for Installing SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)    
   
 ### Microsoft Silverlight  
  To work in the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, Silverlight 5 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the web application that requires it. You can install Silverlight 5 from [here](https://go.microsoft.com/fwlink/?LinkId=243096).  

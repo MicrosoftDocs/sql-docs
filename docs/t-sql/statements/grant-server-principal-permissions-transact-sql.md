@@ -4,9 +4,8 @@ description: GRANT Server Principal Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "impersonate [SQL Server], granting"
@@ -19,14 +18,13 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], impersonation"
 dev_langs:
   - "TSQL"
-ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 ---
 # GRANT Server Principal Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Grants permissions on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,13 +1,14 @@
 ---
 title: "Offload backups to secondary availability group replica"
 description: "Learn about the different supported backup types when offloading backups to a secondary replica of an Always On availability group."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "09/01/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "backup priority"
   - "backup on secondary replicas"
   - "Availability Groups [SQL Server], availability replicas"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "active secondary replicas [SQL Server], backup on"
   - "automated backup preference"
   - "Availability Groups [SQL Server], active secondary replicas"
-ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Offload supported backups to secondary replicas of an availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

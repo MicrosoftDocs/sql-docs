@@ -1,19 +1,15 @@
 ---
-title: "Database Mirroring and Replication (SQL Server) | Microsoft Docs"
+title: "Database Mirroring and Replication (SQL Server)"
 description: Learn how to use database mirroring in conjunction with replication to improve availability for the publication database in SQL Server.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database mirroring [SQL Server], interoperability"
-  - "replication [SQL Server], database mirroring and"
-ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: database-mirroring
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database mirroring [SQL Server], interoperability"
+  - "replication [SQL Server], database mirroring and"
 ---
 # Database Mirroring and Replication (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

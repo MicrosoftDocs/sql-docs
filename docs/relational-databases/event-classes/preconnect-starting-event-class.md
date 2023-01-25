@@ -3,9 +3,9 @@ description: "PreConnect:Starting Event Class"
 title: "PreConnect:Starting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "PreConnect:Starting Event Class"

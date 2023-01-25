@@ -4,8 +4,8 @@ description: sys.database_ledger_digest_locations (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 dev_langs:

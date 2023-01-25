@@ -4,9 +4,8 @@ description: GRANT Schema Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/19/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "schemas [SQL Server], permissions"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], schemas"
 dev_langs:
   - "TSQL"
-ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Schema Permissions (Transact-SQL)
@@ -23,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Grants permissions on a schema.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

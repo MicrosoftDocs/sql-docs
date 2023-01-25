@@ -3,10 +3,9 @@ description: "Object Dependencies"
 title: "Object Dependencies"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.objectdependencies.f1"
@@ -60,5 +59,5 @@ Displays the type of dependency between two objects. Can be one of the following
   
 -   Not available or Unresolved Entity  
   
-    Indicates the dependency type cannot be determined. This occurs only when the selected object is on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
+    Indicates the dependency type cannot be determined. This occurs only when the selected object is on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   

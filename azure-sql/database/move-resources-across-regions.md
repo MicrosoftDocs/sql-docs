@@ -2,17 +2,14 @@
 title: Move resources to new region
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to move your database or managed instance to another region.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: data-movement
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 06/25/2019
+ms.service: sql-db-mi
+ms.subservice: data-movement
+ms.topic: how-to
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -158,7 +155,7 @@ Once the move completes, remove the resources in the source region to avoid unne
 
 1. For each source managed instance, create a target instance of SQL Managed Instance of the same size in the target region.  
 1. Configure the network for a managed instance. For more information, see [network configuration](../managed-instance/how-to-content-reference-guide.md#network-configuration).
-1. Configure the target master database with the correct logins. If you're not the subscription or SQL Managed Instance administrator, work with the administrator to assign the permissions that you need.
+1. Configure the target `master` database with the correct logins. If you're not the subscription or SQL Managed Instance administrator, work with the administrator to assign the permissions that you need.
 1. If your databases are encrypted with transparent data encryption and use your own encryption key in Azure Key Vault, ensure that the Azure Key Vault with identical encryption keys exists in both source and target regions. For more information, see [Transparent data encryption with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md).
 1. If audit is enabled for the managed instance, ensure that:
     - The storage container or event hub with the existing logs is moved to the target region.

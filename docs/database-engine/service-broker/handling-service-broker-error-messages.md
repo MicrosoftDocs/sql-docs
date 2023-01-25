@@ -1,13 +1,13 @@
 ---
 title: Handling Service Broker Error Messages
 description: "Service Broker applications must handle two types of error messages received from conversations: error messages created by an application that uses Service Broker and system messages created by Service Broker."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Handling Service Broker Error Messages

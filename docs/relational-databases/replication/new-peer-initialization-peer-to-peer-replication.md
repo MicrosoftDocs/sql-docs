@@ -3,10 +3,9 @@ title: "New Peer Initialization (Peer-to-Peer) | Microsoft Docs"
 description: Describes the 'New Peer Initialization' used for Peer to Peer Replication in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.p2pwizard.init.f1"
@@ -33,12 +32,12 @@ ms.author: "mathoma"
     |New node|First node|Additional nodes|Option|  
     |--------------|----------------|----------------------|------------|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Disabled|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Disabled|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Disabled|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|None|Disabled|  
+    |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Disabled|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Enabled|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Enabled|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Enabled|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Enabled|  
+    |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|None|Enabled|  
+    |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|Enabled|  
+    |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Enabled|  
   
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

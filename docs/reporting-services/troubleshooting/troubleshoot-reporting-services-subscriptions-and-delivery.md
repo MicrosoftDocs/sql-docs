@@ -2,9 +2,8 @@
 title: "Troubleshoot Reporting Services Subscriptions and Delivery"
 description: In this article, diagnose and fix problems found when you work with report subscriptions, schedules, and delivery in SQL Server Reporting Services.
 ms.date: 05/31/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: troubleshooting
+ms.service: reporting-services
+ms.subservice: troubleshooting
 
 
 ms.topic: conceptual
@@ -15,7 +14,7 @@ ms.author: maggies
 # Troubleshoot Reporting Services Subscriptions and Delivery
   
     
-Use this topic to troubleshoot problems that you encounter when working with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] report subscriptions, schedules, and delivery.  
+Use this topic to troubleshoot problems that you encounter when working with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report subscriptions, schedules, and delivery.  
 ## Log information
  
 The Subscription page in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] includes a status of a subscription but if there is a problem with the subscription, the detailed information is in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] logs. 

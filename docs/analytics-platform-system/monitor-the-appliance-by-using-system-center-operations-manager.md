@@ -1,13 +1,13 @@
 ---
 title: Use System Center Operations Manager to monitor APS
 description: Use System Center Operations Manager (SCOM) to monitor the Analytics Platform System (APS) appliance.
-author: charlesfeddersen 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
+author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ms.custom: seo-dt-2019
 ---
 

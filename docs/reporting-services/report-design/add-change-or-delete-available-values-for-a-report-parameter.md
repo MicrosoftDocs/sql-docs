@@ -2,9 +2,8 @@
 title: "Add, change, or delete available values for a paginated report parameter | Microsoft Docs"
 description: Customize the list of choices a user can make in a paginated report for a parameter in Report Builder by specifying a list of available values to display to the user.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -58,7 +57,7 @@ ms.author: maggies
   
          In **Label field**, choose the name of the field that provides the friendly names for the parameter. If there is no separate field for friendly names, choose the same field as you chose for the **Value** field.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
      When you preview the report, you see a drop-down list of available values for the parameter.  
   
@@ -70,7 +69,7 @@ ms.author: maggies
   
 3.  In **Select from one of the following options**, click **None**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
      When you preview the report, you the drop-down list of available values for the parameter no longer appears.  
   

@@ -1,13 +1,13 @@
 ---
 title: Load with Integration Services
-description: Provides reference and deployment information for loading data into Parallel Data Warehouse (PDW) by using SQL Server Integration Services (SSIS) packages.  
-author: charlesfeddersen 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
+description: Provides reference and deployment information for loading data into Parallel Data Warehouse (PDW) by using SQL Server Integration Services (SSIS) packages.
+author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ms.custom: seo-dt-2019
 ---
 

@@ -1,12 +1,11 @@
 ---
 title: "CREATE BROKER PRIORITY (Transact-SQL)"
 description: CREATE BROKER PRIORITY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE BROKER PRIORITY"
@@ -23,14 +22,13 @@ helpviewer_keywords:
   - "CREATE BROKER PRIORITY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Defines a priority level and the set of criteria for determining which [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations to assign the priority level. The priority level is assigned to any conversation endpoint that uses the same combination of contracts and services that are specified in the conversation priority. Priorities range in value from 1 (low) to 10 (high). The default is 5.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

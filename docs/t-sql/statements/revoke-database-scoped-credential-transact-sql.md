@@ -4,9 +4,8 @@ description: REVOKE Database Scoped Credential (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "12/16/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "REVOKE DATABASE SCOPED CREDENTIAL"
@@ -16,16 +15,15 @@ helpviewer_keywords:
   - "revoking permissions [SQL Server], database scoped credentials"
 dev_langs:
   - "TSQL"
-ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # REVOKE Database Scoped Credential (Transact-SQL)
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 Revokes permissions on a database scoped credential.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

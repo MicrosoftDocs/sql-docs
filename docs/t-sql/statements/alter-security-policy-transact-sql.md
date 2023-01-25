@@ -4,9 +4,8 @@ description: ALTER SECURITY POLICY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_SECURITY_POLICY_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "ALTER SECURITY POLICY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
 
@@ -25,7 +23,7 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 
 Alters a security policy.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

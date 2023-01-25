@@ -1,9 +1,8 @@
 ---
 title: sp_readerrorlog (Transact-SQL)
 description: sp_readerrorlog (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_readerrorlog_TSQL"
@@ -13,7 +12,7 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_readerrorlog"
 author: pijocoder
-ms.author: maghan
+ms.author: jopilov
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "02/08/2022"
@@ -24,7 +23,7 @@ ms.date: "02/08/2022"
 
 Allows you to read the contents of the SQL Server or SQL Server Agent error log file and filter on keywords.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -2,9 +2,8 @@
 title: "Add a data-bound image to a paginated report | Microsoft Docs"
 description: Learn how to reference an image that is stored in a database to display the image in your paginated reports in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -38,7 +37,7 @@ Adding a data-bound image to a page header or page footer requires additional st
   
 8.  In **Use this MIME type**, select the MIME type, or file format, of the image-for example, bmp.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
      An image placeholder appears on the report design surface.  
   

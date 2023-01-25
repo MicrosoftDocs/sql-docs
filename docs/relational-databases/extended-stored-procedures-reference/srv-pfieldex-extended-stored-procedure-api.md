@@ -4,9 +4,8 @@ description: Learn how srv_pfieldex in the Extended Stored Procedure API returns
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_pfieldex"
@@ -21,7 +20,7 @@ ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns a pointer to data containing the requested SRV_PROC field.  
   

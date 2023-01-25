@@ -3,9 +3,9 @@ title: "Failover Cluster Instance administration & maintenance"
 description: Learn about maintenance and administration of SQL Server failover cluster instances with the SQL Server Setup program or the Failover Cluster Manager snap-in.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "user accounts [SQL Server], failover clustering"
@@ -45,7 +45,7 @@ ms.author: mathoma
 > [!IMPORTANT]  
 >  Do not use the same account for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account and the WSFC service account. If the password changes for the WSFC service account, your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation will fail.  
   
- On [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], service SIDs are used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts. For more information, see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ On [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], service SIDs are used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts. For more information, see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## Administering a Failover Cluster Instance  
   

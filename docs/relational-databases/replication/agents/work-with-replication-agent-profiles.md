@@ -3,10 +3,9 @@ description: "Work with Replication Agent Profiles"
 title: "Work with Replication Agent Profiles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], agents and profiles"
@@ -110,7 +109,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  Modify parameters to tailor the profile. To view all parameters for an agent, clear the **Show only parameters used in this profile** check box. For information about agent parameters, see the links at the end of this topic.  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ###  <a name="Delete_SSMS"></a> To delete a user-defined profile  
   
@@ -127,7 +126,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  Select the profile you want to delete, and then click **Delete**.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -5,9 +5,8 @@ author: thesqlsith
 ms.author: derekw
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "IS_[NOT]_DISTINCT_FROM_TSQL"
@@ -25,13 +24,13 @@ dev_langs:
 
 # IS [NOT] DISTINCT FROM (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
 Compares the equality of two expressions and guarantees a true or false result, even if one or both operands are NULL.
 
 IS [NOT] DISTINCT FROM is a predicate used in the search condition of [WHERE](../../t-sql/queries/where-transact-sql.md) clauses and [HAVING](../../t-sql/queries/select-having-transact-sql.md) clauses, the join conditions of [FROM](../../t-sql/queries/from-transact-sql.md) clauses, and other constructs where a Boolean value is required.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

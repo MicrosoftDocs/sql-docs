@@ -5,10 +5,9 @@ ms.custom:
   - seo-lt-2019
   - intro-quickstart
 ms.date: "04/03/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: quickstart
 helpviewer_keywords:
   - "replication [SQL Server], tutorials"
@@ -73,7 +72,7 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
       
 4. On the **Publication Type** page, select **Merge publication**, and then select **Next**.  
    
-5. On the **Subscriber Types** page, ensure that only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later is selected, and then select **Next**: 
+5. On the **Subscriber Types** page, ensure that only [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later is selected, and then select **Next**: 
 
     !["Publication Type" and "Subscriber Types" pages](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   

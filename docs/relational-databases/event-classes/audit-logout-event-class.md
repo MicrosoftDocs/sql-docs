@@ -3,9 +3,9 @@ title: "Audit Logout Event Class | Microsoft Docs"
 description: The Audit Logout event class indicates that a user has signed out of SQL Server. This article describes audit logout event class data columns.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Audit Logout event class"

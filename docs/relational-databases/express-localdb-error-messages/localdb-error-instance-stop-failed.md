@@ -3,9 +3,9 @@ description: "LOCALDB_ERROR_INSTANCE_STOP_FAILED"
 title: "LOCALDB_ERROR_INSTANCE_STOP_FAILED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "reference"
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 author: WilliamDAssafMSFT

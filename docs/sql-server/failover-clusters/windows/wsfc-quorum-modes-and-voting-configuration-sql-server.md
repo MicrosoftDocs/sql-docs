@@ -3,9 +3,9 @@ title: "WSFC quorum modes & voting configuration"
 description: Learn about quorum modes and voting used by the Windows Server Failover Cluster with a SQL Server failover cluster instance or an Always On availability group.
 ms.custom: "seo-lt-2019"
 ms.date: "10/03/2016"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.subservice: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -19,7 +19,7 @@ ms.author: mathoma
 ---
 # WSFC Quorum Modes and Voting Configuration (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Both [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and Always On Failover Cluster Instances (FCI) take advantage of Windows Server Failover Clustering (WSFC) as a platform technology.  WSFC uses a quorum-based approach to monitoring overall cluster health and maximize node-level fault tolerance. A fundamental understanding of WSFC quorum modes and node voting configuration is very important to designing, operating, and troubleshooting your Always On high availability and disaster recovery solution.  
+  Both [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and Always On Failover Cluster Instances (FCI) take advantage of Windows Server Failover Clustering (WSFC) as a platform technology.  WSFC uses a quorum-based approach to monitoring overall cluster health and maximize node-level fault tolerance. A fundamental understanding of WSFC quorum modes and node voting configuration is very important to designing, operating, and troubleshooting your Always On high availability and disaster recovery solution.  
   
   
 ##  <a name="ClusterHealthDetectionbyQuorum"></a> Cluster Health Detection by Quorum  
@@ -71,7 +71,7 @@ ms.author: mathoma
 > [!IMPORTANT]  
 >  In order to use NodeWeight settings, the following hotfix must be applied to all servers in the WSFC cluster:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] and in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Recommended Adjustments to Quorum Voting  
  When enabling or disabling a given WSFC node's vote, follow these guidelines:  

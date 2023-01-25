@@ -2,9 +2,8 @@
 title: "Turn Reporting Services Features On or Off | Microsoft Docs"
 description: Learn how to turn off individual features in native mode Reporting Services. There are different ways to configure features.
 ms.date: 06/10/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual
@@ -62,7 +61,7 @@ ms.author: maggies
   
     -   To turn off the Report Server Web service, set **WebServiceAndHTTPAccessEnabled** to **False**.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="Sched"></a> Scheduled Events and Delivery  
   

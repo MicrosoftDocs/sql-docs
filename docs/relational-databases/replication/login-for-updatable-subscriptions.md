@@ -3,10 +3,9 @@ description: "Login for Updatable Subscriptions"
 title: "Login for Updatable Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"
@@ -20,7 +19,8 @@ ms.author: "mathoma"
   
  Connections are used by the triggers that fire at the Subscriber, and propagate changes to the Publisher. This account is required even if you selected **Queue changes and commit when possible** on the **Updatable Subscriptions** page. The New Subscription Wizard by default configures queued updating with the ability to switch to immediate updating if required.  
   
-> **IMPORTANT!!** The account specified for the connection should only be granted permission to insert, update, and delete data on the views that replication creates in the publication database. It should not be given any additional permissions. Grant permissions on Views in the publication database named in the form **syncobj_**_\<HexadecimalNumber>_ to the account you configured at each Subscriber.  
+> [!IMPORTANT]  
+> The account specified for the connection should only be granted permission to insert, update, and delete data on the views that replication creates in the publication database. It should not be given any additional permissions. Grant permissions on Views in the publication database named in the form **syncobj_**_\<HexadecimalNumber>_ to the account you configured at each Subscriber.  
   
  There are three options available for the type of connection:  
   

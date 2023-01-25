@@ -4,9 +4,8 @@ description: DROP XML SCHEMA COLLECTION (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "11/25/2015"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP XML SCHEMA COLLECTION"
@@ -20,14 +19,13 @@ helpviewer_keywords:
   - "DROP XML SCHEMA COLLECTION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 ---
 # DROP XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Deletes the whole XML schema collection and all of its components.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

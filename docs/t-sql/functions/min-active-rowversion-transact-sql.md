@@ -3,13 +3,10 @@ title: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "MIN_ACTIVE_ROWVERSION"
   - "MIN_ACTIVE_ROWVERSION_TSQL"
@@ -26,7 +23,7 @@ dev_langs:
 > [!NOTE]  
 >  The **rowversion** data type is also known as **timestamp**.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

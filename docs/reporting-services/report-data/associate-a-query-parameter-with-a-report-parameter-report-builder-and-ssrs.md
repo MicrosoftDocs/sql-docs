@@ -2,9 +2,8 @@
 title: "Associate a Query Parameter with a Report Parameter (Report Builder) | Microsoft Docs"
 description: Learn uses for Reporting Services report parameters, the properties you can set, and how to associate a dataset query parameter with a report parameter.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual
@@ -20,13 +19,15 @@ ms.author: maggies
   
  If you rename a report parameter that is bound to a query parameter, you need to manually link the query parameters to the renamed report parameter by using the procedure in this topic.  
   
-> **NOTE:** [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!NOTE]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### To associate a query parameter with a report parameter  
   
 1.  In the Report Data pane, right-click the dataset, click **Dataset Properties**, and then click **Parameters**.  
   
-    > **NOTE:** If the Report Data pane is not visible, click **Report Data** on the **View** menu.  
+    > [!NOTE]  
+    > If the Report Data pane is not visible, click **Report Data** on the **View** menu.  
   
 2.  In the column **Parameter Name**, find the name of the query parameter. Parameter names are automatically populated based on the query. Every time you change the query, the query is checked for new query parameters. Query parameters that you create manually are not changed when the query changes.  
   
@@ -34,7 +35,8 @@ ms.author: maggies
   
     -   In **Parameter Value**, type or select an expression that evaluates to the value to pass to the query parameter. This is typically the name of the report parameter.  
   
-        > **NOTE:** You are not limited to report parameters as values for a query parameter. You can use any expression that evaluates to a value for the parameter value.  
+        > [!NOTE]  
+        > You are not limited to report parameters as values for a query parameter. You can use any expression that evaluates to a value for the parameter value.  
   
 3.  Repeat step 2 for additional query parameters.  
   

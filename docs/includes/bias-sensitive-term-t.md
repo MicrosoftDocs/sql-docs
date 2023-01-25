@@ -1,9 +1,9 @@
 ---
 author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 06/19/2020
 ms.service: sql
 ms.topic: include
-ms.date: 06/19/2020
-ms.author: mikeray
 ---
 > [!NOTE]
 > Bias-free communication

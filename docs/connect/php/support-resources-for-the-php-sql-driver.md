@@ -1,18 +1,14 @@
 ---
 title: Support Resources
 description: Helpful resources when you're developing applications that use the Microsoft Drivers for PHP for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 05/06/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "support"
-ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Support resources for the Microsoft Drivers for PHP for SQL Server
 

@@ -4,9 +4,9 @@ description: This article helps you plan to install SQL Server. It includes link
 ms.custom:
   - intro-quickstart
 ms.date: "08/23/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: install
+ms.subservice: install
 ms.topic: quickstart
 helpviewer_keywords:
   - "installing SQL Server, planning"

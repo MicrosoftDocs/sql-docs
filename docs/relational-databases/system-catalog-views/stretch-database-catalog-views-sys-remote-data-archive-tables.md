@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 f1_keywords:
   - "sys.remote_data_archive_tables"
@@ -25,7 +25,7 @@ dev_langs:
 Contains one row for each remote table that stores data from a Stretch-enabled local table.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

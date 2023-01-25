@@ -3,10 +3,9 @@ description: "MinDbCompatibilityLevel (geometry Data Type)"
 title: "MinDbCompatibilityLevel (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"
@@ -52,7 +51,7 @@ Returns the minimum database compatibility level that recognizes the **geometry*
  ```  
   
 ### B. Testing LineString type for compatibility with compatibility level 100  
- The following example tests a `LineString` instance for compatibility with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
+ The following example tests a `LineString` instance for compatibility with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]:  
   
 ```sql
  DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)'; 

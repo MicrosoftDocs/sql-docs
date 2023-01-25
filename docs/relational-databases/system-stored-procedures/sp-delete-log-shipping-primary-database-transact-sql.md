@@ -3,10 +3,9 @@ description: "sp_delete_log_shipping_primary_database (Transact-SQL)"
 title: "sp_delete_log_shipping_primary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_delete_log_shipping_primary_database"
@@ -24,7 +23,7 @@ ms.author: mathoma
 
   This stored procedure removes log shipping of primary database including backup job as well as local and remote history. Only use this stored procedure after you have removed the secondary databases using **sp_delete_log_shipping_primary_secondary**.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

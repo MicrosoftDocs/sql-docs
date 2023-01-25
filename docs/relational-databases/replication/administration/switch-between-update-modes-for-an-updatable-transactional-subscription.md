@@ -3,10 +3,9 @@ title: "Switch between modes (Updatable Transactional)"
 description: Describes how to switch between update modes for an Updatable Transactional Publication by using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, updatable subscriptions"
@@ -59,13 +58,13 @@ ms.author: "mathoma"
   
 4.  In the **Set Update Method - \<Subscriber>: \<SubscriptionDatabase>** dialog box, select **Immediate updating** or **Queued updating**.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  Select **OK**.
 
 #### To set the updating mode for a pull subscription  
   
 1.  In the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box, select a value of **Immediately replicate changes** or **Queue changes** for the **Subscriber update method** option.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
  For more information about accessing the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box, see [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   

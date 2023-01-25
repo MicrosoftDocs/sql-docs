@@ -2,9 +2,8 @@
 title: "Use WinForms ReportViewer Control"
 description: To view reports deployed to a report server or on a local file system, you can use the WinForms ReportViewer control to render them in a Windows application.
 ms.date: 09/06/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: application-integration
+ms.service: reporting-services
+ms.subservice: application-integration
 ms.custom: seo-lt-2019
 
 ms.topic: reference
@@ -161,7 +160,7 @@ End Class
      If Solution Explorer is not visible, you can open it from the **View** menu by selecting **Solution Explorer**.  
   
     > [!NOTE]  
-    >  Renaming the file extension from rdl to rdlc will allow you to edit the report using report designer for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
+    >  Renaming the file extension from rdl to rdlc will allow you to edit the report using report designer for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../includes/vsprvs2005-md.md)].  
   
 6.  After the report has been renamed, select the file and locate the Properties window. Change the **Copy to Output Directory** property to **Copy if Newer**.  
   

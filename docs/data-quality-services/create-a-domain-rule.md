@@ -1,18 +1,15 @@
 ---
-description: "Create a Domain Rule"
 title: "Create a Domain Rule"
-ms.date: "11/08/2011"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.dm.testdomainrule.f1"
-  - "sql13.dqs.dm.rules.f1"
-ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
+description: "Create a Domain Rule"
 author: swinarko
 ms.author: sawinark
+ms.date: "11/08/2011"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dqs.dm.testdomainrule.f1"
+  - "sql13.dqs.dm.rules.f1"
 ---
 # Create a Domain Rule
 

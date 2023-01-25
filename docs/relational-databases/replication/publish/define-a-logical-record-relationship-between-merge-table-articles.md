@@ -3,10 +3,9 @@ title: "Define logical record relationship between Merge table articles"
 description: Learn how to define the logical record relationship between related tables used for Merge Replication articles. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication logical records [SQL Server replication]"
@@ -72,7 +71,7 @@ ms.author: "mathoma"
   
     2.  In the **Edit Join** dialog box, clear the check box **Logical Record**.  
   
-    3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    3.  Select **OK**.
   
      To delete the logical record relationship and join filter associated with it:  
   

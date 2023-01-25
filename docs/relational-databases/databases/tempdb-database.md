@@ -3,9 +3,8 @@ title: "tempdb database"
 description: This article provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
 ms.date: 10/28/2021
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "temporary tables [SQL Server], tempdb database"
@@ -157,7 +156,7 @@ Preallocate space for all `tempdb` files by setting the file size to a value lar
 
 Data files should be of equal size within each [filegroup](../../relational-databases/databases/database-files-and-filegroups.md#filegroups), because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a proportional-fill algorithm that favors allocations in files with more free space. Dividing `tempdb` into multiple data files of equal size provides a high degree of parallel efficiency in operations that use `tempdb`.
 
-Set the file growth increment to a reasonable size to prevent the `tempdb` database files from growing by too small a value. If the file growth is too small compared to the amount of data that's being written to `tempdb`, `tempdb` might have to constantly expand. That will affect performance.
+Set the file growth increment to a reasonable size and set it to the same increment in all data files, to prevent the `tempdb` database files from growing by too small a value. If the file growth is too small compared to the amount of data that's being written to `tempdb`, `tempdb` might have to constantly expand. That will affect performance.
 
 To check current size and growth parameters for `tempdb`, use the following query:
 

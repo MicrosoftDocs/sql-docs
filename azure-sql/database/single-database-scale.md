@@ -1,19 +1,17 @@
 ---
 title: Scale single database resources
 description: This article describes how to scale the compute and storage resources available for a single database in Azure SQL Database.
-services:
-  - "sql-database"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
+ms.date: 08/01/2022
 ms.service: sql-database
 ms.subservice: performance
+ms.topic: conceptual
 ms.custom:
   - "sqldbrb=1"
   - "references_regions"
   - "devx-track-azurepowershell"
-ms.topic: conceptual
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
-ms.date: 07/27/2022
 ---
 # Scale single database resources in Azure SQL Database
 
@@ -105,6 +103,13 @@ else {
 }
 ```
 
+## Permissions
+
+To scale databases via T-SQL, ALTER DATABASE permissions are needed. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Azure AD admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
+
+To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
+
+
 ## Additional considerations
 
 - If you're upgrading to a higher service tier or compute size, the database max size doesn't increase unless you explicitly specify a larger size (maxsize).
@@ -154,7 +159,7 @@ More than 1 TB of storage in the Premium tier is currently available in all regi
 - For active geo-replication scenarios:
   - Setting up a geo-replication relationship: If the primary database is P11 or P15, the secondary(ies) must also be P11 or P15. Lower compute size are rejected as secondaries since they aren't capable of supporting more than 1 TB.
   - Upgrading the primary database in a geo-replication relationship: Changing the maximum size to more than 1 TB on a primary database triggers the same change on the secondary database. Both upgrades must be successful for the change on the primary to take effect. Region limitations for the more than 1-TB option apply. If the secondary is in a region that doesn't support more than 1 TB, the primary isn't upgraded.
-- Using the Import/Export service for loading P11/P15 databases with more than 1 TB isn't supported. Use SqlPackage.exe to [import](database-import.md) and [export](database-export.md) data.
+- Using the Import/Export service for loading P11/P15 databases with more than 1 TB isn't supported. Use SqlPackage to [import](database-import.md) and [export](database-export.md) data.
 
 ## Next steps
 

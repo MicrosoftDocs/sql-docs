@@ -4,8 +4,8 @@ description: A scalar-valued function returns a single value. In SQL Server CLR 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "SVF"

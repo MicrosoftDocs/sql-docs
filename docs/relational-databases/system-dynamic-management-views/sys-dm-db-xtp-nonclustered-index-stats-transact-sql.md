@@ -4,9 +4,8 @@ description: sys.dm_db_xtp_nonclustered_index_stats includes statistics about op
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_xtp_nonclustered_index_stats_TSQL"
@@ -30,7 +29,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   
  Large numbers of retries are indicative of concurrency issues. 
   
- For more information about memory-optimized indexes, see [SQL Server [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Internals for SQL Server 2016](../in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md), page 20.  
+ For more information about memory-optimized indexes, see [SQL Server [!INCLUDE[inmemory](../../includes/inmemory-md.md)] Internals for SQL Server 2016](../in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md), page 20.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -64,5 +63,5 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
 ## Next steps 
 
-- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

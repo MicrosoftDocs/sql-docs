@@ -1,18 +1,16 @@
 ---
 title: Azure SQL Database file space management
 description: This page describes how to manage file space with single and pooled databases in Azure SQL Database, and provides code samples for how to determine if you need to shrink a single or a pooled database as well as how to perform a database shrink operation.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: deployment-configuration
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-ms.topic: conceptual
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
 ms.date: 1/4/2022
+ms.service: sql-database
+ms.subservice: deployment-configuration
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
 ---
 # Manage file space for databases in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -251,7 +249,7 @@ Unlike data files, Azure SQL Database automatically shrinks transaction log file
 
 In Premium and Business Critical service tiers, if the transaction log becomes large, it may significantly contribute to local storage consumption toward the [maximum local storage](resource-limits-logical-server.md#storage-space-governance) limit. If local storage consumption is close to the limit, customers may choose to shrink transaction log using the [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) command as shown in the following example. This releases local storage as soon as the command completes, without waiting for the periodic automatic shrink operation.
 
-The following example should be executed while connected to the target user database, not the master database.
+The following example should be executed while connected to the target user database, not the `master` database.
 
 ```sql
 -- Shrink the database log file (always file_id 2), by removing all unused space at the end of the file, if any.
@@ -266,7 +264,7 @@ By default, auto-shrink is disabled, which is recommended for most databases. If
 
 For example, auto-shrink can be helpful in the specific scenario where an elastic pool contains many databases that experience significant growth and reduction in data file space used, causing the pool to approach its maximum size limit. This is not a common scenario. 
 
-To enable auto-shrink, execute the following command while connected to your database (not the master database).
+To enable auto-shrink, execute the following command while connected to your database (not the `master` database).
 
 ```sql
 -- Enable auto-shrink for the current database.

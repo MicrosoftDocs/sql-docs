@@ -2,9 +2,8 @@
 title: "Include indicators and gauges in a gauge panel in paginated report | Microsoft Docs"
 description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your paginated reports in Report Builder. 
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -35,7 +34,7 @@ ms.author: maggies
   
 4.  Click **Radial**. The first radial gauge is selected.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  Click the gauge. The **Gauge Data** pane opens.  
   
@@ -45,7 +44,7 @@ ms.author: maggies
   
 9. In the **Select Indicator Style** dialog box, in the left pane, click the indicator type you want, and then click the indicator set.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 11. Click the indicator. The **Gauge Data** pane opens.  
   
@@ -53,7 +52,7 @@ ms.author: maggies
   
      The field can be the same or a different field from the one you use in the gauge.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. Select **OK**.
   
 ### To show an indicator and gauge side by side  
   
@@ -65,7 +64,7 @@ ms.author: maggies
   
 4.  Click **Radial**. The first radial gauge is selected.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  Click the gauge. The **Gauge Data** pane opens.  
   
@@ -75,7 +74,7 @@ ms.author: maggies
   
 9. In the **Select Indicator Style** dialog box, in the left pane, click the indicator type you want, and then click the indicator set.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 11. Click the indicator. The **Gauge Data** pane opens.  
   
@@ -83,7 +82,7 @@ ms.author: maggies
   
      The field can be the same or a different field from the one you use in the gauge.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. Select **OK**.
   
 14. Right-click the gauge panel and click **Add Label**. A label is added to the gauge panel. Repeat one more time.  
   
@@ -95,7 +94,7 @@ ms.author: maggies
   
 17. Right-click the label near the indicator, click **Label Properties**,and type the text you want in the **Text** box.  
   
-18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+18. Select **OK**.
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

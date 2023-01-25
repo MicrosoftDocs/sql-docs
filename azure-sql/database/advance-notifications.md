@@ -1,15 +1,13 @@
 ---
 title: Advance notifications (Preview) for planned maintenance events
 description: Get notification before planned maintenance for Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: service-overview
-ms.topic: how-to
 author: scott-kim-sql
 ms.author: scottkim
 ms.reviewer: wiassaf, mathoma, urosmil
-ms.date: 04/04/2022
+ms.date: 12/01/2022
+ms.service: sql-db-mi
+ms.subservice: service-overview
+ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Advance notifications for planned maintenance events (Preview)
@@ -25,40 +23,44 @@ Notifications can be configured so you can get texts, emails, Azure push notific
 > [!NOTE]
 > While [maintenance windows](maintenance-window.md) are generally available, advance notifications for maintenance windows are in public preview for Azure SQL Database and Azure SQL Managed Instance.
 
-## Create an advance notification
+## Configure an advance notification
 
-Advance notifications are available for Azure SQL databases that have their maintenance window configured. 
+Advance notifications are available for Azure SQL databases that have their maintenance window configured and managed instances with any configuration (including the default one). 
 
 Complete the following steps to enable a notification.  
 
 1. Go to the [Planned maintenance](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/plannedMaintenance) page, select **Health alerts**, then **Add service health alert**.
 
     :::image type="content" source="media/advance-notifications/health-alerts.png" alt-text="create a new health alert menu option":::
+    
+2. In the **Scope** section, select subscription. 
 
-2. In the **Actions** section, select **Add action groups**. 
+    :::image type="content" source="media/advance-notifications/select-subscription.png" alt-text="A screenshot of the Azure portal page where you select the subscription where you will be configuring the health alert.":::
 
-    :::image type="content" source="media/advance-notifications/add-action-group.png" alt-text="add an action group menu option":::
+3. In the **Condition** section, configure service(s) to be alerted for, region(s) and criteria. For more generic alert, select all values. To narrow down, select Azure SQL Database or Azure SQL Managed Instance as a service, region(s) where you have those services deployed, and **Planned maintenance** for the event type.
 
-3. Complete the **Create action group** form, then select **Next: Notifications**.  
+    :::image type="content" source="media/advance-notifications/define-condition-services.png" alt-text="A screenshot of the Azure portal page where you define conditions for the health alert and define services to be notified for.":::
+    
+    :::image type="content" source="media/advance-notifications/define-condition-regions.png" alt-text="A screenshot of the Azure portal page where you define conditions for the health alert and define regions to be notified for.":::
+    
+    :::image type="content" source="media/advance-notifications/define-condition-event-types.png" alt-text="A screenshot of the Azure portal page where you define conditions for the health alert and define event types to be notified for.":::
+    
+> [!IMPORTANT]
+> Service health is rolling out new experiencs in phases. Some users will see the updated experience, others will still see the classic Service Health portal experience. In case that you still see the classic Service Health portal, for **Region** don't select Global as an option, but rather the specific region or all regions.
 
-    :::image type="content" source="media/advance-notifications/create-action-group.png" alt-text="create action group form":::
+4. In the **Actions** section, select the existing action group or create a new one. 
 
-1. On the **Notifications** tab, select the **Notification type**. The **Email/SMS message/Push/Voice** option offers the most flexibility and is the recommended option. Select the pen to configure the notification.  
+    :::image type="content" source="media/advance-notifications/add-action-group.png" alt-text="A screenshot of the Azure portal page where you add or create action groups.":::
 
-    :::image type="content" source="media/advance-notifications/notifications.png" alt-text="configure notifications":::
+5. In the **Details** section, define the name for your alert and specify resource group where it should be deployed.
 
-   1. Complete the *Add or edit notification* form that opens and select **OK**: 
+    :::image type="content" source="media/advance-notifications/define-alert-details.png" alt-text="A screenshot of the Azure portal page where you define alert details.":::
 
-   2. Actions and Tags are optional. Here you can configure additional actions to be triggered or use tags to categorize and organize your Azure resources. 
-
-   4. Check the details on the **Review + create** tab and select **Create**. 
-
-7. After selecting create, the alert rule configuration screen opens and the action group will be selected. Give a name to your new alert rule, then choose the resource group for it, and select **Create alert rule**. 
-
-8. Click the **Health alerts** menu item again, and the list of alerts now contains your new alert. 
-
+6. Select **Review + create** and your alert will be created.
 
 You're all set. Next time there's a planned Azure SQL maintenance event, you'll receive an advance notification.
+
+To learn more about creating health alerts, visit [Azure Service Health](/azure/service-health/service-health-portal-update)
 
 ## Receiving notifications
 
@@ -66,18 +68,18 @@ The following table shows the general-information notifications you may receive:
 
 |Status|Description|
 |:---|:---|
-|**Planned Deployment**| Received 24 hours prior to the maintenance event. Maintenance is planned on DATE between 5pm - 8am (local time) for DB xyz.|
-|**In-Progress** | Maintenance for database *xyz* is starting.| 
-|**Complete** | Maintenance of database *xyz* is complete. |
+|**Planned**| Received 24 hours prior to the maintenance event. Maintenance is planned on DATE between 5pm - 8am<sup>1</sup> (local time) in region *xyz*. |
+|**InProgress** | Maintenance for database(s) in region *xyz* is starting. | 
+|**Complete** | Maintenance of database(s) in region *xyz* is complete. |
+
+<sup>1</sup> Start and end time depend on the selected [maintenance window](maintenance-window.md). 
 
 The following table shows additional notifications that may be sent while maintenance is ongoing: 
 
 |Status|Description|
 |:---|:---|
-|**Extended** | Maintenance is in progress but didn't complete for database *xyz*. Maintenance will continue at the next maintenance window.| 
-|**Canceled**| Maintenance for database *xyz* is canceled and will be rescheduled later. |
-|**Blocked**|There was a problem during maintenance for database *xyz*. We'll notify you when we resume.| 
-|**Resumed**|The problem has been resolved and maintenance will continue at the next maintenance window.|
+|**Rescheduled** | 1) Maintenance is in progress but didn't complete inside maintenance window. 2) there was a problem during maintenance and it could not start. 3)  Planned maintenance has started but couldn't progress to the end and will continue in next maintenance window. | 
+|**Canceled**| Maintenance for database(s) in region *xyz* is canceled and will be rescheduled for later. |
 
 ## Permissions
 
@@ -104,6 +106,16 @@ resources
 ) on resource
 | project resource, status, resourceGroup, location, startTimeUtc, endTimeUtc, impactType
 ```
+
+In Azure Resource Graph (ARG) explorer you might find values for the status of deployment that are bit different than the ones displayed in the notification content.
+
+|Status|Description|
+|:---|:---|
+|**Pending**| 1) Maintenance is planned on upcoming date. 2) Previously planned maintenance was rescheduled and is waiting to start in the next window. 3) Maintenance started but didn't complete in previous window and will continue in the next one. |
+|**InProgress** | Maintenance for resource *xyz* is starting or is in progress. | 
+|**Completed** | Maintenance for resource *xyz* is complete. |
+|**NoUpdatesPending** | Previously planned maintenance for resource *xyz* is canceled and will be rescheduled for later. |
+|**RetryLater** | Planned maintenance for resource *xyz* has started but couldn't progress to the end and will continue in next maintenance window. |
 
 For the full reference of the sample queries and how to use them across tools like PowerShell or Azure CLI, visit [Azure Resource Graph sample queries for Azure Service Health](/azure/service-health/resource-graph-samples).
 

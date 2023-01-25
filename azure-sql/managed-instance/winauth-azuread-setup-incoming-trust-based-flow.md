@@ -1,23 +1,21 @@
 ---
-title: How to set up Windows Authentication for Azure Active Directory with the incoming trust-based flow (Preview)
+title: How to set up Windows Authentication for Azure Active Directory with the incoming trust-based flow
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows authentication for Azure Active Directory with the incoming trust-based flow.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.devlang: 
-ms.topic: how-to
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
 ---
 
-# How to set up Windows Authentication for Azure AD with the incoming trust-based flow (Preview)
+# How to set up Windows Authentication for Azure AD with the incoming trust-based flow 
 
 This article describes how to implement the incoming trust-based authentication flow to allow Active Directory (AD) joined clients running Windows 10, Windows Server 2012, or higher versions of Windows to authenticate to an Azure SQL Managed Instance using Windows Authentication. This article also shares steps to rotate a Kerberos Key for your Azure Active Directory (Azure AD) service account and Trusted Domain Object, and steps to remove a Trusted Domain Object and all Kerberos settings, if desired.
 
-Enabling the incoming trust-based authentication flow is one step in [setting up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)](winauth-azuread-setup.md). The [modern interactive flow (Preview)](winauth-azuread-setup-modern-interactive-flow.md) is available for enlightened clients running Windows 10 20H1, Windows Server 2022, or a higher version of Windows.
+Enabling the incoming trust-based authentication flow is one step in [setting up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md). The [modern interactive flow](winauth-azuread-setup-modern-interactive-flow.md) is available for enlightened clients running Windows 10 20H1, Windows Server 2022, or a higher version of Windows.
 
 ## Permissions
 
@@ -251,6 +249,6 @@ Remove-AzureAdKerberosServer -Domain $domain `
 
 Learn more about implementing Windows Authentication for Azure AD principals on Azure SQL Managed Instance:
 
-- [Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory (Preview)](winauth-azuread-kerberos-managed-instance.md)
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? (Preview)](winauth-azuread-overview.md)
-- [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)](winauth-azuread-setup.md)
+- [Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory](winauth-azuread-kerberos-managed-instance.md)
+- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
+- [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md)

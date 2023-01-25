@@ -3,10 +3,9 @@ description: "Slowly Changing Dimension Transformation"
 title: "Slowly Changing Dimension Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.slowlychangingdimtrans.f1"

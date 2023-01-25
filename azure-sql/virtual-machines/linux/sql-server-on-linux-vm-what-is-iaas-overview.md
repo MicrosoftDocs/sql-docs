@@ -1,17 +1,13 @@
 ---
 title: Overview of SQL Server on Azure Virtual Machines for Linux| Microsoft Docs
 description: Learn about how to run full SQL Server editions on Azure Virtual Machines for Linux. Get direct links to all Linux SQL Server VM images and related content.
-services: virtual-machines-sql
-documentationcenter: ''
 author: MashaMSFT
-tags: azure-service-management
+ms.author: mathoma
+ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
-
 ms.topic: overview
-ms.workload: iaas-sql-server
-ms.date: 10/26/2021
-ms.author: mathoma
+tags: azure-service-management
 ---
 # Overview of SQL Server on Linux Azure Virtual Machines
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -25,7 +21,7 @@ SQL Server on Azure Virtual Machines enables you to use full versions of SQL Ser
 Azure virtual machines run in many different [geographic regions](https://azure.microsoft.com/regions/) around the world. They also offer a variety of [machine sizes](/azure/virtual-machines/sizes). The virtual machine image gallery allows you to create a SQL Server VM with the right version, edition, and operating system. This makes virtual machines a good option for a many different SQL Server workloads. 
 
 If you're new to Azure SQL, check out the *SQL Server on Azure VM Overview* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
-> [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61/player]
+> [!VIDEO https://learn.microsoft.com/shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61/player]
 
 ## <a id="create"></a> Get started with SQL Server VMs
 
@@ -52,10 +48,9 @@ When you configure SQL Server on Linux, you install the Database Engine package 
 
 | Distribution | [Database Engine](/sql/linux/sql-server-linux-setup) | [Tools](/sql/linux/sql-server-linux-setup-tools) | [SQL Server agent](/sql/linux/sql-server-linux-setup-sql-agent) | [Full-text search](/sql/linux/sql-server-linux-setup-full-text-search) | [SSIS](/sql/linux/sql-server-linux-setup-ssis) | [HA add-on](/sql/linux/sql-server-linux-business-continuity-dr) |
 |---|---|---|---|---|---|---|
-| RHEL | ![RHEL and database engine](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![RHEL and tools](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![RHEL and SQL Server agent](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![RHEL and full-text search](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![RHEL and SSIS](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![RHEL and HA add-on](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) |
-| SLES | ![SLES and database engine](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![SLES and tools](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![SLES and SQL Server agent](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![SLES and full-text search](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![SLES and SSIS](./media/sql-server-on-linux-vm-what-is-iaas-overview/no.png) | ![SLES and HA add-on](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png)|
-| Ubuntu | ![Ubuntu and database engine](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![Ubuntu and tools](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![Ubuntu and SQL Server agent](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![Ubuntu and full-text search](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![Ubuntu and SSIS](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) | ![Ubuntu and HA add-on](./media/sql-server-on-linux-vm-what-is-iaas-overview/yes.png) |
-
+| RHEL | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and database engine." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and tools." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and SQL Server agent." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and full-text search." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and SSIS." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="RHEL and HA add-on." border="false"::: |
+| SLES | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and database engine." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and tools." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and SQL Server agent." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and full-text search." border="false"::: | :::image type="content" source="../../media/applies-to/no-icon.svg" alt-text="SLES and SSIS (not supported)." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="SLES and HA add-on." border="false"::: |
+| Ubuntu | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and database engine." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and tools." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and SQL Server agent." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and full-text search." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and SSIS." border="false"::: | :::image type="content" source="../../media/applies-to/yes-icon.svg" alt-text="Ubuntu and HA add-on." border="false"::: |
 
 > [!NOTE]
 > SQL IaaS Agent extension for SQL Server on Azure Linux Virtual Machines is only available for Ubuntu Linux distribution.

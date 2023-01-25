@@ -1,18 +1,15 @@
 ---
 title: Conditional Access
-description: Learn how to configure Conditional Access for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: security
-ms.topic: how-to
+description: Learn how to configure Conditional Access for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.custom:
-  - "sqldbrb=1"
 ms.date: 04/28/2020
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: how-to
+ms.custom: sqldbrb=1
 tag: azure-synpase
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
@@ -23,7 +20,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) support Microsoft Conditional Access.
 
-The following steps show how to configure Azure SQL Database, SQL Managed Instance, or Azure Synapse to enforce a Conditional Access policy.  
+The following steps show how to configure Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse to enforce a Conditional Access policy.  
 
 ## Prerequisites
 
@@ -47,7 +44,7 @@ The following steps show how to configure Azure SQL Database, SQL Managed Instan
    If you can't find **Azure SQL Database** listed in the following third screenshot, complete the following steps:
    - Connect to your database in Azure SQL Database by using SSMS with an Azure AD admin account.  
    - Execute `CREATE USER [user@yourtenant.com] FROM EXTERNAL PROVIDER`.  
-   - Sign into Azure AD and verify that Azure SQL Database, SQL Managed Instance, or Azure Synapse are listed in the applications in your Azure AD instance.  
+   - Sign into Azure AD and verify that Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse are listed in the applications in your Azure AD instance.  
 
 5. Select **Access controls**, select **Grant**, and then check the policy you want to apply. For this example, we select **Require multi-factor authentication**.  
    ![select grant access](./media/conditional-access-configure/grant-access.png)  

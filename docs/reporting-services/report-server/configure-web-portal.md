@@ -2,9 +2,8 @@
 title: "Configure the web portal | Microsoft Docs"
 description: Learn how to configure the web portal application, used to view reports, manage report server content, and grant user access to a native mode report server.
 ms.date: 05/10/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -46,7 +45,7 @@ By default, the web portal URL consists of a unique virtual directory name, plus
 
 4. Click **Apply**.
 
-5. If you're using [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] or Windows Server 2008, additional steps might be required before you can use the web portal. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+5. If you're using [!INCLUDE[winvista](../../includes/winvista-md.md)] or Windows Server 2008, additional steps might be required before you can use the web portal. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 ## Configure the web portal to use a specific report server URL
 

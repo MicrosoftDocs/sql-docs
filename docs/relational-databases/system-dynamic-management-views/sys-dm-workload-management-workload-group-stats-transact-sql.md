@@ -4,8 +4,8 @@ description: sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "11/02/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 # sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Returns workload group statistics and the effective values of the workload group in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+Returns workload group statistics and the effective values of the workload group in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
@@ -32,7 +32,6 @@ Returns workload group statistics and the effective values of the workload group
 |effective_cap_percentage_resource|**tinyint**|The effective cap_percentage_resource for the workload group.  If there are other workload groups with min_percentage_resource > 0, the effective_cap_percentage_resource is lowered proportionally.||
 |effective_request_min_resource_grant_percent|**decimal(5,2)**|The effective runtime value for request_min_resource_grant_percent of the workload group. The effective value considering the service level and how the workload group is configured.  If min_percentage_resource is adjusted because of the service level, effective_request_min_resource_grant_percent will be adjusted accordingly.||
 |effective_request_max_resource_grant_percent|**decimal(5,2)**|The effective runtime value for request_max_resource_grant_percent of the workload group considering the configuration of the all workload groups.||
-|||||
 
 ## See also
 

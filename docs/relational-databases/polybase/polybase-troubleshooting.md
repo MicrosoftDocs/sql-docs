@@ -3,8 +3,8 @@ title: "Monitor and troubleshoot PolyBase"
 titlesuffix: SQL Server
 description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
 ms.date: 05/20/2021
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 dev_langs: 
 -  "TSQL"
@@ -264,7 +264,7 @@ Use DNS name to reroute connections to the active Name Node. In order to do this
 
 ## Log file locations
 
-In Windows servers, the logs are located in the installation directory path, by default: c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\.
+In Windows servers, the logs are located in the installation directory path, by default: c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\PolyBase\.
 
 In Linux servers, the logs are located by default in /var/opt/mssql/log/polybase.
 

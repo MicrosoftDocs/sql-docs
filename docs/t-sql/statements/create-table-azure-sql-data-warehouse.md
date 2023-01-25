@@ -4,7 +4,7 @@ description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azur
 author: markingmyname
 ms.author: maghan
 ms.reviewer: vanto, xiaoyul
-ms.date: 09/12/2022
+ms.date: 01/25/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:

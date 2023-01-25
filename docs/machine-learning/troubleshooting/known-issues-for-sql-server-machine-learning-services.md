@@ -4,7 +4,7 @@ description: This article describes known problems or limitations with the Pytho
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/06/2022
+ms.date: 1/25/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: troubleshooting
@@ -561,13 +561,11 @@ Executing an R script with `sp_execute_external_script` allows money, numeric, d
 
 ### Issues with the rxExecBy function - rxExecBy function cannot find installed package
 
-When `rxExecBy` function is called, a new R runtime process starts up. This new process does not have updated library paths, hence, packages installed in locations other than the default library path are not found during execution.
+When the `rxExecBy` function is called, a new R runtime process starts. This new process does not have updated library paths, hence, packages installed in locations other than the default library path are not found during execution.
 
 #### Workaround
 
-Path to R packages need to be explicitly updated. Suppose the packages are installed in the external libraries path, the R script below should be used to update library path.
-
-```.libPaths(c(Sys.getenv("MRS_EXTLIB_USER_PATH"), Sys.getenv("MRS_EXTLIB_SHARED_PATH"), .libPaths()))```
+The path to R packages needs to be explicitly updated. Suppose the packages are installed in the external libraries path, the following R script could be used to update library path: `.libPaths(c(Sys.getenv("MRS_EXTLIB_USER_PATH"), Sys.getenv("MRS_EXTLIB_SHARED_PATH"), .libPaths()))`
 
 ## Python script execution issues
 

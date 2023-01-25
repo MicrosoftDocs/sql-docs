@@ -66,7 +66,7 @@ In this case, the source SQL Server version when the backup was taken is 15.0.42
 
 1. Use one of the following options:
 
-- If Version A is greater than Version B, use the information that's in Latest updates and version history for SQL Server to upgrade Server B to the same build as Version A. 
+- If Version A is greater than Version B, use the information that's in Latest updates and version history for SQL Server to upgrade Server B to the same build as Version A.
 
 - If Version A is lesser than Version B, temporarily remove later updates by using the following steps:
 - 

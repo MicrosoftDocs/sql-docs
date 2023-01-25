@@ -172,7 +172,7 @@ To learn more about resource limits for Azure SQL Database, review:
 - In the vCore model: [single databases](resource-limits-vcore-single-databases.md), [elastic pools](resource-limits-vcore-elastic-pools.md)
 - In the DTU model: [single databases](resource-limits-dtu-single-databases.md), [elastic pools](resource-limits-dtu-elastic-pools.md)
 
-To learn more about resource limits for Azure SQL Managed Instance, review: [Resource limits](managed-instance/resource-limits.md). 
+To learn more about resource limits for Azure SQL Managed Instance, review: [Resource limits](../managed-instance/resource-limits.md). 
 
 ## Tools
 

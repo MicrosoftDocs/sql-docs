@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/28/2022
+ms.date: 01/25/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual

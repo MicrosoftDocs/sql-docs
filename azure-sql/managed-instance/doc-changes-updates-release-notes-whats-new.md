@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about the new features and documentation improvements for Azure SQL Managed Instance.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 11/30/2022
+ms.date: 02/01/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual

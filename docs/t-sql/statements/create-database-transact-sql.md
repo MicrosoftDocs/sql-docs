@@ -3,7 +3,7 @@ title: "CREATE DATABASE (Transact-SQL)"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
 author: markingmyname
 ms.author: maghan
-ms.date: 06/01/2022
+ms.date: 02/01/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

@@ -171,18 +171,22 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
 | Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
 | Tempdb max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 | 448 |
-| Storage type | [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)| [Note 1](#notes)|
-| Max local SSD IOPS <sup>1</sup> | 8000 | 16000 | 24000 | 32000 | 40000 | 48000 | 56000 |
+| Storage type | Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>|
+| Max local SSD IOPS <sup>2</sup> | 8000 | 16000 | 24000 | 32000 | 40000 | 48000 | 56000 |
 | Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
-| IO latency (approximate) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) |
+| IO latency (approximate) | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup>| Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> |
 | Max concurrent workers | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) |
+| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.   
+<sup>2</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
+<sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
+
+
 
 ### Gen5 compute generation (part 2 of 2)
 
@@ -197,18 +201,20 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 | Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
 | Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
 | Tempdb max data size (GB) | 512 | 576 | 640 | 768 | 1024 | 1280 |
-| Storage type | [Note 1](#notes) | [Note 1](#notes) | [Note 1](#notes) | [Note 1](#notes) | [Note 1](#notes) | [Note 1](#notes) |
-| Max local SSD IOPS <sup>1</sup> | 64000 | 72000 | 80000 | 96000 | 128000 | 160000 |
+| Storage type | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> |
+| Max local SSD IOPS <sup>2</sup> | 64000 | 72000 | 80000 | 96000 | 128000 | 160000 |
 | Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 |
-| IO latency (approximate) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) | [Note 2](#notes) |
+| IO latency (approximate) | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> |
 | Max concurrent workers | 1200 | 1350 | 1500 | 1800 | 2400 | 3000 |
 | Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
 | Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
-| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) |
+| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) |
 | Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
 | Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
 
-<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+<sup>1</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.   
+<sup>2</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
+<sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
 
 ## Hyperscale - provisioned compute - Gen5
 

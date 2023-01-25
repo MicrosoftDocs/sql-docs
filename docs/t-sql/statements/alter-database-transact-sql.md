@@ -3,7 +3,7 @@ title: "ALTER DATABASE (Transact-SQL)"
 description: ALTER DATABASE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: 01/25/2023
+ms.date: 02/01/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

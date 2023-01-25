@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 01/25/2023
+  ms.date: 02/01/2023
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

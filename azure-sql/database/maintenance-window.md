@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database and Azure SQL Managed Instanc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, urosmil
-ms.date: 12/01/2022
+ms.date: 1/24/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -72,6 +72,7 @@ Choosing a maintenance window other than the default is available on all SLOs **
 * Legacy Gen4 vCore
 * Basic, S0 and S1 
 * DC, Fsv2, M-series
+* Premium Series Hyperscale (Preview)
 
 ### Azure region support
 

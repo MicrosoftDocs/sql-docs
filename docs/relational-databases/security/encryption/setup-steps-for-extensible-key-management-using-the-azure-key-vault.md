@@ -297,6 +297,9 @@ You can generate four types of keys in an Azure key vault that will work with SQ
   > For the SQL Server Connector, use only the characters a-z, A-Z, 0-9, and hyphens (-), with a 26-character limit.
   > Different key versions under the same key name in an Azure key vault don't work with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure key vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see the Key Rollover steps in the "A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector" section of [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).
 
+> [!NOTE] 
+> When rotating versions of the key do not disable the version originally used to encrypt the database as SQL Server will be unable to recover the database (it will be in a 'recovery pending' state) and may generate a 'Crypto Exception' memory dump until the version is enabled.
+
 ### Import an existing key
 
 If you have an existing 2048-bit RSA software-protected key, you can upload the key to your Azure key vault. For example, if you have a PFX file saved to your `C:\` drive in a file named `softkey.pfx` that you want to upload to the Azure key vault, run the following command to set the variable `securepfxpwd` for a password of `12987553` for the PFX file:

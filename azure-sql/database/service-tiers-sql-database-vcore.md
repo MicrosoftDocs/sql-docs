@@ -44,14 +44,16 @@ For help with choosing between the vCore and DTU purchasing models, see the [dif
 
 ## Compute
 
-The vCore-based purchasing model has a provisioned compute tier and a [serverless](serverless-tier-overview.md) compute tier for Azure SQL Database. In the provisioned compute tier, the compute cost reflects the total compute capacity continuously provisioned for the application independent of workload activity. Choose the resource allocation that best suits your business needs based on vCore and memory requirements, then scale resources up and down as needed by your workload. In the serverless compute tier for Azure SQL Database, compute resources are auto-scaled based on workload capacity and billed for the amount of compute used, per second.
+The vCore-based purchasing model has a provisioned compute tier and a [serverless](serverless-tier-overview.md) compute tier. In the provisioned compute tier, the compute cost reflects the total compute capacity continuously provisioned for the application independent of workload activity. Choose the resource allocation that best suits your business needs based on vCore and memory requirements, then scale resources up and down as needed by your workload. In the serverless compute tier for Azure SQL Database, compute resources are auto-scaled based on workload capacity and billed for the amount of compute used, per second.
 
 To summarize: 
 
 - While the **provisioned compute tier** provides a specific amount of compute resources that are continuously provisioned independent of workload activity, the **serverless compute tier** auto-scales compute resources based on workload activity. 
 - While the **provisioned compute tier** bills for the amount of compute provisioned at a fixed price per hour, the **serverless compute tier** bills for the amount of compute used, per second.
 
-Regardless of the compute tier, three additional replicas are automatically allocated in the Business Critical service tier which means the price is approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage price per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
+Regardless of the compute tier, three additional high availability secondary replicas are automatically allocated in the Business Critical service tier to provide high resiliency to failures and fast failovers. This makes the cost approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage cost per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
+
+In Hyperscale, customers control the number of additional high availability replicas from 1 to 4 to get the level of resiliency required by their applications while controlling costs.
 
 ## Data and log storage
 
@@ -64,6 +66,12 @@ The following factors affect the amount of storage used for data and log files, 
 - In the General Purpose and Business Critical tiers, you are charged for the maximum storage size configured for a database or elastic pool.
 - For SQL Database, you can select any maximum data size between 1 GB and the supported storage size maximum, in 1 GB increments. 
 
+The following storage considerations apply to Hyperscale:
+
+- Maximum data storage size is set to 100 TB and is not configurable.
+- You are charged for the allocated data storage.
+- You are not charged for log storage.
+- `tempdb` uses local SSD storage, and its cost is included in the vCore price.
 To monitor the current allocated and used data storage size in SQL Database, use the *allocated_data_storage* and *storage* Azure Monitor [metrics](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) respectively. 
 
 To monitor the current allocated and used storage size of individual data and log files in a database by using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
@@ -78,18 +86,19 @@ Storage for database backups is allocated to support the [point-in-time restore 
 - **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [Azure storage](automated-backups-overview.md#restore-capabilities) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 1 and 35 days for SQL Database. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
 - **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in Azure Blob storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage will be used for LTR backups. For more information, see [Long-term backup retention](long-term-retention-overview.md).
 
+For backup storage in Hyperscale, see [Automated backups for Hyperscale databases](hyperscale-automated-backups-overview.md).
 
 ## Service tiers
 
-Service tier options in the vCore purchasing model include General Purpose, Business Critical, and Hyperscale. The service tier generally defines hardware, storage type and IOPS, high availability and disaster recovery options, and other features like memory optimized object types.
+Service tier options in the vCore purchasing model include General Purpose, Business Critical, and Hyperscale. The service tier generally determines storage type and performance, high availability and disaster recovery options, and the availability of certain features such as In-Memory OLTP.
 
 |**Use case**|**General Purpose**|**Business Critical**|**Hyperscale**|
 |---|---|---|---|
-|**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several isolated replicas, and provides the highest I/O performance per database replica.|Most business workloads with highly scalable storage and read-scale requirements.  Offers higher resilience to failures by allowing configuration of more than one isolated database replica. |
+|**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several high availability secondary replicas, and provides the highest I/O performance. | The widest variety of workloads, including those with highly scalable storage and read-scale requirements.  Offers higher resilience to failures by allowing configuration of more than one high availability secondary replica. |
 | **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per compute node)|
-| **Storage size**<sup>1</sup> | 5 GB – 4 TB | 5 GB – 4 TB  |Up to 100 TB |
-| **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 5,000 IOPS with 200,000 maximum IOPS   | Max local SSD 327,680 IOPS <br/> Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload.|
+| **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
+| **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 8,000 IOPS with 200,000 maximum IOPS | Max local SSD 327,680 IOPS <br/> Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload.|
 | **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <sup>2</sup> <br/> Long term retention is not currently available |
 |**Availability**|1 replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |3 replicas, 1 [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA) (preview)|
 |**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS is not charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS is not charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS not yet charged. |
@@ -125,13 +134,13 @@ The General Purpose service tier is the default service tier in Azure SQL Databa
 
 ### Business Critical
 
-The Business Critical service tier model is based on a cluster of database engine processes. This architectural model relies on a quorum of always available database engine nodes to minimize performance impacts to your workload, even during maintenance activities. Azure upgrades and patches the underlying operating system, drivers, and SQL Server database engine transparently, with minimal down-time for end users. 
+The Business Critical service tier model is based on a cluster of database engine processes. This architectural model relies on a quorum of database engine nodes to minimize performance impacts to your workload, even during maintenance activities. Upgrades and patches of the underlying operating system, drivers, and the database engine occur transparently, with minimal down-time for end users. 
 
 In the Business Critical model, compute and storage is integrated on each node. Replication of data between database engine processes on each node of a four-node cluster achieves high availability, with each node using locally attached SSD as data storage. 
 
 ![Cluster of database engine nodes](./media/service-tier-business-critical/business-critical-service-tier.png)
 
-Both the SQL Server database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Every database is a cluster of database nodes with one primary database that is accessible for customer workloads, and three secondary processes containing copies of data. The primary node constantly pushes changes to the secondary nodes in order to ensure the data is available on secondary replicas if the primary node fails for any reason. Failover is handled by the SQL Server database engine – one secondary replica becomes the primary node and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary node.
+Both the database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Every database is a cluster of database nodes with one primary replica that is accessible for customer workloads, and three secondary replicas containing copies of data. The primary replica constantly pushes changes to the secondary replicas in order to ensure the data is available on secondary replicas if the primary fails for any reason. Failover is handled by the Service Fabric and the database engine – one secondary replica becomes the primary, and a new secondary replica is created to ensure there are enough nodes in the cluster. The workload is automatically redirected to the new primary replica.
 
 In addition, the Business Critical cluster has a built-in [Read Scale-Out](read-scale-out.md) capability that provides a free-of charge read-only replica used to run read-only queries (such as reports) that won't affect the performance of the workload on your primary replica.
 
@@ -141,9 +150,9 @@ The Business Critical service tier is designed for applications that require low
 
 The key reasons why you should choose Business Critical service tier instead of General Purpose tier are:
 
--    **Low I/O latency requirements** – workloads that need a fast response from the storage layer (1-2 milliseconds in average) should use Business Critical tier. 
--    **Workload with reporting and analytic queries** that can be redirected to the free-of-charge secondary read-only replica.
-- **Higher resiliency and faster recovery from failures**. In case there is system failure, the database on primary instance is disabled and one of the secondary replicas immediately becomes the new read-write primary database, ready to process queries. There is no need for the database engine to analyze and redo transactions from the log file or load data into memory buffers.
+- **Low I/O latency requirements** – workloads that need a consistently fast response from the storage layer (1-2 milliseconds in average) should use Business Critical tier. 
+- **Workload with reporting and analytic queries** where a single free-of-charge secondary read-only replica is sufficient.
+- **Higher resiliency and faster recovery from failures**. In case there is system failure, the database on primary instance is disabled and one of the secondary replicas immediately becomes the new read-write primary database, ready to process queries.
 - **Advanced data corruption protection**. Since the Business Critical tier uses databases replicas behind the scenes, the service leverages automatic page repair available with [mirroring and availability groups](/sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring) to help mitigate data corruption. If a replica can't read a page due to a data integrity issue, a fresh copy of the page is retrieved from another replica, replacing the unreadable page without data loss or customer downtime. This functionality is available in  the General Purpose tier if the database has geo-secondary replica.
 - **Higher availability** - The Business Critical tier in a multi-availability zone configuration provides resiliency to zonal failures and a higher availability SLA.
 - **Fast geo-recovery** - When [active geo-replication](active-geo-replication-overview.md) is configured, the Business Critical tier has a guaranteed Recovery Point Objective (RPO) of 5 seconds and Recovery Time Objective (RTO) of 30 seconds for 100% of deployed hours.
@@ -158,7 +167,16 @@ To learn more, review [Hyperscale service tier for Azure SQL Database](service-t
 
 ### When to choose this service tier 
 
-The Hyperscale service tier removes many of the practical limits traditionally seen in cloud databases. Where most other databases are limited by the resources available in a single node, databases in the Hyperscale service tier have no such limits. With its flexible storage architecture, storage grows as needed. In fact, Hyperscale databases aren't created with a defined max size. A Hyperscale database grows as needed - and you're billed only for the capacity you use. For read-intensive workloads, the Hyperscale service tier provides rapid scale-out by provisioning additional replicas as needed for offloading read workloads.
+The Hyperscale service tier removes many of the practical limits traditionally seen in cloud databases. Where most other databases are limited by the resources available in a single node, databases in the Hyperscale service tier have no such limits. With its flexible storage architecture, storage grows as needed. In fact, Hyperscale databases aren't created with a defined max size. A Hyperscale database grows as needed - and you're billed only for the capacity you use.
+
+Even though Hyperscale comes with advanced scaling capabilities, it is a great option for any workload and not just for large databases. With Hyperscale, you can:
+- Achieve **high resiliency and fast failure recovery** while controlling cost, by choosing the number of high availability replicas from 1 to 4.
+- Improve **high availability** by enabling zone redundancy for compute and storage.
+- Achieve **low I/O latency** (1-2 milliseconds on average) for the frequently accessed part of your database. For smaller databases, this may apply to the entire database.
+- Implement a large variety of **read scale-out scenarios** with named replicas.
+- Take advantage of **fast scaling**, without waiting for data to be copied to local storage on new nodes.
+- Enjoy **zero-impact continuous database backup** and **fast restore**.
+- Support **business continuity** requirements by using failover groups and geo-replication.
 
 ## Resource limits
 

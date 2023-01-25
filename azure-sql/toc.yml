@@ -1411,8 +1411,6 @@
         href: managed-instance/scripts/create-configure-managed-instance-cli.md
       - name: Configure transparent data encryption (TDE)
         href: managed-instance/scripts/transparent-data-encryption-byok-sql-managed-instance-cli.md
-      - name: Restore geo-backup
-        href: managed-instance/scripts/restore-geo-backup-cli.md  
     - name: Azure PowerShell
       items:
       - name: Samples overview

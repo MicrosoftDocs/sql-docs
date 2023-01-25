@@ -41,7 +41,6 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) release.
 | Notebooks | Provide option for users to convert markdown to a table or not when HMTL table tag is present. |
 | Object Explorer | Databases are no longer brought online in serverless Azure SQL when Databases node is expanded. |
 | Object Explorer | Added support for Ledger views. |
-| Object Explorer | Fixed issue with key binding for objectExplorer.manage not working. |
 | Query Editor | Fixes and updates to SQL grammar (colorization and auto-complete). |
 | Query Plan Viewer | Changed default folder to be user’s home directory when saving a query plan. |
 | Query Results | Added ability to only copy Column Headers, and only for cells that are highlighted. |
@@ -66,6 +65,7 @@ Azure Data Studio 1.41.0 is the latest general availability (GA) release.
 | Notebooks | Improve Intellisense refresh in Notebook cells. |
 | Notebooks | Address issue with "New Notebook Job" resulting in an empty form. |
 | Object Explorer | Fixed issue with database list not loading. |
+| Object Explorer | Fixed issue with key binding for objectExplorer.manage not working. |
 | Query Execution | Fixed error generated when executing a query with LEFT JOIN and NULL values. |
 | Query Plan Viewer | When saving query plans (.sqlplan file), the filename will numerically increment to prevent duplicate filenames. |
 | Query Results | Fixed issue where users were unable to open JSON data as a new file. |

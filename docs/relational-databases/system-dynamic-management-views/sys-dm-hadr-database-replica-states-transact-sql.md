@@ -4,14 +4,14 @@ description: sys.dm_hadr_database_replica_states (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/26/2018"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
-  - "sys.dm_hadr_database_states_TSQL"
-  - "sys.dm_hadr_database_states"
-  - "dm_hadr_database_states"
-  - "dm_hadr_database_states_TSQL"
+  - "sys.dm_hadr_database_replica_states_TSQL"
+  - "sys.dm_hadr_database_replica_states"
+  - "dm_hadr_database_replica_states"
+  - "dm_hadr_database_replica_states_TSQL"
 helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_database_replica_states dynamic management view"

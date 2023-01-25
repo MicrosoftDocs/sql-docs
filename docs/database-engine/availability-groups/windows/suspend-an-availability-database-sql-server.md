@@ -4,8 +4,8 @@ description: Learn about suspending the data movement for a database within an A
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 f1_keywords:

@@ -4,8 +4,8 @@ description: Learn about OLE DB Driver for SQL Server support for sparse columns
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Sparse Columns Support (OLE DB)
@@ -16,7 +16,7 @@ ms.topic: "reference"
   This topic provides information about OLE DB Driver for SQL Server support for sparse columns. For more information about sparse columns, see [Sparse Columns Support in OLE DB Driver for SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). For a sample, see [Display Column and Catalog Metadata for Sparse Columns &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
   
 ## OLE DB Statement Metadata  
- Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a new DBCOLUMNFLAGS flag value, DBCOLUMNFLAGS_SS_ISCOLUMNSET, is available. This value should be set for columns that are **column_set** values. The DBCOLUMNFLAGS flag can be retrieved through the *dwFlags* parameter of IColumnsInfo::GetColumnsInfo and the DBCOLUMN_FLAGS column of the rowset returned by IColumnsRowset::GetColumnsRowset.  
+ Beginning with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], a new DBCOLUMNFLAGS flag value, DBCOLUMNFLAGS_SS_ISCOLUMNSET, is available. This value should be set for columns that are **column_set** values. The DBCOLUMNFLAGS flag can be retrieved through the *dwFlags* parameter of IColumnsInfo::GetColumnsInfo and the DBCOLUMN_FLAGS column of the rowset returned by IColumnsRowset::GetColumnsRowset.  
   
 ## OLE DB Catalog Metadata  
  Two additional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific columns have been added to DBSCHEMA_COLUMNS.  

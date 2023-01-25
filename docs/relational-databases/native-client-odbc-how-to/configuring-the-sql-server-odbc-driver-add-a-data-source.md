@@ -3,10 +3,9 @@ title: "Add a Data Source (ODBC) | Microsoft Docs"
 description: Learn how SQL Server ODBC driver calls stored procedures as remote stored procedures in SQL Server using the remote stored procedure call mechanism.
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data sources [ODBC]"

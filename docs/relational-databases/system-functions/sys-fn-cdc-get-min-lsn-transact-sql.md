@@ -3,10 +3,9 @@ description: "sys.fn_cdc_get_min_lsn (Transact-SQL)"
 title: "sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_get_min_lsn"
@@ -27,7 +26,7 @@ ms.author: randolphwest
 
   Returns the start_lsn column value for the specified capture instance from the [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) system table. This value represents the low endpoint of the validity interval for the capture instance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

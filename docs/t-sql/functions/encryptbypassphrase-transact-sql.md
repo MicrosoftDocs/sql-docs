@@ -4,8 +4,8 @@ description: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/30/2022"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ENCRYPTBYPASSPHRASE"
@@ -25,7 +25,7 @@ dev_langs:
   > [!NOTE]
   > SQL Server 2017 and later versions encrypts data with a passphrase using an AES256 key.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

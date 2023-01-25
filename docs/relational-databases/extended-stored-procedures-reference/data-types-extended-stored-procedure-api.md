@@ -4,9 +4,8 @@ description: Learn about how Extended Stored Procedure API data types can be exp
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], data types"

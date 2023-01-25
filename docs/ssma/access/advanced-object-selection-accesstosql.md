@@ -1,11 +1,11 @@
 ---
 description: "Advanced Object Selection  (AccessToSQL)"
 title: "Advanced Object Selection  (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
 author: cpichuka 

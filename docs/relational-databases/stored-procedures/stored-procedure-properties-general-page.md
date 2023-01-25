@@ -3,8 +3,8 @@ title: "Stored Procedure Properties (General Page) | Microsoft Docs"
 description: Learn how to use the Stored Properties (General Page) to view read-only information about a stored procedure.
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 

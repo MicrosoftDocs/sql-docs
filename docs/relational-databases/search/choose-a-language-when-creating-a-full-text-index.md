@@ -2,9 +2,8 @@
 description: "Choose a Language When Creating a Full-Text Index"
 title: "Choose a Language When Creating a Full-Text Index | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql  
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql 
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"
@@ -34,7 +33,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016"
  This section provides an introduction to word breakers and stemmers, and discusses how full-text search uses the LCID of the column-level language.  
   
 ### Introduction to Word Breakers and Stemmers  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions include a complete new family of word breakers and stemmers that are significantly better than those previously available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions include a complete new family of word breakers and stemmers that are significantly better than those previously available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  The Microsoft Natural Language Group (MS NLG) implemented and supports these new linguistic components.  

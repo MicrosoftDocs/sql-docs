@@ -3,10 +3,9 @@ description: "Extending the Data Flow with the Script Component"
 title: "Extending the Data Flow with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"

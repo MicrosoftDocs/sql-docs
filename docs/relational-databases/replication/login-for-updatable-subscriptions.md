@@ -3,10 +3,9 @@ description: "Login for Updatable Subscriptions"
 title: "Login for Updatable Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"

@@ -3,10 +3,9 @@ description: "catalog.delete_environment_reference (SSISDB Database)"
 title: "catalog.delete_environment_reference (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
 author: chugugrace

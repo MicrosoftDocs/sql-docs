@@ -3,7 +3,6 @@ description: "The sp_help_change_feed system stored procedure monitors the curre
 title: "sp_help_change_feed (Transact-SQL)"
 ms.date: 11/09/2022
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 
@@ -24,7 +23,7 @@ Monitors the current configuration of the [Azure Synapse Link change feed](../..
 
 ## Syntax  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ```syntaxsql  
 EXECUTE sys.sp_help_change_feed;

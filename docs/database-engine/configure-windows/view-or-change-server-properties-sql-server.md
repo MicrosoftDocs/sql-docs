@@ -4,8 +4,8 @@ description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 03/14/2017
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ms.custom: contperf-fy20q4
 f1_keywords:

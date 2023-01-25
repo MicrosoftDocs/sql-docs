@@ -1,9 +1,8 @@
 ---
 title: View and Analyze Traces
 description: Find out how to use SQL Server Profiler to view trace data, find specific events, display object names, and troubleshoot problems.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: profiler
+ms.service: sql
+ms.subservice: profiler
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
@@ -14,7 +13,7 @@ ms.date: 03/14/2017
 
 # View and Analyze Traces with SQL Server Profiler
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Use SQL Server Profiler to view captured event data in a trace. SQL Server Profiler displays data based on defined trace properties. One way to analyze SQL Server data is to copy the data to another program, such as SQL Server or  Database Engine  Tuning Advisor. Database Engine Tuning Advisor can use a trace file that contains SQL batch and remote procedure call (RPC) events if the **Text** data column is included in the trace. To make sure that the correct events and columns are captured for use with Database Engine Tuning Advisor, use the predefined Tuning template that is supplied with SQL Server Profiler .  
   

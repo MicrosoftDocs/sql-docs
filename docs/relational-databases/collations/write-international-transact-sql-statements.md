@@ -3,9 +3,9 @@ description: "Write International Transact-SQL Statements"
 title: "Write International Transact-SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "writing international statements"

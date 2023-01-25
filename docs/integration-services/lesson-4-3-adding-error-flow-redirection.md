@@ -3,10 +3,9 @@ description: "Lesson 4-3: Add error flow redirection"
 title: "Step 3: Add error flow redirection | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace

@@ -3,10 +3,9 @@ title: "SQL Server, User Settable object"
 description: Learn about the User Settable object, which creates custom counter instances in SQL Server to monitor server aspects not monitored by existing counters.
 ms.custom: ""
 ms.date: "07/13/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "User Settable object"

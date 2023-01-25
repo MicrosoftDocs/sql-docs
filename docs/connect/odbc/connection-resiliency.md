@@ -4,8 +4,8 @@ description: Connection resiliency can transparently restore broken connections.
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 07/23/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connection resiliency in the ODBC driver

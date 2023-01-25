@@ -3,10 +3,9 @@ description: "System Stored Procedures (Transact-SQL)"
 title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.TSQLSysNoExpandPortal.f1"

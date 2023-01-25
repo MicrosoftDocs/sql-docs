@@ -3,10 +3,9 @@ description: "catalog.rename_environment (SSISDB Database)"
 title: "catalog.rename_environment (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace

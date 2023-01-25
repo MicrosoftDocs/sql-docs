@@ -3,9 +3,9 @@ description: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER"
 title: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "reference"
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: WilliamDAssafMSFT

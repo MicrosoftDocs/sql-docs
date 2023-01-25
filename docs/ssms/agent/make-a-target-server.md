@@ -1,9 +1,8 @@
 ---
 description: "Make a Target Server"
 title: "Make a Target Server"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.tsxwiz.complete.f1"
@@ -78,7 +77,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
   
 #### To make a target server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

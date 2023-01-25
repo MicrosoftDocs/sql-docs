@@ -3,9 +3,9 @@ description: "Global Settings (Editor) (SybaseToSQL)"
 title: "Global Settings (Editor) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
 author: cpichuka 

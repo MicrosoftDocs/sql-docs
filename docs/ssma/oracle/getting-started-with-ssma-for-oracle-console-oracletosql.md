@@ -1,12 +1,12 @@
 ---
 description: "Getting Started with SSMA  for Oracle Console (OracleToSQL)"
 title: "Getting Started with SSMA  for Oracle Console (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-get-started
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Oracle Console, Console Output Conventions"

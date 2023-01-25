@@ -1,11 +1,11 @@
 ---
 title: "Connecting to SQL Server (OracleToSQL) | Microsoft Docs"
 description: Learn how to connect to SQL Server to migrate an Oracle database. SSMA obtains and displays metadata for databases in SQL Server.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "11/16/2020"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to SQL Server,Synchronizing SQL Server Metadata"

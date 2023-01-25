@@ -4,9 +4,8 @@ description: Learn how srv_willconvert determines whether a specific data type c
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_willconvert"

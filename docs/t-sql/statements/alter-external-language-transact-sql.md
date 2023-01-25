@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rothja
 ms.date: 03/15/2021
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 ms.topic: language-reference
 dev_langs:
   - "TSQL"

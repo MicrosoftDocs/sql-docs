@@ -2,9 +2,8 @@
 title: Configure Firewall rules before running the T-SQL Debugger
 description: Learn how to configure the Windows Firewall rules before running the Transact-SQL (T-SQL) debugger when connected to an SQL Server in SQL Server Management Studio. 
 ms.custom: seo-lt-2019
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords:
   - "vs.debug.error.sqlde_accessdenied"
@@ -37,7 +36,7 @@ Windows Firewall rules must be configured to enable [!INCLUDE[tsql](../../includ
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger includes both server-side and client-side components. The server-side debugger components are installed with each instance of the Database Engine from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) or later. The client-side debugger components are included:
 
-- When you install the client-side tools from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.
+- When you install the client-side tools from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later.
 
 - When you install Microsoft Visual Studio 2010 or later.
 

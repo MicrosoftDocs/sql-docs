@@ -3,10 +3,9 @@ title: Derived Hierarchies
 description: Learn how to create a derived hierarchy to highlight any of the existing domain-based attribute relationships in a Master Data Services model.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "derived hierarchies"

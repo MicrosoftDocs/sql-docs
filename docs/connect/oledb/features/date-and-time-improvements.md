@@ -4,8 +4,8 @@ description: Learn about the OLE DB Driver for SQL Server support for the date a
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Date and Time Improvements
@@ -13,7 +13,7 @@ ms.topic: "reference"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This topic describes the OLE DB Driver for SQL Server support for the date and time data types that were added in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].
+  This topic describes the OLE DB Driver for SQL Server support for the date and time data types that were added in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)].
   
  For more information about date/time improvements, see [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).
 
@@ -22,7 +22,7 @@ ms.topic: "reference"
  The following sections describe various ways of using the new date and time types.  
   
 ### Use Date as a Distinct Data Type  
- Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], enhanced support for date/time types makes it more efficient to use the DBTYPE_DBDATE OLE DB type.  
+ Beginning with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], enhanced support for date/time types makes it more efficient to use the DBTYPE_DBDATE OLE DB type.  
   
 ### Use Time as a Distinct Data Type  
  OLE DB already has a data type that just contains the time, DBTYPE_DBTIME, which has a precision of 1 second.
@@ -39,7 +39,7 @@ ms.topic: "reference"
  Some applications require datetime values with timezone information. This is supported by the new DBTYPE_DBTIMESTAMPOFFSET type.
   
 ### Use Date/Time/Datetime/Datetimeoffset Data with Client-Side Conversions Consistent with Existing Conversions  
- The conversions are extended in a consistent manner to include conversions between all date and time types introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+ The conversions are extended in a consistent manner to include conversions between all date and time types introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)].  
   
 ## See Also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  

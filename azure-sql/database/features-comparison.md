@@ -110,7 +110,7 @@ The following table lists the major features of SQL Server and provides informat
 | [Trace flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) | No | Yes, but only limited set of global trace flags. See [DBCC differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#dbcc) |
 | [Transactional Replication](../managed-instance/replication-transactional-overview.md) | Yes, [Transactional and snapshot replication subscriber only](migrate-to-database-from-sql-server.md) | Yes (public preview) - see [limitations](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication). |
 | [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-tde) | Yes - General Purpose, Business Critical, and Hyperscale service tiers only.| [Yes](transparent-data-encryption-tde-overview.md) |
-| Windows authentication | No | Yes - see [Windows Authentication for Azure Active Directory principals](../managed-instance/winauth-azuread-overview.md) (public preview). |
+| Windows authentication | No | Yes - see [Windows Authentication for Azure Active Directory principals](../managed-instance/winauth-azuread-overview.md)|
 | [Windows Server Failover Clustering](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) | No. Other techniques that provide [high availability](high-availability-sla.md) are included with every database. Disaster recovery is discussed in [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md). | No. Other techniques that provide [high availability](high-availability-sla.md) are included with every database. Disaster recovery is discussed in [Overview of business continuity with Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md). |
 
 ## Platform capabilities
@@ -124,7 +124,7 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | Auto-scale | Yes, but only in [serverless model](serverless-tier-overview.md). In the non-serverless model, the change of service tier (change of vCore, storage, or DTU) is fast and online. The service tier change requires minimal or no downtime. | No, you need to choose reserved compute and storage. The change of service tier (vCore or max storage) is online and requires minimal or no downtime. |
 | [Automatic backups](automated-backups-overview.md) | Yes. Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. | Yes. Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. |
 | [Automatic tuning (indexes)](/sql/relational-databases/automatic-tuning/automatic-tuning)| [Yes](automatic-tuning-overview.md)| No |
-| [Availability Zones](/azure/availability-zones/az-overview) | Yes | No |
+| [Availability Zones](/azure/availability-zones/az-overview) | Yes | In preview for the Business Critical tier only |
 | [Azure Resource Health](/azure/service-health/resource-health-overview) | Yes | No |
 | [Short-term backup retention](automated-backups-overview.md#short-term-retention) | Yes. 7 days default, max 35 days. | Yes. 7 days default, max 35 days. |
 | [Data Migration Service (DMS)](/sql/dma/dma-overview) | Yes | Yes |

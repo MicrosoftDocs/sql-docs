@@ -1,9 +1,8 @@
 ---
 title: "Name Element for Database (DTA)"
 description: In the dta utility, the Name element for Database specifies the name of a database that you want to tune.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"

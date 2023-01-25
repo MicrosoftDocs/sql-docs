@@ -5,8 +5,8 @@ author: ericjulien
 ms.author: ericjulien
 ms.reviewer: randolphwest
 ms.date: 08/09/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ---
 # Configure the time zone on Linux

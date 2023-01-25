@@ -2,10 +2,9 @@
 title: Extract a Script from a Trace
 titleSuffix: SQL Server Profiler
 description: Learn how to extract Transact-SQL events from a trace file or table in SQL Server Profiler and save them as a Transact-SQL script file.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
 author: markingmyname
@@ -16,7 +15,7 @@ ms.date: "03/14/2017"
 
 # Extract a Script from a Trace (SQL Server Profiler)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how to extract [!INCLUDE[tsql](../../includes/tsql-md.md)] events from a trace file or table and save them as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

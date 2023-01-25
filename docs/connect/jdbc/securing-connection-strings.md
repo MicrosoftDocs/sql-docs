@@ -4,8 +4,8 @@ description: Learn how to secure connection string information when using the JD
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/31/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 

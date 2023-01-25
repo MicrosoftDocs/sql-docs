@@ -2,8 +2,8 @@
 title: SQL Server privacy supplement
 description: SQL Server privacy supplement
 ms.date: 05/31/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.reviewer: "wopeter"
 ms.custom: ""
 ms.topic: conceptual

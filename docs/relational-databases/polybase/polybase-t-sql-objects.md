@@ -2,8 +2,8 @@
 title: "PolyBase Transact-SQL reference"
 description: "Use PolyBase to query your external data in Hadoop, Azure Blob Storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, MongoDB, or CSV files."
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: tutorial
 helpviewer_keywords: 
   - "PolyBase, fundamentals"
@@ -246,7 +246,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed);
 
 ## Create external tables for Azure Data Lake Store
 
-Applies to: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], Analytics Platform System (PDW)
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], Analytics Platform System (PDW)
 
 For more information, see [Load with Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 

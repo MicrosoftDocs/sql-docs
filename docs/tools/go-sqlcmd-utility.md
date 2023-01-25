@@ -1,9 +1,8 @@
 ---
 title: go-sqlcmd utility (preview)
 description: The go-sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
@@ -201,6 +200,6 @@ These environment variables can be set to configure some aspects of Azure Active
 
 ## Next steps
 - [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-sqlcmd)
-- [Run on Docker](../linux/quickstart-install-connect-docker.md)
+- [Run SQL Server on Linux containers](../linux/quickstart-install-connect-docker.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

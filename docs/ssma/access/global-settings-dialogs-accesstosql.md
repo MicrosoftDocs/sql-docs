@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Dialogs) (AccessToSQL)"
 title: "Global Settings (Dialogs) (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 author: cpichuka 

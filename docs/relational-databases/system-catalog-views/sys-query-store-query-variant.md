@@ -4,9 +4,8 @@ description: The sys.query_store_query_variant system catalog view returns Query
 author: thesqlsith
 ms.author: derekw
 ms.date: 11/11/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "language-reference"
 ms.custom: event-tier1-sqlpass-2022
 f1_keywords:

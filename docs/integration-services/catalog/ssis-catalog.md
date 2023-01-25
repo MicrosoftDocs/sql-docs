@@ -3,10 +3,9 @@ description: "SSIS Catalog"
 title: "SSIS Catalog | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/17/2020
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.iscreatecatalog.f1"
@@ -370,7 +369,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 ###  <a name="open_dialog"></a> Open the Catalog Properties Dialog Box  
   
-1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 2.  Connect Microsoft SQL Server Database Engine.  
   

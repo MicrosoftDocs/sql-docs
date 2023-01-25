@@ -1,11 +1,11 @@
 ---
 description: "Creating Script Files (AccessToSQL)"
 title: "Creating Script Files (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: cpichuka 

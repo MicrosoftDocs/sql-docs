@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_10061"
 description: The server did not respond to the client request in SQL Server. See an explanation of the error and possible resolutions.
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "10061"
@@ -17,7 +17,7 @@ ms.date: "04/04/2017"
 
 # MSSQLSERVER_10061
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

@@ -4,8 +4,8 @@ description: "Automatically route all read-only traffic to a secondary replica u
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "02/25/2019"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
 helpviewer_keywords:

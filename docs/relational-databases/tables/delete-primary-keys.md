@@ -3,10 +3,9 @@ description: "Delete Primary Keys"
 title: "Delete Primary Keys"
 ms.custom: ""
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing primary keys"

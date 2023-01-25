@@ -4,8 +4,8 @@ description: Learn about the concepts, requirements, and components necessary fo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/15/2022
-ms.prod: sql
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"

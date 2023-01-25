@@ -1,11 +1,11 @@
 ---
 description: "Initializing Test Cases (OracleToSQL)"
 title: "Initializing Test Cases (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
 author: cpichuka 

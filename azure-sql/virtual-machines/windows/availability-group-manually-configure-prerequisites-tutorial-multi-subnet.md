@@ -219,21 +219,26 @@ Set the preferred DNS server address, join the domain, and then configure the se
 
 #### Set preferred DNS server address
 
-First, change the preferred DNS server address. To do so, follow these steps: 
+The preferred DNS server address [should not be updated](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#specify-dns-servers) directly within a VM, it should be edited from the [Azure portal, or Powershell, or Azure CLI](/azure/virtual-network/virtual-network-network-interface?tabs=network-interface-portal#change-dns-servers). The steps below are to make the change inside of the Azure portal:
 
-1. Go to your resource group in the [Azure portal](https://portal.azure.com) and select the second domain controller machine, such as **DC-VM-2**. 
-1. On the **DC-VM-2** page, select **Connect** to download the RDP file for remote desktop access and then open the file. 
-1. Connect to the RDP session using your configured administrator account (**DomainAdmin**) and password (**Contoso!0000**).
-1. Open the **Network and Sharing Center** and select the network interface. 
+1. Sign-in to the [Azure portal](https://portal.azure.com).
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/13-network-interface.png" alt-text="Network interface":::
+1. In the search box at the top of the portal, enter **Network interface**. Select **Network interfaces** in the search results.
 
-1. Open the **Properties** page. 
-1. Choose the **Internet Protocol Version 4 (TCP/IPv4)** and then select **Properties**.
-1. Select **Use the following DNS server addresses** and then specify the private IP address of the primary domain controller in **Preferred DNS server**, such as `10.38.0.4`. 
-1. Select **OK** and then **Close** to commit the changes. If you lose your remote desktop connection after changing the DNS IP address, go to the virtual machine in the [Azure portal](https://portal.azure.com) and restart the VM. 
+1. Select the network interface for the second domain controller that you want to view or change settings for from the list.
 
-### Join the domain 
+1. In **Settings**, select **DNS servers**.
+
+1. Select either:
+   
+    - **Inherit from virtual network**: Choose this option to inherit the DNS server setting defined for the virtual network the network interface is assigned to. This would automatically inherit the primary domain controller as the DNS server.
+   
+    - **Custom**: You can configure your own DNS server to resolve names across multiple virtual networks. Enter the IP address of the server you want to use as a DNS server. The DNS server address you specify is assigned only to this network interface and overrides any DNS setting for the virtual network the network interface is assigned to. If you select custom, then input the IP address of the primary domain controller, such as `10.38.0.4`.
+
+1. Select **Save**.
+1. If using a **Custom** DNS Server, return to the virtual machine in the Azure portal and restart the VM.
+
+### Join the domain
 
 Next, join the **corp.contoso.com** domain. To do so, follow these steps: 
 
@@ -245,7 +250,6 @@ Next, join the **corp.contoso.com** domain. To do so, follow these steps:
 1. In the **Windows Security** popup dialog, specify the credentials for the default domain administrator account (**CORP\DomainAdmin**) and the password (**Contoso!0000**).
 1. When you see the "Welcome to the corp.contoso.com domain" message, select **OK**.
 1. Select **Close**, and then select **Restart Now** in the popup dialog.
-
 
 #### Configure domain controller 
 

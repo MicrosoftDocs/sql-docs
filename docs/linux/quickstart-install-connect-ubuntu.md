@@ -4,9 +4,9 @@ description: This quickstart shows how to install SQL Server 2017 or SQL Server 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 10/20/2022
-ms.prod: sql
-ms.technology: linux
+ms.date: 01/23/2023
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
@@ -57,6 +57,23 @@ You can create your VM based on one of the following two Azure Marketplace image
 - [Ubuntu 18.04](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ubuntupro1804)
 
 When you use these images, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on Ubuntu Pro using the above Marketplace images, are fully supported by both Microsoft and Canonical.
+
+You can configure SQL Server on Linux with **mssql-conf**, using the following command:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf setup
+```
+
+::: moniker-end
+
+<!--SQL Server 2022 on Linux-->
+::: moniker range="= sql-server-linux-ver16 || = sql-server-ver16"
+
+## Azure Marketplace image
+
+You can create your VM based on the following Azure Marketplace image: [Ubuntu 20.04](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2022-ubuntupro2004).
+
+When you use this image, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on Ubuntu Pro using the above Marketplace images, are fully supported by both Microsoft and Canonical.
 
 You can configure SQL Server on Linux with **mssql-conf**, using the following command:
 
@@ -199,7 +216,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 1. Register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-preview.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2022.list)"
    ```
 
    > [!TIP]  
@@ -287,7 +304,7 @@ sudo apt install curl
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -334,7 +351,7 @@ sudo apt install curl
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
@@ -381,6 +398,6 @@ sudo apt install curl
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]
 
 ::: moniker-end

@@ -2,9 +2,8 @@
 title: "Comparing native and SharePoint Reporting Services report servers | Microsoft Docs"
 description: Learn about the central piece of a SQL Server Reporting Services installation, which consists of a processing engine and extensions to add functionality.
 ms.date: 06/10/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-sharepoint
+ms.service: reporting-services
+ms.subservice: report-server-sharepoint
 
 
 ms.topic: conceptual

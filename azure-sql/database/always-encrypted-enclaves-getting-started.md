@@ -58,10 +58,10 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 # [Portal](#tab/azure-portal)
 
 1. Browse to the [Select SQL deployment option](https://portal.azure.com/#create/Microsoft.AzureSQL) page.
-1. If you aren't already signed in to Azure portal, sign in when prompted.
+1. If you aren't already signed in to the Azure portal, sign in when prompted.
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Add to Azure SQL":::
+   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Screenshot of Azure portal, showing the Add to Azure SQL deployment option.":::
 
 1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the desired Azure **Subscription**.
 1. For **Resource group**, select **Create new**, enter a name for your resource group, and select **OK**.
@@ -78,17 +78,17 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. Leave **Want to use SQL elastic pool** set to **No**.
 1. Under **Compute + storage**, select **Configure database**, and select **Change configuration**.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database.png" alt-text="Configure database" lightbox="./media/always-encrypted-enclaves/portal-configure-database.png":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database.png" alt-text="Screenshot of Azure portal, hardware configuration, where to configure database." lightbox="./media/always-encrypted-enclaves/portal-configure-database.png":::
 
 1. Select the **DC-series** hardware configuration, and then select **OK**.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database.png" alt-text="Configure DC-series database":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database.":::
 
 1. Select **Apply**. 
 1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose**, **DC, 2 vCores, 32 GB storage**.
 1. Select **Next: Networking** at the bottom of the page.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database-basics.png" alt-text="Configure DC-series database - basics":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database-basics.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database - basics.":::
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
@@ -361,7 +361,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
 1. Open a new SSMS instance and connect to your database **with** Always Encrypted enabled for the database connection.
     1. Start a new instance of SSMS.
     2. In the **Connect to Server** dialog, specify the fully qualified name of your server (for example, *myserver135.database.windows.net*), and enter the administrator user name and the password you specified when you created the server.
-    3. Select **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, master database). 
+    3. Select **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, `master` database). 
     4. Select the **Always Encrypted** tab.
     5. Select the **Enable Always Encrypted (column encryption)** checkbox.
     6. Select **Enable secure enclaves**. (This step applies to SSMS 19 or later.)

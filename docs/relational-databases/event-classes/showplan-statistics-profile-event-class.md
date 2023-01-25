@@ -3,9 +3,9 @@ description: "Showplan Statistics Profile Event Class"
 title: "Showplan Statistics Profile Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Showplan Statistics Profile event class"

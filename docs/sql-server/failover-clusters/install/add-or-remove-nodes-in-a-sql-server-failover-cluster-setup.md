@@ -4,8 +4,8 @@ description: This article shows you how to add or remove nodes in an existing SQ
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
-ms.prod: sql
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "adding nodes"

@@ -4,8 +4,8 @@ description: "Learn how to specify PHP Data Types when retrieving data using the
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "converting data types"

@@ -1,9 +1,8 @@
 ---
 title: "Create Primary Keys in SQL Server"
 description: "Create Primary Keys"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "primary keys [SQL Server], creating"

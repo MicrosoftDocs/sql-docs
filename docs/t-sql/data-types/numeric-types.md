@@ -4,8 +4,8 @@ description: "Numeric types"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "07/22/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

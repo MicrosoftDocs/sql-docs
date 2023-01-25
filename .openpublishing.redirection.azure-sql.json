@@ -569,6 +569,31 @@
       "source_path_from_root": "/azure-sql/database/migrate-to-database-from-sql-server.md",
       "redirect_url": "/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/management-endpoint-find-ip-address.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/management-endpoint-verify-built-in-firewall.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/scripts/restore-geo-backup-cli.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/scripts/restore-geo-backup",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path_from_root": "/azure-sql/database/sql-database-vulnerability-assessment-rules.md",
+      "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/sql-database-vulnerability-assessment-rules-changelog.md",
+      "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog",
+      "redirect_document_id": false
     }
   ]
 }

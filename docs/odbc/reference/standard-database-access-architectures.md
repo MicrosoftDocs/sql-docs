@@ -3,10 +3,9 @@ description: "Standard Database Access Architectures"
 title: "Standard Database Access Architectures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
 author: David-Engel

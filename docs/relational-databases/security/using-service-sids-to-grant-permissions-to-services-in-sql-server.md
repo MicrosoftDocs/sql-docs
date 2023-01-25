@@ -6,8 +6,7 @@ author: randomnote1
 ms.author: dareist
 ms.date: "05/02/2019"
 ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ---
 
 # Using Service SIDs to grant permissions to services in SQL Server

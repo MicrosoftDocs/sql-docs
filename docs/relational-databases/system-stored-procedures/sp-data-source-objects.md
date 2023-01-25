@@ -3,10 +3,9 @@ description: "sp_data_source_objects returns list of table objects that are avai
 title: "sp_data_source_objects"
 ms.custom: ""
 ms.date: 06/06/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -28,7 +27,7 @@ Returns list of table objects that are available to be virtualized.
 
 ## Syntax  
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ```syntaxsql
 sp_data_source_objects  

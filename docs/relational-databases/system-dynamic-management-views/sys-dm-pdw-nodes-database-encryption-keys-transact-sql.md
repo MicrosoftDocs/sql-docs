@@ -4,8 +4,8 @@ description: sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 dev_langs:
@@ -59,7 +59,7 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
 
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] 
 
 ```sql
 --Query provides underlying distribution encryption status

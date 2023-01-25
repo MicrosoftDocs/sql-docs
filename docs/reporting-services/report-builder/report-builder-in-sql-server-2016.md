@@ -2,9 +2,8 @@
 title: "Microsoft Report Builder in SQL Server | Microsoft Docs"
 description: Microsoft Report Builder is a tool for authoring paginated reports for SQL Server Reporting Services and Power BI Report Server. To create a report, you specify data to retrieve, where to get it, and how to display it.
 ms.date: 05/10/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

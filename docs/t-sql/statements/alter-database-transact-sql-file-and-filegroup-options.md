@@ -5,9 +5,8 @@ description: Update a database's files and filegroups using Transact-SQL.
 author: markingmyname
 ms.author: maghan
 ms.date: "09/15/2021"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: seo-lt-2019
 f1_keywords:
@@ -47,7 +46,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 
 Modifies the files and filegroups associated with the database. Adds or removes files and filegroups from a database, and changes the attributes of a database or its files and filegroups. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 

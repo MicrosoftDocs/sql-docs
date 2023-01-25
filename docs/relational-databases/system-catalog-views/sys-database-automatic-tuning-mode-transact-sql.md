@@ -5,9 +5,8 @@ author: "danimir"
 ms.author: "danil"
 ms.reviewer: "wiassaf"
 ms.date: "07/06/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "database_automatic_tuning_mode_tsql"

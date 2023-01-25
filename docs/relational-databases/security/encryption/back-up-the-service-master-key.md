@@ -3,9 +3,9 @@ title: "Back Up the Service Master Key | Microsoft Docs"
 description: Learn how to back up the service master key in SQL Server by using Transact-SQL. The service master key is the root of the encryption hierarchy.
 ms.custom: ""
 ms.date: "04/02/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "service master key [SQL Server], exporting"

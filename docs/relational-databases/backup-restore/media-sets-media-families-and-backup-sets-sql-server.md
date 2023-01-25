@@ -5,9 +5,8 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:
@@ -57,7 +56,7 @@ This article describes the format that [!INCLUDE[ssNoVersion](../../includes/ssn
 > [!NOTE]  
 > Media sets can be mirrored to protect against a damaged media volume (a tape or disk file). For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
- Compressed and uncompressed backups can't occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+ Compressed and uncompressed backups can't occur together in a media set. Any edition of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
   
 ## Media Families  
@@ -204,7 +203,7 @@ Appending, which is the default behavior of the BACKUP, can be explicitly specif
  Microsoft Windows backups and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups can share the same media, but they aren't interoperable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup can't back up Windows data.  
   
 > [!IMPORTANT]  
-> Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+> Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  
 ##  <a name="Overwriting"></a> Overwriting backup sets  

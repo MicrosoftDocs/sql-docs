@@ -3,10 +3,9 @@ description: "Make an Attribute Group Visible to Users (Master Data Services)"
 title: Make an Attribute Group Visible to Users
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: CordeliaGrey

@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)

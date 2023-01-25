@@ -3,9 +3,9 @@ description: "MSSQLSERVER_35250"
 title: "MSSQLSERVER_35250 | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/06/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "35250 (Database Engine error)"

@@ -3,11 +3,10 @@ title: "Deploy and run SSIS packages in Azure | Microsoft Docs"
 description: Learn how you can move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Microsoft Azure cloud.
 ms.date: "04/06/2022"
 ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.custom:
   - intro-deployment
-ms.technology: integration-services
+ms.subservice: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan

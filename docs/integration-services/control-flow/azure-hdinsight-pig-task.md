@@ -3,10 +3,9 @@ description: "Azure HDInsight Pig Task"
 title: "Azure HDInsight Pig Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afppigtask.f1"

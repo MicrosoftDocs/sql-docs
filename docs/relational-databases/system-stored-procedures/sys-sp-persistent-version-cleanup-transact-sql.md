@@ -3,9 +3,9 @@ description: "The sys.sp_persistent_version_cleanup system stored procedure manu
 title: "sys.sp_persistent_version_cleanup (Transact-SQL)"
 ms.custom: ""
 ms.date: 07/12/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_persistent_version_cleanup"
@@ -28,7 +28,7 @@ It is not typically necessary to start the PVS cleanup process manually using `s
 
 For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax  
   

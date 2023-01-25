@@ -3,10 +3,9 @@ title: Database Requirements
 description: Use Master Data Services Configuration Manager to create and configure the Master Data Services database, which stores all master data.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: CordeliaGrey
@@ -42,7 +41,7 @@ ms.author: jiwang6
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Business Intelligence (64-bit) x64  
   
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise (64-bit) x64 - Upgrade from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Enterprise only  
+-   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise (64-bit) x64 - Upgrade from [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] Enterprise only  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Developer (64-bit) x64  
   

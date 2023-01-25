@@ -3,8 +3,8 @@ description: "Azure Data Lake Store File System Task"
 title: "Azure Data Lake Store File System Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2017"
-ms.prod: sql
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSTASK.F1"

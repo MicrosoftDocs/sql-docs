@@ -1,11 +1,11 @@
 ---
 description: "Assessing DB2 Schemas for Conversion (DB2ToSQL)"
 title: "Assessing DB2 Schemas for Conversion (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: cpichuka 

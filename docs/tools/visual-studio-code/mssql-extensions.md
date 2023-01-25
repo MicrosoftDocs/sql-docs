@@ -2,8 +2,8 @@
 title: Overview of Visual Studio Code mssql extensions
 description: Develop with the mssql extension for Visual Studio Code
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
@@ -12,7 +12,7 @@ ms.date: 5/24/2022
 
 # mssql extension for Visual Studio Code
 
-This article introduces the **mssql** extension for Visual Studio Code (VS Code) to work with databases in SQL Server on Windows, macOS, and Linux, as well as Azure SQL Database and Azure SQL Managed Instance. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) provides querying capabilities for Azure SQL and SQL Server as well as additional features for developers with SQL Projects and SQL bindings for Azure Functions.. The mssql extension for VS Code includes the [SQL Database Projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md).
+This article introduces the **mssql** extension for Visual Studio Code (VS Code) to work with databases in SQL Server on Windows, macOS, and Linux, as well as Azure SQL Database and Azure SQL Managed Instance. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) provides querying capabilities for Azure SQL and SQL Server as well as additional features for developers with SQL Projects and SQL bindings for Azure Functions. The mssql extension for VS Code includes the [SQL Database Projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md).
 
 
 ## Functionality overview
@@ -36,7 +36,7 @@ Both [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) a
 Benefits of working with Azure SQL and SQL Server in VS Code include:
 
 - Single code editor for your SQL and other code (such as C#, Python, JavaScript, Java, PHP, and Go).
-- Broad extension marketplace with extensions for remote development, Docker, and more.
+- Broad extension marketplace with extensions for remote development, containers, and more.
 - Available for use in GitHub Codespaces.
 
 

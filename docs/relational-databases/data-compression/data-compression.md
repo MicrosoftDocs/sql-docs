@@ -3,10 +3,9 @@ title: "Data compression"
 description: Apply row and page data compression, or columnstore and columnstore archival compression, using SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: 04/29/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords:
   - "page compression [Database Engine]"

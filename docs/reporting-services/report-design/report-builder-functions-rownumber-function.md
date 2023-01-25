@@ -2,9 +2,8 @@
 title: "RowNumber function in a paginated report | Microsoft Docs"
 description: Use the RowNumber function in Report Builder to return a running count of the number of rows in a paginated report for the specified scope.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

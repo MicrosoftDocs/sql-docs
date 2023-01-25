@@ -1,17 +1,19 @@
 ---
 title: Configure Active Directory authentication with SQL Server on Linux-based containers using adutil
 description: Step by step on how to configure Active Directory authentication with SQL Server on Linux containers using adutil
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: randolphwest
 ms.date: 03/07/2022
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux containers
+
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This tutorial explains how to configure SQL Server on Linux containers to support Active Directory authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 

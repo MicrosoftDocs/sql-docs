@@ -3,9 +3,8 @@ description: "Delete a SQL Server Agent Proxy"
 title: "Delete a SQL Server Agent Proxy"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting SQL Server Agent proxies"
@@ -64,7 +63,7 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
   
 #### To delete a SQL Server Agent proxy account  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

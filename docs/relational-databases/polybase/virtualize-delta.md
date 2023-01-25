@@ -5,8 +5,8 @@ author: HugoMSFT
 ms.author: hudequei 
 ms.reviewer: wiassaf
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: tutorial
 dev_langs:
   - "TSQL"
@@ -74,7 +74,7 @@ For example, if your storage account is named `delta_lake_sample` and the contai
 CREATE EXTERNAL DATA SOURCE Delta_ED
 WITH
 (
- LOCATION = 'abs://sink@delta_lake_sample.dfs.core.windows.net'
+ LOCATION = 'adls://sink@delta_lake_sample.dfs.core.windows.net'
 ,CREDENTIAL = delta_storage_dsc
 )
 ```

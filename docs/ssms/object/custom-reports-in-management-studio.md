@@ -1,10 +1,9 @@
 ---
 description: "Custom Reports in Management Studio"
 title: "Custom Reports in Management Studio"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.summary.new.custom.report.f1"

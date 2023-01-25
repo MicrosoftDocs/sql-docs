@@ -2,9 +2,8 @@
 title: "RS.exe Utility | Microsoft Docs"
 description: Learn about the commands and syntax for the rs.exe utility that processes scripts used to automate report server deployment and administration tasks.
 ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 
 
 ms.topic: conceptual
@@ -24,7 +23,7 @@ ms.author: maggies
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  
   
 > [!NOTE]  
->  Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
+>  Beginning with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
   
 ## Syntax  
   

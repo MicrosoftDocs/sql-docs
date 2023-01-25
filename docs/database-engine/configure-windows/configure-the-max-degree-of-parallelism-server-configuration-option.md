@@ -5,8 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: katsmith
 ms.date: 08/23/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ms.custom:
   - contperf-fy20q4
@@ -23,7 +23,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to configure the `max degree of parallelism` (MAXDOP) server configuration option in SQL Server by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[Azure Data Studio](../../includes/name-sos-short.md)], or [!INCLUDE[tsql](../../includes/tsql-md.md)]. When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a computer that has more than one microprocessor or CPU, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects whether parallelism can be used. The degree of parallelism sets the number of processors employed to run a single statement, for each parallel plan execution. You can use the `max degree of parallelism` option to limit the number of processors to use in parallel plan execution. For more detail on the limit set by `max degree of parallelism` (MAXDOP), see the [Considerations](#considerations) section in this page. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel inserts, online alter column, parallel stats collection, and static and keyset-driven cursor population.
+This topic describes how to configure the `max degree of parallelism` (MAXDOP) server configuration option in SQL Server by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[Azure Data Studio](../../includes/name-sos-short.md)], or [!INCLUDE[tsql](../../includes/tsql-md.md)]. When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a computer that has more than one microprocessor or CPU, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] detects whether parallelism can be used. The degree of parallelism sets the number of processors employed to run a single statement, for each parallel plan execution. You can use the `max degree of parallelism` option to limit the number of processors to use in parallel plan execution. For more detail on the limit set by `max degree of parallelism` (MAXDOP), see the [Considerations](#considerations) section in this page. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel inserts, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 
 > [!NOTE]
 > [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduced automatic recommendations for setting the MAXDOP server configuration option based on the number of processors available during the installation process. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md#maxdop).
@@ -61,7 +61,7 @@ This topic describes how to configure the `max degree of parallelism` (MAXDOP) s
 
 ### Recommendations
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], during service startup if the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects more than eight physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] places logical processors from the same physical core into different soft-NUMA nodes. The recommendations in the table below are aimed at keeping all the worker threads of a parallel query within the same soft-NUMA node. This will improve the performance of the queries and distribution of worker threads across the NUMA nodes for the workload. For more information, see [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], during service startup if the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] detects more than eight physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] places logical processors from the same physical core into different soft-NUMA nodes. The recommendations in the table below are aimed at keeping all the worker threads of a parallel query within the same soft-NUMA node. This will improve the performance of the queries and distribution of worker threads across the NUMA nodes for the workload. For more information, see [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
 
 Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
 
@@ -76,7 +76,7 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], use the foll
 > NUMA node in the above table refers to soft-NUMA nodes automatically created by [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and higher versions, or hardware-based NUMA nodes if soft-NUMA has been disabled.
 > Use these same guidelines when you set the max degree of parallelism option for Resource Governor workload groups. For more information, see [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
-From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
+From [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
 
 |Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|

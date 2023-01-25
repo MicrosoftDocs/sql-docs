@@ -2,10 +2,9 @@
 description: "Spatial Data (SQL Server)"
 title: "Spatial Data (SQL Server) | Microsoft Docs"
 ms.date: "10/11/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geography data type [SQL Server], spatial storage design"

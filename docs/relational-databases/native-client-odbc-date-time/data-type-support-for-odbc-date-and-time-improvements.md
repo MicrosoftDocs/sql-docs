@@ -3,10 +3,9 @@ title: "Type support, ODBC Date and Time"
 description: Learn about ODBC types that support SQL Server date and time data types, including data type mapping and formats for strings, literals, and data structures.
 ms.custom: ""
 ms.date: 12/18/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], data type support"

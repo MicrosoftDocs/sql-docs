@@ -5,8 +5,8 @@ description: "Learn how to use Data Migration Assistant to migrate a SQL Server 
 author: rajeshsetlem
 ms.author: rajpo
 ms.date: "12/19/2019"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

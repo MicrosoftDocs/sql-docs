@@ -60,7 +60,7 @@ In addition to T-SQL statements related to the unsupported features described in
 - `sp_configure` and `RECONFIGURE`. [ALTER DATABASE SCOPED CONFIGURATION](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql) is supported.
 - `sp_helpuser`
 - `sp_migrate_user_to_contained`
-- SQL Server Agent: Syntax that relies upon the SQL Server Agent or the MSDB database: alerts, operators, central management servers. Use scripting, such as PowerShell, instead.
+- SQL Server Agent: Syntax that relies upon the SQL Server Agent or the `msdb` database: alerts, operators, central management servers. Use scripting, such as PowerShell, instead.
 - SQL Server audit: Use SQL Database [auditing](auditing-overview.md) instead.
 - SQL Server trace.
 - Trace flags.

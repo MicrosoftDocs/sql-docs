@@ -3,9 +3,9 @@ description: "xml Data Type Methods"
 title: xml Data Type Methods
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"

@@ -3,10 +3,9 @@ title: "TCP/IP Properties (Protocols Tab)"
 description: Use the options in the Protocols tab of the TCP/IP Properties dialog box to configure the keep alive interval, the enabled flag, and other properties.
 ms.custom: seo-lt-2019
 ms.date: "08/24/2016"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TCP/IP [SQL Server], configuration options"

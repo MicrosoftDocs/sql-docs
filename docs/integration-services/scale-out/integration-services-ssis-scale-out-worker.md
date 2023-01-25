@@ -3,10 +3,9 @@ title: "SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs
 description: "Learn details about the Scale Out Master component of SQL Server Integration Services (SSIS) Scale Out."
 ms.custom: performance
 ms.date: 01/19/2019
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"

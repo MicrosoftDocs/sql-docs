@@ -3,10 +3,9 @@ description: "sp_db_vardecimal_storage_format (Transact-SQL)"
 title: "sp_db_vardecimal_storage_format (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_db_vardecimal_storage_format"
@@ -27,7 +26,7 @@ ms.author: maghan
 # sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns the current vardecimal storage format state of a database or enables a database for vardecimal storage format.  Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], user databases are always enabled. Enabling databases for the vardecimal storage format is only necessary in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+  Returns the current vardecimal storage format state of a database or enables a database for vardecimal storage format.  Starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], user databases are always enabled. Enabling databases for the vardecimal storage format is only necessary in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 > [!NOTE]  
 > [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] supports the vardecimal storage format; however, because row-level compression achieves the same goals, the vardecimal storage format is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
@@ -51,7 +50,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Specifies whether the vardecimal storage format is enabled. @vardecimal_storage_format can be ON or OFF. The parameter is **varchar(3)**, with no default. If a database name is provided but @vardecimal_storage_format is omitted, the current setting of the specified database is returned. 
  
  > [!IMPORTANT]
- > This argument has no effect on [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions.  
+ > This argument has no effect on [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later versions.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

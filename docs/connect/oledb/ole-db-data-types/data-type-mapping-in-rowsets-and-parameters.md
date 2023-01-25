@@ -4,8 +4,8 @@ description: Learn how the OLE DB Driver for SQL Server represents SQL Server da
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/21/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "mapping data types [OLE DB]"

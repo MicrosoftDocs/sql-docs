@@ -4,7 +4,7 @@ description: An overview of monitoring and performance tuning capabilities and m
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, urmilano
-ms.date: 07/29/2022
+ms.date: 11/30/2022
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
@@ -85,27 +85,6 @@ Starting in September 2020, databases with extremely low usage may show in the p
 
 For example: Consider a 1-minute window with the following four data points: 0.1, 0.1, 0.1, 0.1, these low values are rounded down to 0, 0, 0, 0 and present an average of 0. If any of the data points are greater than 0.5, for example: 0.1, 0.1, 0.9, 0.1, they are rounded to 0, 0, 1, 0 and show an avg of 0.25.
 
-Affected database metrics:
-- cpu_percent
-- log_write_percent
-- workers_percent
-- sessions_percent
-- physical_data_read_percent
-- dtu_consumption_percent2
-- xtp_storage_percent
-
-Affected elastic pool metrics:
-- cpu_percent
-- physical_data_read_percent
-- log_write_percent
-- memory_usage_percent
-- data_storage_percent
-- peak_worker_percent
-- peak_session_percent
-- xtp_storage_percent
-- allocated_data_storage_percent
-
-
 ## Generate intelligent assessments of performance issues
 
 [Intelligent Insights](intelligent-insights-overview.md) for Azure SQL Database and Azure SQL Managed Instance uses built-in intelligence to continuously monitor database usage through artificial intelligence and detect disruptive events that cause poor performance. Intelligent Insights automatically detects performance issues with databases based on query execution wait times, errors, or time-outs. Once detected, a detailed analysis is performed by Intelligent Insights that generates a resource log called SQLInsights (unrelated to the [Azure Monitor SQL Insights (preview)](monitoring-sql-database-azure-monitor.md)). SQLInsights is an [intelligent assessment of the issues](intelligent-insights-troubleshoot-performance.md). This assessment consists of a root cause analysis of the database performance issue and, where possible, recommendations for performance improvements.
@@ -142,7 +121,7 @@ You can stream metrics and resource logs to [Azure Event Hubs](/azure/azure-moni
   Stream all of your metrics and resource logs to a single event hub to pipe log data to a third-party SIEM or log analytics tool.
 - **Build a custom telemetry and logging platform**
 
-  The highly scalable publish-subscribe nature of event hubs allows you to flexibly ingest metrics and resource logs into a custom telemetry platform. See [Designing and Sizing a Global Scale Telemetry Platform on Azure Event Hubs](https://azure.microsoft.com/documentation/videos/build-2015-designing-and-sizing-a-global-scale-telemetry-platform-on-azure-event-Hubs/) for details.
+  The highly scalable publish-subscribe nature of event hubs allows you to flexibly ingest metrics and resource logs into a custom telemetry platform. For more information, see [Azure Event Hubs](/azure/event-hubs/event-hubs-about).
 - **View service health by streaming data to Power BI**
 
   Use Event Hubs, Stream Analytics, and Power BI to transform your diagnostics data into near real-time insights on your Azure services. See [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](/azure/stream-analytics/stream-analytics-power-bi-dashboard) for details on this solution.

@@ -4,9 +4,8 @@ description: Learn how srv_pfieldex in the Extended Stored Procedure API returns
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_pfieldex"

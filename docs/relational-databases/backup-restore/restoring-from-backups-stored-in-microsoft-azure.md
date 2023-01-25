@@ -2,11 +2,10 @@
 title: "Restoring From Backups Stored in Microsoft Azure | Microsoft Docs"
 description: Understand considerations for restoring a SQL Server database using a backup stored in Azure Blob storage. 
 ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.date: 11/10/2022
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MashaMSFT
@@ -32,7 +31,7 @@ ms.author: mathoma
 -   The restore task is used to restore a database using the SQL Server Management Studio. The backup media page now includes the **URL** option to show backup files stored in Azure Blob Storage. You also must provide the SQL Credential that is used to authenticate to the storage account. The **Backup sets to restore** grid is then populated with the available backups in the Azure Blob storage. For more information, see [Restoring from Azure storage Using SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 ### Optimizing Restores  
- To reduce restore write time, Add **perform volume maintenance tasks** user right to the SQL Server user account. For more information, see [Database File Initialization](/previous-versions/sql/sql-server-2008-r2/ms175935(v=sql.105)). If restore is still slow with instant file initialization turned on, look at the size of the log file on the instance where the database was backed up. If the log is very large in size (multiple GBs), it would be expected that restore would be slow. During restore the log file must be zeroed which takes a significant amount of time.  
+ To reduce restore write time, Add **perform volume maintenance tasks** user right to the SQL Server user account. For more information, see [Database File Initialization](../databases/database-instant-file-initialization.md). If restore is still slow with instant file initialization turned on, look at the size of the log file on the instance where the database was backed up. If the log is very large in size (multiple GBs), it would be expected that restore would be slow. During restore the log file must be zeroed which takes a significant amount of time. The initial restore of database transaction log files cannot benefit from instant file initialization.
   
  To reduce restore times it is recommended that you use compressed backups.  For backup sizes exceeding 25 GB, use [AzCopy utility](/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) to download to the local drive and then perform the restore. For other backup best practices and recommendations, see [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   

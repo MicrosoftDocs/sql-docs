@@ -2,10 +2,9 @@
 title: Set Global Trace Options
 titleSuffix: SQL Server Profiler
 description: Learn how to set global trace options, and read about the options that a specific instance of SQL Server Profiler can apply to all traces.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
@@ -16,7 +15,7 @@ ms.date: 03/01/2017
 
 # Set Global Trace Options (SQL Server Profiler)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how to set options that apply to all traces that are created with a specific instance of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

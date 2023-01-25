@@ -3,10 +3,9 @@ description: "catalog.operation_messages (SSISDB Database)"
 title: "catalog.operation_messages (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "catalog.operation_messages view [Integration Services]"

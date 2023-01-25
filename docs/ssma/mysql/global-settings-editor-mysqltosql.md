@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Editor) (MySQLToSQL)"
 title: "Global Settings (Editor) (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
 author: cpichuka 

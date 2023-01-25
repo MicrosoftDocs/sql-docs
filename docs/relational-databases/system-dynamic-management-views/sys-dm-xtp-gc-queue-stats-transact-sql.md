@@ -4,10 +4,14 @@ description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
+  - "sys.dm_xtp_gc_queue_stats"
+  - "dm_xtp_gc_queue_stats"
+  - "sys.dm_xtp_gc_queue_stats_TSQL"
+  - "dm_xtp_gc_queue_stats_TSQL"
 helpviewer_keywords:
   - "sys.dm_xtp_gc_stats dynamic management view"
 dev_langs:

@@ -3,9 +3,9 @@ description: "MSSQLSERVER_3989"
 title: MSSQLSERVER_3989
 ms.custom: ""
 ms.date: 12/25/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "3989 (Database Engine error)"

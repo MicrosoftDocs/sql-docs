@@ -2,8 +2,8 @@
 description: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option"
 title: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "INCLUDE_NULL_VALUES (FOR JSON)"
@@ -15,7 +15,7 @@ ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Include Null Values in JSON - INCLUDE_NULL_VALUES Option
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   To include null values in the JSON output of the **FOR JSON** clause, specify the **INCLUDE_NULL_VALUES** option.  
   

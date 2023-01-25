@@ -2,11 +2,10 @@
 title: "SQL Server managed backup to Microsoft Azure | Microsoft Docs"
 description: SQL Server Managed Backup to Microsoft Azure manages and automates SQL Server backups to Microsoft Azure Blob storage. 
 ms.custom: ""
-ms.date: 10/05/2021
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.date: 12/14/2022
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MashaMSFT
@@ -93,7 +92,7 @@ ms.author: mathoma
 -   Any time the transaction log backup is lagging behind a full database backup. The goal is to keep the log chain ahead of full backup.  
   
 ## Retention Period Settings  
- When enabling backup you must set the retention period in days: The minimum is 1 day, and maximum is 30 days.  
+ When enabling backup you must set the retention period in days: The minimum is 1 day, and maximum is 90 days.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] based on the retention period settings, assesses the ability to recover to a point in time in the specified time, to determine what backup files to keep and identifying the backup files to delete. The backup_finish_date of the backup is used to determine and match the time specified by the retention period settings.  
   
@@ -120,6 +119,8 @@ ms.author: mathoma
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses the Backup to Block Blob feature. The maximum size of a block blob is 200 GB. But by utilizing striping, the maximum size of an individual backup can be up to 12 TB. If your backup requirements exceed this, consider using compression, and test the backup file size prior to setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You can either test by backing up to a local disk or manually backing up to Microsoft Azure storage using **BACKUP TO URL** Transact-SQL statement. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] may have some limitations when it is configured with other technologies supporting backup, high availability, or disaster recovery.  
+
+-   Backups of databases in an Availability Group will be a [**copy_only** backup](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
   
 ## See Also  
 - [Enable SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   

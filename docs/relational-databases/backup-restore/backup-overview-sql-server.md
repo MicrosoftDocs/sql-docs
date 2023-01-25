@@ -3,10 +3,9 @@ title: "Backup Overview (SQL Server) | Microsoft Docs"
 description: Learn about the SQL Server backup component, including backup types and restrictions, and also backup devices and backup media.
 ms.custom: ""
 ms.date: "07/15/2016"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [SQL Server], backing up data"
@@ -92,7 +91,7 @@ ms.author: mathoma
  Multiple copies (mirrors) of a media set.  
   
 ##  <a name="BackupCompression"></a> Backup compression  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
 ##  <a name="Restrictions"></a>  Backup operations restrictions 
  Backup can occur while the database is online and being used. However, the following restrictions exist:  

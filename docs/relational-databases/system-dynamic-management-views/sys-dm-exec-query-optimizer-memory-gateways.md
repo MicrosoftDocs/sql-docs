@@ -5,9 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
 ms.date: "04/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 f1_keywords:

@@ -264,7 +264,7 @@ SQL Managed Instance and Database are built on top of inherent [high availabilit
 
 #### How does disaster recovery work in SQL Managed Instance and SQL Database?
 
-See the [SQL Database and SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md) documentation. [SQL Managed Instance Frequently Asked Questions](/azure/azure-sql/managed-instance/frequently-asked-questions-faq#business-continuity) provide information on DR options.
+See the [SQL Database and SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md) documentation. [SQL Managed Instance Frequently Asked Questions](../managed-instance/frequently-asked-questions-faq.yml#business-continuity) provide information on DR options.
 
 ### Performance and scale
 

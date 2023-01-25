@@ -3,9 +3,9 @@ title: "Modify Statistics | Microsoft Docs"
 description: Learn how to modify existing statistics in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statistics [SQL Server], modifying"

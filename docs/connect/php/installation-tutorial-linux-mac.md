@@ -4,8 +4,8 @@ description: "In these instructions, learn how to install the Microsoft Drivers 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/01/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.custom: intro-installation
 ---

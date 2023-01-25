@@ -3,10 +3,9 @@ title: "Monitor & enforce best practices using Policy-Based Management"
 description: Policy-based management provides a set of policy files you can import as best practice policies and then  evaluate the policies against a target set that includes instances, objects, databases, or database objects. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"

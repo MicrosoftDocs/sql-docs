@@ -2,9 +2,8 @@
 description: "Find property set GUIDs and property integer IDs for Search properties"
 title: "Find property set GUIDs & property integer IDs for Search properties"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], search property lists"

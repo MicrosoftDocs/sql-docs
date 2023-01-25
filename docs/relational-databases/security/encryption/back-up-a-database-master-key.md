@@ -3,9 +3,9 @@ title: "Back up a database master key"
 description: Learn how to back up a database master key in SQL Server by using Transact-SQL. This essential key encrypts other keys and certificates.
 ms.custom: ""
 ms.date: "12/16/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database master key [SQL Server], exporting"

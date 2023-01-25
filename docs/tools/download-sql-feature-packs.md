@@ -1,9 +1,8 @@
 ---
 title: Download SQL Server extended features and tools
 description: This article provides a brief explanation of the various downloads and stand-alone packages Microsoft provides to add value for SQL Server.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 keywords: feature pack
 author: markingmyname
@@ -69,7 +68,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Master Data Service Add-in for Microsoft Excel](https://go.microsoft.com/fwlink/?LinkID=390972) | The Master Data Services (MDS) Add-in for Microsoft Excel is a data management tool that delivers a multitude of master data management capabilities with ease and efficiency. |
+| [Master Data Service Add-in for Microsoft Excel](https://go.microsoft.com/fwlink/?LinkID=2086948) | The Master Data Services (MDS) Add-in for Microsoft Excel is a data management tool that delivers a multitude of master data management capabilities with ease and efficiency. |
 
 ## Providers and Drivers
 

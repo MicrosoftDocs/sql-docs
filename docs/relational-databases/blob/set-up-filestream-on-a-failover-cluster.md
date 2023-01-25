@@ -3,10 +3,9 @@ title: "Set Up FILESTREAM on a Failover Cluster | Microsoft Docs"
 description: Find out how to set up FILESTREAM on a failover cluster in SQL Server, and learn what to enable before you set it up.
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: filestream
+ms.subservice: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], setting up on a failover cluster"

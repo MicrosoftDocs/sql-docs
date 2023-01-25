@@ -5,8 +5,8 @@ author: chris-rossi
 ms.author: v-chross
 ms.reviewer: v-davidengel
 ms.date: "01/02/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Using Transparent Network IP Resolution

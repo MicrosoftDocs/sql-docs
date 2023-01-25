@@ -4,9 +4,8 @@ description: This article explains package0 targets for Extended Events in SQL S
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 08/29/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---

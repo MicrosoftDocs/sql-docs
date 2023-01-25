@@ -3,10 +3,9 @@ description: "Azure Data Lake Store Source"
 title: "Azure Data Lake Store Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/16/2018"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSSRC.F1"

@@ -1,11 +1,11 @@
 ---
 title: "Explore SSMA for Oracle interface"
 description: Learn about the SQL Server Migration Assistant (SSMA) for Oracle installation process, and familiarize yourself with the SSMA user interface.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSMA for Oracle, Metadata Explorers"

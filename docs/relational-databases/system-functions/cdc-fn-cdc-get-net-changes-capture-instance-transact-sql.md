@@ -3,10 +3,9 @@ description: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 title: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 ms.custom: ""
 ms.date: "09/29/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -30,7 +29,7 @@ ms.author: randolphwest
   
  This enumeration function is created when a source table is enabled for change data capture and net tracking is specified. To enable net tracking, the source table must have a primary key or unique index. The function name is derived and uses the format `cdc.fn_cdc_get_net_changes_<capture_instance>`, where <capture_instance> is the value specified for the capture instance when the source table was enabled for change data capture. For more information, see [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

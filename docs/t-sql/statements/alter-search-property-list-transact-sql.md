@@ -4,9 +4,8 @@ description: ALTER SEARCH PROPERTY LIST (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "05/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_SEARCH_PROPERTY_TSQL"
@@ -23,7 +22,7 @@ dev_langs:
   - "TSQL"
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a specified search property to, or drops it from the specified search property list.  
   

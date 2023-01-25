@@ -3,10 +3,9 @@ description: "Choose Search Folders Dialog Box (Visual Studio)"
 title: "Choose Search Folders Dialog Box (Visual Studio)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: "markingmyname"

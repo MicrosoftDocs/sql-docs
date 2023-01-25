@@ -3,10 +3,9 @@ description: "Create a Domain-Based Attribute (Master Data Services)"
 title: Create a Domain-Based Attribute
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "domain-based attributes [Master Data Services], creating"

@@ -4,8 +4,8 @@ description: "Become familiar with the in-doubt xact resolution option. See how 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "distributed transactions [SQL Server], unresolved transactions"

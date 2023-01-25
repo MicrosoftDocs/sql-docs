@@ -3,10 +3,9 @@ description: "Non-SQL Server Publishers"
 title: "Non-SQL Server Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "heterogeneous database replication, non-SQL Server Publishers"

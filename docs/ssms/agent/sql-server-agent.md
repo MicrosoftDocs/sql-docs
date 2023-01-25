@@ -1,9 +1,8 @@
 ---
 description: "SQL Server Agent"
 title: "SQL Server Agent"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, about SQL Server Agent"

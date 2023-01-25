@@ -3,9 +3,9 @@ title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/07/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 01/05/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -26,7 +26,7 @@ Creates an external table.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
@@ -934,7 +934,7 @@ The one to three-part name of the table to create. For an external table, only t
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 > [!NOTE]  
-> `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Warehouse.
+> Deprecated data types `text`, `ntext` and `XML` are not supported data types for columns in external tables for Synapse Analytics.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -1049,6 +1049,9 @@ PolyBase can push some of the query computation to Hadoop to improve query perfo
 
 You can create many external tables that reference the same or different external data sources.
 
+Pay attention to source data using the UTF-8 collation. For any source data using the UTF-8 collation, you must manually provide a non-UTF-8 collation each UTF-8 column in the CREATE EXTERNAL TABLE statement. This is because UTF-8 support does not extend to external tables. When you attempt to create an external table with a UTF-8 collation, you will receive an `Unsupported collation` error message. If the external table's database collation is a UTF-8 collation, external table creation will fail unless you provide an explicit non-UTF-8 column collation, for example, `[UTF8_column] varchar(128) COLLATE LATIN1_GENERAL_100_CI_AS_KS_WS NOT NULL,`.
+
+
 ## Limitations and restrictions
 
 Since the data for an external table is not under the direct management control of Azure Synapse, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
@@ -1094,7 +1097,7 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ## Examples
 
-### A. Import Data from ADLS Gen 2 into Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)].
+### A. Import Data from ADLS Gen 2 into [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 For examples for Gen ADLS Gen 1, see [Create external data source](create-external-data-source-transact-sql.md).
 

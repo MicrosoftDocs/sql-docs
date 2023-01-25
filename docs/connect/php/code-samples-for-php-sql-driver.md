@@ -4,8 +4,8 @@ description: "Find code samples for example applications which use the SQLSRV an
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Code Samples for the Microsoft Drivers for PHP for SQL Server

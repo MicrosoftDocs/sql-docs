@@ -4,8 +4,8 @@ description: You can install SQL Server on a Server Core installation. The Serve
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/16/2021
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"
@@ -123,7 +123,7 @@ The Server Core installation option provides a minimal environment for running s
   
     - Installing [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
     
-    The following example shows how to install a new stand-alone instance that includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
+    The following example shows how to install a new stand-alone instance that includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
 
     ```console
     ; SQL Server Configuration File  

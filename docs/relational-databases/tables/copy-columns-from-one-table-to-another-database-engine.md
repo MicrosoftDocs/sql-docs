@@ -3,10 +3,9 @@ description: "Copy Columns from One Table to Another (Database Engine)"
 title: "Copy Columns from One Table to Another (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "copying columns"

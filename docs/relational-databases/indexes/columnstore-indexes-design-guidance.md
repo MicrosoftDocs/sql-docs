@@ -4,8 +4,8 @@ description: "High-level recommendations for designing columnstore indexes."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -40,7 +40,7 @@ Here is a summary of the options and recommendations.
 | Columnstore option | Recommendations for when to use | Compression |
 | :----------------- | :------------------- | :---------- |
 | [Clustered columnstore index](#use-a-clustered-columnstore-index-for-large-data-warehouse-tables) | Use for:<br /><br />1) Traditional data warehouse workload with a star or snowflake schema<br /><br />2) Internet of Things (IOT) workloads that insert large volumes of data with minimal updates and deletes. | Average of 10x |
-| [Ordered clustered columnstore index](#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables) | *Applies to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] and above*<br />Use when a clustered columnstore index is queried via a single ordered predicate column or column set. This guidance is similar to choosing the key column(s) for a rowstore clustered index, though the compressed underlying rowgroups behave differently. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). | Average of 10x |
+| [Ordered clustered columnstore index](#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables) | *Applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] and above*<br />Use when a clustered columnstore index is queried via a single ordered predicate column or column set. This guidance is similar to choosing the key column(s) for a rowstore clustered index, though the compressed underlying rowgroups behave differently. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). | Average of 10x |
 | [Nonclustered B-tree indexes on a clustered columnstore index](#add-b-tree-nonclustered-indexes-for-efficient-table-seeks) | Use to:<br /><br />   1. Enforce primary key and foreign key constraints on a clustered columnstore index.<br /><br />   2. Speed up queries that search for specific values or small ranges of values.<br /><br />   3. Speed up updates and deletes of specific rows.| 10x on average plus some additional storage for the NCIs.|
 | [Nonclustered columnstore index on a disk-based heap or B-tree index](#add-b-tree-nonclustered-indexes-for-efficient-table-seeks) | Use for:<br /><br />1) An OLTP workload that has some analytics queries. You can drop B-tree indexes created for analytics and replace them with one nonclustered columnstore index.<br /><br />2) Many traditional OLTP workloads that perform Extract Transform and Load (ETL) operations to move data to a separate data warehouse. You can eliminate ETL and a separate data warehouse by creating a nonclustered columnstore index on some of the OLTP tables. | NCCI is an additional index that requires 10% more storage on average.|
 | [Columnstore index on an in-memory table](#use-a-nonclustered-columnstore-index-for-real-time-analytics) | Same recommendations as nonclustered columnstore index on a disk-based table, except the base table is an in-memory table. | Columnstore index is an additional index.|
@@ -66,7 +66,7 @@ For more information, see [Columnstore indexes - data warehousing](../../relatio
 
 ## Use an ordered clustered columnstore index for large data warehouse tables
 
-*Applies to:* [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+*Applies to:* [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
 Consider using an ordered clustered columnstore index in the following scenarios:
 
@@ -130,7 +130,7 @@ For example, both rowstore and columnstore tables use partitions to:
 
 Additionally, with a columnstore index, you use partitioning to:
 
-* Save an additional 30% in storage costs. You can compress older partitions with the COLUMNSTORE_ARCHIVE compression options. The data will be slower for query performance, which is acceptable if the partition is queries infrequently.
+* Save an additional 30% in storage costs. You can compress older partitions with the COLUMNSTORE_ARCHIVE compression options. The data will be slower for query performance, which is acceptable if the partition is queried infrequently.
 
 ### Use partitions to improve query performance
 
@@ -217,7 +217,7 @@ These are tasks for creating and maintaining columnstore indexes.
 To create an empty columnstore index for:
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)], refer to [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
-- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], refer to [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
+- [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], refer to [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 For more information on how to convert an existing rowstore heap or B-tree index into a clustered columnstore index, or to create a nonclustered columnstore index, refer to [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 

@@ -5,7 +5,7 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 07/03/2019
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: seodec18
 ---

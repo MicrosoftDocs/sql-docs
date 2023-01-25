@@ -3,10 +3,9 @@ title: "Monitor and Tune for Performance | Microsoft Docs"
 description: Learn about monitoring databases to assess server performance, using periodic snapshots and gathering data continuously to track performance trends.
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "instances of SQL Server, monitoring performance"

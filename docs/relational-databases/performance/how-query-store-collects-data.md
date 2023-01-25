@@ -3,10 +3,9 @@ title: "How Query Store collects data | Microsoft Docs"
 description: SQL Server Query Store persists query-related data in the internal tables and presents it to users through a set of views.
 ms.custom: ""
 ms.date: "11/29/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, data collection"

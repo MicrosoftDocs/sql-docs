@@ -2,10 +2,9 @@
 description: "Create, Construct, and Query geometry Instances"
 title: "Create, Construct, and Query geometry Instances | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "planar spatial data [SQL Server], getting started"

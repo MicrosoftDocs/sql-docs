@@ -3,9 +3,8 @@ description: "Indexes - Keys Dialog Box (Visual Database Tools)"
 title: Indexes - Keys Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65539"
@@ -105,7 +104,7 @@ Specify whether this index is a full-text key. For more information on full-text
 Specify whether page-level locking is allowed on this index. Allowing or disallowing page-level locking affects database performance. The recommended setting is **Yes**.  
   
 **Re-compute Statistics**  
-Specify whether the underlying [!INCLUDE[ssDE](../../includes/ssde_md.md)] computes new statistics when the index is created. Re-computing statistics slows the building of indexes but will very likely improve query performance.  
+Specify whether the underlying [!INCLUDE[ssDE](../../includes/ssde-md.md)] computes new statistics when the index is created. Re-computing statistics slows the building of indexes but will very likely improve query performance.  
   
 **Row Locks Allowed**  
 Specify whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance. The recommended setting is **Yes**.  

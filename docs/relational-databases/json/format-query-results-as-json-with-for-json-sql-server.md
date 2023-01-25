@@ -5,7 +5,7 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth, randolphwest
 ms.date: 08/09/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ms.custom:
   - seo-dt-2019
@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Format query results as JSON, or export data from SQL Server as JSON, by adding the `FOR JSON` clause to a `SELECT` statement. Use the `FOR JSON` clause to simplify client applications by delegating the formatting of JSON output from the app to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

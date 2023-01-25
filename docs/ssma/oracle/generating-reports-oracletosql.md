@@ -1,11 +1,11 @@
 ---
 description: "Generating Reports (OracleToSQL)"
 title: "Generating Reports (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Generation in Oracle Console, synchronize-target"

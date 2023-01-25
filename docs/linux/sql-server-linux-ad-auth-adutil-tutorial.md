@@ -1,12 +1,12 @@
 ---
 title: Configure Active Directory authentication with SQL Server on Linux using adutil
 description: Step by step on how to configure Active Directory authentication with SQL Server on Linux using adutil
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 09/27/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: tutorial
 monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
@@ -121,7 +121,7 @@ To install **adutil**, follow the steps explained in the article [Introduction t
 1. Add an entry in the keytab for the principal name and its password that will be used by SQL Server to connect to Active Directory:
 
     ```bash
-    adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd!'
+    adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd'
     ```
 
     - `-k`: Path where you would like the `mssql.keytab` file to be created.

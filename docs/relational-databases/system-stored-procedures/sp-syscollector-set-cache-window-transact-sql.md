@@ -3,10 +3,9 @@ description: "sp_syscollector_set_cache_window (Transact-SQL)"
 title: "sp_syscollector_set_cache_window (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_syscollector_set_cache_window"
@@ -26,7 +25,7 @@ ms.author: maghan
   Sets the number of times to attempt a data upload in case of failure. Retrying an upload in the event of a failure mitigates the risk of losing collected data.  
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

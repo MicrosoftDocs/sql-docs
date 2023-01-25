@@ -4,8 +4,8 @@ description: "If you are using Always On availability groups as your high availa
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
 monikerRange: ">=sql-server-2016"

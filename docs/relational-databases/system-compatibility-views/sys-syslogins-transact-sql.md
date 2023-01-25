@@ -3,10 +3,9 @@ description: "sys.syslogins (Transact-SQL)"
 title: "sys.syslogins (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "syslogins_TSQL"
@@ -30,7 +29,7 @@ ms.author: randolphwest
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

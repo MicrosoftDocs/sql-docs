@@ -5,9 +5,9 @@ ms.custom:
 - seo-dt-2019
 - event-tier1-build-2022
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TEMPLATE plan guide"

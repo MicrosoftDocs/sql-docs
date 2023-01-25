@@ -4,8 +4,8 @@ description: sys.dm_os_host_info (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "02/10/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "sys.dm_os_host_info"

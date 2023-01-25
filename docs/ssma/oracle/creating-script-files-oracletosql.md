@@ -1,11 +1,11 @@
 ---
 description: "Creating Script Files (OracleToSQL)"
 title: "Creating Script Files (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Script File Creation, Configuring Oracle Console Settings"

@@ -3,10 +3,9 @@ description: "Replication to Memory-Optimized Table Subscribers"
 title: "Replication to Memory-Optimized Table Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: "MashaMSFT"

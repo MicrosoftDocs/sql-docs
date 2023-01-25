@@ -6,8 +6,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/31/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ---
 # Backup and restore SQL Server databases on Linux

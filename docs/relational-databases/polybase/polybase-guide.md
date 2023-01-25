@@ -1,9 +1,9 @@
 ---
 title: "Introducing data virtualization with PolyBase"
-description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure Blob Storage.
+description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Azure Blob Storage.
 ms.date: 08/22/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: "overview"
 f1_keywords:
   - "PolyBase"
@@ -43,8 +43,8 @@ PolyBase provides these same functionalities for the following SQL products from
 
 - [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions (Windows)
 - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Windows and Linux)
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[pdw](../../includes/sspdw-md.md)] (PDW), hosted in the Analytics Platform System (APS) 
-- [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[pdw](../../includes/sspdw-md.md)]
+- [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 > [!NOTE]
 > Data virtualization using PolyBase feature is available in preview for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
@@ -67,7 +67,7 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 
  The PolyBase feature provides connectivity to the following external data sources:
 
-| External data sources     | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] with PolyBase | APS PDW | [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] |
+| External data sources     | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] with PolyBase | APS PDW | [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
 |:---------------------------|:-------------|:--|:------------|:---------------|
 | Oracle, MongoDB, Teradata                                 | Read               | Read               | **No**     | **No**     |  
 | Generic ODBC                                              | Read (Windows Only)| Read (Windows Only)| **No**     | **No**     |  
@@ -101,11 +101,9 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md).
 1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md).
 
-
-
 ### Azure integration
 
-With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
+With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
 
 ## Why use PolyBase?
 
@@ -122,9 +120,9 @@ PolyBase does not require you to install additional software to your Hadoop envi
 
 PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-- **Query data stored in Hadoop from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or PDW.** Users are storing data in cost-effective distributed and scalable systems, such as Hadoop. PolyBase makes it easy to query the data by using T-SQL.
-
 - **Query data stored in Azure Blob Storage.** Azure Blob Storage is a convenient place to store data for use by Azure services. PolyBase makes it easy to access the data by using T-SQL.
+
+- **Query data stored in Hadoop from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or PDW.** Users are storing data in cost-effective distributed and scalable systems, such as Hadoop. PolyBase makes it easy to query the data by using T-SQL.
 
 - **Import data from Hadoop, Azure Blob Storage, or Azure Data Lake Store.** Leverage the speed of Microsoft SQL's columnstore technology and analysis capabilities by importing data from Hadoop, Azure Blob Storage, or Azure Data Lake Store into relational tables. There is no need for a separate ETL or import tool.
 
@@ -142,14 +140,14 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 ## Upgrading to SQL Server 2022
 
-Starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Hadoop is no longer supported. Azure Storage connectors must be changed based on the reference table below:
+Starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH) are no longer supported. Due to these changes, it is required to manually drop PolyBase external data sources created on previous versions of SQL Server that use `TYPE = HADOOP` or Azure Storage before migrating to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Dropping external data sources also requires dropping the associated database objects, such as database scoped credentials and external tables.
+
+Azure Storage connectors must be changed based on the reference table below:
 
 | External Data Source | From | To |
 |:--|:--|:--|
 | Azure Blob Storage | wasb[s] | abs |
 | ADLS Gen 2 | abfs[s] | adls |
-
-Due to these changes, it is required to manually drop PolyBase external data sources created on previous versions of SQL Server that use `TYPE = HADOOP` or Azure Storage before migrating to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Dropping external data sources also requires dropping the associated database objects, such as database scoped credentials and external tables.
 
 ## Next steps
 

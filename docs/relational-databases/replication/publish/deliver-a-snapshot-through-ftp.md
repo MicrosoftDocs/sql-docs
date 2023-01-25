@@ -3,10 +3,9 @@ description: "Deliver a Snapshot Through FTP"
 title: "Deliver a Snapshot Through FTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], FTP snapshots"

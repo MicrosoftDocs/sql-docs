@@ -1,11 +1,11 @@
 ---
 description: "Working with SSMA for Access Console (AccessToSQL)"
 title: "Working with SSMA for Access Console (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: cpichuka 

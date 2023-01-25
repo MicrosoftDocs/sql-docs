@@ -1,11 +1,11 @@
 ---
 description: "Project Settings(Synchronization) (OracleToSQL)"
 title: "Project Settings(Synchronization) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: cpichuka 

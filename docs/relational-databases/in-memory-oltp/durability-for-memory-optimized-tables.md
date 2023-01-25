@@ -4,9 +4,8 @@ description: Learn how In-Memory OLTP provides full durability for memory-optimi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 ---

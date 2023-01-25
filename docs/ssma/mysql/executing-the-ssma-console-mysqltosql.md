@@ -1,11 +1,11 @@
 ---
 description: "Executing the SSMA Console (MySQLToSQL)"
 title: "Executing the SSMA Console (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Script file commands, Database connection commands"

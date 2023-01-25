@@ -4,9 +4,8 @@ description: This article shows how to find objects that have the most locks. Da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/18/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 ms.custom: seo-lt-2019
 helpviewer_keywords:

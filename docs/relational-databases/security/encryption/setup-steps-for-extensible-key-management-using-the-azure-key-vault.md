@@ -5,8 +5,8 @@ author: Rupp29
 ms.author: arupp
 ms.reviewer: vanto, randolphwest
 ms.date: 10/05/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:
@@ -42,7 +42,7 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
   SQL Server version  | Visual Studio C++ Redistributable version
   ---------|---------
   2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
-  2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
+  2016, 2017, 2019, 2022 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
 
 - Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) if you plan to use the SQL Server Connector for Azure Key Vault behind a firewall or with a proxy server.
 
@@ -296,6 +296,8 @@ You can generate four types of keys in an Azure key vault that will work with SQ
   > [!IMPORTANT]  
   > For the SQL Server Connector, use only the characters a-z, A-Z, 0-9, and hyphens (-), with a 26-character limit.
   > Different key versions under the same key name in an Azure key vault don't work with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure key vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see the Key Rollover steps in the "A. Maintenance Instructions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector" section of [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).
+  >
+  > When rotating versions of the key, do not disable the version originally used to encrypt the database. SQL Server will be unable to recover the database (it will be in a 'recovery pending' state) and may generate a 'Crypto Exception' memory dump until the old version is enabled.
 
 ### Import an existing key
 
@@ -452,6 +454,9 @@ For a note about the minimum permission levels needed for each action in this se
 
    Whether you created a new key or imported an asymmetric key, as described in [Step 2: Create a key vault](#step-2-create-a-key-vault), you will need to open the key. Open it by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.
 
+     > [!IMPORTANT]  
+     > Be sure to first complete the Registry prerequisites for this step.
+
    - Replace `EKMSampleASYKey` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
    - Replace `ContosoRSAKey0` with the name of your key in your Azure key vault.
 
@@ -471,10 +476,12 @@ For a note about the minimum permission levels needed for each action in this se
    CREATION_DISPOSITION = OPEN_EXISTING;
    ```
 
-   In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations. For this scenario, you must complete two prerequisites:
+   In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations. 
+   
+   For this scenario, you must complete two Registry prerequisites:
 
-   1. Create a `SQL Server Cryptographic Provider` key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
-   1. Delegate `Full Control` permissions on the `SQL Server Cryptographic Provider` key to the user account running the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
+   1. Create a `SQL Server Cryptographic Provider` registry key on `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft`.
+   1. Delegate `Full Control` permissions on the `SQL Server Cryptographic Provider` registry key to the user account running the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] service.
 
       > [!NOTE]  
       > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider` to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.

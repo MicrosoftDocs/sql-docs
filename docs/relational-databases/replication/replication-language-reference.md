@@ -3,10 +3,9 @@ description: "Replication Language Reference"
 title: "Replication Language Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "language-reference"
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: "MashaMSFT"

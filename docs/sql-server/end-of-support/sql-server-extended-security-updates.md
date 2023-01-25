@@ -4,8 +4,8 @@ description: Learn how to use Azure Arc to get extended security updates for you
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/01/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
@@ -22,7 +22,7 @@ This article provides information for using [Azure Arc](/azure/azure-arc/overvie
 > Effective July 12, 2022, the SQL Registry portal has been retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
+> Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/sql2008r2-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 For more information about other options, see [End of support options](sql-server-end-of-support-overview.md).
 
@@ -67,7 +67,7 @@ For the versions in the table below, consider using [Extended Security Updates](
 Extended Security Updates (ESUs) include security updates for customers who have purchased an Extended Support Update subscription, and are available for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
+> Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/sql2008r2-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 ESUs are made available **if needed**, once a security vulnerability is discovered and is rated as **Critical** by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com). Therefore, there's no regular release cadence for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESUs.
 
@@ -323,7 +323,7 @@ Microsoft Lifecycle Policy offers 10 years of support (five years for Mainstream
 Enterprise, Datacenter, Standard, Web, and Workgroup editions of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] are eligible for ESUs for both x86 and x64 versions.
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
+> Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/sql2008r2-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 #### When will the Extended Security Updates offer be available?
 
@@ -335,7 +335,7 @@ ESUs include provision of Security Updates and Bulletins rated **critical** by t
 
 - For [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ESUs will be available until July 8, 2025.
 
-- For [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], ESUs will be available until July 12, 2023 for customers who have migrated their workloads to Azure services. See the [Overview](#overview) for more information.
+- For [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], ESUs will be available until July 12, 2023 for customers who have migrated their workloads to Azure services. See the [Overview](#overview) for more information.
 
 ESU will be distributed if and when available. ESUs don't include technical support, but you may use other [!INCLUDE[msCoName](../../includes/msconame-md.md)] support plans to get assistance on your [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questions on workloads covered by ESUs. ESUs don't include new features, functional improvements, nor customer-requested fixes. However, [!INCLUDE[msCoName](../../includes/msconame-md.md)] may include non-security fixes as deemed necessary.
 
@@ -361,7 +361,7 @@ For customers who don't have Software Assurance, the alternative option to get a
 No. For versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] we recommend upgrading to the latest supported versions, but customers can upgrade to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to take advantage of this offer.
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
+> Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/sql2008r2-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 #### Can I deploy a brand new SQL Server 2012 instance on Azure and still get Extended Security Updates?
 
@@ -386,7 +386,7 @@ Customers can move legacy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 ESUs are available for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in Azure Virtual Machines after the End of Support date of July 12, 2022, for the next three years.
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
+> Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/sql2008r2-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 For customers looking to upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], all subsequent versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be supported. For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], customers are required to be on the latest supported Service Pack. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], customers are advised to be on the latest Cumulative Update. Service Packs won't be available starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], only Cumulative Updates and General Distribution Releases (GDRs).
 

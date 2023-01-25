@@ -4,10 +4,9 @@ description: Learn how Dynamic SQL can affect the performance of your applicatio
 title: Dynamic SQL performance in ODBC
 ms.custom: ""
 ms.date: 04/02/2020
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL [ODBC], embedded SQL"

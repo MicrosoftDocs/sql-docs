@@ -3,10 +3,9 @@ description: "sp_help_jobsteplog (Transact-SQL)"
 title: "sp_help_jobsteplog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_help_jobsteplog_TSQL"
@@ -25,7 +24,7 @@ ms.author: maghan
   Returns metadata about a specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step log. **sp_help_jobsteplog** does not return the actual log.  
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

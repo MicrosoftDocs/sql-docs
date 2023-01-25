@@ -3,10 +3,9 @@ title: "Tutorial: Managing servers using Policy-Based Management"
 description: This tutorial teaches you how to create and apply an off-by-default policy, and a naming-standards policy.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorials [Policy-Based Management]"

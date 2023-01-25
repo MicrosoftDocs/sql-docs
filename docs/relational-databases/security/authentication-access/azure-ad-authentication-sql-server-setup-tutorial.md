@@ -5,8 +5,8 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
 ms.date: 10/25/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: tutorial
 ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
@@ -155,7 +155,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 
    The Azure Arc server agent can only update once the previous action has completed. This means that saving a new Azure AD configuration before the last one has finalized can cause a failure. If you see the message **Extended call failed** when you select **Save**, wait 5 minutes and then try again.
 
-   The Azure AD admin login is listed in `sys.server_principals`, but is not part of the `sysadmin` role. To grant the Azure AD admin the `sysadmin` role, use the [sp_addsrvrolemember](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql) stored procedure.
+   The Azure AD admin login is listed in `sys.server_principals`, but is not part of the `sysadmin` role. To grant the Azure AD admin the `sysadmin` role, use the [sp_addsrvrolemember](../../system-stored-procedures/sp-addsrvrolemember-transact-sql.md) stored procedure.
 
    ```sql
    ALTER SERVER ROLE sysadmin ADD MEMBER [aadadmin@contoso.com]
@@ -172,7 +172,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 After the Azure Arc agent on the SQL Server host has completed its operation, the admin account selected in the **Azure Active Directory** pane in the portal will be a `sysadmin` on the SQL Server instance. To sign in, use any SQL Server client like [SSMS](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 > [!NOTE]  
-> All connections to SQL Server that are done with Azure AD authentication require an encrypted connection. If the Database Administrator (DBA) has not set up a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain was issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client or select **trust server certificate** in the advanced connection properties. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+> All connections to SQL Server that are done with Azure AD authentication require an encrypted connection. If the Database Administrator (DBA) has not set up a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain was issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client or select **trust server certificate** in the advanced connection properties. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/configure-sql-server-encryption).
 
 ### Create login syntax
 

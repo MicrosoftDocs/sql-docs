@@ -4,9 +4,8 @@ description: The sys.query_store_query_hints system catalog view returns Query S
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "language-reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:

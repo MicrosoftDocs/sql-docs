@@ -3,10 +3,9 @@ title: "sys.fn_PageResCracker (Transact-SQL) | Microsoft Docs"
 description: Learn about the sys.fn_PageResCracker system function. See examples and view additional available resources.
 ms.custom: ""
 ms.date: "09/18/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "fn_PageResCracker"
@@ -30,7 +29,7 @@ ms.author: "pamela"
 
 Returns the `db_id`, `file_id`, and `page_id` for the given `page_resource` value. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 ```  

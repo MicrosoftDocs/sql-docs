@@ -3,9 +3,8 @@ description: "Defect a Target Server from a Master Server"
 title: "Defect a Target Server from a Master Server"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, target servers"
@@ -48,7 +47,7 @@ To execute this stored procedure, a user must be a member of the **sysadmin** fi
   
 #### To defect a target server from a master server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

@@ -4,8 +4,8 @@ description: Learn how to fetch rows with large user-defined types from a result
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Use Large CLR UDTs (OLE DB)
@@ -13,7 +13,7 @@ ms.topic: "reference"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This sample shows how to fetch rows with large user-defined types from a result set. For more information, see [Large CLR User-Defined Types &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). This sample works with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later.  
+  This sample shows how to fetch rows with large user-defined types from a result set. For more information, see [Large CLR User-Defined Types &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). This sample works with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions.  
   
 ## Example  
  This sample contains two projects. One project creates an assembly (DLL) from C# source code. This assembly contains the CLR type. A table will be added to the database. A column in the table will be of a type defined in the assembly. By default, this sample will use the master database. The second project is a native C application that reads data from the table.  

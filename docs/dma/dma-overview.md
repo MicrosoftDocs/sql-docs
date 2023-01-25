@@ -5,8 +5,8 @@ author: rajeshsetlem
 ms.author: rajpo
 ms.reviewer: randolphwest
 ms.date: 05/24/2022
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Data Migration Assistant, overview"
@@ -89,7 +89,7 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2017 on Windows and Linux
 - SQL Server 2019
 - Azure SQL Database single database
-- Azure SQL Managed Instance
+- Azure SQL Managed Instance (assessment only)
 - SQL server running on an Azure Virtual Machine
 
 ## See also

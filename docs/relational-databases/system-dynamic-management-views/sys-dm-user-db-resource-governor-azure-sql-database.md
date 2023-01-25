@@ -3,10 +3,9 @@ title: "sys.dm_user_db_resource_governance (Transact-SQL)"
 description: sys.dm_user_db_resource_governance (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "11/17/2019"
-ms.prod: sql
-ms.prod_service: sql-database
-ms.technology: system-objects
+ms.date: 11/28/2022
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.resource_governance"
@@ -98,7 +97,7 @@ For description of resource governance in Azure SQL Database, see [SQL Database 
 
 The following query, executed in the context of a user database, returns maximum log rate and maximum IOPS at the user workload group and resource pool level. For a single database, one row is returned. For a database in an elastic pool, a row is returned for each database in the pool.
 
-```
+```sql
 SELECT database_name,
        primary_group_id,
        primary_max_log_rate,
@@ -108,7 +107,7 @@ FROM sys.dm_user_db_resource_governance
 ORDER BY database_name;  
 ```
 
-## See Also
+## Next steps
 
 - [Resource Governor](../resource-governor/resource-governor.md)
 - [sys.dm_resource_governor_resource_pools (Transact-SQL)](./sys-dm-resource-governor-resource-pools-transact-sql.md)
@@ -118,3 +117,4 @@ ORDER BY database_name;
 - [Transaction log rate governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Single database DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [Single database vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
+- [Elastic pool vCore resource limits](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)

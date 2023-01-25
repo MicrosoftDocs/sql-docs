@@ -4,8 +4,8 @@ description: The article provides links to resources that help you upgrade the S
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/04/2019
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "compatibility [SQL Server], databases"

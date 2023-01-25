@@ -3,9 +3,8 @@ title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft SqlPackage.
 ms.custom: "tools|sos"
 ms.date: 11/9/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: "llali"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
@@ -34,17 +33,17 @@ This article lists the features and fixes delivered by the released versions of 
 |Platform|Changes connections to use encryption and not trust the server certificate by default. This is a breaking change for connections using self-signed certificates or without encryption by default.  For more information, see [this dedicated article](https://aka.ms/dacfx-connection).|
 |Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.0.1) v5.0.1|
 |Platform|SqlPackage is now available for [installation](sqlpackage-download.md) as a `dotnet tool` for Windows, macOS, and Linux platforms.|
-|Always Encrypted|Adds support for VBS (Virtualization-based security) with [secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves).|
+|Always Encrypted|Adds support for VBS (Virtualization-based security) with [secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Connectivity|Adds support for TDS 8.0 and parameters for `/SourceHostNameInCertificate` and `/TargetHostNameInCertificate` to SqlPackage operations.|
-|Replication|Adds support for [sp_addpublication](/sql/relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication#automatically-handle-conflicts-with-last-write-wins) with peer-to-peer replication.|
+|Replication|Adds support for [sp_addpublication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) with peer-to-peer replication.|
 |ScriptDOM|Adds support for IS NOT DISTINCT FROM syntax with predicate subqueries.|
-|Server-level roles|Adds support for additional [fixed server roles](/sql/relational-databases/security/authentication-access/server-level-roles#fixed-server-level-roles-introduced-in-sql-server-2022): MS_DatabaseConnector, MS_LoginManager, MS_DatabaseManager, MS_ServerStateManager, MS_ServerStateReader, MS_ServerPerformanceStateReader, MS_ServerSecurityStateReader, MS_DefinitionReader, MS_PerformanceDefinitionReader, MS_SecurityDefinitionReader.|
-|SQL Server 2022|Adds support for [T-SQL function changes associated with SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022#language): GREATEST(), LEAST(), STRING_SPLIT(), DATETRUNC(), LTRIM(), RTRIM(), and TRIM().|
-|SQL Server 2022|Adds support for [JSON function changes associated with SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022#language): ISJSON(), JSON_PATH_EXISTS(), JSON_OBJECT(), and JSON_ARRAY().|
-|SQL Server 2022|Adds support for [bit manipulation functions associated with SQL Server 2022](/sql/t-sql/functions/bit-manipulation-functions-overview): LEFT_SHIFT(), RIGHT_SHIFT(), BIT_COUNT(), GET_BIT(), and SET_BIT().|
-|SQL Server 2022|Adds support for [time series function changes associated with SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022#language): DATE_BUCKET(), GENERATE_SERIES(), FIRST_VALUE(), and LAST_VALUE().|
-|Statistics|Adds support for [STATISTICS AUTO_DROP option](/sql/t-sql/statements/create-statistics-transact-sql).|
-|XML compression|Adds support for XML compression on [XML indexes](/sql/relational-databases/xml/xml-indexes-sql-server#xml-compression).|
+|Server-level roles|Adds support for additional [fixed server roles](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022): MS_DatabaseConnector, MS_LoginManager, MS_DatabaseManager, MS_ServerStateManager, MS_ServerStateReader, MS_ServerPerformanceStateReader, MS_ServerSecurityStateReader, MS_DefinitionReader, MS_PerformanceDefinitionReader, MS_SecurityDefinitionReader.|
+|SQL Server 2022|Adds support for [T-SQL function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): GREATEST(), LEAST(), STRING_SPLIT(), DATETRUNC(), LTRIM(), RTRIM(), and TRIM().|
+|SQL Server 2022|Adds support for [JSON function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): ISJSON(), JSON_PATH_EXISTS(), JSON_OBJECT(), and JSON_ARRAY().|
+|SQL Server 2022|Adds support for [bit manipulation functions associated with SQL Server 2022](../../t-sql/functions/bit-manipulation-functions-overview.md): LEFT_SHIFT(), RIGHT_SHIFT(), BIT_COUNT(), GET_BIT(), and SET_BIT().|
+|SQL Server 2022|Adds support for [time series function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): DATE_BUCKET(), GENERATE_SERIES(), FIRST_VALUE(), and LAST_VALUE().|
+|Statistics|Adds support for [STATISTICS AUTO_DROP option](../../t-sql/statements/create-statistics-transact-sql.md).|
+|XML compression|Adds support for XML compression on [XML indexes](../../relational-databases/xml/xml-indexes-sql-server.md#xml-compression).|
 
 
 ### Known Issues
@@ -128,7 +127,7 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
 | Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
-|Deployment|SqlPackage.exe on .NET Core for Windows, macOS, and Linux fails during a publish operation with an error message "Unrecognized configuration section system.diagnostics" when in-place encryption is used for Always Encrypted with secure enclaves.|Remove the file `sqlpackage.dll.config` from the SqlPackage folder.|
+|Deployment|SqlPackage on .NET Core for Windows, macOS, and Linux fails during a publish operation with an error message "Unrecognized configuration section system.diagnostics" when in-place encryption is used for Always Encrypted with secure enclaves.|Remove the file `sqlpackage.dll.config` from the SqlPackage folder.|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 
@@ -461,7 +460,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Add /p:DatabaseLockTimeout=(INT32 '60') parameter to SqlPackage. | 
 | Deployment | Add /p:LongRunningCommandTimeout=(INT32) parameter to SqlPackage. |
 | Export/Extract | Add /p:TempDirectoryForTableData=(STRING) parameter to SqlPackage. |
-| Deployment | Allow deployment contributors to be loaded from additional locations. Deployment contributors will be loaded from the same directory as the target .dacpac being deployed, the Extensions directory relative to the SqlPackage.exe binary, and the /p:AdditionalDeploymentContributorPaths=(STRING) parameter added to SqlPackage where additional directory locations can be specified. |
+| Deployment | Allow deployment contributors to be loaded from additional locations. Deployment contributors will be loaded from the same directory as the target .dacpac being deployed, the Extensions directory relative to the SqlPackage binary, and the /p:AdditionalDeploymentContributorPaths=(STRING) parameter added to SqlPackage where additional directory locations can be specified. |
 | Deployment | Add support for OPTIMIZE_FOR_SEQUENTIAL_KEY. |
 
 ### Fixes

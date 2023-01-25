@@ -4,8 +4,8 @@ description: OLE DB Driver for SQL Server supports database mirroring. Developer
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "database mirroring [SQL Server], interoperability"

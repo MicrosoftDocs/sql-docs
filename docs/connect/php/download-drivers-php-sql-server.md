@@ -4,8 +4,8 @@ description: Download the Microsoft Drivers for PHP for SQL Server to develop PH
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 06/16/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Download the Microsoft Drivers for PHP for SQL Server

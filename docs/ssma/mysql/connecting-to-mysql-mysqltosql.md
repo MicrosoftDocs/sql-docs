@@ -1,11 +1,11 @@
 ---
 title: "Connecting to MySQL (MySQLToSQL) | Microsoft Docs"
 description: Learn how to connect to a target iMySQL database to migrate a MySQL database. SSMA obtains metadata about databases in Azure SQL Database.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to MySQL, MySQL permission"

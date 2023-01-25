@@ -4,8 +4,8 @@ description: This tutorial shows how to deploy a SQL Server high availability so
 author: rwestMSFT
 ms.author: randolphwest
 ms.topic: quickstart
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.date: 08/18/2022
 ms.custom:
   - template-quickstart

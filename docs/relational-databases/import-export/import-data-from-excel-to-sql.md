@@ -4,9 +4,8 @@ description: This article describes methods to import data from Excel to SQL Ser
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom:
   - sqlfreshmay19
@@ -175,10 +174,9 @@ For more info about linked servers, see the following topics:
 - [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
 - [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
-For more examples and info about both linked servers and distributed queries, see the following topics:
+For more examples and info about both linked servers and distributed queries, see the following topic:
 
 - [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
-- [How to import data from Excel to SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
 ## <a name="prereq"></a> Prerequisite - Save Excel data as text
 

@@ -3,10 +3,9 @@ description: "Change Tracking stored procedures (Transact-SQL)"
 title: "Change Tracking stored procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -17,11 +16,12 @@ ms.assetid:
 author: JetterMcTedder
 ms.author: bspendolini
 ---
+
 # Change Tracking stored procedures (Transact-SQL)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Change Tracking is a lightweight solution that provides an efficient data change tracking mechanism for applications, ETL processes, event capture, and auditing. This allows for quick and simple detection of changed data without the need for expensive and complex custom solutions traditionally involving a combination of triggers, timestamp columns, new tables to store tracking information, and cleanup processes.
+Change Tracking is a lightweight solution that provides an efficient data change tracking mechanism for applications, ETL processes, event capture, and auditing. This allows for quick and simple detection of changed data without the need for expensive and complex custom solutions traditionally involving a combination of triggers, timestamp columns, new tables to store tracking information, and cleanup processes.
 
 ## Stored procedures
 

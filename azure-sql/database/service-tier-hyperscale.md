@@ -86,15 +86,13 @@ The vCore-based service tiers are differentiated based on database availability 
 | **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per instance)|
 | **Storage size**<sup>1</sup> | 5 GB – 4 TB | 5 GB – 4 TB  |Up to 100 TB |
-| **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 5,000 IOPS with 200,000 maximum IOPS   | Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload.|
-| **Availability** | 1 replica, no Read Scale-out, zone-redundant HA, no local cache | 3 replicas, 1 Read Scale-out, zone-redundant HA, full local storage | Multiple replicas, up to 4 Read Scale-out, zone-redundant HA, partial local cache   |
-| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <sup>2</sup>  | 
+| **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
+| **Availability** | 1 replica, no Read Scale-out, zone-redundant HA | 3 replicas, 1 Read Scale-out, zone-redundant HA | Multiple replicas, up to 4 Read Scale-out, zone-redundant HA  |
+| **Backups** |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention <sup>2</sup>, with up to 10 years of long-term retention available <sup>3</sup>| 
 
 <sup>1</sup> Elastic pools aren't supported in the Hyperscale service tier.   
-<sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.
-
-> [!NOTE]
-> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.
+<sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
+<sup>3</sup> Long-term retention for Hyperscale databases is now in preview. 
 
 ## Compute resources
 

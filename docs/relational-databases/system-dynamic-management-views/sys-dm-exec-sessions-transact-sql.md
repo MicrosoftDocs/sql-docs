@@ -55,7 +55,7 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 |last_request_end_time|**datetime**|Time of the last completion of a request on the session. Is nullable.|  
 |reads|**bigint**|Number of reads performed, by requests in this session, during this session. Is not nullable.|  
 |writes|**bigint**|Number of writes performed, by requests in this session, during this session. Is not nullable.|  
-|logical_reads|**bigint**|Number of logical reads that have been performed on the session. Is not nullable.|  
+|logical_reads|**bigint**|Number of logical reads performed by requests in this session, during this session. Is not nullable.|  
 |is_user_process|**bit**|0 if the session is a system session. Otherwise, it is 1. Is not nullable.|  
 |text_size|**int**|TEXTSIZE setting for the session. Is not nullable.|  
 |language|**nvarchar(128)**|LANGUAGE setting for the session. Is nullable.|  

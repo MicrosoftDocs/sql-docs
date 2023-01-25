@@ -61,7 +61,7 @@ The [vCore-based purchasing model](service-tiers-vcore.md) provides two differen
 Azure SQL Database provides the following deployment options for a database:
 
 - [Single database](single-database-overview.md) represents a fully managed, isolated database. You might use this option if you have modern cloud applications and microservices that need a single reliable data source. A single database is similar to a [contained database](/sql/relational-databases/databases/contained-databases?toc=/azure/sql-database/toc.json) in the [SQL Server database engine](/sql/sql-server/sql-server-technical-documentation?toc=/azure/sql-database/toc.json).
-- [Elastic pool](elastic-pool-overview.md) is a collection of [single databases](single-database-overview.md) with a shared set of resources, such as CPU or memory. Single databases can be moved into and out of an elastic pool.
+- [Elastic pool](elastic-pool-overview.md) is a collection of single databases with a shared set of resources, such as CPU or memory. Single databases can be moved into and out of an elastic pool.
 
 > [!IMPORTANT]
 > To understand the feature differences between SQL Database, SQL Server, and Azure SQL Managed Instance, as well as the differences among different Azure SQL Database options, see [SQL Database features](features-comparison.md).
@@ -77,7 +77,7 @@ You can define the amount of resources assigned.
 You can build your first app on a small, single database at a low cost per month in the [General Purpose](service-tier-general-purpose.md) service tier. You can then change its service tier manually or programmatically at any time to the [Business Critical](service-tier-business-critical.md) or [Hyperscale](service-tier-hyperscale.md) service tier, to meet the needs of your solution. You can adjust performance without downtime to your app or to your customers. Dynamic scalability enables your database to transparently respond to rapidly changing resource requirements. You pay for only the resources that you need when you need them.
 
 *Dynamic scalability* is different from *autoscale*. Autoscale is when a service scales automatically based on criteria, whereas dynamic scalability allows for manual scaling without downtime. The single database option supports manual dynamic scalability, but not autoscale. For a more automatic experience, consider these alternatives: 
-- Use the [serverless tier](#serverless-compute), which does provide autoscale.
+- Use the [serverless tier](serverless-tier-overview.md), which does provide autoscale.
 - Use scripts to schedule or automate scalability for a single database. For an example, see [Use PowerShell to monitor and scale a single database](scripts/monitor-and-scale-database-powershell.md).
 - Use [elastic pools](#elastic-pools-to-maximize-resource-utilization), which allow databases to share resources in a pool based on individual database needs. [Elastic pools can also be scaled with custom scripts](scripts/monitor-and-scale-pool-powershell.md), allowing you to schedule or automate scalability.
 

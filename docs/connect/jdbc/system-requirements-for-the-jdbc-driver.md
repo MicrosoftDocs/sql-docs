@@ -51,26 +51,24 @@ ms.topic: conceptual
 
  **Microsoft JDBC Driver 12.2 for SQL Server:**  
 
-  The JDBC Driver 12.2 includes four JAR class libraries in each installation package: **mssql-jdbc-11.2.0.jre8.jar**, **mssql-jdbc-11.2.0.jre11.jar**, **mssql-jdbc-11.2.0.jre17.jar**, and **mssql-jdbc-11.2.0.jre18.jar**.
+  The JDBC Driver 12.2 includes two JAR class libraries in each installation package: **mssql-jdbc-12.2.0.jre8.jar** and **mssql-jdbc-12.2.0.jre11.jar**.
 
-  The JDBC Driver 11.2 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 18.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
+  The JDBC Driver 12.2 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 18.0, OpenJDK 19.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
   
-  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 11.2 for SQL Server:  
+  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 12.2 for SQL Server:  
   
-  |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
-|---------|-----------------------------|----------------------|-----------------|  
-|mssql-jdbc-11.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
-|mssql-jdbc-11.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception. |
-|mssql-jdbc-11.2.0.jre17.jar|4.3|17|Requires a Java Runtime Environment (JRE) 17.0. Using JRE 16.0 or lower throws an exception. |
-|mssql-jdbc-11.2.0.jre18.jar|4.3|18|Requires a Java Runtime Environment (JRE) 18.0. Using JRE 17.0 or lower throws an exception. |
-
-  The JDBC Driver 10.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
+   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
+ |---------|-----------------------------|----------------------|-----------------|  
+ |mssql-jdbc-12.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
+ |mssql-jdbc-12.2.0.jre11.jar|4.3|19|Requires a Java Runtime Environment (JRE) 11.0 or higher. Using JRE 10.0 or lower throws an exception. |
+ 
+  The JDBC Driver 12.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
   
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>11.2.0.jre11</version>
+    <version>12.2.0.jre11</version>
 </dependency> 
 ```
 
@@ -80,7 +78,7 @@ ms.topic: conceptual
 
   The JDBC Driver 11.2 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 18.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
   
-  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 11.2 for SQL Server:  
+  The following chart summarizes support provided by the four JAR files included with Microsoft JDBC Drivers 11.2 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|  
@@ -89,7 +87,7 @@ ms.topic: conceptual
 |mssql-jdbc-11.2.0.jre17.jar|4.3|17|Requires a Java Runtime Environment (JRE) 17.0. Using JRE 16.0 or lower throws an exception. |
 |mssql-jdbc-11.2.0.jre18.jar|4.3|18|Requires a Java Runtime Environment (JRE) 18.0. Using JRE 17.0 or lower throws an exception. |
 
-  The JDBC Driver 10.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
+  The JDBC Driver 11.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
   
  ```xml
 <dependency>

@@ -3,7 +3,7 @@ title: Feature dependencies
 description: Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/08/2022
+ms.date: 01/25/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -126,6 +126,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with the Azure Key Vault provider
 
+- JDBC driver version 12.2.0 — Dependency versions: Azure-security-keyvault-keys (version 4.5.3), and Azure-identity(version 1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 11.2.0 — Dependency versions: Azure-security-keyvault-keys (version 4.4.1), and Azure-identity(version 1.5.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 10.2.0 — Dependency versions: Azure-security-keyvault-keys (version 4.3.6), and Azure-identity(version 1.4.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 9.4.1 — Dependency versions: Azure-security-keyvault-keys (version 4.2.8), and Azure-identity(version 1.3.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
@@ -146,6 +147,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with Azure Active Directory authentication
 
+- JDBC driver version 12.2.0 — Dependency versions: Azure-identity(version 1.7.0), and their dependencies.
 - JDBC driver version 11.2.0 — Dependency versions: Azure-identity(version 1.5.0), and their dependencies.
 - JDBC driver version 10.2.0 — Dependency versions: Azure-identity(version 1.4.3), and their dependencies.
 - JDBC driver version 9.4.1 — Dependency versions: Azure-identity(version 1.3.3), and their dependencies.

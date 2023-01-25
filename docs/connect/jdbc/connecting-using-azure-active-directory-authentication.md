@@ -25,7 +25,7 @@ Connection properties to support Azure Active Directory authentication in the Mi
   - **ActiveDirectoryManagedIdentity**
     - Since driver version **v12.2.0**, `authentication=ActiveDirectoryManagedIdentity` can be used to connect to an Azure SQL Database/Synapse Analytics from an Azure Resource with "Identity" support enabled. The property value, `ActiveDirectoryManagedIdentity`, is synonymous with `ActiveDirectoryMSI`. Optionally, the Client ID of a Managed Identity can also now be set in the `user` property.
   - **DefaultAzureCredential**
-    - Since driver version **v12.2.0**, `authentication=DefaultAzureCredential` can be used to connect to an Azure SQL Database/Synapse Analytics via the **DefaultAzureCredential** within the [Azure Identity client library](https://learn.microsoft.com/en-us/java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential). **ADDITIONALLY_ALLOWED_TENANTS** is an optional environment variable that can be specified with a comma delimited list of allowed tenant IDs. **INTELLIJ_KEEPASS_PATH** is another optional environment variable that can be specified with the path to a KeePass file.
+    - Since driver version **v12.2.0**, `authentication=DefaultAzureCredential` can be used to connect to an Azure SQL Database/Synapse Analytics via the **DefaultAzureCredential** within the [Azure Identity client library](/java/api/overview/azure/identity-readme?#defaultazurecredential). **ADDITIONALLY_ALLOWED_TENANTS** is an optional environment variable that can be specified with a comma delimited list of allowed tenant IDs. **INTELLIJ_KEEPASS_PATH** is another optional environment variable that can be specified with the path to a KeePass file.
   - **ActiveDirectoryIntegrated**
     - Since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Synapse Analytics via integrated authentication. To use this authentication mode, you must federate the on-premises Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it's set up, you can connect by either adding the native library 'mssql-jdbc_auth-\<version>-\<arch>.dll' to the application class path on Windows, or by setting up a Kerberos ticket for cross-platform authentication support. You're able to access Azure SQL Database/Azure Synapse Analytics without prompted for credentials when you're logged in to a domain joined machine.
   - **ActiveDirectoryPassword**
@@ -63,7 +63,7 @@ For other authentication modes, the below components must be installed on the cl
 
 ## Connect using ActiveDirectoryMSI authentication mode
 
-Since driver version **v12.2.0**, the driver requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16#run-time) for a full list of the libraries that the driver depends on.
+Since driver version **v12.2.0**, the driver requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server) for a full list of the libraries that the driver depends on.
 
 The following example shows how to use `authentication=ActiveDirectoryMSI` mode. Run this example from inside an Azure Resource, e,g an Azure Virtual Machine, App Service, or a Function App that is federated with Azure Active Directory.
 
@@ -146,12 +146,12 @@ You have successfully logged on as: <your Managed Identity username>
 
 ## Connect using DefaultAzureCredential authentication mode
 
-The driver's `DefaultAzureCredential` authentication leverages the Azure Identity client library's DefaultAzureCredential chained TokenCredential implementation. The credential combines commonly used authentication methods chained together. See [DefaultAzureCredential](https://learn.microsoft.com/en-us/java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential) for more details on each credential within the credential chain.
+The driver's `DefaultAzureCredential` authentication leverages the Azure Identity client library's DefaultAzureCredential chained TokenCredential implementation. The credential combines commonly used authentication methods chained together. See [DefaultAzureCredential](/java/api/overview/azure/identity-readme?#defaultazurecredential) for more details on each credential within the credential chain.
 
-`DefaultAzureCredential` authentication requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16#run-time) for a full list of the libraries that the driver depends on.
+`DefaultAzureCredential` authentication requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server) for a full list of the libraries that the driver depends on.
 
 
-The following example demonstrates how to use `authentication=ActiveDirectoryManagedIdentity` mode with the [AzureCliCredential](https://learn.microsoft.com/en-us/java/api/com.azure.identity.azureclicredential?view=azure-java-stable).
+The following example demonstrates how to use `authentication=ActiveDirectoryManagedIdentity` mode with the [AzureCliCredential](/java/api/com.azure.identity.azureclicredential).
 
 1. First login to the Azure CLI with the following command.
 

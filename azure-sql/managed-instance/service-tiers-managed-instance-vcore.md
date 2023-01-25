@@ -40,22 +40,31 @@ For instances in the General Purpose service tier, it's possible to save on comp
 
 ## Data and log storage
 
+<!--
+The information in this section is duplicated in /managed-instance/resource-limits.md. Please make sure any changes are made to both articles. 
+--->
+
 The following factors affect the amount of storage used for data and log files, and apply to General Purpose and Business Critical tiers. 
 
-- Each compute size supports a configurable maximum data size, with a default of 32 GB.
-- When you configure maximum data size, an additional 30 percent of billable storage is automatically added for the log file.
 - In the General Purpose service tier, `tempdb` uses local SSD storage, and this storage cost is included in the vCore price.
 - In the Business Critical service tier, `tempdb` shares local SSD storage with data and log files, and `tempdb` storage cost is included in the vCore price.
-- In the General Purpose and Business Critical tiers, you are charged for the maximum storage size configured for a database, elastic pool, or managed instance.
+- The maximum storage size for a SQL Managed Instance must be specified in multiples of 32 GB.
 
-To monitor the current allocated and used storage size of individual data and log files in a database by using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
+> [!IMPORTANT]
+> In both service tiers, you are charged for the maximum storage size configured for a managed instance. 
+
+To monitor total consumed instance storage size for SQL Managed Instance, use the *storage_space_used_mb* [metric](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances). To monitor the current allocated and used storage size of individual data and log files in a database using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
+
+> [!TIP]
+> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](../database/file-space-manage.md).
 
 ## Backup storage
 
-Storage for database backups is allocated to support the [point-in-time restore (PITR)](recovery-using-backups.md) and [long-term retention (LTR)](../database/long-term-retention-overview.md) capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
+Storage for database backups is allocated to support the  and capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.
 
-- **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [Azure storage](automated-backups-overview.md#restore-capabilities) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 0 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
-- **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in Azure Blob storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage will be used for LTR backups. For more information, see [Long-term backup retention](../database/long-term-retention-overview.md).
+
+- [Point-in-time restore (PITR)](recovery-using-backups.md): The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 0 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
+- [Long-term retention (LTR)](../database/long-term-retention-overview.md):  You have the option to configure long-term retention of full backups for up to 10 years. The configuration you choose determines how much storage will be used for LTR backups. 
 
 
 ## <a id="compute-tiers"></a>Service tiers

@@ -19,7 +19,7 @@ One common task everyone deploying [!INCLUDE[ssnoversion-md](../ssnoversion-md.m
 
 This article is focused on covering the availability scenarios in [!INCLUDE[sssql17-md](../sssql17-md.md)] and later versions, as well as the new and enhanced availability features. The scenarios include hybrid ones that will be able to span [!INCLUDE[ssnoversion-md](../ssnoversion-md.md)] deployments on both Windows Server and Linux, and ones that can increase the number of readable copies of a database.
 
-While this article doesn't cover availability options external to [!INCLUDE[ssnoversion-md](../ssnoversion-md.md)], such as those provided by virtualization, everything discussed here applies to [!INCLUDE[ssnoversion-md](../ssnoversion-md.md)] installations inside a guest virtual machine whether in the public cloud or hosted by an on premises hypervisor server.
+While this article doesn't cover availability options external to [!INCLUDE[ssnoversion-md](../ssnoversion-md.md)], such as those provided by virtualization, everything discussed here applies to [!INCLUDE[ssnoversion-md](../ssnoversion-md.md)] installations inside a guest virtual machine whether in the public cloud or hosted by an on-premises hypervisor server.
 
 ## SQL Server scenarios using the availability features
 

@@ -515,7 +515,7 @@ You have successfully logged on as: <your app/client ID>
 Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Synapse Analytics.
 
 > [!NOTE]
-> **accessToken** can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection string. Since driver version **v12.2.0**, users can implement and provide an accessToken callback to the driver for token renewal in connection pooling scenarios.
+> **accessToken** can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection string. Since driver version **v12.2.0**, users can implement and provide an accessToken callback to the driver for token renewal in connection pooling scenarios. Connection pooling scenarios require the connection pool implementation to use the standard [JDBC connection pooling classes](using-connection-pooling.md).
 
 The following example contains a simple Java application that connects to Azure SQL Database/Synapse Analytics using access token-based authentication.
 

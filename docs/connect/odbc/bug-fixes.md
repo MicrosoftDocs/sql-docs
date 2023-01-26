@@ -4,7 +4,7 @@ description: This page contains a listing of bugs fixed in each release, startin
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 11/28/2022
+ms.date: 01/25/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,6 +14,10 @@ helpviewer_keywords:
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.3 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Correct error message when Dedicated Administrative Connections (DAC) fail
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.1.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

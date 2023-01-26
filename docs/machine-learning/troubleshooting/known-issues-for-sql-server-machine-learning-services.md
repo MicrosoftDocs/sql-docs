@@ -4,7 +4,7 @@ description: This article describes known problems or limitations with the Pytho
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/06/2022
+ms.date: 1/25/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: troubleshooting
@@ -558,6 +558,14 @@ Executing an R script with `sp_execute_external_script` allows money, numeric, d
 - **money**: Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.
 - **numeric/decimal**: `sp_execute_external_script` with an R script doesn't support the full range of those data types and would alter the last few decimal digits especially those with fraction.
 - **bigint**: R only support up to 53-bit integers and then it will start to have precision loss.
+
+### Issues with the rxExecBy function - rxExecBy function cannot find installed package
+
+When the `rxExecBy` function is called, a new R runtime process starts. This new process does not have updated library paths, hence, packages installed in locations other than the default library path are not found during execution.
+
+#### Workaround
+
+The path to R packages needs to be explicitly updated. Suppose the packages are installed in the external libraries path, the following R script could be used to update library path: `.libPaths(c(Sys.getenv("MRS_EXTLIB_USER_PATH"), Sys.getenv("MRS_EXTLIB_SHARED_PATH"), .libPaths()))`
 
 ## Python script execution issues
 

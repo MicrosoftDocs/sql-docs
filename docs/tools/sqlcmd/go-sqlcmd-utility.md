@@ -115,8 +115,8 @@ The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, syst
 For more in-depth information on sqlcmd syntax and use, see:
 
 - [sqlcmd syntax](./sqlcmd-utility.md#syntax)
-- [Start the sqlcmd Utility](sqlcmd-start-the-utility.md)
-- [Use the sqlcmd Utility](sqlcmd-use-the-utility.md)
+- [Start the sqlcmd Utility](sqlcmd-start-utility.md)
+- [Use the sqlcmd Utility](sqlcmd-use-utility.md)
 
 ### Break changes from sqlcmd
 

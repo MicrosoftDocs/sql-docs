@@ -59481,8 +59481,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md",
-      "redirect_url": "/sql/tools/sqlcmd/edit-sqlcmd-scripts-with-query-editor",
+      "source_path": "docs/ssms/scripting/edit-sqlcmd-scripts-query-editor.md",
+      "redirect_url": "/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor",
       "redirect_document_id": true
     },
     {
@@ -59507,7 +59507,7 @@
     },
     {
       "source_path": "docs/ssms/scripting/sqlcmd-use-with-scripting-variables.md",
-      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-with-scripting-variables",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-scripting-variables",
       "redirect_document_id": true
     },
     {

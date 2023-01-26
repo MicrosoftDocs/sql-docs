@@ -29,7 +29,7 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
 
 - Users submit a **sqlcmd** job either by specifying a single Transact\-SQL statement to execute, or by pointing the utility to a text file that contains Transact\-SQL statements to execute. The output is directed to a text file, but can also be displayed at the command prompt.
 
-- [SQLCMD mode](edit-sqlcmd-scripts-with-query-editor.md) in SQL Server Management Studio Query Editor.
+- [SQLCMD mode](edit-sqlcmd-scripts-query-editor.md) in SQL Server Management Studio Query Editor.
 
 - SQL Server Management Objects (SMO)
 
@@ -207,7 +207,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
 ## Runn Transact-SQL script files using sqlcmd
 
- You can use **sqlcmd** to execute database script files. Script files are text files that contain a mix of Transact\-SQL statements, **sqlcmd** commands, and scripting variables. For more information about how to script variables, see [Use sqlcmd with Scripting Variables](./sqlcmd-use-with-scripting-variables.md). **sqlcmd** works with the statements, commands, and scripting variables in a script file in a manner similar to how it works with statements and commands that are entered interactively. The main difference is that **sqlcmd** reads through the input file without pause instead of waiting for a user to enter the statements, commands, and scripting variables.
+ You can use **sqlcmd** to execute database script files. Script files are text files that contain a mix of Transact\-SQL statements, **sqlcmd** commands, and scripting variables. For more information about how to script variables, see [Use sqlcmd with Scripting Variables](./sqlcmd-use-scripting-variables.md). **sqlcmd** works with the statements, commands, and scripting variables in a script file in a manner similar to how it works with statements and commands that are entered interactively. The main difference is that **sqlcmd** reads through the input file without pause instead of waiting for a user to enter the statements, commands, and scripting variables.
 
  There are different ways to create database script files:
 
@@ -544,6 +544,6 @@ SQLCMD -E -N -C
 
 - [Sqlcmd utility](sqlcmd-utility.md)
 - [Use sqlcmd with Scripting Variables](sqlcmd-use-scripting-variables.md)
-- [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-with-query-editor.md)
+- [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-query-editor.md)
 - [Manage Job Steps](../../ssms/agent/manage-job-steps.md)
 - [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)

@@ -8401,17 +8401,17 @@ items:
     - name: go-sqlcmd Overview
       href: tools/sqlcmd/go-sqlcmd-utility.md
     - name: Start the Utility
-      href: tools/sqlcmd/sqlcmd-start-the-utility.md
+      href: tools/sqlcmd/sqlcmd-start-utility.md
     - name: Use the Utility
-      href: tools/sqlcmd/sqlcmd-use-the-utility.md
+      href: tools/sqlcmd/sqlcmd-use-utility.md
     - name: Connect to the Database Engine
-      href: tools/sqlcmd/sqlcmd-connect-to-the-database-engine.md
+      href: tools/sqlcmd/sqlcmd-connect-database-engine.md
     - name: Run T-SQL Script Files
       href: tools/sqlcmd/sqlcmd-run-transact-sql-script-files.md
     - name: Use with Scripting Variables
-      href: tools/sqlcmd/sqlcmd-use-with-scripting-variables.md
+      href: tools/sqlcmd/sqlcmd-use-scripting-variables.md
     - name: Edit SQLCMD Scripts with Query Editor
-      href: tools/sqlcmd/edit-sqlcmd-scripts-with-query-editor.md
+      href: tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md
   - name: SSB Diagnose
     href: tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
     items:

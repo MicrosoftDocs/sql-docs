@@ -104,7 +104,7 @@ Currently, **sqlcmd** doesn't require a space between the command-line option an
 For more in-depth information on sqlcmd syntax and use, see:
 
 - [Start the sqlcmd Utility](../../ssms/scripting/sqlcmd-start-the-utility.md)
-- [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md)
+- [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-utility.md)
 
 ```bash
 sqlcmd
@@ -576,7 +576,7 @@ Options don't have to be used in the order shown in the syntax section.
 
 When multiple results are returned, **sqlcmd** prints a blank line between each result set in a batch. In addition, the `<x> rows affected` message doesn't appear when it doesn't apply to the statement executed.
 
-To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this article. For more information, see [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)
+To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this article. For more information, see [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-utility.md)
 
 > [!NOTE]  
 > The options **-L**, **-Q**, **-Z** or **-i** cause **sqlcmd** to exit after execution.
@@ -1021,6 +1021,6 @@ Using **-V16** in combination with checking the exit code and DOS ERRORLEVEL can
 - [Use the sqlcmd Utility](sqlcmd-use-utility.md)
 - [Use sqlcmd with Scripting Variables](sqlcmd-use-scripting-variables.md)
 - [Connect to the Database Engine With sqlcmd](sqlcmd-connect-database-engine.md)
-- [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-with-query-editor.md)
+- [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-query-editor.md)
 - [Manage Job Steps](../../ssms/agent/manage-job-steps.md)
 - [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)

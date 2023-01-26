@@ -19,12 +19,12 @@ The Microsoft's shipped ruleset is available on GitHub. You can view the [entire
 
 In this article, we look at two ways to run the SQL Assessment API for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux and containers:
 
-- [SQL Assessment extension for Azure Data Studio](#sql-assessment-extension-for-azure-data-studio)
+- [SQL Assessment extension for Azure Data Studio](#sql-assessment-extension-for-azure-data-studio-preview) (Preview)
 - [SQL Assessment API with PowerShell](#sql-assessment-api-with-powershell)
 
-## SQL Assessment extension for Azure Data Studio
+## SQL Assessment extension for Azure Data Studio (preview)
 
-The SQL Assessment extension for Azure Data Studio provides a mechanism to evaluate the configuration of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] for best practices.
+The SQL Assessment extension for Azure Data Studio (preview) provides a mechanism to evaluate the configuration of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] for best practices.
 
 With this preview version, you can:
 

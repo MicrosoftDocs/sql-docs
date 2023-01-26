@@ -581,6 +581,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/managed-instance/scripts/restore-geo-backup-cli.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/scripts/restore-geo-backup",
+      "redirect_document_id": false
+    },    
+    {
       "source_path_from_root": "/azure-sql/database/sql-database-vulnerability-assessment-rules.md",
       "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules",
       "redirect_document_id": false

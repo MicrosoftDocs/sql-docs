@@ -23,7 +23,7 @@ Use this page to specify options related to Azure cloud services. To access this
 | Option | Information | Description |
 |--------|-------------|-------------|
 | ADAL Output Window Trace Level | **Information** <br> **None** <br> **Verbose** <br> **Warning** | The level of Azure Active Directory (AAD) login tracing to send to the Output window. |
-| Allow single signon to SQL using AAD authentication | When set, the first connection to an MFA-protected SQL instance may use a locally cached credential to avoid the need for a PIN or other MFA option. |
+| Allow single signon to SQL using AAD authentication | **True** <br> **False** | When set, the first connection to an MFA-protected SQL instance may use a locally cached credential to avoid the need for a PIN or other MFA option. |
 | Azure Data Factory Portal URL | `https://adf.azure.com` | Specifies the URL for the Azure Data Factory portal. |
 | Enable conditional access to Azure SQL Database (EXPERIMENTAL) | **True** <br> **False** | EXPERIMENTAL: If true, requests for access tokens for Azure SQL Database that includes a claim for access to the selected server. Setting may require a restart of SSMS to take effect. |
 | Gallery Endpoint | `https://gallery.azure.com` | Specifies the endpoint for the Resource Manager gallery of deployment templates. |
@@ -32,8 +32,8 @@ Use this page to specify options related to Azure cloud services. To access this
 | Management Portal URL | `https://portal.azure.com` | Specifies the URL for the Management Portal. |
 | Publish Setting File URL | `https://go.microsoft.com/fwlink/?LinkID=335839` | Specifies the URL from which the `.publishsettings` file can be downloaded. |
 | SQL Database Service Principal Name | `https://database.windows.net/` | The Azure SQL Database SPN to obtain a token when using AAD authentication. Also the audience of the JSON Web Token (JWT) for server-side JSON Web Token (JWT) parsing/validation. |
-| Use Web Account Manager | Enable this option if your enterprise uses FIDO keys or other advanced options not supported by a browser. |
-| Use System Browser | Enable to launch an external browser instead of the legacy embedded browser. |
+| Use Web Account Manager | **True** <br> **False** | Enable this option if your enterprise uses FIDO keys or other advanced options not supported by a browser. |
+| Use System Browser | **True** <br> **False** | Enable to launch an external browser instead of the legacy embedded browser. |
 
 ## Resource Management
 

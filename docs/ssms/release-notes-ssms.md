@@ -62,7 +62,7 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 | Showplan | The showplan XML schema has been updated. |
 | Showplan | Added support for Hyperscale Optimized Query Processing. |
 | Showplan | Added DOPFeedbackAdjusted query plan attribute. |
-| SNAC | Removed dependency on SQL Server Native Client (SNAC/SQLNCLI) from SSMS. Visit [Support Policies - SQL Server Native Client](../relational-databases/native-client/applications/support-policies-for-sql-server-native-client) for more information. |
+| SNAC | Removed dependency on SQL Server Native Client (SNAC/SQLNCLI) from SSMS. Visit [Support Policies - SQL Server Native Client](../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md) for more information. |
 | SqlParser | Added support for the TRIM function. |
 
 #### Bug fixes in 19.0
@@ -77,7 +77,7 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 | Backup | Added ability to create a NUL backup device against SQL Server 2017. |
 | Central Management Servers | Provided ability to view SQL ERRORLOGs from Central Management Servers before SQL 2022. |
 | Column Master Key | Increased width of Column Master Key name in the rotation dialog, so the full name is visible. |
-| Connection | Fixed an issue with authentication that doesn't use Azure Resource Manager and Microsoft Information Protection . |
+| Connection | Fixed an issue with authentication that doesn't use Azure Resource Manager and Microsoft Information Protection. |
 | Connection | Addressed issue with logging into Azure with a non-SQL authenticated on a machine not joined to a domain. |
 | Copy Database Wizard | Fixed the log provider type error, which occurred when copying a database using The SQL Management Object method. |
 | Database Restore | Resolved error generated when restoring a backup to an existing database. See [Unexpected behavior by SSMS](https://feedback.azure.com/d365community/idea/95b549d0-6f70-ed11-a81b-000d3adb7ffd). |
@@ -88,9 +88,9 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 | Link feature for Azure SQL Managed Instance | Fixed problem with leaking connections in MI Link. |
 | Link feature for Azure SQL Managed Instance | Updated size of subscription dropdown in the login to Azure pane to properly display subscription names. |
 | Link feature for Azure SQL Managed Instance | Updated display to show Azure sign-in options correctly. |
-| Microsoft Information Protection  | Improved icon display when viewing Microsoft Information Protection  in older versions of SQL Server. |
+| Microsoft Information Protection | Improved icon display when viewing Microsoft Information Protection in older versions of SQL Server. |
 | Object Explorer | SSMS no longer crashes using the Create View UX to create a view with invalid syntax. |
-| Object Explorer | No longer display | Ledger objects if not supported by the platform. |
+| Object Explorer | No longer display Ledger objects if not supported by the platform. |
 | Partitioning | Added support for Azure SQL Managed Instance partitioned tables in the Manage Partition Window UX. |
 | Power BI Datamart | Added ability to connect to a Power BI Datamart. |
 | Query Editor | Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
@@ -148,7 +148,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | New Item | Details |
 | -------- | ------- |
 | Always Encrypted | Fixed issue with Column Master Key creation generating an exception when using Azure Key Vault as the key store. |
-| Data Classification | Fixed issue with "Couldn't load file or assembly 'Microsoft.InformationProtection, Version=1.10.98.0" after upgrading to SSMS 18.10 or higher. See [Latest SSMS 18.11.1 breaks the Data Classification. Get missing assembly error after updating](https://feedback.azure.com/d365community/idea/af89d5d7-45a4-ec11-a81c-0022484ee92d). |
+| Data Classification | Fixed issue with "Couldn't load file or assembly 'Microsoft.Information.Protection', Version=1.10.98.0" after upgrading to SSMS 18.10 or higher. See [Latest SSMS 18.11.1 breaks the Data Classification. Get missing assembly error after updating](https://feedback.azure.com/d365community/idea/af89d5d7-45a4-ec11-a81c-0022484ee92d). |
 | SSMS General | Resolved error related to dacpac deployment using the Deploy Data-tier application option in Azure SQL DB with MFA. |
 
 ### 17.9.1

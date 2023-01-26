@@ -3,7 +3,7 @@ title: Download ODBC Driver for SQL Server
 description: Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to SQL Server and Azure SQL Database.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 11/28/2022
+ms.date: 01/25/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -24,14 +24,12 @@ Version 18.1.2.1 is the latest general availability (GA) version. The Microsoft 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2214634)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2214633)**  
 
-
-
 ### Version information
 
 - Release number: 18.1.2.1
 - Released: November 3, 2022
 
-> [!Note]
+> [!NOTE]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
@@ -46,21 +44,21 @@ Microsoft ODBC Driver 18.1.2.1 for SQL Server (x86):
 
 ## Version 17
 
-Version 17.10.2 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.10.2 upgrades it to 17.10.2.
+Version 17.10.3 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.10.3 upgrades it to 17.10.3.
 
-(:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2217421)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2216865)**  
+(:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2223304)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2223303)**  
 
-- Release number: 17.10.2.1
-- Released: November 28, 2022
+- Release number: 17.10.3.1
+- Released: January 26, 2023
 
 This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
 
-Microsoft ODBC Driver 17.10.2.1 for SQL Server (x64):  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2217421&clcid=0x40a)
+Microsoft ODBC Driver 17.10.3.1 for SQL Server (x64):  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223304&clcid=0x40a)
 
-Microsoft ODBC Driver 17.10.2.1 for SQL Server (x86):  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2216865&clcid=0x40a)
+Microsoft ODBC Driver 17.10.3.1 for SQL Server (x86):  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223303&clcid=0x40a)
 
 ### Release notes for Windows
 

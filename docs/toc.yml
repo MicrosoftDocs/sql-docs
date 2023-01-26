@@ -10397,6 +10397,24 @@ items:
       href: sql-server/azure-arc/overview.md
     - name: Release notes
       href: sql-server/azure-arc/release-notes.md
+    - name: How-to guides
+      items:
+      - name: Plan for deployment
+      - name: prerequisites
+        href: prerequisites.md
+      - name: Network requirements
+        href: network-requirements.md
+      - name: Deployment options
+        href: deployment-options.md
+      - name: Connect interactively
+        items:
+        - name: Connect using a deployment script
+        - name: Connect from other options...
+      - name: Connect at scale
+        items:
+        - name: Connect using Configuration Manager
+        - name: Connect using group policy
+        - name: Connect other options...
     - name: Connect
       href: sql-server/azure-arc/connect.md
     - name: Connect at scale

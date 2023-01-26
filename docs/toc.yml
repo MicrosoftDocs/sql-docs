@@ -8410,6 +8410,8 @@ items:
       href: tools/sqlcmd/sqlcmd-run-transact-sql-script-files.md
     - name: Use with Scripting Variables
       href: tools/sqlcmd/sqlcmd-use-with-scripting-variables.md
+    - name: Edit SQLCMD Scripts with Query Editor
+      href: tools/sqlcmd/edit-sqlcmd-scripts-with-query-editor.md
   - name: SSB Diagnose
     href: tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
     items:
@@ -9263,8 +9265,6 @@ items:
           href: ssms/scripting/manage-code-formatting.md
         - name: Navigate Code & Text
           href: ssms/scripting/navigate-code-and-text.md
-        - name: Edit SQLCMD Scripts with Query Editor
-          href: ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
     - name: References
       items:
       - name: SQL Server Management Objects (SMO)

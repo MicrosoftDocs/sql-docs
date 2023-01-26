@@ -1,10 +1,10 @@
 ---
-title: "Use the sqlcmd Utility"
-description: Learn how to use the sqlcmd utility for ad hoc interactive execution of Transact-SQL statements and scripts, and for automating Transact-SQL scripting tasks.
+title: Sqlcmd utility - Use the sqlcmd utility
+description: Learn how to use the sqlcmd utility for ad hoc interactive execution of Transact-SQL statements and scripts, and  automate Transact-SQL scripting tasks.
 author: grrlgeek
 ms.author: jeschult
 ms.reviewer: maghan
-ms.date: 01/10/2023
+ms.date: 01/25/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -25,9 +25,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The **sqlcmd** utility is a command-line utility for ad hoc, interactive execution of Transact\-SQL statements and scripts and for automating Transact\-SQL scripting tasks. To use **sqlcmd** interactively, or to build script files to be run using **sqlcmd**, users must understand Transact\-SQL. The **sqlcmd** utility is typically used in the following ways:
 
-- Users enter Transact\-SQL statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, enter "cmd" in the Windows search box and select **Command Prompt** to open. At the command prompt, type **sqlcmd** followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [sqlcmd Utility](sqlcmd-utility.md).
+- Users enter Transact\-SQL statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, enter "cmd" in the Windows search box and select **Command Prompt** to open. At the command prompt, type **sqlcmd** followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [Sqlcmd utility](sqlcmd-utility.md).
 
-- Users submit a **sqlcmd** job either by specifying a single Transact\-SQL statement to execute, or by pointing the utility to a text file that contains Transact\-SQL statements to execute. The output is usually directed to a text file, but can also be displayed at the command prompt.
+- Users submit a **sqlcmd** job either by specifying a single Transact\-SQL statement to execute, or by pointing the utility to a text file that contains Transact\-SQL statements to execute. The output is directed to a text file, but can also be displayed at the command prompt.
 
 - [SQLCMD mode](edit-sqlcmd-scripts-with-query-editor.md) in SQL Server Management Studio Query Editor.
 
@@ -52,7 +52,7 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
 
 - Connecting to a default instance by using Windows Authentication to interactively run Transact\-SQL statements:
 
-    ```
+    ```cmd
     sqlcmd -S <ComputerName>
     ```
 
@@ -61,37 +61,37 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
 
 - Connecting to a named instance by using Windows Authentication to interactively run Transact\-SQL statements:
 
-    ```
+    ```cmd
     sqlcmd -S <ComputerName>\<InstanceName>
     ```
 
      or
 
-    ```
+    ```cmd
     sqlcmd -S .\<InstanceName>
     ```
 
 - Connecting to a named instance by using Windows Authentication and specifying input and output files:
 
-    ```
+    ```cmd
     sqlcmd -S <ComputerName>\<InstanceName> -i <MyScript.sql> -o <MyOutput.rpt>
     ```
 
 - Connecting to the default instance on the local computer by using Windows Authentication, executing a query, and having **sqlcmd** remain running after the query has finished running:
 
-    ```
+    ```cmd
     sqlcmd -q "SELECT * FROM AdventureWorks2012.Person.Person"
     ```
 
 - Connecting to the default instance on the local computer by using Windows Authentication, executing a query, directing the output to a file, and having **sqlcmd** exit after the query has finished running:
 
-    ```
+    ```cmd
     sqlcmd -Q "SELECT * FROM AdventureWorks2012.Person.Person" -o MyOutput.txt
     ```
 
 - Connecting to a named instance using SQL Server Authentication to interactively run Transact\-SQL statements, with **sqlcmd** prompting for a password:
 
-    ```
+    ```cmd
     sqlcmd -U MyLogin -S <ComputerName>\<InstanceName>
     ```
 
@@ -103,7 +103,7 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
 
  `sqlcmd -S <ComputerName>\<InstanceName>`
 
- When the command is executed without input files or queries, **sqlcmd** connects to the specified instance of SQL Server and then displays a new line with a `1>` followed by a blinking underscore that is named the **sqlcmd** prompt. The `1` signifies that this is the first line of a Transact\-SQL statement, and the **sqlcmd** prompt is the point at which the Transact\-SQL statement will start when you type it in.
+ When the command is executed without input files or queries, **sqlcmd** connects to the specified instance of SQL Server, and then displays a new line with a `1>` followed by a blinking underscore that is named the **sqlcmd** prompt. The `1` signifies that this is the first line of a Transact\-SQL statement, and the **sqlcmd** prompt is the point at which the Transact\-SQL statement will start when you type it in.
 
  At the **sqlcmd** prompt, you can type both Transact\-SQL statements and **sqlcmd** commands, such as **GO** and **EXIT**. Each Transact\-SQL statement is put in a buffer called the statement cache. These statements are sent to SQL Server after you type the **GO** command and press ENTER. To exit **sqlcmd**, type **EXIT** or **QUIT** at the start of a new line.
 
@@ -113,7 +113,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
 ## Quoted strings
 
- Characters that are enclosed in quotation marks are used without any additional preprocessing, except that quotations marks can be inserted into a string by entering two consecutive quotation marks. SQL Server treats this character sequence as one quotation mark. (However, the translation occurs in the server.) Scripting variables will not be expanded when they appear within a string.
+ Characters that are enclosed in quotation marks are used without any additional preprocessing, except that quotations marks can be inserted into a string by entering two consecutive quotation marks. SQL Server treats this character sequence as one quotation mark. (However, the translation occurs in the server.) Scripting variables won't be expanded when they appear within a string.
 
  For example:
 
@@ -143,7 +143,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
  This is an example of what you see when you run **sqlcmd** interactively.
 
- When you open a Command Prompt window, there is one line similar to:
+ When you open a Command Prompt window, there's one line similar to:
 
  `C:\> _`
 
@@ -155,7 +155,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
  `1> _`
 
- This means you have connected to the instance of SQL Server and `sqlcmd` is now ready to accept Transact\-SQL statements and `sqlcmd` commands. The flashing underscore after the `1>` is the `sqlcmd` prompt that marks the location at which the statements and commands you type will be displayed. Now, type **USE AdventureWorks2012** and press ENTER, and then type **GO** and press ENTER. The contents of the Command Prompt window will be:
+ This means you've connected to the instance of SQL Server and `sqlcmd` is now ready to accept Transact\-SQL statements and `sqlcmd` commands. The flashing underscore after the `1>` is the `sqlcmd` prompt that marks the location at which the statements and commands you type will be displayed. Now, type **USE AdventureWorks2012** and press ENTER, and then type **GO** and press ENTER. The contents of the Command Prompt window will be:
 
  `sqlcmd`
 
@@ -235,7 +235,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
  `sqlcmd -i C:\MyFolder\MyScript.sql -o C:\MyFolder\MyOutput.txt`
 
- When you view the contents of `MyOutput.txt` in Notepad, you will see the following:
+ When you view the contents of `MyOutput.txt` in Notepad, you'll see the following:
 
  `Changed database context to 'AdventureWorks2012'.`
 
@@ -397,13 +397,13 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
 ### F. Use sqlcmd in a Windows script file
 
- A **sqlcmd**command such as `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` can be executed in a .bat file together with VBScript. In this case, do not use interactive options. **sqlcmd** must be installed on the computer that is executing the .bat file.
+ A **sqlcmd**command such as `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` can be executed in a .bat file together with VBScript. In this case, don't use interactive options. **sqlcmd** must be installed on the computer that is executing the .bat file.
 
  First, create the following four files:
 
 - C:\badscript.sql
 
-    ```
+    ```sql
     SELECT batch_1_this_is_an_error
     GO
     SELECT 'batch #2'
@@ -412,7 +412,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
 - C:\goodscript.sql
 
-    ```
+    ```sql
     SELECT 'batch #1'
     GO
     SELECT 'batch #2'
@@ -421,13 +421,13 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
 - C:\returnvalue.sql
 
-    ```
+    ```sql
     :exit(select 100)
     ```
 
 - C:\windowsscript.bat
 
-    ```
+    ```sql
     @echo off
   
     echo Running badscript.sql
@@ -472,7 +472,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
 - The -C switch is used by the client to configure it to implicitly the trust server certificate and not validate it. This option is equivalent to the ADO.net option `TRUSTSERVERCERTIFICATE = true`.
 
- The [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service does not support all the `SET` options available on a SQL Server instance. The following options throw an error when the corresponding `SET` option is set to `ON` or `OFF`:
+ The [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service doesn't support all the `SET` options available on a SQL Server instance. The following options throw an error when the corresponding `SET` option is set to `ON` or `OFF`:
 
 - SET ANSI_DEFAULTS
 
@@ -482,7 +482,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
 - SET ANSI_NULL_DEFAULT
 
- The following SET options do not throw exceptions but cannot be used. They are deprecated:
+ The following SET options don't throw exceptions but can't be used. They're deprecated:
 
 - SET CONCAT_NULL_YIELDS_NULL
 
@@ -496,19 +496,19 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
  Connect using Windows credentials and encrypt communication:
 
-```
+```cmd
 SQLCMD -E -N
 ```
 
  Connect using Windows credentials and trust server certificate:
 
-```
+```cmd
 SQLCMD -E -C
 ```
 
  Connect using Windows credentials, encrypt communication and trust server certificate:
 
-```
+```cmd
 SQLCMD -E -N -C
 ```
 
@@ -516,34 +516,34 @@ SQLCMD -E -N -C
 
  Connect using Windows credentials, encrypt communication and trust server certificate:
 
-```
+```cmd
 SQLCMD -E
 ```
 
  Connect using Windows credentials, encrypt communication and trust server certificate:
 
-```
+```cmd
 SQLCMD -E -N
 ```
 
  Connect using Windows credentials, encrypt communication and trust server certificate:
 
-```
+```cmd
 SQLCMD -E -C
 ```
 
  Connect using Windows credentials, encrypt communication and trust server certificate:
 
-```
+```cmd
 SQLCMD -E -N -C
 ```
 
  If the provider specifies `ForceProtocolEncryption = True` then encryption is enabled even if `Encrypt=No` in the connection string.
 
-## More about sqlcmd
+## Next steps
 
- [sqlcmd Utility](sqlcmd-utility.md)  
- [Use sqlcmd with Scripting Variables](sqlcmd-use-with-scripting-variables.md)  
- [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-with-query-editor.md)  
- [Manage Job Steps](../../ssms/agent/manage-job-steps.md)  
- [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)
+- [Sqlcmd utility](sqlcmd-utility.md)
+- [Use sqlcmd with Scripting Variables](sqlcmd-use-scripting-variables.md)
+- [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-with-query-editor.md)
+- [Manage Job Steps](../../ssms/agent/manage-job-steps.md)
+- [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)

@@ -59487,12 +59487,12 @@
     },
     {
       "source_path": "docs/ssms/scripting/sqlcmd-start-the-utility.md",
-      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-start-the-utility",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-start-utility",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/ssms/scripting/sqlcmd-connect-to-the-database-engine.md",
-      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-connect-to-the-database-engine",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-connect-database-engine",
       "redirect_document_id": true
     },
     {
@@ -59502,7 +59502,7 @@
     },
     {
       "source_path": "docs/ssms/scripting/sqlcmd-use-the-utility.md",
-      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-the-utility",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-utility",
       "redirect_document_id": true
     },
     {

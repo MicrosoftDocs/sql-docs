@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 > [!NOTE]  
-> For SQL Server 2014 and lower, see [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
+> For SQL Server 2014 and lower, see [Sqlcmd utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >  
 > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../../linux/sql-server-linux-setup-tools.md).
 
@@ -53,7 +53,7 @@ The utility uses ODBC to execute Transact-SQL batches.
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
-The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].
+The command line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].
 
 **Version Information**
 
@@ -65,7 +65,7 @@ The new version of SQLCMD supports Azure AD authentication, including Multi-Fact
 The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and Azure Synapse Analytics.
 
 **System Requirements**
-windows 11, Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2022.
+windows 11, Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2022.
 
 This component requires both the built-in [Windows Installer 5](/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).
 
@@ -162,13 +162,13 @@ sqlcmd
 **Login-Related Options**
 
 **-A**  
-Signs in to SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option isn't supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. DAC isn't available for an Azure Active Directory administrator.
+Signs in to SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC isn't available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option isn't supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. DAC isn't available for an Azure Active Directory administrator.
 
 **-C**  
 This switch is used by the client to configure it to implicitly trust the server certificate without validation. This option is equivalent to the ADO.NET option `TRUSTSERVERCERTIFICATE = true`.
 
 **-d** _db_name_  
-Issues a `USE` *db_name* statement when you start **sqlcmd**. This option sets the **sqlcmd** scripting variable SQLCMDDBNAME. This parameter specifies the initial database. The default is your login's default-database property. If the database does not exist, an error message is generated and **sqlcmd** exits.
+Issues a `USE` *db_name* statement when you start **sqlcmd**. This option sets the **sqlcmd** scripting variable SQLCMDDBNAME. This parameter specifies the initial database. The default is your login's default-database property. If the database doesn't exist, an error message is generated and **sqlcmd** exits.
 
 **-D**  
 Interprets the server name provided to -S as a DSN instead of a hostname. For more information, see _DSN Support in sqlcmd and bcp_ in [Connecting with sqlcmd](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
@@ -177,7 +177,7 @@ Interprets the server name provided to -S as a DSN instead of a hostname. For mo
 > The -D option is only available on Linux and MacOS clients. On Windows clients, it previously referred to a now-obsolete option which has been removed and is ignored.
 
 **-l** _login_timeout_  
-Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable SQLCMDLOGINTIMEOUT. The default time-out for login to **sqlcmd** is eight seconds. When using the **-G** option to connect to SQL Database or Azure Synapse Analytics and authenticate using Azure Active Directory, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message. A value of 0 specifies time-out to be infinite.
+Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable SQLCMDLOGINTIMEOUT. The default time-out for login to **sqlcmd** is eight seconds. When using the **-G** option to connect to SQL Database or Azure Synapse Analytics and authenticate using Azure Active Directory, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between 0 and 65534. If the value supplied isn't numeric or doesn't fall into that range, **sqlcmd** generates an error message. A value of 0 specifies time-out to be infinite.
 
 **-E**  
 Uses a trusted connection instead of using a user name and password to sign in to SQL Server. By default, without **-E** specified, **sqlcmd** uses the trusted connection option.
@@ -188,7 +188,7 @@ The **-E** option ignores possible user name and password environment variable s
 Sets the Column Encryption Setting to `Enabled`. For more information, see [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Only master keys stored in Windows Certificate Store are supported. The -g switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`.
 
 **-G**  
-This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The -A option is not supported with the -G option.
+This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The -A option isn't supported with the -G option.
 
 > [!IMPORTANT]  
 > The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
@@ -260,7 +260,7 @@ For Azure Active Directory Integrated authentication, provide the **-G** option 
   >There is a known issue when using the `-G` and `-U` option with SQLCMD, where putting the `-U` option before the `-G` option may cause authentication to fail. Always start with the `-G` option followed by the `-U` option.
 
 **-H** _workstation_name_  
- A workstation name. This option sets the **sqlcmd** scripting variable SQLCMDWORKSTATION. The workstation name is listed in the **hostname** column of the `sys.sysprocesses` catalog view and can be returned using the stored procedure `sp_who`. If this option is not specified, the default is the current computer name. This name can be used to identify different
+ A workstation name. This option sets the **sqlcmd** scripting variable SQLCMDWORKSTATION. The workstation name is listed in the **hostname** column of the `sys.sysprocesses` catalog view and can be returned using the stored procedure `sp_who`. If this option isn't specified, the default is the current computer name. This name can be used to identify different
 
 **sqlcmd** sessions.
 
@@ -268,16 +268,16 @@ For Azure Active Directory Integrated authentication, provide the **-G** option 
 Prints raw error messages to the screen.
 
  **-K** _application_intent_  
- Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, the sqlcmd utility will not support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replica (Always On Availability Groups)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
+ Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** isn't specified, the sqlcmd utility won't support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replica (Always On Availability Groups)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 
 **-M** _multisubnet_failover_  
- Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [Listeners, Client Connectivity, Application Failover](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
+ Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **-M** isn't specified, **-M** is off. For more information about [Listeners, Client Connectivity, Application Failover](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
 
 **-N**  
 This switch is used by the client to request an encrypted connection.
 
 **-P** _password_  
-Is a user-specified password. Passwords are case-sensitive. If the -U option is used and the **-P** option is not used, and the SQLCMDPASSWORD environment variable has not been set, **sqlcmd** prompts the user for a password. We do not recommend the use of the null password, but you can specify the null password by using a pair of contiguous double-quotation marks for the parameter value:
+Is a user-specified password. Passwords are case-sensitive. If the -U option is used and the **-P** option isn't used, and the SQLCMDPASSWORD environment variable hasn't been set, **sqlcmd** prompts the user for a password. We don't recommend the use of the null password, but you can specify the null password by using a pair of contiguous double-quotation marks for the parameter value:
 
    > [!IMPORTANT]  
    > The use of -P should be considered insecure.  Avoid giving the password on the command line. Alternatively, use the SQLCMDPASSWORD environment variable or interactively input the password by omitting the -P option.
@@ -288,7 +288,7 @@ The password prompt is displayed by printing the password prompt to the console,
 
 User input is hidden. This means that nothing is displayed and the cursor stays in position.
 
-The SQLCMDPASSWORD environment variable lets you set a default password for the current session. Therefore, passwords do not have to be hard-coded into batch files.
+The SQLCMDPASSWORD environment variable lets you set a default password for the current session. Therefore, passwords don't have to be hard-coded into batch files.
 
 The following example first sets the SQLCMDPASSWORD variable at the command prompt and then accesses the **sqlcmd** utility. At the command prompt, type:
 
@@ -313,7 +313,7 @@ Specify *server_name* to connect to the default instance of  SQL Server  on that
 
 *protocol* can be **tcp** (TCP/IP), **lpc** (shared memory), or **np** (named pipes).
 
-If you do not specify a *server_name* [ **\\**_instance\_name_ ] when you start **sqlcmd**,  SQL Server  checks for and uses the SQLCMDSERVER environment variable.
+If you don't specify a *server_name* [ **\\**_instance\_name_ ] when you start **sqlcmd**,  SQL Server  checks for and uses the SQLCMDSERVER environment variable.
 
 > [!NOTE]  
 > The OSQLSERVER environment variable has been kept for backward compatibility. The SQLCMDSERVER environment variable takes precedence over the OSQLSERVER environment variable; this means that **sqlcmd** and **osql** can be used next to each other without interference and that old scripts will continue to work.
@@ -357,7 +357,7 @@ Code-page conversion rules:
  Enter **chcp** at the command prompt to verify the code page of Cmd.exe.
 
  **-i** _input_file_[**,**_input\_file2_...]  
- Identifies the file that contains a batch of SQL statements or stored procedures. Multiple files may be specified that will be read and processed in order. Do not use any spaces between file names. **sqlcmd** will first check to see whether all the specified files exist. If one or more files do not exist, **sqlcmd** will exit. The -i and the -Q/-q options are mutually exclusive.
+ Identifies the file that contains a batch of SQL statements or stored procedures. Multiple files may be specified that will be read and processed in order. Don't use any spaces between file names. **sqlcmd** will first check to see whether all the specified files exist. If one or more files don't exist, **sqlcmd** will exit. The -i and the -Q/-q options are mutually exclusive.
 
 Path examples:
 
@@ -374,7 +374,7 @@ Path examples:
  **-o** _output_file_  
  Identifies the file that receives output from **sqlcmd**.
 
- If **-u** is specified, the *output_file* is stored in Unicode format. If the file name is not valid, an error message is generated, and **sqlcmd** exits. **sqlcmd** does not support concurrent writing of multiple **sqlcmd** processes to the same file. The file output will be corrupted or incorrect. See the **-f** switch is also relevant to file formats. This file will be created if it does not exist. A file of the same name from a prior **sqlcmd** session will be overwritten. The file specified here is not the **stdout** file. If a **stdout** file is specified, this file will not be used.
+ If **-u** is specified, the *output_file* is stored in Unicode format. If the file name isn't valid, an error message is generated, and **sqlcmd** exits. **sqlcmd** doesn't support concurrent writing of multiple **sqlcmd** processes to the same file. The file output will be corrupted or incorrect. See the **-f** switch is also relevant to file formats. This file will be created if it doesn't exist. A file of the same name from a prior **sqlcmd** session will be overwritten. The file specified here isn't the **stdout** file. If a **stdout** file is specified, this file won't be used.
 
  Path examples:
 
@@ -387,7 +387,7 @@ Path examples:
  File paths that contain spaces must be enclosed in quotation marks.
 
  **-r**[**0** | **1**]  
- Redirects the error message output to the screen (**stderr**). If you do not specify a parameter or if you specify **0**, only error messages that have a severity level of 11 or higher are redirected. If you specify **1**, all error message output including PRINT is redirected. Has no effect if you use -o. By default, messages are sent to **stdout**.
+ Redirects the error message output to the screen (**stderr**). If you don't specify a parameter or if you specify **0**, only error messages that has a severity level of 11 or higher are redirected. If you specify **1**, all error message output including PRINT is redirected. Has no effect if you use -o. By default, messages are sent to **stdout**.
 
  **-R**  
  Causes **sqlcmd** to localize numeric, currency, date, and time columns retrieved from  SQL Server  based on the client's locale. By default, these columns are displayed using the server's regional settings.
@@ -400,10 +400,10 @@ Path examples:
  Writes input scripts to the standard output device (**stdout**).
 
  **-I**  
- Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](~/t-sql/statements/set-quoted-identifier-transact-sql.md).
+ Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it's set to OFF. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](~/t-sql/statements/set-quoted-identifier-transact-sql.md).
 
  **-q "** _cmdline query_ **"**  
- Executes a query when **sqlcmd** starts, but does not exit **sqlcmd** when the query has finished running. Multiple-semicolon-delimited queries can be executed. Use quotation marks around the query, as shown in the following example.
+ Executes a query when **sqlcmd** starts, but doesn't exit **sqlcmd** when the query has finished running. Multiple-semicolon-delimited queries can be executed. Use quotation marks around the query, as shown in the following example.
 
  At the command prompt, type:
 
@@ -511,7 +511,7 @@ Path examples:
  If the **sqlcmd** script contains an incorrect comment, syntax error, or is missing a scripting variable, ERRORLEVEL returned is 1.
 
  **-m** _error_level_  
- Controls which error messages are sent to **stdout**. Messages that have a severity level greater than or equal to this level are sent. When this value is set to **-1**, all messages including informational messages, are sent. Spaces are not allowed between the **-m** and **-1**. For example, **-m-1** is valid, and **-m -1** is not.
+ Controls which error messages are sent to **stdout**. Messages that has a severity level greater than or equal to this level are sent. When this value is set to **-1**, all messages including informational messages, are sent. Spaces are not allowed between the **-m** and **-1**. For example, **-m-1** is valid, and **-m -1** isn't.
 
  This option also sets the **sqlcmd** scripting variable SQLCMDERRORLEVEL. This variable has a default of 0.
 
@@ -523,10 +523,10 @@ Path examples:
  Requests a packet of a different size. This option sets the **sqlcmd** scripting variable SQLCMDPACKETSIZE. *packet_size* must be a value between 512 and 32767. The default = 4096. A larger packet size can enhance performance for execution of scripts that have lots of SQL statements between GO commands. You can request a larger packet size. However, if the request is denied, **sqlcmd** uses the server default for packet size.
 
  **-c** _batch_terminator_  
- Specifies the batch terminator. By default, commands are terminated and sent to  SQL Server  by typing the word "GO" on a line by itself. When you reset the batch terminator, do not use Transact-SQL reserved keywords or characters that have special meaning to the operating system, even if they are preceded by a backslash.
+ Specifies the batch terminator. By default, commands are terminated and sent to  SQL Server  by typing the word "GO" on a line by itself. When you reset the batch terminator, don't use Transact-SQL reserved keywords or characters that have special meaning to the operating system, even if they're preceded by a backslash.
 
  **-L**[**c**]  
- Lists the locally configured server computers, and the names of the server computers that are broadcasting on the network. This parameter cannot be used in combination with other parameters. The maximum number of server computers that can be listed is 3000. If the server list is truncated because of the size of the buffer a warning message is displayed.
+ Lists the locally configured server computers, and the names of the server computers that are broadcasting on the network. This parameter can't be used in combination with other parameters. The maximum number of server computers that can be listed is 3000. If the server list is truncated because of the size of the buffer a warning message is displayed.
 
 > [!NOTE]  
 > Because of the nature of broadcasting on networks, **sqlcmd** may not receive a timely response from all servers. Therefore, the list of servers returned may vary for each invocation of this option.
@@ -572,9 +572,9 @@ Path examples:
 
 ## Remarks
 
-Options do not have to be used in the order shown in the syntax section.
+Options don't have to be used in the order shown in the syntax section.
 
-When multiple results are returned, **sqlcmd** prints a blank line between each result set in a batch. In addition, the `<x> rows affected` message does not appear when it does not apply to the statement executed.
+When multiple results are returned, **sqlcmd** prints a blank line between each result set in a batch. In addition, the `<x> rows affected` message doesn't appear when it doesn't apply to the statement executed.
 
 To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this article. For more information, see [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)
 
@@ -714,9 +714,9 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
 
 - All **sqlcmd** commands are case insensitive.
 
-- Each command must be on a separate line. A command cannot be followed by a Transact-SQL statement or another command.
+- Each command must be on a separate line. A command can't be followed by a Transact-SQL statement or another command.
 
-- Commands are executed immediately. They are not put in the execution buffer as Transact-SQL statements are.
+- Commands are executed immediately. They aren't put in the execution buffer as Transact-SQL statements are.
 
  **Editing Commands**  
   [**:**] **ED**  
@@ -753,7 +753,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
 
  Variable names must not contain blank space characters.
 
- Variable names cannot have the same form as a variable expression, such as $(var).
+ Variable names can't have the same form as a variable expression, such as $(var).
 
  If the string value of the scripting variable contains blank spaces, enclose the value in quotation marks. If a value for a scripting variable is not specified, the scripting variable is dropped.
 
@@ -1016,11 +1016,11 @@ Using **-V16** in combination with checking the exit code and DOS ERRORLEVEL can
 
 ## Next steps
 
-- [Start the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-start-the-utility.md)
-- [Run Transact-SQL Script Files Using sqlcmd](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)
-- [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)
-- [Use sqlcmd with Scripting Variables](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
-- [Connect to the Database Engine With sqlcmd](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)
+- [Start the sqlcmd Utility](sqlcmd-start-utility.md)
+- [Run Transact-SQL Script Files Using sqlcmd](sqlcmd-run-transact-sql-script-files.md)
+- [Use the sqlcmd Utility](sqlcmd-use-utility.md)
+- [Use sqlcmd with Scripting Variables](sqlcmd-use-scripting-variables.md)
+- [Connect to the Database Engine With sqlcmd](sqlcmd-connect-database-engine.md)
 - [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-with-query-editor.md)
-- [Manage Job Steps](~/ssms/agent/manage-job-steps.md)
-- [Create a CmdExec Job Step](~/ssms/agent/create-a-cmdexec-job-step.md)
+- [Manage Job Steps](../../ssms/agent/manage-job-steps.md)
+- [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)

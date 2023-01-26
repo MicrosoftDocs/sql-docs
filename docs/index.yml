@@ -23,9 +23,9 @@ highlightedContent:
    - title: SQL tools
      itemType: overview
      url: tools/overview-sql-tools.md
-   - title: Educational SQL resources 
-     itemType: learn
-     url: sql-server/educational-sql-resources.yml
+   - title: Troubleshoot
+     itemType: reference
+     url: /troubleshoot/sql/welcome-sql-server
 
 productDirectory:
   items:
@@ -37,7 +37,7 @@ productDirectory:
       - url: /azure/azure-sql/virtual-machines/windows/
         text: On an Azure VM
       - url: /previous-versions/sql/
-        text: Previous Versions (SQL 2005-2012)  
+        text: Previous Versions (SQL 2005-2012) 
   - title: SQL on Azure 
     imageSrc: media/index/azure.svg
     links:
@@ -77,6 +77,10 @@ conceptualContent:
         - text: SQL Docs navigation tips
           url: sql-server/sql-docs-navigation-guide.md
           itemType: get-started
+        - text: Educational SQL resources 
+          url: sql-server/educational-sql-resources.yml
+          itemType: learn
+
     - title: What's new
       links:
         - text: SQL Server 2022

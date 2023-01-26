@@ -8,8 +8,9 @@ f1_keywords:
   - VS.ToolsOptionsPages.Azure_Services.Azure_Cloud
 dev_langs: 
   - TSQL
-author: markingmyname
-ms.author: maghan
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan
 ms.date: 01/26/2023
 ---
 

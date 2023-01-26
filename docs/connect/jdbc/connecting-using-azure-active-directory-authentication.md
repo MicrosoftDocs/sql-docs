@@ -63,7 +63,11 @@ For other authentication modes, the below components must be installed on the cl
 
 Since driver version **v12.2.0**, the driver requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server) for a full list of the libraries that the driver depends on.
 
-The following example shows how to use `authentication=ActiveDirectoryMSI` mode. Run this example from inside an Azure Resource, e,g an Azure Virtual Machine, App Service, or a Function App that is federated with Azure Active Directory.
+The following example shows how to use `authentication=ActiveDirectoryManagedIdentity` mode. Run this example from inside an Azure Resource that is configured for Managed Identity.
+
+> [!NOTE]
+> Driver versions 12.2+ support Managed Identity by using the Azure Identity library for Java. For more information on which Azure resources are supported for Managed Identity, see the [Azure Identity documentation](/java/api/overview/azure/identity-readme?view=azure-java-stable#managed-identity-support).
+> Driver versions 8.3.1 through 11.2 only support Managed Identity in an Azure Virtual Machine, App Service, or Function App.
 
 Replace the server/database name with your server/database name in the following lines to run the example:
 

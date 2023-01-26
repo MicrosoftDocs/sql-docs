@@ -30,7 +30,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------------- | :------ |
 | Download the latest updates for JDBC Driver 12.2. | &bull; &nbsp; [GitHub, 12.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v12.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 12.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-12.2.0.jre11.jar file from the 12.2 package should be used with Java 11 (or higher). |
-| Compatible with Java Development Kit (JDK) version 19.0, 18.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 12.2 for SQL Server is now compatible with Java Development Kit (JDK) version 19.0 in addition to JDK 18.0, 17.0, 11.0 and 1.8. |
+| Compatible with Java Development Kit (JDK) version 19.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 12.2 for SQL Server is now compatible with Java Development Kit (JDK) version 19.0 in addition to JDK 17.0, 11.0 and 1.8. |
 
 ### 12.2 Releases
 
@@ -48,27 +48,27 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Feature | Details |
 | :---------- | :----------- |
-| Java 19 support | The driver is now compatible with Java Development Kit (JDK) version 19.0 in addition to JDK 18.0, 17.0, 11.0 and 1.8. |
-| Added support for access token callback | Allows client code to register a callback for DataSource that returns an access token. |
-| Added support for DefaultAzureCredential | Improvement to the user experience by supporting both `DefaultAzureCredential` and `IntelliJCredential` from the Azure Identity Library. |
+| Java 19 support | The driver is now compatible with Java Development Kit (JDK) version 19.0 in addition to JDK 17.0, 11.0 and 1.8. |
+| Added support for access token callback | Allows client code to register a callback on a DataSource that returns an access token. |
+| Added support for DefaultAzureCredential | Improvement to the user experience by supporting both `DefaultAzureCredential` and `IntelliJCredential` from the Azure Identity Library via the connection option `authentication=ActiveDirectoryDefault`. |
 
 ### Changes in 12.2
 
 | Change | Details |
 | :---------- | :----------- |
 | Made driver Loom-friendly | Replaces `synchronized(foo)` with reentrant locks, improving performance when using Loom. |
-| Managed Identity authentication uses Azure Identity library instead | Replaces the Managed Identity token caching logic with Azure Identity's built-in logic. |
+| Managed Identity authentication uses Azure Identity library | Replaces the driver's built-in code to obtain and cache Managed Identity tokens with the Azure Identity library. This adds Managed Identity support for additional Azure services over what the driver previously supported. |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `antlr4-runtime`, `bcprov-jdk15on`, `bcpkix-jdk15on`, and `msal`. |
 
 ### Fixes in 12.2
 
 | Fix | Details |
 | :---------- | :----------- |
-| Fixed null SQL state and zero error code when database exception is thrown | Fixed an issue where, after SQL Error, the SQL State and error code show incorrect information. [GitHub Issue #2015](https://github.com/microsoft/mssql-jdbc/issues/2015). |
-| Fixed connecting to the wrong SQLServer host | Fixes an issue where, when a driver is connected to multiple SQLServer hosts, a connection is established to the wrong host. [GitHub Issue #1964](https://github.com/microsoft/mssql-jdbc/issues/1964). |
-| Fix cache account name casing issue | Fixes an issue where account names were sent to MSAL with case-sensitivity, leading to repeated login requests. [GitHub Issue #1923](https://github.com/microsoft/mssql-jdbc/issues/1923). |
-| Fixed precision sent when using BigDecimal |  Fixed an issue where BigDecimal values were sent with maximum precision. [GitHub Issue #1489](https://github.com/microsoft/mssql-jdbc/issues/1489). [GitHub Issue #942](https://github.com/microsoft/mssql-jdbc/issues/942) |
-| Fix attestation protocol `NONE` to work in all cases | Fixed logic behind `NONE` protocol to work in all cases, not just specific ones. |
+| Fixed null SQL state and zero error code when database exception is thrown | Fixed an issue where, after SQL Error, the SQL State and error code showed incorrect information. [GitHub Issue #2015](https://github.com/microsoft/mssql-jdbc/issues/2015). |
+| Fixed connecting to the wrong SQLServer host | Fixes a concurrency issue where, when a driver is connecting to multiple SQLServer hosts, a connection could be established to the wrong host. [GitHub Issue #1964](https://github.com/microsoft/mssql-jdbc/issues/1964). |
+| Fixed cache account name casing issue | Fixes an issue where account names were sent to the Microsoft Authentication Library with case-sensitivity, leading to repeated login requests. [GitHub Issue #1923](https://github.com/microsoft/mssql-jdbc/issues/1923). |
+| Fixed precision sent when using BigDecimal |  Fixes an issue where, by default, BigDecimal values were sent with maximum precision, which could result in undesired decimal rounding. [GitHub Issue #1489](https://github.com/microsoft/mssql-jdbc/issues/1489). [GitHub Issue #942](https://github.com/microsoft/mssql-jdbc/issues/942) |
+| Fixed attestation protocol `NONE` to work in all cases | Fixed logic behind `NONE` attestation protocol to work in all cases, not just specific ones. |
 
 ## Previous releases
 

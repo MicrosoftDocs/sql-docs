@@ -3,7 +3,7 @@ title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/25/2023
+ms.date: 01/26/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -54,28 +54,28 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 ## SQL version compatibility
 
-|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
-|---|---|---|---|---|---|---|---|---|---|---|---|
-|12.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
-|11.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
-|10.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-| 9.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-| 9.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-| 8.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-| 8.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-| 7.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-| 7.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-| 7.0|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-| 6.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-| 6.2|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-| 6.1|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 6.0|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 4.2|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 4.1|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 4.0|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 3.0|Yes<sup>2</sup>|   |   |   |   |   |Yes<sup>5</sup>|Yes<sup>1</sup>|   |Yes|Yes|
-| 2.0|   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|Yes<sup>3</sup>|
-| 1.2|   |   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|
+|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|12.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
+|11.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|   |   |   |   |
+|10.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+| 9.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+| 9.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+| 8.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+| 8.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+| 7.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+| 7.2|Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+| 7.0|Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+| 6.4|Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+| 6.2|Yes|Yes|   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+| 6.1|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 6.0|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 4.2|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 4.1|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 4.0|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 3.0|Yes<sup>2</sup>   ||   |   |   |   |   |Yes<sup>5</sup>|Yes<sup>1</sup>|   |Yes|Yes|
+| 2.0|   |   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|Yes<sup>3</sup>|
+| 1.2|   |   |   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|
 
  <sup>1</sup> Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2012 as a down-level client.
 

@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e85ccfca-94e2-4671-b3ed-d247c90e4935" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/connect/jdbc/release-notes-for-the-jdbc-driver.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/connect/jdbc/release-notes-for-the-jdbc-driver.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/connect/jdbc/system-requirements-for-the-jdbc-driver.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/connect/jdbc/system-requirements-for-the-jdbc-driver.md" afterDir="false" />
-    </list>
+    <list default="true" id="e85ccfca-94e2-4671-b3ed-d247c90e4935" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

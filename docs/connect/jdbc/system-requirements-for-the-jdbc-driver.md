@@ -3,7 +3,7 @@ title: System requirements
 description: Find the system requirements for the JDBC driver. Including what Java, operation system, and database versions are supported.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/25/2023
+ms.date: 01/26/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -111,13 +111,13 @@ ms.topic: conceptual
 |mssql-jdbc-10.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception. |
 |mssql-jdbc-10.2.0.jre17.jar|4.3|17|Requires a Java Runtime Environment (JRE) 17.0. Using JRE 16.0 or lower throws an exception. |
 
-  The JDBC Driver 11.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
+  The JDBC Driver 10.2 is available on the Maven Central Repository, and can be added to a Maven project with the following code in the POM.XML:  
   
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>11.2.0.jre11</version>
+    <version>10.2.0.jre11</version>
 </dependency>
 ```
 

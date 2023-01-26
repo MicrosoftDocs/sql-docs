@@ -3,7 +3,7 @@ title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/25/2023
+ms.date: 01/26/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -34,22 +34,11 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ### 12.2 Releases
 
-Release number: 12.1.0  
-Released: November 3, 2022
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2217800)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2217551)**
 
-Fixed issues in 12.1.0:
-
-- Ensure that batchParamValues is cleared in all cases when executing a batch
-- Fixed query cancellation bug
-- Fixed callable statement index out of bounds error
-- Fixed sonatype warnings
-- Fixed check for DONE token when fetching result sets
-- Fixed race condition in secure string utility
-- Fixed attestation NONE protocol bug to work with all servers and enclave types
-- Fixed signed byte comparison
-
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.1.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2217800)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 12.1.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2217551)**
+Release number: 12.2.0  
+Released: January 31, 2023
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
 For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2217800&clcid=0x40a)  
@@ -59,30 +48,27 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Feature | Details |
 | :---------- | :----------- |
-| Java 18 support | The driver is now compatible with Java Development Kit (JDK) version 18.0 in addition to JDK 17.0, 11.0 and 1.8. |
-| Added Configurable IPv6 Support | The IP address preference for the client application can now be set between IPv4 and IPv6. Use the new `ipaddresspreference` connection setting to control the behavior. For more information, see [Setting the connection properties](setting-the-connection-properties.md). |
-| Added support for prepare method selection | Added new connection string property prepareMethod to toggle between use of sp_prepare and sp_prepexec. Use the new `prepareMethod` connection setting to control the behavior. For more information, see [Setting the connection properties](setting-the-connection-properties.md). |
-| Cache parameter metadata calls | Encryption-related information for parameterized queries can now be cached. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
+| Java 19 support | The driver is now compatible with Java Development Kit (JDK) version 19.0 in addition to JDK 18.0, 17.0, 11.0 and 1.8. |
+| Added support for access token callback | Allows client code to register a callback for DataSource that returns an access token. |
+| Added support for DefaultAzureCredential | Improvement to the user experience by supporting both `DefaultAzureCredential` and `IntelliJCredential` from the Azure Identity Library. |
 
 ### Changes in 12.2
 
 | Change | Details |
 | :---------- | :----------- |
-| TDS 8.0 support by adding "strict" option to encrypt connection property | **BREAKING CHANGE** Encrypt connection property is now of type string. |
-| Added check for negotiated ALPN | Checks to make sure to Application-Layer Protocol is successfully negotiated. |
-| Added an option for enclaveAttestationProtocol | Added option for `NONE` protocol so that secure enclaves can be used without attestation. |
-| Allow serverName to be re-ordered in connection string | Validate that the serverName field of the connection string does not have an equal sign. |
-| `msal4j` dependency is now explicit | Added an explicit dependency for `msal4j` (was a transitive dependency in previous releases). |
-| Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`. |
+| Made driver Loom-friendly | Replaces `synchronized(foo)` with reentrant locks, improving performance when using Loom. |
+| Managed Identity authentication uses Azure Identity library instead | Replaces the Managed Identity token caching logic with Azure Identity's built-in logic. |
+| Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `antlr4-runtime`, `bcprov-jdk15on`, `bcpkix-jdk15on`, and `msal`. |
 
 ### Fixes in 12.2
 
 | Fix | Details |
 | :---------- | :----------- |
-| Managed Identity Retry interval|  Fixed Managed Identity retry interval to properly back off exponentially [GitHub Issue #1765](https://github.com/microsoft/mssql-jdbc/issues/1765). |
-| Exception is not thrown as expected when the session is killed in SQL database | Added check for DONE_ERROR status token which may occur from a killed session on the server [GitHub Issue #1846](https://github.com/microsoft/mssql-jdbc/issues/1846). |
-| Assertion fails when canceling "insert into" statement | Fixed issue where the driver may assert when canceling a statement [GitHub Issue #1849](https://github.com/microsoft/mssql-jdbc/issues/1849). |
-| Establishing multiple connections in parallel can throw an IndexOutOfBoundsException | Fixed race condition with addressList which may result in IndexOutOfBoundsException when establishing multiple connections [GitHub Issue #1852](https://github.com/microsoft/mssql-jdbc/issues/1852). |
+| Fixed null SQL state and zero error code when database exception is thrown | Fixed an issue where, after SQL Error, the SQL State and error code show incorrect information. [GitHub Issue #2015](https://github.com/microsoft/mssql-jdbc/issues/2015). |
+| Fixed connecting to the wrong SQLServer host | Fixes an issue where, when a driver is connected to multiple SQLServer hosts, a connection is established to the wrong host. [GitHub Issue #1964](https://github.com/microsoft/mssql-jdbc/issues/1964). |
+| Fix cache account name casing issue | Fixes an issue where account names were sent to MSAL with case-sensitivity, leading to repeated login requests. [GitHub Issue #1923](https://github.com/microsoft/mssql-jdbc/issues/1923). |
+| Fixed precision sent when using BigDecimal |  Fixed an issue where BigDecimal values were sent with maximum precision. [GitHub Issue #1489](https://github.com/microsoft/mssql-jdbc/issues/1489). [GitHub Issue #942](https://github.com/microsoft/mssql-jdbc/issues/942) |
+| Fix attestation protocol `NONE` to work in all cases | Fixed logic behind `NONE` protocol to work in all cases, not just specific ones. |
 
 ## Previous releases
 

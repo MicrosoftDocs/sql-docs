@@ -383,7 +383,7 @@ sections:
       - question: |
           How does the maximum memory limit in serverless compare to provisioned compute? 
         answer:  | 
-          Memory is allocated at 3 GB for every vCore. The maximum amount of memory that a serverless database can scale-up is 3x the maximum number of vCores configured as compared to more than 5x in provisioned compute.  Review [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---gen-5) for details. 
+          The maximum amount of memory that a serverless database can scale-up is 3 GB/vCore times the maximum number of vCores configured as compared to more than 5 GB/vCore times the same number of vCores in provisioned compute.  Review [serverless Hyperscale resource limits](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---gen-5) for details. 
  
  
  

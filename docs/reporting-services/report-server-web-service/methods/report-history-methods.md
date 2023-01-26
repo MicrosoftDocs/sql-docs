@@ -2,7 +2,7 @@
 title: "Report History Methods | Microsoft Docs"
 description: In Reporting Services, you can use these report history methods to create and manage item history snapshots.
 ms.date: 03/06/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server-web-service
 
 

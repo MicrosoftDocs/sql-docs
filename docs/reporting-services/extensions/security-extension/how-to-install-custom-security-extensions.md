@@ -5,7 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: randolphwest
 ms.date: 12/29/2022
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: extensions
 ms.topic: reference
 ---

@@ -2,7 +2,7 @@
 title: "Implementing the IDeliveryExtension Interface for a Delivery Extension | Microsoft Docs"
 description: Find out how to implement the IDeliveryExtension interface in a delivery extension so that clients can validate user data and retrieve delivery settings.
 ms.date: 03/14/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: extensions
 
 

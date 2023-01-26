@@ -2,7 +2,7 @@
 title: "Accessing the SOAP API | Microsoft Docs"
 description: The Report Server Web service uses SOAP over HTTP and acts as a communications interface between clients and the report server. Use WSDL to call the service.
 ms.date: 03/14/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server-web-service
 
 

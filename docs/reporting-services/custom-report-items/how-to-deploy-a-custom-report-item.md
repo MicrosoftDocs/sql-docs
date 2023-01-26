@@ -2,7 +2,7 @@
 title: "How to: Deploy a Custom Report Item | Microsoft Docs"
 description: Learn how to deploy a custom report item. You'll modify the report server configuration files and copy the component assemblies to the appropriate folders.
 ms.date: 03/18/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: custom-report-items
 
 

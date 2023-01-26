@@ -2,7 +2,7 @@
 title: "Batching Methods | Microsoft Docs"
 description: Learn how to use SOAP headers in Reporting Services to include multiple Web service methods in a single operation.
 ms.date: 03/04/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server-web-service-net-framework-soap-headers
 
 

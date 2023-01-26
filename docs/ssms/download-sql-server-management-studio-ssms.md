@@ -4,7 +4,7 @@ description: Download the latest version of SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 01/25/2023
+ms.date: 01/26/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -107,7 +107,7 @@ Follow the steps below if you want to install SSMS in the background with no GUI
 
 ## Installation with Azure Data Studio
 
-- SSMS installs a system version of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) by default.
+- SSMS installs [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) by default.
   - The installation of Azure Data Studio by SSMS is skipped if an equal or higher version of Azure Data Studio is already installed.
   - The Azure Data Studio version can be found in the [release notes](release-notes-ssms.md).
 - The Azure Data Studio system installer requires the same security rights as the SSMS installer.

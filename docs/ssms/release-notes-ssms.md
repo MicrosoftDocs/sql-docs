@@ -29,7 +29,7 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 - Build number: 19.0.20196.0
 - Release date: January 26, 2023
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x40a) |
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x40a) |
 
 #### What's new in 19.0
 
@@ -77,7 +77,7 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 | Backup | Added ability to create a NUL backup device against SQL Server 2017. |
 | Central Management Servers | Provided ability to view SQL ERRORLOGs from Central Management Servers before SQL 2022. |
 | Column Master Key | Increased width of Column Master Key name in the rotation dialog, so the full name is visible. |
-| Connection | Fixed an issue with authentication that doesn't use Azure Resource Manager and information protection. |
+| Connection | Fixed an issue with authentication that doesn't use Azure Resource Manager and Microsoft Information Protection . |
 | Connection | Addressed issue with logging into Azure with a non-SQL authenticated on a machine not joined to a domain. |
 | Copy Database Wizard | Fixed the log provider type error, which occurred when copying a database using The SQL Management Object method. |
 | Database Restore | Resolved error generated when restoring a backup to an existing database. See [Unexpected behavior by SSMS](https://feedback.azure.com/d365community/idea/95b549d0-6f70-ed11-a81b-000d3adb7ffd). |
@@ -88,7 +88,7 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 | Link feature for Azure SQL Managed Instance | Fixed problem with leaking connections in MI Link. |
 | Link feature for Azure SQL Managed Instance | Updated size of subscription dropdown in the login to Azure pane to properly display subscription names. |
 | Link feature for Azure SQL Managed Instance | Updated display to show Azure sign-in options correctly. |
-| Information protection | Improved icon display when viewing information protection in older versions of SQL Server. |
+| Microsoft Information Protection  | Improved icon display when viewing Microsoft Information Protection  in older versions of SQL Server. |
 | Object Explorer | SSMS no longer crashes using the Create View UX to create a view with invalid syntax. |
 | Object Explorer | No longer display | Ledger objects if not supported by the platform. |
 | Partitioning | Added support for Azure SQL Managed Instance partitioned tables in the Manage Partition Window UX. |
@@ -233,3 +233,9 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 For a list of all SQL Server Management Studio downloads, search the [Microsoft Download Center](https://www.microsoft.com/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).
 
 For the latest release of SQL Server Management Studio, For details, see [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).
+
+## Next steps
+
+- [Download SSMS](download-sql-server-management-studio-ssms.md)
+- [Download Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Azure Data Studio release notes](../azure-data-studio/release-notes-azure-data-studio.md)

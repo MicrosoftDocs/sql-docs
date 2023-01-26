@@ -53,7 +53,7 @@ ms.topic: conceptual
 
   The JDBC Driver 12.2 includes two JAR class libraries in each installation package: **mssql-jdbc-12.2.0.jre8.jar** and **mssql-jdbc-12.2.0.jre11.jar**.
 
-  The JDBC Driver 12.2 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 18.0, OpenJDK 19.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
+  The JDBC Driver 12.2 is designed to work with, and supports all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 17.0, OpenJDK 19.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 17.0.
   
   The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 12.2 for SQL Server:  
   

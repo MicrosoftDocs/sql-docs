@@ -83,9 +83,9 @@ Follow the steps below if you want to install SSMS in the background with no GUI
 
 1. Type the command below.
 
-    ```powershell
+   ```powershell
     $media_path = "<path where SSMS-Setup-ENU.exe file is located>"
-    $install_path = "`"%systemdrive%\Program Files (x86)\Microsoft SQL Server Management Studio 18`""
+    $install_path = "<root location where all SSMS files will be installed>"
     $params = " /Install /Quiet SSMSInstallRoot=$install_path"
 
     Start-Process -FilePath $media_path -ArgumentList $params -Wait
@@ -95,15 +95,14 @@ Follow the steps below if you want to install SSMS in the background with no GUI
 
     ```powershell
     $media_path = "C:\Installers\SSMS-Setup-ENU.exe"
-    $install_path = "`"C:\Program Files (x86)\Microsoft SQL Server Management Studio 18`""
-    $params = " /Install /Quiet SSMSInstallRoot=$install_path"
+    $install_path = "$env:SystemDrive\SSMSto"
+    $params = " /Install /Quiet SSMSInstallRoot=`"$install_path`""
     
     Start-Process -FilePath $media_path -ArgumentList $params -Wait
     ```
-
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
+1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and review the log file in %TEMP%\SSMSSetup.
 
 ## Installation with Azure Data Studio
 

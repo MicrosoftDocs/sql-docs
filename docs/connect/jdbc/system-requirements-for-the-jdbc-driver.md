@@ -3,7 +3,7 @@ title: System requirements
 description: Find the system requirements for the JDBC driver. Including what Java, operation system, and database versions are supported.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/26/2023
+ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

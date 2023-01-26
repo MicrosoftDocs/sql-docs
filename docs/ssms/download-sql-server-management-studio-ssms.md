@@ -96,10 +96,11 @@ Follow the steps below if you want to install SSMS in the background with no GUI
     ```powershell
     $media_path = "C:\Installers\SSMS-Setup-ENU.exe"
     $install_path = "$env:SystemDrive\SSMSto"
-    $params = " /Install /Quiet SSMSInstallRoot=`"$install_path`""
+    $params = "/Install /Quiet SSMSInstallRoot=`"$install_path`""
     
     Start-Process -FilePath $media_path -ArgumentList $params -Wait
     ```
+
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
 1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and review the log file in %TEMP%\SSMSSetup.

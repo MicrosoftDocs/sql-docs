@@ -1191,6 +1191,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/download-sql-server-management-studio-ssms-19.md",
+      "redirect_url": "docs/ssms/download-sql-server-management-studio-ssms.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/release-notes-ssms-19.md",
+      "redirect_url": "docs/ssms/release-notes-ssms.md",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/analysis-services/general-restore-database-dialog-box-analysis-services-multidimensional-data.md",
       "redirect_url": "/previous-versions/sql/2014/analysis-services/general-restore-database-dialog-box-analysis-services-multidimensional-data",
       "redirect_document_id": false

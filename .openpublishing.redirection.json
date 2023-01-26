@@ -1192,12 +1192,12 @@
     },
     {
       "source_path": "docs/ssms/download-sql-server-management-studio-ssms-19.md",
-      "redirect_url": "docs/ssms/download-sql-server-management-studio-ssms.md",
+      "redirect_url": "docs/ssms/download-sql-server-management-studio-ssms",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/release-notes-ssms-19.md",
-      "redirect_url": "docs/ssms/release-notes-ssms.md",
+      "redirect_url": "docs/ssms/release-notes-ssms",
       "redirect_document_id": false
     },
     {

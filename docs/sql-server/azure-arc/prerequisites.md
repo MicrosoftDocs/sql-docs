@@ -12,7 +12,28 @@ ms.custom: references_regions
 
 # Prerequisites
 
-## Supported SQL versions and operating systems
+An Azure Arc-enabled instance of SQL Server is an instance on-premises or in a cloud provider, that is connected to Azure Arc. This article explains those prerequisites.
+
+Before you can Arc-enable an instance of SQL Server you need to:
+
+- Have an Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/free/).
+- Register resource providers. Specifically:
+  - `Microsoft.AzureArcData`
+  - `Microsoft.HybridCompute`
+  For instructions, see [Register resource providers](#register-resource-providers).
+
+- Have appropriate permissions in the Azure resource group to complete the task. Specifically:
+  - `Microsoft.AzureArcData/sqlServerInstances/read`
+  - `Microsoft.AzureArcData/sqlServerInstances/write`
+
+    Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+
+- Run a supported version of SQL Server on a supported operating system. See [Supported SQL Server versions and operating systems](#supported-sql-server-versions-and-operating-systems).
+- Have local administrator permission on the operating system to install and configure the agent.
+  - For Linux, use the root account.
+  - For Windows, use an account that is a member of the Local Administrators group.
+
+## Supported SQL Server versions and operating systems
 
 Azure Arc-enabled SQL Server supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
 
@@ -31,11 +52,36 @@ Azure Arc-enabled SQL Server supports SQL Server 2012 or higher running on one o
 > - SQL Server 2008, SQL Server 2008 R2, and older.
 > - Installing the Arc agent and SQL Server extension cannot be done as part of sysprep image creation.
 
-## Required permissions
+## Register resource providers
 
-To connect the SQL Server instances and the hosting machine to Azure Arc, you must have a user account or Azure service principal with [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role for the resource group in which the SQL Server will be managed.
+To register the resource providers, use one of the methods below:
 
-Deploying the Connected Machine agent on a SQL Server machine requires that you have administrator permissions to install and configure the agent. On Linux this is done by using the root account, and on Windows, with an account that is a member of the Local Administrators group
+## [Azure portal](#tab/azure)
+
+1. Select **Subscriptions**.
+1. Choose your subscription.
+1. Under **Settings**, select **Resource providers**.
+1. Search for `Microsoft.AzureArcData` and `Microsoft.HybridCompute` and select **Register**.
+
+## [PowerShell](#tab/powershell)
+
+Run:
+
+```powershell
+Register-AzResourceProvider -ProviderNamespace Microsoft.HybridCompute
+Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData
+```
+
+## [Azure CLI](#tab/az)
+
+Run:
+
+```azurecli
+az provider register --namespace 'Microsoft.HybridCompute'
+az provider register --namespace 'Microsoft.AzureArcData'
+```
+
+---
 
 ## Azure subscription and service limits
 

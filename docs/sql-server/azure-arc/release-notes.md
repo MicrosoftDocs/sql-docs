@@ -82,6 +82,7 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 - Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
 - The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+- SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
 - Azure extension for SQL Server is not supported in the following environments:
   - SQL Server in Linux containers
   - SQL Server on VMware clusters or on Azure VMware Solution

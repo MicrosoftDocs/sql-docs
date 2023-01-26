@@ -14,51 +14,53 @@ ms.custom: event-tier1-build-2022
 
 Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you connect a new SQL Server instance to Azure Arc when you're installing it on Windows Operating System. See [Install SQL Server 2022](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#install-sql-server-2022).
 
-You can connect your existing SQL Server instance to Azure Arc by following these steps.
+This article explains how to connect your SQL Server instance to Azure Arc. Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
-## Prerequisites
+## Onboard the server to Azure Arc
 
-- You need an Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/free/).
-- The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers have been registered.
-- The user onboarding Arc-enabled SQL Server resources must have the following permissions:
+If the server that runs your SQL Server instance isn't yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script connects the server to Azure and installs the Azure extension for SQL Server.
 
-   Microsoft.AzureArcData/sqlServerInstances/read
+> [!NOTE]
+> If your server is already connected to Azure, proceed to [When the machine is already connected to an Arc-enabled Server](#when-the-machine-is-already-connected-to-an-arc-enabled-server).
 
-   Microsoft.AzureArcData/sqlServerInstances/write
+### Generate an onboarding script for SQL Server
 
-Users can be assigned to built-in roles that have these permissions, for example Contributor or Owner. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+1. Go to **Azure Arc > SQL Server** and select **+ Add**
 
-> [!NOTE]  
-> SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
+   :::image type="content" source="media/join/start-creation-of-sql-server-azure-arc-resource.png" alt-text="Screenshot of the start creation.":::
 
-To register the resource providers, use one of the methods below:
+1. Under **Connect SQL Server to Azure Arc**, select **Connect Servers**
 
-## [Azure portal](#tab/azure)
+1. Review the prerequisites and select **Next: Server details**
 
-1. Select **Subscriptions**.
-1. Choose your subscription.
-1. Under **Settings**, select **Resource providers**.
-1. Search for `Microsoft.AzureArcData` and `Microsoft.HybridCompute` and select **Register**.
+1. Specify:
 
-## [PowerShell](#tab/powershell)
+    - **Subscription**
+    - **Resource group**
+    - **Region**
+    - **Operating system**
 
-Run:
+    If necessary, specify the proxy your network uses to connect to the Internet.
 
-```powershell
-Register-AzResourceProvider -ProviderNamespace Microsoft.HybridCompute
-Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData
-```
+   :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details for Azure Arc.":::
 
-## [Azure CLI](#tab/az)
+1. Select the SQL Server edition and license type you are using on this machine. [Learn more:](billing.md).
 
-Run:
+1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances installed on the server).  Separate each excluded instance by a space.
 
-```azurecli
-az provider register --namespace 'Microsoft.HybridCompute'
-az provider register --namespace 'Microsoft.AzureArcData'
-```
+   > [!IMPORTANT]  
+   > If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding **Server - Azure Arc** resource.
 
----
+   :::image type="content" source="media/join/server-details-sql-server-management-azure-arc.png" alt-text="Screenshot of server management details.":::
+
+1. Select **Next: Tags** to optionally add tags to the resource for your SQL Server instance.
+
+1. Select **Run script** to generate the onboarding script.
+Screenshot of
+
+   :::image type="content" source="media/join/download-script-sql-server-azure-arc.png" alt-text="Screenshot of a download script.":::
+
+1. Select **Download** to download the script to your machine.
 
 ## When the machine is already connected to an Arc-enabled Server
 
@@ -115,49 +117,6 @@ The possible licensing types that you can set are, PAYG, Paid and LicenseOnly
 > [!NOTE]  
 > The specified resource group must match the resource group where the corresponding connected server is registered. Otherwise, the command will fail.
  an
-
-## When the machine isn't connected to an Arc-enabled Server
-
-If the server that runs your SQL Server instance isn't yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script will connect the server to Azure and install the Azure extension for SQL Server.
-
-### Generate an onboarding script for SQL Server
-
-1. Go to **Azure Arc > SQL Server** and select **+ Add**
-
-   :::image type="content" source="media/join/start-creation-of-sql-server-azure-arc-resource.png" alt-text="Screenshot of the start creation.":::
-
-1. Under **Connect SQL Server to Azure Arc**, select **Connect Servers**
-
-1. Review the prerequisites and select **Next: Server details**
-
-1. Specify:
-
-    - **Subscription**
-    - **Resource group**
-    - **Region**
-    - **Operating system**
-
-    If necessary, specify the proxy your network uses to connect to the Internet.
-
-   :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details.":::
-
-1. Select the SQL Server edition and license type you are using on this machine. [Learn more:](billing.md).
-
-1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances installed on the server).  Separate each excluded instance by a space.
-
-   > [!IMPORTANT]  
-   > If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding **Server - Azure Arc** resource.
-
-   :::image type="content" source="media/join/server-details-sql-server-management-azure-arc.png" alt-text="Screenshot of server management details.":::
-
-1. Select **Next: Tags** to optionally add tags to the resource for your SQL Server instance.
-
-1. Select **Run script** to generate the onboarding script.
-Screenshot of
-
-   :::image type="content" source="media/join/download-script-sql-server-azure-arc.png" alt-text="Screenshot of a download script.":::
-
-1. Select **Download** to download the script to your machine.
 
 ### Connect SQL Server instances to Azure Arc
 

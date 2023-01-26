@@ -52148,42 +52148,42 @@
     {
       "source_path": "docs/relational-databases/scripting/configure-intellisense-sql-server-management-studio.md",
       "redirect_url": "/sql/ssms/scripting/configure-intellisense-sql-server-management-studio",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md",
       "redirect_url": "/sql/ssms/scripting/database-engine-query-editor-sql-server-management-studio",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/database-engine-scripting.md",
       "redirect_url": "/sql/ssms/scripting/database-engine-scripting",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/drag-and-drop-text.md",
       "redirect_url": "/sql/ssms/scripting/drag-and-drop-text",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/edit-a-breakpoint-location.md",
       "redirect_url": "/sql/ssms/scripting/edit-a-breakpoint-location",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md",
       "redirect_url": "/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/enable-disable-and-delete-breakpoints.md",
       "redirect_url": "/sql/ssms/scripting/enable-disable-and-delete-breakpoints",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/find-and-replace.md",
       "redirect_url": "/sql/ssms/scripting/find-and-replace",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/find-in-files.md",
@@ -59491,7 +59491,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/ssms/scripting/edit-sqlcmd-scripts-query-editor.md",
+      "source_path": "docs/ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md",
       "redirect_url": "/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor",
       "redirect_document_id": true
     },

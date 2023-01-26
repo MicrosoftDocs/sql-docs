@@ -3,7 +3,7 @@ title: "Referencing Assemblies in an RDL File | Microsoft Docs"
 description: Learn to reference assemblies in a Report Definition Language (RDL) file, specifically in the CodeModules element and Classes element.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: custom-assemblies
+ms.subservice: custom-assemblies
 
 
 ms.topic: reference

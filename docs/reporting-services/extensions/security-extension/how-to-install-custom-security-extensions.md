@@ -6,7 +6,7 @@ ms.author: maggies
 ms.reviewer: randolphwest
 ms.date: 12/29/2022
 ms.service: reporting-services
-ms.technology: extensions
+ms.subservice: extensions
 ms.topic: reference
 ---
 # How to install custom security extensions

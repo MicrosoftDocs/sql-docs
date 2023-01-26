@@ -3,7 +3,7 @@ title: "Supplying Web Service Method Arguments | Microsoft Docs"
 description: Learn about arguments for Web Service methods in Reporting Services, including optional parameters and complex data types.
 ms.date: 03/14/2017
 ms.service: reporting-services
-ms.technology: report-server-web-service
+ms.subservice: report-server-web-service
 
 
 ms.topic: reference

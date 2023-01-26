@@ -3,7 +3,7 @@ title: "Building Applications Using the Web Service and the .NET Framework | Mic
 description: A Report Server Web service client communicates with a report server by SOAP. Use the .NET Framework to create Web service clients to work with any Web service.
 ms.date: 03/16/2017
 ms.service: reporting-services
-ms.technology: report-server-web-service
+ms.subservice: report-server-web-service
 
 
 ms.topic: reference

@@ -9,12 +9,11 @@ ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
 ---
-
 # Release notes for SQL Server Management Studio (SSMS)
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
+This article details updates, improvements, and bug fixes for the current and previous versions of SSMS.
 
 [!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
@@ -30,69 +29,69 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 - Build number: 19.0.20196.0
 - Release date: January 26, 2023
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2199013&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223041&clcid=0x40a) |
 
 #### What's new in 19.0
 
 | New Item | Details |
-| --- | --- |
+| ---------- | ------- |
 | Support for SQL Server 2022 | SSMS 19.0 is the first release that is fully aware of SQL Server 2022 (compatibility level 160). |
-| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.41. |
+| Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.41. |
 | Accessibility | Improved keyboard navigation and screen reader text in the data classification window. |
 | Always Encrypted | Added the ability to explicitly configure an attestation protocol in the "Connect To Server" dialog when using Always Encrypted with secure enclaves (column encryption). |
-| Azure Active Directory Authentication | Connections to relational SQL instances now support Azure Active Directory Service Principal, Azure Active Directory Managed Identity, and Azure Active Directory Default authentication methods.  “Default” will use a series of possible sources for authentication, including environment variables, Azure Managed Identity, the user’s shared token cache, Visual Studio, Azure CLI, and Azure Powershell. For more information please see: [Options (Azure Services)](../menu-help/options-azure-services?view=sql-server-ver16). |
+| Azure Active Directory Authentication | Connections to relational SQL instances now support Azure Active Directory Service Principal, Azure Active Directory Managed Identity and Azure Active Directory Default authentication methods. “Default” uses a series of possible sources for authentication, including environment variables, Azure Managed Identity, the user’s shared token cache, Visual Studio, Azure CLI, and Azure PowerShell. For more information, visit: [Options (Azure Services)](menu-help/options-azure-services.md) |
 | Auditing | Added support for SQL 2022 actions. |
 | Client Driver | Changed to Microsoft.Data.SqlClient. |
 | Contained Always On Availability Group | Added support for Contained Always On Availability Groups. |
 | Data Classification | Improvements to Data Classification user interface. |
 | Database Tuning Advisor | Added support for increased nonclustered index size (up to 1700 bytes), originally made available in SQL Server 2016, to allow for expanded index recommendations. |
-| General SSMS | Added a new page, **Tools > Options > Output Window** to allow users to control what window channels appear in the Output window.  See [Options (Output Window - General)](../menu-help/options-output-window-page?view=sql-server-ver16) for more information. |
-| German Azure | Removed references to German Azure (Blackforest) from SSMS. |
+| General SSMS | Added a new page, **Tools > Options > Output Window**, to allow users to control what window channels appear in the Output window. See [Options [Output Window - General)](menu-help/options-output-window-page.md) for more information. |
+| German Azure | Removed references to Azure Germany from SSMS. |
 | Ledger | Added support for import/export of a bacpac or dacpac created from a database with LEDGER = ON. |
 | Ledger | Added support for Ledger feature Database ledger. For more information, visit [What is the database ledger?](../relational-databases/security/ledger/ledger-database-ledger.md). |
-| Link feature for Azure SQL Managed Instance |	Introduced rollback support if selected tasks fail in the MI Link wizard. |
+| Link feature for Azure SQL Managed Instance | Introduced rollback support if selected tasks fail in the MI Link wizard. |
 | Maintenance Plan | The Maintenance Plan node is now available in Object Explorer. |
 | Object Explorer | Dropped Columns folder now exists under the Columns folder for Ledger tables, which have been altered to remove one or more columns. |
 | PowerShell | Removed “Generate PowerShell Script from In-Memory OLTP Migration. |
 | Query Execution or Results | Improved checks for open connections. |
 | Query Plan | Added ellipses button to Residual property for Merge Join operator. See [SSMS: Add ellipsis button to Residual property for Merge Join operator](https://feedback.azure.com/d365community/idea/025ef426-4a88-ed11-a81b-000d3adb7ffd). |
-| Query Results | Added option in **Tools > Options > Query Execution** to not display “querying transaction count” window when closing a query window.  See [SSMS - Querying transaction count - Async](https://feedback.azure.com/d365community/idea/aaaad978-65b9-ec11-a81c-6045bd80aaa9). |
+| Query Results | Added option in **Tools > Options > Query Execution** to not display the “querying transaction count” window when closing a query window. See [SSMS - Querying transaction count - Async](https://feedback.azure.com/d365community/idea/aaaad978-65b9-ec11-a81c-6045bd80aaa9). |
 | Query Tuning Assistant | Updated user interface for improved accessibility. |
 | Security | Added support for permissions introduced in SQL Server 2022 and SQL Server 2019. |
 | Scripting | Compatibility level defaults to 160 when scripting. |
 | Showplan | The showplan XML schema has been updated. |
 | Showplan | Added support for Hyperscale Optimized Query Processing. |
 | Showplan | Added DOPFeedbackAdjusted query plan attribute. |
-| SNAC | Removed dependency on SQL Server Native Client (SNAC/SQLNCLI) from SSMS.  See [Support Policies - SQL Server Native Client](../relational-databases/native-client/applications/support-policies-for-sql-server-native-client?view=sql-server-ver16) for more information. |
-| SqlParser | Added support for TRIM function. |
+| SNAC | Removed dependency on SQL Server Native Client (SNAC/SQLNCLI) from SSMS. Visit [Support Policies - SQL Server Native Client](../relational-databases/native-client/applications/support-policies-for-sql-server-native-client) for more information. |
+| SqlParser | Added support for the TRIM function. |
 
 #### Bug fixes in 19.0
 
 | New Item | Details |
-| --- | --- |
+| -------- | ------- |
 | Accessibility | Fixed accessibility issue when navigating in the data classification window. |
 | Activity Monitor | Fixed issue where SSMS terminated unexpectedly when viewing a query plan from Activity Monitor. |
 | Analysis Services | Connection to Analysis Services is now available. |
-| Always Encrypted | Addressed issue where users were unable to sign in to Column Master Key dialog after signing out. |
+| Always Encrypted | Addressed issue where users couldn't sign in to the Column Master Key dialog after signing out. |
 | Availability Group Dashboard | Fixed the issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016, which resulted in "unknown property ClusterType" error. |
 | Backup | Added ability to create a NUL backup device against SQL Server 2017. |
-| Central Management Servers | Provided ability to view SQL ERRORLOGs from Central Management Servers prior to SQL 2022. |
-| Column Master Key | Increased width of Column Master Key name in the rotation dialog so entire name is visible. |
-| Connection | Fixed an issue with authentication that does not use Azure Resource Manager and Microsoft Information Protection. |
+| Central Management Servers | Provided ability to view SQL ERRORLOGs from Central Management Servers before SQL 2022. |
+| Column Master Key | Increased width of Column Master Key name in the rotation dialog, so the full name is visible. |
+| Connection | Fixed an issue with authentication that doesn't use Azure Resource Manager and Microsoft Information Protection . |
 | Connection | Addressed issue with logging into Azure with a non-SQL authenticated on a machine not joined to a domain. |
 | Copy Database Wizard | Fixed the log provider type error, which occurred when copying a database using The SQL Management Object method. |
-| Database Restore | Resolved error generated when restoring a backup to an existing database.  See [Unexpected behavior by SSMS](https://feedback.azure.com/d365community/idea/95b549d0-6f70-ed11-a81b-000d3adb7ffd). |
+| Database Restore | Resolved error generated when restoring a backup to an existing database. See [Unexpected behavior by SSMS](https://feedback.azure.com/d365community/idea/95b549d0-6f70-ed11-a81b-000d3adb7ffd). |
 | Database Tuning Advisor | Added ability to ignore unexpected elements in showplan XML when generating recommendations. |
-| Database Tuning Advisor | Resolved issue of failure to populate tuning log table. |
-| Database Tuning Advisor | Implemented security fixes, including a replacement of ZeroMemory with SecureZeroMemory. |
+| Database Tuning Advisor | Resolved failure to populate the tuning log table issue. |
+| Database Tuning Advisor | Implemented security fixes, including replacing ZeroMemory with SecureZeroMemory. |
 | Import/Export Data-Tier Application | Restored ability to deploy an extracted dacpac to a database via the Deploy Data-Tier Application option. |
 | Link feature for Azure SQL Managed Instance | Fixed problem with leaking connections in MI Link. |
-| Link feature for Azure SQL Managed Instance | Updated size of subscription dropdown in the Login to Azure pane to properly display subscription names. |
-| Link feature for Azure SQL Managed Instance | Updated display to show Azure sign in options correctly. |
-| Microsoft Information Protection | Improved icon display when viewing Microsoft Information Protection in older versions of SQL Server. |
-| Object Explorer | SSMS no longer crashes when using the Create View UX to create a view that has invalid syntax. |
-| Object Explorer | No longer display | Ledger objects if not supported for the platform. |
-| Partitioning | Added support for Managed Instance partitioned tables in the Manage Partition Window UX. |
+| Link feature for Azure SQL Managed Instance | Updated size of subscription dropdown in the login to Azure pane to properly display subscription names. |
+| Link feature for Azure SQL Managed Instance | Updated display to show Azure sign-in options correctly. |
+| Microsoft Information Protection  | Improved icon display when viewing Microsoft Information Protection  in older versions of SQL Server. |
+| Object Explorer | SSMS no longer crashes using the Create View UX to create a view with invalid syntax. |
+| Object Explorer | No longer display | Ledger objects if not supported by the platform. |
+| Partitioning | Added support for Azure SQL Managed Instance partitioned tables in the Manage Partition Window UX. |
 | Power BI Datamart | Added ability to connect to a Power BI Datamart. |
 | Query Editor | Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
 | Registered Servers | Fixed connection issue for a multi-server query with multiple registered servers in the same folder. |
@@ -100,7 +99,7 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 | Security | Added missing database permissions. |
 | Scripting | Added ability to Script as Insert for DW. |
 | SQL Agent | The Queued status is now shown for queued jobs in SQL Agent. |
-| SMO/Scripting | Addressed CREATE TABLE scripting failure after adding datetime masking for a column . |
+| SMO/Scripting | Addressed CREATE TABLE scripting failure after adding datetime masking for a column. |
 | SqlParser | Fixed incorrect syntax for DATE_BUCKET function. |
 | SqlParser | Added missing options for CREATE USER and CREATE LOGIN. |
 | SSIS | The "Schedule..." menu item is now visible in the Azure SSIS Catalog. |
@@ -110,10 +109,10 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 #### Known issues (19.0)
 
 | New Item | Details | Workaround |
-| --- | --- | --- |
+| -------- | ------- | ---------- |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | Query Editor | When SSMS opens after double-clicking on a .sql file, the Object Explorer window is displayed as a separate window. |
-| SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC `msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
+| SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
@@ -125,7 +124,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 Download previous SSMS versions by selecting the download link in the related section.
 
 | SSMS version | Build number | Release date |
-| --- | --- | --- |
+| ------------ | ------------ | ------------ |
 | [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
 | [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
 | [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
@@ -141,14 +140,14 @@ Download previous SSMS versions by selecting the download link in the related se
 #### What's new in 18.12.1
 
 | New Item | Details |
-| --- | --- |
+| -------- | ------- |
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.37. |
 
 #### Bug fixes in 18.12.1
 
 | New Item | Details |
-| --- | --- |
-| Always Encrypted | Fixed issue with Column Master Key creation generating an exception when using Azure Key Vault as they key store. |
+| -------- | ------- |
+| Always Encrypted | Fixed issue with Column Master Key creation generating an exception when using Azure Key Vault as the key store. |
 | Data Classification | Fixed issue with "Couldn't load file or assembly 'Microsoft.InformationProtection, Version=1.10.98.0" after upgrading to SSMS 18.10 or higher. See [Latest SSMS 18.11.1 breaks the Data Classification. Get missing assembly error after updating](https://feedback.azure.com/d365community/idea/af89d5d7-45a4-ec11-a81c-0022484ee92d). |
 | SSMS General | Resolved error related to dacpac deployment using the Deploy Data-tier application option in Azure SQL DB with MFA. |
 
@@ -159,17 +158,17 @@ Download previous SSMS versions by selecting the download link in the related se
 - Release number: 17.9.1
 - Build number: 14.0.17289.0
 - Release date: November 21, 2018
-- 
+
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
 #### Bug fixes in 17.9.1
 
-- Fixed an issue where users may experience their connection being closed and reopened with each query invocation when using "Azure Active Directory - Universal with MFA support" authentication with the SQL query editor. Side effects of the connection closing included global temporary tables being dropped unexpectedly, and sometimes a new SPID given to the connection.
-- Fixed a long outstanding issue where restore plan would fail to find a restore plan, or would generate an inefficient restore plan under certain conditions.
+- Fixed an issue where users may experience their connection being closed and reopened with each query invocation when using "Azure Active Directory - Universal with MFA support" authentication with the SQL query editor. Side effects of the connection closing included global temporary tables being dropped unexpectedly and sometimes a new SPID given to the connection.
+- Fixed a long outstanding issue where a restore plan would fail to find a restore plan or generate an inefficient one under certain conditions.
 - Fixed an issue in the "Import Data-tier Application" wizard, which could result in an error when connected to an Azure SQL Database.
 
 > [!NOTE]  
-> Non-English localized releases of SSMS 17.x require the [KB 2862966 security update package](https://support.microsoft.com/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
+> Non-English localized releases of SSMS 17.x require the [KB 2862966 security update package](https://support.microsoft.com/kb/2862966) if installed on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
 
 #### Uninstall and reinstall SSMS 17.x
 
@@ -207,7 +206,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 - Fixed an issue introduced in SSMS 16.5.2, which was causing the expansion of the 'Table' node when the table had more than one sparse column.
 
-- Users can deploy SSIS packages containing OData Connection Manager, which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, For details, see [OData Connection Manager](../integration-services/connection-manager/odata-connection-manager.md).
+- Users can deploy SSIS packages containing OData Connection Manager, which connects to a Microsoft Dynamics AX/CRM Online resource to the SSIS catalog. For more information, For details, see [OData Connection Manager](../integration-services/connection-manager/odata-connection-manager.md).
 
 - Configuring Always Encrypted on an existing table fails with errors on unrelated objects. [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -215,7 +214,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 - The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
 
-- When encrypting using Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
+- When encrypting with Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
 
 - *Open recent* menu doesn't show recently saved files. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
@@ -227,10 +226,16 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 - SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
-- SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
+- SSMS 2016 crashes with the error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
 
 ## Additional Downloads
 
 For a list of all SQL Server Management Studio downloads, search the [Microsoft Download Center](https://www.microsoft.com/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).
 
 For the latest release of SQL Server Management Studio, For details, see [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).
+
+## Next steps
+
+- [Download SSMS](download-sql-server-management-studio-ssms.md)
+- [Download Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Azure Data Studio release notes](../azure-data-studio/release-notes-azure-data-studio.md)

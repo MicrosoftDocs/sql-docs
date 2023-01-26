@@ -44,7 +44,7 @@ SSMS 19.0 is the latest general availability (GA) version. If you have a preview
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 
-The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs side by side with previous versions, so both versions are available for use. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing SSMS 19.0. You can see if you have a preview version by going to the **Help > About** window.
+The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs alongside previous versions, so both versions are available for use. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing SSMS 19.0. You can see if you have a preview version by going to the **Help > About** window.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v19.0**.
 
@@ -75,39 +75,13 @@ This article is for the latest version of SSMS only. To download previous versio
 
 ## Unattended install
 
-#### [Command Line](#tab/command-line/)
+You can install SSMS using PowerShell.
 
-You can also install SSMS using a command prompt script.
+Follow the steps below if you want to install SSMS in the background with no GUI prompts.
 
-If you want to install SSMS in the background with no GUI prompts, follow the steps below.
+1. Launch PowerShell with elevated permissions.
 
-1. Launch the command prompt with elevated permissions.
-
-1. Type the command below in the command prompt.
-
-    ```command line
-    start "" /w <path where SSMS-Setup-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
-    ```
-
-    Example:
-
-    ```command line
-    start "" /w %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
-    ```
-
-    You can also pass */Passive* instead of */Quiet* to see the setup UI.
-
-1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
-
-#### [PowerShell](#tab/azure-powershell)
-
-You can also install SSMS using PowerShell.
-
-If you want to install SSMS in the background with no GUI prompts, follow the steps below.
-
-1. Launch the command prompt with elevated permissions.
-
-1. Type the command below in the command prompt.
+1. Type the command below.
 
     ```powershell
     $media_path = "<path where SSMS-Setup-ENU.exe file is located>"
@@ -131,33 +105,11 @@ If you want to install SSMS in the background with no GUI prompts, follow the st
 
 1. If all goes well, you can see SSMS installed at *%systemdrive%\SSMSto\Common7\IDE\Ssms.exe* based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
 
----
-
-You can also install SSMS using a command prompt script.
-
-If you want to install SSMS in the background with no GUI prompts, follow the steps below.
-
-1. Launch the command prompt with elevated permissions.
-
-1. Type the command below in the command prompt.
-
-    ```console
-    start "" /w <path where SSMS-Setup-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
-    ```
-
-    Example:
-
-    ```console
-    start "" /w %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
-    ```
-
-    You can also pass */Passive* instead of */Quiet* to see the setup UI.
-
-1. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and peek at the %TEMP%\SSMSSetup for the log file.
-
 ## Installation with Azure Data Studio
 
-- Starting with SSMS 18.7, SSMS installs a system version of Azure Data Studio by default. If an equal or higher version of Azure Data Studio, both the stable or the insiders version, is already present on the workstation compared to the included version of Azure Data Studio, the installation of Azure Data Studio by SSMS is skipped. The Azure Data Studio version can be found in the release notes.
+- SSMS installs [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) by default.
+  - The installation of Azure Data Studio by SSMS is skipped if an equal or higher version of Azure Data Studio is already installed.
+  - The Azure Data Studio version can be found in the [release notes](release-notes-ssms.md).
 - The Azure Data Studio system installer requires the same security rights as the SSMS installer.
 - The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut isn't created, and Azure Data Studio isn't registered as a default editor for any file type.
 - Localization of Azure Data Studio is accomplished through Language Pack extensions. To localize Azure Data Studio, download the corresponding language pack from the [extension marketplace](../azure-data-studio/extensions/add-extensions.md).
@@ -181,9 +133,9 @@ These components aren't uninstalled because they can be shared with other produc
 
 ## Supported SQL offerings
 
-- This version of SSMS works with SQL Server 2014 and higher, and provides the most significant level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
-- Additionally, SSMS 19.x can be installed side by side with SSMS 18.x, SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
-- SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side by side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
+- This version of SSMS works with SQL Server 2014 and higher and provides the most significant level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
+- Additionally, SSMS 19.x can be installed alongside with SSMS 18.x, SSMS 17.x, SSMS 16.x.
+- SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
 ## SSMS System Requirements
 

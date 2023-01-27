@@ -10397,10 +10397,31 @@ items:
       href: sql-server/azure-arc/overview.md
     - name: Release notes
       href: sql-server/azure-arc/release-notes.md
-    - name: Connect
-      href: sql-server/azure-arc/connect.md
-    - name: Connect at scale
-      href: sql-server/azure-arc/connect-at-scale.md
+    - name: How-to guides
+      items:
+      - name: Plan for deployment
+        href: sql-server/azure-arc/plan-deployment.md
+      - name: prerequisites
+        href: sql-server/azure-arc/prerequisites.md
+      - name: Network requirements
+        href: sql-server/azure-arc/network-requirements.md
+      - name: Deployment options
+        href: sql-server/azure-arc/deployment-options.md
+      - name: Connect interactively
+        items:
+        - name: Connect
+          href: sql-server/azure-arc/connect.md
+        - name: Connect using a deployment script
+          href: sql-server/azure-arc/connect-using-deployment-script.md
+        - name: Connect from other options...
+      - name: Connect at scale
+        items:
+        - name: Connect at scale
+          href: sql-server/azure-arc/connect-at-scale.md
+        - name: Connect using Configuration Manager
+          href: sql-server/azure-arc/connect-at-scale-configuration-manager.md
+        - name: Connect using group policy
+        - name: Connect other options...
     - name: Assess
       href: sql-server/azure-arc/assess.md
     - name: View databases

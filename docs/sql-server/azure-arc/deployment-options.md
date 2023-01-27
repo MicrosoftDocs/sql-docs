@@ -32,10 +32,10 @@ The following table highlights each method so that you can determine which works
 > [!IMPORTANT]
 > The Connected Machine agent cannot be installed on an Azure virtual machine. The install script will warn you and roll back if it detects the server is running in Azure.
 
-Be sure to review the basic [prerequisites](prerequisites.md) and [network configuration requirements](network-requirements.md) before deploying the agent, as well as any specific requirements listed in the steps for the onboarding method you choose. To learn more about what changes the agent will make to your system, see [Overview of the Azure Connected Machine Agent](agent-overview.md).
+Be sure to review the basic [prerequisites](prerequisites.md) before you deploy the agent, as well as any specific requirements listed in the steps for the onboarding method you choose. To learn more about what changes the agent will make to your system, see [Overview of the Azure Connected Machine Agent](agent-overview.md).
 
 ## Next steps
 
-* Learn about the Azure Connected Machine agent [prerequisites](prerequisites.md) and [network requirements](network-requirements.md).
+* Learn about the Azure Connected Machine agent and network requirements in [prerequisites](prerequisites.md).
 * Review the [Planning and deployment guide for Azure Arc-enabled servers](plan-at-scale-deployment.md)
 * Learn about [reconfiguring, upgrading, and removing the Connected Machine agent](manage-agent.md).

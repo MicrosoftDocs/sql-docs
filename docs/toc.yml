@@ -10403,8 +10403,6 @@ items:
         items:
         - name: Prerequisites
           href: sql-server/azure-arc/prerequisites.md
-        - name: Network requirements
-          href: sql-server/azure-arc/network-requirements.md
         - name: Deployment options
           href: sql-server/azure-arc/deployment-options.md
         - name: Connect interactively

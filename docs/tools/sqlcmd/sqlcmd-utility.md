@@ -192,7 +192,7 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 
 > [!IMPORTANT]  
 > The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
-> AAD Interactive Authentication is not currently supported on Linux or macOS. Azure AD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
+> Azure AD Interactive Authentication is not currently supported on Linux or macOS. Azure AD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../../connect/odbc/linux-mac/using-integrated-authentication.md).
 
 - **Azure Active Directory Username and Password:**
 
@@ -234,7 +234,7 @@ For Azure Active Directory Integrated authentication, provide the **-G** option 
 
    To enable interactive authentication, provide -G option with user name (-U) only, without a password.
 
-   The following example exports data using Azure AD interactive mode indicating username where user represents an AAD account. This is the same example used in the previous section: *Azure Active Directory Username and Password*.
+   The following example exports data using Azure AD interactive mode indicating username where user represents an Azure AD account. This is the same example used in the previous section: *Azure Active Directory Username and Password*.
 
    Interactive mode requires a password to be manually entered, or for accounts with multi-factor authentication enabled, complete your configured MFA authentication method.
 

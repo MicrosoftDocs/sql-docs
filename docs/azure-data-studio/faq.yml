@@ -18,7 +18,7 @@ sections:
     questions:
       - question: What is Azure Data Studio?
         answer: |
-          [Azure Data Studio](what-is-azure-data-studio.md) is an open source, cross-platform desktop environment for data professionals using the Azure Data family of on-premises and cloud data platforms on Windows, macOS, and Linux. Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with lightning fast IntelliSense, code snippets, source control integration, and an integrated terminal. it's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
+          [Azure Data Studio](what-is-azure-data-studio.md) is an open source, cross-platform desktop environment for data professionals using the Azure Data family of on-premises and cloud data platforms on Windows, macOS, and Linux. Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with lightning fast IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
           
           Research has shown that users spend an order of magnitude more time working on query editing than on any other task with SQL Server Management Studio. For that reason, Azure Data Studio has been designed to focus deeply on the functionality that is used the most, with additional experiences made available as optional extensions into the product. Every user is allowed to customize their environment to the workflows that they use most often.
           

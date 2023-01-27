@@ -52148,42 +52148,42 @@
     {
       "source_path": "docs/relational-databases/scripting/configure-intellisense-sql-server-management-studio.md",
       "redirect_url": "/sql/ssms/scripting/configure-intellisense-sql-server-management-studio",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md",
       "redirect_url": "/sql/ssms/scripting/database-engine-query-editor-sql-server-management-studio",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/database-engine-scripting.md",
       "redirect_url": "/sql/ssms/scripting/database-engine-scripting",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/drag-and-drop-text.md",
       "redirect_url": "/sql/ssms/scripting/drag-and-drop-text",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/edit-a-breakpoint-location.md",
       "redirect_url": "/sql/ssms/scripting/edit-a-breakpoint-location",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md",
       "redirect_url": "/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/enable-disable-and-delete-breakpoints.md",
       "redirect_url": "/sql/ssms/scripting/enable-disable-and-delete-breakpoints",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/find-and-replace.md",
       "redirect_url": "/sql/ssms/scripting/find-and-replace",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/find-in-files.md",
@@ -59484,6 +59484,46 @@
       "source_path": "docs/tools/distributed-replay/distributed-replay-requirements.md",
       "redirect_url": "/sql/tools/distributed-replay/sql-server-distributed-replay",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sqlcmd-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md",
+      "redirect_url": "/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-start-the-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-start-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-connect-to-the-database-engine.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-connect-database-engine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-run-transact-sql-script-files.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-run-transact-sql-script-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-use-the-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-use-with-scripting-variables.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-scripting-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/go-sqlcmd-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/go-sqlcmd-utility",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",

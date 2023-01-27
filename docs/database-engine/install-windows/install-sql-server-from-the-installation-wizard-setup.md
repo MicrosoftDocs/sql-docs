@@ -480,7 +480,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
    This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
 
-   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/connect.md#prerequisites) are registered in your subscription:
+   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/prerequisites.md) are registered in your subscription:
 
    * **Microsoft.AzureArcData**
    * **Microsoft.HybridCompute**

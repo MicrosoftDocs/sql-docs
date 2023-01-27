@@ -102,7 +102,7 @@ License type is a property of Azure extension for SQL Server resource. It applie
 
 If your machine is already connected to an Arc-enabled Server, follow the steps in [When the machine is already connected to an Arc-enabled Server](connect.md#when-the-machine-is-already-connected-to-an-arc-enabled-server)
 
-If your machine isn’t connected to an Arc-enabled Server, follow the steps in [When the machine isn't connected to an Arc-enabled Server](connect.md#when-the-machine-isnt-connected-to-an-arc-enabled-server)
+If your machine isn’t connected to an Arc-enabled Server, follow the steps in [When the machine isn't connected to an Arc-enabled Server](connect.md#onboard-the-server-to-azure-arc)
 
 If install SQL Server 2022, you have an option to select the license type with [SQL 2022 setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 

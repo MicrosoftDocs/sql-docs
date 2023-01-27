@@ -14,9 +14,9 @@ ms.custom: references_regions
 
 Review [networking configuration, transport layer security, and resource providers](/azure/azure-arc/servers/agent-overview#prerequisites) required for Connected Machine agent.
 
-The resource provider `Microsoft.AzureArcData` is required to connect the SQL Server instances to Azure Arc. To register the resource provider, follow the instructions in the [Prerequisites](connect.md#prerequisites) section.
+The resource provider `Microsoft.AzureArcData` is required to connect the SQL Server instances to Azure Arc. To register the resource provider, follow the instructions in the [Prerequisites](prerequisites.md) section.
 
-If you connected an instance of SQL Server to Azure Arc prior to December 2020, you need to follow the [prerequisite steps](connect.md#prerequisites) to migrate the existing Arc-enabled SQL Server resources to the new namespace.
+If you connected an instance of SQL Server to Azure Arc prior to December 2020, you need to follow the [prerequisite steps](prerequisites.md) to migrate the existing Arc-enabled SQL Server resources to the new namespace.
 
 ## Next steps
 

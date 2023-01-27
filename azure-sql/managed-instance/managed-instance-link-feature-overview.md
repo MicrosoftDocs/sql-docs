@@ -37,7 +37,9 @@ You can keep running the link for as long as you need it, for months and even ye
 
 ## Prerequisites
 
-To use the link feature, you'll need a supported Enterprise, Standard, or Developer edition of SQL Server running on Windows Server.
+The Managed Instance link is supported on both the General Purpose and Business Critical service tier of Azure SQL Managed Instance. 
+
+To use the link feature with SQL Server, you'll need a supported Enterprise, Standard, or Developer edition of SQL Server running on Windows Server.
 
 The following table lists the functionality of the link feature and the supported SQL Server versions:
 

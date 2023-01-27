@@ -2,8 +2,8 @@
 title: "Debugging Data Processing Extension Code | Microsoft Docs"
 description: Discover how to use Microsoft .NET Framework debugging tools to analyze your data processing extension code and locate errors in it.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: extensions
+ms.service: reporting-services
+ms.subservice: extensions
 
 
 ms.topic: reference

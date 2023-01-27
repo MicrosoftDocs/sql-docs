@@ -145,7 +145,7 @@ This release introduces a SQL Server extension that continuously monitors for ch
 > [!IMPORTANT]
 > If you installed a version of SQL Server extension during the preview, make sure it is updated to version 1.1.1668.43 or later. An extension can be updated using the *Extention* pane of the specific connected server resource.
 
-The introduction of SQL Server extension requires that the user accounts have more privileges in order to connect a  SQL Server instance to Azure Arc. For details, see [Required permissions](overview.md#required-permissions).
+The introduction of SQL Server extension requires that the user accounts have more privileges in order to connect a  SQL Server instance to Azure Arc. For details, see [prerequisites](prerequisites.md).
 
 > [!NOTE]
 > In this release, the SQL Server extension is only available for  Windows. A Linux version of the extension will be announced separately.
@@ -204,7 +204,7 @@ If you have existing SQL Server - Azure Arc resources, use these steps to migrat
 ### Other changes
 
 - The *TCPPorts* property in the **SQL Server - Azure Arc** resource type has been renamed to *TCPStaticPorts*
-- The permissions required aren't as broad as they used to be. See the [Required permission](overview.md#required-permissions) section for details.
+- The permissions required aren't as broad as they used to be. See the [prerequisites](prerequisites.md) section for details.
 
 ### Known issues
 
@@ -222,7 +222,7 @@ The October update includes the following improvements:
 
 The following issues apply to the October release:
 
-- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [Required permissions](overview.md#required-permissions).
+- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
 
 ## September 2020
 
@@ -236,7 +236,7 @@ The following issues apply to the September release:
 
 - The **Register Azure Arc-enabled SQL Server** pane doesn't support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
 
-- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [Required permissions](overview.md#required-permissions).
+- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
 
 ## Next steps
 

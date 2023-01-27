@@ -123,7 +123,7 @@ The possible licensing types that you can set are, PAYG, Paid and LicenseOnly
 In this step, you'll take the script you downloaded from the Azure portal and execute it on the target machine. The script installs Azure extension for SQL Server. If the machine itself doesn't have the Azure connected machine agent installed, the script will install it first, then install the Azure extension for SQL Server. Azure connected machine agent will register the connected server as an Azure resource of type `Server - Azure Arc`, and Azure extension for SQL Server will connect the SQL Server instances as Azure resources of type `SQL Server - Azure Arc`.
 
 > [!IMPORTANT]  
-> Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](overview.md#prerequisites).
+> Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](prerequisites.md).
 
 ## [Windows](#tab/windows)
 

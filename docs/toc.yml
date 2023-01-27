@@ -10401,24 +10401,24 @@ items:
       items:
       - name: Plan for deployment
       - name: prerequisites
-        href: prerequisites.md
+        href: sql-server/azure-arc/prerequisites.md
       - name: Network requirements
-        href: network-requirements.md
+        href: sql-server/azure-arc/network-requirements.md
       - name: Deployment options
-        href: deployment-options.md
+        href: sql-server/azure-arc/deployment-options.md
       - name: Connect interactively
         items:
+        - name: Connect
+          href: sql-server/azure-arc/connect.md
         - name: Connect using a deployment script
         - name: Connect from other options...
       - name: Connect at scale
         items:
+        - name: Connect at scale
+          href: sql-server/azure-arc/connect-at-scale.md
         - name: Connect using Configuration Manager
         - name: Connect using group policy
         - name: Connect other options...
-    - name: Connect
-      href: sql-server/azure-arc/connect.md
-    - name: Connect at scale
-      href: sql-server/azure-arc/connect-at-scale.md
     - name: Assess
       href: sql-server/azure-arc/assess.md
     - name: View databases

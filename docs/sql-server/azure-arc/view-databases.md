@@ -140,7 +140,7 @@ Resources
 
 You can also [create charts and pin them to dashboards](/azure/governance/resource-graph/first-query-portal).
 
-![A chart that displays the query results for the count of databases by compatibility level.](media/view-databases/chartdb.png)
+![A chart that displays the query results for the count of databases by compatibility level.](media/view-databases/database-chart.png)
 
 
 ## Next steps

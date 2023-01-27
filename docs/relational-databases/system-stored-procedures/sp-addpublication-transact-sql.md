@@ -107,8 +107,8 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Value|Description|  
 |-----------|-----------------|  
-|**continuous** (default)|Publisher provides output of all log-based transactions. For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this requires that *sync_method* be set to **concurrent_c**.|  
-|**snapshot**|Publisher produces only scheduled synchronization events. For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this requires that *sync_method* be set to **character**.|  
+|**continuous** (default)|The log reader agent runs continuously. For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this requires that *sync_method* be set to **concurrent_c**.|  
+|**snapshot**|The log reader agent runs on a schedule. For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this requires that *sync_method* be set to **character**.|  
   
 `[ @description = ] 'description'`
  Is an optional description for the publication. *description* is **nvarchar(255)**, with a default of NULL.  

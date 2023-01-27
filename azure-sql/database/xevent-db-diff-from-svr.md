@@ -172,6 +172,12 @@ If you receive an error message that says a memory maximum was enforced, some co
 - Run fewer concurrent event sessions.
 - Through your **CREATE** and **ALTER** statements for event sessions, reduce the amount of memory you specify on the **MAX\_MEMORY** clause.
 
+There is a cap on number of active XEvent sessions in Azure SQL Database:
+  - In single Azure SQL Database, the limit is 100.
+  - In an elastic pool, the number of active Xevent sessions of all databases is 100.
+  
+
+
 ### Network latency
 
 The **Event File** target might experience network latency or failures while persisting data to Azure Storage blobs. Other events in Azure SQL Database might be delayed while they wait for the network communication to complete. This delay can slow your workload.

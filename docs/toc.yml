@@ -10400,7 +10400,7 @@ items:
     - name: How-to guides
       items:
       - name: Plan for deployment
-        href: sql-server/azure-arc/plan-for-deployment.md
+        href: sql-server/azure-arc/plan-deployment.md
       - name: prerequisites
         href: sql-server/azure-arc/prerequisites.md
       - name: Network requirements

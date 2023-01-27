@@ -10399,39 +10399,46 @@ items:
       href: sql-server/azure-arc/release-notes.md
     - name: How-to guides
       items:
-      - name: Plan for deployment
-        href: sql-server/azure-arc/plan-deployment.md
-      - name: prerequisites
-        href: sql-server/azure-arc/prerequisites.md
-      - name: Network requirements
-        href: sql-server/azure-arc/network-requirements.md
-      - name: Deployment options
-        href: sql-server/azure-arc/deployment-options.md
-      - name: Connect interactively
+      - name: Deploy
         items:
-        - name: Connect
-          href: sql-server/azure-arc/connect.md
-        - name: Connect using a deployment script
-          href: sql-server/azure-arc/connect-using-deployment-script.md
-        - name: Connect from other options...
-      - name: Connect at scale
-        items:
+        - name: Prerequisites
+          href: sql-server/azure-arc/prerequisites.md
+        - name: Network requirements
+          href: sql-server/azure-arc/network-requirements.md
+        - name: Deployment options
+          href: sql-server/azure-arc/deployment-options.md
+        - name: Connect interactively
+          items:
+          - name: Connect when machine already connected to Azure
+            href: sql-server/azure-arc/connect.md
+          - name: Connect when machine not connected to Azure
+          - name: Connect with installer (.msi)
         - name: Connect at scale
-          href: sql-server/azure-arc/connect-at-scale.md
-        - name: Connect using Configuration Manager
-          href: sql-server/azure-arc/connect-at-scale-configuration-manager.md
-        - name: Connect using group policy
-        - name: Connect other options...
-    - name: Assess
-      href: sql-server/azure-arc/assess.md
-    - name: View databases
-      href: sql-server/azure-arc/view-databases.md
-    - name: Configure advanced data Security
-      href: sql-server/azure-arc/configure-advanced-data-security.md
-    - name: Billing through Microsoft Azure
-      href: sql-server/azure-arc/billing.md
+          items:
+          - name: Connect at scale | Azure policy
+            href: sql-server/azure-arc/connect-at-scale.md
+          - name: Connect at scale | Script
+        - name: Validate successful onboarding
+    - name: Manage
+      items:
+      - name: Assess
+        href: sql-server/azure-arc/assess.md
+      - name: View databases
+        href: sql-server/azure-arc/view-databases.md
+      - name: Delete from or restore to Azure Arc
+      - name: Billing through Microsoft Azure
+        href: sql-server/azure-arc/billing.md
+    - name: Secure
+      items:
+      - name: Configure advanced data Security
+        href: sql-server/azure-arc/configure-advanced-data-security.md
     - name: FAQ
       href: sql-server/azure-arc/faq.yml
+    - name: Troubleshoot
+      items:
+      - name: Troubleshoot deployment
+      - name: Troubleshoot other
+
 - name: Big Data Clusters
   items:
   - name: Big Data Clusters

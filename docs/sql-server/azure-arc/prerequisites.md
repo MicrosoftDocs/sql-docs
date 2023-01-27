@@ -1,6 +1,6 @@
 ---
 title: Azure Arc-enabled SQL Server prerequisites
-description: Descibes prerequisites required by of Azure Arc-enabled SQL Server.
+description: Describes prerequisites required by of Azure Arc-enabled SQL Server.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest

@@ -10400,6 +10400,7 @@ items:
     - name: How-to guides
       items:
       - name: Plan for deployment
+        href: sql-server/azure-arc/plan-for-deployment.md
       - name: prerequisites
         href: sql-server/azure-arc/prerequisites.md
       - name: Network requirements
@@ -10411,12 +10412,14 @@ items:
         - name: Connect
           href: sql-server/azure-arc/connect.md
         - name: Connect using a deployment script
+          href: sql-server/azure-arc/connect-using-deployment-script.md
         - name: Connect from other options...
       - name: Connect at scale
         items:
         - name: Connect at scale
           href: sql-server/azure-arc/connect-at-scale.md
         - name: Connect using Configuration Manager
+          href: sql-server/azure-arc/connect-at-scale-configuration-manager.md
         - name: Connect using group policy
         - name: Connect other options...
     - name: Assess

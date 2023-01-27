@@ -1,6 +1,6 @@
 ---
-title: Connect SQL Servers on Azure Arc-enabled servers at scale
-description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale.
+title: Connect SQL Servers on Azure Arc-enabled servers at scale with Configuration Manager
+description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale with Configuration Manager.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest

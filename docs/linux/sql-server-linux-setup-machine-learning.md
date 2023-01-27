@@ -147,6 +147,9 @@ sudo su
 # Optionally, if your system does not have the https apt transport option
 apt-get install apt-transport-https
 
+# If you are on Ubuntu 20.04, install the following package (R queries need the shared library libtinfo.so.5)
+apt-get install libncurses5
+
 # Set the location of the package repo the "prod" directory containing the distribution.
 # This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb

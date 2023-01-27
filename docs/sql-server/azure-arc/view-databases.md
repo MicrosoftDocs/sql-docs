@@ -129,7 +129,7 @@ Resources
 
 ### Scenario 8: Show a count of databases by compatibility
 
-This example returnes the number of databases, ordered by the compatibility level:
+This example returns the number of databases, ordered by the compatibility level:
 
 ```kusto
 Resources
@@ -140,7 +140,7 @@ Resources
 
 You can also [create charts and pin them to dashboards](/azure/governance/resource-graph/first-query-portal).
 
-![A chart that displays the query results for the count of databases by compatibility level.](media/view-databases/database-chart.png)
+![Diagram of a pie chart that displays the query results for the count of databases by compatibility level.](media/view-databases/database-chart.png)
 
 
 ## Next steps

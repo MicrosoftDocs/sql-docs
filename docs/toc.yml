@@ -10408,9 +10408,11 @@ items:
         - name: Connect interactively
           items:
           - name: Connect when machine already connected to Azure
-            href: sql-server/azure-arc/connect.md
+            href: sql-server/azure-arc/connect-already-enabled.md
           - name: Connect when machine not connected to Azure
+            href: sql-server/azure-arc/connect.md
           - name: Connect with installer (.msi)
+            href: sql-server/azure-arc/connect-with-installer.md
         - name: Connect at scale
           items:
           - name: Connect at scale | Azure policy

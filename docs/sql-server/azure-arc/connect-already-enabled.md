@@ -14,55 +14,71 @@ ms.custom: event-tier1-build-2022
 
 Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you connect a new SQL Server instance to Azure Arc when you're installing it on Windows Operating System. See [Install SQL Server 2022](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#install-sql-server-2022).
 
-This article explains how to connect your SQL Server instance to Azure Arc. Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
+This article explains how to connect your SQL Server instance to Azure Arc on an Arc-enabled server. Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
-## Onboard the server to Azure Arc
+If the machine with SQL Server is already connected to Azure Arc, to connect the SQL Server instances, install *Azure extension for SQL Server*. The extension is in the extension manager as **SQL Server Extension - Azure Arc**. 
 
-If the server that runs your SQL Server instance isn't yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script connects the server to Azure and installs the Azure extension for SQL Server.
+Once installed, the Azure extension for SQL Server recognizes all the installed SQL Server instances and connects them with Azure Arc. 
 
-> [!NOTE]
-> If your server is already connected to Azure, proceed to [When the machine is already connected to an Arc-enabled Server](#when-the-machine-is-already-connected-to-an-arc-enabled-server).
+The extension will runs continuously to detect changes in the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, the extension automatically detects and registers it with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
 
-### Generate an onboarding script for SQL Server
+> [!IMPORTANT]  
+>
+> - The Azure resource with type `SQL Server - Azure Arc` representing the SQL Server instance installed on the machine uses the same region and resource group as the Azure resources for Arc-enabled servers.
 
-1. Go to **Azure Arc > SQL Server** and select **+ Add**
+## [Azure portal](#tab/azure)
 
-   :::image type="content" source="media/join/start-creation-of-sql-server-azure-arc-resource.png" alt-text="Screenshot of the start creation.":::
+To install the Azure extension for SQL Server, use the following steps:
 
-1. Under **Connect SQL Server to Azure Arc**, select **Connect Servers**
+1. Open the **Azure Arc > Servers** resource.
+1. Search for the connected server with the SQL Server instance that you want to connect to Azure.
+1. Under **Extensions**, select **+ Add**.
+1. Select `Azure extension for SQL Server` and select **Next**.
+1. Specify the SQL Server edition and license type you are using on this machine.
+1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances to skip, separate them by spaces) and select **Review + Create**.
+   :::image type="content" source="media/join/license-type-in-extension.png" alt-text="Screenshot for license type and exclude instances.":::
+1. Select **Create**.
 
-1. Review the prerequisites and select **Next: Server details**
+## [PowerShell](#tab/powershell)
 
-1. Specify:
+To install *Azure extension for SQL Server*, run:
 
-    - **Subscription**
-    - **Resource group**
-    - **Region**
-    - **Operating system**
+```powershell
+$Settings = @{ SqlManagement = @{ IsEnabled = $true }; ExcludedSqlInstances = @(<Comma separated names of SQL Server instances, eg: "MSSQLSERVER01","MSSQLSERVER">); LicenseType="<License Type>"}
 
-    If necessary, specify the proxy your network uses to connect to the Internet.
+New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName {your resource group name} -MachineName {your machine name} -Location {azure region} -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
+```
 
-   :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details for Azure Arc.":::
+## [Azure CLI](#tab/az)
 
-1. Select the SQL Server edition and license type you are using on this machine. [Learn more:](billing.md).
+To install *Azure extension for SQL Server* for Windows Operating System, run:
 
-1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances installed on the server).  Separate each excluded instance by a space.
+```azurecli
+az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings "{\"SqlManagement\":{\"IsEnabled\":true}, \"LicenseType\":\"<License Type>\", \"ExcludedSqlInstances\":[]}"
+```
 
-   > [!IMPORTANT]  
-   > If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding **Server - Azure Arc** resource.
+To install *Azure extension for SQL Server* for Linux operating system, run:
 
-   :::image type="content" source="media/join/server-details-sql-server-management-azure-arc.png" alt-text="Screenshot of server management details.":::
+```azurecli
+settings="{\"SqlManagement\":{\"IsEnabled\":true},\"LicenseType\":\"<License Type>\"}"
+az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "LinuxAgent.SqlServer" --resource-group "{your resource group name}" --type "LinuxAgent.SqlServer" --publisher "Microsoft.AzureData" --settings $settings
+```
 
-1. Select **Next: Tags** to optionally add tags to the resource for your SQL Server instance.
+The possible licensing types that you can set are:
 
-1. Select **Run script** to generate the onboarding script.
-Screenshot of
+- `PAYG`
+- `Paid`
+- `LicenseOnly`
 
-   :::image type="content" source="media/join/download-script-sql-server-azure-arc.png" alt-text="Screenshot of a download script.":::
+*Azure extension for SQL Server* for Linux is available for preview.
 
-1. Select **Download** to download the script to your machine.
+---
 
-### Connect SQL Server instances to Azure Arc
+> [!NOTE]  
+> The specified resource group must match the resource group where the corresponding connected server is registered. Otherwise, the command will fail.
+ an
+
+## Connect SQL Server instances to Azure Arc
 
 In this step, you'll take the script you downloaded from the Azure portal and execute it on the target machine. The script installs Azure extension for SQL Server. If the machine itself doesn't have the Azure connected machine agent installed, the script will install it first, then install the Azure extension for SQL Server. Azure connected machine agent will register the connected server as an Azure resource of type `Server - Azure Arc`, and Azure extension for SQL Server will connect the SQL Server instances as Azure resources of type `SQL Server - Azure Arc`.
 

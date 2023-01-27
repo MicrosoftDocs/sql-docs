@@ -22,9 +22,9 @@ Use **sqlcmd** to run a Transact-SQL script file. A Transact-SQL script file is 
 
 ## Create a script file
 
- To create a simple Transact-SQL script file by using Notepad, follow these steps:
+ To create a Transact-SQL script file by using Notepad, follow these steps:
 
-1. Select **Start**, point to **All Programs**, point to **Accessories**, and thenselectk **Notepad**.
+1. Select **Start**, point to **All Programs**, point to **Accessories**, and then select **Notepad**.
 
 1. Copy and paste the following Transact-SQL code into Notepad:
 

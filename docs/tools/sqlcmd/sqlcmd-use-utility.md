@@ -95,7 +95,8 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
     sqlcmd -U MyLogin -S <ComputerName>\<InstanceName>
     ```
 
-    > **HINT!!** To see a list of the options that are supported by the **sqlcmd** utility run: `sqlcmd -?`.
+    > [!TIP]
+    > To see a list of the options that are supported by the **sqlcmd** utility run: `sqlcmd -?`.
 
 ## Run Transact-SQL statements interactively by using sqlcmd
 
@@ -109,7 +110,7 @@ The **sqlcmd** utility is a command-line utility for ad hoc, interactive executi
 
  To clear the statement cache, type **:RESET**. Typing **^C** causes **sqlcmd** to exit. **^C** can also be used to stop the execution of the statement cache after a **GO** command has been issued.
 
-Transact\-SQL statements that are entered in an interactive session can edited by entering the **:ED** command and the **sqlcmd** prompt. The editor will open and, after editing the Transact\-SQL statement and closing the editor, the revised Transact\-SQL statement will appear in the command window. Enter **GO** to run the revised Transact\-SQL statement.
+Transact\-SQL statements that are entered in an interactive session can be edited by entering the **:ED** command and the **sqlcmd** prompt. The editor will open and, after editing the Transact\-SQL statement and closing the editor, the revised Transact\-SQL statement will appear in the command window. Enter **GO** to run the revised Transact\-SQL statement.
 
 ## Quoted strings
 
@@ -169,7 +170,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
  `1> _`
 
- Pressing ENTER after entering `USE AdventureWorks2012` signaled `sqlcmd` to start a new line. Pressing ENTER, after you type `GO,` signaled `sqlcmd` to send the `USE AdventureWorks2012` statement to the instance of SQL Server. `sqlcmd` then returned a message to indicate that the `USE` statement completed successfully and displayed a new `1>` prompt as a signal to enter a new statement or command.
+ Select ENTER after entering `USE AdventureWorks2012` signaled `sqlcmd` to start a new line. Select ENTER, after you type `GO,` signaled `sqlcmd` to send the `USE AdventureWorks2012` statement to the instance of SQL Server. `sqlcmd` then returned a message to indicate that the `USE` statement completed successfully and displayed a new `1>` prompt as a signal to enter a new statement or command.
 
  The following example shows what the Command Prompt window contains if you type a `SELECT` statement, a `GO` to execute the `SELECT`, and an `EXIT` to exit `sqlcmd`:
 
@@ -205,7 +206,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
  The lines after line `3> GO` are the output of a `SELECT` statement. After you generate output, `sqlcmd` resets the `sqlcmd` prompt and displays `1>`. After entering `EXIT` at line `1>`, the Command Prompt window displays the same line it did when you first opened it. This indicates that `sqlcmd` has exited its session. You can now close the Command Prompt window by typing another `EXIT` command.
 
-## Runn Transact-SQL script files using sqlcmd
+## Run Transact-SQL script files using sqlcmd
 
  You can use **sqlcmd** to execute database script files. Script files are text files that contain a mix of Transact\-SQL statements, **sqlcmd** commands, and scripting variables. For more information about how to script variables, see [Use sqlcmd with Scripting Variables](./sqlcmd-use-scripting-variables.md). **sqlcmd** works with the statements, commands, and scripting variables in a script file in a manner similar to how it works with statements and commands that are entered interactively. The main difference is that **sqlcmd** reads through the input file without pause instead of waiting for a user to enter the statements, commands, and scripting variables.
 
@@ -217,7 +218,7 @@ Transact\-SQL statements that are entered in an interactive session can edited b
 
 ## Examples
 
-### A. Runn a script by using sqlcmd
+### A. Run a script by using sqlcmd
 
  Start Notepad, and type the following Transact\-SQL statements:
 

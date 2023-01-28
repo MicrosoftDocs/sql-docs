@@ -147,7 +147,7 @@ sudo su
 # Optionally, if your system does not have the https apt transport option
 apt-get install apt-transport-https
 
-# If you are on Ubuntu 20.04, install the following package (R queries need the shared library libtinfo.so.5)
+# If you are on Ubuntu 20.04, install the following package (MRO 3.5 has a dependency on libtinfo.so.5 in Ubuntu 20.04)
 apt-get install libncurses5
 
 # Set the location of the package repo the "prod" directory containing the distribution.

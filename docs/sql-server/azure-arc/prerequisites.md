@@ -27,13 +27,14 @@ Before you can Arc-enable an instance of SQL Server you need to:
 - Register resource providers. Specifically:
   - `Microsoft.AzureArcData`
   - `Microsoft.HybridCompute`
+
   For instructions, see [Register resource providers](#register-resource-providers).
 
-- Have appropriate permissions in the Azure resource group to complete the task. Specifically:
-  - `Microsoft.AzureArcData/sqlServerInstances/read`
-  - `Microsoft.AzureArcData/sqlServerInstances/write`
-  - Alternatively user can be assigned to built-in role, "Azure Connected SQL Server Onboarding", which consists of above two permissions.
-
+- To onborad SQL Server to Arc-enabled SQL Server, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
+  - `Microsoft.AzureArcData/register/action`
+  - `Microsoft.HybridCompute/machines/extensions/read`
+  - `Microsoft.HybridCompute/machines/extensions/write`
+  
     Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
 - Run a supported version of SQL Server on a supported operating system. See [Supported SQL Server versions and operating systems](#supported-sql-server-versions-and-operating-systems).

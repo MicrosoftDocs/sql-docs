@@ -8246,8 +8246,6 @@ items:
         href: tools/distributed-replay/status-option-distributed-replay-administration-tool.md
       - name: Cancel Option
         href: tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md
-  - name: Go-SQLCMD
-    href: tools/go-sqlcmd-utility.md
   - name: SQL Server Configuration Manager
     href: tools/configuration-manager/sql-server-services.md
     items:
@@ -8399,17 +8397,21 @@ items:
   - name: SQLCMD
     items:
     - name: sqlcmd Overview
-      href: tools/sqlcmd-utility.md
+      href: tools/sqlcmd/sqlcmd-utility.md
+    - name: go-sqlcmd Overview
+      href: tools/sqlcmd/go-sqlcmd-utility.md
     - name: Start the Utility
-      href: ssms/scripting/sqlcmd-start-the-utility.md
+      href: tools/sqlcmd/sqlcmd-start-utility.md
     - name: Use the Utility
-      href: ssms/scripting/sqlcmd-use-the-utility.md
+      href: tools/sqlcmd/sqlcmd-use-utility.md
     - name: Connect to the Database Engine
-      href: ssms/scripting/sqlcmd-connect-to-the-database-engine.md
+      href: tools/sqlcmd/sqlcmd-connect-database-engine.md
     - name: Run T-SQL Script Files
-      href: ssms/scripting/sqlcmd-run-transact-sql-script-files.md
+      href: tools/sqlcmd/sqlcmd-run-transact-sql-script-files.md
     - name: Use with Scripting Variables
-      href: ssms/scripting/sqlcmd-use-with-scripting-variables.md
+      href: tools/sqlcmd/sqlcmd-use-scripting-variables.md
+    - name: Edit SQLCMD Scripts with Query Editor
+      href: tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md
   - name: SSB Diagnose
     href: tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
     items:
@@ -9257,8 +9259,6 @@ items:
           href: ssms/scripting/manage-code-formatting.md
         - name: Navigate Code & Text
           href: ssms/scripting/navigate-code-and-text.md
-        - name: Edit SQLCMD Scripts with Query Editor
-          href: ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
     - name: References
       items:
       - name: SQL Server Management Objects (SMO)

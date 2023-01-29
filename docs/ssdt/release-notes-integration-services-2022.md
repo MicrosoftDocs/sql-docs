@@ -35,6 +35,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   5. Side by side, localization and globalization are not supported.
   6. Azure-enabled SSIS projects are not supported
   7. Repair action dose not work. Please reinstall it instead.  
+  8. Logging page UI cannot choose package.
   
 **Version 0.1**
   1. Target server version supported: SQL server 2019 and SQL server 2022 
@@ -44,8 +45,9 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   1. Side by side, localization and globalization aren't supported.
   1. Packages using Oracle and Teradata connectors aren't supported. 
   1. Azure-enabled SSIS projects aren't supported.
-  1. Right click Package and select SSIS Import and Export Wizard throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\DTSWizard.exe
-  1. Right click Package and select Upgrade All Packages throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\SSISUpgrade.exe
+  2. Logging page UI cannot choose package
+  3. Right click Package and select SSIS Import and Export Wizard throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\DTSWizard.exe
+  4. Right click Package and select Upgrade All Packages throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\SSISUpgrade.exe
 ## Installation issues
 
 If you install successfully, but the solution shows **"incompatible"**, and "The application isn't installed":

@@ -22,14 +22,17 @@ Before you can use [Always Encrypted with secure enclaves](always-encrypted-encl
 > [!NOTE]
 > The role responsible for configuring the secure enclave is the DBA. See [Roles and responsibilities when configuring attestation with HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
-The supported enclave type for [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or later is virtualization based security (VBS). Before configuring the VBS enclave type, make sure  the computer hosting your instance meets the requirements stated in [Plan for Always Encrypted with secure enclaves in SQL Server without attestation](always-encrypted-enclaves-no-attestation-plan.md) (if you're using Always Encrypted with secure enclaves without attestation) or [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md) (if you're using the feature with attestation).
+The supported enclave type for [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or later is virtualization based security (VBS). Before configuring the VBS enclave type, make sure the computer hosting your instance meets the requirements stated in:
+
+- [Plan for Always Encrypted with secure enclaves in SQL Server without attestation](always-encrypted-enclaves-no-attestation-plan.md) (if you're using Always Encrypted with secure enclaves without attestation)
+- [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md) (if you're using the feature with attestation).
 
 For detailed instructions on how to configure the enclave type, see [Configure the enclave type for Always Encrypted Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
 
-## Next Steps
+## Next steps
 
  [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
 
-## See Also  
- 
- [Server Configuration Options (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+## See also  
+
+[Server Configuration Options (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)

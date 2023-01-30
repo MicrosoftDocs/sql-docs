@@ -10,7 +10,6 @@ ms.subservice: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Run Transact-SQL statements using secure enclaves
 
@@ -42,17 +41,16 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
   - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] supports only nested loop joins. [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash, and merge joins
   - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
   - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
-- Queries that insert, update, or delete rows, which in turn triggers inserting and/or removing an index key to/from an index on an enclave-enabled column. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
+- Queries that insert, update, or delete rows, which in turn triggers inserting and/or removing an index key to/from an index on an enclave-enabled column. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
 
 > [!NOTE]
 > Operations on indexes and confidential DML queries using enclaves are only supported on enclave-enabled columns that use randomized encryption. Deterministic encryption is not supported.
-
-> [!NOTE]
-> In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required. 
+>
+> In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required.
 
 ### DBCC commands using secure enclaves
 
-[DBCC (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-transact-sql.md) administrative commands that involve checking the integrity of indexes may also require secure enclaves, if the database contains indexes on enclave-enabled columns using randomized encryption. For example, [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+[DBCC (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-transact-sql.md) administrative commands that involve checking the integrity of indexes may also require secure enclaves if the database contains indexes on enclave-enabled columns using randomized encryption. For example, [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
 
 ## Prerequisites for running statements using secure enclaves
 
@@ -65,9 +63,9 @@ Your environment needs to meet the following requirements to support executing s
 
     - See [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) for information about client drivers supporting Always Encrypted with secure enclaves.
     - See the following sections for information about tools supporting Always Encrypted with secure enclaves.
- 
+
   - Enable Always Encrypted for the database connection.
-  - Specify an attestation protocol, which determines whether your application/tool must attest the enclave before submitting enclave queries, and if so, which attestation service it should use. Most tools and drivers support the following attestation protocols:
+  - Specify an attestation protocol, which determines whether your application or tool must attest the enclave before submitting enclave queries, and which attestation service it should use. Most tools and drivers support the following attestation protocols:
 
     - Microsoft Azure Attestation - enforces attestation using Microsoft Azure Attestation.
     - Host Guardian Service - enforces attestation using Host Guardian Service.
@@ -81,23 +79,23 @@ Your environment needs to meet the following requirements to support executing s
     | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
     | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves (preview)  | None |
 
-- Specify an attestation URL that is valid for your environment, if you're using attestation.
+- Specify an attestation URL that is valid for your environment if you're using attestation.
 
   - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
   - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
 
 ### Prerequisites for running T-SQL statements using enclaves in SSMS
 
-[Download the latest general availability (GA) version of SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+Download the latest version of [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
 Make sure you run your statements from a query window that uses a connection that has Always Encrypted and attestation parameters correctly configured.
 
 1. In the **Connect to Server** dialog, specify your server name, select an authentication method, and specify your credentials.
-2. Click **Options >>** and select the **Connection Properties** tab. Specify your database name.
+2. Select **Options >>** and select the **Connection Properties** tab. Specify your database name.
 3. Select the **Always Encrypted** tab.
 4. Select **Enable Always Encrypted (column encryption)**.
 5. Select **Enable secure enclaves**.
-6. Set **Protocol** to: 
+6. Set **Protocol** to:
 
     1. **Host Guardian Service** if you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
     1. **Microsoft Azure Attestation** if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves.
@@ -110,7 +108,7 @@ Make sure you run your statements from a query window that uses a connection tha
 8. Select **Connect**.
 9. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.
 
-For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ssms.md#en-dis).
+For more information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ssms.md#en-dis).
 
 ### Prerequisites for running T-SQL statements using enclaves in Azure Data Studio
 
@@ -120,7 +118,7 @@ The minimum recommended version **1.23** or higher is recommended.
 
 Make sure you run your statements from a query window that uses a connection that has Always Encrypted enabled and both the correct attestation protocol and the attestation URL configured.
 
-1. In the **Connection** dialog, click **Advanced...**.
+1. In the **Connection** dialog, select **Advanced...**.
 2. To enable Always Encrypted for the connection, set the **Always Encrypted** field to **Enabled**.
 3. Specify the attestation protocol and the attestation URL.
     - If you're using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] set **Attestation Protocol** to **Host Guardian Service** and enter your Host Guardian Service attestation URL in the **Enclave Attestation URL** field.
@@ -128,9 +126,9 @@ Make sure you run your statements from a query window that uses a connection tha
 
     ![Connect to server with attestation using Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
 
-4. Click **OK** to close **Advanced Properties**.
+4. Select **OK** to close **Advanced Properties**.
 
-For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ads.md#enabling-and-disabling-always-encrypted-for-a-database-connection).
+For more information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ads.md#enabling-and-disabling-always-encrypted-for-a-database-connection).
 
 If you plan to run parameterized DML queries, you also need to enable [Parameterization for Always Encrypted](always-encrypted-query-columns-ads.md#parameterization-for-always-encrypted).
 

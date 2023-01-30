@@ -22,14 +22,14 @@ The secure enclaves feature is an addition to the existing [Always Encrypted](..
 - Make sure Microsoft JDBC Driver 8.2 (or higher) for SQL Server is installed on your development machine.
 - Verify environment dependencies such as DLLs, KeyStores, and so on, are in the correct paths. Always Encrypted with secure enclaves is an add-on to the existing [Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md) feature and share similar prerequisites.
 
-> [!Note]
+> [!NOTE]
 > If you are using an older version of JDK 8, you may need to download and install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files. Be sure to read the Readme included in the zip file for installation instructions and relevant details on possible export/import issues.  
 >
 > The policy files can be downloaded from  [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
 ## Setting up secure enclaves
 
-Follow [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md), [Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database](../../../azure-sql/database/always-encrypted-enclaves-getting-started-sgx.md), or [Tutorial: Getting started with Always Encrypted with VBS enclaves in Azure SQL Database](../../../azure-sql/database/always-encrypted-enclaves-getting-started-vbs.md) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Follow [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md), [Tutorial: Getting started using Always Encrypted with Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx), or [Tutorial: Getting started with Always Encrypted with VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs) to get started with secure enclaves. For more in-depth information, see [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Connection String properties
 

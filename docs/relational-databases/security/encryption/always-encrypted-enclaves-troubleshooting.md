@@ -2,14 +2,13 @@
 title: "Troubleshoot common issues for Always Encrypted with secure enclaves"
 description: "Troubleshoot common issues for Always Encrypted with secure enclaves"
 ms.custom: ""
-ms.date: 01/15/2021
+ms.date: 02/15/2023
 ms.reviewer: vanto
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 
 # Troubleshoot common issues for Always Encrypted with secure enclaves
@@ -48,7 +47,7 @@ Errors can occur at various steps of the above workflow due to misconfigurations
   - The attestation provider has been accidentally deleted.
   - The firewall was configured for the attestation provider, but it doesn't allow access to Microsoft services.
   - An intermittent network error causes the attestation provider to be unavailable.
-- Your Azure SQL logical server is not authorized to send attestation requests to the attestation provider. Make sure the administrator of your attestation provider has added the database server to the Attestation Reader role. 
+- Your Azure SQL logical server isn't authorized to send attestation requests to the attestation provider. Make sure the administrator of your attestation provider has added the database server to the Attestation Reader role. 
 - The validation of the attestation policy fails (in step 3 of the above workflow).
   - An incorrect attestation policy is the likely root cause. Make sure you're using the Microsoft-recommended policy. For more information, see [Create and configure an attestation provider](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation#create-and-configure-an-attestation-provider).
   - The policy validation may also fail as a result of a security breach compromising the server-side enclave.
@@ -94,7 +93,8 @@ This section lists common errors you may encounter when you run confidential DML
 - The column you're querying uses deterministic encryption. Confidential DML queries using secure enclaves aren't supported with deterministic encryption. For more information on how to change the encryption type to randomized, see [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md).
 - The string column you're querying uses a collation that isn't a BIN2 or UTF-8 collation. Change the collation to BIN2 or UTF-8. For more information, see [DML statements using secure enclaves](always-encrypted-enclaves-query-columns.md#dml-statements-using-secure-enclaves).
 - Your query triggers an unsupported operation. For the list of operations supported inside enclaves, see [DML statements using secure enclaves](always-encrypted-enclaves-query-columns.md#dml-statements-using-secure-enclaves).
-## Next Steps
+
+## Next steps
 
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
@@ -103,3 +103,4 @@ This section lists common errors you may encounter when you run confidential DML
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
+- [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

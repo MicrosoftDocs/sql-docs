@@ -85,7 +85,7 @@ To enable enclave computations for a database connection, you must set the follo
 
   - If you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
   - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
-  - If you're using the `None` Attestation Protocol, an attestation URL is not required. 
+  - If you're using the `None` Attestation Protocol, an attestation URL isn't required.
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
 
@@ -547,7 +547,7 @@ By default, the **Microsoft .NET Data Provider for SQL Server** relies on the da
 
 ### Forcing Parameter Encryption
 
-Before the **Microsoft .NET Data Provider for SQL Server** sends a parameterized query to SQL Server, it asks SQL Server (by calling [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)) to analyze the query statement and provide information about which parameters in the query should be encrypted. A compromised SQL Server instance could mislead the **Microsoft .NET Data Provider for SQL Server** by sending metadata indicating the parameter doesn't target an encrypted column, even though the column is encrypted in the database. As a result, the **Microsoft .NET Data Provider for SQL Server** wouldn't encrypt the parameter value and it would send it as plaintext to the compromised SQL Server instance.
+Before the **Microsoft .NET Data Provider for SQL Server** sends a parameterized query to SQL Server, it asks SQL Server (by calling [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)) to analyze the query statement and provide information about which parameters in the query should be encrypted. A compromised SQL Server instance could mislead the **Microsoft .NET Data Provider for SQL Server** by sending metadata indicating the parameter doesn't target an encrypted column, even though the column is encrypted in the database. As a result, the **Microsoft .NET Data Provider for SQL Server** wouldn't encrypt the parameter value, and it would send it as plaintext to the compromised SQL Server instance.
 
 To prevent such an attack, an application can set the [SqlParameter.ForceColumnEncryption Property](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption) for the parameter to true. This setting will cause the **Microsoft .NET Data Provider for SQL Server** to throw an exception, if the metadata it has received from the server indicates the parameter doesn't need to be encrypted.
 

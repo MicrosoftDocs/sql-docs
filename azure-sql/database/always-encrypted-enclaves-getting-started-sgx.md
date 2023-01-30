@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Getting started with Always Encrypted with Intel SGX enclaves"
+title: "Tutorial: Getting started using Always Encrypted with Intel SGX enclaves"
 description: Tutorial on how to create a basic environment for Always Encrypted with Intel SGX enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 author: jaszymas
 ms.author: jaszymas
@@ -9,13 +9,14 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
 ---
-# Tutorial: Getting started with Always Encrypted with Intel SGX enclaves in Azure SQL Database
+# Tutorial: Getting started using Always Encrypted with Intel SGX enclaves in Azure SQL Database
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. You will use [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html). It will show you:
+This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database. You'll use [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html). It will show you:
 
 > [!div class="checklist"]
+>
 > - How to create an environment for testing and evaluating Always Encrypted with Intel SGX enclaves.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
@@ -23,16 +24,16 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/). You need to be a member of the Contributor role or the Owner role for the subscription to be able to create resources and configure an attestation policy.
 - Optional, but recommended for storing your column master key for Always Encrypted: a key vault in Azure Key Vault. For information on how to create a key vault, see [Quickstart: Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal). 
-  - If your key vault uses the access policy permissions model, make sure you have the following key permissions in the key vault: `get`, `list`, `create`, `unwrap key`, `wrap key`, `verify`, `sign`. See [Assign a Key Vault access policy](/azure/key-vault/general/assign-access-policy).
+  - If your key vault uses the access policy permissions model, make sure you have the following key permissions in the key vault: `get`, `list`, `create`, `unwrap key`, `wrap key`, `verify`, `sign`. For more information, see [Assign a Key Vault access policy](/azure/key-vault/general/assign-access-policy).
   - If you're using the Azure role-based access control (RBAC) permission model, make you sure you're a member of the [Key Vault Crypto Officer](/azure/role-based-access-control/built-in-roles#key-vault-crypto-officer) role for your key vault. See [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](/azure/key-vault/general/rbac-migration).
-- [The latest general availability (GA) version of SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+- The latest version of [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
 ### PowerShell requirements
 
 > [!NOTE]
-> The prerequisites listed in this section apply only if you choose to use PowerShell for some of the steps in this tutorial. If you plan to use Azure portal instead, you can skip this section.
+> The prerequisites listed in this section apply only if you choose to use PowerShell for some of the steps in this tutorial. If you plan to use the Azure portal instead, you can skip this section.
 
-Az PowerShell module version 9.3.0 or later is required. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
+Az PowerShell module version 9.3.0 or later is required. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version of the Az PowerShell module that is installed on your machine, run the following command from PowerShell.
 
 ```powershell
 Get-InstalledModule -Name Az
@@ -58,12 +59,10 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
    - **Location**: Select a location from the dropdown list.
       > [!IMPORTANT]
       > You need to select a location (an Azure region) that supports both the DC-series hardware and Microsoft Azure Attestation. For the list of regions supporting DC-series, see [DC-series availability](service-tiers-sql-database-vcore.md#dc-series). [Here](https://azure.microsoft.com/global-infrastructure/services/?products=azure-attestation) is the regional availability of Microsoft Azure Attestation.
-   - **Authentication method**: Select *Use SQL Authentication*
+   - **Authentication method**: Select **Use SQL Authentication**
    - **Server admin login**: Enter an admin login name, for example: *azureuser*.
    - **Password**: Enter a password that meets requirements, and enter it again in the **Confirm password** field.
-   
-
-   Select **OK**.
+   - Select **OK**.
 1. Leave **Want to use SQL elastic pool** set to **No**.
 1. Under **Compute + storage**, select **Configure database**, and select **Change configuration**.
 
@@ -75,7 +74,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 
 1. Select **Apply**. 
 1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose**, **DC, 2 vCores, 32 GB storage**.
-1. For **Backup storage redundancy** select *Locally-redundant backup storage*.
+1. For **Backup storage redundancy** select **Locally-redundant backup storage**.
 1. Select **Next: Networking** at the bottom of the page.
 
    :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database-basics.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database - basics.":::
@@ -117,7 +116,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
    New-AzResourceGroup -Name $resourceGroupName -Location $location
    ```
 
-1. Create an Azure SQL logical server. When prompted, enter the server administrator name and a password. Make sure you remember the admin name and the password - you'll need them later to connect to the server. 
+1. Create an Azure SQL logical server. When prompted, enter the server administrator name and a password. Make sure you remember the admin name and the password - you'll need them later to connect to the server.
 
    ```powershell
    $serverName = "<your server name>" 
@@ -234,8 +233,8 @@ In this step, you'll create and configure an attestation provider in Microsoft A
     -ResourceType "Microsoft.Attestation/attestationProviders" `
     -ResourceGroupName $resourceGroupName
    ```
-   
-3. Configure your attestation policy.
+
+1. Configure your attestation policy.
   
    ```powershell
    $policyFile = "<the pathname of the file from step 1 in this section>"
@@ -259,7 +258,6 @@ In this step, you'll create and configure an attestation provider in Microsoft A
    The attestation URL should look like this: `https://myattestprovider12345.eus.attest.azure.net`
 
 ---
-
 
 ## Step 3: Populate your database
 
@@ -326,11 +324,11 @@ In this step, you'll create a column master key and a column encryption key that
 1. Provision a new enclave-enabled column master key:
     1. Right-click **Always Encrypted Keys** and select **New Column Master Key...**.
     2. Enter a name for the new column master key: **CMK1**.
-    3. Verify **Allow enclave computations** is selected. (It's selected by default if a secure enclave is enabled for the database - it should be enabled since your database uses the DC-series hardware configuration.)
+    3. Verify **Allow enclave computations** is selected. (It's selected by default if a secure enclave is enabled for the database. It should be enabled since your database uses the DC-series hardware configuration.)
     4. Select either **Azure Key Vault** (recommended) or **Windows Certificate Store** (**Current User** or **Local Machine**).
-      - If you select Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Select **Generate Key** to create a new key.
-      - If you select Windows Certificate Store, select the **Generate Certificate** button to create a new certificate.
-        :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Allow enclave computations":::
+       - If you select Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Select **Generate Key** to create a new key.
+       - If you select Windows Certificate Store, select the **Generate Certificate** button to create a new certificate.
+         :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Allow enclave computations":::
     5. Select **OK**.
 
 1. Create a new enclave-enabled column encryption key:
@@ -347,7 +345,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
 1. Open a new SSMS instance and connect to your database **with** Always Encrypted enabled for the database connection.
     1. Start a new instance of SSMS.
     2. In the **Connect to Server** dialog, specify the fully qualified name of your server (for example, *myserver135.database.windows.net*), and enter the administrator user name and the password you specified when you created the server.
-    3. Select **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, `master` database). 
+    3. Select **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, `master` database).
     4. Select the **Always Encrypted** tab.
     5. Select the **Enable Always Encrypted (column encryption)** checkbox.
     6. Select **Enable secure enclaves**. (This step applies to SSMS 19 or later.)
@@ -388,7 +386,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
 
 ## Step 6: Run rich queries against encrypted columns
 
-You can run rich queries against the encrypted columns. Some query processing will be performed inside your server-side enclave. 
+You can run rich queries against the encrypted columns. Some query processing will be performed inside your server-side enclave.
 
 1. In the SSMS instance **with** Always Encrypted enabled, make sure Parameterization for Always Encrypted is also enabled.
     1. Select **Tools** from the main menu of SSMS.
@@ -410,6 +408,7 @@ You can run rich queries against the encrypted columns. Some query processing wi
 ## Next steps
 
 After completing this tutorial, you can go to one of the following tutorials:
+
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](/sql/connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps)
 - [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](/sql/relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps)
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](/sql/relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption)

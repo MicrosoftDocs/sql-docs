@@ -17,15 +17,17 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server
+
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md) in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. It will show you:
 
 > [!div class="checklist"]
+>
 > - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves with no attestation configured for enclaves.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
-If you want to learn how to set up Always Encrypted with secure enclaves using Host Guardian Service for enclave attestation, see [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server with attestation using HGS](tutorial-getting-started-with-always-encrypted-enclaves-hgs.md)
+If you want to learn how to set up Always Encrypted with secure enclaves using Host Guardian Service for enclave attestation, see [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server with attestation using HGS](tutorial-getting-started-with-always-encrypted-enclaves-hgs.md)
 
 ## Prerequisites
 
@@ -38,20 +40,17 @@ The computer hosting your SQL Server instance (referred to as SQL Server compute
   - AMD-V with Rapid Virtualization Indexing.
   - If you're running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a VM:
     - In Azure, use a [Generation 2 VM size](/azure/virtual-machines/generation-2#generation-2-vm-sizes) (recommended) or use a Generation 1 VM size with nested virtualization enabled. Check the [individual VM sizes documentation](/azure/virtual-machines/sizes) to determine which Generation 1 VM sizes support nested virtualization.
-    - On Hyper-V 2016 or later (outside of Azure), make sure your VM is a Generation 2 VM (recommended) or it's a Generation 1 VM with nested virtualization enabled. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) and [Configure nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - On Hyper-V 2016 or later (outside of Azure), make sure your VM is a Generation 2 VM (recommended) or that it's a Generation 1 VM with nested virtualization enabled. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) and [Configure nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - On VMware vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.
-- [The latest general availability (GA) version of SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
-
-As an alternative, you can install SSMS on another machine.
+- The latest version of [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). As an alternative, you can install SSMS on another machine.
 
 > [!WARNING]
-> In production environments,  running SSMS or other key management tools on the SQL Server computer may reduce the security benefits of using Always Encrypted. In general, running such tools on a different machine is recommended. See [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management) for details.
-
+> In production environments, running SSMS or other key management tools on the SQL Server computer may reduce the security benefits of using Always Encrypted. In general, running such tools on a different machine is recommended. For more information, see [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 ## Step 1: Make sure virtualization-based security (VBS) is enabled
 
-1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and run msinfo32.exe. Check if VBS is running. If it us running skip the remaining steps in this section and go to the next section.
+1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and run msinfo32.exe. Check if VBS is running. If VBS is running, skip the remaining steps in this section and go to the next section.
 
    ![System information - virtualization-based security](./encryption/media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 
@@ -89,7 +88,7 @@ In this step, you'll enable the functionality of Always Encrypted using enclaves
 
     1. Select **Connect**.
 
-2. Open a new query window, and execute the below statement to set the secure enclave type to Virtualization Based Security (VBS).
+2. Open a new query window, and execute the below statement to set the secure enclave type to virtualization based security (VBS).
 
    ```sql
    EXEC sys.sp_configure 'column encryption enclave type', 1;
@@ -112,6 +111,7 @@ In this step, you'll enable the functionality of Always Encrypted using enclaves
     | column encryption enclave type | 1     | 1              |
 
 ## Step 3: Create a sample database
+
 In this step, you'll create a database with some sample data, which you'll encrypt later.
 
 1. Using the SSMS instance from the previous step, execute the below statement in a query window to create a new database, named **ContosoHR**.
@@ -259,7 +259,7 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 
 3. Try the same query again in the SSMS instance that doesn't have Always Encrypted enabled, and note the failure that occurs.
 
-## Next Steps
+## Next steps
 
 After completing this tutorial, you can go to one of the following tutorials:
 
@@ -267,7 +267,7 @@ After completing this tutorial, you can go to one of the following tutorials:
 - [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-## See Also
+## See also
 
 - [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)
 - [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

@@ -11,7 +11,6 @@ ms.subservice: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15"
 ---
 # Always Encrypted with secure enclaves
 
@@ -50,7 +49,7 @@ Always Encrypted supports the following enclave technologies (or enclave types):
 
 The type of the enclave available for your database depends on the SQL product hosting it ([!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] vs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) and (in the case of [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]) the configuration of your database.
 
-- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, Always Encrypted supports VBS enclaves. (Intel SGX enclaves are not supported.)
+- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, Always Encrypted supports VBS enclaves. (Intel SGX enclaves aren't supported.)
 - In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], a database can use either an Intel SGX enclave or a VBS enclave, depending on the hardware the database is configured to run on:
 
   - Databases using the [DC-series](/azure/azure-sql/database/service-tiers-sql-database-vcore#dc-series) hardware configuration (available with the [vCore purchasing model](/azure/azure-sql/database/service-tiers-vcore)) use Intel SGX enclaves.
@@ -87,9 +86,9 @@ A few important points to call out:
 
 - Attesting VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later requires HGS. You can also use VBS enclaves without attestation (the latest client drivers are required).
 - With Intel SGX enclaves (in DC-series databases) in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], attestation is mandatory and it requires Microsoft Azure Attestation.
-- VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (in preview) currently do not support attestation. 
+- VBS enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (in preview) currently don't support attestation.
 
-For more details, see:
+For more information, see:
 
 - [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md).
 - [Plan for Intel SGX enclaves and attestation in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-plan).
@@ -179,8 +178,8 @@ With the [traditional database recovery process](/azure/sql-database/sql-databas
 
 The following security considerations apply to Always Encrypted with secure enclaves.
 
-- VBS enclaves help protect your data from attacks inside the VM. However, they do not provide any protection from attacks using privileged system accounts originating from the host. For example, a memory dump of the VM generated on the host machine may contain the memory of the enclave. Intel SGX enclaves protect data from attacks originating from both the guest OS and host OS.
-- Using enclave attestation is recommended if it is available for your environment and if you're concerned about protecting your data from attacks by users with the OS-level admin access to the machine hosting your database. If you use attestation, you need to ensure the attestation service and its configuration are managed by a trusted administrator. Also, both supported attestation services offer different policies and attestation modes, some of which perform minimal verification of the enclave and its environment, and are designed for testing and development. Closely follow the guidelines specific to your attestation service to ensure you're using the recommended configurations and policies for your production deployments.
+- VBS enclaves help protect your data from attacks inside the VM. However, they don't provide any protection from attacks using privileged system accounts originating from the host. For example, a memory dump of the VM generated on the host machine may contain the memory of the enclave. Intel SGX enclaves protect data from attacks originating from both the guest OS and host OS.
+- Using enclave attestation is recommended if it's available for your environment and if you're concerned about protecting your data from attacks by users with the OS-level admin access to the machine hosting your database. If you use attestation, you need to ensure the attestation service and its configuration are managed by a trusted administrator. Also, both supported attestation services offer different policies and attestation modes, some of which perform minimal verification of the enclave and its environment, and are designed for testing and development. Closely follow the guidelines specific to your attestation service to ensure you're using the recommended configurations and policies for your production deployments.
 - Encrypting a column using randomized encryption with an enclave-enabled column encryption key may result in leaking the order of data stored in the column, as such columns support range comparisons. For example, if an encrypted column, containing employee salaries, has an index, a malicious DBA could scan the index to find the maximum encrypted salary value and identify a person with the maximum salary (assuming the name of the person isn't encrypted).
 - If you use Always Encrypted to protect sensitive data from unauthorized access by DBAs, don't share the column master keys or column encryption keys with the DBAs. A DBA can manage indexes on encrypted columns without having direct access to the keys by using the cache of column encryption keys inside the enclave.
 
@@ -226,7 +225,7 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 
 ## Next steps
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Tutorial: Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Configure and use Always Encrypted with secure enclaves](configure-always-encrypted-enclaves.md)
 - Run [Always Encrypted with secure enclaves demos/samples](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/security/always-encrypted-with-secure-enclaves) in the [SQL Server samples](https://github.com/Microsoft/sql-server-samples) GitHub repository
 - Learn more about [Azure confidential computing](/azure/confidential-computing/)

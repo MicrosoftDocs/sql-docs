@@ -17,11 +17,11 @@ ms.custom: event-tier1-build-2022
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
-This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+This tutorial teaches you how to develop an application that issues database queries that uses a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Prerequisites
 
-Make sure you've completed one of the [Getting started with Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) tutorials before following the below steps in this tutorial.
+Make sure you've completed one of the [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) tutorials before following the below steps in this tutorial.
 
 In addition, you need Visual Studio (version 2022 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development environment must use .NET Framework 4.6.1 or later or .NET Core 3.1 or later.
 

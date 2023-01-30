@@ -18,7 +18,7 @@ monikerRange: ">= sql-server-ver15"
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). 
+This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md).
 
 > [!NOTE]
 > .NET Framework does not support using Always Encrypted with VBS enclaves without attestation. This tutorial is only applicable if you're using attestation with Microsoft Azure Attestation (with Intel SGX enclaves in Azure SQL Database) or Host Guardian Service (with VBS enclaves in SQL Server).
@@ -194,7 +194,7 @@ Your application will connect to the **ContosoHR** database that was created in 
 
 2. Build and run the application.  
 
-## See Also
+## See also
 
 - [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)

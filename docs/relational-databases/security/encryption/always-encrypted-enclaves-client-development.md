@@ -51,9 +51,9 @@ Your environment needs to meet the following requirements to support Always Encr
 
 To develop applications using Always Encrypted with secure enclaves, you need a SQL client driver version that supports secure enclaves. The client driver plays the following key role:
 
-- Before submitting a query that uses a secure enclave to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] for execution, the driver initiates enclave attestation (if it is configured) to verify the secure enclave is trustworthy and can be safely used to process sensitive data. For more information about attestation, see [Secure Enclave Attestation](always-encrypted-enclaves.md#secure-enclave-attestation).
+- Before submitting a query that uses a secure enclave to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] for execution, the driver initiates enclave attestation (if it's configured) to verify the secure enclave is trustworthy and can be safely used to process sensitive data. For more information about attestation, see [Secure Enclave Attestation](always-encrypted-enclaves.md#secure-enclave-attestation).
 - The client driver establishes a secure session with the enclave by negotiating a shared secret.
-- The driver uses the shared secret to encrypt the column encryption keys the enclave will need to process the query, and sends the keys to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], which forwards them to the secure enclave that decrypts the keys. 
+- The driver uses the shared secret to encrypt the column encryption keys the enclave will need to process the query, and sends the keys to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], which forwards them to the secure enclave that decrypts the keys.
 - Finally, the driver submits the query for execution, which triggers computations inside the secure enclave.
 
 The following client drivers support Always Encrypted with secure enclaves:
@@ -63,16 +63,16 @@ The following client drivers support Always Encrypted with secure enclaves:
   - For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md).
   - Also, see [Example demonstrating use of Azure Key Vault provider and Always Encrypted with secure enclaves](../../../connect/ado-net/sql/azure-key-vault-enclave-example.md).
 - Microsoft ODBC Driver for SQL Server, version 17.4 or higher. If you want to use VBS enclaves without attestation, version 18.1 or higher is required.
-  - For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md). 
+  - For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
   - For information on how to enable enclave computations for a database connection using ODBC, see the [Enabling Always Encrypted with Secure Enclaves](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) section.
 - Microsoft JDBC Driver for SQL Server, version 8.2 or higher. If you want to use VBS enclaves without attestation, version 11.2.1 or higher is required.
   - For more information, see [Using Always Encrypted with secure enclaves with the JDBC driver](../../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)
-- .NET Framework Data Provider for SQL Server in .NET Framework 4.7.2 or higher. 
+- .NET Framework Data Provider for SQL Server in .NET Framework 4.7.2 or higher.
   - For more information, see [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md).
   - For a step-by-step tutorial, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
   > [!NOTE]
-  > Using the .NET Framework Data Provider for SQL Server (System.Data.SqlClient) isn't recommended for new development. See [System.Data.SqlClient](../../../connect/connect-history.md#systemdatasqlclient) for more information.
+  > Using the .NET Framework Data Provider for SQL Server (System.Data.SqlClient) isn't recommended for new development. For more information, see [System.Data.SqlClient](../../../connect/connect-history.md#systemdatasqlclient).
 
 ## See also
 

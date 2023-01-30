@@ -10,7 +10,7 @@ ms.subservice: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">= sql-server-ver15"
 ---
 
 # Register computer with Host Guardian Service
@@ -22,16 +22,14 @@ This article describes how to register [!INCLUDE [ssnoversion-md](../../../inclu
 > [!NOTE]
 > The process of registering a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] with HGS requires a joint effort of the HGS administrator and the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator. See [Roles and responsibilities when configuring attestation with HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
-Before you start, make sure you've deployed at least one HGS computer and set up the HGS attestation service. For more information, see [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md) for more information.
+Before you start, make sure you've deployed at least one HGS computer and set up the HGS attestation service. For more information, see [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md).
 
 ## Step 1: Install the attestation client components
 
 > [!NOTE]
 > This step should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
 
-To allow a SQL client to verify it's talking to a trustworthy [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer must successfully attest with the Host Guardian Service.
-The attestation process is managed by an optional Windows component called the HGS Client.
-The steps below will help you install this component and begin attesting.
+To allow a SQL client to verify it's talking to a trustworthy [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer must successfully attest with the Host Guardian Service. The attestation process is managed by an optional Windows component called the HGS Client. The steps below will help you install this component and begin attesting.
 
 1. Ensure the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer meets the [prerequisites outlined in the HGS planning doc](./always-encrypted-enclaves-host-guardian-service-plan.md#prerequisites).
 

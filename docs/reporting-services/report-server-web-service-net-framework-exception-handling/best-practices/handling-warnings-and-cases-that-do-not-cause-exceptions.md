@@ -2,8 +2,8 @@
 title: "Handling Warnings and Cases That Do Not Cause Exceptions | Microsoft Docs"
 description: Learn how to handle warnings and cases that don't cause exceptions so that appropriate action can be taken.
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.technology: report-server-web-service-net-framework-exception-handling
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 
 
 ms.topic: reference

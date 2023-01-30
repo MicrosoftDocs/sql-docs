@@ -150,7 +150,7 @@ In the **Member Database** section, optionally add a SQL Server database to the 
 
 1. On the **Select Database** page, in the **Sync Member Name** field, provide a name for the new sync member. This name is distinct from the name of the database itself. Select the database from the list. In the **Sync Directions** field, select **Bi-directional Sync**, **To the Hub**, or **From the Hub**.
 
-    ![Select the on premises database](./media/sql-data-sync-sql-server-configure/datasync-preview-selectdb.png)
+    ![Select the on-premises database](./media/sql-data-sync-sql-server-configure/datasync-preview-selectdb.png)
 
 1. Select **OK** to close the **Select Database** page. Then select **OK** to close the **Configure On-Premises** page and wait for the new sync member to be created and deployed. Finally, select **OK** to close the **Select sync members** page.
 

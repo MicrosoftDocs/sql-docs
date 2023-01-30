@@ -3,7 +3,7 @@ title: "Optimized locking"
 description: "Learn about the optimized locking enhancement to the Database Engine."
 ms.custom: 
     "references_regions"
-ms.date: 02/01/2023
+ms.date: 01/30/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -189,11 +189,11 @@ In addition to reduced blocking, the lock memory required will be reduced. This 
 
 ### Avoid locking hints
 
-[Table and query hints](../../t-sql/queries/hints-transact-sql.md) while honored and reduce the benefit of optimized locking. Lock hints like UPDLOCK, READCOMMITTEDLOCK, XLOCK, HOLDLOCK, etc., in your queries reduce the full benefits of optimized locking. Having such lock hints in the queries forces the Database Engine to take row/page locks and hold them until the end of the transaction, to honor the intent of the lock hints. Some applications have logic where lock hints are needed, for example when reading a row with select with UPDLOCK and then updating it later. We recommend using lock hints only where needed.
+While [table and query hints](../../t-sql/queries/hints-transact-sql.md) are honored, they reduce the benefit of optimized locking. Lock hints like UPDLOCK, READCOMMITTEDLOCK, XLOCK, HOLDLOCK, etc., in your queries reduce the full benefits of optimized locking. Having such lock hints in the queries forces the Database Engine to take row/page locks and hold them until the end of the transaction, to honor the intent of the lock hints. Some applications have logic where lock hints are needed, for example when reading a row with select with UPDLOCK and then updating it later. We recommend using lock hints only where needed.
 
 With optimized locking, there are no restrictions on existing queries and queries do not need to be rewritten. Queries that are not using hints will benefit most from optimized locking.
 
-A table hint on one table in a query will not disable optimized locking for other tables in the same query. For example:
+A table hint on one table in a query will not disable optimized locking for other tables in the same query. Further, optimized locking only affects the locking behavior of tables being updated by an UPDATE statement. For example:
 
 ```sql
 CREATE TABLE t3
@@ -211,9 +211,13 @@ GO
 UPDATE t3 SET t3.b = t4.b
 FROM t3 WITH (UPDLOCK) 
 INNER JOIN t4 ON t3.a = t4.a;
+
+UPDATE t3 SET t3.b = t4.b 
+FROM t3 
+INNER JOIN t4 WITH (UPDLOCK) ON t3.a = t4.a;
 ```
 
-In the above example, only `t3` will be affected by the locking hint, while `t4` can still benefit from optimized locking.
+In the previous query example, only table `t4` will be affected by the locking hint, while `t3` can still benefit from optimized locking.
 
 ```sql
 UPDATE t3 SET t3.b = t4.b
@@ -221,7 +225,7 @@ FROM t3 WITH (REPEATABLEREAD)
 INNER JOIN t4 ON t3.a = t4.a;
 ```
 
-In the above example, only `t3` will be affected by the isolation level hint. Only this query would use the repeatable read isolation level on `t3`, and will hold locks until the end of the transaction. Other queries on `t3` can still benefit from optimized locking, and `t4` can still benefit from optimized locking. The same applies to HOLDLOCK.
+In the previous query example, only table `t3` will use the repeatable read isolation level, and will hold locks until the end of the transaction. Other updates to `t3` can still benefit from optimized locking. The same applies to the HOLDLOCK hint.
 
 ## Frequently asked questions (FAQ)
 

@@ -87,6 +87,7 @@ The vCore-based service tiers are differentiated based on database availability 
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per instance)|
 | **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
 | **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
+| **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>4</sup>| 
 | **Availability** | 1 replica, no Read Scale-out, zone-redundant HA | 3 replicas, 1 Read Scale-out, zone-redundant HA | Multiple replicas, up to 4 Read Scale-out, zone-redundant HA  |
 | **Backups** |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention <sup>2</sup>, with up to 10 years of long-term retention available <sup>3</sup>| 
 |**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS is not charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS is not charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS not yet charged. |
@@ -95,7 +96,8 @@ The vCore-based service tiers are differentiated based on database availability 
 
 <sup>1</sup> Elastic pools aren't supported in the Hyperscale service tier.   
 <sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
-<sup>3</sup> Long-term retention for Hyperscale databases is now in preview. 
+<sup>3</sup> Long-term retention for Hyperscale databases is now in preview.   
+<sup>4</sup> 10.2 GB/vCore is available with premium-series memory optimized hardware (preview).
 
 ## Compute resources
 

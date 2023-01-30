@@ -18,7 +18,7 @@ The Azure PostgreSQL migration extension in Azure Data Studio helps you assess y
 ## Prerequisites
 
 - [Azure Data Studio version 1.39 or above](../download-azure-data-studio.md).
-- A PostgreSQL Server instance running 9.3 or higher.
+- PostgreSQL Server instance running 9.3 or higher.
   - PostgreSQL Server instance needs to be IaaS.
 
 ## Install Azure Data Studio extension
@@ -33,7 +33,7 @@ Follow the steps below to install the Azure PostgreSQL Migration extension in Az
 
 1. Select **Install**.
 
-  :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/install-azure-database-postgresql-flexible-server-migration-extension.png" alt-text="install extension":::
+   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/install-azure-database-postgresql-flexible-server-migration-extension.png" alt-text="install extension":::
 
 ## Run assessment
 
@@ -95,14 +95,16 @@ Users can save the assessment report on their machine for offline viewing by sel
 
    :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/run-assessment-step-3-view-assessment.png" alt-text="Screenshot of consolidated assessment report.":::
 
-## Known Issues
+## View assessment
+
+## Known issues and limitations
 
 - If the PostgreSQL user doesn't have the execute privilege on PG_READ_FILE function, then the ADS extension “Azure PostgreSQL Migration” doesn't throw any error while using automatic collection, and the SKU is recommended based on the IOPS and Storage. The report shows the source properties for vCores and Memory as N/A.
-- Collations used in source and not present in Azure Database for PostgreSQL – flexible server is shown as a blocker at the database level and Warning at the Server parameter level.
+- Collations used in source and not present in Azure Database for PostgreSQL – flexible server is shown as a blocker at the database level and Warning at the server parameter level.
 
 ### Get help from Microsoft support
 
-You can raise a support request to get Microsoft support assistance if you encounter issues or errors with your database migrations using the Azure SQL Migration extension.
+You can raise a support request to get Microsoft support assistance if you encounter issues or errors with your database migrations using the PostgreSQL migration extension.
 
 Select the **New support request** button in the upper section of the extension. It automatically takes you to the Azure portal, where you can fill in the details and submit a support request.
 

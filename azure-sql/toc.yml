@@ -430,9 +430,9 @@
           items:
           - name: Configure and use Always Encrypted with secure enclaves >
             href: /sql/relational-databases/security/encryption/configure-always-encrypted-enclaves
-          - name: Plan for Intel SGX enclaves and attestation
+          - name: Plan for secure enclaves and attestation
             href: database/always-encrypted-enclaves-plan.md
-          - name: Enable Intel SGX
+          - name: Enable secure enclaves
             href: database/always-encrypted-enclaves-enable.md
           - name: Configure Azure Attestation
             href: database/always-encrypted-enclaves-configure-attestation.md

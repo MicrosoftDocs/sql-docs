@@ -4,7 +4,7 @@ description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new ta
 author: markingmyname
 ms.author: maghan
 ms.reviewer: vanto, xiaoyul
-ms.date: 09/12/2022
+ms.date: 01/25/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -104,6 +104,7 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 >     - To regain access to MCD tables, opt-in the preview again. 
 >     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
 > - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
+> - Preview features are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
 
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 

@@ -4,7 +4,7 @@ description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azur
 author: markingmyname
 ms.author: maghan
 ms.reviewer: vanto, xiaoyul
-ms.date: 09/12/2022
+ms.date: 01/25/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -156,11 +156,12 @@ Assigns each row to one distribution by hashing the value stored in *distributio
 Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
 
 >[!NOTE]
-> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
+> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
 > - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
 >     - To regain access to MCD tables, opt-in the preview again. 
 >     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
 > - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
+> - Preview features are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].

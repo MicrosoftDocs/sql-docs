@@ -46,6 +46,7 @@ Setting up the proper credentials to run a job can be a little confusing, so kee
 
 - The database scoped credentials must be created in the *Job database*.
 - **All target databases must have a login with [sufficient permissions](/sql/relational-databases/security/permissions-database-engine) for the job to complete successfully** (`jobuser` in the diagram below).
+- Credentials created in target databases (LOGIN and PASSWORD for `masteruser` and `jobuser` in the subsequent diagram) should match the IDENTITY and SECRET in the credentials created in the Job database. 
 - Credentials can be reused across jobs, and the credential passwords are encrypted and secured from users who have read-only access to job objects.
 
 The following image is designed to assist in understanding and setting up the proper job credentials. **Remember to create the user in every database (all *target user dbs*) the job needs to run**.

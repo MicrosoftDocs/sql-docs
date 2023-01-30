@@ -11,6 +11,9 @@ ms.topic: "reference"
 # sys.dm_external_provider_certificate_info (Transact-SQL)
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
+> [!NOTE]
+> This view is introduced in SQL Server 2022 CU1.
+
 Returns information about the Azure cloud certificates used in SQL Server to set up and maintain an Azure AD administrator required to support Azure AD authentication. For more information, see [Set up Azure Active Directory authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial).
   
 |Column name|Data type|Description|  

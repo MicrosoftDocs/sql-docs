@@ -53,27 +53,26 @@ SQL Server features and capabilities provide a method of security at the data le
 - Leverage [Azure Policy](/azure/governance/policy/overview) to create business rules that can be applied to your environment. Azure Policies evaluate Azure resources by comparing the properties of those resources against rules defined in JSON format.
 - Azure Blueprints enables cloud architects and central information technology groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints are [different than Azure Policies](/azure/governance/blueprints/overview#how-its-different-from-azure-policy).
 
-## Microsoft Defender for SQL 
+## Microsoft Defender for SQL on machines
 
-[Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction) enables Microsoft Defender for Cloud security features such as [vulnerability assessments](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview) and security alerts. See [enable Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-usage) to learn more. 
+[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) is a unified security management system that is designed to evaluate and provide opportunities to improve the security posture of your data environment. Microsoft Defender offers [Microsoft Defender for SQL on machines](/azure/defender-for-cloud/defender-for-sql-usage) protection for SQL Server on Azure VMs. Use Microsoft Defender for SQL to discover and mitigate potential database vulnerabilities, and detect anomalous activities that may indicate a threat to your SQL Server instance and database layer. 
 
-Use Azure Defender for SQL to discover and mitigate potential database vulnerabilities, and detect anomalous activities that may indicate a threat to your SQL Server instance and database layer. [Vulnerability Assessments](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview) are a feature of Microsoft Defender for SQL that can discover and help remediate potential risks to your SQL Server environment. It provides visibility into your security state, and it includes actionable steps to resolve security issues. Registering your SQL Server VM with the [SQL Server IaaS Agent Extension](sql-agent-extension-manually-register-single-vm.md) surfaces Microsoft Defender for SQL recommendations to the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal.  
+Microsoft Defender for SQL offers the following benefits: 
+
+- [Vulnerability Assessments](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview) can discover and help remediate potential risks to your SQL Server environment. It provides visibility into your security state, and it includes actionable steps to resolve security issues. 
+- Use [security score](/azure/defender-for-cloud/secure-score-security-controls) in Microsoft Defender for Cloud. 
+- Review the list of the [compute](/azure/defender-for-cloud/recommendations-reference#compute-recommendations) and [data recommendations](/azure/security-center/recommendations-reference#data-recommendations) currently available, for further details.
+- Registering your SQL Server VM with the [SQL Server IaaS Agent Extension](sql-agent-extension-manually-register-single-vm.md) surfaces Microsoft Defender for SQL recommendations to the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal.  
+
 
 ## Portal management
 
 After you've [registered your SQL Server VM with the SQL IaaS extension](sql-agent-extension-manually-register-single-vm.md), you can configure a number of security settings using the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal, such as enabling Azure Key Vault integration, or SQL authentication. 
 
-Additionally, after you've enabled [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-usage) you can view Defender for Cloud features directly within the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal, such as vulnerability assessments and security alerts. 
+Additionally, after you've enabled [Microsoft Defender for SQL on machines](/azure/defender-for-cloud/defender-for-sql-usage) you can view Defender for Cloud features directly within the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal, such as vulnerability assessments and security alerts. 
 
 See [manage SQL Server VM in the portal](manage-sql-vm-portal.md) to learn more. 
 
-## Microsoft Defender for Cloud 
-
-[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) is a unified security management system that is designed to evaluate and provide opportunities to improve the security posture of your data environment. Microsoft Defender for Cloud grants a consolidated view of the security health for all assets in the hybrid cloud. 
-
-- Use [security score](/azure/defender-for-cloud/secure-score-security-controls) in Microsoft Defender for Cloud. 
-- Review the list of the [compute](/azure/defender-for-cloud/recommendations-reference#compute-recommendations) and [data recommendations](/azure/security-center/recommendations-reference#data-recommendations) currently available, for further details.
-- Registering your SQL Server VM with the [SQL Server IaaS Agent Extension](sql-agent-extension-manually-register-single-vm.md) surfaces Microsoft Defender for Cloud recommendations to the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal. 
 
 ## Confidential VMs
 

@@ -53,7 +53,7 @@ To summarize:
 
 Regardless of the compute tier, three additional high availability secondary replicas are automatically allocated in the Business Critical service tier to provide high resiliency to failures and fast failovers. This makes the cost approximately 2.7 times higher than it is in the General Purpose service tier. Likewise, the higher storage cost per GB in the Business Critical service tier reflects the higher IO limits and lower latency of the local SSD storage.
 
-In Hyperscale, customers control the number of additional high availability replicas from 1 to 4 to get the level of resiliency required by their applications while controlling costs.
+In Hyperscale, customers control the number of additional high availability replicas from 0 to 4 to get the level of resiliency required by their applications while controlling costs.
 
 ## Data and log storage
 
@@ -69,7 +69,7 @@ The following factors affect the amount of storage used for data and log files, 
 The following storage considerations apply to Hyperscale:
 
 - Maximum data storage size is set to 100 TB and is not configurable.
-- You are charged for the allocated data storage.
+- You are charged only for the allocated data storage, not for maximum data storage.
 - You are not charged for log storage.
 - `tempdb` uses local SSD storage, and its cost is included in the vCore price.
 To monitor the current allocated and used data storage size in SQL Database, use the *allocated_data_storage* and *storage* Azure Monitor [metrics](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) respectively. 
@@ -170,10 +170,10 @@ To learn more, review [Hyperscale service tier for Azure SQL Database](service-t
 
 ### When to choose this service tier 
 
-The Hyperscale service tier removes many of the practical limits traditionally seen in cloud databases. Where most other databases are limited by the resources available in a single node, databases in the Hyperscale service tier have no such limits. With its flexible storage architecture, storage grows as needed. In fact, Hyperscale databases aren't created with a defined max size. A Hyperscale database grows as needed - and you're billed only for the capacity you use.
+The Hyperscale service tier removes many of the practical limits traditionally seen in cloud databases. Where most other databases are limited by the resources available in a single node, databases in the Hyperscale service tier have no such limits. With its flexible storage architecture, a Hyperscale database grows as needed - and you're billed only for the storage capacity you use.
 
-Even though Hyperscale comes with advanced scaling capabilities, it is a great option for any workload and not just for large databases. With Hyperscale, you can:
-- Achieve **high resiliency and fast failure recovery** while controlling cost, by choosing the number of high availability replicas from 1 to 4.
+Besides its advanced scaling capabilities, Hyperscale is a great option for any workload, not just for large databases. With Hyperscale, you can:
+- Achieve **high resiliency and fast failure recovery** while controlling cost, by choosing the number of high availability replicas from 0 to 4.
 - Improve **high availability** by enabling zone redundancy for compute and storage.
 - Achieve **low I/O latency** (1-2 milliseconds on average) for the frequently accessed part of your database. For smaller databases, this may apply to the entire database.
 - Implement a large variety of **read scale-out scenarios** with named replicas.

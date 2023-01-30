@@ -342,7 +342,7 @@
       items:
       - name: Always Encrypted with secure enclaves
         href: database/always-encrypted-enclaves-getting-started.md
-      items: 
+        items: 
         - name: Always Encrypted with secure enclaves using SGX
           href: database/always-encrypted-enclaves-getting-started-sgx.md
         - name: Always Encrypted with secure enclaves using VBS

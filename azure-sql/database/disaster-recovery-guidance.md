@@ -4,7 +4,7 @@ description: Learn how to recover a database from a regional data center outage 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, rsetlem 
-ms.date: 01/27/2023
+ms.date: 01/30/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.custom: sqldbrb=1
 # Azure SQL Database disaster recovery guidance
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Azure SQL Database provides industry leading high availability guarantee of at least 99.99% to support mission critical and a wide variety of applications that need to be always available. Azure SQL Database also has capability to have turn key business continuity solution that lets you perform quick disaster recovery in the event of a regional outage.
+Azure SQL Database provides industry leading high availability guarantee of at least 99.99% to support mission critical and a wide variety of applications that need to be always available. Azure SQL Database also has capability to have turn key business continuity solution that lets you perform quick disaster recovery in the event of a regional outage. This article contains valuable information to review in advance of application deployment.
 
 Though we continuously strive to provide high availability, there are times when Azure SQL Database service does incur outage causing unavailability of the database and thus impacting your application. When our service monitoring detects issues that cause widespread connectivity errors, failures or performance issues, the service automatically declares an outage to keep you informed.  
 
@@ -23,33 +23,33 @@ In the event of an Azure SQL Database service outage, you will be able to see ad
 
 - **Azure portal banner**
 
-If your subscription is identified to be impacted, there will be an outage alert of a Service Issue in your Azure portal **Notifications**. 
+    If your subscription is identified to be impacted, there will be an outage alert of a Service Issue in your Azure portal **Notifications**. 
 
-:::image type="content" source="media/disaster-recovery-guidance/notification-service-issue-example.png" alt-text="A screenshot from the Azure portal of a notification of an Azure SQL Database service issue.":::
+    :::image type="content" source="media/disaster-recovery-guidance/notification-service-issue-example.png" alt-text="A screenshot from the Azure portal of a notification of an Azure SQL Database service issue.":::
 
 - **Help + support** or **Support + troubleshooting**
 
-When you create support ticket from **Help + support** or **Support + troubleshooting**, there will be information about any issues impacting your resources in the **New support request** window. Look for more information and a **Summary of impact** in the information provided.
+    When you create support ticket from **Help + support** or **Support + troubleshooting**, there will be information about any issues impacting your resources in the **New support request** window. Look for more information and a **Summary of impact** in the information provided.
 
-:::image type="content" source="media/disaster-recovery-guidance/new-support-request-service-issue-example.png" alt-text="A snippet from the Azure portal New Support Request screen with a sample of a service notification.":::
+    :::image type="content" source="media/disaster-recovery-guidance/new-support-request-service-issue-example.png" alt-text="A snippet from the Azure portal New Support Request screen with a sample of a service notification.":::
 
 - **Service health**
 
-The **Service Health** page in the Azure portal contains information about Azure datacenter status globally. Search for "service health" in the search bar in the Azure portal, then view **Service issues** in the **Active events** category. You can also view the health of individual resources in the **Resource health** page of any resource under the **Help** menu. A sample screenshot of the **Service Health** page follows, with information about an active service issue displayed above a global map of affected locations.
+    The **Service Health** page in the Azure portal contains information about Azure datacenter status globally. Search for "service health" in the search bar in the Azure portal, then view **Service issues** in the **Active events** category. You can also view the health of individual resources in the **Resource health** page of any resource under the **Help** menu. A sample screenshot of the **Service Health** page follows, with information about an active service issue displayed above a global map of affected locations.
 
-:::image type="content" source="media/disaster-recovery-guidance/service-health-service-issues-example-map.png" alt-text="A screenshot of the Azure portal Service Health page during a service issue, showing the Issue and a global map of affected resources.":::
+    :::image type="content" source="media/disaster-recovery-guidance/service-health-service-issues-example-map.png" alt-text="A screenshot of the Azure portal Service Health page during a service issue, showing the Issue and a global map of affected resources.":::
 
 - **Email notification**
 
-If you have set up alerts, an email notification will arrive before a planned service outage starts. For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
+    If you have set up alerts, an email notification will arrive before a planned service outage starts. For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
 
 ## When to initiate disaster recovery during an outage
 
 In the event of a service outage impacting application resources, consider the following courses of action. 
 
-- The Azure teams work diligently to restore service availability as quickly as possible but depending on the root cause it can take hours sometimes. If your application can tolerate significant downtime, you can simply wait for the recovery to complete. In this case, no action on your part is required. You can [view current service status on our Azure Service Health Dashboard](https://azure.status.microsoft/status). After the recovery of the region, your application's availability is restored.
+- The Azure teams work diligently to restore service availability as quickly as possible but depending on the root cause it can take hours sometimes. If your application can tolerate significant downtime, you can simply wait for the recovery to complete. In this case, no action on your part is required. You can [view current service status on our Azure Service Health Dashboard](https://azure.status.microsoft/status) for updates and the latest information regarding an outage. After the recovery of the region, your application's availability is restored. 
 
-- Recovery to another Azure region may require changing application connection strings or using DNS redirection, and may result in permanent data loss. Therefore, redirection should be performed only when the outage is likely to last longer than your application's recovery time objective (RTO). When the application is deployed to production, you should perform regular monitoring of the application's health and assert that the recovery is warranted only when there is prolonged expected connectivity failure from the application tier to the database. Depending on your application tolerance to downtime and possible business liability, you can decide if you want to wait for service to recover or initiate disaster recovery yourself.
+- Recovery to another Azure region may require changing application connection strings or using DNS redirection, and may result in permanent data loss. Therefore, redirection should be performed only when the outage duration approaches your application's recovery time objective (RTO). When the application is deployed to production, you should perform regular monitoring of the application's health and assert that the recovery is warranted only when there is prolonged expected connectivity failure from the application tier to the database. Depending on your application tolerance to downtime and possible business liability, you can decide if you want to wait for service to recover or initiate disaster recovery yourself. 
 
 ## Outage recovery guidance
 
@@ -57,7 +57,7 @@ If the Azure SQL Database outage in a region hasn't been mitigated for an extend
 
 ### Planned failover (no data loss) to geo-replicated secondary server
 
-If [active geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-sql-db.md) are enabled, check if the primary and secondary database resource status is **Online** in the Azure portal. If so, the data plane for both primary and secondary database is healthy. Initiate a planned failover of active geo-replication or auto-failover groups to the secondary region by using the Azure portal, T-SQL, PowerShell, or CLI. 
+If [active geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-sql-db.md) are enabled, check if the primary and secondary database resource status is **Online** in the Azure portal. If so, the data plane for both primary and secondary database is healthy. Initiate a planned failover of active geo-replication or auto-failover groups to the secondary region by using the Azure portal, T-SQL, PowerShell, or Azure CLI. 
 
 > [!NOTE]
 > A planned failover requires full data synchronization before switching roles and does not result in data loss. Depending on the type of service outage there is no guarantee that planned failover without data loss will succeed, but it is worth trying as the first recovery option.
@@ -82,9 +82,9 @@ If planned failover doesn't complete gracefully and experiences errors, or if th
 | | Azure portal | [Initiate a forced failover via the Azure portal](active-geo-replication-configure-portal.md?tabs=portal#initiate-a-failover) |
 | | PowerShell | [Initiate a forced failover via PowerShell](/powershell/module/az.sql/set-azsqldatabasesecondary#example-2-initiate-a-forced-failover-(with-potential-data-loss)) |
 | | T-SQL | [Unplanned failover to geo-replication secondary via T-SQL](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current&tabs=sqlpool#f-force-failover-to-a-geo-replication-secondary-with-data-loss) |
-| **Auto-failover groups** | Azure portal | [Failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?&tabs=azure-portal#3---test-failover) | 
-| | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover) | 
-| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover) | 
+| **Auto-failover groups** | Azure portal | [Failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?&tabs=azure-portal#3---test-failover) |
+| | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover) |
+| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover) |
 
 ### Geo-restore
 

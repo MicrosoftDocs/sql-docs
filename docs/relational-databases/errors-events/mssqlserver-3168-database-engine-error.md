@@ -2,7 +2,7 @@
 description: "MSSQLSERVER_3168"
 title: "MSSQLSERVER_3168 | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/28/2023
+ms.date: 01/30/2023
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: supportability
@@ -33,7 +33,7 @@ ms.author: mathoma
 You can't restore a backup of a system database (**master**, **model**, or **msdb**) on a server build that differs from the build on which the backup was originally created.  
   
 > [!NOTE]  
-> While installing a service pack or a hotfix build changes the server build number, server builds are always incremental.  
+> While installing a service pack or a hotfix build changes the server build number, Server builds are always incremental.  
   
 ### Possible causes
 
@@ -82,7 +82,10 @@ In this case, the source SQL Server version when the backup was taken is 15.0.42
     - If Version B is equivalent to Version A, retry the restore operation of master database on Server B.
 1. (Recommended) Update Server B to the latest available version, and then take a new backup of your system databases.
 
-## See Also
+## See also
 
 [Limitations on Restoring System Databases &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md#limitations-on-restoring-system-databases)  
   
+[Restore the master database (Transact-SQL)](../backup-restore/restore-the-master-database-transact-sql.md)
+
+[The Easiest Way To Rebuild The master Database](https://techcommunity.microsoft.com/t5/sql-server-blog/the-easiest-way-to-rebuild-the-master-database/ba-p/383742)

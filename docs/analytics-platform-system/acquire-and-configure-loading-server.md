@@ -38,7 +38,8 @@ Now that you better understand your capacity requirements, you can plan the serv
 ### <a name="R"></a>Software Requirements  
 Supported Operating Systems:  
   
--   Windows Server 2012, Windows Server 2012 R2 or beyond. These operating systems require the FDR network adapter.  
+-   Windows Server 2012, Windows Server 2012 R2, or later versions. These operating systems require the FDR network adapter.  
+
   
 -   Windows Server 2008 R2. This OS requires the DDR network adapter.  
   

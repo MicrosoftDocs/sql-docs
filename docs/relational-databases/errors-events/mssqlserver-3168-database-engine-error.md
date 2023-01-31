@@ -33,7 +33,7 @@ ms.author: mathoma
 You can't restore a backup of a system database (**master**, **model**, or **msdb**) on a server build that differs from the build on which the backup was originally created.  
   
 > [!NOTE]  
-> While installing a service pack or a hotfix build changes the server build number, Server builds are always incremental.  
+> Installing a servicing update like cumulative update or service pack or a GDR changes the server build number. Server builds are always incremental.
   
 ### Possible causes
 

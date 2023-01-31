@@ -39,10 +39,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
 
- [ [WINDOW *window expression*](../../t-sql/queries/select-window-transact-sql.md)]
-  
  [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
-  
+
+ [ [WINDOW *window expression*](../../t-sql/queries/select-window-transact-sql.md)]
+ 
  [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
  The [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT, and INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) operators can be used between queries to combine or compare their results into one result set.  

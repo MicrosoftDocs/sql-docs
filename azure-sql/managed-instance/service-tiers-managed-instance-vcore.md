@@ -124,7 +124,7 @@ When specifying hardware parameter in templates or scripts, hardware is provided
 
 #### <a id="gen4gen5-1"></a> Gen4
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
 
 #### Standard-series (Gen5) and premium-series
 

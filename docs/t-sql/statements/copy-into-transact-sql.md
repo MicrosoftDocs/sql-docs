@@ -430,9 +430,11 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV. This guidance applies to gzip compressed files as well.
+The COPY command will have better performance depending on your workload. 
+- Uncompressed files can be split automatically, so there's no need to manually split CSV files. 
+- Large compressed cannot be split automatically. For best loading performance, consider splitting your input into multiple files when loading compressed CSV.
 
-### What is the file splitting guidance for the COPY command loading CSV files?
+### What is the file splitting guidance for the COPY command loading compressed CSV files?
 Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. The number of files is determined by number of compute nodes multiplied by 60. For example, at 6000DWU we have 12 compute nodes and 12*60 = 720 partitions.  For a simple file splitting experience, refer to [How to maximize COPY load throughput with file splits](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474).
 
 | **DWU** | **#Files** |

@@ -27,7 +27,7 @@ SQL Managed Instance is placed inside the Azure virtual network and the subnet t
 > [!NOTE]
 > November 2022 introduced a number of changes to the default connectivity structure for SQL Managed Instance. This article provides information about the current architecture, as well as the architecture of instances that have not yet enrolled in the feature wave. For more information, review [November 2022 feature wave](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). 
 
-## November 2022 feature wave 
+## November 2022 feature wave
 
 The November 2022 feature wave introduced the following changes to the connectivity architecture for SQL Managed Instance: 
 

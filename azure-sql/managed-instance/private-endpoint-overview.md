@@ -83,38 +83,66 @@ Once a request to create a private endpoint is made, the SQL administrator can m
 1. After you approve or reject connections, the list will reflect the state of selected private endpoint connection(s) along with any text response.
 ![Screenshot of private endpoint connections blade showing one pending and one approved connection](media/private-endpoint/pec-list-after.png)
 
-### How to get the IP address of a private endpoint
-
-As a locally available resource, private endpoint's IP address will always be in its subnet's range. You can find the IP address of a private endpoint to Azure SQL Managed Instance either by visiting Private Link Center or by doing the following the steps below: 
-
-1. Navigate to your Azure SQL Managed Instance in Azure portal.
-2. In the sidebar, select Private endpoint connections.
-3. Locate the private endpoint connection in the table and select its name.
-![Screenshot of private endpoint connections blade with a highlight on one private endpoint name](media/private-endpoint/pec-click.png)
-1. In Overview, select the network interface.
-![Screenshot of private endpoint connection overview with a highlight on network interface](media/private-endpoint/pec-nic-click.png)
-1. In Overview, Private IP address is shown in the Essentials section.
-![Screenshot of private endpoint connection's network interface with a highlight on its private IP address](media/private-endpoint/pec-ip-display.png)
-
 ### Set up domain name resolution for private endpoint
 
-After you create a private endpoint to Azure SQL Managed Instance, you'll need to configure domain name resolution so that SQL clients can retain the name of SQL Managed Instance in their connection strings. Otherwise, login attempts will fail. The method below works for virtual networks that don't use custom DNS servers. If you use a custom DNS server, follow its specific instructions instead.
+After you create a private endpoint to Azure SQL Managed Instance, you'll need to configure domain name resolution. Otherwise, login attempts will fail. The method below works for virtual networks that use Azure DNS resolution. If your virtual network is configured to use a custom DNS server, adjust the steps accordingly.
 
-To set up domain name resolution for private endpoint to an instance whose FQDN is `<instance-name>.<domain>`:
+To set up domain name resolution for private endpoint to an instance whose FQDN is `<instance-name>.<dns-zone>.database.windows.net`, we'll consider two different virtual networks:
+- Instance virtual network: hosts Azure SQL Managed Instance.
+- Endpoint virtual network: hosts the private endpoint to the Azure SQL Managed Instance.
 
-1. [Create a private Azure DNS zone](../../dns/private-dns-getstarted-portal.md#create-a-private-dns-zone):
-   1. If the private endpoint isn't in the same virtual network where your Azure SQL Managed Instance is and the two virtual networks aren't peered, name this zone `privatelink.<domain>`.
-   2. If the private endpoint is in the same virtual network where your Azure SQL Managed Instance is and the two virtual networks aren't peered, name this zone something else, for example `plink.<domain>`.
-> [!IMPORTANT]
-> Do not name the private DNS zone `privatelink.<domain>` when the private endpoint is in the same virtual network as its Azure SQL Managed Instance because this will disrupt the instance's internal connectivity and cause management operations to fail.
-1. In the DNS zone, create a new record set with the following properties:
+#### [Separate virtual networks](#tab/separate-vnets)
+
+Follow the steps below if the instance and endpoint virtual networks are different and are not peered.
+After you complete these steps, SQL clients connecting to `<instance-name>.<dns-zone>.database.windows.net` from inside the endpoint virtual network will be transparently routed through the private endpoint.
+
+1. Obtain the IP address of the private endpoint either by visiting Private Link Center or by performing the following steps:
+    1. Navigate to your Azure SQL Managed Instance in Azure portal.
+    2. In the sidebar, select Private endpoint connections.
+    3. Locate the private endpoint connection in the table and select its name.
+    ![Screenshot of private endpoint connections blade with a highlight on one private endpoint name](media/private-endpoint/pec-click.png)
+    4. In Overview, select the network interface.
+    ![Screenshot of private endpoint connection overview with a highlight on network interface](media/private-endpoint/pec-nic-click.png)
+    5. In Overview, Private IP address is shown in the Essentials section.
+![Screenshot of private endpoint connection's network interface with a highlight on its private IP address](media/private-endpoint/pec-ip-display.png)
+2. [Create a private Azure DNS zone](../../dns/private-dns-getstarted-portal.md#create-a-private-dns-zone) named `privatelink.<dns-zone>.database.windows.net`.
+3. In the DNS zone, create a new record set with the following values:
    - Name: `<instance-name>`
    - Type: A
-   - IP address: IP address of the private endpoint
-2. Link this DNS zone with the virtual network of your private endpoint:
-   1. On the left pane, select **Virtual network links**.
+   - IP address: IP address of the private endpoint obtained in step 1.
+4. Link this DNS zone with the endpoint virtual network:
+   1. In the DNS zone, select Virtual network links on the left pane.
+   2. Select Add, fill in link name, and choose the endpoint virtual network.
+   3. Select OK.
 
-After you complete the above steps, you'll be able to connect to the instance's private endpoint at `<instance-name>.privatelink.<domain>` or `<instance-name>.plink.<domain>`. Additionally, if you used `privatelink.<domain>` as the name of the private DNS zone, `<instance-name>.<domain>` will automatically resolve to the IP address of the private endpoint in that virtual network.
+#### [Same or peered virtual networks](#tab/same-vnet)
+Follow the steps below if the instance and endpoint virtual networks are the same or are peered.
+
+After you complete these steps, SQL clients inside the endpoint virtual network whose connection string includes `Encrypt=false` and `TrustServerCertificate=true` can connect to the private endpoint. They can still connect to the VNet-local endpoint at `<instance-name>.<dns-zone>.database.windows.net` without modifications.
+
+> [!NOTE]
+> When the instance and endpoint virtual networks are the same (or peered), you don't have the ability to establish trusted encrypted connections and to transparently re-route SQL clients via the private endpoint.
+
+1. Obtain the IP address of the private endpoint either by visiting Private Link Center or by performing the following steps:
+    1. Navigate to your Azure SQL Managed Instance in Azure portal.
+    2. In the sidebar, select Private endpoint connections.
+    3. Locate the private endpoint connection in the table and select its name.
+    ![Screenshot of private endpoint connections blade with a highlight on one private endpoint name](media/private-endpoint/pec-click.png)
+    4. In Overview, select the network interface.
+    ![Screenshot of private endpoint connection overview with a highlight on network interface](media/private-endpoint/pec-nic-click.png)
+    5. In Overview, Private IP address is shown in the Essentials section.
+![Screenshot of private endpoint connection's network interface with a highlight on its private IP address](media/private-endpoint/pec-ip-display.png)
+2. [Create a private Azure DNS zone](../../dns/private-dns-getstarted-portal.md#create-a-private-dns-zone) named _anything but_ privatelink.\<dns-zone\>.database.windows.net; for example: `privatelink.site`.
+    > [!IMPORTANT]
+    > Do not name the private DNS zone `privatelink.<dns-zone>.database.windows.net` because this will disrupt the instance's internal connectivity and cause management operations to fail.
+3. In the DNS zone, create a new record set with the following values:
+   - Name: `<instance-name>`
+   - Type: A
+   - IP address: IP address of the private endpoint obtained in step 1.
+4. Link this DNS zone with the virtual network:
+   1. In the DNS zone, select Virtual network links on the left pane.
+   2. Select Add, fill in link name, and choose the virtual network.
+   3. Select OK.
 
 ## Next steps
 

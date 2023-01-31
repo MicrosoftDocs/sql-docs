@@ -1,8 +1,8 @@
 ---
 title: Overview of the workload comparison process
 description: Database Experimentation Assistant (DEA) is an A/B testing solution for changes in SQL Server environments, such as upgrades or new indexes.
-author: pochiraju
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: mathoma
 ms.date: 12/12/2019
 ms.service: sql

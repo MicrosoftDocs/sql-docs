@@ -80,7 +80,8 @@ In this case, the source SQL Server version when the backup was taken is 15.0.42
 
         1. Press and hold (or right-click) the entry, and then select **Uninstall**.
 
-    - If Version B is equivalent to Version A, retry the restore operation of master database on Server B.
+    - After you verify that Version B is same as Version A, retry the restore operation of master database on Server B.
+
 1. (Recommended) Update Server B to the latest available version, and then take a new backup of your system databases.
 
 ## See also

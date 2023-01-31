@@ -88,6 +88,7 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2016
 - SQL Server 2017 on Windows and Linux
 - SQL Server 2019
+- SQL Server 2022
 - Azure SQL Database single database
 - Azure SQL Managed Instance (assessment only)
 - SQL server running on an Azure Virtual Machine

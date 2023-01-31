@@ -153,7 +153,7 @@ Note that the behavior of blocking changes with optimized locking in the previou
 
 However, with optimized locking, Session 2 will not be blocked as the latest committed version of row 1 contains a=1, which does not satisfy the predicate of Session 2. 
 
-If the predicate is satisfied, we wait for any active transaction on the row to finish. If we had to wait for the S TID row lock, the row might have changed, and the latest committed version might have changed. In that case, instead of aborting the transaction due to an update conflict, the Database Engine will retry the predicate evaluation on the same row. If the predicate qualifies upon retry, the row will be updated.
+If the predicate is satisfied, we wait for any active transaction on the row to finish. If we had to wait for the S TID lock, the row might have changed, and the latest committed version might have changed. In that case, instead of aborting the transaction due to an update conflict, the Database Engine will retry the predicate evaluation on the same row. If the predicate qualifies upon retry, the row will be updated.
 
 Consider the following example when a predicate change is automatically retried:
 

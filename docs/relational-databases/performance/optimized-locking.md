@@ -1,22 +1,22 @@
 ---
 title: "Optimized locking"
 description: "Learn about the optimized locking enhancement to the Database Engine."
-ms.custom: 
-    "references_regions"
-ms.date: 01/30/2023
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: "references_regions"
+helpviewer_keywords:
   - "optimized locking"
 dev_langs:
- - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+  - "TSQL"
 monikerRange: "=azuresqldb-current"
 ---
 
 # Optimized locking
+
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
 This article introduces the optimized locking feature, a new [!INCLUDE[SQL Server Database Engine](../../includes/ssdenoversion-md.md)] capability that offers an improved transaction locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions.
@@ -25,10 +25,10 @@ This article introduces the optimized locking feature, a new [!INCLUDE[SQL Serve
 
 Optimized locking helps to reduce lock memory as very few locks are held for large transactions. In addition, optimized locking also avoids lock escalations. This allows more concurrent access to the table.
 
-Optimized locking is composed of two primary components: **Transaction ID (TID) locking** and **lock after qualification (LAQ)**. 
+Optimized locking is composed of two primary components: **Transaction ID (TID) locking** and **lock after qualification (LAQ)**.
 
 - A transaction ID (TID) is a unique identifier of a transaction. Each row is labeled with the last TID that modified it. Instead of potentially many key or row identifier locks, a single lock on the TID is used. For more information, review the section on [Transaction ID (TID) locking](#optimized-locking-and-transaction-id-tid-locking).
-- Lock after qualification (LAQ) is an optimization that evaluates predicates of a query on the latest committed version of the row without acquiring a lock, thus improving concurrency. For more information, review the section on [Lock after qualification (LAQ)](#optimized-locking-and-lock-after-qualification-laq). 
+- Lock after qualification (LAQ) is an optimization that evaluates predicates of a query on the latest committed version of the row without acquiring a lock, thus improving concurrency. For more information, review the section on [Lock after qualification (LAQ)](#optimized-locking-and-lock-after-qualification-laq).
 
 For example:
 
@@ -40,11 +40,11 @@ This article covers these two core concepts of optimized locking in detail.
 ### Availability
 
 Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only in the following Azure regions:
-* West Europe
-* UK South
-* Canada Central
-* Brazil South
-* West Central US
+- West Europe
+- UK South
+- Canada Central
+- Brazil South
+- West Central US
 
 Only in these regions, optimized locking is on by default in both new and existing databases.
 
@@ -68,7 +68,7 @@ Both ADR and RCSI are enabled by default in [!INCLUDE[asdb](../../includes/ssazu
 ```sql
 SELECT name
 , is_read_committed_snapshot_on
-, is_accelerated_database_recovery_on 
+, is_accelerated_database_recovery_on
 FROM  sys.databases
 WHERE name = db_name();
 ```
@@ -77,7 +77,7 @@ WHERE name = db_name();
 
 This is a short summary of the behavior when optimized locking is not enabled. For more information, review the [Transaction locking and row versioning guide](../sql-server-transaction-locking-and-row-versioning-guide.md).
 
-In the Database Engine, locking is a mechanism that prevents multiple transactions from updating the same data simultaneously, in order to protect data integrity and consistency. 
+In the Database Engine, locking is a mechanism that prevents multiple transactions from updating the same data simultaneously, in order to protect data integrity and consistency.
 
 When a transaction needs to modify data, it can request a lock on the data. The lock is granted if no other conflicting locks are held on the data, and the transaction can proceed with the modification. If another conflicting lock is held on the data, the transaction must wait for the lock to be released before it can proceed.
 
@@ -85,7 +85,7 @@ When multiple transactions are allowed to access the same data concurrently, the
 
 ### Optimized locking and transaction ID (TID) locking
 
-Every row in the Database Engine internally contains a transaction ID (TID) when row versioning is in use. This TID is persisted on disk. Every transaction modifying a row will stamp that row with its TID. 
+Every row in the Database Engine internally contains a transaction ID (TID) when row versioning is in use. This TID is persisted on disk. Every transaction modifying a row will stamp that row with its TID.
 
 With TID locking, instead of taking the lock on the key of the row, a lock is taken on the TID of the row. The modifying transaction will hold an X lock on its TID. Other transactions will acquire an S lock on the TID to check if the first transaction is still active. With TID locking, page and row locks continue to be taken for updates, but each page and row lock is released as soon as each row is updated. The only lock held until end of transaction is the X lock on the TID resource, replacing page and row (key) locks as demonstrated in the next demo. (Other standard database and object locks are not affected by optimized locking.)
 
@@ -94,7 +94,7 @@ Optimized locking helps to reduce lock memory as very few locks are held for lar
 Consider the following T-SQL sample scenario that looks for locks on the user's current session:
 
 ```sql
-CREATE TABLE t0 
+CREATE TABLE t0
 (a int PRIMARY KEY not null
 ,b int null);
 
@@ -134,7 +134,7 @@ Since predicate evaluation is performed without acquiring any locks, concurrent 
 Example:
 
 ```sql
-CREATE TABLE t1 
+CREATE TABLE t1
 (a int not null
 ,b int null);
 
@@ -143,15 +143,15 @@ GO
 ```
 
 | **Session 1** | **Session 2** |
-| :--|:--|
-| `BEGIN TRAN`<BR>`UPDATE t1`<BR>`SET b=b+10`<BR>`WHERE a=1;` | |
-| | `BEGIN TRAN`<BR>`UPDATE t1`<BR>`SET b=b+10`<BR>`WHERE a=2;` |
-| `COMMIT TRAN` ||
-|| `COMMIT TRAN`|
+| :-- | :-- |
+| `BEGIN TRAN`<br />`UPDATE t1`<br />`SET b=b+10`<br />`WHERE a=1;` | |
+| | `BEGIN TRAN`<br />`UPDATE t1`<br />`SET b=b+10`<br />`WHERE a=2;` |
+| `COMMIT TRAN` | |
+| | `COMMIT TRAN` |
 
 Note that the behavior of blocking changes with optimized locking in the previous example. Without optimized locking, Session 2 will be blocked.
 
-However, with optimized locking, Session 2 will not be blocked as the latest committed version of row 1 contains a=1, which does not satisfy the predicate of Session 2. 
+However, with optimized locking, Session 2 will not be blocked as the latest committed version of row 1 contains a=1, which does not satisfy the predicate of Session 2.
 
 If the predicate is satisfied, we wait for any active transaction on the row to finish. If we had to wait for the S TID lock, the row might have changed, and the latest committed version might have changed. In that case, instead of aborting the transaction due to an update conflict, the Database Engine will retry the predicate evaluation on the same row. If the predicate qualifies upon retry, the row will be updated.
 
@@ -167,9 +167,9 @@ GO
 ```
 
 | **Session 1** | **Session 2** |
-| :--|:--|
-| `BEGIN TRAN`<BR>`UPDATE t2`<BR>`SET b=b+10`<BR>`WHERE a=1;` | |
-| | `BEGIN TRAN`<BR>`UPDATE t2`<BR>`SET b=b+10`<BR>`WHERE a=1;` |
+| :-- | :-- |
+| `BEGIN TRAN`<br />`UPDATE t2`<br />`SET b=b+10`<br />`WHERE a=1;` | |
+| | `BEGIN TRAN`<br />`UPDATE t2`<br />`SET b=b+10`<br />`WHERE a=1;` |
 | `COMMIT TRAN` | |
 | | `COMMIT TRAN` |
 
@@ -183,7 +183,7 @@ To maximize the benefits of optimized locking, it is recommended to enable [read
 ALTER DATABASE databasename SET READ_COMMITTED_SNAPSHOT ON;
 ```
 
-In [!INCLUDE[asdb](../../includes/ssazure_md.md)], RCSI is enabled by default and read committed is the default isolation level. With RCSI enabled and when using read committed isolation level, readers don't block writers and writers don't block readers. Readers read a version of the row from the snapshot taken at the start of the query. With LAQ, writers will qualify rows per the predicate based on the latest committed version of the row without acquiring U locks. With LAQ, a query will wait only if the row qualifies and there is an active write transaction on that row. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency. 
+In [!INCLUDE[asdb](../../includes/ssazure_md.md)], RCSI is enabled by default and read committed is the default isolation level. With RCSI enabled and when using read committed isolation level, readers don't block writers and writers don't block readers. Readers read a version of the row from the snapshot taken at the start of the query. With LAQ, writers will qualify rows per the predicate based on the latest committed version of the row without acquiring U locks. With LAQ, a query will wait only if the row qualifies and there is an active write transaction on that row. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
 
 In addition to reduced blocking, the lock memory required will be reduced. This is because readers don't take any locks, and writers take only short duration locks, instead of locks that expire at the end of the transaction. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
@@ -208,8 +208,8 @@ INSERT INTO t3 VALUES (1,10),(2,20),(3,30);
 INSERT INTO t4 VALUES (1,10),(2,20),(3,30);
 GO
 
-UPDATE t3 SET t3.b = t4.b 
-FROM t3 
+UPDATE t3 SET t3.b = t4.b
+FROM t3
 INNER JOIN t4 WITH (UPDLOCK) ON t3.a = t4.a;
 ```
 
@@ -217,7 +217,7 @@ In the previous query example, only table `t4` will be affected by the locking h
 
 ```sql
 UPDATE t3 SET t3.b = t4.b
-FROM t3 WITH (REPEATABLEREAD) 
+FROM t3 WITH (REPEATABLEREAD)
 INNER JOIN t4 ON t3.a = t4.a;
 ```
 
@@ -230,27 +230,32 @@ In the previous query example, only table `t3` will use the repeatable read isol
 Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only in [limited Azure regions](#availability).
 
 Optimized locking is available in the following service tiers:
-* all DTU service tiers
-* all vCore service tiers, including provisioned and serverless
+- all DTU service tiers
+- all vCore service tiers, including provisioned and serverless
 
 Optimized locking is not currently available in:
-* [!INCLUDE[Azure SQL Managed Instance](../../includes/ssazuremi_md.md)]
-* [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] hyperscale
-* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+- [!INCLUDE[Azure SQL Managed Instance](../../includes/ssazuremi_md.md)]
+- [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] hyperscale
+- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
 ### Is optimized locking on by default in both new and existing databases?
+
 Where currently supported, yes.
 
 ### How can I detect if optimized locking is enabled?
+
 See [Is optimized locking enabled?](#is-optimized-locking-enabled)
 
 ### What happens when accelerated database recovery (ADR) is not enabled on my database?
+
 If ADR is disabled, optimized locking is automatically disabled as well.
 
 ### What if I want to force queries to block despite optimized locking?
+
 For customers using RCSI, to force blocking between two queries when optimized locking is enabled, use the READCOMMITTEDLOCK query hint.
 
 ### Can I disable optimized locking?
+
 Currently, customers can create a support request to disable optimized locking.
 
 Use the following steps to create a new support request from the Azure portal for Azure SQL Database.
@@ -258,11 +263,11 @@ Use the following steps to create a new support request from the Azure portal fo
 1. First, verify that [optimized locking is enabled for your database](#is-optimized-locking-enabled).
 1. On the [Azure portal](https://portal.azure.com) menu, select **Help + support**.
 
-   ![The Help + support link](media/optimized-locking/help-plus-support.png)
+   :::image type="content" source="media/optimized-locking/help-plus-support.png" alt-text="A screenshot of the Azure portal identifying the help and support link.":::
 
 1. In **Help + support**, select **Create a support request**.
 
-    ![Create a new support request](media/optimized-locking/new-support-request.png)
+    :::image type="content" source="media/optimized-locking/new-support-request.png" alt-text="A screenshot of the Azure portal showing how to create a new support request.":::
 
 1. For **Issue type**, select **Technical**.
 1. For **Subscription**, **Service**, and **Resource**, select the desired **SQL Database**.

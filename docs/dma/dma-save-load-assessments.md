@@ -1,8 +1,8 @@
 ---
 title: "Save and load assessments with Data Migration Assistant"
 description: Learn how to use Data Migration Assistant to save and load assessments.
-author: rajeshsetlem
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: "01/10/2020"
 ms.service: sql
 ms.subservice: dma

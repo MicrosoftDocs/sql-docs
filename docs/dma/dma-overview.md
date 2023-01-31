@@ -1,8 +1,8 @@
 ---
 title: "Overview of Data Migration Assistant (SQL Server)"
 description: Learn how to use Data Migration Assistant to migrate SQL Server databases to other SQL Server or Azure databases
-author: rajeshsetlem
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: randolphwest
 ms.date: 05/24/2022
 ms.service: sql

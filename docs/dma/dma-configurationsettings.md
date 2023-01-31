@@ -1,8 +1,8 @@
 ---
 title: "Configure settings for Data Migration Assistant"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
-author: rajeshsetlem
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.service: sql

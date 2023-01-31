@@ -4,7 +4,7 @@ description: This article describes how to acquire and configure a loading serve
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 04/17/2018
+ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual

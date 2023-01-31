@@ -55,6 +55,7 @@ The following table lists all the currently available connection string properti
 | connectRetryCount<br/><br/>int<br/>[0..255]<br/><br/>1 | (Version 9.4+) The number of reconnection attempts if there's a connection failure. |
 | connectRetryInterval<br/><br/>int<br/>[1..60]<br/><br/>10 | (Version 9.4+) The number of seconds between each connection retry attempt. |
 | databaseName,<br/>database<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | The name of the database to connect to. <br/><br/>If not stated, a connection is made to the default database. |
+| datetimeParameterType<br/><br/>String<br/>["datetime2" &#124; "datetime" &#124; "datetimeoffset"]<br/><br/>datetime2 | (Version 12.2+) This property can be used to specify the data type to always use for date/timestamp parameters. Older databases running in compatibility mode in SQL Server 2016, or higher, will benefit from setting the property to "datetime", as this mitigates casting issues that may otherwise appear. |
 | delayLoadingLobs<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | Flag to indicate whether to stream or not stream all the LOB objects being retrieved from the ResultSet. Setting this property to "false" loads the entire LOB object into memory without streaming. |
 | domainName,<br/>domain<br/><br/>String<br/>null | (Version 7.4+) The Windows domain to authenticate to when using NTLM authentication. |
 | disableStatementPooling<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | Flag indicates if statement pooling should be used. |

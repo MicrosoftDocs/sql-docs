@@ -1,8 +1,8 @@
 ---
 title: "Best practices for Data Migration Assistant"
 description: Learn best practices for migrating SQL Server databases with Data Migration Assistant, including information about installation, assessment, and migration.
-author: rajeshsetlem
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: "03/12/2019"
 ms.service: sql
 ms.subservice: dma

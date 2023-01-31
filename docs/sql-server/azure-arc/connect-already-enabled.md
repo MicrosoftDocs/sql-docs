@@ -1,6 +1,6 @@
 ---
-title: Connect your SQL Server to Azure Arc
-description: Connect an instance of SQL Server to Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
+title: Connect SQL Server on a server already connected to Azure Arc
+description: Connect an instance of SQL Server to Azure Arc on a server that is already connected to Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, maghan
@@ -10,11 +10,13 @@ ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 ---
 
-# Connect your SQL Server to Azure Arc
+# Connect your SQL Server to Azure Arc on a server already connected to Azure Arc
 
 Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you connect a new SQL Server instance to Azure Arc when you're installing it on Windows Operating System. See [Install SQL Server 2022](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#install-sql-server-2022).
 
-This article explains how to connect your SQL Server instance to Azure Arc on an Arc-enabled server. Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
+This article explains how to connect your SQL Server instance to Azure Arc on an Arc-enabled server. If the physical or virtual server is not connected to Azure yet, follow the steps in [Connect your SQL Server to Azure Arc](connect.md).
+
+Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
 If the machine with SQL Server is already connected to Azure Arc, to connect the SQL Server instances, install *Azure extension for SQL Server*. The extension is in the extension manager as **SQL Server Extension - Azure Arc**. 
 

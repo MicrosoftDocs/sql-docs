@@ -19,23 +19,14 @@ The following table highlights each method so that you can determine which works
 
 | Method | Description |
 |--------|-------------|
-| Interactively | Manually install the agent on a single or small number of machines by [connecting machines using a deployment script](onboard-portal.md).<br> From the Azure portal, you can generate a script and execute it on the machine to automate the install and configuration steps of the agent.|
-| Interactively | [Connect machines from Windows Admin Center](onboard-windows-admin-center.md) |
-| Interactively or at scale | [Connect machines using PowerShell](onboard-powershell.md) |
-| Interactively or at scale | [Connect machines using Windows PowerShell Desired State Configuration (DSC)](onboard-dsc.md) |
-| At scale | [Connect machines using a service principal](onboard-service-principal.md) to install the agent at scale non-interactively.|
-| At scale | [Connect machines by running PowerShell scripts with Configuration Manager](onboard-configuration-manager-powershell.md)
-| At scale | [Connect machines with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.md)
-| At scale | [Connect Windows machines using Group Policy](onboard-group-policy-powershell.md)
-| At scale | [Connect machines from Automation Update Management](onboard-update-management-machines.md) to create a service principal that installs and configures the agent for multiple machines managed with Azure Automation Update Management to connect machines non-interactively. |
+| Interactively | Manually connect the instances on a single physical or virtual machine that is already connected to Azure Arc. [Connect your SQL Server to Azure Arc on a server already connected to Azure Arc](connect-already-enabled.md).|
+| Interactively | Manually connect the instances on a single physical or virtual machine that is not currently connected to Azure Arc. [Connect your SQL Server to Azure Arc](connect.md)|
+| Interactively | [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md) |
+| At scale | [Connect SQL Server instances to Azure at scale](connect-at-scale.md)|
 
-> [!IMPORTANT]
-> The Connected Machine agent cannot be installed on an Azure virtual machine. The install script will warn you and roll back if it detects the server is running in Azure.
 
-Be sure to review the basic [prerequisites](prerequisites.md) before you deploy the agent, as well as any specific requirements listed in the steps for the onboarding method you choose. To learn more about what changes the agent will make to your system, see [Overview of the Azure Connected Machine Agent](agent-overview.md).
+Be sure to review the basic [prerequisites](prerequisites.md) before you deploy the agent, as well as any specific requirements listed in the steps for the onboarding method you choose.
 
 ## Next steps
 
 * Learn about the Azure Connected Machine agent and network requirements in [prerequisites](prerequisites.md).
-* Review the [Planning and deployment guide for Azure Arc-enabled servers](plan-at-scale-deployment.md)
-* Learn about [reconfiguring, upgrading, and removing the Connected Machine agent](manage-agent.md).

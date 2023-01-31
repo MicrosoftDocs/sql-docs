@@ -59386,6 +59386,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/releases/download-and-install-latest-updates",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/what-s-new-in-sql-server-ver15.md",
       "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2019",
       "redirect_document_id": false

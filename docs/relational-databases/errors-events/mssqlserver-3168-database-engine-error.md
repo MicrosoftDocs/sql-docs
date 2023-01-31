@@ -33,7 +33,7 @@ ms.author: mathoma
 You can't restore a backup of a system database (**master**, **model**, or **msdb**) on a server build that differs from the build on which the backup was originally created.  
   
 > [!NOTE]  
-> While installing a service pack or a hotfix build changes the server build number, Server builds are always incremental.  
+> Installing a servicing update like cumulative update or service pack or a GDR changes the server build number. Server builds are always incremental.
   
 ### Possible causes
 
@@ -56,7 +56,8 @@ To resolve the issue, follow these steps:
    `SELECT @@VERSION`
 
 1. Run a query that resembles the following to determine the version of SQL Server that was running when the source backup was taken (Version A):
-`RESTORE headeronly FROM disk = 'c:\tools\masterdb.bak'`
+`RESTORE headeronly FROM disk = 'c:\sqlbackups\masterdb.bak'`
+
 
 1. Review the values of `SoftwareVersionMajor`, `SoftwareVersionMinor`, and `SoftwareVersionBuild` columns to determine the build of the source server that was used when the backup was taken. For example, assume that the values are as follows:
 
@@ -79,7 +80,8 @@ In this case, the source SQL Server version when the backup was taken is 15.0.42
 
         1. Press and hold (or right-click) the entry, and then select **Uninstall**.
 
-    - If Version B is equivalent to Version A, retry the restore operation of master database on Server B.
+    - After you verify that Version B is same as Version A, retry the restore operation of master database on Server B.
+
 1. (Recommended) Update Server B to the latest available version, and then take a new backup of your system databases.
 
 ## See also

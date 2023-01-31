@@ -2,7 +2,7 @@
 description: "MSSQLSERVER_3168"
 title: "MSSQLSERVER_3168 | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/30/2023
+ms.date: 01/31/2023
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: supportability
@@ -33,7 +33,7 @@ ms.author: mathoma
 You can't restore a backup of a system database (**master**, **model**, or **msdb**) on a server build that differs from the build on which the backup was originally created.  
   
 > [!NOTE]  
-> Installing a servicing update like cumulative update or service pack or a GDR changes the server build number. Server builds are always incremental.
+> While installing a servicing update like cumulative update or service pack or a GDR changes the server build number, server builds are always incremental.
   
 ### Possible causes
 
@@ -58,7 +58,6 @@ To resolve the issue, follow these steps:
 1. Run a query that resembles the following to determine the version of SQL Server that was running when the source backup was taken (Version A):
 `RESTORE headeronly FROM disk = 'c:\sqlbackups\masterdb.bak'`
 
-
 1. Review the values of `SoftwareVersionMajor`, `SoftwareVersionMinor`, and `SoftwareVersionBuild` columns to determine the build of the source server that was used when the backup was taken. For example, assume that the values are as follows:
 
    - SoftwareVersionMajor: 15
@@ -66,7 +65,7 @@ To resolve the issue, follow these steps:
    - SoftwareVersionBuild: 4236
 In this case, the source SQL Server version when the backup was taken is 15.0.4236.
 
-1. Use either the SQL Server complete version list tables or the Excel builds spreadsheet to determine the version of SQL Server that the build corresponds to. For example, 15.0.4236 maps to SQL Server 2019 CU16+GDR (Version A).
+1. Use either the [SQL Server complete version list tables](/troubleshoot/sql/releases/download-and-install-latest-updates) or the [Excel builds spreadsheet](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx) to determine the version of SQL Server that the build corresponds to. For example, 15.0.4236 maps to SQL Server 2019 CU16+GDR (Version A).
 
 1. Use one of the following options:
 

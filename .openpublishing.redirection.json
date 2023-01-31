@@ -59387,7 +59387,7 @@
     },
     {
       "source_path": "docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md",
-      "redirect_url": "/troubleshoot/sql/releases/download-and-install-latest-updates",
+      "redirect_url": "/troubleshoot/sql/releases/download-and-install-latest-updates?toc=%2Fsql%2Ftoc.json&bc=%2Fsql%2Fbreadcrumb%2Ftoc.json",
       "redirect_document_id": false
     },
     {

@@ -86,23 +86,51 @@ Select the database(s) you want to assess for migration for Azure Database for P
 
 ### 2. Assessment Parameters
 
-Choose how you want to provide assessment performance data parameters.
+Choose how you want to provide assessment performance data parameters for SKU recommandation for target requires performance data of PGSQL server instance.
 
-#### Automatic Collection for SKU recommendations
+#### Enter Performance Data parameters
 
-For automatic collection for SKU recommendation, the user needs to execute privilege on pg_read_file() function.
+The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and recommends the right-sized Azure database for PostgreSQL – Flexible Server SKU based on the data collected. The feature provides pricing tier, compute level, and data size recommendations.
 
-```sql
-GRANT EXECUTE ON FUNCTION pg_read_file(text) TO <<username>>;
-```
+Fill out the fields in the SKU recommendation parameters as follows.
 
-For automatic collection for SKU recommendation, the user should be granted the role pg_read_server_files.
+- vCores – Number of logical cores  available in the server.
+- Memory (in GB) – Total memory available in the server.
+- Storage (in GB) – Total storage used by the PostgreSQL Server instance.
+- IOPS – Input/Output operations per second by the PostgreSQL Server instance.
+- Scale Factor - Scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future usage.
 
-```sql
-GRANT pg_read_server_files TO <<username>>;
-```
+Once you've filled in your parameters, select **Assess**.
 
-Once you've filled in your parameters, select **Start Assessment**.
+:::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/enter-perf-data-parameters.png" alt-text="Screenshot of entering performance data":::
+
+#### Automatically collect data
+
+Select automatic performance data collection to receive the target recommendations for the databases you want to migrate.
+
+> [!NOTE]
+> Before you run the assessment you need to execute privileges for automatic collection for SKU recommendation.
+>
+> The user needs to execute privilege on pg_read_file() function.
+>
+> ```sql
+> GRANT EXECUTE ON FUNCTION pg_read_file(text) TO <<username>>;
+> ```
+>
+> The user should be granted the role pg_read_server_files.
+>
+> ```sql
+> GRANT pg_read_server_files TO <<username>>;
+> ```
+
+Fill out the fields in the SKU recommendation parameters as follows.
+
+- Time duration - enter the amount of time you want to run the assessment.
+- Scale factor - Enter values **1-5**, to expand during peak performance times.
+- Percentage Utilization - How much do you want to migrate.
+- Location - select the Azure region you want to move to.
+
+:::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/automatic-collect-perf-data.png" alt-text="Screenshot of automatically collecting data":::
 
 For more information about SKU recommendations, view [SKU recommendations](#sku-recommendations).
 
@@ -113,7 +141,7 @@ Once the assessment is complete, a consolidated output is generated.
 - The cards at the top represent the recommended SKU in Azure.
   - **Target Platform** – Currently, the assessment is performed and supported on Azure Database for PostgreSQL - Flexible server.
   - **SKU Recommendation** – Based on the performance metrics, SKU available in Azure Database for PostgreSQL - Flexible server is recommended.
-  - **Data Collection status** – Shows the number of cycles completed.
+  - **Data Collection status** – Shows the number of cycles completed and the status of the assessment.
 
 Users can select the Instance name; it shows the PostgreSQL instance's summary and migration readiness. Users can go through different server parameters and features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
 
@@ -126,14 +154,6 @@ Users can save the assessment report on their machine for offline viewing by sel
 ## SKU recommendations
 
 The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and recommends the right-sized Azure database for PostgreSQL – Flexible server SKU based on the data collected. The feature provides pricing tier, compute level, and data size recommendations.
-
-The SKU recommendation parameters are as follows.
-
-- vCores – Number of logical cores  available in the server.
-- Memory (in GB) – Total memory available in the server.
-- Storage (in GB) – Total storage used by the PostgreSQL Server instance.
-- IOPS – Input/Output operations per second by the PostgreSQL Server instance.
-- Scale Factor - Scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future usage.
 
 The SKU recommendation provides the following:
 

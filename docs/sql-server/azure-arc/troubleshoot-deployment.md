@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Arc-enabled SQL Server deployment  #Required; this page title is displayed in search results; Always include the word "troubleshoot" in this line.
-description: Describes how to troubleshoot Azure Arc-enabled SQL Server deployment.#Required; this article description is displayed in search results.
+description: Describes how to troubleshoot Azure Arc-enabled SQL Server deployment. #Required; this article description is displayed in search results.
 author: MikeRayMSFT #Required; your GitHub user alias — correct capitalization is needed.
 ms.author: mikeray #Required; Microsoft alias of the author.
 ms.topic: troubleshooting-general #Required; leave this attribute/value as-is.

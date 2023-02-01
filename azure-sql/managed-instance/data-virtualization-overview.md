@@ -5,7 +5,7 @@ description: Learn about data virtualization capabilities of Azure SQL Managed I
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, wiassaf
-ms.date: 10/07/2022
+ms.date: 01/31/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -465,6 +465,11 @@ Issues with query execution are typically caused by managed instance not being a
 - Outbound traffic blocked on the managed instance using [storage endpoint policy](service-endpoint-policies-configure.md#configure-policies). Allow outbound traffic to the storage account.
 - Managed Identity access rights: make sure the Azure AD service principal representing managed identity of the instance has access rights granted on the storage account.
 - Compatibility level of the database must be 130 or higher for data virtualization queries to work.
+
+## Limitations
+
+- [Row level security](https://learn.microsoft.com/sql/relational-databases/security/row-level-security) feature is not supported with external tables.
+- [Dynamic data masking](https://learn.microsoft.com/sql/relational-databases/security/dynamic-data-masking) rule can't be defined for a column in an external table.
 
 ## Known issues
 

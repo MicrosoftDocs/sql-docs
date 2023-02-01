@@ -34,7 +34,7 @@ Follow these steps to install the **Azure PostgreSQL migration** extension in Az
     1. Once installed the **PostgreSQL** extension is also installed.
     1. Once installed **.NET 6** is also installed.
 
-   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/install-azure-database-postgresql-flexible-server-migration-extension.png" alt-text="install extension":::
+:::image type="content" source="media/azure-postgresql-migration-extension/search-extension.png" alt-text="Scheenshot to show a search of the extension.":::
 
 ## Connect to a PostgreSQL instance
 
@@ -42,7 +42,7 @@ Once the assessment extension is installed, the next step is to [connect to your
 
 1. Go to the connections icon in the menu bar.
 
-   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/new-connection.png" alt-text="connections menu bar":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/new-connection.png" alt-text="connections menu bar":::
 
 1. Fill out the fields in the **Connection Details**.
    1. In the **Connection type** field, select **PostgreSQL**.
@@ -51,10 +51,10 @@ Once the assessment extension is installed, the next step is to [connect to your
    1. In the **User Id** field, provide your database username
    1. in the **Password** field, provide your database password.
    1. Then select **Advanced...**
-      1. Under teh Server section, provide the port number.
+      1. Under the Server section, provide the port number.
       1. Then select **OK**.
 
-   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/connection-details.png" alt-text="connection details":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/connection-details.png" alt-text="connection details":::
 
 1. Select **Connect**.
 
@@ -62,7 +62,7 @@ Once the assessment extension is installed, the next step is to [connect to your
 
 1. Right-click on the PostgreSQL connection and select **Manage**.
 
-   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/manage-database-connection.png" alt-text="Screenshot showing the Manage database screen.":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/manage-database-connection.png" alt-text="Screenshot showing the Manage database screen.":::
 
 ## Run the assessment
 
@@ -70,7 +70,7 @@ Once you've connected to your PostgreSQL instance in Azure Data Studio, you can 
 
 Under the General section, select **Azure PostgreSQL Migration**, then select **Assess Databases(s)**.
 
-   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/start-assessment.png" alt-text="Screenshot showing the Migration Assessment database screen.":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/start-assessment.png" alt-text="Screenshot showing the Migration Assessment database screen.":::
 
 There are three steps to complete the assessment.
 
@@ -78,40 +78,10 @@ There are three steps to complete the assessment.
 - **Assessment Parameters**
 - **View Assessment Results**
 
-### 1. Databases(s) for assessment
-
-Select the database(s) you want to assess for migration for Azure Database for PostgreSQL - Flexible Server.
-
-:::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/view-databases.png" alt-text="Screenshot of view databases.":::
-
-### 2. Assessment Parameters
-
-Choose how you want to provide assessment performance data parameters for SKU recommandation for target requires performance data of PGSQL server instance.
-
-#### Enter Performance Data parameters
-
-The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and recommends the right-sized Azure database for PostgreSQL – Flexible Server SKU based on the data collected. The feature provides pricing tier, compute level, and data size recommendations.
-
-Fill out the fields in the SKU recommendation parameters as follows.
-
-- vCores – Number of logical cores  available in the server.
-- Memory (in GB) – Total memory available in the server.
-- Storage (in GB) – Total storage used by the PostgreSQL Server instance.
-- IOPS – Input/Output operations per second by the PostgreSQL Server instance.
-- Scale Factor - Scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future usage.
-
-Once you've filled in your parameters, select **Assess**.
-
-:::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/enter-perf-data-parameters.png" alt-text="Screenshot of entering performance data":::
-
-#### Automatically collect data
-
-Select automatic performance data collection to receive the target recommendations for the databases you want to migrate.
-
 > [!NOTE]
-> Before you run the assessment you need to execute privileges for automatic collection for SKU recommendation.
+> Before you select your databases, you need to execute privileges for automatic collection for SKU recommendation.
 >
-> The user needs to execute privilege on pg_read_file() function.
+> The user needs to execute privilege on the pg_read_file() function.
 >
 > ```sql
 > GRANT EXECUTE ON FUNCTION pg_read_file(text) TO <<username>>;
@@ -123,14 +93,56 @@ Select automatic performance data collection to receive the target recommendatio
 > GRANT pg_read_server_files TO <<username>>;
 > ```
 
+### 1. Databases(s) for assessment
+
+Select the database(s) you want to assess for migration for Azure Database for PostgreSQL - Flexible Server.
+
+:::image type="content" source="media/azure-postgresql-migration-extension/view-databases.png" alt-text="Screenshot of view databases.":::
+
+### 2. Assessment Parameters
+
+The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and
+recommends the right-sized Azure database for PostgreSQL – Flexible Server SKU based on the data collected. The feature provides pricing tier,
+compute level, and data size recommendations.
+
+Choose how you want to provide SKU recommendations for the target audience. This step requires performance data of a PostgreSQL server instance.
+
+You can automatically collect data to receive the target recommendation for the databases you want to migrate or provide the parameters manually depending on your environment's setup.
+
+#### Automatically collect data
+
+Select automatic performance data collection to receive the target recommendations for the databases you want to migrate.
+
 Fill out the fields in the SKU recommendation parameters as follows.
 
 - Time duration - enter the amount of time you want to run the assessment.
+  - Depending on the submitted time, the process is broken into cycles.
 - Scale factor - Enter values **1-5**, to expand during peak performance times.
-- Percentage Utilization - How much do you want to migrate.
-- Location - select the Azure region you want to move to.
+- Percentage Utilization - The percentile value of the performance sample set to be considered for sizing the Azure target.
 
-:::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/automatic-collect-perf-data.png" alt-text="Screenshot of automatically collecting data":::
+Once you've filled in your parameters, select **Assess**.
+
+:::image type="content" source="media/azure-postgresql-migration-extension/automatic-collect-perf-data.png" alt-text="Screenshot of automatically collecting data":::
+
+#### Enter Performance Data parameters
+
+Based on your environment, you might need help with collecting the data required to perform the assessment automatically. As such, you can use the **Enter Performance Data Parameter** option to enter values needed to provide an assessment manually.
+
+Fill out the fields in the SKU performance parameters as follows.
+
+- **vCores** – Number of logical cores available in the server.
+- **Memory (in GB)** – Total memory available in the server.
+- **Storage (in GB)** – Total storage used by the PostgreSQL Server instance.
+- **IOPS** – Input/Output operations per second by the PostgreSQL Server instance.
+
+Fill out the fields in the SKU recommendation parameters as follows.
+
+- **Scale factor** - The scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future use.
+- **Percentage Utilization** - The percentile value of the performance sample set to be considered for sizing the Azure target.
+
+Once you've filled in your parameters, select **Assess**.
+
+:::image type="content" source="media/azure-postgresql-migration-extension/enter-perf-data-parameters.png" alt-text="Screenshot of entering performance data":::
 
 For more information about SKU recommendations, view [SKU recommendations](#sku-recommendations).
 
@@ -149,7 +161,7 @@ Users can select the respective databases, understand the blockers and warnings 
 
 Users can save the assessment report on their machine for offline viewing by selecting the “Save Assessment” action.
 
-   :::image type="content" source="media/azure-database-postgresql-flexible-server-migration-extension/run-assessment-step-3-view-assessment.png" alt-text="Screenshot of consolidated assessment report.":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/run-assessment-step-3-view-assessment.png" alt-text="Screenshot of consolidated assessment report.":::
 
 ## SKU recommendations
 

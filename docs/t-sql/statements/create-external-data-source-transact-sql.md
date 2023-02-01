@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 12/16/2022
+ms.date: 2/1/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1288,8 +1288,10 @@ There are multiple ways to create a shared access signature:
     |    ------    |    ----------    |
     |    Read data from a file    |    Read    |
     |    Read data from multiple files and subfolders    |    Read and List    |
-    |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
+    |    Use Create External Table as Select (CETAS)    |    Read, Create, List and Write    |
 
+- For Azure Blog Storage `Allowed Services`: `Blob` checkbox must be selected to generate the SAS token.
+- For Azure Data Lake Gen2 `Allowed Services`: `Container` and `Object` checkbox must be selected to generate the SAS token.
 - When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
   - Exclude the leading `?` when configured as the secret.
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`).

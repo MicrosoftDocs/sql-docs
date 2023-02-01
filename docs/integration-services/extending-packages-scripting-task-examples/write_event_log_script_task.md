@@ -114,7 +114,7 @@ To configure the Script Task code sample, follow these steps in the SSIS designe
 
 After the package runs successfully, the following entry appears in the Windows Application log.
 
-    ```output
+ ```vb
     Log Name: Application
     Source: RowCountReporting from SSIS
     Date: 12/20/2022 11:21:38 AM
@@ -164,7 +164,7 @@ After the package runs successfully, the following entry appears in the Windows 
     Execution GUID: {9DF22831-E608-47F7-BD62-F9BD3C2F9C77}</Data>
     </EventData>
     </Event>
-    ```
+```
 
 ## References
 

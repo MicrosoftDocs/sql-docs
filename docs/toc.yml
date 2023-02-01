@@ -10420,7 +10420,9 @@ items:
           - name: Connect at scale | Azure policy
             href: sql-server/azure-arc/connect-at-scale.md
           - name: Connect at scale | Script
+            href: sql-server/azure-arc/connect-at-scale-script.md
         - name: Validate successful onboarding
+          href: sql-server/azure-arc/validate.md
     - name: Manage
       items:
       - name: Assess
@@ -10428,6 +10430,9 @@ items:
       - name: View databases
         href: sql-server/azure-arc/view-databases.md
       - name: Delete from or restore to Azure Arc
+        href: delete-from-azure-arc.md
+      - name: Restore to Azure Arc
+        href: restore-to-azure-arc.md
       - name: Billing through Microsoft Azure
         href: sql-server/azure-arc/billing.md
     - name: Secure
@@ -10439,7 +10444,9 @@ items:
     - name: Troubleshoot
       items:
       - name: Troubleshoot deployment
+        href: sql-server/azure-arc/troubleshoot-deployment.md
       - name: Troubleshoot other
+        href: sql-server/azure-arc/troubleshoot.md
 
 - name: Big Data Clusters
   items:

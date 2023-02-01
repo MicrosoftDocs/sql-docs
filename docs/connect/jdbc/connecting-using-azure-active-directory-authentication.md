@@ -20,8 +20,10 @@ Connection properties to support Azure Active Directory authentication in the Mi
 
 - **authentication**:  Use this property to indicate which SQL authentication method to use for the connection.
   Possible values are:
-  - **ActiveDirectoryMSI**
-    - Since driver version **v8.3.1**, `authentication=ActiveDirectoryMSI` can be used to connect to an Azure SQL Database/Synapse Analytics from an Azure Resource with "Identity" support enabled. Optionally, **msiClientId** can be specified in the Connection/DataSource properties along with this authentication mode. `msiClientId` must contain the Client ID of a Managed Identity to be used to acquire the **accessToken** for establishing the connection.
+  - **ActiveDirectoryManagedIdentity**
+    - Since driver version **v8.3.1**, `authentication=ActiveDirectoryMSI` can be used to connect to an Azure SQL Database/Synapse Analytics from an Azure Resource with "Identity" support enabled. Optionally, **msiClientId** can be specified in the Connection/DataSource properties along with this authentication mode. `msiClientId` must contain the Client ID of a Managed Identity to be used to acquire the **accessToken** for establishing the connection. Since driver version **v12.2.0**, `authentication=ActiveDirectoryManagedIdentity` can also be used to connect to an Azure SQL Database/Synapse Analytics from an Azure Resource with "Identity" support enabled. Optionally, the Client ID of a Managed Identity can also now be set in the `user` property.
+  - **ActiveDirectoryDefault**
+    - Since driver version **v12.2.0**, `authentication=ActiveDirectoryDefault` can be used to connect to an Azure SQL Database/Synapse Analytics via the **DefaultAzureCredential** within the [Azure Identity client library](/java/api/overview/azure/identity-readme?#defaultazurecredential). **ADDITIONALLY_ALLOWED_TENANTS** is an optional environment variable that can be specified with a comma delimited list of allowed tenant IDs. **INTELLIJ_KEEPASS_PATH** is another optional environment variable that can be specified with the path to a KeePass file.
   - **ActiveDirectoryIntegrated**
     - Since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Synapse Analytics via integrated authentication. To use this authentication mode, you must federate the on-premises Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it's set up, you can connect by either adding the native library 'mssql-jdbc_auth-\<version>-\<arch>.dll' to the application class path on Windows, or by setting up a Kerberos ticket for cross-platform authentication support. You're able to access Azure SQL Database/Azure Synapse Analytics without prompted for credentials when you're logged in to a domain joined machine.
   - **ActiveDirectoryPassword**
@@ -40,7 +42,7 @@ For more information, see the authentication property on the [Setting the Connec
 
 ## Client setup requirements
 
-For **ActiveDirectoryMSI** authentication, the below components must be installed on the client machine:
+For **ActiveDirectoryManagedIdentity** authentication, the below components must be installed on the client machine:
 
 - Java 8 or above
 - Microsoft JDBC Driver 7.2 (or higher) for SQL Server
@@ -57,9 +59,15 @@ For other authentication modes, the below components must be installed on the cl
 - If you're using the **ActiveDirectoryInteractive** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions before JDBC Driver 9.1. For more information, see the [Connect using ActiveDirectoryInteractive authentication mode](#connect-using-activedirectoryinteractive-authentication-mode) section.
 - If you're using the **ActiveDirectoryServicePrincipal** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see the [Connect using ActiveDirectoryServicePrincipal authentication mode](#connect-using-activedirectoryserviceprincipal-authentication-mode) section.
 
-## Connect using ActiveDirectoryMSI authentication mode
+## Connect using ActiveDirectoryManagedIdentity authentication mode
 
-The following example shows how to use `authentication=ActiveDirectoryMSI` mode. Run this example from inside an Azure Resource, e,g an Azure Virtual Machine, App Service, or a Function App that is federated with Azure Active Directory.
+Since driver version **v12.2.0**, the driver requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server) for a full list of the libraries that the driver depends on.
+
+The following example shows how to use `authentication=ActiveDirectoryManagedIdentity` mode. Run this example from inside an Azure Resource that is configured for Managed Identity.
+
+> [!NOTE]
+> Driver versions 12.2+ support Managed Identity by using the Azure Identity library for Java. For more information on which Azure resources are supported for Managed Identity, see the [Azure Identity documentation](/java/api/overview/azure/identity-readme#managed-identity-support).
+> Driver versions 8.3.1 through 11.2 only support Managed Identity in an Azure Virtual Machine, App Service, or Function App.
 
 Replace the server/database name with your server/database name in the following lines to run the example:
 
@@ -79,7 +87,7 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AAD_MSI {
+public class AADMSI {
     public static void main(String[] args) throws Exception {
 
         SQLServerDataSource ds = new SQLServerDataSource();
@@ -100,10 +108,83 @@ public class AAD_MSI {
 }
 ```
 
-This example on an Azure Virtual Machine fetches an access token from _System Assigned Managed Identity_ or _User Assigned Managed Identity_ (if **msiClientId** is specified) and establishes a connection using the fetched access token. If a connection is established, you should see the following message:
+The following example demonstrates how to use `authentication=ActiveDirectoryManagedIdentity` mode. 
+
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADManagedIdentity {
+    public static void main(String[] args) throws Exception {
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database name
+        ds.setAuthentication("ActiveDirectoryManagedIdentity"); // ActiveDirectoryManagedIdentity for JDBC driver version v12.2.0+
+        // Optional
+        ds.setUser("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
+
+        try (Connection connection = ds.getConnection();
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+
+These examples on an Azure Virtual Machine fetches an access token from _System Assigned Managed Identity_ or _User Assigned Managed Identity_ (if **msiClientId** or **user** is specified with a Client ID of a Managed Identity) and establishes a connection using the fetched access token. If a connection is established, you should see the following message:
 
 ```output
 You have successfully logged on as: <your Managed Identity username>
+```
+
+## Connect using ActiveDirectoryDefault authentication mode
+
+The driver's `ActiveDirectoryDefault` authentication leverages the Azure Identity client library's DefaultAzureCredential chained TokenCredential implementation. The credential combines commonly used authentication methods chained together. See [DefaultAzureCredential](/java/api/overview/azure/identity-readme?#defaultazurecredential) for more details on each credential within the credential chain.
+
+`ActiveDirectoryDefault` authentication requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server) for a full list of the libraries that the driver depends on.
+
+
+The following example demonstrates how to use `authentication=ActiveDirectoryDefault` mode with the [AzureCliCredential](/java/api/com.azure.identity.azureclicredential) within the DefaultAzureCredential.
+
+1. First login to the Azure CLI with the following command.
+
+```
+az login
+```
+
+2. After successfully logging in to the Azure CLI, run the code below.
+
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADDefault {
+    public static void main(String[] args) throws Exception {
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database name
+        ds.setAuthentication("ActiveDirectoryDefault");
+
+        try (Connection connection = ds.getConnection();
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
 ```
 
 ## Connect using ActiveDirectoryIntegrated authentication mode
@@ -434,7 +515,7 @@ You have successfully logged on as: <your app/client ID>
 Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Synapse Analytics.
 
 > [!NOTE]
-> **accessToken** can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection string.
+> **accessToken** can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection string. Since driver version **v12.2.0**, users can implement and provide an accessToken callback to the driver for token renewal in connection pooling scenarios. Connection pooling scenarios require the connection pool implementation to use the standard [JDBC connection pooling classes](using-connection-pooling.md).
 
 The following example contains a simple Java application that connects to Azure SQL Database/Synapse Analytics using access token-based authentication.
 
@@ -461,6 +542,71 @@ To build and run the example:
     ```
 
 3. On the client machine where you run the example, download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) library and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions before JDBC Driver 9.1, and include them in the Java build path. The microsoft-authentication-library-for-java is only required to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure AD. If you already have an access token, you can skip this step and remove the section in the example that retrieves an access token.
+
+The following example demonstrates implementing and setting the accessToken callback.
+
+```java
+import com.microsoft.aad.msal4j.IClientCredential;
+import com.microsoft.aad.msal4j.ClientCredentialFactory;
+import com.microsoft.aad.msal4j.ConfidentialClientApplication;
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import com.microsoft.aad.msal4j.ClientCredentialParameters;
+import java.sql.Connection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class AADAccessTokenCallback {
+
+    public static void main(String[] args) {
+
+        SQLServerAccessTokenCallback callback = new SQLServerAccessTokenCallback() {
+            @Override
+            public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
+
+                String clientSecret = "..."; // Replace with your client secret.
+                String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+
+                String scope = spn + "/.default";
+                Set<String> scopes = new HashSet<>();
+                scopes.add(scope);
+
+                try {
+                    ExecutorService executorService = Executors.newSingleThreadExecutor();
+                    IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
+                    ConfidentialClientApplication clientApplication = ConfidentialClientApplication
+                            .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
+                    CompletableFuture<IAuthenticationResult> future = clientApplication
+                            .acquireToken(ClientCredentialParameters.builder(scopes).build());
+
+                    IAuthenticationResult authenticationResult = future.get();
+                    String accessToken = authenticationResult.accessToken();
+
+                    return new SqlAuthenticationToken(accessToken, authenticationResult.expiresOnDate().getTime());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        };
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replaces with your server name.
+        ds.setDatabaseName("demo"); // Replace with your database name.
+        ds.setAccessTokenCallback(callback);
+
+        try (Connection connection = ds.getConnection();
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
 
 In the following example, replace the STS URL, Client ID, Client Secret, server and database name with your values.
 

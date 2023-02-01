@@ -168,5 +168,5 @@ Execution GUID: {9DF22831-E608-47F7-BD62-F9BD3C2F9C77}</Data>
 
 ## References
 
-[EventLog.WriteEntry Method (System.Diagnostics)](/dotnet/api/system.diagnostics.eventlog.writeentry?view=windowsdesktop-7.0)
+[EventLog.WriteEntry Method (System.Diagnostics)](/dotnet/api/system.diagnostics.eventlog.writeentry?view=windowsdesktop-7.0&preserve-view=true)
 [Instrument Code to Create EventSource Events](/dotnet/core/diagnostics/eventsource-instrumentation)

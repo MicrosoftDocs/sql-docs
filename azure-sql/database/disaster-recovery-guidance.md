@@ -41,13 +41,13 @@ In the event of an Azure SQL Database service outage, you will be able to see ad
 
 - **Email notification**
 
-    If you have set up alerts, an email notification will arrive before a planned service outage starts. For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
+    If you have set up alerts, an email notification will arrive when a service outage impacts your subscription and resource. For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
 
 ## When to initiate disaster recovery during an outage
 
 In the event of a service outage impacting application resources, consider the following courses of action. 
 
-- The Azure teams work diligently to restore service availability as quickly as possible but depending on the root cause it can take hours sometimes. If your application can tolerate significant downtime, you can simply wait for the recovery to complete. In this case, no action on your part is required. You can [view current service status on our Azure Service Health Dashboard](https://azure.status.microsoft/status) for updates and the latest information regarding an outage. After the recovery of the region, your application's availability is restored. 
+- The Azure teams work diligently to restore service availability as quickly as possible but depending on the root cause it can take hours sometimes. If your application can tolerate significant downtime, you can simply wait for the recovery to complete. In this case, no action on your part is required. View the health of individual resources in the **Resource health** page of any resource under the **Help** menu. Refer to the **Resource health** page for updates and the latest information regarding an outage. After the recovery of the region, your application's availability is restored.
 
 - Recovery to another Azure region may require changing application connection strings or using DNS redirection, and may result in permanent data loss. Therefore, redirection should be performed only when the outage duration approaches your application's recovery time objective (RTO). When the application is deployed to production, you should perform regular monitoring of the application's health and assert that the recovery is warranted only when there is prolonged expected connectivity failure from the application tier to the database. Depending on your application tolerance to downtime and possible business liability, you can decide if you want to wait for service to recover or initiate disaster recovery yourself. 
 

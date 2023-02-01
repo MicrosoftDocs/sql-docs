@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 12/16/2022
+ms.date: 2/1/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

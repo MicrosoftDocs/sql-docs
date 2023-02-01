@@ -106,14 +106,11 @@ After you complete these steps, SQL clients connecting to `<instance-name>.<dns-
     5. In Overview, Private IP address is shown in the Essentials section.
 ![Screenshot of private endpoint connection's network interface with a highlight on its private IP address](media/private-endpoint/pec-ip-display.png)
 2. [Create a private Azure DNS zone](../../dns/private-dns-getstarted-portal.md#create-a-private-dns-zone) named `privatelink.<dns-zone>.database.windows.net`.
-3. In the DNS zone, create a new record set with the following values:
+3. [Link the private DNS zone to the endpoint virtual network](../../dns/private-dns-getstarted-portal.md#link-the-virtual-network).
+4. In the DNS zone, create a new record set with the following values:
    - Name: `<instance-name>`
    - Type: A
    - IP address: IP address of the private endpoint obtained in step 1.
-4. Link this DNS zone with the endpoint virtual network:
-   1. In the DNS zone, select Virtual network links on the left pane.
-   2. Select Add, fill in link name, and choose the endpoint virtual network.
-   3. Select OK.
 
 #### [Same or peered virtual networks](#tab/same-vnet)
 Follow the steps below if the instance and endpoint virtual networks are the same or are peered.
@@ -135,14 +132,11 @@ After you complete these steps, SQL clients inside the endpoint virtual network 
 2. [Create a private Azure DNS zone](../../dns/private-dns-getstarted-portal.md#create-a-private-dns-zone) named _anything but_ privatelink.\<dns-zone\>.database.windows.net; for example: `privatelink.site`.
     > [!IMPORTANT]
     > Do not name the private DNS zone `privatelink.<dns-zone>.database.windows.net` because this will disrupt the instance's internal connectivity and cause management operations to fail.
-3. In the DNS zone, create a new record set with the following values:
+3. [Link the private DNS zone to the endpoint virtual network](../../dns/private-dns-getstarted-portal.md#link-the-virtual-network).
+4. In the DNS zone, create a new record set with the following values:
    - Name: `<instance-name>`
    - Type: A
    - IP address: IP address of the private endpoint obtained in step 1.
-4. Link this DNS zone with the virtual network:
-   1. In the DNS zone, select Virtual network links on the left pane.
-   2. Select Add, fill in link name, and choose the virtual network.
-   3. Select OK.
 
 ## Next steps
 

@@ -112,7 +112,7 @@ For the best experience, use an Azure Active Directory [service principal](/azur
 
 The installation methods to install and configure the Connected Machine agent requires that the automated method you use has administrator permissions on the machines. On Linux, use the root account. Windows, use a member of the Local Administrators group.
 
-Before you get started, be sure to review the [prerequisites](overview.md#prerequisites) and make sure that you've created a custom role that meets the required permissions.
+Before you get started, be sure to review the [prerequisites](prerequisites.md) and make sure that you've created a custom role that meets the required permissions.
 
 ### Connect multiple instances
 
@@ -131,7 +131,7 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
 
    > [!NOTE]
    >
-   > * When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
+   > * When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [prerequisites](prerequisites.md).
    > 
    > * The service principal must have *Directory.ReadAll* permissions in Microsoft graph. For instructions how to assign [Directory permissions](/graph/permissions-reference#directory-permissions) to a service principal, see [Manage API permissions](/graph/migrate-azure-ad-graph-configure-permissions#option-1-use-the-azure-portal-to-find-the-apis-your-organization-uses).
 
@@ -178,7 +178,7 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 2. Download the Linux shell script from the Portal following the instructions in [Connect your SQL Server to Azure Arc](connect.md).
 
    > [!NOTE]
-   > When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
+   > When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [prerequisites](prerequisites.md).
 
 3. Replace the following variables in the script using the values returned by the 'az ad sp create-for-rbac' command. These variables are initially empty.
 
@@ -245,7 +245,7 @@ This means the machine is no longer recognized as a connected server. [Onboard t
 Check the extension log for the following record:
 `[INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc post request failed with error: Forbidden message: {"ErrorDescription":{"ErrorCode":6,"Message":"The user has no access to the provided Azure resource."},"ResponseUrl":null}`
 
-Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [When machine already connected to Arc-enabled Server](connect.md#when-the-machine-is-already-connected-to-an-arc-enabled-server) role assignment instructions.
+Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [When machine already connected to Arc-enabled Server](connect-already-enabled.md) role assignment instructions.
 
 ### The user didn't migrate the Arc-enabled SQL Server resource to the new resource provider
 

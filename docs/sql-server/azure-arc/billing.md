@@ -100,9 +100,9 @@ The following table shows the meters that track usage and billing for different 
 
 License type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in the overview blade of Arc-enabled SQL Server as shown.
 
-If your machine is already connected to an Arc-enabled Server, follow the steps in [When the machine is already connected to an Arc-enabled Server](connect.md#when-the-machine-is-already-connected-to-an-arc-enabled-server)
+If your machine is already connected to an Arc-enabled Server, follow the steps in [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md)
 
-If your machine isn’t connected to an Arc-enabled Server, follow the steps in [When the machine isn't connected to an Arc-enabled Server](connect.md#when-the-machine-isnt-connected-to-an-arc-enabled-server)
+If your machine isn’t connected to an Arc-enabled Server, follow the steps in [When the machine isn't connected to an Arc-enabled Server](connect.md#onboard-the-server-to-azure-arc)
 
 If install SQL Server 2022, you have an option to select the license type with [SQL 2022 setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 

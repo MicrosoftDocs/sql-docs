@@ -10430,9 +10430,9 @@ items:
       - name: View databases
         href: sql-server/azure-arc/view-databases.md
       - name: Delete from or restore to Azure Arc
-        href: delete-from-azure-arc.md
+        href: sql-server/azure-arc/delete-from-azure-arc.md
       - name: Restore to Azure Arc
-        href: restore-to-azure-arc.md
+        href: sql-server/azure-arc/restore-to-azure-arc.md
       - name: Billing through Microsoft Azure
         href: sql-server/azure-arc/billing.md
     - name: Secure

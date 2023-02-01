@@ -3,7 +3,7 @@ title: Connect using Azure Active Directory authentication
 description: Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 01/31/2022
+ms.date: 02/01/2022
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -108,7 +108,7 @@ public class AADMSI {
 }
 ```
 
-The following example demonstrates how to use `authentication=ActiveDirectoryManagedIdentity` mode. 
+The following example demonstrates how to use `authentication=ActiveDirectoryManagedIdentity` mode.
 
 ```java
 import java.sql.Connection;
@@ -155,7 +155,7 @@ The following example demonstrates how to use `authentication=ActiveDirectoryDef
 
 1. First login to the Azure CLI with the following command.
 
-```
+```bash
 az login
 ```
 
@@ -543,71 +543,6 @@ To build and run the example:
 
 3. On the client machine where you run the example, download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) library and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions before JDBC Driver 9.1, and include them in the Java build path. The microsoft-authentication-library-for-java is only required to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure AD. If you already have an access token, you can skip this step and remove the section in the example that retrieves an access token.
 
-The following example demonstrates implementing and setting the accessToken callback.
-
-```java
-import com.microsoft.aad.msal4j.IClientCredential;
-import com.microsoft.aad.msal4j.ClientCredentialFactory;
-import com.microsoft.aad.msal4j.ConfidentialClientApplication;
-import com.microsoft.aad.msal4j.IAuthenticationResult;
-import com.microsoft.aad.msal4j.ClientCredentialParameters;
-import java.sql.Connection;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-public class AADAccessTokenCallback {
-
-    public static void main(String[] args) {
-
-        SQLServerAccessTokenCallback callback = new SQLServerAccessTokenCallback() {
-            @Override
-            public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
-
-                String clientSecret = "..."; // Replace with your client secret.
-                String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
-
-                String scope = spn + "/.default";
-                Set<String> scopes = new HashSet<>();
-                scopes.add(scope);
-
-                try {
-                    ExecutorService executorService = Executors.newSingleThreadExecutor();
-                    IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
-                    ConfidentialClientApplication clientApplication = ConfidentialClientApplication
-                            .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
-                    CompletableFuture<IAuthenticationResult> future = clientApplication
-                            .acquireToken(ClientCredentialParameters.builder(scopes).build());
-
-                    IAuthenticationResult authenticationResult = future.get();
-                    String accessToken = authenticationResult.accessToken();
-
-                    return new SqlAuthenticationToken(accessToken, authenticationResult.expiresOnDate().getTime());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                return null;
-            }
-        };
-
-        SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replaces with your server name.
-        ds.setDatabaseName("demo"); // Replace with your database name.
-        ds.setAccessTokenCallback(callback);
-
-        try (Connection connection = ds.getConnection();
-                Statement stmt = connection.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
-            if (rs.next()) {
-                System.out.println("You have successfully logged on as: " + rs.getString(1));
-            }
-        }
-    }
-}
-```
-
 In the following example, replace the STS URL, Client ID, Client Secret, server and database name with your values.
 
 ```java
@@ -676,12 +611,87 @@ Access Token: <your access token>
 You have successfully logged on as: <your client ID>
 ```
 
+## Connect using access token callback
+
+Like the access token property, the access token callback allows you to register a method that will provide an access token to the driver. The benefit of this callback over the property is the callback allows the driver to request a new access token when the token is expired. A new access token might be requested in a connection pool scenario when the driver recognizes that the access token has expired. Connection pool libraries must use JDBC connection pooling classes in order to take advantage of this functionality. For more information, see [Using connection pooling](using-connection-pooling.md).
+
+The following example demonstrates implementing and setting the accessToken callback.
+
+```java
+import com.microsoft.aad.msal4j.IClientCredential;
+import com.microsoft.aad.msal4j.ClientCredentialFactory;
+import com.microsoft.aad.msal4j.ConfidentialClientApplication;
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import com.microsoft.aad.msal4j.ClientCredentialParameters;
+import java.sql.Connection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class AADAccessTokenCallback {
+
+    public static void main(String[] args) {
+
+        SQLServerAccessTokenCallback callback = new SQLServerAccessTokenCallback() {
+            @Override
+            public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
+
+                String clientSecret = "..."; // Replace with your client secret.
+                String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+
+                String scope = spn + "/.default";
+                Set<String> scopes = new HashSet<>();
+                scopes.add(scope);
+
+                try {
+                    ExecutorService executorService = Executors.newSingleThreadExecutor();
+                    IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
+                    ConfidentialClientApplication clientApplication = ConfidentialClientApplication
+                            .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
+                    CompletableFuture<IAuthenticationResult> future = clientApplication
+                            .acquireToken(ClientCredentialParameters.builder(scopes).build());
+
+                    IAuthenticationResult authenticationResult = future.get();
+                    String accessToken = authenticationResult.accessToken();
+
+                    return new SqlAuthenticationToken(accessToken, authenticationResult.expiresOnDate().getTime());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        };
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replaces with your server name.
+        ds.setDatabaseName("demo"); // Replace with your database name.
+        ds.setAccessTokenCallback(callback);
+
+        try (Connection connection = ds.getConnection();
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+
+If the connection is successful, you should see the following message as output:
+
+```bash
+You have successfully logged on as: <your client ID>
+```
+
 ## Next steps
 
 Learn more about related concepts in the following articles:
 
 - [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview)
-- [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 
+- [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 - [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 - [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
 - [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  

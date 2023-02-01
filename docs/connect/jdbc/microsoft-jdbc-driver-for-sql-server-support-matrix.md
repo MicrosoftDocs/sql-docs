@@ -3,7 +3,7 @@ title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/08/2022
+ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -16,7 +16,7 @@ This page contains the support matrix and support lifecycle policy for the Micro
 
 ## Microsoft JDBC Driver support lifecycle matrix and policy
 
-The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 4.x, 6.x, 7.x, 8.x, 9.x, 10.x, and 11.x have five-year Mainstream support from the driver release date. Mainstream support is defined on the Microsoft support lifecycle website.
+The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 4.x, 6.x, 7.x, 8.x, 9.x, 10.x, 11.x, and 12.x have five-year Mainstream support from the driver release date. Mainstream support is defined on the Microsoft support lifecycle website.
 
 Extended and custom support options are not available for the Microsoft JDBC Driver.
 
@@ -24,6 +24,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|
+|Microsoft JDBC Driver 12.2 for SQL Server|11.2|mssql-jdbc-12.2.0.jre11.jar<br> mssql-jdbc-12.2.0.jre8.jar|January 31, 2028|
 |Microsoft JDBC Driver 11.2 for SQL Server|11.2|mssql-jdbc-11.2.0.jre18.jar<br> mssql-jdbc-11.2.0.jre17.jar<br> mssql-jdbc-11.2.0.jre11.jar<br> mssql-jdbc-11.2.0.jre8.jar|August 4, 2027|
 |Microsoft JDBC Driver 10.2 for SQL Server|10.2|mssql-jdbc-10.2.0.jre17.jar<br> mssql-jdbc-10.2.0.jre11.jar<br> mssql-jdbc-10.2.0.jre8.jar|January 31, 2027|
 |Microsoft JDBC Driver 9.4 for SQL Server|9.4|mssql-jdbc-9.4.1.jre16.jar<br> mssql-jdbc-9.4.1.jre11.jar<br> mssql-jdbc-9.4.1.jre8.jar|July 30, 2026|
@@ -53,27 +54,28 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 ## SQL version compatibility
 
-|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
-|---|---|---|---|---|---|---|---|---|---|---|---|
-|11.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
-|10.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-| 9.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-| 9.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-| 8.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-| 8.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-| 7.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
-| 7.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-| 7.0|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-| 6.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
-| 6.2|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-| 6.1|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 6.0|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 4.2|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 4.1|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 4.0|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-| 3.0|Yes<sup>2</sup>|   |   |   |   |   |Yes<sup>5</sup>|Yes<sup>1</sup>|   |Yes|Yes|
-| 2.0|   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|Yes<sup>3</sup>|
-| 1.2|   |   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|
+|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2022|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|12.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
+|11.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|   |   |   |   |
+|10.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+| 9.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+| 9.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|   |   |   |
+| 8.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+| 8.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+| 7.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+| 7.2|Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+| 7.0|Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+| 6.4|Yes|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+| 6.2|Yes|Yes|   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+| 6.1|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 6.0|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 4.2|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 4.1|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 4.0|Yes|   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+| 3.0|Yes<sup>2</sup>   ||   |   |   |   |   |Yes<sup>5</sup>|Yes<sup>1</sup>|   |Yes|Yes|
+| 2.0|   |   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|Yes<sup>3</sup>|
+| 1.2|   |   |   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|
 
  <sup>1</sup> Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2012 as a down-level client.
 
@@ -89,6 +91,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |JDBC Driver Version|JRE Versions|JDBC API Version|
 |-|-|-|
+|[12.2](release-notes-for-the-jdbc-driver.md#122)|1.8, 11, 17, 19|4.2, 4.3 (partially)|
 |[11.2](release-notes-for-the-jdbc-driver.md#112)|1.8, 11, 17, 18|4.2, 4.3 (partially)|
 |[10.2](release-notes-for-the-jdbc-driver.md#102)|1.8, 11, 17|4.2, 4.3 (partially)|
 |[9.4](release-notes-for-the-jdbc-driver.md#94)|1.8, 11, 16|4.2, 4.3 (partially)|

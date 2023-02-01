@@ -1,6 +1,6 @@
 ---
-title: Connect SQL Servers on Azure Arc-enabled servers at scale
-description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale.
+title: Connect SQL Servers on Azure Arc-enabled servers at scale with a script
+description: In this article, you learn different ways of connecting SQL Server instances to Azure Arc at scale with a script.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
@@ -9,7 +9,7 @@ ms.service: sql
 ms.topic: conceptual
 ---
 
-# Connect SQL Server instances to Azure at scale
+# Connect SQL Server instances to Azure at scale with a script
 
 This article describes how to connect multiple instances of SQL Server to Azure Arc as a single task. The easiest  way to do that is by using Azure policy. Alternatively, you can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using a script.
 

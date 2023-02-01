@@ -9,11 +9,24 @@ ms.service: sql
 ms.topic: conceptual
 ---
 
-# Deployment options
+# Deployment options for Azure Arc-enabled SQL Server
 
-\<\<\<REPLACE\>\>\>
+Connecting machines in your hybrid environment directly with Azure can be accomplished using different methods, depending on your requirements and the tools you prefer to use.
 
+## Onboarding methods
+
+The following table highlights each method so that you can determine which works best for your deployment. For detailed information, follow the links to view the steps for each topic.
+
+| Method | Description |
+|--------|-------------|
+| Interactively | Manually connect the instances on a single physical or virtual machine that is already connected to Azure Arc. [Connect your SQL Server to Azure Arc on a server already connected to Azure Arc](connect-already-enabled.md).|
+| Interactively | Manually connect the instances on a single physical or virtual machine that is not currently connected to Azure Arc. [Connect your SQL Server to Azure Arc](connect.md)|
+| Interactively | [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md) |
+| At scale | [Connect SQL Server instances to Azure at scale](connect-at-scale.md)|
+
+
+Be sure to review the basic [prerequisites](prerequisites.md) before you deploy the agent, as well as any specific requirements listed in the steps for the onboarding method you choose.
 
 ## Next steps
 
-SOMELINKS
+* Learn about the Azure Connected Machine agent and network requirements in [prerequisites](prerequisites.md).

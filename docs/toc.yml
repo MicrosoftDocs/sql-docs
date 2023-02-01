@@ -4261,6 +4261,8 @@ items:
     href: relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
   - name: Transaction Locking & Row Versioning Guide
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
+  - name: Optimized locking
+    href: relational-databases/performance/optimized-locking.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
@@ -10403,22 +10405,24 @@ items:
         items:
         - name: Prerequisites
           href: sql-server/azure-arc/prerequisites.md
-        - name: Network requirements
-          href: sql-server/azure-arc/network-requirements.md
         - name: Deployment options
           href: sql-server/azure-arc/deployment-options.md
         - name: Connect interactively
           items:
           - name: Connect when machine already connected to Azure
-            href: sql-server/azure-arc/connect.md
+            href: sql-server/azure-arc/connect-already-enabled.md
           - name: Connect when machine not connected to Azure
+            href: sql-server/azure-arc/connect.md
           - name: Connect with installer (.msi)
+            href: sql-server/azure-arc/connect-with-installer.md
         - name: Connect at scale
           items:
           - name: Connect at scale | Azure policy
             href: sql-server/azure-arc/connect-at-scale.md
           - name: Connect at scale | Script
+            href: sql-server/azure-arc/connect-at-scale-script.md
         - name: Validate successful onboarding
+          href: sql-server/azure-arc/validate.md
     - name: Manage
       items:
       - name: Assess
@@ -10426,6 +10430,9 @@ items:
       - name: View databases
         href: sql-server/azure-arc/view-databases.md
       - name: Delete from or restore to Azure Arc
+        href: sql-server/azure-arc/delete-from-azure-arc.md
+      - name: Restore to Azure Arc
+        href: sql-server/azure-arc/restore-to-azure-arc.md
       - name: Billing through Microsoft Azure
         href: sql-server/azure-arc/billing.md
     - name: Secure
@@ -10437,7 +10444,9 @@ items:
     - name: Troubleshoot
       items:
       - name: Troubleshoot deployment
+        href: sql-server/azure-arc/troubleshoot-deployment.md
       - name: Troubleshoot other
+        href: sql-server/azure-arc/troubleshoot.md
 
 - name: Big Data Clusters
   items:

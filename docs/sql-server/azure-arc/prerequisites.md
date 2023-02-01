@@ -14,24 +14,35 @@ ms.custom: references_regions
 
 An Azure Arc-enabled instance of SQL Server is an instance on-premises or in a cloud provider, that is connected to Azure Arc. This article explains those prerequisites.
 
+## Before you deploy
+
+>[!NOTE]
+>If you connected an instance of SQL Server to Azure Arc prior to December 2020, you need to follow the [prerequisite steps](prerequisites.md) to migrate the existing Arc-enabled SQL Server resources to the new namespace.
+
 Before you can Arc-enable an instance of SQL Server you need to:
 
 - Have an Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/free/).
+- [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites)
+- [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements)
 - Register resource providers. Specifically:
   - `Microsoft.AzureArcData`
   - `Microsoft.HybridCompute`
+
   For instructions, see [Register resource providers](#register-resource-providers).
 
-- Have appropriate permissions in the Azure resource group to complete the task. Specifically:
-  - `Microsoft.AzureArcData/sqlServerInstances/read`
-  - `Microsoft.AzureArcData/sqlServerInstances/write`
-
+- To onborad SQL Server to Arc-enabled SQL Server, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
+  - `Microsoft.AzureArcData/register/action`
+  - `Microsoft.HybridCompute/machines/extensions/read`
+  - `Microsoft.HybridCompute/machines/extensions/write`
+  
     Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
 - Run a supported version of SQL Server on a supported operating system. See [Supported SQL Server versions and operating systems](#supported-sql-server-versions-and-operating-systems).
 - Have local administrator permission on the operating system to install and configure the agent.
   - For Linux, use the root account.
   - For Windows, use an account that is a member of the Local Administrators group.
+
+
 
 ## Supported SQL Server versions and operating systems
 

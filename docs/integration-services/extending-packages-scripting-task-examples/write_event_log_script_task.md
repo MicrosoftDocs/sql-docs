@@ -11,7 +11,7 @@ author: ramakoni1
 ms.author: v-jayaramanp
 ---
 
-# Write information to the application log
+# Write information to the Application log
 
 You can include a Script Task in the Microsoft SQL Server Integration Services (SSIS) package to run a task. For example, the task may write a collection of variable information to the Windows Application log. You can create an SSIS package that contains a Data Flow task. This Data Flow task includes a Row Count transformation. You can also use a Script Task to write the data that was populated by the Row Count transformation to the Windows Application log.
 
@@ -24,11 +24,11 @@ This example assumes that you created the following elements in the SSIS package
 - A Data Flow task
 - A Script Task
 - A connector from the Data Flow task to the Script Task
-- A Row Count transformation in the data flow in the Data Flow task
+- A Row Count transformation in the data flow in the Data Flow Task
 
 When you run the package, the Row Count transformation returns the row count data that you want to write to the Windows Application log.
 
-## Configure the script task
+## Configure the Script Task
 
 To configure the Script Task code sample, follow these steps in the SSIS designer:
 
@@ -41,16 +41,16 @@ To configure the Script Task code sample, follow these steps in the SSIS designe
 
 1. Double-click the **Data Flow Task**. The active window switches to the **Data Flow** tab.
 
-1. Use the properties of the Row Count transformation to set the value of the `VariableName` property to *mycount*.
+1. Use the properties of the Row Count transformation to set the value of the **VariableName** property to *mycount*.
 
 1. Select the **Control Flow** tab, and then double-click the **Script Task**. The **Script Task Editor** dialog box appears.
 
-1. In the left pane, select the **Script item**, and then change the value of the `ReadOnlyVariables` property to the following value:
+1. In the left pane, select the **Script** item, and then change the value of the **ReadOnlyVariables** property to the following value:
 
     `PackageName,StartTime,ExecutionInstanceGUID,mycount`
 
     > [!NOTE]
-    > The `PackageName`, `StartTime`, and `ExecutionInstanceGUID` items are system variables. These system variables are used to write the package information to the Windows Application log.
+    > The **PackageName**, **StartTime**, and **ExecutionInstanceGUID** items are system variables. These system variables are used to write the package information to the Windows Application log.
 
 1. In the **Script Task Editor** dialog box, select **Edit Script**.
 

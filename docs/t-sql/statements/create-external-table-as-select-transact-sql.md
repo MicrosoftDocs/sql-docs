@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT creates an external table and then
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 01/16/2023
+ms.date: 2/1/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:

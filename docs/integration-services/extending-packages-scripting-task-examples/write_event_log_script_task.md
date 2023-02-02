@@ -2,7 +2,7 @@
 description: "Working with write event log script task"
 title: "Working with write event log script task | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/01/2023"
+ms.date: "02/02/2023"
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: integration-services
@@ -112,61 +112,62 @@ To configure the Script Task code sample, follow these steps in the SSIS designe
         Dts.TaskResult = ScriptResults.Success
         ```
 
-After the package runs successfully, the following entry appears in the Windows Application log.
+    After the package runs successfully, the following entry appears in the Windows Application log.
 
- ```vb
-    Log Name: Application
-    Source: RowCountReporting from SSIS
-    Date: 12/20/2022 11:21:38 AM
-    Event ID: 777
-    Task Category: (2)
-    Level: Information
-    Keywords: Classic
-    User: N/A
-    Computer: <hostname>
-    Description:
-    Rows Processed:
-    case Rows:0
-    =============================================
-    The Package: Package
-    Started: 12/20/2022 11:21:37 AM
-    Current Time:12/20/2022 11:21:38 AM
-    =============================================
-    Package Run Duration in seconds: 1
-    Execution GUID: {9DF22831-E608-47F7-BD62-F9BD3C2F9C77}
-    Event Xml:
-    <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
-    <System>
-    <Provider Name="RowCountReporting from SSIS" />
-    <EventID Qualifiers="0">777</EventID>
-    <Version>0</Version>
-    <Level>4</Level>
-    <Task>2</Task>
-    <Opcode>0</Opcode>
-    <Keywords>0x80000000000000</Keywords>
-    <TimeCreated SystemTime="2022-12-20T17:21:38.5070621Z" />
-    <EventRecordID>122603</EventRecordID>
-    <Correlation />
-    <Execution ProcessID="41588" ThreadID="0" />
-    <Channel>Application</Channel>
-    <Computer>ramakonibook.northamerica.corp.microsoft.com</Computer>
-    <Security />
-    </System>
-    <EventData>
-    <Data>Rows Processed:
-    case Rows:0
-    =============================================
-    The Package: Package
-    Started: 12/20/2022 11:21:37 AM
-    Current Time:12/20/2022 11:21:38 AM
-    =============================================
-    Package Run Duration in seconds: 1
-    Execution GUID: {9DF22831-E608-47F7-BD62-F9BD3C2F9C77}</Data>
-    </EventData>
-    </Event>
-```
+     ```vb
+        Log Name: Application
+        Source: RowCountReporting from SSIS
+        Date: 12/20/2022 11:21:38 AM
+        Event ID: 777
+        Task Category: (2)
+        Level: Information
+        Keywords: Classic
+        User: N/A
+        Computer: <hostname>
+        Description:
+        Rows Processed:
+        case Rows:0
+        =============================================
+        The Package: Package
+        Started: 12/20/2022 11:21:37 AM
+        Current Time:12/20/2022 11:21:38 AM
+        =============================================
+        Package Run Duration in seconds: 1
+        Execution GUID: {9DF22831-E608-47F7-BD62-F9BD3C2F9C77}
+        Event Xml:
+        <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+        <System>
+        <Provider Name="RowCountReporting from SSIS" />
+        <EventID Qualifiers="0">777</EventID>
+        <Version>0</Version>
+        <Level>4</Level>
+        <Task>2</Task>
+        <Opcode>0</Opcode>
+        <Keywords>0x80000000000000</Keywords>
+        <TimeCreated SystemTime="2022-12-20T17:21:38.5070621Z" />
+        <EventRecordID>122603</EventRecordID>
+        <Correlation />
+        <Execution ProcessID="41588" ThreadID="0" />
+        <Channel>Application</Channel>
+        <Computer>ramakonibook.northamerica.corp.microsoft.com</Computer>
+        <Security />
+        </System>
+        <EventData>
+        <Data>Rows Processed:
+        case Rows:0
+        =============================================
+        The Package: Package
+        Started: 12/20/2022 11:21:37 AM
+        Current Time:12/20/2022 11:21:38 AM
+        =============================================
+        Package Run Duration in seconds: 1
+        Execution GUID: {9DF22831-E608-47F7-BD62-F9BD3C2F9C77}</Data>
+        </EventData>
+        </Event>
+    ```
 
 ## References
 
 [EventLog.WriteEntry Method (System.Diagnostics)](/dotnet/api/system.diagnostics.eventlog.writeentry?view=windowsdesktop-7.0&preserve-view=true)
+
 [Instrument Code to Create EventSource Events](/dotnet/core/diagnostics/eventsource-instrumentation)

@@ -142,7 +142,7 @@ When you select **View report details**, it first shows the assessment summary.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="Screenshot showing assessment summary.":::
 
-If the target selected is Database for Azure PostgreSQL, either the Database details tab or Code assessment tab will be visible based on the assessment type selection.
+If the target selected is Database for Azure PostgreSQL, either the Database details tab or Code assessment tab will be available based on the assessment type selection.
 
 The following Database details tab provides the breakdown per schema basis. It shows the list of schemas discovered, the migration feasibility, and the estimated time to convert the schema in hours.
 
@@ -239,7 +239,7 @@ To change the log directory, update the `LogDirectory` property in the extension
 
 ## Contact Microsoft Support for help
 
-If you need further assistance from Microsoft Support, please contact [@DMASUPPORT](mailto:dmasupport@microsoft.com). For faster response, you may attach the logs from [default log directory](https://learn.microsoft.com/en-us/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?view=sql-server-ver16#logs)
+If you need further assistance from Microsoft Support, contact [@DMASUPPORT](mailto:dmasupport@microsoft.com). For faster response, you may attach the logs from [default log directory](../database-migration-assessment-for-oracle-extension?view=sql-server-ver16#logs)
 
 ## Next steps
 

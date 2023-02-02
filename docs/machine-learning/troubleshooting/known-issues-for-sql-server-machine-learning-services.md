@@ -4,7 +4,7 @@ description: This article describes known problems or limitations with the Pytho
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 1/25/2023
+ms.date: 2/2/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: troubleshooting

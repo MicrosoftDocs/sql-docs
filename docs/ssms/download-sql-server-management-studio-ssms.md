@@ -36,7 +36,7 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 :::image type="icon" source="../includes/media/download.svg" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 19.0.1](https://aka.ms/ssmsfullsetup)**
 
-SSMS 19.0.1 is the latest general availability (GA) version. If you have a preview version of SSMS 19 installed, you should uninstall it before installing SSMS 19.0.1.1.  If you have SSMS 19.0 installed, installing SSMS 19.0.1 upgrades it to 19.0.1.
+SSMS 19.0.1 is the latest general availability (GA) version. If you have a preview version of SSMS 19 installed, you should uninstall it before installing SSMS 19.0.1.  If you have SSMS 19.0 installed, installing SSMS 19.0.1 upgrades it to 19.0.1.
 
 - Release number: 19.0.1
 - Build number: 19.0.20200.0

@@ -20,7 +20,7 @@ This article describes how to restore a database backup from Azure SQL Managed I
 
 ## Overview
 
-The database format alignment between SQL Managed Instance and SQL Server 2022 gives you an easy way to copy or move databases from your managed instance to a SQL Server 2022 instance that's hosted on-premises of SQL Server version Enterprise, Developer or Standard, on virtual machines in Azure, or in other clouds. 
+The database format alignment between SQL Managed Instance and SQL Server 2022 gives you an easy way to copy or move databases from your managed instance to a SQL Server 2022 instance with Enterprise, Developer, or Standard edition installed, that's hosted on-premises, on virtual machines in Azure, or in other clouds. 
 
 Restoring databases from managed instances to SQL Server 2022 instances unlocks the following scenarios:
 

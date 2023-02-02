@@ -345,17 +345,17 @@ sqldiag /B 03:00:00 /X /L
 ## Running SQLdiag as a Service  
  When you want to use **SQLdiag** to collect diagnostic data for long periods of time during which you might need to log out of the computer on which **SQLdiag** is running, you can run it as a service.  
   
- **To register SQLDiag to run as a service**  
+ ### To register SQLDiag to run as a service
   
  You can register **SQLdiag** to run as a service by specifying the **/R** argument at the command line. This registers **SQLdiag** to run as a service. The **SQLdiag** service name is SQLDIAG. Any other arguments you specify on the command line when you register **SQLDiag** as a service are preserved and reused when the service is started.  
   
  To change the default SQLDIAG service name, use the **/A** command-line argument to specify another name. **SQLdiag** automatically prefixes DIAG$ to any **SQLdiag** instance name specified with **/A** to create sensible service names.  
   
- **To unregister the SQLDIAG service**  
+ ### To unregister the SQLDIAG service 
   
  To unregister the service, specify the **/U** argument. Unregistering **SQLdiag** as a service also deletes the Windows registry keys of the service.  
   
- **To start or restart the SQLDIAG service**  
+ ### To start or restart the SQLDIAG service
   
  To start or restart the SQLDIAG service, run **SQLDiag START** from the command line.  
   

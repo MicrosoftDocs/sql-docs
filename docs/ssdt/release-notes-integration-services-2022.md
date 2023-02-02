@@ -22,20 +22,20 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
-- Third party components are not supported yet. 
+- Third party components aren't supported yet. 
 - **SSDT side by side issue**. Method not found: 'SqlWorkbench.Interfaces.IAzureCloudConfiguration Microsoft.SqlServer.Management.UserSettings.AzureCloud.GetAzureCloudConfiguration(System.String, Boolean)'. The workaround is to download Visual Studio 2022 17.5 Preview 2 or later.
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues
 **Version 0.2**
   1. Target sever version supported: SQL server 2019 and SQL server 2022
-  2. Cannot design Dimension Processing and Partition Processing.
-  3. Cannot design DQS related component.
+  2. Can't design Dimension Processing and Partition Processing.
+  3. Can't design DQS related component.
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
-  5. Side by side, localization and globalization are not supported.
-  6. Azure-enabled SSIS projects are not supported
+  5. Side by side, localization and globalization aren't supported.
+  6. Azure-enabled SSIS projects aren't supported
   7. Repair action dose not work. Please reinstall it instead.  
-  8. Logging container cannot choose packages.
+  8. Logging container can't choose packages.
   
 **Version 0.1**
   1. Target server version supported: SQL server 2019 and SQL server 2022 
@@ -45,7 +45,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   1. Side by side, localization and globalization aren't supported.
   1. Packages using Oracle and Teradata connectors aren't supported. 
   1. Azure-enabled SSIS projects aren't supported.
-  1. Logging container cannot choose packages.
+  1. Logging container can't choose packages.
   1. Right click Package and select SSIS Import and Export Wizard throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\DTSWizard.exe
   1. Right click Package and select Upgrade All Packages throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\SSISUpgrade.exe
 ## Installation issues

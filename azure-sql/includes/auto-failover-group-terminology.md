@@ -13,7 +13,7 @@ ms.topic: include
   By default, a failover group is configured with an automatic failover policy. The system triggers a geo-failover after the failure is detected and the grace period has expired. The system must verify that the outage cannot be mitigated by the built-in [high availability infrastructure](../database/high-availability-sla.md), for example due to the scale of the impact. If you want to control the geo-failover workflow from the application or manually, you can turn off automatic failover policy.
   
   > [!NOTE]
-  > Because verification of the scale of the outage and how quickly it can be mitigated involves human actions, the grace period cannot be set below one hour. This limitation applies to all databases in the failover group regardless of their data synchronization state.
+  >Because verification of the scale of the outage and how quickly it can be mitigated involves human actions, the grace period cannot be set below one hour, and the exact time of the failover may vary slightly from the grace period that was set. This limitation applies to all databases in the failover group regardless of their data synchronization state.
 
 - **Read-only failover policy**
 

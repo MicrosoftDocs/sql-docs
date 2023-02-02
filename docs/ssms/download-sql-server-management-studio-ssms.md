@@ -34,9 +34,9 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-:::image type="icon" source="../includes/media/download.svg" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 19.0](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 19.0.1](https://aka.ms/ssmsfullsetup)**
 
-SSMS 19.0.1 is the latest general availability (GA) version. If you have a preview version of SSMS 19 installed, you should uninstall it before installing SSMS 19.0.1.  If you have SSMS 19.0 installed, installing SSMS 19.0.1 upgrades it to 19.0.1.
+SSMS 19.0.1 is the latest general availability (GA) version. If you have a preview version of SSMS 19 installed, you should uninstall it before installing SSMS 19.0.1.1.  If you have SSMS 19.0 installed, installing SSMS 19.0.1 upgrades it to 19.0.1.
 
 - Release number: 19.0.1
 - Build number: 19.0.20200.0
@@ -44,9 +44,9 @@ SSMS 19.0.1 is the latest general availability (GA) version. If you have a previ
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 
-The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs alongside previous versions, so both versions are available for use. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing SSMS 19.0. You can see if you have a preview version by going to the **Help > About** window.
+The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs alongside previous versions, so both versions are available for use. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing SSMS 19.0.1. You can see if you have a preview version by going to the **Help > About** window.
 
-If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v19.0**.
+If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v19.0.1**.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 

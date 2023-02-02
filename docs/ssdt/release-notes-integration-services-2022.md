@@ -28,17 +28,17 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Known issues
 **Version 0.2**
-  1. Target sever version supported: SQL server 2019 and SQL server 2022
+  1. Target sever versions supported: SQL server 2019 and SQL server 2022
   2. Can't design Dimension Processing and Partition Processing.
   3. Can't design DQS related component.
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   5. Side by side, localization and globalization aren't supported.
   6. Azure-enabled SSIS projects aren't supported
-  7. Repair action dose not work. Please reinstall it instead.  
+  7. Repair action doesn't take effct. Reinstall it instead.
   8. Logging container can't choose packages.
   
 **Version 0.1**
-  1. Target server version supported: SQL server 2019 and SQL server 2022 
+  1. Target server versions supported: SQL server 2019 and SQL server 2022 
   1. Can't design Dimension Processing and Partition Processing.
   1. Can't design DQS related component.
   1. Project name in Solution Explorer UI doesn't show target server version as suffix.
@@ -65,11 +65,11 @@ If you get an error during installation, and find **"Bundle action failed: Inval
       ```
    1. Repair the vs2022
    1. Restart and reinstall
-- When the error is "Object reference not set to an instance of an object.":
+- When the error is "Object reference not set to an instance of an object.",
   - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
-- When the error is "Error 0x80091007: Failed to verify hash of payload":
+- When the error is "Error 0x80091007: Failed to verify hash of payload",
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
-- When it isn't above error in ISVsix.log, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
+- When it isn't above list error, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
 ## Offline installation
 

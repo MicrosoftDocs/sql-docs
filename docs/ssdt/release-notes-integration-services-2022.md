@@ -69,7 +69,7 @@ If you get an error during installation, and find **"Bundle action failed: Inval
   - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
 - When the error is "Error 0x80091007: Failed to verify hash of payload",
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
-- When the error is not in the above list, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
+- When the error isn't in the above list, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
 ## Offline installation
 

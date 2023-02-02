@@ -291,7 +291,7 @@ SQLDIAG STOP /A Instance1
 
 ## To stop SQLDiag using sqldiag.stop file
 
-SQLDiag will also shut down automatically when it finds a file named `sqldiag.stop` in the utility's \Output folder. This option applies regardless if SQLDiag runs as a console app or as a service. Creating a .stop file can be useful for situations when you want to programmatically shut down SQLDiag after some event occurs, but you do not know in advance the time that this event will occur. The contents of the `sqldiag.stop` file are irrelevant. One option, besides manually creating the file, is to use a command like the following in a batch file to create `sqldiag.stop`:
+SQLDiag will also shut down automatically when it finds a file named `sqldiag.stop` in the utility's \Output folder. This option applies regardless if SQLDiag runs as a console app or as a service. Creating a .stop file can be useful when you want to programmatically shut down SQLDiag after some event occurs, but you don't know in advance the time that this event will occur. The contents of the `sqldiag.stop` file are irrelevant. One option, besides manually creating the file, is to use a command like the following in a batch file to create `sqldiag.stop`:
 
 ```batch
 ECHO abc > F:\PSSDIAG\Output\sqldiag.stop

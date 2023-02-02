@@ -237,7 +237,7 @@ To change the log directory, update the `LogDirectory` property in the extension
   - Check if firewall rules block the Oracle listening port.
   - Run `tnsping` and see if the Service ID gets resolved.
 
-## Contact Micorosoft for help
+## Contact Microsoft for help
 
 If you need further assistance from Microsoft, contact [@Dmasupport](mailto:dmasupport@microsoft.com). For faster turnaround, you may attach the logs from [default log directory](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs).
 

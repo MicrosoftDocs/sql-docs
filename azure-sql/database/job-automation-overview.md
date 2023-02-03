@@ -84,7 +84,7 @@ An Elastic Job agent is the Azure resource for creating, running, and managing j
 
 Creating an **Elastic Job agent** requires an existing database in Azure SQL Database. The agent configures this existing Azure SQL Database as the [*Job database*](#elastic-job-database).
 
-The Elastic Job agent is free. The job database is billed at the same rate as any database in Azure SQL Database.
+The Elastic Job agent is free for the current preview. The job database is billed at the same rate as any database in Azure SQL Database.
 
 #### Elastic job database
 

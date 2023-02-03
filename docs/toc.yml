@@ -34,7 +34,7 @@ items:
     - name: SQL Server 2019
       href: sql-server/sql-server-2019-release-notes.md
     - name: SQL Server 2017
-      href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+      href: sql-server/sql-server-2017-release-notes.md
     - name: SQL Server 2016
       href: sql-server/sql-server-2016-release-notes.md
     - name: SQL Server 2014
@@ -4261,6 +4261,8 @@ items:
     href: relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
   - name: Transaction Locking & Row Versioning Guide
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
+  - name: Optimized locking
+    href: relational-databases/performance/optimized-locking.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
@@ -4421,7 +4423,7 @@ items:
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
       - name: Latest updates for SQL Server
-        href: /troubleshoot/sql/releases/download-and-install-latest-updates?toc=%2Fsql%2Ftoc.json&bc=%2Fsql%2Fbreadcrumb%2Ftoc.json
+        href: /troubleshoot/sql/releases/download-and-install-latest-updates?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
   - name: End of support
     items:
     - name: Overview

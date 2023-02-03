@@ -2,8 +2,8 @@
 title: "Assess SQL Server readiness to migrate to Azure SQL Database"
 titleSuffix: Data Migration Assistant
 description: "Learn how to use Data Migration Assistant to migrate a SQL Server data estate for migration to Azure SQL Database"
-author: rajeshsetlem
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: "12/19/2019"
 ms.service: sql
 ms.subservice: dma

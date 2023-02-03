@@ -302,7 +302,7 @@ GO
 If the number of concurrent execution of `sp_execute_external_script` is higher than the active R/Python processes in the pool, the cold start of adding additional processes to the pool may be slow (for example, due to resource constraints).
 
 #### Workaround
-To overcome the scaling performance issue, multiple requests can be batched (e.g. via [!INCLUDE [loopback connections](../connect/loopback-connection.md)] or rewriting the script to handle multiple requests). In addition, for real-time scenarios [!INCLUDE [SQL PREDICT](../predictions/native-scoring-predict-transact-sql.md)] can be utilized.
+To overcome the scaling performance issue, multiple requests can be batched (for example, via [loopback connections](../connect/loopback-connection.md) or rewriting the script to handle multiple requests). In addition, for real-time scenarios [SQL PREDICT](../predictions/native-scoring-predict-transact-sql.md) can be utilized.
 
 ## R script execution issues
 

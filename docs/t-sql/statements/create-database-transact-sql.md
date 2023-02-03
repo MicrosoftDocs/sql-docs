@@ -210,7 +210,7 @@ For more information about the Windows and SQL collation names, see [COLLATE](~/
 > [!NOTE]
 > Contained databases are collated differently than non-contained databases. For more information, see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).
 
-#### WITH <option>
+#### WITH \<option>
 
 #### <filestream_option>
 
@@ -236,13 +236,13 @@ A windows-compatible directory name. This name should be unique among all the Da
 
 The following options are allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.
 
-#### DEFAULT_FULLTEXT_LANGUAGE = <lcid> | <language name> | <language alias>
+#### DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>
 
   **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
 
   See [Configure the default full-text language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) for a full description of this option.
 
-#### DEFAULT_LANGUAGE = <lcid> | <language name> | <language alias>
+#### DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>
 
   **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
 

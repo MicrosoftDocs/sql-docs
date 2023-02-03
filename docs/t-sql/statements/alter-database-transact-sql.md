@@ -484,7 +484,7 @@ The following rules apply to MAXSIZE and EDITION arguments:
 - If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 250 MB.
 - If neither MAXSIZE nor EDITION is specified, the EDITION is set to General Purpose, and MAXSIZE is set to 32 GB.
 
-#### MODIFY (SERVICE_OBJECTIVE = <service-objective>)
+#### MODIFY (SERVICE_OBJECTIVE = \<service-objective>)
 
 Specifies the compute size and service objective. 
 

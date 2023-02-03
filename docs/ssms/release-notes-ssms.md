@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 01/26/2023
+ms.date: 02/02/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -19,9 +19,57 @@ This article details updates, improvements, and bug fixes for the current and pr
 
 ## Current SSMS release
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19.0](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19.0.1](https://aka.ms/ssmsfullsetup)**
 
-SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 19.0.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 19.0.1
+
+- Release number: 19.0.1
+- Build number: 19.0.20200.0
+- Release date: February 2, 2023
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2223741&clcid=0x40a) |
+
+#### What's new in 19.0.1
+
+| New Item | Details |
+| ---------- | ------- |
+| Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.41.1. |
+
+#### Bug fixes in 19.0.1
+
+| New Item | Details |
+| -------- | ------- |
+| Maintenance Plan | Fixed issue that generated "Failed to retrieve data for this request" error when using backup to NUL in the Back Up Database Task. |
+| Object Explorer | Fixed a regression which caused Object Explorer to not show database objects for Azure SQL DB Basic SLO. |
+
+
+#### Known issues (19.0.1)
+
+| New Item | Details | Workaround |
+| -------- | ------- | ---------- |
+| Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
+| Profiler | The Profiler menu is not localized. | No current alternative. |
+| Query Editor | When SSMS opens after double-clicking on a .sql file, the Object Explorer window is displayed as a separate window. |
+| SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
+| Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
+
+You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+| ------------ | ------------ | ------------ |
+| [19.0](#190) | 19.0.20196.0 | January 26, 2023 |
+| [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 19.0
 
@@ -117,18 +165,6 @@ SSMS 19.0 is the latest general availability (GA) release of SSMS. If you need a
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
-
-You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-| ------------ | ------------ | ------------ |
-| [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 18.12.1
 

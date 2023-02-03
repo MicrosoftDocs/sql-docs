@@ -98,12 +98,12 @@ CREATE DATABASE database_name
     | DEFAULT_FULLTEXT_LANGUAGE = { lcid | language_name | language_alias }
     | DEFAULT_LANGUAGE = { lcid | language_name | language_alias }
     | NESTED_TRIGGERS = { OFF | ON }
-    | TRANSFORM_NOISE_WORDS = { OFF | ON}
+    | TRANSFORM_NOISE_WORDS = { OFF | ON }
     | TWO_DIGIT_YEAR_CUTOFF = <two_digit_year_cutoff>
     | DB_CHAINING { OFF | ON }
     | TRUSTWORTHY { OFF | ON }
     | PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='<Filepath to folder on DAX formatted volume>' )
-    | LEDGER = {ON | OFF}
+    | LEDGER = {ON | OFF }
 }
 
 <filestream_option> ::=
@@ -214,7 +214,7 @@ For more information about the Windows and SQL collation names, see [COLLATE](~/
 
 #### <filestream_option>
 
-#### NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL }
+NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL }
 
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
 
@@ -226,7 +226,7 @@ Specifies the level of non-transactional FILESTREAM access to the database.
 |READONLY|FILESTREAM data in this database can be read by non-transactional processes.|
 |FULL|Full non-transactional access to FILESTREAM FileTables is enabled.|
 
-#### DIRECTORY_NAME = <directory_name>
+DIRECTORY_NAME = <directory_name>
 
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
 
@@ -248,13 +248,13 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
 
   See [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) for a full description of this option.
 
-#### NESTED_TRIGGERS = { OFF | ON}
+#### NESTED_TRIGGERS = { OFF | ON }
 
   **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
 
   See [Configure the nested triggers Server Configuration Option](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) for a full description of this option.
 
-#### TRANSFORM_NOISE_WORDS = { OFF | ON}
+#### TRANSFORM_NOISE_WORDS = { OFF | ON }
 
   **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
 
@@ -289,7 +289,7 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
 
   When this option is specified, the transaction log buffer is created on a volume that is located on a disk device backed by Storage Class Memory (NVDIMM-N nonvolatile storage), also known as a persistent log buffer. For more information, see [Transaction Commit latency acceleration using Storage Class Memory](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1). **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and newer.
 
-#### LEDGER = {ON | OFF}
+#### LEDGER = {ON | OFF }
 
 When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
 
@@ -965,8 +965,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <with_options> ::=
 {
   CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
-  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' | 'GEOZONE'}
-  | LEDGER = {ON | OFF}
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' | 'GEOZONE' }
+  | LEDGER = {ON | OFF }
 }
 
 <edition_options> ::=
@@ -1038,13 +1038,15 @@ Specifies how the point-in-time restore and long-term retention backups for a da
 > [!IMPORTANT]
 > BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Brazil South and generally available in Southeast Asia Azure region only.  
 
-#### LEDGER = {ON | OFF}
+#### LEDGER = {ON | OFF }
 
 When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
 
 #### MAXSIZE
 
-Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.
+Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier).
+
+Following are the supported MAXSIZE values and defaults (D) for the service tiers.
 
 > [!NOTE]
 > The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Hyperscale tier databases grow as needed, up to 100 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.

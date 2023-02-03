@@ -102,7 +102,7 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 Premium-series and premium-series memory optimized hardware is only available for Hyperscale databases.
 - For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
-For regions where standard-series (Gen5) is available, see [Premium-series availability](#hyperscale-premium-series-availability).
+For regions available, see [Hyperscale premium-series availability](#hyperscale-premium-series-availability).
 
 ### Fsv2-series
 
@@ -162,17 +162,55 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 #### <a id="hyperscale-premium-series-availability"></a> Hyperscale premium-series
  
 Hyperscale service tier (currently in preview) premium-series and premium-series memory optimized hardware is available in the following regions:
-Australia East, Canada Central, East US, Japan East, North Europe, South Central US, UK South, West Europe, West US 1, West US 2.
+
+- Australia East
+- Canada Central
+- Central India
+- Central US
+- East US
+- Japan East
+- North Europe
+- North Central US
+- South Central US
+- UK South
+- West Europe
+- West US 1
+- West US 2
 
 #### Fsv2-series
 
 Fsv2-series is available in the following regions:
-Australia Central, Australia Central 2, Australia East, Australia Southeast, Brazil South, Canada Central, East Asia, East US, France Central, India Central, Korea Central, Korea South, North Europe, South Africa North, Southeast Asia, UK South, UK West, West Europe, West US 2.
+- Australia Central
+- Australia Central 2
+- Australia East
+- Australia Southeast
+- Brazil South
+- Canada Central
+- East Asia
+- East US
+- France Central
+- India Central
+- Korea Central
+- Korea South
+- North Europe
+- South Africa North
+- Southeast Asia
+- UK South
+- UK West
+- West Europe
+- West US 2
 
 #### DC-series
 
 DC-series is available in the following regions:
-Canada Central, Canada East, East US, North Europe, UK South, West Europe, West US.
+
+- Canada Central
+- Canada East
+- East US
+- North Europe
+- UK South
+- West Europe
+- West US
 
 If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 

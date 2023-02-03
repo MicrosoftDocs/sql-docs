@@ -13,7 +13,7 @@ ms.author: v-jayaramanp
 
 # Write information to the Application log
 
-You can include a Script Task in the Microsoft SQL Server Integration Services (SSIS) package to run a task. For example, the task may write a collection of variable information to the Windows Application log. You can create an SSIS package that contains a Data Flow task. This Data Flow task includes a Row Count transformation. You can also use a Script Task to write the data that was populated by the Row Count transformation to the Windows Application log.
+You can include a Script Task in the Microsoft SQL Server Integration Services (SSIS) package to run a task. For example, the task may write a collection of variable information to the Windows Application log. You can create an SSIS package that contains a Data Flow task. This Data Flow task includes a Row Count transformation. You can use a Script Task to write the data that was populated by the Row Count transformation to the Windows Application log.
 
 This article describes how to use a Script Task to write information to the Windows Application log.
 

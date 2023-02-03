@@ -1,18 +1,18 @@
 ---
-title: Managed Instance link feature overview (preview)
+title: Managed Instance link feature overview
 titleSuffix: Azure SQL Managed Instance
 description: This article describes the link feature of Azure SQL Managed Instance, which you can use to replicate data continuously from SQL Server to the cloud or migrate your SQL Server databases with minimal downtime.
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, randolphwest
-ms.date: 12/02/2022
+ms.date: 02/03/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: ignite-fall-2021
 ---
 
-# Overview of the Managed Instance link feature (preview)
+# Overview of the Managed Instance link feature
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 

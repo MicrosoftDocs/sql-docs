@@ -17,14 +17,17 @@ You can include a Script Task in the Microsoft SQL Server Integration Services (
 
 This article describes how to use a Script Task to write information to the Windows Application log.
 
+_Original product version_: &nbsp; SQL Server  
+_Original KB number_: &nbsp; 906560
+
 ## Description
 
 This example assumes that you created the following elements in the SSIS package:
 
-- A Data Flow task
-- A Script Task
-- A connector from the Data Flow task to the Script Task
-- A Row Count transformation in the data flow in the Data Flow Task
+- A Data Flow task.
+- A Script Task.
+- A connector from the Data Flow task to the Script Task.
+- In the Data Flow task, you created a Row Count transformation in the data flow.
 
 When you run the package, the Row Count transformation returns the row count data that you want to write to the Windows Application log.
 
@@ -58,7 +61,7 @@ To configure the Script Task code sample, follow these steps in the SSIS designe
 
     1. Make sure that the following namespaces are included in your code before any other declarations.
 
-        ```output
+        ```vb
         Imports System 
         Imports System.Data
         Imports System.Math
@@ -114,7 +117,7 @@ To configure the Script Task code sample, follow these steps in the SSIS designe
 
     After the package runs successfully, the following entry appears in the Windows Application log.
 
-     ```vb
+     ```output
         Log Name: Application
         Source: RowCountReporting from SSIS
         Date: 12/20/2022 11:21:38 AM

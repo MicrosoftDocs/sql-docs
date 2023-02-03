@@ -1294,6 +1294,8 @@
     href: ../integration-services/integration-services-error-and-message-reference.md
 - name: Scripting and programming
   items:
+  - name: Write to event log
+    href: ../integration-services/extending-packages-scripting-task-examples/write_event_log_script_task.md
   - name: Integration Services Programming Overview
     href: ../integration-services/integration-services-programming-overview.md
   - name: Understanding Synchronous and Asynchronous Transformations

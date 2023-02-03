@@ -30,7 +30,7 @@ Each read-only replica of a database has its own resources, such as vCores, memo
 
 You can set the service tier, compute size (service objective), and storage amount for a single database using:
 
-* [Transact-SQL](single-database-manage.md#transact-sql-t-sql) via [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql#overview-sql-database)
+* [Transact-SQL](single-database-manage.md#transact-sql-t-sql) via [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#overview-sql-database)
 * [Azure portal](single-database-manage.md#the-azure-portal)
 * [PowerShell](single-database-manage.md#powershell)
 * [Azure CLI](single-database-manage.md#azure-cli)
@@ -261,9 +261,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
-## Hyperscale - Premium-series (part 1 of 3)
+## Hyperscale - Premium-series
 
-SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_PRMS_` followed by the number of vCores, for example, `SQLDB_HS_PRMS_10`.
+### Hyperscale - Premium-series (part 1 of 3)
+
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
 
 |vCores|2|4|6|8|10|
 |:--- | --: |--: |--: |--: |--: |
@@ -298,9 +300,9 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 
-## Hyperscale - Premium-series (part 2 of 3)
+### Hyperscale - Premium-series (part 2 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_PRMS_` followed by the number of vCores, for example, `SQLDB_HS_PRMS_10`.
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
 
 |vCores|12|14|16|18|20|
 |:--- | --: |--: |--: |--: |--: |
@@ -334,9 +336,9 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
-## Hyperscale - Premium-series (part 3 of 3)
+### Hyperscale - Premium-series (part 3 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_PRMS_` followed by the number of vCores, for example, `SQLDB_HS_PRMS_10`.
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
 
 |vCores|24|32|40|80|128|
 |:--- | --: |--: |--: |--: |--: |
@@ -369,10 +371,11 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
  
+## Hyperscale - Premium-series memory optimized
 
-## Hyperscale - Premium-series memory optimized (part 1 of 3)
+### Hyperscale - Premium-series memory optimized (part 1 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
 
 |vCores|2|4|6|8|10|
 |:--- | --: |--: |--: |--: |--: |
@@ -407,9 +410,9 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 
-## Hyperscale - Premium-series memory optimized (part 2 of 3)
+### Hyperscale - Premium-series memory optimized (part 2 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
 
 |vCores|12|14|16|18|20|
 |:--- | --: |--: |--: |--: |--: |
@@ -444,9 +447,9 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 
-## Hyperscale - Premium-series memory optimized (part 3 of 3)
+### Hyperscale - Premium-series memory optimized (part 3 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
 
 |vCores|24|32|40|80|
 |:--- | --: |--: |--: |--: |
@@ -1105,3 +1108,5 @@ This section includes details on previously available hardware.
 - For resource limits for SQL Managed Instance, see [SQL Managed Instance resource limits](../managed-instance/resource-limits.md).
 - For information about general Azure limits, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 - For information about resource limits on a server, see [overview of resource limits on a server](resource-limits-logical-server.md) for information about limits at the server and subscription levels.
+- [ALTER DATABASE - Azure SQL Database](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true)
+- [CREATE DATABASE - Azure SQL Database](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true)

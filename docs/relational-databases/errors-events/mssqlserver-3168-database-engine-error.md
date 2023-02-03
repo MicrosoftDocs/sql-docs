@@ -58,7 +58,7 @@ To resolve the issue, follow these steps:
 
 1. Run a query that resembles the following to determine the version of SQL Server that was running when the source backup was taken (Version A):
 
-`RESTORE headeronly FROM disk = 'c:\sqlbackups\masterdb.bak'`
+  `RESTORE headeronly FROM disk = 'c:\sqlbackups\masterdb.bak'`
 
 1. Review the values of `SoftwareVersionMajor`, `SoftwareVersionMinor`, and `SoftwareVersionBuild` columns to determine the build of the source server that was used when the backup was taken. For example, assume that the values are as follows:
 

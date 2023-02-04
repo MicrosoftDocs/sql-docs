@@ -3,7 +3,7 @@ description: "The sp_change_feed_disable_db system stored procedure disables the
 title: "sp_change_feed_disable_db (Transact-SQL)"
 ms.custom:
 - event-tier1-build-2022
-ms.date: 11/09/2022
+ms.date: 02/03/2023
 ms.service: synapse-analytics
 ms.reviewer: ""
 ms.topic: "reference"
@@ -36,7 +36,7 @@ EXECUTE sys.sp_change_feed_disable_db;
   
 ## Permissions  
 
- Currently, a user with CONTROL database permissions or higher can execute this procedure. 
+ Currently, a user with [CONTROL database permissions](../security/permissions-database-engine.md), db_owner database role membership, or sysadmin server role membership can execute this procedure. 
 
 ## Remarks
 

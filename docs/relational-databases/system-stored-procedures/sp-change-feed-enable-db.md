@@ -1,7 +1,7 @@
 ---
 description: "The sp_change_feed_enable_db system stored procedure enables the current database for Azure Synapse Link publishing."
 title: "sp_change_feed_enable_db (Transact-SQL)"
-ms.date: 11/09/2022
+ms.date: 02/03/2023
 ms.service: synapse-analytics
 ms.reviewer: wiassaf
 ms.topic: "reference"
@@ -43,11 +43,11 @@ Data type is integer. Indicates the maximum number of transactions to process in
 
 #### @pollinterval
 
-Data type is integer. Describes the frequency that the log is scanned for any new changes in seconds.  Default interval if not specified is 5 s, the value must be 5 or larger.
+Data type is integer. Describes the frequency that the log is scanned for any new changes in seconds.  Default interval if not specified is 5 seconds. The value must be 5 or larger.
 
 ## Permissions  
 
- Currently, a user with CONTROL database permissions or higher can execute this procedure.
+ Currently, a user with [CONTROL database permissions](../security/permissions-database-engine.md), db_owner database role membership, or sysadmin server role membership can execute this procedure.
 
 ## See also  
 

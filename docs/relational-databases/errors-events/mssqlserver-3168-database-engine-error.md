@@ -38,7 +38,8 @@ You can't restore a backup of a system database (**master**, **model**, or **msd
   
 ### Possible causes
 
-The database schema for system databases might be changed across server builds. To make sure that a schema change doesn't cause inconsistencies, the RESTORE statement compares the server build number on the backup file to the build number of the server on which you are trying to restore the backup. If the builds are different, the statement issues a *"3168"* error message, and the restore operation terminates abnormally.  
+The database schema for system databases might be changed across server builds. To make sure that a schema change doesn't cause inconsistencies, the RESTORE statement compares the server build number of the backup file to the build number of the server on which you are trying to restore the backup. If the builds are different, the statement issues a *"3168"* error message, and the restore operation terminates abnormally.  
+
   
 Some scenarios in which this problem might occur include the following:  
   

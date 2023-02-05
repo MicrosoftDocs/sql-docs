@@ -33,11 +33,13 @@ ms.author: mathoma
 You can't restore a backup of a system database (**master**, **model**, or **msdb**) on a server build that differs from the build on which the backup was originally created.  
   
 > [!NOTE]  
-> While installing a servicing update like cumulative update or service pack or a GDR changes the server build number, server builds are always incremental.
+> Installing a servicing update like cumulative update or service pack or a GDR changes the server build number. Server builds are always incremental.
+
   
 ### Possible causes
 
-The database schema for system databases might be changed across server builds. To make sure that a schema change doesn't cause inconsistencies, the RESTORE statement compares the server build number on the backup file to the build number of the server on which you are trying to restore the backup. If the builds are different, the statement issues a *"3168"* error message, and the restore operation terminates abnormally.  
+The database schema for system databases might be changed across server builds. To make sure that a schema change doesn't cause inconsistencies, the RESTORE statement compares the server build number of the backup file to the build number of the server on which you are trying to restore the backup. If the builds are different, the statement issues a *"3168"* error message, and the restore operation terminates abnormally.  
+
   
 Some scenarios in which this problem might occur include the following:  
   

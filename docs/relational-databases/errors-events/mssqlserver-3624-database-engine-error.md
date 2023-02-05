@@ -96,7 +96,8 @@ Faulty hardware can cause corruption of data structures in memory and therefore 
    Follow the recommendations in [Performance and consistency issues when certain modules or filter drivers are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules).
 
 1. If you've already upgraded your SQL Server to the latest Cumulative Update, and DBCC CHECKDB doesn't report any errors, then reach out to Microsoft technical support and be ready to provide the following information:
-    1. SQL Server error logs from the \Log folder
-    1. SQL Server memory dumps (SQLDump00xx.mdmp) generated in the \Log folder
-    1. Steps to reproduce the assert when available. What query or action leads to the assert to be raised?
-    1. Output from `fltmc filters` and from the `sys.dm_os_loaded_modules DMV.
+   - SQL Server error logs from the \Log folder
+   - SQL Server memory dumps (SQLDump00xx.mdmp) generated in the \Log folder
+   - Steps to reproduce the assert when available. What query or action leads to the assert to be raised?
+   - Output from `fltmc filters` and from the `sys.dm_os_loaded_modules DMV
+   - Information about your system - output from `systeminfo`

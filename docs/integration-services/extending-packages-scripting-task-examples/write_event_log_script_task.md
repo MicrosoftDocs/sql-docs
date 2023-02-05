@@ -152,7 +152,7 @@ To configure the Script Task code sample, follow these steps in the SSIS designe
         <Correlation />
         <Execution ProcessID="41588" ThreadID="0" />
         <Channel>Application</Channel>
-        <Computer>ramakonibook.northamerica.corp.microsoft.com</Computer>
+        <Computer><hostname>/Computer>
         <Security />
         </System>
         <EventData>

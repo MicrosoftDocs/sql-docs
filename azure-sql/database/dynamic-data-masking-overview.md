@@ -43,7 +43,7 @@ You set up a dynamic data masking policy in the Azure portal by selecting the **
 
 ### Recommended fields to mask
 
-The DDM recommendations engine, flags certain fields from your database as potentially sensitive fields, which may be good candidates for masking. In the Dynamic Data Masking blade in the portal, you will see the recommended columns for your database. All you need to do is click **Add Mask** for one or more columns and then **Save** to apply a mask for these fields.
+The DDM recommendations engine, flags certain fields from your database as potentially sensitive fields, which may be good candidates for masking. In the Dynamic Data Masking blade in the portal, you will see the recommended columns for your database. All you need to do is click **Add Mask** for one or more columns, then select appropriate masking function and click on **Save** to apply mask for these fields.
 
 ## Manage dynamic data masking using T-SQL
 

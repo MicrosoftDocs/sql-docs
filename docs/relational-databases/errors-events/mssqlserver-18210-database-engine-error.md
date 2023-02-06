@@ -46,7 +46,7 @@ While the cause can be varied, ultimately the error is due to a failed IO submis
 
 1. Backup virtual device IO failure.
 1. A file-related operation failure in one or more of the following I/O API functions ([DeleteFile](/windows/win32/api/fileapi/nf-fileapi-deletefilea) , [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), or [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) .
-1. Failure in freeing a buffer.
+1. Failure in freeing a memory buffer.
 
 
 ## User action  

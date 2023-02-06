@@ -31,11 +31,11 @@ ms.author: JamesFerebee
 
 When a [Virtual device interface (VDI) backup](../backup-restore/vdi-reference/reference-virtual-device-interface.md) is terminated in SQL Server, you'll see SQL Server error 18210 with nested [OS error 995](/windows/win32/debug/system-error-codes--500-999-) in the SQL Server Error Log. VDI may be invoked from a third party application or from [SQLWriter](../../database-engine/configure-windows/sql-writer-service.md). An example:
 
-    2022-05-29 15:55:42.89 Backup      Error: 18210, Severity: 16, State: 1.
-    2022-05-29 15:55:42.89 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}2'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
-    2022-05-29 15:55:42.91 Backup      Error: 18210, Severity: 16, State: 1.
-    2022-05-29 15:55:42.91 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}4'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
-    2022-05-29 15:55:42.91 Backup      Error: 3041, Severity: 16, State: 1.
+ 2022-05-29 15:55:42.89 Backup      Error: 18210, Severity: 16, State: 1.
+ 2022-05-29 15:55:42.89 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}2'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
+ 2022-05-29 15:55:42.91 Backup      Error: 18210, Severity: 16, State: 1.
+ 2022-05-29 15:55:42.91 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}4'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
+ 2022-05-29 15:55:42.91 Backup      Error: 3041, Severity: 16, State: 1.
 
 Both errors are helpful in that you get a timestamp of when a backup failed. However, it does NOT give meaningful information as to root cause as these errors indicate the backup operation is aborting due to another error. Once you find the time frame of the first 18210 error with the nested OS error 995, you have a reference data point to review your backup application logs, which may provide further root cause information.
 
@@ -44,9 +44,9 @@ Both errors are helpful in that you get a timestamp of when a backup failed. How
 
 While the cause can be varied, ultimately the error is due to a failed IO submission to the Operating System. Some examples:
 
-    1. Backup virtual device IO failure.
-    1. Delete file, read file, or write file failure.
-    1. Failure in freeing a buffer.
+ 1. Backup virtual device IO failure.
+ 1. Delete file, read file, or write file failure.
+ 1. Failure in freeing a buffer.
 
 
 ## User action  

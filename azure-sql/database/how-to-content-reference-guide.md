@@ -32,7 +32,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Configure Multi-Factor Authentication](authentication-mfa-ssms-configure.md)
 - [Configure backup retention](long-term-backup-retention-configure.md) for a database to keep your backups on Azure Blob Storage. 
 - [Configure geo-replication](active-geo-replication-overview.md) to keep a replica of your database in another region.
-- [Configure auto-failover group](auto-failover-group-configure-sql-db.md) to automatically failover a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
+- [Configure auto-failover group](auto-failover-group-configure-sql-db.md) to automatically fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
 - [Configure temporal retention policy](temporal-tables-retention-policy.md)
 - [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md)
 - [Rotate TDE BYOK keys](transparent-data-encryption-byok-key-rotation.md)

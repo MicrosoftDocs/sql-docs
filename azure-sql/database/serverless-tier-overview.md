@@ -80,7 +80,7 @@ The following table describes serverless support based on purchasing model, serv
 |:---|:---|:---|
 | **Purchasing model** | [vCore](service-tiers-vcore.md) | [DTU](service-tiers-dtu.md) |
 | **Service tier** | [General Purpose](service-tier-general-purpose.md) <br/> [Hyperscale](service-tier-hyperscale.md) (in Preview) | Business Critical| 
-| **Hardware** | Generation 5 | All other hardware |  
+| **Hardware** | Standard-series (Gen5) | All other hardware |  
 
 ## Autoscaling
 
@@ -108,7 +108,7 @@ When CPU utilization is low, active cache utilization can remain high depending 
 
 #### Cache hydration
 
-The SQL memory cache grows as data is fetched from disk in the same way and with the same speed as for provisioned databases. When the database is busy, the cache is allowed to grow unconstrained up to the max memory limit.
+The SQL memory cache grows as data is fetched from disk in the same way and with the same speed as for provisioned databases. When the database is busy, the cache is allowed to grow unconstrained while there is available memory.
 
 
 ### <a name="disk-cache-mgmt"></a> Disk cache management
@@ -325,7 +325,7 @@ It's possible to move your database from the provisioned compute tier to the ser
 
 When moving your database between compute tiers, provide the **Compute model** parameter as either `Serverless` or `Provisioned` when using Powershell and the Azure CLI, and the compute size for the  **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify your appropriate compute size. 
 
-The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples set the max vCores to 1. 
+The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples set the max vCores to 4. 
 
 
 #### Use PowerShell
@@ -393,7 +393,7 @@ Move a provisioned compute Hyperscale database to the serverless compute tier wi
 
 ```sql
 ALTER DATABASE testdb  
-MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_1') ; 
+MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ; 
 ```
 
 ---
@@ -429,9 +429,9 @@ Metrics for monitoring the resource usage of the app package and user resource p
 
 |Entity|Metric|Description|Units|
 |---|---|---|---|
-|App package|app_cpu_percent|Percentage of vCores used by the app relative to max vCores allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.. |Percentage|
+|App package|app_cpu_percent|Percentage of vCores used by the app relative to max vCores allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |App package|app_cpu_billed|The amount of compute billed for the app during the reporting period. The amount paid during this period is the product of this metric and the vCore unit price. <br><br>Values of this metric are determined by aggregating over time the maximum of CPU used and memory used each second. If the amount used is less than the minimum amount provisioned as set by the min vCores and min memory, then the minimum amount provisioned is billed. In order to compare CPU with memory for billing purposes, memory is normalized into units of vCores by rescaling the amount of memory in GB by 3 GB per vCore. For serverless Hyperscale, this metric is exposed for the primary replica and any named replicas. |vCore seconds|
-|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period.  This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica.  Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica.  This metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
+|App package| app_cpu_billed_HA_replicas| Only applicable to serverless Hyperscale.  Sum of the compute billed across all apps for HA replicas during the reporting period.  This sum is scoped either to the HA replicas belonging to the primary replica or the HA replicas belonging to a given named replica.  Before calculating this sum across HA replicas, the amount of compute billed for an individual HA replica is determined in the same way as for the primary replica or a named replica.  For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas.  The amount paid during the reporting period is the product of this metric and the vCore unit price.  |vCore seconds| 
 |App package|app_memory_percent|Percentage of memory used by the app relative to max memory allowed for the app. For serverless Hyperscale, this metric is exposed for all primary replicas, named replicas, and geo-replicas. |Percentage|
 |User resource pool|cpu_percent|Percentage of vCores used by user workload relative to max vCores allowed for user workload. |Percentage|
 |User resource pool|data_IO_percent|Percentage of data IOPS used by user workload relative to max data IOPS allowed for user workload.|Percentage|

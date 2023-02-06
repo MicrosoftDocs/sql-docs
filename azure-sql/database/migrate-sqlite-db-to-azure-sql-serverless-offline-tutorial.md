@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: How to migrate your SQLite database to Azure SQL Database serverless"
 description: Learn to perform an offline migration from SQLite to Azure SQL Database serverless by using Azure Data Factory.
-author: joe-plumb
-ms.author: joplum
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/11/2022
 ms.service: sql-database

@@ -9,8 +9,8 @@ ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "18210 (Database Engine error)"
-author: jaferebe
-ms.author: jaferebe
+author: JamesFerebee
+ms.author: JamesFerebee
 ---
 # MSSQLSERVER_18210
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

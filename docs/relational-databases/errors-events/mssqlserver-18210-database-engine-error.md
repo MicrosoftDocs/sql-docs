@@ -45,7 +45,7 @@ Both errors are helpful in that you get a timestamp of when a backup failed. How
 While the cause can be varied, ultimately the error is due to a failed IO submission to the Operating System. Some examples:
 
 1. Backup virtual device IO failure.
-1. Delete file, read file, or write file failure.
+1. A file-related operation failure in one or more of the following I/O API functions ([DeleteFile](/windows/win32/api/fileapi/nf-fileapi-deletefilea) , [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), or [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) .
 1. Failure in freeing a buffer.
 
 

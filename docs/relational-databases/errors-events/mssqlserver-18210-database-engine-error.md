@@ -28,7 +28,7 @@ ms.author: jaferebe
   
 ## Explanation  
 
-When performing a VDI backup in SQL Server (which may be from SQLWriter or from some other application), if the backup is terminated you should see a SQL Server error 18210 which references nested OS error 995 such as below:
+When performing a [Virtual device interface (VDI) backup](../backup-restore/vdi-reference/reference-virtual-device-interface.md) in SQL Server (which may be from [SQLWriter](../../database-engine/configure-windows/sql-writer-service.md) or from some other application), if the backup is terminated you should see a SQL Server error 18210 which references nested [OS error 995](/windows/win32/debug/system-error-codes--500-999-)such as below:
 
     2022-05-29 15:55:42.89 Backup      Error: 18210, Severity: 16, State: 1.
     2022-05-29 15:55:42.89 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}2'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
@@ -36,19 +36,31 @@ When performing a VDI backup in SQL Server (which may be from SQLWriter or from 
     2022-05-29 15:55:42.91 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}4'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
     2022-05-29 15:55:42.91 Backup      Error: 3041, Severity: 16, State: 1.
 
-Both errors are helpful in that you get a timestamp of when a backup failed. However, it does NOT give meaningful information as to root cause. Once you find the time frame of the first 18210 error with the nested OS error 995, you have a reference data point to review your backup application logs which should provide further root cause information.
+Both errors are helpful in that you get a timestamp of when a backup failed. However, it does NOT give meaningful information as to root cause as these errors indicate the backup operation is aborting due to another error. Once you find the time frame of the first 18210 error with the nested OS error 995, you have a reference data point to review your backup application logs which should provide further root cause information.
 
 ## Cause
 
 While the cause can be varied, ultimately the error is due to a failed IO submission to the Operating System. Some example causes are below:
 
-1. Backup virtual device IO failure.
-1. Failure in freeing a buffer.
-1. Delete file, read file, or write file failure.
+    1. Backup virtual device IO failure.
+    1. Delete file, read file, or write file failure.
+    1. Failure in freeing a buffer.
 
  
 ## User action  
 
-Since the most common reason for an 18210 error is a VDI backup failure, the best starting point is to identify the component/service invoking VDI and checking the application log for that corresponding application. Other logs to check include the application and system event logs, as well as SQL Server error log for the isolated time frame.
+Since the most common reason for an 18210 error is a VDI backup failure, the best starting point is to identify the component/service invoking VDI and checking the application log for that corresponding application. Some data points to check:
 
-Also check for system issues such as low system memory, filter drivers locking a file (antivirus), disk health, and data corruption.
+1. Most importantly, the backup application logs
+1. Windows Application Event Log
+1. Windows System Event Log
+1. If the backup is being invoked by SQLWriter, review [SQL Server VSS Writer logging](../backup-restore/sql-server-vss-writer-logging.md) and troubleshoot accordingly.
+1. Attempt to narrow the backup issue such as if the issue is specific to a given database and is reproducible? Does issue happen at a repeated time frame or interval?
+1. Does running a VDI backup through [SQL Server Backup Simulator](https://github.com/microsoft/tigertoolbox/releases/tag/v2.0.0) also reproduce the error?
+1. Check for system issues such as low system memory
+1. Check for filter drivers locking a file (antivirus)
+1. Check disk health
+1. For advanced troubleshooting:
+    1. Enable [Trace Flag 3605](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) for additional logging to the SQL Server Error Log prior to encountering the issue. Do not keep this TF on long-term.
+    1. When issue is reproduced, capture [Process Monitor](/sysinternals/downloads/procmon)
+    1. Capture [Extended Events](../extended-events/extended-events.md) or [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md) when the reproducing the error.

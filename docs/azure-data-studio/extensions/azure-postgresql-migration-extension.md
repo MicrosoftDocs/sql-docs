@@ -116,7 +116,10 @@ Select automatic performance data collection to receive the target recommendatio
 Fill out the fields in the SKU recommendation parameters as follows.
 
 - Time duration - enter the amount of time you want to run the assessment.
-  - Depending on the submitted time, the process is broken into cycles.
+
+   > [!NOTE]
+   > It is recommended that you perform the assessment data collection during peak workload time and data collection duration should be 24 hours. The assessment wizard needs to be open while the data collection is in progress.
+
 - Scale factor - Enter values **1-5**, to expand during peak performance times.
 - Percentage Utilization - The percentile value of the performance sample set to be considered for sizing the Azure target.
 

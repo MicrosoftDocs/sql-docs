@@ -25,7 +25,7 @@ This tutorial teaches you how to develop an application that issues database que
 
 ## Prerequisites
 
-Make sure you've completed one of the [Getting started with Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) tutorials before following the below steps in this tutorial.
+Make sure you've completed one of the [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) tutorials before following the below steps in this tutorial.
 
 You'll also need Visual Studio (version 2022 is recommended) - download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development machine must run .NET Framework 4.7.2 or later.
 
@@ -72,7 +72,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 
 8. Inside the `<configuration>` section, below `</configSections>`, add a new section, which specifies an enclave provider to be used to attest and interact with your server-side secure enclave.
 
-   1. If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS) (you're using the database from [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), add the below section.
+   1. If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS) (you're using the database from [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), add the below section.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>

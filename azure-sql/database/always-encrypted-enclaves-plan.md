@@ -72,4 +72,4 @@ In production environments (handling real sensitive data), it's important your o
 
 ## See also
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves](always-encrypted-enclaves-getting-started.md)
+- [Getting started using Always Encrypted with secure enclaves](always-encrypted-enclaves-getting-started.md)

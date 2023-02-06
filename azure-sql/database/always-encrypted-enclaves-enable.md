@@ -99,4 +99,4 @@ az sql db update -g ResourceGroup01 `
 
 ## See also
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves](always-encrypted-enclaves-getting-started.md)
+- [Getting started using Always Encrypted with secure enclaves](always-encrypted-enclaves-getting-started.md)

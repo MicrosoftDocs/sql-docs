@@ -19,7 +19,7 @@ ms.author: jaszymas
 
 For tutorials that show you how to quickly get started with Always Encrypted with secure enclaves, see:
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 
 ## Set up the secure enclave and attestation
 

@@ -112,4 +112,4 @@ For more information, see [Create and manage an attestation provider](/azure/att
 
 ## See also
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves](always-encrypted-enclaves-getting-started.md)
+- [Getting started using Always Encrypted with secure enclaves](always-encrypted-enclaves-getting-started.md)

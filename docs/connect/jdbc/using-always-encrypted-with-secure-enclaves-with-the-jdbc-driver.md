@@ -49,7 +49,7 @@ Users must enable **columnEncryptionSetting** and correctly set **both** of the 
 
 ## Working with secure enclaves
 
-When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries that trigger enclave computations. You can find the database and table setup in [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started).
+When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries that trigger enclave computations. You can find the database and table setup in [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started using Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started).
 
 Rich queries will trigger enclave computations:
 

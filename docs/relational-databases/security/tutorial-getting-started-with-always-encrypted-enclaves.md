@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server"
+title: "Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server"
 description: This tutorial teaches you how to create a basic environment for Always Encrypted with secure enclaves in SQL Server, using virtualization based security (VBS) enclaves and no enclave attestation. You'll also learn how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 ms.custom:
 - seo-lt-2019
@@ -16,7 +16,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15"
 ---
-# Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server
+# Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server
 
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 

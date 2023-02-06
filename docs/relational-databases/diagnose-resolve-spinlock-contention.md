@@ -78,7 +78,7 @@ A combination of several of the following symptoms may indicate spinlock content
 
 * A high number of spins and backoffs are observed for a particular spinlock type.
 
-* The system is experiencing heavy CPU utilization or spikes in CPU consumption. In heavy CPU scenarios, you see high signal waits on SOS_SCHEDULER_YEILD (reported by the DMV *sys.dm_os_wait_stats*).
+* The system is experiencing heavy CPU utilization or spikes in CPU consumption. In heavy CPU scenarios, you see high signal waits on SOS_SCHEDULER_YIELD (reported by the DMV *sys.dm_os_wait_stats*).
 
 * The system is experiencing high concurrency.
 

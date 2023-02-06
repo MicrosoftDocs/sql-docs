@@ -21,6 +21,8 @@ An Azure Arc-enabled instance of SQL Server is an instance on-premises or in a c
 
 Before you can Arc-enable an instance of SQL Server you need to:
 
+
+
 - Have an Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/free/).
 - [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites)
 - [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements)
@@ -30,7 +32,7 @@ Before you can Arc-enable an instance of SQL Server you need to:
 
   For instructions, see [Register resource providers](#register-resource-providers).
 
-- To onborad SQL Server to Arc-enabled SQL Server, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
+- To onboard SQL Server to Arc-enabled SQL Server, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
   - `Microsoft.AzureArcData/register/action`
   - `Microsoft.HybridCompute/machines/extensions/read`
   - `Microsoft.HybridCompute/machines/extensions/write`
@@ -96,7 +98,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 ## Azure subscription and service limits
 
-Before configuring your SQL server instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
+The number of Arc-enabled SQL Server or database resources is limited to 800 resources per resource group. Before configuring your SQL server instances and machines with Azure Arc review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
 
 ## Supported Azure regions
 

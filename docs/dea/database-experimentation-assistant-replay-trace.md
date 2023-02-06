@@ -1,8 +1,8 @@
 ---
 title: Replay a trace for SQL Server upgrades
 description: Learn how to replay a captured trace with Database Experimentation Assistant for SQL Server upgrades.
-author: pochiraju
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: mathoma
 ms.date: 12/12/2019
 ms.service: sql

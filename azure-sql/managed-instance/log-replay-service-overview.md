@@ -23,9 +23,9 @@ To get started, review [Migrate databases from SQL Server to Azure SQL Managed I
 
 ## When to use Log Replay Service
 
-[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance) and LRS use the same underlying migration technology and APIs. LRS further enables complex custom migrations and hybrid architectures between on-premises SQL Server instances and SQL Managed Instance deployments.
+[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance), the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension), and LRS all use the same underlying migration technology and APIs. LRS further enables complex custom migrations and hybrid architectures between on-premises SQL Server instances and SQL Managed Instance deployments.
 
-When you can't use Azure Database Migration Service for migration, you can use LRS directly with PowerShell, Azure CLI cmdlets, or APIs to manually build and orchestrate database migrations to SQL Managed Instance deployments. 
+When you can't use Azure Database Migration Service, or the Azure SQL extension for migration, you can use LRS directly with PowerShell, Azure CLI cmdlets, or APIs to manually build and orchestrate database migrations to SQL Managed Instance deployments. 
 
 Consider using LRS in the following cases, when:
 
@@ -33,6 +33,7 @@ Consider using LRS in the following cases, when:
 - There's little tolerance for downtime during migration cutover.
 - The Database Migration Service executable file can't be installed to your environment.
 - The Database Migration Service executable file doesn't have file access to your database backups.
+- The Azure SQL migration extension can't be installed to your environment, or it can't access your database backups. 
 - No access to the host operating system is available, or there are no administrator privileges.
 - You can't open network ports from your environment to Azure.
 - Network throttling, or proxy blocking issues, exist in your environment.
@@ -48,7 +49,7 @@ The following sources are supported:
 - Cloud SQL for SQL Server - GCP (Google Cloud Platform) 
 
 > [!NOTE]
-> - We recommend that you automate the migration of databases from SQL Server to Azure SQL Managed Instance by using Database Migration Service. Consider using LRS to orchestrate migrations when Database Migration Service doesn't fully support your scenarios.
+> - We recommend that you automate the migration of databases from SQL Server to Azure SQL Managed Instance by using the Azure SQL migration extension for Azure Data Studio. Consider using LRS to orchestrate migrations when the Azure SQL migration extension doesn't fully support your scenarios.
 > - LRS is the only method to restore differential backups on managed instances. It isn't possible to manually restore differential backups on managed instances or to manually set the `NORECOVERY` mode by using T-SQL.
 >
 

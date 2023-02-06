@@ -5,8 +5,8 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: migration-guide
 ms.topic: how-to
-author: MashaMSFT
-ms.author: mathoma
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: randolphwest
 ---
 

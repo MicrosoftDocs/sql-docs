@@ -84,7 +84,6 @@ In this article you can find a content reference of various guides, scripts, and
 
 - [Create and manage](elastic-jobs-powershell-create.md) Elastic Database Jobs using PowerShell.
 - [Create and manage](elastic-jobs-tsql-create-manage.md) Elastic Database Jobs using Transact-SQL.
-- [Migrate from old Elastic job](elastic-jobs-migrate.md).
 
 ## Database sharding
 

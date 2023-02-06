@@ -96,7 +96,7 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 |---|---|---|---|
 |**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several high availability secondary replicas, and provides the highest I/O performance. | The widest variety of workloads, including those with highly scalable storage and read-scale requirements.  Offers higher resilience to failures by allowing configuration of more than one high availability secondary replica. |
 | **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
-| **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per compute node)|
+| **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per instance) |
 | **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
 | **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
 | **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>4</sup>| 
@@ -162,9 +162,7 @@ The key reasons why you should choose Business Critical service tier instead of 
 
 ### Hyperscale
 
-The Hyperscale service tier in Azure SQL Database is a highly scalable storage and compute performance tier that uses the Azure architecture to scale out the storage and compute resources for an Azure SQL Database substantially beyond the limits available for the General Purpose and Business Critical service tiers.
-
-The Hyperscale service tier in Azure SQL Database supports databases up to 100 TB in database size, has a higher overall performance, and supports both rapid scale out, and scale up. 
+The Hyperscale service tier is suitable for all workload types. Its cloud native architecture provides independently scalable compute and storage to support the widest variety of traditional and modern applications. Compute and storage resources in Hyperscale substantially exceed the resources available in the General Purpose and Business Critical tiers.
 
 To learn more, review [Hyperscale service tier for Azure SQL Database](service-tier-hyperscale.md).
 
@@ -173,6 +171,7 @@ To learn more, review [Hyperscale service tier for Azure SQL Database](service-t
 The Hyperscale service tier removes many of the practical limits traditionally seen in cloud databases. Where most other databases are limited by the resources available in a single node, databases in the Hyperscale service tier have no such limits. With its flexible storage architecture, a Hyperscale database grows as needed - and you're billed only for the storage capacity you use.
 
 Besides its advanced scaling capabilities, Hyperscale is a great option for any workload, not just for large databases. With Hyperscale, you can:
+
 - Achieve **high resiliency and fast failure recovery** while controlling cost, by choosing the number of high availability replicas from 0 to 4.
 - Improve **high availability** by enabling zone redundancy for compute and storage.
 - Achieve **low I/O latency** (1-2 milliseconds on average) for the frequently accessed part of your database. For smaller databases, this may apply to the entire database.

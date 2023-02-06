@@ -60,12 +60,11 @@ DBCC SHRINKDATABASE
 ]
 
 < wait_at_low_priority_option_list > ::=  
-	<wait_at_low_priority_option>
-	| <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
+    <wait_at_low_priority_option>
+    | <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
 
 < wait_at_low_priority_option > ::=
-	MAX_DURATION = { 'timeout' } [ MINUTES ]
-    | , ABORT_AFTER_WAIT = { SELF | BLOCKERS }
+  ABORT_AFTER_WAIT = { SELF | BLOCKERS }
 ```  
 
 
@@ -175,6 +174,8 @@ Specify either the `NOTRUNCATE` option or the `TRUNCATEONLY` option when you run
 The shrunk database doesn't have to be in single user mode. Other users can be working in the database when it's shrunk, including system databases.
 
 You can't shrink a database while the database is being backed up. Conversely, you can't back up a database while a shrink operation on the database is in process.
+
+When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock request will wait with low priority when executing the command for 1 minute. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed.
 
 ## How DBCC SHRINKDATABASE works
 

@@ -26,9 +26,10 @@ ms.author: jaferebe
 |Symbolic Name|STRMIO_IOFAILED|  
 |Message Text|%s: %s failure on backup device '%s'. Operating system error %s.|  
   
+
 ## Explanation  
 
-When performing a [Virtual device interface (VDI) backup](../backup-restore/vdi-reference/reference-virtual-device-interface.md) in SQL Server (which may be from [SQLWriter](../../database-engine/configure-windows/sql-writer-service.md) or from some other application), if the backup is terminated you should see a SQL Server error 18210 which references nested [OS error 995](/windows/win32/debug/system-error-codes--500-999-)such as below:
+When a [Virtual device interface (VDI) backup](../backup-restore/vdi-reference/reference-virtual-device-interface.md) is terminated in SQL Server, you'll see SQL Server error 18210 with nested [OS error 995](/windows/win32/debug/system-error-codes--500-999-) in the SQL Server Error Log. VDI may be invoked from a third party application or from [SQLWriter](../../database-engine/configure-windows/sql-writer-service.md). An example:
 
     2022-05-29 15:55:42.89 Backup      Error: 18210, Severity: 16, State: 1.
     2022-05-29 15:55:42.89 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}2'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
@@ -36,17 +37,18 @@ When performing a [Virtual device interface (VDI) backup](../backup-restore/vdi-
     2022-05-29 15:55:42.91 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}4'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
     2022-05-29 15:55:42.91 Backup      Error: 3041, Severity: 16, State: 1.
 
-Both errors are helpful in that you get a timestamp of when a backup failed. However, it does NOT give meaningful information as to root cause as these errors indicate the backup operation is aborting due to another error. Once you find the time frame of the first 18210 error with the nested OS error 995, you have a reference data point to review your backup application logs which should provide further root cause information.
+Both errors are helpful in that you get a timestamp of when a backup failed. However, it does NOT give meaningful information as to root cause as these errors indicate the backup operation is aborting due to another error. Once you find the time frame of the first 18210 error with the nested OS error 995, you have a reference data point to review your backup application logs, which may provide further root cause information.
+
 
 ## Cause
 
-While the cause can be varied, ultimately the error is due to a failed IO submission to the Operating System. Some example causes are below:
+While the cause can be varied, ultimately the error is due to a failed IO submission to the Operating System. Some examples:
 
     1. Backup virtual device IO failure.
     1. Delete file, read file, or write file failure.
     1. Failure in freeing a buffer.
 
- 
+
 ## User action  
 
 Since the most common reason for an 18210 error is a VDI backup failure, the best starting point is to identify the component/service invoking VDI and checking the application log for that corresponding application. Some data points to check:
@@ -61,6 +63,6 @@ Since the most common reason for an 18210 error is a VDI backup failure, the bes
 1. Check for filter drivers locking a file (antivirus)
 1. Check disk health
 1. For advanced troubleshooting:
-    1. Enable [Trace Flag 3605](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) for additional logging to the SQL Server Error Log prior to encountering the issue. Do not keep this TF on long-term.
+    1. Enable [Trace Flag 3605](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) for more logging to the SQL Server Error Log prior to encountering the issue. Avoid keeping this TF enabled long-term.
     1. When issue is reproduced, capture [Process Monitor](/sysinternals/downloads/procmon)
     1. Capture [Extended Events](../extended-events/extended-events.md) or [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md) when the reproducing the error.

@@ -27,7 +27,7 @@ You set up a dynamic data masking policy in the Azure portal by selecting the **
 
 ### Dynamic data masking policy
 
-* **SQL users excluded from masking** - A set of SQL users or Azure AD identities that get unmasked data in the SQL query results. Users with administrator privileges are always excluded from masking, and see the original data without any mask.
+* **SQL users excluded from masking** - A set of SQL users or Azure AD identities that get unmasked data in the SQL query results. Users with administrative rights like Server Admin, AAD Admin or db_owner role could view the original data without any mask. (Note: It also applies to sysadmin role in SQL Server) 
 * **Masking rules** - A set of rules that define the designated fields to be masked and the masking function that is used. The designated fields can be defined using a database schema name, table name, and column name.
 * **Masking functions** - A set of methods that control the exposure of data for different scenarios.
 
@@ -100,7 +100,7 @@ To learn more about permissions when using dynamic data masking with T-SQL comma
 
 ## Granular permission example
 
-Prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke UNMASK permission at the database-level, schema-level, table-level or at the column-level to a user. Using UNMASK permission provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
+Prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke UNMASK permission at the database-level, schema-level, table-level or at the column-level to a database user, AAD identity, AAD group or database role. Using UNMASK permission provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
 
 1. Create schema to contain user tables
 

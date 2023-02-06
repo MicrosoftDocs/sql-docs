@@ -60,7 +60,7 @@ If you are not connected to the database specified in `DATABASEPROPERTYEX`, the 
 
 Optimized locking builds on other database features:
 
-- Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery.md) to be enabled on the database.
+- Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
 - For the most benefit from optimized locking, [read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true#read_committed_snapshot--on--off--1) should be enabled for the database.
 
 Both ADR and RCSI are enabled by default in [!INCLUDE[asdb](../../includes/ssazure_md.md)]. To verify that these options are enabled for your current database, use the following T-SQL query:
@@ -281,5 +281,5 @@ Use the following steps to create a new support request from the Azure portal fo
 - [Transaction locking and row versioning guide](../sql-server-transaction-locking-and-row-versioning-guide.md)
 - [Read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true#read_committed_snapshot--on--off--1)
 - [sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)
-- [Accelerated database recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery.md)
+- [Accelerated database recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery)
 - [Accelerated database recovery](../accelerated-database-recovery-concepts.md)

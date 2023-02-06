@@ -123,9 +123,9 @@ Msg 3013, Level 16, State 1, Line 62
 BACKUP DATABASE is terminating abnormally.
 ```
 
-### Backup stripe exceeding 100,000 MB
+### Backup stripe exceeding 100 GB
 
-Currently, the size of a single backup file created by customers in S3-compatible object storage during a backup cannot exceed 100,000 MB per file, using default `MAXTRANSFERSIZE`. If the backup stripe goes beyond 100,000 MB, the backup T-SQL syntax statement will throw the following error message:
+Currently, the size of a single backup file created by customers in S3-compatible object storage during a backup cannot exceed 100 GB per file, using default `MAXTRANSFERSIZE`. If the backup stripe goes beyond 100 GB, the backup T-SQL syntax statement will throw the following error message:
 
 ```
 Msg 3202, Level 16, State 1, Line 161
@@ -134,7 +134,7 @@ Msg 3013, Level 16, State 1, Line 161
 BACKUP DATABASE is terminating abnormally.
 ```
 
-Current guidance for user's backup large databases is use multiple stripes for the database backup, each of allowable sizes less than or equal to 100,000 MB. The BACKUP T-SQL supports striping up to 64 URLs, for example:
+Current guidance for user's backup large databases is use multiple stripes for the database backup, each of allowable sizes less than or equal to 100 GB. The BACKUP T-SQL supports striping up to 64 URLs, for example:
 
 ```sql
 BACKUP DATABASE AdventureWorks2019

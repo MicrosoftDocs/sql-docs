@@ -3,7 +3,7 @@ title: "sys.dm_hadr_database_replica_states (Transact-SQL)"
 description: sys.dm_hadr_database_replica_states (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/26/2018"
+ms.date: "02/03/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,7 +58,7 @@ ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 |**log_send_queue_size**|**bigint**|Amount of log records of the primary database that has not been sent to the secondary databases, in kilobytes (KB).|  
 |**log_send_rate**|**bigint**|Average rate at which primary replica instance sent data during last active period, in kilobytes (KB)/second.|  
 |**redo_queue_size**|**bigint**|Amount of log records in the log files of the secondary replica that has not yet been redone, in kilobytes (KB).|  
-|**redo_rate**|**bigint**|Average Rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second.|  
+|**redo_rate**|**bigint**|Average rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second.<br /><br />**redo_rate** is calculated by dividing the total log bytes redone since database engine startup by the time span when redo was actively running, rather than by the elapsed time. Because redo may not be running continuously, resulting value may be different (higher) than the value of `Database Replica:Redone Bytes/sec` performance counter.|  
 |**filestream_send_rate**|**bigint**|The rate at which the FILESTREAM files are shipped to the secondary replica, in kilobytes (KB)/second.|  
 |**end_of_log_lsn**|**numeric(25,0)**|Local end of log LSN. Actual LSN corresponding to the last log record in the log cache on the primary and secondary databases. On the primary replica, the secondary rows reflect the end of log LSN from the latest progress messages that the secondary replicas have sent to the primary replica.<br /><br /> **end_of_log_lsn** reflects a log-block ID padded with zeroes. It is not an actual log sequence number. For more information, see [Understanding the LSN Column Values](#LSNcolumns), later in this topic.|  
 |**last_commit_lsn**|**Numeric(25,0)**|Actual log sequence number corresponding to the last commit record in the transaction log.<br /><br /> On the primary database, this corresponds to the last commit record processed. Rows for secondary databases show the log sequence number that the secondary replica has sent to the primary replica.<br /><br /> On the secondary replica, this is the last commit record that was redone.|  

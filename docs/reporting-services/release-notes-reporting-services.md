@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 12/5/2022
+ms.date: 02/06/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 
@@ -86,6 +86,17 @@ Release Candidate 0 (RC0)
 ::: moniker-end
 
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8434.2956, 2023/02/06
+*(Product Version: 15.0.1102.1047)*
+- New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
+- Using of single quote in item names is enabled.
+- Fixed issue with exporting Arabic characters with Calibri font to PDF.
+- Fixed layout misalignment in vertical writing mode.
+- Fixed formatting loss of empty cells exported to Word.
+- Fixed problem with row height in matrix after exporting to PDF
+- Changes to telemetry configuration and logging
+- Security fixes
 
 ## 15.0.8270.42049, 2022/08/31
 *(Product Version: 15.0.1102.1002)*

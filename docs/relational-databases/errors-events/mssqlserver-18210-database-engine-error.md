@@ -31,7 +31,7 @@ ms.author: ramakoni
 
 When a [Virtual device interface (VDI) backup](../backup-restore/vdi-reference/reference-virtual-device-interface.md) is terminated in SQL Server, you'll see SQL Server error 18210 in the SQL Server Error Log. VDI may be invoked from a third party application or from [SQLWriter](../../database-engine/configure-windows/sql-writer-service.md). An example:
 
- ```dotnetcli
+ ```Output
  2022-05-29 15:55:42.89 Backup      Error: 18210, Severity: 16, State: 1.
  2022-05-29 15:55:42.89 Backup      BackupIoRequest::ReportIoError: write failure on backup device '{AA4B3232-1881-4F09-9DBA-0983D553BF46}2'. Operating system error 995(The I/O operation has been aborted because of either a thread exit or an application request.).
  2022-05-29 15:55:42.91 Backup      Error: 18210, Severity: 16, State: 1.
@@ -39,7 +39,7 @@ When a [Virtual device interface (VDI) backup](../backup-restore/vdi-reference/r
  2022-05-29 15:55:42.91 Backup      Error: 3041, Severity: 16, State: 1.
  ```
 
-It is common to see SQL Server Error 18210 with nested [OS error 995](/windows/win32/debug/system-error-codes--500-999-). Both errors are helpful in that you get a timestamp of when a backup failed. However, it does not give meaningful information as to root cause as these errors indicate the backup operation is aborting due to another error. Once you find the time frame of the first occurrence of the 18210 error, you then have a reference timestamp to review your backup application logs which may provide further root cause information.
+It's common to see SQL Server Error 18210 with nested [OS error 995](/windows/win32/debug/system-error-codes--500-999-). Both errors are helpful in that you get a timestamp of when a backup failed. However, it doesn't give meaningful information as to root cause as these errors indicate the backup operation is aborting due to another error. Once you find the time frame of the first occurrence of the 18210 error, you then have a reference timestamp to review your backup application logs that may provide further root cause information.
 
 
 ## Cause

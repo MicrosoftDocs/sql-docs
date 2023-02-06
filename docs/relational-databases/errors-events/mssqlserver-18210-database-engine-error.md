@@ -44,9 +44,9 @@ Both errors are helpful in that you get a timestamp of when a backup failed. How
 
 While the cause can be varied, ultimately the error is due to a failed IO submission to the Operating System. Some examples:
 
- 1. Backup virtual device IO failure.
- 1. Delete file, read file, or write file failure.
- 1. Failure in freeing a buffer.
+1. Backup virtual device IO failure.
+1. Delete file, read file, or write file failure.
+1. Failure in freeing a buffer.
 
 
 ## User action  

@@ -65,11 +65,6 @@ DBCC SHRINKDATABASE
 
 < wait_at_low_priority_option > ::=
   ABORT_AFTER_WAIT = { SELF | BLOCKERS }
-```  
-
-
-< wait_at_low_priority_option_list > ::=
- ABORT_AFTER_WAIT = { SELF | BLOCKERS }
 ```
 
 Syntax for Azure Synapse Analytics:

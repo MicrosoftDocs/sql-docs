@@ -23,7 +23,7 @@ The following table highlights each method so that you can determine which works
 | Interactively | Manually connect the SQL Server on a single physical or virtual machine that is not currently connected to Azure Arc. [Connect your SQL Server to Azure Arc](connect.md)|
 | Interactively | [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md) |
 | At scale | [Connect SQL Servers at scale using Azure policy](connect-at-scale.md)|
-| At scale | [Connect SQL Server at scale usng script](connect-at-scale-script.md)|
+| At scale | [Connect SQL Server at scale using script](connect-at-scale-script.md)|
 
 
 Be sure to review the basic [prerequisites](prerequisites.md) before you deploy the agent, as well as any specific requirements listed in the steps for the onboarding method you choose.

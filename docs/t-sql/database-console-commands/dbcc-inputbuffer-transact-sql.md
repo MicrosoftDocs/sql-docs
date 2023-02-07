@@ -1,4 +1,5 @@
-[InputbufferChanges.docx](https://github.com/MicrosoftDocs/sql-docs/files/10672254/InputbufferChanges.docx)
+<!-- [InputbufferChanges.docx](https://github.com/MicrosoftDocs/sql-docs/files/10672254/InputbufferChanges.docx) -->
+
 ---
 title: "DBCC INPUTBUFFER (Transact-SQL)"
 description: DBCC INPUTBUFFER Displays the last statement sent from a client to an instance of SQL Server.

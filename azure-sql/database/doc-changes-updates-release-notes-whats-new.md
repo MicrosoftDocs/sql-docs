@@ -81,7 +81,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 
 | Changes | Details |
 | --- | --- |
-| Optimized locking GA | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Currently, optimized locking is available only in select regions. Review [Optimized locking](/sql/relational-databases/performance/optimized-locking) to learn more. |
+| **Optimized locking GA** | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Currently, optimized locking is available only in select regions. This feature is generally available. Review [Optimized locking](/sql/relational-databases/performance/optimized-locking) to learn more. |
 
 ### 2022
 

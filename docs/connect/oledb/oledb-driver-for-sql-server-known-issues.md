@@ -25,8 +25,8 @@ The above errors can be caused by the installation of version 19.2.0 of the OLE 
 
 To resolve these issues, the user needs to:
 1. Delete the `adal.dll` file from the following system folders:
-- `%windir%\System32\adal.dll`
-- `%windir%\SysWOW64\adal.dll` (64-bit version of Windows only)
+    - `%windir%\System32\adal.dll`
+    - `%windir%\SysWOW64\adal.dll` (64-bit version of Windows only)
 2. Install the OLE DB Driver version 19.3 or higher. This step will install ADAL 3.4.1 with the correct bitness.
 
 ## See also

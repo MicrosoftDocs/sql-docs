@@ -649,8 +649,6 @@
           href: database/elastic-jobs-powershell-create.md
         - name: Create and manage (T-SQL)
           href: database/elastic-jobs-tsql-create-manage.md
-        - name: Migrate (from old Elastic jobs)
-          href: database/elastic-jobs-migrate.md
 
     - name: Secure 
       items: 
@@ -735,7 +733,7 @@
       - name: Configure the max degree of parallelism (MAXDOP)
         href: database/configure-max-degree-of-parallelism.md
       - name: Optimized locking
-        href: /sql/relational-databases/performance/optimized-locking.md
+        href: /sql/relational-databases/performance/optimized-locking
 
     - name: Load and move data 
       items: 

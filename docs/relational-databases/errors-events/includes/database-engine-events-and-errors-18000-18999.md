@@ -22,7 +22,7 @@ ms.topic: include
 |    18113    |    10    |    Yes    |    SQL Server shutdown after verifying system indexes.    |
 |    18124    |    10    |    Yes    |    The default collation was successfully changed.    |
 |    18204    |    16    |    Yes    |    %s: Backup device '%s' failed to %s. Operating system error %s.    |
-|    18210    |    16    |    Yes    |    %s: %s failure on backup device '%s'. Operating system error %s.    |
+|    [18210](../mssqlserver-18210-database-engine-error.md)    |    16    |    Yes    |    %s: %s failure on backup device '%s'. Operating system error %s.    |
 |    18225    |    10    |    Yes    |    Tape '%s' (family ID %d, sequence %d, media_set_guid %s) is mounted on tape drive '%s'. This is an informational message only. No user action required    |
 |    18226    |    10    |    Yes    |    Tape mount is being requested on drive '%s'. Expected volume has (Family ID %d, sequence %d).    |
 |    18227    |    10    |    Yes    |    Unnamed tape (family ID %d, sequence %d, media_set_guid %s) is mounted on tape drive '%s'. This is an informational message only. No user action required.    |

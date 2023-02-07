@@ -11498,6 +11498,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17890-database-engine-error.md
         - name: 17892
           href: relational-databases/errors-events/mssqlserver-17892-database-engine-error.md
+        - name: 18210
+          href: relational-databases/errors-events/mssqlserver-18210-database-engine-error.md
         - name: 18264
           href: relational-databases/errors-events/mssqlserver-18264-database-engine-error.md
         - name: 18452

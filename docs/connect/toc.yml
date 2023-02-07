@@ -5256,7 +5256,7 @@
     href: ../connect/oledb/download-oledb-driver-for-sql-server.md
   - name: Release notes
     href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-  - name: Known Issues
+  - name: Known issues
     href: ../connect/oledb/oledb-driver-for-sql-server-known-issues.md
   - name: MSOLEDBSQL major version differences
     href: ../connect/oledb/major-version-differences.md

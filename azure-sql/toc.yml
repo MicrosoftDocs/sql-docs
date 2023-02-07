@@ -641,8 +641,6 @@
           href: database/elastic-jobs-powershell-create.md
         - name: Create and manage (T-SQL)
           href: database/elastic-jobs-tsql-create-manage.md
-        - name: Migrate (from old Elastic jobs)
-          href: database/elastic-jobs-migrate.md
 
     - name: Secure 
       items: 

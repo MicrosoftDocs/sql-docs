@@ -93,22 +93,8 @@ Starting with SQL Server 2022, you can connect to SQL Server using one of the fo
 - Azure AD Universal with Multi-Factor Authentication
 - Azure Active Directory access token 
 
-Using Azure AD with SQL Server on Azure VMs is currently in preview. 
+To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-with-sql-vm.md). Using Azure AD authentication with SQL Server on Azure VMs is currently in preview. 
 
-To enable Azure AD authentication, navigate to your [SQL virtual machines resource](manage-sql-vm-portal.md#security-configuration) in the Azure portal, select **Security Configuration** under **Settings** and then enable Azure AD authentication. Choose the type of identity you want to use to connect to your SQL Server instance, and then, if prompted, select the identity you want to use to authenticate to your instance. 
-
-Using Azure AD authentication with SQL Server on Azure VMs has the following prerequisites: 
-
-- Use SQL Server 2022. 
-- Register SQL VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md). 
-- The identity you choose to authenticate to SQL Server has either the **Azure AD Directory Readers role** permission or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
-
-Consider the following limitations
-
-- Once Azure AD authentication is enabled, there is no way to disable it by using the Azure portal. 
-- Currently, enabling Azure AD authentication is only possible through the Azure portal. 
-- Currently, Azure AD authentication is only available to SQL Server VMs deployed to the public cloud. 
-- Currently, Authenticating to SQL VM through AAD authentication using [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) is not supported.
 
 
 ## Azure Advisor 

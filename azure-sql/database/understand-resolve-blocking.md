@@ -73,7 +73,7 @@ Optimized locking is a new Database Engine feature drastically reduces lock memo
 
 This article currently applies to the behavior of the Database Engine without optimized locking.
 
-For more information and to learn where optimized locking is available, see [Optimized locking](performance/optimized-locking.md).
+For more information and to learn where optimized locking is available, see [Optimized locking](/sql/relational-databases/performance/optimized-locking).
 
 ## Applications and blocking
 

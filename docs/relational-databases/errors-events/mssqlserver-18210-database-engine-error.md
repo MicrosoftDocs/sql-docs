@@ -39,7 +39,7 @@ When a [Virtual device interface (VDI) backup](../backup-restore/vdi-reference/r
  2022-05-29 15:55:42.91 Backup      Error: 3041, Severity: 16, State: 1.
  ```
 
-It's common to see SQL Server Error 18210 with nested [OS error 995](/windows/win32/debug/system-error-codes--500-999-). Both errors are helpful in that you get a timestamp of when a backup failed. However, it doesn't give meaningful information as to root cause as these errors indicate the backup operation is aborting due to another error. Once you find the time frame of the first occurrence of the 18210 error, you then have a reference timestamp to review your backup application logs that may provide further root cause information.
+It's common to see SQL Server Error 18210 with nested [OS error 995](/windows/win32/debug/system-error-codes--500-999-). The most common reason for OS error 995 is that the VDI application has aborted the backup process. Both errors are helpful in that you get a timestamp of when a backup failed. However, it doesn't give meaningful information as to root cause as these errors indicate the backup operation is aborting due to another error. Once you find the time frame of the first occurrence of the 18210 error, you then have a reference timestamp to review your backup application logs that may provide further root cause information.
 
 
 ## Cause
@@ -47,7 +47,7 @@ It's common to see SQL Server Error 18210 with nested [OS error 995](/windows/wi
 While the cause can be varied, ultimately the error is due to a failed IO submission to the Operating System. Some examples:
 
 1. Backup virtual device IO failure.
-1. A file-related operation failure in one or more of the following I/O API functions ([DeleteFile](/windows/win32/api/fileapi/nf-fileapi-deletefilea) , [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), or [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) .
+1. A file-related operation failure in one or more of the following I/O API functions ([DeleteFile](/windows/win32/api/fileapi/nf-fileapi-deletefilea) , [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), or [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile)).
 1. Failure in freeing a memory buffer.
 
 

@@ -12,7 +12,7 @@ ms.custom: references_regions
 
 # Prerequisites
 
-An Azure Arc-enabled instance of SQL Server is an instance on-premises or in a cloud provider, that is connected to Azure Arc. This article explains those prerequisites.
+An Azure Arc-enabled instance of SQL Server is an instance on-premises or in a cloud provider that is connected to Azure Arc. This article explains those prerequisites.
 
 ## Before you deploy
 

@@ -1,16 +1,16 @@
 ---
-title: "Configure Azure AD authentication"
+title: "Enable Azure AD authentication"
 description: This article teaches you to configure Azure AD authentication for your SQL Server on Azure VM. 
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
-ms.date: 02/15/2023
+ms.date: 02/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: how-to
 ms.custom: 
 ---
-# Configure Azure AD authentication for SQL Server on Azure VMs
+# Enable Azure AD authentication for SQL Server on Azure VMs (Preview)
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 This article teaches you to configure Azure Active Directory (Azure AD) authentication for your SQL Server on Azure Virtual Machine. 
@@ -31,18 +31,20 @@ When enabling a [managed identity](/azure/active-directory/managed-identities-az
 
 ## Prerequisites
 
+To enable Azure AD authentication to  your SQL Server, you need the following prerequisites: 
+
 - Use SQL Server 2022. 
-- Register SQL VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md). 
-- You have an existing **system-assigned** or **user-assigned** managed identity in the same Azure AD tenant as your SQL Server VM. 
+- Register SQL Server VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md). 
+- Have an existing **system-assigned** or **user-assigned** managed identity in the same Azure AD tenant as your SQL Server VM. 
 
 ## Grant permission to the identity
 
-The identity you choose to authenticate to SQL Server has either the **Azure AD Directory Readers role** permission or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
+The identity you choose to authenticate to SQL Server has to have either the **Azure AD Directory Readers role** permission or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
 
-The steps in this section teach you how to add your managed identity to the **Azure AD Directory Readers role**. You need to have Azure AD Global administrator privileges to make changes to the Directory Readers role assignments. If you do not have sufficient permission, work with your Azure AD administrator to grant **Azure AD Directory Readers role** permission to the managed identity you want to use to authenticate to your SQL Server on your Azure VM. 
+The steps in this section teach you how to add your managed identity to the **Azure AD Directory Readers role**. You need to have Azure AD Global administrator privileges to make changes to the Directory Readers role assignments. If you do not have sufficient permission, work with your Azure AD administrator to follow the steps in the section and grant **Azure AD Directory Readers** role permissions to the managed identity you want to use to authenticate to your SQL Server on your Azure VM. 
 
 
-To grant your identity the **Azure AD Directory** role permission, follow these steps: 
+To grant your managed identity the **Azure AD Directory** role permission, follow these steps: 
 
 1. Go to **Azure Active Directory** in the [Azure portal](https://portal.azure.com). 
 1. On the **Azure Active Directory** overview page, choose **Roles and administrators** under **Manage**: 
@@ -87,7 +89,6 @@ Consider the following limitations:
 Review the security best practices for [SQL Server](/sql/relational-databases/security/). 
 
 For other topics related to running SQL Server in Azure VMs, see [SQL Server on Azure Virtual Machines overview](sql-server-on-azure-vm-iaas-what-is-overview.md). If you have questions about SQL Server virtual machines, see the [Frequently asked questions](frequently-asked-questions-faq.yml).
-
 
 To learn more, see the other articles in this best practices series:
 

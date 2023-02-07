@@ -4,7 +4,7 @@ description: This article provides general guidance for securing SQL Server runn
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 10/14/2022
+ms.date: 02/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: conceptual
@@ -93,7 +93,7 @@ Starting with SQL Server 2022, you can connect to SQL Server using one of the fo
 - Azure AD Universal with Multi-Factor Authentication
 - Azure Active Directory access token 
 
-To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-with-sql-vm.md). Using Azure AD authentication with SQL Server on Azure VMs is currently in preview. 
+To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). Using Azure AD authentication with SQL Server on Azure VMs is currently in preview. 
 
 
 

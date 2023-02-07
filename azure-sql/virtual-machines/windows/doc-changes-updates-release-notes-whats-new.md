@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 12/15/2022
+ms.date: 02/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference

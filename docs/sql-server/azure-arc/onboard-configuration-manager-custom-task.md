@@ -3,6 +3,10 @@ title: Connect machines at scale with a Configuration Manager custom task sequen
 description: You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers for Azure Arc-enabled SQL Server.
 ms.date: 01/20/2022
 ms.topic: how-to
+author: pochiraju
+ms.author: rajpo
+ms.reviewer: mikeray, randolphwest
+ms.service: sql
 ---
 
 # Connect machines at scale with a Configuration Manager custom task sequence
@@ -11,17 +15,17 @@ Microsoft Endpoint Configuration Manager facilitates comprehensive management of
 
 You can use a custom task sequence, that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers.
 
-Before you get started, be sure to review the [prerequisites](prerequisites.md) and verify that your subscription and resources meet the requirements. For information about supported regions and other related considerations, see [supported Azure regions](overview.md#supported-regions). Also review our [at-scale planning guide](plan-at-scale-deployment.md) to understand the design and deployment criteria, as well as our management and monitoring recommendations.
+Before you get started, be sure to review the [prerequisites](prerequisites.md) and verify that your subscription and resources meet the requirements. For information about supported regions and other related considerations, see [supported Azure regions](prerequisites.md#supported-regions). Also review our [at-scale planning guide](/azure/azure-arc/servers/plan-at-scale-deployment) to understand the design and deployment criteria, as well as our management and monitoring recommendations.
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
 ## Generate a service principal
 
-Follow the steps to [create a service principal for onboarding at scale](onboard-service-principal.md#create-a-service-principal-for-onboarding-at-scale). Assign the **Azure Connected Machine Onboarding** role to your service principal, and limit the scope of the role to the target Azure landing zone. Make a note of the Service Principal ID and Service Principal Secret, as you'll need these values later.
+Follow the steps to [create a service principal for onboarding at scale](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale). Assign the **Azure Connected Machine Onboarding** role to your service principal, and limit the scope of the role to the target Azure landing zone. Make a note of the Service Principal ID and Service Principal Secret, as you'll need these values later.
 
 ## Download the agent and create the application
 
-First, download the Azure Connected Machine agent package (AzureConnectedMachineAgent.msi) for Windows from the [Microsoft Download Center](https://aka.ms/AzureConnectedMachineAgent). The Azure Connected Machine agent for Windows can be [upgraded to the latest release manually or automatically](manage-agent.md), depending on your requirements. The .msi must be saved in a server share for the custom task sequence.
+First, download the Azure Connected Machine agent package (AzureConnectedMachineAgent.msi) for Windows from the [Microsoft Download Center](https://aka.ms/AzureConnectedMachineAgent). The Azure Connected Machine agent for Windows can be [upgraded to the latest release manually or automatically](/azure/azure-arc/servers/manage-agent), depending on your requirements. The .msi must be saved in a server share for the custom task sequence.
 
 Next, [create an application in Configuration Manager](/mem/configmgr/apps/get-started/create-and-deploy-an-application) using the installed Azure Connected Machine agent package:
 
@@ -87,6 +91,6 @@ To verify that the machines have been successfully connected to Azure Arc, verif
 
 ## Next steps
 
-- Review the [Planning and deployment guide](plan-at-scale-deployment.md) to plan for deploying Azure Arc-enabled servers at any scale and implement centralized management and monitoring.
-- Review connection troubleshooting information in the [Troubleshoot Connected Machine agent guide](troubleshoot-agent-onboard.md).
-- Learn how to manage your machine using [Azure Policy](../../governance/policy/overview.md) for such things as VM [guest configuration](../../governance/machine-configuration/overview.md), verifying that the machine is reporting to the expected Log Analytics workspace, enabling monitoring with [VM insights](../../azure-monitor/vm/vminsights-enable-policy.md), and much more.
+- Review the [Planning and deployment guide](/azure/azure-arc/servers/plan-at-scale-deployment) to plan for deploying Azure Arc-enabled servers at any scale and implement centralized management and monitoring.
+- Review connection troubleshooting information in the [Troubleshoot Connected Machine agent guide](/azure/azure-arc/servers/troubleshoot-agent-onboard).
+- Learn how to manage your machine using [Azure Policy](/azure/governance/policy/overview) for such things as VM [guest configuration](/azure/governance/machine-configuration/overview), verifying that the machine is reporting to the expected Log Analytics workspace, enabling monitoring with [VM insights](/azure/azure-monitor/vm/vminsights-enable-policy.md), and much more.

@@ -100,7 +100,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 The maximum number of resources in a resource group is 800. This limitation applies to Azure Arc-enabled SQL Server instances and databases. Before configuring your SQL server instances and machines with Azure Arc review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
 
-## Supported Azure regions
+## Supported regions
 
 Arc-enabled SQL Server is available in the following regions:
 

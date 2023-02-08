@@ -1,6 +1,6 @@
 ---
-description: "Working with write event log script task"
-title: "Working with write event log script task | Microsoft Docs"
+description: "Work with write event log script task"
+title: This article helps you to configure the Script Task.
 ms.custom: ""
 ms.date: "02/02/2023"
 ms.service: sql

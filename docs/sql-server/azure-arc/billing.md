@@ -114,7 +114,7 @@ License type is a property of Azure extension for SQL Server. Only one instance 
    
 The license type value is shared by all SQL Server instances and for your convenience, it is visible in the overview blade of Arc-enabled SQL Server as shown.
 
-![Overview blade](media/billing/overview-of-sql-server-azure-arc.png)
+![Screenshot of Azure Arc-enabled SQL Server instance configured for pay-as-you-go licensing.](media/billing/overview-of-sql-server-azure-arc.png)
 
 
 ## Modify license type

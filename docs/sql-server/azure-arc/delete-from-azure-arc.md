@@ -9,14 +9,16 @@ ms.date: 02/01/2022 #Required; mm/dd/yyyy format.
 ms.custom: template-how-to-pattern #Required; leave this attribute/value as-is.
 ---
 
+# Delete your Arc-enabled SQL Server resource
+
 This article describes how you can do one of the following tasks:
 
 * Delete an Azure Arc-enabled SQL Server instance from Azure.
 * Restore (or re-enable) an Azure Arc-enabled SQL Server instance after it has been deleted.
 
-## Delete your Arc-enabled SQL Server resource
+## Delete resources from the portal
 
-To delete your Arc-enabled SQL Server resource, go to **Azure Arc > SQL Server**, open the Arc-enabled SQL Server resource for that instance, and select the **Delete** button.
+To delete your Arc-enabled SQL Server resource, go to **Azure Arc** > **SQL Server**, open the Arc-enabled SQL Server resource for that instance, and select the **Delete** button.
 
 > [!IMPORTANT]  
 > Because multiple SQL Server instances could be installed on the same machine, the *Delete* button doesn't uninstall the Azure extension for SQL Server on that machine. To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.

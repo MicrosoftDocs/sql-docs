@@ -10281,8 +10281,6 @@ items:
           items:
           - name: Create for high availability
             href: linux/sql-server-linux-availability-group-ha.md
-          - name: Configure an AG
-            href: linux/sql-server-linux-availability-group-configure-ha.md
           - name: Configure with DH2i
             href: /azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial
           - name: Configure with HPE Serviceguard
@@ -10291,6 +10289,8 @@ items:
             items:
             - name: Pacemaker basics
               href: linux/sql-server-linux-pacemaker-basics.md
+            - name: Configure an AG
+              href: linux/sql-server-linux-availability-group-configure-ha.md
             - name: Configure on RHEL, SLES, and Ubuntu
               href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
             - name: Configure failover

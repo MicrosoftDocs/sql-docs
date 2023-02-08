@@ -97,7 +97,7 @@ SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));
 |For information about|See|  
 |---------------------------|---------|  
 |The encryption hierarchy in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)|  
-|Implementing secure connections|[Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](/sql/database-engine/configure-windows/configure-sql-server-encryption)|  
+|Implementing secure connections|[Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md)|  
 |Encryption functions|[Cryptographic Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)|  
   
  Certificates are software "keys" shared between two servers that enable secure communications by way of strong authentication. You can create and use certificates in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to enhance object and connection security. The following table contains information about how to use certificates with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -132,7 +132,7 @@ Windows Defender Application Control (WDAC) prevents unauthorized code execution
 |For information about|See|  
 |---------------------------|---------|  
 |Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)|  
-|Connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
+|Connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](/sql/tools/sqlcmd/sqlcmd-utility)|  
 |Network configuration and control for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)|  
 |Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Manipulating symmetric keys for a report server|[rskeymgmt Utility &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  

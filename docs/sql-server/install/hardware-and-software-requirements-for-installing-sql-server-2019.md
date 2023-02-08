@@ -205,7 +205,7 @@ For more information on installing [!INCLUDE[ssNoVersion](../../includes/ssnover
 You can get relevant installation media from the following locations: 
   
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
-- [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Most recent cumulative updates](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 Alternatively, you can create an [Azure virtual machine already running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart) though [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on a virtual machine will be slower than running natively because of the overhead of virtualization.
 

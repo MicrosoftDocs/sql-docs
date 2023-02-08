@@ -36,8 +36,7 @@ ORIGINAL_DB_NAME ()
  If the initial database isn't specified, the function returns an empty string.  
   
 ## See Also  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](/sql/tools/sqlcmd/sqlcmd-utility)   
  [osql Utility](../../tools/osql-utility.md)   
  [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
   

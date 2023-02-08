@@ -21,7 +21,7 @@ If the machine with SQL Server is already connected to Azure Arc, to connect the
 
 
 
-The extension runs continuously to detect changes in the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, the extension automatically detects and registers it with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
+
 
 > [!IMPORTANT]  
 >
@@ -79,10 +79,6 @@ Once installed, the Azure extension for SQL Server recognizes all the installed 
 
 The extension will runs continuously to detect changes in the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, the extension automatically detects and registers it with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
 
-
-> [!NOTE]  
-> The specified resource group must match the resource group where the corresponding connected server is registered. Otherwise, the command will fail.
- an
 
 ## Validate your Arc-enabled SQL Server resources
 

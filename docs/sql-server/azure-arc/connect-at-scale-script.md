@@ -11,10 +11,11 @@ ms.topic: conceptual
 
 # Connect SQL Server instances to Azure at scale with a script
 
-This article describes how to connect multiple instances of SQL Server to Azure Arc as a single task. The easiest  way to do that is by using [Azure policy](connect-at-scale.md). Alternatively, you can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using a script.
+This article describes how to connect SQL Servers installed on multiple Windows or Linux machines to Azure ARC as a single task using a script. If the machines are already connected to Azure Arc, use [Azure policy](connect-at-scale-policy.md) to deploy the Azure SQL extension.
 
+For the best experience, use an Azure Active Directory [service principal](https://learn.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.
 
-Before you get started, be sure to review the [prerequisites](prerequisites.md) and make sure that you've created a custom role that meets the required permissions.
+Before you get started, be sure to review the [prerequisites](prerequisites.md) and make sure that you've created a [custom role](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal) that meets the required permissions.
 
 ### Connect multiple instances
 

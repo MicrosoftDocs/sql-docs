@@ -114,7 +114,7 @@ The host license type is a property of the installed Azure extension for SQL Ser
    
 The host license type is shared by all SQL Server instances and for your convenience, it is visible in the overview blade of Arc-enabled SQL Server as shown.
 
-![overview-of-sql-server-azure-arc](media/billing/overview-of-sql-server-azure-arc.png)
+![Overview blade](media/billing/overview-of-sql-server-azure-arc.png)
 
 
 ## Modify license type

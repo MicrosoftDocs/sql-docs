@@ -19,8 +19,9 @@ The following table highlights each method so that you can determine which works
 
 | Method | Description |
 |--------|-------------|
-| Interactively | Manually connect the iSQL Server on a single physical or virtual machine that is already connected to Azure Arc. [Connect your SQL Server to Azure Arc on a server already connected to Azure Arc](connect-already-enabled.md).|
 | Interactively | Manually connect the SQL Server on a single physical or virtual machine that is not currently connected to Azure Arc. [Connect your SQL Server to Azure Arc](connect.md)|
+| Interactively | Manually connect the SQL Server on a single physical or virtual machine that is already connected to Azure Arc. [Connect your SQL Server to Azure Arc on a server already connected to Azure Arc](connect-already-enabled.md)
+| Interactively | Beginning with SQL Server 2022, you can connect a new SQL Server instance to Azure Arc when you're installing it on Windows Operating System.  [Install SQL Server 2022](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#install-sql-server-2022)|
 | Interactively | [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md) |
 | At scale | [Connect SQL Servers at scale using Azure policy](connect-at-scale.md)|
 | At scale | [Connect SQL Server at scale using script](connect-at-scale-script.md)|

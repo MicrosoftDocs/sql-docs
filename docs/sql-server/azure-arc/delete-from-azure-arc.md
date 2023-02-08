@@ -1,6 +1,6 @@
 ---
-title: Delete instance from Azure Arc #Required; page title is displayed in search results. Include the brand.
-description: Delete Azure Arc-enabled SQL Server instance from Azure
+title: Delete instance from or restore instances to Azure Arc #Required; page title is displayed in search results. Include the brand.
+description: Delete Azure Arc-enabled SQL Server instance from Azure Arc, or restore or re-enable an instance for Azure Arc.
 author: MikeRayMSFT #Required; your GitHub user alias, with correct capitalization.
 ms.author: mikeray #Required; microsoft alias of author; optional team alias.
 ms.service: sql #Required; service per approved list. slug assigned by ACOM.
@@ -9,91 +9,41 @@ ms.date: 02/01/2022 #Required; mm/dd/yyyy format.
 ms.custom: template-how-to-pattern #Required; leave this attribute/value as-is.
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
+This article describes how you can do one of the following tasks:
 
-This template provides the basic structure of a How-to article pattern. See the
-[instructions - How-to](../level4/article-how-to-guide.md) in the pattern library.
+* Delete an Azure Arc-enabled SQL Server instance from Azure.
+* Restore (or re-enable) an Azure Arc-enabled SQL Server instance after it has been deleted.
 
-You can provide feedback about this template at: https://aka.ms/patterns-feedback
+## Delete your Arc-enabled SQL Server resource
 
-<!-- 1. H1 -----------------------------------------------------------------------------
+To delete your Arc-enabled SQL Server resource, go to **Azure Arc > SQL Server**, open the Arc-enabled SQL Server resource for that instance, and select the **Delete** button.
 
-Required: Start your H1 with a verb. Pick an H1 that clearly conveys the task the user 
-will complete.
+> [!IMPORTANT]  
+> Because multiple SQL Server instances could be installed on the same machine, the *Delete* button doesn't uninstall the Azure extension for SQL Server on that machine. To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
 
--->
+## Restore a deleted Arc-enabled SQL Server resource
 
-# Delete Azure Arc-enabled SQL Server instance from Azure
+If you accidentally deleted your Arc-enabled SQL Server resource, you can restore it with the following steps.
 
-TODO: Add your heading
+1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Select the correct version for your OS.
 
-<!-- 2. Introductory paragraph ----------------------------------------------------------
+    ```azurecli
+       az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+   ```
 
-Required: Lead with a light intro that describes, in customer-friendly language, what the 
-customer will do. Answer the fundamental “why would I want to do this?” question. Keep it 
-short.
-Readers should have a clear idea of what they will do in this article after reading the 
-introduction.
+   > [!IMPORTANT]  
+   > The location property must match the location of the Arc-enabled SQL Server resource for the server specified by the `--machine-name` parameter.
 
--->
+1. Check to make sure your instance is in the exclusion list (see the value of the *excludedSqlInstances* property).
 
-[Add your introductory paragraph]
-TODO: Add your introductory paragraph
+    ```azurecli
+        az connectedmachine extension show --machine-name "{your machine name}" --resource-group "{your resource group name}" -n WindowsAgent.SqlServer
+    ```
 
-<!-- 3. Prerequisites --------------------------------------------------------------------
+1. Make sure to remove your instance from the exclusion list and update the extension settings.
 
-Optional: If there are prerequisites for the task covered by the how-to guide, make 
-**Prerequisites** your first H2 in the guide. The prerequisites H2 is never numbered.
-Use clear and unambiguous language and use a unordered list format.
-If there are specific versions of software a user needs, call out those versions (for example: 
-Visual Studio 2019 or later).
+    ```azurecli
+        az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[\"{named instance 1}\",\"{named instance 3}}\"]}'
+    ```
 
--->
-
-## Prerequisites
-TODO: Determine if prerequisites are appropriate
-TODO: List the prerequisites if appropriate
-
-<!-- 4. Task H2s ------------------------------------------------------------------------------
-
-Required: Each major step in completing a task should be represented as an H2 in the article.
-These steps should be numbered.
-The procedure should be introduced with a brief sentence or two.
-Multiple procedures should be organized in H2 level sections.
-Procedure steps use ordered lists.
-
--->
-
-## 1 - [Doing the first thing]
-TODO: Add introduction sentence(s)
-TODO: Add ordered list of procedure steps
-
-## 2 - [Doing the second thing]
-TODO: Add introduction sentence(s)
-TODO: Add ordered list of procedure steps
-
-## 3 - [Doing the next thing]
-TODO: Add introduction sentence(s)
-TODO: Add ordered list of procedure steps
-
-## [N - Doing the last thing]
-TODO: Add introduction sentence(s)
-TODO: Add ordered list of procedure steps
-
-<!-- 5. Next steps ------------------------------------------------------------------------
-
-Required: Provide at least one next step and no more than three. Include some context so the 
-customer can determine why they would click the link.
-Add a context sentence for the following links.
-
--->
-
-## Next steps
-TODO: Add your next step link(s)
-
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
-
--->
+The instance is restored after the next sync with the agent. For information on managing vm extensions using Portal or PowerShell, see [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions).

@@ -33,7 +33,7 @@ Before you can Arc-enable an instance of SQL Server you need to:
   For instructions, see [Register resource providers](#register-resource-providers).
 
 ### Permissions
-- To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale.md) for you to create an Azure Policy assignment, need the `Resource Policy Contributor` role assignment on the scope - subscription or resource group - that you are targeting the assignment to. Further, if you are going to create a *new* system assigned managed identity, you need the `User Access Administrator` role assignment in the subscription.
+- To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md) for you to create an Azure Policy assignment, need the `Resource Policy Contributor` role assignment on the scope - subscription or resource group - that you are targeting the assignment to. Further, if you are going to create a *new* system assigned managed identity, you need the `User Access Administrator` role assignment in the subscription.
 
   For all the other onboarding methods, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
   - `Microsoft.AzureArcData/register/action`

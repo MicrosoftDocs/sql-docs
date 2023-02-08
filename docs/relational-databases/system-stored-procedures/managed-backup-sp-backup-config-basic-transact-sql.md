@@ -45,6 +45,8 @@ EXEC managed_backup.sp_backup_config_basic
   
  @database_name  
  The database name for enabling managed backup on a specific database.  
+ [!NOTE] 
+ If @database name is set to NULL the settings will be applied at instance level(apply to all new databases created on the instance)
   
  @container_url  
  A URL that indicates the location of the backup. When @credential_name is NULL, this URL is a shared access signature (SAS) URL to a blob container in Azure Storage, and the backups use the new backup to block blob functionality. For more information, please review [Understanding SAS](/azure/storage/common/storage-sas-overview). When @credential_name is specified, then this is a storage account URL, and the backups use the deprecated backup to page blob functionality.  
@@ -70,12 +72,52 @@ EXEC managed_backup.sp_backup_config_basic
  Requires membership in **db_backupoperator** database role, with **ALTER ANY CREDENTIAL** permissions, and **EXECUTE** permissions on **sp_delete_backuphistory** stored procedure.  
   
 ## Examples  
- You can create both the storage account container and the SAS URL by using the latest Azure PowerShell commands. The following example creates a new container, mycontainer, in the mystorageaccount storage account and then obtains a SAS URL for it with full permissions.  
+The following example creates Shared Access Signatures that can be used to create a SQL Server Credential on a newly created container. The script creates a Shared Access Signature that is associated with a Stored Access Policy. For more information, see Shared Access Signatures, Part 1: Understanding the SAS Model. The script also writes the T-SQL command required to create the credential on SQL Server.
   
 ```powershell  
-$context = New-AzureStorageContext -StorageAccountName mystorageaccount -StorageAccountKey (Get-AzureStorageKey -StorageAccountName mystorageaccount).Primary  
-New-AzureStorageContainer -Name mycontainer -Context $context  
-New-AzureStorageContainerSASToken -Name mycontainer -Permission rwdl -FullUri -Context $context  
+# Define global variables for the script  
+$prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
+$subscriptionName='<your subscription name>'   # the name of subscription name you will use  
+$locationName = '<a data center location>'  # the data center region you will use  
+$storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
+$containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
+$policyName = $prefixName + 'policy' # the name of the SAS policy  
+
+# Set a variable for the name of the resource group you will create or use  
+$resourceGroupName=$prefixName + 'rg'
+
+# adds an authenticated Azure account for use in the session
+Connect-AzAccount
+
+# set the tenant, subscription and environment for use in the rest of
+Set-AzContext -SubscriptionName $subscriptionName
+
+# create a new resource group - comment out this line to use an existing resource group  
+New-AzResourceGroup -Name $resourceGroupName -Location $locationName
+
+# Create a new ARM storage account - comment out this line to use an existing ARM storage account  
+New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+
+# Get the access keys for the ARM storage account  
+$accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+
+# Create a new storage account context using an ARM storage account  
+$storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
+
+# Creates a new container in Azure Blob Storage  
+$container = New-AzStorageContainer -Context $storageContext -Name $containerName  
+$cbc = $container.CloudBlobContainer  
+
+# Sets up a Stored Access Policy and a Shared Access Signature for the new container  
+$policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
+
+# Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
+Write-Host 'Credential T-SQL'  
+$tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.Substring(1)   
+$tSql | clip  
+Write-Host $tSql
 ```  
   
  The following example enables [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance of SQL Server it is executed on, sets the retention policy to 30 days, sets the destination to a container named 'mycontainer' in a storage account named 'mystorageaccount'.  

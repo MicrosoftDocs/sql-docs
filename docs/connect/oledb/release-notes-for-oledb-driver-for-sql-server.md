@@ -3,7 +3,7 @@ title: Release notes for OLE DB Driver
 description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/02/2023
+ms.date: 02/09/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -20,6 +20,36 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## 19.3.0
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2220017)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2220016)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2224283)  
+
+Released: February 09, 2023
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x40a)  
+    For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x40a)
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md). |
+| Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user may now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| New distribution supported | Windows ARM64(Preview). |
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed MSRC crashes. | Fixed three crashes reported by MSRC (Microsoft Security Response Center). |
+| Fixed adal issues. | Fixed the issues detected in OLE DB Driver 19.2.0, including fixing x86 adal.dll issue and downgrading adal.ll from version 3.6.0 to version 3.4.1. |
+
+## Previous releases
 
 ## 19.1.0
 
@@ -46,8 +76,6 @@ If you need to download the installer in a language other than the one detected 
 | Fixed an issue with missing digital signatures. | Added digital signatures for the installer custom action dynamic-link libraries. |
 | Fixed an issue with HostnameInCertificate property being passed through the Server Name Indication (SNI) TLS extension. | The HostnameInCertificate value is no longer present in the Server Name Indication (SNI) TLS extension. |
 | Restored the functionality of the Protocol Order and the TCP Keep-Alive registry properties. | The driver now adjusts the TCP Keep-Alive and the Protocol Order properties based on the values set for the corresponding [registry entries](features/registry-settings.md#tcp-keep-alive-and-protocol-order-registry-properties). |
-
-## Previous releases
 
 ## 19.0.0
 

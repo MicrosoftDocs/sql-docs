@@ -10421,6 +10421,8 @@ items:
             href: sql-server/azure-arc/connect-at-scale-policy.md
           - name: Connect at scale | Script
             href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Connect machines using Configuration Manager custom task sequence
+            href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
     - name: Manage
       items:
       - name: Assess

@@ -32,7 +32,7 @@ To install the Azure extension for SQL Server, use the following steps:
 1. Open the **SQL Server - Azure Arc** resource
 1. Search the connected SQL Server instance resource.
 1. On overview page, navigate to **Host License Type** properties and click on license type value.
-1. On **Sql Server management** page, select a specific licnese type applicable to SQL Server.  Please note that some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. [Learn more:](billing.md).
+1. On **Sql Server management** page, select a specific licnese type applicable to SQL Server.  Please note that some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. The above table provides a list of features available for different license types. [Learn more:](billing.md).
 1. Click **Save** to save the new license type selected.
 
 ## [PowerShell](#tab/powershell)

@@ -1,10 +1,10 @@
 ---
 title: Troubleshooting Database Migration Assessment for Oracle extension errors
-description: Learn how to install the Azure Data Studio Database Migration Assessment for Oracle extension. This extension helps guide you choose the best Azure SQL database and Azure Database for PostgreSQL migration path.
+description: This article explains how to determine, diagnose, and fix issues/errors that you might encounter when you use  Database Migration Assessment for Oracle extension.
 author: abhims14
-ms.author: abhims14
-ms.reviewer: 
-ms.date: 09/02/23
+ms.author: abhishekum
+ms.reviewer: maghan, randolphwest
+ms.date: 02/09/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---

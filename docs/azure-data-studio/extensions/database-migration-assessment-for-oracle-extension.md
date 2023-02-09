@@ -19,7 +19,7 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio help
 ## Prerequisites
 
 - An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10g or higher.
-- [Azure Data Studio version 1.39 or above](../../download-azure-data-studio.md).
+- [Azure Data Studio version 1.39 or above](../download-azure-data-studio.md).
 - Oracle users should have CONNECT and SELECT ANY DICTIONARY privileges assigned.
 
 ## Install Azure Data Studio extension
@@ -148,7 +148,7 @@ The following Database details tab provides the breakdown per schema basis. It s
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="Screenshot showing the breakdown per schema basis.":::
 
-This estimation is based on a statistical model that applies to the object count, lines of code, enabled features, and size of the database. For more accurate estimate on the code conversion, use [SQL Server Migration Assistant for Oracle](../../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md).
+This estimation is based on a statistical model that applies to the object count, lines of code, enabled features, and size of the database. For more accurate estimate on the code conversion, use [SQL Server Migration Assistant for Oracle](../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md).
 
 > [!NOTE]  
 > The following system or Oracle built-in schemas are excluded from the workload assessment:
@@ -239,11 +239,11 @@ To change the log directory, update the `LogDirectory` property in the extension
 
 ## Contact Microsoft for help
 
-If you need further assistance from Microsoft, contact [@Dmasupport](mailto:dmasupport@microsoft.com). For faster turnaround, you may attach the logs from [default log directory](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs).
+If you need further assistance from Microsoft, contact [@Dmasupport](mailto:dmasupport@microsoft.com). For faster turnaround, you may attach the logs from [default log directory](#logs).
 
 ## Next steps
 
-- [Azure SQL Migration extension](../azure-sql-migration-extension.md)
-- [Oracle extension](../extension-for-oracle.md)
+- [Azure SQL Migration extension](azure-sql-migration-extension.md)
+- [Oracle extension](extension-for-oracle.md)
 - [Data Schema Conversion](dsct/database-schema-conversion-toolkit.md)
 - [Add extensions](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)

@@ -1,7 +1,7 @@
 ---
 description: "The sp_change_feed_configure_parameters system stored procedure is used to reduce latency or reduce the cost by increasing the batch size with higher transactions"
 title: "sp_change_feed_configure_parameters (Transact-SQL)"
-ms.date: 11/09/2022
+ms.date: 02/03/2023
 ms.service: synapse-analytics
 ms.reviewer: wiassaf
 ms.topic: "reference"
@@ -51,7 +51,7 @@ Returns: 0 - Success, 1 - Failure
 
 ## Permissions  
 
-  Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure. 
+  Currently, a user with [CONTROL database permissions](../security/permissions-database-engine.md), db_owner database role membership, or sysadmin server role membership can execute this procedure. 
 
 ## See also  
 

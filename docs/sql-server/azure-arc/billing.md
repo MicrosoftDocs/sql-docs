@@ -114,7 +114,7 @@ The license type value is shared by all SQL Server instances and for your conven
 
 ## Modify license type
 
-You can change the license type of an installed Azure extension for SL Server by using one of the following methods.
+You can change the license type of an installed Azure extension for SQL Server by using one of the following methods.
 
 ### [Azure portal](#tab/azure)
 

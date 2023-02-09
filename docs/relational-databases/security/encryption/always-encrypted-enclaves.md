@@ -149,7 +149,7 @@ The operations supported inside the secure enclaves are:
 > [!NOTE]
 > The above operations inside secure enclaves require randomized encryption. Deterministic encryption is not supported. Equality comparison remains the operation available for columns using deterministic encryption.
 >
->The compatibility level of the database should be set to SQL Server 2022 (160) or higher.
+> The [compatibility level](../../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) of the database should be set to SQL Server 2022 (160) or higher.
 >
 > In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required. 
 

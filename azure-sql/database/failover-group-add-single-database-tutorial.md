@@ -4,7 +4,7 @@ description: Add a database in Azure SQL Database to an auto-failover group usin
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/26/2022
+ms.date: 02/09/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
@@ -228,11 +228,11 @@ Test failover using the Azure portal.
    ![Select the failover group from the portal](./media/failover-group-add-single-database-tutorial/select-failover-group.png)
 
 1. <a id="test-forced-failover-portal"></a>Review which server is primary and which server is secondary.
-1. Select **Failover** from the task pane to fail over your failover group containing your sample database.
+1. Initiate either planned or forced failover: 
+  - To initiate a planned failover (without data loss), select **Failover** from the task pane to fail over your failover group containing your sample database.
+    ![Fail over your failover group containing your database](./media/failover-group-add-single-database-tutorial/failover-sql-db.png)
+  - To initiate a forced failover (with possible data loss), select **Forced Failover** from the task pane to fail over your failover group containing your sample database.     
 1. Select **Yes** on the warning that notifies you that TDS sessions will be disconnected.
-
-   ![Fail over your failover group containing your database](./media/failover-group-add-single-database-tutorial/failover-sql-db.png)
-
 1. Review which server is now primary and which server is secondary. If failover succeeded, the two servers should have swapped roles.
 1. Select **Failover** again to fail the servers back to their original roles.
 
@@ -256,13 +256,13 @@ Check the role of the secondary replica:
       -ServerName $drServerName).ReplicationRole
    ```
 
-Fail over to the secondary server:
+Perform a planned failover (without data loss) to the secondary server:
 
    ```powershell-interactive
    # Set variables
-   # $resourceGroupName = "myResourceGroup-$(Get-Random)"
-   # $serverName = "mysqlserver-$(Get-Random)"
-   # $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
+   $resourceGroupName = "myResourceGroup-$(Get-Random)"
+   $serverName = "mysqlserver-$(Get-Random)"
+   $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
 
    # Failover to secondary server
    Write-host "Failing over failover group to the secondary..."
@@ -270,6 +270,25 @@ Fail over to the secondary server:
       -ResourceGroupName $resourceGroupName `
       -ServerName $drServerName `
       -FailoverGroupName $failoverGroupName
+   Write-host "Failed failover group successfully to" $drServerName
+   ```
+
+Perform a forced failover (with possible data loss) to the secondary server, using `-AllowDataLoss`:
+
+   ```powershell-interactive
+
+   # Set variables
+   $resourceGroupName = "myResourceGroup-$(Get-Random)"
+   $serverName = "mysqlserver-$(Get-Random)"
+   $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
+
+   # Failover to secondary server
+   Write-host "Failing over failover group to the secondary..."
+   Switch-AzSqlDatabaseFailoverGroup `
+      -ResourceGroupName $resourceGroupName `
+      -ServerName $drServerName `
+      -FailoverGroupName $failoverGroupName `
+      -AllowDataLoss
    Write-host "Failed failover group successfully to" $drServerName
    ```
 

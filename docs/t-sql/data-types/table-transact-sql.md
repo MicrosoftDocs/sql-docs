@@ -78,7 +78,9 @@ SELECT select_list INTO table_variable;
   
 ## Limitations and restrictions
 **Table** variables don't have distribution statistics. They won't trigger recompiles. In many cases, the optimizer will build a query plan on the assumption that the table variable has no rows. For this reason, you should be cautious about using a table variable if you expect a larger number of rows (greater than 100). Temp tables may be a better solution in this case. For queries that join the table variable with other tables, use the RECOMPILE hint, which will cause the optimizer to use the correct cardinality for the table variable.
+
 **table** variables aren't supported in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimizer's cost-based reasoning model. As such, they shouldn't be used when cost-based choices are required to achieve an efficient query plan. Temporary tables are preferred when cost-based choices are required. This plan typically includes queries with joins, parallelism decisions, and index selection choices.
+
 Queries that modify **table** variables don't generate parallel query execution plans. Performance can be affected when large **table** variables, or **table** variables in complex queries, are modified. Consider using temporary tables instead in situations where **table** variables are modified. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Queries that read **table** variables without modifying them can still be parallelized.
 
 > [!IMPORTANT]

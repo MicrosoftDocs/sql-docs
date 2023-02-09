@@ -94,7 +94,7 @@ Create your failover group and add your database to it using the Azure portal.
 
 # [PowerShell](#tab/azure-powershell)
 
-Create your failover group and add your database to it using PowerShell. In each case, update the variable to the values appropriate for your environment.
+Create your failover group and add your database to it using PowerShell. In each case, update the variables to the appropriate values for your environment.
 
    > [!NOTE]
    > The server login and firewall settings must match that of your primary server.

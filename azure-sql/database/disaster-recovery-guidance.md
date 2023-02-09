@@ -29,19 +29,19 @@ In the event of an Azure SQL Database service outage, you will be able to see ad
 
 - **Help + support** or **Support + troubleshooting**
 
-    When you create support ticket from **Help + support** or **Support + troubleshooting**, there will be information about any issues impacting your resources in the **New support request** window. Look for more information and a **Summary of impact** in the information provided.
+    When you create support ticket from **Help + support** or **Support + troubleshooting**, there will be information about any issues impacting your resources. Select **View outage details** for more information and a summary of impact. There will also be an alert in the **New support request** page.
 
-    :::image type="content" source="media/disaster-recovery-guidance/new-support-request-service-issue-example.png" alt-text="A snippet from the Azure portal New Support Request screen with a sample of a service notification.":::
+    :::image type="content" source="media/disaster-recovery-guidance/help-support-service-health-notification.png" alt-text="A screenshot of the Help+Support page showing a notification of an active service health issue..":::
 
 - **Service health**
 
-    The **Service Health** page in the Azure portal contains information about Azure datacenter status globally. Search for "service health" in the search bar in the Azure portal, then view **Service issues** in the **Active events** category. You can also view the health of individual resources in the **Resource health** page of any resource under the **Help** menu. A sample screenshot of the **Service Health** page follows, with information about an active service issue displayed above a global map of affected locations.
+    The **Service Health** page in the Azure portal contains information about Azure data center status globally. Search for "service health" in the search bar in the Azure portal, then view **Service issues** in the **Active events** category. You can also view the health of individual resources in the **Resource health** page of any resource under the **Help** menu. A sample screenshot of the **Service Health** page follows, with information about an active service issue in Southeast Asia.
 
-    :::image type="content" source="media/disaster-recovery-guidance/service-health-service-issues-example-map.png" alt-text="A screenshot of the Azure portal Service Health page during a service issue, showing the Issue and a global map of affected resources.":::
+    :::image type="content" source="media/disaster-recovery-guidance/service-health-service-issues-example-map.png" alt-text="A screenshot of the Azure portal Service Health page during a service issue in Southeast Asia, showing the Issue and a map of affected resources.":::
 
 - **Email notification**
 
-    If you have set up alerts, an email notification will arrive when a service outage impacts your subscription and resource. For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
+    If you have set up alerts, an email notification will arrive when a service outage impacts your subscription and resource. The emails arrive from "azure-noreply@microsoft.com". The body of the email would begin with "The activity log alert ... was triggered by a service issue for the Azure subscription...". For more information on service health alerts, see [Receive activity log alerts on Azure service notifications using Azure portal](/azure/service-health/alerts-activity-log-service-notifications-portal).
 
 ## When to initiate disaster recovery during an outage
 
@@ -49,7 +49,7 @@ In the event of a service outage impacting application resources, consider the f
 
 - The Azure teams work diligently to restore service availability as quickly as possible but depending on the root cause it can take hours sometimes. If your application can tolerate significant downtime, you can simply wait for the recovery to complete. In this case, no action on your part is required. View the health of individual resources in the **Resource health** page of any resource under the **Help** menu. Refer to the **Resource health** page for updates and the latest information regarding an outage. After the recovery of the region, your application's availability is restored.
 
-- Recovery to another Azure region may require changing application connection strings or using DNS redirection, and may result in permanent data loss. Therefore, redirection should be performed only when the outage duration approaches your application's recovery time objective (RTO). When the application is deployed to production, you should perform regular monitoring of the application's health and assert that the recovery is warranted only when there is prolonged expected connectivity failure from the application tier to the database. Depending on your application tolerance to downtime and possible business liability, you can decide if you want to wait for service to recover or initiate disaster recovery yourself. 
+- Recovery to another Azure region may require changing application connection strings or using DNS redirection, and may result in permanent data loss. Therefore, redirection should be performed only when the outage duration approaches your application's recovery time objective (RTO). When the application is deployed to production, you should perform regular monitoring of the application's health and assert that the recovery is warranted only when there is prolonged connectivity failure from the application tier to the database. Depending on your application tolerance to downtime and possible business liability, you can decide if you want to wait for service to recover or initiate disaster recovery yourself.
 
 ## Outage recovery guidance
 

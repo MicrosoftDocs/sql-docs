@@ -4,7 +4,7 @@ description: Learn about the recommended user configurations that you can implem
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: rsetlem 
-ms.date: 01/27/2023
+ms.date: 02/08/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.custom:
 
 Azure SQL Database service automatically ensures all the databases are online, healthy, and constantly strives to achieve [the published SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/). 
 
-This guide provides a detailed review of proactive steps you can take to maximize availability, ensure recovery, and prepare for Azure outages.
+This guide provides a detailed review of proactive steps you can take to maximize availability, ensure recovery, and prepare for Azure outages. This guidance applies to all purchasing models and service tiers of Azure SQL Database.
 
 ## High availability checklist
 
@@ -33,8 +33,8 @@ Although Azure SQL Database automatically maintains high availability, there are
 The following are recommended configurations to be best prepared for disaster recovery:
 
 * Enable [active geo-replication](active-geo-replication-overview.md) to have a readable secondary database in a different Azure region. 
-* Enable [auto-failover groups](auto-failover-group-sql-db.md) for a group of databases. Leverage the read-write and read-only listener endpoints that remain unchanged after failovers.
-* Ensure the secondary database is created with the same service tier and service level objective (SLO) as primary database. If you scale up or down the primary, remember to scale up or down the secondary as well.
+* Enable [auto-failover groups](auto-failover-group-sql-db.md) for a group of databases. Leverage the read-write and read-only listener endpoints that remain unchanged after failover. With auto-failover groups, you can set the failover mode to [automatic (default) or manual](auto-failover-group-sql-db.md#terminology-and-capabilities).
+* Ensure the secondary database is created with the same service tier and service level objective (SLO) as primary database. When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down, reverse the order: scale down the primary first, and then scale down the secondary.
 * Disaster recovery by nature is designed to make use of asynchronous replication of data between primary and secondary region. To prioritize data availability over higher commit latency, consider calling the [sp_wait_for_database_copy_sync](/sql/relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync?preserve-view=true&view=azuresqldb-current) stored procedure immediately after committing the transaction. Calling `sp_wait_for_database_copy_sync` blocks the calling thread until the last committed transaction has been transmitted and hardened in the transaction log of the secondary database.
 * Monitor lag with respect to Recovery Point Objective (RPO), using the `replication_lag_sec` column of the [sys.dm_geo_replication_link_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database?preserve-view=true&view=azuresqldb-current) dynamic management view (DMV) on the primary database. It shows lag in seconds between the transactions committed on the primary and hardened to the transaction log on the secondary. For example, if the lag is one second, it means that if the primary is impacted by an outage at this moment and a geo-failover is initiated, transactions committed in the last second will be lost.
 * [Configure the backup storage redundancy option](automated-backups-change-settings.md?preserve-view=true&view=azuresqldb-current#configure-backup-storage-redundancy) to **Geo-redundant backup storage** to leverage [geo-restore capability](recovery-using-backups.md#point-in-time-restore). 

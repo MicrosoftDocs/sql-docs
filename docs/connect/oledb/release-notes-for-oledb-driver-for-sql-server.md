@@ -25,14 +25,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2220017)  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2220016)  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2224283)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Arm64 installer](https://go.microsoft.com/fwlink/?linkid=2224283)  
 
 Released: February 09, 2023
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
     For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220017&clcid=0x40a)  
     For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2220016&clcid=0x40a)  
-    For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x40a)
+    For the Arm64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2224283&clcid=0x40a)
 
 ### Features added
 
@@ -40,14 +40,15 @@ If you need to download the installer in a language other than the one detected 
 | :------------ | :------ |
 | Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md). |
 | Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user may now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
-| New distribution supported | Windows ARM64(Preview). |
+| Windows Arm64 support | The Arm64 driver is for 64-bit ARM applications only and does not include 32-bit ARM nor x86/x64 emulation drivers. |
+| Visual Studio 2022 build toolset upgrade | The driver now requires [Microsoft Visual C++ Redistributable for Visual Studio 2022](https://go.microsoft.com/fwlink/?linkid=2219560) (version 14.34 at minimum). |
 
 ### Bugs fixed
 
 | Bug fixed | Details |
 | :-------- | :------ |
 | Fixed MSRC crashes. | Fixed three crashes reported by MSRC (Microsoft Security Response Center). |
-| Fixed adal issues. | Fixed the issues detected in OLE DB Driver 19.2.0, including fixing x86 adal.dll issue and downgrading adal.ll from version 3.6.0 to version 3.4.1. |
+| Fixed adal issues. | Fixed an installer issue where a 64-bit version of adal.dll was packaged instead of the 32-bit one. For details, see [Known issues](https://go.microsoft.com/fwlink/?linkid=2224752). |
 
 ## Previous releases
 

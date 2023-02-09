@@ -227,7 +227,7 @@ Test failover using the Azure portal.
   
    ![Select the failover group from the portal](./media/failover-group-add-single-database-tutorial/select-failover-group.png)
 
-1. Review which server is primary and which server is secondary.
+1. <a id="test-forced-failover-portal"></a>Review which server is primary and which server is secondary.
 1. Select **Failover** from the task pane to fail over your failover group containing your sample database.
 1. Select **Yes** on the warning that notifies you that TDS sessions will be disconnected.
 

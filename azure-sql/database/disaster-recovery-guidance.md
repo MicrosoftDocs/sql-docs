@@ -4,7 +4,7 @@ description: Learn how to recover a database from a regional data center outage 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, rsetlem 
-ms.date: 01/30/2023
+ms.date: 02/08/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -49,7 +49,7 @@ In the event of a service outage impacting application resources, consider the f
 
 - The Azure teams work diligently to restore service availability as quickly as possible but depending on the root cause it can take hours sometimes. If your application can tolerate significant downtime, you can simply wait for the recovery to complete. In this case, no action on your part is required. View the health of individual resources in the **Resource health** page of any resource under the **Help** menu. Refer to the **Resource health** page for updates and the latest information regarding an outage. After the recovery of the region, your application's availability is restored.
 
-- Recovery to another Azure region may require changing application connection strings or using DNS redirection, and may result in permanent data loss. Therefore, redirection should be performed only when the outage duration approaches your application's recovery time objective (RTO). When the application is deployed to production, you should perform regular monitoring of the application's health and assert that the recovery is warranted only when there is prolonged connectivity failure from the application tier to the database. Depending on your application tolerance to downtime and possible business liability, you can decide if you want to wait for service to recover or initiate disaster recovery yourself.
+- Recovery to another Azure region may require changing application connection strings or using DNS redirection, and may result in permanent data loss. Therefore, disaster recovery should be performed only when the outage duration approaches your application's recovery time objective (RTO). When the application is deployed to production, you should perform regular monitoring of the application's health and assert that the recovery is warranted only when there is prolonged connectivity failure from the application tier to the database. Depending on your application tolerance to downtime and possible business liability, you can decide if you want to wait for service to recover or initiate disaster recovery yourself.
 
 ## Outage recovery guidance
 
@@ -68,9 +68,9 @@ To initiate a planned failover, use the following links:
 |:--|:--|:--|
 |**Active geo-replication**| PowerShell | [Failover to geo-replication secondary via PowerShell](/powershell/module/az.sql/set-azsqldatabasesecondary#example-1-initiate-a-planned-failover) |
 | | T-SQL | [Failover to geo-replication secondary via T-SQL](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current&tabs=sqlpool#e-failover-to-a-geo-replication-secondary) |
-| **Auto-failover groups** | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover) |
+| **Auto-failover groups** | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover) |
 | | Azure portal | [Failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?&tabs=azure-portal#3---test-failover) | 
-| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover) | 
+| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover) | 
 
 ### Unplanned failover (potential data loss) to geo-replicated secondary server
 
@@ -82,9 +82,10 @@ If planned failover doesn't complete gracefully and experiences errors, or if th
 | | Azure portal | [Initiate a forced failover via the Azure portal](active-geo-replication-configure-portal.md?tabs=portal#initiate-a-failover) |
 | | PowerShell | [Initiate a forced failover via PowerShell](/powershell/module/az.sql/set-azsqldatabasesecondary#example-2-initiate-a-forced-failover-(with-potential-data-loss)) |
 | | T-SQL | [Unplanned failover to geo-replication secondary via T-SQL](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current&tabs=sqlpool#f-force-failover-to-a-geo-replication-secondary-with-data-loss) |
-| **Auto-failover groups** | Azure portal | [Failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?&tabs=azure-portal#3---test-failover) |
-| | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover) |
-| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover) |
+| **Auto-failover groups** | Azure portal | [Failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?tabs=azure-portal#test-forced-failover-portal) |
+| | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover) but use `--allow-data-loss`|
+| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover) but use `-AllowDataLoss`|
+
 
 ### Geo-restore
 

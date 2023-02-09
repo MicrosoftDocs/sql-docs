@@ -160,7 +160,7 @@ The following steps outline the process of creating a new Azure SQL Database log
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
-Create a server configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql server create](/cli/azure/sql/server) command. The **Key Identifier** from the second tenant can be used in the `key-id` field. - The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field.
+Create a server configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql server create](/cli/azure/sql/server) command. The **Key Identifier** from the second tenant can be used in the `key-id` field. The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field.
 
 ```azurecli
 az sql server create \

@@ -5,7 +5,7 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft. U
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/17/2023
+ms.date: 02/07/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -46,10 +46,9 @@ az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
 ---
-
 ## Overview
 
-Host license type is a configuration setting of Azure Extension for SQL Server that defines how you prefer to pay for the usage of SQL Server software installed on the physical or virtual machine. It allows you to track software usage Cost Management + Billing portal and ensure you are compliant with SQL Server license requirements. License type is a required parameter when you install Azure Extension for SQL Server. Every supported onboarding method includes the license type options. See [SQL Server privacy supplement]() for details of how we use that information. 
+License type is a configuration setting of Azure Extension for SQL Server that defines how you prefer to pay for the usage of SQL Server software installed on the physical or virtual machine. It also allows you to track software usage in the Cost Management + Billing portal and ensure you are compliant with SQL Server license requirements. License type is a required parameter when you install Azure Extension for SQL Server and each supported onboarding method includes the license type options. 
 
 The following license types are supported:
 
@@ -60,14 +59,23 @@ The following license types are supported:
 | LicenseOnly | Developer, Evaluation, Express, Web, Standard or Enterprise edition license only without Software Assurance | License only |
 
 
-If "PAYG” is configured it enables paying for your SQL Server software usage on a pay-as-you-go basis through Microsoft Azure. See SQL Server pay-as-you-go prices here. “Paid” and “LicenseOnly” types mean that you are using an existing license agreement and already have the necessary licenses. In those cases, your software usage will be reported to you using $0 meters. You can analyze your usage in Cost Management + Billing to make sure you have enough licenses for all your installed SQL Server instances.
 
-The billing granularity is one hour. Pay-as-you-go charges are calculated based on the SQL Server edition and the size of the hosting server at any time during that hour. The size is measured in cores if the SQL Server instance is installed on a physical server, and logical cores (vCores) if the SQL Server instance is installed on a virtual machine. When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The following rules apply:
+
+
+
+
+
+
+
+
+If "PAYG” is configured it enables paying for your SQL Server software usage on a pay-as-you-go basis through Microsoft Azure. See SQL Server pay-as-you-go prices [here](https://www.microsoft.com/sql-server/sql-server-2022-pricing). “Paid” and “LicenseOnly” types mean that you are using an existing license agreement and already have the necessary licenses. In those cases, your software usage will be reported to you using $0 meters. You can analyze your usage in the Cost Management + Billing portal to make sure you have enough licenses for all your installed SQL Server instances.
+
+The billing granularity is one hour. Pay-as-you-go charges are calculated based on the SQL Server edition and the size of the hosting server at any time during that hour. The size is measured in cores if the SQL Server instance is installed on a physical server, and logical cores (vCores) if the SQL Server instance is installed on a virtual machine. When multiple instances of SQL Server are installed on the same OS, only one instance must be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The following rules apply:
 
 - The instance with the highest edition of all instances installed on the same operating system determines the required license.
-- If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key, the pay-as-you-go instance is ignored because it is included in the customer's product key.
-- If two instances are installed with pay-as-you-go billing and same editions, the first instance in alphabetical order is billed.
-
+- If two or more instances of the same edition are installed, the first instance in alphabetical order is billed.
+- The configured license type defines how the winning instance is billed.
+   
 In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features are not included the LicenseOnly license type.  
 
 - Licensing benefit for fail-over servers. Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group and reporting the usage with a separate meter. You can track the usage of the DR benefit in Cost Management + Billing. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
@@ -98,13 +106,20 @@ The following table shows the meters that track usage and billing for different 
 
 ## Selecting license type
 
-License type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in the overview blade of Arc-enabled SQL Server as shown.
+License type is a property of Azure extension for SQL Server. Only one instance of the extension can be installed on each machine. It manages all SQL Server instances installed on that machine. To select license type, use one of the following methods:
 
 If your machine is already connected to an Arc-enabled Server, follow the steps in [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md)
 
 If your machine isn’t connected to an Arc-enabled Server, follow the steps in [When the machine isn't connected to an Arc-enabled Server](connect.md#onboard-the-server-to-azure-arc)
 
-If install SQL Server 2022, you have an option to select the license type with [SQL 2022 setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
+- If your machine is already connected to an Arc-enabled Server, follow the steps in [When the machine is already connected to an Arc-enabled Server](connect.md#when-the-machine-is-already-connected-to-an-arc-enabled-server)
+- If your machine isn’t connected to an Arc-enabled Server, follow the steps in [When the machine isn't connected to an Arc-enabled Server](connect.md#when-the-machine-isnt-connected-to-an-arc-enabled-server)
+- If you are installing SQL Server 2022, you have the option to select the license type with [SQL 2022 setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
+   
+The license type value is shared by all SQL Server instances and for your convenience, it is visible in the overview blade of Arc-enabled SQL Server as shown.
+
+![Screenshot of Azure Arc-enabled SQL Server instance configured for pay-as-you-go licensing.](media/billing/overview-of-sql-server-azure-arc.png)
+
 
 ## Modify license type
 
@@ -136,7 +151,6 @@ az connectedmachine extension update --machine-name "simple-vm" -g "arceeBilling
 ```
 
 ---
-
 > [!IMPORTANT]  
 >
 > - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
@@ -147,3 +161,4 @@ az connectedmachine extension update --machine-name "simple-vm" -g "arceeBilling
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
 - [Frequently asked questions](faq.yml#billing)
+

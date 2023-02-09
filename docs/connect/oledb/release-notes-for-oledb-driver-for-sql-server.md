@@ -3,7 +3,7 @@ title: Release notes for OLE DB Driver
 description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/09/2023
+ms.date: 02/10/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -47,7 +47,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed MSRC crashes. | Fixed three crashes reported by MSRC (Microsoft Security Response Center). |
+| Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
 | Fixed adal issues. | Fixed an installer issue where a 64-bit version of adal.dll was packaged instead of the 32-bit one. For details, see [Known issues](https://go.microsoft.com/fwlink/?linkid=2224752). |
 
 ## Previous releases

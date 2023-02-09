@@ -31,8 +31,8 @@ Azure Data Studio 1.41.2 is the latest general availability (GA) release.
 
 | New Item | Details |
 | --- | --- |
-| Connection | Fixed a bug that generated the error "Requestconnection/listdatabases failed" for Azure SQL database. |
 | Connection | Addressed an issue that prevented users in non-public clouds from using Azure Data Studio with MSAL. |
+| Connection | Fixed a bug that opened the output window when unexpected errors occurred. |
 
 For a full list of bug fixes addressed for the January 2023 hotfix 2 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/97?closed=1).
 

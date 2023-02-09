@@ -16,10 +16,19 @@ Host license type is a property of Azure extension for SQL Server resource. It a
 
 The following table provide features enabled depending on license type:
 
-   :::image type="content" source="media/join/LT_features.png" alt-text="Screenshot for license type and features.":::
+|Feature  |License only <sup>*</sup> |License with Software Assurance<br/>or SQL subscription  |Pay-as-you-go  |
+|---------|---------|---------|---------|
+|Connect to Azure |Yes |Yes |Yes |
+|SQL Server inventory|Yes |Yes |Yes |
+|Best practices assessment |No |Yes |Yes |
+|Detailed database inventory |No |Yes |Yes |
+|Azure Active Directory authentication |No |Yes |Yes |
+|Microsoft Defender for Cloud|Yes |Yes |Yes |
+|Microsoft Purview|Yes |Yes |Yes |
+
+<sup>*</sup>License only includes SQL Server instances that are Developer, Express, or Evaluation Edition.
 
 Learn more [SQL Server licensing and billing options](billing.md)
-
 
 ## Modify license type
 

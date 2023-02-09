@@ -10433,6 +10433,8 @@ items:
         href: sql-server/azure-arc/delete-from-azure-arc.md
       - name: Billing through Microsoft Azure
         href: sql-server/azure-arc/billing.md
+      - name: Modify license type
+        href: sql-server/azure-arc/modify-license-type.md
     - name: Secure
       items:
       - name: Configure advanced data Security

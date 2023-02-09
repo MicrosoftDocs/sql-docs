@@ -33,7 +33,7 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
 1. On the first tenant where you want to create the Azure SQL Database, [create and configure a multi-tenant Azure AD application](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-new-multi-tenant-app-registration)
 1. After the application has been created, navigate to the **Authentication** menu for the application in the [Azure portal](https://portal.azure.com). Select the option **ID tokens (used for implicit and hybrid flows)**, and save the selection
 
-   :::image type="content" source="media/transparent-data-encryption-byok-create-server-cross-tenant/authentication-menu-for-application.png" alt-text="Screenshot of the Authentication menu of an application in the Azure portal.":::
+   :::image type="content" source="media/transparent-data-encryption-byok-create-server-cross-tenant/authentication-menu-for-application.png" alt-text="Screenshot of the Authentication menu of an application in the Azure portal." lightbox="media/transparent-data-encryption-byok-create-server-cross-tenant/authentication-menu-for-application.png":::
 
 1. [Create and configure a user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-creates-a-user-assigned-managed-identity)
 1. [Configure the user-assigned managed identity](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-configures-the-user-assigned-managed-identity-as-a-federated-credential-on-the-application) as a [federated identity credential](/graph/api/resources/federatedidentitycredentials-overview) for the application
@@ -41,7 +41,21 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
 
 ### Required resources on the second tenant
 
-1. On the second tenant where the Azure Key Vault resides, [create a service principal (application)](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#phase-2---the-customer-authorizes-access-to-the-key-vault) using the application ID from the registered application from the first tenant.
+1. On the second tenant where the Azure Key Vault resides, [create a service principal (application)](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-customer-grants-the-service-providers-app-access-to-the-key-in-the-key-vault) using the application ID from the registered application from the first tenant. Here's some examples of how to register the multi-tenant application. Replace `<TenantID>` and `<ApplicationID>` with the client **Tenant ID** from Azure AD and **Application ID** from the multi-tenant application, respectively:
+   1. **PowerShell**:
+
+      ```powershell
+      Connect-AzureAD -TenantID <TenantID>
+      New-AzADServicePrincipal  -ApplicationId <ApplicationID>
+      ```
+
+   1. **The Azure CLI**
+
+      ```azurecli
+      az login --tenant <TenantID>
+      az ad sp create --id <ApplicationID>
+      ```
+
 1. created an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't have one, [create or set the access policy](/azure/key-vault/general/assign-access-policy), and [create a key](/azure/key-vault/keys/quick-create-portal)
    1. Select the *Get, Wrap Key, Unwrap Key* permissions under **Key permissions** when creating the access policy
    1. Select the multi-tenant application created in the first step in the **Principal** option when creating the access policy
@@ -50,9 +64,40 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
 
 1. Once the access policy and key has been created, [Retrieve the key from Key Vault](/azure/key-vault/keys/quick-create-portal#retrieve-a-key-from-key-vault) and record the **Key Identifier**
 
+### Overview of the setup
+
+**On the ISV tenant**
+
+1. Create a [user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md)
+
+1. Create a [multi-tenant application](/azure/active-directory/develop/app-objects-and-service-principals)
+
+1. Configure the user-assigned managed identity as a federated credential on the application
+
+**On the client tenant**
+
+1. Install the multi-tenant application
+
+1. Create or use existing key vault and grant [key permissions](transparent-data-encryption-byok-overview.md) to the multi-tenant application
+
+1. Create a new or use an existing key
+
+1. [Retrieve the key from Key Vault](/azure/key-vault/keys/quick-create-portal#retrieve-a-key-from-key-vault) and record the **Key Identifier**
+
+**On the ISV tenant**
+
+1. [Assign the user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md#set-a-managed-identity-in-the-azure-portal) created as the **Primary identity** in the Azure SQL resource **Identity** menu in the [Azure portal](https://portal.azure.com)
+
+1. Assign the **Federated client identity** in the same **Identity** menu, and use the application name
+
+1. In the **Transparent data encryption** menu of the Azure SQL resource, assign a **Key identifier** using the customer's **Key Identifier** obtained from the client tenant.
+
 ## Create server configured with TDE with cross-tenant customer-managed key (CMK)
 
 The following steps outline the process of creating a new Azure SQL Database logical server and a new database with a user-assigned managed identity. The steps also go over how to set a cross-tenant customer managed key. The user-assigned managed identity is required for configuring a customer-managed key for TDE at server creation time.
+
+> [!IMPORTANT]
+> The user or application using APIs to create SQL logical servers needs the [**SQL Server Contributor**](/azure/role-based-access-control/built-in-roles#sql-server-contributor) and [**Managed Identity Operator**](/azure/role-based-access-control/built-in-roles#managed-identity-operator) RBAC roles or higher on the subscription.
 
 # [Portal](#tab/azure-portal)
 
@@ -115,7 +160,7 @@ The following steps outline the process of creating a new Azure SQL Database log
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
-Create a server configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql server create](/cli/azure/sql/server) command. The **Key Identifier** from the second tenant can be used in the `key-id` field.
+Create a server configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql server create](/cli/azure/sql/server) command. The **Key Identifier** from the second tenant can be used in the `key-id` field. - The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field.
 
 ```azurecli
 az sql server create \
@@ -129,6 +174,7 @@ az sql server create \
     --user-assigned-identity-id $identityid
     --primary-user-assigned-identity-id $primaryidentityid
     --key-id $keyid
+    --federated-client-id $federatedid
  
 ```
 
@@ -165,18 +211,18 @@ Replace the following values in the example:
 - `<UserAssignedIdentityId>`: The list of user-assigned managed identities to be assigned to the server (can be one or multiple)
 - `<PrimaryUserAssignedIdentityId>`: The user-assigned managed identity that should be used as the primary or default on this server
 - `<CustomerManagedKeyId>`: The **Key Identifier** from the second tenant Key Vault
+- `<FederatedClientId>`: The **Application ID** of the multi-tenant application
 
 To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
 
 ```powershell
 # create a server with user-assigned managed identity and cross-tenant customer-managed TDE
-New-AzSqlServer -ResourceGroupName <ResourceGroupName> -Location <Location> -ServerName <ServerName> -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential) -SqlAdministratorLogin <ServerAdminName> -SqlAdministratorPassword <ServerAdminPassword> -AssignIdentity -IdentityType <IdentityType> -UserAssignedIdentityId <UserAssignedIdentityId> -PrimaryUserAssignedIdentityId <PrimaryUserAssignedIdentityId> -KeyId <CustomerManagedKeyId>
-
+New-AzSqlServer -ResourceGroupName <ResourceGroupName> -Location <Location> -ServerName <ServerName> -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential) -SqlAdministratorLogin <ServerAdminName> -SqlAdministratorPassword <ServerAdminPassword> -AssignIdentity -IdentityType <IdentityType> -UserAssignedIdentityId <UserAssignedIdentityId> -PrimaryUserAssignedIdentityId <PrimaryUserAssignedIdentityId> -KeyId <CustomerManagedKeyId> -FederatedClientId <FederatedClientId>
 ```
 
 # [ARM Template](#tab/arm-template)
 
-Here's an example of an ARM template that creates an Azure SQL logical server with a user-assigned managed identity and customer-managed TDE. For a cross-tenant CMK, use the **Key Identifier** from the second tenant Key Vault.
+Here's an example of an ARM template that creates an Azure SQL logical server with a user-assigned managed identity and customer-managed TDE. For a cross-tenant CMK, use the **Key Identifier** from the second tenant Key Vault, and the **Application ID** from the multi-tenant application.
 
 The template also adds an Azure AD admin set for the server and enables [Azure AD-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
 
@@ -236,6 +282,13 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
                 "description": "The Resource ID of the user-assigned managed identity."
             }
         },
+        "federated_clientid": {
+            "defaultValue": "",
+            "type": "String",
+            "metadata": {
+                "description": "The Application ID of the multi-tenant application."
+            }
+        },
         "keyvault_url": {
             "defaultValue": "",
             "type": "String",
@@ -267,6 +320,7 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
                 "administratorLogin": "[parameters('AdminLogin')]",
                 "administratorLoginPassword": "[parameters('AdminLoginPassword')]",
                 "PrimaryUserAssignedIdentityId": "[parameters('user_identity_resource_id')]",
+                "federatedClientId": "[parameters('federated_clientid')]",
                 "KeyId": "[parameters('keyvault_url')]",
                 "administrators": {
                     "login": "[parameters('aad_admin_name')]",

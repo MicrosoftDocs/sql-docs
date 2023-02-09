@@ -84,9 +84,9 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 - The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 - SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
 - Azure extension for SQL Server is not supported in the following environments:
-  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [remove the Azure extension for SQL Server](connect.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
+  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [Delete your Arc-enabled SQL Server resource](delete-from-azure-arc.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
   - SQL Server in Linux containers
-  - SQL Server on VMware clusters or on Azure VMware Solution
+  - SQL Server Azure VMware Solution
 
 > [!NOTE]
 > Azure extension for SQL Server fully supports VMware clusters outside of Azure.
@@ -155,7 +155,7 @@ The introduction of SQL Server extension requires that the user accounts have mo
 
 ### Other changes
 
-This release includes a new Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connect-at-scale-using-azure-policy).
+This release includes a new Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale-policy.md#connect-at-scale-using-azure-policy).
 
 ## April 2021
 

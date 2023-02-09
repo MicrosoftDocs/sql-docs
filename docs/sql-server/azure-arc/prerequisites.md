@@ -21,30 +21,30 @@ An Azure Arc-enabled instance of SQL Server is an instance on-premises or in a c
 
 Before you can Arc-enable an instance of SQL Server you need to:
 
-
-
-- Have an Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/free/).
-- [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites)
-- [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements)
+- Have an Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/free/)
+- Verify [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites)
+- Verify [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements)
 - Register resource providers. Specifically:
   - `Microsoft.AzureArcData`
   - `Microsoft.HybridCompute`
 
   For instructions, see [Register resource providers](#register-resource-providers).
 
-- To onboard SQL Server to Arc-enabled SQL Server, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
-  - `Microsoft.AzureArcData/register/action`
-  - `Microsoft.HybridCompute/machines/extensions/read`
-  - `Microsoft.HybridCompute/machines/extensions/write`
-  
-    Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+### Permissions
 
-- Run a supported version of SQL Server on a supported operating system. See [Supported SQL Server versions and operating systems](#supported-sql-server-versions-and-operating-systems).
+To [Connect SQL Servers on Azure Arc-enabled servers at scale using Azure policy](connect-at-scale-policy.md) for you to create an Azure Policy assignment, your subscription requires the `Resource Policy Contributor` role assignment for the scope that you're targeting. The scope may be either subscription or resource group. Further, if you are going to create a *new* system assigned managed identity, you need the `User Access Administrator` role assignment in the subscription.
+
+For all the other onboarding methods, user or service principal must have permissions in the Azure resource group to complete the task. Specifically:
+- `Azure Connected Machine Onboarding` role
+- `Microsoft.AzureArcData/register/action`
+- `Microsoft.HybridCompute/machines/extensions/read`
+- `Microsoft.HybridCompute/machines/extensions/write`
+  
+Users can be assigned to built-in roles that have these permissions, for example [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or [Owner](/azure/role-based-access-control/built-in-roles#owner). See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+
 - Have local administrator permission on the operating system to install and configure the agent.
   - For Linux, use the root account.
   - For Windows, use an account that is a member of the Local Administrators group.
-
-
 
 ## Supported SQL Server versions and operating systems
 
@@ -100,7 +100,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 The maximum number of resources in a resource group is 800. This limitation applies to Azure Arc-enabled SQL Server instances and databases. Before configuring your SQL server instances and machines with Azure Arc review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
 
-## Supported Azure regions
+## Supported regions
 
 Arc-enabled SQL Server is available in the following regions:
 

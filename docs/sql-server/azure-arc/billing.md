@@ -107,23 +107,14 @@ The following table shows the meters that track usage and billing for different 
 ## Selecting license type
 
 License type is a property of Azure extension for SQL Server. Only one instance of the extension can be installed on each machine. It manages all SQL Server instances installed on that machine. To select license type, use one of the following methods:
-
-If your machine is already connected to an Arc-enabled Server, follow the steps in [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md)
-
-If your machine isn’t connected to an Arc-enabled Server, follow the steps in [When the machine isn't connected to an Arc-enabled Server](connect.md#onboard-the-server-to-azure-arc)
-
-- If your machine is already connected to an Arc-enabled Server, follow the steps in [When the machine is already connected to an Arc-enabled Server](connect.md#when-the-machine-is-already-connected-to-an-arc-enabled-server)
-- If your machine isn’t connected to an Arc-enabled Server, follow the steps in [When the machine isn't connected to an Arc-enabled Server](connect.md#when-the-machine-isnt-connected-to-an-arc-enabled-server)
-- If you are installing SQL Server 2022, you have the option to select the license type with [SQL 2022 setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
    
 The license type value is shared by all SQL Server instances and for your convenience, it is visible in the overview blade of Arc-enabled SQL Server as shown.
 
 ![Screenshot of Azure Arc-enabled SQL Server instance configured for pay-as-you-go licensing.](media/billing/overview-of-sql-server-azure-arc.png)
 
-
 ## Modify license type
 
-You can change the license type of an installed Azure extension for SL Server by using one of the following methods.
+You can change the license type of an installed Azure extension for SQL Server by using one of the following methods.
 
 ### [Azure portal](#tab/azure)
 
@@ -156,6 +147,9 @@ az connectedmachine extension update --machine-name "simple-vm" -g "arceeBilling
 > - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
 > - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a mchine extenstion](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
+## Deployment options
+
+To select the appropriate deployment option, see [Deployment options for Azure Arc-enabled SQL Server](deployment-options.md)
 ## Next steps
 
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)

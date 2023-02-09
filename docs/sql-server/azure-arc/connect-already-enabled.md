@@ -19,9 +19,9 @@ This article explains how to connect your SQL Server instance to Azure Arc on an
 
 If the machine with SQL Server is already connected to Azure Arc, to connect the SQL Server instances, install *Azure extension for SQL Server*. The extension is in the extension tab of "Server -Azure Arc" resource as **Azure Extension for SQL Server**.
 
-Once installed, the Azure extension for SQL Server recognizes all the installed SQL Server instances and connects them with Azure Arc. 
 
-The extension runs continuously to detect changes in the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, the extension automatically detects and registers it with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
+
+
 
 > [!IMPORTANT]  
 >
@@ -35,7 +35,7 @@ To install the Azure extension for SQL Server, use the following steps:
 1. Search for the connected server with the SQL Server instance that you want to connect to Azure.
 1. Under **Extensions**, select **+ Add**.
 1. Select `Azure extension for SQL Server` and select **Next**.
-1. Specify the SQL Server edition and license type you are using on this machine.
+1. Specify the SQL Server edition and license type you are using on this machine. Please note that some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. [Learn more:](billing.md). 
 1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances to skip, separate them by spaces) and select **Review + Create**.
    :::image type="content" source="media/join/license-type-in-extension.png" alt-text="Screenshot for license type and exclude instances.":::
 1. Select **Create**.
@@ -75,9 +75,16 @@ The possible licensing types that you can set are:
 
 ---
 
-> [!NOTE]  
-> The specified resource group must match the resource group where the corresponding connected server is registered. Otherwise, the command will fail.
- an
+Once installed, the Azure extension for SQL Server recognizes all the installed SQL Server instances and connects them with Azure Arc. 
+
+The extension will runs continuously to detect changes in the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, the extension automatically detects and registers it with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
+
+
+## Validate your Arc-enabled SQL Server resources
+
+Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL Server resource to validate.
+
+   :::image type="content" source="media/join/validate-sql-server-azure-arc.png" alt-text="Screenshot of validating a connected SQL server.":::
 
 ## Next steps
 

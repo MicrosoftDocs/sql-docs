@@ -501,7 +501,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
    * **Proxy server URL**: (Optional) - Name of the HTTP proxy server used to connect to Azure Arc.
 
    > [!NOTE]  
-   > To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale.md#connect-multiple-instances). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
+   > To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale-policy.md). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
 
    Select **Next** to proceed.
 

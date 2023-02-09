@@ -10418,11 +10418,11 @@ items:
         - name: Connect at scale
           items:
           - name: Connect at scale | Azure policy
-            href: sql-server/azure-arc/connect-at-scale.md
+            href: sql-server/azure-arc/connect-at-scale-policy.md
           - name: Connect at scale | Script
             href: sql-server/azure-arc/connect-at-scale-script.md
-        - name: Validate successful onboarding
-          href: sql-server/azure-arc/validate.md
+          - name: Connect machines using Configuration Manager custom task sequence
+            href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
     - name: Manage
       items:
       - name: Assess
@@ -10431,8 +10431,6 @@ items:
         href: sql-server/azure-arc/view-databases.md
       - name: Delete from or restore to Azure Arc
         href: sql-server/azure-arc/delete-from-azure-arc.md
-      - name: Restore to Azure Arc
-        href: sql-server/azure-arc/restore-to-azure-arc.md
       - name: Billing through Microsoft Azure
         href: sql-server/azure-arc/billing.md
     - name: Secure
@@ -10445,8 +10443,7 @@ items:
       items:
       - name: Troubleshoot deployment
         href: sql-server/azure-arc/troubleshoot-deployment.md
-      - name: Troubleshoot other
-        href: sql-server/azure-arc/troubleshoot.md
+
 
 - name: Big Data Clusters
   items:

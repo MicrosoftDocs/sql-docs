@@ -1,7 +1,7 @@
 ---
-title: Enable billing through Microsoft Azure
+title: Manage license type
 titleSuffix: Azure Arc-enabled SQL Server
-description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft. Use to enable pay as you go licensing.
+description: Explains how to manage SQL Server instance licenses. Also demonstrates how Azure Arc-enabled SQL Server can be billed by Microsoft. Use to enable pay as you go licensing.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
@@ -10,7 +10,9 @@ ms.service: sql
 ms.topic: conceptual
 ---
 
-# SQL Server licensing and billing options
+# Manage SQL Server license type
+
+This article explains how to manage SQL Server licenses. 
 
 You can use Arc-enabled SQL Server to accurately track your usage of the SQL Server software and manage your license compliance. You may also elect to pay for the SQL software usage directly through Microsoft Azure using a pay-as-you-go billing option. You can control how you pay for SQL Server software through Azure portal or API. SQL Server 2022 (16.x) allows you to select a pay-as-you-go billing option during setup.
 

@@ -1,5 +1,5 @@
 ---
-title: Connect machines at scale with a Configuration Manager custom task sequence | Arc-enabled SQL Server
+title: Connect SQL Server machines at scale with a Configuration Manager custom task sequence | Arc-enabled SQL Server
 description: You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers for Azure Arc-enabled SQL Server.
 ms.date: 01/20/2022
 ms.topic: how-to
@@ -9,23 +9,24 @@ ms.reviewer: mikeray, randolphwest
 ms.service: sql
 ---
 
-# Connect machines at scale with a Configuration Manager custom task sequence
+# Connect SQL Server machines at scale with a Configuration Manager custom task sequence
 
 Microsoft Endpoint Configuration Manager facilitates comprehensive management of servers supporting the secure and scalable deployment of applications, software updates, and operating systems. Configuration Manager offers the custom task sequence as a flexible paradigm for application deployment.
 
 You can use a custom task sequence, that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers.
 
-Before you get started, be sure to review the [prerequisites](prerequisites.md) and verify that your subscription and resources meet the requirements. For information about supported regions and other related considerations, see [supported Azure regions](prerequisites.md#supported-regions). Also review our [at-scale planning guide](/azure/azure-arc/servers/plan-at-scale-deployment) to understand the design and deployment criteria, as well as our management and monitoring recommendations.
+Before you get started, be sure to review the [prerequisites](prerequisites.md) and verify that your subscription and resources meet the requirements. 
 
-If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
 ## Generate a service principal
 
-Follow the steps to [create a service principal for onboarding at scale](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale). Assign the **Azure Connected Machine Onboarding** role to your service principal, and limit the scope of the role to the target Azure landing zone. Make a note of the Service Principal ID and Service Principal Secret, as you'll need these values later.
+Create an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.
+
+Before you get started, be sure to review the [prerequisites](prerequisites.md) and assign the necessary roles and permissions to the service principal.
 
 ## Download the agent and create the application
 
-First, download the Azure Connected Machine agent package (AzureConnectedMachineAgent.msi) for Windows from the [Microsoft Download Center](https://aka.ms/AzureConnectedMachineAgent). The Azure Connected Machine agent for Windows can be [upgraded to the latest release manually or automatically](/azure/azure-arc/servers/manage-agent), depending on your requirements. The .msi must be saved in a server share for the custom task sequence.
+Download AzureExtensionForSQLServer.msi from the [link](https://aka.ms/AzureExtensionForSQLServer) for Windows.  The .msi must be saved in a server share for the custom task sequence.
 
 Next, [create an application in Configuration Manager](/mem/configmgr/apps/get-started/create-and-deploy-an-application) using the installed Azure Connected Machine agent package:
 
@@ -33,7 +34,7 @@ Next, [create an application in Configuration Manager](/mem/configmgr/apps/get-s
 1. On the **Home** tab, in the **Create** group, select **Create Application**.
 1. On the **General** page of the Create Application Wizard, select **Automatically detect information about this application from installation files**. This action pre-populates some of the information in the wizard with information that is extracted from the installation .msi file. Then, specify the following information:
    1. **Type**: Select **Windows Installer (*.msi file)**
-   1. **Location**: Select **Browse** to choose the location where you saved the installation file **AzureConnectedMachineAgent.msi**.
+   1. **Location**: Select **Browse** to choose the location where you saved the installation file **AzureExtensionForSQLServer.msi**.
       :::image type="content" source="media/onboard-configuration-manager-custom-task/configuration-manager-create-application.png" alt-text="Screenshot of the Create Application Wizard in Configuration Manager.":::
 1. Select **Next**, and on the **Import Information** page, select **Next** again.
 1. On the **General Information** page, you can supply further information about the application to help you sort and locate it in the Configuration Manager console. Once complete, select Next.
@@ -44,7 +45,7 @@ You have finished creating the application. To find it, in the **Software Librar
 
 ## Create a task sequence
 
-The next step is to define a custom task sequence that installs the Azure Connected Machine Agent on a machine, then connects it to Azure Arc.
+The next step is to define a custom task sequence that installs the Azure Connected Machine Agent on a machine and deploy Azure Extension for SQL Server, then connects it to Azure Arc.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.
 1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Task Sequence**. This will launch the Create Task Sequence Wizard.
@@ -59,8 +60,8 @@ After you complete the Create Task Sequence Wizard, Configuration Manager adds t
 1. In the **Task Sequence** list, select the task sequence that you want to edit.
 1. Define **Install Application** as the first task in the task sequence.
    1. On the **Home** tab of the ribbon, in the**Task Sequence** group, select **Edit**. Then, select **Add**, select **Software**, and select **Install Application**.
-   1. Set the name to `Install Connected Machine Agent`.
-   1. Select the Azure Connected Machine Agent.
+   1. Set the name to `Install Connected Machine Agent and Azure extenstion for SQL Server `.
+   1. Select the Azure Extension for SQL Server.
       :::image type="content" source="media/onboard-configuration-manager-custom-task/configuration-manager-edit-task-sequence.png" alt-text="Screenshot showing a task sequence being edited in Configuration Manager.":::
 1. Define **Run PowerShell Script** as the second task in the task sequence.
    1. Select **Add**, select **General**, and select **Run PowerShell Script**.
@@ -69,7 +70,7 @@ After you complete the Create Task Sequence Wizard, Configuration Manager adds t
    1. Select **Add Script**, and then edit the script to connect to Arc as shown below. Note that this template script has placeholder values for the service principal, tenant, subscription, resource group, and location, which you should update to the appropriate values.
 
    ```azurepowershell
-   & "$env:ProgramW6432\AzureConnectedMachineAgent\azcmagent.exe" connect --service-principal-id <serviceprincipalAppID> --service-principal-secret <serviceprincipalPassword> --tenant-id <tenantID> --subscription-id <subscriptionID> --resource-group <ResourceGroupName> --location <resourceLocation>
+   '& "$env:ProgramW6432\AzureExtensionForSQLServer\AzureExtensionForSQLServer.exe" --subId <subscriptionid> --resourceGroup <resourceGroupName> --location <AzureRegion> --tenantid <TenantId> --service-principal-app-id <servicePrincipalAppId> --service-principal-secret <servicePrincipalSecret> --proxy <proxy> --licenseType <licenseType> --excluded-SQL-instances <"MSSQLSERVER01 MSSQLSERVER02 MSSQLSERVER15">'
    ```
 
    :::image type="content" source="media/onboard-configuration-manager-custom-task/configuration-manager-connect-to-azure-arc.png" alt-text="Screenshot showing a task sequence being edited to run a PowerShell script.":::
@@ -83,14 +84,16 @@ Follow the steps outlined in Deploy a task sequence to deploy the task sequence 
 - Under **Deployment Settings**, set **Purpose** as **Required** so that Configuration Manager automatically runs the task sequence according to the configured schedule. If **Purpose** is set to **Available** instead, the task sequence will need to be installed on demand from Software Center.
 - Under **Scheduling**, set **Rerun Behavior** to **Rerun if failed previous attempt**.
 
-## Verify successful connection to Azure Arc
+## Validate successful onboarding
 
-To verify that the machines have been successfully connected to Azure Arc, verify that they are visible in the [Azure portal](https://aka.ms/hybridmachineportal).
+After you connected the SQL Server instances to Azure, go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You'll see a new `Server - Azure Arc` resource for each connected machine and a new `SQL Server - Azure Arc` resource for each connected SQL Server instance within approximately 1 minute. If these resources aren't created, it means something went wrong during the extension installation and activation process. See [Troubleshoot Azure extension for SQL Server](troubleshoot-deployment.md) for the troubleshooting options.
 
-:::image type="content" source="media/onboard-configuration-manager-custom-task/verify-onboarding-configuration-manager-custom-task-sequence.png" alt-text="Screenshot of the Azure portal showing successful onboarding of Azure Arc-enabled servers.":::
+:::image type="content" source="./media/join-at-scale/successful-onboard.png" alt-text="Screenshot showing a successful onboard.":::
+
+
 
 ## Next steps
 
-- Review the [Planning and deployment guide](/azure/azure-arc/servers/plan-at-scale-deployment) to plan for deploying Azure Arc-enabled servers at any scale and implement centralized management and monitoring.
-- Review connection troubleshooting information in the [Troubleshoot Connected Machine agent guide](/azure/azure-arc/servers/troubleshoot-agent-onboard).
-- Learn how to manage your machine using [Azure Policy](/azure/governance/policy/overview) for such things as VM [guest configuration](/azure/governance/machine-configuration/overview), verifying that the machine is reporting to the expected Log Analytics workspace, enabling monitoring with [VM insights](/azure/azure-monitor/vm/vminsights-enable-policy.md), and much more.
+- Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
+
+- Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)

@@ -12,11 +12,42 @@ ms.topic: conceptual
  
 # Troubleshooting Database Migration Assessment for Oracle extension errors
 
-This article covers details about the errors messages, possible causes and how to troubleshoot Database Migration Assessment for Oracle extension errors.
+This article explain how to determine, diagnose, and fix issues/errors that you might encounter when you use  Database Migration Assessment for Oracle extension.
 
 
 
-## Error Code: FSMB-0001
+## Troubleshoot
+
+To troubleshoot any Database Migration Assessment for Oracle extension issue, you may have to find out the details  about the error, and warnings from the logs generated. Refer below section to access the logs.
+
+
+
+### Logs
+
+The extension stores errors, warnings, and other diagnostic logs in the default log directory:
+
+- Windows - `C:\Users\<username>.dmaoracle\logs\`
+- Linux - `~/.dmaoracle/logs`
+- macOS - `/Users/<username>/.dmaoracle/logs`
+
+> [!NOTE]
+> By default, the extension stores the last seven log files.
+To change the log directory, update the `LogDirectory` property in the extension settings file.
+
+|Operating system|Path|
+|---|---|
+|Windows|`C:\Users\<username>\.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-<VersionNumber>\bin\service\Properties\ConfigSettings\extension-settings.json`|
+|Linux|`~/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+|macOS|`/Users/<username>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+
+
+## Error Codes Details
+
+Below section gives you more details about error codes, messages, possible causes and their respective remediation actions.
+
+
+
+### Error Code: FSMB-0001
 
 Error Message: Failed to access assessment data.
 
@@ -28,7 +59,7 @@ Remediation actions: You need to ensure that the logged in user has read and wri
 
 
  
-## Error Code: GE-0000
+### Error Code: GE-0000
  
 Error Message: The data collection failed with an unknown error. Try creating a new assessment.
  
@@ -38,7 +69,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
  
 
 
-## Error Code: FSMB-0002
+### Error Code: FSMB-0002
  
 Error Message: Failed to parse the assessment data. A metadata file is either corrupted or modified externally. Try creating a new assessment.
  
@@ -50,7 +81,7 @@ Remediation actions: You may have to delete the current assessment and then try 
 
 
  
-## Error Code: FSMB-0003
+### Error Code: FSMB-0003
  
 Error Message: Failed to save the assessment output with a file system error.
  
@@ -62,7 +93,7 @@ Remediation actions: You need to ensure that the logged in user has read and wri
 
 
  
-## Error Code: ODC-1000
+### Error Code: ODC-1000
  
 Error Message: Failed to collect required data with an underlying Oracle exception - {ORA error}. Check Oracle documentation for this error code.
  
@@ -72,7 +103,7 @@ Remediation actions: You may need to refer Oracle documentation to resolve this 
 
 
  
-## Error Code: FSRP-0001
+### Error Code: FSRP-0001
  
 Error Message: A terminal error occurred - failed to access lookup data. A lookup file is either deleted or corrupted. Re-install the extension and try again.
  
@@ -84,7 +115,7 @@ Remediation actions: Try to re-install the extension, close any open assessment 
 
 
  
-## Error Code: GE-2000
+### Error Code: GE-2000
  
 Error Message: Failed to process the AWR report with an unknown error.
  
@@ -94,7 +125,7 @@ Remediation actions: Try to create a new assessment with another AWR report. Als
  
 
  
-## Error Code: ODC-1002
+### Error Code: ODC-1002
 
 Error Message: Connection timed out to the Oracle server. Navigate to the connections panel and refresh the connection to the Oracle server.
  
@@ -106,7 +137,7 @@ Remediation actions: Try to reconnect to the Oracle server or refresh the connec
  
 
  
-## Error Code: SQLA-3001
+### Error Code: SQLA-3001
  
 Error Message: SKU recommendation for Azure SQL target platform failed with an unknown error.
  
@@ -116,7 +147,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
 
 
 
-## Error Code: AWR-0001
+### Error Code: AWR-0001
  
 Error Message: The specified AWR report version does not match with the connected Oracle server. Run a new assessment with an AWR report of the same server.
  
@@ -127,7 +158,7 @@ If the issue persists, please [contact Microsoft for help](https://aka.ms/contac
 
 
  
-## Error Code: AWR-0002
+### Error Code: AWR-0002
  
 Error Message: Uploaded report is not a valid AWR report. Run a new assessment with a valid AWR report of the connected server.
  
@@ -138,7 +169,7 @@ If the issue persists, please [contact Microsoft for help](https://aka.ms/contac
  
 
  
-## Error Code: ORADA-1002
+### Error Code: ORADA-1002
  
 Error Message: Assessment failed as it received an invalid value={invalid value} for metric name={metric name} from the Oracle server.
  
@@ -150,7 +181,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
 
 
 
-## Error Code: DBNS-0000
+### Error Code: DBNS-0000
  
 Error Message: Assessment failed as {0} database running on {1} platform with version {2} is unsupported. For supported versions, refer aka.ms/prereq
  
@@ -160,7 +191,7 @@ Remediation actions: Try to create a new assessment on a supported version of Or
  
 
 
-## Error Code: AWR-0000
+### Error Code: AWR-0000
  
 Error Message: Oracle database name in the specified AWR report doesn't matches with the connected Oracle server. Run a new assessment with an AWR report of the same database.
  
@@ -170,7 +201,7 @@ Remediation actions: You must upload the correct AWR report for the connected Or
 
  
  
-## Error Code: GE-1002
+### Error Code: GE-1002
  
 Error Message: Configured assessment folder does not exist.
  
@@ -180,7 +211,7 @@ Remediation actions: Verify the assessment folder path exists on local computer.
 
  
 
-## Error Code: ODC-1005
+### Error Code: ODC-1005
 
 Error Message: Connected oracle server is not available due to an underlying Oracle exception - ORA1034.
 
@@ -190,7 +221,7 @@ Remediation actions: Check if the database is online, in a healthy state and rea
  
 
  
-## Error Code: ODC-1003
+### Error Code: ODC-1003
 
 Error Message: Login failed due to invalid credentials. Verify the login credentials for database and try again.
 
@@ -200,7 +231,7 @@ Remediation actions: You must ensure that the Oracle Database credentials provid
  
  
  
-## Error Code: ODC-1004 
+### Error Code: ODC-1004 
  
 Error Message: Failed to connect to the Oracle server due to an underlying driver error code {error code}.
    
@@ -212,7 +243,7 @@ Remediation actions: Try to reconnect to the Oracle server or refresh the connec
 
 
   
-## Error Code: ODC-0000
+### Error Code: ODC-0000
  
 Error Message: The data collection failed with an unknown error. Try creating a new assessment.
  
@@ -222,7 +253,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
 
  
  
-## Error Code: ODC-0004
+### Error Code: ODC-0004
  
 Error Message: Ora2Pg code complexity data collection failed with an unknown error. Try creating a new assessment.
 
@@ -232,7 +263,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
  
 
  
-## Error Code: Ora2pg-2000
+### Error Code: Ora2pg-2000
  
 Error Message: Failed to parse the Ora2Pg assessment report with an unknown error. Try creating a new assessment.
 
@@ -242,7 +273,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
 
 
 
-## Error Code: MDS-0004
+### Error Code: MDS-0004
 
 Error Message: Failed to save the assessment output with a serializer error.
 
@@ -254,7 +285,7 @@ Remediation actions: You may have to delete the current assessment and then try 
  
 
  
-## Error Code: MDS-0005
+### Error Code: MDS-0005
 
 Error Message: Failed to delete the assessment report with an unknown error.
 
@@ -266,7 +297,7 @@ Remediation actions: You need to ensure that the logged in user has delete permi
 
  
 
-## Error Code: FSRP-0000
+### Error Code: FSRP-0000
 
 Error Message: A terminal error occurred - failed to access lookup data. A lookup file is either deleted or corrupted. Re-install the extension and try again.
 
@@ -278,7 +309,7 @@ Remediation actions: Try to re-install the extension, close any open assessment 
  
  
  
-## Error Code: LDR-0000
+### Error Code: LDR-0000
 
 Error Message: A terminal error occurred - failed to access lookup data. A lookup file is either deleted or corrupted. Re-install the extension and try again.
 
@@ -290,7 +321,7 @@ Remediation actions: Try to re-install the extension, close any open assessment 
  
 
 
-## Error Code: LDR-0001
+### Error Code: LDR-0001
 
 Error Message: A terminal error occurred - failed to parse lookup data. A lookup file is either deleted or corrupted. Re-install the extension and try again.
 
@@ -302,7 +333,7 @@ Remediation actions: Try to re-install the extension, close any open assessment 
  
 
  
-## Error Code: ORADA-0000
+### Error Code: ORADA-0000
 
 Error Message: Failed to aggregate the collected performance data with to an unknown error.
 
@@ -311,7 +342,7 @@ Possible Causes: This is an uncategorized error.
 Remediation actions: To investigate further, go through the [logs](https://aka.ms/logsDMAO) to understand the reason of error. Please [contact Microsoft for help](https://aka.ms/contactDMAO) 
  
  
-## Error Code: ODC-0002
+### Error Code: ODC-0002
 
 Error Message: Failed to collect Oracle feature data with to an unknown error.
 
@@ -321,7 +352,7 @@ Remediation actions: To investigate further, go through the [logs](https://aka.m
  
  
  
-## Error Code: FSMB-0000
+### Error Code: FSMB-0000
 
 Error Message: Failed to generate the assessment output with an unknown error.
   
@@ -333,7 +364,7 @@ Remediation actions: You need to ensure that the logged in user has write permis
 
 
 
-## Error Code: FSMB-0004
+### Error Code: FSMB-0004
 
 Error Message: Failed to save the assessment output with a serializer error.
  
@@ -343,7 +374,7 @@ Remediation actions: You may try to run a new assessment. To investigate further
 
 
 
-## Error Code: FSMB-0005
+### Error Code: FSMB-0005
 
 Error Message: Failed to delete the assessment report with a file system error.
  
@@ -355,7 +386,7 @@ Remediation actions: You need to ensure that the logged in user has delete permi
 
 
 
-## Error Code: MDS-0001
+### Error Code: MDS-0001
 
 Error Message: Failed to read the assessment data with a file system error.
  
@@ -367,7 +398,7 @@ Remediation actions: You need to ensure that the logged in user has read and wri
 
 
 
-## Error Code: MDS-0002
+### Error Code: MDS-0002
 
 Error Message: Failed to read the assessment data with a serializer error.
  
@@ -380,7 +411,7 @@ Remediation actions: You need to ensure that the logged in user has read and wri
 
  
 
-## Error Code: ORADA - 1001
+### Error Code: ORADA - 1001
 
 Error Message: Failed to process collected static data with serializer error. Try creating a new assessment.
  
@@ -392,7 +423,7 @@ Remediation actions: You may try to run a new assessment. To investigate further
 
 
 
-## Error Code: ORADA-1000
+### Error Code: ORADA-1000
 
 Error Message: Failed to process collected performance data with serializer error. Try creating a new assessment.
  
@@ -404,7 +435,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
  
 
  
-## Error Code: AWR-0003
+### Error Code: AWR-0003
 
 Error Message: Uploaded AWR report is for a pluggable database, but a CDB root container AWR report was expected for performance data collection. Try creating a new assessment with the AWR report for CDB root container.
  

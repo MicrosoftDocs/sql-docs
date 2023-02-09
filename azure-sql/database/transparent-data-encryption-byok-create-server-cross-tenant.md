@@ -49,7 +49,7 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
       New-AzADServicePrincipal  -ApplicationId <ApplicationID>
       ```
 
-   1. **The Azure CLI**
+   1. **The Azure CLI**:
 
       ```azurecli
       az login --tenant <TenantID>

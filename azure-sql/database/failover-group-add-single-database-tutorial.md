@@ -94,19 +94,17 @@ Create your failover group and add your database to it using the Azure portal.
 
 # [PowerShell](#tab/azure-powershell)
 
-Create your failover group and add your database to it using PowerShell.
+Create your failover group and add your database to it using PowerShell. In each case, update the variable to the values appropriate for your environment.
 
    > [!NOTE]
    > The server login and firewall settings must match that of your primary server.
 
    ```powershell-interactive
-   # $subscriptionId = '<SubscriptionID>'
-   # $resourceGroupName = "myResourceGroup-$(Get-Random)"
-   # $location = "West US"
-   # $adminLogin = "azureuser"
-   # $password = "PWD27!"+(New-Guid).Guid
-   # $serverName = "mysqlserver-$(Get-Random)"
-   # $databaseName = "mySampleDatabase"
+   $resourceGroupName = "myResourceGroup-$(Get-Random)"
+   $adminLogin = "azureuser"
+   $password = "password"+(New-Guid).Guid
+   $serverName = "mysqlserver-$(Get-Random)"
+   $databaseName = "mySampleDatabase"
    $drLocation = "East US"
    $drServerName = "mysqlsecondary-$(Get-Random)"
    $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
@@ -238,15 +236,15 @@ Test failover using the Azure portal.
 
 # [PowerShell](#tab/azure-powershell)
 
-Test failover using PowerShell.
+Test failover using PowerShell. In each case, update the variables to the appropriate values for your environment.
 
 Check the role of the secondary replica:
 
    ```powershell-interactive
    # Set variables
-   # $resourceGroupName = "myResourceGroup-$(Get-Random)"
-   # $serverName = "mysqlserver-$(Get-Random)"
-   # $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
+   $resourceGroupName = "myResourceGroup-$(Get-Random)"
+   $drServerName = "mysqlserver-$(Get-Random)"
+   $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
 
    # Check role of secondary replica
    Write-host "Confirming the secondary replica is secondary...."
@@ -261,7 +259,7 @@ Perform a planned failover (without data loss) to the secondary server:
    ```powershell-interactive
    # Set variables
    $resourceGroupName = "myResourceGroup-$(Get-Random)"
-   $serverName = "mysqlserver-$(Get-Random)"
+   $drServerName = "mysqlserver-$(Get-Random)"
    $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
 
    # Failover to secondary server
@@ -279,7 +277,7 @@ Perform a forced failover (with possible data loss) to the secondary server, usi
 
    # Set variables
    $resourceGroupName = "myResourceGroup-$(Get-Random)"
-   $serverName = "mysqlserver-$(Get-Random)"
+   $drServerName = "mysqlserver-$(Get-Random)"
    $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
 
    # Failover to secondary server
@@ -296,9 +294,9 @@ Revert failover group back to the primary server:
 
    ```powershell-interactive
    # Set variables
-   # $resourceGroupName = "myResourceGroup-$(Get-Random)"
-   # $serverName = "mysqlserver-$(Get-Random)"
-   # $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
+   $resourceGroupName = "myResourceGroup-$(Get-Random)"
+   $serverName = "mysqlserver-$(Get-Random)"
+   $failoverGroupName = "failovergrouptutorial-$(Get-Random)"
 
    # Revert failover to primary server
    Write-host "Failing over failover group to the primary...."
@@ -367,7 +365,7 @@ Delete the resource group using PowerShell.
 
    ```powershell-interactive
    # Set variables
-   # $resourceGroupName = "myResourceGroup-$(Get-Random)"
+   $resourceGroupName = "myResourceGroup-$(Get-Random)"
 
    # Remove the resource group
    Write-host "Removing resource group..."

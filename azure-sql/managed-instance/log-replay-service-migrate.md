@@ -116,6 +116,20 @@ You use an Azure Blob Storage account as intermediary storage for backup files b
 1. [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
 1. [Create a blob container](/azure/storage/blobs/storage-quickstart-blobs-portal) inside the storage account.
 
+### Configure Azure storage behind a firewall
+
+Using Azure Blob storage that's protected behind a firewall is supported, but requires additional configuration. To enable read / write access to Azure Storage with Azure Firewall turned on, you have to add the subnet of the SQL managed instance to the firewall rules of the vNet for the storage account by using MI subnet delegation and the Storage service endpoint. The storage account and the managed instance must be in the same region, or two paired regions. 
+
+To configure the firewall, follow these steps: 
+
+1. Go to your managed instance in the [Azure Portal](https://portal.azure.com) and select the subnet.
+1. Under **Subnet delegation**, choose **Microsoft.Sql/managedInstances** from the **Delegate subnet to a service** drop-down menu. 
+1. Wait about an hour for permissions to propogate. 
+1. Under **Service endpoints**, choose **Microsoft.Storage** from the **Services** drop-down. 
+1. Next, go to **Firewalls and virtual networks** for your storage account, and choose **+Add existing virtual network** to open the **Add networks** page. 
+1. Select the appropriate subscription, virtual network, and managed instance subnet from the drop-down menus and then select **Add**. 
+
+
 ## Authenticate to your Blob Storage account
 
 Use either a SAS token or a managed identity to access your Azure Blob Storage account. 

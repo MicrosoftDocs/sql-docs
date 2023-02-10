@@ -10431,7 +10431,7 @@ items:
         href: sql-server/azure-arc/view-databases.md
       - name: Delete from or restore to Azure Arc
         href: sql-server/azure-arc/delete-from-azure-arc.md
-      - name: Manage SQL Server license type
+      - name: Manage SQL Server license and billing options
         href: sql-server/azure-arc/manage-license-type.md
     - name: Secure
       items:

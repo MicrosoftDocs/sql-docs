@@ -1,5 +1,5 @@
 ---
-title: Manage license type
+title: Manage SQL Server license and billing options
 titleSuffix: Azure Arc-enabled SQL Server
 description: Explains how to manage SQL Server instance licenses. Also demonstrates how Azure Arc-enabled SQL Server can be billed by Microsoft. Use to enable pay as you go licensing.
 author: anosov1960
@@ -10,13 +10,13 @@ ms.service: sql
 ms.topic: conceptual
 ---
 
-# Manage SQL Server license type
+# Manage SQL Server license and billing options
 
-This article explains how to manage SQL Server licenses. 
+This article explains how to manage SQL Server licenses set billing options. 
 
 You can use Arc-enabled SQL Server to accurately track your usage of the SQL Server software and manage your license compliance. You may also elect to pay for the SQL software usage directly through Microsoft Azure using a pay-as-you-go billing option. You can control how you pay for SQL Server software through Azure portal or API. SQL Server 2022 (16.x) allows you to select a pay-as-you-go billing option during setup.
 
-Host license type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in Azure Portal overview for an Arc-enabled SQL Server instance as **Host License Type**.
+License type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in Azure Portal overview for an Arc-enabled SQL Server instance as **Host License Type**.
 
 The following table provide features enabled depending on license type:
 
@@ -32,7 +32,7 @@ The following table provide features enabled depending on license type:
 
 <sup>*</sup>License only includes SQL Server instances that are Developer, Express, or Evaluation Edition.
 
-Learn more [Manage SQL Server license type](manage-license-type.md)
+
 
 ## Prerequisites
 

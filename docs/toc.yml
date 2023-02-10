@@ -8024,7 +8024,7 @@ items:
       - name: Always Encrypted with secure enclaves
         items:
         - name: Always Encrypted with secure enclaves documentation
-          href: /azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing
+          href: /azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
         - name: Always Encrypted with secure enclaves overview
           href: relational-databases/security/encryption/always-encrypted-enclaves.md
       - name: Encryption keys

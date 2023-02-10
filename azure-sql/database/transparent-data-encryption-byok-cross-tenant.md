@@ -52,7 +52,7 @@ The following diagram represents the steps for a scenario that utilizes an Azure
 
 2. Create a [multi-tenant application](/azure/active-directory/develop/app-objects-and-service-principals)
 
-   1. Configure the user-assigned managed identity as a federated credential on the application
+   1. Configure the [user-assigned managed identity as a federated credential](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-service-provider-configures-the-user-assigned-managed-identity-as-a-federated-credential-on-the-application) on the application
 
 **On the client tenant**
 

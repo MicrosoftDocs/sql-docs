@@ -1,5 +1,5 @@
 ---
-title: Azure Arc-enabled data services data collection and reporting
+title: Azure Arc-enabled SQL Server data collection and reporting
 description: Explains data that Microsoft collects for reporting for Azure Arc-enabled SQL Server
 author: anosov1960
 ms.author: sashan
@@ -18,13 +18,13 @@ Neither Azure Arc-enabled SQL Server nor any of the related Azure Arc-enabled se
 
 ## Related products
 
-Azure Arc-enabled data services uses the following products:
+Azure Arc-enabled data services use the following products:
 
 - Azure Arc-enabled servers
 
 The following data is collected to Azure for Azure Arc-enabled SQL Servers:
 
-### Azure Arc-enabled SQL Server
+## Azure Arc-enabled SQL Server
 | Description | Property name | Property type|
 |:--|:--|:--|
 |SQL Server edition|Edition|string|
@@ -66,7 +66,7 @@ The following JSON document is an example of the SQL Server - Azure Arc resource
 }
 ```
 
-### SQL Server database - Azure Arc
+## SQL Server database - Azure Arc
 
 | Description | Property name | Property type|
 |:--|:--|:--|
@@ -113,3 +113,8 @@ The following JSON document is an example of the SQL Server database - Azure Arc
     "provisioningState": "Succeeded"
 }
 ```
+
+## Next steps
+
+- [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+- [Configure on-demand SQL assessment for your SQL Server instance](assess.md)

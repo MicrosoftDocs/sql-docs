@@ -279,7 +279,7 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
     "resources": [
         {
             "type": "Microsoft.Sql/servers",
-            "apiVersion": "2020-11-01-preview",
+            "apiVersion": "2022-05-01-preview",
             "name": "[parameters('server')]",
             "location": "[parameters('location')]",
             "identity": {

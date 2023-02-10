@@ -3,7 +3,7 @@ description: "Provision enclave-enabled keys"
 title: "Provision enclave-enabled keys | Microsoft Docs"
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 02/15/2023
 ms.service: sql
 ms.reviewer: vanto
 ms.subservice: security
@@ -160,6 +160,6 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ## See also
 
-- [Tutorial: Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

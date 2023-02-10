@@ -3,7 +3,7 @@ title: Using Always Encrypted with SqlClient
 description: Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/01/2023
+ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: "Always Encrypted with .NET Framework Data Provider"
 description: Learn how to develop .NET applications using the Always Encrypted feature for SQL Server. 
 ms.custom: seo-lt-2019
-ms.date: "02/01/2023"
+ms.date: "02/15/2023"
 ms.service: sql
 ms.reviewer: vanto
 ms.subservice: security

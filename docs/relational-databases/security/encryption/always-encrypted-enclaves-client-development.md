@@ -3,7 +3,7 @@ description: "Develop applications using Always Encrypted with secure enclaves"
 title: "Develop applications using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom:
 - event-tier1-build-2022
-ms.date: "02/01/2023"
+ms.date: "02/15/2023"
 ms.service: sql
 ms.reviewer: vanto
 ms.subservice: security

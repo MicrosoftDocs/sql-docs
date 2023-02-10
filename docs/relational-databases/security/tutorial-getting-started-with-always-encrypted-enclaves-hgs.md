@@ -5,7 +5,7 @@ ms.custom:
 - seo-lt-2019
 - intro-get-started
 - event-tier1-build-2022
-ms.date: 02/02/2023
+ms.date: 02/15/2023
 ms.service: sql
 ms.reviewer: vanto
 ms.suite: "sql"

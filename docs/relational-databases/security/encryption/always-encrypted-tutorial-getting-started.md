@@ -2,7 +2,7 @@
 title: "Tutorial: Getting started with Always Encrypted"
 description: This tutorial teaches you how to encrypt columns using Always Encrypted and how to query encrypted columns in SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 ms.custom:
-ms.date: 11/17/2022
+ms.date: 02/15/2023
 ms.service: sql
 ms.reviewer: vanto
 ms.subservice: security

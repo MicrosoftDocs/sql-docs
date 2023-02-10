@@ -4,7 +4,7 @@ description: "Tutorial: Develop a .NET application using Always Encrypted with s
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 02/01/2023
+ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: tutorial

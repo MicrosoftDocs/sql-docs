@@ -4,7 +4,7 @@ description: Learn how to enable secure enclaves in Azure SQL Database by select
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: 02/01/2023
+ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual

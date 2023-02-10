@@ -3,7 +3,7 @@ title: "Configure the secure enclave in SQL Server"
 description: "Configure the secure enclave for Always Encrypted with secure enclaves in SQL Server."
 ms.custom:
 - event-tier1-build-2022
-ms.date: 02/01/2023
+ms.date: 02/15/2023
 ms.service: sql
 ms.reviewer: "vanto"
 ms.subservice: security

@@ -4,7 +4,7 @@ description: Plan the deployment of Always Encrypted with secure enclaves in Azu
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: 02/01/2023
+ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual

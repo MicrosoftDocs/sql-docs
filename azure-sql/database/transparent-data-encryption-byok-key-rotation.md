@@ -144,7 +144,7 @@ az sql mi tde-key set --server-key-type AzureKeyVault
 
 In a geo-replication configuration where the primary server is set to use TDE with CMK, the secondary server should also needs be configured to enable TDE with CMK with the same key used on the primary.
 
-# [Portal](#tab/azure-portal-geo)
+# [Portal](#tab/azure-portal)
 
 Using the [Azure portal](https://portal.azure.com):
 
@@ -164,9 +164,9 @@ Using the [Azure portal](https://portal.azure.com):
 
 When the key is rotated on the primary server, it's automatically transferred to the secondary server.
 
-# [PowerShell](#tab/azure-powershell-geo)
+# [PowerShell](#tab/azure-powershell)
 
-
+1
 
 
 ---

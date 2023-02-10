@@ -30,7 +30,7 @@ The following table provide features enabled depending on license type:
 |Microsoft Defender for Cloud|Yes |Yes |Yes |
 |Microsoft Purview|Yes |Yes |Yes |
 
-<sup>*</sup>License only includes SQL Server instances that are Developer, Express, or Evaluation Edition.
+<sup>*</sup>License only includes SQL Server instances that are Developer, Express, Web or Evaluation Edition and instances using a Server/CAL license.
 
 
 

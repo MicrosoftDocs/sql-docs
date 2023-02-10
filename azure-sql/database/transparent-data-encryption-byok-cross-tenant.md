@@ -44,6 +44,34 @@ The following diagram represents the steps for a scenario that utilizes an Azure
 
 :::image type="content" source="media/transparent-data-encryption-byok-cross-tenant/cross-tenant-setup.png" alt-text="Diagram of setting up cross-tenant transparent data encryption with customer-managed keys.":::
 
+### Overview of the setup
+
+**On the ISV tenant**
+
+1. Create a [user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md)
+
+2. Create a [multi-tenant application](/azure/active-directory/develop/app-objects-and-service-principals)
+
+   1. Configure the user-assigned managed identity as a federated credential on the application
+
+**On the client tenant**
+
+3. Install the multi-tenant application
+
+4. Create or use existing key vault and grant [key permissions](transparent-data-encryption-byok-overview.md) to the multi-tenant application
+
+   1. Create a new or use an existing key
+
+   1. [Retrieve the key from Key Vault](/azure/key-vault/keys/quick-create-portal#retrieve-a-key-from-key-vault) and record the **Key Identifier**
+
+**On the ISV tenant**
+
+5. [Assign the user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md#set-a-managed-identity-in-the-azure-portal) created as the **Primary identity** in the Azure SQL resource **Identity** menu in the [Azure portal](https://portal.azure.com)
+
+6. Assign the **Federated client identity** in the same **Identity** menu, and use the application name
+
+7. In the **Transparent data encryption** menu of the Azure SQL resource, assign a **Key identifier** using the customer's **Key Identifier** obtained from the client tenant.
+
 > [!NOTE]
 > For an in-depth guide on setting up cross-tenant CMK with TDE, see [Create server configured with user-assigned managed identity and cross-tenant CMK for TDE](transparent-data-encryption-byok-create-server-cross-tenant.md)
 

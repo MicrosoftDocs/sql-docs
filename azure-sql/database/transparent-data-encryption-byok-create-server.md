@@ -99,11 +99,11 @@ az sql server create \
     --resource-group $resourceGroupName \
     --location $location  \
     --admin-user $adminlogin \
-    --admin-password $password
-    --assign-identity
-    --identity-type $identitytype
-    --user-assigned-identity-id $identityid
-    --primary-user-assigned-identity-id $primaryidentityid
+    --admin-password $password \
+    --assign-identity \
+    --identity-type $identitytype \
+    --user-assigned-identity-id $identityid \
+    --primary-user-assigned-identity-id $primaryidentityid \
     --key-id $keyid
  
 ```

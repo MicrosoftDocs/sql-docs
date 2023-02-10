@@ -235,7 +235,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 3.  Call the <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> method.  
   
-###  <a name="PShellExample"></a> Examples (RMO)  
+####  <a name="PShellExample"></a> Examples (RMO)  
  This example synchronously runs the Snapshot Agent to generate the initial snapshot for a transactional publication.  
   
  [!code-cs[HowTo#rmo_GenerateSnapshot](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_generatesnapshot)]  

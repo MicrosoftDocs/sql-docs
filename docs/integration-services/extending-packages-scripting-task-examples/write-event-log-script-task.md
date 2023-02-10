@@ -1,8 +1,8 @@
 ---
-description: "Work with write event log script task"
-title: This article helps you to configure the Script Task.
+description: "This article helps you to configure the Script Task."
+title: Work with write event log script task.
 ms.custom: ""
-ms.date: "02/02/2023"
+ms.date: "02/10/2023"
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: integration-services

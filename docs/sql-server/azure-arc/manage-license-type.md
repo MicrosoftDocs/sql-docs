@@ -1,5 +1,5 @@
 ---
-title: Manage license type
+title: Manage SQL Server license and billing options
 titleSuffix: Azure Arc-enabled SQL Server
 description: Explains how to manage SQL Server instance licenses. Also demonstrates how Azure Arc-enabled SQL Server can be billed by Microsoft. Use to enable pay as you go licensing.
 author: anosov1960
@@ -10,35 +10,21 @@ ms.service: sql
 ms.topic: conceptual
 ---
 
-# Manage SQL Server license type
+# Manage SQL Server license and billing options
 
-This article explains how to manage SQL Server licenses. 
+This article explains how to manage SQL Server licenses set billing options. 
 
 You can use Arc-enabled SQL Server to accurately track your usage of the SQL Server software and manage your license compliance. You may also elect to pay for the SQL software usage directly through Microsoft Azure using a pay-as-you-go billing option. You can control how you pay for SQL Server software through Azure portal or API. SQL Server 2022 (16.x) allows you to select a pay-as-you-go billing option during setup.
 
-Host license type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in Azure Portal overview for an Arc-enabled SQL Server instance as **Host License Type**.
+License type is a property of Azure extension for SQL Server resource. It applies to all instances installed on the server where the extension is running. For your convenience it is also included in Azure Portal overview for an Arc-enabled SQL Server instance as **Host License Type**.
 
-The following table provide features enabled depending on license type:
-
-|Feature  |License only <sup>*</sup> |License with Software Assurance<br/>or SQL subscription  |Pay-as-you-go  |
-|---------|---------|---------|---------|
-|Connect to Azure |Yes |Yes |Yes |
-|SQL Server inventory|Yes |Yes |Yes |
-|Best practices assessment |No |Yes |Yes |
-|Detailed database inventory |No |Yes |Yes |
-|Azure Active Directory authentication |No |Yes |Yes |
-|Microsoft Defender for Cloud|Yes |Yes |Yes |
-|Microsoft Purview|Yes |Yes |Yes |
-
-<sup>*</sup>License only includes SQL Server instances that are Developer, Express, or Evaluation Edition.
-
-Learn more [Manage SQL Server license type](manage-license-type.md)
+[!INCLUDE [license-types](includes/license-types.md)]
 
 ## Prerequisites
 
 * You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) in at least one of the Azure subscriptions your organization created. Learn how to [create a new billing subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 * You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the resource group in which the SQL Server instance will be registered. See [Managed Azure resource groups](/azure/azure-resource-manager/management/manage-resource-groups-portal) for details.
-* The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers are registered in each  subscription you use for SQL Server pay-as-you-go billing.
+* The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers are registered in each subscription you use for SQL Server pay-as-you-go billing.
 
 To register the resource providers, use one of the methods below:  
 
@@ -66,6 +52,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
 ---
+
 ## Overview
 
 License type is a configuration setting of Azure Extension for SQL Server that defines how you prefer to pay for the usage of SQL Server software installed on the physical or virtual machine. It also allows you to track software usage in the Cost Management + Billing portal and ensure you are compliant with SQL Server license requirements. License type is a required parameter when you install Azure Extension for SQL Server and each supported onboarding method includes the license type options. 
@@ -91,7 +78,7 @@ In addition to billing differences, license type determines what features will b
 - Licensing benefit for fail-over servers. Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group and reporting the usage with a separate meter. You can track the usage of the DR benefit in Cost Management + Billing. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
 - Detailed database inventory. You can manage your SQL database inventory in Azure portal. See [View databases](view-databases.md) for details.
 - Managing automatic updates of SQL Server from Azure.
-- Azure active directory authentication. You can manage access to your SQL Server databases using ADD credentials. This feature requires that your instance is upgraded to SQL Server  2022. For more information, see [Azure Active Directory authentication for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/07/28/azure-active-directory-authentication-for-sql-server-2022/).
+- Azure Active Directory authentication. You can manage access to your SQL Server databases using Azure Active Directory credentials. This feature requires that your instance is upgraded to SQL Server 2022. For more information, see [Azure Active Directory authentication for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/07/28/azure-active-directory-authentication-for-sql-server-2022/).
 - Best practices assessment. You can generate best practices reports and recommendations by periodic scans of your SQL Server configurations. See [Configure your SQL Server instance for Best practices assessment](assess.md)
 
 The following table shows the meters that track usage and billing for different license types and SQL Server editions:
@@ -148,7 +135,7 @@ New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupNam
 The following command will set the license type to "PAYG":
 
 ```azurecli
-az connectedmachine extension update --machine-name "simple-vm" -g "arceeBilling" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'    
+az connectedmachine extension update --machine-name "simple-vm" -g "<resource-group>" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'    
 ```
 
 ---

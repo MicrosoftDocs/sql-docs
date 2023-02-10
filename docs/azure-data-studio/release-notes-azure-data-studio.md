@@ -94,7 +94,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 > [!NOTE]  
 > All previous versions of Azure Data Studio are not supported.
 
-### January 2023 (hotfix 1)
+### January 2023 (hotfix)
 
 - Release number: 1.41.1
 - Release date: January 30, 2023

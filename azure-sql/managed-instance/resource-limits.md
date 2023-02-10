@@ -43,7 +43,7 @@ Hardware configurations have different characteristics, as described in the foll
 | **Number of vCores** <BR>vCore=1 LP (hyper-thread) | 4-80 vCores | 4-80 vCores | 4-64 vCores |
 | **Max memory (memory/vCore ratio)** | 5.1 GB per vCore<br/>Add more vCores to get more memory. | 7 GB per vCore | 13.6 GB per vCore |
 | **Max In-Memory OLTP memory** |  Instance limit: 0.8 - 1.65 GB per vCore | Instance limit: 1.1 - 2.3 GB per vCore | Instance limit: 2.2 - 4.5 GB per vCore |
-| **Max instance reserved storage**\* | **General Purpose:** up to 16 TB<br/> **Business Critical:** up to 4 TB | **General Purpose:** up to 16 TB<br/> **Business Critical:** up to 5.5 TB | **General Purpose:** up to 16 TB <br/> **Business Critical:** up to 16 TB |
+| **Max instance reserved storage**\* | **General Purpose:** up to 16 TB<br/> **Business Critical:** up to 4 TB | **General Purpose:** up to 16 TB<br/> **Business Critical:** up to 16 TB | **General Purpose:** up to 16 TB <br/> **Business Critical:** up to 16 TB |
 
 \* Dependent on [the number of vCores](#service-tier-characteristics).
 

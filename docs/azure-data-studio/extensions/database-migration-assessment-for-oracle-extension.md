@@ -239,7 +239,7 @@ To change the log directory, update the `LogDirectory` property in the extension
 
 ## Contact Microsoft for help
 
-If you need further assistance from Microsoft, contact [@Dmasupport](mailto:dmasupport@microsoft.com). For faster turnaround, you may attach the logs from [default log directory](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs).
+If you need further assistance from Microsoft, contact [@Dmasupport](mailto:dmasupport@microsoft.com). For faster turnaround, you may attach the logs from [default log directory](#logs).
 
 ## Next steps
 

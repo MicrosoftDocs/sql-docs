@@ -49,7 +49,7 @@ The following JSON document is an example of the SQL Server - Azure Arc resource
     "name": "SQL22-EE",
     "version": "SQL Server 2022",
     "edition": "Enterprise",
-    "containerResourceId": "/subscriptions/23082b19-8a6e-4bc5-8fdd-8ef39dfebc23/resourcegroups/arc-eastasia/providers/Microsoft.HybridCompute/machines/SQL22-EE",
+    "containerResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/arc-eastasia/providers/Microsoft.HybridCompute/machines/SQL22-EE",
     "vCore": "8",
     "status": "Connected",
     "patchLevel": "16.0.1000.6",

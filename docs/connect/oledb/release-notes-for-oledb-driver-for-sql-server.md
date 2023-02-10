@@ -38,8 +38,6 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md). |
-| Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user may now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | Windows Arm64 support | The Arm64 driver is for 64-bit ARM applications only and does not include 32-bit ARM nor x86/x64 emulation drivers. |
 | Visual Studio 2022 build toolset upgrade | The driver now requires [Microsoft Visual C++ Redistributable for Visual Studio 2022](https://go.microsoft.com/fwlink/?linkid=2219560) (version 14.34 at minimum). |
 
@@ -48,9 +46,27 @@ If you need to download the installer in a language other than the one detected 
 | Bug fixed | Details |
 | :-------- | :------ |
 | Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
-| Fixed adal issues. | Fixed an installer issue where a 64-bit version of adal.dll was packaged instead of the 32-bit one. For details, see [Known issues](oledb-driver-for-sql-server-known-issues.md#known-issues). |
+| Fixed adal issue. | Fixed an installer issue where a 64-bit version of adal.dll was packaged instead of the 32-bit one. For details, see [Known issues](oledb-driver-for-sql-server-known-issues.md#known-issues). |
 
 ## Previous releases
+
+## 19.2.0
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2212594)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2212470)  
+
+Released: October 26, 2022
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2212594&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2212470&clcid=0x40a)
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md). |
+| Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user may now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 
 ## 19.1.0
 

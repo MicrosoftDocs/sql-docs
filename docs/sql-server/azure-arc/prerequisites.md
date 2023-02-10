@@ -95,10 +95,9 @@ az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
 ---
-
 ## Azure subscription and service limits
 
-The maximum number of resources in a resource group is 800. This limitation applies to Azure Arc-enabled SQL Server instances and databases. Before configuring your SQL server instances and machines with Azure Arc review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
+The maximum number of resources in a resource group is 800, per resource type. This limitation applies to Azure Arc-enabled SQL Server instances and databases. Before configuring your SQL server instances and machines with Azure Arc review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
 
 ## Supported regions
 
@@ -122,6 +121,7 @@ Arc-enabled SQL Server is available in the following regions:
 ## Next steps
 
 - [Azure Arc-enabled SQL Server](overview.md)
-- [Connect your SQL Server to Azure Arc](connect.md)
-- [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
+- [Connect your SQL Server to Azure Arc](deployment-options.md)
+- [Configure your SQL Server instance for periodic best practices assessment](assess.md)
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+

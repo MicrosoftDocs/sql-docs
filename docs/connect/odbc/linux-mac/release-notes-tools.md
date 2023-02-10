@@ -4,7 +4,7 @@ description: "Learn what's new and changed in released versions of the Microsoft
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 08/08/2022
+ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,6 +14,12 @@ ms.topic: conceptual
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server Tools on Linux and macOS.
+
+## 18.2.1.1, January 2023
+
+| New item | Details |
+| :------- | :------ |
+| Sqlcmd Bugfix | Fixed issue with command line parameters not being hidden |
 
 ## 18.1.1.1, August 2022
 

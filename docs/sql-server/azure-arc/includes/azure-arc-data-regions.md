@@ -4,6 +4,7 @@ ms.author: mikeray
 ms.date: 02/10/2023
 ms.topic: include
 ms.prod: sql
+ms.custom: references_regions
 ---
 
 Arc-enabled SQL Server is available in the following regions:

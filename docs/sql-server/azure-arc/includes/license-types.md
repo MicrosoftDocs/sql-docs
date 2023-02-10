@@ -6,7 +6,7 @@ ms.topic: include
 ms.prod: sql
 ---
 
-The following table provide features enabled depending on license type:
+The following table identifies features enabled depending on license type:
 
 |Feature  |License only <sup>*</sup> |License with Software Assurance<br/>or SQL subscription  |Pay-as-you-go  |
 |---------|---------|---------|---------|

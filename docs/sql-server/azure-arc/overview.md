@@ -7,7 +7,6 @@ ms.reviewer: mikeray, randolphwest
 ms.date: 10/12/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom: references_regions
 ---
 
 # Azure Arc-enabled SQL Server
@@ -16,9 +15,9 @@ Azure Arc-enabled SQL Server extends Azure services to SQL Server instances host
 
 ## Manage your SQL Servers at-scale from a single point of control
 
-Azure Arc enables you to manage all of your SQL Servers from a single point of control: Azure. As you connect your SQL Servers to Azure, you get a single place to view the detailed inventory of your SQL Servers and databases.  You can look at details for a given SQL Server in the Azure Portal such as the name, version, edition, number of cores, and host operating system. At scale, you can query across all of your SQL Servers using Azure Resource Graph Explorer to answer questions like 'How many SQL Servers do I have that are SQL Server 2014? or "What are the names of all the SQL Servers that are running on Linux?"  You can even quickly creates charts from these queries and pin them to customizable dashboards.  Go a level deeper and you can view a list of every database on a SQL Server and do cross-SQL Server queries of databases to get insights into which databases haven't been backed up recently or that are not encrypted.
+Azure Arc enables you to manage all of your SQL Servers from a single point of control: Azure. As you connect your SQL Servers to Azure, you get a single place to view the detailed inventory of your SQL Servers and databases.  You can look at details for a given SQL Server in the Azure Portal such as the name, version, edition, number of cores, and host operating system. At scale, you can query across all of your SQL Servers using Azure Resource Graph Explorer to answer questions like 'How many SQL Servers do I have that are SQL Server 2014? or "What are the names of all the SQL Servers that are running on Linux?"  You can even quickly create charts from these queries and pin them to customizable dashboards.  Go a level deeper and you can view a list of every database on a SQL Server and do cross-SQL Server queries of databases to get insights into which databases haven't been backed up recently or that are not encrypted.
 
-![A screenshot of the Arc-enabled SQL Server dashboard from Azure portal.](media/overview/arcsqlserverdashboard.png)
+![A screenshot of the Arc-enabled SQL Server dashboard from Azure portal.](media/overview/arc-sql-server-dashboard.png)
 
 ## Best practices assessment
 

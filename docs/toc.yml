@@ -10281,8 +10281,6 @@ items:
           items:
           - name: Create for high availability
             href: linux/sql-server-linux-availability-group-ha.md
-          - name: Configure an AG
-            href: linux/sql-server-linux-availability-group-configure-ha.md
           - name: Configure with DH2i
             href: /azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial
           - name: Configure with HPE Serviceguard
@@ -10291,6 +10289,8 @@ items:
             items:
             - name: Pacemaker basics
               href: linux/sql-server-linux-pacemaker-basics.md
+            - name: Configure an AG
+              href: linux/sql-server-linux-availability-group-configure-ha.md
             - name: Configure on RHEL, SLES, and Ubuntu
               href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
             - name: Configure failover
@@ -10399,20 +10399,52 @@ items:
       href: sql-server/azure-arc/overview.md
     - name: Release notes
       href: sql-server/azure-arc/release-notes.md
-    - name: Connect
-      href: sql-server/azure-arc/connect.md
-    - name: Connect at scale
-      href: sql-server/azure-arc/connect-at-scale.md
-    - name: Assess
-      href: sql-server/azure-arc/assess.md
-    - name: View databases
-      href: sql-server/azure-arc/view-databases.md
-    - name: Configure advanced data Security
-      href: sql-server/azure-arc/configure-advanced-data-security.md
-    - name: Billing through Microsoft Azure
-      href: sql-server/azure-arc/billing.md
+    - name: How-to guides
+      items:
+      - name: Deploy
+        items:
+        - name: Prerequisites
+          href: sql-server/azure-arc/prerequisites.md
+        - name: Deployment options
+          href: sql-server/azure-arc/deployment-options.md
+        - name: Connect interactively
+          items:
+          - name: Connect when machine not connected to Azure
+            href: sql-server/azure-arc/connect.md
+          - name: Connect when machine already connected to Azure
+            href: sql-server/azure-arc/connect-already-enabled.md
+          - name: Connect with installer (.msi)
+            href: sql-server/azure-arc/connect-with-installer.md
+        - name: Connect at scale
+          items:
+          - name: Connect at scale | Azure policy
+            href: sql-server/azure-arc/connect-at-scale-policy.md
+          - name: Connect at scale | Script
+            href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Connect machines using Configuration Manager custom task sequence
+            href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
+    - name: Manage
+      items:
+      - name: Assess
+        href: sql-server/azure-arc/assess.md
+      - name: View databases
+        href: sql-server/azure-arc/view-databases.md
+      - name: Delete from or restore to Azure Arc
+        href: sql-server/azure-arc/delete-from-azure-arc.md
+      - name: Billing through Microsoft Azure
+        href: sql-server/azure-arc/billing.md
+    - name: Secure
+      items:
+      - name: Configure advanced data Security
+        href: sql-server/azure-arc/configure-advanced-data-security.md
     - name: FAQ
       href: sql-server/azure-arc/faq.yml
+    - name: Troubleshoot
+      items:
+      - name: Troubleshoot deployment
+        href: sql-server/azure-arc/troubleshoot-deployment.md
+
+
 - name: Big Data Clusters
   items:
   - name: Big Data Clusters
@@ -11142,6 +11174,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3617-database-engine-error.md
         - name: 3619
           href: relational-databases/errors-events/mssqlserver-3619-database-engine-error.md
+        - name: 3624
+          href: relational-databases/errors-events/mssqlserver-3624-database-engine-error.md          
         - name: 3937
           href: relational-databases/errors-events/mssqlserver-3937-database-engine-error.md
         - name: 3961
@@ -11462,6 +11496,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17147-database-engine-error.md
         - name: 17148
           href: relational-databases/errors-events/mssqlserver-17148-database-engine-error.md
+        - name: 17182
+          href: relational-databases/errors-events/mssqlserver-17182-database-engine-error.md
         - name: 17194
           href: relational-databases/errors-events/mssqlserver-17194-database-engine-error.md
         - name: 17204
@@ -11480,6 +11516,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17803-database-engine-error.md
         - name: 17809
           href: relational-databases/errors-events/mssqlserver-17809-database-engine-error.md
+        - name: 17826
+          href: relational-databases/errors-events/mssqlserver-17826-database-engine-error.md          
         - name: 17832
           href: relational-databases/errors-events/mssqlserver-17832-database-engine-error.md
         - name: 17883
@@ -11492,6 +11530,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17890-database-engine-error.md
         - name: 17892
           href: relational-databases/errors-events/mssqlserver-17892-database-engine-error.md
+        - name: 18210
+          href: relational-databases/errors-events/mssqlserver-18210-database-engine-error.md
         - name: 18264
           href: relational-databases/errors-events/mssqlserver-18264-database-engine-error.md
         - name: 18452

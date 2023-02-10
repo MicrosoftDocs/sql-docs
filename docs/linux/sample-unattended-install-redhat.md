@@ -48,7 +48,7 @@ MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 # Defaults to developer
 MSSQL_PID='evaluation'
 
-# Install SQL Server Agent (recommended)
+# Enable SQL Server Agent (recommended)
 SQL_ENABLE_AGENT='y'
 
 # Install SQL Server Full Text Search (optional)
@@ -90,7 +90,6 @@ if [ ! -z $SQL_ENABLE_AGENT ]
 then
   echo Enable SQL Server Agent...
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
-  sudo systemctl restart mssql-server
 fi
 
 # Optional SQL Server Full Text Search installation:
@@ -189,7 +188,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 
-1. Install the SQL Server Agent if the scripting variable `SQL_INSTALL_AGENT` is set, on by default.
+1. Enable the SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set, on by default.
 
 1. Optionally install SQL Server Full-Text search, if the variable `SQL_INSTALL_FULLTEXT` is set.
 
@@ -211,10 +210,9 @@ Simplify multiple unattended installs and create a stand-alone bash script that 
 #!/bin/bash
 export MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 export MSSQL_PID='evaluation'
-export SQL_INSTALL_AGENT='y'
+export SQL_ENABLE_AGENT='y'
 export SQL_INSTALL_USER='<Username>'
 export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
-export SQL_INSTALL_AGENT='y'
 ```
 
 Then run the bash script as follows:

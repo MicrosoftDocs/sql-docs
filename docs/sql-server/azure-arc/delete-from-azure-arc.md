@@ -27,10 +27,15 @@ To delete your Arc-enabled SQL Server resource, go to **Azure Arc** > **SQL Serv
 
 If you accidentally deleted your Arc-enabled SQL Server resource, you can restore it with the following steps.
 
+## Restore a deleted Arc-enabled SQL Server resource
+
+If you accidentally deleted your Arc-enabled SQL Server resource, you can restore it with the following steps.
+
 1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Select the correct version for your OS.
 
-    ```azurecli
-       az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+   
+```azurecli
+          az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"SqlManagement":{"IsEnabled":true},  "excludedSqlInstances":[],"LicenseType":"LicenseOnly"}'
    ```
 
    > [!IMPORTANT]  
@@ -44,8 +49,9 @@ If you accidentally deleted your Arc-enabled SQL Server resource, you can restor
 
 1. Make sure to remove your instance from the exclusion list and update the extension settings.
 
-    ```azurecli
-        az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[\"{named instance 1}\",\"{named instance 3}}\"]}'
-    ```
+1. 
+```azurecli
+           az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"SqlManagement":{"IsEnabled":true},  "excludedSqlInstances":["{named instance 1}","{named instance 3}}"],"LicenseType":"LicenseOnly"}'
+   ```
 
 The instance is restored after the next sync with the agent. For information on managing vm extensions using Portal or PowerShell, see [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions).

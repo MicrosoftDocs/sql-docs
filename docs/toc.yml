@@ -8022,7 +8022,11 @@ items:
         - name: Always Encrypted cryptography
           href: relational-databases/security/encryption/always-encrypted-cryptography.md
       - name: Always Encrypted with secure enclaves
-        href: relational-databases/security/encryption/always-encrypted-enclaves.md
+        items:
+        - name: Always Encrypted with secure enclaves documentation
+          href: /azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing
+        - name: Always Encrypted with secure enclaves overview
+          href: relational-databases/security/encryption/always-encrypted-enclaves.md
       - name: Encryption keys
         href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
         items:

@@ -10439,6 +10439,8 @@ items:
         href: sql-server/azure-arc/configure-advanced-data-security.md
     - name: FAQ
       href: sql-server/azure-arc/faq.yml
+    - name: Data collection and reporting
+      href: sql-server/azure-arc/data-collection.md
     - name: Troubleshoot
       items:
       - name: Troubleshoot deployment

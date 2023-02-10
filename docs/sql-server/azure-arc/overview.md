@@ -18,8 +18,7 @@ Azure Arc-enabled SQL Server extends Azure services to SQL Server instances host
 
 Azure Arc enables you to manage all of your SQL Servers from a single point of control: Azure. As you connect your SQL Servers to Azure, you get a single place to view the detailed inventory of your SQL Servers and databases.  You can look at details for a given SQL Server in the Azure Portal such as the name, version, edition, number of cores, and host operating system. At scale, you can query across all of your SQL Servers using Azure Resource Graph Explorer to answer questions like 'How many SQL Servers do I have that are SQL Server 2014? or "What are the names of all the SQL Servers that are running on Linux?"  You can even quickly creates charts from these queries and pin them to customizable dashboards.  Go a level deeper and you can view a list of every database on a SQL Server and do cross-SQL Server queries of databases to get insights into which databases haven't been backed up recently or that are not encrypted.
 
-![arcsqlserverdashboard](media/overview/arcsqlserverdashboard.png)
-
+![A screenshot of the Arc-enabled SQL Server dashboard from Azure portal.](media/overview/arcsqlserverdashboard.png)
 
 ## Best practices assessment
 
@@ -50,48 +49,22 @@ Now, with Azure Arc-enabled SQL Serves connected to Azure, you have the option o
 
 ## Architecture
 
-The SQL Server instance that you want to enable with Azure Arc can be installed in a virtual or physical machine running Windows or Linux.  The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) and the Azure Extension for SQL Server securely connect to Azure to establish communication channels with multiple Azure services using only outbound HTTPS traffic on TCP port 443 using SSL. The Azure Connected Machine agent can communicate through a configurable HTTPS proxy server over Azure Express Route, Azure Private Link or over the Internet. Review the [overview](azure/azure-arc/servers/agent-overview), [network requirements](azure/azure-arc/servers/network-requirements) and [prerequisites](/azure/azure-arc/servers/prerequisites) for the Azure Connected Machine agent.
+The SQL Server instance that you want to enable with Azure Arc can be installed in a virtual or physical machine running Windows or Linux.  The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) and the Azure Extension for SQL Server securely connect to Azure to establish communication channels with multiple Azure services using only outbound HTTPS traffic on TCP port 443 using SSL. The Azure Connected Machine agent can communicate through a configurable HTTPS proxy server over Azure Express Route, Azure Private Link or over the Internet. Review the [overview](/azure/azure-arc/servers/agent-overview), [network requirements](/azure/azure-arc/servers/network-requirements) and [prerequisites](/azure/azure-arc/servers/prerequisites) for the Azure Connected Machine agent.
 
 Some of the services provided by Azure Arc-enabled SQL Server, such as Microsoft Defender for Cloud and best practices assessment, require the Azure Monitoring agent (AMA) extension to be installed and connected to an Azure Log Analytics workspace for data collection and reporting.
 
 The following diagram illustrates the architecture of Azure Arc-enabled SQL Server.
 
-![architecture](media/overview/architecture.png)
-
+![Diagram of the architecture for Azure Arc-enabled SQL Server.](media/overview/architecture.png)
 
 ## Feature availability depending on license type
 
-Depending on the license type you select, some features will be available:
-| Feature | License only | License with Software Assurance or SQL subscription | Pay-as-you-go |
-| --- |--- | --- | --- |
-| Connect to Azure | Yes | Yes | Yes |
-| SQL Server inventory | Yes | Yes | Yes |
-| Best practices assessment | No | Yes | Yes |
-| Detailed database inventory | No | Yes | Yes |
-| Azure Active Directory authentication | No | Yes | Yes |
-| Microsoft Defender for Cloud | Yes | Yes | Yes |
-| Microsoft Purview | Yes | Yes | Yes |
-
-License only includes SQL Server instances that are Developer, Express, or Evaluation Edition.
+[!INCLUDE [license-types](includes/license-types.md)]
 
 ## Supported Azure regions
 
-Arc-enabled SQL Server is available in the following regions:
+[!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]
 
-- East US
-- East US 2
-- West US 2
-- Central US
-- South Central US
-- UK South
-- France Central
-- West Europe
-- North Europe
-- Japan East
-- Korea Central
-- East Asia
-- Southeast Asia
-- Australia East
 
 ## Next steps
 

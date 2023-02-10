@@ -101,22 +101,7 @@ The maximum number of resources in a resource group is 800, per resource type. T
 
 ## Supported regions
 
-Arc-enabled SQL Server is available in the following regions:
-
-- East US
-- East US 2
-- West US 2
-- Central US
-- South Central US
-- UK South
-- France Central
-- West Europe
-- North Europe
-- Japan East
-- Korea Central
-- East Asia
-- Southeast Asia
-- Australia East
+[!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]Arc-enabled SQL Server is available in the following regions:
 
 ## Next steps
 

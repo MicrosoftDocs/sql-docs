@@ -27,10 +27,6 @@ To delete your Arc-enabled SQL Server resource, go to **Azure Arc** > **SQL Serv
 
 If you accidentally deleted your Arc-enabled SQL Server resource, you can restore it with the following steps.
 
-## Restore a deleted Arc-enabled SQL Server resource
-
-If you accidentally deleted your Arc-enabled SQL Server resource, you can restore it with the following steps.
-
 1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Select the correct version for your OS.
 
    ```azurecli

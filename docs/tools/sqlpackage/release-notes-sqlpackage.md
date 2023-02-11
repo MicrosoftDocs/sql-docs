@@ -34,7 +34,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 |Deployment|Adds the ability for the `GenerateSmartDefaults` property on publish to populate values from a default constraint when set to `true`. [GitHub issue](https://github.com/microsoft/DacFx/issues/38)|
-|Serverless pools|Adds support for serverless SQL pools in Extract and Publish operations.|
+|Azure Synapse Analytics|Adds support for [serverless SQL pools](./sqlpackage-for-azure-synapse-analytics.md#support-for-serverless-sql-pools) in Extract and Publish operations.|
 |SQL Server 2022|Adds support for [ordered clustered columnstore indexes](../../relational-databases/indexes/columnstore-indexes-design-guidance.md#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables).|
 
 

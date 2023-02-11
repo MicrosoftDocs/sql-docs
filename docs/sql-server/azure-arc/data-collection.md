@@ -18,7 +18,7 @@ Neither Azure Arc-enabled SQL Server nor any of the related Azure Arc-enabled se
 
 ## Related products
 
-Azure Arc-enabled data services use the following products:
+Azure Arc-enabled SQL Server uses the following products:
 
 - Azure Arc-enabled servers
 

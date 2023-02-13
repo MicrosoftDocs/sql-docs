@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 02/01/2023
+ms.date: 02/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -78,10 +78,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 Learn about significant changes to the Azure SQL Database documentation.
 
-### F 2022
 
-| Changes | Details |
-| --- | --- |
 
 
 ### February 2023

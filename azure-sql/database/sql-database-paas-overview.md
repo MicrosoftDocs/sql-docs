@@ -4,7 +4,7 @@ description: "Get an introduction to SQL Database: technical details and capabil
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 02/01/2023
+ms.date: 02/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: overview

@@ -451,11 +451,11 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO)
 
 Error Message: Failed to save the assessment output with an unknown error.
 
-Possible causes: This error may appear due to any of the given reasons-
-1.	The user may not have the appropriate permission to access the folder that is chosen for saving the assessment.
-2.	The folder is already in use by another program.
+Possible causes: This error may appear due to any of the given reasons.
+-	The user may not have the appropriate permission to access the folder that is chosen for saving the assessment.
+-	The folder is already in use by another program.
 
-Remediation actions: You need to ensure that the logged in user has read and write permissions on the assessment data folder. In case you've changed the assessment data folder path, check the current assessment path mentioned in extension settings is correct.And then try to create a new assessment after closing any open assessment file(s).
+Remediation actions: You need to ensure that the logged in user has read and write permissions on the assessment data folder. In case you've changed the assessment data folder path, check the current assessment path mentioned in extension settings is correct. And then try to create a new assessment after closing any open assessment file(s).
 
 ### Error Code: ODC-0003	
 

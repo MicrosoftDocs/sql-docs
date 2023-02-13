@@ -16,7 +16,7 @@ ms.custom:
 # Serverless compute tier for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Serverless is a [compute tier](service-tiers-sql-database-vcore.md#compute-tiers) for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The serverless compute tier is available in the [General Purpose](service-tier-general-purpose.md) service tier and currently in preview in the [Hyperscale](service-tier-hyperscale.md) service tier. 
+Serverless is a [compute tier](service-tiers-sql-database-vcore.md#compute) for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The serverless compute tier is available in the [General Purpose](service-tier-general-purpose.md) service tier and currently in preview in the [Hyperscale](service-tier-hyperscale.md) service tier. 
 
 > [!NOTE]
 > - Serverless in the Hyperscale service tier is currently in preview.
@@ -45,7 +45,7 @@ For more cost details, see [Billing](serverless-tier-overview.md#billing).
 
 ## Scenarios
 
-Serverless is price-performance optimized for single databases with intermittent, unpredictable usage patterns that can afford some delay in compute warm-up after idle usage periods. In contrast, the [provisioned compute tier](service-tiers-sql-database-vcore.md#compute-tiers) is price-performance optimized for single databases or multiple databases in [elastic pools](elastic-pool-overview.md) with higher average usage that cannot afford any delay in compute warm-up.
+Serverless is price-performance optimized for single databases with intermittent, unpredictable usage patterns that can afford some delay in compute warm-up after idle usage periods. In contrast, the [provisioned compute tier](service-tiers-sql-database-vcore.md#compute) is price-performance optimized for single databases or multiple databases in [elastic pools](elastic-pool-overview.md) with higher average usage that cannot afford any delay in compute warm-up.
 
 ### Scenarios well suited for serverless compute
 

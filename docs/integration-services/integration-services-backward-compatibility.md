@@ -27,7 +27,7 @@ ms.author: chugu
   
 ## Deprecated Integration Services Features
 
-This section describes deprecated [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are still available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use deprecated features in new applications.  
+This section describes deprecated [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are still available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Don't use deprecated features in new applications.  
   
  There are no deprecated [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features in [!INCLUDE[ssSQL22](../includes/sssql22-md.md)].  
 
@@ -35,7 +35,7 @@ This section describes deprecated [!INCLUDE[ssISnoversion](../includes/ssisnover
 
 This section describes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are no longer available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-[Change Data Capture Designer for Oracle by Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md) is not supported in [!INCLUDE[ssSQL22](../includes/sssql22-md.md)].
+[Change Data Capture Designer for Oracle by Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md) isn't supported in [!INCLUDE[ssSQL22](../includes/sssql22-md.md)].
 
 ## Breaking Changes to Integration Services Features
 

@@ -15,6 +15,8 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to move a utility control point (UCP) from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another, by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
+[!INCLUDE[instances-managed-by-ucp](../../includes/instances-managed-by-ucp.md)]
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### Move a UCP from one instance of SQL Server to another.  

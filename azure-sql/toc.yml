@@ -471,6 +471,8 @@
         href: database/active-geo-replication-overview.md
       - name: Auto-failover groups
         href: database/auto-failover-group-sql-db.md
+      - name: HA/DR checklist
+        href: database/high-availability-disaster-recovery-checklist.md
       - name: Outage recovery guidance
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills

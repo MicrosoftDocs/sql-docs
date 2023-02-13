@@ -166,7 +166,7 @@ Supported hardware:
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- [Latest updates](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Latest updates](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 - [Azure Data Architecture Guide](/azure/architecture/data-guide/)
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 

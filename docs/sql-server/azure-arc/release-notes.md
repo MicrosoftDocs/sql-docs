@@ -11,6 +11,18 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
+## February, 2023
+
+This release is published February 17, 2023
+
+### Extension version
+
+`1.1.22xx.yy`
+
+### Azure extension for SQL Server
+
+- [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
+
 ## January 2023
 
 This release is published January 17, 2023

@@ -5,7 +5,7 @@ description: This article compares the database engine features of Azure SQL Dat
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
-ms.date: 10/10/2022
+ms.date: 01/31/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -150,6 +150,29 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | VNet Service endpoint | [Yes](vnet-service-endpoint-rule-overview.md) | Yes |
 | VNet Global peering | Yes, using [Private IP and service endpoints](vnet-service-endpoint-rule-overview.md) | Yes, using [Virtual network peering](https://techcommunity.microsoft.com/t5/azure-sql/new-feature-global-vnet-peering-support-for-azure-sql-managed/ba-p/1746913). |
 | [Private connectivity](/azure/private-link/private-link-overview) | Yes, using [Private Link](/azure/private-link/private-endpoint-overview) | Yes, using VNet. | 
+
+## Resource limits
+
+The following table compares the maximum resource limits available for Azure SQL Database and Azure SQL Managed Instance: 
+
+| **Category** | **Azure SQL Database** | **Azure SQL Managed Instance** |
+|:--|:--|:--|
+| **Compute size**| Up to 128 vCores  | Up to 80 vCores| 
+| **Storage size** | 1 GB - 100 TB | 16 TB | 
+| **Tempdb size** | [32 GB per vCore](resource-limits-vcore-single-databases.md), up to 2,560 GB |Up to 4 TB - [limited by reserved storage size](../managed-instance/resource-limits.md#service-tier-characteristics) |
+| **Log write throughput** | Up to 100mb/sec | [4 MB/s per vCore (max 48 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) |
+| **Availability** | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) <br> 99.995% SLA with [zone redundancy](high-availability-sla.md#premium-and-business-critical-service-tier-zone-redundant-availability) | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)|
+| **Backups** | A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |A choice of locally-redundant (LRS), zone-redundant (ZRS), geo-redundant (GRS) or geo-zone-redundant (GZRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available| 
+| [**Read-only replicas**](read-scale-out.md) |Read scale with 1-4 high availability replicas or 1-30 [named replicas](service-tier-hyperscale-replicas.md#named-replica)  <br> 0 - 4 [geo-replicas](active-geo-replication-overview.md) |1 built-in high availability replica is readable <br> 0 - 1 geo-replicas using [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md)  | 
+| **Discount models** |[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions | 
+
+To learn more about resource limits for Azure SQL Database, review: 
+
+- [Logical server](resource-limits-logical-server.md)
+- In the vCore model: [single databases](resource-limits-vcore-single-databases.md), [elastic pools](resource-limits-vcore-elastic-pools.md)
+- In the DTU model: [single databases](resource-limits-dtu-single-databases.md), [elastic pools](resource-limits-dtu-elastic-pools.md)
+
+To learn more about resource limits for Azure SQL Managed Instance, review: [Resource limits](../managed-instance/resource-limits.md). 
 
 ## Tools
 

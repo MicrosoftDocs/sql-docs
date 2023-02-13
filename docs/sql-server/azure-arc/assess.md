@@ -127,7 +127,7 @@ If there are multiple runs in a single day, only the latest run is included in t
 
 - [Connect your SQL Server to Azure Arc](connect.md).
 
-- [Connect SQL Server instances to Azure at scale](connect-at-scale.md)
+- [Connect SQL Server instances to Azure at scale](connect-at-scale-policy.md)
 
 - Review the [rich set of nearly 500 rules](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-assessment-api/DefaultRuleset.csv) best practices assessment applies.
 

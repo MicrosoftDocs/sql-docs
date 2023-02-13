@@ -4,7 +4,7 @@ description: This article describes the Hyperscale service tier in the vCore-bas
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 02/01/2023
+ms.date: 01/31/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -20,7 +20,7 @@ Azure SQL Database is based on SQL Server Database Engine architecture that is a
 - Business Critical
 - Hyperscale
 
-The Hyperscale service tier in Azure SQL Database is the newest service tier in the vCore-based purchasing model. This service tier is a highly scalable storage and compute performance tier that uses the Azure architecture to scale out the storage and compute resources for an Azure SQL Database substantially beyond the limits available for the General Purpose and Business Critical service tiers.
+The Hyperscale service tier is suitable for all workload types. Its cloud native architecture provides independently scalable compute and storage to support the widest variety of traditional and modern applications. Compute and storage resources in Hyperscale substantially exceed the resources available in the General Purpose and Business Critical tiers. 
 
 > [!NOTE]
 >
@@ -85,20 +85,24 @@ vCore resource limits are listed in the following articles, please be sure to up
 
 The vCore-based service tiers are differentiated based on database availability and storage type, performance, and maximum storage size, as described in the following table:
 
-|ㅤ| **General Purpose** | **Hyperscale** | **Business Critical** |
+|ㅤ| **General Purpose** | **Business Critical** | **Hyperscale** |
 |:---:|:---:|:---:|:---:|
-|**Best for** | Offers budget oriented balanced compute and storage options.|Most business workloads. Autoscaling storage size up to 100 TB, fast vertical and horizontal compute scaling, fast database restore.| OLTP applications with high transaction rate and low IO latency. Offers highest resilience to failures and fast failovers using multiple synchronously updated replicas.|
-| **Compute size** | 2 to 128 vCores | 2 to 128 vCores<sup>1</sup> | 2 to 128 vCores |
-| **Storage type** | Premium remote storage (per instance) | De-coupled storage with local SSD cache (per instance) | Super-fast local SSD storage (per instance)|
-| **Storage size**<sup>1</sup> | 5 GB – 4 TB | Up to 100 TB | 5 GB – 4 TB |
-| **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. | 5,000 IOPS with 200,000 maximum IOPS |
-| **Availability** | 1 replica, no Read Scale-out, zone-redundant HA, no local cache | Multiple replicas, up to 4 Read Scale-out, zone-redundant HA, partial local cache | 3 replicas, 1 Read Scale-out, zone-redundant HA, full local storage |
-| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) |
+|**Best for** | Offers budget oriented balanced compute and storage options.|OLTP applications with high transaction rate and low IO latency. Offers high resilience to failures and fast failovers using multiple hot standby replicas. |The widest variety of workloads. Autoscaling storage size up to 100 TB, fast vertical and horizontal compute scaling, fast database restore. |
+| **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
+| **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per instance)|
+| **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
+| **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
+| **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>4</sup>| 
+| **Availability** | 1 replica, no Read Scale-out, zone-redundant HA | 3 replicas, 1 Read Scale-out, zone-redundant HA | Multiple replicas, up to 4 Read Scale-out, zone-redundant HA  |
+| **Backups** |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |  A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention <sup>2</sup>, with up to 10 years of long-term retention available <sup>3</sup>| 
+|**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS is not charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS is not charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS not yet charged. |
+|**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
 
-<sup>1</sup> Elastic pools aren't supported in the Hyperscale service tier.
 
-> [!NOTE]
-> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.
+<sup>1</sup> Elastic pools aren't supported in the Hyperscale service tier.   
+<sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
+<sup>3</sup> Long-term retention for Hyperscale databases is now in preview.   
+<sup>4</sup> 10.2 GB/vCore is available with premium-series memory optimized hardware (preview).
 
 ## Compute resources
 

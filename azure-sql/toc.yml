@@ -13,18 +13,10 @@
   items:
   - name: Billing options
     items:
-    - name: vCore purchasing model 
-      href: database/service-tiers-vcore.md
     - name: Azure Hybrid Benefit
       href: azure-hybrid-benefit.md
     - name: Reserved capacity
       href: database/reserved-capacity-overview.md
-  - name: Service tiers
-    items:
-    - name: General Purpose
-      href: database/service-tier-general-purpose.md
-    - name: Business Critical
-      href: database/service-tier-business-critical.md
 
   - name: Shared concepts 
     items: 
@@ -479,6 +471,8 @@
         href: database/active-geo-replication-overview.md
       - name: Auto-failover groups
         href: database/auto-failover-group-sql-db.md
+      - name: HA/DR checklist
+        href: database/high-availability-disaster-recovery-checklist.md
       - name: Outage recovery guidance
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills

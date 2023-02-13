@@ -3,7 +3,7 @@ title: "Download Microsoft OLE DB Driver for SQL Server"
 description: "Download the Microsoft OLE DB Driver for SQL Server to develop native Windows applications that connect to SQL Server and Azure SQL Database."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/10/2023
+ms.date: 02/14/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -27,7 +27,7 @@ Microsoft OLE DB Driver 19.3.0 for SQL Server is the latest general availability
 ### Version information
 
 - Release number: 19.3.0
-- Released: February 10, 2023
+- Released: February 14, 2023
 
 > [!Note]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).

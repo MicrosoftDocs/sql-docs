@@ -4,7 +4,7 @@ description: sys.dm_operation_status
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 01/17/2023
+ms.date: 02/13/2023
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "sys.dm_operation_status dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # sys.dm_operation_status
 
-[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
 Returns information about operations performed on databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.
 

@@ -105,8 +105,60 @@ Add the following sample code to the bottom of the `Program.cs` file above `app.
 
 ## Connect the App Service to Azure SQL
 
-When your application is deployed to App Service, the following steps are required to make that connection work:
+When your application is deployed to App Service, the following steps are required to connect the app to Azure SQL:
 
-1) Create a managed identity for the App Service
+1) Create a managed identity for the App Service. The managed identity will automatically be discovered by the SqlClient library included in your app, just like it discovered your local Visual Studio user.
+2) Create an Azure SQL database user and associate it with the App Service managed identity.
+3) Assign SQL roles to the database user that allow for read, write, and potentially other permissions.
+
+There are multiple tools available to implement these steps:
+
+## [Service Connector](#tab/service-connector)
+
+Service connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to an Azure SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command will complete the three steps mentioned above for you.
+
+```bash
+az webapp connection create sql
+-g <your-resource-group>
+-n <your-app-service-name>
+--tg <your-database-server-resource-group>
+--server <your-database-server-name>
+--database <your-database-name>
+--system-identity
+```
+
+## [Azure Portal](#tab/azure-portal)
+
+The Azure portal allows you to work with managed identities and run queries against an Azure SQL database. Complete the following steps to create a passwordless connection from your App Service instance to Azure SQL:
+
+### Create the managed identity
+
+1) In the Azure portal, navigate to your App Service and select **Identity** on the left navigation.
+
+2) On the identity page, make sure the **Enable system-assigned managed identity** option is enabled. When this setting is enabled, a system-assigned managed identity is created with the same name as your App Service. System-assigned identities are tied to the service instance and are destroyed with the app when it is deleted.
+
+### Create the database user and assign roles
+
+1) In the Azure portal, browse to your Azure SQL database instance and select **Query editor (preview)**.
+
+2) Select **Continue as <your-username>** on the right side of the screen to sign into the database using your account.
+
+3) On the query editor view, run the following SQL commands:
+
+```sql
+CREATE USER <your-app-service-name> FROM EXTERNAL PROVIDER;
+ALTER ROLE db_datareader ADD MEMBER <your-app-service-name>;
+ALTER ROLE db_datawriter ADD MEMBER <your-app-service-name>;
+ALTER ROLE db_ddladmin ADD MEMBER <your-app-service-name>;
+GO
+```
+
+This SQL script will create an Azure SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed your services are connected.
+
+---
 
 ## Test the deployed application
+
+Browse to the URL of the app to test that the connection to Azure SQL is working. You can locate the URL of your app on the App Service overview page. Append the `/person` path to the end of the URL to browse to the same endpoint you tested locally.
+
+The person you created locally should display in the browser.

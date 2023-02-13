@@ -629,7 +629,7 @@ Possible causes: This error may appear due to any of the given reasons-
 3.	Oracle Home path is not correctly set in the extension settings.
 4.	The Oracle Home path in environment variable is different from the one mentioned in the extension settings.
 
-Remediation actions: Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of environment variable from command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings, refer [configure extension settings] (https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).
+Remediation actions: Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of environment variable from command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings, refer [configure extension settings](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).
 
 
 ### Error Code: Ora2Pg-0012	
@@ -637,4 +637,4 @@ Error Message: Assessment failed due to an issue with the Ora2pg installation. I
 
 Possible causes: Ora2Pg is not installed or is not visible to you.
 
-Remediation actions: Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of environment variable from command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings, refer [configure extension settings] (https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).
+Remediation actions: Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of environment variable from command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings, refer [configure extension settings](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).

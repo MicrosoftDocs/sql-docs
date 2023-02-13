@@ -455,7 +455,7 @@ Possible causes: This error may appear due to any of the given reasons-
 1.	The user may not have the appropriate permission to access the folder that is chosen for saving the assessment.
 2.	The folder is already in use by another program.
 
-Remediation actions: You need to ensure that the logged in user has read and write permissions on the assessment data folder. In case you have changed the assessment data folder path, check the current assessment path mentioned in extension settings is correct.And then try to create a new assessment after closing any open assessment file(s).
+Remediation actions: You need to ensure that the logged in user has read and write permissions on the assessment data folder. In case you've changed the assessment data folder path, check the current assessment path mentioned in extension settings is correct.And then try to create a new assessment after closing any open assessment file(s).
 
 ### Error Code: ODC-0003	
 
@@ -463,7 +463,7 @@ Error Message: Failed to collect Oracle static data with an unknown error.
 
 Possible causes: An unknown internal error has occurred.
 
-Remediation actions: Try to create a new assessment. To investigate further, go through the [log](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason of error. If the issue persists, please [contact Microsoft for help](https://aka.ms/contactDMAO).
+Remediation actions: Try to create a new assessment. To investigate further, go through the [log](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason of error. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 
 ### Error Code: SQLA-1000	
@@ -472,7 +472,7 @@ Error Message: Failed to calculate feature compatibility with an unknown error.
 
 Possible causes: An unknown internal error has occurred.
 
-Remediation actions: Try to create a new assessment. To investigate further, go through the [log](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason of error. If the issue persists, please [contact Microsoft for help](https://aka.ms/contactDMAO).
+Remediation actions: Try to create a new assessment. To investigate further, go through the [log](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason of error. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 
 
@@ -482,7 +482,7 @@ Error Message: Failed to calculate schema workload complexity with an unknown er
 
 Possible causes: An unknown internal error has occurred.
 
-Remediation actions: Try to create a new assessment. To investigate further, go through the [log](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason of error. If the issue persists, please [contact Microsoft for help](https://aka.ms/contactDMAO).
+Remediation actions: Try to create a new assessment. To investigate further, go through the [log](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason of error. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 
 ### Error Code: GE-0001	
@@ -491,7 +491,7 @@ Error Message: Failed to run one or more assessment components with an unknown e
 
 Possible causes: An unknown internal error has occurred.
 
-Remediation actions: Try to create a new assessment. To investigate further, go through the [log](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason of error. If the issue persists, please [contact Microsoft for help](https://aka.ms/contactDMAO).
+Remediation actions: Try to create a new assessment. To investigate further, go through the [log](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#logs) to understand the reason of error. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 
 ### Error Code: Ora2Pg-2001	
@@ -503,7 +503,7 @@ Possible causes: This error may appear due to any of the given reasons-
 2.	Ora2Pg html report was corrupted.
 3.	Ora2Pg html report version is not supported. 
 
-Remediation actions: Check the installed version of Ora2Pg should be v23.1 or above. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
+Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
 
 
@@ -516,7 +516,7 @@ Possible causes: This error may appear due to any of the given reasons-
 2.	Ora2Pg html report was corrupted.
 3.	Ora2Pg html report version is not supported. 
 
-Remediation actions: Check the installed version of Ora2Pg should be v23.1 or above. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
+Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
 
 
@@ -529,7 +529,7 @@ Possible causes: This error may appear due to any of the given reasons-
 2.	Ora2Pg html report was corrupted.
 3.	Ora2Pg html report version is not supported. 
 
-Remediation actions: Check the installed version of Ora2Pg should be v23.1 or above. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
+Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
 
 
@@ -543,7 +543,7 @@ Possible causes: This error may appear due to any of the given reasons-
 3.	Ora2Pg failed with an unknow error.
 4.	Ora2Pg process crashed due to a system error.
 
-Remediation actions: Check the installed version of Ora2Pg should be v23.1 or above. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
+Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
 
 
@@ -555,7 +555,7 @@ Possible causes: This error may appear due to any of the given reasons-
 1.	Ora2Pg was not able to connect to the Oracle server.
 2.	Ora2pg execution took more than config time out. The default config time out is five hours.
 
-Remediation actions: You can increase the ***ora2pgTimeOutInMin*** setting in the app.config file which is located in the ADS extension install folder (e.g. on Windows %USERPROFILE%/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-*/bin/service).
+Remediation actions: You can increase the ***ora2pgTimeOutInMin*** setting in the app.config file, which is located in the ADS extension install folder (e.g. on Windows %USERPROFILE%/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-*/bin/service).
 
 
 
@@ -567,7 +567,7 @@ Error Message: Failed as an invalid Oracle object caused Ora2pg to consume exces
 Possible causes: Due to certain invalid Oracle objects, Ora2Pg DDL extractor runs into out-of-memory condition. To avoid system crash, this extension monitors the memory usage and caps it at 50% of available system memory. If Ora2Pg starts to take more memory, the background process is gracefully exited.
 
 Remediation actions: You can increase the ***maxSystemMemoryPercentage*** setting in the app.config file which is located in the 
-ADS extension install folder (e.g. on Windows %USERPROFILE%/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-
+ADS extension install folder (for example, on Windows %USERPROFILE%/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-
 */bin/service). Check with Oracle DBA if they can identify any such objects which can cause Ora2Pg to crash.
 
 
@@ -581,7 +581,7 @@ Possible causes: This error may appear due to any of the given reasons-
 2.	Ora2Pg html report was corrupted.
 3.	Ora2Pg html report version is not supported. 
 
-Remediation actions: Check the installed version of Ora2Pg should be v23.1 or above. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
+Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
 
 ### Error Code: Ora2Pg-0007	
@@ -592,7 +592,7 @@ Possible causes: This error may appear due to any of the given reasons-
 2.	Ora2Pg html report was corrupted.
 3.	Ora2Pg html report version is not supported. 
 
-Remediation actions: Check the installed version of Ora2Pg should be v23.1 or above. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
+Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
 
 ### Error Code: Ora2Pg-0008	
@@ -604,7 +604,7 @@ Possible causes: This error may appear due to any of the given reasons-
 3.	Oracle Home path is not correctly set in the extension settings.
 4.	The Oracle Home path in environment variable is different from the one mentioned in the extension settings.
 
-Remediation actions: Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of environment variable from command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings, refer [configure extension settings] (https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).
+Remediation actions: Check that Ora2Pg is installed correctly by running the command ***ora2pg -v*** on the command prompt. You can install Ora2Pg using the [script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). Check the value of environment variable from command prompt using ***echo %ORACLE_HOME%***. Also, Check the Oracle Home path setting in the extension settings, refer [configure extension settings](https://learn.microsoft.com/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension?#configure-extension-settings).
 
 
 
@@ -617,7 +617,7 @@ Possible causes: This error may appear due to any of the given reasons-
 3.	Ora2Pg failed with an unknow error.
 4.	Ora2Pg process crashed due to a system error.
 
-Remediation actions: Check the installed version of Ora2Pg should be v23.1 or above. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
+Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
 
 ### Error Code: Ora2Pg-0010	
@@ -633,7 +633,7 @@ Remediation actions: Check that Ora2Pg is installed correctly by running the com
 
 
 ### Error Code: Ora2Pg-0012	
-Error Message: Assessment failed due to an issue with the Ora2pg installation. Install Ora2pg using the script {0}. This script will install the Ora2pg and its pre-requisites. Please verify that PATH (Windows) environment variable or ORACLE_HOME (Linux) environment variable is pointing to the correct Oracle Home Directory.
+Error Message: Assessment failed due to an issue with the Ora2pg installation. Install Ora2pg using the script {0}. This script will install the Ora2pg and its pre-requisites. Verify that PATH (Windows) environment variable or ORACLE_HOME (Linux) environment variable is pointing to the correct Oracle Home Directory.
 
 Possible causes: Ora2Pg is not installed or is not visible to you.
 

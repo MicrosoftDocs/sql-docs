@@ -53,7 +53,7 @@ Table-valued parameters offer more flexibility and in some cases better performa
 - Are cached like a temp table when used in a stored procedure. Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], table-valued parameters are also cached for parameterized queries.
 
 ## <a name="Permissions"></a> Permissions
-To create an instance of a User-Defined Table Type or call a stored procedure with a Table-valued parameter the user must have EXECUTE permission on the type, or on the schema or database containing the type.
+To create an instance of a User-Defined Table Type or call a stored procedure with a Table-valued parameter the user must have EXECUTE and REFERENCES permissions on the type, or on the schema or database containing the type.
 
 ## <a name="Restrictions"></a> Restrictions
 

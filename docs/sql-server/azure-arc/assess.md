@@ -21,6 +21,8 @@ The Environment Health assessment is replaced with a much richer best practices 
 
 >[!IMPORTANT]
 >Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
+>
+>T configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
 
 ## Prerequisites
 
@@ -77,6 +79,12 @@ Resource group or Subscription of Arc Machine.
 1. Upon successful best practices assessment deployment, the assessment is scheduled to run every Sunday 12:00 AM local time by default.
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-enabled.png" alt-text="Screenshot showing the successful enablement of best practices assessment of an Arc-enabled SQL Server resource.":::
+
+### Modify license type
+
+If an instance of SQL Server is configured with a license only type of license, you will need to change the license type to configure best practices assessment.
+
+:::image type="content" source="media/assess/change-license-type.png" alt-text="Screenshot of Azure portal change license type.":::
 
 ## Manage best practices assessment
 

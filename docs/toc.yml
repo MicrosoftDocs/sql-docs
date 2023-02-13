@@ -10411,10 +10411,10 @@ items:
           items:
           - name: Connect when machine not connected to Azure
             href: sql-server/azure-arc/connect.md
-          - name: Connect when machine already connected to Azure
-            href: sql-server/azure-arc/connect-already-enabled.md
           - name: Connect with installer (.msi)
             href: sql-server/azure-arc/connect-with-installer.md
+          - name: Connect when machine already connected to Azure
+            href: sql-server/azure-arc/connect-already-enabled.md
         - name: Connect at scale
           items:
           - name: Connect at scale | Azure policy
@@ -10431,14 +10431,16 @@ items:
         href: sql-server/azure-arc/view-databases.md
       - name: Delete from or restore to Azure Arc
         href: sql-server/azure-arc/delete-from-azure-arc.md
-      - name: Billing through Microsoft Azure
-        href: sql-server/azure-arc/billing.md
+      - name: Manage SQL Server license and billing options
+        href: sql-server/azure-arc/manage-license-type.md
     - name: Secure
       items:
       - name: Configure advanced data Security
         href: sql-server/azure-arc/configure-advanced-data-security.md
     - name: FAQ
       href: sql-server/azure-arc/faq.yml
+    - name: Data collection and reporting
+      href: sql-server/azure-arc/data-collection.md
     - name: Troubleshoot
       items:
       - name: Troubleshoot deployment

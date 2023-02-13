@@ -3,7 +3,7 @@ title: Features of the Microsoft ODBC Driver
 description: Learn about the different features supported by the Microsoft ODBC Driver for SQL Server on Windows.
 author: v-makouz
 ms.author: v-davidengel
-ms.date: 02/15/2022
+ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -21,6 +21,9 @@ The connection encryption defaults have changed. The default value of Encrypt is
 
 <a id="getdataextensions"></a>
 The ODBC Driver 18 includes SQLGetData extensions. When enabled, SQLGetData can be used to retrieve column data in any order within a row, including going backwards. The feature is provided for compatibility purposes and will significantly degrade performance and increase memory usage. It is highly recommended that application always access the columns in ascending order. To enable SQLGetData extensions one can either use the `GetDataExtensions` connection string attribute, or use the `SQLSetConnectAttr` function to set `SQL_COPT_SS_GETDATA_EXTENSIONS` to `SQL_EN_ON`.
+
+<a id="windowsarm64"></a>
+Support for Windows ARM64 is included starting with ODBC Driver 18.2 and is currently a preview. The ARM64 driver is for 64-bit ARM64 applications only and does not include 32-bit ARM nor x86/amd64 emulation drivers.
 
 ## Microsoft ODBC Driver 17.4 for SQL Server on Windows
 

@@ -19,7 +19,7 @@ ms.author: mikeray
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility health policies can be configured for data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Health policies can be defined globally for all data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, or they can be defined individually for each data-tier application and for each managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
-[!INCLUDE[instances-managed-by-ucp](../../includes/instances-managed-by-ucp.md)]
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
 
 
 ## Monitoring Policies for Data-tier Applications  

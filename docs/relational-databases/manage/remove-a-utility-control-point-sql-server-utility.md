@@ -15,7 +15,7 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to remove a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utility control point (UCP) from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-[!INCLUDE[instances-managed-by-ucp](../../includes/instances-managed-by-ucp.md)]
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
 
  **In This Topic**  
   

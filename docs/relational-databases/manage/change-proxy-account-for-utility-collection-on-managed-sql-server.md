@@ -15,7 +15,7 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to change the proxy account for the Utility Collection Set on a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-[!INCLUDE[instances-managed-by-ucp](../../includes/instances-managed-by-ucp.md)]
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
 
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

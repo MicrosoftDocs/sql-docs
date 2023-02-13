@@ -17,7 +17,7 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the following steps to remove a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. This procedure removes the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the UCP list view and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility data collection stops. The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not uninstalled.  
   
-[!INCLUDE[instances-managed-by-ucp](../../includes/instances-managed-by-ucp.md)]
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
 
 
 > [!IMPORTANT]  

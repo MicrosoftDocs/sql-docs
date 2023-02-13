@@ -17,7 +17,7 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the following strategies to reduce reporting noise and unwanted violations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource utilization policies.  
   
-[!INCLUDE[instances-managed-by-ucp](../../includes/instances-managed-by-ucp.md)]
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
 
 
 ## How frequently should processor utilization be in violation before it is reported as overutilized?  

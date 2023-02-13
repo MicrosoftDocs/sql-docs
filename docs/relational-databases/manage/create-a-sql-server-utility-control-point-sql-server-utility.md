@@ -27,7 +27,7 @@ ms.author: mikeray
   
  The UCP collects configuration and performance information from managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] every 15 minutes. This information is stored in the utility management data warehouse (UMDW) on the UCP; the UMDW file name is sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance data is compared to policies to help identify resource use bottlenecks and consolidation opportunities.  
 
-[!INCLUDE[instances-managed-by-ucp](../../includes/instances-managed-by-ucp.md)]
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
   
 ## Before You Begin  
  Before you create a UCP, review the following requirements and recommendations.  

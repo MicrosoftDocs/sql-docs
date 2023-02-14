@@ -323,7 +323,7 @@ It's possible to move your database from the provisioned compute tier to the ser
 > [!NOTE]
 > It's also possible to upgrade your database in the General Purpose tier to the Hyperscale tier. Review [Manage Hyperscale databases](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale) to learn more. 
 
-When moving your database between compute tiers, provide the **Compute model** parameter as either `Serverless` or `Provisioned` when using Powershell and the Azure CLI, and the compute size for the  **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify your appropriate compute size. 
+When moving your database between compute tiers, provide the **Compute model** parameter as either `Serverless` or `Provisioned` when using PowerShell and the Azure CLI, and the compute size for the  **SERVICE_OBJECTIVE** when using T-SQL. Review [resource limits](resource-limits-vcore-single-databases.md) to identify your appropriate compute size. 
 
 The examples in this section show you how to move your provisioned database to serverless. Modify the service objective as needed, as these examples set the max vCores to 4. 
 
@@ -402,7 +402,7 @@ MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ;
 
 ### Use PowerShell
 
-Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to modify the maximum or minimum vCores, and autopause delay. Use the the `MaxVcore`, `MinVcore`, and `AutoPauseDelayInMinutes` arguments.  Serverless auto-pausing is not currently supported in the Hyperscale tier,  so the auto-pause delay argument is only applicable to the General Purpose tier. 
+Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to modify the maximum or minimum vCores, and autopause delay. Use the `MaxVcore`, `MinVcore`, and `AutoPauseDelayInMinutes` arguments.  Serverless auto-pausing is not currently supported in the Hyperscale tier, so the auto-pause delay argument is only applicable to the General Purpose tier. 
 
 ### Use Azure CLI
 

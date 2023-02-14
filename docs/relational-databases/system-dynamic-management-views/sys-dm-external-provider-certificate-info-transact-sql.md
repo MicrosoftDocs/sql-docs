@@ -3,7 +3,7 @@ title: "sys.dm_external_provider_certificate_info (Transact-SQL)"
 description: sys.dm_external_provider_certificate_info (Transact-SQL)
 author: GithubMirek
 ms.author: mireks
-ms.date: "01/20/2023"
+ms.date: "02/15/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -35,3 +35,4 @@ The visibility of the metadata in catalog views is limited to securables that a 
 - [Set up Azure Active Directory authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial)
 - [Azure Active Directory authentication for SQL Server](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview)
 - [Linked server for SQL Server with Azure Active Directory authentication](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-linked-server)
+- [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](azure-ad-authentication-sql-server-automation-setup-tutorial.md)

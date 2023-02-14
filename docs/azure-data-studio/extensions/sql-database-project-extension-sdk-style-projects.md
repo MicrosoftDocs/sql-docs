@@ -40,13 +40,13 @@ From the Azure Data Studio and VS Code interfaces, building and publishing an SD
 To build an SDK-style SQL project from the command line on Windows, macOS, or Linux, use the following command:
 
 ```bash
-dotnet build /p:NetCoreBuild=true
+dotnet build
 ```
 
-The `.dacpac` file resulting from building an SDK-style SQL project is compatible with tooling associated with the data-tier application framework (`.dacpac`, `.bacpac`), including [SqlPackage](../../tools/sqlpackage/sqlpackage-publish.md).
+The `.dacpac` file resulting from building an SDK-style SQL project is compatible with tooling associated with the data-tier application framework (`.dacpac`, `.bacpac`), including [SqlPackage](../../tools/sqlpackage/sqlpackage-publish.md) and GitHub [sql-action](https://github.com/azure/sql-action).
 
 ## Project capabilities
-In SQL projects there are several capabilities that can be specified in the `.sqlproj` file that can impact the database model either at project build or deployment.  The following sections describe some of these capabilities that are available for SDK-style SQL projects.
+In SQL projects there are several capabilities that can be specified in the `.sqlproj` file that impact the database model either at project build or deployment.  The following sections describe some of these capabilities that are available for Microsoft.Build.Sql projects.
 
 ### Target platform
 The target platform property is contained in the `DSP` tag in the `.sqlproj` file under the `<PropertyGroup>` item.  The target platform is used during project build to validate support for features included in the project and is added to the `.dacpac` file as a property.  By default, during deployment, the target platform is checked against the target database to ensure compatibility.  If the target platform is not supported by the target database, the deployment fails unless an override [publish option](../../tools/sqlpackage/sqlpackage-publish.md) is specified.
@@ -143,7 +143,7 @@ SqlPackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionSt
 ```
 
 ### Pre/post-deployment scripts
-Pre- and post-deployment scripts are SQL scripts that are included in the project to be executed during deployment but are not compiled into the validated database object model. A pre-deployment script is executed before the database model is applied and a post-deployment script is executed after the database model is applied.  The following example from a SQL project file adds the file `populate-app-settings.sql` as post-deployment script.
+Pre- and post-deployment scripts are SQL scripts that are included in the project to be executed during deployment. Pre/post-deployment scrips are included in the `.dacpac` but they are not compiled into or validated with database object model. A pre-deployment script is executed before the database model is applied and a post-deployment script is executed after the database model is applied.  The following example from a SQL project file adds the file `populate-app-settings.sql` as post-deployment script.
 
 ```xml
   <ItemGroup>

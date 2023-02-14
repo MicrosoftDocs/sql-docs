@@ -217,8 +217,6 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>2</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
 <sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
 
-## Hyperscale - provisioned compute - Gen5
-
 ## <a id="hyperscale---provisioned-compute---gen5"></a>Hyperscale - provisioned compute - standard-series (Gen5)
 
 ### <a id="gen5-hardware-part-1-2"></a>Hyperscale Standard-series (Gen5) compute generation (part 1 of 2)

@@ -239,7 +239,7 @@ The following table describes the format of the option that you can use to overr
   
 |Parameter|Default|Description|  
 |-------------|-----------|---------------|  
-|**/Variables:{PropertyName}={Value}**||Specifies a name value pair for an action-specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable.|  
+|**/v:{PropertyName}={Value}**||Specifies a name value pair for an action-specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable.|  
 
 ## Next Steps
 

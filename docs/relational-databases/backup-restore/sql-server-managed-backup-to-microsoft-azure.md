@@ -119,6 +119,8 @@ ms.author: mathoma
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses the Backup to Block Blob feature. The maximum size of a block blob is 200 GB. But by utilizing striping, the maximum size of an individual backup can be up to 12 TB. If your backup requirements exceed this, consider using compression, and test the backup file size prior to setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You can either test by backing up to a local disk or manually backing up to Microsoft Azure storage using **BACKUP TO URL** Transact-SQL statement. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] may have some limitations when it is configured with other technologies supporting backup, high availability, or disaster recovery.  
+
+-   Backups of databases in an Availability Group will be a [**copy_only** backup](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
   
 ## See Also  
 - [Enable SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   

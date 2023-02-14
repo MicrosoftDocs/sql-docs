@@ -109,7 +109,7 @@ ms.topic: include
 |    17115    |    10    |    Yes    |    Command Line Startup Parameters:%.*ls    |
 |    17116    |    16    |    Yes    |    Failed to initialize distributed COM; DCOM is not installed. Heterogeneous queries and remote procedure calls are disabled. Check the DCOM configuration using Component Services in Control Panel.    |
 |    17119    |    10    |    Yes    |    The number of concurrent user connections was reduced to %ld, because it exceeded the allowable limit for this edition of SQL Server. To avoid this message in the future, use sp_configure to permanently adjust the number of user connections within the licensed limit.    |
-|    17120    |    16    |    Yes    |    SQL Server could not spawn %s thread. Check the SQL Server error log and the Windows event logs for information about possible related problems.    |
+|    [17120](../mssqlserver-17120-database-engine-error.md)    |    16    |    Yes    |    SQL Server could not spawn %s thread. Check the SQL Server error log and the Windows event logs for information about possible related problems.    |
 |    17121    |    10    |    Yes    |    SQL Server is started with trace flag %d, this may cause user to see some error messages masked using '%ls'.    |
 |    17123    |    10    |    Yes    |    Logging to event log is disabled. Startup option '-%c' is supplied, either from the registry or the command prompt.    |
 |    17124    |    10    |    Yes    |    SQL Server has been configured for lightweight pooling. This is an informational message; no user action is required.    |
@@ -163,7 +163,7 @@ ms.topic: include
 |    17179    |    10    |    Yes    |    Could not use Address Windowing Extensions because the 'lock pages in memory' privilege was not granted.    |
 |    17180    |    10    |    Yes    |    SQL Server is not configured to use all of the available system memory. To enable SQL Server to use more memory, set the awe enabled option to 1 by using the sp_configure stored procedure.    |
 |    17181    |    16    |    Yes    |    SNIInitializeListener() failed with error 0x%lx.    |
-|    17182    |    16    |    Yes    |    TDSSNIClient initialization failed with error 0x%lx, status code 0x%lx. Reason: %S_MSG %.*ls    |
+|    [17182](../mssqlserver-17182-database-engine-error.md)    |    16    |    Yes    |    TDSSNIClient initialization failed with error 0x%lx, status code 0x%lx. Reason: %S_MSG %.*ls    |
 |    17183    |    10    |    Yes    |    Attempting to cycle error log. This is an informational message only; no user action is required.    |
 |    17184    |    10    |    Yes    |    The error log has been reinitialized. See the previous log for older entries.    |
 |    17185    |    16    |    Yes    |    Unable to update password policy.    |
@@ -238,7 +238,7 @@ ms.topic: include
 |    17812    |    10    |    Yes    |    Dedicated administrator connection has been disconnected. This is an informational message only. No user action is required.    |
 |    17813    |    20    |    Yes    |    The requested service has been stopped or disabled and is unavailable at this time. The connection has been closed.%.*ls    |
 |    17825    |    18    |    Yes    |    Could not close network endpoint, or could not shut down network library. The cause is an internal error in a network library. Review the error log: the entry listed after this error contains the error code from the network library.    |
-|    17826    |    18    |    Yes    |    Could not start the network library because of an internal error in the network library. To determine the cause, review the errors immediately preceding this one in the error log.    |
+|    [17826](../mssqlserver-17826-database-engine-error.md)    |    18    |    Yes    |    Could not start the network library because of an internal error in the network library. To determine the cause, review the errors immediately preceding this one in the error log.    |
 |    17827    |    20    |    Yes    |    There was a failure while attempting to encrypt a password. The connection has been closed.%.*ls    |
 |    17828    |    20    |    Yes    |    The prelogin packet used to open the connection is structurally invalid; the connection has been closed. Please contact the vendor of the client library.%.*ls    |
 |    17829    |    20    |    Yes    |    A network error occurred while establishing a connection; the connection has been closed.%.*ls    |

@@ -14,13 +14,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Learn about which columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+  Learn about which columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 ## Feature summary for product releases
 
  This table summarizes key features for columnstore indexes and the products in which they are available.
 
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<sup>1</sup>|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]<sup>1</sup>|[!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]|
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<sup>1</sup>|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]<sup>1</sup>|[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]|
 |*----|---|---|---|---|---|---|---|---|
 |Batch mode execution for multi-threaded queries<sup>2</sup>|yes|yes|yes|yes|yes|yes|yes|yes|
 |Batch mode execution for single-threaded queries|||yes|yes|yes|yes|yes|yes|
@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Specify columnstore index when creating a table|||yes|yes|yes|yes|yes|yes|
 |Always On supports columnstore indexes|yes|yes|yes|yes|yes|yes|yes|yes|
 |Always On readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|yes|
-|Always On readable secondary supports updateable columnstore indexes|||yes||yes|yes|||
+|Always On readable secondary supports updateable columnstore indexes|||yes|yes|yes|yes|||
 |Read-only nonclustered columnstore index on heap or B-tree|yes|yes|yes <sup>3</sup>|yes <sup>3</sup>|yes <sup>3</sup>|yes <sup>3</sup>|yes <sup>3</sup>|yes <sup>3</sup>|
 |Updateable nonclustered columnstore index on heap or B-tree|||yes|yes|yes|yes|yes|yes|
 |Additional B-tree indexes allowed on a heap or B-tree that has a nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|yes|

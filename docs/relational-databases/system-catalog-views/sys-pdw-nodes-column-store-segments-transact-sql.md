@@ -37,7 +37,7 @@ Contains a row for each column in a columnstore index.
 | **max_data_id**             | **bigint** | Maximum data ID in the column segment.                       |
 | **null_value**              | **bigint** | Value used to represent nulls.                               |
 | **on_disk_size**            | **bigint** | Size of segment in bytes.                                    |
-| **pdw_node_id**             | **int**    | Unique identifier of a [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] node. |
+| **pdw_node_id**             | **int**    | Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node. |
 
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

@@ -28,7 +28,7 @@ dev_langs:
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Exports a certificate to a file.
 

@@ -47,7 +47,7 @@ PolyBase provides these same functionalities for the following SQL products from
 - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 > [!NOTE]
-> Data virtualization using PolyBase feature is available in preview for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
+> Data virtualization using PolyBase feature is available for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
 
 ### SQL Server 2022 PolyBase enhancements
 

@@ -20,6 +20,7 @@ dev_langs:
 monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 # GET_BIT (Transact SQL)
+[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 GET_BIT takes two parameters and returns the bit in *expression_value* that is in the offset defined by *bit_offset*.
 

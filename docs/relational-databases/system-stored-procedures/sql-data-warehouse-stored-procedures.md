@@ -16,7 +16,7 @@ monikerRange: "= azure-sqldw-latest"
 # Azure Synapse Analytics Stored Procedures
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] provides built-in procedures that you can use to perform operations related to database roles. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] includes the following system procedures:  
+  [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] provides built-in procedures that you can use to perform operations related to database roles. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] includes the following system procedures:  
   
 <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
@@ -33,7 +33,7 @@ monikerRange: "= azure-sqldw-latest"
  [sp_special_columns_100 &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  Some additional system stored procedures are used only within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and are not intended for general customer use. These procedures are listed at [System Stored Procedures (Transact-SQL)](./system-stored-procedures-transact-sql.md). These procedures are subject to change and compatibility is not guaranteed. All procedures on the list are not available in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].  
+>  Some additional system stored procedures are used only within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and are not intended for general customer use. These procedures are listed at [System Stored Procedures (Transact-SQL)](./system-stored-procedures-transact-sql.md). These procedures are subject to change and compatibility is not guaranteed. All procedures on the list are not available in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
 ## See Also  
  [System Stored Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   

@@ -12,7 +12,7 @@ ms.topic: quickstart
 
 # Quickstart: Deploy SQL Server on Linux using an Ansible playbook
 
-[!INCLUDE [sql-linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This quickstart takes you through the steps to automate a SQL Server on Linux deployment on Azure Virtual Machines, using an [Ansible](/azure/developer/ansible/overview) playbook.
 

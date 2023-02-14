@@ -20,7 +20,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Delete Data or Log Files from a Database
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to delete data or log files in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  

@@ -20,6 +20,7 @@ dev_langs:
 monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 # RIGHT_SHIFT (Transact SQL)
+[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 RIGHT_SHIFT takes two parameters, and returns the first parameter bit-shifted right by the number of bits specified in the second parameter.
 

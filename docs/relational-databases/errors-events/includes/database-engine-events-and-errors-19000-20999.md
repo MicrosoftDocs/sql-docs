@@ -90,6 +90,9 @@ ms.topic: include
 |    19148    |    10    |    No    |    Unable to initialize SSL support.    |
 |    19149    |    10    |    No    |    Unable to configure MDAC-compatibility protocol list in registry.    |
 |    19150    |    10    |    No    |    Unable to open SQL Server Network Interface library configuration key in registry.    |
+|    [19407](../mssqlserver-19407-database-engine-error.md)    |    10    |    No    |    The lease between availability group '%.*ls' and the Windows Server Failover Cluster has expired. A connectivity issue occurred between the instance of SQL Server and the Windows Server Failover Cluster. To determine whether the availability group is failing over correctly, check the corresponding availability group resource in the Windows Server Failover Cluster.    |
+|    [19419](../mssqlserver-19419-database-engine-error.md)    |    10    |    No    |    Windows Server Failover Cluster did not receive a process event signal from SQL Server hosting availability group '%.*ls' within the lease timeout period.    |
+|    [19421](../mssqlserver-19421-database-engine-error.md)    |    10    |    No    |    SQL Server hosting availability group '%.*ls' did not receive a process event signal from the Windows Server Failover Cluster within the lease timeout period.    |
 |    20001    |    10    |    No    |    There is no nickname for article '%s' in publication '%s'.    |
 |    20002    |    10    |    No    |    The filter '%s' already exists for article '%s' in publication '%s'.    |
 |    20003    |    10    |    No    |    Could not generate nickname for '%s'.    |

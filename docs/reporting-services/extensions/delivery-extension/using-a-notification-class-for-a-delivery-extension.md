@@ -2,8 +2,8 @@
 title: "Using a Notification Class for a Delivery Extension | Microsoft Docs"
 description: Find out how delivery extensions can use the Notification class. This class stores subscription information that is used when delivering reports.
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.technology: extensions
+ms.service: reporting-services
+ms.subservice: extensions
 
 
 ms.topic: reference

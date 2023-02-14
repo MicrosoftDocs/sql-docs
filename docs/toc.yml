@@ -34,7 +34,7 @@ items:
     - name: SQL Server 2019
       href: sql-server/sql-server-2019-release-notes.md
     - name: SQL Server 2017
-      href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+      href: sql-server/sql-server-2017-release-notes.md
     - name: SQL Server 2016
       href: sql-server/sql-server-2016-release-notes.md
     - name: SQL Server 2014
@@ -4261,6 +4261,8 @@ items:
     href: relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
   - name: Transaction Locking & Row Versioning Guide
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
+  - name: Optimized locking
+    href: relational-databases/performance/optimized-locking.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
   - name: Diagnosing latch contention
@@ -4421,7 +4423,7 @@ items:
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
       - name: Latest updates for SQL Server
-        href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
+        href: /troubleshoot/sql/releases/download-and-install-latest-updates?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
   - name: End of support
     items:
     - name: Overview
@@ -8254,8 +8256,6 @@ items:
         href: tools/distributed-replay/status-option-distributed-replay-administration-tool.md
       - name: Cancel Option
         href: tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md
-  - name: Go-SQLCMD
-    href: tools/go-sqlcmd-utility.md
   - name: SQL Server Configuration Manager
     href: tools/configuration-manager/sql-server-services.md
     items:
@@ -8407,17 +8407,21 @@ items:
   - name: SQLCMD
     items:
     - name: sqlcmd Overview
-      href: tools/sqlcmd-utility.md
+      href: tools/sqlcmd/sqlcmd-utility.md
+    - name: go-sqlcmd Overview
+      href: tools/sqlcmd/go-sqlcmd-utility.md
     - name: Start the Utility
-      href: ssms/scripting/sqlcmd-start-the-utility.md
+      href: tools/sqlcmd/sqlcmd-start-utility.md
     - name: Use the Utility
-      href: ssms/scripting/sqlcmd-use-the-utility.md
+      href: tools/sqlcmd/sqlcmd-use-utility.md
     - name: Connect to the Database Engine
-      href: ssms/scripting/sqlcmd-connect-to-the-database-engine.md
+      href: tools/sqlcmd/sqlcmd-connect-database-engine.md
     - name: Run T-SQL Script Files
-      href: ssms/scripting/sqlcmd-run-transact-sql-script-files.md
+      href: tools/sqlcmd/sqlcmd-run-transact-sql-script-files.md
     - name: Use with Scripting Variables
-      href: ssms/scripting/sqlcmd-use-with-scripting-variables.md
+      href: tools/sqlcmd/sqlcmd-use-scripting-variables.md
+    - name: Edit SQLCMD Scripts with Query Editor
+      href: tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md
   - name: SSB Diagnose
     href: tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
     items:
@@ -8627,12 +8631,6 @@ items:
       href: ssms/download-sql-server-management-studio-ssms.md
     - name: Release notes
       href: ssms/release-notes-ssms.md    
-    - name: Preview
-      items:
-      - name: Download SSMS 19 (Preview)
-        href: ssms/download-sql-server-management-studio-ssms-19.md
-      - name: SSMS 19 (Preview) release notes
-        href: ssms/release-notes-ssms-19.md
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)
@@ -9271,8 +9269,6 @@ items:
           href: ssms/scripting/manage-code-formatting.md
         - name: Navigate Code & Text
           href: ssms/scripting/navigate-code-and-text.md
-        - name: Edit SQLCMD Scripts with Query Editor
-          href: ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
     - name: References
       items:
       - name: SQL Server Management Objects (SMO)
@@ -9295,8 +9291,6 @@ items:
           href: ssms/property-pages-in-sql-server-management-studio.md
         - name: Properties Window in SSMS
           href: ssms/properties-window-management-studio.md
-        - name: Output Window in SSMS
-          href: ssms/output-window.md
         - name: Use the Toolbox
           href: ssms/use-the-toolbox.md
       - name: F1 help
@@ -9349,14 +9343,14 @@ items:
           href: ssms/menu-help/sql-server-management-studio-menu-help.md
         - name: Properties Window F1 Help (Management Studio)
           href: ssms/menu-help/properties-window-f1-help-management-studio.md
+        - name: Options (Output window)
+          href: ssms/menu-help/options-output-window-page.md
         - name: Options (Environment - Fonts & Colors Page)
           href: ssms/menu-help/options-environment-fonts-and-colors-page.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
         - name: Options (Query Execution options - Help - General Page)
           href: ssms/menu-help/options-query-execution.md
-        - name: Options (Output Window)
-          href: ssms/menu-help/options-output-window-page.md
         - name: Options (Azure Service - Help - General Page)
           href: ssms/menu-help/options-azure-services.md
         - name: External Tools
@@ -10214,7 +10208,7 @@ items:
         href: linux/sql-server-linux-kubernetes-best-practices-statefulsets.md
       - name: Use MSDTC with containers
         href: linux/sql-server-linux-configure-msdtc-docker.md
-      - name: Troubleshoot Docker containers
+      - name: Troubleshoot containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
       - name: Setup AD Authentication using adutil
         href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
@@ -10295,8 +10289,6 @@ items:
           items:
           - name: Create for high availability
             href: linux/sql-server-linux-availability-group-ha.md
-          - name: Configure an AG
-            href: linux/sql-server-linux-availability-group-configure-ha.md
           - name: Configure with DH2i
             href: /azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial
           - name: Configure with HPE Serviceguard
@@ -10305,6 +10297,8 @@ items:
             items:
             - name: Pacemaker basics
               href: linux/sql-server-linux-pacemaker-basics.md
+            - name: Configure an AG
+              href: linux/sql-server-linux-availability-group-configure-ha.md
             - name: Configure on RHEL, SLES, and Ubuntu
               href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
             - name: Configure failover
@@ -10370,6 +10364,8 @@ items:
         href: linux/sample-unattended-install-suse.md
       - name: Ubuntu
         href: linux/sample-unattended-install-ubuntu.md
+    - name: SQL Assessment API
+      href: linux/sql-server-linux-sql-assessment-api.md
   - name: Resources
     items:
     - name: Troubleshoot
@@ -10411,20 +10407,54 @@ items:
       href: sql-server/azure-arc/overview.md
     - name: Release notes
       href: sql-server/azure-arc/release-notes.md
-    - name: Connect
-      href: sql-server/azure-arc/connect.md
-    - name: Connect at scale
-      href: sql-server/azure-arc/connect-at-scale.md
-    - name: Assess
-      href: sql-server/azure-arc/assess.md
-    - name: View databases
-      href: sql-server/azure-arc/view-databases.md
-    - name: Configure advanced data Security
-      href: sql-server/azure-arc/configure-advanced-data-security.md
-    - name: Billing through Microsoft Azure
-      href: sql-server/azure-arc/billing.md
+    - name: How-to guides
+      items:
+      - name: Deploy
+        items:
+        - name: Prerequisites
+          href: sql-server/azure-arc/prerequisites.md
+        - name: Deployment options
+          href: sql-server/azure-arc/deployment-options.md
+        - name: Connect interactively
+          items:
+          - name: Connect when machine not connected to Azure
+            href: sql-server/azure-arc/connect.md
+          - name: Connect with installer (.msi)
+            href: sql-server/azure-arc/connect-with-installer.md
+          - name: Connect when machine already connected to Azure
+            href: sql-server/azure-arc/connect-already-enabled.md
+        - name: Connect at scale
+          items:
+          - name: Connect at scale | Azure policy
+            href: sql-server/azure-arc/connect-at-scale-policy.md
+          - name: Connect at scale | Script
+            href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Connect machines using Configuration Manager custom task sequence
+            href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
+    - name: Manage
+      items:
+      - name: Assess
+        href: sql-server/azure-arc/assess.md
+      - name: View databases
+        href: sql-server/azure-arc/view-databases.md
+      - name: Delete from or restore to Azure Arc
+        href: sql-server/azure-arc/delete-from-azure-arc.md
+      - name: Manage SQL Server license and billing options
+        href: sql-server/azure-arc/manage-license-type.md
+    - name: Secure
+      items:
+      - name: Configure advanced data Security
+        href: sql-server/azure-arc/configure-advanced-data-security.md
     - name: FAQ
       href: sql-server/azure-arc/faq.yml
+    - name: Data collection and reporting
+      href: sql-server/azure-arc/data-collection.md
+    - name: Troubleshoot
+      items:
+      - name: Troubleshoot deployment
+        href: sql-server/azure-arc/troubleshoot-deployment.md
+
+
 - name: Big Data Clusters
   items:
   - name: Big Data Clusters
@@ -11154,6 +11184,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3617-database-engine-error.md
         - name: 3619
           href: relational-databases/errors-events/mssqlserver-3619-database-engine-error.md
+        - name: 3624
+          href: relational-databases/errors-events/mssqlserver-3624-database-engine-error.md          
         - name: 3937
           href: relational-databases/errors-events/mssqlserver-3937-database-engine-error.md
         - name: 3961
@@ -11460,6 +11492,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17084-database-engine-error.md
         - name: 17112
           href: relational-databases/errors-events/mssqlserver-17112-database-engine-error.md
+        - name: 17120
+          href: relational-databases/errors-events/mssqlserver-17120-database-engine-error.md
         - name: 17128
           href: relational-databases/errors-events/mssqlserver-17128-database-engine-error.md
         - name: 17130
@@ -11472,6 +11506,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17147-database-engine-error.md
         - name: 17148
           href: relational-databases/errors-events/mssqlserver-17148-database-engine-error.md
+        - name: 17182
+          href: relational-databases/errors-events/mssqlserver-17182-database-engine-error.md
         - name: 17194
           href: relational-databases/errors-events/mssqlserver-17194-database-engine-error.md
         - name: 17204
@@ -11490,6 +11526,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17803-database-engine-error.md
         - name: 17809
           href: relational-databases/errors-events/mssqlserver-17809-database-engine-error.md
+        - name: 17826
+          href: relational-databases/errors-events/mssqlserver-17826-database-engine-error.md          
         - name: 17832
           href: relational-databases/errors-events/mssqlserver-17832-database-engine-error.md
         - name: 17883
@@ -11502,6 +11540,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-17890-database-engine-error.md
         - name: 17892
           href: relational-databases/errors-events/mssqlserver-17892-database-engine-error.md
+        - name: 18210
+          href: relational-databases/errors-events/mssqlserver-18210-database-engine-error.md
         - name: 18264
           href: relational-databases/errors-events/mssqlserver-18264-database-engine-error.md
         - name: 18452
@@ -11518,6 +11558,10 @@ items:
         items:
         - name: 19407
           href: relational-databases/errors-events/mssqlserver-19407-database-engine-error.md
+        - name: 19419
+          href: relational-databases/errors-events/mssqlserver-19419-database-engine-error.md
+        - name: 19421
+          href: relational-databases/errors-events/mssqlserver-19421-database-engine-error.md
       - name: Errors 20,000 to 33,999
         items:
         - name: 20557

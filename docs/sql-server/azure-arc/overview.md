@@ -7,92 +7,66 @@ ms.reviewer: mikeray, randolphwest
 ms.date: 10/12/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom: references_regions
 ---
 
 # Azure Arc-enabled SQL Server
 
-Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure; in your datacenter, on the edge, or in a multicloud environment.
+Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure: in your data center, in edge site locations like retail stores, or any public cloud or hosting provider.
 
-To enable Azure services, you must onboard a running SQL Server instance to Azure Arc. The onboarding will install an *Azure  extension for SQL Server* to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will create an Azure resource for each SQL Server instance.  You can see all the Arc-enabled SQL Server resources in the Azure portal under __Azure Arc > SQL Server__. The properties of this resource reflect a subset of the SQL Server configuration settings.
+## Manage your SQL Servers at-scale from a single point of control
 
-Azure Arc-enabled SQL Server doesn't store any customer data.
+Azure Arc enables you to manage all of your SQL Servers from a single point of control: Azure. As you connect your SQL Servers to Azure, you get a single place to view the detailed inventory of your SQL Servers and databases.  You can look at details for a given SQL Server in the Azure Portal such as the name, version, edition, number of cores, and host operating system. At scale, you can query across all of your SQL Servers using Azure Resource Graph Explorer to answer questions like 'How many SQL Servers do I have that are SQL Server 2014? or "What are the names of all the SQL Servers that are running on Linux?"  You can even quickly create charts from these queries and pin them to customizable dashboards.  Go a level deeper and you can view a list of every database on a SQL Server and do cross-SQL Server queries of databases to get insights into which databases haven't been backed up recently or that are not encrypted.
+
+![A screenshot of the Arc-enabled SQL Server dashboard from Azure portal.](media/overview/arc-sql-server-dashboard.png)
+
+## Best practices assessment
+
+You can optimize the configuration of your SQL Servers for best performance and security by running a best practices assessment.  The assessment report shows you specific ways to improve your configuration to match the best practices established by Microsoft Support through many years of experience learning from real-world usage of SQL Server.  Each suggestion includes the details on how to change the configuration.
+
+## Azure Active Directory authentication
+
+New in SQL Server 2022, you can enable Azure Active Directory for authentication to SQL Server.  This feature requires using Azure Arc-enabled SQL Server to establish the secure connection to Azure Active Directory for performing the authentication.
+
+## Microsoft Defender for Cloud
+
+Microsoft Defender for Cloud helps you discover and mitigate potential database vulnerabilities and alerts you to anomalous activities that may be an indication of a threat to your databases on Arc-enabled SQL Servers
+
+- Vulnerability assessment: Scan databases to discover, track, and remediate vulnerabilities.
+- Threat protection: Receive detailed security alerts and recommended actions based on SQL Advanced Threat Protection to provide to mitigate threats.
+
+When you enable Microsoft Defender through Azure Arc-enabled SQL Server, you can get substantial cost savings on Defender.
+
+## Microsoft Purview
+
+Microsoft Purview provides a unified data governance solution to help manage and govern your on-premises, multi-cloud, and software as a service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Enable data consumers to access valuable, trustworthy data management.
+
+Azure Arc-enabled SQL Server powers some of the Microsoft Purview features such as access policies and it generally makes it easier for you to get your SQL Servers connected into Purview.
+
+## Pay-as-you-go for SQL Server
+
+Now, with Azure Arc-enabled SQL Serves connected to Azure, you have the option of purchasing SQL Server using a 'pay-as-you-go' model instead of purchasing licenses.  This model is a great alternative if you are looking to save costs on SQL Servers that have variable demand for compute capacity over time such as when you can turn off a SQL Server at night or on weekends, or even just scale down the number of cores that is using during less busy times.  It's also a great option if you only plan to use a SQL Server for a short period of time and then won't need it anymore.  Pay-as-you-go, billed through Azure, is now available for all versions of SQL Server from 2014 to 2022.
 
 ## Architecture
 
-The SQL Server instance can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the [Connected Machine agent](/azure/azure-arc/servers/agent-overview). When you register the SQL Server instance, the agent is installed, and the machine is registered automatically.
+The SQL Server instance that you want to enable with Azure Arc can be installed in a virtual or physical machine running Windows or Linux.  The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) and the Azure Extension for SQL Server securely connect to Azure to establish communication channels with multiple Azure services using only outbound HTTPS traffic on TCP port 443 using SSL. The Azure Connected Machine agent can communicate through a configurable HTTPS proxy server over Azure Express Route, Azure Private Link or over the Internet. Review the [overview](/azure/azure-arc/servers/agent-overview), [network requirements](/azure/azure-arc/servers/network-requirements) and [prerequisites](/azure/azure-arc/servers/prerequisites) for the Azure Connected Machine agent.
 
-The Connected Machine agent communicates outbound securely to Azure Arc over TCP port 443. If the machine connects through a firewall or an HTTP proxy server to communicate over the Internet, review the [network configuration requirements for the Connected Machine agent](/azure/azure-arc/servers/agent-overview#prerequisites).
+Some of the services provided by Azure Arc-enabled SQL Server, such as Microsoft Defender for Cloud and best practices assessment, require the Azure Monitoring agent (AMA) extension to be installed and connected to an Azure Log Analytics workspace for data collection and reporting.
 
-Azure Arc-enabled SQL Server supports a set of solutions that require Microsoft Monitoring Agent (MMA) to be installed and connected to an Azure Log analytics workspace for data collection and reporting. These solutions include Microsoft Defender for Cloud and On-demand SQL Assessment feature.
+The following diagram illustrates the architecture of Azure Arc-enabled SQL Server.
 
-The following diagram illustrates the architecture of SQL Server on Azure Arc enable servers.
+![Diagram of the architecture for Azure Arc-enabled SQL Server.](media/overview/architecture.png)
 
-:::image type="content" source="media/overview/architecture.png" alt-text="Diagram showing customer infrastructure hosts virtualization and persistent storage. Use the Azure portal or the appropriate CLI to manage the SQL Server instance.":::
+## Feature availability depending on license type
 
-To learn more about these capabilities, you can also refer to this Data Exposed episode.
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Understanding-Azure-Arc-Enabled-SQL-Server/player?format=ny]
-
-## Prerequisites
-
-### Supported SQL versions and operating systems
-
-Azure Arc-enabled SQL Server supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
-
-- Windows Server 2012 R2 and higher
-- Ubuntu 20.04 (x64)
-- Red Hat Enterprise Linux (RHEL) 8 (x64) 
-- SUSE Linux Enterprise Server (SLES) 15 (x64)
-
-> [!NOTE]
-> Azure Arc-enabled SQL Server does not support the following configurations currently:
->
-> - SQL Server running in containers.
-> - SQL Server Failover Cluster Instances (FCI).
-> - SQL Server roles other than the Database Engine, such as Analysis Services (SSAS), Reporting Services (SSRS), or Integration Services (SSIS).
-> - SQL Server editions: Business Intelligence.
-> - SQL Server 2008, SQL Server 2008 R2, and older.
-> - Installing the Arc agent and SQL Server extension cannot be done as part of sysprep image creation.
-
-### Required permissions
-
-To connect the SQL Server instances and the hosting machine to Azure Arc, you must have a user account or Azure service principal with [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role for the resource group in which the SQL Server will be managed.
-
-Deploying the Connected Machine agent on a SQL Server machine requires that you have administrator permissions to install and configure the agent. On Linux this is done by using the root account, and on Windows, with an account that is a member of the Local Administrators group
-
-### Azure subscription and service limits
-
-Before configuring your SQL server instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
-
-### Networking configuration and resource providers
-
-Review [networking configuration, transport layer security, and resource providers](/azure/azure-arc/servers/agent-overview#prerequisites) required for Connected Machine agent.
-
-The resource provider `Microsoft.AzureArcData` is required to connect the SQL Server instances to Azure Arc. To register the resource provider, follow the instructions in the [Prerequisites](connect.md#prerequisites) section.
-
-If you connected an instance of SQL Server to Azure Arc prior to December 2020, you need to follow the [prerequisite steps](connect.md#prerequisites) to migrate the existing Arc-enabled SQL Server resources to the new namespace.
+[!INCLUDE [license-types](includes/license-types.md)]
 
 ## Supported Azure regions
 
-Arc-enabled SQL Server is available in the following regions:
+[!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]
 
-- East US
-- East US 2
-- West US 2
-- Central US
-- South Central US
-- UK South
-- France Central
-- West Europe
-- North Europe
-- Japan East
-- Korea Central
-- East Asia
-- Southeast Asia
-- Australia East
 
 ## Next steps
 
-- [Connect your SQL Server to Azure Arc](connect.md)
-- [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
-- [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+- [Learn about the prerequisites to connect your SQL Server to Azure Arc](prerequisites.md)
+- [Learn more about Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage)
+- [Lean more about Microsoft Purview](/azure/purview/register-scan-azure-arc-enabled-sql-server)

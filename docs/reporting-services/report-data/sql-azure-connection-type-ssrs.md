@@ -154,7 +154,7 @@ You can use the Azure SQL database with Azure Active Directory (AAD).
 
 This scenario is supported when you set up the following items properly:
 
-- [Active Directory Authentication Library for SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) is installed on the report server.
+- Active Directory Authentication Library for SQL Server (ADALSQL) is installed on the report server.
 - [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) is configured to federate across on-premises Active Directory (AD) and AAD.
 - [Kerberos Constrained Delegation (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) is configured from the report server to the ADFS server.
 - Configure the report/data source to authenticate to [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) as the user viewing the report.

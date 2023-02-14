@@ -4,7 +4,7 @@ description: DBCC SHRINKDATABASE shrinks the size of the data and log files in t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, KevinConanMSFT, dplessMSFT, randolphwest
-ms.date: 12/05/2022
+ms.date: "01/06/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
@@ -41,24 +41,30 @@ Shrinks the size of the data and log files in the specified database.
 Syntax for SQL Server:
 
 ```syntaxsql
-DBCC SHRINKDATABASE
-( database_name | database_id | 0
-     [ , target_percent ]
-     [ , { NOTRUNCATE | TRUNCATEONLY } ]
-)
-[ WITH
-    NO_INFOMSGS ,
-    {
-         [ WAIT_AT_LOW_PRIORITY
-            [ (
-                  < wait_at_low_priority_option_list >
-             ) ]
-         ]
+DBCC SHRINKDATABASE   
+( database_name | database_id | 0   
+     [ , target_percent ]   
+     [ , { NOTRUNCATE | TRUNCATEONLY } ]   
+)  
+[ WITH 
+
+    {     
+         [ WAIT_AT_LOW_PRIORITY 
+            [ ( 
+                  <wait_at_low_priority_option_list>
+             )] 
+         ] 
+         
+         [ , NO_INFOMSGS]
     }
 ]
 
-< wait_at_low_priority_option_list > ::=
- ABORT_AFTER_WAIT = { SELF | BLOCKERS }
+< wait_at_low_priority_option_list > ::=  
+    <wait_at_low_priority_option>
+    | <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
+
+< wait_at_low_priority_option > ::=
+  ABORT_AFTER_WAIT = { SELF | BLOCKERS }
 ```
 
 Syntax for Azure Synapse Analytics:
@@ -85,7 +91,7 @@ The percentage of free space that you want left in the database file after the d
 
 #### NOTRUNCATE
 
-Moves assigned pages from the file's end to unassigned pages in the front of the file. This action compacts the data within the file. *target_percent* is optional. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] doesn't support this option.
+Moves assigned pages from the file's end to unassigned pages in the front of the file. This action compacts the data within the file. *target_percent* is optional. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't support this option.
 
 The free space at the end of the file isn't returned to the operating system, and the physical size of the file doesn't change. As such, the database appears not to shrink when you specify `NOTRUNCATE`.
 
@@ -93,7 +99,7 @@ The free space at the end of the file isn't returned to the operating system, an
 
 #### TRUNCATEONLY
 
-Releases all free space at the end of the file to the operating system. Doesn't move any pages inside the file. The data file shrinks only to the last assigned extent. Ignores *target_percent* if specified with `TRUNCATEONLY`. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] doesn't support this option.
+Releases all free space at the end of the file to the operating system. Doesn't move any pages inside the file. The data file shrinks only to the last assigned extent. Ignores *target_percent* if specified with `TRUNCATEONLY`. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't support this option.
 
 `DBCC SHRINKDATABASE` with the `TRUNCATEONLY` option affects the database transaction log file only. To truncate the data file, use `DBCC SHRINKFILE` instead. For more information, see [DBCC SHRINKFILE](dbcc-shrinkfile-transact-sql.md).
 
@@ -109,14 +115,13 @@ The wait at low priority feature reduces lock contention. For more information, 
 
 This feature is similar to the [WAIT_AT_LOW_PRIORITY with online index operations](../statements/alter-table-transact-sql.md#wait_at_low_priority), with some differences.
 
-- You can't modify `MAX_DURATION`. The wait duration is 60,000 milliseconds (1 minute).
-- You can't specify `ABORT_AFTER_WAIT` option NONE.
+- You cannot specify ABORT_AFTER_WAIT option NONE.
 
 #### WAIT_AT_LOW_PRIORITY
 
-When a shrink command is executed in `WAIT_AT_LOW_PRIORITY` mode, new queries requiring schema stability (Sch-S) locks aren't blocked by the waiting shrink operation until the shrink operation stops waiting and starts executing. The shrink operation will execute when it is able to obtain a schema modify lock (Sch-M) lock.  If a new shrink operation in `WAIT_AT_LOW_PRIORITY` mode can't obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60,000 milliseconds (1 minute) and will exit with no error.
+When a shrink command is executed in `WAIT_AT_LOW_PRIORITY` mode, new queries requiring schema stability (Sch-S) locks are not blocked by the waiting shrink operation until the shrink operation stops waiting and starts executing. The shrink operation will execute when it is able to obtain a schema modify lock (Sch-M) lock.  If a new shrink operation in `WAIT_AT_LOW_PRIORITY` mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will exit with no error.
 
-If a new shrink operation in `WAIT_AT_LOW_PRIORITY` mode can't obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60,000 milliseconds (1 minute) and will exit with no error. This will occur if the shrink operation can't obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in `WAIT_AT_LOW_PRIORITY` mode knowing that there would be no impact to the application.
+If a new shrink operation in `WAIT_AT_LOW_PRIORITY` mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will exit with no error. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in `WAIT_AT_LOW_PRIORITY` mode knowing that there would be no impact to the application.
 
 #### ABORT_AFTER_WAIT = [ SELF | BLOCKERS ]
 
@@ -164,6 +169,8 @@ Specify either the `NOTRUNCATE` option or the `TRUNCATEONLY` option when you run
 The shrunk database doesn't have to be in single user mode. Other users can be working in the database when it's shrunk, including system databases.
 
 You can't shrink a database while the database is being backed up. Conversely, you can't back up a database while a shrink operation on the database is in process.
+
+When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock request will wait with low priority when executing the command for 1 minute. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed.
 
 ## How DBCC SHRINKDATABASE works
 

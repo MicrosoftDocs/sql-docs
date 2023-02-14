@@ -140,7 +140,7 @@ COMMIT TRAN T1;
 ## Examples  
   
 ### A. Using an explicit transaction
-**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], Parallel Data Warehouse
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], Parallel Data Warehouse
 
 This example uses AdventureWorks. 
 
@@ -153,7 +153,7 @@ COMMIT;
 
 ### B. Rolling back a transaction
 **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
-, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], Parallel Data Warehouse
+, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], Parallel Data Warehouse
 
 The following example shows the effect of rolling back a transaction. In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.
 

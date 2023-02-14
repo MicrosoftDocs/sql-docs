@@ -4,7 +4,7 @@ description: Learn about the tools and options available to migrate your SQL Ser
 author: croblesm
 ms.author: roblescarlos
 ms.reviewer: mathoma, danil, randolphwest
-ms.date: 04/11/2022
+ms.date: 01/06/2023
 ms.service: sql-managed-instance
 ms.subservice: migration-guide
 ms.topic: how-to
@@ -17,11 +17,11 @@ Learn about the options and considerations for migrating your SQL Server databas
 
 You can migrate SQL Server databases running on-premises or on: 
 
-- SQL Server on Azure Virtual Machines.  
-- Amazon Web Services (AWS) Elastic Compute Cloud (EC2). 
-- Compute Engine in Google Cloud Platform (GCP).  
-- Amazon RDS
-- Cloud SQL for SQL Server in GCP. 
+- SQL Server on Virtual Machines
+- Amazon EC2 (Elastic Compute Cloud)
+- Amazon RDS (Relational Database Service) for SQL Server
+- Google Compute Engine
+- Cloud SQL for SQL Server - GCP (Google Cloud Platform)
 
 For other migration guides, see [Database Migration](/data-migration). 
 
@@ -82,9 +82,8 @@ We recommend the following migration tools:
 
 |Technology | Description|
 |---------|---------|
-| [Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) | The Azure SQL migration extension for Azure Data Studio provides both the SQL Server assessment and migration capabilities in Azure Data Studio. It supports migrations in either online (for migrations that require minimal downtime) or offline (for migrations where downtime persists through the duration of the migration) modes. |
+|[Azure SQL Migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio)| Powered by the [Azure Database Migration service](/azure/dms/dms-overview), the Azure SQL Migration extension for Azure Data Studio helps you to assess your database requirements to understand your migration readiness, get the right-sized SKU recommendations for Azure resources, and migrate your SQL Server database to Azure. You can migrate single databases or at scale using [PowerShell and Azure CLI](/azure/dms/migration-dms-powershell-cli). |
 | [Azure Migrate](/azure/migrate/how-to-create-azure-sql-assessment) | This Azure service helps you discover and assess your SQL data estate at scale on VMware. It provides Azure SQL deployment recommendations, target sizing, and monthly estimates. | 
-|[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance) | This Azure service supports migration in the offline mode for applications that can afford downtime during the migration process. Unlike the continuous migration in online mode, offline mode migration runs a one-time restore of a full database backup from the source to the target. | 
 |[Native backup and restore](../../managed-instance/restore-sample-database-quickstart.md) | SQL Managed Instance supports restore of native SQL Server database backups (.bak files). It's the easiest migration option for customers who can provide full database backups to Azure Storage.| 
 |[Log Replay Service](../../managed-instance/log-replay-service-migrate.md) | This cloud service is enabled for SQL Managed Instance based on SQL Server log-shipping technology. It's a migration option for customers who can provide full, differential, and log database backups to Azure Storage. Log Replay Service is used to restore backup files from Azure Blob Storage to SQL Managed Instance.| 
 |[Managed Instance link](../../managed-instance/managed-instance-link-feature-overview.md) | This feature enables online migration to SQL Managed Instance using Always On technology. It's a migration option for customers who require database on SQL Managed Instance to be accessible in R/O mode while migration is in progress, who need to keep the migration running for prolonged periods of time (weeks or months at the time), who require true online replication to Business Critical service tier, and for customers who require the most performant minimum downtime migration. | 
@@ -106,8 +105,7 @@ The following table compares the recommended migration options:
 
 |Migration option  |When to use  |Considerations  |
 |---------|---------|---------|
-|[Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) | - Migrate single databases or multiple databases at scale.<br/>- Can run in both online (minimal downtime) and offline (acceptable downtime) modes.<br/><br/>Supported sources:<br/>- SQL Server (2005 to 2019) on-premises or Azure VM<br/>- Amazon EC2<br/>- GCP Compute SQL Server VM |  - Easy to set up and get started.<br/>- Requires setup of self-hosted integration runtime to access on-premises SQL Server and backups.<br/>- Includes both assessment and migration capabilities. |
-|[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance) | - Migrate single databases or multiple databases at scale.<br/>- Can run in both online (minimal downtime) and offline modes.<br/><br/>Supported sources:<br/>- SQL Server (2005 to 2019) on-premises or Azure VM<br/>- Amazon EC2<br/>- GCP Compute SQL Server VM |  - Migrations at scale can be automated via [PowerShell](/azure/dms/howto-sql-server-to-azure-sql-managed-instance-powershell-offline).<br/>- Time to complete migration depends on database size and is affected by backup and restore time.<br/>- Sufficient downtime might be required. |
+| [Azure SQL Migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) | - Migrate single databases or at scale. </br> - Can run in both online and offline modes. </br> </br> Supported sources: </br> - SQL Server (2005 onwards) on-premises, or on Azure Virtual Machines </br> - SQL Server on Amazon EC2 </br> - Amazon RDS for SQL Server </br> - SQL Server on Google Compute Engine | - Migrations at scale can be automated via [PowerShell or Azure CLI](/azure/dms/migration-dms-powershell-cli). </br> </br> - Time to complete migration depends on database size and the number of objects in the database. </br> </br> - Azure Data Studio is required when you are not using PowerShell or Azure CLI. |
 |[Native backup and restore](../../managed-instance/restore-sample-database-quickstart.md) | - Migrate individual line-of-business application databases.<br/>- Quick and easy migration without a separate migration service or tool.<br/><br/>Supported sources:<br/>- SQL Server (2005 to 2019) on-premises or Azure VM<br/>- Amazon EC2<br/>- GCP Compute SQL Server VM | - Database backup uses multiple threads to optimize data transfer to Azure Blob Storage, but partner bandwidth and database size can affect transfer rate.<br/>- Downtime should accommodate the time required to perform a full backup and restore (which is a size of data operation).| 
 |[Log Replay Service](../../managed-instance/log-replay-service-migrate.md) | - Migrate individual line-of-business application databases.<br/>- More control is needed for database migrations.<br/><br/>Supported sources:<br/>- SQL Server (2008 to 2019) on-premises or Azure VM<br/>- Amazon EC2  </br> - Amazon RDS for SQL Server <br/> - GCP Compute SQL Server VM | - The migration entails making full database backups on SQL Server and copying backup files to Azure Blob Storage. Log Replay Service is used to restore backup files from Azure Blob Storage to SQL Managed Instance.<br/>- Databases being restored during the migration process will be in a restoring mode and can't be used for read or write workloads until the process is complete.| 
 |[Link feature for Azure SQL Managed Instance](../../managed-instance/managed-instance-link-feature-overview.md) | - Migrate individual line-of-business application databases.<br/>- More control is needed for database migrations.<br/>- Minimum downtime migration is needed.<br/><br/>Supported sources:<br/>- SQL Server (2016 to 2019) on-premises or Azure VM<br/>- Amazon EC2<br/>- GCP Compute SQL Server VM | - The migration entails establishing a network connection between SQL Server and SQL Managed Instance, and opening communication ports.<br/>- Uses [Always On availability group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) technology to replicate database near real-time, making an exact replica of the SQL Server database on SQL Managed Instance.<br/>- The database can be used for read-only access on SQL Managed Instance while migration is in progress.<br/>- Provides the best performance during migration with minimum downtime. | 

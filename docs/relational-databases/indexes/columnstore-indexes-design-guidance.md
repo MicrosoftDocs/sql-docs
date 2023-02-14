@@ -130,7 +130,7 @@ For example, both rowstore and columnstore tables use partitions to:
 
 Additionally, with a columnstore index, you use partitioning to:
 
-* Save an additional 30% in storage costs. You can compress older partitions with the COLUMNSTORE_ARCHIVE compression options. The data will be slower for query performance, which is acceptable if the partition is queries infrequently.
+* Save an additional 30% in storage costs. You can compress older partitions with the COLUMNSTORE_ARCHIVE compression options. The data will be slower for query performance, which is acceptable if the partition is queried infrequently.
 
 ### Use partitions to improve query performance
 
@@ -217,7 +217,7 @@ These are tasks for creating and maintaining columnstore indexes.
 To create an empty columnstore index for:
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)], refer to [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
-- [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], refer to [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
+- [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], refer to [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 For more information on how to convert an existing rowstore heap or B-tree index into a clustered columnstore index, or to create a nonclustered columnstore index, refer to [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 

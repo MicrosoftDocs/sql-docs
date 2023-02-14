@@ -52,7 +52,7 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
 match_expression [ NOT ] LIKE pattern  
 ```  
 >[!NOTE]
-> Currently ESCAPE and STRING_ESCAPE are not supported in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+> Currently ESCAPE and STRING_ESCAPE are not supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

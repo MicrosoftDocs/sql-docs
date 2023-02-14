@@ -68,4 +68,4 @@ In addition to the system-assigned managed identity that is already supported fo
 
 ## See also
 
-- [Create an Azure SQL Managed Instance with a user-assigned managed identity](/azure/azure-sql/managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance)
+- [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)

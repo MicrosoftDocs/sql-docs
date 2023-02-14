@@ -16,7 +16,7 @@ ms.custom: seo-dt-2019
 # sp_pdw_remove_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  This removes network credentials stored in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] to access a network file share. For example, use this stored procedure to remove permission for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] to perform backup and restore operations on a server that resides within your own network.  
+  This removes network credentials stored in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to access a network file share. For example, use this stored procedure to remove permission for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to perform backup and restore operations on a server that resides within your own network.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -33,7 +33,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 
 ## Arguments  
  '*target_server_name*'  
- Specifies the target server host name or IP address. Credentials to access this server will be removed from [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]. This does not change or remove any permissions on the actual target server which is managed by your own team.  
+ Specifies the target server host name or IP address. Credentials to access this server will be removed from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. This does not change or remove any permissions on the actual target server which is managed by your own team.  
   
  *target_server_name* is defined as nvarchar(337).  
   
@@ -47,7 +47,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  An error occurs if removing credentials does not succeed on the Control node and all Compute nodes.  
   
 ## General Remarks  
- This stored procedure removes network credentials from the NetworkService account for [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]. The NetworkService account runs each instance of SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the Control node and the Compute nodes. For example, when a backup operation runs, the Control node and each Compute node will use the NetworkService account credentials to access the target server.  
+ This stored procedure removes network credentials from the NetworkService account for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. The NetworkService account runs each instance of SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the Control node and the Compute nodes. For example, when a backup operation runs, the Control node and each Compute node will use the NetworkService account credentials to access the target server.  
   
 ## Metadata  
  To list all credentials and to verify the credentials have been removed, use [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  

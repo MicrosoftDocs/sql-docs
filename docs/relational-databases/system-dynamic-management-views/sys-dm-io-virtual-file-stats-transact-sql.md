@@ -82,7 +82,7 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
 |**file_handle**|**varbinary**|Windows file handle for this file.|  
 |**io_stall_queued_read_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for reads. Is not nullable. For more information, see [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Total IO latency introduced by IO resource governance for writes. Is not nullable.|
-|**pdw_node_id**|**int**|**Applies to:** [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]</br></br>Identifier of the node for the distribution.
+|**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]</br></br>Identifier of the node for the distribution.
  
 ## Remarks
 The counters are initialized to empty whenever the SQL Server (MSSQLSERVER) service is started.

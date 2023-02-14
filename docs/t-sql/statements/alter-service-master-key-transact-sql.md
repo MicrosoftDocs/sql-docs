@@ -23,7 +23,7 @@ dev_langs:
   - "TSQL"
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the service master key of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

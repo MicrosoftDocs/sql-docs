@@ -24,8 +24,6 @@
     href: quickstart-mysql.md
   - name: Connect & query PostgreSQL
     href: quickstart-postgres.md
-  - name: Connect & query PostgreSQL
-    href: quickstart-postgres.md
   - name: Connect and query Managed Service for TimescaleDB
     href: quickstart-timescaledb.md
 - name: Tutorials
@@ -68,7 +66,11 @@
     - name: Azure Cosmos DB API for MongoDB extension
       href: extensions/azure-cosmos-db-mongodb-extension.md
     - name: Database Migration Assessment for Oracle extension
-      href: extensions/database-migration-assessment-for-oracle-extension.md
+      items:
+      - name: Overview
+        href: extensions/database-migration-assessment-for-oracle-extension.md
+      - name: Troubleshoot
+        href: extensions/database-migration-assessment-for-oracle-extension-troubleshoot.md
     - name: Database Schema Conversion Toolkit
       href: extensions/dsct/toc.yml
     - name: Data Virtualization extension

@@ -19,11 +19,11 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
   A transaction is a group of one or more database statements that are either wholly committed or wholly rolled back. Each transaction is atomic, consistent, isolated, and durable (ACID). If the transaction succeeds, all statements within it are committed. If the transaction fails, that is at least one of the statements in the group fails, then the entire group is rolled back.  
   
- The beginning and end of transactions depends on the AUTOCOMMIT setting and the BEGIN TRANSACTION, COMMIT, and ROLLBACK statements. [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] supports the following types of transactions:  
+ The beginning and end of transactions depends on the AUTOCOMMIT setting and the BEGIN TRANSACTION, COMMIT, and ROLLBACK statements. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] supports the following types of transactions:  
   
 -   *Explicit transactions* start with the BEGIN TRANSACTION statement and end with the COMMIT or ROLLBACK statement.  
   
--   *Auto-commit transactions* initiate automatically within a session and do not start with the BEGIN TRANSACTION statement. When the AUTOCOMMIT setting is ON, each statement runs in a transaction and no explicit COMMIT or ROLLBACK is necessary. When the AUTOCOMMIT setting is OFF, a COMMIT or ROLLBACK statement is required to determine the outcome of the transaction. In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], autocommit transactions begin immediately after a COMMIT or ROLLBACK statement, or after a SET AUTOCOMMIT OFF statement.  
+-   *Auto-commit transactions* initiate automatically within a session and do not start with the BEGIN TRANSACTION statement. When the AUTOCOMMIT setting is ON, each statement runs in a transaction and no explicit COMMIT or ROLLBACK is necessary. When the AUTOCOMMIT setting is OFF, a COMMIT or ROLLBACK statement is required to determine the outcome of the transaction. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], autocommit transactions begin immediately after a COMMIT or ROLLBACK statement, or after a SET AUTOCOMMIT OFF statement.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  Each statement runs under its own transaction and no explicit COMMIT or ROLLBACK statement is necessary. Explicit transactions are allowed when AUTOCOMMIT is ON.  
   
  OFF  
- [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] automatically initiates a transaction when a transaction is not already in progress. Any subsequent statements are run as part of the transaction and a COMMIT or ROLLBACK is necessary to determine the outcome of the transaction. As soon as a transaction commits or rolls back under this mode of operation, the mode remains OFF, and [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] initiates a new transaction. Explicit transactions are not allowed when AUTOCOMMIT is OFF.  
+ [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] automatically initiates a transaction when a transaction is not already in progress. Any subsequent statements are run as part of the transaction and a COMMIT or ROLLBACK is necessary to determine the outcome of the transaction. As soon as a transaction commits or rolls back under this mode of operation, the mode remains OFF, and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] initiates a new transaction. Explicit transactions are not allowed when AUTOCOMMIT is OFF.  
   
  If you change the AUTOCOMMIT setting within an active transaction, the setting does affect the current transaction and does not take affect until the transaction is completed.  
   
@@ -71,9 +71,9 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  If a BEGIN TRANSACTION is run while a transaction is already in progress, an error is raised. This can occur if a BEGIN TRANSACTION occurs after a successful BEGIN TRANSACTION statement or when the session is under SET AUTOCOMMIT OFF.  
   
- If an error other than a run-time statement error prevents the successful completion of an explicit transaction, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. For example, if the client's network connection to an instance of [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] is broken or the client logs off the application, any uncommitted transactions for the connection are rolled back when the network notifies the instance of the break.  
+ If an error other than a run-time statement error prevents the successful completion of an explicit transaction, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. For example, if the client's network connection to an instance of [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] is broken or the client logs off the application, any uncommitted transactions for the connection are rolled back when the network notifies the instance of the break.  
   
- If a run-time statement error occurs in a batch, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] behaves consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
+ If a run-time statement error occurs in a batch, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] behaves consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   
 ## General Remarks  
  A session can only run one transaction at a given time; save points and nested transactions are not supported.  
@@ -89,10 +89,10 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  The [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) and [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) commands cannot be used inside an explicit transaction.  
   
- [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] does not have a transaction sharing mechanism. This implies that at any given point in time, only one session can be doing work on any transaction in the system.  
+ [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] does not have a transaction sharing mechanism. This implies that at any given point in time, only one session can be doing work on any transaction in the system.  
   
 ## Locking Behavior  
- [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] uses locking to ensure the integrity of transactions and maintain the consistency of databases when multiple users are accessing data at the same time. Locking is used by both implicit and explicit transactions. Each transaction requests locks of different types on the resources, such as tables or databases on which the transaction depends. All [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] locks are table level or higher. The locks block other transactions from modifying the resources in a way that would cause problems for the transaction requesting the lock. Each transaction frees its locks when it no longer has a dependency on the locked resources; explicit transactions retain locks until the transaction completes when it is either committed or rolled back.  
+ [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses locking to ensure the integrity of transactions and maintain the consistency of databases when multiple users are accessing data at the same time. Locking is used by both implicit and explicit transactions. Each transaction requests locks of different types on the resources, such as tables or databases on which the transaction depends. All [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] locks are table level or higher. The locks block other transactions from modifying the resources in a way that would cause problems for the transaction requesting the lock. Each transaction frees its locks when it no longer has a dependency on the locked resources; explicit transactions retain locks until the transaction completes when it is either committed or rolled back.  
   
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

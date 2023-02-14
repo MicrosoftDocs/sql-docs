@@ -4,7 +4,7 @@ description: This article discusses the Transact-SQL (T-SQL) differences between
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, bonova, danil
-ms.date: 08/15/2022
+ms.date: 02/08/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -142,10 +142,7 @@ SQL Managed Instance can't access files, so cryptographic providers can't be cre
 - Windows logins created with the `CREATE LOGIN ... FROM WINDOWS` syntax aren't supported. Use Azure Active Directory logins and users.
 - The Azure AD admin for the instance has [unrestricted admin privileges](../database/logins-create-manage.md).
 - Non-administrator Azure AD database-level users can be created by using the `CREATE USER ... FROM EXTERNAL PROVIDER` syntax. See [CREATE USER ... FROM EXTERNAL PROVIDER](../database/authentication-aad-configure.md#create-contained-users-mapped-to-azure-ad-identities).
-- Azure AD server principals (logins) support SQL features within one SQL Managed Instance only. Features that require cross-instance interaction, no matter whether they're within the same Azure AD tenant or different tenants, aren't supported for Azure AD users. Examples of such features are:
-
-  - SQL transactional replication.
-  - Link server.
+- Some features do not support usage of Azure AD server principals (logins) in cross-instance interaction, but within one SQL Managed Instance only. Example of such a feature is SQL replication. Linked server feature though supports cross-instance authentication using Azure AD server principals (logins).
 
 - Setting an Azure AD login mapped to an Azure AD group as the database owner isn't supported. A member of the Azure AD group can be a database owner, even if the login hasn't been created in the database.
 - Impersonation of Azure AD server-level principals by using other Azure AD principals is supported, such as the [EXECUTE AS](/sql/t-sql/statements/execute-as-transact-sql) clause. EXECUTE AS limitations are:
@@ -392,7 +389,6 @@ For more information, see [FILESTREAM](/sql/relational-databases/blob/filestream
 
 Operations: 
 
-- [Cross-instance](../database/elastic-transactions-overview.md) write transactions are supported only for SQL Managed Instances.
 - `sp_dropserver` is supported for dropping a linked server. See [sp_dropserver](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).
 - The `OPENROWSET` function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. See [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql).
 - The [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. An example is `SELECT * FROM OPENDATASOURCE('SQLNCLI', '...').AdventureWorks2012.HumanResources.Employee`. Only the `SQLNCLI`, `SQLNCLI11`, `SQLOLEDB`, and `MSOLEDBSQL` values are supported as a provider. The [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client) (often abbreviated SNAC) has been removed from SQL Server 2022 and SQL Server Management Studio 19 (SSMS). The SQL Server Native Client (SQLNCLI or SQLNCLI11) and the legacy Microsoft OLE DB Provider for SQL Server (SQLOLEDB) are not recommended for new development. Switch to the new [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) or the latest [Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server) going forward.

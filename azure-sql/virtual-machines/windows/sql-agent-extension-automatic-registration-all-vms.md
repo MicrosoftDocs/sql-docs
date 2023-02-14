@@ -4,7 +4,7 @@ description: Learn how to enable the automatic registration feature to automatic
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
-ms.date: 10/26/2021
+ms.date: 01/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -37,6 +37,21 @@ By default, Azure VMs with SQL Server 2016 or later installed will be automatica
 > [!IMPORTANT]
 > The SQL IaaS Agent extension collects data for the express purpose of giving customers optional benefits when using SQL Server within Azure Virtual Machines. Microsoft will not use this data for licensing audits without the customer's advance consent. See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information.
 
+## Integration with centrally managed Azure Hybrid Benefit
+
+Centrally managed Azure Hybrid Benefit (CM-AHB) is a service that helps customers optimize their Azure costs and use other benefits such as:
+
+- Moving all pay-as-you-go (full price) SQL PaaS/IaaS workloads to take advantage of your Hybrid Benefits without individually configuring them to enable Azure Hybrid Benefit
+- Ensuring that all your SQL workloads are licensed in compliance with the existing license agreements.
+- Separating the license compliance management roles from devops roles using RBAC
+- Take advantage of free business continuity by ensuring that your passive & DR environments are properly identified. 
+- Leverage your MSDN licenses in Azure for non-production environments. 
+
+CM-AHB uses data provided by the SQL IaaS Agent extension to account for the number of SQL Server licenses used by the individual Azure VMs and provides recommendations to the billing admin during the license assignment process. Using the recommendations ensures that you get the maximum discount by using Azure Hybrid Benefit. If your VMs are not registered with the SQL IaaS Agent extension when CM-AHB is enabled by your billing admin, the service will not receive the full usage data from your Azure subscriptions and therefore the CM-AHB recommendations will be inaccurate.  
+
+> [!IMPORTANT]
+> If automatic registration is activated after CM-AHB is enabled, you will run the risk of unnecessary pay-as-you-go charges for your SQL Server on Azure VM workloads.
+To mitigate this risk, you need to adjust your license assignments in CM-AHB to account for the additional usage that will be reported by the SQL IaaS Agent extension after auto-registration. We published an [open source tool](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-hybrid-benefit) that provides insights into the utilization of SQL Server licenses, including the utilization by the SQL Servers on Azure Virtual Machines that are not yet registered with the SQL IaaS Agent extension.    
 
 ## Prerequisites
 

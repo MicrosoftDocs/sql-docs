@@ -16,7 +16,7 @@ ms.date: "04/04/2017"
 ---
 # MSSQLSERVER_10060
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

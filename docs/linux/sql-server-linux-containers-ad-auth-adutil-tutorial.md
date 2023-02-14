@@ -13,6 +13,8 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux containers
 
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
 This tutorial explains how to configure SQL Server on Linux containers to support Active Directory authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 
 This tutorial consists of the following tasks:

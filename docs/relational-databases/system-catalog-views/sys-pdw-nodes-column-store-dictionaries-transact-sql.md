@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |**last_id**|**int**|The last data id in the dictionary.|  
 |**entry_count**|**bigint**|Number of entries in the dictionary.|  
 |**on_disc_size**|**bigint**|Size of dictionary in bytes.|  
-|**pdw_node_id**|**int**|Unique identifier of a [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] node.|  
+|**pdw_node_id**|**int**|Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node.|  
   
 ## Permissions  
  Requires `VIEW SERVER STATE` permission.  

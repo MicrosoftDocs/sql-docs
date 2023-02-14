@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/26/2022
+ms.date: 02/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -17,9 +17,10 @@ ms.custom:
 
 This article provides the detailed resource limits for single databases in Azure SQL Database using the vCore purchasing model.
 
-* For DTU purchasing model limits for single databases on a server, see [Overview of resource limits on a server](resource-limits-logical-server.md).
-* For DTU purchasing model resource limits for Azure SQL Database, see [DTU resource limits single databases](resource-limits-dtu-single-databases.md) and [DTU resource limits elastic pools](resource-limits-dtu-elastic-pools.md).
+
 * For elastic pool vCore resource limits, [vCore resource limits - elastic pools](resource-limits-vcore-elastic-pools.md).
+* For limits of the logical server in Azure, see [Overview of resource limits on a server](resource-limits-logical-server.md).
+* For DTU purchasing model resource limits, see [DTU resource limits single databases](resource-limits-dtu-single-databases.md) and [DTU resource limits elastic pools](resource-limits-dtu-elastic-pools.md).
 * For more information regarding the different purchasing models, see [Purchasing models and service tiers](purchasing-models.md).
 
 > [!IMPORTANT]
@@ -30,7 +31,7 @@ Each read-only replica of a database has its own resources, such as vCores, memo
 
 You can set the service tier, compute size (service objective), and storage amount for a single database using:
 
-* [Transact-SQL](single-database-manage.md#transact-sql-t-sql) via [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql#overview-sql-database)
+* [Transact-SQL](single-database-manage.md#transact-sql-t-sql) via [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#overview-sql-database)
 * [Azure portal](single-database-manage.md#the-azure-portal)
 * [PowerShell](single-database-manage.md#powershell)
 * [Azure CLI](single-database-manage.md#azure-cli)
@@ -154,6 +155,68 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
+## Hyperscale - serverless compute - Gen 5
+
+The [serverless compute tier](serverless-tier-overview.md) is currently available on Gen5 hardware only.
+
+### Gen5 compute generation (part 1 of 2)
+
+| Compute size (service objective) | HS_S_Gen5_2 | HS_S_Gen5_4 | HS_S_Gen5_6 | HS_S_Gen5_8 | HS_S_Gen5_10 | HS_S_Gen5_12 | HS_S_Gen5_14 |
+|--|--|--|--|--|--|--|--|
+| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Min-max vCores | 0.5-2 | 0.5-4 | 0.75-6 | 1-8 | 1.25-10 | 1.5-12 | 1.75-14 |
+| Min-max memory (GB) | 2.05-6 | 2.10-12 | 2.25-18 | 3.00-24 | 3.75-30 | 4.50-36 | 5.25-42 |
+| [Max RBPEX Size](hyperscale-architecture.md#compute) | N/A | N/A | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 64 | 128 | 192 | 256 | 320 | 384 | 448 |
+| Storage type | Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>| Multi-tiered <sup>1</sup>|
+| Max local SSD IOPS <sup>2</sup> | 8000 | 16000 | 24000 | 32000 | 40000 | 48000 | 56000 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| IO latency (approximate) | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup>| Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> |
+| Max concurrent workers | 150 | 300 | 450 | 600 | 750 | 900 | 1050 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
+
+<sup>1</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.   
+<sup>2</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
+<sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
+
+
+
+### Gen5 compute generation (part 2 of 2)
+
+| Compute size (service objective) | HS_S_Gen5_16 | HS_S_Gen5_18 | HS_S_Gen5_20 | HS_S_Gen5_24 | HS_S_Gen5_32 | HS_S_Gen5_40 |
+|--|--|--|--|--|--|--|
+| Compute generation | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
+| Min-max vCores | 2-16 | 2.25-18 | 2.25-20 | 3-24 | 4-32 | 5-40 |
+| Min-max memory (GB) | 6.00-48 | 6.75-54 | 7.5-60 | 9-72 | 12-96 | 15-120 |
+| [Max RBPEX Size](hyperscale-architecture.md#compute) | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory | 3X Memory |
+| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
+| In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
+| Max data size (TB) | 100 | 100 | 100 | 100 | 100 | 100 |
+| Max log size (TB) | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited | Unlimited |
+| Tempdb max data size (GB) | 512 | 576 | 640 | 768 | 1024 | 1280 |
+| Storage type | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> | Multi-tiered <sup>1</sup> |
+| Max local SSD IOPS <sup>2</sup> | 64000 | 72000 | 80000 | 96000 | 128000 | 160000 |
+| Max log rate (MBps) | 100 | 100 | 100 | 100 | 100 | 100 |
+| IO latency (approximate) | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> | Variable <sup>3</sup> |
+| Max concurrent workers | 1200 | 1350 | 1500 | 1800 | 2400 | 3000 |
+| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
+| Secondary replicas | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 | 0-4 |
+| Multi-AZ | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) | [Available in preview](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability) |
+| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
+| Backup storage retention | 7 days | 7 days | 7 days | 7 days | 7 days | 7 days |
+
+<sup>1</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. Review [Hyperscale service tier](service-tier-hyperscale.md#distributed-functions-architecture) for more information.   
+<sup>2</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).   
+<sup>3</sup> Latency is 1-2 ms for data on local compute replica SSD, which caches most used data pages. Higher latency for data retrieved from page servers. 
+
 ## <a id="hyperscale---provisioned-compute---gen5"></a>Hyperscale - provisioned compute - standard-series (Gen5)
 
 ### <a id="gen5-hardware-part-1-2"></a>Hyperscale Standard-series (Gen5) compute generation (part 1 of 2)
@@ -261,9 +324,11 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
-## Hyperscale - Premium-series (part 1 of 3)
+## Hyperscale - Premium-series
 
-SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_PRMS_` followed by the number of vCores, for example, `SQLDB_HS_PRMS_10`.
+### Hyperscale - Premium-series (part 1 of 3)
+
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
 
 |vCores|2|4|6|8|10|
 |:--- | --: |--: |--: |--: |--: |
@@ -298,9 +363,9 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 
-## Hyperscale - Premium-series (part 2 of 3)
+### Hyperscale - Premium-series (part 2 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_PRMS_` followed by the number of vCores, for example, `SQLDB_HS_PRMS_10`.
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
 
 |vCores|12|14|16|18|20|
 |:--- | --: |--: |--: |--: |--: |
@@ -334,9 +399,9 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
-## Hyperscale - Premium-series (part 3 of 3)
+### Hyperscale - Premium-series (part 3 of 3)
 
-SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_PRMS_` followed by the number of vCores, for example, `SQLDB_HS_PRMS_10`.
+SLOs in the Hyperscale premium-series tier use the naming convention `HS_PRMS_` followed by the number of vCores, for example, `HS_PRMS_10`.
 
 |vCores|24|32|40|80|128|
 |:--- | --: |--: |--: |--: |--: |
@@ -369,10 +434,11 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
  
+## Hyperscale - Premium-series memory optimized
 
-## Hyperscale - Premium-series memory optimized (part 1 of 3)
+### Hyperscale - Premium-series memory optimized (part 1 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
 
 |vCores|2|4|6|8|10|
 |:--- | --: |--: |--: |--: |--: |
@@ -407,9 +473,9 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 
-## Hyperscale - Premium-series memory optimized (part 2 of 3)
+### Hyperscale - Premium-series memory optimized (part 2 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
 
 |vCores|12|14|16|18|20|
 |:--- | --: |--: |--: |--: |--: |
@@ -444,9 +510,9 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 
-## Hyperscale - Premium-series memory optimized (part 3 of 3)
+### Hyperscale - Premium-series memory optimized (part 3 of 3)
 
-SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+SLOs in the Premium-series memory optimized tier use the naming convention `HS_MOPRMS_` followed by the number of vCores, for example, `HS_MOPRMS_10`.
 
 |vCores|24|32|40|80|
 |:--- | --: |--: |--: |--: |
@@ -1105,3 +1171,5 @@ This section includes details on previously available hardware.
 - For resource limits for SQL Managed Instance, see [SQL Managed Instance resource limits](../managed-instance/resource-limits.md).
 - For information about general Azure limits, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 - For information about resource limits on a server, see [overview of resource limits on a server](resource-limits-logical-server.md) for information about limits at the server and subscription levels.
+- [ALTER DATABASE - Azure SQL Database](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true)
+- [CREATE DATABASE - Azure SQL Database](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true)

@@ -1,6 +1,6 @@
 ---
 title: Use SDK-style projects with the SQL Database Projects extension
-description: Getting started using SDK-style SQL projects with the SQL Database Projects extension for Azure Data Studio or VS Code
+description: Getting started using SDK-style SQL projects with the SQL Database Projects extension for Azure Data Studio or Visual Studio Code
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
@@ -12,7 +12,7 @@ ms.custom: intro-get-started
 
 # Use SDK-style SQL projects with the SQL Database Projects extension (Preview)
 
-This article introduces [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or VS Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.  The initial announcement is available in [TechCommunity](https://techcommunity.microsoft.com/t5/azure-sql-blog/microsoft-build-sql-the-next-frontier-of-sql-projects/ba-p/3290628).
+This article introduces [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or Visual Studio Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.  The initial announcement is available in [TechCommunity](https://techcommunity.microsoft.com/t5/azure-sql-blog/microsoft-build-sql-the-next-frontier-of-sql-projects/ba-p/3290628).
 
 > [!NOTE]
 > Microsoft.Build.Sql is currently in preview. 
@@ -35,7 +35,7 @@ By default the selection for **SDK-style project (Preview)** is checked. When th
 
 ## Build and publish
 
-From the Azure Data Studio and VS Code interfaces, building and publishing an SDK-style SQL project is completed in the same way as the previous SQL project format. For more on this process, see [Build and Publish a Project](sql-database-project-extension-build.md).
+From the Azure Data Studio and Visual Studio Code interfaces, building and publishing an SDK-style SQL project is completed in the same way as the previous SQL project format. For more on this process, see [Build and Publish a Project](sql-database-project-extension-build.md).
 
 To build an SDK-style SQL project from the command line on Windows, macOS, or Linux, use the following command:
 

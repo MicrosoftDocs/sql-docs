@@ -12,24 +12,24 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 # Create and query an Azure SQL database using .NET and the SqlClient library
 
-In this quickstart, you'll connect to an Azure SQL database and perform queries using .NET and the SqlClient library. This quickstart follows the recommended passwordless approach to connect to the database without the use of connection strings. You can learn more about passwordless connections on the passwordless hub.
+In this quickstart, you'll connect an application to an Azure SQL database and perform queries using .NET and the `Microsoft.Data.SqlClient` library. This quickstart follows the recommended passwordless approach to connect to the database without the use of connection strings. You can learn more about passwordless connections on the passwordless hub.
 
 ## Prerequisites
 
-* An active Azure subscription. If you don't have one, create a free account.
-* An Azure SQL database configured with Azure AD authentication. You can create one using Azure SQL create a database quickstart.
-* The latest version of the Azure CLI.
-* Visual Studio 2022 and .NET 6.0 or higher installed.
+* An active Azure subscription. If you don't have one, [create a free account](https://signup.azure.com/signup).
+* An Azure SQL database configured with Azure AD authentication. You can create one using the [create database quickstart](/azure/azure-sql/database/single-database-create-quickstart).
+* The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
+* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) and [.NET 7.0](https://dotnet.microsoft.com/en-us/download) or a recent version of .NET installed.
 
 ## Configure the database
 
-Secure, passwordless connections to Azure SQL with .NET require certain database configurations.  In order to properly connect to your Azure SQL database in both local and hosted environments, verify the following settings:
+Secure, passwordless connections to Azure SQL with .NET require certain database configurations. Verify the following settings are applied to your database server to properly connect to your Azure SQL database in both local and hosted environments:
 
-1) For local development scenarios, make sure your Azure SQL database has a firewall rule enabled to allow your client IP address to connect. You can configure this on the **Networking** page of your database server by selecting **Add your client IPv4 address(xx.xx.xx.xx)**. Make sure **Allow Azure services and resources to access this server** is also selected.
+1) For local development scenarios, make sure your Azure SQL database server has a firewall rule enabled to allow your client IP address to connect. You can configure this on the **Networking** page of your database server by selecting **Add your client IPv4 address(xx.xx.xx.xx)**. Make sure **Allow Azure services and resources to access this server** is also selected.
 
     :::image type="content" source="media/passwordless-connections/configure-firewall-small.png" lightbox="media/passwordless-connections/configure-firewall.png" alt-text="A screenshot showing how to configure firewall rules.":::
     
-1) The SQL Server must have Azure Active Directory authentication enabled with an admin account assigned. For the purposes of this tutorial, the admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your database server has Azure Active Directory authentication enabled on the Azure Active Directory page.
+1) The SQL Server must also have Azure Active Directory authentication enabled with an admin account assigned. For the purposes of this tutorial, the admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your database server has Azure Active Directory authentication enabled on the Azure Active Directory page.
 
     :::image type="content" source="media/passwordless-connections/enable-active-directory-small.png" lightbox="media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable ActiveDdirectory authentication.":::
 
@@ -47,7 +47,9 @@ For the steps ahead, create a .NET Web API using either the .NET CLI or Visual S
 
 1. For the **Project Name**, enter *DotnetSQL*. Leave the default values for the rest of the fields and select **Next**.
 
-1. For the **Framework**, ensure .NET 7.0 is selected. Then choose **Create**. The new project will open inside the Visual Studio environment.
+1. For the **Framework**, ensure .NET 7.0 is selected and uncheck **Use controllers (uncheck to use minimal APIs)**. This tutorial uses a Minimal API template to streamline endpoint creation and configuration. 
+
+1. Choose **Create**. The new project will open inside the Visual Studio environment.
 
 ## [.NET CLI](#tab/net-cli)
 
@@ -57,7 +59,7 @@ For the steps ahead, create a .NET Web API using either the .NET CLI or Visual S
    dotnet new webapi -n DotNetSQL
    ```
 
-1. Navigate into the newly created *DotNetSQL* directory and double-click the `DotNetSQL.csproj` file to open the project in Visual Studio
+1. Navigate into the newly created *DotNetSQL* directory and double-click the `DotNetSQL.csproj` file to open the project in Visual Studio.
 
 ---
 
@@ -70,7 +72,7 @@ To connect to Azure SQL using .NET, install the `Microsoft.Data.SqlClient`.
 
 ## [Visual Studio 2022](#tab/visual-studio)
 
-1. In **Solution Explorer**, right-click the **Dependencies** node of your project. Select **Manage NuGet Packages**.
+1. In the **Solution Explorer**, right-click the **Dependencies** node of your project and select **Manage NuGet Packages**.
 
 1. In the resulting window, search for *SqlClient*. Select the `Microsoft.Data.SqlClient` result, and select **Install**.
 
@@ -81,6 +83,8 @@ Use the following command to install the `Microsoft.Data.SqlClient` package:
 ```dotnetcli
 dotnet add package Microsoft.Data.SqlClient
 ```
+
+---
 
 ## Add the sample code
 

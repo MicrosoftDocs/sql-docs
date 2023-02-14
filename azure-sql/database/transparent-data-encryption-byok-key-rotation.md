@@ -16,7 +16,7 @@ ms.custom:
 ---
 # Rotate the Transparent data encryption (TDE) protector
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa-formerly-sqldw](../includes/appliesto-sqldb-sqlmi-asa-formerly-sqldw.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 This article describes key rotation for a [server](logical-servers.md) using a TDE protector from Azure Key Vault. Rotating the logical TDE protector for a server means to switch to a new asymmetric key that protects the databases on the server. Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the database's data encryption key, not the entire database.
 

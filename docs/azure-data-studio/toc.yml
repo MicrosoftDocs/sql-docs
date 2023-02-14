@@ -50,7 +50,6 @@
       href: create-temporal-tables-in-azure-data-studio.md
     - name: Using SQL Database Projects to build and deploy changes to tables
       href: build-and-publish-changes-to-table-using-sql-projects.md
-
 - name: Concepts
   items:
   - name: Extensions
@@ -60,6 +59,11 @@
     - name: Azure Arc extension
       href: extensions/azure-arc-extension.md
     - name: Azure PostgreSQL migration extension
+      items:
+      - name: Overview
+        href: extensions/azure-postgresql-migration-extension.md
+      - name: Troubleshoot
+        href: extensions/azure-postgresql-migration-extension-troubleshoot.md
       href: extensions/azure-postgresql-migration-extension.md
     - name: Azure SQL migration extension
       href: extensions/azure-sql-migration-extension.md

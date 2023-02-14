@@ -190,11 +190,11 @@ You can also cancel an ongoing assessment, delete an assessment and move assessm
 
 ## Change assessment path
 
-1. Go to the extension marketplace and search for "Database Migration Assessment for Oracle".
+1. Go to the extension marketplace and search for *Database Migration Assessment for Oracle*.
 1. Select the Manage icon, and select Extensions settings.
 1. Provide the new assessment path under Oracle Assessment: Assessment Path.
 
-   :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="Screenshot showing the Change assessment path option.":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="Screenshot showing the Change assessment path option.":::
 
 ## Troubleshoot
 
@@ -211,11 +211,13 @@ The extension stores errors, warnings, and other diagnostic logs in the default 
 
 To change the log directory, update the `LogDirectory` property in the extension settings file.
 
-|Operating system|Path|
-|---|---|
+| Operating system | Path |
+|------------------|------|
 |Windows|`C:\Users\<username>\.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-<VersionNumber>\bin\service\Properties\ConfigSettings\extension-settings.json`|
-|Linux|`~/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
-|macOS|`/Users/<username>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+|Linux|`~/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-<VersionNumber>/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+|macOS|`/Users/<username>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-<VersionNumber>/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+
+For more information about troubleshooting issues, visit [Troubleshooting Database Migration Assessment for Oracle extension errors](database-migration-assessment-for-oracle-extension-troubleshoot.md).
 
 ### Known issues and limitations
 
@@ -243,7 +245,7 @@ If you need further assistance from Microsoft, contact [@Dmasupport](mailto:dmas
 
 ## Next steps
 
-- [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [Oracle extension](extension-for-oracle.md)
+- [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [Data Schema Conversion](dsct/database-schema-conversion-toolkit.md)
 - [Azure Data Studio extensions](add-extensions.md)

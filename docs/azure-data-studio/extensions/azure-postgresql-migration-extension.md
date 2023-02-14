@@ -1,10 +1,10 @@
 ---
 title: Azure PostgreSQL migration extension
-description: Learn how to install the Azure Data Studio Azure Database for PostgreSQL flexible server extension. This extension helps guide you choose the best Azure SQL database and Azure Database for PostgreSQL migration path.
+description: Learn how to install the Azure Data Studio Azure Database for PostgreSQL - Flexible Server extension. This extension helps guide you choose the best Azure Database for PostgreSQL migration path.
 author: apduvuri
 ms.author: adityaduvuri
 ms.reviewer: maghan, randolphwest
-ms.date: 01/31/2023
+ms.date: 02/20/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---
@@ -13,12 +13,14 @@ ms.topic: conceptual
 
 [!INCLUDE [database-migration-services-ads](../../includes/database-migration-services-postgresql-ads.md)]
 
-The Azure PostgreSQL migration extension in Azure Data Studio helps you assess your PostgreSQL workload for migrating to Azure Database for PostgreSQL flexible server. The extension identifies an appropriate PostgreSQL target with right-sizing recommendations and the complexity of the migration.
+The Azure PostgreSQL migration extension in Azure Data Studio helps you assess your PostgreSQL workload for migrating to Azure Database for PostgreSQL - Flexible Server. The extension identifies an appropriate PostgreSQL target with rightsizing recommendations and the complexity of the migration.
 
 ## Prerequisites
 
 - [Azure Data Studio version](../download-azure-data-studio.md).
+  - Version must be 1.39 and higher.
 - PostgreSQL Server instance running 9.3 or higher.
+- PostgreSQL users should have CONNECT and SELECT privileges on the databases of the instance.
 
 ## Install Azure Data Studio extension
 
@@ -26,15 +28,15 @@ Follow these steps to install the **Azure PostgreSQL migration** extension in Az
 
 1. Open the extensions manager in Azure Data Studio. Select the extension icon or **Extensions** in the **View** menu.
 
-1. Type *PostgreSQL Migration* in the search bar.
+1. Type *Postgresql migration* in the search bar.
 
-1. Select the **Azure PostgreSQL Migration** extension and view its details.
+1. Select the **Azure PostgreSQL migration** extension and view its details.
 
 1. Select **Install**.
     1. Once installed the **PostgreSQL** extension is also installed.
     1. Once installed **.NET 6** is also installed.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/search-extension.png" alt-text="Scheenshot to show a search of the extension.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/search-extension.png" alt-text="Screenshot to show a search of the extension.":::
 
 ## Connect to a PostgreSQL instance
 
@@ -68,7 +70,7 @@ Once the assessment extension is installed, the next step is to [connect to your
 
 Once you've connected to your PostgreSQL instance in Azure Data Studio, you can begin to run the assessment.
 
-Under the General section, select **Azure PostgreSQL Migration**, then select **Assess Databases(s)**.
+Under the General section, select **Azure PostgreSQL Migration**, then select **Run new assessment**.
 
    :::image type="content" source="media/azure-postgresql-migration-extension/start-assessment.png" alt-text="Screenshot showing the Migration Assessment database screen.":::
 
@@ -77,6 +79,26 @@ There are three steps to complete the assessment.
 - **Databases(s) for assessment**
 - **Assessment Parameters**
 - **View Assessment Results**
+
+### 1. Databases(s) for assessment
+
+Select the database(s) you want to assess for migration for Azure Database for PostgreSQL - Flexible Server and then select **Next**.
+
+:::image type="content" source="media/azure-postgresql-migration-extension/view-databases.png" alt-text="Screenshot of view databases.":::
+
+### 2. Assessment Parameters
+
+The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and
+recommends the rightsized Azure Database for PostgreSQL - Flexible Server SKU based on the data collected. The feature provides compute level and data size recommendations.
+
+Choose how you want to provide SKU recommendations for the target audience. This step requires performance data of a PostgreSQL server instance.
+
+There are two options to collect performance data to receive the target recommendation for the databases you want to migrate.
+
+- Automatically collect performance data
+- Enter performance data parameters
+
+#### Automatically collect performance data
 
 > [!NOTE]
 > Before you select your databases, you need to execute privileges for automatic collection for SKU recommendation.
@@ -93,55 +115,45 @@ There are three steps to complete the assessment.
 > GRANT pg_read_server_files TO <<username>>;
 > ```
 
-### 1. Databases(s) for assessment
-
-Select the database(s) you want to assess for migration for Azure Database for PostgreSQL - Flexible Server.
-
-:::image type="content" source="media/azure-postgresql-migration-extension/view-databases.png" alt-text="Screenshot of view databases.":::
-
-### 2. Assessment Parameters
-
-The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and
-recommends the right-sized Azure database for PostgreSQL – Flexible Server SKU based on the data collected. The feature provides pricing tier,
-compute level, and data size recommendations.
-
-Choose how you want to provide SKU recommendations for the target audience. This step requires performance data of a PostgreSQL server instance.
-
-You can automatically collect data to receive the target recommendation for the databases you want to migrate or provide the parameters manually depending on your environment's setup.
-
-#### Automatically collect data
+If your environment supports **Automatically collect performance data**, then this is the [default option](#known-issues-and-limitations).
 
 Select automatic performance data collection to receive the target recommendations for the databases you want to migrate.
 
 Fill out the fields in the SKU recommendation parameters as follows.
 
-- Time duration - enter the amount of time you want to run the assessment.
+- **Time duration - enter the time you want to run the data collection.
 
    > [!NOTE]
-   > It is recommended that you perform the assessment data collection during peak workload time and data collection duration should be 24 hours. The assessment wizard needs to be open while the data collection is in progress.
+   > It is recommended that you collect the assessment data during peak workload times. Data collection duration should run for 24 hours because it provides time to collect data with higher confidence. The assessment wizard needs to be open while the data collection is in progress.
 
-- Scale factor - Enter values **1-5**, to expand during peak performance times.
-- Percentage Utilization - The percentile value of the performance sample set to be considered for sizing the Azure target.
+- **Scale factor** - Enter values **0.2-2**, to expand during peak performance times.
 
-Once you've filled in your parameters, select **Assess**.
+   > [!NOTE]
+   > The scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future use.
+
+- **Percentile utilization** - The percentile value of the performance sample set to be considered for sizing the Azure target.
+
+Once you've provided your values, select **Assess**.
 
 :::image type="content" source="media/azure-postgresql-migration-extension/automatic-collect-perf-data.png" alt-text="Screenshot of automatically collecting data":::
 
-#### Enter Performance Data parameters
+#### Enter performance data parameters
 
-Based on your environment, you might need help with collecting the data required to perform the assessment automatically. As such, you can use the **Enter Performance Data Parameter** option to enter values needed to provide an assessment manually.
+Based on your environment, you might have to [provide the data manually](#known-issues-and-limitations) to perform the assessment. As such, you can use the **Enter Performance Data Parameter** option to enter values needed to provide an assessment manually.
 
-Fill out the fields in the SKU performance parameters as follows.
+Fill out the fields in the performance parameters as follows.
 
 - **vCores** – Number of logical cores available in the server.
-- **Memory (in GB)** – Total memory available in the server.
-- **Storage (in GB)** – Total storage used by the PostgreSQL Server instance.
+- **Memory (GB)** – Total memory available in the server.
+- **Storage (GB)** – Total storage used by the PostgreSQL Server instance.
 - **IOPS** – Input/Output operations per second by the PostgreSQL Server instance.
 
-Fill out the fields in the SKU recommendation parameters as follows.
+Fill out the fields in the recommendation parameters as follows.
 
-- **Scale factor** - The scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future use.
-- **Percentage Utilization** - The percentile value of the performance sample set to be considered for sizing the Azure target.
+- **Scale factor** - Enter values **0.2-2**, to expand during peak performance times.
+
+   > [!NOTE]
+   > The scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future use.
 
 Once you've filled in your parameters, select **Assess**.
 
@@ -154,21 +166,39 @@ For more information about SKU recommendations, view [SKU recommendations](#sku-
 Once the assessment is complete, a consolidated output is generated.
 
 - The cards at the top represent the recommended SKU in Azure.
-  - **Target Platform** – Currently, the assessment is performed and supported on Azure Database for PostgreSQL - Flexible server.
-  - **SKU Recommendation** – Based on the performance metrics, SKU available in Azure Database for PostgreSQL - Flexible server is recommended.
-  - **Data Collection status** – Shows the number of cycles completed and the status of the assessment.
+  - **Target Platform** – Currently, the assessment is performed and supported on Azure Database for PostgreSQL - Flexible Server.
+  - **Recommended Configuration** – Based on the performance metrics, SKU available in Azure Database for PostgreSQL - Flexible Server is recommended. For more information about SKU recommendations, see [SKU recommendations](#sku-recommendations). Add view details link
+  - **Data collection status** – Shows the number of cycles completed and the data collection status.
+    - There are four statuses: **In Progress**, **Completed**, **Stopped**, **Not Applicable**  (only for **Enter performance data parameters** data collection).
 
-Users can select the Instance name; it shows the PostgreSQL instance's summary and migration readiness. Users can go through different server parameters and features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
+      > [!NOTE]
+      > In the **Data collection status** card, a user can start or stop the collection at any time.
 
-Users can select the respective databases, understand the blockers and warnings and go through the summary if the database is in Ready, Ready with conditions, or Not Ready state for migration into Azure.
+   :::image type="content" source="media/azure-postgresql-migration-extension/configuration-cards.png" alt-text="Screenshot of configuration cards.":::
+
+Users can select the Instance name that shows the PostgreSQL instance's summary and migration readiness. Users can go through different server parameters and features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
+
+Users can select the value next to the [Migration Readiness state](#migration-readiness-state) to determine which database is under what status.
+
+:::image type="content" source="media/azure-postgresql-migration-extension/summary-instance.png" alt-text="Screenshot of instance summary.":::
+
+Users can select the respective databases, understand the blockers and warnings and go through the [Migration Readiness](#migration-readiness-state) summary if the database is in the Not Ready, Ready with conditions, or Ready state for migration into Azure.
+
+:::image type="content" source="media/azure-postgresql-migration-extension/summary-database.png" alt-text="Screenshot of database summary.":::
 
 Users can save the assessment report on their machine for offline viewing by selecting the “Save Assessment” action.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/run-assessment-step-3-view-assessment.png" alt-text="Screenshot of consolidated assessment report.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/save-assessment.png" alt-text="Screenshot to show how to save the assessment.":::
+
+#### Migration Readiness state
+
+- **Not Ready** - The PostgreSQL instance (DBs) can't be migrated to Azure. For example, if an on-premises server's disk stores more than 64 TB, Azure can't host the server. Follow the remediation guidance to fix the problem before migration.
+- **Ready with Conditions** - The PostgreSQL instance (DBs) can be migrated to Azure by following the recommendations provided in ADS. For example, let us say Azure PostgreSQL - Flexible Server doesn't support the latest collation version running on-premises instances. You must be careful before you migrate these instances to Azure. To fix any readiness problems, follow the remediation guidance. In this example, the user needs to rebuild the index.
+- **Ready** - The PostgreSQL instance (DBs) can be migrated to Azure without any changes.
 
 ## SKU recommendations
 
-The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and recommends the right-sized Azure database for PostgreSQL – Flexible server SKU based on the data collected. The feature provides pricing tier, compute level, and data size recommendations.
+The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and recommends the rightsized Azure database for PostgreSQL - Flexible Server SKU based on the data collected. The feature provides pricing tier, compute level, and data size recommendations.
 
 The SKU recommendation provides the following:
 
@@ -178,11 +208,70 @@ The SKU recommendation provides the following:
 
 The SKU recommendation evaluates various performance metrics, such as CPU, Memory, IOPS, latency, and storage. Based on the usage and configuration data, the recommender provides the suitable target and the appropriate service tier.
 
+### Review confidence rating
+
+Azure Migrate assigns a confidence rating to performance-based assessments. Rating is from one star (lowest) to five stars (highest).
+
+The confidence rating helps you estimate the reliability of size recommendations in the assessment. The rating is based on the available data points to compute the assessment.
+
+Confidence ratings are as follows for a 24-hour data collection run time.
+
+| Data point availability | Confidence rating |
+|-------------------------|-------------------|
+| 0%-20%  | 1 star  |
+| 21%-40% | 2 stars |
+| 41%-60% | 3 stars |
+| 61%-80% | 4 stars |
+| 81%-100% | 5 stars |
+
+### Recommended Configuration
+
+Once the assessment is complete, you can select the **View Details** option in the **Recommended Details** card at the top.
+
+In the Recommended details screen, you can see the **Recommendation reason** and **Source properties**.
+
+The recommendation reasons list the CPU, memory requirements, storage requirements, storage requirements, and IOPs requirements.
+
+## Change assessment path
+
+1. Go to the extension marketplace and search for *Azure PostgreSQL migration*.
+1. Select the Manage icon, and select Extensions settings.
+1. Provide the new assessment path under Oracle Assessment: Assessment Path.
+
+:::image type="content" source="media/azure-postgresql-migration-extension/postgresql-migration-extension-settings.png" alt-text="Screenshot of extension settings.":::
+
+## Troubleshoot
+
+To troubleshoot any Azure PostgreSQL migration extension issue, you should find out the details about the error and warnings from the logs generated. Refer to this section to access the logs.
+
+### Logs
+
+The extension stores errors, warnings, and other diagnostic logs in the default log directory:
+
+- Windows - C:\Users\<username>\.postgresmigration\logs\
+- Linux - ~/. postgresmigration /logs
+- macOS - /Users/<username>/. postgresmigration /logs
+
+> [!NOTE]
+> By default, the extension stores the last seven log files.
+
+To change the log directory, update the `LogDirectory` property in the extension settings file.
+
+| Operating system | Path |
+|------------------|------|
+|Windows|`C:\Users\<username>\.azuredatastudio\extensions\microsoft.azuredatastudio-postgresql-migration-<VersionNumber>\bin\service\Properties\ConfigSettings\extension-settings.json`|
+|Linux|`~/.azuredatastudio/extensions/microsoft.azuredatastudio-postgresql-migration-<VersionNumber>/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+|macOS|`/Users/<username>/.azuredatastudio/extensions/microsoft.azuredatastudio-postgresql-migration-<VersionNumber>/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+
+For more information about troubleshooting issues, visit [Troubleshoot Azure PostgreSQL migration extension errors](azure-postgresql-migration-extension-troubleshoot.md).
+
 ## Known issues and limitations
 
 - Automatic collection for SKU recommendation isn't supported for any PostgreSQL PaaS services.
 - Automatic collections are only applicable for Linux.
 - Automatic collections are only applicable for PostgreSQL versions 11 and higher.
+
+For more details about troubleshooting issues, visit [Troubleshoot Azure PostgreSQL migration extension errors](azure-postgresql-migration-extension-troubleshoot.md).
 
 ## Get help from Microsoft support
 
@@ -197,6 +286,7 @@ You can submit ideas/suggestions for improvement, and other feedback, including 
 
 ## Next steps
 
+- [Troubleshoot Azure PostgreSQL migration issues](azure-postgresql-migration-extension-troubleshoot.md)
 - [PostgreSQL extension](postgres-extension.md)
 - [Azure Data Studio extensions](add-extensions.md)
 - [Azure Data Studio release notes](../release-notes-azure-data-studio.md)

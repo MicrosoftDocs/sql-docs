@@ -105,8 +105,4 @@ The maximum number of resources in a resource group is 800, per resource type. T
 
 ## Next steps
 
-- [Azure Arc-enabled SQL Server](overview.md)
 - [Connect your SQL Server to Azure Arc](deployment-options.md)
-- [Configure your SQL Server instance for periodic best practices assessment](assess.md)
-- [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-

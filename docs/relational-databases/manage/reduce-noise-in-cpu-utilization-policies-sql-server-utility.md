@@ -17,6 +17,9 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the following strategies to reduce reporting noise and unwanted violations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource utilization policies.  
   
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
+
+
 ## How frequently should processor utilization be in violation before it is reported as overutilized?  
  The evaluation time period and tolerance for percent violations are both configurable using the **Policy** tab settings in the **Utility Administration** node of Utility Explorer. To change policies, use the slider controls to the right of policy descriptions, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
   

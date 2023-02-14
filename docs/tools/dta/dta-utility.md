@@ -138,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  If you are using an XML input file, you can specify the first database to which **dta** connects by using the **DatabaseToConnect** element that is located under the **TuningOptions** element. For more information, see [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
- If you are tuning only one database, the **-d** argument provides functionality that is similar to the **-d** argument in the **sqlcmd** utility, but it does not execute the USE *database_name* statement. For more information, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
+ If you are tuning only one database, the **-d** argument provides functionality that is similar to the **-d** argument in the **sqlcmd** utility, but it does not execute the USE *database_name* statement. For more information, see [sqlcmd Utility](/sql/tools/sqlcmd/sqlcmd-utility).  
   
  **-E**  
  Uses a trusted connection instead of requesting a password. Either the **-E** argument or the **-U** argument, which specifies a login ID, must be used.  

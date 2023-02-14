@@ -41311,6 +41311,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/billing.md",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-license-type",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/azure-arc/connect-at-scale.md",
       "redirect_url": "/sql/sql-server/azure-arc/connect-at-scale-script",
       "redirect_document_id": false

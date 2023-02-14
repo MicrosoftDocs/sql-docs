@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database and Azure SQL Managed Instanc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, urosmil
-ms.date: 1/24/2023
+ms.date: 2/10/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -73,6 +73,7 @@ Choosing a maintenance window other than the default is available on all SLOs **
 * Basic, S0 and S1 
 * DC, Fsv2, M-series
 * Hyperscale service tier premium-series hardware (preview) 
+* Hyperscale service tier with zone redundancy
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 

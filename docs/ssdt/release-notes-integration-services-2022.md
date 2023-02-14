@@ -20,13 +20,35 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.
 
+## Component Download
+- To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector](https://aka.ms/SSISMSOracleConnector) and [Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
+  - [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
+  - [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)
+  - [Microsoft Connector Version 3.0 for Oracle and Teradata by Attunity targeting SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)
+  - [Microsoft Connector Version 2.0 for Oracle and Teradata by Attunity targeting SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283)
+
+- Since version 3.3, Power Query Source for SQL Server 2017-2022 have been excluded from the installation of this product. To continue using this component, manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017-2022](https://www.microsoft.com/download/details.aspx?id=100619)
+
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
-- Third party components aren't supported yet. 
-- **SSDT side by side issue**. Method not found: 'SqlWorkbench.Interfaces.IAzureCloudConfiguration Microsoft.SqlServer.Management.UserSettings.AzureCloud.GetAzureCloudConfiguration(System.String, Boolean)'. The workaround is to download Visual Studio 2022 17.5 Preview 2 or later.
+
+- Third party components aren't supported yet.
+
+- Sometimes this product or Visual Studio Tools for Applications 2022 may be somehow deleted during VS instance upgrade. If your existing SSIS projects cannot be loaded, try to repair this product via control panel. If VS doesn't pop up when clicking on "Edit Script", try to repair VSTA 2022 via control panel. 
+
+- **SSDT side by side issue**. SQL Server Analysis Services and SQL Server Reporting Services extensions can now work side-by-side with this extension in VS2022 17.4 and previous version. The workaround is to download Visual Studio 2022 17.5 Preview 2 or later.
+
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues
+**Version 0.3**
+  1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
+  2. Can't design Dimension Processing and Partition Processing.
+  3. Can't design DQS related component.
+  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  5. Localization and globalization aren't supported.
+  6. Oracle Connection Manager execute failed with error code 0x80004005 when targeting SQL Server 2017.
+  
 **Version 0.2**
   1. Target sever versions supported: SQL server 2019 and SQL server 2022
   2. Can't design Dimension Processing and Partition Processing.

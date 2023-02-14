@@ -88,6 +88,5 @@ GO
   
 ## See Also  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
-  
+ [sqlcmd Utility](/sql/tools/sqlcmd/sqlcmd-utility)  
   

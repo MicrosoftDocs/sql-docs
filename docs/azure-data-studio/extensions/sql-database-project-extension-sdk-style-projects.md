@@ -29,7 +29,7 @@ By default the selection for **SDK-style project (Preview)** is checked. When th
 
 ### From an existing database
 
-In the **Project** view, select the **Import Project from Database** button and connect to a SQL Server.  Once the connection is established, select a database from the list of available databases and set the name of the project.  Select a target structure of the extraction.  
+In the **Project** view, select the **Create Project from Database** button and connect to a SQL Server.  Once the connection is established, select a database from the list of available databases and set the name of the project.  Select a target structure of the extraction.  
 
 By default the selection for **SDK-style project (Preview)** is checked. When the dialog is completed, the new project is opened and contains SQL scripts for the contents of the selected database.
 

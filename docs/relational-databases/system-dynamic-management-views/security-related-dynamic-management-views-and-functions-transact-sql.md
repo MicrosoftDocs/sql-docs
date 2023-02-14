@@ -29,7 +29,8 @@ ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 
         [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql.md)
 
-        [sys.dm_external_provider_certificate_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-external-provider-certificate-info-transact-sql.md)
+        [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)
+
     :::column-end:::
     :::column:::
         [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)
@@ -38,7 +39,7 @@ ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 
         [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)
 
-        [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)
+        [sys.dm_external_provider_certificate_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-external-provider-certificate-info-transact-sql.md)
     :::column-end:::
 :::row-end:::
 

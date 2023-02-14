@@ -13288,6 +13288,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql.md
       - name: sys.dm_database_encryption_keys
         href: relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md
+      - name: sys.dm_external_provider_certificate_info
+        href: relational-databases/system-dynamic-management-views/sys-dm-external-provider-certificate-info-transact-sql.md
     - name: Server-Related
       href: relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md
       items:

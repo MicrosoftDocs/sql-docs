@@ -37,7 +37,7 @@ Principals must have the **VIEW SERVER SECURITY STATE** permission.
 
 ## See also
 
- [sys.dm_server_external_policy_principal_assigned_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-principal-assigned-actions-transact-sql.md)  
+ [sys.dm_server_external_policy_principal_assigned_actions \(Transact-SQL\)](../../relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-principal-assigned-actions-transact-sql.md)  
   
 - [Provision access by data owner for Azure SQL Database](/azure/purview/how-to-policies-data-owner-azure-sql-db)
 

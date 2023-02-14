@@ -65,7 +65,7 @@ The SQL Database Projects extension has a dependency on the .NET Core SDK and Au
 
 ### .NET Core SDK
 
-The .NET Core SDK is required for project build functionality and you will be prompted to install the .NET Core SDK if it cannot be detected by the extension.  The .NET Core SDK (v3.1.x) can be downloaded and installed from [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1). 
+The .NET Core SDK is required for project build functionality and you will be prompted to install the .NET Core SDK if a supported version cannot be detected by the extension.  The .NET Core SDK can be downloaded and installed for [Windows, macOS, and Linux](https://aka.ms/sqlprojects-dotnet). 
 
 If you would like to [check currently installed versions](/dotnet/core/install/how-to-detect-installed-versions) of the dotnet SDK, open a terminal and run the following command:
 
@@ -73,7 +73,7 @@ If you would like to [check currently installed versions](/dotnet/core/install/h
 dotnet --list-sdks
 ```
 
-To force the SQL Database Projects extension to use the v3.1.x version of the .NET Core SDK when multiple versions are installed, add a [package.json](/dotnet/core/tools/global-json?tabs=netcore3x) file to the folder that contains the SQL project. 
+To force the SQL Database Projects extension to use the v6.x version of the .NET Core SDK when multiple versions are installed, add a [package.json](/dotnet/core/tools/global-json) file to the folder that contains the SQL project. 
 
 Unsupported .NET Core SDK versions may result in error messages such as:
 - `error MSB4018: The "SqlBuildTask" task failed unexpectedly.`

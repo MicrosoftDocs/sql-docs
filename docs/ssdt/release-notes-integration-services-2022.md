@@ -47,7 +47,8 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   3. Can't design DQS related component.
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   5. Localization and globalization aren't supported.
-
+  6. Oracle Connection Manager execute failed with error code 0x80004005 when targeting SQL Server 2017.
+  
 **Version 0.2**
   1. Target sever versions supported: SQL server 2019 and SQL server 2022
   2. Can't design Dimension Processing and Partition Processing.

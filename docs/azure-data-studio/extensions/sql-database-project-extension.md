@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # SQL Database Projects extension (Preview)
 
-The SQL Database Projects extension (preview) is an Azure Data Studio and VS Code extension for developing SQL databases including for SQL Server, Azure SQL Database, and Azure SQL Managed Instance in a project-based development environment.  A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions.
+The SQL Database Projects extension (preview) is an Azure Data Studio and Visual Studio Code extension for developing SQL databases including for SQL Server, Azure SQL Database, and Azure SQL Managed Instance in a project-based development environment.  A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions.
 
 
 ## Extension features
@@ -34,7 +34,7 @@ Watch this short 10-minute video for an introduction to the SQL Database Project
 
 ## Install
 
-You can install the SQL Database Project extension in Azure Data Studio and VS Code. 
+You can install the SQL Database Project extension in Azure Data Studio and Visual Studio Code. 
 
 ### Azure Data Studio
 
@@ -55,7 +55,7 @@ To install the SQL Database Project extension in Azure Data Studio, follow these
 
 
 
-### VS Code
+### Visual Studio Code
 
 The SQL Database Projects extension is installed with the [mssql](../../tools/visual-studio-code/sql-server-develop-use-vscode.md) extension for VS Code.
 
@@ -65,7 +65,7 @@ The SQL Database Projects extension has a dependency on the .NET Core SDK and Au
 
 ### .NET Core SDK
 
-The .NET Core SDK is required for project build functionality and you will be prompted to install the .NET Core SDK if a supported version cannot be detected by the extension.  The .NET Core SDK can be downloaded and installed for [Windows, macOS, and Linux](https://aka.ms/sqlprojects-dotnet). 
+The .NET Core SDK is required for project build functionality and you are prompted to install the .NET Core SDK if a supported version can't be detected by the extension.  The .NET Core SDK can be downloaded and installed for [Windows, macOS, and Linux](https://aka.ms/sqlprojects-dotnet). 
 
 If you would like to [check currently installed versions](/dotnet/core/install/how-to-detect-installed-versions) of the dotnet SDK, open a terminal and run the following command:
 
@@ -89,9 +89,9 @@ The SQL extension for [AutoRest](https://github.com/Azure/autorest) is automatic
 
 Currently, the SQL Database Project extension has the following limitations: 
 
-- Loading files as a link is not supported in Azure Data Studio today, however the files will be loaded at the top level in the tree and the build will incorporate these files as expected.
-- SQLCLR objects in projects are not supported in the.NET Core version of DacFx.
-- Tasks (build/publish) are not user-defined.
+- Loading files as a link isn't supported in Azure Data Studio today, however the files are loaded at the top level in the tree and the build incorporates these files as expected.
+- SQLCLR objects in projects aren't supported in the.NET Core version of DacFx.
+- Tasks (build/publish) aren't user-defined.
 - Publish targets defined by DacFx.
 - WSL environment support is limited.
 

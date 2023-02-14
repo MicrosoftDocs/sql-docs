@@ -49,7 +49,7 @@ The `.dacpac` file resulting from building an SDK-style SQL project is compatibl
 In SQL projects there are several capabilities that can be specified in the `.sqlproj` file that can impact the database model either at project build or deployment.  The following sections describe some of these capabilities that are available for SDK-style SQL projects.
 
 ### Target platform
-The target platform property is contained in the `DSP` tag in the `.sqlproj` file under the `<PropertyGroup>` item.  The target platform is used during project build to validate support for features included in the project and is added to the `.dacpac` file as a property.  By default, during deployment the target platform is checked against the target database to ensure compatibility.  If the target platform is not supported by the target database, the deployment will fail unless additional [publish options](../../tools/sqlpackage/sqlpackage-publish.md) are specified.
+The target platform property is contained in the `DSP` tag in the `.sqlproj` file under the `<PropertyGroup>` item.  The target platform is used during project build to validate support for features included in the project and is added to the `.dacpac` file as a property.  By default, during deployment, the target platform is checked against the target database to ensure compatibility.  If the target platform is not supported by the target database, the deployment fails unless an override [publish option](../../tools/sqlpackage/sqlpackage-publish.md) is specified.
 
 ```xml
 <Project DefaultTargets="Build">
@@ -70,13 +70,13 @@ Valid settings for the target platform are:
 - `Microsoft.Data.Tools.Schema.Sql.SqlDwDatabaseSchemaProvider`
 
 ### Database references
-The database model validation at build time can be extended past the contents of the SQL project through database references. Database references specified in the `.sqlproj` file can reference another SQL project or a `.dacpac` file, representing either another database or additional components of the same database.
+The database model validation at build time can be extended past the contents of the SQL project through database references. Database references specified in the `.sqlproj` file can reference another SQL project or a `.dacpac` file, representing either another database or more components of the same database.
 
 The following attributes are available for database references that represent another database:
-- **DatabaseSqlCmdVariable:** the value is the name of the variable that will be used to reference the database
+- **DatabaseSqlCmdVariable:** the value is the name of the variable that is used to reference the database
     - Reference setting: `<DatabaseSqlCmdVariable>SomeOtherDatabase</DatabaseSqlCmdVariable>`
     - Usage example: `SELECT * FROM [$(SomeOtherDatabase)].dbo.Table1`
-- **ServerSqlCmdVariable:** used in conjunction with DatabaseSqlCmdVariable, when the database is in another server.
+- **ServerSqlCmdVariable:** the value is the name of the variable that is used to reference the server where the database resides. used with DatabaseSqlCmdVariable, when the database is in another server.
     - Reference setting: `<ServerSqlCmdVariable>SomeOtherServer</ServerSqlCmdVariable>`
     - Usage example: `SELECT * FROM [$(SomeOtherServer)].[$(SomeOtherDatabase)].dbo.Table1`
 - **DatabaseVariableLiteralValue:** the value is the literal name of the database as used in the SQL project, similar to `DatabaseSqlCmdVariable` but the reference to other database is a literal value

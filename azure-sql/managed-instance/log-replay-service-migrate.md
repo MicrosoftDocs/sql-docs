@@ -314,11 +314,7 @@ After your backups are ready, and you want to start migrating databases to a man
 
 If you're on a supported version of SQL Server (starting with SQL Server 2012 SP1 CU2 and SQL Server 2014), and your corporate and network policies allow it, you can take backups from SQL Server directly to your Blob Storage account by using the native SQL Server [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) option. If you can use `BACKUP TO URL`, you don't need to take backups to local storage and upload them to your Blob Storage account.
 
-When you take native backups directly to your Blob Storage account, you have to authenticate to the storage account. You can do so by using a SAS token or, if you're on SQL Server 2022, you can also use a managed identity.  
-
-
-
-### [SAS token](#tab/sas-token)
+When you take native backups directly to your Blob Storage account, you have to authenticate to the storage account. 
 
 Use the following command to create a credential that imports the SAS token to your SQL Server instance: 
 
@@ -330,20 +326,6 @@ SECRET = '<SAS_TOKEN>';
 
 For detailed instructions working with SAS tokens, review the tutorial [Use Azure Blob Storage with SQL Server](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage).
 
-
-
-### [Managed identity](#tab/managed-identity)
-
-SQL Server 2022 has added support for managed identities. If you're on SQL Server 2022, you can authenticate to your storage account by using a managed identity. 
-
-Use the following command to create a credential that uses the managed identity on your SQL Server instance: 
-
-```sql
-CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
-WITH IDENTITY = 'MANAGED IDENTITY'
-```
-
----
 
 After you've created the credential to authenticate your SQL Server instance with Blob Storage, you can use the [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) command to take backups directly to the storage account. `CHECKSUM` is recommended, but not required. 
 

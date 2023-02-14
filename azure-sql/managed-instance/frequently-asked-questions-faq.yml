@@ -169,8 +169,6 @@ sections:
           
           [Transactional replication](replication-two-instances-and-sql-server-configure-tutorial.md) can be used if all tables in the database have *primary* keys and there are no In-memory OLTP objects in the database.
           
-          Native COPY_ONLY backups taken from managed instance cannot be restored to SQL Server because managed instance has a higher database version compared to SQL Server. For more information, see [Copy-only backup](/sql/relational-databases/backup-restore/copy-only-backups-sql-server?preserve-view=true&view=sql-server-ver15).
-          
           ### How can I migrate my SQL Server instance to SQL Managed Instance?
           
           To migrate your SQL Server instance, see [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).

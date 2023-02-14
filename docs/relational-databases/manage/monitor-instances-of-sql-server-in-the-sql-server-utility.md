@@ -14,6 +14,7 @@ ms.author: mikeray
 # Monitor Instances of SQL Server in the SQL Server Utility
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
   
 |Topic|Information|  
 |-----------|-----------------|  

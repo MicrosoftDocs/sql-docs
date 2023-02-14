@@ -82,10 +82,14 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 - Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
 - The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+- SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
 - Azure extension for SQL Server is not supported in the following environments:
+  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [Delete your Arc-enabled SQL Server resource](delete-from-azure-arc.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
   - SQL Server in Linux containers
-  - SQL Server on VMware clusters or on Azure VMware Solution
-  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [remove the Azure extension for SQL Server](connect.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
+  - SQL Server Azure VMware Solution
+
+> [!NOTE]
+> Azure extension for SQL Server fully supports VMware clusters outside of Azure.
 
 ## October 2022
 
@@ -144,14 +148,14 @@ This release introduces a SQL Server extension that continuously monitors for ch
 > [!IMPORTANT]
 > If you installed a version of SQL Server extension during the preview, make sure it is updated to version 1.1.1668.43 or later. An extension can be updated using the *Extention* pane of the specific connected server resource.
 
-The introduction of SQL Server extension requires that the user accounts have more privileges in order to connect a  SQL Server instance to Azure Arc. For details, see [Required permissions](overview.md#required-permissions).
+The introduction of SQL Server extension requires that the user accounts have more privileges in order to connect a  SQL Server instance to Azure Arc. For details, see [prerequisites](prerequisites.md).
 
 > [!NOTE]
 > In this release, the SQL Server extension is only available for  Windows. A Linux version of the extension will be announced separately.
 
 ### Other changes
 
-This release includes a new Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connect-at-scale-using-azure-policy).
+This release includes a new Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale-policy.md#connect-at-scale-using-azure-policy).
 
 ## April 2021
 
@@ -176,7 +180,7 @@ A new property *LicenseType* has been added to the **SQL Server - Azure Arc** re
 
 ### Breaking change
 
-This release introduces an updated [resource provider](/azure/azure-resource-manager/management/azure-services-resource-providers) called `Microsoft.AzureArcData`. Before you can continue using Azure Arc-enabled SQL Server, you need to register this resource provider. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
+This release introduces an updated [resource provider](/azure/azure-resource-manager/management/azure-services-resource-providers) called `Microsoft.AzureArcData`. Before you can continue using Azure Arc-enabled SQL Server, you need to register this resource provider. See the resource provider registration instructions in the [Prerequisites](prerequisites.md) section.
 
 If you have existing SQL Server - Azure Arc resources, use these steps to migrate them to Microsoft.AzureArcData namespace.
 
@@ -203,7 +207,7 @@ If you have existing SQL Server - Azure Arc resources, use these steps to migrat
 ### Other changes
 
 - The *TCPPorts* property in the **SQL Server - Azure Arc** resource type has been renamed to *TCPStaticPorts*
-- The permissions required aren't as broad as they used to be. See the [Required permission](overview.md#required-permissions) section for details.
+- The permissions required aren't as broad as they used to be. See the [prerequisites](prerequisites.md) section for details.
 
 ### Known issues
 
@@ -221,7 +225,7 @@ The October update includes the following improvements:
 
 The following issues apply to the October release:
 
-- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [Required permissions](overview.md#required-permissions).
+- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
 
 ## September 2020
 
@@ -235,9 +239,10 @@ The following issues apply to the September release:
 
 - The **Register Azure Arc-enabled SQL Server** pane doesn't support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
 
-- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [Required permissions](overview.md#required-permissions).
+- Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
 
 ## Next steps
 
 **Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+
 

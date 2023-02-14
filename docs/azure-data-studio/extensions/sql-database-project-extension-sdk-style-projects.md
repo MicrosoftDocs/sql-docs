@@ -101,7 +101,7 @@ The following example from a SQL project file references the `Microsoft.SqlServe
 
 ```xml
   <ItemGroup>
-        <PackageReference Include="Microsoft.SqlServer.Dacpacs" Version="160.0.0" />
+    <PackageReference Include="Microsoft.SqlServer.Dacpacs" Version="160.0.0" />
   </ItemGroup>
 </Project>
 ```
@@ -110,9 +110,9 @@ In addition to the attributes available for [database references](#database-refe
 
 ```xml
   <ItemGroup>
-        <PackageReference Include="Microsoft.SqlServer.Dacpacs" Version="160.0.0" />
-            <DacpacName>msdb</DacpacName>
-        </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Dacpacs" Version="160.0.0" />
+      <DacpacName>msdb</DacpacName>
+    </PackageReference>
   </ItemGroup>
 </Project>
 ```
@@ -121,6 +121,7 @@ In addition to the attributes available for [database references](#database-refe
 SqlCmd variables can be defined in the `.sqlproj` file and are used to replace tokens in SQL objects and scripts during `.dacpac` [deployment](../../tools/sqlpackage/sqlpackage-publish.md#sqlcmd-variables). The following example from a SQL project file defines a variable named `EnvironmentName` that available for use in the project's objects and scripts.
 
 ```xml
+  <ItemGroup>
     <SqlCmdVariable Include="EnvironmentName">
       <DefaultValue>testing</DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>

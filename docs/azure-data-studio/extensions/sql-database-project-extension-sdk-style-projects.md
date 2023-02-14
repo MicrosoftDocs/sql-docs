@@ -144,7 +144,7 @@ SqlPackage /Action:Publish /SourceFile:AdventureWorks.dacpac /TargetConnectionSt
 ```
 
 ### Pre/post-deployment scripts
-Pre- and post-deployment scripts are SQL scripts that are included in the project to be executed during deployment. Pre/post-deployment scrips are included in the `.dacpac` but they are not compiled into or validated with database object model. A pre-deployment script is executed before the database model is applied and a post-deployment script is executed after the database model is applied.  The following example from a SQL project file adds the file `populate-app-settings.sql` as post-deployment script.
+Pre- and post-deployment scripts are SQL scripts that are included in the project to be executed during deployment. Pre/post-deployment scripts are included in the `.dacpac` but they are not compiled into or validated with database object model. A pre-deployment script is executed before the database model is applied and a post-deployment script is executed after the database model is applied.  The following example from a SQL project file adds the file `populate-app-settings.sql` as post-deployment script.
 
 ```xml
   <ItemGroup>

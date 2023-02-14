@@ -1,6 +1,6 @@
 ---
 title: SQL Database Projects extension
-description: Install and use the SQL Database Projects extension for Azure Data Studio and VS Code.
+description: Install and use the SQL Database Projects extension for Azure Data Studio and Visual Studio Code.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
@@ -20,7 +20,7 @@ The SQL Database Projects extension provides the following features:
 
 - Create a new blank project.
 - Create a new project from a connected database or from an [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification file.
-- Open a project previously created in [Azure Data Studio, VS Code](sql-database-project-extension-getting-started.md) or in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
+- Open a project previously created in [Azure Data Studio, Visual Studio Code](sql-database-project-extension-getting-started.md) or in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
 - Edit a project by adding or removing objects (tables, views, stored procedures) or custom scripts in the project.
 - Organize files/scripts in folders.
 - Add references to system databases or a user dacpac.
@@ -57,7 +57,7 @@ To install the SQL Database Project extension in Azure Data Studio, follow these
 
 ### Visual Studio Code
 
-The SQL Database Projects extension is installed with the [mssql](../../tools/visual-studio-code/sql-server-develop-use-vscode.md) extension for VS Code.
+The SQL Database Projects extension is installed with the [mssql](../../tools/visual-studio-code/sql-server-develop-use-vscode.md) extension for Visual Studio Code.
 
 ## Dependencies
 
@@ -97,7 +97,7 @@ Currently, the SQL Database Project extension has the following limitations:
 
 ## Workspace
 
-SQL database projects are contained within a logical workspace in Azure Data Studio and VS Code. A workspace manages the folder(s) visible in the Explorer pane. **All SQL projects within the folders open in the current workspace are available in the SQL Database Projects view by default.**  
+SQL database projects are contained within a logical workspace in Azure Data Studio and Visual Studio Code. A workspace manages the folder(s) visible in the Explorer pane. **All SQL projects within the folders open in the current workspace are available in the SQL Database Projects view by default.**  
 
 You can manually add and remove projects from a workspace through the interface in the **Projects** pane. The settings for a workspace can be manually edited in the `.code-workspace` file,  if necessary.
 

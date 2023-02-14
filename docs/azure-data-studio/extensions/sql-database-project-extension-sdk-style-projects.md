@@ -4,7 +4,7 @@ description: Getting started using SDK-style SQL projects with the SQL Database 
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 5/24/2022
+ms.date: 2/14/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: intro-get-started
@@ -43,13 +43,13 @@ To build an SDK-style SQL project from the command line on Windows, macOS, or Li
 dotnet build /p:NetCoreBuild=true
 ```
 
-The `.dacpac` resulting from building an SDK-style SQL project is compatible with tooling associated with the data-tier application framework (`.dacpac`, `.bacpac`), including [SqlPackage](../../tools/sqlpackage/sqlpackage-publish.md).
+The `.dacpac` file resulting from building an SDK-style SQL project is compatible with tooling associated with the data-tier application framework (`.dacpac`, `.bacpac`), including [SqlPackage](../../tools/sqlpackage/sqlpackage-publish.md).
 
 ## Project capabilities
-In SQL projects there are several properties that can be specified in the `.sqlproj` file.  These properties are used to configure the project and can impact the database model either at project build or deployment.  The following sections describe some of the properties that are available for SDK-style SQL projects.
+In SQL projects there are several capabilities that can be specified in the `.sqlproj` file that can impact the database model either at project build or deployment.  The following sections describe some of these capabilities that are available for SDK-style SQL projects.
 
 ### Target platform
-The target platform property is contained in the `DSP` tag in the `.sqlproj` file.  The target platform is used during project build to validate support for features included in the project and is added to the `.dacpac` file as a property.  By default, during deployment the target platform is checked against the target database to ensure compatibility.  If the target platform is not supported by the target database, the deployment will fail unless additional [publish options](../../tools/sqlpackage/sqlpackage-publish.md) are specified.
+The target platform property is contained in the `DSP` tag in the `.sqlproj` file under the `<PropertyGroup>` item.  The target platform is used during project build to validate support for features included in the project and is added to the `.dacpac` file as a property.  By default, during deployment the target platform is checked against the target database to ensure compatibility.  If the target platform is not supported by the target database, the deployment will fail unless additional [publish options](../../tools/sqlpackage/sqlpackage-publish.md) are specified.
 
 ```xml
 <Project DefaultTargets="Build">
@@ -61,9 +61,6 @@ The target platform property is contained in the `DSP` tag in the `.sqlproj` fil
 ```
 
 Valid settings for the target platform are:
-- `Microsoft.Data.Tools.Schema.Sql.Sql90DatabaseSchemaProvider`
-- `Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider`
-- `Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider`
 - `Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider`
 - `Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider`
 - `Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider`
@@ -75,20 +72,18 @@ Valid settings for the target platform are:
 ### Database references
 The database model validation at build time can be extended past the contents of the SQL project through database references. Database references specified in the `.sqlproj` file can reference another SQL project or a `.dacpac` file, representing either another database or additional components of the same database.
 
-The following attributes are optional for database references:
-- **DatabaseSqlCmdVariable** – when objects are in a different database, the value is the name of the variable that will be used to reference the database.
-    - Reference setting: `DatabaseSqlCmdVariable="SomeOtherDatabase"`
+The following attributes are available for database references that represent another database:
+- **DatabaseSqlCmdVariable:** the value is the name of the variable that will be used to reference the database
+    - Reference setting: `<DatabaseSqlCmdVariable>SomeOtherDatabase</DatabaseSqlCmdVariable>`
     - Usage example: `SELECT * FROM [$(SomeOtherDatabase)].dbo.Table1`
-- **ServerSqlCmdVariable** – used in conjunction with DatabaseSqlCmdVariable, when the database is in another server.
-    - Reference setting: `ServerSqlCmdVariable="SomeOtherServer"`
+- **ServerSqlCmdVariable:** used in conjunction with DatabaseSqlCmdVariable, when the database is in another server.
+    - Reference setting: `<ServerSqlCmdVariable>SomeOtherServer</ServerSqlCmdVariable>`
     - Usage example: `SELECT * FROM [$(SomeOtherServer)].[$(SomeOtherDatabase)].dbo.Table1`
-- **DatabaseVariableLiteralValue** – This is similar to DatabaseSqlCmdVariable but the reference to other database is a literal 
+- **DatabaseVariableLiteralValue:** the value is the literal name of the database as used in the SQL project, similar to `DatabaseSqlCmdVariable` but the reference to other database is a literal value
+    - Reference setting: `<DatabaseVariableLiteralValue>SomeOtherDatabase</DatabaseVariableLiteralValue>`
+    - Usage example: `SELECT * FROM [SomeOtherDatabase].dbo.Table1`
 
-Update View1.sql to be SELECT * FROM [SomeOtherDatabase].dbo.Table1 
-
-Change DatabaseSqlCmdVariable to DatabaseVariableLiteralValue in the PackageReference 
-
-Verify build 
+In a SQL project file, a database reference is specified as an `ArtifactReference` item with the `Include` attribute set to the path of the `.dacpac` file.
 
 ```xml
   <ItemGroup>
@@ -102,8 +97,7 @@ Verify build
 ### Package references
 Package references are used to reference NuGet packages that contain a `.dacpac` file and are used to extend the database model at build time similarly as a [database reference](#database-references).
 
-
-The following example from a SQL project file references the `Microsoft.SqlServer.Dacpacs` package for the `master` database.
+The following example from a SQL project file references the `Microsoft.SqlServer.Dacpacs` [package](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs) for the `master` database.
 
 ```xml
   <ItemGroup>
@@ -112,8 +106,19 @@ The following example from a SQL project file references the `Microsoft.SqlServe
 </Project>
 ```
 
+In addition to the attributes available for [database references](#database-references), the following `DacpacName` attribute can be specified to select a `.dacpac` from a package that contains multiple `.dacpac` files.
+
+```xml
+  <ItemGroup>
+        <PackageReference Include="Microsoft.SqlServer.Dacpacs" Version="160.0.0" />
+            <DacpacName>msdb</DacpacName>
+        </PackageReference>
+  </ItemGroup>
+</Project>
+```
+
 ### SqlCmd variables
-SqlCmd variables can be defined in the `.sqlproj` file and are used to replace tokens in SQL objects and scripts during a `.dacpac` [deployment](../../tools/sqlpackage/sqlpackage-publish.md#sqlcmd-variables). The following example from a SQL project file defines a variable named `EnvironmentName` that available for use in the project's objects and scripts.
+SqlCmd variables can be defined in the `.sqlproj` file and are used to replace tokens in SQL objects and scripts during `.dacpac` [deployment](../../tools/sqlpackage/sqlpackage-publish.md#sqlcmd-variables). The following example from a SQL project file defines a variable named `EnvironmentName` that available for use in the project's objects and scripts.
 
 ```xml
     <SqlCmdVariable Include="EnvironmentName">
@@ -151,3 +156,4 @@ Pre- and post-deployment scripts are SQL scripts that are included in the projec
 ## Next steps
 
 - [Build and Publish a project with the SQL Database Projects extension](sql-database-project-extension-build.md)
+- [Install SqlPackage for deployment from the CLI](../../tools/sqlpackage/sqlpackage-download.md)

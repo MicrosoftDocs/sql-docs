@@ -97,7 +97,7 @@ Consider the following when using zone redundancy:
 
 During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions:
 | Geography | Regions supporting zone redundancy for Business Critical service tier |
-|:-- |:-- |
+| :--- | :--- |
 | Europe, Middle East, Africa | North Europe, Norway East, South Africa North, Sweden Central, Switzerland North, West Europe, UAE North, UK South |
 | Americas | Brazil South, Canada Central, East US, South Central US, West US 3 |
 | Asia Pacific | Australia East, East Asia, India Central, Japan East, Korea Central |

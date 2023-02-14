@@ -16,7 +16,7 @@ ms.custom:
 ---
 # Rotate the Transparent data encryption (TDE) protector
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 This article describes key rotation for a [server](logical-servers.md) using a TDE protector from Azure Key Vault. Rotating the logical TDE protector for a server means to switch to a new asymmetric key that protects the databases on the server. Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the database's data encryption key, not the entire database.
 
@@ -142,7 +142,7 @@ az sql mi tde-key set --server-key-type AzureKeyVault
 
 ## Automatic key rotation for geo-replication configurations
 
-In an Azure SQL Database geo-replication configuration where the primary server is set to use TDE with CMK, the secondary server also needs be configured to enable TDE with CMK with the same key used on the primary.
+In an Azure SQL Database geo-replication configuration where the primary server is set to use TDE with CMK, the secondary server also needs to be configured to enable TDE with CMK with the same key used on the primary.
 
 # [Portal](#tab/azure-portal-geo)
 
@@ -210,7 +210,7 @@ The `<keyVaultKeyId>` can be [retrieved from Key Vault](/azure/key-vault/keys/qu
 
 ### Using different keys for each server
 
-It's possible to configure the primary and secondary servers with a different key vault key when configuring TDE with CMK in the Azure portal. It's not evident in the Azure portal that the key used to protect the primary server is also the same key that protects the primary database that has been replicated to the secondary server. However, you can use PowerShell, the Azure CLI, or REST APIs to obtain details about keys that are used on the server. This will show that auto rotated keys are transferred from the primary server to the secondary server.
+It's possible to configure the primary and secondary servers with a different key vault key when configuring TDE with CMK in the Azure portal. It's not evident in the Azure portal that the key used to protect the primary server is also the same key that protects the primary database that has been replicated to the secondary server. However, you can use PowerShell, the Azure CLI, or REST APIs to obtain details about keys that are used on the server. This shows that auto rotated keys are transferred from the primary server to the secondary server.
 
 Here's an example of using PowerShell commands to check for keys that are transferred from the primary server to the secondary server after key rotation.
 
@@ -240,9 +240,9 @@ Here's an example of using PowerShell commands to check for keys that are transf
 
 1. If the secondary server has a default TDE protector using a different key than the primary server, you should see two (or more) keys. The first key being the default TDE protector, and the second key is the key used in the primary server used to protect the replicated database.
 
-1. When the key is rotated on the primary server, it is automatically transferred to the secondary server. If you were to run the `Get-AzSqlServerKeyVaultKey` again on the primary server, you should see two keys. The first key is the original key, and the second key, which is the current key that was generated as part of the key rotation.
+1. When the key is rotated on the primary server, it's automatically transferred to the secondary server. If you were to run the `Get-AzSqlServerKeyVaultKey` again on the primary server, you should see two keys. The first key is the original key, and the second key, which is the current key that was generated as part of the key rotation.
 
-1. Running the `Get-AzSqlServerKeyVaultKey` command on the secondary server should also show the same keys that are present in the primary server. This confirms that the rotated keys on the primary server is automatically transferred to the secondary server, and used to protect the database replica.
+1. Running the `Get-AzSqlServerKeyVaultKey` command on the secondary server should also show the same keys that are present in the primary server. This confirms that the rotated keys on the primary server are automatically transferred to the secondary server, and used to protect the database replica.
 
 ## Manual key rotation
 
@@ -421,6 +421,6 @@ The following examples use [az sql mi tde-key set](/cli/azure/sql/mi/tde-key#az-
 
 ## Next steps
 
-- In case of a security risk, learn how to remove a potentially compromised TDE protector: [Remove a potentially compromised key](transparent-data-encryption-byok-remove-tde-protector.md).
+- If there's a security risk, learn how to remove a potentially compromised TDE protector: [Remove a potentially compromised key](transparent-data-encryption-byok-remove-tde-protector.md).
 
 - Get started with Azure Key Vault integration and Bring Your Own Key support for TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-configure.md).

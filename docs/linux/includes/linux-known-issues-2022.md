@@ -126,29 +126,7 @@ Not all filters are available with this release, including filters for Microsoft
 
 ### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
-The **mssql-server-is** package isn't supported on SUSE in this release. It's currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
-
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages can use ODBC connections on Linux. This functionality has been tested with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
-
-The following features aren't supported in this release when you run SSIS packages on Linux:
-
-- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Catalog database
-- Scheduled package execution by SQL Agent
-- Windows Authentication
-- Third-party components
-- Change Data Capture (CDC)
-- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out
-- Azure Feature Pack for SSIS
-- Hadoop and HDFS support
-- Microsoft Connector for SAP BW
-
-For a list of built-in SSIS components that aren't currently supported, or that are supported with limitations, see [Limitations and known issues for SSIS on Linux](../sql-server-linux-ssis-known-issues.md#components).
-
-For more info about SSIS on Linux, see the following articles:
-
-- [Blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
-- [Install SQL Server Integration Services (SSIS) on Linux](../sql-server-linux-setup-ssis.md)
-- [Extract, transform, and load data on Linux with SSIS](../sql-server-linux-migrate-ssis.md)
+The **mssql-server-is** package isn't supported in this version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
 ### SQL Server Management Studio (SSMS)
 

@@ -96,7 +96,7 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 |---|---|---|---|
 |**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several high availability secondary replicas, and provides the highest I/O performance. | The widest variety of workloads, including those with highly scalable storage and read-scale requirements.  Offers higher resilience to failures by allowing configuration of more than one high availability secondary replica. |
 | **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
-| **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per instance) |
+| **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | De-coupled storage with local SSD cache (per compute replica) |
 | **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
 | **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
 | **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>4</sup>| 

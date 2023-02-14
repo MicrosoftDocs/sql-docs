@@ -14,7 +14,7 @@ monikerRange: "= azuresql || = azuresql-db"
 
 # Cross-tenant customer-managed keys with transparent data encryption
 
-[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE[appliesto-sqldb-asa-formerly-sqldw](../includes/appliesto-sqldb-asa-formerly-sqldw.md)]
 
 Azure SQL now offers support for cross-tenant customer-managed keys (CMK) with [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption). Cross-tenant CMK expands on the [Bring Your Own Key (BYOK)](transparent-data-encryption-byok-overview.md) scenario for utilizing TDE without the need to have the Azure SQL logical server be in the same Azure Active Directory (Azure AD) tenant as the Azure Key Vault that stores the customer-managed key used to protect the server.
 
@@ -56,11 +56,11 @@ The following diagram represents the steps for a scenario that utilizes an Azure
 
 **On the client tenant**
 
-3. Install the multi-tenant application
+3. [Install the multi-tenant application](/azure/storage/common/customer-managed-keys-configure-cross-tenant-new-account#the-customer-grants-the-service-providers-app-access-to-the-key-in-the-key-vault)
 
-4. Create or use existing key vault and grant [key permissions](transparent-data-encryption-byok-overview.md) to the multi-tenant application
+4. [Create](/azure/key-vault/general/quick-create-portal) or use existing key vault and grant [key permissions](transparent-data-encryption-byok-overview.md) to the multi-tenant application
 
-   1. Create a new or use an existing key
+   1. [Create](/azure/key-vault/keys/quick-create-portal) a new or use an existing key
 
    1. [Retrieve the key from Key Vault](/azure/key-vault/keys/quick-create-portal#retrieve-a-key-from-key-vault) and record the **Key Identifier**
 
@@ -77,7 +77,7 @@ The following diagram represents the steps for a scenario that utilizes an Azure
 
 ## Remarks
 
-- For a server with an existing key vault key, changing the **Identity** option in the Azure portal to use the multi-tenant application under **Federated client identity** can cause an error if the multi-tenant application hasn't been added to the key vault access policy with the required key vault permissions (*Get, Wrap Key, Unwrap Key*). To get the **Federated client identity** to work with the new multi-tenant application, the existing key vault key must be removed from the **Transparent data encryption** menu. Select **Service-managed key**, and apply the changes. The new multi-tenant application can then be added to the access policy of the key vault. Set the multi-tenant application as the **Federated client identity** in the **Identity** menu. Then set the CMK key in the **Transparent data encryption** menu.
+- If the multi-tenant application hasn't been added to the key vault access policy with the required permissions (*Get, Wrap Key, Unwrap Key*), selecting it as the Identity option in the Azure portal may cause an error. To fix this, the existing key vault key must be removed from the **Transparent data encryption** menu and replaced with **Service-managed key**. After this, the new multi-tenant application can be added to the access policy of the key vault. Lastly, the multi-tenant application must be set as the **Federated client identity** in the **Identity** menu, and the CMK key must be set in the **Transparent data encryption** menu.
 
 ## Next steps
 

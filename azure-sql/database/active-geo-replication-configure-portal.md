@@ -151,7 +151,6 @@ This operation permanently stops the replication to the secondary database, and 
 1. In the [Azure portal](https://portal.azure.com), browse to the primary database in the geo-replication partnership.
 2. Select **Replicas**.
 3. In the **Geo replicas** list, select the database you want to remove from the geo-replication partnership, select the ellipsis, and then select **Stop replication**.
-
 5. A confirmation window opens. Click **Yes** to remove the database from the geo-replication partnership. (Set it to a read-write database not part of any replication.)
  
 # [Azure CLI](#tab/azure-cli)

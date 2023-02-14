@@ -15,7 +15,7 @@ ms.author: mathoma
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   All critical errors and warning events for the SQL Server Resource DLL are written to the Windows event log. A running log of the diagnostic information specific to SQL Server is captured by the [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure and is written to the SQL Server failover cluster diagnostics (also known as the *SQLDIAG* logs) log files.  
   
--   **Before you begin:**  [Recommendations](#Recommendations), [Security](#Security)  
+-   **Before you begin:**  [File name, location and format](#file-name-location-format), [Security](#Security)  
   
 -   **To View the Diagnostic Log, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
@@ -23,10 +23,10 @@ ms.author: mathoma
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
-###  <a name="Recommendations"></a> Recommendations  
- By default, the SQLDIAG are stored under a local LOG folder of the SQL Server instance directory, for example, 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG' of the owning node of the Always On Failover Cluster Instance (FCI). The size of each SQLDIAG log file is fixed at 100 MB. Ten such log files are stored on the computer before they are recycled for new logs.  
+###  <a name="file-name-location-format"></a> File name, location and format
+ By default, the SQLDIAG are stored under a local LOG folder of the SQL Server instance directory, for example, 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG' of the owning node of the Always On Failover Cluster Instance (FCI). The maximum size of each SQLDIAG log file is fixed at 100 MB. Ten such log files are stored on the computer before they are recycled for new logs.  The file name is of the following format `MACHINE_SQLINSTANCE_SQLDIAG_0_xxxxxxxxxxxxxxxxx.xel` where the the last part 'xxxxxxxx' is a auto-generated number. For example for a default instance the file name would be `NODE1_MSSQLSERVER_SQLDIAG_0_133177967257760000.xel` and for a named instance the name would be `NODE1_SQL2019INST_SQLDIAG_0_133177967257760000.xel`
   
- The logs use the extended events file format. The **sys.fn_xe_file_target_read_file** system function can be used to read the files that are created by Extended Events. One event, in XML format, is returned per row. Query the system view to parse the XML data as a result-set. For more information, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
+ The logs use the extended events file format. The **sys.fn_xe_file_target_read_file** system function can be used to read the files that are created by Extended Events and display them as a result-set. One event, in XML format, is returned per row. For more information, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
 ###  <a name="Security"></a> Security  
   

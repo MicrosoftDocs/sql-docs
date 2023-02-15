@@ -106,8 +106,6 @@ The vCore-based service tiers are differentiated based on database availability 
 
 ## Compute resources
 
-Serverless is only supported on hardware.
-
 |Hardware configuration  |CPU  |Memory  |
 |:---------|:---------|:---------|
 |Gen4     |- Intel&reg; E5-2673 v3 (Haswell) 2.4-GHz processors<br>- Provision up to 24 vCores (physical)  |- 7 GB per vCore<br>- Provision up to 168 GB|

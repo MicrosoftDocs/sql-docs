@@ -12,6 +12,7 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # Example: Query XMLType columns
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -72,12 +73,13 @@ This is the result:
 
 The following query specifies the `ELEMENTS` directive. Therefore, the result returned is element-centric. The `XSINIL` option specified with the `ELEMENTS` directive returns the `<ManuSteps>` elements, even if the corresponding column in the rowset is NULL.
 
+
 ```sql
 USE AdventureWorks2012;
 GO
 SELECT ProductModelID, Name,
    Instructions.query('
-declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"
+declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"
    /MI:root/MI:Location[1]/MI:step
 ') as ManuSteps
 FROM Production.ProductModel
@@ -110,3 +112,4 @@ This is the result:
 ## See also
 
 - [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)
+

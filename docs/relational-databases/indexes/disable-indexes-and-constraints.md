@@ -88,7 +88,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To disable an index  
-  
+
 1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to disable an index.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
@@ -98,7 +98,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 4.  Click the plus sign to expand the **Indexes** folder.  
   
 5.  Right-click the index you want to disable and select **Disable**.  
-  
+
+   > [!NOTE]
+   > If the table is open in **Design** mode, the **Disable** control is not available. To proceed, close the table designer and start over.
+
 6.  In the **Disable Indexes** dialog box, verify that the correct index is in the **Indexes to disable** grid and click **OK**.  
   
 #### To disable all indexes on a table  

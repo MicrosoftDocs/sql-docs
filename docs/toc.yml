@@ -589,7 +589,7 @@ items:
             href: database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md
         - name: Encrypted databases
           href: database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md
-        - name: Failover cluster instances
+        - name: SQL Server Analysis Services (SSAS)
           href: database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md
         - name: FILESTREAM & FileTable
           href: database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md
@@ -7852,6 +7852,8 @@ items:
             items:
               - name: Set up SQL Server
                 items:
+                  - name: Without attestation
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-no-attestation-plan.md
                   - name: Plan for Host Guardian Service attestation
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
                   - name: Deploy the Host Guardian Service
@@ -8022,7 +8024,11 @@ items:
         - name: Always Encrypted cryptography
           href: relational-databases/security/encryption/always-encrypted-cryptography.md
       - name: Always Encrypted with secure enclaves
-        href: relational-databases/security/encryption/always-encrypted-enclaves.md
+        items:
+        - name: Always Encrypted with secure enclaves documentation
+          href: /azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
+        - name: Always Encrypted with secure enclaves overview
+          href: relational-databases/security/encryption/always-encrypted-enclaves.md
       - name: Encryption keys
         href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
         items:
@@ -8071,9 +8077,11 @@ items:
         href: relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md
     - name: Always Encrypted with secure enclaves
       items:
-      - name: Getting started with Always Encrypted with secure enclaves in SQL Server
+      - name: Always Encrypted with secure enclaves in SQL Server
         href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-      - name: Getting started with Always Encrypted with secure enclaves in Azure SQL Database >
+      - name: Always Encrypted with secure enclaves in SQL Server using HGS
+        href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves-hgs.md
+      - name: Getting started using Always Encrypted with secure enclaves in Azure SQL Database >
         href: /azure/azure-sql/database/always-encrypted-enclaves-getting-started
       - name: Create and use indexes on Always Encrypted with secure enclaves columns
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md

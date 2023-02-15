@@ -589,7 +589,7 @@ items:
             href: database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md
         - name: Encrypted databases
           href: database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md
-        - name: Failover cluster instances
+        - name: SQL Server Analysis Services (SSAS)
           href: database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md
         - name: FILESTREAM & FileTable
           href: database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md

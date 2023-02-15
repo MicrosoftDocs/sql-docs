@@ -58,7 +58,7 @@ For information about client driver versions that support using secure enclaves 
 
 To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the `Virtualization-based security` items towards the bottom of the System Summary.
 
-![System Information screenshot showing virtualization-based security status and configuration](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
+![Screenshot of System Information showing virtualization-based security status and configuration.](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 
 The first item to check is `Virtualization-based security`, which can have the following three values:
 

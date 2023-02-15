@@ -130,7 +130,7 @@ In this step, you'll create a table and populate it with some data that you'll l
     3. Select the **Always Encrypted** tab.
     4. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
 
-       :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-disabled.png" alt-text="Connect without Always Encrypted":::
+       :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-disabled.png" alt-text="Screenshot of Connect to Server using SSMS without Always Encrypted enabled.":::
 
     5. Select **Connect**.
 
@@ -189,7 +189,7 @@ In this step, you'll create a column master key and a column encryption key that
     4. Select either **Azure Key Vault** (recommended) or **Windows Certificate Store** (**Current User** or **Local Machine**).
        - If you select Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Select **Generate Key** to create a new key.
        - If you select Windows Certificate Store, select the **Generate Certificate** button to create a new certificate.
-       :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Allow enclave computations":::
+       :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Screenshot of the allow enclave computations selection in SSMS when creating a new column master key.":::
     5. Select **OK**.
 
 1. Create a new enclave-enabled column encryption key:
@@ -209,10 +209,10 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     3. Select **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, `master` database). 
     4. Select the **Always Encrypted** tab.
     5. Select the **Enable Always Encrypted (column encryption)** checkbox.
-    6. Select **Enable secure enclaves**. 
+    6. Select **Enable secure enclaves**.
     7. Set **Protocol** to **None**. See the below screenshot.
 
-       :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-vbs-protocol-none.png" alt-text="Connect with Protocol None":::
+       :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-vbs-protocol-none.png" alt-text="Screenshot of the SSMS Connect to Server dialog Always Encrypted tab, with with attestation protocol set to None.":::
 
     8. Select **Connect**.
     9. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

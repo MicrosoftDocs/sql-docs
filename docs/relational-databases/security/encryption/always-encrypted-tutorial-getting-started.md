@@ -368,7 +368,7 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     SELECT [SSN], [Salary] FROM [HR].[Employees]
     ```
 
-    :::image type="content" source="media/always-encrypted-database-engine/always-encrypted-ssms-retrieving-cyphertext.png" alt-text="Screenshot of cyphertext results from encrypted columns.":::
+    :::image type="content" source="media/always-encrypted-database-engine/always-encrypted-ssms-retrieving-ciphertext.png" alt-text="Screenshot of cipher text results from encrypted columns.":::
 
 1. Connect to your database with Always Encrypted enabled for your connection.
     1. Right-click anywhere in the query window and select **Connection** > **Change Connection**. This will open the **Connect to Database Engine** dialog.

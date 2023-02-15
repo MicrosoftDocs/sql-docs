@@ -267,7 +267,7 @@ In this step, you'll create a column master key and a column encryption key that
     6. Select your certificate or Azure Key Value key if it already exists, or select the **Generate Certificate** button to create a new one.
     7. Select **OK**.
 
-        ![Allow enclave computations](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
+        ![Screenshot of the allow enclave computations selection in SSMS when creating a new column master key.](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 1. Create a new enclave-enabled column encryption key:
 
@@ -289,7 +289,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     1. Set **Protocol** to **Host Guardian Service**. (This step applies to SSMS 19 or later.)
     1. Specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
 
-          ![Connect to server with attestation using SSMS](./encryption/media/always-encrypted-enclaves/ssms-connect-hgs.png)
+          ![Screenshot of the connect to server Always Encrypted tab with attestation using SSMS.](./encryption/media/always-encrypted-enclaves/ssms-connect-hgs.png)
 
     1. Select **Connect**.
     1. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

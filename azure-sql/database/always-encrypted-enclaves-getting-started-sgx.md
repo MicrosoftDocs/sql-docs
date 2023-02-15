@@ -66,7 +66,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. Leave **Want to use SQL elastic pool** set to **No**.
 1. Under **Compute + storage**, select **Configure database**, and select **Change configuration**.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database.png" alt-text="Screenshot of Azure portal, hardware configuration, where to configure database." lightbox="./media/always-encrypted-enclaves/portal-configure-database.png":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database.png" alt-text="Screenshot of Azure portal hardware configuration, and where to configure database." lightbox="./media/always-encrypted-enclaves/portal-configure-database.png":::
 
 1. Select the **DC-series** hardware configuration, and then select **OK**.
 
@@ -85,7 +85,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. For **Encrypted connections**, leave **Minimum TLS version** to **TLS 1.2**.
 1. Select **Review + create** at the bottom of the page.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database-networking.png" alt-text="New SQL database - networking":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database-networking.png" alt-text="Screenshot of the Azure portal Create SQL Database, networking tab.":::
 
 1. On the **Review + create** page, after reviewing, select **Create**.
 
@@ -167,19 +167,19 @@ In this step, you'll create and configure an attestation provider in Microsoft A
 
 1. After you provide the required inputs, select **Review + create**.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-create-attestation-provider-basics.png" alt-text="Create attestation provider":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-create-attestation-provider-basics.png" alt-text="Screenshot of the Azure portal Create attestation provider menu.":::
 
 1. Select **Create**.
 1. Once the attestation provider is created, select **Go to resource**.
 1. On the **Overview** tab for the attestation provider, copy the value of the **Attest URI** property to clipboard and save it in a file. This is the attestation URL, you'll need in later steps.  
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-attest-uri.png" alt-text="Attestation URL":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-attest-uri.png" alt-text="Screenshot of the attestation URL in the Azure portal.":::
 
 1. Select **Policy** on the resource menu on the left side of the window or on the lower pane.
 1. Set **Attestation Type** to **SGX-IntelSDK**.
 1. Select **Configure** on the upper menu.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-attestation-policy.png" alt-text="Configure attestation policy":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-attestation-policy.png" alt-text="Screenshot of configuring attestation policy in the Azure portal.":::
 
 1. Set **Policy Format** to **Text**. Leave  **Policy options** set to **Enter policy**.
 1. In the **Policy text** field, replace the default policy with the below policy. For information about the below policy, see [Create and configure an attestation provider](always-encrypted-enclaves-configure-attestation.md#create-and-configure-an-attestation-provider).
@@ -198,7 +198,7 @@ In this step, you'll create and configure an attestation provider in Microsoft A
 
 1. Select **Save**.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-edit-attestation-policy.png" alt-text="Edit attestation policy":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-edit-attestation-policy.png" alt-text="Screenshot of editing an attestation policy in the Azure portal.":::
 
 1. Select **Refresh** on the upper menu to view the configured policy.
 
@@ -269,7 +269,7 @@ In this step, you'll create a table and populate it with some data that you'll l
     3. Select the **Always Encrypted** tab.
     4. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
 
-        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-disabled.png" alt-text="Connect without Always Encrypted":::
+        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-disabled.png" alt-text="Screenshot of Connect to Server using SSMS without Always Encrypted enabled.":::
 
     5. Select **Connect**.
 
@@ -328,7 +328,7 @@ In this step, you'll create a column master key and a column encryption key that
     4. Select either **Azure Key Vault** (recommended) or **Windows Certificate Store** (**Current User** or **Local Machine**).
        - If you select Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Select **Generate Key** to create a new key.
        - If you select Windows Certificate Store, select the **Generate Certificate** button to create a new certificate.
-         :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Allow enclave computations":::
+         :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Screenshot of the allow enclave computations selection in SSMS when creating a new column master key.":::
     5. Select **OK**.
 
 1. Create a new enclave-enabled column encryption key:
@@ -352,7 +352,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     7. Set **Protocol** to **Microsoft Azure Attestation**. (This step applies to SSMS 19 or later.)
     8. Specify your enclave attestation URL that you've obtained by following the steps in [Step 2: Configure an attestation provider](#step-2-configure-an-attestation-provider). See the below screenshot.
 
-        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-microsoft-azure-attestation.png" alt-text="Connect with attestation":::
+        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-microsoft-azure-attestation.png" alt-text="Screenshot of the SSMS Connect to Server dialog Always Encrypted tab, with with attestation enabled.":::
 
     9. Select **Connect**.
     10. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

@@ -17,7 +17,7 @@ ms.custom: event-tier1-build-2022
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
-This tutorial teaches you how to develop an application that issues database queries that uses a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Prerequisites
 

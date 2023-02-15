@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 02/14/2023
+ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -30,6 +30,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | Feature | Details |
 | ---| --- |
 | [128 vCore](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) | Provision your Azure SQL Database with up to 128 virtual cores (vCores). | 
+| [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) | Support for Always Encrypted with virtualization-based security (VBS) enclaves in Azure SQL Database. | 
 | [Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |

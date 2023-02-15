@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database & Azure Synapse Analytics
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 02/10/2023
+ms.date: 02/15/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -31,7 +31,7 @@ Cross-tenant CMK capabilities allow service providers or independent software ve
 
 Cross-tenant interaction between Azure SQL and a key vault in another Azure AD tenant is enabled with the Azure AD feature, [workload identity federation](/azure/active-directory/develop/workload-identity-federation).
 
-ISVs that deploy Azure SQL services can create a multi-tenant application in Azure AD, and then configure a [federated identity credential](/graph/api/resources/federatedidentitycredentials-overview) for this application using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview) (system-assigned or user-assigned). With the appropriate application name and application ID, a client or ISV customer can install the ISV created application in their own tenant. The customer then grants the service principal associated with the application permissions ([needed for Azure SQL](transparent-data-encryption-byok-overview.md)) to their key vault in their tenant, and shares their key location with the ISV. Once the ISV assigns the [managed identity](transparent-data-encryption-byok-identity.md) and federated client identity to the Azure SQL resource, the Azure SQL resource in the ISV's tenant can access the customer's key vault.
+ISVs that deploy Azure SQL services can create a multi-tenant application in Azure AD, and then configure a [federated identity credential](/graph/api/resources/federatedidentitycredentials-overview) for this application using a user-assigned [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). With the appropriate application name and application ID, a client or ISV customer can install the ISV created application in their own tenant. The customer then grants the service principal associated with the application permissions ([needed for Azure SQL](transparent-data-encryption-byok-overview.md)) to their key vault in their tenant, and shares their key location with the ISV. Once the ISV assigns the [managed identity](transparent-data-encryption-byok-identity.md) and federated client identity to the Azure SQL resource, the Azure SQL resource in the ISV's tenant can access the customer's key vault.
 
 For more information, see:
 
@@ -40,7 +40,7 @@ For more information, see:
 
 ## Setting up cross-tenant CMK
 
-The following diagram represents the steps for a scenario that utilizes an Azure SQL logical server that uses TDE to encrypt the data at rest using a cross-tenant CMK with a user-assigned managed identity. Similar steps can be used for a system-assigned managed identity.
+The following diagram represents the steps for a scenario that utilizes an Azure SQL logical server that uses TDE to encrypt the data at rest using a cross-tenant CMK with a user-assigned managed identity.
 
 :::image type="content" source="media/transparent-data-encryption-byok-cross-tenant/cross-tenant-setup.png" alt-text="Diagram of setting up cross-tenant transparent data encryption with customer-managed keys.":::
 

@@ -5,7 +5,7 @@ description: Learn how to configure user-assigned managed identity and transpare
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 02/10/2023
+ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to

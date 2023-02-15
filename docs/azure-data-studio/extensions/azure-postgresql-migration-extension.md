@@ -210,13 +210,13 @@ The confidence rating helps you estimate the reliability of rightsized recommend
 
 Confidence ratings are as follows for a 24-hour data collection run time.
 
-| Data point availability | Estimated Run time | Confidence rating |
-|-------------------------|--------------------|-------------------|
-| 1%-20%  | 5 hours  | 1 star  |
-| 21%-40% | 10 hours | 2 stars |
-| 41%-60% | 14 hours | 3 stars |
-| 61%-80% | 19 hours | 4 stars |
-| 81%-100%| 24 hours | 5 stars |
+| Data point availability | Approximate run time | Confidence rating |
+|-------------------------|----------------------|------------------|
+| 1%-20%  | 10 minutes - 5 hours  | 1 star  |
+| 21%-40% | > 5 hours - 10 hours  | 2 stars |
+| 41%-60% | > 10 hours - 14 hours | 3 stars |
+| 61%-80% | > 14 hours - 19 hours | 4 stars |
+| 81%-100%| > 19 hours - 24 hours | 5 stars |
 
 ### Recommended Configuration
 

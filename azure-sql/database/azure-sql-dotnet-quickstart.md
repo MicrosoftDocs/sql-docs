@@ -274,15 +274,17 @@ The Azure portal allows you to work with managed identities and run queries agai
 
 3) On the query editor view, run the following SQL commands:
 
-```sql
-CREATE USER <your-app-service-name> FROM EXTERNAL PROVIDER;
-ALTER ROLE db_datareader ADD MEMBER <your-app-service-name>;
-ALTER ROLE db_datawriter ADD MEMBER <your-app-service-name>;
-ALTER ROLE db_ddladmin ADD MEMBER <your-app-service-name>;
-GO
-```
+    ```sql
+    CREATE USER <your-app-service-name> FROM EXTERNAL PROVIDER;
+    ALTER ROLE db_datareader ADD MEMBER <your-app-service-name>;
+    ALTER ROLE db_datawriter ADD MEMBER <your-app-service-name>;
+    ALTER ROLE db_ddladmin ADD MEMBER <your-app-service-name>;
+    GO
+    ```
 
-This SQL script will create an Azure SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed your services are connected.
+    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to enable ActiveDdirectory authentication.":::
+
+    This SQL script will create an Azure SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed your services are connected.
 
 ---
 

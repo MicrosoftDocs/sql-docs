@@ -212,7 +212,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     6. Select **Enable secure enclaves**.
     7. Set **Protocol** to **None**. See the below screenshot.
 
-       :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-vbs-protocol-none.png" alt-text="Screenshot of the SSMS Connect to Server dialog Always Encrypted tab, with with attestation protocol set to None.":::
+       :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-vbs-protocol-none.png" alt-text="Screenshot of the SSMS Connect to Server dialog Always Encrypted tab, with attestation protocol set to None.":::
 
     8. Select **Connect**.
     9. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

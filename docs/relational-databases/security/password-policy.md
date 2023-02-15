@@ -104,7 +104,7 @@ ms.author: vanto
  The security policy might be set in Windows, or might be received from the domain. To view the password policy on the computer, use the Local Security Policy MMC snap-in (**secpol.msc**).
 
 >[!NOTE]
->For SQL Server logins if you run an [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) command to change a user's password that also has CHECK_POLICY enabled, if OLD_PASSWORD is omitted then [Enforce Password History](../../windows/security/threat-protection/security-policy-settings/enforce-password-history.md) is ignored. This is a by-design behavior to allow password resets despite any previously used passwords. Other checks associated with CHECK_POLICY including length and complexity are checked regardless of whether OLD_PASSWORD is used.
+>For SQL Server logins if you run an [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) command to change a user's password that also has CHECK_POLICY enabled, if OLD_PASSWORD is omitted then [Enforce Password History](../../windows/security/threat-protection/security-policy-settings/enforce-password-history.md) is ignored. This is a by-design behavior to allow password resets despite any previously used passwords. Other checks associated with CHECK_POLICY including length and complexity are checked regardless whether OLD_PASSWORD is used.
   
 ## Related Tasks  
 

@@ -93,7 +93,7 @@ SEMANTICSIMILARITYTABLE
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  
-FROMSEMANTICSIMILARITYTABLE  
+FROM SEMANTICSIMILARITYTABLE  
     (  
     HumanResources.JobCandidate,  
     Resume,  

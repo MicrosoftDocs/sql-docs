@@ -83,7 +83,7 @@ This guide will walk you through the process of creating a logical server and da
 
 5. For **Resource group**, select **Create new**, enter a name for your resource group, and select **OK**.
 
-6. For **Database name** enter `ContosoHR`.
+6. For **Database name** enter a database name. For example, `ContosoHR`.
 
 7. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
 

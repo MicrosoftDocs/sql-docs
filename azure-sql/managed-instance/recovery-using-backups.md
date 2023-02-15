@@ -203,7 +203,7 @@ Consider the following limitations when working with backups and Azure SQL Manag
 
 - Geo-restore of a database can only be performed to an instance in the same subscription as the source SQL managed instance. 
 - SQL Managed Instance databases can only be [restored to SQL Server 2022](restore-database-to-sql-server.md) (either on-premises, or on a virtual machine) if the source SQL Managed Instance has enrolled in the [November 2022 feature wave](november-2022-feature-wave-enroll.md).
-- SQL Managed Instance databases are encrypted with TDE by default. To restore your database to an instance other than the source SQL Managed Instance, the target instance must have access to the same key in Azure Key Vault used to encrypt to encrypt the source database, or you must disable TDE encryption on the source database before taking the backup. 
+- SQL Managed Instance databases are encrypted with TDE by default. To restore your database to an instance other than the source SQL Managed Instance, the target instance must have access to the same key in Azure Key Vault used to encrypt the source database, or you must disable TDE encryption on the source database before taking the backup. 
 
 
 ## Next steps

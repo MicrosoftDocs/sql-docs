@@ -13,18 +13,10 @@
   items:
   - name: Billing options
     items:
-    - name: vCore purchasing model 
-      href: database/service-tiers-vcore.md
     - name: Azure Hybrid Benefit
       href: azure-hybrid-benefit.md
     - name: Reserved capacity
       href: database/reserved-capacity-overview.md
-  - name: Service tiers
-    items:
-    - name: General Purpose
-      href: database/service-tier-general-purpose.md
-    - name: Business Critical
-      href: database/service-tier-business-critical.md
 
   - name: Shared concepts 
     items: 
@@ -344,6 +336,11 @@
       items:
       - name: Always Encrypted with secure enclaves
         href: database/always-encrypted-enclaves-getting-started.md
+        items: 
+        - name: Always Encrypted with secure enclaves using SGX
+          href: database/always-encrypted-enclaves-getting-started-sgx.md
+        - name: Always Encrypted with secure enclaves using VBS
+          href: database/always-encrypted-enclaves-getting-started-vbs.md
       - name: Configure security
         href: database/secure-database-tutorial.md
       - name: Create users using service principals
@@ -427,10 +424,10 @@
           items:
           - name: Configure and use Always Encrypted with secure enclaves >
             href: /sql/relational-databases/security/encryption/configure-always-encrypted-enclaves
-          - name: Plan for Intel SGX enclaves and attestation
+          - name: Plan for secure enclaves and attestation
             href: database/always-encrypted-enclaves-plan.md
-          - name: Enable Intel SGX
-            href: database/always-encrypted-enclaves-enable-sgx.md
+          - name: Enable secure enclaves
+            href: database/always-encrypted-enclaves-enable.md
           - name: Configure Azure Attestation
             href: database/always-encrypted-enclaves-configure-attestation.md
         - name: Azure SQL Auditing
@@ -481,6 +478,8 @@
         href: database/active-geo-replication-overview.md
       - name: Auto-failover groups
         href: database/auto-failover-group-sql-db.md
+      - name: HA/DR checklist
+        href: database/high-availability-disaster-recovery-checklist.md
       - name: Outage recovery guidance
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills

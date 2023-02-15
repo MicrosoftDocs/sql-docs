@@ -21,7 +21,7 @@ This lesson shows you how to create a database, create a table in the database, 
 
 - By using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This tutorial assumes that you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], but you can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, which is available as a free download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=14630).
 
-- By using the [**sqlcmd**](../tools/sqlcmd-utility.md) utility.
+- By using the [**sqlcmd**](/sql/tools/sqlcmd/sqlcmd-utility) utility.
 
 - By connecting from an application that you create.
 

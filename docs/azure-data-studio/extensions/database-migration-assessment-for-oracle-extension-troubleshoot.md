@@ -94,8 +94,8 @@ Error Message: A terminal error occurred - failed to access lookup data. A looku
 
 Possible Causes: This error may appear due to any of the given reasons-
 
-1) The lookup metadata file is either deleted or corrupted.
-2) The lookup metadata file is already in use by another program.
+1. The lookup metadata file is either deleted or corrupted.
+2. The lookup metadata file is already in use by another program.
 
 Remediation actions: Try to reinstall the extension, close any open assessment file(s), and then create a new assessment. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
@@ -113,8 +113,8 @@ Error Message: Connection timed out to the Oracle server. Navigate to the connec
 
 Possible causes: This error may appear due to any of the given reasons-
 
-1) Oracle server connection terminated forcefully or timed out.
-2) Network connectivity to the Oracle server is unstable or lost.
+1. Oracle server connection terminated forcefully or timed out.
+2. Network connectivity to the Oracle server is unstable or lost.
 
 Remediation actions: Try to reconnect to the Oracle server or refresh the connection. Also, ping the Oracle server to check the network connectivity between your machine and the Oracle server is stable. Check if the timeout parameters are set properly in sqlnet.ora file. For more information, see Oracle documentation for ORA-03135 error.
 
@@ -150,8 +150,8 @@ Error Message: Assessment failed as it received an invalid value={invalid value}
 
 Possible causes: This error may appear due to any of the given reasons-
 
-1) The state of performance data available in the Oracle server is invalid.
-2) The collected performance data file is corrupted or modified externally.
+1. The state of performance data available in the Oracle server is invalid.
+2. The collected performance data file is corrupted or modified externally.
 
 Remediation actions: Try to create a new assessment. To investigate further, go through the [logs](https://aka.ms/logsDMAO) to understand the reason of error. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
@@ -181,7 +181,7 @@ Remediation actions: Verify the assessment folder path exists on local computer.
 
 ### Error Code: ODC-1005
 
-Error Message: Connected oracle server isn't available due to an underlying Oracle exception - ORA1034.
+Error Message: Connected Oracle server isn't available due to an underlying Oracle exception - ORA1034.
 
 Possible Causes: Database might be down or not ready to accept connections.
 
@@ -316,7 +316,7 @@ Remediation actions: You need to ensure that the logged in user has write permis
 
 Error Message: Failed to save the assessment output with a serializer error.
 
-Possible Causes: The generated assessment data Couldn't be converted to JSON format.
+Possible Causes: The generated assessment data couldn't be converted to JSON format.
 
 Remediation actions: You may try to run a new assessment. To investigate further, go through the [logs](https://aka.ms/logsDMAO) to understand the reason of error. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO)
 
@@ -472,7 +472,7 @@ Possible causes: This error may appear due to any of the given reasons-
 
 1. Ora2Pg wasn't installed.
 2. Ora2Pg wasn't able to connect to the Oracle server.
-3. Ora2Pg failed with an unknow error.
+3. Ora2Pg failed with an unknown error.
 4. Ora2Pg process crashed due to a system error.
 
 Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
@@ -543,7 +543,7 @@ Possible causes: This error may appear due to any of the given reasons-
 
 1. Ora2Pg wasn't installed.
 2. Ora2Pg wasn't able to connect to the Oracle server.
-3. Ora2Pg failed with an unknow error.
+3. Ora2Pg failed with an unknown error.
 4. Ora2Pg process crashed due to a system error.
 
 Remediation actions: Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.

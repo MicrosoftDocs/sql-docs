@@ -44,7 +44,7 @@ Once the assessment extension is installed, the next step is to [connect to your
 
 1. Go to the connections icon in the menu bar.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/new-connection.png" alt-text="connections menu bar":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/new-connection.png" alt-text="Screenshot of the new connection menu bar.":::
 
 1. Fill out the fields in the **Connection Details**.
    1. In the **Connection type** field, select **PostgreSQL**.
@@ -56,7 +56,7 @@ Once the assessment extension is installed, the next step is to [connect to your
       1. Under the Server section, provide the port number.
       1. Then select **OK**.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/connection-details.png" alt-text="connection details":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/connection-details.png" alt-text="Screenshot of the connection details.":::
 
 1. Select **Connect**.
 
@@ -76,11 +76,11 @@ Under the General section, select **Azure PostgreSQL Migration**, then select **
 
 There are three steps to complete the assessment.
 
-- **Databases(s) for assessment**
+- **Database(s) for assessment**
 - **Assessment Parameters**
 - **View Assessment Results**
 
-### 1. Databases(s) for assessment
+### 1. Database(s) for assessment
 
 Select the database(s) you want to assess for migration for Azure Database for PostgreSQL - Flexible Server and then select **Next**.
 
@@ -135,7 +135,7 @@ Fill out the fields in the SKU recommendation parameters as follows.
 
 Once you've provided your values, select **Assess**.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/automatic-collect-perf-data.png" alt-text="Screenshot of automatically collecting data":::
+:::image type="content" source="media/azure-postgresql-migration-extension/automatic-collect-data.png" alt-text="Screenshot of automatically collecting data.":::
 
 #### Enter performance data parameters
 
@@ -157,7 +157,7 @@ Fill out the fields in the recommendation parameters as follows.
 
 Once you've filled in your parameters, select **Assess**.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/enter-perf-data-parameters.png" alt-text="Screenshot of entering performance data":::
+:::image type="content" source="media/azure-postgresql-migration-extension/enter-data-parameters.png" alt-text="Screenshot of entering performance data.":::
 
 For more information about SKU recommendations, view [SKU recommendations](#sku-recommendations).
 
@@ -211,7 +211,7 @@ The confidence rating helps you estimate the reliability of rightsized recommend
 Confidence ratings are as follows for a 24-hour data collection run time.
 
 | Data point availability | Approximate run time | Confidence rating |
-|-------------------------|----------------------|------------------|
+|-------------------------|----------------------|-------------------|
 | 1%-20%  | 10 minutes - 5 hours  | 1 star  |
 | 21%-40% | > 5 hours - 10 hours  | 2 stars |
 | 41%-60% | > 10 hours - 14 hours | 3 stars |
@@ -226,7 +226,7 @@ The recommendation reasons list the CPU, memory, storage, and IOPs requirements,
 
 The source properties list the used and actual performance parameters. The *Used* information explains the usage by the source PostgreSQL instance. The *Actual* information explains the total utilization that can be used by the source PostgreSQL instance.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/view-details.png" alt-text="Screenshot of View details screen.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/recommendation-details.png" alt-text="Screenshot of View details screen.":::
 
 ## Change assessment path
 

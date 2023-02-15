@@ -53,15 +53,32 @@ To grant your managed identity the **Azure AD Directory** role permission, follo
 
 1. Type _Directory readers_ in the search box, and then select the role **Directory readers** to open the **Directory Readers | Assignments** page: 
 
-   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/search-for-directory-readers.png" alt-text="Screenshot of the Roles and administrators page of the Azure portal, searching for and selecting the Directory Readers  role. ":::
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/search-for-directory-readers.png" alt-text="Screenshot of the Roles and administrators page of the Azure portal, searching for and selecting the Directory Readers role.":::
 
 1. On the **Directory Readers | Assignments** page, select **+ Add assignments** to open the **Add assignment** page. 
+
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-directory-readers.png" alt-text="Screenshot of the Directory Readers page of the Azure portal.":::
+
 1. On the **Add assignments** page, choose **No member selected** under **Select members** to open the **Select a member** page. 
+
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-add-assignment.png" alt-text="Screenshot of the add assignment page of the Azure portal, with No member selected highlighted.":::
+
 1. On the **Select a member** page, search for the managed identity you want to use with your SQL Server VM and add to the **Azure AD Directory Readers** role. If you want to use a system-assigned managed identity, search for the name of the VM and select the associated identity. If you want to use a user-managed identity, then search for the name of the identity and choose it. Select **Select** to save your identity selection and go back to the **Add assignments** page. 
+
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-select-member.png" alt-text="Screenshot searching for members to select in the Azure portal.":::
+
 1. Verify that you see your chosen identity under **Select members** and then select **Next**.  
-1. Verify that your assignment type is set to **Active** and the box next to **Permanently assigned** is checked. 
-1. Enter a business justification, such as _Adding Directory Reader role permissions to the system-assigned identity for SQLVM1_ and then select **Assign** to save your settings and go back to the **Directory Readers | Assignments** page. 
+
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-verify-assignment.png" alt-text="Screenshot of the Add assignment page in the Azure portal, with VM2 added as an assignment.":::
+
+1. Verify that your assignment type is set to **Active** and the box next to **Permanently assigned** is checked. Enter a business justification, such as _Adding Directory Reader role permissions to the system-assigned identity for SQLVM1_ and then select **Assign** to save your settings and go back to the **Directory Readers | Assignments** page. 
+
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-verify-assignment-settings.png" alt-text="Screenshot of settings on the Add assignment in the Azure portal.":::
+
 1. On the **Directory Readers | Assignments** page, confirm you see your newly-added identity under **Directory Readers**. 
+
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-verify-directory-reader.png" alt-text="Screenshot of the Directory Readers page of the Azure portal showing your VM assignment added to the role.":::
+
 
 ## Enable Azure AD authentication to your SQL VM
 
@@ -71,6 +88,8 @@ To enable Azure AD authentication to your SQL Server VM, follow these steps:
 1. Select **Security configuration** under **Settings**. 
 1. Choose **Enable** under **Azure AD authentication**. 
 1. Choose the managed identity type from the drop-down, either **System-assigned** or **User-assigned**. If you choose user-assigned, then select the identity you want to use to authenticate to SQL Server on your Azure VM from the **User-assigned managed identity** drop-down that appears. 
+
+   :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/enable-azure-ad-in-portal.png" alt-text="Screenshot of the security configuration page for SQL VM in the Azure portal, with Azure AD authentication selected. ":::
 
 
 ## Limitations

@@ -17,7 +17,7 @@ The Azure PostgreSQL migration extension in Azure Data Studio helps you assess y
 
 ## Prerequisites
 
-- [Azure Data Studio version](../download-azure-data-studio.md).
+- [Azure Data Studio](../download-azure-data-studio.md).
   - Version must be 1.39 and higher.
 - PostgreSQL Server instance running 9.3 or higher.
 - PostgreSQL users should have CONNECT and SELECT privileges on the databases of the instance.
@@ -50,7 +50,7 @@ Once the assessment extension is installed, the next step is to [connect to your
    1. In the **Connection type** field, select **PostgreSQL**.
    1. In the **Server name** field, type in your *PostgreSQL server name*.
    1. In the **Authentication type**, select **Password**.
-   1. In the **User Id** field, provide your database username
+   1. In the **User name** field, provide your database username
    1. in the **Password** field, provide your database password.
    1. Then select **Advanced...**
       1. Under the Server section, provide the port number.
@@ -103,13 +103,13 @@ There are two options to collect performance data to receive the target recommen
 > [!NOTE]
 > Before you select your databases, you need to execute privileges for automatic collection for SKU recommendation.
 >
-> The user needs to execute privilege on the pg_read_file() function.
+> The user needs to execute privilege on the `pg_read_file() function`.
 >
 > ```sql
 > GRANT EXECUTE ON FUNCTION pg_read_file(text) TO <<username>>;
 > ```
 >
-> The user should be granted the role pg_read_server_files.
+> The user should be granted the `role pg_read_server_files`.
 >
 > ```sql
 > GRANT pg_read_server_files TO <<username>>;
@@ -121,7 +121,7 @@ Select automatic performance data collection to receive the target recommendatio
 
 Fill out the fields in the SKU recommendation parameters as follows.
 
-- **Time duration - enter the time you want to run the data collection.
+- **Time duration** - enter the time you want to run the data collection.
 
    > [!NOTE]
    > It is recommended that you collect the assessment data during peak workload times. Data collection duration should run for 24 hours because it provides time to collect data with higher confidence. The assessment wizard needs to be open while the data collection is in progress.
@@ -186,7 +186,7 @@ Users can select the respective databases, understand the blockers and warnings 
 
 :::image type="content" source="media/azure-postgresql-migration-extension/summary-database.png" alt-text="Screenshot of database summary.":::
 
-Users can save the assessment report on their machine for offline viewing by selecting the “Save Assessment” action.
+Users can save the assessment report on their machine for offline viewing by selecting the **Save Assessment** action.
 
 :::image type="content" source="media/azure-postgresql-migration-extension/save-assessment.png" alt-text="Screenshot to show how to save the assessment.":::
 
@@ -233,7 +233,7 @@ The source properties list the used and actual performance parameters. The *Used
 If you want to save your assessment and performance data in a different path, you can edit the assessment path under the extension settings.
 
 1. Go to the extension marketplace and search for *Azure PostgreSQL migration*.
-1. Select the Manage icon and select extensions settings.
+1. Select the **Manage** icon and select extensions settings.
 1. Provide the new assessment path under **PostgreSQL Assessment: Assessment Path**.
 
 :::image type="content" source="media/azure-postgresql-migration-extension/postgresql-migration-extension-settings.png" alt-text="Screenshot of extension settings.":::
@@ -248,7 +248,7 @@ The extension stores errors, warnings, and other diagnostic logs in the default 
 
 - Windows - `C:\Users\<username>\.postgresmigration\logs\`
 - Linux - `~/.postgresmigration/logs`
-- macOS - `/Users/<username>/.postgresmigration /logs`
+- macOS - `/Users/<username>/.postgresmigration/logs`
 
 > [!NOTE]
 > By default, the extension stores the last seven log files.

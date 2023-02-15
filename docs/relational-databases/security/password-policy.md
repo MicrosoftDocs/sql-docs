@@ -47,7 +47,7 @@ ms.author: vanto
 
  Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords. When password complexity policy is enforced, new passwords must meet the following guidelines:  
   
-- The password does not contain the account name of the user.  
+- The password doesn't contain the account name of the user.  
   
 - The password is at least eight characters long.  
   
@@ -73,7 +73,7 @@ ms.author: vanto
   
 - When CHECK_POLICY is changed to ON, the following behaviors occur:  
   
-  - CHECK_EXPIRATION is also set to ON unless it is explicitly set to OFF.  
+  - CHECK_EXPIRATION is also set to ON unless it's explicitly set to OFF.  
   
   - The password history is initialized with the value of the current password hash.  
   
@@ -87,11 +87,11 @@ ms.author: vanto
   
   - The value of `lockout_time` is reset.  
   
- Some combinations of policy options are not supported.  
+ Some combinations of policy options aren't supported.  
   
 - If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON. Otherwise, the statement fails.  
   
-- If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LOGIN statement that has this combination of options will fail.  
+- If CHECK_POLICY is set to OFF, CHECK_EXPIRATION can't be set to ON. An ALTER LOGIN statement that has this combination of options will fail.  
   
 - Setting CHECK_POLICY = ON prevents the creation of passwords that are:  
   
@@ -101,7 +101,10 @@ ms.author: vanto
   
   - Any of the following: "password", "admin", "administrator", "sa", "sysadmin"  
   
- The security policy might be set in Windows, or might be received from the domain. To view the password policy on the computer, use the Local Security Policy MMC snap-in (**secpol.msc**).  
+ The security policy might be set in Windows, or might be received from the domain. To view the password policy on the computer, use the Local Security Policy MMC snap-in (**secpol.msc**).
+
+>[!NOTE]
+>For SQL Server logins if you run an [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) command to change a user's password that also has CHECK_POLICY enabled, if OLD_PASSWORD is omitted then [Enforce Password History](../../windows/security/threat-protection/security-policy-settings/enforce-password-history.md) is ignored. This is a by-design behavior to allow password resets despite any previously used passwords. Other checks associated with CHECK_POLICY including length and complexity are checked regardless of whether OLD_PASSWORD is used.
   
 ## Related Tasks  
 
@@ -120,4 +123,3 @@ ms.author: vanto
 ## Related Content  
 
  [Strong Passwords](../../relational-databases/security/strong-passwords.md)  
- 

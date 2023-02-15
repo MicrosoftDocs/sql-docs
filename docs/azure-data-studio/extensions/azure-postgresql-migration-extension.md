@@ -129,7 +129,7 @@ Fill out the fields in the SKU recommendation parameters as follows.
 - **Scale factor** - Enter values **0.2-2**, to expand during peak performance times.
 
    > [!NOTE]
-   > The scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future use.
+   > The scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future use.
 
 - **Percentile utilization** - The percentile value of the performance sample set to be considered for sizing the Azure target.
 
@@ -167,7 +167,7 @@ Once the assessment is complete, a consolidated output is generated.
 
 - The cards at the top represent the recommended SKU in Azure.
   - **Target Platform** – Currently, the assessment is performed and supported on Azure Database for PostgreSQL - Flexible Server.
-  - **Recommended Configuration** – Based on the performance metrics, SKU available in Azure Database for PostgreSQL - Flexible Server is recommended. For more information about SKU recommendations, see [SKU recommendations](#sku-recommendations). Add view details link
+  - **Recommended Configuration** – Based on the performance metrics, SKU available in Azure Database for PostgreSQL - Flexible Server is recommended. For more information about SKU recommendations, see [SKU recommendations](#sku-recommendations).
   - **Data collection status** – Shows the number of cycles completed and the data collection status.
     - There are four statuses: **In Progress**, **Completed**, **Stopped**, **Not Applicable**  (only for **Enter performance data parameters** data collection).
 
@@ -193,75 +193,65 @@ Users can save the assessment report on their machine for offline viewing by sel
 #### Migration Readiness state
 
 - **Not Ready** - The PostgreSQL instance (DBs) can't be migrated to Azure. For example, if an on-premises server's disk stores more than 64 TB, Azure can't host the server. Follow the remediation guidance to fix the problem before migration.
-- **Ready with Conditions** - The PostgreSQL instance (DBs) can be migrated to Azure by following the recommendations provided in ADS. For example, let us say Azure PostgreSQL - Flexible Server doesn't support the latest collation version running on-premises instances. You must be careful before you migrate these instances to Azure. To fix any readiness problems, follow the remediation guidance. In this example, the user needs to rebuild the index.
+- **Ready with Conditions** - The PostgreSQL instance (DBs) can be migrated to Azure by following the recommendations provided in ADS. For example, Azure PostgreSQL - Flexible Server doesn't support the latest collation version running on-premises instances. You must be careful before you migrate these instances to Azure. To fix any readiness problems, follow the remediation guidance. In this example, the user needs to rebuild the index.
 - **Ready** - The PostgreSQL instance (DBs) can be migrated to Azure without any changes.
 
 ## SKU recommendations
 
-The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and recommends the rightsized Azure database for PostgreSQL - Flexible Server SKU based on the data collected. The feature provides pricing tier, compute level, and data size recommendations.
+The SKU recommendation feature allows you to collect performance data from your source PostgreSQL instances hosting your databases and recommends the rightsized Azure Database for PostgreSQL - Flexible Server based on the data collected. The feature provides compute level and data size recommendations.
 
-The SKU recommendation provides the following:
-
-- The suitable Azure target.
-- The service tier.
-- The metric thresholds are used to provide the recommended SKU.
-
-The SKU recommendation evaluates various performance metrics, such as CPU, Memory, IOPS, latency, and storage. Based on the usage and configuration data, the recommender provides the suitable target and the appropriate service tier.
+The SKU recommendation evaluates various performance metrics, such as vCores, Memory, IOPS, and storage. Based on the usage and configuration data, the recommender provides the suitable target and the appropriate service tier.
 
 ### Review confidence rating
 
-Azure Migrate assigns a confidence rating to performance-based assessments. Rating is from one star (lowest) to five stars (highest).
+The recommended Configuration provides a confidence rating based on the data collection and a 24-hour run time. Rating is from one star (lowest) to five stars (highest).
 
-The confidence rating helps you estimate the reliability of size recommendations in the assessment. The rating is based on the available data points to compute the assessment.
+The confidence rating helps you estimate the reliability of rightsized recommendation in the assessment.
 
 Confidence ratings are as follows for a 24-hour data collection run time.
 
-| Data point availability | Confidence rating |
-|-------------------------|-------------------|
-| 0%-20%  | 1 star  |
-| 21%-40% | 2 stars |
-| 41%-60% | 3 stars |
-| 61%-80% | 4 stars |
-| 81%-100% | 5 stars |
+| Data point availability | Estimated Run time | Confidence rating |
+|-------------------------|--------------------|-------------------|
+| 1%-20%  | 5 hours  | 1 star  |
+| 21%-40% | 10 hours | 2 stars |
+| 41%-60% | 14 hours | 3 stars |
+| 61%-80% | 19 hours | 4 stars |
+| 81%-100%| 24 hours | 5 stars |
 
 ### Recommended Configuration
 
-Once the assessment is complete, you can select the **View Details** option in the **Recommended Details** card at the top.
+Once the data collection process is complete, you can select the **View Details** option in the **Recommended Details** card at the top to view the Recommended details screen. You can see the **Recommendation reason** and **Source properties**.
 
-In the Recommended details screen, you can see the **Recommendation reason** and **Source properties**.
+The recommendation reasons list the CPU, memory, storage, and IOPs requirements, comparing it with the Azure Database for PostgreSQL - Flexible Server target.
 
-The recommendation reasons list the CPU, memory requirements, storage requirements, storage requirements, and IOPs requirements.
+The source properties list the used and actual performance parameters. The *Used* information explains the usage by the source PostgreSQL instance. The *Actual* information explains the total utilization that can be used by the source PostgreSQL instance.
+
+:::image type="content" source="media/azure-postgresql-migration-extension/view-details.png" alt-text="Screenshot of View details screen.":::
 
 ## Change assessment path
 
+If you want to save your assessment and performance data in a different path, you can edit the assessment path under the extension settings.
+
 1. Go to the extension marketplace and search for *Azure PostgreSQL migration*.
-1. Select the Manage icon, and select Extensions settings.
-1. Provide the new assessment path under Oracle Assessment: Assessment Path.
+1. Select the Manage icon and select extensions settings.
+1. Provide the new assessment path under **PostgreSQL Assessment: Assessment Path**.
 
 :::image type="content" source="media/azure-postgresql-migration-extension/postgresql-migration-extension-settings.png" alt-text="Screenshot of extension settings.":::
 
 ## Troubleshoot
 
-To troubleshoot any Azure PostgreSQL migration extension issue, you should find out the details about the error and warnings from the logs generated. Refer to this section to access the logs.
+To troubleshoot any Azure PostgreSQL migration extension issue, you should find out the details about the error and warnings from the logs generated.
 
 ### Logs
 
 The extension stores errors, warnings, and other diagnostic logs in the default log directory:
 
-- Windows - C:\Users\<username>\.postgresmigration\logs\
-- Linux - ~/. postgresmigration /logs
-- macOS - /Users/<username>/. postgresmigration /logs
+- Windows - `C:\Users\<username>\.postgresmigration\logs\`
+- Linux - `~/.postgresmigration/logs`
+- macOS - `/Users/<username>/.postgresmigration /logs`
 
 > [!NOTE]
 > By default, the extension stores the last seven log files.
-
-To change the log directory, update the `LogDirectory` property in the extension settings file.
-
-| Operating system | Path |
-|------------------|------|
-|Windows|`C:\Users\<username>\.azuredatastudio\extensions\microsoft.azuredatastudio-postgresql-migration-<VersionNumber>\bin\service\Properties\ConfigSettings\extension-settings.json`|
-|Linux|`~/.azuredatastudio/extensions/microsoft.azuredatastudio-postgresql-migration-<VersionNumber>/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
-|macOS|`/Users/<username>/.azuredatastudio/extensions/microsoft.azuredatastudio-postgresql-migration-<VersionNumber>/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
 
 For more information about troubleshooting issues, visit [Troubleshoot Azure PostgreSQL migration extension errors](azure-postgresql-migration-extension-troubleshoot.md).
 
@@ -270,8 +260,6 @@ For more information about troubleshooting issues, visit [Troubleshoot Azure Pos
 - Automatic collection for SKU recommendation isn't supported for any PostgreSQL PaaS services.
 - Automatic collections are only applicable for Linux.
 - Automatic collections are only applicable for PostgreSQL versions 11 and higher.
-
-For more details about troubleshooting issues, visit [Troubleshoot Azure PostgreSQL migration extension errors](azure-postgresql-migration-extension-troubleshoot.md).
 
 ## Get help from Microsoft support
 

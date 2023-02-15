@@ -6,7 +6,7 @@ ms.author: adityaduvuri
 ms.reviewer: maghan, randolphwest
 ms.date: 02/14/2023
 ms.service: azure-data-studio
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 ---
 
 # Troubleshoot Azure PostgreSQL migration extension errors
@@ -21,9 +21,9 @@ To troubleshoot any Azure PostgreSQL migration extension issue, you should find 
 
 The extension stores errors, warnings, and other diagnostic logs in the default log directory:
 
-- Windows - C:\Users\<username>\.postgresmigration\logs\
-- Linux - ~/. postgresmigration /logs
-- macOS - /Users/<username>/. postgresmigration /logs
+- Windows - `C:\Users\<username>\.postgresmigration\logs\`
+- Linux - `~/.postgresmigration/logs`
+- macOS - `/Users/<username>/.postgresmigration/logs`
 
 > [!NOTE]  
 > By default, the extension stores the last seven log files.

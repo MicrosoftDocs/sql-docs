@@ -6,7 +6,7 @@ ms.author: abhishekum
 ms.reviewer: maghan, randolphwest
 ms.date: 02/09/2023
 ms.service: azure-data-studio
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 ---
 
 # Troubleshooting Database Migration Assessment for Oracle extension errors

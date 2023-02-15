@@ -34,7 +34,7 @@ A Hyperscale database contains the following types of components: compute nodes,
 
 ## Compute
 
-The compute node is where the relational engine lives. The compute node is where language, query, and transaction processing occur. All user interactions with a Hyperscale database happen through compute nodes.  Computes nodes can either be configured to use serverless or provisioned compute.
+The compute node is where the relational engine lives. The compute node is where language, query, and transaction processing occur. All user interactions with a Hyperscale database happen through compute nodes.  Compute nodes can either be configured to use serverless or provisioned compute.
 
 Compute nodes have local SSD-based caches called Resilient Buffer Pool Extension (RBPEX Data Cache). RBPEX Data Cache is an intelligent low latency data cache that minimizes the need to fetch data from remote page servers.
 

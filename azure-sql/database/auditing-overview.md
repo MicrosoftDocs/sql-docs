@@ -39,7 +39,6 @@ You can use SQL Database auditing to:
 
 ### Auditing limitations
 
-- **User managed identity** authentication type for enabling auditing to **storage behind firewall** is not currently supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
 - When you configure the auditing for your [logical server in Azure](logical-servers.md) or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD authentication only and not configured for access key usage, the auditing cannot be configured. <!-- REST API reference: - /rest/api/sql/2021-08-01-preview/server-blob-auditing-policies/create-or-update -->

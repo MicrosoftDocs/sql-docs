@@ -78,6 +78,7 @@ The following diagram represents the steps for a scenario that utilizes an Azure
 ## Remarks
 
 - If the multi-tenant application hasn't been added to the key vault access policy with the required permissions (*Get, Wrap Key, Unwrap Key*), selecting it as the Identity option in the Azure portal may cause an error. To fix this, the existing key vault key must be removed from the **Transparent data encryption** menu and replaced with **Service-managed key**. After this, the new multi-tenant application can be added to the access policy of the key vault. Lastly, the multi-tenant application must be set as the **Federated client identity** in the **Identity** menu, and the CMK key must be set in the **Transparent data encryption** menu.
+- The cross-tenant CMK with TDE feature is only supported for user-assigned managed identities. You cannot use a system-assigned managed identity for cross-tenant CMK with TDE.
 
 ## Next steps
 

@@ -71,7 +71,7 @@ To grant your managed identity the **Azure AD Directory** role permission, follo
 
    :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-verify-assignment.png" alt-text="Screenshot of the Add assignment page in the Azure portal, with VM2 added as an assignment.":::
 
-1. Verify that your assignment type is set to **Active** and the box next to **Permanently assigned** is checked. Enter a business justification, such as _Adding Directory Reader role permissions to the system-assigned identity for SQLVM1_ and then select **Assign** to save your settings and go back to the **Directory Readers | Assignments** page. 
+1. Verify that your assignment type is set to **Active** and the box next to **Permanently assigned** is checked. Enter a business justification, such as _Adding Directory Reader role permissions to the system-assigned identity for VM2_ and then select **Assign** to save your settings and go back to the **Directory Readers | Assignments** page. 
 
    :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-verify-assignment-settings.png" alt-text="Screenshot of settings on the Add assignment in the Azure portal.":::
 

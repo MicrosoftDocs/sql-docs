@@ -4,7 +4,7 @@ description: Learn how to install the Azure Data Studio Azure Database for Postg
 author: apduvuri
 ms.author: adityaduvuri
 ms.reviewer: maghan, randolphwest
-ms.date: 02/20/2023
+ms.date: 02/15/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---
@@ -36,7 +36,7 @@ Follow these steps to install the **Azure PostgreSQL migration** extension in Az
     1. Once installed the **PostgreSQL** extension is also installed.
     1. Once installed **.NET 6** is also installed.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/search-extension.png" alt-text="Screenshot to show a search of the extension.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/search-extension.png" alt-text="Screenshot to show a search of the extension." lightbox="media/azure-postgresql-migration-extension/search-extension.png" lightbox="media/azure-postgresql-migration-extension/search-extension.png":::
 
 ## Connect to a PostgreSQL instance
 
@@ -44,7 +44,7 @@ Once the assessment extension is installed, the next step is to [connect to your
 
 1. Go to the connections icon in the menu bar.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/new-connection.png" alt-text="Screenshot of the new connection menu bar.":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/new-connection.png" alt-text="Screenshot of the new connection menu bar." lightbox="media/azure-postgresql-migration-extension/new-connection.png":::
 
 1. Fill out the fields in the **Connection Details**.
    1. In the **Connection type** field, select **PostgreSQL**.
@@ -56,7 +56,7 @@ Once the assessment extension is installed, the next step is to [connect to your
       1. Under the Server section, provide the port number.
       1. Then select **OK**.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/connection-details.png" alt-text="Screenshot of the connection details.":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/connection-details.png" alt-text="Screenshot of the connection details." lightbox="media/azure-postgresql-migration-extension/connection-details.png":::
 
 1. Select **Connect**.
 
@@ -64,7 +64,7 @@ Once the assessment extension is installed, the next step is to [connect to your
 
 1. Right-click on the PostgreSQL connection and select **Manage**.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/manage-database-connection.png" alt-text="Screenshot showing the Manage database screen.":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/manage-database-connection.png" alt-text="Screenshot showing the Manage database screen." lightbox="media/azure-postgresql-migration-extension/manage-database-connection.png":::
 
 ## Run the assessment
 
@@ -72,7 +72,7 @@ Once you've connected to your PostgreSQL instance in Azure Data Studio, you can 
 
 Under the General section, select **Azure PostgreSQL Migration**, then select **Run new assessment**.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/start-assessment.png" alt-text="Screenshot showing the Migration Assessment database screen.":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/start-assessment.png" alt-text="Screenshot showing the Migration Assessment database screen." lightbox="media/azure-postgresql-migration-extension/start-assessment.png":::
 
 There are three steps to complete the assessment.
 
@@ -84,7 +84,7 @@ There are three steps to complete the assessment.
 
 Select the database(s) you want to assess for migration for Azure Database for PostgreSQL - Flexible Server and then select **Next**.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/view-databases.png" alt-text="Screenshot of view databases.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/view-databases.png" alt-text="Screenshot of view databases." lightbox="media/azure-postgresql-migration-extension/view-databases.png":::
 
 ### 2. Assessment Parameters
 
@@ -100,17 +100,17 @@ There are two options to collect performance data to receive the target recommen
 
 #### Automatically collect performance data
 
-> [!NOTE]
+> [!NOTE]  
 > Before you select your databases, you need to execute privileges for automatic collection for SKU recommendation.
->
+>  
 > The user needs to execute privilege on the `pg_read_file() function`.
->
+>  
 > ```sql
 > GRANT EXECUTE ON FUNCTION pg_read_file(text) TO <<username>>;
 > ```
->
+>  
 > The user should be granted the `role pg_read_server_files`.
->
+>  
 > ```sql
 > GRANT pg_read_server_files TO <<username>>;
 > ```
@@ -123,19 +123,19 @@ Fill out the fields in the SKU recommendation parameters as follows.
 
 - **Time duration** - enter the time you want to run the data collection.
 
-   > [!NOTE]
+   > [!NOTE]  
    > It is recommended that you collect the assessment data during peak workload times. Data collection duration should run for 24 hours because it provides time to collect data with higher confidence. The assessment wizard needs to be open while the data collection is in progress.
 
 - **Scale factor** - Enter values **0.2-2**, to expand during peak performance times.
 
-   > [!NOTE]
+   > [!NOTE]  
    > The scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future use.
 
 - **Percentile utilization** - The percentile value of the performance sample set to be considered for sizing the Azure target.
 
 Once you've provided your values, select **Assess**.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/automatic-collect-data.png" alt-text="Screenshot of automatically collecting data.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/automatic-collect-data.png" alt-text="Screenshot of automatically collecting data." lightbox="media/azure-postgresql-migration-extension/automatic-collect-data.png":::
 
 #### Enter performance data parameters
 
@@ -152,12 +152,12 @@ Fill out the fields in the recommendation parameters as follows.
 
 - **Scale factor** - Enter values **0.2-2**, to expand during peak performance times.
 
-   > [!NOTE]
+   > [!NOTE]  
    > The scale factor during the assessment is a buffer applied on top of current utilization data for PostgreSQL (vCores, Memory, and storage). The scale factor accounts for seasonal usage, short performance history, and increases in future use.
 
 Once you've filled in your parameters, select **Assess**.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/enter-data-parameters.png" alt-text="Screenshot of entering performance data.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/enter-data-parameters.png" alt-text="Screenshot of entering performance data." lightbox="media/azure-postgresql-migration-extension/enter-data-parameters.png":::
 
 For more information about SKU recommendations, view [SKU recommendations](#sku-recommendations).
 
@@ -171,24 +171,24 @@ Once the assessment is complete, a consolidated output is generated.
   - **Data collection status** – Shows the number of cycles completed and the data collection status.
     - There are four statuses: **In Progress**, **Completed**, **Stopped**, **Not Applicable**  (only for **Enter performance data parameters** data collection).
 
-      > [!NOTE]
+      > [!NOTE]  
       > In the **Data collection status** card, a user can start or stop the collection at any time.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/configuration-cards.png" alt-text="Screenshot of configuration cards.":::
+   :::image type="content" source="media/azure-postgresql-migration-extension/configuration-cards.png" alt-text="Screenshot of configuration cards." lightbox="media/azure-postgresql-migration-extension/configuration-cards.png":::
 
 Users can select the Instance name that shows the PostgreSQL instance's summary and migration readiness. Users can go through different server parameters and features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
 
 Users can select the value next to the [Migration Readiness state](#migration-readiness-state) to determine which database is under what status.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/summary-instance.png" alt-text="Screenshot of instance summary.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/summary-instance.png" alt-text="Screenshot of instance summary." lightbox="media/azure-postgresql-migration-extension/summary-instance.png":::
 
 Users can select the respective databases, understand the blockers and warnings and go through the [Migration Readiness](#migration-readiness-state) summary if the database is in the Not Ready, Ready with conditions, or Ready state for migration into Azure.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/summary-database.png" alt-text="Screenshot of database summary.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/summary-database.png" alt-text="Screenshot of database summary." lightbox="media/azure-postgresql-migration-extension/summary-database.png":::
 
 Users can save the assessment report on their machine for offline viewing by selecting the **Save Assessment** action.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/save-assessment.png" alt-text="Screenshot to show how to save the assessment.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/save-assessment.png" alt-text="Screenshot to show how to save the assessment." lightbox="media/azure-postgresql-migration-extension/save-assessment.png":::
 
 #### Migration Readiness state
 
@@ -211,12 +211,12 @@ The confidence rating helps you estimate the reliability of rightsized recommend
 Confidence ratings are as follows for a 24-hour data collection run time.
 
 | Data point availability | Approximate run time | Confidence rating |
-|-------------------------|----------------------|-------------------|
-| 1%-20%  | 10 minutes - 5 hours  | 1 star  |
-| 21%-40% | > 5 hours - 10 hours  | 2 stars |
+| --- | --- | --- |
+| 1%-20% | 10 minutes - 5 hours | 1 star |
+| 21%-40% | > 5 hours - 10 hours | 2 stars |
 | 41%-60% | > 10 hours - 14 hours | 3 stars |
 | 61%-80% | > 14 hours - 19 hours | 4 stars |
-| 81%-100%| > 19 hours - 24 hours | 5 stars |
+| 81%-100% | > 19 hours - 24 hours | 5 stars |
 
 ### Recommended Configuration
 
@@ -226,7 +226,7 @@ The recommendation reasons list the CPU, memory, storage, and IOPs requirements,
 
 The source properties list the used and actual performance parameters. The *Used* information explains the usage by the source PostgreSQL instance. The *Actual* information explains the total utilization that can be used by the source PostgreSQL instance.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/recommendation-details.png" alt-text="Screenshot of View details screen.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/recommendation-details.png" alt-text="Screenshot of View details screen." lightbox="media/azure-postgresql-migration-extension/recommendation-details.png":::
 
 ## Change assessment path
 
@@ -236,7 +236,7 @@ If you want to save your assessment and performance data in a different path, yo
 1. Select the **Manage** icon and select extensions settings.
 1. Provide the new assessment path under **PostgreSQL Assessment: Assessment Path**.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/postgresql-migration-extension-settings.png" alt-text="Screenshot of extension settings.":::
+:::image type="content" source="media/azure-postgresql-migration-extension/postgresql-migration-extension-settings.png" alt-text="Screenshot of extension settings." lightbox="media/azure-postgresql-migration-extension/postgresql-migration-extension-settings.png":::
 
 ## Troubleshoot
 
@@ -250,7 +250,7 @@ The extension stores errors, warnings, and other diagnostic logs in the default 
 - Linux - `~/.postgresmigration/logs`
 - macOS - `/Users/<username>/.postgresmigration/logs`
 
-> [!NOTE]
+> [!NOTE]  
 > By default, the extension stores the last seven log files.
 
 For more information about troubleshooting issues, visit [Troubleshoot Azure PostgreSQL migration extension errors](azure-postgresql-migration-extension-troubleshoot.md).

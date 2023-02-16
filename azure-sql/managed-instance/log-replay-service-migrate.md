@@ -120,13 +120,38 @@ You use an Azure Blob Storage account as intermediary storage for backup files b
 
 Using Azure Blob storage that's protected behind a firewall is supported, but requires additional configuration. To enable read / write access to Azure Storage with Azure Firewall turned on, you have to add the subnet of the SQL managed instance to the firewall rules of the vNet for the storage account by using MI subnet delegation and the Storage service endpoint. The storage account and the managed instance must be in the same region, or two paired regions. 
 
+If your Azure storage is behind a firewall, you'll see the following message in the SQL managed instance error log: 
+
+```
+Audit: Storage access denied user fault. Creating an email notification:
+```
+
+This generates an email that notifies you that auditing for the SQL managed instance is failing to write audit logs to the storage account.  If you see this error, or receive this email, follow the steps in this section to configure your firewall. 
+
 To configure the firewall, follow these steps: 
 
-1. Go to your managed instance in the [Azure Portal](https://portal.azure.com) and select the subnet.
+1. Go to your managed instance in the [Azure Portal](https://portal.azure.com) and select the subnet to open the **Subnets** page.
+
+   :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-overview-page.png" alt-text="Screenshot of the SQL managed instance Overview page of the Azure portal, with the subnet selected.":::
+
+1. On the **Subnets** page, select the name of the subnet to open the subnet configuration page. 
+
+   :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-subnet.png" alt-text="Screenshot of the SQL managed instance Subnet page of the Azure portal, with the subnet selected.":::
+
 1. Under **Subnet delegation**, choose **Microsoft.Sql/managedInstances** from the **Delegate subnet to a service** drop-down menu. 
+
+   :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-subnet-configuration.png" alt-text="Screenshot of the SQL managed instance Subnet configuration page of the Azure portal.":::
+
 1. Wait about an hour for permissions to propogate. 
 1. Under **Service endpoints**, choose **Microsoft.Storage** from the **Services** drop-down. 
-1. Next, go to **Firewalls and virtual networks** for your storage account, and choose **+Add existing virtual network** to open the **Add networks** page. 
+
+   :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-overview-page.png" alt-text="Screenshot of the SQL managed instance Overview page of the Azure portal, with the subnet selected.":::
+
+1. Next, go to your storage account in the Azure portal and select **Firewalls and virtual networks** under **Settings**. 
+1. On the **Firewalls and virtual networks** page for your storage account, choose **+Add existing virtual network** to open the **Add networks** page. 
+
+   :::image type="content" source="media/log-replay-service-migrate/storage-neteworking.png" alt-text="Screenshot of the Storage Account Networking page of the Azure portal, with Add existing virtual network selected.":::
+
 1. Select the appropriate subscription, virtual network, and managed instance subnet from the drop-down menus and then select **Add**. 
 
 

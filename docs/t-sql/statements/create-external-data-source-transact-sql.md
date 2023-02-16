@@ -894,7 +894,8 @@ CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
 CREDENTIAL = [OracleProxyCredential]);
 ```
 
-### TNS Oracle Support
+Alternatively, you can use TNS authentication.
+
 
 Starting in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Cumulative Update 19, `CREATE EXTERNAL DATA SOURCE` now supports the use of TNS files when connecting to Oracle.
 The `CONNECTION_OPTIONS` parameter was expanded and now uses `TNSNamesFile` and `ServerName` as variables to browse the `tnsnames.ora` file and establish connection with the server.

@@ -17,7 +17,7 @@ This release is published February 17, 2023
 
 ### Extension version
 
-`1.1.22xx.yy`
+`1.1.2231.59`
 
 ### Azure extension for SQL Server
 

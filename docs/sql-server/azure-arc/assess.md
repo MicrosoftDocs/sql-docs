@@ -22,7 +22,7 @@ The Environment Health assessment is replaced with a much richer best practices 
 >[!IMPORTANT]
 >Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
->T configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
+>For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
 
 ## Prerequisites
 

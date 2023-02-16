@@ -738,6 +738,11 @@ The `key_value_pair` is the keyword and the value for a specific connection opti
 
 Possible key value pairs are specific to the provider for the external data source vendor. For more information for each provider, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
+Starting in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] cumulative update 19, additional keywords was introduced to support Oracle TNS files:
+
+- The keyword `TNSNamesFile` specifies the filepath to the `tnsnames.ora` file located on the Oracle server.
+- The keyword `ServerName` specifies the alias used inside the `tnsnames.ora` that will be used to replace the host name and the port.
+
 #### Pushdown = ON | OFF
 
 Specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only. States whether computation can be pushed down to the external data source. It is **ON** by default.
@@ -887,6 +892,24 @@ CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
 WITH (LOCATION = 'oracle://145.145.145.145:1521',
 CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
 CREDENTIAL = [OracleProxyCredential]);
+```
+
+### TNS Oracle Support
+
+Starting in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Cumulative Update 19, `CREATE EXTERNAL DATA SOURCE` now supports the use of TNS files when connecting to Oracle.
+The `CONNECTION_OPTIONS` parameter was expanded and now uses `TNSNamesFile` and `ServerName` as variables to browse the `tnsnames.ora` file and establish connection with the server.
+
+In the example below, during runtime SQL Server will search for the `tnsnames.ora` file location especified by `TNSNamesFile` and search for the host and network port especified by `ServerName`.
+
+```sql
+CREATE EXTERNAL DATA SOURCE [external_data_source_name]
+WITH (
+LOCATION = N'oracle://XE', 
+CREDENTIAL = [OracleCredentialTest], 
+CONNECTION_OPTIONS = N'TNSNamesFile=C:\Temp\tnsnames.ora;ServerName=XE'
+)
+GO
+
 ```
 
 For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].
@@ -1257,6 +1280,12 @@ The `key_value_pair` is the keyword and the value for a specific connection opti
 
 Possible key value pairs are specific to the driver. For more information for each provider, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
+Starting in [!INCLUDE[SQL2022](../../includes/applies-to-version/sqlserver2022.md)] cumulative update 2, additional keywords was introduced to support Oracle TNS files:
+
+- The keyword `TNSNamesFile` specifies the filepath to the `tnsnames.ora` file located on the Oracle server.
+- The keyword `ServerName` specifies the alias used inside the `tnsnames.ora` that will be used to replace the host name and the port.
+
+
 #### PUSHDOWN = ON | OFF
 
 **Applies to: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.** States whether computation can be pushed down to the external data source. It is on by default.
@@ -1423,6 +1452,24 @@ CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
 WITH (LOCATION = 'oracle://145.145.145.145:1521',
 CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
 CREDENTIAL = [OracleProxyCredential]);
+```
+
+### TNS Oracle Support
+
+Starting in [!INCLUDE[SQL2022](../../includes/applies-to-version/sqlserver2022.md)] Cumulative Update 2, `CREATE EXTERNAL DATA SOURCE` now supports the use of TNS files when connecting to Oracle.
+The `CONNECTION_OPTIONS` parameter was expanded and now uses `TNSNamesFile` and `ServerName` as variables to browse the `tnsnames.ora` file and establish connection with the server.
+
+In the example below, during runtime SQL Server will search for the `tnsnames.ora` file location especified by `TNSNamesFile` and search for the host and network port especified by `ServerName`.
+
+```sql
+CREATE EXTERNAL DATA SOURCE [external_data_source_name]
+WITH (
+LOCATION = N'oracle://XE', 
+CREDENTIAL = [OracleCredentialTest], 
+CONNECTION_OPTIONS = N'TNSNamesFile=C:\Temp\tnsnames.ora;ServerName=XE'
+)
+GO
+
 ```
 
 ### B. Create external data source to reference a SQL Server named instance via PolyBase connectivity

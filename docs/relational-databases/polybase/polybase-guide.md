@@ -80,7 +80,8 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 * [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
 * [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-compatible storage connector.
-
+* [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Cumulative update 19 introduced support for Oracle TNS.
+* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Cumulative update 2 introduced support for Oracle TNS.
 
  Examples of external connectors include:
 

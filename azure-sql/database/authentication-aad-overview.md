@@ -105,13 +105,13 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
 
     Grant the `db_owner` role directly to the individual Azure AD user to mitigate the **CREATE DATABASE SCOPED CREDENTIAL** issue.
 
-- These system functions return NULL values when executed under Azure AD principals:
+- These system functions are not supported and return NULL values when executed under Azure AD principals:
 
   - `SUSER_ID()`
-  - `SUSER_NAME(<admin ID>)`
-  - `SUSER_SNAME(<admin SID>)`
-  - `SUSER_ID(<admin name>)`
-  - `SUSER_SID(<admin name>)`
+  - `SUSER_NAME(<ID>)`
+  - `SUSER_SNAME(<SID>)`
+  - `SUSER_ID(<name>)`
+  - `SUSER_SID(<name>)`
 
 ### SQL Managed Instance
 

@@ -102,6 +102,8 @@
           href: database/transparent-data-encryption-byok-overview.md
         - name: Managed identities with CMK
           href: database/transparent-data-encryption-byok-identity.md
+        - name: Cross-tenant CMK
+          href: database/transparent-data-encryption-byok-cross-tenant.md
 
     - name: Business continuity
       displayName: Backup, back up, restore, recovery
@@ -675,6 +677,8 @@
         href: database/dynamic-data-masking-configure-portal.md
       - name: Create server configured with UMI and customer-managed TDE
         href: database/transparent-data-encryption-byok-create-server.md
+      - name: Create server configured with cross-tenant customer-managed TDE
+        href: database/transparent-data-encryption-byok-create-server-cross-tenant.md
       - name: IP-based firewall
         href: database/firewall-configure.md
       - name: Ledger

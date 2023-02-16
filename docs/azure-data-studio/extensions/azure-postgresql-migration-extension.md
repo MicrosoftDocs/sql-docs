@@ -13,12 +13,11 @@ ms.topic: conceptual
 
 [!INCLUDE [database-migration-services-ads](../../includes/database-migration-services-postgresql-ads.md)]
 
-The Azure PostgreSQL migration extension in Azure Data Studio helps you assess your PostgreSQL workload for migrating to Azure Database for PostgreSQL - Flexible Server. The extension identifies an appropriate PostgreSQL target with rightsizing recommendations and the complexity of the migration.
+The Azure PostgreSQL migration extension in Azure Data Studio helps you assess your PostgreSQL workload for migrating to Azure Database for PostgreSQL - Flexible Server. The extension identifies an appropriate PostgreSQL target with rightsizing recommendations for migrations.
 
 ## Prerequisites
 
-- [Azure Data Studio](../download-azure-data-studio.md).
-  - Version must be 1.39 and higher.
+- [Azure Data Studio (1.39 and higher)](../download-azure-data-studio.md).
 - PostgreSQL Server instance running 9.3 or higher.
 - PostgreSQL users should have CONNECT and SELECT privileges on the databases of the instance.
 

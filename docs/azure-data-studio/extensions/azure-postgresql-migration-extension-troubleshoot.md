@@ -196,7 +196,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
 
 ### Error Code: PGSQLC-0001
 
-Error Message: Failed to collect PG Server Compatibility data with an unknown error.
+Error Message: Failed to collect PostgreSQL Server Compatibility data with an unknown error.
 
 Possible Causes: This error occurs during the collection of Server Compatibility data.
 
@@ -204,7 +204,7 @@ Remediation actions: To investigate further, go through the [logs](#logs) to und
 
 ### Error Code: PGSQLC-0002
 
-Error Message: Failed to collect PG Database Compatibility data with an unknown error.
+Error Message: Failed to collect PostgreSQL Database Compatibility data with an unknown error.
 
 Possible Causes: This error occurs during the collection of Database Compatibility data.
 
@@ -212,9 +212,9 @@ Remediation actions: To investigate further, go through the [logs](#logs) to und
 
 ### Error Code: PGSQLC-0003
 
-Error Message: Failed to collect PG performance data with an unknown error.
+Error Message: Failed to process the performance data.
 
-Possible causes: This Error occurred during the collection of PG performance data.
+Possible causes: This Error occurred during the collection of PostgreSQL performance data.
 
 Remediation actions: Try to create a new assessment. To investigate further, go through the [log](/sql/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension) to understand the reason for the error. If the issue persists, [contact Microsoft for help](azure-postgresql-migration-extension.md#get-help-from-microsoft-support).
 
@@ -246,7 +246,7 @@ Remediation actions: Try to create a new assessment. To investigate further, go 
 
 Error Message: Failed to aggregate the collected performance data details with an unknown error.
 
-Possible Causes: The performance aggregator failed to process the performance data.
+Possible Causes: Failed to process the performance data.
 
 Remediation actions: To investigate further, go through the [logs](#logs) to understand the reason for the error. [contact Microsoft for help](azure-postgresql-migration-extension.md#get-help-from-microsoft-support).
 
@@ -268,15 +268,15 @@ Remediation actions: You may need to refer to PG documentation to resolve this i
 
 ### Error Code: PGDC-10002
 
-Error Message: Connection timed out to the PG server. Navigate to the connections panel and refresh the connection to the PG server.
+Error Message: Connection timed out to the PostgreSQL Server. Navigate to the connections panel and refresh the connection to the PostgreSQL Server.
 
 Possible causes: This error may appear due to any of the given reasons-
 
-1. PG server connection terminated forcefully or timed out.
+1. PostgreSQL Server connection terminated forcefully or timed out.
 
-1. Network connectivity to the PG server is unstable or lost.
+1. Network connectivity to the PostgreSQL Server is unstable or lost.
 
-Remediation actions: Try to reconnect to the PG server or refresh the connection. Also, ping the PG server to check the network connectivity between your machine and the PG server is stable. Check if the timeout parameters are correctly set in postgresql.conf file.
+Remediation actions: Try to reconnect to the PostgreSQL Server or refresh the connection. Also, ping the PostgreSQL Server to check the network connectivity between your machine and the PostgreSQL Server is stable. Check if the timeout parameters are correctly set in postgresql.conf file.
 
 ### Error Code: PGDC-10003
 
@@ -284,11 +284,11 @@ Error Message: Login failed due to invalid credentials. Verify the login credent
 
 Possible Causes: Login failure might be due to invalid credentials.
 
-Remediation actions: You must ensure that the PG Server credentials provided are correct. Verify the login credentials for the database and try again.
+Remediation actions: You must ensure that the PostgreSQL Server credentials provided are correct. Verify the login credentials for the database and try again.
 
 ### Error Code: PGDC-10004
 
-Error Message: Connected PG server is unavailable due to an underlying PG exception.
+Error Message: Connected PostgreSQL Server is unavailable due to an underlying PG exception.
 
 Possible Causes: The database might be down or unwilling to accept connections.
 

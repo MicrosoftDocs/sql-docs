@@ -1,6 +1,6 @@
 ---
 title: Azure PostgreSQL migration extension
-description: Learn how to install the Azure Data Studio Azure Database for PostgreSQL - Flexible Server extension. This extension helps guide you choose the best Azure Database for PostgreSQL migration path.
+description: Learn how to install the Azure Data Studio Azure Database for PostgreSQL - Flexible Server extension. This extension helps you choose the best Azure Database for PostgreSQL migration path.
 author: apduvuri
 ms.author: adityaduvuri
 ms.reviewer: maghan, randolphwest

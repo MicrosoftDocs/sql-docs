@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting the Azure PostgreSQl migration extension errors in Azure Data Studio
+title: Troubleshooting the Azure PostgreSQL migration extension errors in Azure Data Studio
 description: This article explains how to determine, diagnose, and fix issues/errors that you might encounter when you use Azure PostgreSQL migration extension.
 author: apduvuri
 ms.author: adityaduvuri

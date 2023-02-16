@@ -82,7 +82,7 @@ SQLCMD scripts in the Query Editor can use the same features that all Transact\-
 > [!IMPORTANT]  
 > When executed from the command line, the **sqlcmd** utility permits full interaction with the operating system. When you use the Query Editor in **SQLCMD Mode**, you must be careful not to execute interactive statements. The Query Editor cannot respond to operating system prompts.
 
- For more information about how to run SQLCMD, see [Sqlcmd utility](/sql/tools/sqlcmd/sqlcmd-utility), or take the SQLCMD tutorial.
+ For more information about how to run SQLCMD, see [Sqlcmd utility](./sqlcmd-utility.md), or take the SQLCMD tutorial.
 
 ## Enable SQLCMD Scripting by Default
 

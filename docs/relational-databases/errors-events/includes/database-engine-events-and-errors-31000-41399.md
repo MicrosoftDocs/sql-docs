@@ -89,7 +89,7 @@ ms.topic: include
 |    33022    |    16    |    No    |    Cannot obtain cryptographic provider properties. Provider error code: %d.    |
 |    33023    |    16    |    No    |    The %S_MSG is too long. Maximum allowed length is %d bytes.    |
 |    33024    |    16    |    No    |    Cryptographic provider %S_MSG '%ls' in dll is different from the guid recorded in system catalog for provider with id %d.    |
-|    33025    |    16    |    No    |    Invalid cryptograpihic provider property: %S_MSG.    |
+|    33025    |    16    |    No    |    Invalid cryptographic provider property: %S_MSG.    |
 |    33026    |    16    |    No    |    Cryptographic provider with guid '%ls' already exists.    |
 |    [33027](../mssqlserver-33027-database-engine-error.md)    |        |        |    Failed to load cryptographic provider '%.*ls' due to an invalid Authenticode signature or invalid file path. Check previous messages for other failures.    |
 |    33027    |    16    |    No    |    Cannot load library '%.*ls'. See errorlog for more information.    |

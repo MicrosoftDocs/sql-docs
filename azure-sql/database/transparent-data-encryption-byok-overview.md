@@ -15,7 +15,8 @@ ms.custom:
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Azure SQL transparent data encryption with customer-managed key
-[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+
+[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
 Azure SQL [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) with customer-managed key enables Bring Your Own Key (BYOK) scenario for data protection at rest, and allows organizations to implement separation of duties in the management of keys and data. With customer-managed TDE, customer is responsible for and in a full control of a key lifecycle management (key creation, upload, rotation, deletion), key usage permissions, and auditing of operations on keys.
 

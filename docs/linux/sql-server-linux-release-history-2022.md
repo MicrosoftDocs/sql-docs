@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2022 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 11/16/2022
+ms.date: 02/14/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -20,7 +20,24 @@ The following table lists the release history for [!INCLUDE[ssSQL22](../includes
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
-| [GA](#GA)          | 16.0.1000.6    | 2022-11-16   |
+| [GDR 1](#GDR1)        | 16.0.1050.5   | 2023-02-14   |
+| [GA](#GA)             | 16.0.1000.6   | 2022-11-16   |
+
+## <a id="GDR1"></a> GDR 1 (February 2023)
+
+This is the General Distribution Release GDR1 (GDR 1) of [!INCLUDE[ssSQL22](../includes/sssql22-md.md)]. This is a security update that only includes fixes for GDR releases. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 16.0.1050.5. For information about the fixes and improvements in this release, see [KB 5021522](https://support.microsoft.com/help/5021522).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 8.x RPM packages** | 16.0.1050.5-4 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-16.0.1050.5-4.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-extensibility-16.0.1050.5-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-fts-16.0.1050.5-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-ha-16.0.1050.5-4.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-polybase-16.0.1050.5-4.x86_64.rpm)<br />|
+| **SLES 15 RPM packages** | 16.0.1050.5-4 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/mssql-server-16.0.1050.5-4.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/mssql-server-extensibility-16.0.1050.5-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/mssql-server-fts-16.0.1050.5-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/mssql-server-ha-16.0.1050.5-4.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/mssql-server-polybase-16.0.1050.5-4.x86_64.rpm)<br />|
+| **Ubuntu 20.04 Debian packages** | 16.0.1050.5-4 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server/mssql-server_16.0.1050.5-4_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_16.0.1050.5-4_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server-fts/mssql-server-fts_16.0.1050.5-4_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server-ha/mssql-server-ha_16.0.1050.5-4_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server-polybase/mssql-server-polybase_16.0.1050.5-4_amd64.deb)<br />|
+
+Go back to the [release history](#release-history).
 
 ## <a id="GA"></a> GA (November 2022)
 
@@ -33,7 +50,6 @@ Package details and download locations for the RPM and Debian packages are liste
 - [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-Text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
-- [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |

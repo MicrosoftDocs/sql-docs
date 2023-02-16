@@ -99,11 +99,11 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
   - Imported members from other Azure AD's who are native or federated domain members.
   - Active Directory groups created as security groups.
 
-- Azure AD users that are part of a group that has `db_owner` server role cannot use the **[CREATE DATABASE SCOPED CREDENTIAL](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)** syntax against Azure SQL Database and Azure Synapse. You will see the following error:
+- Azure AD users that are part of a group that is member of the `db_owner` database role cannot use the **[CREATE DATABASE SCOPED CREDENTIAL](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)** syntax against Azure SQL Database and Azure Synapse. You will see the following error:
 
     `SQL Error [2760] [S0001]: The specified schema name 'user@mydomain.com' either does not exist or you do not have permission to use it.`
 
-    Grant the `db_owner` role directly to the individual Azure AD user to mitigate the **CREATE DATABASE SCOPED CREDENTIAL** issue.
+    To mitigate the **CREATE DATABASE SCOPED CREDENTIAL** issue add the individual Azure AD user the `db_owner` role directly.
 
 - These system functions return NULL values when executed under Azure AD principals:
 

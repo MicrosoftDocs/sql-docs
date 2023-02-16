@@ -35,7 +35,7 @@ Follow these steps to install the **Azure PostgreSQL migration** extension in Az
     1. Once installed the **PostgreSQL** extension is also installed.
     1. Once installed **.NET 6** is also installed.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/search-extension.png" alt-text="Screenshot to show a search of the extension." lightbox="media/azure-postgresql-migration-extension/search-extension.png" lightbox="media/azure-postgresql-migration-extension/search-extension.png":::
+:::image type="content" source="media/azure-postgresql-migration-extension/search-extension.png" alt-text="Screenshot to show a search of the extension." lightbox="media/azure-postgresql-migration-extension/search-extension.png":::
 
 ## Connect to a PostgreSQL instance
 

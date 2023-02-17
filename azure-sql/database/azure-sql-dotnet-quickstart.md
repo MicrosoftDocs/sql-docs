@@ -137,23 +137,25 @@ Complete the following steps to connect to Azure SQL using the SqlClient library
     app.MapGet("/Person", () =>
     {
         var rows = new List<string>();
-    
-        SqlConnection conn = new SqlConnection(connectionString);
-        conn.Open();
-    
-        SqlCommand command = new SqlCommand("SELECT * FROM Persons", conn);
-        SqlDataReader reader = command.ExecuteReader();
-    
-        if (reader.HasRows)
+
+        using (SqlConnection conn = new SqlConnection(connectionString))
         {
-            while (reader.Read())
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Persons", conn);
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.HasRows)
             {
-                rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
+                while (reader.Read())
+                {
+                    rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
+                }
             }
-        }
-    
-        reader.Close();
-    
+
+            reader.Close();
+        };
+
         return rows;
     })
     .WithName("GetPersons")
@@ -161,22 +163,24 @@ Complete the following steps to connect to Azure SQL using the SqlClient library
     
     app.MapPost("/Person", (Person person) =>
     {
-        SqlConnection conn = new SqlConnection(connectionString);
-        conn.Open();
-    
-        SqlCommand command = new SqlCommand(
-              $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
-              conn);
-    
-        SqlDataReader reader = command.ExecuteReader();
-        reader.Close();
+        using(SqlConnection conn = new SqlConnection(connectionString)) 
+        {
+            conn.Open();
+        
+            SqlCommand command = new SqlCommand(
+                  $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
+                  conn);
+        
+            SqlDataReader reader = command.ExecuteReader();
+            reader.Close();
+        };
     })
     .WithName("CreatePerson")
     .WithOpenApi();
     ```
-    
+
     Finally, add the `Person` class to the bottom of the `Program.cs` file. This class represents records in the SQL database.
-    
+
     ```csharp
     public class Person
     {
@@ -184,7 +188,7 @@ Complete the following steps to connect to Azure SQL using the SqlClient library
         public string LastName { get; set; }
     }
     ```
-    
+
 ## Run and test the app locally
 
 The app is ready to be tested locally. Make sure you're signed in to Visual Studio or the Azure CLI with the same account you set as the admin for your database.

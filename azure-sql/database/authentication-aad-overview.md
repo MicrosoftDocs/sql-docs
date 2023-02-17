@@ -99,11 +99,12 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
   - Imported members from other Azure ADs who are native or federated domain members.
   - Active Directory groups created as security groups.
 
-- Azure AD users that are part of a group that has `db_owner` server role cannot use the **[CREATE DATABASE SCOPED CREDENTIAL](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)** syntax against Azure SQL Database and Azure Synapse. You'll see the following error:
+
+- Azure AD users that are part of a group that is member of the `db_owner` database role cannot use the **[CREATE DATABASE SCOPED CREDENTIAL](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)** syntax against Azure SQL Database and Azure Synapse. You'll see the following error:
 
     `SQL Error [2760] [S0001]: The specified schema name 'user@mydomain.com' either doesn't exist or you do not have permission to use it.`
 
-    Grant the `db_owner` role directly to the individual Azure AD user to mitigate the **CREATE DATABASE SCOPED CREDENTIAL** issue.
+    To mitigate the **CREATE DATABASE SCOPED CREDENTIAL** issue add the individual Azure AD user the `db_owner` role directly.
 
 - These system functions aren't supported and return NULL values when executed under Azure AD principals:
 
@@ -117,7 +118,9 @@ To create a contained database user in Azure SQL Database, Azure SQL Managed Ins
 
 - Azure AD server principals (logins) and users are supported for [SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
 - Setting Azure AD server principals (logins) mapped to an Azure AD group as database owner isn't supported in [SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
+
   - An extension of this is that when a group is added as part of the `dbcreator` server role, users from this group can connect to the SQL Managed Instance and create new databases, but won't be able to access the database. This is because the new database owner is SA, and not the Azure AD user. This issue doesn't manifest if the individual user is added to the `dbcreator` server role.
+
 - SQL Agent management and jobs execution are supported for Azure AD server principals (logins).
 - Database backup and restore operations can be executed by Azure AD server principals (logins).
 - Auditing of all statements related to Azure AD server principals (logins) and authentication events is supported.

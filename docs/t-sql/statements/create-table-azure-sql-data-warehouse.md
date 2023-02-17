@@ -352,7 +352,8 @@ For more information, see these articles:
 
 <a name="LimitationsRestrictions"></a>  
 ## Limitations and Restrictions  
- You can't define a DEFAULT constraint on a distribution column.  
+- You can't define a DEFAULT constraint on a distribution column.  
+- Table Name cannot be greater than 100 characters.
   
 ### Partitions
 When using partitions, the partition column can't have a Unicode-only collation. For example, the following statement fails.  

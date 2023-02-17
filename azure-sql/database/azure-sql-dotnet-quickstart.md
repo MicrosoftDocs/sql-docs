@@ -12,7 +12,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 # Connect to and query Azure SQL Database using .NET and the SqlClient library
 
-In this quickstart, you'll connect an application to an Azure SQL Database and perform queries using .NET and the `Microsoft.Data.SqlClient` library. This quickstart follows the recommended passwordless approach to connect to the database without the use of connection strings. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to an Azure SQL Database and perform queries using .NET and the `Microsoft.Data.SqlClient` library. This quickstart follows the recommended passwordless approach to connect to the database without the use of connection strings. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
@@ -23,17 +23,17 @@ In this quickstart, you'll connect an application to an Azure SQL Database and p
 
 ## Configure the database
 
-Secure, passwordless connections to Azure SQL with .NET require certain database configurations. Verify the following settings are applied to your database server to properly connect to your Azure SQL Database in both local and hosted environments:
+Secure, passwordless connections to Azure SQL with .NET require certain database configurations. Verify the following settings on your database server to properly connect to your Azure SQL Database in both local and hosted environments:
 
-1) For local development connections, make sure your Azure SQL Database server has a firewall rule enabled to allow your client IP address to connect. You can configure this on the **Networking** page of your database server by selecting **Add your client IPv4 address(xx.xx.xx.xx)**.
+1) For local development connections, make sure your Azure SQL Database server has a firewall rule enabled to allow your client IP address to connect. You can configure firewall rules on the **Networking** page of your database server by selecting **Add your client IPv4 address(xx.xx.xx.xx)**.
 
     :::image type="content" source="media/passwordless-connections/configure-firewall-small.png" lightbox="media/passwordless-connections/configure-firewall.png" alt-text="A screenshot showing how to configure firewall rules.":::
 
 1) The SQL Server must also have Azure Active Directory authentication enabled with an admin account assigned. For local development connections, the admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your database server has Azure Active Directory authentication enabled on the Azure Active Directory page.
 
-    :::image type="content" source="media/passwordless-connections/enable-active-directory-small.png" lightbox="media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable ActiveDdirectory authentication.":::
+    :::image type="content" source="media/passwordless-connections/enable-active-directory-small.png" lightbox="media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
 
-1) If you are using a personal azure account, you'll need to make sure you have [Azure Active Directory setup and configured for Azure SQL](/azure/azure-sql/database/authentication-aad-configure) in order to assing your account as a SQL Server admin. If you are using a corporate account, this will most likely already be configured for you.
+1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL](/azure/azure-sql/database/authentication-aad-configure) in order to assign your account as a SQL Server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
 
 ## Create the project
 
@@ -43,13 +43,13 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 1. At the top of Visual Studio, navigate to **File** > **New** > **Project..**.
 
-1. In the dialog window, enter *asp.net* into the project template search box and select the ASP.NET Core Web API result. Choose **Next** at the bottom of the dialog.
+1. In the dialog window, enter *ASP.NET* into the project template search box and select the ASP.NET Core Web API result. Choose **Next** at the bottom of the dialog.
 
-1. For the **Project Name**, enter *DotnetSQL*. Leave the default values for the rest of the fields and select **Next**.
+1. For the **Project Name**, enter *DotNetSQL*. Leave the default values for the rest of the fields and select **Next**.
 
-1. For the **Framework**, ensure .NET 7.0 is selected and uncheck **Use controllers (uncheck to use minimal APIs)**. This tutorial uses a Minimal API template to streamline endpoint creation and configuration. 
+1. For the **Framework**, select .NET 7.0 and uncheck **Use controllers (uncheck to use minimal APIs)**. This tutorial uses a Minimal API template to streamline endpoint creation and configuration. 
 
-1. Choose **Create**. The new project will open inside the Visual Studio environment.
+1. Choose **Create**. The new project opens inside the Visual Studio environment.
 
 ## [.NET CLI](#tab/net-cli)
 
@@ -74,7 +74,7 @@ To connect to Azure SQL using .NET, install the `Microsoft.Data.SqlClient`. This
 
 1. In the **Solution Explorer**, right-click the **Dependencies** node of your project and select **Manage NuGet Packages**.
 
-1. In the resulting window, search for *SqlClient*. Select the `Microsoft.Data.SqlClient` result, and select **Install**.
+1. In the resulting window, search for *SqlClient*. Locate the `Microsoft.Data.SqlClient` result and select **Install**.
 
 ## [.NET CLI](#tab/net-cli)
 
@@ -90,13 +90,13 @@ dotnet add package Microsoft.Data.SqlClient
 
 The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL, which you can learn more about on the [DefaultAzureCredential overview](/dotnet/azure/sdk/authentication#defaultazurecredential).
 
-`DefaultAzureCredential` supports multiple authentication methods and determines which method should be used at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The order and locations in which `DefaultAzureCredential` looks for credentials can be found in the [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential).
+`DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
 Complete the following steps to connect to Azure SQL using the SqlClient library and `DefaultAzureCredential`:
 
-1) Update the `environmentVariables` section of the `launchSettings.json` file to match the code below. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
+1) Update the `environmentVariables` section of the `launchSettings.json` file to match the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
 
-    The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. This is implemented internally by the `Microsoft.Data.SqlClient` library. When running locally the app will authenticate with the user you are signed into Visual Studio with. Once the app is deployed to Azure, the same code will discover and apply the managed identity that is associated with the hosted app, which you'll configure later.
+    The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `Microsoft.Data.SqlClient` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
     
     > [!NOTE]
     > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
@@ -187,24 +187,24 @@ Complete the following steps to connect to Azure SQL using the SqlClient library
     
 ## Run and test the app locally
 
-The app is ready to be tested locally. Make sure you are signed in to Visual Studio or the Azure CLI with the same account you set as the admin for your database.
+The app is ready to be tested locally. Make sure you're signed in to Visual Studio or the Azure CLI with the same account you set as the admin for your database.
 
 1) Press the run button at the top of Visual Studio to launch the API project.
 
 1) On the Swagger UI page, expand the POST method and select **Try it**.
 
-1) Modify the sample JSON to include values for the first and last name. Select **Execute** to add a new record to the database. The API will return a successful response.
+1) Modify the sample JSON to include values for the first and last name. Select **Execute** to add a new record to the database. The API returns a successful response.
 
-    :::image type="content" source="media/passwordless-connections/api-testing-small.png" lightbox="media/passwordless-connections/api-testing.png" alt-text="A screenshot showing how to configure firewall rules.":::
+    :::image type="content" source="media/passwordless-connections/api-testing-small.png" lightbox="media/passwordless-connections/api-testing.png" alt-text="A screenshot showing how to test the API.":::
 
-1) Expand the **GET** method on the Swagger UI page and select **Try it**. Choose **Execute**, and the person you just created should be returned.
+1) Expand the **GET** method on the Swagger UI page and select **Try it**. Choose **Execute**, and the person you just created is returned.
 
 ## Deploy to Azure App Service
 
 The app is ready to be deployed to Azure. Visual Studio can create an Azure App Service and deploy your application in a single workflow.
 
 1. Make sure the app is stopped and builds successfully.
-1. In Visual Studio solution explorer, right click on the top level project node and select **Publish**.
+1. In Visual Studio solution explorer, right select on the top level project node and select **Publish**.
 1. In the publishing dialog, select **Azure** as the deployment target, and then select **Next**.
 1. For the specific target, select **Azure App Service (Windows)**, and then select **Next**.
 1. Select the green **+** icon to create a new App Service to deploy to and enter the following values:
@@ -212,23 +212,23 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
     * **Name**: Leave the default value.
     * **Subscription name**: Select the subscription to deploy to.
     * **Resource group**: Select **New** and create a new resource group called *msdocs-dotnet-sql*.
-    * **Hosting Plan**: Select **New** to open the hosting plan dialog. Leave the default values and select **Ok**.
+    * **Hosting Plan**: Select **New** to open the hosting plan dialog. Leave the default values and select **OK**.
     * Select **Create** to close the original dialog. Visual Studio creates the App Service resource in Azure.
 
-        :::image type="content" source="media/passwordless-connections/create-app-service-small.png" lightbox="media/passwordless-connections/create-app-service.png" alt-text="A screenshot showing how to enable ActiveDdirectory authentication.":::
+        :::image type="content" source="media/passwordless-connections/create-app-service-small.png" lightbox="media/passwordless-connections/create-app-service.png" alt-text="A screenshot showing how to deploy with Visual Studio.":::
 
 1. Once the resource is created, make sure it's selected in the list of app  services, and then select **Next**.
-1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then choose **Finish**
+1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then choose **Finish**.
 
 1. Select **Publish** in the upper right of the publishing profile summary to deploy the app to Azure.
 
-When the deployment finishes, Visual Studio launches the browser to display the hosted app, but at this point the app does not work correctly on Azure. You still need to configure the secure connection between the App Service and the Azure SQL Database to retrieve your data.
+When the deployment finishes, Visual Studio launches the browser to display the hosted app, but at this point the app doesn't work correctly on Azure. You still need to configure the secure connection between the App Service and the Azure SQL Database to retrieve your data.
 
 ## Connect the App Service to Azure SQL
 
 The following steps are required to connect the App Service instance to Azure SQL:
 
-1) Create a managed identity for the App Service. The managed identity will automatically be discovered by the `Microsoft.Data.SqlClient` library included in your app, just like it discovered your local Visual Studio user.
+1) Create a managed identity for the App Service. The `Microsoft.Data.SqlClient` library included in your app will automatically discover the managed identity, just like it discovered your local Visual Studio user.
 2) Create an Azure SQL Database user and associate it with the App Service managed identity.
 3) Assign SQL roles to the database user that allow for read, write, and potentially other permissions.
 
@@ -236,7 +236,7 @@ There are multiple tools available to implement these steps:
 
 ## [Service Connector (Recommended)](#tab/service-connector)
 
-Service connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to an Azure SQL Database via the Azure CLI using the `az webapp connection create sql` command. This single command will complete the three steps mentioned above for you.
+Service connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to an Azure SQL Database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.
 
 ```bash
 az webapp connection create sql
@@ -250,11 +250,11 @@ az webapp connection create sql
 
 You can verify the changes made by service connector on the App Service settings.
 
-1) Navigate to the **Identity** page for your App Service. Under the **System assigned** tab, the **Status** should be set to **On**. This value means that a system-assigned managed identity was enabled for you rapp.
+1) Navigate to the **Identity** page for your App Service. Under the **System assigned** tab, the **Status** should be set to **On**. This value means that a system-assigned managed identity was enabled for your app.
 
-2) Navigate to the **Configuration** page for your App Service. Under the **Connection strings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the passwordless connection string that was generated. The name of this connection string aligns with the one you configured in your app, so it will be discovered automatically when running in Azure.
+2) Navigate to the **Configuration** page for your App Service. Under the **Connection strings** tab, you should see a connection string called **AZURE_SQL_CONNECTIONSTRING**. Select the **Click to show value** text to view the generated passwordless connection string. The name of this connection string aligns with the one you configured in your app, so it will be discovered automatically when running in Azure.
 
-## [Azure Portal](#tab/azure-portal)
+## [Azure portal](#tab/azure-portal)
 
 The Azure portal allows you to work with managed identities and run queries against an Azure SQL Database. Complete the following steps to create a passwordless connection from your App Service instance to Azure SQL:
 
@@ -262,7 +262,7 @@ The Azure portal allows you to work with managed identities and run queries agai
 
 1) In the Azure portal, navigate to your App Service and select **Identity** on the left navigation.
 
-2) On the identity page, make sure the **Enable system-assigned managed identity** option is enabled. When this setting is enabled, a system-assigned managed identity is created with the same name as your App Service. System-assigned identities are tied to the service instance and are destroyed with the app when it is deleted.
+2) On the identity page, make sure the **Enable system-assigned managed identity** option is enabled. When this setting is enabled, a system-assigned managed identity is created with the same name as your App Service. System-assigned identities are tied to the service instance and are destroyed with the app when it's deleted.
 
 ### Create the database user and assign roles
 
@@ -280,9 +280,9 @@ The Azure portal allows you to work with managed identities and run queries agai
     GO
     ```
 
-    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to enable ActiveDdirectory authentication.":::
+    :::image type="content" source="media/passwordless-connections/query-editor-small.png" lightbox="media/passwordless-connections/query-editor.png" alt-text="A screenshot showing how to use the Azure Query editor.":::
 
-    This SQL script will create an Azure SQL Database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed your services are connected.
+    This SQL script creates an Azure SQL Database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
 
 ---
 

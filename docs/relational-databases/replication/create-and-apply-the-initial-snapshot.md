@@ -277,4 +277,4 @@ To work around this issue, specify a different subscriber database for each publ
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Use sqlcmd with Scripting Variables](/sql/tools/sqlcmd/sqlcmd-use-scripting-variables)
+ [Use sqlcmd with Scripting Variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

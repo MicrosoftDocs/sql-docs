@@ -234,7 +234,7 @@ This example enables the `AdventureWorks` database for merge publishing and crea
 
 ## See also
 
-- [Use sqlcmd with Scripting Variables](/sql/tools/sqlcmd/sqlcmd-use-scripting-variables)
+- [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)
 - [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)
 - [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)
 - [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)

@@ -259,4 +259,4 @@ You can create push subscriptions programmatically by using replication stored p
  [Replication management objects concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Synchronize a push subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Use sqlcmd with scripting variables](/sql/tools/sqlcmd/sqlcmd-use-scripting-variables)
+ [Use sqlcmd with scripting variables](../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

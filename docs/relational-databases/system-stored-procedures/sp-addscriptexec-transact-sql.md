@@ -65,9 +65,9 @@ sp_addscriptexec [ @publication = ] publication
   
  To use **sp_addscriptexec**, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must have read and write permissions on the snapshot location and read permissions on the location where any scripts are stored.  
   
- The [sqlcmd utility](/sql/tools/sqlcmd/sqlcmd-utility) is used to execute the script at the Subscriber, and the script is executed in the security context used by the Distribution Agent or Merge Agent when connecting to the subscription database. When the agent is run on a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [osql utility](../../tools/osql-utility.md) is used instead of [sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility).  
+ The [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md) is used to execute the script at the Subscriber, and the script is executed in the security context used by the Distribution Agent or Merge Agent when connecting to the subscription database. When the agent is run on a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [osql utility](../../tools/osql-utility.md) is used instead of [sqlcmd](../../tools/sqlcmd/sqlcmd-utility.md).  
   
- **sp_addscriptexec** is useful in applying scripts to subscribers, and uses [sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility) to apply the contents of the script to the Subscriber. However, because Subscriber configurations can vary, scripts tested prior to posting to the Publisher may still cause errors on a Subscriber. *skiperror* provides the ability to have the Distribution Agent or Merge Agent ignore errors and continue on. Use [sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility) to test scripts prior to running **sp_addscriptexec**.  
+ **sp_addscriptexec** is useful in applying scripts to subscribers, and uses [sqlcmd](../../tools/sqlcmd/sqlcmd-utility.md) to apply the contents of the script to the Subscriber. However, because Subscriber configurations can vary, scripts tested prior to posting to the Publisher may still cause errors on a Subscriber. *skiperror* provides the ability to have the Distribution Agent or Merge Agent ignore errors and continue on. Use [sqlcmd](../../tools/sqlcmd/sqlcmd-utility.md) to test scripts prior to running **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Skipped errors will continue to be logged in the Agent history for reference.  
@@ -81,4 +81,3 @@ sp_addscriptexec [ @publication = ] publication
  [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Synchronize Data](../../relational-databases/replication/synchronize-data.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  

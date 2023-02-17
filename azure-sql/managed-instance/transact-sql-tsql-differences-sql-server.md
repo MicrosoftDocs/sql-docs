@@ -4,7 +4,7 @@ description: This article discusses the Transact-SQL (T-SQL) differences between
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, bonova, danil
-ms.date: 02/08/2023
+ms.date: 02/17/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -195,9 +195,9 @@ The default instance collation is `SQL_Latin1_General_CP1_CI_AS` and can be spec
 
 ### Compatibility levels
 
-- Supported compatibility levels are 100, 110, 120, 130, 140 and 150.
+- Supported compatibility levels are 100, 110, 120, 130, 140, 150 and 160.
 - Compatibility levels below 100 aren't supported.
-- The default compatibility level for new databases is 140. For restored databases, the compatibility level remains unchanged if it was 100 and above.
+- The default compatibility level for new databases is 150. For restored databases, the compatibility level remains unchanged if it was 100 and above.
 
 See [ALTER DATABASE Compatibility Level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 

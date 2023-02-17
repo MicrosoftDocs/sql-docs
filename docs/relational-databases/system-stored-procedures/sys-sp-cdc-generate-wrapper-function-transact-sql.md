@@ -36,10 +36,7 @@ sys.sp_cdc_generate_wrapper_function
     [ [ @capture_instance sysname = ] 'capture_instance'  
     [ , [ @closed_high_end_point = ] closed_high_end_pt  
     [ , [ @column_list = ] 'column_list'  
-```  
-  
-```syntaxsql    
-[ , [ @update_flag_list = ] 'update_flag_list'  
+    [ , [ @update_flag_list = ] 'update_flag_list'  
 ```  
   
 ## Arguments  
@@ -72,7 +69,7 @@ sys.sp_cdc_generate_wrapper_function
 ## Examples  
  The following example show how you can use `sys.sp_cdc_generate_wrapper_function` to create wrappers for all the change data capture functions.  
   
-```sql  
+```syntaxsql  
 DECLARE @wrapper_functions TABLE (  
     function_name sysname,  
     create_script nvarchar(max));  

@@ -4,7 +4,7 @@ description: Learn which SQL Server features are supported in the drivers for .N
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 02/01/2022
+ms.date: 02/16/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -70,7 +70,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Yes](php/using-always-encrypted-php-drivers.md) (v5.2+) | [Yes](php/using-always-encrypted-php-drivers.md) (v5.2+) | | Yes |
 | [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Yes](php/always-encrypted-secure-enclaves.md) (v5.8+) | [Yes](php/always-encrypted-secure-enclaves.md) (v5.8+) | | Yes |
-| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
+| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-SQL-Server-from-Linux#connecting-to-servers-with-access-tokens) |
 | [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | | Yes |
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | | | | Yes<sup>[2](#note2)</sup> |

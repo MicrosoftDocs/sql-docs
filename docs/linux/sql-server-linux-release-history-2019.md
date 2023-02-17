@@ -1,6 +1,6 @@
 ---
 title: Release history for SQL Server 2019 on Linux
-description: This article contains the release history for SQL Server 2019 running on Linux. Information is included for all Cumulative Updates and GDRs.
+description: This article contains the release history for SQL Server 2019 running on Linux. Information includes all Cumulative Updates and GDRs.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
@@ -456,6 +456,6 @@ Go back to the [release history](#release-history).
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
-- [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
+- [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
 

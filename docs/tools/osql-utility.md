@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 The **osql** utility allows you to enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files. This utility uses ODBC to communicate with the server.  
   
 > [!IMPORTANT]  
->  This feature will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use **sqlcmd** instead. For more information, see [sqlcmd Utility](/sql/tools/sqlcmd/sqlcmd-utility).  
+>  This feature will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use **sqlcmd** instead. For more information, see [sqlcmd Utility](./sqlcmd/sqlcmd-utility.md).  
   
 ## Syntax  
   
@@ -201,7 +201,7 @@ osql -E -q "select name, object_id from %table%"
  The **osql** utility uses the ODBC API. The utility uses the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ODBC driver default settings for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO connection options. For more information, see Effects of ANSI Options.  
   
 > [!NOTE]  
->  The **osql** utility does not support CLR user-defined data types. To process these data types, you must use the **sqlcmd** utility. For more information, see [sqlcmd Utility](/sql/tools/sqlcmd/sqlcmd-utility).  
+>  The **osql** utility does not support CLR user-defined data types. To process these data types, you must use the **sqlcmd** utility. For more information, see [sqlcmd Utility](./sqlcmd/sqlcmd-utility.md).  
   
 ## OSQL Commands  
  In addition to [!INCLUDE[tsql](../includes/tsql-md.md)] statements within **osql**, these commands are also available.  
@@ -339,4 +339,3 @@ GO
  [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST and CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
-  

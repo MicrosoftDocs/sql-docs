@@ -61,7 +61,7 @@ For other authentication modes, the below components must be installed on the cl
 
 ## Connect using ActiveDirectoryManagedIdentity authentication mode
 
-Since driver version **v12.2.0**, the driver requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server) for a full list of the libraries that the driver depends on.
+Since driver version **v12.2.0**, the driver requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](./feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for a full list of the libraries that the driver depends on.
 
 The following example shows how to use `authentication=ActiveDirectoryManagedIdentity` mode. Run this example from inside an Azure Resource that is configured for Managed Identity.
 
@@ -148,7 +148,7 @@ You have successfully logged on as: <your Managed Identity username>
 
 The driver's `ActiveDirectoryDefault` authentication leverages the Azure Identity client library's DefaultAzureCredential chained TokenCredential implementation. The credential combines commonly used authentication methods chained together. See [DefaultAzureCredential](/java/api/overview/azure/identity-readme?#defaultazurecredential) for more details on each credential within the credential chain.
 
-`ActiveDirectoryDefault` authentication requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server) for a full list of the libraries that the driver depends on.
+`ActiveDirectoryDefault` authentication requires a run time dependency on the Azure Identity client library for Managed Identity. See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](./feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for a full list of the libraries that the driver depends on.
 
 
 The following example demonstrates how to use `authentication=ActiveDirectoryDefault` mode with the [AzureCliCredential](/java/api/com.azure.identity.azureclicredential) within the DefaultAzureCredential.
@@ -694,4 +694,4 @@ Learn more about related concepts in the following articles:
 - [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 - [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 - [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
-- [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
+- [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)

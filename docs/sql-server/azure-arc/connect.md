@@ -12,8 +12,6 @@ ms.custom: event-tier1-build-2022
 
 # Connect your SQL Server to Azure Arc
 
-
-
 This article explains how to connect your SQL Server instance to Azure Arc. Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
 ## Onboard the server to Azure Arc

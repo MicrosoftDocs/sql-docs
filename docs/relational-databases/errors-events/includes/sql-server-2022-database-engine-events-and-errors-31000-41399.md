@@ -710,7 +710,7 @@ ms.topic: include
 | 35264 | 10 | No | Always On Availability Groups data movement for database '%.\*ls' has been suspended for the following reason: "%S_MSG" (Source ID %d; Source string: '%.\*ls'). To resume data movement on the database, you will need to resume the database manually. For information about how to resume an availability database, see SQL Server Books Online. |
 | 35265 | 10 | No | Always On Availability Groups data movement for database '%.\*ls' has been resumed. This is an informational message only. No user action is required. |
 | 35266 | 10 | No | Always On Availability Groups connection with %S_MSG database established for %S_MSG database '%.\*ls' on the availability replica '%.\*ls' with Replica ID: {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. This is an informational message only. No user action is required. |
-| 35267 | 10 | No | Always On Availability Groups connection with %S_MSG database terminated for %S_MSG database '%.\*ls' on the availability replica '%.\*ls' with Replica ID: {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. This is an informational message only. No user action is required. |
+| [35267](../mssqlserver-35267-database-engine-error.md) | 10 | No | Always On Availability Groups connection with %S_MSG database terminated for %S_MSG database '%.\*ls' on the availability replica '%.\*ls' with Replica ID: {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. This is an informational message only. No user action is required. |
 | 35268 | 16 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will enter the RESTORING state. To complete recovery and bring the database online, use current log backups from the primary database to restore the log records past LSN %S_LSN. Alternatively, drop this secondary database, and prepare a new one by restoring a full database backup of the primary database followed by all subsequent log backups. |
 | 35269 | 21 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will be marked SUSPECT. To return the database to a consistent state, restore it from a clean database backup followed by all subsequent log backups. |
 | 35270 | 10 | No | Received a corrupt FileStream transport message. The '%ls' message section is invalid. |
@@ -1048,7 +1048,7 @@ ms.topic: include
 | 37350 | 16 | No | LEDGER = ON cannot be specified with SYSTEM_VERSIONING = ON and APPEND_ONLY = ON. |
 | 37351 | 16 | No | LEDGER = ON cannot be specified with PERIOD FOR SYSTEM_TIME and APPEND_ONLY = ON. |
 | 37352 | 16 | No | APPEND_ONLY = ON cannot be specified with generated always end columns. |
-| 37353 | 16 | No | Server identity does not have Azure Active Directory Readers permission. Please follow the steps here : https://learn.microsoft.com/azure/azure-sql/database/authentication-aad-service-principal |
+| 37353 | 16 | No | Server identity does not have Azure Active Directory Readers permission. Please follow the steps here : [https://learn.microsoft.com/azure/azure-sql/database/authentication-aad-service-principal](/azure/azure-sql/database/authentication-aad-service-principal) |
 | 37354 | 16 | No | LEDGER = ON cannot be specified with system versioning retention period. |
 | 37355 | 16 | No | An existing History Table cannot be specified with LEDGER=ON. |
 | 37356 | 16 | No | System Versioning cannot be altered for Ledger Tables. |
@@ -1252,7 +1252,7 @@ ms.topic: include
 | 39018 | 16 | No | Parameter '%.\*ls' uses a data type that is not supported by the runtime for '%.\*s' script. Unsupported types are timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. External script request id is %ls. |
 | 39019 | 10 | No | An external script error occurred: %.\*ls%.\*ls |
 | 39020 | 16 | No | Feature 'Advanced Analytics Extensions' is not installed. Please consult Books Online for more information on this feature. |
-| 39021 | 16 | No | Unable to launch runtime for '%.\*s' script for request id: %ls. Please check the configuration of the '%.\*s' runtime. See 'https://learn.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022?view=sql-server-ver16' for setup instructions. |
+| 39021 | 16 | No | Unable to launch runtime for '%.\*s' script for request id: %ls. Please check the configuration of the '%.\*s' runtime. See '[https://learn.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022](/sql/machine-learning/install/sql-machine-learning-services-windows-install-sql-2022)' for setup instructions. |
 | 39022 | 10 | No | STDERR message(s) from external script: %.\*ls%.\*ls |
 | 39023 | 16 | No | 'sp_execute_external_script' is disabled on this instance of SQL Server. Use sp_configure 'external scripts enabled' to enable it. |
 | 39024 | 16 | No | Parallel execution of 'sp_execute_external_script' failed. Specify WITH RESULT SETS clause with output schema. |

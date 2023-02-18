@@ -11699,6 +11699,8 @@ items:
         items:
         - name: 35250
           href: relational-databases/errors-events/mssqlserver-35250-database-engine-error.md
+        - name: 35267
+          href: relational-databases/errors-events/mssqlserver-35267-database-engine-error.md
       - name: Errors 41,000 to 41,399
         items:
         - name: 41030

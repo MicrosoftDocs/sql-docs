@@ -169,7 +169,7 @@ ms.topic: include
 | 7440 | 10 | No | Remote execution status: "%ls" . |
 | 7441 | 16 | Yes | Linked server query execution failed due to an internal error related to AAD authentication. |
 | 7442 | 16 | Yes | Linked Server use self mode AAD authentication functionality is disabled on the service side and therefore cannot be used. |
-| 7443 | 16 | Yes | AAD use-self authentication to Linked Server "%ls" failed because it is not part of any Server trust group that contains current server. Use documentation to join two servers into a Server trust group: https://learn.microsoft.com/azure/azure-sql/managed-instance/server-trust-group-overview. |
+| 7443 | 16 | Yes | AAD use-self authentication to Linked Server "%ls" failed because it is not part of any Server trust group that contains current server. Use documentation to join two servers into a Server trust group: [https://learn.microsoft.com/azure/azure-sql/managed-instance/server-trust-group-overview](/azure/azure-sql/managed-instance/server-trust-group-overview). |
 | 7444 | 16 | Yes | Linked Server access token mode AAD authentication functionality is disabled on the service side and therefore cannot be used. |
 | 7445 | 16 | Yes | AAD token for accessing linked server cannot be obtained. Error message: '%ls'. |
 | 7446 | 16 | Yes | Linked Server use MSI mode AAD authentication functionality is disabled on the service side and therefore cannot be used. |

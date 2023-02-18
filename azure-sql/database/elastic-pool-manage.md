@@ -51,6 +51,7 @@ To create and manage SQL Database elastic pools and pooled databases with Azure 
 |[Set-AzSqlElasticPool](/powershell/module/az.sql/set-azsqlelasticpool)|Modifies properties of an elastic pool For example, use the **StorageMB** property to modify the max storage of an elastic pool.|
 |[Remove-AzSqlElasticPool](/powershell/module/az.sql/remove-azsqlelasticpool)|Deletes an elastic pool.|
 |[Get-AzSqlElasticPoolActivity](/powershell/module/az.sql/get-azsqlelasticpoolactivity)|Gets the status of operations on an elastic pool|
+|[Stop-AzSqlElasticPoolActivity](/powershell/module/az.sql/stop-azsqlelasticpoolactivity) | Cancels the asynchronous update operation on an elastic pool. | 
 |[New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase)|Creates a new database in an existing pool or as a single database. |
 |[Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase)|Gets one or more databases.|
 |[Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase)|Sets properties for a database, or moves an existing database into, out of, or between elastic pools.|

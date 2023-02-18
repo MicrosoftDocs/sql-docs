@@ -34,11 +34,13 @@ A Hyperscale database contains the following types of components: compute nodes,
 
 ## Compute
 
-The compute node is where the relational engine lives. The compute node is where language, query, and transaction processing occur. All user interactions with a Hyperscale database happen through compute nodes.
+The compute node is where the relational engine lives. The compute node is where language, query, and transaction processing occur. All user interactions with a Hyperscale database happen through compute nodes.  Compute nodes can either be configured to use serverless or provisioned compute.
 
 Compute nodes have local SSD-based caches called Resilient Buffer Pool Extension (RBPEX Data Cache). RBPEX Data Cache is an intelligent low latency data cache that minimizes the need to fetch data from remote page servers.
 
 Hyperscale databases have one primary compute node where the read-write workload and transactions are processed. Up to four high availability secondary compute nodes can be added on-demand. They act as hot standby nodes for failover purposes, and may serve as read-only compute nodes to offload read workloads when desired. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) are secondary compute nodes designed to enable a variety of additional OLTP [read-scale out](read-scale-out.md) scenarios and to better support Hybrid Transactional and Analytical Processing (HTAP) workloads. A [geo secondary](active-geo-replication-overview.md) compute node can be added for disaster recovery purposes and to serve as a read-only compute node to offload read workloads in a different Azure region.
+
+In serverless, the primary replica and any high availability replicas or named replicas each independently auto-scale based on their usage.  The compute auto-scaling range for the primary replica and any named replicas are configured independently.  The auto-scaling range of any high availability replicas is inherited from the auto-scaling configuration specified by their associated primary replica or named replica.    
 
 The database engine running on Hyperscale compute nodes is the same as in other Azure SQL Database service tiers. When users interact with the database engine on Hyperscale compute nodes, the supported surface area and engine behavior are the same as in other service tiers, with the exception of [known limitations](service-tier-hyperscale.md#known-limitations).
 

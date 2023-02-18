@@ -1,10 +1,10 @@
 ---
 title: Release history for SQL Server 2017 on Linux
-description: This article contains the release history for SQL Server 2017 running on Linux. Information is included for all Cumulative Updates and GDRs.
+description: This article contains the release history for SQL Server 2017 running on Linux. Information includes all Cumulative Updates and GDRs.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 09/28/2022
+ms.date: 02/14/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -20,6 +20,7 @@ The following table lists the release history for [!INCLUDE[ssSQL17](../includes
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
+| [CU 31 GDR](#CU31-GDR) | 14.0.3460.9   | 2023-02-14   |
 | [CU 31](#CU31)        | 14.0.3456.2   | 2022-09-20   |
 | [CU 30](#CU30)        | 14.0.3451.2   | 2022-07-13   |
 | [CU 29 GDR](#CU29-GDR) | 14.0.3445.2   | 2022-06-14   |
@@ -59,6 +60,22 @@ The following table lists the release history for [!INCLUDE[ssSQL17](../includes
 | [CU 2](#CU2)          | 14.0.3008.27  | 2017-11-28   |
 | [CU 1](#CU1)          | 14.0.3006.16  | 2017-10-24   |
 | [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
+
+## <a id="CU31-GDR"></a> CU 31 GDR (February 2023)
+
+This is the Cumulative Update 31-GDR (CU 31 GDR) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3460.9. For information about the fixes and improvements in this release, see [KB 5021126](https://support.microsoft.com/help/5021126).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/)) | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3460.9-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3460.9-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3460.9-3.x86_64.rpm)<br />|
+| **SLES 12 RPM packages** | 14.0.3460.9-3 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3460.9-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3460.9-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3460.9-3.x86_64.rpm)<br />|
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3460.9-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3460.9-3_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3460.9-3_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3460.9-3_amd64.deb)<br />|
+
+Go back to the [release history](#release-history).
 
 ## <a id="CU31"></a> CU 31 (September 2022)
 
@@ -767,6 +784,6 @@ Go back to the [release history](#release-history).
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
-- [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
+- [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
 

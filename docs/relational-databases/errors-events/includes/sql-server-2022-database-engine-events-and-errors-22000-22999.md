@@ -50,7 +50,7 @@ ms.topic: include
 | 22122 | 16 | No | Change Tracking autocleanup failed on side table of "%s".  If the failure persists, use sp_flush_CT_internal_table_on_demand to clean up expired records from its side table. |
 | 22123 | 16 | No | Change Tracking autocleanup is blocked on side table of "%s". If the failure persists, check if the table "%s" is blocked by any process . |
 | 22124 | 16 | No | Change Tracking manual cleanup is blocked on side table of "%s". If the failure persists, check if the table "%s" is blocked by any process . |
-| 22125 | 16 | No | Change tracking autocleanup is currently not able to maintain retention for database ID %d. Number of expired records: %d. If this warning persists, check the following resource: https://learn.microsoft.com/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server |
+| 22125 | 16 | No | Change tracking autocleanup is currently not able to maintain retention for database ID %d. Number of expired records: %d. If this warning persists, check the following resource: [https://learn.microsoft.com/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server](/sql/relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server) |
 | 22201 | 16 | No | Internal error. Unable to acquire the latch holding buffers for DW Tiered Storage ColumnStore Scan. |
 | 22202 | 16 | No | Internal error. Unable to run the remote cs garbage collector. Error Code 22202. |
 | 22203 | 16 | No | Internal error. Unable to update the blobs table in the catalogDB. Error Code 22203. |

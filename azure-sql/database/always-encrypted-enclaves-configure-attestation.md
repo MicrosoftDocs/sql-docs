@@ -51,7 +51,11 @@ Attestation policies are specified using the [claim rule grammar](/azure/attesta
 Microsoft recommends the following policy for attesting Intel SGX enclaves used for Always Encrypted in Azure SQL Database:
 
 ```output
-version= 1.0;
+version= 1.1;
+configurationrules
+{
+    => issueproperty(type="x-ms-sgx-tcbidentifier", value="azuredefault");
+};
 authorizationrules 
 {
        [ type=="x-ms-sgx-is-debuggable", value==false ]
@@ -60,6 +64,7 @@ authorizationrules
         && [ type=="x-ms-sgx-mrsigner", value=="e31c9e505f37a58de09335075fc8591254313eb20bb1a27e5443cc450b6e33e5"] 
     => permit();
 };
+
 ```
 
 The policy verifies:

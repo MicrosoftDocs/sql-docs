@@ -306,8 +306,8 @@ ms.topic: include
 | 42034 | 16 | No | Boot of federation host failed with error 0x%08X. |
 | 42035 | 16 | No | %ls operation timed out. Request was sent to the service resulting in response timeout. The operation might start anyway. |
 | 42036 | 16 | No | %ls operation has been cancelled. |
-| 42101 | 10 | No | Reason: Unable to create or update firewall rules since Deny Public Network Access is set to Yes. Please set Deny Public Network Access to No and retry the operation (https://learn.microsoft.com/azure/azure-sql/database/connectivity-settings#deny-public-network-access). |
-| 42102 | 10 | No | Reason: Unable to set Deny Public Network Access to Yes since there is no private endpoint enabled to access the server. Please set up private endpoints and retry the operation (https://learn.microsoft.com/azure/sql-database/sql-database-private-endpoint-overview#how-to-set-up-private-link-for-azure-sql-database). |
+| 42101 | 10 | No | Reason: Unable to create or update firewall rules since Deny Public Network Access is set to Yes. Please set Deny Public Network Access to No and retry the operation ([https://learn.microsoft.com/azure/azure-sql/database/connectivity-settings#deny-public-network-access](/azure/azure-sql/database/connectivity-settings#deny-public-network-access)). |
+| 42102 | 10 | No | Reason: Unable to set Deny Public Network Access to Yes since there is no private endpoint enabled to access the server. Please set up private endpoints and retry the operation ([https://learn.microsoft.com/azure/sql-database/sql-database-private-endpoint-overview#how-to-set-up-private-link-for-azure-sql-database](/azure/sql-database/sql-database-private-endpoint-overview#how-to-set-up-private-link-for-azure-sql-database)). |
 | 42103 | 16 | No | The SQL Pool '%.\*ls' already exists. Please choose a new name. |
 | 42104 | 16 | No | Could not create SQL Pool '%.\*ls'. Please try again later. |
 | 42105 | 16 | No | The server role '%.\*ls' already exists. Please choose a new name. |

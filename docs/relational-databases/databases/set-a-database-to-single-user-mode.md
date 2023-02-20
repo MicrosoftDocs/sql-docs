@@ -22,7 +22,7 @@ This article describes how to set a user-defined database to single-user mode in
   
 -   If other users are connected to the database at the time that you set the database to single-user mode, their connections to the database will be closed without warning. 
   
--   The database remains in single-user mode even if the after the user that set the option is disconnected. At that point, a different user, but only one, can connect to the database.  
+-   The database remains in single-user mode even after the user that set the option is disconnected. At that point, a different user, but only one, can connect to the database.  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

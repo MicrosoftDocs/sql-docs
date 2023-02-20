@@ -118,7 +118,7 @@ Currently, we support TLS 1.0, 1.1, and 1.2. Setting a minimal TLS version ensur
 > [!IMPORTANT]
 > The default for the minimal TLS version is to allow all versions. After you enforce a version of TLS, it's not possible to revert to the default.
 
-For customers with applications that rely on older versions of TLS, we recommend setting the minimal TLS version according to the requirements of your applications. SQL Database, SQL Managed Instance and Azure Synapse Analytics enforce encryption (SSL/TLS) at all times for all connections regardless of a minimal TLS version setting.
+For customers with applications that rely on older versions of TLS, we recommend setting the minimal TLS version according to the requirements of your applications. If application requirements are unknown or workloads rely on older drivers that are no longer maintained, we recommend not setting any minimal TLS version.
 
 For more information, see [TLS considerations for SQL Database connectivity](connect-query-content-reference-guide.md#tls-considerations-for-database-connectivity).
 

@@ -11,9 +11,13 @@ Arc-enabled SQL Server is available in the following regions:
 
 - East US
 - East US 2
+- West US
 - West US 2
+- West US 3
 - Central US
+- North Central US
 - South Central US
+- Canada Central
 - UK South
 - France Central
 - West Europe

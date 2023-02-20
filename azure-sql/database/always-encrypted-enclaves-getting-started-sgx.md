@@ -185,15 +185,19 @@ In this step, you'll create and configure an attestation provider in Microsoft A
 1. In the **Policy text** field, replace the default policy with the below policy. For information about the below policy, see [Create and configure an attestation provider](always-encrypted-enclaves-configure-attestation.md#create-and-configure-an-attestation-provider).
 
     ```output
-    version= 1.0;
-    authorizationrules 
-    {
-           [ type=="x-ms-sgx-is-debuggable", value==false ]
-            && [ type=="x-ms-sgx-product-id", value==4639 ]
-            && [ type=="x-ms-sgx-svn", value>= 2 ]
-            && [ type=="x-ms-sgx-mrsigner", value=="e31c9e505f37a58de09335075fc8591254313eb20bb1a27e5443cc450b6e33e5"] 
-        => permit();
-    };
+  version= 1.1;
+  configurationrules
+  {
+      => issueproperty(type="x-ms-sgx-tcbidentifier", value="azuredefault");
+  };
+  authorizationrules 
+  {
+         [ type=="x-ms-sgx-is-debuggable", value==false ]
+          && [ type=="x-ms-sgx-product-id", value==4639 ]
+          && [ type=="x-ms-sgx-svn", value>= 2 ]
+          && [ type=="x-ms-sgx-mrsigner", value=="e31c9e505f37a58de09335075fc8591254313eb20bb1a27e5443cc450b6e33e5"] 
+      => permit();
+  };
     ```
 
 1. Select **Save**.

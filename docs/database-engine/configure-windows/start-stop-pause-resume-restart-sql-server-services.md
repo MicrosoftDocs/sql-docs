@@ -3,7 +3,7 @@ title: Start, stop, pause, resume, and restart SQL Server services
 description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/16/2022
+ms.date: 02/21/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -338,6 +338,21 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN (Transact-S
     # Display the state of the service.
     $DfltInstance
     ```
+
+## Checking for and enable disabled instances
+
+To check if a SQL Server service instance is disabled, perform the following steps:
+
+1. Identify the service that you're trying to check by using the information in the section [Identify the Service](start-stop-pause-resume-restart-sql-server-services.md).
+1. In the [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and locate the service you are interested in. If the value of the **Start Mode** column is set to **Other (Boot, System, Disabled or Unknown)**, it typically means the corresponding service is disabled.
+1. To enable the service, perform the following steps:
+
+    a. Right-click on the corresponding service under the Name column and switch to **Service** tab in the **<Service name> Properties** window.  
+
+    a. Review the value of the **Start Mode** and confirm that it's set to **Disabled**.
+
+    a. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [Configure Server Startup Options (SQL Server Configuration Manager)](scm-services-configure-server-startup-options.md).
+
 
 ## <a id="ServiceController"></a> Use the ServiceController class
 

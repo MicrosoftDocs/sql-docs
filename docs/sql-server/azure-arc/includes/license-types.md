@@ -3,7 +3,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 02/10/2023
 ms.topic: include
-ms.prod: sql
+ms.service: sql
 ---
 
 The following table identifies features enabled depending on license type:

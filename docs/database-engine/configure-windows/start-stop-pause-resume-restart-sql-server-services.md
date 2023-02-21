@@ -96,7 +96,7 @@ The SQL Server Configuration Manager is a snap-in for the Microsoft Management C
 
 ### <a id="configmande"></a> Start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
-1. Start SQL Server Configuration Manager, using the instructions above.
+1. Start SQL Server Configuration Manager, using the instructions in the previous section.
 
 1. If the **User Account Control** dialog box appears, select **Yes**.
 
@@ -114,7 +114,7 @@ The SQL Server Configuration Manager is a snap-in for the Microsoft Management C
 
 ### Start, stop, pause, resume, or restart the SQL Server Browser or an instance of the SQL Server Agent
 
-1. Start SQL Server Configuration Manager, using the instructions above.
+1. Start SQL Server Configuration Manager, using the instructions in the previous section.
 
 1. If the **User Account Control** dialog box appears, select **Yes**.
 
@@ -125,7 +125,7 @@ The SQL Server Configuration Manager is a snap-in for the Microsoft Management C
 1. Select **OK** to close the SQL Server Configuration Manager.
 
 > [!NOTE]  
-> SQL Server Agent cannot be paused.
+> SQL Server Agent can't be paused.
 
 ## SQL Server Management Studio
 
@@ -344,15 +344,14 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN (Transact-S
 To check if a SQL Server service instance is disabled, perform the following steps:
 
 1. Identify the service that you're trying to check by using the information in the section [Identify the Service](start-stop-pause-resume-restart-sql-server-services.md).
-1. In the [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and locate the service you are interested in. If the value of the **Start Mode** column is set to **Other (Boot, System, Disabled or Unknown)**, it typically means the corresponding service is disabled.
+1. In the [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and locate the service you're interested in. If the value of the **Start Mode** column is set to **Other (Boot, System, Disabled or Unknown)**, it typically means the corresponding service is disabled.
 1. To enable the service, perform the following steps:
 
-    a. Right-click on the corresponding service under the Name column and switch to **Service** tab in the **<Service name> Properties** window.  
+    a. Right-click on the corresponding service under the **Name** column and switch to **Service** tab in the **<Service name> Properties** window.  
 
     a. Review the value of the **Start Mode** and confirm that it's set to **Disabled**.
 
     a. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [Configure Server Startup Options (SQL Server Configuration Manager)](scm-services-configure-server-startup-options.md).
-
 
 ## <a id="ServiceController"></a> Use the ServiceController class
 

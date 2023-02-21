@@ -242,11 +242,11 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
 
 ### <a id="pauseStop"></a> Pause or stop services from the command prompt window
 
-- To pause or stop services, modify the commands in the following ways.
+To pause or stop services, modify the commands in the following ways.
 
 - To pause a service, replace **net start** with **net pause**.
 
-- To stop a service, replace **net start** with use **net stop**.
+- To stop a service, replace **net start** with **net stop**.
 
 ## <a id="TsqlProcedure"></a> Transact-SQL
 
@@ -347,11 +347,11 @@ To check if a SQL Server service instance is disabled, perform the following ste
 1. In the [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and locate the service you're interested in. If the value of the **Start Mode** column is set to **Other (Boot, System, Disabled or Unknown)**, it typically means the corresponding service is disabled.
 1. To enable the service, perform the following steps:
 
-    a. Right-click on the corresponding service under the **Name** column and switch to **Service** tab in the **\<Service name\> Properties** window.  
+    a. Right-click on the corresponding service under the **Name** column and switch to **Service** tab in the ***<Service name>*Properties** window.  
 
-    a. Review the value of the **Start Mode** and confirm that it's set to **Disabled**.
+    b. Review the value of the **Start Mode** and confirm that it's set to **Disabled**.
 
-    a. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [Configure Server Startup Options (SQL Server Configuration Manager)](scm-services-configure-server-startup-options.md).
+    c. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [Configure Server Startup Options (SQL Server Configuration Manager)](scm-services-configure-server-startup-options.md).
 
 ## <a id="ServiceController"></a> Use the ServiceController class
 

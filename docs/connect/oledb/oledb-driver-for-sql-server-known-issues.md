@@ -4,8 +4,8 @@ description: Learn about known issues and fixes for the Microsoft OLE DB Driver 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 02/07/2023
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # Microsoft OLE DB Driver for SQL Server known issues

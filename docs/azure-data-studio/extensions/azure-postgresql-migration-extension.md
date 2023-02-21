@@ -173,21 +173,17 @@ Once the assessment is complete, a consolidated output is generated.
       > [!NOTE]  
       > In the **Data collection status** card, a user can start or stop the collection at any time.
 
-   :::image type="content" source="media/azure-postgresql-migration-extension/configuration-cards.png" alt-text="Screenshot of configuration cards." lightbox="media/azure-postgresql-migration-extension/configuration-cards.png":::
+:::image type="content" source="media/azure-postgresql-migration-extension/configuration-cards-02.png" alt-text="Screenshot of configuration cards." lightbox="media/azure-postgresql-migration-extension/configuration-cards.png":::
 
 Users can select the Instance name that shows the PostgreSQL instance's summary and migration readiness. Users can go through different server parameters and features, understand the use of the parameter, and get to know the recommendation for resolving the warnings.
 
 Users can select the value next to the [Migration Readiness state](#migration-readiness-state) to determine which database is under what status.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/summary-instance.png" alt-text="Screenshot of instance summary." lightbox="media/azure-postgresql-migration-extension/summary-instance.png":::
-
 Users can select the respective databases, understand the blockers and warnings and go through the [Migration Readiness](#migration-readiness-state) summary if the database is in the Not Ready, Ready with conditions, or Ready state for migration into Azure.
-
-:::image type="content" source="media/azure-postgresql-migration-extension/summary-database.png" alt-text="Screenshot of database summary." lightbox="media/azure-postgresql-migration-extension/summary-database.png":::
 
 Users can save the assessment report on their machine for offline viewing by selecting the **Save Assessment** action.
 
-:::image type="content" source="media/azure-postgresql-migration-extension/save-assessment.png" alt-text="Screenshot to show how to save the assessment." lightbox="media/azure-postgresql-migration-extension/save-assessment.png":::
+:::image type="content" source="media/azure-postgresql-migration-extension/save-assessment-02.png" alt-text="Screenshot to show how to save the assessment." lightbox="media/azure-postgresql-migration-extension/save-assessment.png":::
 
 #### Migration Readiness state
 

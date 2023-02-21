@@ -92,7 +92,7 @@ At this point, your server or managed instance is only configured for access usi
 - **In SQL Database, create SQL logins with limited administrative permissions**
 
   - Create an additional SQL login in the `master` database.
-  - Add the Login to the `##MS_DatabaseManager##`, `##MS_LoginManager##` and `##MS_DatabaseConnector##` [server level roles](security-server-roles) using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) statement.
+  - Add the Login to the `##MS_DatabaseManager##`, `##MS_LoginManager##` and `##MS_DatabaseConnector##` [server level roles](security-server-roles.md) using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) statement.
 
 - **In SQL Synapse, create SQL logins with limited administrative permissions**
 

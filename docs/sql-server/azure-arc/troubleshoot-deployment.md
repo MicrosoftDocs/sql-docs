@@ -5,7 +5,7 @@ author: MikeRayMSFT #Required; your GitHub user alias — correct capitalization
 ms.author: mikeray #Required; Microsoft alias of the author.
 ms.topic: troubleshooting-general #Required; leave this attribute/value as-is.
 ms.date: 02/01/2023 #Required; enter the date in the mm/dd/yyyy format.
-ms.prod: sql
+ms.service: sql
 ---
 
 # Troubleshoot Azure extension for SQL Server

@@ -85,7 +85,7 @@ FROM master.sys.objects;
 
 ### A. Return the object schema name and object name
 
-*Applies to:* [!INCLUDE [SQL Server](_ssnoversion.md)]  [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asmi.md)]
+*Applies to:* [!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)] [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asmi.md)]
 
  The following example returns the object schema name, object name, and SQL text for all cached query plans that are not ad hoc or prepared statements. 
 
@@ -117,7 +117,7 @@ GO
 
  The following example returns the database, schema, and object name along with all other columns in the `sys.dm_db_index_operational_stats` dynamic management view for all objects in all databases.  
 
-*Applies to:* [!INCLUDE [SQL Server](_ssnoversion.md)]  [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asmi.md)]
+*Applies to:* [!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)] [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asmi.md)]
 
 ```sql
 SELECT QUOTENAME(DB_NAME(database_id))   

@@ -347,7 +347,7 @@ To check if a SQL Server service instance is disabled, perform the following ste
 1. In the [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and locate the service you're interested in. If the value of the **Start Mode** column is set to **Other (Boot, System, Disabled or Unknown)**, it typically means the corresponding service is disabled.
 1. To enable the service, perform the following steps:
 
-    a. Right-click on the corresponding service under the **Name** column and switch to **Service** tab in the **<Service name> Properties** window.  
+    a. Right-click on the corresponding service under the **Name** column and switch to **Service** tab in the **\<Service name\> Properties** window.  
 
     a. Review the value of the **Start Mode** and confirm that it's set to **Disabled**.
 

@@ -5,7 +5,7 @@ description: Learn about data virtualization capabilities of Azure SQL Managed I
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, wiassaf
-ms.date: 01/31/2023
+ms.date: 02/21/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -357,7 +357,7 @@ CREATE EXTERNAL TABLE tbl_TaxiRides(
 WITH (
  LOCATION = 'yellow/puYear=*/puMonth=*/*.parquet',
  DATA_SOURCE = NYCTaxiExternalDataSource,
- FILE_FORMAT = MyFileFormat
+ FILE_FORMAT = DemoFileFormat
 );
 GO
 ```
@@ -448,7 +448,7 @@ The syntax for creating statistics on external tables resembles the one used for
 
 ```sql
 CREATE STATISTICS sVendor
-ON tbl_TaxiRides (vendor_id)
+ON tbl_TaxiRides (vendorID)
 WITH FULLSCAN, NORECOMPUTE;
 ```
 

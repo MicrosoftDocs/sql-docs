@@ -48,6 +48,8 @@ landingContent:
             url: ../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md
           - text: T-SQL differences with SQL Server
             url: transact-sql-tsql-differences-sql-server.md
+          - text: Connect apps to Azure SQL Managed Instance 
+            url: database/develop-overview.md#client-connections
 
 
   # Card 
@@ -169,4 +171,3 @@ landingContent:
             url: ../database/maintenance-window-configure.md
           - text: Maintenance Window Notifications
             url: ../database/advance-notifications.md
- 

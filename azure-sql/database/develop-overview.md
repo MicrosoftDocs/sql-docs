@@ -28,13 +28,31 @@ Access to Azure SQL Database is protected with logins and firewalls. Azure SQL D
 
 Learn more about [managing database access and login](logins-create-manage.md).
 
-## Connections
+## Client connections
 
 In your client connection logic, override the default timeout to be 30 seconds. The default of 15 seconds is too short for connections that depend on the internet.
 
 If you are using a [connection pool](/dotnet/framework/data/adonet/sql-server-connection-pooling), be sure to close the connection the instant your program is not actively using it, and is not preparing to reuse it.
 
 Avoid long-running transactions because any infrastructure or connection failure might roll back the transaction. If possible, split the transaction in the multiple smaller transactions and use [batching to improve performance](../performance-improve-use-batching.md).
+
+
+It's possible to connect your application to your Azure SQL resource by using the following languages: 
+
+- [.NET with Visual Studio](connect-query-dotnet-visual-studio.md)
+- [.NET with WIndows, Linux, and macOS](connect-query-dotnet-core.md)
+- [Go](connect-query-go.md)
+- [Node.js](connect-query-nodejs.md)
+- [PHP](connect-query-php.md)
+- [Python](connect-query-python.md)
+- [Ruby](connect-query-ruby.md)
+
+It's possible to configure Azure AD authentication with your Azure SQL resource. Review the following articles for more information: 
+
+- [Connect to Azure SQL with Azure AD authentication and SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication)
+- [Use Managed Identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
+- [Connect to SQL Database from .NET App Service without secrets using a managed identity](/azure/app-service/tutorial-connect-msi-sql-database)
+
 
 ## Resiliency
 

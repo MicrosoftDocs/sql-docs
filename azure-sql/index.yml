@@ -166,6 +166,9 @@ landingContent:
             url: database/connect-query-dotnet-core.md
           - text: Python
             url: database/connect-query-python.md
+          - text: With Azure AD and SqlClient
+            url: /sql/connect/ado-net/sql/azure-active-directory-authentication
+
 
   # Card 
   - title: Reference 
@@ -225,6 +228,8 @@ landingContent:
         links:
           - text: Application development 
             url:  database/develop-overview.md
+          - text: Connect apps to Azure SQL 
+            url: database/develop-overview.md#client-connections
           - text: Disaster recovery app design
             url: database/designing-cloud-solutions-for-disaster-recovery.md
           - text: Managing rolling upgrades (SQL DB) 

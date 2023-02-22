@@ -83,7 +83,7 @@ When the restore is complete, it creates a new database on the same server as th
 You generally restore a database to an earlier point for recovery purposes. You can treat the restored database as a replacement for the original database or use it as a data source to update the original database.
 
 > [!IMPORTANT]
-> - You can run a restore on the same server or, if you have enabled geo-redundant backup, on another server in a paired region. Point-in-time restore doesn't support cross-server restoration.
+> - You can perform point-in-time restore on the same server. Cross-server and Cross subscription Point-in-time restore is not supported yet. Refer to the [Geo-restore](#Geo-Restore) section to restore to a different region for databases set with geo-redundant backup storage.
 > - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
 > - The `BackupFrequency` parameter isn't supported for Hyperscale databases. 
 > - Database restore operations are resource-intensive and may require a service tier of S3 or greater for the restoring (target) database. Once restore completes, the database or elastic pool may be scaled down, if required.

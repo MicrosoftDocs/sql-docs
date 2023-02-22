@@ -21,7 +21,7 @@ helpviewer_keywords:
 
  To use Kerberos authentication with SQL Server requires both the following conditions to be true:  
 
-- The client and server computers must be part of the same Windows domain, or in trusted domains.  
+- The client and server computers must be part of the same Windows domain, or in [trusted domains](/windows/win32/secmgmt/primary-and-trusted-domains).  
 
 - A Service Principal Name (SPN) must be registered with Active Directory, which assumes the role of the Key Distribution Center in a Windows domain. The SPN, after it's registered, maps to the Windows account that started the SQL Server instance service. If the SPN registration hasn't been performed or fails, the Windows security layer can't determine the account associated with the SPN, and Kerberos authentication isn't used.
 

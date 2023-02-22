@@ -60,6 +60,9 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 
 [!INCLUDE [license-types](includes/license-types.md)]
 
+## Feature availabiltiy by operating system
+
+[!INCLUDE [features-operating-systems](includes/features-operating-system.md)]
 ## Supported Azure regions
 
 [!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]

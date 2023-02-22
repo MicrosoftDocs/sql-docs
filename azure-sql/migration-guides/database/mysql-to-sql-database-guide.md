@@ -170,7 +170,7 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 - For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Service and tools for data migration](/azure/dms/dms-tools-matrix).
 
-- For other migration guides, see [Azure Database Migration Guide](https://datamigration.microsoft.com/). 
+- For other migration guides, see [Azure Database Migration Guide](/data-migration/).
 
 - For migration videos, see [Overview of the migration journey and recommended migration and assessment tools and services](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).
 

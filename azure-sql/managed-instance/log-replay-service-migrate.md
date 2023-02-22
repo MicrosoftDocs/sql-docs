@@ -138,14 +138,9 @@ To configure the firewall, follow these steps:
 
    :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-subnet.png" alt-text="Screenshot of the SQL managed instance Subnet page of the Azure portal, with the subnet selected.":::
 
-1. Under **Subnet delegation**, choose **Microsoft.Sql/managedInstances** from the **Delegate subnet to a service** drop-down menu. 
+1. Under **Subnet delegation**, choose **Microsoft.Sql/managedInstances** from the **Delegate subnet to a service** drop-down menu. Wait about an hour for permissions to propogate, and then, under **Service endpoints**, choose **Microsoft.Storage** from the **Services** drop-down. 
 
    :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-subnet-configuration.png" alt-text="Screenshot of the SQL managed instance Subnet configuration page of the Azure portal.":::
-
-1. Wait about an hour for permissions to propogate. 
-1. Under **Service endpoints**, choose **Microsoft.Storage** from the **Services** drop-down. 
-
-   :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-overview-page.png" alt-text="Screenshot of the SQL managed instance Overview page of the Azure portal, with the subnet selected.":::
 
 1. Next, go to your storage account in the Azure portal and select **Firewalls and virtual networks** under **Settings**. 
 1. On the **Firewalls and virtual networks** page for your storage account, choose **+Add existing virtual network** to open the **Add networks** page. 

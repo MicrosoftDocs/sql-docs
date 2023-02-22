@@ -78,7 +78,7 @@ At this point, your server or managed instance is only configured for access usi
 
 - **Create an Azure Active Directory administrator account with full administrative permissions**
 
-  Enable Azure Active Directory authentication and add an **Azure Active Directory admin** . One Azure Active Directory account can be configured as an administrator of the Azure SQL deployment with full administrative permissions. This account can be either an individual or security group account. An **Azure Active Directory admin** **must** be configured if you want to use Azure AD accounts to connect to SQL Database, SQL Managed Instance, or Azure Synapse. For detailed information on enabling Azure AD authentication for all Azure SQL deployment types, see the following articles:
+  Enable Azure Active Directory authentication and add an **Azure Active Directory admin** . One Azure Active Directory account can be configured as an administrator of the Azure SQL deployment with full administrative permissions. This account can be either an individual or security group account. An **Azure Active Directory admin** *must* be configured if you want to use Azure AD accounts to connect to SQL Database, SQL Managed Instance, or Azure Synapse. For detailed information on enabling Azure AD authentication for all Azure SQL deployment types, see the following articles:
 
   - [Use Azure Active Directory authentication for authentication with SQL](authentication-aad-overview.md)
   - [Configure and manage Azure Active Directory authentication with SQL](authentication-aad-configure.md)

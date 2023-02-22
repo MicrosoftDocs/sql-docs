@@ -97,6 +97,7 @@ WITH METADATA_ONLY, FORMAT
 ```
 > [!NOTE]
 > None of these commands support suspending system databases: master, model, and msdb for snapshot backup.
+> The maximum number of databases for the above command is 64.
 
 ### Suspend multiple user databases with a single command
 

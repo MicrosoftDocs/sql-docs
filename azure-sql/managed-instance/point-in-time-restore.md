@@ -174,15 +174,15 @@ To restore the database to another subscription, set the context to the the targ
 Set-AzContext -SubscriptionID "targetSubscriptionID"
 
 Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
-   -SubscriptionId "sourceSubscriptionID" `
-   -ResourceGroupName "sourceRGName" `
-   -InstanceName "sourceManagedInstanceName" `
-   -Name "sourceDatabaseName" `
-   -PointInTime $pointInTime `
-   -TargetInstanceDatabaseName "targetDatabaseName" `
-   -TargetInstanceName "targetManagedInstanceName" `
-   -TargetResourceGroupName "targetResourceGroupName" `
-   -TargetSubscriptionId "targetSubscriptionId"
+                              -SubscriptionId "sourceSubscriptionID" `
+                              -ResourceGroupName "sourceRGName" `
+                              -InstanceName "sourceManagedInstanceName" `
+                              -Name "sourceDatabaseName" `
+                              -PointInTime $pointInTime `
+                              -TargetInstanceDatabaseName "targetDatabaseName" `
+                              -TargetInstanceName "targetManagedInstanceName" `
+                              -TargetResourceGroupName "targetResourceGroupName" `
+                              -TargetSubscriptionId "targetSubscriptionId"
 ```
 
 
@@ -246,59 +246,59 @@ To restore a deleted managed database, run one of the following PowerShell code 
 
 To restore a deleted database to the same managed instance:
 
-    ```powershell
-    $subscriptionId = "<subscription ID>"
-    Get-AzSubscription -SubscriptionId $subscriptionId
-    Select-AzSubscription -SubscriptionId $subscriptionId
-    
-    $resourceGroupName = "<resource group name>"
-    $managedInstanceName = "<managed instance name>"
-    $deletedDatabaseName = "<source database name>"
-    $targetDatabaseName = "<target database name>"
-    
-    $deletedDatabase = Get-AzSqlDeletedInstanceDatabaseBackup -ResourceGroupName $resourceGroupName `
-    -InstanceName $managedInstanceName -DatabaseName $deletedDatabaseName
-    
-    Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name `
-       -InstanceName $deletedDatabase.ManagedInstanceName `
-       -ResourceGroupName $deletedDatabase.ResourceGroupName `
-       -DeletionDate $deletedDatabase.DeletionDate `
-       -PointInTime UTCDateTime `
-       -TargetInstanceDatabaseName $targetDatabaseName
-    ```
+```powershell-interactive
+$subscriptionId = "<subscription ID>"
+Get-AzSubscription -SubscriptionId $subscriptionId
+Select-AzSubscription -SubscriptionId $subscriptionId
+
+$resourceGroupName = "<resource group name>"
+$managedInstanceName = "<managed instance name>"
+$deletedDatabaseName = "<source database name>"
+$targetDatabaseName = "<target database name>"
+
+$deletedDatabase = Get-AzSqlDeletedInstanceDatabaseBackup -ResourceGroupName $resourceGroupName `
+-InstanceName $managedInstanceName -DatabaseName $deletedDatabaseName
+
+Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name `
+                              -InstanceName $deletedDatabase.ManagedInstanceName `
+                              -ResourceGroupName $deletedDatabase.ResourceGroupName `
+                              -DeletionDate $deletedDatabase.DeletionDate `
+                              -PointInTime UTCDateTime `
+                              -TargetInstanceDatabaseName $targetDatabaseName
+```
 
 To restore the database to a different managed instance, you also specify the names of the target resource group and the target managed instance:
 
-    ```powershell
-    $targetResourceGroupName = "<resource group of target managed instance>"
-    $targetInstanceName = "<target managed instance name>"
-    
-    Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name `
-       -InstanceName $deletedDatabase.ManagedInstanceName `
-       -ResourceGroupName $deletedDatabase.ResourceGroupName `
-       -DeletionDate $deletedDatabase.DeletionDate `
-       -PointInTime UTCDateTime `
-       -TargetInstanceDatabaseName $targetDatabaseName `
-       -TargetResourceGroupName $targetResourceGroupName `
-       -TargetInstanceName $targetInstanceName 
-    ```
+```powershell-interactive
+$targetResourceGroupName = "<resource group of target managed instance>"
+$targetInstanceName = "<target managed instance name>"
+
+Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name `
+                              -InstanceName $deletedDatabase.ManagedInstanceName `
+                              -ResourceGroupName $deletedDatabase.ResourceGroupName `
+                              -DeletionDate $deletedDatabase.DeletionDate `
+                              -PointInTime UTCDateTime `
+                              -TargetInstanceDatabaseName $targetDatabaseName `
+                              -TargetResourceGroupName $targetResourceGroupName `
+                              -TargetInstanceName $targetInstanceName 
+```
 
 To restore the database to another subscription, set the context to the the target subscription (`Set-AzContext`) and be sure to provide values for the required parameters `-TargetSubscriptionID`, and `-DeleteDate`: 
 
-```powershell-interactive 
+```powershell-interactive
 Set-AzContext -SubscriptionID "targetSubscriptionID"
 
 Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
-   -SubscriptionId "sourceSubscriptionID" `
-   -ResourceGroupName "sourceRGName" `
-   -InstanceName "sourceManagedInstanceName" `
-   -Name "sourceDatabaseName" `
-   -PointInTime $pointInTime `
-   -TargetInstanceDatabaseName "targetDatabaseName" `
-   -TargetInstanceName "targetManagedInstanceName" `
-   -TargetResourceGroupName "targetResourceGroupName" `
-   -TargetSubscriptionId "targetSubscriptionId" `
-   -DeletionDate "deletion_date"
+                              -SubscriptionId "sourceSubscriptionID" `
+                              -ResourceGroupName "sourceRGName" `
+                              -InstanceName "sourceManagedInstanceName" `
+                              -Name "sourceDatabaseName" `
+                              -PointInTime $pointInTime `
+                              -TargetInstanceDatabaseName "targetDatabaseName" `
+                              -TargetInstanceName "targetManagedInstanceName" `
+                              -TargetResourceGroupName "targetResourceGroupName" `
+                              -TargetSubscriptionId "targetSubscriptionId" `
+                              -DeletionDate "deletion_date"
 ```
 
 
@@ -311,6 +311,7 @@ az sql midb restore -s sourcesubscriptionid -g sourcegroup --mi sourceinstance
 -n sourcemanageddb --dest-name targetDbName 
 --dest-mi targetMI --dest-resource-group targetRG 
 --time "2018-05-20T05:34:22" --deleted-time "deletion_date"
+```
 
 To restore a deleted database to another subscription, be sure to set the context (`az account set`) to the source subscription: 
 

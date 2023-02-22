@@ -75,7 +75,7 @@ When you're using LRS, consider the following best practices:
 - Enable backup compression to help the network transfer speeds.
 - Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to use the latest released cmdlets.
 - Configure a [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day and time. This configuration helps achieve a more predictable time for database migrations, because system upgrades can interrupt in-progress migrations.
-- Plan to complete a single LRS migration job within a maximum of 30 days. On expiration of this time frame, the LRS job will be automatically canceled.
+- Plan to complete a single LRS migration job within a maximum of 30 days. On expiration of this time frame, the LRS job is automatically canceled.
 - For a faster database restore, enable `CHECKSUM` when you're taking your backups. SQL Managed Instance performs an integrity check on backups without `CHECKSUM`, which increases restore time. 
 
 System updates for SQL Managed Instance take precedence over database migrations in progress. During a system update on an instance, all pending LRS migrations are suspended and resumed only after the update is applied. This system behavior might prolong migration time, especially for large databases. 
@@ -120,7 +120,7 @@ You use an Azure Blob Storage account as intermediary storage for backup files b
 
 Using Azure Blob storage that's protected behind a firewall is supported, but requires additional configuration. To enable read / write access to Azure Storage with Azure Firewall turned on, you have to add the subnet of the SQL managed instance to the firewall rules of the vNet for the storage account by using MI subnet delegation and the Storage service endpoint. The storage account and the managed instance must be in the same region, or two paired regions. 
 
-If your Azure storage is behind a firewall, you'll see the following message in the SQL managed instance error log: 
+If your Azure storage is behind a firewall, you] may see the following message in the SQL managed instance error log: 
 
 ```
 Audit: Storage access denied user fault. Creating an email notification:
@@ -130,7 +130,7 @@ This generates an email that notifies you that auditing for the SQL managed inst
 
 To configure the firewall, follow these steps: 
 
-1. Go to your managed instance in the [Azure Portal](https://portal.azure.com) and select the subnet to open the **Subnets** page.
+1. Go to your managed instance in the [Azure portal](https://portal.azure.com) and select the subnet to open the **Subnets** page.
 
    :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-overview-page.png" alt-text="Screenshot of the SQL managed instance Overview page of the Azure portal, with the subnet selected.":::
 
@@ -138,16 +138,16 @@ To configure the firewall, follow these steps:
 
    :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-subnet.png" alt-text="Screenshot of the SQL managed instance Subnet page of the Azure portal, with the subnet selected.":::
 
-1. Under **Subnet delegation**, choose **Microsoft.Sql/managedInstances** from the **Delegate subnet to a service** drop-down menu. Wait about an hour for permissions to propogate, and then, under **Service endpoints**, choose **Microsoft.Storage** from the **Services** drop-down. 
+1. Under **Subnet delegation**, choose **Microsoft.Sql/managedInstances** from the **Delegate subnet to a service** drop-down menu. Wait about an hour for permissions to propagate, and then, under **Service endpoints**, choose **Microsoft.Storage** from the **Services** drop-down. 
 
    :::image type="content" source="media/log-replay-service-migrate/sql-managed-instance-subnet-configuration.png" alt-text="Screenshot of the SQL managed instance Subnet configuration page of the Azure portal.":::
 
-1. Next, go to your storage account in the Azure portal and select **Firewalls and virtual networks** under **Settings**. 
-1. On the **Firewalls and virtual networks** page for your storage account, choose **+Add existing virtual network** to open the **Add networks** page. 
+1. Next, go to your storage account in the Azure portal, select **Networking** under **Security + networking** and then choose the **Firewalls and virtual networks**  tab. 
+1. On the **Firewalls and virtual networks** tab for your storage account, choose **+Add existing virtual network** to open the **Add networks** page. 
 
    :::image type="content" source="media/log-replay-service-migrate/storage-neteworking.png" alt-text="Screenshot of the Storage Account Networking page of the Azure portal, with Add existing virtual network selected.":::
 
-1. Select the appropriate subscription, virtual network, and managed instance subnet from the drop-down menus and then select **Add**. 
+1. Select the appropriate subscription, virtual network, and managed instance subnet from the drop-down menus and then select **Add** to add the virtual network of the SQL managed instance to the storage account. 
 
 
 ## Authenticate to your Blob Storage account
@@ -435,7 +435,7 @@ When you use autocomplete mode, the migration finishes automatically when the la
 
 When you use continuous mode, the service continuously scans the Azure Blob Storage folder and restores any new backup files that get added while migration is in progress. The migration finishes only after the manual cutover has been requested. You need to use continuous mode migration when you don't have the entire backup chain in advance, and when you plan to add new backup files after the migration is in progress. We recommend this mode for active workloads for which data catch-up is required.
 
-Plan to complete a single LRS migration job within a maximum of 30 days. When this time expires, the LRS job will be automatically canceled.
+Plan to complete a single LRS migration job within a maximum of 30 days. When this time expires, the LRS job is automatically canceled.
 
 > [!NOTE]
 > When you're migrating multiple databases, LRS must be started separately for each database and point to the full URI path of the Azure Blob Storage container and the individual database folder.

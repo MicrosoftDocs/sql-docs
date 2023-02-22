@@ -10,7 +10,7 @@ The following table identifies features available by operating system:
 
 |Feature  |Windows|Linux|
 |---------|---------|---------|
-|[Discover and register SQL Servers in Azure]() |Yes |Yes |
+|[Discover and register SQL Servers in Azure](../prerequisites.md) |Yes |Yes |
 |[Best practices assessment](../assess.md) |Yes |No |
 |[Detailed database inventory](../view-databases.md#inventory-databases) |Yes |Yes |
 |[Azure Active Directory authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) |Yes |Yes |

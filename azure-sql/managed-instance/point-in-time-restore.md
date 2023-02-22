@@ -42,6 +42,21 @@ The following table shows point-in-time restore scenarios for SQL Managed Instan
 | Restore an existing database to a managed instance in another subscription | Yes | No | No |
 | Restore a deleted database to a managed instance in another subscription | Yes | No | No |
 
+## Permissions 
+
+To recover a database, you must be either:
+
+- A member of the SQL Server Contributor role or SQL Managed Instance Contributor role (depending on the recovery destination) in the subscription
+- The subscription owner 
+
+
+To restore database to a different target subscription, you should also have the following permissions:
+
+- **Microsoft.Sql/managedInstances/databases/readBackups/action** on the source SQL managed instance. 
+- **Microsoft.Sql/managedInstances/crossSubscriptionPITR/action** on the target SQL managed instance.
+
+For more information, see [Azure RBAC: Built-in roles](/azure/role-based-access-control/built-in-roles). 
+
 ## Limitations
 
 These limitations apply to point-in-time restore in SQL Managed Instance:
@@ -75,7 +90,7 @@ Restoring a point-in-time restore backup across subscriptions has the following 
 
 You can restore an existing database in the same subscription by using the Azure portal, PowerShell, or the Azure CLI. If you restore to a different instance in the same subscription by using PowerShell or the Azure CLI, be sure to specify the properties for the target SQL Managed Instance resource. The database is restored to the same instance by default.
 
-Currently, you can restore your database to a managed instance in a different subscription only by using the Azure portal. If you restore to a different subscription, the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) API call that underlies the restore action must contain `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and either `crossSubscriptionSourceDatabaseId` or `crossSubscriptionRestorableDroppedDatabaseId`.
+If you restore to a different subscription, the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) API call that underlies the restore action must contain `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and either `crossSubscriptionSourceDatabaseId` or `crossSubscriptionRestorableDroppedDatabaseId`. 
 
 # [Portal](#tab/azure-portal)
 
@@ -112,7 +127,7 @@ Currently, you can restore your database to a managed instance in a different su
 
 # [PowerShell](#tab/azure-powershell)
 
-Use Azure PowerShell to restore your database. For more information, review [Install the Azure PowerShell module](/powershell/azure/install-az-ps).
+Use Azure PowerShell to restore your database. For more information, review [Install the Azure PowerShell module](/powershell/azure/install-az-ps). For more information, see [Restore-AzSqlInstanceDatabase](/powershell/module/az.sql/restore-azsqlinstancedatabase).
 
 Run one of the following code options with your values substituted for the parameters.
 
@@ -153,11 +168,27 @@ Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
                               -TargetInstanceName $targetInstanceName 
 ```
 
-For more information, see [Restore-AzSqlInstanceDatabase](/powershell/module/az.sql/restore-azsqlinstancedatabase).
+To restore the database to another subscription, set the context to the the target subscription (`Set-AzContext`) and be sure to provide a value for the required parameter `-TargetSubscriptionID`: 
+
+```powershell-interactive 
+Set-AzContext -SubscriptionID "targetSubscriptionID"
+
+Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
+   -SubscriptionId "sourceSubscriptionID" `
+   -ResourceGroupName "sourceRGName" `
+   -InstanceName "sourceManagedInstanceName" `
+   -Name "sourceDatabaseName" `
+   -PointInTime $pointInTime `
+   -TargetInstanceDatabaseName "targetDatabaseName" `
+   -TargetInstanceName "targetManagedInstanceName" `
+   -TargetResourceGroupName "targetResourceGroupName" `
+   -TargetSubscriptionId "targetSubscriptionId"
+```
+
 
 # [Azure CLI](#tab/azure-cli)
 
-Use the Azure CLI to restore your database to a point in time. For more information, see [Install the Azure CLI](/cli/azure/install-azure-cli).
+Use the Azure CLI to restore your database to a point in time. For more information, see [Install the Azure CLI](/cli/azure/install-azure-cli). For a detailed explanation of available parameters, see the [CLI documentation for restoring a database in SQL Managed Instance](/cli/azure/sql/midb#az-sql-midb-restore).
 
 Run one of the following code options with your values substituted for the parameters.
 
@@ -168,7 +199,7 @@ az sql midb restore -g mygroupname --mi myinstancename |
 -n mymanageddbname --dest-name targetmidbname --time "2018-05-20T05:34:22"
 ```
   
-To restore the database to a different managed instance, you also specify the names of the target resource group and the managed instance:  
+To restore the database to a different managed instance, also specify the names of the target resource group and the managed instance:  
 
 ```azurecli-interactive
 az sql midb restore -g mygroupname --mi myinstancename -n mymanageddbname |
@@ -177,8 +208,16 @@ az sql midb restore -g mygroupname --mi myinstancename -n mymanageddbname |
        --dest-mi mytargetinstancename
 ```
 
-For a detailed explanation of available parameters, see the [CLI documentation for restoring a database in SQL Managed Instance](/cli/azure/sql/midb#az-sql-midb-restore).
+To restore to another subscription, be sure to set the context (`az account set`) to the target subscription: 
 
+
+```azurecli-interactive
+az account set -s “sourceSubscriptionId”
+
+az sql midb restore -s sourcesubscriptionid -g sourcegroup 
+--mi sourceinstance -n sourcemanageddb --dest-name targetDbName 
+--dest-mi targetMI --dest-resource-group targetRG --time "2022-05-20T05:34:22"
+```
 ---
 
 ## Restore a deleted database
@@ -205,7 +244,7 @@ To restore a deleted managed database by using the Azure portal:
 
 To restore a deleted managed database, run one of the following PowerShell code options with your values substituted for the parameters:
 
-- To restore a deleted database to the same managed instance:
+To restore a deleted database to the same managed instance:
 
     ```powershell
     $subscriptionId = "<subscription ID>"
@@ -228,7 +267,7 @@ To restore a deleted managed database, run one of the following PowerShell code 
        -TargetInstanceDatabaseName $targetDatabaseName
     ```
 
-- To restore the database to a different managed instance, you also specify the names of the target resource group and the target managed instance:
+To restore the database to a different managed instance, you also specify the names of the target resource group and the target managed instance:
 
     ```powershell
     $targetResourceGroupName = "<resource group of target managed instance>"
@@ -244,9 +283,45 @@ To restore a deleted managed database, run one of the following PowerShell code 
        -TargetInstanceName $targetInstanceName 
     ```
 
+To restore the database to another subscription, set the context to the the target subscription (`Set-AzContext`) and be sure to provide values for the required parameters `-TargetSubscriptionID`, and `-DeleteDate`: 
+
+```powershell-interactive 
+Set-AzContext -SubscriptionID "targetSubscriptionID"
+
+Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
+   -SubscriptionId "sourceSubscriptionID" `
+   -ResourceGroupName "sourceRGName" `
+   -InstanceName "sourceManagedInstanceName" `
+   -Name "sourceDatabaseName" `
+   -PointInTime $pointInTime `
+   -TargetInstanceDatabaseName "targetDatabaseName" `
+   -TargetInstanceName "targetManagedInstanceName" `
+   -TargetResourceGroupName "targetResourceGroupName" `
+   -TargetSubscriptionId "targetSubscriptionId" `
+   -DeletionDate "deletion_date"
+```
+
+
 # [Azure CLI](#tab/azure-cli)
 
-Currently, you can't restore a deleted database by using the Azure CLI.
+To restore a deleted database: 
+
+```azurecli-interactive
+az sql midb restore -s sourcesubscriptionid -g sourcegroup --mi sourceinstance 
+-n sourcemanageddb --dest-name targetDbName 
+--dest-mi targetMI --dest-resource-group targetRG 
+--time "2018-05-20T05:34:22" --deleted-time "deletion_date"
+
+To restore a deleted database to another subscription, be sure to set the context (`az account set`) to the source subscription: 
+
+```azurecli-interactive
+az account set -s "sourceSubscriptionId"
+
+az sql midb restore -s sourcesubscriptionid -g sourcegroup 
+--mi sourceinstance -n sourcemanageddb --dest-name targetDbName 
+--dest-mi targetMI --dest-resource-group targetRG 
+--time "2022-05-20T05:34:22" --deleted-time "deletion_date"
+```
 
 ---
 
@@ -316,6 +391,8 @@ Use one of the following methods to connect to the database in your managed inst
 - [Azure virtual machine](./connect-vm-instance-configure.md)
 - [Point-to-site](./point-to-site-p2s-configure.md)
 - [Public endpoint](./public-endpoint-configure.md)
+
+
 
 ## Next steps
 

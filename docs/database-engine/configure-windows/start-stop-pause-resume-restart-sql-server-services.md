@@ -339,12 +339,12 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN (Transact-S
     $DfltInstance
     ```
 
-## Checking for and enable disabled instances
+## Check and enable disabled instances
 
 To determine whether a SQL Server service instance is disabled, follow these steps:
 
 1. Identify the service that you're trying to check by using the information in the [Identify the Service](start-stop-pause-resume-restart-sql-server-services.md) section.
-1. In [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and then locate the service you're interested in. 
+1. In [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and then locate the service you're interested in.
 1. If the value of the **Start Mode** column is set to **Other (Boot, System, Disabled or Unknown)**, it typically means the corresponding service is disabled. To enable the service, follow these steps:
 
     a. In the Name column, right-click on the corresponding service and then switch to **Service** tab in the ***\<Service name\>* Properties** window.  

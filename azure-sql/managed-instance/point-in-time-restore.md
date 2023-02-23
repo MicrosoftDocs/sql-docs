@@ -37,9 +37,9 @@ The following table shows point-in-time restore scenarios for SQL Managed Instan
 |:----------|:----------|:----------|:----------|
 | Restore an existing database to the same managed instance | Yes | Yes | Yes|
 | Restore an existing database to a different managed instance | Yes |  Yes | Yes |
-| Restore a deleted database to the same managed instance | Yes | No| Yes |
-| Restore a deleted database to a different managed instance | Yes | No | Yes |
-| Restore an existing database to a managed instance in another subscription | Yes | No | No |
+| Restore a deleted database to the same managed instance | Yes | Yes | Yes |
+| Restore a deleted database to a different managed instance | Yes | Yes | Yes |
+| Restore an existing database to a managed instance in another subscription | Yes | Yes | Yes |
 | Restore a deleted database to a managed instance in another subscription | Yes | Yes | Yes |
 
 ## Permissions 

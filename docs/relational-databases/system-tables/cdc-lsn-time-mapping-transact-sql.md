@@ -3,7 +3,7 @@ title: "cdc.lsn_time_mapping (Transact-SQL)"
 description: cdc.lsn_time_mapping (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "06/10/2016"
+ms.date: "02/22/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,7 @@ dev_langs:
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 ---
 # cdc.lsn_time_mapping (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each transaction having rows in a change table. This table is used to map between log sequence number (LSN) commit values and the time the transaction committed. Entries may also be logged for which there are no change tables entries. This allows the table to record the completion of LSN processing in periods of low or no change activity.  
   

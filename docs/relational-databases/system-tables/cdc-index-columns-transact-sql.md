@@ -3,7 +3,7 @@ title: "cdc.index_columns (Transact-SQL)"
 description: cdc.index_columns (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "06/10/2016"
+ms.date: "02/22/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,7 @@ dev_langs:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 ---
 # cdc.index_columns (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each index column associated with a change table. The index columns are used by change data capture to uniquely identify rows in the source table. By default, the columns of the primary key of the source table are included. However, if a unique index on the source table is specified when change data capture is enabled on the source table, columns in that index are used instead. A primary key or unique index is required on the source table if net change tracking is enabled. For more information, see [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   

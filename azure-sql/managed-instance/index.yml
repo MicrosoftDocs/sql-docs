@@ -49,7 +49,7 @@ landingContent:
           - text: T-SQL differences with SQL Server
             url: transact-sql-tsql-differences-sql-server.md
           - text: Connect apps to Azure SQL Managed Instance 
-            url: database/develop-overview.md#client-connections
+            url: ../database/develop-overview.md#client-connections
 
 
   # Card 
@@ -91,6 +91,26 @@ landingContent:
         - text: Educational SQL resources
           url: /sql/sql-server/educational-sql-resources
 
+
+  # Card 
+  - title: Business continuity  
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Business continuity 
+            url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
+          - text: High availability
+            url: ../database/high-availability-sla.md
+          - text: Auto-failover groups
+            url: auto-failover-group-sql-mi.md 
+          - text: Automated backups
+            url: ../database/automated-backups-overview.md
+          - text: Recover with backup 
+            url: ../database/recovery-using-backups.md 
+          - text: Long-term backup retention  
+            url: ../database/long-term-retention-overview.md
+
+
   # Card 
   - title: Reference 
     linkLists:
@@ -123,26 +143,8 @@ landingContent:
           - text: PowerShell
             url: /powershell/module/az.sql
           - text: REST API
-            url: /rest/api/sql/
+            url: /rest/api/sql/   
 
-  # Card 
-  - title: Business continuity  
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Business continuity 
-            url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-          - text: High availability
-            url: ../database/high-availability-sla.md
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-mi.md 
-          - text: Automated backups
-            url: ../database/automated-backups-overview.md
-          - text: Recover with backup 
-            url: ../database/recovery-using-backups.md 
-          - text: Long-term backup retention  
-            url: ../database/long-term-retention-overview.md
-          
   # Card 
   - title: Instance pools
     linkLists:

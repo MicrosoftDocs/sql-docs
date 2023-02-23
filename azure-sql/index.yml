@@ -145,6 +145,22 @@ landingContent:
           - text: SQL Server on Azure VMs
             url: migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md 
 
+  # Card 
+  - title: Learn Azure SQL 
+    linkLists:
+      - linkListType: learn
+        links:
+        - text: Azure SQL for beginners
+          url: /shows/azure-sql-for-beginners/
+        - text: Azure SQL fundamentals 
+          url: /training/paths/azure-sql-fundamentals/
+        - text: Azure SQL hands-on labs
+          url: https://aka.ms/asqlworkshop
+        - text: Azure SQL bootcamp 
+          url: /users/marisabrasile/collections/8oq1i8p0z2qygw
+        - text: Educational SQL resources
+          url: /sql/sql-server/educational-sql-resources
+
   # Card
   - title: Connect and query 
     linkLists:
@@ -204,22 +220,6 @@ landingContent:
           - text: REST API
             url: /rest/api/sql/
 
-
-  # Card 
-  - title: Learn Azure SQL 
-    linkLists:
-      - linkListType: learn
-        links:
-        - text: Azure SQL for beginners
-          url: /shows/azure-sql-for-beginners/
-        - text: Azure SQL fundamentals 
-          url: /training/paths/azure-sql-fundamentals/
-        - text: Azure SQL hands-on labs
-          url: https://aka.ms/asqlworkshop
-        - text: Azure SQL bootcamp 
-          url: /users/marisabrasile/collections/8oq1i8p0z2qygw
-        - text: Educational SQL resources
-          url: /sql/sql-server/educational-sql-resources
 
   # Card
   - title: Development

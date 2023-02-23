@@ -76,17 +76,19 @@ When you close the Integration Services Project Conversion Wizard, SSIS displays
   
 1.  On the **Integration Services Deployment Wizard** **Introduction** page, review the steps for deploying the project, then select **Next**.  
   
-2.  On the **Select Destination** page, verify the server name is the instance of SQL Server containing the SSISDB catalog, and the path shows **SSIS Tutorial Deployment**, and then select **Next**.  
+2.  On the **Select Destination** page, verify the server name is the instance of SQL Server containing the SSISDB catalog, and select **Connect**. 
+
+3.  The path should show **SSIS Tutorial Deployment**, then select **Next**.
   
-3.  On the **Review** page, review the **Summary** then select **Deploy**.  
+4.  On the **Review** page, review the **Summary** then select **Deploy**.  
   
-4.  When the deployment completes, select **Close**.  
+5.  When the deployment completes, select **Close**.  
   
-5.  In **Object Explorer**, right-click **Integration Services Catalogs** and select **Refresh**.  
+6.  In **Object Explorer**, right-click **Integration Services Catalogs** and select **Refresh**.  
   
-6.  Expand **Integration Services Catalogs** then expand **SSISDB**. Continue to expand the tree under **SSIS Tutorial** until you have completely expanded the project. You should see **Lesson 6.dtsx** under the **Packages** node of the **SSIS Tutorial Deployment** node.  
+7.  Expand **Integration Services Catalogs** then expand **SSISDB**. Continue to expand the tree under **SSIS Tutorial** until you have completely expanded the project. You should see **Lesson 6.dtsx** under the **Packages** node of the **SSIS Tutorial Deployment** node.  
   
-7.  To verify that the package is complete, right-click **Lesson 6.dtsx** and select **Configure**. On the **Configure** dialog box, select **Parameters**, and verify that there is an entry with **Lesson 6.dtsx** as the **Container**, **VarFolderName** as the **Name**, and the path to **New Sample Data** as the value, and then select **Close**.  
+8.  To verify that the package is complete, right-click **Lesson 6.dtsx** and select **Configure**. On the **Configure** dialog box, select **Parameters**, and verify that there is an entry with **Lesson 6.dtsx** as the **Container**, **VarFolderName** as the **Name**, and the path to **New Sample Data** as the value, and then select **Close**.  
   
 ## Create and populate a new sample data folder  
   

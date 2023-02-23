@@ -14,7 +14,7 @@ ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 # Change Data Capture Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Change data capture enables change tracking on tables so that data manipulation language (DML) and data definition language (DDL) changes made to the tables can be incrementally loaded into a data warehouse. The topics in this section describe the system tables that store information used by change data capture operations.  
+  Change data capture enables change tracking on tables so that data manipulation language (DML) and data definition language (DDL) changes made to the tables can be incrementally loaded into a data warehouse. The articles in this section describe the system tables that store information used by change data capture operations.  
   
 ## In This Section  
  [cdc.<capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  

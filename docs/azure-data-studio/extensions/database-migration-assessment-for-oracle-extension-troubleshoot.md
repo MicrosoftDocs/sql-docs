@@ -197,7 +197,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 ### Error Code: ODC-1003
 
-**Error Message:** Login failed due to invalid credentials. Verify the login credentials for database and try again..
+**Error Message:** Login failed due to invalid credentials. Verify the login credentials for database and try again.
 
 **Possible causes:** Sign in failure might be due to invalid credentials.
 

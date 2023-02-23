@@ -145,29 +145,21 @@ landingContent:
         - text: Educational SQL resources
           url: /sql/sql-server/educational-sql-resources
 
-  # Card
-  - title: Connect and query 
+   # Card
+  - title: Migrate from SQL Server
     linkLists:
-      - linkListType: quickstart
+      - linkListType: overview
         links:
-          - text: Overview
-            url: database/connect-query-content-reference-guide.md 
-          - text: SQL Server Management Studio (SSMS)
-            url: database/connect-query-ssms.md
-          - text: Azure Data Studio
-            url: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
-          - text: Azure portal
-            url: database/connect-query-portal.md 
-          - text: Visual Studio (.NET)
-            url: database/connect-query-dotnet-visual-studio.md
-          - text: Visual Studio Code
-            url: database/connect-query-vscode.md 
-          - text: .NET Core
-            url: database/connect-query-dotnet-core.md
-          - text: Python
-            url: database/connect-query-python.md
-          - text: With Azure AD and SqlClient
-            url: /sql/connect/ado-net/sql/azure-active-directory-authentication
+          - text: Migrating SQL Server Workloads FAQ
+            url: migration-guides/modernization.md
+      - linkListType: deploy
+        links:
+          - text: Azure SQL Database
+            url: migration-guides/database/sql-server-to-sql-database-overview.md 
+          - text: Azure SQL Managed Instance 
+            url: migration-guides/managed-instance/sql-server-to-managed-instance-overview.md
+          - text: SQL Server on Azure VMs
+            url: migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md          
 
 
   # Card 
@@ -204,22 +196,30 @@ landingContent:
           - text: REST API
             url: /rest/api/sql/
 
-
   # Card
-  - title: Migrate from SQL Server
+  - title: Connect and query 
     linkLists:
-      - linkListType: overview
+      - linkListType: quickstart
         links:
-          - text: Migrating SQL Server Workloads FAQ
-            url: migration-guides/modernization.md
-      - linkListType: deploy
-        links:
-          - text: Azure SQL Database
-            url: migration-guides/database/sql-server-to-sql-database-overview.md 
-          - text: Azure SQL Managed Instance 
-            url: migration-guides/managed-instance/sql-server-to-managed-instance-overview.md
-          - text: SQL Server on Azure VMs
-            url: migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md 
+          - text: Overview
+            url: database/connect-query-content-reference-guide.md 
+          - text: SQL Server Management Studio (SSMS)
+            url: database/connect-query-ssms.md
+          - text: Azure Data Studio
+            url: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
+          - text: Azure portal
+            url: database/connect-query-portal.md 
+          - text: Visual Studio (.NET)
+            url: database/connect-query-dotnet-visual-studio.md
+          - text: Visual Studio Code
+            url: database/connect-query-vscode.md 
+          - text: .NET Core
+            url: database/connect-query-dotnet-core.md
+          - text: Python
+            url: database/connect-query-python.md
+          - text: With Azure AD and SqlClient
+            url: /sql/connect/ado-net/sql/azure-active-directory-authentication
+
 
   # Card
   - title: Development

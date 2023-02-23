@@ -66,7 +66,7 @@ The below section gives you more details about error codes, messages, possible c
 **Possible causes:** This error may appear due to any of the given reasons:
 
 1. The metadata file is either corrupted or modified externally.
-2. Need help with parsing the json for the metadata file correctly.
+2. Parsing of metadata file couldn't be done correctly.
 
 **Remediation actions:** You may have to delete the current assessment and then try creating a new assessment. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
@@ -189,7 +189,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 ### Error Code: ODC-1005
 
-**Error Message:** Connected oracle server is unavailable due to an underlying Oracle exception - ORA1034.
+**Error Message:** Connected oracle server is not available due to an underlying Oracle exception - ORA1034.
 
 **Possible causes:** The database might need to be updated or prepared to accept connections.
 
@@ -197,7 +197,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 ### Error Code: ODC-1003
 
-**Error Message:** Sign in failed due to invalid credentials. Verify the sign in credentials for the database and try again.
+**Error Message:** Login failed due to invalid credentials. Verify the login credentials for database and try again..
 
 **Possible causes:** Sign in failure might be due to invalid credentials.
 

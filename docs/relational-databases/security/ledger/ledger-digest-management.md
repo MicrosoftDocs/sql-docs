@@ -66,7 +66,7 @@ SECRET = '<your SAS key>'
 
 #### Azure Confidential Ledger Permission
 
-If you use **Azure SQL Database**, make sure that your logical server (System Identity) has sufficient RBAC permissions to write digests by adding it to the **Contributor** role.
+If you use **Azure SQL Database**, make sure that your logical server (System Identity) has sufficient permissions to write digests by adding it to the **Contributor** role. To do this follow the steps for [Azure Confidential Ledger user management](https://learn.microsoft.com/en-us/azure/confidential-ledger/manage-azure-ad-token-based-users?tabs=azure-cli).
 
 > [!NOTE]
 > Automatic generation and storage of database digests in SQL Server only supports Azure Storage accounts.

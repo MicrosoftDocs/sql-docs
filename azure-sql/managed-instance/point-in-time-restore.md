@@ -40,17 +40,16 @@ The following table shows point-in-time restore scenarios for SQL Managed Instan
 | Restore a deleted database to the same managed instance | Yes | No| Yes |
 | Restore a deleted database to a different managed instance | Yes | No | Yes |
 | Restore an existing database to a managed instance in another subscription | Yes | No | No |
-| Restore a deleted database to a managed instance in another subscription | Yes | No | No |
+| Restore a deleted database to a managed instance in another subscription | Yes | Yes | Yes |
 
 ## Permissions 
 
 To recover a database, you must be either:
 
-- A member of the SQL Server Contributor role or SQL Managed Instance Contributor role (depending on the recovery destination) in the subscription
+- A member of the SQL Server Contributor role or [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role (depending on the recovery destination) in the subscription
 - The subscription owner 
 
-
-To restore database to a different target subscription, you should also have the following permissions:
+To restore database to a different target subscription, if you're not in the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor)role you should also have the following permissions:
 
 - **Microsoft.Sql/managedInstances/databases/readBackups/action** on the source SQL managed instance. 
 - **Microsoft.Sql/managedInstances/crossSubscriptionPITR/action** on the target SQL managed instance.
@@ -83,7 +82,9 @@ Restoring a point-in-time restore backup across subscriptions has the following 
 - The subscription type must be either Enterprise Agreement, Cloud Solution Provider, Microsoft Certified Partner, or pay-as-you-go.
 - You can use the restore action only on the primary instance.
 - Geo-replicated backups currently aren't supported for cross-subscription point-in-time restore.
-- The user who takes the restore action must either have the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role assignment or have these explicit permissions: `crossSubscription/action` and `readBackups/action`.
+- The user who takes the restore action must either have the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role assignment or have these explicit permissions:
+    - **Microsoft.Sql/managedInstances/databases/readBackups/action** on the source SQL managed instance. 
+    - **Microsoft.Sql/managedInstances/crossSubscriptionPITR/action** on the target SQL managed instance.
 - If you bring your own key (BYOK), the key must be present in both subscriptions.
 
 ## Restore an existing database
@@ -304,19 +305,18 @@ Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
 
 # [Azure CLI](#tab/azure-cli)
 
-To restore a deleted database: 
+To restore a deleted database to the same subscription: 
 
 ```azurecli-interactive
-az sql midb restore -s sourcesubscriptionid -g sourcegroup --mi sourceinstance 
--n sourcemanageddb --dest-name targetDbName 
---dest-mi targetMI --dest-resource-group targetRG 
---time "2018-05-20T05:34:22" --deleted-time "deletion_date"
+az sql midb restore -g "gen4-testing-RG" --mi "filiptanic-gen4-on-gen7-v2" 
+-n test --dest-name "test-crosss" --dest-mi "source-mi" 
+--dest-resource-group ToMove --time "2023-02-23T11:54:00" [--deleted-time "deletion_date"]*
 ```
 
-To restore a deleted database to another subscription, be sure to set the context (`az account set`) to the source subscription: 
+To restore a deleted database to another subscription, be sure to set the context (`az account set`) to the target subscription and specify the -s parameter for the `az sql midb restore` command to identify the source subscription: 
 
 ```azurecli-interactive
-az account set -s "sourceSubscriptionId"
+az account set -s "targetSubscriptionId"
 
 az sql midb restore -s sourcesubscriptionid -g sourcegroup 
 --mi sourceinstance -n sourcemanageddb --dest-name targetDbName 

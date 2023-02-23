@@ -201,7 +201,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 **Possible causes:** Sign in failure might be due to invalid credentials.
 
-**Remediation actions:** You must ensure that the Oracle Database credentials provided are correct. Verify the sign in credentials for the database and try again.
+**Remediation actions:** You must ensure that the Oracle Database credentials provided are correct. Verify the sign-in credentials for the database and try again.
 
 ### Error Code: ODC-1004
 

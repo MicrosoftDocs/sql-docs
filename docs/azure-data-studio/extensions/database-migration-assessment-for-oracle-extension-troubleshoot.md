@@ -456,7 +456,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO)
 
 1. Ora2Pg HTML report needed to be in the correct format.
 2. Ora2Pg HTML report was corrupted.
-3. Ora2Pg html report version isn't supported.
+3. Ora2Pg HTML report version isn't supported.
 
 **Remediation actions:** Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
@@ -466,9 +466,9 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO)
 
 **Possible causes:** This error may appear due to any of the given reasons:
 
-1. Ora2Pg html report wasn't in the correct format.
-2. Ora2Pg html report was corrupted.
-3. Ora2Pg html report version isn't supported.
+1. Ora2Pg HTML report wasn't in the correct format.
+2. Ora2Pg HTML report was corrupted.
+3. Ora2Pg HTML report version isn't supported.
 
 **Remediation actions:** Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
@@ -512,9 +512,9 @@ Azure Data Studio extension install folder (for example, on Windows %USERPROFILE
 
 **Possible causes:** This error may appear due to any of the given reasons:
 
-1. Ora2Pg html report wasn't in the correct format.
-2. Ora2Pg html report was corrupted.
-3. Ora2Pg html report version isn't supported.
+1. Ora2Pg HTML report wasn't in the correct format.
+2. Ora2Pg HTML report was corrupted.
+3. Ora2Pg HTML report version isn't supported.
 
 **Remediation actions:** Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 
@@ -524,9 +524,9 @@ Azure Data Studio extension install folder (for example, on Windows %USERPROFILE
 
 **Possible causes:** This error may appear due to any of the given reasons:
 
-1. Ora2Pg html report wasn't in the correct format.
-2. Ora2Pg html report was corrupted.
-3. Ora2Pg html report version isn't supported.
+1. Ora2Pg HTML report wasn't in the correct format.
+2. Ora2Pg HTML report was corrupted.
+3. Ora2Pg HTML report version isn't supported.
 
 **Remediation actions:** Check the installed version of Ora2Pg should be v23.1 or greater. You can install Ora2Pg using the [script]( https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install). And then try to create a new assessment.
 

@@ -14,9 +14,9 @@ ms.author: v-sidong
 
 This article describes how to schedule a database backup operation by using SQL Server Management Studio (SSMS) for [SQL Editions that support SQL Server Agent](/sql/sql-server/editions-and-components-of-sql-server-2019#SSMS). To schedule backups for SQL Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database).
 
-## Use maintenance plan
+## Use maintenance plans
 
-You can use maintenance plans to back up database and transaction log files, perform differential backups, and also to define retention periods for your backups. For more information, see [Create a Maintenance Plan (Maintenance Plan Design Surface)](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface) and [Use the Maintenance Plan Wizard](/sql/relational-databases/maintenance-plans/use-the-maintenance-plan-wizard).
+You can use maintenance plans to back up database and transaction log files, perform differential backups, and define retention periods for your backups. For more information, see [Create a Maintenance Plan (Maintenance Plan Design Surface)](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface) and [Use the Maintenance Plan Wizard](/sql/relational-databases/maintenance-plans/use-the-maintenance-plan-wizard).
 
 ## Use Script Action to Job option in SSMS
 
@@ -24,9 +24,9 @@ You can use maintenance plans to back up database and transaction log files, per
 1. In the **Connect to Server** dialog box, select the appropriate values in the **Server type** list, in the **Server name** list, and in the **Authentication** list.
 1. Select **Connect**.
 1. In **Object Explorer**, expand **Databases**.
-1. Right-click the database that you want to back up, select **Tasks**, and then select **Back Up**.
-1. In the **Back Up Database - DatabaseName** dialog box, make sure that the **Backup type** is set to **Full**, type the name of the backup set in the **Name** box, and then select **Add** under **Destination**.
-1. In the **Select Backup Destinatio**n dialog box, type a path and a file name in the **Destinations on disk** box, and then select **OK**.
+1. Right-click the database you want to back up, select **Tasks**, and then select **Back Up**.
+1. In the **Back Up Database - DatabaseName** dialog box, make sure that the **Backup type** is set to **Full**, enter the name of the backup set in the **Name** box, and then select **Add** under **Destination**.
+1. In the **Select Backup Destination** dialog box, enter a path and a file name in the **Destinations on disk** box, and then select **OK**.
 
 1. In the **Script** list, select **Script Action to Job**.
 
@@ -38,7 +38,7 @@ You can use maintenance plans to back up database and transaction log files, per
     > [!NOTE]
     > In the **Job Step Properties - 1** dialog box, you can see the backup command.
     >
-    > Microsoft is currently investigating an error message that can occur in SSMS at this step. If you get an exception at this step, repeat the procedure without this step and make any changes by editing the corresponding job under **Jobs** menu under **SQL Server Agent** in object explorer.
+    > Microsoft is currently investigating an error message that can occur in SSMS at this step. If you get an exception at this step, repeat the procedure without this step and make any changes by editing the corresponding job under the **Jobs** menu under **SQL Server Agent** in Object Explorer.
 
 1. Under **Select a page**, select **Schedules**, and then select **New**.
 
@@ -61,7 +61,7 @@ You can use maintenance plans to back up database and transaction log files, per
 
 ## Manually create SQL Server Agent jobs
 
-Alternately, you can create and schedule your own backup jobs using SQL Server Agent. For more information, see [Create Jobs](/sql/ssms/agent/create-jobs) and [Schedule a Job](/sql/ssms/agent/schedule-a-job).
+Alternatively, you can create and schedule your own backup jobs using SQL Server Agent. For more information, see [Create Jobs](/sql/ssms/agent/create-jobs) and [Schedule a Job](/sql/ssms/agent/schedule-a-job).
 
 ## See also
 

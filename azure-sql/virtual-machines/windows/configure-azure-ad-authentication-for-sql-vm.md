@@ -27,7 +27,7 @@ Starting with SQL Server 2022, you can connect to SQL Server on Azure VM using o
 - Azure Active Directory access token 
 
 
-When enabling a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) for SQL Server on Azure Virtual Machines, the security boundary of the identity is the resource to which it's attached. For example, the security boundary for a virtual machine with managed identities for Azure resources enabled, is the virtual machine. Any code running on that VM, is able to call the managed identities endpoint and request tokens. The experience is similar experience when working with other resources that support managed identities. For more information, read the [Managed Identities faq](/azure/active-directory/managed-identities-azure-resources/managed-identities-faq).
+When enabling a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) for SQL Server on Azure Virtual Machines, the security boundary of the identity is the resource to which it's attached. For example, the security boundary for a virtual machine with managed identities for Azure resources enabled is the virtual machine. Any code running on that VM is able to call the managed identities endpoint and request tokens. The experience is similar experience when working with other resources that support managed identities. For more information, read the [Managed Identities FAQ](/azure/active-directory/managed-identities-azure-resources/managed-identities-faq).
 
 ## Prerequisites
 
@@ -75,7 +75,7 @@ To grant your managed identity the **Azure AD Directory** role permission, follo
 
    :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-verify-assignment-settings.png" alt-text="Screenshot of settings on the Add assignment in the Azure portal.":::
 
-1. On the **Directory Readers | Assignments** page, confirm you see your newly-added identity under **Directory Readers**. 
+1. On the **Directory Readers | Assignments** page, confirm you see your newly added identity under **Directory Readers**. 
 
    :::image type="content" source="media/configure-azure-ad-authentication-for-sql-vm/azure-ad-verify-directory-reader.png" alt-text="Screenshot of the Directory Readers page of the Azure portal showing your VM assignment added to the role.":::
 
@@ -101,7 +101,7 @@ Consider the following limitations:
 - Currently, enabling Azure AD authentication is only possible through the Azure portal. 
 - Currently, Azure AD authentication is only available to SQL Server VMs deployed to the public cloud. 
 - Azure AD authentication is only supported for Azure Windows VMs. 
-- Currently, authenticating to SQL VM through AAD authentication using [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) is not supported. 
+- Currently, authenticating to SQL VM through Azure AD authentication using [FIDO2 method](/azure/active-directory/authentication/howto-authentication-passwordless-faqs) is not supported. 
 
 ## Next steps
 

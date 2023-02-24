@@ -75,7 +75,7 @@ Auditors can use Azure Monitor to review key vault AuditEvent logs, if logging i
 
 ### Requirements for configuring AKV
 
-- Key vault and SQL Database/managed instance must belong to the same Azure Active Directory tenant. Cross-tenant key vault and server interactions aren't supported. To move resources afterwards, TDE with AKV will have to be reconfigured. Learn more about [moving resources](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+- Key vault and SQL Database/managed instance must belong to the same Azure Active Directory tenant. Cross-tenant key vault and server interactions aren't supported. To move resources afterwards, TDE with AKV has to be reconfigured. Learn more about [moving resources](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 - [Soft-delete](/azure/key-vault/general/soft-delete-overview) and [purge protection](/azure/key-vault/general/soft-delete-overview#purge-protection) features must be enabled on the key vault to protect from data loss due to accidental key (or key vault) deletion. 
 - Grant the server or managed instance access to the key vault (*get*, *wrapKey*, *unwrapKey*) using its Azure Active Directory identity. The server identity can be a system-assigned managed identity or a user-assigned managed identity assigned to the server. When using the Azure portal, the Azure AD identity gets automatically created when the server is created. When using PowerShell or Azure CLI, the Azure AD identity must be explicitly created and should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md) and [Configure TDE with BYOK for SQL Managed Instance](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md) for detailed step-by-step instructions when using PowerShell.
     - Depending on the permission model of the key vault (access policy or Azure RBAC), key vault access can be granted either by creating an access policy on the key vault, or by creating a new Azure RBAC role assignment with the role [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations).
@@ -163,10 +163,11 @@ To avoid issues while establishing or during geo-replication, when automatic rot
 
 - For an existing geo-replication setup, prior to enabling automated key rotation on the primary server, add the encryption key being used as TDE protector on the primary server to the secondary server. The secondary server requires access to the key in the same key vault being used with the primary server (and not another key with the same key material). Alternatively, before enabling automated key, ensure that the secondary [server's managed identity](transparent-data-encryption-byok-identity.md) (user-assigned or system-assigned) has required permissions on the primary server's key vault, and the system will attempt to add the key to the secondary server.  
 
+- Geo-replication scenarios using customer-managed keys (CMK) for TDE is supported. TDE with automatic key rotation must be configured on all servers if you're configuring TDE in the Azure portal. For more information on setting up automatic key rotation for geo-replication configurations with TDE, see [Automatic key rotation for geo-replication configurations](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation).
 
 ## Inaccessible TDE protector
 
-When TDE is configured to use a customer-managed key, continuous access to the TDE protector is required for the database to stay online. If the server loses access to the customer-managed TDE protector in AKV, in up to 10 minutes a database will start denying all connections with the corresponding error message and change its state to *Inaccessible*. The only action allowed on a database in the Inaccessible state is deleting it.
+When TDE is configured to use a customer-managed key, continuous access to the TDE protector is required for the database to stay online. If the server loses access to the customer-managed TDE protector in AKV, in up to 10 minutes a database starts denying all connections with the corresponding error message and change its state to *Inaccessible*. The only action allowed on a database in the Inaccessible state is deleting it.
 
 > [!NOTE]
 > If the database is inaccessible due to an intermittent networking outage, there is no action required and the databases will come back online automatically.
@@ -224,7 +225,7 @@ In case the test returns *TcpTestSucceeded: False*, review the networking config
 To monitor database state and to enable alerting for loss of TDE protector access, configure the following Azure features:
 
 - [Azure Resource Health](/azure/service-health/resource-health-overview). An inaccessible database that has lost access to the TDE protector will show as "Unavailable" after the first connection to the database has been denied.
-- [Activity Log](/azure/service-health/alerts-activity-log-service-notifications-portal) when access to the TDE protector in the customer-managed key vault fails, entries are added to the activity log. Creating alerts for these events will enable you to reinstate access as soon as possible.
+- [Activity Log](/azure/service-health/alerts-activity-log-service-notifications-portal) when access to the TDE protector in the customer-managed key vault fails, entries are added to the activity log. Creating alerts for these events enable you to reinstate access as soon as possible.
 - [Action Groups](/azure/azure-monitor/alerts/action-groups) can be defined to send you notifications and alerts based on your preferences, for example, Email/SMS/Push/Voice, Logic App, Webhook, ITSM, or Automation Runbook.
 
 ## Database backup and restore with customer-managed TDE
@@ -269,7 +270,7 @@ To avoid issues while establishing or during geo-replication due to incomplete k
 
 To test a failover, follow the steps in [Active geo-replication overview](active-geo-replication-overview.md). Testing failover should be done regularly to validate that SQL Database has maintained access permission to both key vaults.
 
-**Azure SQL Database server and SQL Managed Instance in one region can now be linked to key vault in any other region.** The server and key vault don't have to be co-located in the same region. With this, for simplicity, the primary and secondary servers can be connected to the same key vault (in any region). This will help avoid scenarios where key material may be out of sync if separate key vaults are used for both the servers. Azure Key Vault has multiple layers of redundancy in place to make sure that your keys and key vaults remain available in case of service or region failures. [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance)
+**Azure SQL Database server and SQL Managed Instance in one region can now be linked to key vault in any other region.** The server and key vault don't have to be co-located in the same region. With this, for simplicity, the primary and secondary servers can be connected to the same key vault (in any region). This helps avoid scenarios where key material may be out of sync if separate key vaults are used for both the servers. Azure Key Vault has multiple layers of redundancy in place to make sure that your keys and key vaults remain available in case of service or region failures. [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance)
 
 ## Azure Policy for customer-managed TDE
 

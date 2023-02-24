@@ -250,6 +250,6 @@ After the migration, review the [Post-migration validation and optimization guid
 
 For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).
 
-For other migration guides, see [Azure Database Migration Guide](https://datamigration.microsoft.com/). 
+For other migration guides, see [Azure Database Migration Guide](/data-migration/).
 
 For migration videos, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

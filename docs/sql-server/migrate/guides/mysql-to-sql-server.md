@@ -189,4 +189,4 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 - [SQL Server Migration Assistant documentation for MySQL](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
 - [Services and tools for data migration](/azure/dms/dms-tools-matrix)
-- [Azure Database Migration Guides](https://datamigration.microsoft.com/)
+- [Azure Database Migration Guides](/data-migration/)

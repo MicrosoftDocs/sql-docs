@@ -25,7 +25,7 @@ You can use maintenance plans to back up database and transaction log files, per
 1. Select **Connect**.
 1. In **Object Explorer**, expand **Databases**.
 1. Right-click the database you want to back up, select **Tasks**, and then select **Back Up**.
-1. In the **Back Up Database - <DatabaseName>** dialog box, make sure that the **Backup type** is set to **Full**, enter the name of the **Backup set** in the **Name** box, and then select **Add** under **Destination**.
+1. In the **Back Up Database - \<DatabaseName>** dialog box, make sure that the **Backup type** is set to **Full**, enter the name of the **Backup set** in the **Name** box, and then select **Add** under **Destination**.
 1. In the **Select Backup Destination** dialog box, enter a path and a file name in the **Destinations on disk** box, and then select **OK**.
 
 1. In the **Script** list, select **Script Action to Job**.
@@ -51,7 +51,7 @@ You can use maintenance plans to back up database and transaction log files, per
 
    You receive the following message:
 
-   > The backup of database '<DatabaseName>' completed successfully.
+   > The backup of database '\<DatabaseName>' completed successfully.
 
 > [!NOTE]
 > To verify the backup job, expand **SQL Server Agent**, and then expand **Jobs**. When you do this step, the SQL Server Agent service must be running.

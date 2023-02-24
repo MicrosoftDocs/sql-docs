@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 02/14/2023
+ms.date: 02/24/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -30,7 +30,7 @@ Most existing client tools that target [!INCLUDE[ssNoVersion](../includes/ssnove
 
 ## Latest versions for all packages
 
-This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017. The following table shows the most recent release, which is **CU 31 GDR**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017](sql-server-linux-release-history-2017.md).
+This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017. The following table shows the most recent release, which is **CU 31 GDR**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017](/troubleshoot/sql/linux/release-history-2017).
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
@@ -74,46 +74,46 @@ The following table lists the release history for [!INCLUDE[ssSQL17](../includes
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
-| [CU 31 GDR](sql-server-linux-release-history-2017.md#CU31-GDR) | 14.0.3460.9   | 2023-02-14   |
-| [CU 31](sql-server-linux-release-history-2017.md#CU31) | 14.0.3456.2   | 2022-09-20   |
-| [CU 30](sql-server-linux-release-history-2017.md#CU30) | 14.0.3451.2   | 2022-07-13   |
-| [CU 29 GDR](sql-server-linux-release-history-2017.md#CU29-GDR) | 14.0.3445.2   | 2022-06-14   |
-| [CU 29](sql-server-linux-release-history-2017.md#CU29) | 14.0.3436.1   | 2022-03-30   |
-| [CU 28](sql-server-linux-release-history-2017.md#CU28) | 14.0.3430.2   | 2022-01-13   |
-| [CU 27](sql-server-linux-release-history-2017.md#CU27) | 14.0.3421.10  | 2021-10-27   |
-| [CU 26](sql-server-linux-release-history-2017.md#CU26) | 14.0.3411.3   | 2021-09-14   |
-| [CU 25](sql-server-linux-release-history-2017.md#CU25) | 14.0.3401.7   | 2021-07-12   |
-| [CU 24](sql-server-linux-release-history-2017.md#CU24) | 14.0.3391.2   | 2021-05-10   |
-| [CU 23](sql-server-linux-release-history-2017.md#CU23) | 14.0.3381.3   | 2021-02-24   |
-| [CU 22 GDR](sql-server-linux-release-history-2017.md#CU22) | 14.0.3370.1   | 2021-01-12   |
-| [GDR 3](sql-server-linux-release-history-2017.md#GDR3) | 14.0.2037.2   | 2021-01-12   |
-| [CU 22](sql-server-linux-release-history-2017.md#CU22) | 14.0.3356.20  | 2020-09-10   |
-| [CU 21](sql-server-linux-release-history-2017.md#CU21) | 14.0.3335.7   | 2020-07-01   |
-| [CU 20](sql-server-linux-release-history-2017.md#CU20) | 14.0.3294.2   | 2020-04-10   |
-| [CU 19](sql-server-linux-release-history-2017.md#CU19) | 14.0.3281.6   | 2020-02-05   |
-| [CU 18](sql-server-linux-release-history-2017.md#CU18) | 14.0.3257.3   | 2019-12-09   |
-| [CU 17](sql-server-linux-release-history-2017.md#CU17) | 14.0.3238.1   | 2019-10-08   |
-| [CU 16](sql-server-linux-release-history-2017.md#CU16) | 14.0.3223.3   | 2019-08-01   |
-| [CU 15 GDR](sql-server-linux-release-history-2017.md#CU15-GDR) | 14.0.3192.2   | 2019-07-09   |
-| [CU 15](sql-server-linux-release-history-2017.md#CU15) | 14.0.3162.1   | 2019-05-23   |
-| [CU 14](sql-server-linux-release-history-2017.md#CU14) | 14.0.3076.1   | 2019-03-25   |
-| [CU 13](sql-server-linux-release-history-2017.md#CU13) | 14.0.3048.4   | 2018-12-18   |
-| [CU 12](sql-server-linux-release-history-2017.md#CU12) | 14.0.3045.24  | 2018-10-24   |
-| [CU 11](sql-server-linux-release-history-2017.md#CU11) | 14.0.3038.14  | 2018-09-20   |
-| [CU 10](sql-server-linux-release-history-2017.md#CU10) | 14.0.3037.1   | 2018-08-27   |
-| [CU 9 GDR](sql-server-linux-release-history-2017.md#CU9-GDR) | 14.0.3035.2   | 2018-08-18   |
-| [GDR 2](sql-server-linux-release-history-2017.md#GDR2) | 14.0.2002.14  | 2018-08-18   |
-| [CU 9](sql-server-linux-release-history-2017.md#CU9) | 14.0.3030.27  | 2018-07-18   |
-| [CU 8](sql-server-linux-release-history-2017.md#CU8) | 14.0.3029.16  | 2018-06-21   |
-| [CU 7](sql-server-linux-release-history-2017.md#CU7) | 14.0.3026.27  | 2018-05-24   |
-| [CU 6](sql-server-linux-release-history-2017.md#CU6) | 14.0.3025.34  | 2018-04-19   |
-| [CU 5](sql-server-linux-release-history-2017.md#CU5) | 14.0.3023.8   | 2018-03-20   |
-| [CU 4](sql-server-linux-release-history-2017.md#CU4) | 14.0.3022.28  | 2018-02-20   |
-| [CU 3](sql-server-linux-release-history-2017.md#CU3) | 14.0.3015.40  | 2018-01-03   |
-| [GDR 1](sql-server-linux-release-history-2017.md#GDR1) | 14.0.2000.63  | 2018-01-03   |
-| [CU 2](sql-server-linux-release-history-2017.md#CU2) | 14.0.3008.27  | 2017-11-28   |
-| [CU 1](sql-server-linux-release-history-2017.md#CU1) | 14.0.3006.16  | 2017-10-24   |
-| [GA](sql-server-linux-release-history-2017.md#GA) | 14.0.1000.169 | 2017-10-02   |
+| [CU 31 GDR](/troubleshoot/sql/linux/release-history-2017#CU31-GDR) | 14.0.3460.9   | 2023-02-14   |
+| [CU 31](/troubleshoot/sql/linux/release-history-2017#CU31) | 14.0.3456.2   | 2022-09-20   |
+| [CU 30](/troubleshoot/sql/linux/release-history-2017#CU30) | 14.0.3451.2   | 2022-07-13   |
+| [CU 29 GDR](/troubleshoot/sql/linux/release-history-2017#CU29-GDR) | 14.0.3445.2   | 2022-06-14   |
+| [CU 29](/troubleshoot/sql/linux/release-history-2017#CU29) | 14.0.3436.1   | 2022-03-30   |
+| [CU 28](/troubleshoot/sql/linux/release-history-2017#CU28) | 14.0.3430.2   | 2022-01-13   |
+| [CU 27](/troubleshoot/sql/linux/release-history-2017#CU27) | 14.0.3421.10  | 2021-10-27   |
+| [CU 26](/troubleshoot/sql/linux/release-history-2017#CU26) | 14.0.3411.3   | 2021-09-14   |
+| [CU 25](/troubleshoot/sql/linux/release-history-2017#CU25) | 14.0.3401.7   | 2021-07-12   |
+| [CU 24](/troubleshoot/sql/linux/release-history-2017#CU24) | 14.0.3391.2   | 2021-05-10   |
+| [CU 23](/troubleshoot/sql/linux/release-history-2017#CU23) | 14.0.3381.3   | 2021-02-24   |
+| [CU 22 GDR](/troubleshoot/sql/linux/release-history-2017#CU22) | 14.0.3370.1   | 2021-01-12   |
+| [GDR 3](/troubleshoot/sql/linux/release-history-2017#GDR3) | 14.0.2037.2   | 2021-01-12   |
+| [CU 22](/troubleshoot/sql/linux/release-history-2017#CU22) | 14.0.3356.20  | 2020-09-10   |
+| [CU 21](/troubleshoot/sql/linux/release-history-2017#CU21) | 14.0.3335.7   | 2020-07-01   |
+| [CU 20](/troubleshoot/sql/linux/release-history-2017#CU20) | 14.0.3294.2   | 2020-04-10   |
+| [CU 19](/troubleshoot/sql/linux/release-history-2017#CU19) | 14.0.3281.6   | 2020-02-05   |
+| [CU 18](/troubleshoot/sql/linux/release-history-2017#CU18) | 14.0.3257.3   | 2019-12-09   |
+| [CU 17](/troubleshoot/sql/linux/release-history-2017#CU17) | 14.0.3238.1   | 2019-10-08   |
+| [CU 16](/troubleshoot/sql/linux/release-history-2017#CU16) | 14.0.3223.3   | 2019-08-01   |
+| [CU 15 GDR](/troubleshoot/sql/linux/release-history-2017#CU15-GDR) | 14.0.3192.2   | 2019-07-09   |
+| [CU 15](/troubleshoot/sql/linux/release-history-2017#CU15) | 14.0.3162.1   | 2019-05-23   |
+| [CU 14](/troubleshoot/sql/linux/release-history-2017#CU14) | 14.0.3076.1   | 2019-03-25   |
+| [CU 13](/troubleshoot/sql/linux/release-history-2017#CU13) | 14.0.3048.4   | 2018-12-18   |
+| [CU 12](/troubleshoot/sql/linux/release-history-2017#CU12) | 14.0.3045.24  | 2018-10-24   |
+| [CU 11](/troubleshoot/sql/linux/release-history-2017#CU11) | 14.0.3038.14  | 2018-09-20   |
+| [CU 10](/troubleshoot/sql/linux/release-history-2017#CU10) | 14.0.3037.1   | 2018-08-27   |
+| [CU 9 GDR](/troubleshoot/sql/linux/release-history-2017#CU9-GDR) | 14.0.3035.2   | 2018-08-18   |
+| [GDR 2](/troubleshoot/sql/linux/release-history-2017#GDR2) | 14.0.2002.14  | 2018-08-18   |
+| [CU 9](/troubleshoot/sql/linux/release-history-2017#CU9) | 14.0.3030.27  | 2018-07-18   |
+| [CU 8](/troubleshoot/sql/linux/release-history-2017#CU8) | 14.0.3029.16  | 2018-06-21   |
+| [CU 7](/troubleshoot/sql/linux/release-history-2017#CU7) | 14.0.3026.27  | 2018-05-24   |
+| [CU 6](/troubleshoot/sql/linux/release-history-2017#CU6) | 14.0.3025.34  | 2018-04-19   |
+| [CU 5](/troubleshoot/sql/linux/release-history-2017#CU5) | 14.0.3023.8   | 2018-03-20   |
+| [CU 4](/troubleshoot/sql/linux/release-history-2017#CU4) | 14.0.3022.28  | 2018-02-20   |
+| [CU 3](/troubleshoot/sql/linux/release-history-2017#CU3) | 14.0.3015.40  | 2018-01-03   |
+| [GDR 1](/troubleshoot/sql/linux/release-history-2017#GDR1) | 14.0.2000.63  | 2018-01-03   |
+| [CU 2](/troubleshoot/sql/linux/release-history-2017#CU2) | 14.0.3008.27  | 2017-11-28   |
+| [CU 1](/troubleshoot/sql/linux/release-history-2017#CU1) | 14.0.3006.16  | 2017-10-24   |
+| [GA](/troubleshoot/sql/linux/release-history-2017#GA) | 14.0.1000.169 | 2017-10-02   |
 
 ## Known issues
 

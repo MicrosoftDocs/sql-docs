@@ -2,8 +2,8 @@
 title: Determine required subnet size & range
 titleSuffix: Azure SQL Managed Instance
 description: This topic describes how to calculate the size of the subnet where Azure SQL Managed Instance will be deployed.
-author: srdan-bozovic-msft
-ms.author: srbozovi
+author: urosmil
+ms.author: urmilano
 ms.reviewer: mathoma, bonova, srbozovi, wiassaf
 ms.date: 04/06/2022
 ms.service: sql-managed-instance

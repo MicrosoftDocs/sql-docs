@@ -1537,6 +1537,8 @@
           href: virtual-machines/windows/change-sql-server-version.md
         - name: Storage
           href: virtual-machines/windows/storage-configuration.md
+        - name: Azure AD authentication
+          href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
         - name: Automated Patching
           href: virtual-machines/windows/automated-patching.md
         - name: SQL best practices assessment

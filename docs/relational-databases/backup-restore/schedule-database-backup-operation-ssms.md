@@ -1,5 +1,5 @@
 ---
-title: Schedule a database backup operation by using SSMS
+title: Schedule a database backup operation using SSMS
 description: This article describes how to schedule a database backup operation by using SQL Server Management Studio.
 ms.date: "02/23/2023"
 ms.service: sql
@@ -16,9 +16,14 @@ This article describes how to schedule a database backup operation by using SQL 
 
 ## Use maintenance plans
 
-You can use maintenance plans to back up database and transaction log files, perform differential backups, and define retention periods for your backups. For more information, see [Create a Maintenance Plan (Maintenance Plan Design Surface)](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface) and [Use the Maintenance Plan Wizard](/sql/relational-databases/maintenance-plans/use-the-maintenance-plan-wizard).
+You can use [Maintenance Plans](/sql/relational-databases/maintenance-plans/maintenance-plans) to back up database and transaction log files, perform differential backups, and define retention periods for your backups. For more information, see:
+
+- [Create a Maintenance Plan](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan)
+- [Create a Maintenance Plan (Maintenance Plan Design Surface)](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface) - [Use the Maintenance Plan Wizard](/sql/relational-databases/maintenance-plans/use-the-maintenance-plan-wizard)
 
 ## Use Script Action to Job option in SSMS
+
+To schedule a database backup using **Script Action to Job** option in SSMS, follow these steps:
 
 1. Start SQL Server Management Studio and select **Connect** > **Database Engine**.
 1. In the **Connect to Server** dialog box, select the appropriate values in the **Server type** list, in the **Server name** list, and in the **Authentication** list.
@@ -31,7 +36,7 @@ You can use maintenance plans to back up database and transaction log files, per
 1. In the **Script** list, select **Script Action to Job**.
 
     > [!NOTE]
-    > If you do not see the **Script Action to Job** option, you may be running an express edition of SQL Server. You can check your edition by running the query `select@@version`. For more information, see [Determine which version and edition of SQL Server Database Engine is running](/troubleshoot/sql/releases/find-my-sql-version).
+    > If you don't see the **Script Action to Job** option, you may be running an express edition of SQL Server. You can check your edition by running the query `select@@version`. For more information, see [Determine which version and edition of SQL Server Database Engine is running](/troubleshoot/sql/releases/find-my-sql-version).
 
 1. In the **New Job** dialog box, select **Steps** under **Select a page**, and then select **Edit** if you want to change the job parameters.
 
@@ -54,10 +59,9 @@ You can use maintenance plans to back up database and transaction log files, per
    > The backup of database '\<DatabaseName>' completed successfully.
 
 > [!NOTE]
-> To verify the backup job, expand **SQL Server Agent**, and then expand **Jobs**. When you do this step, the SQL Server Agent service must be running.
-
-> [!NOTE]
-> You can use a similar procedure to schedule transaction log and differential backups if you make the appropriate selection in Step 6 for **Backup type**. If you don't see the **Transaction Log** option in **Backup type**, check the recovery model of the database. You can't take transaction log backups if you are using the [Simple Recovery model](/sql/relational-databases/backup-restore/recovery-models-sql-server) for your database.
+> - To verify the backup job, expand **SQL Server Agent**, and then expand **Jobs**. When you do this step, the SQL Server Agent service must be running.
+>
+> - You can use a similar procedure to schedule transaction log and differential backups if you make the appropriate selection in Step 6 for **Backup type**. If you don't see the **Transaction Log** option in **Backup type**, check the recovery model of the database. You can't take transaction log backups if you are using the [Simple Recovery model](/sql/relational-databases/backup-restore/recovery-models-sql-server) for your database.
 
 ## Manually create SQL Server Agent jobs
 

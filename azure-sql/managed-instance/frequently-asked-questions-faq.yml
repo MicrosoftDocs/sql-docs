@@ -175,7 +175,7 @@ sections:
           
           ### How can I migrate from other platforms to SQL Managed Instance?
           
-          For migration information about migrating from other platforms, see [Azure Database Migration Guide](https://datamigration.microsoft.com/).
+          For migration information about migrating from other platforms, see [Azure Database Migration Guide](/data-migration/).
           
       - question: |
           Switch hardware configuration

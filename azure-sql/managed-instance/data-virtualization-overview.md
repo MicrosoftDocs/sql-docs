@@ -468,8 +468,8 @@ Issues with query execution are typically caused by managed instance not being a
 
 ## Limitations
 
-- [Row level security](https://learn.microsoft.com/sql/relational-databases/security/row-level-security) feature is not supported with external tables.
-- [Dynamic data masking](https://learn.microsoft.com/sql/relational-databases/security/dynamic-data-masking) rule can't be defined for a column in an external table.
+- [Row level security](/sql/relational-databases/security/row-level-security) feature is not supported with external tables.
+- [Dynamic data masking](/sql/relational-databases/security/dynamic-data-masking) rule can't be defined for a column in an external table.
 
 ## Known issues
 

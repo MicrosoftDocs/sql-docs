@@ -43,7 +43,7 @@ landingContent:
       - text: Migration content
         url:  migrate/index.yml
       - text: Data migration guide
-        url:  https://datamigration.microsoft.com/
+        url:  /data-migration/
       - text: Database compatibility certification
         url: ../database-engine/install-windows/compatibility-certification.md
       - text: Data Migration Assistant (DMA)

@@ -135,6 +135,8 @@ EXEC sp_addlinkedserver
    @provider=N'MSOLEDBSQL',   
    @datasrc=N'S1\instance1';  
 ```  
+> [!NOTE]  
+> For SQL Server on Linux,If we are connecting to a Named Instance you need to specify the port number with the servername `@datasrc=N'S1\instance1,port'`
 
  The following example creates a linked server `S1_instance1` on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
  

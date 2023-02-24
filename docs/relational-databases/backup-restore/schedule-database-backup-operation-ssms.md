@@ -57,7 +57,7 @@ You can use maintenance plans to back up database and transaction log files, per
 > To verify the backup job, expand **SQL Server Agent**, and then expand **Jobs**. When you do this step, the SQL Server Agent service must be running.
 
 > [!NOTE]
-> You can use a similar procedure to schedule Transaction Log and Differential backups if you make the appropriate selection in Step 6 for **Backup Type**. If you do not see the **Transaction Log** option in **Backup Type**, check the recovery model of the database. You can't take transaction log backups if you are using Simple Recovery model for your database.
+> You can use a similar procedure to schedule Transaction Log and Differential backups if you make the appropriate selection in Step 6 for **Backup Type**. If you do not see the **Transaction Log** option in **Backup Type**, check the recovery model of the database. You can't take transaction log backups if you are using the Simple Recovery model for your database.
 
 ## Manually create SQL Server Agent jobs
 

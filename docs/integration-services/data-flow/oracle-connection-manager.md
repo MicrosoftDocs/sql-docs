@@ -3,10 +3,9 @@ description: "Oracle Connection Manager"
 title: "Oracle Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
@@ -69,9 +68,9 @@ Click **Test Connection** to verify if the information provided is correct. You 
 
 > [!NOTE]
 >
-> If you wanna specify **ConnectionString** directly, here is the sample with Oracle Authentication:
+> To specify **ConnectionString** directly, here is a sample with Oracle Authentication:
 >
->SERVER=\<YourOracleServerName or EzConnect format>;USERNAME=\<YourUserName>;PWD=\<YourPassword>;WINAUTH=0
+> `SERVER=\<YourOracleServerName or EzConnect format>;USERNAME=\<YourUserName>;PWD=\<YourPassword>;WINAUTH=0`
 
 ### Custom properties
 

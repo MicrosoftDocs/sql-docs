@@ -1,12 +1,12 @@
 ---
 title: Introduction to adutil - Active Directory Utility
 description: Overview of adutil, a utility for configuring and managing Active Directory domains for SQL Server on Linux and containers
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 09/27/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---

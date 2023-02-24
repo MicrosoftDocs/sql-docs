@@ -4,8 +4,8 @@ description: After you register the assembly that contains a UDT definition, you
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/05/2019"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "user-defined types [CLR integration], columns"

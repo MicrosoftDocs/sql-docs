@@ -3,10 +3,9 @@ description: "managed_backup.fn_get_current_xevent_settings (Transact-SQL)"
 title: "managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "fn_get_current_xevent_settings"
@@ -29,7 +28,7 @@ ms.author: mikeray
   
  Use this function to return or review the current Extended Event settings to identify the type of events that are configurable and the current configurations.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

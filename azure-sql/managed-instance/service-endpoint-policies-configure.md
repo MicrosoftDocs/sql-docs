@@ -32,17 +32,18 @@ Configuring Virtual network Azure Storage service endpoint policies for your Azu
 - __System traffic remains unaffected__: Service endpoint policies never obstruct access to storage that is required for Azure SQL Managed Instance to function. This includes the storage of backups, data files, transaction log files, and other assets.
 
 > [!IMPORTANT]
-> Service endpoint policies only control traffic that originates from the SQL Managed Instance subnet and terminates in Azure storage. The policies do not affect, for example, exporting the database to an on-prem BACPAC file, Azure Data Factory integration, the collection of diagnostic information via Azure Diagnostic Settings, or other mechanisms of data extraction that do not directly target Azure Storage.
+> Service endpoint policies only control traffic that originates from the SQL Managed Instance subnet and terminates in Azure storage. The policies do not affect, for example, exporting the database to an on-premises BACPAC file, Azure Data Factory integration, the collection of diagnostic information via Azure Diagnostic Settings, or other mechanisms of data extraction that do not directly target Azure Storage.
 
 ## Limitations
 
 Enabling service endpoint policies for your Azure SQL Managed Instance has the following limitations:
 
+- While in preview, placing a service endpoint policy on a subnet will interfere with the ability of instances in that subnet to perform [point-in-time restores (PITR)](point-in-time-restore.md) from an instance in another subnet. A service endpoint policy does not, however, prevent instances in other subnets from restoring backups from that subnet.
 - While in preview, this feature is available in all Azure regions where SQL Managed Instance is supported except for **China East 2**, **China North 2**,  **Central US EUAP**, **East US 2 EUAP**, **US Gov Arizona**, **US Gov Texas**, **US Gov Virginia**, and **West Central US**.
 - The feature is available only to virtual networks deployed through the Azure Resource Manager deployment model.
 - The feature is available only in subnets that have [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) for Azure Storage enabled.
-- Enabling service endpoints for Azure Storage also extends to include paired regions where you deploy the virtual network to support Read-Access Geo-Redundant storage (RA-GRS) and Geo-Redundant storage (GRS) traffic.
 - Assigning a service endpoint policy to a service endpoint upgrades the endpoint from regional to global scope. In other words, all traffic to Azure Storage will go through the service endpoint regardless of the region in which the storage account resides.
+- Allowing a storage account will automatically allow access to its RA-GRS secondary.
 
 ## Prepare storage inventory
 

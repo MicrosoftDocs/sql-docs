@@ -3,10 +3,9 @@ description: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
 title: "sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/25/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_get_column_ordinal"
@@ -27,7 +26,7 @@ ms.author: randolphwest
 
   Returns the column ordinal of the specified column as it appears in the [change table](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associated with the specified capture instance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

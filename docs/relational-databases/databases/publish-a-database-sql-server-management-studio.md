@@ -3,10 +3,9 @@ description: "Publish a Database (SQL Server Management Studio)"
 title: "Publish a Database (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: WilliamDAssafMSFT

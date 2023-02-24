@@ -4,9 +4,8 @@ description: CREATE AVAILABILITY GROUP (Transact-SQL)
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.date: "10/16/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -34,7 +33,7 @@ Creates a new availability group, if the instance of [!INCLUDE[ssNoVersion](../.
 > [!IMPORTANT]  
 >  Execute CREATE AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you intend to use as the initial primary replica of your new availability group. This server instance must reside on a Windows Server Failover Clustering (WSFC) node.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -210,7 +209,17 @@ The REUSE_SYSTEM_DATABASES option causes the contained `master` and `msdb` datab
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)])
 
-Introduced in SQL Server 2017. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transaction waits until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it is in a "not synced" state and the replica marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica waits until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+
+Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Sets a minimum number of synchronous secondary replicas required to commit before the primary replica commits a transaction. Guarantees that SQL Server transactions wait until the transaction logs are updated on the minimum number of secondary replicas. 
+
+- Default: 0. Provides same behavior as [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. 
+- Minimum: 0.
+- Maximum: Number of replicas minus 1.
+
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on synchronous replicas commit to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceeds. When the unresponsive database comes back online it will be in a "not synced" state and the replica is marked as unhealthy until the primary can synchronize it again. This setting guarantees that the primary replica does not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available, then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+
+Not supported for CREATE AVAILABILITY GROUP. Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can use ALTER AVAILABILITY GROUP to set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT on a distributed availability group. See [ALTER AVAILABILITY GROUP (Transact-SQL)](alter-availability-group-transact-sql.md).
 
 #### CLUSTER_TYPE
 
@@ -376,7 +385,7 @@ For more information, see [Active Secondaries: Readable Secondary Replicas &#40;
   
 #### READ_ONLY_ROUTING_URL ='TCP://_system-address_:_port_'  
 
-Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]  listens. Typically, the default instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on TCP port 1433.
+Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]  listens. Typically, the default instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on TCP port 1433.
   
 For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   

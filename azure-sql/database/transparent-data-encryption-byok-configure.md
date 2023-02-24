@@ -2,10 +2,10 @@
 title: Enable SQL TDE with Azure Key Vault
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to configure an Azure SQL Database and Azure Synapse Analytics to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell or Azure CLI.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 06/23/2021
+ms.date: 01/20/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
@@ -20,7 +20,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article walks through how to use a key from Azure Key Vault for Transparent Data Encryption (TDE) on Azure SQL Database or Azure Synapse Analytics. To learn more about the TDE with Azure Key Vault integration - Bring Your Own Key (BYOK) Support, visit [TDE with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md).
+This article walks through how to use a key from Azure Key Vault for transparent data encryption (TDE) on Azure SQL Database or Azure Synapse Analytics. To learn more about the TDE with Azure Key Vault integration - Bring Your Own Key (BYOK) Support, visit [TDE with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md). If you are looking for Azure portal instructions on how to enable TDE with a customer-managed key from Azure Key Vault, see [Create server configured with user-assigned managed identity and customer-managed TDE](transparent-data-encryption-byok-create-server.md).
 
 > [!NOTE] 
 > Azure SQL now supports using a RSA key stored in a Managed HSM as TDE Protector. Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant, standards-compliant cloud service that enables you to safeguard cryptographic keys for your cloud applications, using FIPS 140-2 Level 3 validated HSMs. Learn more about [Managed HSMs](/azure/key-vault/managed-hsm/index).

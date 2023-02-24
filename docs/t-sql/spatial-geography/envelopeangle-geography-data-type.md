@@ -3,10 +3,9 @@ description: "EnvelopeAngle (geography Data Type)"
 title: "EnvelopeAngle (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "EnvelopeAngle"
@@ -45,7 +44,7 @@ EnvelopeAngle( )
   
  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], this method has been extended to **FullGlobe** instances.  
   
- The hemisphere limitation applied to `EnvelopeAngle()` in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] has been removed. However, for instances with angles greater than 90 degrees, 180 degrees will be returned. `EnvelopeAngle()` is not precise for **geography** instances that span more than one hemisphere.  
+ The hemisphere limitation applied to `EnvelopeAngle()` in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] has been removed. However, for instances with angles greater than 90 degrees, 180 degrees will be returned. `EnvelopeAngle()` is not precise for **geography** instances that span more than one hemisphere.  
   
 ## Examples  
   

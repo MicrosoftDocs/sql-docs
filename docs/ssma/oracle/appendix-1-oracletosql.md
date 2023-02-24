@@ -1,16 +1,15 @@
 ---
 description: "Appendix - 1 (OracleToSQL)"
 title: "Appendix - 1 (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Appendix - 1 (OracleToSQL)
 Quick view of the SSMA Console command line options:  

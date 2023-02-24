@@ -2,9 +2,8 @@
 title: "Preparing to Implement a Data Processing Extension | Microsoft Docs"
 description: Discover how to implement a data processing extension in Reporting Services. Learn about available interfaces and required and optional functionality.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
+ms.service: reporting-services
+ms.subservice: extensions
 
 
 ms.topic: reference

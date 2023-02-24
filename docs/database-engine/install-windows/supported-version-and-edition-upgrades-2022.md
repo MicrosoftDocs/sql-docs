@@ -1,11 +1,11 @@
 ---
-title: "Supported version and edition upgrades (SQL Server 2022 Preview)"
-description: The supported version and edition upgrades for SQL Server 2022 Preview.
+title: "Supported version and edition upgrades (SQL Server 2022)"
+description: The supported version and edition upgrades for SQL Server 2022.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/25/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "cross-language support"
 monikerRange: ">=sql-server-2017"
 ---
-# Supported version and edition upgrades (SQL Server 2022 Preview)
+# Supported version and edition upgrades (SQL Server 2022)
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
@@ -43,8 +43,8 @@ You can upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUD
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports upgrade from the following versions of SQL Server:
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 or later
-- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 or later
-- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 or later
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3 or later
+- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP3 or later
 - [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 - [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]
 
@@ -54,22 +54,22 @@ Specific version and edition upgrade paths aren't available during community tec
 
 You can migrate databases from older versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], as long as the source database compatibility level is `90` or higher. Databases with a compatibility level of `90` (for example, on [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)]), are automatically upgraded to a compatibility level of `100` when migrated to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. If the compatibility level on the source database is `100` or higher, it will be unchanged on [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
-For information, see [Azure Database Migration Guide](https://datamigration.microsoft.com/scenario/sql-to-sqlserver).
+For information, see [Azure Database Migration Guide](../../sql-server/migrate/guides/sql-server-to-sql-server-upgrade-guide.md).
 
 The following tips and tools can help you plan and implement your migration.
 
 - **Migration tools.** Migration is supported through [Data Migration Assistant (DMA)](../../dma/dma-overview.md).
 
-- **Backup and restore.** A backup taken on [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] and later, can be restored to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] without changing its compatibility level, as long as the database backup has a compatibility level of `100` or higher.
+- **Backup and restore.** A backup taken on [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, can be restored to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] without changing its compatibility level, as long as the database backup has a compatibility level of `100` or higher.
 
   Databases with a compatibility level of `90`, including backups taken on [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)], are automatically upgraded to a compatibility level of `100` when restored to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
-- **Log shipping.** Log shipping is supported if the primary is running [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] SP3 or later, or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] SP2 or later, and the secondary is running [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+- **Log shipping.** Log shipping is supported if the primary is running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP3 or later, or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] SP2 or later, and the secondary is running [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
    > [!WARNING]
-   > If an automatic or manual failover happens and the [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] instance becomes primary, [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] instance becomes secondary and cannot receive changes from primary.
+   > If an automatic or manual failover happens and the [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] instance becomes primary, [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] instance becomes secondary and cannot receive changes from primary.
 
-- Bulk load: Tables can be bulk copied from [!INCLUDE [sskatmai-md](../../includes/sskatmai-md.md)] or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+- Bulk load: Tables can be bulk copied from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## See also
 

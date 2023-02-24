@@ -1,9 +1,8 @@
 ---
 title: " SQL Server Options page - Environment - Startup"
 description: "Options (Environment - Startup page)"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 author: "markingmyname"
 ms.author: "maghan"

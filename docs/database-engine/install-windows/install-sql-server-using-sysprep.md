@@ -4,8 +4,8 @@ description: This article describes how to prepare and complete images by using 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/07/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"

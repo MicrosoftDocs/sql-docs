@@ -4,9 +4,9 @@ title: "Getting Started with the SSMA for Sybase Console (SybaseToSQL) | Microso
 ms.custom:
   - intro-get-started
 ms.date: "09/30/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Sybase Console,Launching SSMA Console"

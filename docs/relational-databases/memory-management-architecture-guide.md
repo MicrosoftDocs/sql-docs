@@ -4,8 +4,8 @@ description: Learn about memory management architecture in SQL Server, including
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/25/2022
-ms.prod: sql
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords:
   - "guide, memory management architecture"
@@ -83,7 +83,7 @@ Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], Single-Page alloca
 
 The following table indicates whether a specific type of memory allocation is controlled by the **max server memory (MB)** and **min server memory (MB)** configuration options:
 
-|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Single-page allocations|Yes|Yes, consolidated into "any size" page allocations|
 |Multi-page allocations|No|Yes, consolidated into "any size" page allocations|
@@ -113,7 +113,7 @@ Because the "any size" page allocator also handles allocations greater than 8 KB
 
 The following table indicates whether a specific type of memory allocation falls into the **memory_to_reserve** region of the virtual address space for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process:
 
-|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Single-page allocations|No|No, consolidated into "any size" page allocations|
 |Multi-page allocations|Yes|No, consolidated into "any size" page allocations|
@@ -173,7 +173,7 @@ As other applications are started on a computer running an instance of [!INCLUDE
 
 ## Effects of min and max server memory
 
-The *min server memory* and *max server memory* configuration options establish upper and lower limits to the amount of memory used by the buffer pool and other caches of the [!INCLUDE[ssde_md](../includes/ssde_md.md)]. The buffer pool doesn't immediately acquire the amount of memory specified in min server memory. The buffer pool starts with only the memory required to initialize. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] workload increases, it keeps acquiring the memory required to support the workload. The buffer pool doesn't free any of the acquired memory until it reaches the amount specified in min server memory. Once min server memory is reached, the buffer pool then uses the standard algorithm to acquire and free memory as needed. The only difference is that the buffer pool never drops its memory allocation below the level specified in min server memory, and never acquires more memory than the level specified in **max server memory (MB)**.
+The *min server memory* and *max server memory* configuration options establish upper and lower limits to the amount of memory used by the buffer pool and other caches of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)]. The buffer pool doesn't immediately acquire the amount of memory specified in min server memory. The buffer pool starts with only the memory required to initialize. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] workload increases, it keeps acquiring the memory required to support the workload. The buffer pool doesn't free any of the acquired memory until it reaches the amount specified in min server memory. Once min server memory is reached, the buffer pool then uses the standard algorithm to acquire and free memory as needed. The only difference is that the buffer pool never drops its memory allocation below the level specified in min server memory, and never acquires more memory than the level specified in **max server memory (MB)**.
 
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a process acquires more memory than specified by **max server memory (MB)** option. Both internal and external components can allocate memory outside of the buffer pool, which consumes additional memory, but the memory allocated to the buffer pool usually still represents the largest portion of memory consumed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -191,7 +191,7 @@ The following list describes the approximate amount of memory used by different 
 - Lock (as maintained by the Lock Manager): 64 bytes + 32 bytes per owner
 - User connection: Approximately (3 \* *network_packet_size* + 94 KB)
 
-The *network packet size* is the size of the tabular data stream (TDS) packets that are used to communicate between applications and the [!INCLUDE[ssde_md](../includes/ssde_md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.
+The *network packet size* is the size of the tabular data stream (TDS) packets that are used to communicate between applications and the [!INCLUDE[ssDE-md](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.
 
 When multiple active result sets (MARS) are enabled, the user connection is approximately (3 + 3 \* *num_logical_connections*) * network_packet_size + 94 KB.
 
@@ -351,12 +351,12 @@ When checksum is enabled, errors caused by power failures and flawed hardware or
 
 ## Dynamic partition of memory objects
 
-Heap allocators, called memory objects in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], allow the [!INCLUDE[ssde_md](../includes/ssde_md.md)] to allocate memory from the heap. These can be tracked using the [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV.
+Heap allocators, called memory objects in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], allow the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] to allocate memory from the heap. These can be tracked using the [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV.
 
 CMemThread is a thread-safe memory object type that allows concurrent memory allocations from multiple threads. For correct tracking, CMemThread objects rely on synchronization constructs (a mutex) to ensure only a single thread is updating critical pieces of information at a time.
 
 > [!NOTE]  
-> The CMemThread object type is utilized throughout the [!INCLUDE[ssde_md](../includes/ssde_md.md)] code base for many different allocations, and can be partitioned globally, by node or by CPU.
+> The CMemThread object type is utilized throughout the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] code base for many different allocations, and can be partitioned globally, by node or by CPU.
 
 However, the use of mutexes can lead to contention if many threads are allocating from the same memory object in a highly concurrent fashion. Therefore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has the concept of partitioned memory objects (PMO) and each partition is represented by a single CMemThread object. The partitioning of a memory object is statically defined and can't be changed after creation. As memory allocation patterns vary widely based on aspects like hardware and memory usage, it is impossible to come up with the perfect partitioning pattern upfront.
 
@@ -365,7 +365,7 @@ In most cases, using a single partition will suffice, but in some scenarios this
 > [!NOTE]  
 > Before [!INCLUDE[sssql16-md](../includes/sssql16-md.md)], trace flag 8048 could be used to force a node-based PMO to become a CPU-based PMO. Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE[sssql16-md](../includes/sssql16-md.md)], this behavior is dynamic and controlled by the engine.
 
-Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE[sssql16-md](../includes/sssql16-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] can dynamically detect contention on a specific CMemThread object and promote the object to a per-node or a per-CPU based implementation. Once promoted, the PMO remains promoted until the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process is restarted. CMemThread contention can be detected by the presence of high CMEMTHREAD waits in the [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV, and by observing the [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV columns `contention_factor`, `partition_type`, `exclusive_allocations_count`, and `waiting_tasks_count`.
+Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE[sssql16-md](../includes/sssql16-md.md)], the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] can dynamically detect contention on a specific CMemThread object and promote the object to a per-node or a per-CPU based implementation. Once promoted, the PMO remains promoted until the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process is restarted. CMemThread contention can be detected by the presence of high CMEMTHREAD waits in the [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV, and by observing the [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV columns `contention_factor`, `partition_type`, `exclusive_allocations_count`, and `waiting_tasks_count`.
 
 ## Next steps
 

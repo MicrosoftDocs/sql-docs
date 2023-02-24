@@ -3,9 +3,9 @@ description: "MSSQLSERVER_17204"
 title: "MSSQLSERVER_17204 | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/25/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "17204 (Database Engine error)"

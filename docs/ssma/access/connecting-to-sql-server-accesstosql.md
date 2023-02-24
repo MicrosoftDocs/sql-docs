@@ -1,11 +1,11 @@
 ---
 title: "Connecting to SQL Server (AccessToSQL) | Microsoft Docs"
 description: Learn how to connect to a target instance of SQL Database to migrate Access databases. SSMA obtains metadata about databases in SQL Database.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "11/16/2020"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "authentication"
@@ -60,7 +60,7 @@ To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
    - If you are connecting to the default instance on the local computer, you can enter `localhost` or a dot (`.`).
    - If you are connecting to the default instance on another computer, enter the name of the computer.
    - If you are connecting to a named instance, enter the computer name, a backslash, and the instance name. For example: `MyServer\MyInstance`.
-   - To connect to an active user instance of [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], connect by using named pipes protocol and specifying the pipe name, such as `\\.\pipe\sql\query`. For more information, see the [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentation.
+   - To connect to an active user instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], connect by using named pipes protocol and specifying the pipe name, such as `\\.\pipe\sql\query`. For more information, see the [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] documentation.
 
 3. If your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to accept connections on a non-default port, enter the port number that is used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections in the **Server port** box. For the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default port number is 1433. For named instances, SSMA will try to obtain the port number from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service.
 

@@ -4,8 +4,8 @@ description: Learn about the internationalization features of the JDBC driver an
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # International features of the JDBC driver
@@ -47,7 +47,7 @@ For date, time, and currencies, all formatting with localized data is done at th
 
 ## Collation support
 
-The JDBC Driver 3.0 supports all the collations supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and the new collations or new versions of Windows collation names introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].
+The JDBC Driver 3.0 supports all the collations supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and the new collations or new versions of Windows collation names introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].
 
 For more information on the collations, see [Collation and Unicode Support](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105)) and [Windows Collation Name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).
 

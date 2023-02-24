@@ -4,9 +4,8 @@ description: Describes the MSmerge_conflict_publication_article stored procedure
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 ms.custom: seo-lt-2019
 f1_keywords:

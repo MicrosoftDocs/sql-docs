@@ -3,10 +3,9 @@ description: "Implementing Endpoints"
 title: "Implementing Endpoints"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -25,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
 -   Database mirroring  
   
--   SOAP (support for SOAP endpoints is present in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] and earlier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions)  
+-   SOAP (support for SOAP endpoints is present in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)] and earlier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions)  
   
 -   Service Broker  
   

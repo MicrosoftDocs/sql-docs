@@ -5,8 +5,8 @@ author: jacinda-eng
 ms.author: jacindaeng
 ms.reviewer: wiassaf
 ms.date: "10/14/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

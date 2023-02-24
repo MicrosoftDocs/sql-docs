@@ -3,10 +3,9 @@ title: "Write SQL Server Audit Events to the Security Log | Microsoft Docs"
 description: Learn how to write SQL Server audit events to the Windows Security log. Find out about the limitations and restrictions to using that log.
 ms.custom: ""
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: security
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], Security Log"

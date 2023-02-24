@@ -3,10 +3,9 @@ title: "Database Properties (Options Page)"
 description: "Learn how to use the Options tab in the Database Properties dialog box to view or modify a database's collation, recovery model, and other settings."
 ms.custom: ""
 ms.date: "12/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.options.f1"
@@ -195,7 +194,7 @@ Enables this feature.
  To set this property, use the ALTER DATABASE statement.  
   
  **VarDecimal Storage Format Enabled**  
- This option is read-only starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. When **True**, this database is enabled for the vardecimal storage format. Vardecimal storage format cannot be disabled while any tables in the database are using it. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, all databases are enabled for the vardecimal storage format. This option uses [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
+ This option is read-only starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. When **True**, this database is enabled for the vardecimal storage format. Vardecimal storage format cannot be disabled while any tables in the database are using it. In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, all databases are enabled for the vardecimal storage format. This option uses [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
   
 ## Recovery  
  **Page Verify**  

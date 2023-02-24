@@ -3,10 +3,9 @@ description: "Lesson 2: Create the Deployment Bundle in SSIS"
 title: "Lesson 2: Create the Deployment Bundle in SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace

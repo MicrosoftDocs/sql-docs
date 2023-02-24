@@ -2,8 +2,8 @@
 title: Create Azure Functions with the SQL bindings extension for Visual Studio Code
 description: Use the SQL bindings extension for Visual Studio Code to create Azure functions with SQL bindings.
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 author: VasuBhog
 ms.author: vabhog
 ms.reviewer: drskwier

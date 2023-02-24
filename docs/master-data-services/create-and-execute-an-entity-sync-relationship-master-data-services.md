@@ -3,10 +3,9 @@ description: "Create and Execute an Entity Sync Relationship (Master Data Servic
 title: Create and Execute an Entity Sync Relationship
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: CordeliaGrey

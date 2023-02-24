@@ -3,8 +3,8 @@ title: "Search an Active Document Incrementally"
 description: Learn how to incrementally search a single document or window. As you type, the incremental search operation highlights the next occurrence of what you have typed to that point. Hidden text is ignored.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

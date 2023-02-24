@@ -3,10 +3,9 @@ description: "Modify Foreign Key Relationships"
 title: "Modify Foreign Key Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65538"

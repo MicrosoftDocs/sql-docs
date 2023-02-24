@@ -3,10 +3,9 @@ title: "Subscription Validation Options (Merge)"
 description: Describes the 'Subscription Validation Options' dialog box within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.validate.mergeoptions.f1"

@@ -4,9 +4,8 @@ description: Learn about creating XML views of relational data using the XML Sch
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 01/11/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 ms.custom: "seo-lt-2019"
 helpviewer_keywords:

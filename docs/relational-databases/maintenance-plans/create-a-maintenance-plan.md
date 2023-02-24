@@ -4,9 +4,8 @@ description: Learn how to create a single server or multiserver maintenance plan
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords:
   - "maintenance plans [SQL Server], creating"

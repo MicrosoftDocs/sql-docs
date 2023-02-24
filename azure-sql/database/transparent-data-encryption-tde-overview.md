@@ -2,8 +2,8 @@
 title: Transparent data encryption
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: An overview of transparent data encryption for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The document covers its benefits and the options for configuration, which includes service-managed transparent data encryption and Bring Your Own Key.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/27/2022
 ms.service: sql-database
@@ -31,7 +31,8 @@ For Azure SQL Database and Azure Synapse, the TDE protector is set at the [serve
 > All newly created databases in SQL Database are encrypted by default by using service-managed transparent data encryption. Existing SQL databases created before May 2017 and SQL databases created through restore, geo-replication, and database copy are not encrypted by default. Existing SQL Managed Instance databases created before February 2019 are not encrypted by default. SQL Managed Instance databases created through restore inherit encryption status from the source. To restore an existing TDE-encrypted database, the required TDE certificate must first be [imported](../managed-instance/tde-certificate-migrate.md) into the SQL Managed Instance. 
 
 > [!NOTE]
-> TDE cannot be used to encrypt system databases, such as the **master** database, in Azure SQL Database and Azure SQL Managed Instance. The **master** database contains objects that are needed to perform the TDE operations on the user databases. It is recommended to not store any sensitive data in the system databases. [Infrastructure encryption](transparent-data-encryption-byok-overview.md#doubleencryption) is now being rolled out which encrypts the system databases including master. 
+> TDE cannot be used to encrypt system databases, such as the `master` database, in Azure SQL Database and Azure SQL Managed Instance. The `master` database contains objects that are needed to perform TDE operations on user databases. It is recommended not to store any sensitive data in system databases.  The exception is `tempdb`, which is always encrypted with TDE to protect the data stored there. 
+
 
 
 ## Service-managed transparent data encryption
@@ -117,7 +118,7 @@ Use the following cmdlets for Azure SQL Database and Azure Synapse:
 
 Manage TDE by using Transact-SQL.
 
-Connect to the database by using a login that is an administrator or member of the **dbmanager** role in the master database.
+Connect to the database by using a login that is an administrator or member of the **dbmanager** role in the `master` database.
 
 | Command | Description |
 | --- | --- |

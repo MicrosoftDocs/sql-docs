@@ -3,10 +3,9 @@ description: "Lesson 4-4: Add a Flat File destination"
 title: "Step 4: Add a Flat File destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace

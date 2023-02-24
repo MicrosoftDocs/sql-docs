@@ -3,10 +3,9 @@ title: "Specify type & conflict resolution priority (Merge)"
 description: Learn how to specify the type and conflict resolution policy used by a Merge Subscription for SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication conflict resolution [SQL Server replication], merge subscription resolvers"

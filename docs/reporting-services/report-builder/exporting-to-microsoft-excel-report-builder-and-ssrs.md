@@ -2,9 +2,8 @@
 title: "Export a paginated report to Microsoft Excel (Report Builder) | Microsoft Docs"
 description: In Report Builder, the Excel rendering extension renders a paginated report to the Office Open XML format to use with Microsoft Excel.
 ms.date: 09/02/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 
 
 ms.topic: conceptual
@@ -124,7 +123,7 @@ The Excel rendering extension renders a paginated report to the [!INCLUDE[ofprex
 ## Excel Renderer  
   
 ### Current (.xlsx) Excel File Renderer  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], the default Excel renderer is the version compatible with current (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] files. This is the **Excel** option on the **Exporting** menus in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal and SharePoint list.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], the default Excel renderer is the version compatible with current (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] files. This is the **Excel** option on the **Exporting** menus in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal and SharePoint list.  
   
  When you use the default Excel renderer, instead of the earlier Excel 2003 (.xls) renderer, you can install the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint to allow earlier versions of Excel to open the files that are exported.  
   

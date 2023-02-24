@@ -4,10 +4,9 @@ title: "Installing Integration Services Versions Side by Side | Microsoft Docs"
 ms.custom:
   - intro-installation
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "interoperability and coexistence [Integration Services]"

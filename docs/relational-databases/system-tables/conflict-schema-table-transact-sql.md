@@ -4,9 +4,8 @@ description: conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "01/15/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "conflict_"

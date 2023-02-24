@@ -3,9 +3,9 @@ description: "Select Source Tables and Views (SQL Server Import and Export Wizar
 title: "Select Source Tables and Views (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.selectsourcetablesandviews.f1"

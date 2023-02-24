@@ -4,8 +4,8 @@ description: Find out how to set an instance of SQL Server to start automaticall
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/06/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "automatic SQL Server startup"

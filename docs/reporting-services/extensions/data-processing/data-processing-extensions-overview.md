@@ -2,9 +2,8 @@
 title: "Data Processing Extensions Overview | Microsoft Docs"
 description: See which data processing extensions are included with Reporting Services, and learn how to add custom data processing to your report server.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
+ms.service: reporting-services
+ms.subservice: extensions
 
 
 ms.topic: reference

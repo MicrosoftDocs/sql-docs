@@ -3,9 +3,9 @@ description: "EXPLAIN returns the query plan for a Microsoft Azure Synapse Analy
 title: "EXPLAIN (Transact-SQL)"
 ms.custom: ""
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: data-warehouse
+ms.subservice: data-warehouse
 ms.topic: conceptual
 author: mstehrani
 ms.author: emtehran
@@ -15,7 +15,7 @@ monikerRange: "= azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
+  Returns the query plan for an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
   
 ## Syntax  
   

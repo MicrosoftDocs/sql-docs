@@ -4,8 +4,8 @@ description: "Learn about the sqlcmd utility. See how to use it in a command pro
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "logins [SQL Server], named instance of SQL Server"

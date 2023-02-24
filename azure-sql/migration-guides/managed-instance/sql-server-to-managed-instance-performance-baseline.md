@@ -34,7 +34,7 @@ Any performance issues on the source SQL Server should be addressed prior to mig
 
 After you have defined a baseline, compare similar workload performance on the target SQL Managed Instance. For accuracy, it is important that the SQL Managed Instance environment is comparable to the SQL Server environment as much as possible. 
 
-There are SQL Managed Instance infrastructure differences that make matching performance exactly unlikely. Some queries may run faster than expected, while others may be slower. The goal of this comparison is to verify that workload performance in the managed instance matches the performance on SQL Server (on average) and to identify any critical queries with performance that don’t match your original performance. 
+There are SQL Managed Instance infrastructure differences that make matching performance exactly unlikely. Some queries may run faster than expected, while others may be slower. The goal of this comparison is to verify that workload performance in the managed instance matches the performance on SQL Server (on average) and to identify any critical queries with performance that don't match your original performance. 
 
 Performance comparison is likely to result in the following outcomes: 
 
@@ -61,7 +61,7 @@ SQL Managed Instance provides advanced tools for monitoring and troubleshooting,
 
 When comparing performance, consider the following: 
 
-- Settings match between source and target. Validate that various instance, database, and tempdb settings are equivalent between the two environments. Differences in configuration, compatibility levels, encryption settings, trace flags etc., can all skew performance. 
+- Settings match between source and target. Validate that various instance, database, and `tempdb` settings are equivalent between the two environments. Differences in configuration, compatibility levels, encryption settings, trace flags, etc., can all skew performance. 
 
 - Storage is configured according to [best practices](https://techcommunity.microsoft.com/t5/datacat/storage-performance-best-practices-and-considerations-for-azure/ba-p/305525). For example, for General Purpose, you may need to pre-allocate the size of the files to improve performance. 
 

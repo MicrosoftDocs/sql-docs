@@ -4,9 +4,8 @@ description: Learn which Transact-SQL features are not supported for memory-opti
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "11/21/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11

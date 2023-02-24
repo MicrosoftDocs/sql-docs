@@ -1,10 +1,9 @@
 ---
 title: "Deprecated features in SQL Server Reporting Services | Microsoft Docs"
 description: Learn about the deprecated features in the different versions of SQL Server Reporting Services. The features are still available in the release in which they are deprecated. 
-ms.date: 10/17/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.date: 11/2/2022
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual
@@ -33,7 +32,11 @@ When we mark a feature as deprecated, it means:
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2022-and-later](../includes/ssrs-appliesto-2022-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
-No features were deprecated in SQL Server 2022 Reporting Services.
+SQL Server 2022 Reporting Services and Power BI Report Server September 2022 support the following features, but they are now deprecated. These features will be removed in a future release, however, the specific version of SQL Server and Power BI Report Server hasn't been determined.
+
+| **Category** | **Deprecated feature** | **Replacement** |
+| --- | --- | --- |
+| Report Server | Report Part Gallery | None |
 
 ::: moniker-end
 

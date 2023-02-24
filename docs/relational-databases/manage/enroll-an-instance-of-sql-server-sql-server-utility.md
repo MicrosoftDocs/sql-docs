@@ -3,10 +3,9 @@ title: "Enroll an Instance of SQL Server (SQL Server Utility) | Microsoft Docs"
 description: Start monitoring the performance and configuration of an instance of SQL Server by enrolling it into an existing SQL Server Utility.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.makemanaged.agentaccount.F1"
@@ -25,6 +24,9 @@ ms.author: mikeray
 # Enroll an Instance of SQL Server (SQL Server Utility)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Enroll an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] into an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility to monitor its performance and configuration as a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The utility control point (UCP) collects configuration and performance information from managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] every 15 minutes. This information is stored in the utility management data warehouse (UMDW) on the UCP; the UMDW file name is sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance data is compared to policies to help identify resource use bottlenecks and consolidation opportunities.  
+
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
+
   
  In this release, the UCP and all managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must satisfy the following requirements:  
   

@@ -5,9 +5,8 @@ author: mstehrani
 ms.author: emtehran
 ms.reviewer: wiassaf
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -28,7 +27,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 ---
 # MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Runs insert, update, or delete operations on a target table from the results of a join with a source table. For example, synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table.
 
@@ -61,7 +60,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 > ```  
 ::: moniker-end
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"  
@@ -192,7 +191,7 @@ If *target_table* is a view, any actions against it must satisfy the conditions 
 Hints can be specified as a <merge_hint>. 
 
 ::: moniker range="=azure-sqldw-latest"
-Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+Note that merge_hints aren't supported for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 ::: moniker-end
   
 #### [ AS ] *table_alias*  
@@ -412,7 +411,7 @@ MERGE is a fully reserved keyword when the database compatibility level is set t
 
 ::: moniker range="=azure-sqldw-latest"
 ### Troubleshooting
-In certain scenarios, a MERGE statement may result in the error `“CREATE TABLE failed because column <> in table <> exceeds the maximum of 1024 columns.”`, even when neither Target nor Source table has 1024 columns. This scenario can arise when all the below conditions are met:
+In certain scenarios, a MERGE statement may result in the error `"CREATE TABLE failed because column <> in table <> exceeds the maximum of 1024 columns."`, even when neither Target nor Source table has 1024 columns. This scenario can arise when all the below conditions are met:
 - Multiple columns are specified in an UPDATE SET or INSERT operation within MERGE (not specific to any WHEN [NOT] MATCHED clause)
 - Any column in the JOIN condition has a Non-Clustered Index (NCI)
 

@@ -3,10 +3,9 @@ title: "Restore databases to marked transaction"
 description: When you make related updates to two or more related databases, use transaction marks in SQL Server to recover them to a logically consistent point.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction marks [SQL Server]"

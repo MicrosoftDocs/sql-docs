@@ -2,8 +2,8 @@
 title: Status Option in admin tool
 titleSuffix: SQL Server Distributed Replay
 description: This article describes the status command-line option and syntax of the SQL Server Distributed Replay administration tool, which displays the current status.
-ms.prod: sql
-ms.technology: distributed-replay
+ms.service: sql
+ms.subservice: distributed-replay
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
@@ -23,7 +23,7 @@ The Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distribu
 
 The **status** option queries the controller and displays the current status.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") For more information about the syntax conventions that are used with the administration tool syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: For more information about the syntax conventions that are used with the administration tool syntax, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax
 

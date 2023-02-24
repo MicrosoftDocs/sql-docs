@@ -3,10 +3,9 @@ description: "sp_control_plan_guide (Transact-SQL)"
 title: "sp_control_plan_guide (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_control_plan_guide"
@@ -24,7 +23,7 @@ ms.author: maghan
 
   Drops, enables, or disables a plan guide.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -71,7 +70,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  Disabling a disabled plan guide or enabling an enabled plan guide has no effect and runs without error.  
   
- Plans guides are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). However, you can execute **sp_control_plan_guide** with the DROP or DROP ALL option in any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Plans guides are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). However, you can execute **sp_control_plan_guide** with the DROP or DROP ALL option in any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Permissions  
  To execute **sp_control_plan_guide** on a plan guide of type OBJECT (created specifying **@type ='**OBJECT**'** ) requires ALTER permission on the object that is referenced by the plan guide. All other plan guides require ALTER DATABASE permission.  

@@ -4,8 +4,8 @@ description: "BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/21/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DISTRIBUTED"
@@ -33,7 +33,7 @@ dev_langs:
 
  - In case of Azure SQL Managed Instance, the distributed transaction is managed by the service itself and not MS DTC. For information on distributed transactions in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], see [Distributed transactions across cloud databases](/azure/azure-sql/database/elastic-transactions-overview).
 
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

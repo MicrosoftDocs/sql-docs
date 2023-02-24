@@ -1,9 +1,8 @@
 ---
 title: "SQL Server Audit Action Groups and Actions"
 description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit. 
-ms.prod: sql
-ms.prod_service: security
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "audit actions [SQL Server]"
@@ -90,6 +89,7 @@ Server-level audit action groups are actions similar to [!INCLUDE[ssNoVersion](.
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|This event is raised when there is an impersonation operation in the database scope such as EXECUTE AS \<principal> or SETPRINCIPAL. This event is raised for impersonations done in any database. Equivalent to the [Audit Database Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|This event is raised whenever a login is added to or removed from a database role. This event class is raised for the sp_addrolemember, sp_changegroup, and sp_droprolemember stored procedures. This event is raised on any Database role member change in any database. Equivalent to the [Audit Add Member to DB Role Event Class](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|This event is raised whenever a principal issues any DBCC command. Equivalent to the [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
+|EXTGOV_OPERATION_GROUP|This event is raised on external governance feature enablement, external governance feature disablement, external governance policies synchronization, and external governance policies based permissions enforcement.|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Indicates that a principal tried to log on to a contained database and failed. Events in this class are raised by new connections or by connections that are reused from a connection pool. Equivalent to the [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|    
 |FAILED_LOGIN_GROUP|Indicates that a principal tried to log on to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and failed. Events in this class are raised by new connections or by connections that are reused from a connection pool. Equivalent to the [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md). This audit does not apply to Azure SQL Database.| 
 |FULLTEXT_GROUP|Indicates fulltext event occurred. Equivalent to the [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md).|  

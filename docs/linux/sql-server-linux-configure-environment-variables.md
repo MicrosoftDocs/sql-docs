@@ -6,8 +6,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 03/31/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 
 ---
 # Configure SQL Server settings with environment variables on Linux

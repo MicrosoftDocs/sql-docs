@@ -3,9 +3,8 @@ title: "Database Engine Scripting"
 description: Learn how you can use the Microsoft PowerShell scripting environment to manage instances of the SQL Server Database Engine, and how you can build and run Database Engine queries that contain Transact-SQL and XQuery.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -69,11 +68,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Describes how to use the code and text editors in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to interactively develop, debug, and run [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts|[Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)|  
-|Describes how to use the **sqlcmd** utility to run [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts from the command prompt, including the ability to interactively develop scripts.|[sqlcmd How-to Topics](./sqlcmd-start-the-utility.md)|  
+|Describes how to use the **sqlcmd** utility to run [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts from the command prompt, including the ability to interactively develop scripts.|[sqlcmd How-to Topics](../../tools/sqlcmd/sqlcmd-start-utility.md)|  
 |Describes how to integrate the SQL Server components into a Windows PowerShell environment and then build PowerShell scripts for managing SQL Server instances and objects.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |Describes how to use the **Generate and Publish Scripts** wizard to create [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that recreate one or more of the objects from a database.|[Generate Scripts &#40;SQL Server Management Studio&#41;](./generate-scripts-sql-server-management-studio.md)|  
   
 ## See Also  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
- [Tutorial: Writing Transact-SQL Statements](../../t-sql/tutorial-writing-transact-sql-statements.md)  
-  
+ [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)   
+ [Tutorial: Writing Transact-SQL Statements](../../t-sql/tutorial-writing-transact-sql-statements.md)

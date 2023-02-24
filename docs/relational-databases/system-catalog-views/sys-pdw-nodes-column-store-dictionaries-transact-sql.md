@@ -4,8 +4,8 @@ description: sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 dev_langs:
@@ -28,8 +28,8 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |**type**|**int**|Dictionary type:<br /><br /> 1 - Hash dictionary containing **int** values<br /><br /> 2 - Not used<br /><br /> 3 - Hash dictionary containing string values<br /><br /> 4 - Hash dictionary containing **float** values|  
 |**last_id**|**int**|The last data id in the dictionary.|  
 |**entry_count**|**bigint**|Number of entries in the dictionary.|  
-|**on_disc_size**|**bigint**|Size of dictionary in bytes.|  
-|**pdw_node_id**|**int**|Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
+|**on_disk_size**|**bigint**|Size of dictionary in bytes.|  
+|**pdw_node_id**|**int**|Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node.|  
   
 ## Permissions  
  Requires `VIEW SERVER STATE` permission.  

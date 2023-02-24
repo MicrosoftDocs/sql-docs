@@ -1,9 +1,8 @@
 ---
 description: "Create and update statistics"
 title: Create and update statistics
-ms.prod: sql
-ms.prod_service: database-engine
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: reference
 helpviewer_keywords:
   - "statistical information [SMO]"

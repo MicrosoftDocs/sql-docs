@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
 ms.date: 09/26/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.resource_governor"
@@ -44,7 +44,7 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**target_memory_kb**|bigint|The target amount of memory, in kilobytes, the resource pool is trying to attain. This is based on the current settings and server state. Is not nullable.|
 |**used_memory_kb**|bigint|The amount of memory used, in kilobytes, for the resource pool. Is not nullable.|
 |**cache_memory_kb**|bigint|The current total cache memory usage in kilobytes. Is not nullable.|
-|**compile_memory_kb**|bigint|The current total stolen memory usage in kilobytes (KB). The majority of this usage would be for compile and optimization, but it can also include other memory users. Is not nullable.|
+|**compile_memory_kb**|bigint|The current total stolen memory usage in kilobytes (KB). Most of this usage would be for compile and optimization, but it can also include other memory users. Is not nullable.|
 |**active_memgrant_count**|bigint|The current count of memory grants. Is not nullable.|
 |**active_memgrant_kb**|bigint|The sum, in kilobytes (KB), of current memory grants. Is not nullable.|
 |**used_memgrant_kb**|bigint|The current total used (stolen) memory from memory grants. Is not nullable.|
@@ -92,6 +92,9 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information, visit [File space management in SQL Database](/azure/sql-database/sql-database-file-space-management).|
 |**max_worker_percent**|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
 |**max_session_percent**|decimal(5,2)|Maximum concurrent sessions in percentage based on the limit of the pool.|
+|**active_outbound_connection_worker_count**|int|Total outbound connection workers in current snapshot.|
+|**max_outbound_connection_worker**|int|Outbound connection worker limit for the pool.|
+|**max_outbound_connection_worker_percent**|decimal(5,2)|Maximum concurrent outbound connection workers (requests) in percentage based on the limit of the pool.|
 
 ## Permissions
 
@@ -99,7 +102,7 @@ This view requires VIEW SERVER STATE permission.
 
 ## Remarks
 
-Users can access this dynamic management view to monitor near real time resource consumption for user workload pool as well as system internal pools of Azure SQL Database instance.
+Users can access this dynamic management view to monitor near real time resource consumption for user workload pool and system internal pools of Azure SQL Database instance.
 
 ## Examples
 

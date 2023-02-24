@@ -10,7 +10,7 @@ ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: "05/24/2022"
+ms.date: "10/20/2022"
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 zone_pivot_groups: as1-azuresql-sql
 ---
@@ -30,14 +30,18 @@ This article provides information on configuring a [ledger database](ledger-over
 
 ## Enable ledger database
 
+> [!NOTE]
+> Enabling the ledger functionality at the database level will make all tables in this database updatable ledger tables. This option cannot be changed after the database is created. Creating a table with the option `LEDGER = OFF` will throw an error message.
+
 # [Portal](#tab/Portal)
 
-1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) if you don't already have one.
-1. In the **Security** tab, select the **Ledger** option. 
+1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) .
+
+1. On the **Security** tab, select **Configure ledger**. 
 
    :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected.":::
 
-1. In the **Ledger** pane, select **Enable for all future tables in this database**. 
+1. On the **Configure ledger** pane, select **Enable for all future tables in this database**. 
 
    :::image type="content" source="media/ledger/enable-ledger-database.png" alt-text="Screenshot that shows the selection for enabling a ledger database.":::
 

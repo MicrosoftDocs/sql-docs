@@ -4,9 +4,9 @@ description: This section provides reference information about the following SQL
 titleSuffix: SQL Server Express
 ms.custom: seo-dt-2019
 ms.date: "03/06/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "reference"
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: WilliamDAssafMSFT

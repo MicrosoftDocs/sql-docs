@@ -3,10 +3,9 @@ description: "Upgrade Database Wizard (Master Data Services Configuration Manage
 title: Upgrade Database Wizard
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: CordeliaGrey
@@ -26,7 +25,7 @@ ms.author: jiwang6
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|**SQL Server instance**|The name of the currently selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] instance.|  
+|**SQL Server instance**|The name of the currently selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instance.|  
 |**Master Data Services database**|The name of the currently selected [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.|  
   
 ## Progress and Finish  

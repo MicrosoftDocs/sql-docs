@@ -1,11 +1,10 @@
 ---
-description: "Change an Operator&#39;s Availability"
-title: "Change an Operator&#39;s Availability"
+description: "Change an Operator's Availability"
+title: "Change an Operator's Availability"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -25,7 +24,7 @@ ms.author: maghan
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
-# Change an Operator&#39;s Availability
+# Change an Operator's Availability
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
@@ -60,7 +59,7 @@ Only members of the **sysadmin** fixed server role can edit operators.
   
 #### To change an operator's availability  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

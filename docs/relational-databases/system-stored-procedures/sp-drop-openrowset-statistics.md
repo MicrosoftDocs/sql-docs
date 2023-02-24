@@ -4,7 +4,6 @@ title: "sp_drop_openrowset_statistics (Transact-SQL)"
 ms.custom: ""
 ms.date: "04/13/2022"
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: "reference"
 f1_keywords: 
@@ -27,7 +26,7 @@ monikerRange: "=azure-sqldw-latest||=azuresqldb-mi-current"
 
  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

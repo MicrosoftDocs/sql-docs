@@ -4,9 +4,8 @@ description: The Unicode character data format allows data to be exported from a
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/30/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

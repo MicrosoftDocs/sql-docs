@@ -19,8 +19,7 @@ This article describes how to register your SQL Server virtual machines (VMs) in
 
 This article teaches you to register SQL Server VMs manually in bulk. Alternatively, you can register [all SQL Server VMs automatically](sql-agent-extension-automatic-registration-all-vms.md) or [individual SQL Server VMs manually](sql-agent-extension-manually-register-single-vm.md). 
 
-> [!NOTE]
-> Starting in September 2021, registering with the SQL IaaS extension in full mode no longer requires restarting the SQL Server service. 
+[!INCLUDE [SQL VM feature benefits](../../includes/sql-vm-iaas-extension-permissions.md)]
 
 ## Overview
 
@@ -233,6 +232,8 @@ For the full script on GitHub, see [Bulk register SQL Server VMs with Az PowerSh
 Copy the full script and save it as `RegisterSqLVMs.psm1`.
 
 ## Next steps
+
+[Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
 
 For more information, see the following articles: 
 

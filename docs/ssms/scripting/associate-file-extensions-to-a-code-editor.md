@@ -3,9 +3,8 @@ title: "Associate File Extensions to a Code Editor"
 description: Learn how to associate a file extension to a specific code editor so that when you double-click a file with the extension it is opened by the associated editor.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -3,9 +3,8 @@ description: "Create an ActiveX Script Job Step"
 title: "Create an ActiveX Script Job Step"
 ms.custom: seo-lt-2019
 ms.date: 10/06/2020
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ActiveX scripting jobs [SQL Server]"
@@ -64,7 +63,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To create an ActiveX script job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

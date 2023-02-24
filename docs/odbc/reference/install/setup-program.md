@@ -3,10 +3,9 @@ description: "Setup Program"
 title: "Setup Program | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2016"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing ODBC components [ODBC], setup program"

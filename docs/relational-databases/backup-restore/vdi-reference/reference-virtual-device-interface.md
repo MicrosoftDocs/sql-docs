@@ -3,9 +3,8 @@ title: Virtual device interface reference
 titlesuffix: SQL Server VDI reference
 description: This article provides an overview of the virtual device interface reference for SQL Server backup.
 ms.date: 08/30/2019
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma

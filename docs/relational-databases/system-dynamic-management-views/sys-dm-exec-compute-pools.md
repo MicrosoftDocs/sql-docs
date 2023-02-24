@@ -4,9 +4,8 @@ description: sys.dm_exec_compute_pools (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/04/2019
-ms.prod: sql
-ms.prod_service: "database-engine, big-data-clusters"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_compute_pools"

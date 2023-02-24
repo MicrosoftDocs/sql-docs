@@ -4,8 +4,7 @@ description: "Deterministic and Nondeterministic Functions"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/28/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
   - "built-in functions [SQL Server]"

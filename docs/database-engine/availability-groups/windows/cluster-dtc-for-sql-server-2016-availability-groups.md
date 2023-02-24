@@ -4,8 +4,8 @@ description: "Describes the requirements and steps for clustering the Microsoft 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "08/30/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"

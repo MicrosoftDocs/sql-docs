@@ -5,9 +5,8 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: rwestMSFT
 ms.date: 04/04/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "database_audit_specifications_TSQL"

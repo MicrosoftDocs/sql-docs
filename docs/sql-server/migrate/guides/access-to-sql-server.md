@@ -1,9 +1,9 @@
 ---
 title: 'Access to SQL Server: Migration guide'
 description: 'This guide teaches you how to migrate your Microsoft Access databases to Microsoft SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access).'
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: migration-guide
+ms.subservice: migration-guide
 ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
@@ -18,7 +18,7 @@ ms.custom:
 
 In this guide, you learn how to migrate your Microsoft Access databases to SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access).
 
-For other migration guides, see [Azure Database Migration Guides](https://datamigration.microsoft.com/).
+For other migration guides, see [Azure Database Migration Guides](/data-migration/).
 
 ## Prerequisites
 
@@ -163,5 +163,5 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 - After the migration, review the [Post-migration validation and optimization guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 - For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Data migration services and tools](/azure/dms/dms-tools-matrix).
-- For other migration guides, see [Azure Database Migration Guides](https://datamigration.microsoft.com/).
+- For other migration guides, see [Azure Database Migration Guides](/data-migration/).
 - For migration videos, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

@@ -4,8 +4,8 @@ description: "Aggregate Functions (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "08/15/2018"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "functions [SQL Server], aggregate"

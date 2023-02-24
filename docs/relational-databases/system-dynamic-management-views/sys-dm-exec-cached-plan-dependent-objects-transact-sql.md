@@ -4,9 +4,8 @@ description: sys.dm_exec_cached_plan_dependent_objects returns a row for each ex
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/03/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_cached_plan_dependent_objects"

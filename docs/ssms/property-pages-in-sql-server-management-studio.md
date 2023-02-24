@@ -1,10 +1,9 @@
 ---
 title: "Property Pages in SQL Server Management Studio"
 description: "Property Pages in SQL Server Management Studio"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "property pages [SQL Server Management Studio]"

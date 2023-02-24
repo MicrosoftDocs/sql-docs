@@ -1,9 +1,8 @@
 ---
 title: dta utility
 description: The dta utility is a command prompt version of Database Engine Tuning Advisor that allows you to use functionality in applications and scripts.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "physical design structures [SQL Server]"
@@ -139,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  If you are using an XML input file, you can specify the first database to which **dta** connects by using the **DatabaseToConnect** element that is located under the **TuningOptions** element. For more information, see [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
- If you are tuning only one database, the **-d** argument provides functionality that is similar to the **-d** argument in the **sqlcmd** utility, but it does not execute the USE *database_name* statement. For more information, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
+ If you are tuning only one database, the **-d** argument provides functionality that is similar to the **-d** argument in the **sqlcmd** utility, but it does not execute the USE *database_name* statement. For more information, see [sqlcmd Utility](../sqlcmd/sqlcmd-utility.md).  
   
  **-E**  
  Uses a trusted connection instead of requesting a password. Either the **-E** argument or the **-U** argument, which specifies a login ID, must be used.  

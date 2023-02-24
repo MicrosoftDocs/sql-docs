@@ -4,9 +4,9 @@ title: "Installing SSMA components on SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom:
   - intro-installation
 ms.date: "04/29/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: cpichuka 

@@ -2,8 +2,8 @@
 title: Error List Window
 description: Learn how to use the Error List to view the errors and warnings that Intellisense generates when you edit Transact-SQL scripts.
 titleSuffix: T-SQL debugger
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -61,7 +61,7 @@ The **Error List** provides the following functionality:
 ## Transact-SQL Errors in Management Studio  
  SQL Server Management Studio displays errors for [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts in the following locations:  
   
--   The **Error List** contains all syntax and semantic errors found by IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Editor. This list of errors is dynamically updated as you edit [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. The list includes all errors that the editor has found in each [!INCLUDE[tsql](../../includes/tsql-md.md)] script. The editor does not stop parsing a file after encountering errors in a script. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Editor does not support all [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax elements. The **Error List** contains only errors from the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that is supported by IntelliSense.  
+-   The **Error List** contains all syntax and semantic errors found by IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Editor. This list of errors is dynamically updated as you edit [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. The list includes all errors that the editor has found in each [!INCLUDE[tsql](../../includes/tsql-md.md)] script. The editor does not stop parsing a file after encountering errors in a script. In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Editor does not support all [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax elements. The **Error List** contains only errors from the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that is supported by IntelliSense.  
   
 -   The **Messages** tab at the bottom of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window displays all errors and messages that are returned by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] when a [!INCLUDE[tsql](../../includes/tsql-md.md)] script is executed. This list does not change until you execute the script again. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] stops parsing a batch after it finds one or two compile errors; therefore, the **Messages** tab might not list all errors in a script.  
   

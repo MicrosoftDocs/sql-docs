@@ -3,10 +3,9 @@ description: "Guidelines for Interval and Numeric Data Types"
 title: "Guidelines for Interval and Numeric Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
 author: David-Engel

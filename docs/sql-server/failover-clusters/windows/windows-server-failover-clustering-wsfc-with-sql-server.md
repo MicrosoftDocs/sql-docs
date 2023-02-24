@@ -3,9 +3,9 @@ title: "Windows Server Failover Cluster with SQL Server"
 description: Learn about using the Windows Server Failover Cluster service with SQL Server and failover cluster instances. 
 ms.custom: seo-lt-2019
 ms.date: "01/18/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.subservice: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"

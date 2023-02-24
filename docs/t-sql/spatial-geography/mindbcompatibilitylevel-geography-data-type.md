@@ -3,10 +3,9 @@ description: "MinDbCompatibilityLevel (geography Data Type)"
 title: "MinDbCompatibilityLevel (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "MinDbCompatibilityLevel"
@@ -55,7 +54,7 @@ END
 ```  
   
 ### B. Testing LineString type for compatibility with compatibility level 100  
- The following example tests a `LineString` instance for compatibility with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
+ The following example tests a `LineString` instance for compatibility with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]:  
   
 ```sql
 DECLARE @g geometry = 'LINESTRING(-120.533 46.566, -118.283 46.1, -122.3 47.45)';  

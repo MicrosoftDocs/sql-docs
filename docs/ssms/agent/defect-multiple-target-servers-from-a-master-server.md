@@ -1,9 +1,8 @@
 ---
 description: "Defect Multiple Target Servers from a Master Server"
 title: Defect Multiple Target Servers from a Master Server
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, target servers"

@@ -3,10 +3,9 @@ description: "Performance Counters"
 title: "Performance Counters | Microsoft Docs"
 ms.custom: supportability
 ms.date: "08/27/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], performance counters"

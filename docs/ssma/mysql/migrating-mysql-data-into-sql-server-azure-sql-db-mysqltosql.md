@@ -1,12 +1,12 @@
 ---
 description: "Migrating MySQL Data into SQL Server - Azure SQL Database (MySQLToSQL)"
 title: "Migrating MySQL Data into SQL Server - Azure SQL Database (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Data Migration, server side data migration"

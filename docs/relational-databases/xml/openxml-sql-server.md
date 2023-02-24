@@ -3,10 +3,9 @@ title: "OPENXML (SQL Server)"
 description: Learn about the OPENXML statement in SQL Server that provides a rowset view of the internal representation of an XML document.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: jroth, randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "ColPattern [XML in SQL Server]"
@@ -26,7 +25,7 @@ ms.author: mikeray
 ---
 # OPENXML (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 OPENXML is a [!INCLUDE[tsql](../../includes/tsql-md.md)] keyword, which provides a rowset over in-memory XML documents that is similar to a table or a view. OPENXML allows access to XML data as though it's a relational rowset. It does this by providing a rowset view of the internal representation of an XML document. The records in the rowset can be stored in database tables.
 

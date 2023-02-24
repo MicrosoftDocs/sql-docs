@@ -22,11 +22,11 @@ Three versions of the app are available; each explores a different database tena
 
 ![Three tenancy patterns][image-three-tenancy-patterns]
 
- Each sample includes the application code, plus management scripts and tutorials that explore a range of design and management patterns.  Each sample deploys in less that five minutes.  All three can be deployed side-by-side so you can compare the differences in design and management.
+ Each sample includes the application code, plus management scripts and tutorials that explore a range of design and management patterns.  Each sample deploys in less than five minutes.  All three can be deployed side-by-side so you can compare the differences in design and management.
 
 ## Standalone application per tenant pattern
 
-The standalone app per tenant pattern uses a single tenant application with a database for each tenant. Each tenant’s app, including its database, is deployed into a separate Azure resource group. The resource group can be deployed in the service provider’s subscription or the tenant’s subscription and managed by the provider on the tenant’s behalf. The standalone app per tenant pattern provides the greatest tenant isolation, but is typically the most expensive as there's no opportunity to share resources between multiple tenants.  This pattern is well suited to applications that might be more complex and which are deployed to smaller numbers of tenants.  With standalone deployments, the app can be customized for each tenant more easily than in other patterns.  
+The standalone app per tenant pattern uses a single tenant application with a database for each tenant. Each tenant's app, including its database, is deployed into a separate Azure resource group. The resource group can be deployed in the service provider's subscription or the tenant's subscription and managed by the provider on the tenant's behalf. The standalone app per tenant pattern provides the greatest tenant isolation, but is typically the most expensive as there's no opportunity to share resources between multiple tenants.  This pattern is well suited to applications that might be more complex and which are deployed to smaller numbers of tenants.  With standalone deployments, the app can be customized for each tenant more easily than in other patterns.  
 
 Check out the [tutorials][docs-tutorials-for-wingtip-sa] and code on GitHub  [.../Microsoft/WingtipTicketsSaaS-StandaloneApp][github-code-for-wingtip-sa].
 

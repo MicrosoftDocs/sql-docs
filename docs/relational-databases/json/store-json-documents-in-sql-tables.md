@@ -2,8 +2,8 @@
 title: "Store JSON documents in SQL Server or SQL Database"
 description: "This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents."
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
@@ -16,7 +16,7 @@ SQL Server and Azure SQL Database have native JSON functions that enable you to 
 ## JSON storage format
 
 The first storage design decision is how to store JSON documents in the tables. There are two available options:
-- **LOB storage** - JSON documents can be stored as-is in `NVARCHAR` columns. This is the best way for quick data load and ingestion because the loading speed is matching loading of string columns. This approach might introduce additional performance penalty on query/analysis time if indexing on JSON values in not performed, because the raw JSON documents must be parsed while the queries are running. 
+- **LOB storage** - JSON documents can be stored as-is in `NVARCHAR` columns. This is the best way for quick data load and ingestion because the loading speed is matching loading of string columns. This approach might introduce additional performance penalty on query/analysis time if indexing on JSON values is not performed, because the raw JSON documents must be parsed while the queries are running. 
 - **Relational storage** - JSON documents can be parsed while they are inserted in the table using `OPENJSON`, `JSON_VALUE` or `JSON_QUERY` functions. Fragments from the input JSON documents can be stored in the SQL data type columns or in NVARCHAR columns containing JSON sub-elements. This approach increases the load time because JSON parsing is done during load; however, queries are matching performance of classic queries on the relational data.
 
 ## Classic tables

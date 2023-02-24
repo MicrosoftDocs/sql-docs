@@ -3,7 +3,7 @@ title: Configure minimal TLS version - managed instance
 description: "Learn how to configure minimal TLS version for managed instance"
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.date: 05/25/2020
+ms.date: 10/21/2022
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
@@ -27,6 +27,9 @@ After setting the Minimal TLS Version, login attempts from clients that are usin
 Error 47072
 Login failed with invalid TLS version
 ```
+
+> [!NOTE]
+> When you configure a minimum TLS version, that minimum version is enforced at the application layer. Tools that attempt to determine TLS support at the protocol layer may return TLS versions in addition to the minimum required version when run directly against the managed instance endpoint.
 
 ## Set minimal TLS version via PowerShell
 

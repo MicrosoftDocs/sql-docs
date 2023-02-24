@@ -4,8 +4,8 @@ description: "Retrieving Resultsets into Streams"
 author: rothja
 ms.author: jroth
 ms.date: "01/20/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "streams [ADO], retrieving query results"

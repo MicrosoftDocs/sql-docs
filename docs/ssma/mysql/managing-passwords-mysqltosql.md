@@ -1,11 +1,11 @@
 ---
 description: "Managing Passwords (MySQLToSQL)"
 title: "Managing Passwords (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: 07/06/2020
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Password management, importing or exporting encrypted password"

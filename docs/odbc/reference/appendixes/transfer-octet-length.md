@@ -3,10 +3,9 @@ description: "Transfer Octet Length"
 title: "Transfer Octet Length | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2019"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords: 
   - "transfer octet length of data types [ODBC]"

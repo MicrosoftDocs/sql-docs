@@ -3,10 +3,9 @@ title: "Media errors: Backup and Restore | Microsoft Docs"
 description: In SQL Server 2019, you can recover database despite detected errors. Use RESTORE and RESTORE VERIFYONLY with a backup checksum to check for errors.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "media errors [SQL Server]"

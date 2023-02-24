@@ -6,9 +6,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: ""
 ms.date: "07/27/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: "seo-lt-2019"
 f1_keywords:
@@ -27,7 +26,7 @@ dev_langs:
 
   Removes query notification subscriptions from the instance. This statement can remove a specific subscription or all subscriptions.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

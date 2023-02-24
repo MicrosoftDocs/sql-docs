@@ -4,8 +4,8 @@ description: "Learn how to work with data types in the JDBC Driver for SQL Serve
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/12/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Working with data types (JDBC)

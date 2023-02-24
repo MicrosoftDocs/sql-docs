@@ -4,9 +4,8 @@ description: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/05/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_column_store_row_group_physical_stats_TSQL"

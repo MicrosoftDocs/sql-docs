@@ -4,9 +4,8 @@ description: SQL Server Databases with memory-optimized tables, with or without 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/31/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510

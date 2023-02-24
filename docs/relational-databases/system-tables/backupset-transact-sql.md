@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 09/09/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -60,7 +60,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |**type**|**char(1)**|Backup type. Can be:<br /><br />D = Database<br />I = Differential database<br />L = Log<br />F = File or filegroup<br />G =Differential file<br />P = Partial<br />Q = Differential partial<br /><br />Can be NULL.|
 |**sort_order**|**smallint**|Sort order of the server performing the backup operation. Can be NULL. For more information about sort orders and collations, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|
 |**code_page**|**smallint**|Code page of the server performing the backup operation. Can be NULL. For more information about code pages, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|
-|**compatibility_level**|**tinyint**|Compatibility level setting for the database. Can be:<br /><br />90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br />100 = [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)]<br />110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br />120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br />130 = [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]<br />140 = [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]<br />150 = [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]<br />160 = [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]<br /><br />Can be NULL.<br /><br />For more information about compatibility levels, see [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|
+|**compatibility_level**|**tinyint**|Compatibility level setting for the database. Can be:<br /><br />90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br />100 = [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]<br />110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br />120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br />130 = [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]<br />140 = [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]<br />150 = [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]<br />160 = [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]<br /><br />Can be NULL.<br /><br />For more information about compatibility levels, see [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|
 |**database_version**|**int**|Database version number. Can be NULL.|
 |**backup_size**|**numeric(20,0)**|Size of the backup set, in bytes. Can be NULL. For VSS backups, backup_size is an estimated value.|
 |**database_name**|**nvarchar(128)**|Name of the database involved in the backup operation. Can be NULL.|
@@ -101,7 +101,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 
 - `RESTORE VERIFYONLY FROM <backup_device> WITH LOADHISTORY` populates the column of the `backupmediaset` table with the appropriate values from the media-set header.  
 - To reduce the number of rows in this table and in other backup and history tables, execute the [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
-- For SQL Managed Instance, backupset table only shows the backup history for user-initiated [Copy-Only backups](../../relational-databases/backup-restore/copy-only-backups-sql-server.md). The backupset table does not show backup history for automatic backups performed by the service.
+- For SQL Managed Instance, see [backup transparency](/azure/azure-sql/managed-instance/backup-transparency) and how to [monitor backups](/azure/azure-sql/managed-instance/backup-activity-monitor).
 
 ## Examples
 

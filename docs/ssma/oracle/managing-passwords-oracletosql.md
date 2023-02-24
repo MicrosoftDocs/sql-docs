@@ -1,11 +1,11 @@
 ---
 description: "Managing Passwords (OracleToSQL)"
 title: "Managing Passwords (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: 07/07/2020
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Managing Passwords in Oracle, Exporting or Importing Encrypted Password"
@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Managing Passwords (OracleToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers.

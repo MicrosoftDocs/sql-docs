@@ -3,10 +3,9 @@ description: "Cursors (SQL Server)"
 title: "Cursors (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/11/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "results [SQL Server], cursors"

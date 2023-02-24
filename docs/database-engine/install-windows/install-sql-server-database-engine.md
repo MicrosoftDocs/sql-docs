@@ -4,8 +4,8 @@ description: Learn about features that can be installed when you select SQL Serv
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/26/2019
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 helpviewer_keywords:

@@ -2,9 +2,8 @@
 title: "Schedule Properties (General Page) | Microsoft Docs"
 description: Learn about the options for viewing or modifying a shared schedule on the Reporting Services page in SQL Server Management Studio.
 ms.date: 06/11/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 
 
 ms.topic: conceptual

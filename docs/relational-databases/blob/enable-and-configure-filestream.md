@@ -3,9 +3,9 @@ title: "Enable and configure FILESTREAM | Microsoft Docs"
 description: To use FILESTREAM, first enable it on the SQL Server Database Engine instance. Learn how to enable FILESTREAM by using SQL Server Configuration Manager.
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: filestream
+ms.subservice: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], enabling"

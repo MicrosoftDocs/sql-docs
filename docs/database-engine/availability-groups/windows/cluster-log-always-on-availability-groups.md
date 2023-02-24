@@ -4,8 +4,8 @@ description: "Learn details about how to generate and analyze the cluster log fo
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "06/14/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seo-lt-2019
 ---

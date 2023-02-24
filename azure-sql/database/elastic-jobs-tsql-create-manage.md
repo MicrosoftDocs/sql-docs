@@ -676,7 +676,7 @@ If not null, the name of the table that the command's first result set will be w
 Output parameter that will be assigned the new job version number. job_version is int.
 
 [ **\@max_parallelism =** ] max_parallelism OUTPUT  
-The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or is inside a server that is included in the target group. max_parallelism is int.
+The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or to elastic pools inside a server that is included in the target group. max_parallelism is int.
 
 #### Return Code Values
 
@@ -801,7 +801,7 @@ If not null, the name of the table that the command's first result set will be w
 Output parameter that will be assigned the new job version number. job_version is int.
 
 [ **\@max_parallelism =** ] max_parallelism OUTPUT  
-The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or is inside a server that is included in the target group. To reset the value of max_parallelism back to null, set this parameter's value to -1. max_parallelism is int.
+The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or to elastic pools inside a server that is included in the target group. To reset the value of max_parallelism back to null, set this parameter's value to -1. max_parallelism is int.
 
 #### Return Code Values
 
@@ -1340,11 +1340,8 @@ Shows all members of all target groups.
 |**elastic_pool_name**|nvarchar(128)|Name of the Elastic pool contained in the target group. Specified only when target_type is 'SqlElasticPool'.|
 |**shard_map_name**|nvarchar(128)|Name of the shard maps contained in the target group. Specified only when target_type is 'SqlShardMap'.|
 
-## Resources
-
-- ![Topic link icon](/sql/database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
-
 ## Next steps
 
+- [Transact-SQL syntax conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
 - [Create and manage Elastic Jobs using PowerShell](elastic-jobs-powershell-create.md)
 - [Authorization and Permissions](/dotnet/framework/data/adonet/sql/authorization-and-permissions-in-sql-server)

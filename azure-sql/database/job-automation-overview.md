@@ -46,7 +46,7 @@ Consider the following job scheduling technologies on different platforms:
 - **Elastic Jobs** are Job Scheduling services that execute custom jobs on one or many databases in Azure SQL Database.
 - **SQL Agent Jobs** are executed by the SQL Agent service that continues to be used for task automation in SQL Server and is also included with Azure SQL Managed Instances. SQL Agent Jobs are not available in Azure SQL Database.
 
-Elastic Jobs can target [Azure SQL Databases](sql-database-paas-overview.md), [Azure SQL Database elastic pools](elastic-pool-overview.md), and Azure SQL Databases in [shard maps](elastic-scale-shard-map-management.md).
+Elastic Jobs can target [Azure SQL Databases](sql-database-paas-overview.md), [Azure SQL Database elastic pools](elastic-pool-overview.md).
 
 - For T-SQL script job automation in SQL Server and Azure SQL Managed Instance, consider [SQL Agent](../managed-instance/job-automation-managed-instance.md). 
 
@@ -56,7 +56,7 @@ It is worth noting differences between SQL Agent (available in SQL Server and as
 
 | |Elastic Jobs |SQL Agent |
 |---------|---------|---------|
-|**Scope** | Any number of databases in Azure SQL Database and/or data warehouses in the same Azure cloud as the job agent. Targets can be in different servers, subscriptions, and/or regions. <br><br>Target groups can be composed of individual databases or data warehouses, or all databases in a server, pool, or shard map (dynamically enumerated at job runtime). | Any individual database in the same instance as the SQL agent. The Multi Server Administration feature of SQL Server Agent allows for master/target instances to coordinate job execution, though this feature is not available in SQL managed instance. |
+|**Scope** | Any number of databases in Azure SQL Database and/or data warehouses in the same Azure cloud as the job agent. Targets can be in different servers, subscriptions, and/or regions (dynamically enumerated at job runtime). | Any individual database in the same instance as the SQL agent. The Multi Server Administration feature of SQL Server Agent allows for master/target instances to coordinate job execution, though this feature is not available in SQL managed instance. |
 |**Supported APIs and Tools** | Portal, PowerShell, T-SQL, Azure Resource Manager | T-SQL, SQL Server Management Studio (SSMS) |
  
 ## Elastic job targets
@@ -84,7 +84,7 @@ An Elastic Job agent is the Azure resource for creating, running, and managing j
 
 Creating an **Elastic Job agent** requires an existing database in Azure SQL Database. The agent configures this existing Azure SQL Database as the [*Job database*](#elastic-job-database).
 
-The Elastic Job agent is free. The job database is billed at the same rate as any database in Azure SQL Database.
+The Elastic Job agent is free for the current preview. The job database is billed at the same rate as any database in Azure SQL Database.
 
 #### Elastic job database
 
@@ -111,8 +111,8 @@ During job agent creation, a schema, tables, and a role called *jobs_reader* are
 
 A *target group* defines the set of databases a job step will execute on. A target group can contain any number and combination of the following:
 
-- **Logical SQL server** - if a server is specified, all databases that exist in the server at the time of the job execution are part of the group. The master database credential must be provided so that the group can be enumerated and updated prior to job execution. For more information on logical servers, see [What is a server in Azure SQL Database and Azure Synapse Analytics?](logical-servers.md).
-- **Elastic pool** - if an elastic pool is specified, all databases that are in the elastic pool at the time of the job execution are part of the group. As for a server, the master database credential must be provided so that the group can be updated prior to the job execution.
+- **Logical SQL server** - if a server is specified, all databases that exist in the server at the time of the job execution are part of the group. The `master` database credential must be provided so that the group can be enumerated and updated prior to job execution. For more information on logical servers, see [What is a server in Azure SQL Database and Azure Synapse Analytics?](logical-servers.md).
+- **Elastic pool** - if an elastic pool is specified, all databases that are in the elastic pool at the time of the job execution are part of the group. As for a server, the `master` database credential must be provided so that the group can be updated prior to the job execution.
 - **Single database** - specify one or more individual databases to be part of the group.
 - **Shard map** - databases of a shard map.
 

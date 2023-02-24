@@ -1,9 +1,8 @@
 ---
 description: "Resize the Job History Log"
 title: Resize the Job History Log
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], history"

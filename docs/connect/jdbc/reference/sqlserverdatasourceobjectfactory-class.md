@@ -4,8 +4,8 @@ description: "SQLServerDataSourceObjectFactory Class"
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # SQLServerDataSourceObjectFactory Class

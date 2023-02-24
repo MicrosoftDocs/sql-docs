@@ -3,10 +3,9 @@ title: "Allow Non-Administrators use Replication Monitor"
 description: Learn how to grant access to non-administrators to the Replication Monitor in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Replication Monitor, non-administrators access"

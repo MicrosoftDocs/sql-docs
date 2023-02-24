@@ -15,7 +15,7 @@ ms.custom: sqldbrb=1
 
 In this tutorial, you deploy and explore the Wingtip Tickets SaaS sample application developed using the standalone application, or app-per-tenant, pattern.  The application is designed to showcase features of Azure SQL Database that simplify enabling multi-tenant SaaS scenarios.
 
-The standalone application or app-per-tenant pattern deploys an application instance for each tenant.  Each application is configured for a specific tenant and deployed in a separate Azure resource group. Multiple instances of the application are provisioned to provide a multi-tenant solution. This pattern is best suited to smaller numbers, of tenants where tenant isolation is a top priority. Azure has partner programs that allow resources to be deployed into a tenant’s subscription and managed by a service provider on the tenant’s behalf. 
+The standalone application or app-per-tenant pattern deploys an application instance for each tenant.  Each application is configured for a specific tenant and deployed in a separate Azure resource group. Multiple instances of the application are provisioned to provide a multi-tenant solution. This pattern is best suited to smaller numbers, of tenants where tenant isolation is a top priority. Azure has partner programs that allow resources to be deployed into a tenant's subscription and managed by a service provider on the tenant's behalf. 
 
 In this tutorial, you'll deploy three standalone applications for three tenants into your Azure subscription.  You have full access to explore and work with the individual application components.
 
@@ -90,7 +90,7 @@ In a production environment, typically you create a CNAME DNS record to [*point 
 
 ## Explore the servers and tenant databases
 
-Let’s look at some of the resources that were deployed:
+Let's look at some of the resources that were deployed:
 
 1. In the [Azure portal](https://portal.azure.com), browse to the list of resource groups.
 2. You should see the three tenant resource groups.

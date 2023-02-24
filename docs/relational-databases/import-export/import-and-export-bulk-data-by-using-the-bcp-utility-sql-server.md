@@ -4,9 +4,8 @@ description: Use bcp to export data from anywhere in a SQL Server database that 
 author: markingmyname
 ms.author: maghan
 ms.date: "09/28/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

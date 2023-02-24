@@ -4,8 +4,8 @@ description: "The Microsoft Drivers for PHP for SQL Server enable integration wi
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Microsoft Drivers for PHP for SQL Server

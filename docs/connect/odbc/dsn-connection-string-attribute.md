@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chojas
 ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # DSN and Connection String Keywords and Attributes
@@ -320,7 +320,7 @@ In case if private key file is password protected then password keyword is requi
 
 ### HostnameInCertificate
 
-Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) is negotiated, if it's different from the default value derived from Addr/Address/Server.
+Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/configure-sql-server-encryption.md) is negotiated, if it's different from the default value derived from Addr/Address/Server.
 
 ### IpAddressPreference
 

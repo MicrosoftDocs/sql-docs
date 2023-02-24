@@ -4,8 +4,8 @@ description: "Steps to remove a secondary replica from an Always On availability
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seodec18
 f1_keywords:

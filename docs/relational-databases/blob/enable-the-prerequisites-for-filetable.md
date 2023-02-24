@@ -3,8 +3,8 @@ title: "Enable the Prerequisites for FileTable | Microsoft Docs"
 description: To use FileTables, first turn on FILESTREAM, specify a directory, and set certain options and access levels. Learn how to meet all prerequisites.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: filestream
+ms.service: sql
+ms.subservice: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], prerequisites"

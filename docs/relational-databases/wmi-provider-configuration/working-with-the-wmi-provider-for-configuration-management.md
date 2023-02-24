@@ -3,10 +3,9 @@ title: "Use the WMI Provider for Configuration Management"
 description: Learn about the WMI Provider for Configuration Management, including binding, specifying a connection string, and permissions/server authentication.
 ms.custom: seo-lt-2019
 ms.date: "04/12/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: wmi
+ms.subservice: wmi
 ms.topic: "reference"
 helpviewer_keywords: 
   - "permissions [WMI]"

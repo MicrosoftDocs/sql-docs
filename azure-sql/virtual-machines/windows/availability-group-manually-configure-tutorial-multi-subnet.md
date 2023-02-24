@@ -372,6 +372,7 @@ To test the connection, follow these steps:
 
 ## Next steps
 
+Now that you've configured your multi-subnet availability group, if needed, you can extend this [across multiple regions](availability-group-manually-configure-multi-subnet-multiple-regions.md).
 
 To learn more, see:
 

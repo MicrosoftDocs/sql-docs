@@ -2,9 +2,8 @@
 title: "Asserting Permissions in Custom Assemblies | Microsoft Docs"
 description: Learn how to assert permissions so you can implement a custom assembly that makes secured calls to protected resources within your security system.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-assemblies
+ms.service: reporting-services
+ms.subservice: custom-assemblies
 
 
 ms.topic: reference

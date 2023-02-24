@@ -1,8 +1,8 @@
 ---
 title: Query Expressions and Uniform Resource Names
 description: Learn about Query Expressions, which enumerate one or more objects in an object model hierarchy, and about Uniform Resource names (URNs), which uniquely identify a single object.
-ms.prod: sql
-ms.technology: sql-server-powershell
+ms.service: sql
+ms.subservice: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query expressions"

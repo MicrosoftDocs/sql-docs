@@ -26,7 +26,7 @@ monikerRange: "= azuresqldb-current"
   
  The stored procedure is part of the elastic query feature.  See [Azure SQL Database elastic database query overview](/azure/azure-sql/database/elastic-query-overview) and [Elastic database queries for sharding (horizontal partitioning)](/azure/azure-sql/database/elastic-query-horizontal-partitioning).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -4,9 +4,8 @@ description: These tools create and manage SQL Server Extended Events sessions. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: conceptual
 helpviewer_keywords:
   - "extended events [SQL Server], using"

@@ -4,8 +4,8 @@ description: "sp_query_store_unforce_plan (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: 09/30/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "SP_QUERY_STORE_UNFORCE_PLAN_TSQL"
@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Enables unforcing a previously forced plan for a particular query.
 
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -46,7 +46,7 @@ sp_query_store_unforce_plan
 
 #### [ @force_plan_scope = ] replica_group_id
 
- You can force and unforce plans on a secondary replica when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled. Execute `sp_query_store_force_plan` and `sp_query_store_unforce_plan` on the secondary replica. The optional *force_plan_scope* argument defaults only to the local replica, but you can optionally specify a `replica_group_id` referencing [sys.plan_forcing_locations](../system-catalog-views/sys-plan-forcing-locations.md).
+ You can force and unforce plans on a secondary replica when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. Execute `sp_query_store_force_plan` and `sp_query_store_unforce_plan` on the secondary replica. The optional *force_plan_scope* argument defaults only to the local replica, but you can optionally specify a `replica_group_id` referencing [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md).
 
 ## Return Code Values
 
@@ -80,7 +80,7 @@ EXEC sp_query_store_unforce_plan 3, 3;
 ## Next steps
 
 - [sys.query_store_replicas (Transct-SQL)](../system-catalog-views/sys-query-store-replicas.md)
-- [sys.plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-plan-forcing-locations.md)
+- [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
 - [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
 - [sp_query_store_remove_plan (Transct-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)

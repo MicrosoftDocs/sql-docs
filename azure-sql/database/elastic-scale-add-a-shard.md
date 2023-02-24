@@ -46,7 +46,7 @@ In some circumstances, you may have already mapped a range to a shard and partia
 
 ### Example: splitting a range and assigning the empty portion to a newly added shard
 
-A database named “sample_shard_2” and all necessary schema objects inside of it have been created.  
+A database named "sample_shard_2" and all necessary schema objects inside of it have been created.  
 
 ```csharp
 // sm is a RangeShardMap object.

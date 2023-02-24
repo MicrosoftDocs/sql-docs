@@ -3,10 +3,9 @@ title: Connect to a SQL Server Utility
 description: Learn how to connect to a SQL Server Utility so that you can manage SQL Server resource health. You can connect through SQL Server Management Studio (SSMS).
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
@@ -16,6 +15,8 @@ ms.author: mikeray
 # Connect to a SQL Server Utility
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
 
 Before you can connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, you must create a utility control point (UCP). For more information, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
 

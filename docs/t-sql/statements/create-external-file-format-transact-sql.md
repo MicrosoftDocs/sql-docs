@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 10/05/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL FILE FORMAT"
@@ -31,11 +31,12 @@ The following file formats are supported:
 
 - **Hive RCFile**
 
-  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+  Does not apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  
 
 - **Hive ORC**
 
-  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+  Does not apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
 
 - **Parquet**
 
@@ -49,7 +50,7 @@ The following file formats are supported:
 
 ## Syntax
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ### [Delimited text](#tab/delimited)
 
@@ -61,7 +62,6 @@ WITH (
     [ , FORMAT_OPTIONS ( <format_options> [ ,...n  ] ) ]
     [ , DATA_COMPRESSION = {
            'org.apache.hadoop.io.compress.GzipCodec'
-         | 'org.apache.hadoop.io.compress.DefaultCodec'
         }
      ]);
 
@@ -75,7 +75,7 @@ WITH (
     | Encoding = {'UTF8' | 'UTF16'}
 }
 ```
-
+<!---'org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
 ### [RC](#tab/rc)
 
 ```syntaxsql
@@ -139,7 +139,7 @@ WITH (
 ### [Delta table](#tab/delta)
 
 ```syntaxsql
--- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]).
+-- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and SQL Server 2022).
 CREATE EXTERNAL FILE FORMAT file_format_name
 WITH (
          FORMAT_TYPE = DELTA
@@ -196,10 +196,10 @@ To work properly, Gzip compressed files must have the ".gz" file extension.
 
 #### [Delimited text](#tab/delimited)
 
-The DELIMITEDTEXT format type supports these compression methods:
+The DELIMITEDTEXT format type supports this compression method:
 
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
 - DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+<!--- - DATA COMPRESSION ='org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
 
 #### [RC](#tab/rc)
 
@@ -373,7 +373,7 @@ Details:
 
 #### ENCODING = {'UTF8' | 'UTF16'}
 
-In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
 ## Permissions
 
@@ -381,7 +381,7 @@ In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../
 
 ## Remarks
 
- The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
  The format options are all optional and only apply to delimited text files.
 
@@ -407,7 +407,7 @@ Takes a shared lock on the EXTERNAL FILE FORMAT object.
 
 Using compressed files always comes with the tradeoff between transferring less data between the external data source and SQL Server while increasing the CPU usage to compress and decompress the data.
 
-Gzip compressed text files aren't splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Gen2, which is 20 readers per node. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.
+Gzip compressed text files aren't splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Gen2, which is 20 readers per node. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.
 
 ## Examples
 

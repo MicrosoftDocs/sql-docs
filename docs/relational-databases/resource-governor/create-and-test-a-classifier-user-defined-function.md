@@ -3,9 +3,9 @@ title: "Create & test classifier user-defined function - Resource Governor"
 description: Learn how to create and test a classifier user-defined function which involves running Transact-SQL statements in the SQL Server Management Studio Query Editor.
 ms.custom: seo-dt-2019
 ms.date: "07/11/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, classifier function create"
@@ -115,7 +115,7 @@ ms.author: wiassaf
 4.  Create the classifier function that uses time functions and values that can be evaluated against the times in the lookup table. For information about using Lookup Tables in a classifier function, see "Best practices for using Lookup Tables in a classifier function" in this topic.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced an expanded set of date and time data types and functions. For more information, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+    >  [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] introduced an expanded set of date and time data types and functions. For more information, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
     ```sql  
     CREATE FUNCTION fnTimeClassifier()  

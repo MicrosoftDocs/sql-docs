@@ -3,9 +3,9 @@ title: "RPC:Completed Event Class | Microsoft Docs"
 description: "The RPC:Completed event class indicates that a remote procedure call has been completed in SQL Server."
 ms.custom: ""
 ms.date: "12/04/2015"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "RPC:Completed event class"
@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |CPU|**int**|Amount of CPU time used by the event. In microseconds beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In milliseconds in earlier versions.|18|Yes|  
 |DatabaseID|**int**|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the ServerName data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |DatabaseName|**nvarchar**|Name of the database in which the user statement is running.|35|Yes|  
-|Duration|**bigint**|Amount of time taken by the event. In microseconds beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. In milliseconds in earlier versions.|13|Yes|  
+|Duration|**bigint**|Amount of time taken by the event. In microseconds beginning with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. In milliseconds in earlier versions.|13|Yes|  
 |EndTime|**datetime**|Time at which the remote procedure call ended.|15|Yes|  
 |Error|**int**|Error number of a given event.<br /><br /> 0=OK<br /><br /> 1=Error<br /><br /> 2=Abort<br /><br /> 3=Skipped|31|Yes|  
 |EventClass|**int**|Type of event = 10.|27|No|  

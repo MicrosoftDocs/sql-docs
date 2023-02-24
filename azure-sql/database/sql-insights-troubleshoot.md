@@ -46,8 +46,8 @@ If there are no log entries, check the logs on the monitoring virtual machine fo
   - Service: mdsd 
 - `Microsoft.Azure.Monitor.Workloads.Workload.WLILinuxExtension`
   - Service: wli 
-  - Service: ms-telegraf 
-  - Service: td-agent-bit-wli 
+  - Service: telegraf 
+  - Service: fluent-bit
   - Extension log to check installation failures: `/var/log/azure/Microsoft.Azure.Monitor.Workloads.Workload.WLILinuxExtension/wlilogs.log`
 
 ### wli service logs 
@@ -61,7 +61,7 @@ If you see the following error log, there's a problem with the `mdsd` service: `
 
 ### Telegraf service logs 
 
-Service logs: `/var/log/ms-telegraf/telegraf.log`
+Service logs: `/var/log/telegraf/telegraf.log`
 
 To see recent logs: `tail -n 100 -f /var/log/ms-telegraf/telegraf.log`
 

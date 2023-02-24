@@ -4,9 +4,8 @@ description: "Learn about the Query Store hints feature, which can be used to sh
 ms.custom:
 - event-tier1-build-2022
 ms.date: 10/11/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store hints"
@@ -112,13 +111,13 @@ When hints are applied, the following result set appears in the `StmtSimple` ele
 
 ### Query Store hints and availability groups
 
-For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
 
 *   Prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store hints can be applied against the primary replica of an availability group.
 *   Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, Query Store hints are also replica-aware for secondary replicas in availability groups.
 *   You can add a Query Store hint to a specific replica or replica set when you have Query Store for secondary replicas enabled. In [sys.sp_query_store_set_query_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md), this is set by the `@query_hint_scope` parameter, which was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 *   Find the available replica sets by querying [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
-
+*   Find plans forced on secondary replicas with [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md).
 
 ## Query Store hints best practices
 

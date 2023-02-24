@@ -4,8 +4,8 @@ description: "Describes how to enable the Always On availability group feature f
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
 helpviewer_keywords:

@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom:
   - intro-migration

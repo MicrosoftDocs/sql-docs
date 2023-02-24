@@ -3,8 +3,8 @@ title: Auto-failover group overview
 description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for the terminology for auto-failover groups that overlap between both products.
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: kendralittle, emlisa, mlandzic
-ms.date: 03/01/2022
+ms.reviewer: emlisa, mlandzic
+ms.date: 02/02/2023
 ms.topic: include
 ---
 
@@ -13,7 +13,7 @@ ms.topic: include
   By default, a failover group is configured with an automatic failover policy. The system triggers a geo-failover after the failure is detected and the grace period has expired. The system must verify that the outage cannot be mitigated by the built-in [high availability infrastructure](../database/high-availability-sla.md), for example due to the scale of the impact. If you want to control the geo-failover workflow from the application or manually, you can turn off automatic failover policy.
   
   > [!NOTE]
-  > Because verification of the scale of the outage and how quickly it can be mitigated involves human actions, the grace period cannot be set below one hour. This limitation applies to all databases in the failover group regardless of their data synchronization state.
+  > Because verification of the scale of the outage and how quickly it can be mitigated involves human actions, the grace period cannot be set below one hour, and the exact time of the failover may vary slightly from the grace period that was set. This limitation applies to all databases in the failover group regardless of their data synchronization state.
 
 - **Read-only failover policy**
 
@@ -43,4 +43,4 @@ ms.topic: include
 
 - **Grace period with data loss**
 
-  Because the data is replicated to the secondary database using asynchronous replication, an automatic geo-failover may result in data loss. You can customize the automatic failover policy to reflect your application’s tolerance to data loss. By configuring `GracePeriodWithDataLossHours`, you can control how long the system waits before initiating a forced failover, which may result in data loss.
+  Because the data is replicated to the secondary database using asynchronous replication, an automatic geo-failover may result in data loss. You can customize the automatic failover policy to reflect your application's tolerance to data loss. By configuring `GracePeriodWithDataLossHours`, you can control how long the system waits before initiating a forced failover, which may result in data loss.

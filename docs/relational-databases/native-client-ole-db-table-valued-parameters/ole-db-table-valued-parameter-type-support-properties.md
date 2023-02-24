@@ -3,10 +3,9 @@ description: "OLE DB Table-Valued Parameter Type Support in SQL Server Native Cl
 title: "OLE DB Table-Valued Parameter type (Properties)"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (properties)"

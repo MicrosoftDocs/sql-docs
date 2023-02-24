@@ -2,9 +2,8 @@
 title: "Preload the Cache (SSRS)| Microsoft Docs"
 description: Learn how to preload the cache for a shared dataset by creating a cache refresh plan for the shared dataset in a Reporting Services report server.
 ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual
@@ -22,7 +21,7 @@ ms.author: maggies
   
 1.  Create a cache refresh plan for the report. This is the preferred method.  
   
-2.  Use a data-driven subscription to preload the cache with instances of parameterized reports. This was the only way to preload the cache in versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] earlier than [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. For more information, see [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
+2.  Use a data-driven subscription to preload the cache with instances of parameterized reports. This was the only way to preload the cache in versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] earlier than [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. For more information, see [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
  The following conditions must be met before you can cache a report or a shared dataset:  
   

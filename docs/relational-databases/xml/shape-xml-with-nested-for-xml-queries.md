@@ -3,10 +3,9 @@ title: "Shape XML with Nested FOR XML Queries"
 description: View an example of using nested FOR XML queries to shape the resulting XML.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML query"
@@ -17,7 +16,7 @@ ms.author: mikeray
 ---
 # Shape XML with nested FOR XML queries
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following example queries the `Production.Product` table to retrieve the `ListPrice` and `StandardCost` values of a specific product. To make the query interesting, both prices are returned in a `<Price>` element, and each `<Price>` element has a `PriceType` attribute.
 

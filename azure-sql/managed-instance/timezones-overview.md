@@ -144,7 +144,7 @@ Using the same time zone across a primary and secondary instance in a failover g
 | UTC-02 | (UTC-02:00) Coordinated Universal Time-02 |
 | Mid-Atlantic Standard Time | (UTC-02:00) Mid-Atlantic - Old |
 | Azores Standard Time | (UTC-01:00) Azores |
-| Cape Verde Standard Time | (UTC-01:00) Cabo Verde Is. |
+| Cabo Verde Standard Time | (UTC-01:00) Cabo Verde Is. |
 | UTC | (UTC) Coordinated Universal Time |
 | GMT Standard Time | (UTC+00:00) Dublin, Edinburgh, Lisbon, London |
 | Greenwich Standard Time | (UTC+00:00) Monrovia, Reykjavik |
@@ -192,7 +192,7 @@ Using the same time zone across a primary and secondary instance in a failover g
 | India Standard Time | (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi |
 | Sri Lanka Standard Time | (UTC+05:30) Sri Jayawardenepura |
 | Nepal Standard Time | (UTC+05:45) Kathmandu |
-| Central Asia Standard Time | (UTC+06:00) Astana |
+| Central Asia Standard Time | (UTC+06:00) Nur-Sultan |
 | Bangladesh Standard Time | (UTC+06:00) Dhaka |
 | Omsk Standard Time | (UTC+06:00) Omsk |
 | Myanmar Standard Time | (UTC+06:30) Yangon (Rangoon) |

@@ -4,8 +4,8 @@ description: "Graph Functions (Transact-SQL)"
 author: "arvindshmicrosoft"
 ms.author: "arvindsh"
 ms.date: 08/16/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "SQL Graph functions"

@@ -2,9 +2,8 @@
 title: "Create a Transact-SQL snapshot backup | Microsoft Docs"
 description: This article shows you how to create a Transact-SQL backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
@@ -25,7 +24,7 @@ This article explains what, why, and how to use Transact-SQL snapshot backups. T
 
 Databases are getting larger and larger every day. Traditionally, SQL Server backups are streaming backups. A streaming backup depends on the size of the database. Backup operations consume resources (CPU, memory, I/O, network) which impact throughput of the concurrent OLTP workload for the duration of the backup. One way to make the backup performance constant, rather than depend on the size of data, is by performing a snapshot backup using mechanisms provided by the underlying storage hardware or service.
 
-Because the backup itself happens at the hardware level, this is not a pure SQL Server solution. SQL Server must first prepare the data and log files for the snapshot so that the files are guaranteed to be in a state that can later be restored. Once this is done, I/O is frozen on SQL Server and control is handed over to the backup application to complete the snapshot. Once the snapshot has successfully completed, the application must return control back to SQL Server where I/O is then resumed. Because we must freeze I/O for the duration of the snapshot operation, it is essential that the snapshot happen quickly (ideally less than a second), so that the workload on the server is not interrupted for an extended period. In the past, users have relied on third-party solutions that were built on top of the SQL Writer service to complete snapshot backups. The SQL Writer service depends on Windows VSS (Volume Shadow Service) along with SQL Server VDI (Virtual Device Interface) to perform the orchestration between SQL Server and the disk-level snapshot. Backup clients based on the SQL Writer service tend to be complex, and they only work on Windows. With T-SQL snapshot backups, the SQL Server side of the orchestration can be handled with a series of T-SQL commands. This allows users to create their own simple backup applications that can run on either Windows or Linux, or even scripted solutions if the underlying storage supports a scripting interface to initiate a snapshot.
+Because the backup itself happens at the hardware level, this is not a pure SQL Server solution. SQL Server must first prepare the data and log files for the snapshot so that the files are guaranteed to be in a state that can later be restored. Once this is done, I/O is frozen on SQL Server and control is handed over to the backup application to complete the snapshot. Once the snapshot has successfully completed, the application must return control back to SQL Server where I/O is then resumed. Because we must freeze I/O for the duration of the snapshot operation, it is essential that the snapshot happen quickly, so that the workload on the server is not interrupted for an extended period. In the past, users have relied on third-party solutions that were built on top of the SQL Writer service to complete snapshot backups. The SQL Writer service depends on Windows VSS (Volume Shadow Service) along with SQL Server VDI (Virtual Device Interface) to perform the orchestration between SQL Server and the disk-level snapshot. Backup clients based on the SQL Writer service tend to be complex, and they only work on Windows. With T-SQL snapshot backups, the SQL Server side of the orchestration can be handled with a series of T-SQL commands. This allows users to create their own simple backup applications that can run on either Windows or Linux, or even scripted solutions if the underlying storage supports a scripting interface to initiate a snapshot.
 
 Here is a [sample PowerShell script](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/t-sql-snapshot-backup/snapshot-backup-restore-azurevm-single-db.ps1) that demonstrates an end-to-end solution of backing up and restoring a database in an Azure SQL IaaS Virtual Machine using the T-SQL snapshot backup capabilities introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (and higher).
 
@@ -258,7 +257,7 @@ RESTORE BACKUPSETONLY supports DBNAME parameter if the user wants to output one 
 ```sql
 RESTORE BACKUPSETONLY
 FROM DISK='d:\temp\db.bkm'
-WITH METADATA_ONLY, FILE=3, DBNAME=’testdb2’
+WITH METADATA_ONLY, FILE=3, DBNAME='testdb2'
 ```
 
 ### Dynamic Management Views (DMVs) for seeing the suspend status and locks acquired
@@ -273,7 +272,7 @@ sys.dm_tran_locks (resource_type, resource_database_id, resource_lock_partition,
 ```sql
 SELECT SERVERPROPERTY('SuspendedDatabaseCount')
 SELECT SERVERPROPERTY('IsServerSuspendedForSnapshotBackup')
-SELECT DATABASEPROPERTYEX('db1', 'IsDatabaseSuspendedForSnapshotBackup’)
+SELECT DATABASEPROPERTYEX('db1', 'IsDatabaseSuspendedForSnapshotBackup')
 ```
 
 ### Sample T-SQL troubleshooting script

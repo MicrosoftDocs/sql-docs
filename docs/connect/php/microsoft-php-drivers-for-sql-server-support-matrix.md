@@ -4,8 +4,8 @@ description: "This page contains the support matrix and support lifecycle policy
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/24/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Microsoft PHP Drivers for SQL Server Support Matrix

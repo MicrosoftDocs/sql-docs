@@ -3,9 +3,9 @@ description: "MSSQLSERVER_11001"
 title: "MSSQLSERVER_11001 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "12001"
@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_11001
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

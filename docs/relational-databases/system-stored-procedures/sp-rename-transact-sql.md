@@ -3,11 +3,10 @@ title: "sp_rename (Transact-SQL)"
 description: "Changes the name of a user-created object in the current database."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: randolphwest
-ms.date: 07/27/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.reviewer: randolphwest, maghan
+ms.date: 12/01/2022
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sp_rename_TSQL"
@@ -21,19 +20,24 @@ dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
+
 # sp_rename (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
-Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.
+Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE[msCoName](../../includes/msconame-md.md)]
+
+[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.
 
 > [!NOTE]  
-> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a COLUMN in a user object.
+> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a COLUMN in a user object.
+
+[!INCLUDE[synapse-analytics-severless-sql-pools-tsql](Includes/synapse-analytics-severless-sql-pools-tsql.md)]
 
 > [!CAUTION]  
 > Changing any part of an object name can break scripts and stored procedures. We recommend you do not use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -70,20 +74,20 @@ The new name for the specified object. *new_name* must be a one-part name and mu
 
 The type of object being renamed. *object_type* is **varchar(13)**, with a default of NULL, and can be one of these values.
 
-|Value|Description|  
-|-----------|-----------------|  
-|COLUMN|A column to be renamed.|  
-|DATABASE|A user-defined database. This object type is required when renaming a database.|  
-|INDEX|A user-defined index. Renaming an index with statistics, also automatically renames the statistics.|  
-|OBJECT|An item of a type tracked in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules.|  
-|STATISTICS|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well.|  
-|USERDATATYPE|A [CLR user-defined type](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|
+| Value | Description |
+| --- | --- |
+| COLUMN | A column to be renamed. |
+| DATABASE | A user-defined database. This object type is required when renaming a database. |
+| INDEX | A user-defined index. Renaming an index with statistics, also automatically renames the statistics. |
+| OBJECT | An item of a type tracked in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules. |
+| STATISTICS | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well. |
+| USERDATATYPE | A [CLR user-defined type](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md). |
 
 #### [ @objtype = ] '*COLUMN*'
 
 **Applies to**: Azure Synapse Analytics
 
-In `sp_rename` (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It is a **varchar(13)** with no default value and must always be included in the `sp_rename` (preview) statement. A column can only be renamed if it is a non-distribution column.
+In `sp_rename` (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse-md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It is a **varchar(13)** with no default value and must always be included in the `sp_rename` (preview) statement. A column can only be renamed if it is a non-distribution column.
 
 ## Return code values
 
@@ -170,18 +174,18 @@ FROM sys.objects
 WHERE parent_object_id = (OBJECT_ID('HumanResources.Employee'))
 AND type IN ('C','F', 'PK');
 GO
-  
+
 -- Rename the primary key constraint.
 EXEC sp_rename 'HumanResources.PK_Employee_BusinessEntityID', 'PK_EmployeeID';
 GO
-  
+
 -- Rename a check constraint.
 EXEC sp_rename 'HumanResources.CK_Employee_BirthDate', 'CK_BirthDate';
 GO
-  
+
 -- Rename a foreign key constraint.
 EXEC sp_rename 'HumanResources.FK_Employee_Person_BusinessEntityID', 'FK_EmployeeID';
-  
+
 -- Return the current Primary Key, Foreign Key and Check constraints for the Employee table.
 SELECT name, SCHEMA_NAME(schema_id) AS schema_name, type_desc
 FROM sys.objects
@@ -190,7 +194,7 @@ AND type IN ('C','F', 'PK');
 GO
 ```
 
-```output  
+```output
 name                                  schema_name        type_desc
 ------------------------------------- ------------------ ----------------------
 FK_Employee_Person_BusinessEntityID   HumanResources     FOREIGN_KEY_CONSTRAINT
@@ -201,9 +205,9 @@ CK_Employee_HireDate                  HumanResources     CHECK_CONSTRAINT
 CK_Employee_Gender                    HumanResources     CHECK_CONSTRAINT
 CK_Employee_VacationHours             HumanResources     CHECK_CONSTRAINT
 CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
-  
+
 (7 row(s) affected)
-  
+
 name                                  schema_name        type_desc
 ------------------------------------- ------------------ ----------------------
 FK_Employee_ID                        HumanResources     FOREIGN_KEY_CONSTRAINT
@@ -214,7 +218,7 @@ CK_Employee_HireDate                  HumanResources     CHECK_CONSTRAINT
 CK_Employee_Gender                    HumanResources     CHECK_CONSTRAINT
 CK_Employee_VacationHours             HumanResources     CHECK_CONSTRAINT
 CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
-  
+
 (7 row(s) affected)
 ```
 
@@ -226,19 +230,18 @@ The following example creates a statistics object named contactMail1 and then re
 CREATE STATISTICS ContactMail1
     ON Person.Person (BusinessEntityID, EmailPromotion)
     WITH SAMPLE 5 PERCENT;
-  
+
 EXEC sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
-  
 ```
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### G. Rename a column
 
 The following example renames the `c1` column in the `table1` table to `col1`.
 
 > [!NOTE]  
-> This [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] feature is still in preview for dedicated SQL pools and is currently available only for objects in the **dbo** schema.
+> This [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse-md.md)] feature is still in preview for dedicated SQL pools and is currently available only for objects in the **dbo** schema.
 
 ```sql
 CREATE TABLE table1 (c1 INT, c2 INT);
@@ -248,7 +251,7 @@ GO
 
 ## See also
 
-- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
-- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
-- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
-- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+- [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
+- [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
+- [System Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [Database Engine Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)

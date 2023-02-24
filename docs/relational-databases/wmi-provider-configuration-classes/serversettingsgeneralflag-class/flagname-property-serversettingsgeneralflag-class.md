@@ -3,10 +3,9 @@ description: "FlagName Property (ServerSettingsGeneralFlag Class)"
 title: "FlagName Property (ServerSettingsGeneralFlag)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: wmi
+ms.subservice: wmi
 ms.topic: "reference"
 apiname: 
   - "FlagName Property (ServerSettingsGeneralFlag Class)"

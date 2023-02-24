@@ -3,10 +3,9 @@ description: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
 title: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
 ms.custom: ""
 ms.date: "09/29/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "fn_cdc_decrement_lsn"
@@ -26,7 +25,7 @@ ms.author: randolphwest
 
   Returns the previous log sequence number (LSN) in the sequence based upon the specified LSN.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

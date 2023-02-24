@@ -4,9 +4,8 @@ description: sys.linked_logins (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.linked_logins"
@@ -20,7 +19,7 @@ dev_langs:
 ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 ---
 # sys.linked_logins (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row per linked-server-login mapping, for use by RPC and distributed queries from local server to the corresponding linked server.  
   

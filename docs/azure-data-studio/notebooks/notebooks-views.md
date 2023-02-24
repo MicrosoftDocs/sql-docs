@@ -4,7 +4,7 @@ description: Learn how to use notebook views
 author: markingmyname
 ms.author: maghan
 ms.date: 10/27/2021
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: how-to
 ms.custom: seo-lt-2019
 ---
@@ -16,6 +16,9 @@ Notebook Views is ideal for consumers of notebook results such as data analysis 
 One notebook can have multiple views and work for any kernel.
 
 Notebook Views is now available in [Azure Data Studio](../download-azure-data-studio.md), starting with the October 2021 release (1.33.0).
+
+
+[!INCLUDE [azure-data-studio-preview](../../includes/azure-data-studio-preview.md)]
 
 ## Get started
 

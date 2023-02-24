@@ -3,10 +3,9 @@ title: "Scripting Replication | Microsoft Docs"
 description: A script contains Transact-SQL system stored procedures necessary to implement the SQL Server replication components, such as a publication or subscription.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server replication], replication objects"

@@ -4,9 +4,9 @@ description: Describes how to use supported Azure Active Directory authenticatio
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 12/14/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 01/27/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"
@@ -137,9 +137,12 @@ When this mode is in use, you can't set the `Credential` property of `SqlConnect
 
 The following code snippet is an example of using `Active Directory Device Code Flow` authentication.
 
+> [!NOTE]
+> The timeout for `Active Directory Device Code Flow` defaults to the connection's `Connect Timeout` setting. Make sure to specify a `Connect Timeout` that provides enough time to go through the device code flow authentication process.
+
 ```cs
-// Use your own server and database.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Device Code Flow; Encrypt=True; Database=testdb";
+// Use your own server and database and increase Connect Timeout as needed for device code flow.
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Device Code Flow; Encrypt=True; Database=testdb; Connect Timeout=180;";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -165,7 +168,7 @@ The following example shows how to use `Active Directory Managed Identity` authe
 
 ```cs
 // For system-assigned managed identity
-// Use your own server and database.
+// Use your own values for Server and Database.
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
@@ -203,6 +206,9 @@ using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
 The following example demonstrates `Active Directory Managed Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v2.1**.
 
 ```cs
+// For user-assigned managed identity
+// Use your own values for Server, Database, and User Id.
+
 // With Microsoft.Data.SqlClient v2.1
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 

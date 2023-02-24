@@ -5,7 +5,7 @@ description: This article explains the Transport Layer Security (TLS) version ch
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 07/14/2022
+ms.date: 10/21/2022
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: how-to
@@ -31,9 +31,9 @@ You can change these settings from the networking tab of your [logical server](l
 
 ## Deny public network access
 
-The default for the **Connectivity method** setting is **No access** so that customers can connect by using either public endpoints (with IP-based server- level firewall rules or with virtual-network firewall rules) or private endpoints (by using Azure Private Link), as outlined in the [network access overview](network-access-controls-overview.md).
+The default for the **Public network access** setting is **Disable**. Customers can choose to connect to a database by using either public endpoints (with IP-based server-level firewall rules or with virtual-network firewall rules), or [private endpoints](private-endpoint-overview.md) (by using Azure Private Link), as outlined in the [network access overview](network-access-controls-overview.md).
 
-When **Connectivity method** is set to **No access**, only connections via private endpoints are allowed. All connections via public endpoints will be denied with an error message similar to:  
+When **Public network access** is set to **Disable**, only connections from private endpoints are allowed. All connections from public endpoints will be denied with an error message similar to:  
 
 ```output
 Error 47073
@@ -42,7 +42,7 @@ The public network interface on this server is not accessible.
 To connect to this server, use the Private Endpoint from inside your virtual network.
 ```
 
-When **Connectivity method** is set to **No access**, any attempts to add, remove or edit any firewall rules will be denied with an error message similar to:
+When **Public network access** is set to **Disable**, any attempts to add, remove, or edit any firewall rules will be denied with an error message similar to:
 
 ```output
 Error 42101
@@ -50,7 +50,7 @@ Unable to create or modify firewall rules when public network interface for the 
 To manage server or database level firewall rules, please enable the public network interface.
 ```
 
-Ensure that **Connectivity method** is set to **Public endpoint** or **Private endpoint** to be able to add, remove or edit any firewall rules for Azure SQL Database and Azure Synapse Analytics. 
+Ensure that **Public network access** is set to **Selected networks** to be able to add, remove, or edit any firewall rules for Azure SQL Database and Azure Synapse Analytics. 
 
 ## Change public network access 
 
@@ -128,6 +128,9 @@ After you set the minimal TLS version, login attempts from customers who are usi
 Error 47072
 Login failed with invalid TLS version
 ```
+
+> [!NOTE]
+> When you configure a minimum TLS version, that minimum version is enforced at the application layer. Tools that attempt to determine TLS support at the protocol layer may return TLS versions in addition to the minimum required version when run directly against the SQL Database endpoint.
 
 ### [Portal](#tab/azure-portal)
 

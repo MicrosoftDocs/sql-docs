@@ -3,10 +3,9 @@ description: "Mapping the Cursor Attributes1 Information Types"
 title: "Mapping the Cursor Attributes1 Information Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], mapping cursor attributes1 information types"

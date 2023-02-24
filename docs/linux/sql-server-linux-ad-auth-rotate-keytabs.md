@@ -1,17 +1,19 @@
 ---
 title: Rotate SQL Server on Linux keytabs
 description: Recommendations on rotating keytabs for SQL Server on Linux using adutil when configured for Active Directory authentication
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 09/27/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 
 # Rotate keytabs for SQL Server on Linux
+
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Based on your organization's security best practices, you may be required to rotate the password regularly for the Windows Active Directory account provided as **network.privilegedadaccount** in **mssql.conf**, or any other account that owns the service principal names (SPN) for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service. The supported method for changing the password for the account is documented in this article. The password change takes effect without the need to restart the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service on Linux.
 

@@ -4,8 +4,8 @@ description: sys.query_store_plan (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/19/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -53,10 +53,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />NONE: No plan forcing<br /><br />MANUAL: Plan forced by user<br /><br />AUTO: Plan forced by automatic tuning.|
 |**has_compile_replay_script**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether the plan has an optimization replay script associated with it:<BR/><BR/>0 = No optimization replay script (none or even invalid).<BR/><BR/>1 = optimization replay script recorded.|
 |**is_optimized_plan_forcing_disabled**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether optimized plan forcing was disabled for the plan:<BR/><BR/> 0 = disabled.<BR/><BR/> 1 = not disabled.|
+|**plan_type**|int|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Plan type.<BR/><BR/> 0: Compiled Plan<BR/><BR/>1: Dispatcher Plan<BR/><BR />2: Query Variant Plan|
+|**plan_type_desc**|nvarchar(120)|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Text description of the plan type.<BR/><BR/> Compiled Plan: Indicates that the plan is a non-parameter sensitive plan optimized plan<BR/><BR/>Dispatcher Plan: Indicates that the plan is a parameter sensitive plan optimized dispatcher plan<BR/><BR />Query Variant Plan: Indicates that the plan is a parameter sensitive plan optimized query variant plan|
 
 ## Remarks
 
-More than one plan can be forced when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled.
+More than one plan can be forced when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled.
 
 ## Plan forcing limitations
 

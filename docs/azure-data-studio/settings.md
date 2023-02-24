@@ -5,7 +5,7 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 09/24/2018
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: how-to
 ms.custom: seodec18
 ---
@@ -52,7 +52,7 @@ By default, hot exit's off. Enable hot exit by editing the `files.hotExit` setti
 
 ## Tab color
 
-To simplify identifying what connections you're working with, open tabs in the editor can have their colors set to match the color of the Server Group the connection belongs to. By default, tab colors are off by default. Enable tab colors by editing the `sql.tabColorMode` setting.
+To simplify identifying what connections you're working with, open tabs in the editor can have their colors set to match the color of the Server Group the connection belongs to. By default, tab colors are off by default. Enable tab colors by editing the `queryEditor.tabColorMode` setting.
 
 ## Additional resources
 

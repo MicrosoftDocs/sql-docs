@@ -39,7 +39,7 @@ To configure active geo-replication, you need a database in Azure SQL Database. 
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE [azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 ---
 
@@ -151,8 +151,6 @@ This operation permanently stops the replication to the secondary database, and 
 1. In the [Azure portal](https://portal.azure.com), browse to the primary database in the geo-replication partnership.
 2. Select **Replicas**.
 3. In the **Geo replicas** list, select the database you want to remove from the geo-replication partnership, select the ellipsis, and then select **Stop replication**.
-
-    :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-select-stop-replication.png" alt-text="Screenshot that shows selecting stop replication from the drop-down.":::
 5. A confirmation window opens. Click **Yes** to remove the database from the geo-replication partnership. (Set it to a read-write database not part of any replication.)
  
 # [Azure CLI](#tab/azure-cli)

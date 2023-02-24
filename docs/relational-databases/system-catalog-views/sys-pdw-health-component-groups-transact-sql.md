@@ -4,8 +4,8 @@ description: See a reference for the system catalog view sys.pdw_health_componen
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/12/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: reference
 ms.custom: kr2b-contr-experiment
 dev_langs:

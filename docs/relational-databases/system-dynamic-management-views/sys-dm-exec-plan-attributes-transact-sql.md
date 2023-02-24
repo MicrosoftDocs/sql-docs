@@ -4,8 +4,8 @@ description: sys.dm_exec_plan_attributes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "02/24/2021"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_plan_attributes_TSQL"

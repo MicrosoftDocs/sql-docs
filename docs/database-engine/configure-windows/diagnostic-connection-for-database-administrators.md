@@ -4,8 +4,8 @@ description: "Find out about the dedicated administrator connection (DAC). View 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/12/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "server management [SQL Server], connections"

@@ -4,8 +4,8 @@ description: "Learn about JDBC data types and how the Microsoft JDBC Driver for 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/12/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Understanding the JDBC driver data types

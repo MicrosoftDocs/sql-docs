@@ -2,8 +2,8 @@
 title: SQL Server help and feedback | Microsoft Docs
 description: A resource for finding ways to get help with your issue or submit feedback for either the SQL Server product, or the SQL Server technical documentation. 
 ms.date: 12/20/2021
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.reviewer: ""
 ms.custom: ""
 ms.topic: conceptual
@@ -18,7 +18,17 @@ This article explains different ways to get assistance with an issue or provide 
 
 ## Contact Microsoft Support
 
-Customers with a support plan can [open a ticket](https://support.microsoft.com/hub/4343728/support-for-business) with Microsoft support.  Review the [support options for businesses](https://support.microsoft.com/help/4341255/support-for-business) for more information. 
+Customers with a Premier or Unified support plan can [open a ticket](https://serviceshub.microsoft.com/support/create) with Microsoft support. For more information, visit the [Microsoft Services Hub Resource Center](/services-hub/unified/). 
+
+Customers with a Professional or Business support plan can [open a ticket](https://support.serviceshub.microsoft.com/supportforbusiness/create) with Microsoft support. For more information, review [Professional Support FAQ](/services-hub/sfbus/support-for-business/professional-support-faqs).
+
+Customers with a Azure technical support plan can [open a ticket](/azure/azure-portal/supportability/how-to-create-azure-support-request) with Microsoft support. 
+
+You can also use the [Global Customer Service phone numbers](https://support.microsoft.com/en-us/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2) to open a support ticket.
+
+## Troubleshooting documentation
+
+You can find all the latest troubleshooting guidance and resolution to common issues in the [SQL Server Troubleshooting documentation](/troubleshoot/sql/).
 
 ## Ask the community for help
 

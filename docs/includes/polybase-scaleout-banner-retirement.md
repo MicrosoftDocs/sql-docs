@@ -2,8 +2,8 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 02/22/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: include
 ---
 

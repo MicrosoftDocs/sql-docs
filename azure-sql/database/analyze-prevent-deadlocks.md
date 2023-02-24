@@ -178,7 +178,7 @@ To use an existing Azure Storage account:
 1. On the **Overview** pane, Under **Resources**, set the **Type** dropdown to *Storage account*.
 1. Select the storage account you want to use.
 
-To create a new Azure Storage account, follow the steps in [Create an Azure storage account](/azure/media-services/latest/storage-create-how-to). Complete the process by selecting **Go to resource** in the final step.
+To create a new Azure Storage account, follow the steps in [Create an Azure storage account](/azure/storage/common/storage-account-create). Complete the process by selecting **Go to resource** in the final step.
 
 #### Create a container
 

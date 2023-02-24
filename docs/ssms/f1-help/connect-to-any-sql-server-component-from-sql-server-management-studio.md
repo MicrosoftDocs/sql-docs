@@ -1,9 +1,8 @@
 ---
 title: Connect to Any SQL Server Component
 description: "Connect to Any SQL Server Component from SQL Server Management Studio"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "connections [SQL Server], SQL Server Management Studio"
@@ -25,7 +24,7 @@ SQL Server Management Studio provides functionality for managing every component
 
 - An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
 
-- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
+- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
 
 - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
 

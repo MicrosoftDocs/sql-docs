@@ -3,7 +3,7 @@ title: "sys.dm_exec_query_plan (Transact-SQL)"
 description: sys.dm_exec_query_plan (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/02/2016"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -76,6 +76,10 @@ The *plan_handle* can be obtained from the following dynamic management objects:
   
 ## Permissions  
  To execute **sys.dm_exec_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the `VIEW SERVER STATE` permission on the server.  
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
 ## Examples  
  The following examples show how to use the **sys.dm_exec_query_plan** dynamic management view.  

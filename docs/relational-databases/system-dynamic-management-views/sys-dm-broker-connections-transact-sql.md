@@ -3,7 +3,7 @@ title: "sys.dm_broker_connections (Transact-SQL) "
 description: sys.dm_broker_connections returns a row for each Service Broker network connection.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/03/2022"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -55,6 +55,10 @@ dev_langs:
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Physical joins  
 
 :::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-broker-connections-1.svg" alt-text="Diagram of physical joins for sys.dm_broker_connections.":::

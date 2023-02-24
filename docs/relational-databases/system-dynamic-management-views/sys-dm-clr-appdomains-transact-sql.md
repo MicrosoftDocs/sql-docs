@@ -3,7 +3,7 @@ title: "sys.dm_clr_appdomains (Transact-SQL)"
 description: sys.dm_clr_appdomains (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/14/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -76,6 +76,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 ## Permissions  
  Requires VIEW SERVER STATE permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example shows how to view the details of an **AppDomain** for a given assembly:  
   

@@ -2,10 +2,10 @@
 description: "sp_reset_dtc_log (Transact-SQL)"
 title: "sp_reset_dtc_log (Transact-SQL)"
 ms.custom: ""
-ms.date: "10/18/2022"
-ms.prod: sql
+ms.date: "02/24/2023"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 author: VanMSFT
 ms.author: vanto
@@ -36,7 +36,8 @@ There are no arguments for this Stored Procedure.
  None  
   
 ## Permissions  
- **What permissions are needed to execute this?** 
+
+Requires **sysadmin** or have **CONTROL SERVER** permissions.
   
 ## Examples
   

@@ -2,10 +2,10 @@
 description: "sys.sp_manage_distributed_transaction (Transact-SQL)"
 title: "sys.sp_manage_distributed_transaction (Transact-SQL)"
 ms.custom: ""
-ms.date: "10/18/2022"
-ms.prod: sql
+ms.date: "02/24/2023"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 author: VanMSFT
 ms.author: vanto
@@ -27,21 +27,25 @@ sys.sp_manage_distributed_transaction
    @operation = 'value'  
 ```  
   
-## Arguments  
+## Arguments
+
 `@transaction_uow = 'id'`
  Specifies MSDTC transaction ID GUID (transaction UOW).
   
 `@operation = 'value'`
  Specifies operation to perform. Valid values are `commit`, `abort`, or `forget`.
   
-## Return Code Values  
- **0** (success) or **1** (failure)  
+## Return Code Values
+
+**0** (success) or **1** (failure)  
   
-## Result Sets  
- None  
+## Result Sets
+
+None  
   
-## Permissions  
- **What permissions are needed to execute this?** 
+## Permissions
+
+Requires **sysadmin** or have **CONTROL SERVER** permissions.
   
 ## Examples
   

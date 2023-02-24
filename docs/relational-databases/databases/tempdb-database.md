@@ -2,7 +2,7 @@
 title: "tempdb database"
 description: This article provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
-ms.date: 10/28/2021
+ms.date: 02/24/2023
 ms.service: sql
 ms.subservice: 
 ms.topic: conceptual
@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article describes the `tempdb` system database, a global resource available to all users connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure SQL Managed Instance. 
+This article describes the `tempdb` system database, a global resource available to all users connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure SQL Managed Instance.
 
 ## Overview
 
@@ -264,6 +264,8 @@ This change also requires a restart to take effect, even if memory-optimized tem
 - [Columnstore indexes](../indexes/columnstore-indexes-overview.md) can't be created on temporary tables when memory-optimized `tempdb` metadata is enabled.
 
 - Due to the limitation on columnstore indexes, use of the `sp_estimate_data_compression_savings` system stored procedure with the `COLUMNSTORE` or `COLUMNSTORE_ARCHIVE` data compression parameter is not supported when memory-optimized `tempdb` metadata is enabled.
+
+- A system stored procedure is available to manually cause the in-memory engine to release memory related to deleted rows of in-memory data that are eligible for garbage collection. This can help with troubleshooting specific [memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory). For more information, see [sys.sp_xtp_force_gc (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md).
 
 > [!NOTE] 
 > These limitations apply only when you're referencing `tempdb` system views. You can create a temporary table in the same transaction as you access a memory-optimized table in a user database, if desired.

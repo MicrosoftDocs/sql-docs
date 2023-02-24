@@ -25,24 +25,24 @@ You can use maintenance plans to back up database and transaction log files, per
 1. Select **Connect**.
 1. In **Object Explorer**, expand **Databases**.
 1. Right-click the database you want to back up, select **Tasks**, and then select **Back Up**.
-1. In the **Back Up Database - DatabaseName** dialog box, make sure that the **Backup type** is set to **Full**, enter the name of the backup set in the **Name** box, and then select **Add** under **Destination**.
+1. In the **Back Up Database - <DatabaseName>** dialog box, make sure that the **Backup type** is set to **Full**, enter the name of the **Backup set** in the **Name** box, and then select **Add** under **Destination**.
 1. In the **Select Backup Destination** dialog box, enter a path and a file name in the **Destinations on disk** box, and then select **OK**.
 
 1. In the **Script** list, select **Script Action to Job**.
 
     > [!NOTE]
-    > If you do not see the **Script Action to Job** option, you may be running an express edition of SQL Server. You can check your edition using select@@version. For more information, see [Determine which version and edition of SQL Server Database Engine is running](/troubleshoot/sql/releases/find-my-sql-version).
+    > If you do not see the **Script Action to Job** option, you may be running an express edition of SQL Server. You can check your edition by running the query `select@@version`. For more information, see [Determine which version and edition of SQL Server Database Engine is running](/troubleshoot/sql/releases/find-my-sql-version).
 
 1. In the **New Job** dialog box, select **Steps** under **Select a page**, and then select **Edit** if you want to change the job parameters.
 
     > [!NOTE]
-    > In the **Job Step Properties - 1** dialog box, you can see the backup command.
+    > - In the **Job Step Properties - 1** dialog box, you can see the backup command.
     >
-    > Microsoft is currently investigating an error message that can occur in SSMS at this step. If you get an exception at this step, repeat the procedure without this step and make any changes by editing the corresponding job under the **Jobs** menu under **SQL Server Agent** in Object Explorer.
+    > - Microsoft is currently investigating an error message that can occur in SSMS at this step. If you get an exception at this step, repeat the procedure without this step and make any changes by editing the corresponding job under the **Jobs** menu under **SQL Server Agent** in **Object Explorer**.
 
 1. Under **Select a page**, select **Schedules**, and then select **New**.
 
-1. In the **New Job Schedule** dialog box, type the job name in the **Name** box, specify the job schedule, and then select **OK**.
+1. In the **New Job Schedule** dialog box, enter the job name in the **Name** box, specify the job schedule, and then select **OK**.
 
     > [!NOTE]
     > If you want to configure alerts or notifications, you can select **Alerts** or **Notifications** under **Select a page**.
@@ -51,13 +51,13 @@ You can use maintenance plans to back up database and transaction log files, per
 
    You receive the following message:
 
-   > The backup of database 'DatabaseName' completed successfully.
+   > The backup of database '<DatabaseName>' completed successfully.
 
 > [!NOTE]
 > To verify the backup job, expand **SQL Server Agent**, and then expand **Jobs**. When you do this step, the SQL Server Agent service must be running.
 
 > [!NOTE]
-> You can use a similar procedure to schedule Transaction Log and Differential backups if you make the appropriate selection in Step 6 for **Backup Type**. If you do not see the **Transaction Log** option in **Backup Type**, check the recovery model of the database. You can't take transaction log backups if you are using the Simple Recovery model for your database.
+> You can use a similar procedure to schedule transaction log and differential backups if you make the appropriate selection in Step 6 for **Backup type**. If you don't see the **Transaction Log** option in **Backup type**, check the recovery model of the database. You can't take transaction log backups if you are using the [Simple Recovery model](/sql/relational-databases/backup-restore/recovery-models-sql-server) for your database.
 
 ## Manually create SQL Server Agent jobs
 

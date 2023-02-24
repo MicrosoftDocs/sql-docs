@@ -2,8 +2,8 @@
 title: Configure point-to-site connectivity using SSMS
 titleSuffix: Azure SQL Managed Instance
 description: Connect to Azure SQL Managed Instance using SQL Server Management Studio (SSMS) using a point-to-site connection from an on-premises client computer.
-author: srdan-bozovic-msft
-ms.author: srbozovi
+author: zoran-rilak-msft
+ms.author: zoranrilak
 ms.reviewer: mathoma, bonova, jovanpop
 ms.date: 03/13/2019
 ms.service: sql-managed-instance

@@ -103,15 +103,15 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
   
 ## tempdb in Azure SQL 
 
-The behavior of tempdb in Azure SQL Database differs from the behavior SQL Server, Azure SQL Managed Instance, and SQL Server on Azure VMs. 
+The behavior of `tempdb` in Azure SQL Database differs from the behavior SQL Server, Azure SQL Managed Instance, and SQL Server on Azure VMs. 
 
 ### tempdb in SQL Database
 
 Single and pooled databases in [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) support global temporary tables and global temporary stored procedures scoped to the database level, and stored in `tempdb`.  Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same database. User sessions from other databases can't access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). 
 
-For single and pooled databases in Azure SQL Database, out of all the system databases, only the master database and `tempdb` database are accessible.  For more information, see [What is a logical server in Azure?](/azure/azure-sql/database/logical-servers) 
+For single and pooled databases in Azure SQL Database, out of all the system databases, only the `master` database and `tempdb` database are accessible.  For more information, see [What is a logical server in Azure?](/azure/azure-sql/database/logical-servers) 
 
-To learn more about tempdb sizes in Azure SQL Database, review: 
+To learn more about `tempdb` sizes in Azure SQL Database, review: 
 
 - vCore purchasing model: [single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases), [pooled databases](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
 - DTU purchasing model: [single databases](/azure/azure-sql/database/resource-limits-dtu-single-databases#tempdb-sizes), [pooled databases](/azure/azure-sql/database/resource-limits-dtu-elastic-pools#tempdb-sizes)
@@ -120,7 +120,7 @@ To learn more about tempdb sizes in Azure SQL Database, review:
 
 [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) supports temporary objects in the same way as SQL Server, where all global temporary tables and global temporary stored procedures are accessible by all user sessions within the same managed instance. Likewise, all system databases are accessible. 
 
-To learn more about tempdb sizes in Azure SQL Managed Instance, review [resource limits](/azure/azure-sql/managed-instance/resource-limits). 
+To learn more about `tempdb` sizes in Azure SQL Managed Instance, review [resource limits](/azure/azure-sql/managed-instance/resource-limits). 
 
 
 ## Restrictions
@@ -203,9 +203,9 @@ Metadata contention in `tempdb` has historically been a bottleneck to scalabilit
 This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
 
 > [!NOTE]
-> Currently the memory-optimized tempdb metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
+> Currently the memory-optimized `tempdb` metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
 
-Watch this seven-minute video for an overview of how and when to use memory-optimized tempdb metadata:
+Watch this seven-minute video for an overview of how and when to use memory-optimized `tempdb` metadata:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 

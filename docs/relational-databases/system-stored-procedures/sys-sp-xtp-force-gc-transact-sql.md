@@ -27,6 +27,8 @@ For more information on memory-optimized `tempdb` metadata out of memory errors,
 
 The `sys.sp_xtp_force_gc` system stored procedure was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] [CU1](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1#2087479) and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] [CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535). This stored procedure is not currently supported on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
 ## Syntax
 
 ```syntaxsql

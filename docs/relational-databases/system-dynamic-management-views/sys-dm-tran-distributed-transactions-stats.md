@@ -12,7 +12,8 @@ dev_langs:
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sys.dm_tran_distributed_transactions_stats (Transact-SQL)
-[!INCLUDE [SQL Server 2022 ](../../includes/applies-to-version/sqlserver2022.md)]
+
+[!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
   Returns information about MSDTC statistics in SQL Server.
 
@@ -23,7 +24,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 |aborted  |  int|  The number of transactions that were shut down before they were completed.  |
 |aborted_max  |  int|  The highest number of aborted transactions since DTC last started.  |
 |forced_abort |   int | The number of aborted transactions that were manually shut down before they were completed. |
-|committed |  int | The number of commited transactions for the instance.  |
+|committed |  int | The number of committed transactions for the instance.  |
 |committed_max |  int | The highest number of committed transactions since DTC last started.  |
 |forced_commit |  int | The number of committed transactions that were manually committed.  |
 |heuristic |  int | **TBD**  |

@@ -14,16 +14,17 @@ ms.author: v-sidong
 
 This article describes how to schedule a database backup operation by using SQL Server Management Studio (SSMS) for [SQL Editions that support SQL Server Agent](/sql/sql-server/editions-and-components-of-sql-server-2019#SSMS). To schedule backups for SQL Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database).
 
-## Use maintenance plans
+## Use maintenance plans to back up databases
 
-You can use [Maintenance Plans](/sql/relational-databases/maintenance-plans/maintenance-plans) to back up database and transaction log files, perform differential backups, and define retention periods for your backups. For more information, see:
+You can use [Maintenance Plans](/sql/relational-databases/maintenance-plans/maintenance-plans) to back up databases and transaction log files, perform differential backups, and define retention periods for your backups. For more information, see:
 
 - [Create a Maintenance Plan](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan)
-- [Create a Maintenance Plan (Maintenance Plan Design Surface)](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface) - [Use the Maintenance Plan Wizard](/sql/relational-databases/maintenance-plans/use-the-maintenance-plan-wizard)
+- [Create a Maintenance Plan (Maintenance Plan Design Surface)](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface)
+- [Use the Maintenance Plan Wizard](/sql/relational-databases/maintenance-plans/use-the-maintenance-plan-wizard)
 
-## Use Script Action to Job option in SSMS
+## Use the Script Action to Job option to back up databases
 
-To schedule a database backup using **Script Action to Job** option in SSMS, follow these steps:
+To schedule a database backup using the **Script Action to Job** option in SSMS, follow these steps:
 
 1. Start SQL Server Management Studio and select **Connect** > **Database Engine**.
 1. In the **Connect to Server** dialog box, select the appropriate values in the **Server type** list, in the **Server name** list, and in the **Authentication** list.

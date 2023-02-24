@@ -44,7 +44,7 @@ SSMS 19.0.2 is the latest general availability (GA) release of SSMS. If you need
 | Fulltext | Fixed an issue that caused a table's fulltext index to be rebuilt when moving the table to a different filegroup. |
 | General SSMS | Added digital signature to dll files. |
 | Profiler | Fixed issue that generated "Errors in the OLE DB provider. Unable to obtain authentication token using the credentials provided" error trying to run SQL Profiler with a Power BI workspace. |
-| Replication | Addressed error "Property Password cannot be changed or read after a connection string has been set" which occurred when trying to configure a replication subscriber. |
+| Replication | Addressed error "Property Password cannot be changed or read after a connection string has been set" which occurred when trying to configure a replication subscriber. See [SSMS 19 - Issue while connecting to subsciber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e).|
 
 #### Known issues (19.0.2)
 

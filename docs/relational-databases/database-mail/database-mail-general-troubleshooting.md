@@ -101,7 +101,7 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
     EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'mail';
     ```
 
-   The mail queue should have the state of RECEIVES_OCCURRING. The status queue may vary from moment to moment. If the mail queue state isn't RECEIVES_OCCURRING, try restarting the queue. Stop the queue using the following statement:
+   The mail queue should have the state of `RECEIVES_OCCURRING`. The status queue may vary from moment to moment. If the mail queue state isn't `RECEIVES_OCCURRING`, try restarting the queue. Stop the queue using the following statement:
 
 ```sql
 EXEC msdb.dbo.sysmail_stop_sp;
@@ -114,7 +114,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 ```
 
   > [!NOTE]
-  >  Use the length column in the result set of sysmail_help_queue_sp to determine the number of e-mails in the Mail queue.
+  >  Use the length column in the result set of `sysmail_help_queue_sp` to determine the number of e-mails in the Mail queue.
 
 ## Do problems affect some or all accounts
 
@@ -142,6 +142,19 @@ EXEC msdb.dbo.sysmail_start_sp;
     > [!NOTE]
     > When large numbers of messages are being sent, large default values may increase reliability, but will substantially increase the use of resources as many messages are attempted to be delivered over and over again. Address the root problem by resolving the network or SMTP server problem that prevents Database Mail from contacting the SMTP server promptly.
 
+## Verify service broker is enabled for msdb
+
+Database mail requires the Service Broker to be enabled for the `msdb` database. Verify if the service broker is enabled on `msdb` with the following T-SQL script:
+
+```sql
+SELECT is_broker_enabled FROM sys.databases WHERE name = 'msdb' ; -- should be 1
+```
+
+If not enabled, the service broker must be enabled. The following sample script requires exclusive access to the `msdb` system databases, however, so this may not be feasible to execute during typical business hours. For more information, see [ALTER DATABASE ... SET ENABLE_BROKER](../../t-sql/statements/alter-database-transact-sql-set-options.md#enable_broker).
+
+```sql
+ALTER DATABASE msdb SET ENABLE_BROKER;
+```
 
 ## <a id="RelatedContent"></a> Next steps
 

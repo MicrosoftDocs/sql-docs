@@ -111,8 +111,6 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  **View or change system parameters**  
  Configure Database Mail system parameters such as the maximum file size for attachments.  
 
-[Database Mail Configuration Wizard](#DBWizard)  
-
 ### <a id="NewAccount"></a> New Account Page
 
  Use this page to create a new Database Mail account. A Database Mail account contains information for sending e-mail to an SMTP server.  

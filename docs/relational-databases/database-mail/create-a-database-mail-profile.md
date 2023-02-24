@@ -76,7 +76,7 @@ helpviewer_keywords:
 
 ### <a id="PrivateProfile"></a> Create a database mail private profile
 
--   Connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+-   Connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with SQL Server Management Studio (SSMS) or Azure Data Studio. Open a new query window.
 
 -   To create a new profile, run the system stored procedure [sysmail_add_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) as follows:  
 

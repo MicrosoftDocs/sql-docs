@@ -87,7 +87,7 @@ The following table lists the supported upgrade scenarios from earlier versions 
 
 You can migrate databases from older versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], as long as the source database compatibility level is `90` or higher. Databases with a compatibility level of `90` (for example, on [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)]), are automatically upgraded to a compatibility level of `100` when migrated to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. If the compatibility level on the source database is `100` or higher, it will be unchanged on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].
 
-For information, see [Azure Database Migration Guide](https://datamigration.microsoft.com/scenario/sql-to-sqlserver).
+For information, see [Azure Database Migration Guide](../../sql-server/migrate/guides/sql-server-to-sql-server-upgrade-guide.md).
 
 The following tips and tools can help you plan and implement your migration.
 

@@ -180,11 +180,7 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
   
   - Further, setting a lower compatibility level also misses a number of improvements in the query optimizer for latest versions, and affects all queries against the database.
   
-- You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
-
-  - Further, setting a lower compatibility level also misses many improvements in the query optimizer for latest versions, and affects all queries against the database.
-
-- You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
+- You could use `LEGACY_CARDINALITY_ESTIMATION` database scoped configuration option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
 
 - You could use `LEGACY_CARDINALITY_ESTIMATION` query hint, to have a single query use the older CE, while retaining other improvements in the query optimizer.
 

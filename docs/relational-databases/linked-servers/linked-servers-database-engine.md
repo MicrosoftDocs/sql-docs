@@ -112,7 +112,7 @@ Azure SQL Managed Instance linked servers support both SQL authentication, and A
 
 ### MSOLEDBSQL19 and linked servers
 
-Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificated is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
+Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
 
 ## See also
 

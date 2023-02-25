@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 12/15/2022
+ms.date: 02/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
@@ -16,6 +16,13 @@ tags: azure-service-management
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 When you deploy an Azure virtual machine (VM) with SQL Server installed on it, either manually, or through a built-in image, you can use Azure features to improve your experience. This article summarizes the documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md). 
+
+
+## February 2023 
+
+| Changes | Details |
+| --- | --- |
+| **Enable Azure AD for SQL Server** | We've published a guide to help you enable Azure AD authentication for your SQL Server VM. Review [Configure Azure AD](configure-azure-ad-authentication-for-sql-vm.md) to learn more. | 
 
 
 ## January 2023

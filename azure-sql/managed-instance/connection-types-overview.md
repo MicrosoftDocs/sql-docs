@@ -2,8 +2,8 @@
 title: Connection types
 titleSuffix: Azure SQL Managed Instance
 description: Learn about Azure SQL Managed Instance connection types
-author: srdan-bozovic-msft
-ms.author: srbozovi
+author: zoran-rilak-msft
+ms.author: zoranrilak
 ms.reviewer: vanto
 ms.date: 12/01/2021
 ms.service: sql-managed-instance

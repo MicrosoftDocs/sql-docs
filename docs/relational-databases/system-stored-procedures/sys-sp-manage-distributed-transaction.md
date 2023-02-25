@@ -57,5 +57,5 @@ EXEC sys.sp_manage_distributed_transaction
   
 ## See also  
 
-- [sys.dm_tran_distributed_transactions_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-distributed-transactions-stats.md)
+- [sys.dm_tran_distributed_transaction_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md)
 - [sp_reset_dtc_log (Transact-SQL)](sp-reset-dtc-log.md)

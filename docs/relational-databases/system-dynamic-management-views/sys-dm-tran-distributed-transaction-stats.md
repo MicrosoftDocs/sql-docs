@@ -1,6 +1,6 @@
 ---
-title: "sys.dm_tran_distributed_transactions_stats (Transact-SQL)"
-description: sys.dm_tran_distributed_transactions_stats (Transact-SQL)
+title: "sys.dm_tran_distributed_transaction_stats (Transact-SQL)"
+description: sys.dm_tran_distributed_transaction_stats (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "02/24/2023"
@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
-# sys.dm_tran_distributed_transactions_stats (Transact-SQL)
+# sys.dm_tran_distributed_transaction_stats (Transact-SQL)
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
@@ -27,13 +27,13 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 |committed |  int | The number of committed transactions for the instance.  |
 |committed_max |  int | The highest number of committed transactions since DTC last started.  |
 |forced_commit |  int | The number of committed transactions that were manually committed.  |
-|heuristic |  int | **TBD**  |
-|heuristic_max |  int | **TBD**  |
+|heuristic |  int | TBD  |
+|heuristic_max |  int | TBD  |
 |in_doubt |  int | The number of in doubt transactions.  |
 |in_doubt_max |  int | The highest number of in doubt transactions since DTC last started.  |
 |open |  int | The number of running transactions for the instance.  |
 |open_max |  int | The highest number of concurrently running transactions since DTC last started.  |
-|single_phase_in_doubt |  int | **TBD**  |
+|single_phase_in_doubt |  int | TBD  |
   
 ## Permissions
 

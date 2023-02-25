@@ -37,6 +37,8 @@ ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
 
         [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md)
 
+        [sys.dm_tran_distributed_transaction_stats (Transact-SQL)](sys-dm-tran-distributed-transaction-stats.md)
+
         [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)
 
         [sys.dm_tran_top_version_generators &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-top-version-generators-transact-sql.md)

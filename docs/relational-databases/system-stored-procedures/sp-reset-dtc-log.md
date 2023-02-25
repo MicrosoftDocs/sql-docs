@@ -9,11 +9,11 @@ ms.subservice: system-objects
 ms.topic: "reference"
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # sp_reset_dtc_log (Transact-SQL)
 
-[!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
   Clears the MSDTC log.  
   

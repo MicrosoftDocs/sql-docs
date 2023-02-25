@@ -9,11 +9,11 @@ ms.subservice: system-objects
 ms.topic: "reference"
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # sys.sp_manage_distributed_transaction (Transact-SQL)
 
-[!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
   Commits, aborts, or forgets a specified transaction  
   

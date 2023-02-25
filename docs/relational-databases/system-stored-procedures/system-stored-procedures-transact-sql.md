@@ -2,7 +2,7 @@
 description: "System Stored Procedures (Transact-SQL)"
 title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 07/25/2022
+ms.date: 02/24/2023
 ms.service: sql
 ms.reviewer: randolphwest
 ms.subservice: system-objects
@@ -48,6 +48,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |[General Extended Stored Procedures](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Used to provide an interface from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to external programs for various maintenance activities.|  
 |[Log Shipping Stored Procedures](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Used to configure, modify, and monitor log shipping configurations.|  
 |[Management Data Warehouse Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Used to configure the management data warehouse.|  
+| [MSDTC Stored Procedure](msdtc-stored-procedures-transact-sql.md)| Use for resetting the Microsoft Distributed Transaction Coordinator (MSDTC) log or looking at MSDTC statistics.
 |[OLE Automation Stored Procedures](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Used to enable standard Automation objects for use within a standard [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.|  
 |[Policy-Based Management Stored Procedures](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Used for Policy-Based Management.|  
 |[PolyBase stored procedures](./polybase-stored-procedures-sp-polybase-join-group.md)|Add or remove a computer from a PolyBase scale-out group.|  

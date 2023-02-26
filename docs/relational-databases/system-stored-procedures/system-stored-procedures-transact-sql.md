@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 |Category|Description|  
 |--------------|-----------------|  
-|[Active Geo-Replication Stored Procedures]()|Used to manage to manage Active Geo-Replication configurations in Azure SQL Database|  
+|[Active Geo-Replication Stored Procedures]()|Used to manage Active Geo-Replication configurations in Azure SQL Database|  
 |[Catalog Stored Procedures](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Used to implement ODBC data dictionary functions and isolate ODBC applications from changes to underlying system tables.|  
 |[Change Data Capture Stored Procedures](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Used to enable, disable, or report on change data capture objects.|  
 |[Cursor Stored Procedures](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Used to implements cursor variable functionality.|  

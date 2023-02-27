@@ -5,7 +5,7 @@ description: Learn how to restore a database to an earlier point in time for Azu
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: mathoma, nvraparl
-ms.date: 08/25/2019
+ms.date: 03/01/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -213,7 +213,7 @@ To restore to another subscription, be sure to set the context (`az account set`
 
 
 ```azurecli-interactive
-az account set -s “sourceSubscriptionId”
+az account set -s "“"sourceSubscriptionId"”"
 
 az sql midb restore -s sourcesubscriptionid -g sourcegroup 
 --mi sourceinstance -n sourcemanageddb --dest-name targetDbName 
@@ -309,8 +309,8 @@ Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
 To restore a deleted database to the same subscription: 
 
 ```azurecli-interactive
-az sql midb restore -g resourcegroup --mi source-mi
--n databasename --dest-name databasename --dest-mi source-mi 
+az sql midb restore -g resourcegroup --mi instancename
+-n databasename --dest-name databasename --dest-mi instancename 
 --dest-resource-group ToMove --time "2023-02-23T11:54:00" [--deleted-time "deletion_date"]*
 ```
 

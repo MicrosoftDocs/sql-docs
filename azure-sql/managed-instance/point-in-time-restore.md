@@ -308,8 +308,8 @@ Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
 To restore a deleted database to the same subscription: 
 
 ```azurecli-interactive
-az sql midb restore -g "gen4-testing-RG" --mi "filiptanic-gen4-on-gen7-v2" 
--n test --dest-name "test-crosss" --dest-mi "source-mi" 
+az sql midb restore -g "resourcegroup" --mi "source-mi" 
+-n "databasename" --dest-name "databasename" --dest-mi "source-mi" 
 --dest-resource-group ToMove --time "2023-02-23T11:54:00" [--deleted-time "deletion_date"]*
 ```
 

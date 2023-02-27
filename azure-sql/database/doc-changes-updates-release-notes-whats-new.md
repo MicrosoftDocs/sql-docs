@@ -2,8 +2,9 @@
 title: What's new?
 titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma
 ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: service-overview
@@ -11,7 +12,6 @@ ms.topic: conceptual
 ms.custom:
   - "sqldbrb=2"
   - "references_regions"
-  - "ignite-fall-2021"
 ---
 # What's new in Azure SQL Database?
 
@@ -25,7 +25,10 @@ This article summarizes the documentation changes associated with new features a
 
 ## Preview
 
-The following table lists the features of Azure SQL Database that are currently in preview:
+The following table lists the features of Azure SQL Database that are currently in preview.
+
+> [!NOTE]  
+> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure Synapse Analytics provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 | Feature | Details |
 | ---| --- |
@@ -129,20 +132,6 @@ Learn about significant changes to the Azure SQL Database documentation.
 | **Hyperscale reverse migration** | Reverse migration is now in preview. Reverse migration to the General Purpose service tier allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. Learn about [reverse migration from Hyperscale](manage-hyperscale-database.md#reverse-migrate-from-hyperscale). Update: This feature is now generally available as of September 2022.|
 | **New Hyperscale articles** | We have reorganized some existing content into new articles and added new content for Hyperscale. Learn about [Hyperscale distributed functions architecture](hyperscale-architecture.md), [how to manage a Hyperscale database](manage-hyperscale-database.md), and how to [create a Hyperscale database](hyperscale-database-create-quickstart.md). |
 | **Free Azure SQL Database** | Try Azure SQL Database for free using the Azure free account. To learn more, review [Try SQL Database for free](free-sql-db-free-account-how-to-deploy.md).|
-
-### 2021
-
-| Changes | Details |
-| --- | --- |
-| **Azure AD-only authentication** | Restricting authentication to your Azure SQL Database only to Azure Active Directory users is now generally available. To learn more, see [Azure AD-only authentication](../database/authentication-azure-ad-only-authentication.md). |
-|**Split what's new** | The previously combined **What's new** article has been split by product - [What's new in SQL Database](doc-changes-updates-release-notes-whats-new.md) and [What's new in SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new.md), making it easier to identify what features are currently in preview, generally available, and significant documentation changes. Additionally, the [Known Issues in SQL Managed Instance](../managed-instance/doc-changes-updates-known-issues.md) content has moved to its own page.  |
-| **Maintenance Window support for availability zones** | You can now use the [Maintenance Window feature](maintenance-window.md) if your Azure SQL Database is deployed to an availability zone. This feature is currently in preview.  |
-| **Azure AD-only authentication** | It's now possible to restrict authentication to your Azure SQL Database to Azure Active Directory users only. This feature is currently in preview. To learn more, see [Azure AD-only authentication](authentication-azure-ad-only-authentication.md). |
-| **Query store hints** | It's now possible to use query hints to optimize your query execution via the OPTION clause. To learn more, see [Query store hints](/sql/relational-databases/performance/query-store-hints?view=azuresqldb-current&preserve-view=true). |
-| **Change data capture** | Using change data capture (CDC) with Azure SQL Database is now in preview. To learn more, see [Change data capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server). |
-| **SQL Database ledger** | SQL Database ledger is in preview, and introduces the ability to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. To learn more, see [Ledger](/sql/relational-databases/security/ledger/ledger-overview). |
-| **Maintenance window** | The maintenance window feature allows you to configure a maintenance schedule for your Azure SQL Database, currently in preview. To learn more, see [maintenance window](maintenance-window.md).|
-| **SQL Insights** | SQL Insights is a comprehensive solution for monitoring any product in the Azure SQL family. The SQL Insights solution uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance. To learn more, see [SQL Insights](/azure/azure-monitor/insights/sql-insights-overview). |
 
 ## Contribute to content
 

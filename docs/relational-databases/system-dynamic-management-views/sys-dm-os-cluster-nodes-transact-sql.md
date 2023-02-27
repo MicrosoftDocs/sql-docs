@@ -3,7 +3,7 @@ title: "sys.dm_os_cluster_nodes (Transact-SQL)"
 description: sys.dm_os_cluster_nodes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/18/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,6 +44,10 @@ Returns one row for each node in the failover cluster instance configuration. If
 ## Permissions  
  Requires VIEW SERVER STATE permission on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example uses sys. dm_os_cluster_nodes to return the nodes on a clustered server instance.  
   
@@ -60,7 +64,7 @@ FROM sys.dm_os_cluster_nodes;
 |node2|0|up|0|  
 |Node3|1|down|0|  
   
-## See Also  
+## See also  
  [sys.dm_os_cluster_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
  [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   

@@ -3,7 +3,7 @@ title: "sys.dm_exec_xml_handles (Transact-SQL)"
 description: sys.dm_exec_xml_handles (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/15/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -61,6 +61,10 @@ dm_exec_xml_handles (session_id | 0 )
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server to see all sessions or session IDs that are not owned by the caller. A caller can always see the data for his or her own current session ID.      
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example selects all active handles.  
   

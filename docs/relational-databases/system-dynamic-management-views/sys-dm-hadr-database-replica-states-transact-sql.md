@@ -3,7 +3,7 @@ title: "sys.dm_hadr_database_replica_states (Transact-SQL)"
 description: sys.dm_hadr_database_replica_states (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/03/2023"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -72,13 +72,15 @@ ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
  **end_of_log_lsn**, **last_hardened_lsn**, and **recovery_lsn** are flush LSNs. For example, **last_hardened_lsn** indicates the start of the next block past the blocks that are already on disk.  So any LSN < the value of **last_hardened_lsn** is on disk.  LSN that are >= to this value are not flushed.  
   
  Of the LSN values returned by **sys.dm_hadr_database_replica_states**, only **last_redone_lsn** is a real LSN.  
-  
-## Security  
-  
-### Permissions  
+
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

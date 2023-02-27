@@ -3,7 +3,7 @@ title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL)"
 description: sys.dm_db_xtp_checkpoint_files displays information about In-Memory OLTP checkpoint files, including file size, physical location, and transaction ID. Learn how this view differs for versions of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: "reference"
@@ -87,8 +87,12 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |logical_deletion_log_block_id|**bigint**|Applies only to state 5.|  
   
 ## Permissions  
- Requires `VIEW DATABASE STATE` permission on the server.  
+ Requires `VIEW DATABASE STATE` permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Use Cases  
  You can estimate the total storage used by [!INCLUDE[inmemory](../../includes/inmemory-md.md)] as follows:  
   

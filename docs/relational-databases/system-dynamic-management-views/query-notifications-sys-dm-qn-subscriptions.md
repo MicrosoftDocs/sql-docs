@@ -3,7 +3,7 @@ title: "sys.dm_qn_subscriptions (Transact-SQL)"
 description: Query Notifications - sys.dm_qn_subscriptions
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/15/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -89,6 +89,10 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 > [!NOTE]  
 >  If the user does not have VIEW SERVER STATE permission, this view returns information about subscriptions owned by current user.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Return active query notification subscriptions for the current user  

@@ -3,7 +3,7 @@ title: "sys.dm_exec_text_query_plan (Transact-SQL)"
 description: sys.dm_exec_text_query_plan (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "10/20/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -100,6 +100,10 @@ When an ad hoc query uses [simple](../../relational-databases/query-processing-a
 ## Permissions  
  To execute **sys.dm_exec_text_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Retrieving the cached query plan for a slow-running Transact-SQL query or batch  

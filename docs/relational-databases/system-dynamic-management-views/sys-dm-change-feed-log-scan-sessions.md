@@ -3,7 +3,7 @@ title: "sys.dm_change_feed_log_scan_sessions (Transact-SQL)"
 description: sys.dm_change_feed_log_scan_sessions (Transact-SQL) shows activity for the Azure Synapse Link feature.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "05/24/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -48,7 +48,7 @@ monikerRange: ">=sql-server-ver16||=azuresqldb-current"
 
 ## Permissions  
 
-Requires VIEW DATABASE STATE permission to query the `sys.dm_change_feed_log_scan_sessions` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions](system-dynamic-management-views.md).
+Requires VIEW DATABASE STATE or VIEW DATABASE PERFORMANCE STATE permission to query the `sys.dm_change_feed_log_scan_sessions` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions](system-dynamic-management-views.md).
 
 ## See also  
 

@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 02/15/2023
+ms.date: 02/27/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual

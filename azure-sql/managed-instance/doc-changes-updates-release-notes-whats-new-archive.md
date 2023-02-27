@@ -21,6 +21,8 @@ ms.custom:
 
 This article summarizes older documentation changes associated with new features and improvements in the recent releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see the [overview](sql-managed-instance-paas-overview.md).
 
+Return to [What's new in Azure SQL Managed Instance?](doc-changes-updates-release-notes-whats-new.md).
+
 ### 2021
 
 The following changes were added to SQL Managed Instance and the documentation in 2021: 

@@ -23,6 +23,8 @@ ms.custom:
 
 This article summarizes older documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). To learn more about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md)
 
+Return to [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md).
+
 ### 2021
 
 | Changes | Details |

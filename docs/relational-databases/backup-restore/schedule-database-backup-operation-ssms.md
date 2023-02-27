@@ -71,5 +71,5 @@ Alternatively, you can create and schedule your own backup jobs using SQL Server
 
 ## See also
 
-- [Script queries from the GUI](../../ssms/tutorials/scripting-ssms#script-queries-from-the-gui.md)
+- [Script queries from the GUI](../../ssms/tutorials/scripting-ssms.md#script-queries-from-the-gui)
 - [Troubleshoot SQL Server backup and restore operations](/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations)

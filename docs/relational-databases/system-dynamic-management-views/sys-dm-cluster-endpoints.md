@@ -33,7 +33,7 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW 
 
 ### Permissions for SQL Server 2022 and later
 
-Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+Requires VIEW SERVER SECURITY STATE permission on the server.
 
 ## See also
 

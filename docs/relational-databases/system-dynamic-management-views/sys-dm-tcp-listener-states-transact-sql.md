@@ -45,7 +45,7 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
   
 ### Permissions for SQL Server 2022 and later
 
-Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+Requires VIEW SERVER SECURITY STATE permission on the server.
 
 ## See also  
  [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   

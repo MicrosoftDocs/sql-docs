@@ -3,7 +3,7 @@ title: "sys.dm_xe_objects (Transact-SQL)"
 description: sys.dm_xe_objects (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "3/30/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -49,7 +49,11 @@ Returns a row for each object that is exposed by an event package. Objects can b
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-### Relationship cardinalities  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  

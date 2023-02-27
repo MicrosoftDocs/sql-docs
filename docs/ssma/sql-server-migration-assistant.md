@@ -66,7 +66,7 @@ The following target versions are supported for SSMA.
     
 - **Premier support** - If you have a Premier Contract, you can get Premier support on the [Premier Online portal](https://premier.microsoft.com/).  
   
-- **Consulting services** - For partner assisted migrations, go the [Azure Database Migration Guide](https://datamigration.microsoft.com/).
+- **Consulting services** - For partner assisted migrations, go the [Azure Database Migration Guide](/data-migration/).
   
 ## Legal Notice (SSMA)
 

@@ -55,7 +55,7 @@ The preceding diagram shows the following resources in the same resource group:
 
 Before you complete the instructions in this article, you should already have:
 
-- An Azure subscription. Get started for [free](https://azure.microsoft.com/free/). 
+- An Azure subscription. Get started with a [free Azure account](https://azure.microsoft.com/free/). 
 - [Two or more prepared Windows Azure virtual machines](failover-cluster-instance-prepare-vm.md) in an [availability set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set).
 - An account that has permissions to create objects on both Azure virtual machines and in Active Directory.
 - The latest version of [PowerShell](/powershell/azure/install-az-ps). 

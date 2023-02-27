@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 02/16/2023
+ms.date: 02/24/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -30,7 +30,7 @@ Most existing client tools that target [!INCLUDE[ssNoVersion](../includes/ssnove
 
 ## Latest versions for all packages
 
-This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022. The following table shows the most recent release, which is **CU 1**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022](sql-server-linux-release-history-2022.md).
+This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022. The following table shows the most recent release, which is **CU 1**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022](/troubleshoot/sql/linux/release-history-2022).
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
@@ -75,9 +75,9 @@ The following table lists the release history for [!INCLUDE[ssSQL22](../includes
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
-| [CU 1](sql-server-linux-release-history-2022.md#CU1) | 16.0.4003.1   | 2023-02-16   |
-| [GDR 1](sql-server-linux-release-history-2022.md#GDR1) | 16.0.1050.5   | 2023-02-14   |
-| [GA](sql-server-linux-release-history-2022.md#GA) | 16.0.1000.6   | 2022-11-16   |
+| [CU 1](/troubleshoot/sql/linux/release-history-2022#CU1) | 16.0.4003.1   | 2023-02-16   |
+| [GDR 1](/troubleshoot/sql/linux/release-history-2022#GDR1) | 16.0.1050.5   | 2023-02-14   |
+| [GA](/troubleshoot/sql/linux/release-history-2022#GA) | 16.0.1000.6   | 2022-11-16   |
 
 ## Known issues
 

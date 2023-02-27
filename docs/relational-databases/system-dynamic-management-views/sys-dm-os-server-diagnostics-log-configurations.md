@@ -3,7 +3,7 @@ title: "sys.dm_os_server_diagnostics_log_configurations"
 description: sys.dm_os_server_diagnostics_log_configurations
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/14/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -35,6 +35,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ## Permissions  
  Requires VIEW SERVER STATE permissions on the SQL Server failover cluster instance.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example uses sys.dm_os_server_diagnostics_log_configurations to return the property settings for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover diagnostic logs.  
   

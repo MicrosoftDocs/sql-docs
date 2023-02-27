@@ -3,7 +3,7 @@ title: "sys.dm_repl_traninfo (Transact-SQL)"
 description: sys.dm_repl_traninfo (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,10 +63,14 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the publication database or on the database enabled for change data capture.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Remarks  
  Information is only returned for replicated database objects or tables enabled for change data capture that are currently loaded in the article cache.  
   
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Replication Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)  

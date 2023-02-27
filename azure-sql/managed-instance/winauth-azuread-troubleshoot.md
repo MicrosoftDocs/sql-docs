@@ -2,8 +2,8 @@
 title: Troubleshoot Windows Authentication for Azure AD principals on Azure SQL Managed Instance
 titleSuffix: Azure SQL Managed Instance
 description: Learn to troubleshoot Azure Active Directory Kerberos authentication for Azure SQL Managed Instance.
-author: srdan-bozovic-msft
-ms.author: srbozovi
+author: sravanisaluru
+ms.author: srsaluru
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, randolphwest
 ms.date: 12/23/2022
 ms.service: sql-managed-instance

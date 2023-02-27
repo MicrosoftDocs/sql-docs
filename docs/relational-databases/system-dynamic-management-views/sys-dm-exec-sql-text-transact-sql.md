@@ -3,7 +3,7 @@ title: "sys.dm_exec_sql_text (Transact-SQL)"
 description: sys.dm_exec_sql_text (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "10/20/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -77,6 +77,10 @@ The *plan_handle* can be obtained from the following dynamic management objects:
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
 For ad hoc queries, the SQL handles are hash values based on the SQL text being submitted to the server, and can originate from any database. 
 

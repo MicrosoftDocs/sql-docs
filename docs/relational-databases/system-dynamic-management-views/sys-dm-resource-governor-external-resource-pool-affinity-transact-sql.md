@@ -3,7 +3,7 @@ title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)"
 description: sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "11/13/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -38,6 +38,10 @@ Pools that are created with an affinity of `AUTO` do not appear in this view bec
 ## Permissions
 
 Requires `VIEW SERVER STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## See also
 

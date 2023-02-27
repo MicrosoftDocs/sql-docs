@@ -3,6 +3,7 @@ title: Connect to and query Azure SQL Database using .NET and the Microsoft.Data
 description: Learn how to connect to a database in Azure SQL Database and query data using .NET
 author: alexwolfmsft
 ms.author: alexwolf
+ms.custom: passwordless-dotnet
 ms.date: 02/10/2023
 ms.service: sql-database
 ms.subservice: security
@@ -75,7 +76,7 @@ To connect to Azure SQL Database by using .NET, install `Microsoft.Data.SqlClien
 
 ## [Visual Studio 2022](#tab/visual-studio)
 
-1. In the **Solution Explorer**, right-click the **Dependencies** node of your project and select **Manage NuGet Packages**.
+1. In the **Solution Explorer** window, right-click the project's **Dependencies** node and select **Manage NuGet Packages**.
 
 1. In the resulting window, search for *SqlClient*. Locate the `Microsoft.Data.SqlClient` result and select **Install**.
 
@@ -213,7 +214,7 @@ The app is ready to be tested locally. Make sure you're signed in to Visual Stud
 The app is ready to be deployed to Azure. Visual Studio can create an Azure App Service and deploy your application in a single workflow.
 
 1. Make sure the app is stopped and builds successfully.
-1. In Visual Studio solution explorer, right select on the top-level project node and select **Publish**.
+1. In Visual Studio's **Solution Explorer** window, right select on the top-level project node and select **Publish**.
 1. In the publishing dialog, select **Azure** as the deployment target, and then select **Next**.
 1. For the specific target, select **Azure App Service (Windows)**, and then select **Next**.
 1. Select the green **+** icon to create a new App Service to deploy to and enter the following values:
@@ -226,7 +227,7 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
 
         :::image type="content" source="media/passwordless-connections/create-app-service-small.png" lightbox="media/passwordless-connections/create-app-service.png" alt-text="A screenshot showing how to deploy with Visual Studio.":::
 
-1. Once the resource is created, make sure it's selected in the list of app  services, and then select **Next**.
+1. Once the resource is created, make sure it's selected in the list of app services, and then select **Next**.
 1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then choose **Finish**.
 
 1. Select **Publish** in the upper right of the publishing profile summary to deploy the app to Azure.

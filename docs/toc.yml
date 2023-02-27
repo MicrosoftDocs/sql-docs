@@ -6758,7 +6758,7 @@ items:
     items:
     - name: Concepts
       items:
-      - name: Automatic Tuning
+      - name: Automatic tuning
         href: relational-databases/automatic-tuning/automatic-tuning.md
       - name: Cardinality estimation
         href: relational-databases/performance/cardinality-estimation-sql-server.md
@@ -13606,6 +13606,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md
       - name: sys.dm_tran_database_transactions
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md
+      - name: sys.dm_tran_distributed_transaction_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md
       - name: sys.dm_tran_locks
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md
       - name: sys.dm_tran_session_transactions
@@ -14218,6 +14220,8 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md
       - name: sys.sp_xtp_control_query_exec_stats
         href: relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md
+      - name: sys.sp_xtp_force_gc
+        href: relational-databases/system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md
       - name: sys.sp_xtp_merge_checkpoint_files
         href: relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md
       - name: sys.sp_xtp_unbind_db_resource_pool
@@ -14577,7 +14581,15 @@ items:
         href: relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
       - name: sp_query_store_clear_message_queues
         href: relational-databases/system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md   
-        
+
+    - name: MSDTC
+      href: relational-databases/system-stored-procedures/msdtc-stored-procedures-transact-sql.md
+      items:
+      - name: sp_manage_distributed_transaction
+        href: relational-databases/system-stored-procedures/sys-sp-manage-distributed-transaction.md
+      - name: sp_reset_dtc_log
+        href: relational-databases/system-stored-procedures/sp-reset-dtc-log.md
+
     - name: Replication
       href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md
       items:

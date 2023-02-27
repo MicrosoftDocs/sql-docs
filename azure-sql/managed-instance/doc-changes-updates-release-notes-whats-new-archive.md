@@ -1,7 +1,7 @@
 ---
-title: What's new?
+title: What's new? (Archive)
 titleSuffix: Azure SQL Managed Instance
-description: Learn about the new features and documentation improvements for Azure SQL Managed Instance.
+description: Learn about the new features and documentation improvements for Azure SQL Managed Instance. (Archive)
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf

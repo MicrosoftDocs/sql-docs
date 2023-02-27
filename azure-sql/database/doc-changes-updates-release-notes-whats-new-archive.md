@@ -1,7 +1,7 @@
 ---
-title: What's new?
+title: What's new? (Archive)
 titleSuffix: Azure SQL Database
-description: Learn about the new features and documentation improvements for Azure SQL Database.
+description: Learn about the new features and documentation improvements for Azure SQL Database. (Archive)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma

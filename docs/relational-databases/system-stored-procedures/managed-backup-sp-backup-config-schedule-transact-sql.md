@@ -92,7 +92,7 @@ The following example configures managed backups for database `Test`, performing
 USE msdb;
 GO
 
-EXEC managed_backup.`sp_backup_config_schedule` @database_name = 'Test',
+EXEC managed_backup.sp_backup_config_schedule @database_name = 'Test',
     @scheduling_option = 'Custom',
     @full_backup_freq_type = 'Daily',
     @backup_begin_time = '04:00',

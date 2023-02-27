@@ -3,12 +3,7 @@ title: "sys.dm_db_tuning_recommendations (Transact-SQL)"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-<<<<<<< HEAD
 ms.date: "02/24/2023"
-=======
-ms.reviewer: randolphwest
-ms.date: 02/24/2023
->>>>>>> 484b87cfe1878cba89119f0cfbc301b18a7ba216
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"

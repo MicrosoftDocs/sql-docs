@@ -17,7 +17,7 @@ Azure Arc-enabled SQL Server extends Azure services to SQL Server instances host
 
 Azure Arc enables you to manage all of your SQL Servers from a single point of control: Azure. As you connect your SQL Servers to Azure, you get a single place to view the detailed inventory of your SQL Servers and databases.  
 
-- Look at details for a given SQL Server in the Azure Portal such as the name, version, edition, number of cores, and host operating system.
+- Look at details for a given SQL Server in the Azure portal such as the name, version, edition, number of cores, and host operating system.
 - Query across all of your SQL Servers using Azure Resource Graph Explorer to answer questions like:
   - "How many SQL Servers do I have that are SQL Server 2014?"
   - "What are the names of all the SQL Servers that are running on Linux?"  
@@ -47,7 +47,7 @@ When you enable Microsoft Defender through Azure Arc-enabled SQL Server, you can
 
 ## Microsoft Purview
 
-Microsoft Purview provides a unified data governance solution to help manage and govern your on-premises, multi-cloud, and software as a service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Enable data consumers to access valuable, trustworthy data management.
+Microsoft Purview provides a unified data governance solution to help manage and govern your on-premises, multicloud, and software as a service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. Enable data consumers to access valuable, trustworthy data management.
 
 Azure Arc-enabled SQL Server powers some of the Microsoft Purview features such as access policies and it generally makes it easier for you to get your SQL Servers connected into Purview.
 

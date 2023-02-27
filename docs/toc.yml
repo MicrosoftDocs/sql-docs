@@ -109,6 +109,8 @@ items:
           href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
         - name: To a mirrored media set
           href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
+        - name: Schedule Database Backups
+          href: relational-databases/backup-restore/schedule-database-backup-operation-ssms.md
       - name: Restore
         items:
         - name: Use SQL Server Management Studio (SSMS)
@@ -6758,7 +6760,7 @@ items:
     items:
     - name: Concepts
       items:
-      - name: Automatic Tuning
+      - name: Automatic tuning
         href: relational-databases/automatic-tuning/automatic-tuning.md
       - name: Cardinality estimation
         href: relational-databases/performance/cardinality-estimation-sql-server.md
@@ -10090,11 +10092,11 @@ items:
     - name: Release history
       items:
       - name: SQL Server 2022
-        href: linux/sql-server-linux-release-history-2022.md
+        href: /troubleshoot/sql/linux/release-history-2022?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: SQL Server 2019
-        href: linux/sql-server-linux-release-history-2019.md
+        href: /troubleshoot/sql/linux/release-history-2019?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: SQL Server 2017
-        href: linux/sql-server-linux-release-history-2017.md
+        href: /troubleshoot/sql/linux/release-history-2017?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
     - name: Editions & Features
       items:
       - name: SQL Server 2022
@@ -13606,6 +13608,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md
       - name: sys.dm_tran_database_transactions
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md
+      - name: sys.dm_tran_distributed_transaction_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md
       - name: sys.dm_tran_locks
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md
       - name: sys.dm_tran_session_transactions
@@ -14579,7 +14583,15 @@ items:
         href: relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
       - name: sp_query_store_clear_message_queues
         href: relational-databases/system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md   
-        
+
+    - name: MSDTC
+      href: relational-databases/system-stored-procedures/msdtc-stored-procedures-transact-sql.md
+      items:
+      - name: sp_manage_distributed_transaction
+        href: relational-databases/system-stored-procedures/sys-sp-manage-distributed-transaction.md
+      - name: sp_reset_dtc_log
+        href: relational-databases/system-stored-procedures/sp-reset-dtc-log.md
+
     - name: Replication
       href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md
       items:

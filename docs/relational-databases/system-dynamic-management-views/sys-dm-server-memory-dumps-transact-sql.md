@@ -3,7 +3,7 @@ title: "sys.dm_server_memory_dumps (Transact-SQL)"
 description: sys.dm_server_memory_dumps (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -40,4 +40,6 @@ Introduced in [!INCLUDE[sql2008r2-md](../../includes/sql2008r2-md.md)] Service P
 ### Permissions  
  Requires VIEW SERVER STATE permission.  
   
-  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.

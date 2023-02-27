@@ -3,7 +3,7 @@ title: "sys.dm_external_script_execution_stats"
 description: sys.dm_external_script_execution_stats
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/25/2020"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: "reference"
@@ -40,6 +40,10 @@ Returns one row for each type of external script request. The external script re
 > [!NOTE]  
 > Users who run external scripts must have the additional permission EXECUTE ANY EXTERNAL SCRIPT, however, this DMV can be used by administrators without this permission.
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks
 
   This DMV is provided for internal telemetry, to monitor overall usage of the new external script execution feature provided in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. The telemetry service starts when LaunchPad does and increments a disk-based counter each time a registered external script function is called.

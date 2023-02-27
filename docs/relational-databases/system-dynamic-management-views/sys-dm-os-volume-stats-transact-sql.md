@@ -3,7 +3,7 @@ title: "sys.dm_os_volume_stats (Transact-SQL)"
 description: sys.dm_os_volume_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "09/03/2020"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -63,6 +63,10 @@ sys.dm_os_volume_stats (database_id, file_id)
 ### Permissions  
  Requires `VIEW SERVER STATE` permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Return total space and available space for all database files  
@@ -83,7 +87,7 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## See Also  
+## See also  
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   

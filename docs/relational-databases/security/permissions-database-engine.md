@@ -407,7 +407,8 @@ The following permissions are added to SQL Server 2022:
 
 - 10 new permissions have been added to allow access to system metadata.
 - 18 new permissions have been added for extended events.
-- 9 new permissions have been added with regards to security-related objects.
+- 9 new permissions have been added with regard to security-related objects.
+
 - 5 permissions have been added for Ledger.
 - 3 additional database permissions.
 

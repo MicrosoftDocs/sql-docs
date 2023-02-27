@@ -186,7 +186,8 @@ sys.dm_db_index_operational_stats (
     
 -   `VIEW DATABASE STATE` or `VIEW DATABASE PERFORMANCE STATE` (SQL Server 2022) permission to return information about all objects within the specified database, by using the object wildcard @*object_id* = NULL    
     
--   `VIEW SERVER STATE` `VIEW SERVER PERFORMANCE STATE` (SQL Server 2022)permission to return information about all databases, by using the database wildcard @*database_id* = NULL    
+-   `VIEW SERVER STATE` `VIEW SERVER PERFORMANCE STATE` (SQL Server 2022) permission to return information about all databases, by using the database wildcard @*database_id* = NULL    
+
     
  Granting `VIEW DATABASE STATE` allows all objects in the database to be returned, regardless of any CONTROL permissions denied on specific objects.    
     

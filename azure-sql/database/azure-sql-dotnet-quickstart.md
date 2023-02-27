@@ -22,7 +22,7 @@ This quickstart follows the recommended passwordless approach to connect to the 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
 * A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](/azure/azure-sql/database/single-database-create-quickstart).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
-* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or later.
+* [Visual Studio 2022(https://visualstudio.microsoft.com/vs/) or later.
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 
 ## Configure the database
@@ -33,7 +33,7 @@ Secure, passwordless connections to Azure SQL Database with .NET require certain
 
     :::image type="content" source="media/passwordless-connections/configure-firewall-small.png" lightbox="media/passwordless-connections/configure-firewall.png" alt-text="A screenshot showing how to configure firewall rules.":::
 
-1) The SQL Server must also have Azure AD authentication enabled with an admin account assigned. For local development connections, the admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the Azure Active Directory page.
+1) The SQL Server must also have Azure AD authentication enabled with an admin account assigned. For local development connections, the admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
 
     :::image type="content" source="media/passwordless-connections/enable-active-directory-small.png" lightbox="media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
 
@@ -43,7 +43,7 @@ Secure, passwordless connections to Azure SQL Database with .NET require certain
 
 For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or Visual Studio 2022.
 
-## [Visual Studio 2022](#tab/visual-studio)
+## [Visual Studio 2022(#tab/visual-studio)
 
 1. In the Visual Studio menu, navigate to **File** > **New** > **Project..**.
 
@@ -74,7 +74,7 @@ To connect to Azure SQL Database by using .NET, install `Microsoft.Data.SqlClien
 > [!WARNING]
 > Make sure to install `Microsoft.Data.SqlClient` and not `System.Data.SqlClient`. `Microsoft.Data.SqlClient` is a newer version of the SQL client library that provides additional capabilities.
 
-## [Visual Studio 2022](#tab/visual-studio)
+## [Visual Studio 2022(#tab/visual-studio)
 
 1. In the **Solution Explorer** window, right-click the project's **Dependencies** node and select **Manage NuGet Packages**.
 
@@ -92,7 +92,7 @@ dotnet add package Microsoft.Data.SqlClient
 
 ## Add the code to connect to Azure SQL
 
-The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/dotnet/azure/sdk/authentication#defaultazurecredential).
+The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/dotnet/azure/sdk/authentication#defaultazurecredential). **DefaultAzureCredential** is provided by the Azure Identity library on which the SQL client library depends.
 
 `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 

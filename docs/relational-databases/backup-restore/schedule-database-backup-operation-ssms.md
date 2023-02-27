@@ -12,15 +12,15 @@ ms.author: v-sidong
 
 # How to schedule a database backup operation by using SQL Server Management Studio
 
-This article describes how to schedule a database backup operation by using SQL Server Management Studio (SSMS) for [SQL Editions that support SQL Server Agent](/sql/sql-server/editions-and-components-of-sql-server-2019#SSMS). To schedule backups for SQL Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database).
+This article describes how to schedule a database backup operation by using SQL Server Management Studio (SSMS) for [SQL Editions that support SQL Server Agent](../../sql-server/editions-and-components-of-sql-server-2019.md#SSMS). To schedule backups for SQL Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database).
 
 ## Use maintenance plans to back up databases
 
-You can use [Maintenance Plans](/sql/relational-databases/maintenance-plans/maintenance-plans) to back up databases and transaction log files, perform differential backups, and define retention periods for your backups. For more information, see:
+You can use [Maintenance Plans](../maintenance-plans/maintenance-plans.md) to back up databases and transaction log files, perform differential backups, and define retention periods for your backups. For more information, see:
 
-- [Create a Maintenance Plan](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan)
-- [Create a Maintenance Plan (Maintenance Plan Design Surface)](/sql/relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface)
-- [Use the Maintenance Plan Wizard](/sql/relational-databases/maintenance-plans/use-the-maintenance-plan-wizard)
+- [Create a Maintenance Plan](../maintenance-plans/create-a-maintenance-plan.md)
+- [Create a Maintenance Plan (Maintenance Plan Design Surface)](../maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)
+- [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)
 
 ## Use the Script Action to Job option to back up databases
 
@@ -67,9 +67,9 @@ To schedule a database backup using the **Script Action to Job** option in SSMS,
 
 ## Manually create SQL Server Agent jobs
 
-Alternatively, you can create and schedule your own backup jobs using SQL Server Agent. For more information, see [Create Jobs](/sql/ssms/agent/create-jobs) and [Schedule a Job](/sql/ssms/agent/schedule-a-job).
+Alternatively, you can create and schedule your own backup jobs using SQL Server Agent. For more information, see [Create Jobs](../../ssms/agent/create-jobs.md) and [Schedule a Job](../../ssms/agent/schedule-a-job.md).
 
 ## See also
 
-- [Script queries from the GUI](/sql/ssms/tutorials/scripting-ssms#script-queries-from-the-gui)
+- [Script queries from the GUI](../../ssms/tutorials/scripting-ssms#script-queries-from-the-gui.md)
 - [Troubleshoot SQL Server backup and restore operations](/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations)

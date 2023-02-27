@@ -276,8 +276,6 @@
       href: database/sql-database-paas-overview.md
     - name: What's new?
       href: database/doc-changes-updates-release-notes-whats-new.md
-    - name: What's new? (Archive)
-      href: database/doc-changes-updates-release-notes-whats-new-archive.md
     - name: Try for free
       href: database/free-sql-db-free-account-how-to-deploy.md
 
@@ -980,8 +978,6 @@
       href: managed-instance/sql-managed-instance-paas-overview.md
     - name: What's new?
       href: managed-instance/doc-changes-updates-release-notes-whats-new.md
-    - name: What's new? (Archive)
-      href: managed-instance/doc-changes-updates-release-notes-whats-new-archive.md
     - name: Resource limits
       href: managed-instance/resource-limits.md
     - name: vCore purchasing model
@@ -1834,6 +1830,12 @@
     href: https://social.msdn.microsoft.com/Forums/home
   - name: Stack Overflow
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
+  - name: What's New Archives
+    items: 
+    - name: What's new in Azure SQL Database? (Archive)
+      href: database/doc-changes-updates-release-notes-whats-new-archive.md
+    - name: What's new in Azure SQL Managed Instance? (Archive)
+      href: managed-instance/doc-changes-updates-release-notes-whats-new-archive.md
   - name: Troubleshoot
     items:
     - name: Known issues with Azure SQL Managed Instance 

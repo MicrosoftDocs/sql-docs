@@ -4,7 +4,7 @@ description: Consult this complete list of SQL Server permissions to find out wh
 author: AndreasWolter
 ms.author: anwolter
 ms.reviewer: randolphwest
-ms.date: 02/26/2023
+ms.date: 02/27/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -236,7 +236,6 @@ The following table lists major classes of permissions and the kinds of securabl
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|
 |DATABASE|EXECUTE ANY EXTERNAL ENDPOINT|EAEE|SERVER|CONTROL SERVER|
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current).|SERVER|CONTROL SERVER|
-|DATABASE|GENERATE LEDGER DIGEST|GLD|SERVER|CONTROL|
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br />Only applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|
@@ -409,7 +408,7 @@ The following permissions are added to SQL Server 2022:
 - 18 new permissions have been added for extended events.
 - 9 new permissions have been added with regard to security-related objects.
 
-- 5 permissions have been added for Ledger.
+- 4 permissions have been added for Ledger.
 - 3 additional database permissions.
 
 For more information, see [New granular permissions for SQL Server 2022 and Azure SQL to improve adherence with PoLP](https://techcommunity.microsoft.com/t5/sql-server-blog/new-granular-permissions-for-sql-server-2022-and-azure-sql-to/ba-p/3607507).
@@ -479,7 +478,6 @@ All these permissions are under the same parent-permission: **ALTER ANY DATABASE
 - ALTER LEDGER
 - ALTER LEDGER CONFIGURATION
 - ENABLE LEDGER
-- GENERATE LEDGER DIGEST
 - VIEW LEDGER CONTENT
 
 #### Other database permissions

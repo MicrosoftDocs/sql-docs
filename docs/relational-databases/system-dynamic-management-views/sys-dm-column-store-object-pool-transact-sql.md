@@ -3,7 +3,7 @@ title: "sys.dm_column_store_object_pool (Transact-SQL)"
 description: sys.dm_column_store_object_pool (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2023"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -40,7 +40,7 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
  
 ### Permissions for SQL Server 2022 and later
 
-Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
 ## See also  
   

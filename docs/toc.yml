@@ -10092,11 +10092,11 @@ items:
     - name: Release history
       items:
       - name: SQL Server 2022
-        href: linux/sql-server-linux-release-history-2022.md
+        href: /troubleshoot/sql/linux/release-history-2022?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: SQL Server 2019
-        href: linux/sql-server-linux-release-history-2019.md
+        href: /troubleshoot/sql/linux/release-history-2019?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: SQL Server 2017
-        href: linux/sql-server-linux-release-history-2017.md
+        href: /troubleshoot/sql/linux/release-history-2017?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
     - name: Editions & Features
       items:
       - name: SQL Server 2022

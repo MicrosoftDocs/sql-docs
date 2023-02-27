@@ -219,6 +219,7 @@ az sql midb restore -s sourcesubscriptionid -g sourcegroup
 --mi sourceinstance -n sourcemanageddb --dest-name targetDbName 
 --dest-mi targetMI --dest-resource-group targetRG --time "2022-05-20T05:34:22"
 ```
+
 ---
 
 ## Restore a deleted database
@@ -308,8 +309,8 @@ Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
 To restore a deleted database to the same subscription: 
 
 ```azurecli-interactive
-az sql midb restore -g "resourcegroup" --mi "source-mi" 
--n "databasename" --dest-name "databasename" --dest-mi "source-mi" 
+az sql midb restore -g resourcegroup --mi source-mi
+-n databasename --dest-name databasename --dest-mi source-mi 
 --dest-resource-group ToMove --time "2023-02-23T11:54:00" [--deleted-time "deletion_date"]*
 ```
 

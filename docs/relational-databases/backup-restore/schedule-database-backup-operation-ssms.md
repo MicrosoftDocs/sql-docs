@@ -31,7 +31,8 @@ To schedule a database backup using the **Script Action to Job** option in SSMS,
 1. Select **Connect**.
 1. In **Object Explorer**, expand **Databases**.
 1. Right-click the database you want to back up, select **Tasks**, and then select **Back Up**.
-1. In the **Back Up Database - \<DatabaseName>** dialog box, make sure that the **Backup type** is set to **Full**, enter the name of the **Backup set** in the **Name** box, and then select **Add** under **Destination**.
+1. In the **Back Up Database - \<DatabaseName>** dialog box, make sure that **Backup type** is set to **Full** and **Backup component** is set to **Database**.
+1. Under **Destination*", select **Disk** for the **Back up to** option and then select **Add**. For additional options on this page, see [Backup Database](/relational-databases/backup-restore/back-up-database-general-page).
 1. In the **Select Backup Destination** dialog box, enter a path and a file name in the **Destinations on disk** box, and then select **OK**.
 
 1. In the **Script** list, select **Script Action to Job**.

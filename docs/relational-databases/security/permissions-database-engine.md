@@ -4,7 +4,7 @@ description: Consult this complete list of SQL Server permissions to find out wh
 author: AndreasWolter
 ms.author: anwolter
 ms.reviewer: randolphwest
-ms.date: 10/14/2022
+ms.date: 02/26/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -407,8 +407,9 @@ The following permissions are added to SQL Server 2022:
 
 - 10 new permissions have been added to allow access to system metadata.
 - 18 new permissions have been added for extended events.
-- 4 new permissions have been added with regards to security-related objects.
+- 9 new permissions have been added with regards to security-related objects.
 - 5 permissions have been added for Ledger.
+- 3 additional database permissions.
 
 For more information, see [New granular permissions for SQL Server 2022 and Azure SQL to improve adherence with PoLP](https://techcommunity.microsoft.com/t5/sql-server-blog/new-granular-permissions-for-sql-server-2022-and-azure-sql-to/ba-p/3607507).
 
@@ -462,7 +463,12 @@ All these permissions are under the same parent-permission: **ALTER ANY DATABASE
 
 #### Security-related object permissions
 
+- CONTROL (CREDENTIAL)
 - CREATE LOGIN
+- CREATE USER
+- REFERENCES (CREDENTIAL)
+- UNMASK (OBJECT)
+- UNMASK (SCHEMA)
 - VIEW ANY ERROR LOG
 - VIEW SERVER SECURITY AUDIT
 - VIEW DATABASE SECURITY AUDIT
@@ -474,6 +480,12 @@ All these permissions are under the same parent-permission: **ALTER ANY DATABASE
 - ENABLE LEDGER
 - GENERATE LEDGER DIGEST
 - VIEW LEDGER CONTENT
+
+#### Other database permissions
+
+- ALTER ANY EXTERNAL JOB
+- ALTER ANY EXTERNAL STREAM
+- EXECUTE ANY EXTERNAL ENDPOINT
 
 ## Summary of the permission check algorithm
 

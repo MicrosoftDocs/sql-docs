@@ -3,7 +3,7 @@ title: "sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)"
 description: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -137,6 +137,10 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### Permissions  
  Requires the VIEW DATABASE STATE permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Example  
  The following example shows a query on **sys.dm_db_objects_disabled_on_compatibility_level_change** to find the objects impacted by changing the compatibility level to 120.  
   

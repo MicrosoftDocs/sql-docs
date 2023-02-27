@@ -3,7 +3,7 @@ title: "sys.dm_hadr_automatic_seeding (Transact-SQL)"
 description: sys.dm_hadr_automatic_seeding (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "04/20/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -45,6 +45,10 @@ Query sys.dm_hadr_automatic_seeding on the primary replica to check the status o
 
 Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Next steps
 
 Learn more about related concepts in the following articles:

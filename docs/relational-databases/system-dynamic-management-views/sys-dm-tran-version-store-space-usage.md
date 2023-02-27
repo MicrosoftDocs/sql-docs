@@ -3,7 +3,7 @@ title: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
 description: sys.dm_tran_version_store_space_usage (Transact-SQL)
 author: "savjani"
 ms.author: "pariks"
-ms.date: "04/24/2018"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -37,6 +37,10 @@ Because the versioned record is stored as binary, there are no problems with dif
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
 The following query can be used to determine space consumed in tempdb, by version store of each database in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
   
@@ -59,7 +63,7 @@ AdventureWorks2016DW      0                    0
 WideWorldImporters        20                   160             
 ```
  
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

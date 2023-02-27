@@ -3,7 +3,7 @@ title: "sys.dm_resource_governor_workload_groups (Transact-SQL)"
 description: sys.dm_resource_governor_workload_groups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "05/04/2021"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -67,6 +67,10 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 ## Permissions  
  Requires `VIEW SERVER STATE` permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## See also  
  - [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  - [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   

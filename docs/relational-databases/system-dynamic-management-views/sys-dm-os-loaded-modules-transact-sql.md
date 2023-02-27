@@ -3,7 +3,7 @@ title: "sys.dm_os_loaded_modules (Transact-SQL)"
 description: sys.dm_os_loaded_modules (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/18/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -46,7 +46,11 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016"
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

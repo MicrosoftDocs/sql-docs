@@ -3,8 +3,7 @@ title: "sys.dm_db_tuning_recommendations (Transact-SQL)"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: randolphwest
-ms.date: 02/24/2023
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -185,6 +184,10 @@ For more information about JSON functions that can be used to query values in th
 Requires `VIEW SERVER STATE` permission in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
 Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## See also
 

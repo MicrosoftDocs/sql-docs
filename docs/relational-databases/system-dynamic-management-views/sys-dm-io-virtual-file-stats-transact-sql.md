@@ -3,7 +3,7 @@ title: "sys.dm_io_virtual_file_stats (Transact-SQL)"
 description: sys.dm_io_virtual_file_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "04/21/2021"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -90,6 +90,10 @@ The counters are initialized to empty whenever the SQL Server (MSSQLSERVER) serv
 ## Permissions  
  Requires VIEW SERVER STATE permission. For more information, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
 
 ### A. Return statistics for a log file
@@ -113,7 +117,7 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I O Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

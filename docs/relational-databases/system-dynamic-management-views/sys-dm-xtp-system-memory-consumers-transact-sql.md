@@ -3,7 +3,7 @@ title: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
 description: Reports system level memory consumers for In-Memory OLTP.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 02/24/2023
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -50,6 +50,10 @@ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../i
 ## Permissions
 
 Requires VIEW SERVER STATE permissions on the server.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks
 

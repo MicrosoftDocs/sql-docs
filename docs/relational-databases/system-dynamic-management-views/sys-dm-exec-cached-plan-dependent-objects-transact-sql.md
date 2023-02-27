@@ -3,7 +3,7 @@ title: "sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)"
 description: sys.dm_exec_cached_plan_dependent_objects returns a row for each execution plan, common language runtime (CLR) execution plan, and cursor associated with a plan.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/03/2022"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -57,6 +57,10 @@ The `plan_handle` can be obtained from the following dynamic management objects:
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Physical joins  
 
 :::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-exec-cached-plan-dependent-objects.svg" alt-text="Diagram of physical joins for sys.dm_exec_cached_plan_dependent_objects.":::

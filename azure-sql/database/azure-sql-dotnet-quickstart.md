@@ -244,15 +244,6 @@ The following steps are required to connect the App Service instance to Azure SQ
 
 There are multiple tools available to implement these steps:
 
-> [!IMPORTANT]
-> Although this solution provides a simple approach for getting started, it is not a best practice for enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
->
-> You can read more about configuring database roles and security on the following resources:
->
-> [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
-
-> [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
-
 ## [Service Connector (Recommended)](#tab/service-connector)
 
 Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to a SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.
@@ -304,6 +295,15 @@ The Azure portal allows you to work with managed identities and run queries agai
     This SQL script creates a SQL database user that maps back to the managed identity of your App Service instance. It also assigns the necessary SQL roles to the user to allow your app to read, write, and modify the data and schema of your database. After this step is completed, your services are connected.
 
 ---
+
+> [!IMPORTANT]
+> Although this solution provides a simple approach for getting started, it is not a best practice for enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
+>
+> You can read more about configuring database roles and security on the following resources:
+>
+> [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
+>
+> [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
 
 ## Test the deployed application
 

@@ -22,7 +22,7 @@ This quickstart follows the recommended passwordless approach to connect to the 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
 * A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](/azure/azure-sql/database/single-database-create-quickstart).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
-* [Visual Studio 2022(https://visualstudio.microsoft.com/vs/) or later.
+* [Visual Studio](https://visualstudio.microsoft.com/vs/) or later.
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 
 ## Configure the database
@@ -43,7 +43,7 @@ Secure, passwordless connections to Azure SQL Database with .NET require certain
 
 For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or Visual Studio 2022.
 
-## [Visual Studio 2022(#tab/visual-studio)
+## [Visual Studio](#tab/visual-studio)
 
 1. In the Visual Studio menu, navigate to **File** > **New** > **Project..**.
 
@@ -74,7 +74,7 @@ To connect to Azure SQL Database by using .NET, install `Microsoft.Data.SqlClien
 > [!WARNING]
 > Make sure to install `Microsoft.Data.SqlClient` and not `System.Data.SqlClient`. `Microsoft.Data.SqlClient` is a newer version of the SQL client library that provides additional capabilities.
 
-## [Visual Studio 2022(#tab/visual-studio)
+## [Visual Studio](#tab/visual-studio)
 
 1. In the **Solution Explorer** window, right-click the project's **Dependencies** node and select **Manage NuGet Packages**.
 
@@ -249,10 +249,9 @@ There are multiple tools available to implement these steps:
 >
 > You can read more about configuring database roles and security on the following resources:
 >
-> [Tutorial: Secure a database in Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/secure-database-tutorial?view=azuresql)
->
-> [Authorize database access to SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/logins-create-manage?view=azuresql)
+> [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
 
+> [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
 
 ## [Service Connector (Recommended)](#tab/service-connector)
 

@@ -25,7 +25,7 @@ This article summarizes older documentation changes associated with new features
 
 Return to [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md).
 
-### 2021
+## 2021
 
 | Changes | Details |
 | --- | --- |

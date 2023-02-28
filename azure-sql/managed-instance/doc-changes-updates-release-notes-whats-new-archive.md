@@ -23,7 +23,7 @@ This article summarizes older documentation changes associated with new features
 
 Return to [What's new in Azure SQL Managed Instance?](doc-changes-updates-release-notes-whats-new.md).
 
-### 2021
+## 2021
 
 The following changes were added to SQL Managed Instance and the documentation in 2021: 
 
@@ -54,7 +54,7 @@ The following changes were added to SQL Managed Instance and the documentation i
 | **SQL Insights (preview)** | SQL Insights (preview) is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance. To learn more, see [Azure Monitor SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview). | 
 
 
-### 2020
+## 2020
 
 The following changes were added to SQL Managed Instance and the documentation in 2020: 
 

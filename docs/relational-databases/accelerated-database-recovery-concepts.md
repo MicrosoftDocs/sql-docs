@@ -1,12 +1,10 @@
 ---
 description: "Accelerated database recovery"
 title: "Accelerated database recovery"
-ms.date: 07/14/2022
+ms.date: 02/28/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 helpviewer_keywords: 
   - "accelerated database recovery [SQL Server], recovery-only"
   - "database recovery [SQL Server]"
@@ -157,11 +155,13 @@ There are several improvements to address persistent version store (PVS) storage
   
   In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance.
   
-  Beginning with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], this process uses multi-threaded version cleanup at the database level. This allows multiple threads for cleanup for each database. This improvement is valuable when you have multiple large databases.
+  Beginning with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], this process uses multi-threaded version cleanup. This allows multiple databases in the same SQL Server instance to be cleaned in parallel. This improvement is valuable when you have multiple large databases.
 
   To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`. The thread count is capped at the number of cores for the instance.
 
-  The example below changes the thread count to 4:
+  As a best practice, we recommend using the same number of ADR cleaner threads as the number of your databases. For instance, if you configure the `ADR Cleaner Thread Count` to be `4` on a SQL Server instance with two databases, the ADR cleaner will still only allocate one thread per database, leaving the remaining two threads idle.
+
+  The example below changes the thread count to `4`:
 
   ```sql
   EXEC sp_configure 'ADR Cleaner Thread Count', '4'

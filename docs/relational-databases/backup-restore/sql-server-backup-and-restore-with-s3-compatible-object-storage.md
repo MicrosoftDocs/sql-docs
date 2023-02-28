@@ -1,14 +1,13 @@
 ---
-description: "SQL Server backup and restore with S3-compatible object storage preview"
 title: "Backup & restore with S3-compatible object storage"
-storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
-ms.date: 02/28/2023
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
+description: "SQL Server backup and restore with S3-compatible object storage preview"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 02/28/2023
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # SQL Server backup and restore with S3-compatible object storage preview
@@ -19,7 +18,7 @@ This article introduces the concepts, requirements and components necessary to u
 
 > [!NOTE]
 > SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
-  
+
 ## Overview
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
@@ -50,7 +49,7 @@ The following table provides a non-exhaustive summary of object storage provider
 | [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform for Cloud Scale |
 | [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric                  |
 | [MinIO][minio_webs]             | Multi-Cloud Object Storage               |
-| [NetApp][netapp_webs]           | StorageGRID<br>ONTAP                     |
+| [NetApp][netapp_webs]           | StorageGRID<br />ONTAP                     |
 | [Nutanix][nutanix_webs]         | Nutanix Object Storage                   |
 | [Pure Storage][pure_webs]       | Pure FlashBlade                          |
 | [Red Hat][redhat_webs]          | OpenShift Container Storage              |
@@ -77,12 +76,12 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 
 ## Next steps
 
- - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md). 
- - [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
- - [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
- - [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
- - [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- - [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+- [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
+- [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
+- [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+- [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
+- [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+- [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
 <!-- Table links -->
 [aws_docs]:  https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html

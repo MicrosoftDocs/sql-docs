@@ -419,9 +419,9 @@ To delete a file-snapshot backup set, follow these steps:
 1. Open a new query window and connect to the SQL Server instance of the database engine in your Azure virtual machine (or to any SQL Server instance with permissions to read and write on this container).
 1. Copy and paste the following Transact-SQL script into the query window. Select the log backup you wish to delete along with its associated file snapshots. Modify the URL appropriately for your storage account name and the container that you specified in section 1, provide the log backup file name and then execute this script.
 
-  ```sql
-  sys.sp_delete_backup 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/tutorial-21764-20181003205236.bak';
-  ```
+    ```sql
+    sys.sp_delete_backup 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/tutorial-21764-20181003205236.bak';
+    ```
 
 1. In Object Explorer, connect to Azure storage.
 1. Expand **Containers**, expand the container that you created in section 1 and verify that the backup file you used in step 3 no longer appears in this container (refresh the node as necessary).
@@ -441,7 +441,7 @@ To delete a file-snapshot backup set, follow these steps:
 
 Once you're done with this tutorial, and to conserve resources, be sure to delete the resource group created in this tutorial.
 
-To delete the resource group, run the following powershell code:
+To delete the resource group, run the following PowerShell code:
 
   ```powershell
   # Define global variables for the script

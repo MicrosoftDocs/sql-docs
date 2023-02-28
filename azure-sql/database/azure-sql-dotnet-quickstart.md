@@ -244,6 +244,16 @@ The following steps are required to connect the App Service instance to Azure SQ
 
 There are multiple tools available to implement these steps:
 
+> [!IMPORTANT]
+> Although this solution provides a simple approach for getting started, it is not a best practice for enterprise production environments. In those scenarios the app should not perform all operations using a single, elevated identity. You should try to implement the principle of least privilege by configuring multiple identities with specific permissions for specific tasks.
+>
+> You can read more about configuring database roles and security on the following resources:
+>
+> [Tutorial: Secure a database in Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/secure-database-tutorial?view=azuresql)
+>
+> [Authorize database access to SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/logins-create-manage?view=azuresql)
+
+
 ## [Service Connector (Recommended)](#tab/service-connector)
 
 Service Connector is a tool that streamlines authenticated connections between different services in Azure. Service Connector currently supports connecting an App Service to a SQL database via the Azure CLI using the `az webapp connection create sql` command. This single command completes the three steps mentioned above for you.

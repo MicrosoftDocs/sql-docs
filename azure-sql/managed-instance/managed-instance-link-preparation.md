@@ -27,6 +27,35 @@ To use the link with Azure SQL Managed Instance, you need the following prerequi
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 
+## Permissions
+
+
+For SQL Server, you should have **sysadmin** permissions. 
+
+For Azure SQL Managed Instance, you should be a member of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor), or have the following permissions for a custom role: 
+
+- Microsoft.Sql/managedInstances/hybridCertificate/action
+- Microsoft.Sql/managedInstances/read
+- Microsoft.Sql/managedInstances/write
+- Microsoft.Sql/managedInstances/databases/read
+- Microsoft.Sql/managedInstances/databases/delete
+- Microsoft.Sql/managedInstances/databases/write
+- Microsoft.Sql/managedInstances/databases/completeRestore/action
+- Microsoft.Sql/managedInstances/databases/readBackups/action
+- Microsoft.Sql/managedInstances/databases/restoreDetails/read
+- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/read
+- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/write
+- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/delete
+- Microsoft.Sql/managedInstances/distributedAvailabilityGroups/setRole/action
+- Microsoft.Sql/managedInstances/endpointCertificates/read
+- Microsoft.Sql/managedInstances/hybridLink/read
+- Microsoft.Sql/managedInstances/hybridLink/write
+- Microsoft.Sql/managedInstances/hybridLink/delete
+- Microsoft.Sql/managedInstances/serverTrustCertificates/write
+- Microsoft.Sql/managedInstances/serverTrustCertificates/delete
+- Microsoft.Sql/managedInstances/serverTrustCertificates/read
+
+
 ## Prepare your SQL Server instance
 
 To prepare your SQL Server instance, you need to validate that:

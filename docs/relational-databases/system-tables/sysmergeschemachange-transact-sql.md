@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysmergeschemachange system table"
 dev_langs:
   - "TSQL"
-ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 ---
 # sysmergeschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

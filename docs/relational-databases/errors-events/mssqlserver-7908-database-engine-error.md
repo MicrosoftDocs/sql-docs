@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7908"
 description: "MSSQLSERVER_7908"
-title: "MSSQLSERVER_7908 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7908 (Database Engine error)"
-ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7908 (Database Engine error)"
 ---
 # MSSQLSERVER_7908
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

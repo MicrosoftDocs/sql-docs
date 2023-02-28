@@ -1,18 +1,15 @@
 ---
+title: "ODBC Architecture"
 description: "ODBC Architecture"
-title: "ODBC Architecture | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC architecture [ODBC], components"
-  - "ODBC architecture [ODBC]"
-ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC architecture [ODBC], components"
+  - "ODBC architecture [ODBC]"
 ---
 # ODBC Architecture
 The ODBC architecture has four components:  

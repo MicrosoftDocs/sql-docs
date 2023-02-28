@@ -1,21 +1,18 @@
 ---
+title: "Configuring the Script Task in the Script Task Editor"
 description: "Configuring the Script Task in the Script Task Editor"
-title: "Configuring the Script Task in the Script Task Editor | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], configuring"
   - "Script Task Editor"
   - "SSIS Script task, configuring"
-ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Configuring the Script Task in the Script Task Editor
 

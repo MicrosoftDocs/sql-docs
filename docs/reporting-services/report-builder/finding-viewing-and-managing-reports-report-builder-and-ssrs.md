@@ -1,15 +1,12 @@
 ---
-title: "Find, View, & Manage Reports (Report Builder & SSRS ) | Microsoft Docs"
+title: "Find, View, & Manage Reports (Report Builder & SSRS )"
 description: In Report Builder and Report Designer, you can browse to find paginated reports, shared data sources, models, and other related report items.
-ms.date: 12/16/2019
-ms.service: reporting-services
-ms.subservice: report-builder   
-
-
-ms.topic: conceptual
-ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/16/2019
+ms.service: reporting-services
+ms.subservice: report-builder
+ms.topic: conceptual
 ---
 # Finding, Viewing, and Managing Reports (Report Builder and SSRS )
   In Report Builder, you can browse folders on a report server or SharePoint site to find paginated reports, shared data sources, models, and other related report items and browse your computer to find local reports. To make it easier to find reports, Report Builder maintains a list of recently used servers and sites and provides direct access to the Desktop, My Documents and My Computer folders in the file system of your computer.  

@@ -1,22 +1,19 @@
 ---
+title: "sp_password (Transact-SQL)"
 description: "sp_password (Transact-SQL)"
-title: "sp_password (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_password"
-  - "sp_password_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_password"
-ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_password"
+  - "sp_password_TSQL"
+helpviewer_keywords:
+  - "sp_password"
+dev_langs:
+  - "TSQL"
 ---
 # sp_password (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

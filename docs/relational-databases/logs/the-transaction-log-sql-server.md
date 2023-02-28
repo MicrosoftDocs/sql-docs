@@ -1,19 +1,16 @@
 ---
-title: "The Transaction Log (SQL Server) | Microsoft Docs"
+title: "The Transaction Log (SQL Server)"
 description: Learn about the transaction log. Every SQL Server database records all transactions and database modifications that you need if there is a system failure.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "10/23/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction logs [SQL Server], about"
   - "databases [SQL Server], transaction logs"
   - "logs [SQL Server], transaction logs"
-ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # The Transaction Log (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

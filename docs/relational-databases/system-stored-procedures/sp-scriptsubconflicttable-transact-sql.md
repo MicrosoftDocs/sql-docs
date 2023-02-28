@@ -1,22 +1,19 @@
 ---
+title: "sp_scriptsubconflicttable (Transact-SQL)"
 description: "sp_scriptsubconflicttable (Transact-SQL)"
-title: "sp_scriptsubconflicttable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_scriptsubconflicttable"
-  - "sp_scriptsubconflicttable_TSQL"
-helpviewer_keywords: 
-  - "sp_scriptsubconflicttable"
-ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_scriptsubconflicttable"
+  - "sp_scriptsubconflicttable_TSQL"
+helpviewer_keywords:
+  - "sp_scriptsubconflicttable"
+dev_langs:
+  - "TSQL"
 ---
 # sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

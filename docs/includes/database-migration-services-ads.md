@@ -1,9 +1,9 @@
 ---
 author: croblesm
 ms.author: roblescarlos
+ms.date: 10/03/2022
 ms.service: dms
 ms.topic: include
-ms.date: 10/03/2022
 ---
 
 The Azure SQL migration extension for Azure Data Studio enables you to assess, get right-sized Azure recommendations and migrate your SQL Server databases to Azure.

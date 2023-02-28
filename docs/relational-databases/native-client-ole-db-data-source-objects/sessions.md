@@ -1,18 +1,15 @@
 ---
-description: "Sessions (Native Client OLE DB provider)"
 title: Sessions (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "sessions [OLE DB]"
-  - "SQL Server Native Client OLE DB provider, sessions"
-ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
+description: "Sessions (Native Client OLE DB provider)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "sessions [OLE DB]"
+  - "SQL Server Native Client OLE DB provider, sessions"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sessions (Native Client OLE DB provider)

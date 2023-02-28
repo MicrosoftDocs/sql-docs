@@ -9,7 +9,6 @@ ms.service: sql-database
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_xe_database_sessions (Azure SQL Database and Azure SQL Managed Instance)

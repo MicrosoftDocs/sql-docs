@@ -1,17 +1,15 @@
 ---
 title: "Query Store Usage Scenarios"
 description: Learn how Query Store can be used to track and ensure predictable workload performance. Consider several examples in SQL Server.
-ms.custom:
-- event-tier1-build-2022
-ms.date: 03/07/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Query Store, usage scenarios"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 03/07/2022
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
+  - "Query Store, usage scenarios"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store Usage Scenarios

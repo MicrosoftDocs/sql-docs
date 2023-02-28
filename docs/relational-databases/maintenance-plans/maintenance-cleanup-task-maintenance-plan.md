@@ -11,7 +11,6 @@ f1_keywords:
   - "sql13.swb.maint.cleanup.f1"
 helpviewer_keywords:
   - "Maintenance Cleanup Task dialog box"
-ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 ---
 # Maintenance Cleanup Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

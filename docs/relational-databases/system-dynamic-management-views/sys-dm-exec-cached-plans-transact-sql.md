@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_cached_plans dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_exec_cached_plans (Transact-SQL)

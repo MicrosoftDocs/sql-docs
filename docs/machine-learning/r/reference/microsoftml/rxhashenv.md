@@ -7,8 +7,10 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (MicrosoftML), rxHashEnv, datasets
+keywords:
+  - (MicrosoftML)
+  - rxHashEnv
+  - datasets
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
  

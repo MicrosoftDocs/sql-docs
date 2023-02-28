@@ -1,22 +1,19 @@
 ---
+title: "sp_addpullsubscription (Transact-SQL)"
 description: "sp_addpullsubscription (Transact-SQL)"
-title: "sp_addpullsubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/29/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addpullsubscription"
-  - "sp_addpullsubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_addpullsubscription"
-ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: markingmyname
 ms.author: maghan
+ms.date: "03/29/2021"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addpullsubscription"
+  - "sp_addpullsubscription_TSQL"
+helpviewer_keywords:
+  - "sp_addpullsubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

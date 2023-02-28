@@ -1,17 +1,14 @@
 ---
+title: "XQuery Static Type Event Class"
 description: "XQuery Static Type Event Class"
-title: "XQuery Static Type Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "XQuery Static Type event class"
-ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "XQuery Static Type event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XQuery Static Type Event Class

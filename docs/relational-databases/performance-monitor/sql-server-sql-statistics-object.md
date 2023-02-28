@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, SQL Statistics object"
-description: Learn about the SQLServer:SQL Statistics object, which provides counters to monitor compilation and the type of requests sent to an instance of SQL Server.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:SQL Statistics"
-  - "SQL Statistics object"
+description: "Learn about the SQLServer:SQL Statistics object, which provides counters to monitor compilation and the type of requests sent to an instance of SQL Server."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:SQL Statistics"
+  - "SQL Statistics object"
 ---
 # SQL Server, SQL Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

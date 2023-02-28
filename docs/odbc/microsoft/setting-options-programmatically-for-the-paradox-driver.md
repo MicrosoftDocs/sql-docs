@@ -1,20 +1,17 @@
 ---
+title: "Setting Options Programmatically for the Paradox Driver"
 description: "Setting Options Programmatically for the Paradox Driver"
-title: "Setting Options Programmatically for the Paradox Driver | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], Paradox driver"
   - "Paradox driver [ODBC], setting options programmatically"
   - "desktop database drivers [ODBC], Paradox driver"
   - "Jet-based ODBC drivers [ODBC], Paradox driver"
-ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Setting Options Programmatically for the Paradox Driver
 

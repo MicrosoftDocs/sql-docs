@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Editor) (DB2ToSQL)"
 description: "Global Settings (Editor) (DB2ToSQL)"
-title: "Global Settings (Editor) (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.globalsettingeditor.f1"
+f1_keywords:
+  - "ssma.db2.globalsettingeditor.f1"
 ---
 # Global Settings (Editor) (DB2ToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

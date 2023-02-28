@@ -1,15 +1,12 @@
 ---
-title: "Polar charts in a paginated report | Microsoft Docs"
+title: "Polar charts in a paginated report"
 description: Discover the use of a paginated report polar chart with points grouped by category on a circle and values represented by the length of a point from the center of the circle.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Polar charts in a paginated report (Report Builder)
 

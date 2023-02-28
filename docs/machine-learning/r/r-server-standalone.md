@@ -1,12 +1,12 @@
 ---
 title: What is standalone Machine Learning Server or R Server?
 description: Learn the differences between standalone R Server and Machine Learning Server in SQL Server Setup.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 08/13/2019
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 08/13/2019
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 ms.custom:
   - seo-lt-2019
   - intro-overview

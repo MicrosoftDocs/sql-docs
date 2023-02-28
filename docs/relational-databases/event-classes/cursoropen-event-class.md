@@ -1,17 +1,14 @@
 ---
+title: "CursorOpen Event Class"
 description: "CursorOpen Event Class"
-title: "CursorOpen Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "CursorOpen event class"
-ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "CursorOpen event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorOpen Event Class

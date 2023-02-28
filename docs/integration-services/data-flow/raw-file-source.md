@@ -1,23 +1,20 @@
 ---
+title: "Raw File Source"
 description: "Raw File Source"
-title: "Raw File Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.rawfilesource.f1"
   - "sql13.dts.designer.rawfilesourceconnectionmanager.f1"
   - "sql13.dts.designer.rawfilesourcecolumns.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sources [Integration Services], Raw File"
   - "raw data [Integration Services]"
   - "Raw File source"
-ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-author: chugugrace
-ms.author: chugu
 ---
 # Raw File Source
 

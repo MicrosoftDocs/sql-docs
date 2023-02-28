@@ -1,17 +1,14 @@
 ---
-description: "Obtain a FAST_FORWARD Cursor (Native Client OLE DB provider)"
 title: Obtain a FAST_FORWARD cursor (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "fast forward-only cursors"
-ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
+description: "Obtain a FAST_FORWARD Cursor (Native Client OLE DB provider)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "fast forward-only cursors"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Obtain a FAST_FORWARD Cursor (Native Client OLE DB provider)

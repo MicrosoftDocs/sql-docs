@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_db_fts_index_physical_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_fts_index_physical_stats (Transact-SQL)

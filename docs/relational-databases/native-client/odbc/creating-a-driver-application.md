@@ -1,13 +1,13 @@
 ---
-description: "Creating a Driver Application"
 title: "Create an Application"
-ms.custom: ""
+description: "Creating a Driver Application"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC, architecture"
   - "SQL Server Native Client ODBC driver, creating applications"
   - "ODBC function calls"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "extensions [ODBC]"
   - "ODBC, driver extensions"
   - "function calls [ODBC]"
-ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Driver Application

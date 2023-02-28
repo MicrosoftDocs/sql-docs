@@ -1,22 +1,17 @@
 ---
+title: "bcp_bind"
 description: "bcp_bind"
-title: "bcp_bind | Microsoft Docs"
+author: markingmyname
+ms.author: maghan
+ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-apiname: 
-  - "bcp_bind"
-apilocation: 
-  - "sqlncli11.dll"
-apitype: "DLLExport"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bcp_bind function"
-ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: markingmyname
-ms.author: maghan
-ms.custom: ""
-ms.reviewer: ""
-ms.date: "03/14/2017"
+apilocation: "sqlncli11.dll"
+apiname: "bcp_bind"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -1,24 +1,19 @@
 ---
+title: "SQLSetStmtAttr Function"
 description: "SQLSetStmtAttr Function"
-title: "SQLSetStmtAttr Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetStmtAttr"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetStmtAttr"
-helpviewer_keywords: 
-  - "SQLSetStmtAttr function [ODBC]"
-ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetStmtAttr"
+helpviewer_keywords:
+  - "SQLSetStmtAttr function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetStmtAttr"
+apitype: "dllExport"
 ---
 # SQLSetStmtAttr Function
 **Conformance**  

@@ -1,23 +1,20 @@
 ---
+title: "ADO NET Destination"
 description: "ADO NET Destination"
-title: "ADO NET Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.adonetdest.f1"
   - "sql13.dts.designer.adonetdest.connection.f1"
   - "sql13.dts.designer.adonetdest.mappings.f1"
   - "sql13.dts.designer.adonetdest.erroroutput.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "destinations [Integration Services], ADO.NET"
   - "ADO.NET destination"
-ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-author: chugugrace
-ms.author: chugu
 ---
 # ADO NET Destination
 

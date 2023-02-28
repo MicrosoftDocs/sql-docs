@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_session_wait_stats"
 dev_langs:
   - "TSQL"
-ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 ---
 # sys.dm_exec_session_wait_stats (Transact-SQL)
 

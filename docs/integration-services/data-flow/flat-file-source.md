@@ -1,25 +1,22 @@
 ---
+title: "Flat File Source"
 description: "Flat File Source"
-title: "Flat File Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.flatfilesource.f1"
   - "sql13.dts.designer.flatfilesourceadapter.connection.f1"
   - "sql13.dts.designer.flatfilesourceadapter.columns.f1"
   - "sql13.dts.designer.flatfilesourceadapter.errorhandling.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sources [Integration Services], Flat File"
   - "text file reading [Integration Services]"
   - "flat files"
   - "Flat File source"
-ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: chugugrace
-ms.author: chugu
 ---
 # Flat File Source
 

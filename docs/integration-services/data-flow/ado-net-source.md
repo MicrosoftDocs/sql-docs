@@ -1,26 +1,23 @@
 ---
+title: "ADO NET Source"
 description: "ADO NET Source"
-title: "ADO NET Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.adonetsource.f1"
   - "sql13.dts.designer.adonetsource.connection.f1"
   - "sql13.dts.designer.adonetsource.columns.f1"
   - "sql13.dts.designer.adonetsource.erroroutput.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ADO.NET source"
   - "sources [Integration Services], ADO.NET"
   - "sources [Integration Services], DataReader"
   - ".NET Framework [Integration Services]"
   - "DataReader source"
-ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: chugugrace
-ms.author: chugu
 ---
 # ADO NET Source
 

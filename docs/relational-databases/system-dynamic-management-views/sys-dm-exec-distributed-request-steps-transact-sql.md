@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_exec_distributed_request_steps management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_request_steps (Transact-SQL)

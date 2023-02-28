@@ -1,18 +1,15 @@
 ---
-description: "Attribute Groups (Master Data Services)"
 title: Attribute Groups
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "attribute groups [Master Data Services]"
-  - "attribute groups [Master Data Services], about attribute groups"
-ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
+description: "Attribute Groups (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "attribute groups [Master Data Services]"
+  - "attribute groups [Master Data Services], about attribute groups"
 ---
 # Attribute Groups (Master Data Services)
 

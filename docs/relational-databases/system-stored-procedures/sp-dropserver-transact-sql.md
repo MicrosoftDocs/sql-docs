@@ -1,21 +1,19 @@
 ---
 title: sp_dropserver (Transact-SQL)
 description: "sp_dropserver (Transact-SQL)"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dropserver_TSQL"
-  - "sp_dropserver"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dropserver"
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
 ms.date: "09/07/2018"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropserver_TSQL"
+  - "sp_dropserver"
+helpviewer_keywords:
+  - "sp_dropserver"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 

@@ -1,24 +1,19 @@
 ---
+title: "SQLDescribeCol Function"
 description: "SQLDescribeCol Function"
-title: "SQLDescribeCol Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLDescribeCol"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLDescribeCol"
-helpviewer_keywords: 
-  - "SQLDescribeCol function [ODBC]"
-ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLDescribeCol"
+helpviewer_keywords:
+  - "SQLDescribeCol function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLDescribeCol"
+apitype: "dllExport"
 ---
 # SQLDescribeCol Function
 **Conformance**  

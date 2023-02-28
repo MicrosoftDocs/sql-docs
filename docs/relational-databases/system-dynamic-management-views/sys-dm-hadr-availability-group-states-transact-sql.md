@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_availability_group_states dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 ---
 # sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

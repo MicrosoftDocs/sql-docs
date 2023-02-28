@@ -1,17 +1,14 @@
 ---
+title: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager"
 description: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager"
-title: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Lookup transformation [Integration Services]"
-ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Lookup transformation [Integration Services]"
 ---
 # Lookup Transformation Full Cache Mode - OLE DB Connection Manager
 

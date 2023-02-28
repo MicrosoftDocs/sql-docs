@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_os_dispatcher_pools DMV"
 dev_langs:
   - "TSQL"
-ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_dispatcher_pools (Transact-SQL)

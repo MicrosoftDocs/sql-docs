@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "dbo.MSchange_tracking_history"
 dev_langs:
   - "TSQL"
-ms.assetid:
 ---
 # dbo.MSchange_tracking_history (Transact-SQL)
 

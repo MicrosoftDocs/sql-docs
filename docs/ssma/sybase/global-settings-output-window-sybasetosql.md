@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Output Window)  (SybaseToSQL)"
 description: "Global Settings (Output Window)  (SybaseToSQL)"
-title: "Global Settings (Output Window)  (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 7efe8070-bb30-45c7-8619-7efc9cdfbd06
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.sybase.globalsettingoutputwindow.f1"
+f1_keywords:
+  - "ssma.sybase.globalsettingoutputwindow.f1"
 ---
 # Global Settings (Output Window)  (SybaseToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

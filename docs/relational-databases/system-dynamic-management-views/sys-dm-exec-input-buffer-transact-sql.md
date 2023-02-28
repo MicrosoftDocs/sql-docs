@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_input_buffer dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_input_buffer (Transact-SQL)

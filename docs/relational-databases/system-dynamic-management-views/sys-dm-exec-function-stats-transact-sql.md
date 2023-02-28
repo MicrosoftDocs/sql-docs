@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_function_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_function_stats (Transact-SQL)

@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_convert
 apitype: "DLLExport"
-ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 ---
 # srv_convert (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,18 @@
 ---
+title: "Using SQLGetDiagRec and SQLGetDiagField"
 description: "Using SQLGetDiagRec and SQLGetDiagField"
-title: "Using SQLGetDiagRec and SQLGetDiagField | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagnostic information [ODBC], SqlGetDiagField"
   - "SQLGetDiagField function [ODBC], and SQLGetDiagRec"
   - "SQLGetDiagRec function [ODBC], and SQLGetDiagField"
   - "diagnostic information [ODBC], SqlGetDiagRec"
   - "retrieving diagnostic information [ODBC]"
-ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using SQLGetDiagRec and SQLGetDiagField
 Applications call **SQLGetDiagRec** or **SQLGetDiagField** to retrieve diagnostic information. These functions accept an environment, connection, statement, or descriptor handle and return diagnostics from the function that last used that handle. The diagnostics logged on a particular handle are discarded when a new function is called using that handle. If the function returned multiple diagnostic records, the application calls these functions multiple times; the total number of status records is retrieved by calling **SQLGetDiagField** for the header record (record 0) with the SQL_DIAG_NUMBER option.  

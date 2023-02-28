@@ -1,18 +1,18 @@
 ---
+title: "OLE DB Destination"
 description: "OLE DB Destination"
-title: "OLE DB Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.oledbdest.f1"
   - "sql13.dts.designer.oledbdestadapter.connection.f1"
   - "sql13.dts.designer.oledbdestadapter.mappings.f1"
   - "sql13.dts.designer.oledbdestadapter.errorhandling.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fast-load data access mode [Integration Services]"
   - "OLE DB destination [Integration Services]"
   - "fast load options [Integration Services]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "destinations [Integration Services], OLE DB"
   - "fast load data access mode [Integration Services]"
   - "inserting data"
-ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: chugugrace
-ms.author: chugu
 ---
 # OLE DB Destination
 

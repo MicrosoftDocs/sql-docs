@@ -1,22 +1,19 @@
 ---
+title: "sp_MSchange_merge_agent_properties (Transact-SQL)"
 description: "sp_MSchange_merge_agent_properties (Transact-SQL)"
-title: "sp_MSchange_merge_agent_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_MSchange_merge_agent_properties_TSQL"
-  - "sp_MSchange_merge_agent_properties"
-helpviewer_keywords: 
-  - "sp_MSchange_merge_agent_properties"
-ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_MSchange_merge_agent_properties_TSQL"
+  - "sp_MSchange_merge_agent_properties"
+helpviewer_keywords:
+  - "sp_MSchange_merge_agent_properties"
+dev_langs:
+  - "TSQL"
 ---
 # sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

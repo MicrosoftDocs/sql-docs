@@ -1,17 +1,15 @@
 ---
+title: "sys.sp_generate_database_ledger_digest (Transact-SQL)"
 description: "sys.sp_generate_database_ledger_digest (Transact-SQL)"
-title: "sys.sp_generate_database_ledger_digest (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 author: VanMSFT
 ms.author: vanto
+ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+ms.custom: event-tier1-build-2022
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 

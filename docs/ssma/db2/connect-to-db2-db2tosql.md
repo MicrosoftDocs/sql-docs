@@ -1,18 +1,14 @@
 ---
+title: "Connect To DB2 (DB2ToSQL)"
 description: "Connect To DB2 (DB2ToSQL)"
-title: "Connect To DB2 (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.connectdb2mfform.f1"
-
+f1_keywords:
+  - "ssma.db2.connectdb2mfform.f1"
 ---
 # Connect To DB2 (DB2ToSQL)
 Use the **Connect to DB2** dialog box to connect to the DB2 database that you want to migrate.  

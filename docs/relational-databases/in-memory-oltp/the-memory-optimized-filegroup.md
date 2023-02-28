@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 ---
 # The Memory Optimized Filegroup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

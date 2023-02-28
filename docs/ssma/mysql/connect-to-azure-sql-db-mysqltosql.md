@@ -1,15 +1,12 @@
 ---
+title: "Connect to Azure SQL Database (MySQLToSQL)"
 description: "Connect to Azure SQL Database (MySQLToSQL)"
-title: "Connect to Azure SQL Database (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Connect to Azure SQL Database (MySQLToSQL)
 Use the Connect to SQL Azure dialog box to connect to the database in Azure SQL Database that you want to migrate.  

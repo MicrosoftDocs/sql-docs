@@ -1,21 +1,19 @@
 ---
 title: xml (Transact-SQL)
 description: xml (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "07/26/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "xml_TSQL"
   - "xml"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "xml data type [SQL Server], about xml data type"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/26/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # xml (Transact-SQL)

@@ -1,24 +1,22 @@
 ---
+title: "sp_describe_parameter_encryption (Transact-SQL)"
 description: "sp_describe_parameter_encryption (Transact-SQL)"
-title: "sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: jaszymas
+ms.author: jaszymas
+ms.reviewer: "vanto"
 ms.date: "07/27/2016"
 ms.service: sql
-ms.reviewer: "vanto"
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_describe_parameter_encryption"
   - "sp_describe_parameter_encryption_TSQL"
   - "sys.sp_describe_parameter_encryption"
   - "sys.sp_describe_parameter_encryption_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_describe_parameter_encryption"
-ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
-author: jaszymas
-ms.author: jaszymas
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_parameter_encryption (Transact-SQL)

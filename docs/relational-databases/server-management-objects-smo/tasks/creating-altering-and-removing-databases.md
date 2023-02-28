@@ -1,21 +1,17 @@
 ---
-description: "Creating, Altering, and Removing Databases"
 title: "Creating, Altering, and Removing Databases"
-ms.custom: seo-dt-2019
+description: "Creating, Altering, and Removing Databases"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "databases [SMO]"
   - "databases [SMO], creating"
   - "databases [SMO], modifying"
   - "databases [SMO], deleting"
-ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Databases

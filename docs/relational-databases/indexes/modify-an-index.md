@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "indexes [SQL Server], modifying"
   - "modifying indexes"
   - "index changes [SQL Server]"
-ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Modify an Index

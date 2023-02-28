@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "assemblies [CLR integration], CREATE ASSEMBLY checks"
   - "programming model restrictions [CLR integration]"
   - "assemblies [CLR integration], runtime checks"
-ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 ---
 # CLR Integration Programming Model Restrictions
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

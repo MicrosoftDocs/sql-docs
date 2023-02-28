@@ -1,20 +1,17 @@
 ---
+title: "Work with Replication Agent Profiles"
 description: "Work with Replication Agent Profiles"
-title: "Work with Replication Agent Profiles | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
   - "replication agent profiles [SQL Server]"
   - "agents [SQL Server replication], profiles"
   - "profiles [SQL Server], replication agents"
-ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Work with Replication Agent Profiles

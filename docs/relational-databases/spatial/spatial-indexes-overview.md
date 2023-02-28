@@ -1,16 +1,13 @@
 ---
+title: "Spatial Indexes Overview"
 description: "Spatial Indexes Overview"
-title: "Spatial Indexes Overview | Microsoft Docs"
-ms.date: "09/17/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "spatial indexes [SQL Server]"
-ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
+ms.date: "09/17/2021"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "spatial indexes [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Indexes Overview

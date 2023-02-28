@@ -1,22 +1,19 @@
 ---
+title: "STLineFromText (geometry Data Type)"
 description: "STLineFromText (geometry Data Type)"
-title: "STLineFromText (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "10/11/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STLineFromText (geometry Data Type)"
   - "STLineFromText_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STLineFromText (geometry Data Type)"
-ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STLineFromText (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

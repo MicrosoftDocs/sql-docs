@@ -1,14 +1,13 @@
 ---
 title: New to linux resources for SQL users
 titleSuffix: SQL Server
-description: Resources and guidance for SQL Server users who are new to Linux. 
-author: VanMSFT 
+description: Resources and guidance for SQL Server users who are new to Linux.
+author: VanMSFT
 ms.author: vanto
 ms.date: 08/12/2020
-ms.topic: conceptual
-ms.service: sql 
+ms.service: sql
 ms.subservice: linux
-ms.assetid:
+ms.topic: conceptual
 ---
 # New to Linux resources for SQL users
 

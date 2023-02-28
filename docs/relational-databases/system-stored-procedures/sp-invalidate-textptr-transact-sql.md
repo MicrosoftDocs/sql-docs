@@ -1,22 +1,19 @@
 ---
+title: "sp_invalidate_textptr (Transact-SQL)"
 description: "sp_invalidate_textptr (Transact-SQL)"
-title: "sp_invalidate_textptr (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_invalidate_textptr_TSQL"
-  - "sp_invalidate_textptr"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_invalidate_textptr"
-ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_invalidate_textptr_TSQL"
+  - "sp_invalidate_textptr"
+helpviewer_keywords:
+  - "sp_invalidate_textptr"
+dev_langs:
+  - "TSQL"
 ---
 # sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

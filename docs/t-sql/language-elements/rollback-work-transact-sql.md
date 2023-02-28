@@ -3,12 +3,10 @@ title: ROLLBACK WORK (Transact-SQL)
 description: "ROLLBACK WORK (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "ROLLBACK WORK"
   - "ROLLBACK_WORK_TSQL"

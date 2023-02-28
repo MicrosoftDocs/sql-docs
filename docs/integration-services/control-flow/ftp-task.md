@@ -1,21 +1,18 @@
 ---
+title: "FTP Task"
 description: "FTP Task"
-title: "FTP Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.ftptask.f1"
   - "sql13.dts.designer.ftptask.general.f1"
   - "sql13.dts.designer.ftptask.filetransfer.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FTP task [Integration Services]"
-ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: chugugrace
-ms.author: chugu
 ---
 # FTP Task
 

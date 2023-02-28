@@ -1,18 +1,15 @@
 ---
-title: "Add a rectangle or container to a paginated report | Microsoft Docs"
+title: "Add a rectangle or container to a paginated report"
 description: Separate or emphasize areas of a report or provide a background for one or more report items using a customized rectangle in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "10061"
   - "sql13.rtp.rptdesigner.rectangleproperties.general.f1"
-ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Add a rectangle or container to a paginated report (Report Builder)
 

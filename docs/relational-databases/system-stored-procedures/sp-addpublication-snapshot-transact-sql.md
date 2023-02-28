@@ -1,22 +1,19 @@
 ---
+title: "sp_addpublication_snapshot (Transact-SQL)"
 description: "sp_addpublication_snapshot (Transact-SQL)"
-title: "sp_addpublication_snapshot (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addpublication_snapshot_TSQL"
-  - "sp_addpublication_snapshot"
-helpviewer_keywords: 
-  - "sp_addpublication_snapshot"
-ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: markingmyname
 ms.author: maghan
+ms.date: "06/15/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addpublication_snapshot_TSQL"
+  - "sp_addpublication_snapshot"
+helpviewer_keywords:
+  - "sp_addpublication_snapshot"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

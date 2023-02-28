@@ -1,22 +1,19 @@
 ---
+title: "IsValidDetailed (geography Data Type)"
 description: "IsValidDetailed (geography Data Type)"
-title: "IsValidDetailed (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IsValidDetailed_TSQL"
   - "IsValidDetailed"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IsValidDetailed geography"
-ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # IsValidDetailed (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

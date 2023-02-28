@@ -1,22 +1,19 @@
 ---
+title: "sp_change_agent_parameter (Transact-SQL)"
 description: "sp_change_agent_parameter (Transact-SQL)"
-title: "sp_change_agent_parameter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_change_agent_parameter_TSQL"
-  - "sp_change_agent_parameter"
-helpviewer_keywords: 
-  - "sp_change_agent_parameter"
-ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_agent_parameter_TSQL"
+  - "sp_change_agent_parameter"
+helpviewer_keywords:
+  - "sp_change_agent_parameter"
+dev_langs:
+  - "TSQL"
 ---
 # sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

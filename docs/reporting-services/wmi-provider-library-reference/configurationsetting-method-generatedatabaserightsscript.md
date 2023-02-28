@@ -1,22 +1,17 @@
 ---
+title: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting)"
 description: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting)"
-title: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GenerateDatabaseRightsScript method"
-ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - GenerateDatabaseRightsScript
   Generates a SQL Script that can be used to grant a user rights to the report server database and other databases required for a report server to run. The caller is expected to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and execute the script.  

@@ -1,21 +1,17 @@
 ---
+title: "Manage Data Collection"
 description: "Manage Data Collection"
-title: "Manage Data Collection | Microsoft Docs"
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "07/18/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-keywords: 
-  - "Data Collection"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data collection [SQL Server]"
   - "data collector [SQL Server], Transact-SQL"
   - "data collector [SQL Server], SQL Server Management Studio"
-ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-author: MashaMSFT
-ms.author: mathoma
+keywords: "Data Collection"
 ---
 # Manage Data Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

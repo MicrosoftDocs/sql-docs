@@ -1,15 +1,12 @@
 ---
+title: "User Interface Reference (OracleToSQL)"
 description: "User Interface Reference (OracleToSQL)"
-title: "User Interface Reference (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 160d4784-d108-4705-932d-763558912804
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # User Interface Reference (OracleToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle.  

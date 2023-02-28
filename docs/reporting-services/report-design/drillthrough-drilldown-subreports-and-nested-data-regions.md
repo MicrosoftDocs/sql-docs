@@ -1,15 +1,12 @@
 ---
-title: "Drillthrough, drilldown, subreports, and nested data regions in a paginated report | Microsoft Docs"
+title: "Drillthrough, drilldown, subreports, and nested data regions in a paginated report"
 description: Organize data in a paginated report to show the relationship of the general to the detailed and then display the data in a subreport or a separate drillthrough report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Drillthrough, drilldown, subreports, and nested data regions in a paginated report (Report Builder)
 

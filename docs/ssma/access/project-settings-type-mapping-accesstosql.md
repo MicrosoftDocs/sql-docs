@@ -1,25 +1,21 @@
 ---
+title: "Project Settings (Type Mapping) (AccessToSQL)"
 description: "Project Settings (Type Mapping) (AccessToSQL)"
-title: "Project Settings (Type Mapping) (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+f1_keywords:
+  - "ssma.access.projectsettingstypemapping.f1"
+helpviewer_keywords:
   - "Access data types"
   - "data types, default mappings"
   - "default data type mappings"
   - "Project Settings dialog box, Type Mapping"
   - "SQL Server data types"
   - "Type Mapping settings"
-ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-  - "ssma.access.projectsettingstypemapping.f1"
-
 ---
 # Project Settings (Type Mapping) (AccessToSQL)
 The Type Mapping project settings let you set default type mappings for the SSMA project. You can also specify type mappings for individual database objects. For more information, see [Mapping Source and Target Data Types](mapping-source-and-target-data-types-accesstosql.md).  

@@ -3,12 +3,10 @@ title: "$PARTITION (Transact-SQL)"
 description: "$PARTITION (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "4/22/2022"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "$partition_TSQL"
   - "$partition"

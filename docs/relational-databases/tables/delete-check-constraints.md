@@ -1,21 +1,18 @@
 ---
+title: "Delete Check Constraints"
 description: "Delete Check Constraints"
-title: "Delete Check Constraints | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/28/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing constraints"
   - "CHECK constraints, deleting"
   - "constraints [SQL Server], deleting"
   - "constraints [SQL Server], check"
   - "deleting constraints"
-ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Check Constraints

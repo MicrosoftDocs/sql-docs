@@ -1,20 +1,17 @@
 ---
+title: "Delete Views"
 description: "Delete Views"
-title: "Delete Views | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping views"
   - "deleting views"
   - "views [SQL Server], deleting"
   - "removing views"
-ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Views

@@ -11,7 +11,6 @@ ms.topic: conceptual
 ms.custom: intro-whats-new
 helpviewer_keywords:
   - "Data Migration Assistant, new features"
-keywords: ""
 ---
 
 # What's new in Data Migration Assistant

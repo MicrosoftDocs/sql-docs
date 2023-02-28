@@ -1,20 +1,17 @@
 ---
-title: "contains Function (XQuery) | Microsoft Docs"
+title: "contains Function (XQuery)"
 description: Learn about using the contains function in an XQuery to determine whether a specified string value contains the specified substring value.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "contains function (XQuery)"
-  - "fn:contains function"
-ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "contains function (XQuery)"
+  - "fn:contains function"
+dev_langs:
+  - "XML"
 ---
 # Functions on String Values - contains
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

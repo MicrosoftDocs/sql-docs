@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], database"
 dev_langs:
   - "TSQL"
-ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 ---
 # Database Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

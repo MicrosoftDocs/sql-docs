@@ -1,21 +1,19 @@
 ---
 title: sp_cursorprepare (Transact-SQL)
 description: "sp_cursorprepare (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cursor_prepare_TSQL"
   - "sp_cursor_prepare"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_cursor_prepare"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/14/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # sp_cursorprepare (Transact-SQL)

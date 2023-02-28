@@ -1,20 +1,19 @@
 ---
 title: "Manage Objects by Using Object Explorer"
 description: "Manage Objects by Using Object Explorer"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Object Explorer F1 Help"
   - "OE F1 Help"
   - "OE Help"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Manage Objects by Using Object Explorer

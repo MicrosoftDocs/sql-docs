@@ -1,13 +1,13 @@
 ---
-title: "Server Performance and Activity Monitoring | Microsoft Docs"
+title: "Server Performance and Activity Monitoring"
 description: Use these resources to learn how to use SQL Server and Windows performance and activity monitoring tools to assess how a server is performing.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/27/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "activity monitoring [SQL Server]"
   - "traces [SQL Server], how-to topics"
   - "monitoring server performance [SQL Server], activity monitoring"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "SQL Server Profiler, how-to topics"
   - "SQL Server Management Studio [SQL Server], monitoring system"
   - "Profiler [SQL Server Profiler], how-to topics"
-ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Server Performance and Activity Monitoring
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

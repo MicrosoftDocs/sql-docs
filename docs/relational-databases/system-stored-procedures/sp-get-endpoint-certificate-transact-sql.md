@@ -1,22 +1,19 @@
 ---
+title: "sp_get_endpoint_certificate (Transact-SQL)"
 description: "sp_get_endpoint_certificate (Transact-SQL)"
-title: "sp_get_endpoint_certificate (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_get_endpoint_certificate"
-  - "sp_get_endpoint_certificate_TSQL"
-helpviewer_keywords: 
-  - "sp_get_endpoint_certificate"
-ms.assetid: 680aabbc-6983-4fda-9b37-efcc5f083821
 author: MladjoA
 ms.author: mlandzic
+ms.date: "03/09/2022"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_get_endpoint_certificate"
+  - "sp_get_endpoint_certificate_TSQL"
+helpviewer_keywords:
+  - "sp_get_endpoint_certificate"
+dev_langs:
+  - "TSQL"
 ---
 # sp_get_endpoint_certificate (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

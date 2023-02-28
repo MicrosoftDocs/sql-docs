@@ -1,19 +1,16 @@
 ---
+title: "CLR Event Category"
 description: "CLR Event Category"
-title: "CLR Event Category | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event classes [SQL Server], CLR event category"
   - "SQL Server event classes, CLR event category"
   - "CLR event category [SQL Server]"
-ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CLR Event Category

@@ -1,17 +1,14 @@
 ---
+title: "ListReservedURLs Method (WMI MSReportServer_ConfigurationSetting)"
 description: "ListReservedURLs Method (WMI MSReportServer_ConfigurationSetting)"
-title: "ListReservedURLs Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ListReservedURLs method"
-ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
-author: maggiesMSFT
-ms.author: maggies
 ---
 # ConfigurationSetting Method - ListReservedURLs
   Lists URLs reserved for all applications on the report server.  

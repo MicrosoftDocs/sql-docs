@@ -1,21 +1,19 @@
 ---
-description: "sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)"
 title: "sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)"
-ms.custom: ""
-ms.date: 02/24/2023
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sys.sp_xtp_checkpoint_force_garbage_collection_TSQL"
-  - "sys.sp_xtp_checkpoint_force_garbage_collection"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sys.sp_xtp_checkpoint_force_garbage_collection"
+description: "sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.date: 02/24/2023
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sys.sp_xtp_checkpoint_force_garbage_collection_TSQL"
+  - "sys.sp_xtp_checkpoint_force_garbage_collection"
+helpviewer_keywords:
+  - "sys.sp_xtp_checkpoint_force_garbage_collection"
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

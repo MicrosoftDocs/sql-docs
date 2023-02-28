@@ -1,18 +1,16 @@
 ---
+title: "Azure Data Lake Store Connection Manager"
 description: "Azure Data Lake Store Connection Manager"
-title: "Azure Data Lake Store Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: "Lingxi-Li"
+ms.author: "lingxl"
+ms.reviewer: maghan
 ms.date: "03/02/2017"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "SQL13.DTS.DESIGNER.AFPADLSCM.F1"
   - "sql14.dts.designer.afpadlscm.f1"
-ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
-author: "Lingxi-Li"
-ms.author: "lingxl"
-ms.reviewer: maghan
 ---
 # Azure Data Lake Store Connection Manager
 

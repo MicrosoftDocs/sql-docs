@@ -15,7 +15,6 @@ f1_keywords:
   - "sql13.swb.indexproperties.columns.f1"
   - "sql13.swb.indexproperties.options.f1"
   - "sql13.swb.indexproperties.spatial.f1"
-ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Index Properties F1 Help

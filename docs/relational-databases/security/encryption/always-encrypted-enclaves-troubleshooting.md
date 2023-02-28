@@ -1,14 +1,13 @@
 ---
 title: "Troubleshoot common issues for Always Encrypted with secure enclaves"
 description: "Troubleshoot common issues for Always Encrypted with secure enclaves"
-ms.custom: ""
-ms.date: 02/15/2023
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: vanto
+ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
-author: jaszymas
-ms.author: jaszymas
 ---
 
 # Troubleshoot common issues for Always Encrypted with secure enclaves

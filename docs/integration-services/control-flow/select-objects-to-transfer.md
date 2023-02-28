@@ -1,17 +1,14 @@
 ---
+title: "Select Objects to Transfer"
 description: "Select Objects to Transfer"
-title: "Select Objects to Transfer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.transfertasks.selectobjectsmodaldialogs.f1"
-ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.transfertasks.selectobjectsmodaldialogs.f1"
 ---
 # Select Objects to Transfer
 

@@ -1,19 +1,16 @@
 ---
-description: "Tutorial: Signing Stored Procedures with a Certificate"
 title: "Tutorial: Signing Stored Procedures with a Certificate"
+description: "Tutorial: Signing Stored Procedures with a Certificate"
+author: "MashaMSFT"
+ms.author: "mathoma"
+ms.date: "08/23/2018"
+ms.service: sql
+ms.topic: quickstart
 ms.custom:
   - seo-dt-2019
   - intro-quickstart
-ms.date: "08/23/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: quickstart
 helpviewer_keywords:
   - "signing stored procedures tutorial [SQL Server]"
-ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Signing Stored Procedures with a Certificate

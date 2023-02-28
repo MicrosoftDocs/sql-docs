@@ -1,15 +1,12 @@
 ---
-description: "Create an Entity Administrator (Master Data Services)"
 title: Create an Entity Administrator
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
+description: "Create an Entity Administrator (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Create an Entity Administrator (Master Data Services)
 

@@ -1,13 +1,13 @@
 ---
-title: "Data Sources Supported by Reporting Services | Microsoft Docs"
+title: "Data Sources Supported by Reporting Services"
 description: Learn about the various data sources that are supported by Reporting Services, including Microsoft SQL Server, Oracle, and ODBC.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 10/21/2021
 ms.service: reporting-services
 ms.subservice: report-data
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server data processing extension [Reporting Services]"
   - "XML data processing extension [Reporting Services]"
   - "reports [Reporting Services], data"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "data sources [Reporting Services], about data sources"
   - "ODBC data processing extension"
   - "Reporting Services, data sources"
-ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Data Sources Supported by Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit).  

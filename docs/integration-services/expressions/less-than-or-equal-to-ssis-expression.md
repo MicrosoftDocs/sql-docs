@@ -1,18 +1,15 @@
 ---
+title: "&lt;= (Less Than or Equal To) (SSIS Expression)"
 description: "&lt;= (Less Than or Equal To) (SSIS Expression)"
-title: "&lt;= (Less Than or Equal To) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "<= (less than or equal to operator)"
-  - "less than or equal to operator (<=)"
-ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "<= (less than or equal to operator)"
+  - "less than or equal to operator (<=)"
 ---
 # &lt;= (Less Than or Equal To) (SSIS Expression)
 

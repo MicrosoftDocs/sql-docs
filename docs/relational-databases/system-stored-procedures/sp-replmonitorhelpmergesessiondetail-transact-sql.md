@@ -1,22 +1,20 @@
 ---
 title: "sp_replmonitorhelpmergesessiondetail (T-SQL)"
-description: Describes the sp_replmonitorhelpmergesessiondetail stored procedure which returns detailed article-level information about a specific replication Merge Agent session. 
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replmonitorhelpmergesessiondetail"
-  - "sp_replmonitorhelpmergesessiondetail_TSQL"
-helpviewer_keywords: 
-  - "sp_replmonitorhelpmergesessiondetail"
-ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
+description: Describes the sp_replmonitorhelpmergesessiondetail stored procedure which returns detailed article-level information about a specific replication Merge Agent session.
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sp_replmonitorhelpmergesessiondetail"
+  - "sp_replmonitorhelpmergesessiondetail_TSQL"
+helpviewer_keywords:
+  - "sp_replmonitorhelpmergesessiondetail"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

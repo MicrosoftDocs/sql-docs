@@ -1,17 +1,14 @@
 ---
-title: "Find Text, Numbers, or Dates in a Report | Microsoft Docs"
+title: "Find Text, Numbers, or Dates in a Report"
 description: Learn how to use Reporting Services to search for content in a report, such as text, numbers, and dates.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: reports
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "searching reports"
-ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Find Text, Numbers, or Dates in a Report
   You can search for content in a report by typing a word or phrase that you want to find (the maximum value of a search term is 256 characters). Search is a navigation technique that finds a matching value in the report and puts focus on the part of the report that contains that value.  

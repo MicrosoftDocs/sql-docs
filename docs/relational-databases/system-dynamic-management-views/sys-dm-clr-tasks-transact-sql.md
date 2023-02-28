@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_clr_tasks dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_clr_tasks (Transact-SQL)

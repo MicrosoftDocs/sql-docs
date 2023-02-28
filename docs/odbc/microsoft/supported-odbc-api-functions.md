@@ -1,18 +1,15 @@
 ---
+title: "Supported ODBC API Functions"
 description: "Supported ODBC API Functions"
-title: "Supported ODBC API Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC, API functions"
-  - "ODBC SQL grammar, API functions mapped to driver (table) [ODBC]"
-ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC, API functions"
+  - "ODBC SQL grammar, API functions mapped to driver (table) [ODBC]"
 ---
 # Supported ODBC API Functions
 The purpose of leveling is to inform the application what features are available to it from the driver. The Microsoft ODBC Desktop Database Drivers support all Core and Level 1 functions.  

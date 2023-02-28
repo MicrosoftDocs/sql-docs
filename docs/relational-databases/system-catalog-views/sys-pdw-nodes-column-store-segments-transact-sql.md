@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)

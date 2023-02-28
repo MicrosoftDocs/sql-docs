@@ -1,16 +1,13 @@
 ---
-title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
+title: "What's New in SSMA for Oracle (OracleToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Oracle (OracleToSQL) for each release.
 author: cpichuka
-ms.service: sql
-ms.custom:
-  - intro-whats-new
+ms.author: cpichuka
 ms.date: "04/29/2021"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-ms.author: cpichuka
+ms.custom: intro-whats-new
 ---
 # What's New in SSMA for Oracle (OracleToSQL)
 

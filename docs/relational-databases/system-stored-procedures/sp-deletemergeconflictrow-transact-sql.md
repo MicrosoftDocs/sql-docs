@@ -1,22 +1,19 @@
 ---
+title: "sp_deletemergeconflictrow (Transact-SQL)"
 description: "sp_deletemergeconflictrow (Transact-SQL)"
-title: "sp_deletemergeconflictrow (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_deletemergeconflictrow"
-  - "sp_deletemergeconflictrow_TSQL"
-helpviewer_keywords: 
-  - "sp_deletemergeconflictrow"
-ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_deletemergeconflictrow"
+  - "sp_deletemergeconflictrow_TSQL"
+helpviewer_keywords:
+  - "sp_deletemergeconflictrow"
+dev_langs:
+  - "TSQL"
 ---
 # sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

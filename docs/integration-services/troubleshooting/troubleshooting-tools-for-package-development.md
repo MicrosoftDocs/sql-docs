@@ -1,21 +1,18 @@
 ---
+title: "Troubleshooting Tools for Package Development"
 description: "Troubleshooting Tools for Package Development"
-title: "Troubleshooting Tools for Package Development | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services packages, troubleshooting"
   - "SSIS packages, troubleshooting"
   - "Integration Services, troubleshooting"
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
-ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-author: chugugrace
-ms.author: chugu
 ---
 # Troubleshooting Tools for Package Development
 

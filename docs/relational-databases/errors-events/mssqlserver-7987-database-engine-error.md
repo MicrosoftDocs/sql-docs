@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7987"
 description: "MSSQLSERVER_7987"
-title: "MSSQLSERVER_7987 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7987 (Database Engine error)"
-ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7987 (Database Engine error)"
 ---
 # MSSQLSERVER_7987
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,10 +1,13 @@
 ---
 title: SQL Server Configuration Manager
 description: Utilizing the SQL Server Configuration Manager client
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: 07/25/2022
 ms.service: sql
-ms.subservice:
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: FY22Q2Fresh
+helpviewer_keywords:
   - "protocols [SQL Server], managing"
   - "network protocols [SQL Server], managing"
   - "Client Network Utility"
@@ -15,11 +18,6 @@ helpviewer_keywords:
   - "services [SQL Server], managing"
   - "tools [SQL Server], SQL Server Configuration Manager"
   - "configuration manager [SQL Server]"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: 
-ms.custom: FY22Q2Fresh
-ms.date: 07/25/2022
 ---
 
 # SQL Server Configuration Manager

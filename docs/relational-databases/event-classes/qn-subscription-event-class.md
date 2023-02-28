@@ -1,17 +1,14 @@
 ---
+title: "QN:Subscription Event Class"
 description: "QN:Subscription Event Class"
-title: "QN:Subscription Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "event classes [SQL Server], QN:Subscription"
-ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "event classes [SQL Server], QN:Subscription"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QN:Subscription Event Class

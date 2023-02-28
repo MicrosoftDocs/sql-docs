@@ -1,17 +1,14 @@
 ---
+title: "Manage a CDC Instance"
 description: "Manage a CDC Instance"
-title: "Manage a CDC Instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "manIns"
-ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "manIns"
 ---
 # Manage a CDC Instance
 

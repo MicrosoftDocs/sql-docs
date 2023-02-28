@@ -1,22 +1,20 @@
 ---
-title: "sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs"
+title: "sys.sp_rda_reconcile_batch (Transact-SQL)"
 description: Learn how to use sys.sp_rda_reconcile_batch to reconcile the batch ID in the Stretch-enabled SQL Server table with the batch ID stored in the remote Azure table.
-ms.custom: ""
-ms.date: 07/25/2022
-ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice: stored-procedures
-ms.topic: "reference"
-f1_keywords: 
-  - "sys.sp_rda_reconcile_batch"
-  - "sys.sp_rda_reconcile_batch_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sys.sp_rda_reconcile_batch stored procedure"
-ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: markingmyname
 ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: "reference"
+f1_keywords:
+  - "sys.sp_rda_reconcile_batch"
+  - "sys.sp_rda_reconcile_batch_TSQL"
+helpviewer_keywords:
+  - "sys.sp_rda_reconcile_batch stored procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

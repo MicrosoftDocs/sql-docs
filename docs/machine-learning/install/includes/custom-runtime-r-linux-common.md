@@ -1,10 +1,10 @@
 ---
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 02/18/2021
-ms.topic: include
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 02/18/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: include
 ---
 ## Custom installation of R
 

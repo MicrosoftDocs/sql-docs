@@ -1,19 +1,13 @@
 ---
-description: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
 title: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
-ms.custom: seo-dt-2019
-ms.date: 07/22/2020
-ms.service: sql
-ms.subservice: 
-ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
+description: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 07/22/2020
+ms.service: sql
+ms.topic: conceptual
+ms.custom: seo-dt-2019
+applies_to: "SQL Server 2016"
 ---
 # Tutorial: Use Azure Blob Storage with SQL Server 2016
 

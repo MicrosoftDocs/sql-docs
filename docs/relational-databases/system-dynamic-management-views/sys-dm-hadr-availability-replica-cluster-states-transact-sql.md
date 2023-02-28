@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_availability_replica_cluster_states dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 ---
 # sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

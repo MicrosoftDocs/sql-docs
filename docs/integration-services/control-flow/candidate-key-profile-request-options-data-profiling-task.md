@@ -1,17 +1,14 @@
 ---
+title: "Candidate Key Profile Request Options (Data Profiling Task)"
 description: "Candidate Key Profile Request Options (Data Profiling Task)"
-title: "Candidate Key Profile Request Options (Data Profiling Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Data Profiling Task Editor"
-ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Profiling Task Editor"
 ---
 # Candidate Key Profile Request Options (Data Profiling Task)
 

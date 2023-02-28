@@ -1,22 +1,19 @@
 ---
+title: "Integration Services (SSIS) Queries"
 description: "Integration Services (SSIS) Queries"
-title: "Integration Services (SSIS) Queries | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.querybuilder.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Builder [Integration Services]"
   - "queries [Integration Services]"
   - "statements [Integration Services]"
   - "queries [Integration Services], about queries in packages"
-ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Queries
 

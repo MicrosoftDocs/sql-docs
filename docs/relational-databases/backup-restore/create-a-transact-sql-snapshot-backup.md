@@ -1,18 +1,17 @@
 ---
-title: "Create a Transact-SQL snapshot backup | Microsoft Docs"
+title: "Create a Transact-SQL snapshot backup"
 description: This article shows you how to create a Transact-SQL backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
+author: perrysk-msft
+ms.author: peskount
+ms.reviewer: mikeray
 ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-helpviewer_keywords: 
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
   - "backing up databases [SQL Server], full backups"
   - "backups [SQL Server], creating"
-author: perrysk-msft
-ms.author: peskount
-ms.reviewer: mikeray
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 

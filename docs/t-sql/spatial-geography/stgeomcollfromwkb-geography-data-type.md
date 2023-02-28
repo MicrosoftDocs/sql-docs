@@ -1,22 +1,19 @@
 ---
+title: "STGeomCollFromWKB (geography Data Type)"
 description: "STGeomCollFromWKB (geography Data Type)"
-title: "STGeomCollFromWKB (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomCollFromWKB (geography Data Type)"
   - "STGeomCollFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STMGeomCollFromWKB method"
-ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomCollFromWKB (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

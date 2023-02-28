@@ -1,19 +1,15 @@
 ---
-description: "Creating, Altering, and Removing Database Objects"
 title: "Working with Database Objects"
-ms.custom: seo-dt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "database objects [SMO]"
-  - "objects [SMO]"
-ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
+description: "Creating, Altering, and Removing Database Objects"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+ms.custom: seo-dt-2019
+helpviewer_keywords:
+  - "database objects [SMO]"
+  - "objects [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Database Objects

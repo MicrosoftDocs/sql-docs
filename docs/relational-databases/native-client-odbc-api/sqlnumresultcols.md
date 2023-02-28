@@ -1,18 +1,15 @@
 ---
+title: "SQLNumResultCols"
 description: "SQLNumResultCols"
-title: "SQLNumResultCols | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "SQLNumResultCols function"
-ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQLNumResultCols function"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLNumResultCols

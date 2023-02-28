@@ -1,24 +1,23 @@
 ---
-description: "sys.sp_cdc_generate_wrapper_function (Transact-SQL)"
 title: "sys.sp_cdc_generate_wrapper_function (Transact-SQL)"
-ms.custom: ""
+description: "sys.sp_cdc_generate_wrapper_function (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: "wiassaf"
 ms.date: "07/26/2021"
 ms.service: sql
-ms.reviewer: "wiassaf"
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cdc_generate_wrapper_function_TSQL"
   - "sp_cdc_generate_wrapper_function"
   - "sys.sp_cdc_generate_wrapper_function_TSQL"
   - "sys.sp_cdc_generate_wrapper_function"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_cdc_generate_wrapper_function"
   - "sp_cdc_generate_wrapper_function"
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

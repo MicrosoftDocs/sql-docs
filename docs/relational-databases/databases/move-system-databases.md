@@ -1,13 +1,12 @@
 ---
-description: "Move System Databases"
 title: "Move System Databases"
-ms.custom: ""
+description: "Move System Databases"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "02/24/2022"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "moving system databases"
   - "disaster recovery [SQL Server], moving database files"
   - "database files [SQL Server], moving"
@@ -24,8 +23,6 @@ helpviewer_keywords:
   - "model database [SQL Server], moving"
   - "Resource database [SQL Server]"
   - "databases [SQL Server], moving"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Move system databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

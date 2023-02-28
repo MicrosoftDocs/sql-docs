@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5554"
 description: "MSSQLSERVER_5554"
-title: "MSSQLSERVER_5554 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5554 (Database Engine error)"
-ms.assetid: 7134bbe5-d240-4a98-85ce-b13cc8ae9b0e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5554 (Database Engine error)"
 ---
 # MSSQLSERVER_5554
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

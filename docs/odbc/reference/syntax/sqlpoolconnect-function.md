@@ -1,17 +1,14 @@
 ---
+title: "SQLPoolConnect Function"
 description: "SQLPoolConnect Function"
-title: "SQLPoolConnect Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLPoolConnect function [ODBC]"
-ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLPoolConnect function [ODBC]"
 ---
 # SQLPoolConnect Function
 **Conformance**  

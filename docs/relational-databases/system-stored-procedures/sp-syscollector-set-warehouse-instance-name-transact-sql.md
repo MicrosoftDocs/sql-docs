@@ -1,23 +1,20 @@
 ---
+title: "sp_syscollector_set_warehouse_instance_name (Transact-SQL)"
 description: "sp_syscollector_set_warehouse_instance_name (Transact-SQL)"
-title: "sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_set_warehouse_instance_name_TSQL"
-  - "sp_syscollector_set_warehouse_instance_name"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data collector [SQL Server], stored procedures"
-  - "sp_syscollector_set_warehouse_instance_name"
-ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_set_warehouse_instance_name_TSQL"
+  - "sp_syscollector_set_warehouse_instance_name"
+helpviewer_keywords:
+  - "data collector [SQL Server], stored procedures"
+  - "sp_syscollector_set_warehouse_instance_name"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

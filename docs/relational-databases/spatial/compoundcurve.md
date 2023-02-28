@@ -1,14 +1,11 @@
 ---
+title: "CompoundCurve"
 description: "CompoundCurve"
-title: "CompoundCurve | Microsoft Docs"
-ms.date: "07/16/2020"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
+ms.date: "07/16/2020"
+ms.service: sql
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CompoundCurve

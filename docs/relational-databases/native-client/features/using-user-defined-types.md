@@ -1,13 +1,13 @@
 ---
+title: "Using User-Defined Types"
 description: "Using User-Defined Types in SQL Server Native Client"
-title: "Using User-Defined Types | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBPROPSET_DATASOURCEINFO property set"
   - "UDTs [SQL Server Native Client]"
   - "user-defined types [SQL Server], SQL Server Native Client"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, user-defined types"
   - "data access [SQL Server Native Client], user-defined types"
   - "ISSCommandWithParameters interface"
-ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using User-Defined Types in SQL Server Native Client

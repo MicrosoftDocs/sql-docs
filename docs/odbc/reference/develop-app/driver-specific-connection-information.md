@@ -1,13 +1,13 @@
 ---
+title: "Driver-Specific Connection Information"
 description: "Driver-Specific Connection Information"
-title: "Driver-Specific Connection Information | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLConnect function [ODBC], driver-specific connection information"
   - "connecting to driver [ODBC], SQLConnect"
   - "SQLDriverConnect function [ODBC], driver specific connection information"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "connecting to driver [ODBC], SQLDriverConnect"
   - "connecting to data source [ODBC], SQLConnect"
   - "connecting to driver [ODBC], driver-specific information"
-ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Driver-Specific Connection Information
 **SQLConnect** assumes that a data source name, user ID, and password are sufficient to connect to a data source and that all other connection information can be stored on the system. This is frequently not the case. For example, a driver might need one user ID and password to log on to a server and a different user ID and password to log on to a DBMS. Because **SQLConnect** accepts a single user ID and password, this means that the other user ID and password must be stored with the data source information on the system if **SQLConnect** is to be used. This is a potential breach of security and should be avoided unless the password is encrypted.  

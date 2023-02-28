@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8710"
 description: "MSSQLSERVER_8710"
-title: "MSSQLSERVER_8710 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8710 (Database Engine error)"
-ms.assetid: 78b9f9da-5489-4be0-94df-f065d86ed18c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8710 (Database Engine error)"
 ---
 # MSSQLSERVER_8710
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

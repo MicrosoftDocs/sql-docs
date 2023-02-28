@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "systargetservergroups system table"
 dev_langs:
   - "TSQL"
-ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
 ---
 # dbo.systargetservergroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

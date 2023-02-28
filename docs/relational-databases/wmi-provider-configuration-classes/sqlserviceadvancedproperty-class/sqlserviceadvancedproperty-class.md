@@ -1,23 +1,16 @@
 ---
-description: "SqlServiceAdvancedProperty Class"
 title: "SqlServiceAdvancedProperty Class"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "SqlServiceAdvancedProperty Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SqlServiceAdvancedProperty class"
-ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
+description: "SqlServiceAdvancedProperty Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SqlServiceAdvancedProperty class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SqlServiceAdvancedProperty Class"
+apitype: "MOFDef"
 ---
 # SqlServiceAdvancedProperty Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

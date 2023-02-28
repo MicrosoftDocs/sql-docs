@@ -1,19 +1,17 @@
 ---
 title: "Create snapshot with parameterized filters (Merge)"
-description: Learn how to create a snapshot for a Merge Publication using parameterized filters. 
-ms.custom: seo-lt-2019
+description: Learn how to create a snapshot for a Merge Publication using parameterized filters.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "parameterized filters [SQL Server replication], snapshots"
   - "snapshots [SQL Server replication], parameterized filters and"
   - "filters [SQL Server replication], parameterized"
-ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Create a Snapshot for a Merge Publication with Parameterized Filters
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

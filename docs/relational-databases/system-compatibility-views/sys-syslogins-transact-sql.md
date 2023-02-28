@@ -1,25 +1,22 @@
 ---
+title: "sys.syslogins (Transact-SQL)"
 description: "sys.syslogins (Transact-SQL)"
-title: "sys.syslogins (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/08/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syslogins_TSQL"
   - "syslogins"
   - "sys.syslogins"
   - "sys.syslogins_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.syslogins compatibility view"
   - "syslogins system table"
-ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.syslogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

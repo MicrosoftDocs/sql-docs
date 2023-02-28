@@ -1,20 +1,18 @@
 ---
-title: "Choose an Encryption Algorithm | Microsoft Docs"
+title: "Choose an Encryption Algorithm"
 description: Use this guidance to choose an encryption algorithm to help secure an instance of SQL Server, which supports several common algorithms.
-ms.custom: ""
+author: jaszymas
+ms.author: jaszymas
+ms.reviewer: vanto
 ms.date: "08/14/2018"
 ms.service: sql
-ms.reviewer: vanto
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cryptography [SQL Server], algorithms"
   - "encryption [SQL Server], algorithms"
   - "security [SQL Server], encryption"
   - "algorithms [SQL Server encryption]"
-ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-author: jaszymas
-ms.author: jaszymas
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Choose an Encryption Algorithm

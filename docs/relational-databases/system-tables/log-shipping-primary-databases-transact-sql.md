@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "log_shipping_primary_databases system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 ---
 # log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

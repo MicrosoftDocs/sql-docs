@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSsnapshot_history system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 ---
 # MSsnapshot_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

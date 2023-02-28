@@ -1,22 +1,19 @@
 ---
+title: "sp_change_users_login (Transact-SQL)"
 description: "sp_change_users_login (Transact-SQL)"
-title: "sp_change_users_login (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_users_login"
-  - "sp_change_users_login_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_users_login"
-ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
+ms.date: "12/13/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_users_login"
+  - "sp_change_users_login_TSQL"
+helpviewer_keywords:
+  - "sp_change_users_login"
+dev_langs:
+  - "TSQL"
 ---
 # sp_change_users_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

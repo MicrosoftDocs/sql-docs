@@ -1,22 +1,19 @@
 ---
+title: "sp_help_proxy (Transact-SQL)"
 description: "sp_help_proxy (Transact-SQL)"
-title: "sp_help_proxy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_proxy"
-  - "sp_help_proxy_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_proxy"
-ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_proxy"
+  - "sp_help_proxy_TSQL"
+helpviewer_keywords:
+  - "sp_help_proxy"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

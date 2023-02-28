@@ -1,19 +1,16 @@
 ---
+title: "Reinitialize Subscriptions"
 description: "Reinitialize Subscriptions"
-title: "Reinitialize Subscriptions | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "initializing subscriptions [SQL Server replication], reinitializing"
   - "subscriptions [SQL Server replication], reinitializing"
   - "reinitializing subscriptions"
-ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Reinitialize Subscriptions

@@ -1,15 +1,12 @@
 ---
-title: "Database Engine Tutorials | Microsoft Docs"
+title: "Database Engine Tutorials"
 description: Use these tutorials to learn about the SQL Server Database Engine, including getting started and using the SQL Server Management Studio.
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "08/02/2016"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Engine Tutorials

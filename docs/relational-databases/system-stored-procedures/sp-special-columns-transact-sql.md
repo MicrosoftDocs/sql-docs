@@ -1,22 +1,19 @@
 ---
+title: "sp_special_columns (Transact-SQL)"
 description: "sp_special_columns (Transact-SQL)"
-title: "sp_special_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_special_columns_TSQL"
-  - "sp_special_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_special_columns"
-ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_special_columns_TSQL"
+  - "sp_special_columns"
+helpviewer_keywords:
+  - "sp_special_columns"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_special_columns (Transact-SQL)

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_12329"
 description: "MSSQLSERVER_12329"
-title: "MSSQLSERVER_12329 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "12329 (Database Engine error)"
-ms.assetid: 43f90287-36d5-46c2-ac91-a37202dcf6d3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "12329 (Database Engine error)"
 ---
 # MSSQLSERVER_12329
  [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

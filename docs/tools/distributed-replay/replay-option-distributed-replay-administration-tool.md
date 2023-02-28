@@ -2,14 +2,14 @@
 title: Replay option in admin tool
 titleSuffix: SQL Server Distributed Replay
 description: This article describes the replay command-line option & syntax of the SQL Server Distributed Replay administration tool, which initiates the event replay stage.
-ms.service: sql
-ms.subservice: distributed-replay
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom: seo-lt-2019
 ms.date: 06/20/2022
+ms.service: sql
+ms.subservice: distributed-replay
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7931"
 description: "MSSQLSERVER_7931"
-title: "MSSQLSERVER_7931 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7931 (Database Engine error)"
-ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7931 (Database Engine error)"
 ---
 # MSSQLSERVER_7931
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

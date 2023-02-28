@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7912"
 description: "MSSQLSERVER_7912"
-title: "MSSQLSERVER_7912 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7912 (Database Engine error)"
-ms.assetid: 8e6157c2-7e84-49f2-965a-c7426c2b23fa
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7912 (Database Engine error)"
 ---
 # MSSQLSERVER_7912
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

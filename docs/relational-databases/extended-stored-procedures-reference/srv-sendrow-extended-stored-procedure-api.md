@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_sendrow
 apitype: "DLLExport"
-ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 ---
 # srv_sendrow (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

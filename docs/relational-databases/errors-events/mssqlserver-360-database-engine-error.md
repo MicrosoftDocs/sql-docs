@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_360"
 description: "MSSQLSERVER_360"
-title: "MSSQLSERVER_360 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "360 (Database Engine error)"
-ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "360 (Database Engine error)"
 ---
 # MSSQLSERVER_360
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

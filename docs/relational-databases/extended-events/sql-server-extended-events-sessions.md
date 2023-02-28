@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "xe"
   - "sessions"
   - "extend events [SQL Server]"
-ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Extended Events Sessions

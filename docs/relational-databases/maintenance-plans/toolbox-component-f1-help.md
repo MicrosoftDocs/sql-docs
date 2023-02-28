@@ -9,7 +9,6 @@ ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords:
   - "Toolbox [SQL Server Management Studio]"
-ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 ---
 # Toolbox Component F1 Help
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

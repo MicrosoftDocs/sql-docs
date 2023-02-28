@@ -1,19 +1,16 @@
 ---
+title: "Descriptor Fields"
 description: "Descriptor Fields"
-title: "Descriptor Fields | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "descriptors [ODBC], fields"
   - "header fields [ODBC]"
   - "record fields [ODBC]"
-ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Descriptor Fields
 Descriptors contain *header* and *record* fields that completely describe columns or parameters.  

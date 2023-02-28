@@ -1,18 +1,14 @@
 ---
+title: "GetSQLInstanceRegStringByID()"
 description: "GetSQLInstanceRegStringByID() "
-title: "GetSQLInstanceRegStringByID()  | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/18/2021"
-ms.service: sql
-ms.reviewer: ""
-apiname: 
-  - "GetSQLInstanceRegStringByID"
-apilocation: 
-  - "instapi.dll"
-apitype: "DllExport"
-ms.topic: reference
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/18/2021"
+ms.service: sql
+ms.topic: reference
+apilocation: "instapi.dll"
+apiname: "GetSQLInstanceRegStringByID"
+apitype: "DllExport"
 ---
 
 # GetSQLInstanceRegStringByID()

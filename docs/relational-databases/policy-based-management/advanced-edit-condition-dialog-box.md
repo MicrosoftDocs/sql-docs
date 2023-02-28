@@ -1,17 +1,14 @@
 ---
+title: "Advanced Edit (Condition) Dialog Box"
 description: "Advanced Edit (Condition) Dialog Box"
-title: "Advanced Edit (Condition) Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.condition.advancededit.f1"
-ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/12/2016"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.condition.advancededit.f1"
 ---
 # Advanced Edit (Condition) Dialog Box
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

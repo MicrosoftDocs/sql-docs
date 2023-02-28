@@ -12,7 +12,6 @@ f1_keywords:
   - "sql13.swb.maint.integrity.f1"
 helpviewer_keywords:
   - "Check Database Integrity Task dialog box"
-ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 ---
 # Check Database Integrity Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

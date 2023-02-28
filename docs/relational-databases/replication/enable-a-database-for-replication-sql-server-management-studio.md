@@ -1,17 +1,15 @@
 ---
 title: "Enable a database for Replication (SSMS)"
 description: Learn how to enable a database for Replication using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "databases [SQL Server replication]"
-ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "databases [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Enable a Database for Replication (SQL Server Management Studio)

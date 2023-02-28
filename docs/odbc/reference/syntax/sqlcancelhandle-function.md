@@ -1,19 +1,16 @@
 ---
+title: "SQLCancelHandle Function"
 description: "SQLCancelHandle Function"
-title: "SQLCancelHandle Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-f1_keywords: 
-  - "SQLCancelHandle"
-helpviewer_keywords: 
-  - "SQLCancelHandle function [ODBC]"
-ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLCancelHandle"
+helpviewer_keywords:
+  - "SQLCancelHandle function [ODBC]"
 ---
 # SQLCancelHandle Function
 **Conformance**  

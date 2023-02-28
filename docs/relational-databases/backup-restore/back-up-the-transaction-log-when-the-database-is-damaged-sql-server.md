@@ -1,19 +1,16 @@
 ---
-title: "Back Up the Transaction Log When the Database Is Damaged (SQL Server) | Microsoft Docs"
+title: "Back Up the Transaction Log When the Database Is Damaged (SQL Server)"
 description: This topic describes how to back up a transaction log when the database is damaged in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], damaged"
   - "backing up [SQL Server]. damaged database"
   - "transaction log backups [SQL Server], damaged databases"
-ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Back Up the Transaction Log When the Database Is Damaged (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,19 @@
 ---
 title: "OLE Automation Result Sets"
 description: Learn that if an OLE Automation property or method returns data in an array with one or two dimensions, the array is returned to the client as a result set.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/10/2022"
 ms.service: sql
 ms.subservice: stored-procedures
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data types [SQL Server], OLE Automation"
   - "two-dimensional arrays"
   - "one-dimensional arrays"
   - "result sets [SQL Server], OLE Automation"
   - "OLE Automation [SQL Server], result sets"
   - "arrays [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=sql-server-2016"
 ---
 # OLE Automation Result Sets

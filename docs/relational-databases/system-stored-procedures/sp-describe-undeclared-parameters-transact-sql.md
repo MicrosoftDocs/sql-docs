@@ -1,19 +1,17 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL)
 description: "sp_describe_undeclared_parameters (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "07/13/2021"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_describe_undeclared_parameters"
   - "sp_describe_undeclared_parameters_TSQL"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/13/2021"
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 

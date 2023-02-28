@@ -1,24 +1,19 @@
 ---
+title: "SQLSetCursorName Function"
 description: "SQLSetCursorName Function"
-title: "SQLSetCursorName Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetCursorName"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetCursorName"
-helpviewer_keywords: 
-  - "SQLSetCursorName function [ODBC]"
-ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetCursorName"
+helpviewer_keywords:
+  - "SQLSetCursorName function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetCursorName"
+apitype: "dllExport"
 ---
 # SQLSetCursorName Function
 **Conformance**  

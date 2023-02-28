@@ -2,12 +2,12 @@
 title: "Emulating Oracle Package Variables"
 description: "Describes how SQL Server Migration Assistant (SSMA) for Oracle emulates Oracle Package Variables in SQL Server."
 author: cpichuka
+ms.author: cpichuka
+ms.date: "1/22/2020"
 ms.service: sql
 ms.subservice: ssma
-ms.devlang: "sql"
 ms.topic: "article"
-ms.date: "1/22/2020"
-ms.author: cpichuka
+ms.devlang: sql
 ---
 
 # Emulating Oracle Package Variables

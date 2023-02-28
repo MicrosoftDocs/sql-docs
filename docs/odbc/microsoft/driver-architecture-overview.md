@@ -1,18 +1,15 @@
 ---
+title: "Driver Architecture Overview"
 description: "Driver Architecture Overview"
-title: "Driver Architecture Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Visual FoxPro ODBC driver [ODBC], architecture"
-  - "FoxPro ODBC driver [ODBC], architecture"
-ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Visual FoxPro ODBC driver [ODBC], architecture"
+  - "FoxPro ODBC driver [ODBC], architecture"
 ---
 # Driver Architecture Overview
 The Microsoft Visual FoxPro ODBC Driver is a 32-bit driver that enables you to open and query a Microsoft Visual FoxPro database or FoxPro tables through the Open Database Connectivity (ODBC) interface. You can access FoxPro data using the following types of applications:  

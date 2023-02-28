@@ -1,19 +1,16 @@
 ---
+title: "Cursor Concurrency (ODBC)"
 description: "Cursor Concurrency (ODBC)"
-title: "Cursor Concurrency (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "concurrency [ODBC]"
   - "cursors [ODBC], concurrency"
   - "ODBC cursors, concurrency"
-ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursor Concurrency (ODBC)

@@ -1,22 +1,19 @@
 ---
+title: "sp_getqueuedrows (Transact-SQL)"
 description: "sp_getqueuedrows (Transact-SQL)"
-title: "sp_getqueuedrows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_getqueuedrows_TSQL"
-  - "sp_getqueuedrows"
-helpviewer_keywords: 
-  - "sp_getqueuedrows"
-ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_getqueuedrows_TSQL"
+  - "sp_getqueuedrows"
+helpviewer_keywords:
+  - "sp_getqueuedrows"
+dev_langs:
+  - "TSQL"
 ---
 # sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

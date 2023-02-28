@@ -1,15 +1,13 @@
 ---
-description: "Email a Shortcut Query File (MDS Add-in for Excel)"
 title: Email a Shortcut Query File
-ms.custom: microsoft-excel-add-in
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
+description: "Email a Shortcut Query File (MDS Add-in for Excel)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Email a Shortcut Query File (MDS Add-in for Excel)
 

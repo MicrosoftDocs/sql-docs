@@ -1,17 +1,14 @@
 ---
+title: "FT:Crawl Started Event Class"
 description: "FT:Crawl Started Event Class"
-title: "FT:Crawl Started Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Crawl Started event class"
-ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Crawl Started event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FT:Crawl Started Event Class

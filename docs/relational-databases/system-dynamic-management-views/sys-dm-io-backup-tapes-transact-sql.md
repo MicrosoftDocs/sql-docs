@@ -3,7 +3,7 @@ title: "sys.dm_io_backup_tapes (Transact-SQL)"
 description: sys.dm_io_backup_tapes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -47,7 +47,11 @@ ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 ## Permissions  
  The user must have VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/O Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   

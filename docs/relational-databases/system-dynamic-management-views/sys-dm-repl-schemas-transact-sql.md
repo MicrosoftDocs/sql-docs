@@ -3,7 +3,7 @@ title: "sys.dm_repl_schemas (Transact-SQL)"
 description: sys.dm_repl_schemas (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -77,10 +77,14 @@ ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the publication database to call **dm_repl_schemas**.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Remarks  
  Information is only returned for replicated database objects that are currently loaded in the replication article cache.  
   
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Replication Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   

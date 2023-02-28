@@ -3,7 +3,7 @@ title: "sys.dm_db_persisted_sku_features (Transact-SQL)"
 description: sys.dm_db_persisted_sku_features (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/23/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -34,6 +34,10 @@ ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Remarks  
  If no features that may be restricted by a specific edition are used by the database, the view returns no rows.  
   

@@ -17,7 +17,7 @@ Create a [login in SQL Server](../../relational-databases/security/authenticatio
 
 Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current Windows user has a login. For external processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts do not have a login by default.
 
-You can work around the connection error by creating a login for  **SQLServerRUserGroup**. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
+You can work around the connection error by creating a login for  **SQLRUserGroup**. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
 
 > [!Note]
 > Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but some organizations stricter group policies might disable this right.

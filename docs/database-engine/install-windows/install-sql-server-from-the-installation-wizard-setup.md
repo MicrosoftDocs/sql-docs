@@ -453,7 +453,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 1. On the **Edition** page, select the edition you want to install.
 
    * **Specify a free edition** allows you to select Evaluation, Developer, or Web edition.
-   * **Use pay-as-you-go billing through Microsoft Azure** is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. This option requires an active Azure subscription. For more information, see [Billing through Microsoft Azure](../../sql-server/azure-arc/billing.md). With this option you can specify Standard or Enterprise edition.
+   * **Use pay-as-you-go billing through Microsoft Azure** is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. This option requires an active Azure subscription. For more information, see [Manage SQL Server license type](../../sql-server/azure-arc/manage-license-type.md). With this option you can specify Standard or Enterprise edition.
    * **Enter the product key** allows you to provide a product key for a specific edition of SQL Server. You may also specify if you have a license with Software Assurance or SQL Software Subscription, and if you have a SQL Server license only.
 
    To continue, select **Next**.
@@ -478,14 +478,17 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
 1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and others.
 
+   > [!NOTE]
+   > If you're installing SQL Server 2022 on an Azure VM, you won't see the **Azure Extension for SQL Server** page during installation. Connectivity to Azure Services for SQL Server on Azure VMs is handled through the [SQL IaaS Agent Extension](/azure/azure-sql/virtual-machines/windows/sql-server-iaas-agent-extension-automate-management), which is automatically pushed to your Azure VM shortly after SQL Server installation. You can register your VM with the extension [manually](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm) if you don't want to wait for automatic registration. 
+
    This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
 
-   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/connect.md#prerequisites) are registered in your subscription:
+   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/prerequisites.md) are registered in your subscription:
 
    * **Microsoft.AzureArcData**
    * **Microsoft.HybridCompute**
 
-   To authenticate the SQL Server instance with Azure, you can sign in using an Azure account, or you can use an Azure service principal. For specific security requirements to install the extension, see [Required permissions](../../sql-server/azure-arc/overview.md#required-permissions).
+   To authenticate the SQL Server instance with Azure, you can sign in using an Azure account, or you can use an Azure service principal. For specific security requirements to install the extension, see [Required permissions](../../sql-server/azure-arc/prerequisites.md).
 
    To sign in with your Azure account, select **Use Azure Login**. Windows may prompt you to add one or more sites to the Trusted sites zone. Follow your organization's security requirements. After you sign in to Azure, proceed to provide the additional registration information.
 
@@ -501,7 +504,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
    * **Proxy server URL**: (Optional) - Name of the HTTP proxy server used to connect to Azure Arc.
 
    > [!NOTE]  
-   > To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale.md#connect-multiple-instances). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
+   > To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale-policy.md). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
 
    Select **Next** to proceed.
 

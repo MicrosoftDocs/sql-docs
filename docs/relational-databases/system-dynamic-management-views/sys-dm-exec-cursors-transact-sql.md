@@ -3,7 +3,7 @@ title: "sys.dm_exec_cursors (Transact-SQL)"
 description: sys.dm_exec_cursors (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/09/2016"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -64,6 +64,10 @@ dm_exec_cursors (session_id | 0 )
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  The following table provides information about the cursor declaration interface and includes the possible values for the properties column.  
   

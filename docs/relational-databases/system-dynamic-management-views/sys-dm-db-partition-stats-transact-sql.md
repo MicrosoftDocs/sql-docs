@@ -3,7 +3,7 @@ title: "sys.dm_db_partition_stats (Transact-SQL)"
 description: sys.dm_db_partition_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "05/28/2020"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -60,6 +60,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions  
  Requires `VIEW DATABASE STATE` and `VIEW DEFINITION` permissions to query the **sys.dm_db_partition_stats** dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE and VIEW SECURITY DEFINITION permissions on the database.
+
 ## Examples  
   
 ### A. Returning all counts for all partitions of all indexes and heaps in a database  

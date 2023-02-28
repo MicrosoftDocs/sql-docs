@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics for loading from 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
-ms.date: 01/17/2023
+ms.date: 2/1/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: language-reference
@@ -430,9 +430,14 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV. This guidance applies to gzip compressed files as well.
 
-### What is the file splitting guidance for the COPY command loading CSV files?
+The COPY command will have better performance depending on your workload. 
+
+- Compressed files cannot be split automatically. For best loading performance, consider splitting your input into multiple files when loading compressed CSVs.
+- Large uncompressed CSV files can be split and loaded in parallel automatically, so there is no need to manually split uncompressed CSV files in most cases. In certain cases where auto file splitting is not feasible due to data characteristics, manually splitting large CSV’s may still benefit performance. 
+
+
+### What is the file splitting guidance for the COPY command loading compressed CSV files?
 Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. The number of files is determined by number of compute nodes multiplied by 60. For example, at 6000DWU we have 12 compute nodes and 12*60 = 720 partitions.  For a simple file splitting experience, refer to [How to maximize COPY load throughput with file splits](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474).
 
 | **DWU** | **#Files** |

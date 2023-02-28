@@ -3,7 +3,7 @@ description: "The sp_change_feed_disable_table system stored procedure disables 
 title: "sp_change_feed_disable_table (Transact-SQL)"
 ms.custom:
 - event-tier1-build-2022
-ms.date: 11/09/2022
+ms.date: 02/03/2023
 ms.service: synapse-analytics
 ms.reviewer: ""
 ms.topic: "reference"
@@ -56,7 +56,7 @@ The last changes published and synchronized to Azure Synapse cannot be guarantee
 
 ## Permissions  
 
-  Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
+  Currently, a user with [CONTROL database permissions](../security/permissions-database-engine.md), db_owner database role membership, or sysadmin server role membership can execute this procedure. 
 
 ## See also  
 

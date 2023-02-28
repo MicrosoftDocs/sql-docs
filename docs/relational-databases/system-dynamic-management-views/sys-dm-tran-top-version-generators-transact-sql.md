@@ -3,7 +3,7 @@ title: "sys.dm_tran_top_version_generators (Transact-SQL)"
 description: sys.dm_tran_top_version_generators (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/15/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -49,6 +49,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
 
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  Because **sys.dm_tran_top_version_generators** might have to read many pages as it scans the entire version store, running **sys.dm_tran_top_version_generators** can interfere with system performance.  
   
@@ -84,7 +88,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
   
  The output shows that all versions are created by `database_id``9` and that the versions generate from two tables.  
   
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

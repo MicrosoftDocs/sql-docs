@@ -4,7 +4,7 @@ description: This article has release notes for Azure Data Studio.
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 01/16/2023
+ms.date: 02/10/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom:
@@ -20,18 +20,25 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### November 2022 (hotfix 2)
+### January 2023
 
-Azure Data Studio 1.40.2 is the latest general availability (GA) release.
+Azure Data Studio 1.41.2 is the latest general availability (GA) release.
 
-- Release number: 1.40.2
-- Release date: December 27, 2022
+- Release number: 1.41.2
+- Release date: February 10, 2023
 
-#### Bug fixes in 1.40.2
+#### Bug fixes in 1.41.2
 
 | New Item | Details |
 | --- | --- |
-| Terminal | Fixed a security vulnerability that allowed an .exe to be easily run by a user. |
+| Connection | Addressed an issue that prevented users in non-public clouds from using Azure Data Studio with MSAL. |
+| Connection | Fixed a bug that opened the output window when unexpected errors occurred. |
+
+For a full list of bug fixes addressed for the January 2023 hotfix 2 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/97?closed=1).
+
+#### Known issues in 1.41.2
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ## Azure Data Studio feedback
 
@@ -41,7 +48,8 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 | --- | --- | --- | --- |
-| [November 2022](#november-2022) | 1.40.0 | November 16, 2022 | [hotfix](#november-2022-hotfix) |
+| [January 2023](#january-2023) | 1.41.0 | January 25, 2023 | [hotfix 1](#january-2023-hotfix) |
+| [November 2022](#november-2022) | 1.40.0 | November 16, 2022 | [hotfix 1](#november-2022-hotfix)<br />[hotfix 2](#november-2022-hotfix-2) |
 | [August 2022](#august-2022) | 1.39.1 | August 30, 2022 | [hotfix](#august-2022-hotfix) |
 | [August 2022](#august-2022) | 1.39.0 | August 24, 2022 | N/A |
 | [July 2022](#july-2022) | 1.38.0 | July 27, 2022 | N/A |
@@ -86,9 +94,95 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 > [!NOTE]  
 > All previous versions of Azure Data Studio are not supported.
 
-### November 2022 (hotfix)
+### January 2023 (hotfix)
 
-Azure Data Studio 1.40.1 is the latest general availability (GA) release.
+- Release number: 1.41.1
+- Release date: January 30, 2023
+
+#### Bug fixes in 1.41.1
+
+| New Item | Details |
+| --- | --- |
+| Connection | Fixed a bug causing incorrect Azure account tenant selection when connecting to server through the Azure view. |
+| Object Explorer | Fixed a regression which caused Object Explorer to not show database objects for Azure SQL DB Basic SLO. |
+
+For a full list of bug fixes addressed for the January 2023 hotfix release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/96?closed=1).
+
+### January 2023
+
+- Release number: 1.41.0
+- Release date: January 25, 2023
+
+#### What's new in 1.41.0
+
+| New Item | Details |
+| --- | --- |
+| Azure Subscriptions |  Introduced Azure Synapse Analytics and Dedicated SQL Pools nodes. |
+| Azure SQL Migration Extension | Premium series memory optimized SQL MI SKUs included in recommendations. |
+| Connection | Migrated Azure authentication library from ADAL to MSAL. MSAL is the library used by default starting with release 1.41.  However, if you encounter issues, you can change back to ADAL within **Settings > Azure: Authentication Library**. |
+| Connection | Added ability to provide a description when creating a firewall rule from Azure Data Studio. |
+| Connection | Include ability to change password for new or expired login. |
+| Connection | Add support for SQL Server Alias use when connecting to a server. |
+| MongoDB Atlas Extension | Provides the ability to connect to and query data on MongoDB Atlas (Preview). | 
+| Notebooks | Provide option for users to convert markdown to a table or not when HMTL table tag is present. |
+| Object Explorer | Databases are no longer brought online in serverless Azure SQL when Databases node is expanded. |
+| Object Explorer | Added support for Ledger views. |
+| Query Editor | Fixes and updates to SQL grammar (colorization and auto-complete). |
+| Query Plan Viewer | Changed default folder to be user’s home directory when saving a query plan. |
+| Query Results | Added ability to only copy Column Headers, and only for cells that are highlighted. |
+| Query Results | Added option to show or hide the action bar in the results window. |
+| Query Results | Increased height of horizontal scrollbar in results window. |
+| Query Results | Added new aggregate details in the results toolbar when selecting multiple cells. |
+| SQL Projects Extension | Provide the ability select an existing project via a new dropdown. |
+
+#### Bug fixes in 1.41.0
+
+| New Item | Details |
+| --- | --- |
+| Accessibility | Accessibility improvements were made in the Query Plan Viewer, Query History Extension and Migration Extension. |
+| Big Data Cluster | Fix missing connect icon in BDC view header bar. |
+| Big Data Cluster | Fixed issue preventing HDFS nodes for BDC servers in Object Explorer from expanding. |
+| Connection | Added ability to delete a connection that has expired AAD credentials. |
+| Connection | Improved experience when Azure Active Directory token expiration occurs. |
+| Connection | Improved connection experience when using multiple Azure tenants. |
+| Connection | Addressed problem with adding a firewall exception for a non-default Azure subscription. |
+| Migration Extension | Added support for non-public clouds for migration scenarios. |
+| MySQL Extension | Updated resource endpoints to support AAD logins in the MySQL extension. |
+| Notebooks | Improve Intellisense refresh in Notebook cells. |
+| Notebooks | Address issue with "New Notebook Job" resulting in an empty form. |
+| Object Explorer | Fixed issue with database list not loading. |
+| Object Explorer | Fixed issue with key binding for objectExplorer.manage not working. |
+| Query Execution | Fixed error generated when executing a query with LEFT JOIN and NULL values. |
+| Query Plan Viewer | When saving query plans (.sqlplan file), the filename will numerically increment to prevent duplicate filenames. |
+| Query Results | Fixed issue where users were unable to open JSON data as a new file. |
+| Query Results | Provide proper cell selection and navigation in the query results grid. |
+| Query Results | Improved the handling of line breaks when copying cell contents. |
+| Query Results | Addressed issue where a column would re-size incorrectly when auto-sizing in the results output. |
+| Query Results | Improved JSON cell handling from query results. |
+| Query Results | Fixed behavior where focus was incorrectly set on a cell using keyboard navigation. |
+| Resource Deployment | Remove 'Preview' flag for SQL Server 2022 deployment types. |
+| Schema Compare Extension | Fixed problem where differences in schema compare were not being highlighted. |
+| Schema Compare Extension | Permissions are now included in schema compare when the "Include Permissions" option is selected. |
+| SQL Projects Extension | Changes to db_datawriter or db_datareader roles are now supported. |
+| SQL Projects Extension | Updated Database Projects Net Core SDK Location dialog to be more descriptive. |
+| Table Designer | Updated Table Designer to disable transaction support for Azure Synapse databases. |
+| Table Designer | Addressed problem of the table name not refreshing after being updated prior to publishing. |
+| Table Designer | Fixed issue where table designer could not be opened for existing Ledger tables. |
+
+For a full list of bug fixes addressed for the January 2023 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/92?closed=1).
+
+### November 2022 (hotfix 2)
+
+- Release number: 1.40.2
+- Release date: December 27, 2022
+
+#### Bug fixes in 1.40.2
+
+| New Item | Details |
+| --- | --- |
+| Terminal | Fixed a security vulnerability that allowed an .exe to be easily run by a user. |
+
+### November 2022 (hotfix)
 
 - Release number: 1.40.1
 - Release date: November 23, 2022
@@ -101,12 +195,10 @@ Azure Data Studio 1.40.1 is the latest general availability (GA) release.
 
 ### November 2022
 
-Azure Data Studio 1.40 is the latest general availability (GA) release.
-
 - Release number: 1.40
 - Release date: November 16, 2022
 
-#### What's new in 1.40
+#### What's new in 1.40.0
 
 | New Item | Details |
 | --- | --- |
@@ -135,7 +227,7 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | VS Code merge | VS Code merges to version 1.67. Read [their release notes](https://code.visualstudio.com/updates/v1_67) to learn more. |
 | SQL Database Projects | Adds SQL projects support for syntax introduced in SQL Server 2022. |
 
-#### Bug fixes in 1.40
+#### Bug fixes in 1.40.0
 
 | New Item | Details |
 | --- | --- |
@@ -152,6 +244,8 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | Query Plan Viewer | Fixed missing index recommendation T-SQL syntax. |
 | SQL Projects | Fixed bug in SQL Projects that led to extension not using output path when publishing a project. |
 | SQL Projects | Fixed bug that caused .NET install to not be found when using the SQL Projects extension on Linux platforms. |
+
+For a full list of bug fixes addressed for the November 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/91?closed=1).
 
 ### August 2022 (hotfix)
 
@@ -201,7 +295,12 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | Notebooks | Fixed a bug that prevented markdown cell toolbar shortcuts from working after creating a new split view cell. |
 | Notebooks | Fixed a bug that caused text cells to be erroneously created in split view mode when the notebook default text edit mode was set to "Markdown". |
 
+For a full list of bug fixes addressed for the August 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/87?closed=1).
+
 ### July 2022
+
+- Release number: 1.38.0
+- Release date: July 27, 2022
 
 ### What's new in 1.38.0
 
@@ -233,7 +332,12 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | Notebooks | Fixed issue where notebook wasn't opening if a cell contains an unsupported output type. |
 | Schema Compare | Fixed issue where views and stored procedures weren't correctly recognized by schema compare after applying changes. |
 
+For a full list of bug fixes addressed for the July 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/90?closed=1).
+
 ### June 2022
+
+- Release number: 1.37.0
+- Release date: June 15, 2022
 
 ### What's new in 1.37.0
 
@@ -259,6 +363,8 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | Schema Compare | Fixed issue with indexes not being added correctly when updating project from database. |
 | Notebooks | Fixed inconsistencies with notebook cell behavior and toolbars. |
 | Notebooks | Fixed issues with keyboard navigation. |
+
+For a full list of bug fixes addressed for the June 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/85?closed=1).
 
 ### May 2022 (hotfix)
 
@@ -321,10 +427,6 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 
 For a full list of bug fixes addressed for the April 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/84?closed=1).
 
-#### Known issues in 1.36.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
-
 ### February 2022 (hotfix)
 
 - Release number: 1.35.1
@@ -358,10 +460,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 | Notebooks | Support for keyboard navigation between cells to minimize mouse selecting |
 
 For a full list of bug fixes addressed for the February 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2022+Release%22+is%3Aclosed).
-
-#### Known issues in 1.35.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### December 2021
 
@@ -427,10 +525,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22October+2021+Release%22+is%3Aclosed).
 
-#### Known issues in 1.33.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
-
 ### August 2021
 
 - Release number: 1.32.0
@@ -459,10 +553,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2021+Release%22+is%3Aclosed).
 
-#### Known issues in 1.32.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
-
 ### July Hotfix 2021
 
 - Release number: 1.31.1
@@ -477,10 +567,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 | Connections | Script file opened from command line doesn't allow DB connection |
 
 For a full list of bug fixes addressed for the July Hotfix 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/75).
-
-#### Known issues in 1.31.1
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### July 2021
 
@@ -507,10 +593,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 For a full list of bug fixes addressed for the July 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/75).
 
-#### Known issues in 1.31.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
-
 ### June 2021
 
 - Release number: 1.30.0
@@ -534,10 +616,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 | Notebooks | Fixed issue that Kusto notebook doesn't change kernels properly |
 
 For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/73?closed=1).
-
-#### Known issues in 1.30.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### May 2021
 
@@ -577,10 +655,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?page=3&q=is%3Aissue+is%3Aclosed+milestone%3A%22May+2021+Release%22).
 
-#### Known issues in 1.29.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
-
 ### April 2021
 
 April 15, 2021 / version: 1.28.0
@@ -598,10 +672,6 @@ April 15, 2021 / version: 1.28.0
 #### Bug fixes in 1.28.0
 
 For the list of the bug fixes addressed for the April 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22).
-
-#### Known issues in 1.28.0
-
-For the list of known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### March 2021
 

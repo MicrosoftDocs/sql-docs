@@ -3,7 +3,7 @@ title: "sys.dm_xe_map_values (Transact-SQL)"
 description: sys.dm_xe_map_values (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "3/30/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -35,6 +35,10 @@ Returns a mapping of internal numeric keys to human-readable text.
 
 Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ### Relationship cardinalities  
   
 |From|To|Relationship|  

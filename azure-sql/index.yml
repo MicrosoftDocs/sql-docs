@@ -191,7 +191,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Migration guide
-            url: https://datamigration.microsoft.com/
+            url: /data-migration/
           - text: Transact-SQL (T-SQL)
             url: /sql/t-sql/language-reference
           - text: Azure CLI

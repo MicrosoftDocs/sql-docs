@@ -405,7 +405,7 @@ Linked servers on Azure SQL Managed Instance support SQL authentication and [Azu
 - Snapshot and Bi-directional replication types are supported. Merge replication, Peer-to-peer replication, and updatable subscriptions are not supported.
 - [Transactional Replication](replication-transactional-overview.md) is available for SQL Managed Instance with some constraints:
     - All types of replication participants (Publisher, Distributor, Pull Subscriber, and Push Subscriber) can be placed on SQL Managed Instance, but the publisher and the distributor must be either both in the cloud or both on-premises.
-    - SQL Managed Instance can communicate with the recent versions of SQL Server. See the [supported versions matrix](replication-transactional-overview.md#supportability-matrix) for more information.
+    - SQL Managed Instance can communicate with the recent versions of SQL Server. For more information see [supported versions matrix](replication-transactional-overview.md#supportability-matrix).
     - Transactional Replication has some [additional networking requirements](replication-transactional-overview.md#requirements).
 
 For more information about configuring transactional replication, see the following tutorials:

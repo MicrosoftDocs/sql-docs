@@ -4,7 +4,7 @@ description: Learn how to install the Azure Data Studio Azure Database for Postg
 author: apduvuri
 ms.author: adityaduvuri
 ms.reviewer: maghan, randolphwest
-ms.date: 02/15/2023
+ms.date: 02/24/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---
@@ -17,7 +17,7 @@ The Azure PostgreSQL migration extension in Azure Data Studio helps you assess y
 
 ## Prerequisites
 
-- [Azure Data Studio (1.39 and higher)](../download-azure-data-studio.md).
+- [Azure Data Studio (1.40 and higher)](../download-azure-data-studio.md).
 - PostgreSQL Server instance running 9.3 or higher.
 - PostgreSQL users should have CONNECT and SELECT privileges on the databases of the instance.
 

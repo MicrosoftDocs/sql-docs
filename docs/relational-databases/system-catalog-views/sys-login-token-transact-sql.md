@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "tokens [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 ---
 # sys.login_token (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

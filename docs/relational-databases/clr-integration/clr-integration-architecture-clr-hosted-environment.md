@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "scalability [CLR integration]"
   - "hosted environments [CLR integration]"
   - "HPAs [CLR integration]"
-ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 ---
 # CLR Integration Architecture - CLR Hosted Environment
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

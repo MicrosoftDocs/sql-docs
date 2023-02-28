@@ -3,10 +3,10 @@ title: "Quickstart: Deploy a SQL Server container with Azure Kubernetes Services
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Kubernetes Service.
 author: rwestMSFT
 ms.author: randolphwest
-ms.topic: quickstart
+ms.date: 08/18/2022
 ms.service: sql
 ms.subservice: linux
-ms.date: 08/18/2022
+ms.topic: quickstart
 ms.custom:
   - template-quickstart
   - seo-lt-2019

@@ -1,24 +1,19 @@
 ---
+title: "SQLRemoveDefaultDataSource Function"
 description: "SQLRemoveDefaultDataSource Function"
-title: "SQLRemoveDefaultDataSource Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLRemoveDefaultDataSource"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLRemoveDefaultDataSource"
-helpviewer_keywords: 
-  - "SQLRemoveDefaultDataSource function [ODBC]"
-ms.assetid: db803266-57df-4864-a41b-901247549c1f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLRemoveDefaultDataSource"
+helpviewer_keywords:
+  - "SQLRemoveDefaultDataSource function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLRemoveDefaultDataSource"
+apitype: "dllExport"
 ---
 # SQLRemoveDefaultDataSource Function
 **Conformance**  

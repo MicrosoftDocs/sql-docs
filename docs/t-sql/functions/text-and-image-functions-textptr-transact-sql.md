@@ -3,12 +3,10 @@ title: "TEXTPTR (Transact-SQL)"
 description: "Text and Image Functions - TEXTPTR (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "10/23/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "TEXTPTR_TSQL"
   - "TEXTPTR"

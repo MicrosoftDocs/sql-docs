@@ -1,18 +1,19 @@
 ---
+title: "Access Control for Sensitive Data in Packages"
 description: "Access Control for Sensitive Data in Packages"
-title: "Access Control for Sensitive Data in Packages | Microsoft Docs"
-ms.custom: security
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: security
+f1_keywords:
   - "sql13.dts.packageprotectionlevel.f1"
   - "sql13.ssis.bids.projectprotectionlevel.f1"
   - "sql13.dts.designer.packagepassword.f1"
   - "sql13.ssis.bids.projectpassword.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "passwords [Integration Services]"
   - "packages [Integration Services], security"
   - "protection levels for packages [Integration Services]"
@@ -20,9 +21,6 @@ helpviewer_keywords:
   - "encryption [Integration Services]"
   - "cryptography [Integration Services]"
   - "security [Integration Services], protection levels"
-ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-author: chugugrace
-ms.author: chugu
 ---
 # Access Control for Sensitive Data in Packages
 

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_16594"
 description: "MSSQLSERVER_16594"
-title: "MSSQLSERVER_16594 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/24/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "16594 (Database Engine error)"
-ms.assetid: 5e5acb07-16ca-4329-8210-cd2bab0c904f
 author: azaricstefan
 ms.author: stefanazaric
+ms.date: "11/24/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "16594 (Database Engine error)"
 ---
 # MSSQLSERVER_16594
 

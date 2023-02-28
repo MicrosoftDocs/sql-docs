@@ -1,18 +1,15 @@
 ---
+title: "MSSQLSERVER_7308"
 description: "MSSQLSERVER_7308"
-title: "MSSQLSERVER_7308 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7308 (Database Engine error)"
-  - "single-threaded apartment mode"
-ms.assetid: cca9eab9-afb9-463d-abfd-0802257e2c99
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7308 (Database Engine error)"
+  - "single-threaded apartment mode"
 ---
 # MSSQLSERVER_7308
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

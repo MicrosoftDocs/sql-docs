@@ -1,13 +1,12 @@
 ---
-description: "Describes the Database Mail configuration objects for configuration of the settings that Database mail should use when sending an email from your database application or SQL Agent."
 title: "Database Mail Configuration Objects"
-ms.custom: ""
+description: "Describes the Database Mail configuration objects for configuration of the settings that Database mail should use when sending an email from your database application or SQL Agent."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/26/2022"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
   - "sql13.swb.sqlimail.newaccount.f1"
   - "sql13.swb.sqlimail.manageexistingprofile.f1"
@@ -22,15 +21,13 @@ f1_keywords:
   - "sql13.swb.sqlimail.manageexistingaccount.f1"
   - "sql13.swb.sqlimail.completewizard.f1"
   - "sql13.swb.sqlimail.configuresystem.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Mail [SQL Server], configuration objects"
   - "Database Mail [SQL Server], accounts"
   - "configuration objects [Database Mail]"
   - "Database Mail [SQL Server], profiles"
   - "profiles [SQL Server], Database Mail"
   - "accounts [Database Mail]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Mail Configuration Objects
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

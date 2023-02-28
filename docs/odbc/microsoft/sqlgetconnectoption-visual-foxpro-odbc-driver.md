@@ -1,17 +1,14 @@
 ---
+title: "SQLGetConnectOption (Visual FoxPro ODBC Driver)"
 description: "SQLGetConnectOption (Visual FoxPro ODBC Driver)"
-title: "SQLGetConnectOption (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLGetConnectOption function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLGetConnectOption function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLGetConnectOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -1,22 +1,19 @@
 ---
+title: "sp_getbindtoken (Transact-SQL)"
 description: "sp_getbindtoken (Transact-SQL)"
-title: "sp_getbindtoken (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_getbindtoken"
-  - "sp_getbindtoken_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_getbindtoken"
-ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_getbindtoken"
+  - "sp_getbindtoken_TSQL"
+helpviewer_keywords:
+  - "sp_getbindtoken"
+dev_langs:
+  - "TSQL"
 ---
 # sp_getbindtoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

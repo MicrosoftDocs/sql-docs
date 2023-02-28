@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_17884"
 description: "MSSQLSERVER_17884"
-title: "MSSQLSERVER_17884 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "17884 (Database Engine error)"
-ms.assetid: 8d05ba05-3f71-4dc3-bd81-2ea5ac9fe843
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "17884 (Database Engine error)"
 ---
 # MSSQLSERVER_17884
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

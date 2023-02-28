@@ -1,22 +1,19 @@
 ---
+title: "sp_unbindrule (Transact-SQL)"
 description: "sp_unbindrule (Transact-SQL)"
-title: "sp_unbindrule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_unbindrule_TSQL"
-  - "sp_unbindrule"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_unbindrule"
-ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_unbindrule_TSQL"
+  - "sp_unbindrule"
+helpviewer_keywords:
+  - "sp_unbindrule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_unbindrule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

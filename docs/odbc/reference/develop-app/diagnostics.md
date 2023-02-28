@@ -1,19 +1,16 @@
 ---
+title: "Diagnostics"
 description: "Diagnostics"
-title: "Diagnostics | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagnostic information [ODBC]"
   - "functions [ODBC], diagnostic information"
   - "diagnostic information [ODBC], about diagnostic information"
-ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Diagnostics
 Functions in ODBC return diagnostic information in two ways. The return code indicates the overall success or failure of the function, while diagnostic records provide detailed information about the function. At least one diagnostic record - the header record - is returned even if the function succeeds.  

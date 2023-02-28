@@ -1,17 +1,14 @@
 ---
+title: "Create Table SQL Statement (SQL Server Import and Export Wizard)"
 description: "Create Table SQL Statement (SQL Server Import and Export Wizard)"
-title: "Create Table SQL Statement (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.createtablesql.f1"
-ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
+ms.date: "02/16/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.createtablesql.f1"
 ---
 # Create Table SQL Statement (SQL Server Import and Export Wizard)
 

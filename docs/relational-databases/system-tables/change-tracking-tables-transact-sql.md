@@ -9,7 +9,6 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid:
 ---
 # Change Tracking tables (Transact-SQL)
 

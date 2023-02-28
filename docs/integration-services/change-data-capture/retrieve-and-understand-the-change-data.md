@@ -1,17 +1,14 @@
 ---
+title: "Retrieve and Understand the Change Data"
 description: "Retrieve and Understand the Change Data"
-title: "Retrieve and Understand the Change Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "incremental load [Integration Services],retrieving data"
-ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "incremental load [Integration Services],retrieving data"
 ---
 # Retrieve and Understand the Change Data
 

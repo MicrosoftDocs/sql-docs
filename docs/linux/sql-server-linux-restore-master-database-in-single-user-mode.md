@@ -7,10 +7,10 @@ ms.date: 08/09/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
+ms.custom: template-how-to
 helpviewer_keywords:
   - "starting SQL Server on Linux, single-user mode"
   - "single-user mode [SQL Server] Linux"
-ms.custom: template-how-to
 ---
 # Restore the master database on Linux in single-user mode
 

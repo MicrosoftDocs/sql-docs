@@ -1,17 +1,14 @@
 ---
+title: "Create Database (SQL Server Import and Export Wizard)"
 description: "Create Database (SQL Server Import and Export Wizard)"
-title: "Create Database (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.createdatabase.f1"
-ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
+ms.date: "02/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.createdatabase.f1"
 ---
 # Create Database (SQL Server Import and Export Wizard)
 

@@ -1,10 +1,11 @@
 ---
 title: "Use FOR XML Results in Application Code"
 description: Learn how to use the results of an SQL query with FOR XML clauses in an application.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,8 +16,6 @@ helpviewer_keywords:
   - "ADO [SQL Server]"
   - "XML data islands [SQL Server]"
   - "data islands [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use FOR XML Results in application code
 

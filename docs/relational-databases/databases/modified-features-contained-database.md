@@ -1,17 +1,13 @@
 ---
+title: "Modified Features (Contained Database)"
 description: "Modified Features (Contained Database)"
-title: "Modified Features (Contained Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "contained database, modifications to DBs"
-ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "contained database, modifications to DBs"
 ---
 # Modified Features (Contained Database)
  [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,25 +1,22 @@
 ---
+title: "Sort Transformation"
 description: "Sort Transformation"
-title: "Sort Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.sorttrans.f1"
   - "sql13.dts.designer.sorttransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sort transformation"
   - "descending sorts"
   - "ascending sorts"
   - "sorting data [Integration Services]"
   - "multiple sorts"
   - "duplicate data [Integration Services]"
-ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-author: chugugrace
-ms.author: chugu
 ---
 # Sort Transformation
 

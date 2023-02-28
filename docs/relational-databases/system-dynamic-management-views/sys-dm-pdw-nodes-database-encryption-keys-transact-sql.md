@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)

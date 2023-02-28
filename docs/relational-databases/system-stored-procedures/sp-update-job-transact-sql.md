@@ -1,22 +1,19 @@
 ---
+title: "sp_update_job (Transact-SQL)"
 description: "sp_update_job (Transact-SQL)"
-title: "sp_update_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_job"
-  - "sp_update_job_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_update_job"
-ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_job"
+  - "sp_update_job_TSQL"
+helpviewer_keywords:
+  - "sp_update_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

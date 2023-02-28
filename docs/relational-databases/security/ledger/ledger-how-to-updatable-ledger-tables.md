@@ -1,13 +1,13 @@
 ---
 title: "Create and use updatable ledger tables"
 description: Learn how to create and use updatable ledger tables.
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: kendralittle, mathoma
 ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
-ms.reviewer: kendralittle, mathoma
 ms.topic: how-to
-author: VanMSFT
-ms.author: vanto
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 

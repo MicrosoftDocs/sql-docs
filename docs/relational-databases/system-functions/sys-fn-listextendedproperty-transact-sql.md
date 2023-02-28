@@ -1,18 +1,16 @@
 ---
+title: "sys.fn_listextendedproperty (Transact-SQL)"
 description: "sys.fn_listextendedproperty (Transact-SQL)"
-title: "sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_listextendedproperty"
   - "fn_listextendedproperty_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_listextendedproperty function"
   - "displaying extended properties"
   - "database extended properties [SQL Server]"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "database objects [SQL Server], extended properties"
   - "extended properties [SQL Server], columns"
   - "table extended properties [SQL Server]"
-ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_listextendedproperty (Transact-SQL)

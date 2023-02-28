@@ -1,16 +1,12 @@
 ---
-description: "Create a Custom Workflow - XML Description"
 title: Custom Workflow XML Description
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-
-ms.topic: "reference"
-ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
+description: "Create a Custom Workflow - XML Description"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: "reference"
 ---
 # Create a Custom Workflow - XML Description
 

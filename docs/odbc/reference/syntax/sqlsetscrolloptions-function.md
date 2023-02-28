@@ -1,29 +1,19 @@
 ---
+title: "SQLSetScrollOptions Function"
 description: "SQLSetScrollOptions Function"
-title: "SQLSetScrollOptions Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetScrollOptions"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetScrollOptions"
-helpviewer_keywords: 
-  - "SQLSetScrollOptions function [ODBC]"
-ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetScrollOptions"
+helpviewer_keywords:
+  - "SQLSetScrollOptions function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetScrollOptions"
+apitype: "dllExport"
 ---
 # SQLSetScrollOptions Function
 **Conformance**  

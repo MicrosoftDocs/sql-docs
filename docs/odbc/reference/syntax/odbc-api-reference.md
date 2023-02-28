@@ -1,16 +1,13 @@
 ---
+title: "ODBC API Reference"
 description: "ODBC API Reference"
-title: "ODBC API Reference | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
 apitype: "dllExport"
-ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-author: David-Engel
-ms.author: v-davidengel
 ---
 # ODBC API Reference
 The topics in this section describe each ODBC function in alphabetical order. Each function is defined as a C programming language function. Descriptions include the following:  

@@ -1,22 +1,19 @@
 ---
+title: "syssubscriptions (System View) (Transact-SQL)"
 description: "syssubscriptions (System View) (Transact-SQL)"
-title: "syssubscriptions (System View) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "syssubscriptions_TSQL"
-  - "syssubscriptions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "syssubscriptions view"
-ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "syssubscriptions_TSQL"
+  - "syssubscriptions"
+helpviewer_keywords:
+  - "syssubscriptions view"
+dev_langs:
+  - "TSQL"
 ---
 # syssubscriptions (System View) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

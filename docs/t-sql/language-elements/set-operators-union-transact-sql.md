@@ -3,12 +3,10 @@ title: "UNION (Transact-SQL)"
 description: "Set Operators - UNION (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "08/07/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "UNION"
   - "UNION_TSQL"

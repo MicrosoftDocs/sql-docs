@@ -1,22 +1,17 @@
 ---
+title: "DatabaseLogonAccount Property (WMI MSReportServer_ConfigurationSetting)"
 description: "DatabaseLogonAccount Property (WMI MSReportServer_ConfigurationSetting)"
-title: "DatabaseLogonAccount Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "DatabaseLogonAccount"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DatabaseLogonAccount property"
-ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "DatabaseLogonAccount"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - DatabaseLogonAccount
   Specifies the logon account that the report server uses when connecting to the report server database. Read only.  

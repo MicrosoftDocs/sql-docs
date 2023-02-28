@@ -3,12 +3,10 @@ title: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
 description: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "01/29/2021"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SMALLDATETIMEFROMPARTS"
   - "SMALLDATETIMEFROMPARTS_TSQL"

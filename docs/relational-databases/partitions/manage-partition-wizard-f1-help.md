@@ -19,7 +19,6 @@ f1_keywords:
   - "sql13.swb.managepartition.selectoutput.f1"
 helpviewer_keywords:
   - "wizards [SQL Server Management Studio] See Manage Partition Wizard"
-ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 ---
 # Manage Partition Wizard 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

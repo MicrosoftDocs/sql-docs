@@ -5,9 +5,9 @@ description: Learn how to read data from a SQL table and insert into a pandas da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 07/23/2020
-ms.topic: how-to
 ms.service: sql
 ms.subservice: machine-learning
+ms.topic: how-to
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Insert data from a SQL table into a Python pandas dataframe

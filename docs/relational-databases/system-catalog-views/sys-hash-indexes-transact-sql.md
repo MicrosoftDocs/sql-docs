@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.hash_indexes catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 ---
 # sys.hash_indexes (Transact-SQL)
 [!INCLUDE[sqlserver2014-asdb-asdbmi](../../includes/applies-to-version/sqlserver2014-asdb-asdbmi.md)]

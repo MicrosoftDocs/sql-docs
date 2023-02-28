@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7915"
 description: "MSSQLSERVER_7915"
-title: "MSSQLSERVER_7915 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7915 (Database Engine error)"
-ms.assetid: 63338587-7dd3-40e6-b70e-d8ae18fff47b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7915 (Database Engine error)"
 ---
 # MSSQLSERVER_7915
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

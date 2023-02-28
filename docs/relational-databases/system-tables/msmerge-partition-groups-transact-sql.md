@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_partition_groups system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 ---
 # MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

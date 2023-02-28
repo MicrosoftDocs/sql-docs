@@ -1,17 +1,14 @@
 ---
+title: "SET COLLATE Command"
 description: "SET COLLATE Command"
-title: "SET COLLATE Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "set collate command [ODBC]"
-ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "set collate command [ODBC]"
 ---
 # SET COLLATE Command
 Specifies a collation sequence for character fields in subsequent indexing and sorting operations.  

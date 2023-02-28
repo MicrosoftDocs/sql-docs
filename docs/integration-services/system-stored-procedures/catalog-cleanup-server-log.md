@@ -1,15 +1,12 @@
 ---
+title: "catalog.cleanup_server_log"
 description: "catalog.cleanup_server_log"
-title: "catalog.cleanup_server_log | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # catalog.cleanup_server_log 
 

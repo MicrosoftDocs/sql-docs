@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "sys.registered_search_properties catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.registered_search_properties (Transact-SQL)

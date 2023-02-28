@@ -5,13 +5,13 @@ description: "Learn how to install SQL Server 2019 Machine Learning Services on 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 01/27/2023
-ms.topic: how-to
 ms.service: sql
 ms.subservice: machine-learning-services
-monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
+ms.topic: how-to
 ms.custom:
-- intro-installation
-- event-tier1-build-2022
+  - intro-installation
+  - event-tier1-build-2022
+monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install SQL Server 2019 Machine Learning Services (Python and R) on Linux
 

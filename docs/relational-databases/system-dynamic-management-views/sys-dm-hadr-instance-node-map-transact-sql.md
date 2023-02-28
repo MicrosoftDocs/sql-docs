@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.sys.dm_hadr_instance_node_map dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 ---
 # sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

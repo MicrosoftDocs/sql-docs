@@ -1,22 +1,19 @@
 ---
+title: "sp_dropuser (Transact-SQL)"
 description: "sp_dropuser (Transact-SQL)"
-title: "sp_dropuser (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dropuser"
-  - "sp_dropuser_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dropuser"
-ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropuser"
+  - "sp_dropuser_TSQL"
+helpviewer_keywords:
+  - "sp_dropuser"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

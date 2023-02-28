@@ -1,19 +1,16 @@
 ---
-title: "Connecting to SAP ASE (SybaseToSQL) | Microsoft Docs"
+title: "Connecting to SAP ASE (SybaseToSQL)"
 description: Learn how to connect to an Adaptive Server to migrate a SAP Adaptive Server Enterprise (ASE) database to SQL Server or Azure SQL Database.
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Connecting to Sybase"
-ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.sybase.connectsybaseform.f1"
+helpviewer_keywords:
+  - "Connecting to Sybase"
 ---
 
 # Connecting to SAP ASE (SybaseToSQL)

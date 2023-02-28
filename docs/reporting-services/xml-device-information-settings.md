@@ -1,18 +1,15 @@
 ---
-title: "XML Device Information Settings | Microsoft Docs"
+title: "XML Device Information Settings"
 description: Learn details about the various device information settings you can use to render in XML format.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML [Reporting Services], rendering"
   - "device information settings [Reporting Services], PDF rendering"
-ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-author: maggiesMSFT
-ms.author: maggies
 ---
 # XML Device Information Settings
   The following table lists the device information settings for rendering in XML format.  

@@ -1,24 +1,19 @@
 ---
+title: "SQLSetConnectAttr Function"
 description: "SQLSetConnectAttr Function"
-title: "SQLSetConnectAttr Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetConnectAttr"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetConnectAttr"
-helpviewer_keywords: 
-  - "SQLSetConnectAttr function [ODBC]"
-ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetConnectAttr"
+helpviewer_keywords:
+  - "SQLSetConnectAttr function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetConnectAttr"
+apitype: "dllExport"
 ---
 # SQLSetConnectAttr Function
 **Conformance**  

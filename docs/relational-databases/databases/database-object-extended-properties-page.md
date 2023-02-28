@@ -1,17 +1,14 @@
 ---
-title: "Database Object (Extended Properties Page) | Microsoft Docs"
+title: "Database Object (Extended Properties Page)"
 description: "Find out about the Extended Properties page. Learn how to use this page to add, view, or modify custom properties of database objects."
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.common.extendedproperties.f1"
-ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.common.extendedproperties.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Object (Extended Properties Page)

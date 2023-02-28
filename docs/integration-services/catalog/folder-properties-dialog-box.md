@@ -1,19 +1,16 @@
 ---
+title: "Folder Properties Dialog Box"
 description: "Folder Properties Dialog Box"
-title: "Folder Properties Dialog Box | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "08/26/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.ssms.isfolderprop.permissions.f1"
   - "sql13.ssis.ssms.iscreatefolder.f1"
   - "sql13.ssis.ssms.isfolderprop.general.f1"
-ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: chugugrace
-ms.author: chugu
 ---
 # Folder Properties Dialog Box
 

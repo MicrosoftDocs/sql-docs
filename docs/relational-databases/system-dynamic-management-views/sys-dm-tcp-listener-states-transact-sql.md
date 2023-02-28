@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_tcp_listener_states dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 ---
 # sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

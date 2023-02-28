@@ -1,15 +1,12 @@
 ---
-title: "SQL Server data files in Microsoft Azure | Microsoft Docs"
+title: "SQL Server data files in Microsoft Azure"
 description: Discover concepts and considerations that are central to storing SQL Server data files in Microsoft Azure Storage and some advantages of using Azure Storage.
-ms.custom: ""
-ms.date: "12/04/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "12/04/2019"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
 ---
 # SQL Server data files in Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

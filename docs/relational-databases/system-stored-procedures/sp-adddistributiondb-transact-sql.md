@@ -1,22 +1,19 @@
 ---
+title: "sp_adddistributiondb (Transact-SQL)"
 description: "sp_adddistributiondb (Transact-SQL)"
-title: "sp_adddistributiondb (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/30/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_adddistributiondb_TSQL"
-  - "sp_adddistributiondb"
-helpviewer_keywords: 
-  - "sp_adddistributiondb"
-ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
+ms.date: "04/30/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_adddistributiondb_TSQL"
+  - "sp_adddistributiondb"
+helpviewer_keywords:
+  - "sp_adddistributiondb"
+dev_langs:
+  - "TSQL"
 ---
 # sp_adddistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,23 +1,20 @@
 ---
+title: "System Information Schema Views (Transact-SQL)"
 description: "System Information Schema Views (Transact-SQL)"
-title: "System Information Schema Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/30/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "information schema views"
   - "schemas [SQL Server], information schema views"
   - "metadata [SQL Server], views"
   - "views [SQL Server], information schema"
   - "system views [SQL Server], information schema"
-ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # System Information Schema Views (Transact-SQL)
 

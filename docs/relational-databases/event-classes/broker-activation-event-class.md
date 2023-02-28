@@ -1,17 +1,14 @@
 ---
+title: "Broker:Activation Event Class"
 description: "Broker:Activation Event Class"
-title: "Broker:Activation Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Broker:Activation event class"
-ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "05/24/2019"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Broker:Activation event class"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Activation Event Class

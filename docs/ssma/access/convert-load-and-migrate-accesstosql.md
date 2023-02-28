@@ -1,22 +1,18 @@
 ---
+title: "Convert, Load, and Migrate (AccessToSQL)"
 description: "Convert, Load, and Migrate (AccessToSQL)"
-title: "Convert, Load, and Migrate (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+f1_keywords:
+  - "ssma.access.convert.f1"
+helpviewer_keywords:
   - "Convert Load and Migrate dialog box"
   - "migrating databases, one-click"
   - "one-click migration"
-ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-  - "ssma.access.convert.f1"
-
 ---
 # Convert, Load, and Migrate (AccessToSQL)
 

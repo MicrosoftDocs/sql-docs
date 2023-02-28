@@ -1,22 +1,19 @@
 ---
+title: "sp_change_agent_profile (Transact-SQL)"
 description: "sp_change_agent_profile (Transact-SQL)"
-title: "sp_change_agent_profile (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_change_agent_profile"
-  - "sp_change_agent_profile_TSQL"
-helpviewer_keywords: 
-  - "sp_change_agent_profile"
-ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_agent_profile"
+  - "sp_change_agent_profile_TSQL"
+helpviewer_keywords:
+  - "sp_change_agent_profile"
+dev_langs:
+  - "TSQL"
 ---
 # sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

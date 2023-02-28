@@ -1,16 +1,13 @@
 ---
-description: "sp_datatype_info_90 (Azure Synapse Analytics)"
 title: "sp_datatype_info_90 (Azure Synapse Analytics)"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
+description: "sp_datatype_info_90 (Azure Synapse Analytics)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/13/2017"
+ms.service: sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sp_datatype_info_90 (Azure Synapse Analytics)

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSqreader_history system table"
 dev_langs:
   - "TSQL"
-ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 ---
 # MSqreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_9532"
 description: "MSSQLSERVER_9532"
-title: "MSSQLSERVER_9532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "9532 (Database Engine error)"
-ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "9532 (Database Engine error)"
 ---
 # MSSQLSERVER_9532
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

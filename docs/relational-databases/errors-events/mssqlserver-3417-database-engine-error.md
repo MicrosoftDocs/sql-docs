@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3417"
 description: "MSSQLSERVER_3417"
-title: "MSSQLSERVER_3417 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/07/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3417 (Database Engine error)"
-ms.assetid: 005829c8-cf57-4828-818a-bbe8ee2e00f0
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "12/07/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3417 (Database Engine error)"
 ---
 # MSSQLSERVER_3417
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

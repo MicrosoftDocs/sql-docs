@@ -1,17 +1,14 @@
 ---
 title: "'Evaluation Results' page of 'Evaluate Policies' dialog box"
 description: Describes the 'Evaluation Results' page of the 'Evaluate Policies' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.evalpoliciesresults.f1"
-ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.evalpoliciesresults.f1"
 ---
 # Evaluate Policies Dialog Box, Evaluation Results Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

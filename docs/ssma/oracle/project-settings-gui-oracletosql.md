@@ -1,16 +1,13 @@
 ---
+title: "Project Settings (GUI) (OracleToSQL)"
 description: "Project Settings (GUI) (OracleToSQL)"
-title: "Project Settings (GUI) (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.oracle.projectsettinggui.f1"
 ---
 # Project Settings (GUI) (OracleToSQL)

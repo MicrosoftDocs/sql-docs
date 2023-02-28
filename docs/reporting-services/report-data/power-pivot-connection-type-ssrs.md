@@ -1,15 +1,12 @@
 ---
-title: "Power Pivot Connection Type | Microsoft Docs"
+title: "Power Pivot Connection Type"
 description: Use the information in this article about the Power Pivot connection type to learn how to build a data source.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-data
-
-
 ms.topic: conceptual
-ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Power Pivot Connection Type (SSRS)
   You can use SQL Server Analysis Services data processing extension to retrieve data from a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbook that is published in a SharePoint [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Gallery.  

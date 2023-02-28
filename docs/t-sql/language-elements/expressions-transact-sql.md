@@ -3,12 +3,10 @@ title: "Expressions (Transact-SQL)"
 description: "Expressions (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "Boolean expressions"
   - "expressions [SQL Server], about expressions"

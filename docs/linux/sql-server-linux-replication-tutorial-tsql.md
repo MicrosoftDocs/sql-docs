@@ -1,15 +1,15 @@
 ---
 title: "Tutorial: Configure replication (T-SQL)"
+titleSuffix: SQL Server on Linux
 description: Configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL (T-SQL).
-ms.custom: seo-dt-2019
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/09/2019
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-titleSuffix: SQL Server on Linux
+ms.topic: conceptual
+ms.custom: seo-dt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Configure Replication with T-SQL

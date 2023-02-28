@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.trigger_events catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trigger_events (Transact-SQL)

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_1457"
 description: "MSSQLSERVER_1457"
-title: "MSSQLSERVER_1457 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1457 (Database Engine error)"
-ms.assetid: 28434ba1-b033-4866-ab41-111fccef45a2
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1457 (Database Engine error)"
 ---
 # MSSQLSERVER_1457
  [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

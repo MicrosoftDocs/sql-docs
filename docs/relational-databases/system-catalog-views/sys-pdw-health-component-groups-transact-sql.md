@@ -10,7 +10,6 @@ ms.topic: reference
 ms.custom: kr2b-contr-experiment
 dev_langs:
   - "TSQL"
-ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_health_component_groups (Transact-SQL)

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_db_persisted_sku_features dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 ---
 # sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

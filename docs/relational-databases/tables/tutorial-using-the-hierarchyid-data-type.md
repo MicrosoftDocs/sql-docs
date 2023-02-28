@@ -1,19 +1,16 @@
 ---
+title: "Tutorial: Using the hierarchyid Data Type"
 description: "Tutorial: Using the hierarchyid Data Type"
-title: "Tutorial: Using the hierarchyid Data Type | Microsoft Docs"
-ms.custom:
-  - intro-quickstart
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: quickstart
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "tutorials [hierarchyid]"
   - "hierarchyid [Database Engine], tutorial"
-ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Using the hierarchyid Data Type

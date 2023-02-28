@@ -1,22 +1,19 @@
 ---
+title: "GetFileNamespacePath (Transact-SQL)"
 description: "GetFileNamespacePath (Transact-SQL)"
-title: "GetFileNamespacePath (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "GetFileNamespacePath"
-  - "GetFileNamespacePath_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "GetFileNamespacePath function"
-ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "GetFileNamespacePath"
+  - "GetFileNamespacePath_TSQL"
+helpviewer_keywords:
+  - "GetFileNamespacePath function"
+dev_langs:
+  - "TSQL"
 ---
 # GetFileNamespacePath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

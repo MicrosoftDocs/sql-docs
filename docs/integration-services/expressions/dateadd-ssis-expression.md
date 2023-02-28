@@ -1,19 +1,16 @@
 ---
+title: "DATEADD (SSIS Expression)"
 description: "DATEADD (SSIS Expression)"
-title: "DATEADD (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [Integration Services], DATEADD"
   - "dates [Integration Services]"
   - "DATEADD function"
-ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-author: chugugrace
-ms.author: chugu
 ---
 # DATEADD (SSIS Expression)
 

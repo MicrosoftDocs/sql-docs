@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], UNIQUE constraint"
   - "indexes [SQL Server], nonclustered"
   - "nonclustered indexes [SQL Server], PRIMARY KEY constraint"
-ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nonclustered Indexes

@@ -1,23 +1,20 @@
 ---
+title: "Returning Results from the Script Task"
 description: "Returning Results from the Script Task"
-title: "Returning Results from the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], status information"
   - "ExecutionValue property"
   - "status information [Integration Services]"
   - "TaskResult property"
   - "SSIS Script task, status information"
-ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Returning Results from the Script Task
 

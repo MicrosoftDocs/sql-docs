@@ -1,22 +1,19 @@
 ---
+title: "sp_helpmergearticlecolumn (Transact-SQL)"
 description: "sp_helpmergearticlecolumn (Transact-SQL)"
-title: "sp_helpmergearticlecolumn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergearticlecolumn"
-  - "sp_helpmergearticlecolumn_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergearticlecolumn"
-ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergearticlecolumn"
+  - "sp_helpmergearticlecolumn_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergearticlecolumn"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

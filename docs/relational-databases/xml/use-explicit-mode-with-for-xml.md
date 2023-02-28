@@ -1,18 +1,17 @@
 ---
 title: "Use EXPLICIT Mode with FOR XML"
 description: Learn how using FOR XML EXPLICIT mode provides the most flexibility in generating XML from a query result.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "EXPLICIT FOR XML mode"
   - "FOR XML clause, EXPLICIT mode"
   - "FOR XML EXPLICIT mode"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use EXPLICIT mode with FOR XML
 

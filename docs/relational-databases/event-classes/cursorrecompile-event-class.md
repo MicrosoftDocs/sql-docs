@@ -1,17 +1,14 @@
 ---
+title: "CursorRecompile Event Class"
 description: "CursorRecompile Event Class"
-title: "CursorRecompile Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "CursorRecompile event class"
-ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "CursorRecompile event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorRecompile Event Class

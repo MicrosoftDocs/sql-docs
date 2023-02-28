@@ -1,18 +1,15 @@
 ---
-description: "Learn how to administer change tracking on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
 title: "Cleanup and troubleshoot Change Tracking"
+description: "Learn how to administer change tracking on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
+author: JetterMcTedder
+ms.author: bspendolini
 ms.date: "10/20/2022"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change tracking, cleanup"
   - "change tracking, troubleshooting"
   - "change tracking, troubleshoot"
-ms.assetid: 
-author: JetterMcTedder
-ms.author: bspendolini
 ---
 # Cleanup and troubleshoot change tracking
 

@@ -1,14 +1,12 @@
 ---
-description: "Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log"
 title: "Diagnostic Info in Extended Events log"
+description: "Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log"
+author: markingmyname
+ms.author: maghan
 ms.date: 03/14/2017
-ms.reviewer: ""
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log

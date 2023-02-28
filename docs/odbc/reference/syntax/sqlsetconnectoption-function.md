@@ -1,24 +1,19 @@
 ---
+title: "SQLSetConnectOption Function"
 description: "SQLSetConnectOption Function"
-title: "SQLSetConnectOption Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetConnectOption"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetConnectOption"
-helpviewer_keywords: 
-  - "SQLSetConnectOption function [ODBC]"
-ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetConnectOption"
+helpviewer_keywords:
+  - "SQLSetConnectOption function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetConnectOption"
+apitype: "dllExport"
 ---
 # SQLSetConnectOption Function
 **Conformance**  

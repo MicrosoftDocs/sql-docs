@@ -1,22 +1,17 @@
 ---
+title: "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)"
 description: "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)"
-title: "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BackupEncryptionKey method"
-ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - BackupEncryptionKey
   Backs up the encryption key for the specified report server instance. The encryption key is stored encrypted with a password.  

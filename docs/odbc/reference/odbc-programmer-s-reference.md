@@ -1,17 +1,14 @@
 ---
+title: "ODBC Programmer's Reference"
 description: "ODBC Programmer's Reference"
-title: "ODBC Programmer's Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC [ODBC], reference"
-ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC [ODBC], reference"
 ---
 # ODBC Programmer's Reference
 The *ODBC Programmer's Reference* contains the following sections.  

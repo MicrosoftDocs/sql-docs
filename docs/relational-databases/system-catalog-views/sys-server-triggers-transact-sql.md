@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_triggers catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 ---
 # sys.server_triggers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,19 +1,16 @@
 ---
+title: "Use Annotations in Packages"
 description: "Use Annotations in Packages"
-title: "Use Annotations in Packages | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "self-documenting packages"
   - "adding annotations"
   - "annotations [Integration Services]"
-ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-author: chugugrace
-ms.author: chugu
 ---
 # Use Annotations in Packages
 

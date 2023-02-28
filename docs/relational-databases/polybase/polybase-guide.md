@@ -1,10 +1,17 @@
 ---
 title: "Introducing data virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Azure Blob Storage.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
 ms.date: 08/22/2022
 ms.service: sql
 ms.subservice: polybase
 ms.topic: "overview"
+ms.custom:
+  - contperf-fy21q2
+  - intro-overview
+  - event-tier1-build-2022
 f1_keywords:
   - "PolyBase"
   - "PolyBase, guide"
@@ -15,13 +22,6 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-ms.custom:
-- contperf-fy21q2
-- intro-overview
-- event-tier1-build-2022
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: hudequei
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 

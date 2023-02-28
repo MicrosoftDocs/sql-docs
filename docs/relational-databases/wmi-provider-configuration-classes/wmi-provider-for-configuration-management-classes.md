@@ -1,22 +1,17 @@
 ---
 title: "WMI Provider for Configuration Management Classes"
-description: Discover and implement the functionality that Windows Management Instrumentation provides. Choose from these classes for Configuration Manager.  
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "WMI Classes"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "WMI Provider for Configuration Management, classes"
-  - "classes [WMI]"
-ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
+description: Discover and implement the functionality that Windows Management Instrumentation provides. Choose from these classes for Configuration Manager.
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "WMI Provider for Configuration Management, classes"
+  - "classes [WMI]"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "WMI Classes"
 ---
 # WMI Provider for Configuration Management Classes
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

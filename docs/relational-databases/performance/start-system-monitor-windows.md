@@ -1,19 +1,16 @@
 ---
-title: "Start Performance Monitor (Windows) | Microsoft Docs"
+title: "Start Performance Monitor (Windows)"
 description: Use Performance Monitor to collect performance data counters, such as processor and memory use, and for SQL Server resources, such as locks and transactions.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Performance Monitor [SQL Server], starting"
   - "starting Windows Performance Monitor"
   - "Windows Performance Monitor [SQL Server], starting"
-ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Start Performance Monitor (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

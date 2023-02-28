@@ -1,18 +1,15 @@
 ---
+title: "Add or Change a Property Expression"
 description: "Add or Change a Property Expression"
-title: "Add or Change a Property Expression | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "expressions [Integration Services], creating"
-  - "expressions [Integration Services], property expressions"
-ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "expressions [Integration Services], creating"
+  - "expressions [Integration Services], property expressions"
 ---
 # Add or Change a Property Expression
 

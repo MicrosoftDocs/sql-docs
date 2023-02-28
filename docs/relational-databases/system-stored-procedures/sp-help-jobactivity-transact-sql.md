@@ -1,22 +1,19 @@
 ---
+title: "sp_help_jobactivity (Transact-SQL)"
 description: "sp_help_jobactivity (Transact-SQL)"
-title: "sp_help_jobactivity (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobactivity_TSQL"
-  - "sp_help_jobactivity"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobactivity"
-ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobactivity_TSQL"
+  - "sp_help_jobactivity"
+helpviewer_keywords:
+  - "sp_help_jobactivity"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

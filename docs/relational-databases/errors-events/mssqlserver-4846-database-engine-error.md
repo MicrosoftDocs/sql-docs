@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_4846"
 description: "MSSQLSERVER_4846"
-title: "MSSQLSERVER_4846 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "4846 (Database Engine error)"
-ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "4846 (Database Engine error)"
 ---
 # MSSQLSERVER_4846
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,14 +1,12 @@
 ---
-description: "sp_reset_dtc_log (Transact-SQL)"
 title: "sp_reset_dtc_log (Transact-SQL)"
-ms.custom: ""
-ms.date: "02/24/2023"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
+description: "sp_reset_dtc_log (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
 monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # sp_reset_dtc_log (Transact-SQL)

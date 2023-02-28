@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "search property lists [SQL Server], viewing"
 dev_langs:
   - "TSQL"
-ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 ---
 # sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

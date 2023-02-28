@@ -1,17 +1,14 @@
 ---
+title: "Device Driver Control Error"
 description: "Device Driver Control Error"
-title: "Device Driver Control Error | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Device Driver Control Error
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

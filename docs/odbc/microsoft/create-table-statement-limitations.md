@@ -1,18 +1,15 @@
 ---
+title: "CREATE TABLE Statement Limitations"
 description: "CREATE TABLE Statement Limitations"
-title: "CREATE TABLE Statement Limitations | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "CREATE TABLE statement limitations [ODBC]"
-  - "ODBC SQL grammar, CREATE TABLE statement limitations"
-ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "CREATE TABLE statement limitations [ODBC]"
+  - "ODBC SQL grammar, CREATE TABLE statement limitations"
 ---
 # CREATE TABLE Statement Limitations
 When the Microsoft Access, Microsoft Excel, or Paradoxdriver is used, and the length of a text or binary column is not specified (or is specified as 0), the column length will be set to 255.  

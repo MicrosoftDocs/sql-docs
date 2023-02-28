@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "dynamic management views [SQL Server], Service Broker"
 dev_langs:
   - "TSQL"
-ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 ---
 # Service Broker Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

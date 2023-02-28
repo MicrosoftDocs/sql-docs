@@ -1,18 +1,15 @@
 ---
+title: "SQLGetInfo (Excel Driver)"
 description: "SQLGetInfo (Excel Driver)"
-title: "SQLGetInfo (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Excel driver [ODBC], SQLGetInfo"
-  - "SQLGetInfo function [ODBC], Excel Driver"
-ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Excel driver [ODBC], SQLGetInfo"
+  - "SQLGetInfo function [ODBC], Excel Driver"
 ---
 # SQLGetInfo (Excel Driver)
 > [!NOTE]  

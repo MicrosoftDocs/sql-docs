@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_sql_text dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_sql_text (Transact-SQL)

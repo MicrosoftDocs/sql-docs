@@ -1,16 +1,15 @@
 ---
 title: "Example: Querying XMLType Columns"
 description: View an example of how to query columns of the xml data type.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "RAW mode, querying XML example"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 
 # Example: Query XMLType columns

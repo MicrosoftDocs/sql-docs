@@ -1,12 +1,14 @@
 ---
-description: "Sort and Group Query Results (Visual Database Tools)"
 title: Sort and Group Query Results
-ms.custom: seo-lt-2019
+description: "Sort and Group Query Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "View Designer, Results pane"
   - "result sets [SQL Server], queries"
   - "queries [SQL Server], groups"
@@ -18,11 +20,6 @@ helpviewer_keywords:
   - "ordering query results [SQL Server]"
   - "Results pane"
   - "sorting query results [SQL Server]"
-ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Sort and Group Query Results (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

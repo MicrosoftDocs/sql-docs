@@ -1,19 +1,16 @@
 ---
+title: "Example SQLGetTypeInfo Result Set"
 description: "Example SQLGetTypeInfo Result Set"
-title: "Example SQLGetTypeInfo Result Set | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL data types [ODBC], examples"
   - "SQLGetTypeInfo function [ODBC], examples"
   - "data types [ODBC], SQL data types"
-ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Example SQLGetTypeInfo Result Set
 An application calls **SQLGetTypeInfo** to determine which data types are supported by a data source and the characteristics of those data types. The following tables show a sample result set returned by **SQLGetTypeInfo** for a data source that supports SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR, and SQL_INTERVAL_DAY_TO_SECOND.  

@@ -1,16 +1,16 @@
 ---
-description: "Accelerated database recovery"
 title: "Accelerated database recovery"
+description: "Accelerated database recovery"
+author: mashamsft
+ms.author: mathoma
+ms.reviewer: kfarlee, wiassaf
 ms.date: 02/28/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "accelerated database recovery [SQL Server], recovery-only"
   - "database recovery [SQL Server]"
-author: mashamsft
-ms.author: mathoma
-ms.reviewer: kfarlee, wiassaf
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Accelerated database recovery

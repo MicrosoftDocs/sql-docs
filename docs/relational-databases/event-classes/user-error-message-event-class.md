@@ -1,17 +1,14 @@
 ---
+title: "User Error Message Event Class"
 description: "User Error Message Event Class"
-title: "User Error Message Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "User Error Message event class"
-ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "User Error Message event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # User Error Message Event Class

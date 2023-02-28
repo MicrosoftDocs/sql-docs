@@ -1,18 +1,15 @@
 ---
+title: "Advanced Object Selection (SybaseToSQL)"
 description: "Advanced Object Selection (SybaseToSQL)"
-title: "Advanced Object Selection (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.sybase.loadobjectsdialog.f1"
-    - "ssma.sybase.multichecktreeview.f1"
+f1_keywords:
+  - "ssma.sybase.loadobjectsdialog.f1"
+  - "ssma.sybase.multichecktreeview.f1"
 ---
 # Advanced Object Selection (SybaseToSQL)
 The **Advanced Object Section** dialog box lets you filter database objects by using strings and substrings in the object name, and then select or deselect those objects. SSMA performs conversion and migration operations on selected objects.  

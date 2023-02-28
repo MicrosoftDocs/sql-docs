@@ -1,19 +1,16 @@
 ---
+title: "Setting Up the Cursor"
 description: "Setting Up the Cursor"
-title: "Setting Up the Cursor | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scrollable cursors [ODBC]"
   - "cursors [ODBC], scrollable"
   - "cursors [ODBC], creating"
-ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Setting Up the Cursor
 The application can specify the cursor type before executing a statement that creates a result set. It does this with the SQL_ATTR_CURSOR_TYPE statement attribute. If the application does not explicitly specify a type, a forward-only cursor will be used. To get a mixed cursor, an application specifies a keyset-driven cursor but declares a keyset size less than the result set size.  

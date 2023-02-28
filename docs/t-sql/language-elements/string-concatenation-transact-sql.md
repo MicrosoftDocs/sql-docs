@@ -3,12 +3,10 @@ title: "+ (String Concatenation) (Transact-SQL)"
 description: "+ (String Concatenation) (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "12/06/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "concatenation"
   - "string"

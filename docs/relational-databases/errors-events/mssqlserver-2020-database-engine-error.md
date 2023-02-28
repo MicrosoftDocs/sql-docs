@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2020"
 description: "MSSQLSERVER_2020"
-title: "MSSQLSERVER_2020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2020 (Database Engine error)"
-ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2020 (Database Engine error)"
 ---
 # MSSQLSERVER_2020
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

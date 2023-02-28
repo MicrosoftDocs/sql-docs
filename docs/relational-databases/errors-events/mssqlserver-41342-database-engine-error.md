@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_41342"
 description: "MSSQLSERVER_41342"
-title: "MSSQLSERVER_41342 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "41342 (Database Engine error)"
-ms.assetid: 28270d98-c543-4e7d-b40c-2200e38dce1c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "41342 (Database Engine error)"
 ---
 # MSSQLSERVER_41342
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

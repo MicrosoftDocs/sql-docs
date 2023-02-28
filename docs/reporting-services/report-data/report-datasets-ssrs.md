@@ -1,15 +1,12 @@
 ---
-title: "Report Datasets | Microsoft Docs"
-description: Learn about report datasets, for example that a dataset contains the information that is needed to retrieve a specific set of data from a data source. 
+title: "Report Datasets"
+description: Learn about report datasets, for example that a dataset contains the information that is needed to retrieve a specific set of data from a data source.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 10/14/2022
 ms.service: reporting-services
 ms.subservice: report-data
-
-
 ms.topic: conceptual
-ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Datasets (SSRS)
   To add data to a report, you create datasets. Each dataset represents the result set from running a query command on a data source. The columns in the result set are the field collection. The rows in the result set are the data. A dataset does not contain the actual data. A dataset contains the information that is needed to retrieve a specific set of data from a data source.  

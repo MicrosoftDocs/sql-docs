@@ -1,17 +1,14 @@
 ---
+title: "Always On Availability Groups Functions (Transact-SQL)"
 description: "Always On Availability Groups Functions (Transact-SQL)"
-title: "Always On Availability Groups Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 ---
 # Always On Availability Groups Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

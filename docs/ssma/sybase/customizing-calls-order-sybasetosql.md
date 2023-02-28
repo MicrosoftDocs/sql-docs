@@ -1,17 +1,14 @@
 ---
+title: "Customizing Calls Order (SybaseToSQL)"
 description: "Customizing Calls Order (SybaseToSQL)"
-title: "Customizing Calls Order (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Tester Component,Customizing Calls Order"
-ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Customizing Calls Order (SybaseToSQL)
 At this step you select the order in which the objects to test will be invoked.  

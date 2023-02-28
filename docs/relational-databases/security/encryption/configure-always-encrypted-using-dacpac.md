@@ -1,17 +1,15 @@
 ---
+title: "Configure column encryption using Always Encrypted with a DAC package"
 description: "Configure column encryption using Always Encrypted with a DAC package"
-title: "Configure column encryption using Always Encrypted with a DAC package   | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/26/2019
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Always Encrypted, configure with SSMS"
-ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 06/26/2019
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Always Encrypted, configure with SSMS"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure column encryption using Always Encrypted with a DAC package 

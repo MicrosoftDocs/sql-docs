@@ -1,20 +1,17 @@
 ---
+title: "Define and Modify a Column Filter"
 description: "Define and Modify a Column Filter"
-title: "Define and Modify a Column Filter | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filters [SQL Server replication], column"
   - "modifying filters, column"
   - "modifying filters"
   - "column filters [SQL Server replication]"
-ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Define and Modify a Column Filter

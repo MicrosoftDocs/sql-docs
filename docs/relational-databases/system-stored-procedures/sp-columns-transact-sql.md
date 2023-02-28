@@ -1,22 +1,19 @@
 ---
+title: "sp_columns (Transact-SQL)"
 description: "sp_columns (Transact-SQL)"
-title: "sp_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_columns_TSQL"
-  - "sp_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_columns"
-ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
+ms.date: "10/17/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_columns_TSQL"
+  - "sp_columns"
+helpviewer_keywords:
+  - "sp_columns"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_columns (Transact-SQL)

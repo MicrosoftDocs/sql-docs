@@ -1,22 +1,19 @@
 ---
+title: "xp_revokelogin (Transact-SQL)"
 description: "xp_revokelogin (Transact-SQL)"
-title: "xp_revokelogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_revokelogin"
-  - "xp_revokelogin_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_revokelogin"
-ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_revokelogin"
+  - "xp_revokelogin_TSQL"
+helpviewer_keywords:
+  - "xp_revokelogin"
+dev_langs:
+  - "TSQL"
 ---
 # xp_revokelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

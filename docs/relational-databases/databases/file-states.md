@@ -1,13 +1,12 @@
 ---
+title: "File States"
 description: "File States"
-title: "File States | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restoring file state [SQL Server]"
   - "verifying file states"
   - "current file states"
@@ -25,9 +24,6 @@ helpviewer_keywords:
   - "states [SQL Server], files"
   - "displaying filegroup states"
   - "defunct file state"
-ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # File States

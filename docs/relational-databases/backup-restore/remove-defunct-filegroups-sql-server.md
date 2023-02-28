@@ -1,22 +1,19 @@
 ---
-title: "Remove Defunct Filegroups (SQL Server) | Microsoft Docs"
+title: "Remove Defunct Filegroups (SQL Server)"
 description: This article shows you how to remove defunct filegroups in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "piecemeal restores [SQL Server], defunct filegroups"
   - "defunct filegroups"
   - "restoring filegroups [SQL Server]"
   - "deferred transactions"
   - "filegroups [SQL Server], defunct"
   - "unrestored filegroups"
-ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Remove Defunct Filegroups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

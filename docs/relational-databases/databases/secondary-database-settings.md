@@ -1,17 +1,13 @@
 ---
+title: "Secondary Database Settings"
 description: "Secondary Database Settings"
-title: "Secondary Database Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
-ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
 ---
 # Secondary Database Settings
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

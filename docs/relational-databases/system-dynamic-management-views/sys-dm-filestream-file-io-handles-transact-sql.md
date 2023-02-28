@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_filestream_file_io_handle catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 ---
 # sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

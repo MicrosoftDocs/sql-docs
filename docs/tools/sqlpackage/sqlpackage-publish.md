@@ -1,14 +1,13 @@
 ---
 title: SqlPackage Publish
 description: Learn how to automate database development tasks with SqlPackage Publish. View examples and available parameters, properties, and SQLCMD variables.
-ms.service: sql
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
 ms.date: 9/29/2022
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # SqlPackage Publish parameters, properties, and SQLCMD variables

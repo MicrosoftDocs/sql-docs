@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_14420"
 description: "MSSQLSERVER_14420"
-title: "MSSQLSERVER_14420 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "14420 (Database Engine error)"
-ms.assetid: 4a1d72b1-ab1b-4119-a11b-a8a05c6fdb45
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "14420 (Database Engine error)"
 ---
 # MSSQLSERVER_14420
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

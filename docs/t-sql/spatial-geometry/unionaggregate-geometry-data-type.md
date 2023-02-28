@@ -1,19 +1,16 @@
 ---
+title: "UnionAggregate (geometry Data Type)"
 description: "UnionAggregate (geometry Data Type)"
-title: "UnionAggregate (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UnionAggregate method (geometry)"
-ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # UnionAggregate (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

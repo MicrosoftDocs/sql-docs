@@ -1,17 +1,14 @@
 ---
+title: "GetDatabaseVersionDisplayName Method (WMI)"
 description: "ConfigurationSetting Method - GetDatabaseVersionDisplayName"
-title: "GetDatabaseVersionDisplayName Method (WMI) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GetDatabaseVersionDisplayName method"
-ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-author: maggiesMSFT
-ms.author: maggies
 ---
 # ConfigurationSetting Method - GetDatabaseVersionDisplayName
   Gets the display name for a given report server database version string.  

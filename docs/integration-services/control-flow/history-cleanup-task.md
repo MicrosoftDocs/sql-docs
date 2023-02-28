@@ -1,20 +1,17 @@
 ---
+title: "History Cleanup Task"
 description: "History Cleanup Task"
-title: "History Cleanup Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.historycleanuptask.f1"
-helpviewer_keywords: 
-  - "history tables [SQL Server]"
-  - "History Cleanup task [Integration Services]"
-ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.historycleanuptask.f1"
+helpviewer_keywords:
+  - "history tables [SQL Server]"
+  - "History Cleanup task [Integration Services]"
 ---
 # History Cleanup Task
 

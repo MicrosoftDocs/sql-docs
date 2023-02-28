@@ -1,24 +1,21 @@
 ---
+title: "sp_fulltext_service (Transact-SQL)"
 description: "sp_fulltext_service (Transact-SQL)"
-title: "sp_fulltext_service (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_fulltext_service"
   - "sp_fulltext_service_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], properties"
   - "sp_fulltext_service"
   - "Full-Text Search Upgrade Option"
-ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

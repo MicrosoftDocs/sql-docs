@@ -1,26 +1,23 @@
 ---
+title: "FREETEXT (Transact-SQL)"
 description: "FREETEXT (Transact-SQL)"
-title: "FREETEXT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/23/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FREETEXT"
   - "FREETEXT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], meaning matches"
   - "meaning matches [full-text search]"
   - "FREETEXT predicate (Transact-SQL)"
   - "words in predicate [full-text search]"
   - "column searches [full-text search]"
-ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # FREETEXT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

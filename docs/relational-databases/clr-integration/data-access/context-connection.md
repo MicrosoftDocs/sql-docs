@@ -15,7 +15,6 @@ helpviewer_keywords:
 dev_langs:
   - "VB"
   - "CSharp"
-ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 ---
 # Context Connection
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

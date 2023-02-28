@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2579"
 description: "MSSQLSERVER_2579"
-title: "MSSQLSERVER_2579 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2579 (Database Engine error)"
-ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2579 (Database Engine error)"
 ---
 # MSSQLSERVER_2579
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

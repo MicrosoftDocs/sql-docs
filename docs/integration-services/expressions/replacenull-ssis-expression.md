@@ -1,15 +1,12 @@
 ---
+title: "REPLACENULL (SSIS Expression)"
 description: "REPLACENULL (SSIS Expression)"
-title: "REPLACENULL (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # REPLACENULL (SSIS Expression)
 

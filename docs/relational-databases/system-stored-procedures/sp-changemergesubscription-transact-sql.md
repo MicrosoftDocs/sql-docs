@@ -1,22 +1,19 @@
 ---
+title: "sp_changemergesubscription (Transact-SQL)"
 description: "sp_changemergesubscription (Transact-SQL)"
-title: "sp_changemergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changemergesubscription_TSQL"
-  - "sp_changemergesubscription"
-helpviewer_keywords: 
-  - "sp_changemergesubscription"
-ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changemergesubscription_TSQL"
+  - "sp_changemergesubscription"
+helpviewer_keywords:
+  - "sp_changemergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

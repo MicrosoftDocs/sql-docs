@@ -1,22 +1,19 @@
 ---
+title: "STGeometryType (geography Data Type)"
 description: "STGeometryType (geography Data Type)"
-title: "STGeometryType (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeometryType (geography Data Type)"
   - "STGeometryType_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STGeometryType method"
-ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeometryType (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

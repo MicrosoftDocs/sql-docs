@@ -1,17 +1,14 @@
 ---
+title: "Hadoop Pig Task"
 description: "Hadoop Pig Task"
-title: "Hadoop Pig Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.hadooppigtask.f1"
-ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.hadooppigtask.f1"
 ---
 # Hadoop Pig Task
 

@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.sp_set_parameter (Transact-SQL)"
 description: "managed_backup.sp_set_parameter (Transact-SQL)"
-title: "managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_set_parameter_TSQL"
   - "sp_set_parameter"
   - "smart_admin.sp_set_parameter"
   - "smart_admin.sp_set_parameter_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_set_parameter"
   - "smart_admin.sp_set_parameter"
-ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

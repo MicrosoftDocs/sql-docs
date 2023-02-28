@@ -1,17 +1,14 @@
 ---
+title: "Log File Auto Shrink Event Class"
 description: "Log File Auto Shrink Event Class"
-title: "Log File Auto Shrink Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Log File Auto Shrink event class"
-ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Log File Auto Shrink event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Log File Auto Shrink Event Class

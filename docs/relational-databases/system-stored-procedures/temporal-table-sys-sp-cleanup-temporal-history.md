@@ -1,16 +1,13 @@
 ---
+title: "sys.sp_cleanup_temporal_history"
 description: "sys.sp_cleanup_temporal_history (Transact-SQL)"
-title: "sys.sp_cleanup_temporal_history | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql-database
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql-database
+ms.topic: conceptual
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current"
 ---
 # sys.sp_cleanup_temporal_history (Transact-SQL)

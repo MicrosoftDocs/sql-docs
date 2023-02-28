@@ -1,18 +1,14 @@
 ---
-description: "Creating, Altering, and Removing User-Defined Functions"
 title: "Creating, Altering, and Removing User-Defined Functions"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "user-defined functions [SMO]"
-ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
+description: "Creating, Altering, and Removing User-Defined Functions"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+ms.custom: seo-dt-2019
+helpviewer_keywords:
+  - "user-defined functions [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing User-Defined Functions

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_os_workers dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_workers (Transact-SQL)

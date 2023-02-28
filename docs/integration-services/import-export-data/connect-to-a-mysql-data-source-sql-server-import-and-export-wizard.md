@@ -1,15 +1,12 @@
 ---
+title: "Connect to a MySQL Data Source (SQL Server Import and Export Wizard)"
 description: "Connect to a MySQL Data Source (SQL Server Import and Export Wizard)"
-title: "Connect to a MySQL Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/29/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
+ms.date: 06/29/2020
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Connect to a MySQL Data Source (SQL Server Import and Export Wizard)
 

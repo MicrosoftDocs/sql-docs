@@ -1,22 +1,19 @@
 ---
+title: "sp_upgrade_log_shipping (Transact-SQL)"
 description: "sp_upgrade_log_shipping (Transact-SQL)"
-title: "sp_upgrade_log_shipping (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_upgrade_log_shipping"
-  - "sp_upgrade_log_shipping_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_upgrade_log_shipping"
-ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_upgrade_log_shipping"
+  - "sp_upgrade_log_shipping_TSQL"
+helpviewer_keywords:
+  - "sp_upgrade_log_shipping"
+dev_langs:
+  - "TSQL"
 ---
 # sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

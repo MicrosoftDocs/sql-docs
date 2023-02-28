@@ -1,22 +1,18 @@
 ---
-description: "GetCurrentCertificate Method (SInstance Class)"
 title: "GetCurrentCertificate Method (SInstance)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "GetCurrentCertificate Method (SInstance Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "GetCurrentCertificate method"
-ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
+description: "GetCurrentCertificate Method (SInstance Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "GetCurrentCertificate method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "GetCurrentCertificate Method (SInstance Class)"
+apitype: "MOFDef"
 ---
 # GetCurrentCertificate Method (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,15 @@
 ---
+title: "Developing a User Interface for a Custom ForEach Enumerator"
 description: "Developing a User Interface for a Custom ForEach Enumerator"
-title: "Developing a User Interface for a Custom ForEach Enumerator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom user interface [Integration Services], custom foreach enumerators"
-  - "custom foreach enumerators [Integration Services], developing custom user interface"
-ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom user interface [Integration Services], custom foreach enumerators"
+  - "custom foreach enumerators [Integration Services], developing custom user interface"
 ---
 # Developing a User Interface for a Custom ForEach Enumerator
 

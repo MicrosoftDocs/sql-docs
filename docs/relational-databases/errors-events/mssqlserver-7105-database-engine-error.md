@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_7105"
 title: MSSQLSERVER_7105
-ms.custom: ""
-ms.date: 08/20/2020
-ms.service: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7105 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_7105"
 author: rgward
 ms.author: ramakoni
+ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
+ms.date: 08/20/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7105 (Database Engine error)"
 ---
 # MSSQLSERVER_7105
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

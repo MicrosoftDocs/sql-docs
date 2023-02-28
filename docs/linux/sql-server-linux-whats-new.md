@@ -4,11 +4,10 @@ description: In this article, learn about the major features and services availa
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/10/2020
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.custom:
-  - intro-whats-new
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
 
 # What's new for SQL Server 2017 on Linux

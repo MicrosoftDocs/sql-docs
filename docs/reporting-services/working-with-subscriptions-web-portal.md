@@ -1,14 +1,12 @@
 ---
-title: "Working with subscriptions (web portal) | Microsoft Docs"
-description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services. 
+title: "Working with subscriptions (web portal)"
+description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 01/24/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
-
 ms.topic: conceptual
-ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Working with subscriptions (web portal)

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_schema_model_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 ---
 # sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

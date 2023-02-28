@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2501"
 description: "MSSQLSERVER_2501"
-title: "MSSQLSERVER_2501 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2501 (Database Engine error)"
-ms.assetid: 895aafe3-a4e7-4ed8-acc5-93be76ef3664
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2501 (Database Engine error)"
 ---
 # MSSQLSERVER_2501
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

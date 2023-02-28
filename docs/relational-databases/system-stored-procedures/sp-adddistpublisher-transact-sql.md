@@ -1,22 +1,19 @@
 ---
+title: "sp_adddistpublisher (Transact-SQL)"
 description: "sp_adddistpublisher (Transact-SQL)"
-title: "sp_adddistpublisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/29/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_adddistpublisher"
-  - "sp_adddistpublisher_TSQL"
-helpviewer_keywords: 
-  - "sp_adddistpublisher"
-ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
+ms.date: "03/29/2021"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_adddistpublisher"
+  - "sp_adddistpublisher_TSQL"
+helpviewer_keywords:
+  - "sp_adddistpublisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_adddistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

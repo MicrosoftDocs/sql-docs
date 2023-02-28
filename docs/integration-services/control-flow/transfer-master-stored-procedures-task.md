@@ -1,21 +1,18 @@
 ---
+title: "Transfer Master Stored Procedures Task"
 description: "Transfer Master Stored Procedures Task"
-title: "Transfer Master Stored Procedures Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.transfermasterspstask.f1"
   - "sql13.dts.designer.transferstoredprocedurestask.general.f1"
   - "sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transfer Master Stored Procedures task [Integration Services]"
-ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-author: chugugrace
-ms.author: chugu
 ---
 # Transfer Master Stored Procedures Task
 

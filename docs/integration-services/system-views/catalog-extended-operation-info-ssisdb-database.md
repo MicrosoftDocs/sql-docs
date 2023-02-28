@@ -1,15 +1,12 @@
 ---
+title: "catalog.extended_operation_info (SSISDB Database)"
 description: "catalog.extended_operation_info (SSISDB Database)"
-title: "catalog.extended_operation_info (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.extended_operation_info (SSISDB Database)
 

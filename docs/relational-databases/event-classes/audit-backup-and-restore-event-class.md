@@ -1,17 +1,14 @@
 ---
+title: "Audit Backup and Restore Event Class"
 description: "Audit Backup and Restore Event Class"
-title: "Audit Backup and Restore Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Backup/Restore event class"
-ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Backup/Restore event class"
 ---
 # Audit Backup and Restore Event Class
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

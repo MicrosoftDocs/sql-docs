@@ -1,21 +1,18 @@
 ---
-title: "XQuery Expressions | Microsoft Docs"
+title: "XQuery Expressions"
 description: View information about XQuery expressions that includes descriptions of each type of expression and how to use them.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "08/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XQuery, expressions"
   - "expressions [XQuery]"
   - "expressions [XQuery], listed"
-ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # XQuery Expressions
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

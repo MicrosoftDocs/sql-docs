@@ -1,22 +1,20 @@
 ---
-description: "Assign Alerts to an Operator"
 title: "Assign Alerts to an Operator"
-ms.custom: seo-lt-2019
+description: "Assign Alerts to an Operator"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "SQL Server Agent jobs, operators"
   - "assigning alerts to operator"
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], assigning to operator"
   - "jobs [SQL Server Agent], operators"
   - "notifications [SQL Server], job status"
-ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Assign Alerts to an Operator

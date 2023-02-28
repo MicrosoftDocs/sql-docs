@@ -1,23 +1,20 @@
 ---
+title: "VIEW_COLUMN_USAGE (Transact-SQL)"
 description: "VIEW_COLUMN_USAGE (Transact-SQL)"
-title: "VIEW_COLUMN_USAGE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "VIEW_COLUMN_USAGE"
-  - "VIEW_COLUMN_USAGE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "INFORMATION_SCHEMA.VIEW_COLUMN_USAGE view"
-  - "VIEW_COLUMN_USAGE view"
-ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "VIEW_COLUMN_USAGE"
+  - "VIEW_COLUMN_USAGE_TSQL"
+helpviewer_keywords:
+  - "INFORMATION_SCHEMA.VIEW_COLUMN_USAGE view"
+  - "VIEW_COLUMN_USAGE view"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # VIEW_COLUMN_USAGE (Transact-SQL)

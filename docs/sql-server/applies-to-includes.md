@@ -1,13 +1,11 @@
 ---
 title: "SQL Server documentation include files"
 description: Explanation of SQL Server includes files for versioning and applies-to.
-ms.custom: ""
-ms.date: 01/19/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: release-landing
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 01/19/2019
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---

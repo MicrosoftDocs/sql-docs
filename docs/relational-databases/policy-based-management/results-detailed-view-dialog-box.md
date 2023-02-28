@@ -1,18 +1,15 @@
 ---
+title: "Results Detailed View Dialog Box"
 description: "Results Detailed View Dialog Box"
-title: "Results Detailed View Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.results.f1"
-  - "sql13.swb.dmf.policy.resultdetails.f1"
-ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.results.f1"
+  - "sql13.swb.dmf.policy.resultdetails.f1"
 ---
 # Results Detailed View Dialog Box
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_indexes (Transact-SQL)"
 description: "sp_indexes (Transact-SQL)"
-title: "sp_indexes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_indexes_TSQL"
-  - "sp_indexes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_indexes"
-ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_indexes_TSQL"
+  - "sp_indexes"
+helpviewer_keywords:
+  - "sp_indexes"
+dev_langs:
+  - "TSQL"
 ---
 # sp_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

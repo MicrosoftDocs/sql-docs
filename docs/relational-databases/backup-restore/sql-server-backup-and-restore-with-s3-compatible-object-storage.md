@@ -2,9 +2,7 @@
 description: "SQL Server backup and restore with S3-compatible object storage preview"
 title: "Backup & restore with S3-compatible object storage"
 storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 02/28/2023
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: backup-restore
@@ -63,8 +61,8 @@ The following table provides a non-exhaustive summary of object storage provider
 
 The S3 endpoint must have been configured as follows:
 
-- TLS has been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server will require the certificate for this scenario.
-- A user (Access Key ID) has been configured and the secret (Secret Key ID) for that user is known to you. You will need both to authenticate against the S3 endpoint.
+- TLS has been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server requires the certificate for this scenario.
+- A user (Access Key ID) has been configured and the secret (Secret Key ID) for that user is known to you. You need both to authenticate against the S3 endpoint.
 - At least one bucket has been configured. Buckets can't be created or configured inside [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Performance best practices
@@ -75,7 +73,7 @@ By using S3 parts in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you c
 
 ## Known issues and limitations
 
-Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files are not removed in case of failures. They may be created in the S3-compatible object store due to an ongoing multipart upload operation while the BACKUP T-SQL command is running. These uncommitted data blocks will continue to persist in the S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are removed automatically by the object store to form the final backup file. Some S3-providers will handle temporary file cleanup through their garbage collector system.
+Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files are not removed in case of failures. They may be created in the S3-compatible object store due to an ongoing multipart upload operation while the BACKUP T-SQL command is running. These uncommitted data blocks persist in the S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, the object store automatically removes these temporary files to form the final backup file. Some S3-providers handle temporary file cleanup through their garbage collector system.
 
 ## Next steps
 

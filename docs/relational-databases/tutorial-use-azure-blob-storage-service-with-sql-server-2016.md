@@ -3,10 +3,9 @@ title: "Tutorial: Use Azure Blob Storage with SQL Server"
 description: "Tutorial: Use Azure Blob Storage with SQL Server"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 01/24/2023
+ms.date: 02/28/2023
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # Tutorial: Use Azure Blob Storage with SQL Server
 
@@ -475,5 +474,5 @@ To delete the resource group, run the following powershell code:
 - [sys.credentials (Transact-SQL)](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
 - [sp_delete_backup (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)
 - [sys.fn_db_backup_file_snapshots (Transact-SQL)](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)
-- [sp_delete_backup_file_snapshot (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 
+- [sp_delete_backup_file_snapshot (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)
 - [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)

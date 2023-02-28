@@ -1,16 +1,13 @@
 ---
+title: "Installing the Microsoft Connector for SAP BW"
 description: "Installing the Microsoft Connector for SAP BW"
-title: "Installing the Microsoft Connector for SAP BW | Microsoft Docs"
-ms.custom:
-  - intro-installation
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: intro-installation
 ---
 # Installing the Microsoft Connector for SAP BW
 

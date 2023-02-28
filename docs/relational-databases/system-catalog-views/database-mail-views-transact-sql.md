@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "status information [SQL Server], Database Mail"
 dev_langs:
   - "TSQL"
-ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 ---
 # Database Mail Views (Transact-SQL)
 

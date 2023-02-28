@@ -7,7 +7,9 @@ ms.date: "09/25/2019"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019, FY22Q2Fresh
+ms.custom:
+  - seo-lt-2019
+  - FY22Q2Fresh
 helpviewer_keywords:
   - "BULK INSERT statement, importing data from a remote data file"
   - "bulk importing [SQL Server], methods"

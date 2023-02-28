@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_825"
 description: "MSSQLSERVER_825"
-title: "MSSQLSERVER_825 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "825 (Database Engine error)"
-ms.assetid: f69f8214-5af1-4769-878b-117ad6eaff52
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "825 (Database Engine error)"
 ---
 # MSSQLSERVER_825
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

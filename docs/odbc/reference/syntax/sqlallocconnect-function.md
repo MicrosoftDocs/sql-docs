@@ -1,24 +1,19 @@
 ---
+title: "SQLAllocConnect Function"
 description: "SQLAllocConnect Function"
-title: "SQLAllocConnect Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLAllocConnect"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLAllocConnect"
-helpviewer_keywords: 
-  - "SQLAllocConnect function [ODBC]"
-ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLAllocConnect"
+helpviewer_keywords:
+  - "SQLAllocConnect function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLAllocConnect"
+apitype: "dllExport"
 ---
 # SQLAllocConnect Function
 **Conformance**  

@@ -1,21 +1,20 @@
 ---
 title: "PolyBase errors and possible solutions"
 description: PolyBase reference for errors and suggested solutions.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 03/22/2021
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
-dev_langs: 
--  "TSQL"
--  "XML"
-f1_keywords: 
-   - "PolyBase, monitoring"
-   - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-   - "PolyBase, troubleshooting"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
+f1_keywords:
+  - "PolyBase, monitoring"
+  - "PolyBase, performance monitoring"
+helpviewer_keywords:
+  - "PolyBase, troubleshooting"
+dev_langs:
+  - "TSQL"
+  - "XML"
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # PolyBase errors and possible solutions

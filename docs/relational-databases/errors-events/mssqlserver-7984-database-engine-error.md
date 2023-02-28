@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7984"
 description: "MSSQLSERVER_7984"
-title: "MSSQLSERVER_7984 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7984 (Database Engine error)"
-ms.assetid: e3192f56-e4e2-41da-b132-65f1e7540b1a
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7984 (Database Engine error)"
 ---
 # MSSQLSERVER_7984
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

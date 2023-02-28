@@ -1,15 +1,12 @@
 ---
+title: "catalog.validations (SSISDB Database)"
 description: "catalog.validations (SSISDB Database)"
-title: "catalog.validations (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.validations (SSISDB Database)
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_apply_job_to_targets (Transact-SQL)"
 description: "sp_apply_job_to_targets (Transact-SQL)"
-title: "sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_apply_job_to_targets"
-  - "sp_apply_job_to_targets_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_apply_job_to_targets"
-ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_apply_job_to_targets"
+  - "sp_apply_job_to_targets_TSQL"
+helpviewer_keywords:
+  - "sp_apply_job_to_targets"
+dev_langs:
+  - "TSQL"
 ---
 # sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

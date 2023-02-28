@@ -1,18 +1,16 @@
 ---
-description: "You can view the foreign key attributes of a relationship with SQL Server Management Studio or T-SQL queries."
 title: "View Foreign Key Properties"
-ms.custom: ""
+description: "You can view the foreign key attributes of a relationship with SQL Server Management Studio or T-SQL queries."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/13/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "foreign keys [SQL Server], attributes"
   - "displaying foreign keys attributes"
   - "viewing foreign keys attributes"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View foreign key properties

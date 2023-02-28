@@ -1,15 +1,12 @@
 ---
-title: "Aggregate function in a paginated report | Microsoft Docs"
+title: "Aggregate function in a paginated report"
 description: The Aggregate Function returns a custom aggregate of a specified expression in a paginated report as the expression is defined by the data provider.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/15/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Builder functions - Aggregate function in a paginated report (Report Builder)
 

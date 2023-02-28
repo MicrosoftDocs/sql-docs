@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
 dev_langs:
   - "TSQL"
-ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 ---
 # sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

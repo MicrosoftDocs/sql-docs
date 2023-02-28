@@ -1,23 +1,20 @@
 ---
+title: "TABLE_PRIVILEGES (Transact-SQL)"
 description: "TABLE_PRIVILEGES (Transact-SQL)"
-title: "TABLE_PRIVILEGES (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "TABLE_PRIVILEGES_TSQL"
-  - "TABLE_PRIVILEGES"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "INFORMATION_SCHEMA.TABLE_PRIVILEGES view"
-  - "TABLE_PRIVILEGES view"
-ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "TABLE_PRIVILEGES_TSQL"
+  - "TABLE_PRIVILEGES"
+helpviewer_keywords:
+  - "INFORMATION_SCHEMA.TABLE_PRIVILEGES view"
+  - "TABLE_PRIVILEGES view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TABLE_PRIVILEGES (Transact-SQL)

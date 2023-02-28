@@ -1,20 +1,16 @@
 ---
+title: "Database Mail Messaging Objects"
 description: "Database Mail Messaging Objects"
-title: "Database Mail Messaging Objects | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Mail [SQL Server], host databases"
   - "Database Mail [SQL Server], messaging objects"
   - "mail host databases [SQL Server]"
   - "host databases [Database Mail]"
-ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Mail Messaging Objects
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

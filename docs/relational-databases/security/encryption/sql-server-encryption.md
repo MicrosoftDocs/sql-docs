@@ -1,19 +1,17 @@
 ---
-title: "SQL Server Encryption | Microsoft Docs"
+title: "SQL Server Encryption"
 description: Use these resources to understand how SQL Server uses encryption to enhance security for your databases.
-ms.custom: ""
+author: jaszymas
+ms.author: jaszymas
+ms.reviewer: vanto
 ms.date: "05/15/2017"
 ms.service: sql
-ms.reviewer: vanto
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], about encryption"
   - "security [SQL Server], encryption"
   - "cryptography [SQL Server], about cryptography"
-ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Encryption

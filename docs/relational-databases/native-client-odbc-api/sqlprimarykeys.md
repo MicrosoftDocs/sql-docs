@@ -1,18 +1,15 @@
 ---
+title: "SQLPrimaryKeys"
 description: "SQLPrimaryKeys"
-title: "SQLPrimaryKeys | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "SQLPrimaryKeys function"
-ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQLPrimaryKeys function"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLPrimaryKeys

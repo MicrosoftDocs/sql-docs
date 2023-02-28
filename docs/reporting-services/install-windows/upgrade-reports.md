@@ -1,12 +1,12 @@
 ---
+title: "Upgrade Reports"
 description: "Upgrade Reports (SSRS)"
-title: "Upgrade Reports | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/04/2018
 ms.service: reporting-services
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reports [Reporting Services], upgrading"
   - "published reports [Reporting Services], upgrades"
   - "custom report items, upgrading"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "snapshots [Reporting Services], upgrading"
   - "report definition files [Reporting Services]"
   - ".rdl files"
-ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Upgrade Reports (SSRS)

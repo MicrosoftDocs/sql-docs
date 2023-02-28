@@ -1,17 +1,14 @@
 ---
-title: "Remove an Instance of SQL Server from the SQL Server Utility | Microsoft Docs"
+title: "Remove an Instance of SQL Server from the SQL Server Utility"
 description: Learn how to remove an instance of SQL Server from the SQL Server Utility. You can run a PowerShell script or use SQL Server Management Studio for this task.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.utility.remove.f1"
-ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.utility.remove.f1"
 ---
 # Remove an Instance of SQL Server from the SQL Server Utility
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_fkeys (Transact-SQL)"
 description: "sp_fkeys (Transact-SQL)"
-title: "sp_fkeys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/08/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_fkeys"
-  - "sp_fkeys_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_fkeys"
-ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: markingmyname
 ms.author: maghan
+ms.date: "09/08/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_fkeys"
+  - "sp_fkeys_TSQL"
+helpviewer_keywords:
+  - "sp_fkeys"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fkeys (Transact-SQL)

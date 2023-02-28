@@ -1,16 +1,13 @@
 ---
+title: "Enabling Logging Programmatically"
 description: "Enabling Logging Programmatically"
-title: "Enabling Logging Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services 
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services packages, logs"
   - "SSIS packages, logs"
   - "Integration Services packages, logs"
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "LoggingMode property"
   - "LogProvider object"
   - "packages [Integration Services], logs"
-ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Enabling Logging Programmatically
 

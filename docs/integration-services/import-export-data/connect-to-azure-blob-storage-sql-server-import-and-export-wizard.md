@@ -1,15 +1,12 @@
 ---
+title: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard)"
 description: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard)"
-title: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
+ms.date: "02/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Connect to Azure Blob Storage (SQL Server Import and Export Wizard)
 

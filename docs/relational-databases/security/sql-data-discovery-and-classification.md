@@ -1,15 +1,13 @@
 ---
-title: SQL Data Discovery & Classification | Microsoft Docs
+title: SQL Data Discovery & Classification
 description: SQL Data Discovery & Classification
-documentationcenter: ''
-ms.reviewer: vanto
-ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
-ms.service: sql-database
-ms.custom: security
-ms.topic: conceptual
-ms.date: 03/09/2022
-ms.author: matripathy
 author: Madhumitatripathy
+ms.author: matripathy
+ms.reviewer: vanto
+ms.date: 03/09/2022
+ms.service: sql-database
+ms.topic: conceptual
+ms.custom: security
 ---
 # SQL Data Discovery and Classification
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

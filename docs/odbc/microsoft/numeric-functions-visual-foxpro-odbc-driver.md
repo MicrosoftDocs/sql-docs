@@ -1,20 +1,17 @@
 ---
+title: "Numeric Functions (Visual FoxPro ODBC Driver)"
 description: "Numeric Functions (Visual FoxPro ODBC Driver)"
-title: "Numeric Functions (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC numeric functions [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], numeric functions"
   - "numeric functions [ODBC]"
   - "FoxPro ODBC driver [ODBC], numeric functions"
-ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Numeric Functions (Visual FoxPro ODBC Driver)
 The following table describes ODBC numeric functions supported by the Visual FoxPro ODBC Driver; when the Visual FoxPro grammar for the same function differs from the ODBC syntax, the Visual FoxPro equivalent is listed.  

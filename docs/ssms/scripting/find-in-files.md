@@ -1,17 +1,15 @@
 ---
 title: "Find in Files"
-description: Learn how to search for a string or expression in a specified set of files, and how to specify the location of the search results. 
-ms.custom: seo-lt-2019
+description: Learn how to search for a string or expression in a specified set of files, and how to specify the location of the search results.
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Find in Files dialog box"
-ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find in Files

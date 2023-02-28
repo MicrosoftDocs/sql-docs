@@ -1,26 +1,23 @@
 ---
+title: "Message Queue Task"
 description: "Message Queue Task"
-title: "Message Queue Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.messagequeuetask.f1"
   - "sql13.dts.designer.msgqueuetask.general.f1"
   - "sql13.dts.designer.msgqueuetask.send.f1"
   - "sql13.dts.designer.msgqueuetask.receive.f1"
   - "sql13.dts.designer.selectvariables.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Message Queue task [Integration Services]"
   - "receiving messages"
   - "messages [Integration Services]"
   - "sending messages"
-ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: chugugrace
-ms.author: chugu
 ---
 # Message Queue Task
 

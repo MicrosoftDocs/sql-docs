@@ -1,17 +1,14 @@
 ---
+title: "Create a New Policy-Based Management Condition"
 description: "Create a New Policy-Based Management Condition"
-title: "Create a New Policy-Based Management Condition | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, creating policy conditions"
-ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, creating policy conditions"
 ---
 # Create a New Policy-Based Management Condition
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

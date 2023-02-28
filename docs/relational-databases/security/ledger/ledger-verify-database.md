@@ -1,14 +1,13 @@
 ---
 title: Verify a ledger table to detect tampering
 description: This article discusses how to verify if a table was tampered with.
-ms.service: sql-database
-ms.subservice: security
-ms.devlang:
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
 ms.date: "05/24/2022"
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 

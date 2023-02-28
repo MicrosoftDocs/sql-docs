@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_845"
 description: "MSSQLSERVER_845"
-title: "MSSQLSERVER_845 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "845 (Database Engine error)"
-ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "845 (Database Engine error)"
 ---
 # MSSQLSERVER_845
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

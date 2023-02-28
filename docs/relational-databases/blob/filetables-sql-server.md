@@ -1,20 +1,17 @@
 ---
-title: "FileTables (SQL Server) | Microsoft Docs"
+title: "FileTables (SQL Server)"
 description: Explore the benefits and functionality of FileTables, the SQL Server feature that uses a directory structure to store files. Learn how to work with FileTables.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/27/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: filestream
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FileTables [SQL Server], overview"
   - "FileTables [SQL Server]"
   - "FileTable [SQL Server], see FileTables [SQL Server]"
   - "FileTable [SQL Server]"
-ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # FileTables (SQL Server)
 

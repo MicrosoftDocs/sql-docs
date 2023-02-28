@@ -1,17 +1,14 @@
 ---
-title: "Device Contents (SQL Server) | Microsoft Docs"
+title: "Device Contents (SQL Server)"
 description: In SQL Server, use the Device Contents dialog box to view the backup information describing the device, the media, the media set, and the backup set or sets.
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.bnrdevicecontents.f1"
-ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.bnrdevicecontents.f1"
 ---
 # Device Contents (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

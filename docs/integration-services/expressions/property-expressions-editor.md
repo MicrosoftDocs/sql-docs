@@ -1,19 +1,16 @@
 ---
+title: "Property Expressions Editor"
 description: "Property Expressions Editor"
-title: "Property Expressions Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.propertyexpressionseditor.f1"
-helpviewer_keywords: 
-  - "Property Expressions Editor dialog box"
-ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.propertyexpressionseditor.f1"
+helpviewer_keywords:
+  - "Property Expressions Editor dialog box"
 ---
 # Property Expressions Editor
 

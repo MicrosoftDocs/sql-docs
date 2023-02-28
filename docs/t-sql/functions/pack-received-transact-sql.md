@@ -3,12 +3,10 @@ title: "@@PACK_RECEIVED (Transact-SQL)"
 description: "@@PACK_RECEIVED (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@PACK_RECEIVED_TSQL"
   - "@@PACK_RECEIVED"

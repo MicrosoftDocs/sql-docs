@@ -1,17 +1,14 @@
 ---
+title: "Bitmap Warning Event Class"
 description: "Bitmap Warning Event Class"
-title: "Bitmap Warning Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Bitmap Warning event class"
-ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Bitmap Warning event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bitmap Warning Event Class

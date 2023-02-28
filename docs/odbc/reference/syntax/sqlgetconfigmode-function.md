@@ -1,24 +1,19 @@
 ---
+title: "SQLGetConfigMode Function"
 description: "SQLGetConfigMode Function"
-title: "SQLGetConfigMode Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetConfigMode"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetConfigMode"
-helpviewer_keywords: 
-  - "SQLGetConfigMode function [ODBC]"
-ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetConfigMode"
+helpviewer_keywords:
+  - "SQLGetConfigMode function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetConfigMode"
+apitype: "dllExport"
 ---
 # SQLGetConfigMode Function
 **Conformance**  

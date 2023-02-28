@@ -1,13 +1,13 @@
 ---
-title: "Enhance Transactional Replication Performance | Microsoft Docs"
+title: "Enhance Transactional Replication Performance"
 description: In addition to general performance tips to enhance replication performance in SQL Server, learn about additional techniques for transactional replication.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "publications [SQL Server replication], design and performance"
   - "performance [SQL Server replication], transactional replication"
   - "designing databases [SQL Server], replication performance"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "Distribution Agent, performance"
   - "transactional replication, performance"
   - "Log Reader Agent, performance"
-ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Enhance Transactional Replication Performance

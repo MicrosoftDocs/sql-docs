@@ -1,24 +1,21 @@
 ---
+title: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)"
 description: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)"
-title: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/14/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_hadr_distributed_ag_database_replica"
   - "sys.fn_hadr_distributed_ag_database_replica_TSQL"
   - "fn_hadr_distributed_ag_database_replica"
   - "fn_hadr_distributed_ag_database_replica_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.fn_hadr_distributed_ag_database_replica"
-ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

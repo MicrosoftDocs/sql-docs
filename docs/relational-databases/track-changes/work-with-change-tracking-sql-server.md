@@ -1,12 +1,13 @@
 ---
-description: "Work with Change Tracking (SQL Server)"
 title: "Work with Change Tracking"
-ms.custom: seo-dt-2019
+description: "Work with Change Tracking (SQL Server)"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/06/2022
 ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice:
 ms.topic: conceptual
+ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "change tracking [SQL Server], making changes"
   - "change tracking [SQL Server], troubleshooting"
@@ -18,8 +19,6 @@ helpviewer_keywords:
   - "change tracking [SQL Server], data restore"
   - "change tracking [SQL Server], ensuring consistent results"
   - "change tracking [SQL Server], handling changes"
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Work with change tracking (SQL Server)

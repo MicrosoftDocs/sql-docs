@@ -1,17 +1,14 @@
 ---
+title: "TM: Commit Tran Completed Event Class"
 description: "TM: Commit Tran Completed Event Class"
-title: "TM: Commit Tran Completed Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "TM: Commit Tran Completed event class"
-ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "TM: Commit Tran Completed event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Commit Tran Completed Event Class

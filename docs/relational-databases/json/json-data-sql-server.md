@@ -1,19 +1,20 @@
 ---
 title: "Work with JSON data"
 description: "JSON data in SQL Server"
-ms.service: sql
-ms.subservice: 
-ms.topic: quickstart
-helpviewer_keywords:
-  - "JSON"
-  - "JSON, built-in support"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019, intro-quickstart, FY22Q2Fresh
 ms.date: 10/21/2021
+ms.service: sql
+ms.topic: quickstart
+ms.custom:
+  - seo-dt-2019
+  - intro-quickstart
+  - FY22Q2Fresh
+helpviewer_keywords:
+  - "JSON"
+  - "JSON, built-in support"
 monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-adobe-target: true
 ---
 
 # JSON data in SQL Server

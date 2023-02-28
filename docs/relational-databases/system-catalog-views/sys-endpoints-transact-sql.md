@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.endpoints catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 ---
 # sys.endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

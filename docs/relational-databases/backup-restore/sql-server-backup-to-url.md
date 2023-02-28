@@ -1,15 +1,13 @@
 ---
 title: "SQL Server Backup to URL for Microsoft Azure Blob Storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the Microsoft Azure Blob Storage as a backup destination.
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/09/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/09/2022
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 ---
 
 # SQL Server backup to URL for Microsoft Azure Blob Storage

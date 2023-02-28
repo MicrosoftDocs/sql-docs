@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_xml_handles dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_xml_handles (Transact-SQL)

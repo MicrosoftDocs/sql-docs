@@ -1,13 +1,13 @@
 ---
-title: "Display the Estimated Execution Plan | Microsoft Docs"
+title: "Display the Estimated Execution Plan"
 description: Learn how to generate graphical estimated execution plans by using SQL Server Management Studio. An estimated execution plan contains no runtime information.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/21/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "zoom [SQL Server]"
   - "estimated execution plan [SQL Server]"
   - "displaying execution plans"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "customizing execution plan display [SQL Server]"
   - "modifying execution plan display"
   - "custom zoom [SQL Server]"
-ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Display the Estimated Execution Plan

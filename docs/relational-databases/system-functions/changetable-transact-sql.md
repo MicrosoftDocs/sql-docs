@@ -1,23 +1,20 @@
 ---
+title: "CHANGETABLE (Transact-SQL)"
 description: "CHANGETABLE (Transact-SQL)"
-title: "CHANGETABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/12/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "CHANGETABLE_TSQL"
-  - "CHANGETABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CHANGETABLE"
-  - "change tracking [SQL Server], CHANGETABLE"
-ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "02/12/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "CHANGETABLE_TSQL"
+  - "CHANGETABLE"
+helpviewer_keywords:
+  - "CHANGETABLE"
+  - "change tracking [SQL Server], CHANGETABLE"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGETABLE (Transact-SQL)

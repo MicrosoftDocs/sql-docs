@@ -1,26 +1,23 @@
 ---
+title: "sys.sp_cdc_help_change_data_capture (Transact-SQL)"
 description: "sys.sp_cdc_help_change_data_capture (Transact-SQL)"
-title: "sys.sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cdc_help_change_data_capture_TSQL"
   - "sys.sp_cdc_help_change_data_capture_TSQL"
   - "sp_cdc_help_change_data_capture"
   - "sys.sp_cdc_help_change_data_capture"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change data capture [SQL Server], querying metadata"
   - "sys.sp_cdc_help_change_data_capture"
   - "sp_cdc_help_change_data_capture"
-ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

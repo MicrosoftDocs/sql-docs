@@ -1,17 +1,14 @@
 ---
+title: "Finish the Slowly Changing Dimension Wizard"
 description: "Finish the Slowly Changing Dimension Wizard"
-title: "Finish the Slowly Changing Dimension Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.finish.f1"
-ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.loaddimwizard.finish.f1"
 ---
 # Finish the Slowly Changing Dimension Wizard
 

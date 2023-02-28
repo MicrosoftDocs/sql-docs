@@ -1,22 +1,19 @@
 ---
+title: "sp_fulltext_column (Transact-SQL)"
 description: "sp_fulltext_column (Transact-SQL)"
-title: "sp_fulltext_column (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_fulltext_column_TSQL"
-  - "sp_fulltext_column"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_fulltext_column"
-ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_fulltext_column_TSQL"
+  - "sp_fulltext_column"
+helpviewer_keywords:
+  - "sp_fulltext_column"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_column (Transact-SQL)

@@ -1,18 +1,15 @@
 ---
+title: "Divide (SSIS Expression)"
 description: "Divide (SSIS Expression)"
-title: "Divide (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "/ (divide)"
-  - "divide operator (/)"
-ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "/ (divide)"
+  - "divide operator (/)"
 ---
 # Divide (SSIS Expression)
 

@@ -1,20 +1,16 @@
 ---
+title: "Resource Database"
 description: "Resource Database"
-title: "Resource Database | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system objects [SQL Server]"
   - "read-only databases"
   - "mssqlsystemresource.mdf file"
   - "Resource database [SQL Server]"
-ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Resource Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

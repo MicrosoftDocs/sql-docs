@@ -1,22 +1,20 @@
 ---
-description: "Firewall Rules Stored Procedures (Azure SQL Database)"
 title: "Firewall Rules Stored Procedures"
 titleSuffix: Azure SQL Database
+description: "Firewall Rules Stored Procedures (Azure SQL Database)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/28/2016"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "firewall rules stored procedures"
   - "firewall_rules, setting"
   - "firewall_rules, Azure SQL Database"
   - "firewall systems, Azure SQL Database"
-ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
-author: VanMSFT
-ms.author: vanto
-ms.custom: seo-dt-2019
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Firewall Rules Stored Procedures (Azure SQL Database)

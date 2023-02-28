@@ -1,13 +1,13 @@
 ---
-title: "Formatting axis labels on a paginated report chart | Microsoft Docs"
+title: "Formatting axis labels on a paginated report chart"
 description: Learn how to format axis labels on a paginated report chart using a dialog box or by using the properties pane to categorize and display relationships in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1"
   - "sql13.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1"
   - "10148"
@@ -22,11 +22,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.axisproperties.labelfont.f1"
   - "sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1"
   - "10141"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "10140"
-ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Formatting axis labels on a paginated report chart (Report Builder)
 

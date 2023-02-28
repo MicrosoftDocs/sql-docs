@@ -1,20 +1,17 @@
 ---
-title: "View Statistics Properties | Microsoft Docs"
+title: "View Statistics Properties"
 description: Learn how to display current query optimization statistics for a table or indexed view in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.statistics.details.f1"
-helpviewer_keywords: 
-  - "viewing statistics properties"
-  - "statistics [SQL Server], viewing properties"
-ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.statistics.details.f1"
+helpviewer_keywords:
+  - "viewing statistics properties"
+  - "statistics [SQL Server], viewing properties"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Statistics Properties

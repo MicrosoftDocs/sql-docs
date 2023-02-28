@@ -7,14 +7,13 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "queries [SQLXML], SQLXML Managed Classes"
   - "SQLXML Managed Classes, executing SQL queries"
   - "Managed Classes [SQLXML], executing SQL queries"
   - "ExecuteXmlReader method"
   - "SQL queries [SQLXML]"
-ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries by Using the ExecuteXMLReader Method

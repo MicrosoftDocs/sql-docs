@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "MSmerge_conflict_publication_article system table"
 dev_langs:
   - "TSQL"
-ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 ---
 # MSmerge_conflict_publication_article (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

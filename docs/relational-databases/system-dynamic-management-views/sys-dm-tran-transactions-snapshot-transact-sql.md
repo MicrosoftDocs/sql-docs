@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_tran_transactions_snapshot dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_transactions_snapshot (Transact-SQL)

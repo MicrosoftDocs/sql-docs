@@ -1,15 +1,15 @@
 ---
-description: "View All Annotations or Transactions for a Member (MDS Add-in for Excel)"
 title: View Annotations or Transactions
-ms.custom: microsoft-excel-add-in, seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
+description: "View All Annotations or Transactions for a Member (MDS Add-in for Excel)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom:
+  - microsoft-excel-add-in
+  - seo-lt-2019
 ---
 # View All Annotations or Transactions for a Member (MDS Add-in for Excel)
 

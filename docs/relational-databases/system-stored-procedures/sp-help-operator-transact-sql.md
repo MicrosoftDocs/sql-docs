@@ -1,22 +1,19 @@
 ---
+title: "sp_help_operator (Transact-SQL)"
 description: "sp_help_operator (Transact-SQL)"
-title: "sp_help_operator (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_operator"
-  - "sp_help_operator_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_operator"
-ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: markingmyname
 ms.author: maghan
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_operator"
+  - "sp_help_operator_TSQL"
+helpviewer_keywords:
+  - "sp_help_operator"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

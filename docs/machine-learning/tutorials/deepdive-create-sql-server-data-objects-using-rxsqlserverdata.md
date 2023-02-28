@@ -1,13 +1,12 @@
 ---
 title: Create RxSqlServerData objects
 description: "Learn how to use RevoScaleR functions with SQL Server. This tutorial is a continuation of database creation: adding tables and loading data."
-ms.service: sql
-ms.subservice: machine-learning-services
-
-ms.date: 11/26/2018  
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 11/26/2018
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: tutorial
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---

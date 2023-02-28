@@ -4,11 +4,10 @@ description: This article highlights what's new for SQL Server 2019 on Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/22/2021
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.custom:
-  - intro-whats-new
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
 
 # What's new for SQL Server 2019 on Linux

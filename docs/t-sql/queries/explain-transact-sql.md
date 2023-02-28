@@ -1,14 +1,13 @@
 ---
-description: "EXPLAIN returns the query plan for a Microsoft Azure Synapse Analytics SQL statement without running the statement."
 title: "EXPLAIN (Transact-SQL)"
-ms.custom: ""
-ms.date: 07/25/2022
-ms.service: sql
-ms.reviewer: wiassaf
-ms.subservice: data-warehouse
-ms.topic: conceptual
+description: "EXPLAIN returns the query plan for a Microsoft Azure Synapse Analytics SQL statement without running the statement."
 author: mstehrani
 ms.author: emtehran
+ms.reviewer: wiassaf
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 monikerRange: "= azure-sqldw-latest"
 ---
 # EXPLAIN (Transact-SQL) 

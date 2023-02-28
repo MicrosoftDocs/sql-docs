@@ -1,19 +1,14 @@
 ---
+title: "Global Settings (Logging) (OracleToSQL)"
 description: "Global Settings (Logging) (OracleToSQL)"
-title: "Global Settings (Logging) (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.oracle.globalsettinglogging.f1"
-
-
 ---
 # Global Settings (Logging) (OracleToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  

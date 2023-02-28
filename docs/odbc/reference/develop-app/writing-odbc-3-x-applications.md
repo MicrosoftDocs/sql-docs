@@ -1,13 +1,13 @@
 ---
+title: "Writing ODBC 3.x Applications"
 description: "Writing ODBC 3.x Applications"
-title: "Writing ODBC 3.x Applications | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "application upgrades [ODBC], about upgrading"
   - "ODBC drivers [ODBC], backward compatibility"
   - "upgrading applications [ODBC]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "application upgrades [ODBC]"
   - "upgrading applications [ODBC], about upgrading"
   - "backward compatibility [ODBC], upgrading applications"
-ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Writing ODBC 3.x Applications
 When an ODBC *2.x* application is upgraded to ODBC *3.x*, it should be written such that it works with both ODBC *2.x* and *3.x* drivers. The application should incorporate conditional code to take full advantage of the ODBC *3.x* features.  

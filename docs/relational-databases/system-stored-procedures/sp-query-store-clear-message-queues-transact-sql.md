@@ -1,24 +1,21 @@
 ---
-description: "sp_query_store_clear_message_queues (Transact-SQL)"
 title: "sp_query_store_clear_message_queues (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "04/26/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_query_store_clear_message_queues_TSQL"
-  - "sp_query_store_clear_message_queues"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_query_store_clear_message_queues"
-  - "sys.sp_query_store_clear_message_queues"
-ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
+description: "sp_query_store_clear_message_queues (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.date: "04/26/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+ms.custom: event-tier1-build-2022
+f1_keywords:
+  - "sp_query_store_clear_message_queues_TSQL"
+  - "sp_query_store_clear_message_queues"
+helpviewer_keywords:
+  - "sp_query_store_clear_message_queues"
+  - "sys.sp_query_store_clear_message_queues"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_clear_message_queues (Transact-SQL)

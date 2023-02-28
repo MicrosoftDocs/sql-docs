@@ -1,21 +1,17 @@
 ---
-description: "Managing Services and Network Settings by Using WMI Provider"
 title: "Managing Services and Network Settings by Using WMI Provider"
-ms.custom: seo-dt-2019
+description: "Managing Services and Network Settings by Using WMI Provider"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "WMI provider [SMO]"
   - "services [SQL Server], SMO"
   - "network settings [SMO]"
   - "monitoring [SMO]"
-ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Services and Network Settings by Using WMI Provider

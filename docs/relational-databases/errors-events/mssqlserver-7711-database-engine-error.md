@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7711"
 description: "MSSQLSERVER_7711"
-title: "MSSQLSERVER_7711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7711 (Database Engine error)"
-ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7711 (Database Engine error)"
 ---
 # MSSQLSERVER_7711
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

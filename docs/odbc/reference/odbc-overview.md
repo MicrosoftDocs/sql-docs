@@ -1,18 +1,15 @@
 ---
+title: "ODBC Overview"
 description: "ODBC Overview"
-title: "ODBC Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC [ODBC]"
-  - "ODBC [ODBC], about ODBC"
-ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC [ODBC]"
+  - "ODBC [ODBC], about ODBC"
 ---
 # ODBC Overview
 Open Database Connectivity (ODBC) is a widely accepted application programming interface (API) for database access. It is based on the Call-Level Interface (CLI) specifications from Open Group and ISO/IEC for database APIs and uses Structured Query Language (SQL) as its database access language.  

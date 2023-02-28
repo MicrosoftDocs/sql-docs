@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_5180"
 title: MSSQLSERVER_5180
-ms.custom: ""
-ms.date: 08/20/2020
-ms.service: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5180 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_5180"
 author: rgward
 ms.author: ramakoni
+ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
+ms.date: 08/20/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5180 (Database Engine error)"
 ---
 # MSSQLSERVER_5180
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

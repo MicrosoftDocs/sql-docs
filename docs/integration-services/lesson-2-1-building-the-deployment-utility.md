@@ -1,15 +1,12 @@
 ---
+title: "Step 1: Building the Deployment Utility"
 description: "Lesson 2-1 - Building the Deployment Utility"
-title: "Step 1: Building the Deployment Utility | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Lesson 2-1 - Building the Deployment Utility
 

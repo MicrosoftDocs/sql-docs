@@ -1,14 +1,12 @@
 ---
-description: "Microsoft Distributed Transaction Coordinator (MSDTC) Stored Procedures (Transact-SQL)"
 title: "MSDTC Stored Procedures (Transact-SQL)"
-ms.custom: ""
-ms.date: "02/24/2023"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
+description: "Microsoft Distributed Transaction Coordinator (MSDTC) Stored Procedures (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
 ---
 # MSDTC Stored Procedures (Transact-SQL)
 

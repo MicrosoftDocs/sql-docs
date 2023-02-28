@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSrepl_queuedtraninfo system table"
 dev_langs:
   - "TSQL"
-ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 ---
 # MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

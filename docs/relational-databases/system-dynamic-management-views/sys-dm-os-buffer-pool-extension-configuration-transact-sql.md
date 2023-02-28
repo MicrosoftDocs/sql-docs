@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_buffer_pool_extension_configuration dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 ---
 # sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 

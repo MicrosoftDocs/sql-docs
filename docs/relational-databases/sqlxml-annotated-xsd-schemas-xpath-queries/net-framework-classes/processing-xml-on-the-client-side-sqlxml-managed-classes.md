@@ -7,14 +7,13 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "processing XML on client side [SQLXML]"
   - "client-side XML formatting"
   - "Managed Classes [SQLXML], client-side XML formatting"
   - "SQLXML Managed Classes, client-side XML formatting"
   - "ClientSideXml property"
-ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)

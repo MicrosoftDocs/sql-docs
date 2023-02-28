@@ -1,22 +1,19 @@
 ---
+title: "sp_stop_job (Transact-SQL)"
 description: "sp_stop_job (Transact-SQL)"
-title: "sp_stop_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_stop_job_TSQL"
-  - "sp_stop_job"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_stop_job"
-ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: markingmyname
 ms.author: maghan
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_stop_job_TSQL"
+  - "sp_stop_job"
+helpviewer_keywords:
+  - "sp_stop_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

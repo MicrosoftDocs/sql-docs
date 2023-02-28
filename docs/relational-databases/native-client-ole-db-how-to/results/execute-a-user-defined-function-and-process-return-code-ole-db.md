@@ -1,17 +1,14 @@
 ---
-description: "Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)"
 title: "User-Defined Function, Return Code (OLE DB)"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "user-defined functions [OLE DB]"
-ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
+description: "Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "user-defined functions [OLE DB]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)

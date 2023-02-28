@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "syscategories system table"
 dev_langs:
   - "TSQL"
-ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 ---
 # dbo.syscategories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.system_columns catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.system_columns (Transact-SQL)

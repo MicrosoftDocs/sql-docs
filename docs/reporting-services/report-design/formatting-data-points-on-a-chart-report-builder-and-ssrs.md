@@ -1,18 +1,15 @@
 ---
-title: "Formatting data points on a paginated report chart | Microsoft Docs"
-description: Find out about different types of formatting of data points on charts in your paginated reports in Report Builder. 
+title: "Formatting data points on a paginated report chart"
+description: Find out about different types of formatting of data points on charts in your paginated reports in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "10248"
   - "sql13.rtp.rptdesigner.serieslabelproperties.general.f1"
-ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Formatting data points on a paginated report chart (Report Builder)
 

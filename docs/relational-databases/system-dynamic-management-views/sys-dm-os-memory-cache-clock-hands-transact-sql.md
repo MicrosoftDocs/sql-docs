@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_memory_cache_clock_hands dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_memory_cache_clock_hands (Transact-SQL)

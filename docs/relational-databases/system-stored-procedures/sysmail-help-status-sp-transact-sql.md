@@ -1,22 +1,19 @@
 ---
+title: "sysmail_help_status_sp (Transact-SQL)"
 description: "sysmail_help_status_sp (Transact-SQL)"
-title: "sysmail_help_status_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_help_status_sp"
-  - "sysmail_help_status_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_help_status_sp"
-ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_help_status_sp"
+  - "sysmail_help_status_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_help_status_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

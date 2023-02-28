@@ -1,12 +1,12 @@
 ---
 title: Common R script errors
 description: This article documents several common scripting errors you might encounter when running R scripts in SQL Server Machine Learning Services.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 03/31/2021
-ms.topic: troubleshooting
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 03/31/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: troubleshooting
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---

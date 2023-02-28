@@ -1,20 +1,19 @@
 ---
 title: SSMS Utility
 description: "SSMS Utility"
+author: markingmyname
+ms.author: maghan
+ms.date: 07/24/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], opening"
   - "command prompt utilities [SQL Server], sqlwb"
   - "sqlwb utility"
   - "Management Studio command line"
   - "opening SQL Server Management Studio"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 07/24/2020
 ---
 
 # SSMS Utility

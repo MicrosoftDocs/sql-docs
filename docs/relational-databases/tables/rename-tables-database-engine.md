@@ -1,19 +1,17 @@
 ---
 title: Rename Tables (Database Engine)
 description: "Rename Tables (Database Engine)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "07/08/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table renaming [SQL Server]"
   - "table names [SQL Server]"
   - "tables [SQL Server], Visual Database Tools"
   - "renaming tables"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: ""
-ms.date: "07/08/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_create_plan_guide_from_handle (Transact-SQL)"
 description: "sp_create_plan_guide_from_handle (Transact-SQL)"
-title: "sp_create_plan_guide_from_handle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_create_plan_guide_from_handle_TSQL"
-  - "sp_create_plan_guide_from_handle"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_create_plan_guide_from_handle"
-ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_create_plan_guide_from_handle_TSQL"
+  - "sp_create_plan_guide_from_handle"
+helpviewer_keywords:
+  - "sp_create_plan_guide_from_handle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

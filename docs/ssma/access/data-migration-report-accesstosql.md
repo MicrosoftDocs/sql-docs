@@ -1,18 +1,14 @@
 ---
+title: "Data Migration Report (AccessToSQL)"
 description: "Data Migration Report (AccessToSQL)"
-title: "Data Migration Report (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.access.datamigrationreport.f1"
-
 ---
 # Data Migration Report (AccessToSQL)
 The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

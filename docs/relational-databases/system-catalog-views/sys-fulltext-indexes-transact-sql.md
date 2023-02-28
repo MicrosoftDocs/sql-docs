@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], properties"
 dev_langs:
   - "TSQL"
-ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_indexes (Transact-SQL)

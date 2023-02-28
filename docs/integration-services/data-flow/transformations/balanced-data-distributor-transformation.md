@@ -1,17 +1,14 @@
 ---
+title: "Balanced Data Distributor Transformation"
 description: "Balanced Data Distributor Transformation"
-title: "Balanced Data Distributor Transformation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.balanceddatadistributor.f1"
-ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.balanceddatadistributor.f1"
 ---
 # Balanced Data Distributor Transformation
 

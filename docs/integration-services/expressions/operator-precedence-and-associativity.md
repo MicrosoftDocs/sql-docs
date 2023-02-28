@@ -1,18 +1,15 @@
 ---
+title: "Operator Precedence and Associativity"
 description: "Operator Precedence and Associativity"
-title: "Operator Precedence and Associativity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "associativity [Integration Services]"
-  - "precedence [Integration Services]"
-ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "associativity [Integration Services]"
+  - "precedence [Integration Services]"
 ---
 # Operator Precedence and Associativity
 

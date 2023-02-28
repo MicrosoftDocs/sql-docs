@@ -1,16 +1,16 @@
 ---
 title: "Always Encrypted with secure enclaves"
-description: Learn about the Always Encrypted with secure enclaves feature for SQL Server. 
-ms.custom:
-- seo-lt-2019
-- event-tier1-build-2022
-ms.date: 02/15/2023
-ms.service: sql
-ms.reviewer: "vanto"
-ms.subservice: security
-ms.topic: conceptual
+description: Learn about the Always Encrypted with secure enclaves feature for SQL Server.
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: "vanto"
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+ms.custom:
+  - seo-lt-2019
+  - event-tier1-build-2022
 ---
 # Always Encrypted with secure enclaves
 

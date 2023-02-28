@@ -1,22 +1,19 @@
 ---
+title: "sp_setnetname (Transact-SQL)"
 description: "sp_setnetname (Transact-SQL)"
-title: "sp_setnetname (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_setnetname"
-  - "sp_setnetname_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_setnetname"
-ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_setnetname"
+  - "sp_setnetname_TSQL"
+helpviewer_keywords:
+  - "sp_setnetname"
+dev_langs:
+  - "TSQL"
 ---
 # sp_setnetname (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

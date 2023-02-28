@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.linked_logins catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 ---
 # sys.linked_logins (Transact-SQL)
 [!INCLUDE[SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

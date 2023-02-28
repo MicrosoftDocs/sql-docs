@@ -1,17 +1,14 @@
 ---
+title: "Audit Schema Object Management Event Class"
 description: "Audit Schema Object Management Event Class"
-title: "Audit Schema Object Management Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Schema Object Management event class"
-ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Schema Object Management event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Schema Object Management Event Class

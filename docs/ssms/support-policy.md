@@ -1,16 +1,14 @@
 ---
-description: "SQL Server Management Studio (SSMS) Support Policy"
 title: "SQL Server Management Studio (SSMS) Support Policy"
+description: "SQL Server Management Studio (SSMS) Support Policy"
+author: "dzsquared"
+ms.author: "drskwier"
 ms.date: "11/13/2018"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio"
-ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-author: "dzsquared"
-ms.author: "drskwier"
 ---
 # SQL Server Management Studio (SSMS) Support Policy
 

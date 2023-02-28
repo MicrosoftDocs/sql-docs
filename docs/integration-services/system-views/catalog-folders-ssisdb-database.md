@@ -1,15 +1,12 @@
 ---
+title: "catalog.folders (SSISDB Database)"
 description: "catalog.folders (SSISDB Database)"
-title: "catalog.folders (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.folders (SSISDB Database)
 

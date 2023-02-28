@@ -1,16 +1,15 @@
 ---
-description: "Set or Change the Server Collation"
 title: "Set or Change the Server Collation"
-ms.custom: FY22Q2Fresh
-ms.date: "10/21/2021"
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "server collations [SQL Server]"
-  - "collations [SQL Server], server"
+description: "Set or Change the Server Collation"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "10/21/2021"
+ms.service: sql
+ms.topic: conceptual
+ms.custom: FY22Q2Fresh
+helpviewer_keywords:
+  - "server collations [SQL Server]"
+  - "collations [SQL Server], server"
 ---
 # Set or change the server collation
 

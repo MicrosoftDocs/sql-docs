@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_principals catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_principals (Transact-SQL)

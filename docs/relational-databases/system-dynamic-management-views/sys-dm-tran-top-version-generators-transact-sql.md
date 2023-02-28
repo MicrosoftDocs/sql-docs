@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_tran_top_version_generators dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_top_version_generators (Transact-SQL)

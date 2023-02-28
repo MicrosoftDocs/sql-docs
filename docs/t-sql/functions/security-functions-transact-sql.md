@@ -3,12 +3,10 @@ title: "Security Functions (Transact-SQL)"
 description: "Security Functions (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "functions [SQL Server], security"
   - "security functions"

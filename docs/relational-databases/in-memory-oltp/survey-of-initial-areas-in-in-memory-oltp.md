@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
-ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Survey of Initial Areas in In-Memory OLTP

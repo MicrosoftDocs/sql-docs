@@ -1,15 +1,12 @@
 ---
-title: "Use of SQL Server features and capabilities | Microsoft Docs"
+title: "Use of SQL Server features and capabilities"
 description: Learn about SQL Server features and capabilities, and their use in the WideWorldImporters sample database.
-ms.service: sql
-ms.subservice: samples
-ms.custom: ""
-ms.date: "01/21/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "01/21/2017"
+ms.service: sql
+ms.subservice: samples
+ms.topic: conceptual
 ---
 # Use of SQL Server features and capabilities
 

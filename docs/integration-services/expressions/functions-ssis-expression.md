@@ -1,21 +1,18 @@
 ---
+title: "Functions (SSIS Expression)"
 description: "Functions (SSIS Expression)"
-title: "Functions (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "functions [Integration Services]"
   - "expressions [Integration Services], functions"
   - "string functions"
   - "SQL Server Integration Services, functions"
   - "SSIS, functions"
-ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: chugugrace
-ms.author: chugu
 ---
 # Functions (SSIS Expression)
 

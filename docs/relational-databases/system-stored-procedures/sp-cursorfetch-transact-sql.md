@@ -1,22 +1,19 @@
 ---
+title: "sp_cursorfetch (Transact-SQL)"
 description: "sp_cursorfetch (Transact-SQL)"
-title: "sp_cursorfetch (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursorfetch"
-  - "sp_cursorfetch_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursorfetch"
-ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursorfetch"
+  - "sp_cursorfetch_TSQL"
+helpviewer_keywords:
+  - "sp_cursorfetch"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

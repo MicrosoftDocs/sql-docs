@@ -1,21 +1,19 @@
 ---
-description: "Synchronize Target Server Clocks"
 title: Synchronize Target Server Clocks
+description: "Synchronize Target Server Clocks"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "clocks [SQL Server]"
   - "master servers [SQL Server], clock synchronization"
   - "synchronization [SQL Server], target server clocks"
   - "target servers [SQL Server], clock synchronization"
-ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

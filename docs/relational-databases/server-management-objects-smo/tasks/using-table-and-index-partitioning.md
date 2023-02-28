@@ -1,21 +1,16 @@
 ---
+title: "Using Table and Index Partitioning"
 description: "Using Table and Index Partitioning"
-title: "Using Table and Index Partitioning | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "partitions [SMO]"
   - "storing data [SMO]"
   - "partitioned tables [SQL Server], SMO"
   - "partitioned indexes [SQL Server], SMO"
-ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Table and Index Partitioning

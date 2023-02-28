@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_windows_info dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 ---
 # sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

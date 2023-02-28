@@ -1,23 +1,18 @@
 ---
+title: "MSReportServer_ConfigurationSetting Methods"
 description: "MSReportServer_ConfigurationSetting Methods"
-title: "MSReportServer_ConfigurationSetting Methods | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/20/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "MSReportServer_ConfigurationSetting Methods"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
   - "MSReportServer_ConfigurationSetting class"
-ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "MSReportServer_ConfigurationSetting Methods"
+apitype: MOFDef
 ---
 # MSReportServer_ConfigurationSetting Methods
   The MSReportServer_ConfigurationSetting class of the Report Server WMI Provider provides the following public methods.  

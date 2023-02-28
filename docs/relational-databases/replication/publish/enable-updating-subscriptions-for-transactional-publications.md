@@ -1,19 +1,17 @@
 ---
 title: "Enable Updatable Subscriptions for Transactional Publications"
 description: Learn how to enable Updatable Subscriptions for a Transactional Publication in SQL Server.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "transactional replication, updatable subscriptions"
   - "updatable subscriptions, enabling"
   - "subscriptions [SQL Server replication], updatable"
-ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Enable Updating Subscriptions for Transactional Publications
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

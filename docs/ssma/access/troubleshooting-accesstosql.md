@@ -1,15 +1,12 @@
 ---
+title: "Troubleshooting (AccessToSQL)"
 description: "Troubleshooting (AccessToSQL)"
-title: "Troubleshooting (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Troubleshooting (AccessToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

@@ -1,18 +1,15 @@
 ---
+title: "SQLGetInfo (Text File Driver)"
 description: "SQLGetInfo (Text File Driver)"
-title: "SQLGetInfo (Text File Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLGetInfo function [ODBC], Text File Driver"
-  - "text file driver [ODBC], SQLGetInfo"
-ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLGetInfo function [ODBC], Text File Driver"
+  - "text file driver [ODBC], SQLGetInfo"
 ---
 # SQLGetInfo (Text File Driver)
 > [!NOTE]  

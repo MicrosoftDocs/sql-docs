@@ -1,22 +1,19 @@
 ---
-title: "Joins (SQL Server) | Microsoft Docs"
+title: "Joins (SQL Server)"
 description: Learn about the types of join operations that SQL Server employs. SQL Server supports vertical table partitioning, or columnar storage, using join operations.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/19/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HASH join"
   - "NESTED LOOPS join"
   - "MERGE join"
   - "ADAPTIVE join"
   - "joins [SQL Server], about joins"
   - "join hints [SQL Server]"
-ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Joins (SQL Server)

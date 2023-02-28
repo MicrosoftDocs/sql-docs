@@ -1,17 +1,14 @@
 ---
+title: "Data File Auto Grow Event Class"
 description: "Data File Auto Grow Event Class"
-title: "Data File Auto Grow Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Data File Auto Grow event class"
-ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Data File Auto Grow event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data File Auto Grow Event Class

@@ -1,19 +1,16 @@
 ---
+title: "Other Paradox Driver Programming Details"
 description: "Other Paradox Driver Programming Details"
-title: "Other Paradox Driver Programming Details | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], Paradox driver"
   - "desktop database drivers [ODBC], Paradox driver"
   - "Jet-based ODBC drivers [ODBC], Paradox driver"
-ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Other Paradox Driver Programming Details
 > [!NOTE]  

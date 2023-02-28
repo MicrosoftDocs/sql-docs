@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysssislog system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 ---
 # sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

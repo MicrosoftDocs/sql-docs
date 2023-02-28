@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_delete_policy_execution_history (Transact-SQL)"
 description: "sp_syspolicy_delete_policy_execution_history (Transact-SQL)"
-title: "sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_delete_policy_execution_history"
-  - "sp_syspolicy_delete_policy_execution_history_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_delete_policy_execution_history"
-ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_delete_policy_execution_history"
+  - "sp_syspolicy_delete_policy_execution_history_TSQL"
+helpviewer_keywords:
+  - "sp_syspolicy_delete_policy_execution_history"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

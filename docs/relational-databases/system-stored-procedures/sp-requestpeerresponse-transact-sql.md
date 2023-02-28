@@ -1,22 +1,19 @@
 ---
+title: "sp_requestpeerresponse (Transact-SQL)"
 description: "sp_requestpeerresponse (Transact-SQL)"
-title: "sp_requestpeerresponse (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_requestpeerresponse_TSQL"
-  - "sp_requestpeerresponse"
-helpviewer_keywords: 
-  - "sp_requestpeerresponse"
-ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_requestpeerresponse_TSQL"
+  - "sp_requestpeerresponse"
+helpviewer_keywords:
+  - "sp_requestpeerresponse"
+dev_langs:
+  - "TSQL"
 ---
 # sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

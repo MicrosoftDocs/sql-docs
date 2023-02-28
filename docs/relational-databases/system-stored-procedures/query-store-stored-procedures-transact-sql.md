@@ -1,21 +1,19 @@
 ---
-description: "Query Store stored procedures (Transact-SQL)"
 title: "Query Store stored procedures (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: "Query Store stored procedures (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "04/26/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
   - "system stored procedures [SQL Server], query store"
   - "stored procedures [SQL Server], query store"
   - "query store [SQL Server], stored procedures"
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store stored procedures (Transact-SQL)

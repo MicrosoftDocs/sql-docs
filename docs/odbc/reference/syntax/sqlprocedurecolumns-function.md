@@ -1,24 +1,19 @@
 ---
+title: "SQLProcedureColumns Function"
 description: "SQLProcedureColumns Function"
-title: "SQLProcedureColumns Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLProcedureColumns"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLProcedureColumns"
-helpviewer_keywords: 
-  - "SQLProcedureColumns function [ODBC]"
-ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLProcedureColumns"
+helpviewer_keywords:
+  - "SQLProcedureColumns function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLProcedureColumns"
+apitype: "dllExport"
 ---
 # SQLProcedureColumns Function
 **Conformance**  

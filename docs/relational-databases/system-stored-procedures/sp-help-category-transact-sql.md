@@ -1,22 +1,19 @@
 ---
+title: "sp_help_category (Transact-SQL)"
 description: "sp_help_category (Transact-SQL)"
-title: "sp_help_category (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_category"
-  - "sp_help_category_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_category"
-ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_category"
+  - "sp_help_category_TSQL"
+helpviewer_keywords:
+  - "sp_help_category"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

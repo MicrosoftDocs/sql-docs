@@ -1,19 +1,16 @@
 ---
+title: "MSSQLSERVER_948"
 description: "MSSQLSERVER_948"
-title: "MSSQLSERVER_948 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-f1_keywords: 
-  - "948"
-helpviewer_keywords: 
-  - "948 (Database Engine error)"
-ms.assetid: 95c4ad45-a518-4165-a5c4-6e6b932b0570
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+f1_keywords:
+  - "948"
+helpviewer_keywords:
+  - "948 (Database Engine error)"
 ---
 # MSSQLSERVER_948
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

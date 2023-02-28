@@ -1,18 +1,15 @@
 ---
+title: "ODBC Static Cursors"
 description: "ODBC Static Cursors"
-title: "ODBC Static Cursors | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "cursors [ODBC], static"
-  - "static cursors [ODBC]"
-ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "cursors [ODBC], static"
+  - "static cursors [ODBC]"
 ---
 # ODBC Static Cursors
 A static cursor is one in which the result set appears to be static. It does not usually detect changes that were made to the membership, order, or values of the result set after the cursor is opened. For example, suppose a static cursor fetches a row and another application then updates that row. If the static cursor refetches the row, the values it sees are unchanged, despite the changes that were made by the other application.  

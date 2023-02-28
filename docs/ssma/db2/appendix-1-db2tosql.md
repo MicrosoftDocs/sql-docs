@@ -1,15 +1,12 @@
 ---
+title: "Appendix - 1 (DB2ToSQL)"
 description: "Appendix - 1 (DB2ToSQL)"
-title: "Appendix - 1 (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Appendix - 1 (DB2ToSQL)
 Quick view of the SSMA Console command line options:  

@@ -1,18 +1,16 @@
 ---
+title: "Monitor Running Packages and Other Operations"
 description: "Monitor Running Packages and Other Operations"
-title: "Monitor Running Packages and Other Operations | Microsoft Docs"
-ms.custom: supportability
-ms.date: 06/04/2018
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.ssms.isoperations.executions.f1"
-  - "sql13.ssis.ssms.isoperations.general.f1"
-ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
+ms.date: 06/04/2018
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: supportability
+f1_keywords:
+  - "sql13.ssis.ssms.isoperations.executions.f1"
+  - "sql13.ssis.ssms.isoperations.general.f1"
 ---
 # Monitor Running Packages and Other Operations
 

@@ -3,12 +3,10 @@ title: "&amp;= (Bitwise AND Assignment) (Transact-SQL)"
 description: "&amp;= (Bitwise AND Assignment) (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "01/10/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "&="
   - "&=_TSQL"

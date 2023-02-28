@@ -1,22 +1,19 @@
 ---
+title: "sp_trace_setevent (Transact-SQL)"
 description: "sp_trace_setevent (Transact-SQL)"
-title: "sp_trace_setevent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_trace_setevent_TSQL"
-  - "sp_trace_setevent"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_trace_setevent"
-ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_trace_setevent_TSQL"
+  - "sp_trace_setevent"
+helpviewer_keywords:
+  - "sp_trace_setevent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

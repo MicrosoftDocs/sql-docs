@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_repl_articles dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 ---
 # sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

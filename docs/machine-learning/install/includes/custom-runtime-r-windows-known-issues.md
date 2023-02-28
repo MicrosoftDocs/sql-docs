@@ -1,11 +1,11 @@
 ---
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 04/07/2021
-ms.topic: include
 author: anmunde
 ms.author: anmunde
 ms.reviewer: rothja
+ms.date: 04/07/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: include
 ---
 ## Known issues
 

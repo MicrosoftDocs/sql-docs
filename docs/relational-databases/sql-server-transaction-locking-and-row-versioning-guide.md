@@ -1,12 +1,13 @@
 ---
-description: "Transaction locking and row versioning guide"
 title: "Transaction locking and row versioning guide"
-ms.custom: seo-dt-2019
+description: "Transaction locking and row versioning guide"
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 01/26/2023
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "guide, transaction locking and row versioning"
   - "transaction locking and row versioning guide"
   - "lock compatibility matrix, [SQL Server]"
@@ -14,9 +15,6 @@ helpviewer_keywords:
   - "deadlocks, [SQL Server]"
   - "lock escalation, [SQL Server]"
   - "lock partitioning, [SQL Server]"
-author: rwestMSFT
-ms.author: randolphwest
-ms.date: 01/26/2023
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transaction locking and row versioning guide

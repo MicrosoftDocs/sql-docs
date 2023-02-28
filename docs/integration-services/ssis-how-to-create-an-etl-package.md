@@ -1,12 +1,13 @@
 ---
+title: "SSIS How to Create an ETL Package"
 description: "SSIS How to Create an ETL Package"
-title: "SSIS How to Create an ETL Package | Microsoft Docs"
-ms.custom:
-  - intro-quickstart
+author: chugugrace
+ms.author: chugu
 ms.date: "03/24/2022"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: quickstart
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "SSIS, tutorials"
   - "packages [Integration Services], tutorials"
@@ -14,8 +15,6 @@ helpviewer_keywords:
   - "SQL Server Integration Services, tutorials"
   - "logs [Integration Services], tutorials"
   - "walkthroughs [Integration Services]"
-author: chugugrace
-ms.author: chugu
 ---
 # SSIS How to Create an ETL Package
 

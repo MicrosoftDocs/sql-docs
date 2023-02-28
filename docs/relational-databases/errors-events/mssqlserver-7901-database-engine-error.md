@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7901"
 description: "MSSQLSERVER_7901"
-title: "MSSQLSERVER_7901 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7901 (Database Engine error)"
-ms.assetid: 2d0d19b9-947b-4474-9ff8-7e03019ab93d
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7901 (Database Engine error)"
 ---
 # MSSQLSERVER_7901
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "cdc.ddl_history"
 dev_langs:
   - "TSQL"
-ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 ---
 # cdc.ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

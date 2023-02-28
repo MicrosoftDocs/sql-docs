@@ -1,16 +1,12 @@
 ---
-title: "Rendering report items in paginated reports | Microsoft Docs"
-
+title: "Rendering report items in paginated reports"
 description: Learn how paginated report items such as number, size, and locations affect rendering pagination in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Rendering report items in paginated reports (Report Builder)
 

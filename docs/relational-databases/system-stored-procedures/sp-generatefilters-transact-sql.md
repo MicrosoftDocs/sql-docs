@@ -1,22 +1,19 @@
 ---
+title: "sp_generatefilters (Transact-SQL)"
 description: "sp_generatefilters (Transact-SQL)"
-title: "sp_generatefilters (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_generatefilters"
-  - "sp_generatefilters_TSQL"
-helpviewer_keywords: 
-  - "sp_generatefilters"
-ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_generatefilters"
+  - "sp_generatefilters_TSQL"
+helpviewer_keywords:
+  - "sp_generatefilters"
+dev_langs:
+  - "TSQL"
 ---
 # sp_generatefilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

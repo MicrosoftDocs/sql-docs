@@ -1,22 +1,19 @@
 ---
+title: "sp_unsetapprole (Transact-SQL)"
 description: "sp_unsetapprole (Transact-SQL)"
-title: "sp_unsetapprole (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_unsetapprole_TSQL"
-  - "sp_unsetapprole"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_unsetapprole"
-ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_unsetapprole_TSQL"
+  - "sp_unsetapprole"
+helpviewer_keywords:
+  - "sp_unsetapprole"
+dev_langs:
+  - "TSQL"
 ---
 # sp_unsetapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

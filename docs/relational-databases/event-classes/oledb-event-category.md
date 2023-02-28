@@ -1,19 +1,16 @@
 ---
+title: "OLEDB Event Category"
 description: "OLEDB Event Category"
-title: "OLEDB Event Category | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLEDB event category"
   - "SQL Server event classes, OLEDB event category"
   - "event classes [SQL Server], OLEDB event category"
-ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Event Category

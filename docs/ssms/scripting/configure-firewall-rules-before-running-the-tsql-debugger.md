@@ -1,10 +1,13 @@
 ---
 title: Configure Firewall rules before running the T-SQL Debugger
-description: Learn how to configure the Windows Firewall rules before running the Transact-SQL (T-SQL) debugger when connected to an SQL Server in SQL Server Management Studio. 
-ms.custom: seo-lt-2019
+description: Learn how to configure the Windows Firewall rules before running the Transact-SQL (T-SQL) debugger when connected to an SQL Server in SQL Server Management Studio.
+author: markingmyname
+ms.author: maghan
+ms.date: "10/20/2016"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
+ms.custom: seo-lt-2019
 f1_keywords:
   - "vs.debug.error.sqlde_accessdenied"
   - "vs.debug.error.sqlde_register_failed"
@@ -16,11 +19,6 @@ helpviewer_keywords:
   - "Transact-SQL debugger, configuring"
   - "ports [SQL Server], Transact-SQL debugger"
   - "TCP/IP [SQL Server], port numbers"
-ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.date: "10/20/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

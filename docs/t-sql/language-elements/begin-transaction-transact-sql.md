@@ -3,12 +3,10 @@ title: "BEGIN TRANSACTION (Transact-SQL)"
 description: "BEGIN TRANSACTION (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "BEGIN_TRANSACTION_TSQL"
   - "TRANSACTION_TSQL"

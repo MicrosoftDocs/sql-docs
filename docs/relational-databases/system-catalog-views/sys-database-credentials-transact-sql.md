@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_credentials catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_credentials (Transact-SQL)

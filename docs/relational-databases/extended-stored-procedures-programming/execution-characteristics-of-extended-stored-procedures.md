@@ -10,7 +10,6 @@ ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], executing"
   - "executing extended stored procedures [SQL Server]"
-ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 ---
 # Execution Characteristics of Extended Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

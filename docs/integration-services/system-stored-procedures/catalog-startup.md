@@ -1,15 +1,12 @@
 ---
+title: "catalog.startup"
 description: "catalog.startup"
-title: "catalog.startup | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.startup 
 

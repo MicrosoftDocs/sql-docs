@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_response system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 ---
 # MSpeer_response (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,15 +1,12 @@
 ---
+title: "Edit Type Mapping (SybaseToSQL)"
 description: "Edit Type Mapping (SybaseToSQL)"
-title: "Edit Type Mapping (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Edit Type Mapping (SybaseToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

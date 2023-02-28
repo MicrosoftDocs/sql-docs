@@ -1,17 +1,14 @@
 ---
-title: "Report Server HTTP Log | Microsoft Docs"
+title: "Report Server HTTP Log"
 description: Learn how to enable the Report Server HTTP log after you install Reporting Services. This feature logs every HTTP request and response a report server handles.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/12/2019
 ms.service: reporting-services
 ms.subservice: report-server
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HTTP [Reporting Services]"
-ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Server HTTP Log
   The Report Server HTTP log file keeps a record of every HTTP request and response handled by the report server. Because request overflow and timeout errors do not reach the report server, they are not recorded in the log file.  

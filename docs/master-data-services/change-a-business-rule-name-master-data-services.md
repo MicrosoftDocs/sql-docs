@@ -1,17 +1,14 @@
 ---
-description: "Change a Business Rule Name (Master Data Services)"
 title: Change a Business Rule Name
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "business rules [Master Data Services], changing name"
-ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
+description: "Change a Business Rule Name (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "business rules [Master Data Services], changing name"
 ---
 # Change a Business Rule Name (Master Data Services)
 

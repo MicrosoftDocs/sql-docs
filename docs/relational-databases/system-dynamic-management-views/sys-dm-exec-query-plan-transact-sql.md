@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_query_plan dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 ---
 # sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

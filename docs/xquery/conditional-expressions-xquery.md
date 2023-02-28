@@ -1,24 +1,21 @@
 ---
-title: "Conditional Expressions (XQuery) | Microsoft Docs"
+title: "Conditional Expressions (XQuery)"
 description: Learn about the conditional expressions that are supported by XQuery.
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "08/09/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XQuery, conditional expressions"
   - "expressions [XQuery], conditional"
   - "effective Boolean value [XQuery]"
   - "if-then-else statement [XQuery]"
   - "conditional expressions [XQuery]"
   - "EBV"
-ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "XML"
 ---
 # Conditional Expressions (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.remote_logins catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 ---
 # sys.remote_logins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

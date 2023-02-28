@@ -1,20 +1,17 @@
 ---
 title: "WMI Provider for Configuration Management Concepts"
 description: Learn about WMI provider, which is used with SQL Server Configuration Manager in Microsoft Management Console and Microsoft SQL Server Configuration Manager.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: wmi
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "WMI Provider for Configuration Management"
   - "SQL Server WMI Provider"
   - "configuration management [WMI]"
   - "WMI Provider for Configuration Management, about WMI Provider for Configuration Management"
-ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
-author: markingmyname
-ms.author: maghan
 ---
 # WMI Provider for Configuration Management
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

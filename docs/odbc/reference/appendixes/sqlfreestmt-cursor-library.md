@@ -1,17 +1,14 @@
 ---
+title: "SQLFreeStmt (Cursor Library)"
 description: "SQLFreeStmt (Cursor Library)"
-title: "SQLFreeStmt (Cursor Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLFreeStmt function [ODBC], Cursor Library"
-ms.assetid: 47bfbd4d-9453-4609-958d-1e05794cb223
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLFreeStmt function [ODBC], Cursor Library"
 ---
 # SQLFreeStmt (Cursor Library)
 > [!IMPORTANT]  

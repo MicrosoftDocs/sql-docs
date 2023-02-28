@@ -3,12 +3,10 @@ title: "SCOPE_IDENTITY (Transact-SQL)"
 description: "SCOPE_IDENTITY (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "07/06/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SCOPE_IDENTITY"
   - "SCOPE_IDENTITY_TSQL"

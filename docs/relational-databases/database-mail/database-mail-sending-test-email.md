@@ -1,18 +1,15 @@
 ---
+title: "Send a test email with database mail"
 description: "Send a test email with database mail"
-title: "Send a test email with database mail | Microsoft Docs"
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "04/22/2019"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Send a test email with database mail  
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

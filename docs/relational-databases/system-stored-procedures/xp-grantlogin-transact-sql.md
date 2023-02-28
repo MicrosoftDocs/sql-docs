@@ -1,22 +1,19 @@
 ---
+title: "xp_grantlogin (Transact-SQL)"
 description: "xp_grantlogin (Transact-SQL)"
-title: "xp_grantlogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_grantlogin"
-  - "xp_grantlogin_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_grantlogin"
-ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_grantlogin"
+  - "xp_grantlogin_TSQL"
+helpviewer_keywords:
+  - "xp_grantlogin"
+dev_langs:
+  - "TSQL"
 ---
 # xp_grantlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

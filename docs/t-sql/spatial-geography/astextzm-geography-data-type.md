@@ -1,22 +1,19 @@
 ---
+title: "AsTextZM (geography Data Type)"
 description: "AsTextZM (geography Data Type)"
-title: "AsTextZM (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "AsTextZM_(geography Data Type)"
   - "AsTextZM_(geography_Data_Type)_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "AsTextZM method"
-ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # AsTextZM (geography Data Type)
 

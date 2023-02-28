@@ -1,17 +1,14 @@
 ---
+title: "Developing Specific Types of Script Components"
 description: "Developing Specific Types of Script Components"
-title: "Developing Specific Types of Script Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Script component [Integration Services], examples"
-ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script component [Integration Services], examples"
 ---
 # Developing Specific Types of Script Components
 

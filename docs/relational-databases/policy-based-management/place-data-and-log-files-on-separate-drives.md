@@ -1,17 +1,14 @@
 ---
-title: "Place Data and Log Files on Separate Drives | Microsoft Docs"
+title: "Place Data and Log Files on Separate Drives"
 description: Place data and log files on separate logical drives. Separate locations allow activity for each to occur at the same time, improving SQL performance.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Place Data and Log Files on Separate Drives
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

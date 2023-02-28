@@ -1,17 +1,14 @@
 ---
+title: "Select Oracle Tables and Columns"
 description: "Select Oracle Tables and Columns"
-title: "Select Oracle Tables and Columns | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "selTabCol"
-ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "selTabCol"
 ---
 # Select Oracle Tables and Columns
 

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "dm_db_resource_stats"
 dev_langs:
   - "TSQL"
-ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_os_job_object (Azure SQL Database)

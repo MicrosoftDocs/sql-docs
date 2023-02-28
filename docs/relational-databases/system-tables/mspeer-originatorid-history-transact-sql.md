@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_originatorid_history"
 dev_langs:
   - "TSQL"
-ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 ---
 # MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "STPolyFromText (geography Data Type)"
 description: "STPolyFromText (geography Data Type)"
-title: "STPolyFromText (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPolyFromText_TSQL"
   - "STPolyFromText (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPolyFromText method"
-ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPolyFromText (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

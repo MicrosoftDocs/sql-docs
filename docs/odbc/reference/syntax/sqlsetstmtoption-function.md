@@ -1,24 +1,19 @@
 ---
+title: "SQLSetStmtOption Function"
 description: "SQLSetStmtOption Function"
-title: "SQLSetStmtOption Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetStmtOption"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetStmtOption"
-helpviewer_keywords: 
-  - "SQLSetStmtOption function [ODBC]"
-ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetStmtOption"
+helpviewer_keywords:
+  - "SQLSetStmtOption function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetStmtOption"
+apitype: "dllExport"
 ---
 # SQLSetStmtOption Function
 **Conformance**  

@@ -1,19 +1,16 @@
 ---
+title: "Cache Connection Manager"
 description: "Cache Connection Manager"
-title: "Cache Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.cacheconnection.f1"
-helpviewer_keywords: 
-  - "Cache connection manager"
-ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.cacheconnection.f1"
+helpviewer_keywords:
+  - "Cache connection manager"
 ---
 # Cache Connection Manager
 

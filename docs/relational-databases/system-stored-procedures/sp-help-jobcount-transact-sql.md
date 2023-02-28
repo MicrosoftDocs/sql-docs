@@ -1,22 +1,19 @@
 ---
+title: "sp_help_jobcount (Transact-SQL)"
 description: "sp_help_jobcount (Transact-SQL)"
-title: "sp_help_jobcount (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobcount"
-  - "sp_help_jobcount_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobcount"
-ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobcount"
+  - "sp_help_jobcount_TSQL"
+helpviewer_keywords:
+  - "sp_help_jobcount"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

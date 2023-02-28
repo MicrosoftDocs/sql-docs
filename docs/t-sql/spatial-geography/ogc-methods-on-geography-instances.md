@@ -1,17 +1,14 @@
 ---
+title: "OGC Methods on Geography Instances"
 description: "OGC Methods on Geography Instances"
-title: "OGC Methods on Geography Instances | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "06/27/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
-author: MladjoA
-ms.author: mlandzic 
 ---
 # OGC Methods on Geography Instances
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

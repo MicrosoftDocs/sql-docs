@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "query_store_query_text catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_query_text (Transact-SQL)

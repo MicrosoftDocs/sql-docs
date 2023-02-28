@@ -1,23 +1,20 @@
 ---
+title: "sp_dbmmonitordropmonitoring (Transact-SQL)"
 description: "sp_dbmmonitordropmonitoring (Transact-SQL)"
-title: "sp_dbmmonitordropmonitoring (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbmmonitordropmonitoring_TSQL"
-  - "sp_dbmmonitordropmonitoring"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbmmonitordropmonitoring"
-  - "database mirroring [SQL Server], monitoring"
-ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbmmonitordropmonitoring_TSQL"
+  - "sp_dbmmonitordropmonitoring"
+helpviewer_keywords:
+  - "sp_dbmmonitordropmonitoring"
+  - "database mirroring [SQL Server], monitoring"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbmmonitordropmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -5,10 +5,10 @@ author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: randolphwest
 ms.date: 03/07/2022
-ms.topic: tutorial
 ms.service: sql
 ms.subservice: linux
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+ms.topic: tutorial
+monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux containers

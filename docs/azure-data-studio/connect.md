@@ -7,7 +7,6 @@ ms.reviewer: "maghan"
 ms.date: 11/15/2022
 ms.service: azure-data-studio
 ms.topic: "how-to"
-ms.custom:
 ---
 
 # Connect with Azure Data Studio

@@ -1,15 +1,12 @@
 ---
+title: "catalog.event_message_context"
 description: "catalog.event_message_context"
-title: "catalog.event_message_context | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.event_message_context 
 

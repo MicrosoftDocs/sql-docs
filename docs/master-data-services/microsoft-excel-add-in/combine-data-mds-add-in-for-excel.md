@@ -1,15 +1,13 @@
 ---
-description: "Combine Data (MDS Add-in for Excel)"
 title: Combine Data
-ms.custom: microsoft-excel-add-in
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
+description: "Combine Data (MDS Add-in for Excel)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Combine Data (MDS Add-in for Excel)
 

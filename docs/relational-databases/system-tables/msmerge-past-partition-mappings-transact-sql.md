@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_past_partition_mappings system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 ---
 # MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

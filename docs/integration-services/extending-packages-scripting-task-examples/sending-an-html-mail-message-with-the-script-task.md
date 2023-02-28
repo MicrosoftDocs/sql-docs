@@ -1,21 +1,18 @@
 ---
+title: "Sending an HTML Mail Message with the Script Task"
 description: "Sending an HTML Mail Message with the Script Task"
-title: "Sending an HTML Mail Message with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Send Mail task [Integration Services]"
   - "Script task [Integration Services], examples"
   - "Script task [Integration Services], HTML mail message"
-ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Sending an HTML Mail Message with the Script Task
 

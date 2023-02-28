@@ -1,18 +1,15 @@
 ---
-description: "Statement Attributes that Affect Table-Valued Parameters"
 title: "Attributes that affect Table-Valued Parameters"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters (ODBC), descriptor header field"
-  - "table-valued parameters (ODBC), statement attribute"
-ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
+description: "Statement Attributes that Affect Table-Valued Parameters"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters (ODBC), descriptor header field"
+  - "table-valued parameters (ODBC), statement attribute"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Statement Attributes that Affect Table-Valued Parameters

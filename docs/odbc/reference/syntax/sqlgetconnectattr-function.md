@@ -1,24 +1,19 @@
 ---
+title: "SQLGetConnectAttr Function"
 description: "SQLGetConnectAttr Function"
-title: "SQLGetConnectAttr Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetConnectOption"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetConnectAttr"
-helpviewer_keywords: 
-  - "SQLGetConnectAttr function [ODBC]"
-ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetConnectAttr"
+helpviewer_keywords:
+  - "SQLGetConnectAttr function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetConnectOption"
+apitype: "dllExport"
 ---
 # SQLGetConnectAttr Function
 **Conformance**  

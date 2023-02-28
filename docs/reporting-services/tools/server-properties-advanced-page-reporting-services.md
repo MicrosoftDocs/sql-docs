@@ -1,12 +1,12 @@
 ---
-title: "Server Properties Advanced Page | Microsoft Docs"
+title: "Server Properties Advanced Page"
 description: Use the Advanced Server Properties page to set system properties on the report server. This tool provides a graphical user interface so that you can set properties without writing code.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 1/12/2023
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.date: 1/12/2023
 monikerRange: ">=sql-server-2016"
 ---
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_droplogin (Transact-SQL)"
 description: "sp_droplogin (Transact-SQL)"
-title: "sp_droplogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_droplogin"
-  - "sp_droplogin_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_droplogin"
-ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_droplogin"
+  - "sp_droplogin_TSQL"
+helpviewer_keywords:
+  - "sp_droplogin"
+dev_langs:
+  - "TSQL"
 ---
 # sp_droplogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

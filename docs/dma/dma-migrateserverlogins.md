@@ -12,7 +12,6 @@ ms.custom:
   - intro-migration
 helpviewer_keywords:
   - "Data Migration Assistant, login migration"
-keywords: ""
 ---
 
 # Migrate SQL Server logins with Data Migration Assistant

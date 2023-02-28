@@ -1,12 +1,12 @@
 ---
 title: Connect SQL Server machines at scale with a Configuration Manager custom task sequence | Arc-enabled SQL Server
 description: You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers for Azure Arc-enabled SQL Server.
-ms.date: 01/20/2022
-ms.topic: how-to
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
+ms.date: 01/20/2022
 ms.service: sql
+ms.topic: how-to
 ---
 
 # Connect SQL Server machines at scale with a Configuration Manager custom task sequence

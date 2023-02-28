@@ -1,17 +1,14 @@
 ---
+title: "Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)"
 description: "Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)"
-title: "Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.scdsupport.f1"
-ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.loaddimwizard.scdsupport.f1"
 ---
 # Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)
 

@@ -1,17 +1,17 @@
 ---
 title: "Specify the ELEMENT directive and entity encoding"
 description: Learn how to specify the ELEMENT directive in an SQL query so that the query result is entity encoded.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "ELEMENT directive"
   - "entity encoding [XML]"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Example: Specify the ELEMENT directive and entity encoding
 

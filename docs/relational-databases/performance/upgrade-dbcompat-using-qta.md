@@ -1,15 +1,17 @@
 ---
 title: "Upgrade databases using Query Tuning Assistant"
 description: Learn how the Query Tuning Assistant guides you through the recommended workflow to keep performance stability during upgrades to newer SQL Server versions.
-ms.custom: seo-dt-2019
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf
 ms.date: "02/13/2019"
 ms.service: sql
-ms.reviewer: wiassaf
 ms.subservice: performance
 ms.topic: conceptual
-f1_keywords: 
-  - sql13.swb.querytuning.f1
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+f1_keywords:
+  - "sql13.swb.querytuning.f1"
+helpviewer_keywords:
   - "query statistics [SQL Server] live query stats"
   - "live query statistics"
   - "debugging [SQL Server], live query stats"
@@ -17,9 +19,6 @@ helpviewer_keywords:
   - "query profiling"
   - "lightweight query profiling"
   - "lightweight profiling"
-ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 
 # Upgrade databases using the Query Tuning Assistant

@@ -1,23 +1,20 @@
 ---
+title: "Multicast Transformation"
 description: "Multicast Transformation"
-title: "Multicast Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.multicasttrans.f1"
   - "sql13.dts.designer.multicasttransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiple outputs"
   - "Multicast transformation"
   - "datasets [Integration Services], multiple outputs"
   - "multiple transformations"
-ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-author: chugugrace
-ms.author: chugu
 ---
 # Multicast Transformation
 

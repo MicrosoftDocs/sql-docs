@@ -1,22 +1,19 @@
 ---
+title: "Manual-Commit Mode"
 description: "Manual-Commit Mode"
-title: "Manual-Commit Mode | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rolling back transactions [ODBC]"
   - "manual-commit mode [ODBC]"
   - "transactions [ODBC], commit modes"
   - "committing transactions [ODBC]"
   - "commit modes [ODBC]"
   - "transactions [ODBC], rolling back"
-ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Manual-Commit Mode
 *In manual-commit mode,* applications must explicitly complete transactions by calling **SQLEndTran** to commit them or roll them back. This is the normal transaction mode for most relational databases.  

@@ -2,15 +2,13 @@
 title: Set Global Trace Options
 titleSuffix: SQL Server Profiler
 description: Learn how to set global trace options, and read about the options that a specific instance of SQL Server Profiler can apply to all traces.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: conceptual
-ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 
 # Set Global Trace Options (SQL Server Profiler)

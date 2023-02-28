@@ -1,12 +1,12 @@
 ---
 title: "R tutorial: Deploy model"
 description: Learn to deploy R models in a production environment by calling a trained model from a stored procedure.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 11/26/2018
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 11/26/2018
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: tutorial
 ms.custom:
   - seo-lt-2019
   - intro-deployment

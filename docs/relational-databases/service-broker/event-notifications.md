@@ -1,18 +1,14 @@
 ---
+title: "Event Notifications"
 description: "Event Notifications"
-title: "Event Notifications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "event notifications, about"
-  - "events [SQL Server], notifications"
-ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "event notifications, about"
+  - "events [SQL Server], notifications"
 ---
 # Event Notifications
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

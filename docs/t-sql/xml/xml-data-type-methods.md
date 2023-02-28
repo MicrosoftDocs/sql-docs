@@ -1,20 +1,17 @@
 ---
-description: "xml Data Type Methods"
 title: xml Data Type Methods
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xml data type [SQL Server], methods"
-  - "methods [XML in SQL Server]"
-ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
+description: "xml Data Type Methods"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "xml data type [SQL Server], methods"
+  - "methods [XML in SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # xml Data Type Methods
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

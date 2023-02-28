@@ -4,12 +4,10 @@ description: Learn how to install SQL Server Full-Text Search on Linux. Full-Tex
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.custom:
-  - intro-installation
+ms.topic: conceptual
+ms.custom: intro-installation
 ---
 # Install SQL Server Full-Text Search on Linux
 

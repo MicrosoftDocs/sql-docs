@@ -1,18 +1,15 @@
 ---
+title: "Procedure Calls"
 description: "Procedure Calls"
-title: "Procedure Calls | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "escape sequences [ODBC], procedure calls"
-  - "procedure calls [ODBC]"
-ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "escape sequences [ODBC], procedure calls"
+  - "procedure calls [ODBC]"
 ---
 # Procedure Calls
 A *procedure* is an executable object stored on the data source. Generally, it is one or more SQL statements that have been precompiled. The escape sequence for calling a procedure is  

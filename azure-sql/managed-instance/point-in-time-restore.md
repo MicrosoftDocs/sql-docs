@@ -311,7 +311,7 @@ To restore a deleted database to the same subscription:
 ```azurecli-interactive
 az sql midb restore -g resourcegroup --mi instancename
 -n databasename --dest-name databasename --dest-mi instancename 
---dest-resource-group ToMove --time "2023-02-23T11:54:00" [--deleted-time "deletion_date"]*
+--dest-resource-group resourcegroup --time "2023-02-23T11:54:00" --deleted-time "deletion_date"
 ```
 
 To restore a deleted database to another subscription, be sure to set the context (`az account set`) to the target subscription and specify the -s parameter for the `az sql midb restore` command to identify the source subscription: 

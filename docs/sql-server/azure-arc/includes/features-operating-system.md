@@ -13,7 +13,7 @@ The following table identifies features available by operating system:
 |[Discover and register SQL Servers in Azure](../prerequisites.md) |Yes |Yes |
 |[Use Azure Policy to onboard SQL Server instances at scale](../connect-at-scale-policy.md) | Yes | Yes |
 |[Azure pay-as-you-go billing](../manage-license-type.md) | Yes | Yes |
-|[Install Azure extension for SQL Server during setup <sup>*</sup>](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#install-sql-server-2022)| Yes | No |
+|[Install Azure extension for SQL Server during setup <sup>*</sup>](../../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#install-sql-server-2022)| Yes | No |
 |[Best practices assessment](../assess.md) |Yes |No |
 |[Detailed database inventory](../view-databases.md#inventory-databases) |Yes |No |
 |[Azure Active Directory authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) |Yes |Yes |

@@ -445,7 +445,6 @@
           "tools/dta/*.md",
           "tools/sql-server-profiler/*.md",
           "tools/ssbdiagnose/*.md"
-
         ]
       }
     }

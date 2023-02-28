@@ -4,7 +4,7 @@ description: Learn how to install the Azure Data Studio Azure Database for Postg
 author: apduvuri
 ms.author: adityaduvuri
 ms.reviewer: maghan, randolphwest
-ms.date: 02/24/2023
+ms.date: 02/28/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---

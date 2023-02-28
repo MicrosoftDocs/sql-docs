@@ -1,24 +1,19 @@
 ---
+title: "SQLSetConfigMode Function"
 description: "SQLSetConfigMode Function"
-title: "SQLSetConfigMode Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetConfigMode"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetConfigMode"
-helpviewer_keywords: 
-  - "SQLSetConfigMode function [ODBC]"
-ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetConfigMode"
+helpviewer_keywords:
+  - "SQLSetConfigMode function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetConfigMode"
+apitype: "dllExport"
 ---
 # SQLSetConfigMode Function
 **Conformance**  

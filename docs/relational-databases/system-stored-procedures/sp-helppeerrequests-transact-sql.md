@@ -1,22 +1,19 @@
 ---
+title: "sp_helppeerrequests (Transact-SQL)"
 description: "sp_helppeerrequests (Transact-SQL)"
-title: "sp_helppeerrequests (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helppeerrequests_TSQL"
-  - "sp_helppeerrequests"
-helpviewer_keywords: 
-  - "sp_helppeerrequests"
-ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helppeerrequests_TSQL"
+  - "sp_helppeerrequests"
+helpviewer_keywords:
+  - "sp_helppeerrequests"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helppeerrequests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

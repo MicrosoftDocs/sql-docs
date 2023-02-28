@@ -1,22 +1,19 @@
 ---
+title: "GetPathLocator (Transact-SQL)"
 description: "GetPathLocator (Transact-SQL)"
-title: "GetPathLocator (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "GetPathLocator"
-  - "GetPathLocator_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "GetPathLocator function"
-ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "GetPathLocator"
+  - "GetPathLocator_TSQL"
+helpviewer_keywords:
+  - "GetPathLocator function"
+dev_langs:
+  - "TSQL"
 ---
 # GetPathLocator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

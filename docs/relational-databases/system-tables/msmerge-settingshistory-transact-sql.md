@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_settingshistory system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 ---
 # MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

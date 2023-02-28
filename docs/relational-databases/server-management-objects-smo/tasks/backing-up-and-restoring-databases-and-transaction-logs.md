@@ -1,14 +1,13 @@
 ---
-description: "Backing Up and Restoring Databases and Transaction Logs"
 title: "Backing Up and Restoring Databases and Transaction Logs"
-ms.custom: seo-dt-2019
+description: "Backing Up and Restoring Databases and Transaction Logs"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "restoring databases [SMO]"
   - "transaction log backups [SMO]"
   - "backing up transaction logs [SMO]"
@@ -17,9 +16,6 @@ helpviewer_keywords:
   - "transaction log restores [SMO]"
   - "backing up databases [SMO]"
   - "database restores [SMO]"
-ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Backing Up and Restoring Databases and Transaction Logs

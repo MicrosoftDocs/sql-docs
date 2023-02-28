@@ -1,17 +1,14 @@
 ---
+title: "TM: Begin Tran Starting Event Class"
 description: "TM: Begin Tran Starting Event Class"
-title: "TM: Begin Tran Starting Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "TM: Begin Tran Starting event class"
-ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "TM: Begin Tran Starting event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Begin Tran Starting Event Class

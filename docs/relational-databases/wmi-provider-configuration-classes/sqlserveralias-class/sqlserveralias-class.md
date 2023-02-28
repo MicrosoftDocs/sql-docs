@@ -1,23 +1,16 @@
 ---
-description: "SqlServerAlias Class"
 title: "SqlServerAlias Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "SqlServerAlias Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SqlServerAlias class"
-ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
+description: "SqlServerAlias Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SqlServerAlias class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SqlServerAlias Class"
+apitype: "MOFDef"
 ---
 # SqlServerAlias Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

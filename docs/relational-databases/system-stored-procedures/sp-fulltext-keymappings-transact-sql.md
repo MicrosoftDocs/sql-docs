@@ -1,24 +1,21 @@
 ---
+title: "sp_fulltext_keymappings (Transact-SQL)"
 description: "sp_fulltext_keymappings (Transact-SQL)"
-title: "sp_fulltext_keymappings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_fulltext_keymappings_TSQL"
   - "sp_fulltext_keymappings"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text indexes [SQL Server], key column"
   - "sp_fulltext_keymappings"
   - "full-text indexes [SQL Server], troubleshooting"
-ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_keymappings (Transact-SQL)

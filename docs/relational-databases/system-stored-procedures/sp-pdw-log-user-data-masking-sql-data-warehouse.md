@@ -1,16 +1,13 @@
 ---
+title: "sp_pdw_log_user_data_masking (Azure Synapse Analytics)"
 description: "sp_pdw_log_user_data_masking (Azure Synapse Analytics)"
-title: "sp_pdw_log_user_data_masking (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sp_pdw_log_user_data_masking (Azure Synapse Analytics)

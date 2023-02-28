@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "trace_xe_action_map"
 dev_langs:
   - "TSQL"
-ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 ---
 # Extended Events Tables - trace_xe_action_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

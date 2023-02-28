@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "removing extended stored procedures"
   - "extended stored procedures [SQL Server], removing"
   - "dropping extended stored procedures"
-ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
 ---
 # Removing an Extended Stored Procedure from SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,15 @@
 ---
+title: "SQLBindParameter (Excel Driver)"
 description: "SQLBindParameter (Excel Driver)"
-title: "SQLBindParameter (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Excel driver [ODBC], SQLBindParameter"
-  - "SQLBindParameter function [ODBC], Excel Driver"
-ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Excel driver [ODBC], SQLBindParameter"
+  - "SQLBindParameter function [ODBC], Excel Driver"
 ---
 # SQLBindParameter (Excel Driver)
 > [!NOTE]  

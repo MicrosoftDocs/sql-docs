@@ -1,15 +1,12 @@
 ---
+title: "Integration Services (SSIS) in a Cluster"
 description: "Integration Services (SSIS) in a Cluster"
-title: "Integration Services (SSIS) in a Cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Integration Services (SSIS) in a Cluster
 

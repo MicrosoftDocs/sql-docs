@@ -3,14 +3,14 @@ title: Release notes - Azure Synapse Pathway
 description: Azure Synapse Pathway release notes
 author: prlangad
 ms.author: prlangad
-ms.topic: overview 
 ms.date: 02/10/2022
 ms.service: sql
 ms.subservice: tools-other
-monikerRange: "=azure-sqldw-latest"
+ms.topic: overview
 ms.custom:
   - template-overview
   - intro-overview
+monikerRange: "=azure-sqldw-latest"
 ---
 # Azure Synapse Pathway - release notes
 

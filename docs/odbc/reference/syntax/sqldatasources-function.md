@@ -1,24 +1,19 @@
 ---
+title: "SQLDataSources Function"
 description: "SQLDataSources Function"
-title: "SQLDataSources Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLDataSources"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLDataSources"
-helpviewer_keywords: 
-  - "SQLDataSources function [ODBC]"
-ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLDataSources"
+helpviewer_keywords:
+  - "SQLDataSources function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLDataSources"
+apitype: "dllExport"
 ---
 # SQLDataSources Function
 **Conformance**  

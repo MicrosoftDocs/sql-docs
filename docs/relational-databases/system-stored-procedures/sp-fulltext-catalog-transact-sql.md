@@ -1,22 +1,19 @@
 ---
+title: "sp_fulltext_catalog (Transact-SQL)"
 description: "sp_fulltext_catalog (Transact-SQL)"
-title: "sp_fulltext_catalog (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_fulltext_catalog_TSQL"
-  - "sp_fulltext_catalog"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_fulltext_catalog"
-ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_fulltext_catalog_TSQL"
+  - "sp_fulltext_catalog"
+helpviewer_keywords:
+  - "sp_fulltext_catalog"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_catalog (Transact-SQL)

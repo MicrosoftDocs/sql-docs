@@ -1,15 +1,12 @@
 ---
-description: "Create and Execute an Entity Sync Relationship (Master Data Services)"
 title: Create and Execute an Entity Sync Relationship
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
+description: "Create and Execute an Entity Sync Relationship (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Create and Execute an Entity Sync Relationship (Master Data Services)
 

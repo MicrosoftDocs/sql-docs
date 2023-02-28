@@ -1,14 +1,13 @@
 ---
+title: "Run an SSIS package with PowerShell"
 description: "Run an SSIS package with PowerShell"
-title: "Run an SSIS package with PowerShell | Microsoft Docs"
-ms.date: "09/17/2020"
-ms.topic: quickstart
-ms.service: sql
-ms.custom:
-  - intro-quickstart
-ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "09/17/2020"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: quickstart
+ms.custom: intro-quickstart
 ---
 # Run an SSIS package with PowerShell
 

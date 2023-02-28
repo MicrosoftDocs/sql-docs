@@ -1,22 +1,19 @@
 ---
+title: "sp_help_fulltext_catalogs (Transact-SQL)"
 description: "sp_help_fulltext_catalogs (Transact-SQL)"
-title: "sp_help_fulltext_catalogs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_fulltext_catalogs_TSQL"
-  - "sp_help_fulltext_catalogs"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_fulltext_catalogs"
-ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_fulltext_catalogs_TSQL"
+  - "sp_help_fulltext_catalogs"
+helpviewer_keywords:
+  - "sp_help_fulltext_catalogs"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

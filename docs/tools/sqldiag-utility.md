@@ -1,13 +1,15 @@
 ---
 title: "SQLdiag Utility"
 description: Use the SQLdiag utility to collect logs and data files from SQL Server and other types of servers, and monitor servers over time or troubleshoot problems.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
+ms.reviewer: pijocoder
 ms.date: 02/01/2022
 ms.service: sql
-ms.reviewer: pijocoder
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "command prompt utilities [SQL Server], SQLdiag"
   - "stopping diagnostic collection"
   - "storing diagnostic information"
@@ -26,9 +28,6 @@ helpviewer_keywords:
   - "configuration files [SQL Server]"
   - "automatic diagnostic collection"
   - "clusters [SQL Server], diagnostic collection"
-ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: markingmyname
-ms.author: maghan
 ---
 # SQLdiag Utility
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

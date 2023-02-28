@@ -1,25 +1,22 @@
 ---
+title: "sys.sysperfinfo (Transact-SQL)"
 description: "sys.sysperfinfo (Transact-SQL)"
-title: "sys.sysperfinfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysperfinfo_TSQL"
   - "sys.sysperfinfo_TSQL"
   - "sys.sysperfinfo"
   - "sysperfinfo"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sysperfinfo compatibility view"
   - "sysperfinfo system table"
-ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysperfinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

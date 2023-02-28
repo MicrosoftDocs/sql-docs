@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_memory_pools dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_memory_pools (Transact-SQL)

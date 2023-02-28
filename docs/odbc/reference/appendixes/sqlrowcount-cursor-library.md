@@ -1,17 +1,14 @@
 ---
+title: "SQLRowCount (Cursor Library)"
 description: "SQLRowCount (Cursor Library)"
-title: "SQLRowCount (Cursor Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLRowCount function [ODBC], Cursor Library"
-ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLRowCount function [ODBC], Cursor Library"
 ---
 # SQLRowCount (Cursor Library)
 > [!IMPORTANT]  

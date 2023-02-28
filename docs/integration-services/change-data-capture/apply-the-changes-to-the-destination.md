@@ -1,17 +1,14 @@
 ---
+title: "Apply the Changes to the Destination"
 description: "Apply the Changes to the Destination"
-title: "Apply the Changes to the Destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "incremental load [Integration Services],applying changes"
-ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "incremental load [Integration Services],applying changes"
 ---
 # Apply the Changes to the Destination
 

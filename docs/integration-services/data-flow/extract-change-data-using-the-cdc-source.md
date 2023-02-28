@@ -1,15 +1,12 @@
 ---
+title: "Extract Change Data Using the CDC Source"
 description: "Extract Change Data Using the CDC Source"
-title: "Extract Change Data Using the CDC Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Extract Change Data Using the CDC Source
 

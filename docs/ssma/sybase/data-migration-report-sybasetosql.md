@@ -1,17 +1,14 @@
 ---
+title: "Data Migration Report (SybaseToSQL)"
 description: "Data Migration Report (SybaseToSQL)"
-title: "Data Migration Report (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.sybase.datamigrationreport.f1"
+f1_keywords:
+  - "ssma.sybase.datamigrationreport.f1"
 ---
 # Data Migration Report (SybaseToSQL)
 The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

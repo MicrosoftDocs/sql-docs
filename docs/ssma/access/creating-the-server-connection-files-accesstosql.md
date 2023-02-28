@@ -1,15 +1,12 @@
 ---
+title: "Creating the Server Connection Files (AccessToSQL)"
 description: "Creating the Server Connection Files (AccessToSQL)"
-title: "Creating the Server Connection Files (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "08/17/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Creating the server connection files (AccessToSQL)
 Server information can be specified either in the servers section of the script file. Server information can also be specified in a separate server connection file. The command line parameter for the server connection file is `-c <serverconnectionfile>`. If the same server id is present in both the script and server connection files, then the server definition in the script file is considered.  

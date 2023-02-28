@@ -1,14 +1,12 @@
 ---
+title: "Microsoft Connector for Oracle"
 description: "Microsoft Connector for Oracle"
-title: "Microsoft Connector for Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/14/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "08/14/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Microsoft Connector for Oracle
 

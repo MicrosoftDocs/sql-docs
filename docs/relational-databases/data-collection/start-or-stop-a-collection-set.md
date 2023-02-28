@@ -1,18 +1,15 @@
 ---
+title: "Start or Stop a Collection Set"
 description: "Start or Stop a Collection Set"
-title: "Start or Stop a Collection Set | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "collection sets [SQL Server], stopping"
-  - "collection sets [SQL Server], starting"
-ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+helpviewer_keywords:
+  - "collection sets [SQL Server], stopping"
+  - "collection sets [SQL Server], starting"
 ---
 # Start or Stop a Collection Set
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

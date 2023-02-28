@@ -1,11 +1,14 @@
 ---
 title: "Requirements and limitations (XML schema collections)"
 description: Learn about the requirements and limitations for modifying your XML schema collections in SQL Server.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "identifiers [XML schema collections]"
   - "XML schema collections [SQL Server], limitations"
@@ -20,9 +23,6 @@ helpviewer_keywords:
   - "precision decimals [XML in SQL Server]"
   - "schema collections [SQL Server], guidelines"
   - "lexical representation"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Requirements and limitations for XML schema collections on the server
 

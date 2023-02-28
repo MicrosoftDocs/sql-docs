@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.column_encryption_keys catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_encryption_keys  (Transact-SQL)

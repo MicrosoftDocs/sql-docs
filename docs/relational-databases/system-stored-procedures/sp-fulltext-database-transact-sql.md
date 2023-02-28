@@ -1,22 +1,19 @@
 ---
+title: "sp_fulltext_database (Transact-SQL)"
 description: "sp_fulltext_database (Transact-SQL)"
-title: "sp_fulltext_database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_fulltext_database_TSQL"
-  - "sp_fulltext_database"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_fulltext_database"
-ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_fulltext_database_TSQL"
+  - "sp_fulltext_database"
+helpviewer_keywords:
+  - "sp_fulltext_database"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_database (Transact-SQL)

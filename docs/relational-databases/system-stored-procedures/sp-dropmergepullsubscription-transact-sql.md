@@ -1,22 +1,19 @@
 ---
+title: "sp_dropmergepullsubscription (Transact-SQL)"
 description: "sp_dropmergepullsubscription (Transact-SQL)"
-title: "sp_dropmergepullsubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropmergepullsubscription"
-  - "sp_dropmergepullsubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_dropmergepullsubscription"
-ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropmergepullsubscription"
+  - "sp_dropmergepullsubscription_TSQL"
+helpviewer_keywords:
+  - "sp_dropmergepullsubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

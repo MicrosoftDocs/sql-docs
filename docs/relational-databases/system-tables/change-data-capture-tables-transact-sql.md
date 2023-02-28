@@ -9,7 +9,6 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 ---
 # Change Data Capture Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_helpfilegroup (Transact-SQL)"
 description: "sp_helpfilegroup (Transact-SQL)"
-title: "sp_helpfilegroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpfilegroup_TSQL"
-  - "sp_helpfilegroup"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpfilegroup"
-ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpfilegroup_TSQL"
+  - "sp_helpfilegroup"
+helpviewer_keywords:
+  - "sp_helpfilegroup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

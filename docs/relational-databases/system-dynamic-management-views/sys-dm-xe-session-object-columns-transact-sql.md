@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_xe_session_object_columns dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 ---
 # sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

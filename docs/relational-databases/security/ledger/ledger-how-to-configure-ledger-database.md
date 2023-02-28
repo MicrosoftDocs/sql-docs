@@ -1,18 +1,16 @@
 ---
 title: Configure a ledger database
 description: This article discusses how to configure a ledger database in Azure SQL Database and SQL Server 2022
-ms.service: sql-database
-ms.subservice: security
-ms.devlang:
-ms.custom:
-- event-tier1-build-2022
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
 ms.date: "10/20/2022"
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
+ms.custom: event-tier1-build-2022
 zone_pivot_groups: as1-azuresql-sql
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Configure a ledger database

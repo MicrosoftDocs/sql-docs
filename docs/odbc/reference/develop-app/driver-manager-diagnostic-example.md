@@ -1,19 +1,16 @@
 ---
+title: "Driver Manager Diagnostic Example"
 description: "Driver Manager Diagnostic Example"
-title: "Driver Manager Diagnostic Example | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "driver manager [ODBC], diagnostic messages"
   - "diagnostic information [ODBC], examples"
   - "error messages [ODBC], diagnostic messages"
-ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Driver Manager Diagnostic Example
 The Driver Manager can also generate diagnostic messages. For example, if an application passed an invalid direction option to **SQLDataSources**, the Driver Manager might format and return the following values from **SQLGetDiagRec**:  

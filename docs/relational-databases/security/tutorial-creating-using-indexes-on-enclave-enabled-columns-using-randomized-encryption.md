@@ -1,18 +1,16 @@
 ---
 title: "Indexes on enclave-enabled columns with randomized encryption (Tutorial)"
-description: Tutorial on how to create and use index on enclave-enabled columns using randomized encryption supported in Always Encrypted with secure enclaves for SQL Server and Azure SQL Database. 
-ms.custom:
-- seo-lt-2019
-- event-tier1-build-2022
-ms.date: 02/15/2023
-ms.service: sql
-ms.reviewer: vanto
-ms.suite: "sql"
-ms.subservice: security
-ms.tgt_pltfrm: ""
-ms.topic: tutorial
+description: Tutorial on how to create and use index on enclave-enabled columns using randomized encryption supported in Always Encrypted with secure enclaves for SQL Server and Azure SQL Database.
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: security
+ms.topic: tutorial
+ms.custom:
+  - seo-lt-2019
+  - event-tier1-build-2022
 monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption

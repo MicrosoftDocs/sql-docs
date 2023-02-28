@@ -1,16 +1,12 @@
 ---
-title: "Controlling page breaks, headings, columns, and rows in paginated reports | Microsoft Docs"
-
+title: "Controlling page breaks, headings, columns, and rows in paginated reports"
 description: Optimize viewing and printing of your tables, lists, or images in paginated reports with choices for page lengths, columns, headings, and rows in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Controlling page breaks, headings, columns, and rows in paginated reports (Report Builder)
 

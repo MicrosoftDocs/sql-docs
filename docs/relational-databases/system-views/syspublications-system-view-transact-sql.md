@@ -1,22 +1,19 @@
 ---
+title: "syspublications (System View) (Transact-SQL)"
 description: "syspublications (System View) (Transact-SQL)"
-title: "syspublications (System View) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "syspublications"
-  - "syspublications_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "syspublications view"
-ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "syspublications"
+  - "syspublications_TSQL"
+helpviewer_keywords:
+  - "syspublications view"
+dev_langs:
+  - "TSQL"
 ---
 # syspublications (System View) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

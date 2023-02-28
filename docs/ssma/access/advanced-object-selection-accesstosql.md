@@ -1,19 +1,15 @@
 ---
+title: "Advanced Object Selection  (AccessToSQL)"
 description: "Advanced Object Selection  (AccessToSQL)"
-title: "Advanced Object Selection  (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.access.loadingobjectsdialog.f1"
   - "ssma.access.multichecktreeview.f1"
-
 ---
 # Advanced Object Selection  (AccessToSQL)
 The **Advanced Object Section** dialog box lets you filter database objects by using strings and substrings in the object name, and then select or deselect those objects. SSMA performs conversion and migration operations on selected objects.  

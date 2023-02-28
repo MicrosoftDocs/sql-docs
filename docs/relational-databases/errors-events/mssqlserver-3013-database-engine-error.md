@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_3013"
 title: MSSQLSERVER_3013
-ms.custom: ""
-ms.date: 08/20/2020
-ms.service: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3013 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_3013"
 author: suresh-kandoth
 ms.author: ramakoni
+ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
+ms.date: 08/20/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3013 (Database Engine error)"
 ---
 
 # MSSQLSERVER_3013

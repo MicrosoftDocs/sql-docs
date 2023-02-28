@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_12304"
 description: "MSSQLSERVER_12304"
-title: "MSSQLSERVER_12304 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "12304 (Database Engine error)"
-ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "12304 (Database Engine error)"
 ---
 # MSSQLSERVER_12304
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

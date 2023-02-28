@@ -1,19 +1,16 @@
 ---
+title: "MSSQLSERVER_8525"
 description: "MSSQLSERVER_8525"
-title: "MSSQLSERVER_8525 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-f1_keywords: 
-  - "8525"
-helpviewer_keywords: 
-  - "8525 (Database Engine error)"
-ms.assetid: 297867c1-691e-4d6b-a3be-a7575015ecfa
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+f1_keywords:
+  - "8525"
+helpviewer_keywords:
+  - "8525 (Database Engine error)"
 ---
 # MSSQLSERVER_8525
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

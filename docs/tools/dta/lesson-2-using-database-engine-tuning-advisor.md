@@ -1,17 +1,15 @@
 ---
 title: Using Database Engine Tuning Advisor
 description: Learn about how the SQL Server Database Engine Tuning Advisor GUI tunes databases, manages tuning sessions, and displays tuning recommendations.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Database Engine [SQL Server], tutorials"
-ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+helpviewer_keywords:
+  - "Database Engine [SQL Server], tutorials"
 ---
 
 # Lesson 2: Using Database Engine Tuning Advisor

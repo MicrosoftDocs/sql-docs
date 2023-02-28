@@ -1,20 +1,15 @@
 ---
+title: "Using Transactions"
 description: "Using Transactions"
-title: "Using Transactions | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Objects, transactions"
   - "transactions [SMO]"
   - "SMO [SQL Server], transactions"
-ms.assetid: 399aded8-bee3-4cfb-a671-1877c7d0de9f
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Transactions

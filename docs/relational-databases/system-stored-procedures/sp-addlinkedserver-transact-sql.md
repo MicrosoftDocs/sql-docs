@@ -1,21 +1,20 @@
 ---
-description: "sp_addlinkedserver (Transact-SQL)"
 title: "sp_addlinkedserver (Transact-SQL)"
-ms.custom: ""
-ms.date: "11/16/2021"
-ms.service: sql
-ms.reviewer: wiassaf
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addlinkedserver_TSQL"
-  - "sp_addlinkedserver"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addlinkedserver"
+description: "sp_addlinkedserver (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.reviewer: wiassaf
+ms.date: "11/16/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addlinkedserver_TSQL"
+  - "sp_addlinkedserver"
+helpviewer_keywords:
+  - "sp_addlinkedserver"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

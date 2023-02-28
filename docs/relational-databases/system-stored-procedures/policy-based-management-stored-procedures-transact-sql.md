@@ -1,20 +1,17 @@
 ---
+title: "Policy-Based Management Stored Procedures (Transact-SQL)"
 description: "Policy-Based Management Stored Procedures (Transact-SQL)"
-title: "Policy-Based Management Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Policy-Based Management, stored procedures"
-  - "stored procedures [Policy-Based Management]"
-ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Policy-Based Management, stored procedures"
+  - "stored procedures [Policy-Based Management]"
+dev_langs:
+  - "TSQL"
 ---
 # Policy-Based Management Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

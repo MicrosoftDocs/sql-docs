@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_link_status dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)

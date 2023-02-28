@@ -1,19 +1,16 @@
 ---
+title: "Getting Started with SSMA for MySQL Console (MySQLToSQL)"
 description: "Getting Started with SSMA for MySQL Console (MySQLToSQL)"
-title: "Getting Started with SSMA for MySQL Console (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom:
-  - intro-get-started
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom: intro-get-started
 helpviewer_keywords:
   - "MySQL Console, launching console"
   - "MySQL Console, output conventions"
-ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Getting Started with SSMA for MySQL Console (MySQLToSQL)
 This section describes the procedure to launch and get started with the MySQL console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  

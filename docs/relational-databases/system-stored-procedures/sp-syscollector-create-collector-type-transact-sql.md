@@ -1,23 +1,20 @@
 ---
+title: "sp_syscollector_create_collector_type (Transact-SQL)"
 description: "sp_syscollector_create_collector_type (Transact-SQL)"
-title: "sp_syscollector_create_collector_type (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_create_collector_type"
-  - "sp_syscollector_create_collector_type_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syscollector_create_collector_type"
-  - "data collector [SQL Server], stored procedures"
-ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_create_collector_type"
+  - "sp_syscollector_create_collector_type_TSQL"
+helpviewer_keywords:
+  - "sp_syscollector_create_collector_type"
+  - "data collector [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_cleanup_log_shipping_history (Transact-SQL)"
 description: "sp_cleanup_log_shipping_history (Transact-SQL)"
-title: "sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cleanup_log_shipping_history_TSQL"
-  - "sp_cleanup_log_shipping_history"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cleanup_log_shipping_history"
-ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cleanup_log_shipping_history_TSQL"
+  - "sp_cleanup_log_shipping_history"
+helpviewer_keywords:
+  - "sp_cleanup_log_shipping_history"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

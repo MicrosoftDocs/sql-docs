@@ -1,21 +1,18 @@
 ---
+title: "Transfer Jobs Task"
 description: "Transfer Jobs Task"
-title: "Transfer Jobs Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.transferjobstask.f1"
   - "sql13.dts.designer.transferjobstask.general.f1"
   - "sql13.dts.designer.transferjobstask.jobs.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transfer Jobs task [Integration Services]"
-ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-author: chugugrace
-ms.author: chugu
 ---
 # Transfer Jobs Task
 

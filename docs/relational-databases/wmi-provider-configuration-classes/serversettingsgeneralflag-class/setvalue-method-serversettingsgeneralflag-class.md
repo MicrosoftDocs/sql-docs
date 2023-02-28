@@ -1,22 +1,18 @@
 ---
-description: "SetValue Method (ServerSettingsGeneralFlag Class)"
 title: "SetValue Method (ServerSettingsGeneralFlag)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetValue Method (ServerSettingsGeneralFlag Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetValue method"
-ms.assetid: a889feac-c0e0-4635-b506-843863d86967
+description: "SetValue Method (ServerSettingsGeneralFlag Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "SetValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetValue Method (ServerSettingsGeneralFlag Class)"
+apitype: "MOFDef"
 ---
 # SetValue Method (ServerSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

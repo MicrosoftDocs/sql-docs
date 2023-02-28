@@ -1,17 +1,14 @@
 ---
+title: "sp_delete_backup (Transact-SQL)"
 description: "sp_delete_backup (Transact-SQL)"
-title: "sp_delete_backup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/03/2015"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_backup (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

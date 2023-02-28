@@ -1,14 +1,12 @@
 ---
+title: How to Contribute to SQL Server Documentation
 description: "How to contribute to SQL Server Documentation"
-title: How to Contribute to SQL Server Documentation | Microsoft Docs
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/13/2018"
 ms.service: sql
 ms.subservice: release-landing
-ms.reviewer: ""
-ms.custom: ""
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 

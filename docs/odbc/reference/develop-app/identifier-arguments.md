@@ -1,19 +1,16 @@
 ---
+title: "Identifier Arguments"
 description: "Identifier Arguments"
-title: "Identifier Arguments | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "identifier arguments [ODBC]"
   - "catalog functions [ODBC], arguments"
   - "arguments in catalog functions [ODBC], identifier"
-ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Identifier Arguments
 If a string in an identifier argument is quoted, the driver removes leading and trailing blanks and treats literally the string within the quotation marks. If the string is not quoted, the driver removes trailing blanks and folds the string to uppercase. Setting an identifier argument to a null pointer returns SQL_ERROR and SQLSTATE HY009 (Invalid use of null pointer), unless the argument is a catalog name and catalogs are not supported.  

@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "witness [SQL Server], sys.database_mirroring_witnesses catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

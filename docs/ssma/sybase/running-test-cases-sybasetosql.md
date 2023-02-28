@@ -1,17 +1,14 @@
 ---
+title: "Running Test Cases (SybaseToSQL)"
 description: "Running Test Cases (SybaseToSQL)"
-title: "Running Test Cases (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/29/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Tester Component,Execution Steps"
-ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: cpichuka 
-ms.author: cpichuka 
 ---
 
 # Running Test Cases (SybaseToSQL)

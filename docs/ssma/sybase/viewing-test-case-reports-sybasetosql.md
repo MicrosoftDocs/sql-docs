@@ -1,17 +1,14 @@
 ---
+title: "Viewing Test Case Reports (SybaseToSQL)"
 description: "Viewing Test Case Reports (SybaseToSQL)"
-title: "Viewing Test Case Reports (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Tester Component,Test Case Reports"
-ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Viewing Test Case Reports (SybaseToSQL)
 The Test Case Report shows the test verification results and general test information. In case of a test failure, information about any mismatched data in verified objects is also displayed.  

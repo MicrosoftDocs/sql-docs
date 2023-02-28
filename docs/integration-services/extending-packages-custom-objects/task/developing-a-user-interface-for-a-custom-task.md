@@ -1,16 +1,13 @@
 ---
+title: "Developing a User Interface for a Custom Task"
 description: "Developing a User Interface for a Custom Task"
-title: "Developing a User Interface for a Custom Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom user interfaces [Integration Services]"
   - "IDtsTaskUI interface"
   - "DtsTaskAttribute attribute"
@@ -18,9 +15,9 @@ helpviewer_keywords:
   - "custom user interface [Integration Services], custom tasks"
   - "user interface [Integration Services]"
   - "SSIS custom tasks, user interface"
-ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing a User Interface for a Custom Task
 

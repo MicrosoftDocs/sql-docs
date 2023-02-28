@@ -1,22 +1,20 @@
 ---
 title: Filter (geometry Data Type)
 description: "Filter (geometry Data Type)"
+author: MladjoA
+ms.author: mlandzic
+ms.date: "08/03/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Filter"
   - "Filter_TSQL"
   - "Filter (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Filter method"
-author: MladjoA
-ms.author: mlandzic 
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "08/03/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # Filter (geometry Data Type)

@@ -1,22 +1,19 @@
 ---
+title: "sp_copysubscription (Transact-SQL)"
 description: "sp_copysubscription (Transact-SQL)"
-title: "sp_copysubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_copysubscription"
-  - "sp_copysubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_copysubscription"
-ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_copysubscription"
+  - "sp_copysubscription_TSQL"
+helpviewer_keywords:
+  - "sp_copysubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_copysubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

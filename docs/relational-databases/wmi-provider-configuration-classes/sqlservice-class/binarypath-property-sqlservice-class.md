@@ -1,21 +1,16 @@
 ---
-description: "BinaryPath Property (SqlService Class )"
 title: "BinaryPath Property (SqlService Class )"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "BinaryPath Property (SqlService Class )"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "BinaryPath property"
-ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
+description: "BinaryPath Property (SqlService Class )"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "BinaryPath property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "BinaryPath Property (SqlService Class )"
 ---
 # BinaryPath Property (SqlService Class )
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

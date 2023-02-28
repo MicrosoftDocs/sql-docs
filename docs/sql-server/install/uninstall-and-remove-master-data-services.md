@@ -1,15 +1,12 @@
 ---
-title: "Uninstall and Remove Master Data Services | Microsoft Docs"
+title: "Uninstall and Remove Master Data Services"
 description: This uninstall process removes Master Data Services folders and files, and uninstalls Master Data Services Configuration Manager from the local computer.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: install
-ms.topic: conceptual
-ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: install
+ms.topic: conceptual
 ---
 # Uninstall and Remove Master Data Services
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

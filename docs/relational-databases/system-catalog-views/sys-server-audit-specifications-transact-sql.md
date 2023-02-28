@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_audit_specifications catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 ---
 # sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]

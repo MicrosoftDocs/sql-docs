@@ -1,15 +1,12 @@
 ---
+title: "Global Settings (Dialogs) (DB2ToSQL)"
 description: "Global Settings (Dialogs) (DB2ToSQL)"
-title: "Global Settings (Dialogs) (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Global Settings (Dialogs) (DB2ToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

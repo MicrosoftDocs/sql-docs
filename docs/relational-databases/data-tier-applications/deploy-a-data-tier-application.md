@@ -1,14 +1,13 @@
 ---
+title: "Deploy a Data-tier Application"
 description: "Deploy a Data-tier Application"
-title: "Deploy a Data-tier Application | Microsoft Docs"
-ms.custom:
-  - intro-deployment
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "01/31/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: intro-deployment
+f1_keywords:
   - "sql13.swb.deploydacwizard.introduction.f1"
   - "sql13.swb.deploydacwizard.deploydac.f1"
   - "sql13.swb.deploydacwizard.summary.f1"
@@ -20,9 +19,6 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], deploy"
   - "How to [DAC], deploy"
   - "wizard [DAC], deploy"
-ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Deploy a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

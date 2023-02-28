@@ -1,22 +1,19 @@
 ---
+title: "sp_cursor (Transact-SQL)"
 description: "sp_cursor (Transact-SQL)"
-title: "sp_cursor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursor_TSQL"
-  - "sp_cursor"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursor"
-ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursor_TSQL"
+  - "sp_cursor"
+helpviewer_keywords:
+  - "sp_cursor"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

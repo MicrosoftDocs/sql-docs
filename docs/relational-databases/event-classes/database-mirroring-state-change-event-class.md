@@ -1,19 +1,16 @@
 ---
+title: "Database Mirroring State Change Event Class"
 description: "Database Mirroring State Change Event Class"
-title: "Database Mirroring State Change Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event notifications [SQL Server], database mirroring"
   - "database mirroring [SQL Server], event notifications"
   - "Database Mirroring State Change event class"
-ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Mirroring State Change Event Class

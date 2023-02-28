@@ -1,21 +1,18 @@
 ---
-title: "Back Up Files and Filegroups | Microsoft Docs"
-description: This article describes how to back up files and filegroups in SQL Server by using SQL Server Management Studio, Transact-SQL, or PowerShell. 
-ms.custom: ""
+title: "Back Up Files and Filegroups"
+description: This article describes how to back up files and filegroups in SQL Server by using SQL Server Management Studio, Transact-SQL, or PowerShell.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "08/03/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backing up filegroups [SQL Server]"
   - "file backups [SQL Server], how-to topics"
   - "backing up files [SQL Server]"
   - "backups [SQL Server], creating"
   - "filegroups [SQL Server], backing up"
-ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Back Up Files and Filegroups
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

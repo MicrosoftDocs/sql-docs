@@ -1,18 +1,16 @@
 ---
 title: "Contained user access to contained databases"
-description: Learn how to configure contained user access for contained databases, and the differences between a traditional login/user model. 
-ms.custom: seo-lt-2019
-ms.date: "01/28/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "contained database, users"
-  - "user [SQL Server], about contained database users"
-ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
+description: Learn how to configure contained user access for contained databases, and the differences between a traditional login/user model.
 author: VanMSFT
 ms.author: vanto
+ms.date: "01/28/2019"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "contained database, users"
+  - "user [SQL Server], about contained database users"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Contained Database Users - Making Your Database Portable

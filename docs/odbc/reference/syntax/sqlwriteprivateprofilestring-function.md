@@ -1,24 +1,19 @@
 ---
+title: "SQLWritePrivateProfileString Function"
 description: "SQLWritePrivateProfileString Function"
-title: "SQLWritePrivateProfileString Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLWritePrivateProfileString"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLWritePrivateProfileString"
-helpviewer_keywords: 
-  - "SQLWritePrivateProfileString [ODBC]"
-ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLWritePrivateProfileString"
+helpviewer_keywords:
+  - "SQLWritePrivateProfileString [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLWritePrivateProfileString"
+apitype: "dllExport"
 ---
 # SQLWritePrivateProfileString Function
 **Conformance**  

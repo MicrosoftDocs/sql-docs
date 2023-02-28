@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_xe_session_event_actions dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 ---
 # sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

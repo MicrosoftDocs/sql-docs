@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
 dev_langs:
   - "TSQL"
-ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_fdhosts (Transact-SQL)

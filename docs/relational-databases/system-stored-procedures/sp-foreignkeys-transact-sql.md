@@ -1,22 +1,19 @@
 ---
+title: "sp_foreignkeys (Transact-SQL)"
 description: "sp_foreignkeys (Transact-SQL)"
-title: "sp_foreignkeys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_foreignkeys_TSQL"
-  - "sp_foreignkeys"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_foreignkeys"
-ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_foreignkeys_TSQL"
+  - "sp_foreignkeys"
+helpviewer_keywords:
+  - "sp_foreignkeys"
+dev_langs:
+  - "TSQL"
 ---
 # sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

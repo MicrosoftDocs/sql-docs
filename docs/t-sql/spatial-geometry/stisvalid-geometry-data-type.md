@@ -1,22 +1,19 @@
 ---
+title: "STIsValid (geometry Data Type)"
 description: "STIsValid (geometry Data Type)"
-title: "STIsValid (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STIsValid (geometry Data Type)"
   - "STIsValid_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STIsValid (geometry Data Type)"
-ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STIsValid (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,17 +1,14 @@
 ---
+title: "Generating Reports (MySQLToSQL)"
 description: "Generating Reports (MySQLToSQL)"
-title: "Generating Reports (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Generating reports"
-ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Generating Reports (MySQLToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

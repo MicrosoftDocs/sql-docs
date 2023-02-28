@@ -1,20 +1,20 @@
 ---
 title: "Basic syntax of the FOR XML Clause"
 description: Learn the basic syntax of the FOR XML clause and how it is used to determine the shape of XML resulting from an SQL query.
-ms.custom: "fresh2019may"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
+ms.custom: fresh2019may
 helpviewer_keywords:
   - "BINARY BASE64 directive"
   - "ROOT directive"
   - "FOR XML clause, BINARY BASE64 directive"
   - "FOR XML clause, syntax"
   - "FOR XML clause, ROOT directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Basic syntax of the FOR XML clause
 

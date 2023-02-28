@@ -1,16 +1,16 @@
 ---
 title: "Deploy Host Guardian Service"
 description: "Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves."
-ms.custom:
-- intro-deployment
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+ms.custom:
+  - intro-deployment
+  - event-tier1-build-2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

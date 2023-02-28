@@ -5,9 +5,8 @@ author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray
 ms.date: 11/03/2022
-ms.topic: conceptual
-ms.custom:
 ms.service: sql
+ms.topic: conceptual
 ---
 
 # View SQL Server databases - Azure Arc

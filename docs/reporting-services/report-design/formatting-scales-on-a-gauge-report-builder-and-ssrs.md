@@ -1,15 +1,12 @@
 ---
-title: "Formatting scales on a gauge in a paginated report | Microsoft Docs"
-description: Learn about the gauge scale range of numbers bound by a minimum and a maximum in a paginated report in Report Builder. 
+title: "Formatting scales on a gauge in a paginated report"
+description: Learn about the gauge scale range of numbers bound by a minimum and a maximum in a paginated report in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Formatting scales on a gauge in a paginated report (Report Builder)
 

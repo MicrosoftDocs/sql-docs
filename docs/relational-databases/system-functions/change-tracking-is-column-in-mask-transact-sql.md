@@ -1,23 +1,20 @@
 ---
+title: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)"
 description: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)"
-title: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "CHANGE_TRACKING_IS_COLUMN_IN_MASK_TSQL"
-  - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK"
-  - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
-ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "08/08/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "CHANGE_TRACKING_IS_COLUMN_IN_MASK_TSQL"
+  - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
+helpviewer_keywords:
+  - "change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK"
+  - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)

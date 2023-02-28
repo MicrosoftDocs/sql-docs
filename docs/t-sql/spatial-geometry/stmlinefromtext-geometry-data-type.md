@@ -1,22 +1,19 @@
 ---
+title: "STMLineFromText (geometry Data Type)"
 description: "STMLineFromText (geometry Data Type)"
-title: "STMLineFromText (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STMLineFromText (geometry Data Type)"
   - "STMLineFromText_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STMLineFromText (geometry Data Type)"
-ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STMLineFromText (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

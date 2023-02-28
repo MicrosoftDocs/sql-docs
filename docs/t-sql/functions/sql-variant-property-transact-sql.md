@@ -3,12 +3,10 @@ title: "SQL_VARIANT_PROPERTY (Transact-SQL)"
 description: "SQL_VARIANT_PROPERTY (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "02/25/2020"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SQL_VARIANT_PROPERTY_TSQL"
   - "SQL_VARIANT_PROPERTY"

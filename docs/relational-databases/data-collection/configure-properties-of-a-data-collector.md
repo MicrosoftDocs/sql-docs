@@ -1,18 +1,15 @@
 ---
+title: "Configure Properties of a Data Collector"
 description: "Configure Properties of a Data Collector"
-title: "Configure Properties of a Data Collector | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dc.datacollectionprop.general.f1"
-  - "sql13.swb.dc.datacollectionprop.advanced.f1"
-ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dc.datacollectionprop.general.f1"
+  - "sql13.swb.dc.datacollectionprop.advanced.f1"
 ---
 # Configure Properties of a Data Collector
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

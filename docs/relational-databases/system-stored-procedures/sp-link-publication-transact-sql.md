@@ -1,22 +1,19 @@
 ---
+title: "sp_link_publication (Transact-SQL)"
 description: "sp_link_publication (Transact-SQL)"
-title: "sp_link_publication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_link_publication_TSQL"
-  - "sp_link_publication"
-helpviewer_keywords: 
-  - "sp_link_publication"
-ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_link_publication_TSQL"
+  - "sp_link_publication"
+helpviewer_keywords:
+  - "sp_link_publication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

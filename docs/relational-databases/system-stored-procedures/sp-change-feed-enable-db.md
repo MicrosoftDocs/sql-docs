@@ -1,19 +1,19 @@
 ---
-description: "The sp_change_feed_enable_db system stored procedure enables the current database for Azure Synapse Link publishing."
 title: "sp_change_feed_enable_db (Transact-SQL)"
-ms.date: 02/03/2023
-ms.service: synapse-analytics
-ms.reviewer: wiassaf
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_feed_enable_db_TSQL"
-  - "sp_change_feed_enable_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_feed_enable_db"
+description: "The sp_change_feed_enable_db system stored procedure enables the current database for Azure Synapse Link publishing."
 author: IdrisMotiwala
 ms.author: imotiwala
+ms.reviewer: wiassaf
+ms.date: 02/03/2023
+ms.service: synapse-analytics
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_feed_enable_db_TSQL"
+  - "sp_change_feed_enable_db"
+helpviewer_keywords:
+  - "sp_change_feed_enable_db"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 # sp_change_feed_enable_db (Transact-SQL)

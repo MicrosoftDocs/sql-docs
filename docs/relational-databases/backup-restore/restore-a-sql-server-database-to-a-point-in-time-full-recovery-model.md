@@ -1,20 +1,16 @@
 ---
+title: "Restore a SQL Server Database to a Point in Time (Full Recovery Model)"
 description: "Restore a SQL Server Database to a Point in Time (Full Recovery Model)"
-title: "Restore a SQL Server Database to a Point in Time (Full Recovery Model) | Microsoft Docs"
-decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STOPAT clause [RESTORE LOG statement]"
   - "point in time recovery [SQL Server]"
   - "restoring databases [SQL Server], point in time"
-ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Restore a SQL Server Database to a Point in Time (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

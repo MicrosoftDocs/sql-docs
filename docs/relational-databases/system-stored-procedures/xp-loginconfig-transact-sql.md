@@ -1,22 +1,19 @@
 ---
+title: "xp_loginconfig (Transact-SQL)"
 description: "xp_loginconfig (Transact-SQL)"
-title: "xp_loginconfig (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_loginconfig_TSQL"
-  - "xp_loginconfig"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_loginconfig"
-ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_loginconfig_TSQL"
+  - "xp_loginconfig"
+helpviewer_keywords:
+  - "xp_loginconfig"
+dev_langs:
+  - "TSQL"
 ---
 # xp_loginconfig (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

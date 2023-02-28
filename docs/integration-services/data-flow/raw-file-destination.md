@@ -1,25 +1,22 @@
 ---
+title: "Raw File Destination"
 description: "Raw File Destination"
-title: "Raw File Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.rawfiledest.f1"
   - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
   - "sql13.dts.designer.rawfiledestinationcolumns.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "append options [Integration Services]"
   - "destinations [Integration Services], Raw File"
   - "raw data [Integration Services]"
   - "writing raw data"
   - "Raw File destination"
-ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: chugugrace
-ms.author: chugu
 ---
 # Raw File Destination
 

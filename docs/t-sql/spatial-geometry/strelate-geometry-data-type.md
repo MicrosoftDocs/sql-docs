@@ -1,22 +1,19 @@
 ---
+title: "STRelate (geometry Data Type)"
 description: "STRelate (geometry Data Type)"
-title: "STRelate (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STRelate (geometry Data Type)"
   - "STRelate_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STRelate (geometry Data Type)"
-ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STRelate (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

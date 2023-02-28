@@ -1,22 +1,19 @@
 ---
+title: "sp_autostats (Transact-SQL)"
 description: "sp_autostats (Transact-SQL)"
-title: "sp_autostats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_autostats_TSQL"
-  - "sp_autostats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_autostats"
-ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_autostats_TSQL"
+  - "sp_autostats"
+helpviewer_keywords:
+  - "sp_autostats"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_autostats (Transact-SQL)

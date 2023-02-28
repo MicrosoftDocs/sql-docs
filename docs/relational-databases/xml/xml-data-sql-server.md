@@ -1,19 +1,17 @@
 ---
 title: XML data (SQL Server)
 description: Use XML data for developing rich applications for semi-structured data management.
-ms.service: sql
-ms.subservice: xml
-ms.topic: conceptual
-helpviewer_keywords:
-  - "XML [SQL Server]"
-  - "XML [SQL Server], about XML"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.custom:
-- event-tier1-build-2022
 ms.date: 05/09/2022
-# monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
+  - "XML [SQL Server]"
+  - "XML [SQL Server], about XML"
 ---
 # XML data (SQL Server)
 

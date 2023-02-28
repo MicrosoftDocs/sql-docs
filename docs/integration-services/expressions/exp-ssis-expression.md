@@ -1,18 +1,15 @@
 ---
+title: "EXP (SSIS Expression)"
 description: "EXP (SSIS Expression)"
-title: "EXP (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "exponential functions"
-  - "EXP function"
-ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "exponential functions"
+  - "EXP function"
 ---
 # EXP (SSIS Expression)
 

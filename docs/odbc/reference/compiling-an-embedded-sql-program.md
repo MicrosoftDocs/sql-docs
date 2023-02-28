@@ -1,20 +1,17 @@
 ---
+title: "Compiling an Embedded SQL Program"
 description: "Compiling an Embedded SQL Program"
-title: "Compiling an Embedded SQL Program | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL [ODBC], embedded SQL"
   - "SQL statements [ODBC], embedded SQL"
   - "compiling embedded SQL programs [ODBC]"
   - "embedded SQL [ODBC]"
-ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Compiling an Embedded SQL Program
 Because an embedded SQL program contains a mix of SQL and host language statements, it cannot be submitted directly to a compiler for the host language. Instead, it is compiled through a multistep process. Although this process differs from product to product, the steps are roughly the same for all products.  

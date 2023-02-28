@@ -11,7 +11,6 @@ f1_keywords:
   - "sql13.swb.maint.defrag.f1"
 helpviewer_keywords:
   - "Reorganize Index Task dialog box"
-ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 ---
 # Reorganize Index Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
-title: "Complete Database Restores (Full Recovery Model) | Microsoft Docs"
+title: "Complete Database Restores (Full Recovery Model)"
 description: Learn about a complete SQL Server database restore, where all data is recovered to a consistent point in time.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "complete database restores"
   - "database restores [SQL Server], complete database"
   - "restoring databases [SQL Server], complete database"
   - "restoring [SQL Server], database"
   - "full recovery model [SQL Server], performing restores"
   - "log backups [SQL Server["
-ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Complete Database Restores (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

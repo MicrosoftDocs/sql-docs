@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_4064"
 description: "MSSQLSERVER_4064"
-title: "MSSQLSERVER_4064 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "4064 (Database Engine error)"
-ms.assetid: 32112b90-0a2f-4834-a027-756811732be7
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "4064 (Database Engine error)"
 ---
 # MSSQLSERVER_4064
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

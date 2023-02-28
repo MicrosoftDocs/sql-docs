@@ -1,21 +1,19 @@
 ---
 title: "Define logical backup device - tape"
 description: This article shows you how to define a logical backup device for a tape drive in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "backup devices [SQL Server], defining"
   - "backup devices [SQL Server], tapes"
   - "backing up databases [SQL Server], tapes"
   - "database backups [SQL Server], tapes"
   - "tape backup devices, creating"
-ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Define a Logical Backup Device for a Tape Drive (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

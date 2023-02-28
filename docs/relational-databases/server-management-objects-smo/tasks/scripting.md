@@ -1,19 +1,14 @@
 ---
+title: "Scripting"
 description: "Scripting"
-title: "Scripting | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "dependencies [SMO]"
-  - "scripts [SMO]"
-ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "dependencies [SMO]"
+  - "scripts [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scripting

@@ -1,16 +1,14 @@
 ---
-description: "Automatically Generate Attribute Values Other Than Code (Master Data Services)"
 title: Automatically Generate Attribute Values
 titleSuffix: Master Data Services
-ms.custom: "seo-lt-2019"
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
+description: "Automatically Generate Attribute Values Other Than Code (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 # Automatically Generate Attribute Values Other Than Code (Master Data Services)
 

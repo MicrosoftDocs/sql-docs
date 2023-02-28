@@ -1,17 +1,14 @@
 ---
+title: "Column Statistics Profile Request Options (Data Profiling Task)"
 description: "Column Statistics Profile Request Options (Data Profiling Task)"
-title: "Column Statistics Profile Request Options (Data Profiling Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Data Profiling Task Editor"
-ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Profiling Task Editor"
 ---
 # Column Statistics Profile Request Options (Data Profiling Task)
 

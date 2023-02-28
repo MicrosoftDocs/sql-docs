@@ -1,15 +1,12 @@
 ---
-title: "Merge cells in a data region in a paginated report | Microsoft Docs"
+title: "Merge cells in a data region in a paginated report"
 description: Discover how to merge cells in a data region in a paginated report to combine cells, improve data region appearance, or provide spanning labels for column and row groups in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Merge cells in a data region in a paginated report (Report Builder)
 

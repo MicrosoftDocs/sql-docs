@@ -1,22 +1,19 @@
 ---
+title: "STIsEmpty (geography Data Type)"
 description: "STIsEmpty (geography Data Type)"
-title: "STIsEmpty (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STIsEmpty_TSQL"
   - "STIsEmpty (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STIsEmpty method"
-ms.assetid: 4cbc66e3-9035-4ecf-8f5a-6301f168c26c
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STIsEmpty (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

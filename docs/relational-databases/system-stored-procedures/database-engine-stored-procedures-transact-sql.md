@@ -1,20 +1,18 @@
 ---
-description: "Database Engine Stored Procedures (Transact-SQL)"
 title: "Database Engine Stored Procedures (Transact-SQL)"
-ms.custom: ""
+description: "Database Engine Stored Procedures (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: 02/24/2023
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Engine [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], Database Engine"
   - "stored procedures [SQL Server], Database Engine"
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # Database Engine Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

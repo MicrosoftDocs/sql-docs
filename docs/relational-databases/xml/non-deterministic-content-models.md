@@ -1,17 +1,16 @@
 ---
 title: "Non-Deterministic Content Models"
 description: View an example of using an XML schema with a non-deterministic content model.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "non-deterministic content models"
   - "content models [XML in SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Non-Deterministic content models
 

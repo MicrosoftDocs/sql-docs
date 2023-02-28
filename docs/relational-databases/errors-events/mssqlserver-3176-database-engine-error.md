@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3176"
 description: "MSSQLSERVER_3176"
-title: "MSSQLSERVER_3176 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3176 (Database Engine error)"
-ms.assetid: 4be24c64-2d52-4cb4-b4d7-36efbe4555b6
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3176 (Database Engine error)"
 ---
 # MSSQLSERVER_3176
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

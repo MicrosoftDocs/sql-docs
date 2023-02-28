@@ -1,19 +1,16 @@
 ---
+title: "Server Event Category"
 description: "Server Event Category"
-title: "Server Event Category | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server event classes, Server event category"
   - "event classes [SQL Server], Server event category"
   - "Server event category [SQL Server]"
-ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server Event Category

@@ -1,13 +1,12 @@
 ---
+title: "Move Database Files"
 description: "Move Database Files"
-title: "Move Database Files | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disaster recovery [SQL Server], moving database files"
   - "files [SQL Server], moving"
   - "data files [SQL Server], moving"
@@ -21,9 +20,6 @@ helpviewer_keywords:
   - "relocating database files"
   - "planned database relocations [SQL Server]"
   - "databases [SQL Server], moving"
-ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Move Database Files
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

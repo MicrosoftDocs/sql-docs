@@ -1,24 +1,21 @@
 ---
+title: "sp_posttracertoken (Transact-SQL)"
 description: "sp_posttracertoken (Transact-SQL)"
-title: "sp_posttracertoken (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "posttracerttoken"
   - "posttracerttoken_TSQL"
   - "sp_posttracertoken"
   - "sp_posttracertoken_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_posttracertoken"
-ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_posttracertoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

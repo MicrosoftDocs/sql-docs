@@ -1,17 +1,15 @@
 ---
+title: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)"
 description: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)"
-title: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 author: VanMSFT
 ms.author: vanto
+ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+ms.custom: event-tier1-build-2022
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current"
 ---
 

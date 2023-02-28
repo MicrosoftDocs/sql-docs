@@ -1,19 +1,15 @@
 ---
+title: "Delete a Trace (Transact-SQL)"
 description: "Delete a Trace (Transact-SQL)"
-title: "Delete a Trace (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "traces [SQL Server], deleting"
   - "removing traces"
   - "deleting traces"
-ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Delete a Trace (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

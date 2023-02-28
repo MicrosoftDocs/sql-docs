@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "system tables [SQL Server], SQL Server Agent"
 dev_langs:
   - "TSQL"
-ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 ---
 # SQL Server Agent Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

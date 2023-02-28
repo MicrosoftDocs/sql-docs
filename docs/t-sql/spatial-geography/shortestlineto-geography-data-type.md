@@ -1,22 +1,19 @@
 ---
+title: "ShortestLineTo (geography Data Type)"
 description: "ShortestLineTo (geography Data Type)"
-title: "ShortestLineTo (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ShortestLineTo_TSQL"
   - "ShortestLineTo"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ShortestLineTo method (geography)"
-ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # ShortestLineTo (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

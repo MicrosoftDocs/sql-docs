@@ -1,15 +1,12 @@
 ---
+title: "Apply Data Quality Rules to Data Source"
 description: "Apply Data Quality Rules to Data Source"
-title: "Apply Data Quality Rules to Data Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Apply Data Quality Rules to Data Source
 

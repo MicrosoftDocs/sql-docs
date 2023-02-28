@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_tran_database_transactions dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_database_transactions (Transact-SQL)

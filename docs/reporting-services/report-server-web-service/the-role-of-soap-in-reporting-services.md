@@ -1,20 +1,17 @@
 ---
-title: "The Role of SOAP in Reporting Services | Microsoft Docs"
+title: "The Role of SOAP in Reporting Services"
 description: The Report Server Web service uses SOAP over HTTP. Report Manager provides an interface to the report server database which stores reports and related content.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-server-web-service
-
-
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Web service [Reporting Services], SOAP"
   - "SOAP [Reporting Services], role in Reporting Services"
   - "Report Server Web service, SOAP"
   - "XML Web service [Reporting Services], SOAP"
-ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-author: maggiesMSFT
-ms.author: maggies
 ---
 # The Role of SOAP in Reporting Services
   The Report Server Web service uses Simple Object Access Protocol (SOAP) messaging to send text-based commands over a network. These commands take the form of XML text that is sent over the World Wide Web using HTTP. By using SOAP as its communication protocol, the Report Server Web service allows applications and components to exchange data with the report server using an open and widely accepted infrastructure. The SOAP standard is defined at www.w3.org/TR/SOAP.  

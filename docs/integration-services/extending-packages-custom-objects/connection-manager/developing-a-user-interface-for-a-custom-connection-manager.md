@@ -1,18 +1,15 @@
 ---
+title: "Developing a User Interface for a Custom Connection Manager"
 description: "Developing a User Interface for a Custom Connection Manager"
-title: "Developing a User Interface for a Custom Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom connection managers [Integration Services], developing user interface"
-  - "custom user interface [Integration Services], custom connection manager"
-ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom connection managers [Integration Services], developing user interface"
+  - "custom user interface [Integration Services], custom connection manager"
 ---
 # Developing a User Interface for a Custom Connection Manager
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.xml_schema_components catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
 ---
 # sys.xml_schema_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

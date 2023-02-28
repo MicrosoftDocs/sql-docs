@@ -1,15 +1,14 @@
 ---
 title: "Maximum capacity specifications for SQL Server"
 description: This article shows maximum sizes and numbers of various objects defined in SQL Server components, along with additional information.
-ms.service: sql
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 03/11/2022
 ms.reviewer: randolphwest
-ms.custom: ""
+ms.date: 03/11/2022
+ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "objects [SQL Server]"
   - "number capacity specifications [SQL Server]"
   - "size [SQL Server], capacity specifications"

@@ -1,17 +1,14 @@
 ---
+title: "Date, Time, and Timestamp Literals"
 description: "Date, Time, and Timestamp Literals"
-title: "Date, Time, and Timestamp Literals | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "escape sequences [ODBC], literals"
-ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "escape sequences [ODBC], literals"
 ---
 # Date, Time, and Timestamp Literals
 The escape sequence for date, time, and timestamp literals is  

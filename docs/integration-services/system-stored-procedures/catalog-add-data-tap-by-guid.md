@@ -1,15 +1,12 @@
 ---
+title: "catalog.add_data_tap_by_guid"
 description: "catalog.add_data_tap_by_guid"
-title: "catalog.add_data_tap_by_guid | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.add_data_tap_by_guid 
 

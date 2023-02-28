@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_io_backup_tapes dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 ---
 # sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

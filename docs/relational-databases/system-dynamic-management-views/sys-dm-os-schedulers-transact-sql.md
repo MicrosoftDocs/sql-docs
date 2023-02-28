@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_schedulers dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_schedulers (Transact-SQL)

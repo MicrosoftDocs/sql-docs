@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_db_partition_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_partition_stats (Transact-SQL)

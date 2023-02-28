@@ -3,12 +3,10 @@ title: "VERSION (Transact-SQL)"
 description: "Version - Transact SQL Metadata functions"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 dev_langs:
   - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"

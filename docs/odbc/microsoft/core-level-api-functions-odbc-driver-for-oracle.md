@@ -1,20 +1,17 @@
 ---
+title: "Core Level API Functions (ODBC Driver for Oracle)"
 description: "Core Level API Functions (ODBC Driver for Oracle)"
-title: "Core Level API Functions (ODBC Driver for Oracle) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "functions [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], functions"
   - "core level API functions [ODBC]"
   - "ODBC core level API functions [ODBC]"
-ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Core Level API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -1,22 +1,19 @@
 ---
+title: "sp_addlinkedsrvlogin (Transact-SQL)"
 description: "sp_addlinkedsrvlogin (Transact-SQL)"
-title: "sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addlinkedsrvlogin_TSQL"
-  - "sp_addlinkedsrvlogin"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addlinkedsrvlogin"
-ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addlinkedsrvlogin_TSQL"
+  - "sp_addlinkedsrvlogin"
+helpviewer_keywords:
+  - "sp_addlinkedsrvlogin"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

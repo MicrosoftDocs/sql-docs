@@ -1,24 +1,19 @@
 ---
+title: "SQLWriteDSNToIni Function"
 description: "SQLWriteDSNToIni Function"
-title: "SQLWriteDSNToIni Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLWriteDSNToIni"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLWriteDSNToIni"
-helpviewer_keywords: 
-  - "SQLWriteDSNToIni [ODBC]"
-ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLWriteDSNToIni"
+helpviewer_keywords:
+  - "SQLWriteDSNToIni [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLWriteDSNToIni"
+apitype: "dllExport"
 ---
 # SQLWriteDSNToIni Function
 **Conformance**  

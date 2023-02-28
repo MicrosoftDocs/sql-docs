@@ -1,19 +1,16 @@
 ---
-title: "Tutorial: Create a Quick Chart Report Offline (Report Builder) | Microsoft Docs"
+title: "Tutorial: Create a Quick Chart Report Offline (Report Builder)"
 description: In this tutorial, you create a pie chart in a Reporting Services paginated report in Report Builder. Then you add percentages and modify the pie chart.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2017
 ms.service: reporting-services
 ms.subservice: report-builder
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reports, creating"
   - "tutorials, getting started"
   - "creating reports"
-ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)

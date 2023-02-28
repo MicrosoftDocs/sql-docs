@@ -1,24 +1,19 @@
 ---
+title: "ConfigDriver Function"
 description: "ConfigDriver Function"
-title: "ConfigDriver Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "ConfigDriver"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "ConfigDriver"
-helpviewer_keywords: 
-  - "ConfigDriver [ODBC]"
-ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "ConfigDriver"
+helpviewer_keywords:
+  - "ConfigDriver [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "ConfigDriver"
+apitype: "dllExport"
 ---
 # ConfigDriver Function
 **Conformance**  

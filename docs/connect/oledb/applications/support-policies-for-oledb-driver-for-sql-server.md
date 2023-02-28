@@ -1,14 +1,12 @@
 ---
 title: "Support policies for OLE DB Driver for SQL Server"
 description: "Learn about the support policies for OLE DB Driver for SQL Server and what operating systems and SQL database versions are supported with each driver version."
-ms.date: "02/14/2023"
-ms.service: sql
-ms.reviewer: ""
-ms.custom: ""
-ms.subservice: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "02/14/2023"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: "reference"
 ---
 # Support policies for OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

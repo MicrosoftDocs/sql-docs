@@ -1,18 +1,15 @@
 ---
+title: "Selecting and Configuring Objects to Test (SybaseToSQL)"
 description: "Selecting and Configuring Objects to Test (SybaseToSQL)"
-title: "Selecting and Configuring Objects to Test (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Tester Component,Parameter Comparision Setting"
   - "Tester Component,Selecting Objects"
-ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Selecting and Configuring Objects to Test (SybaseToSQL)
 At this step you select objects to test, and configure settings for comparing procedures' and functions' output parameters, as well as the return values of functions.  

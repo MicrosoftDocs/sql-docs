@@ -1,22 +1,19 @@
 ---
+title: "sp_helpsort (Transact-SQL)"
 description: "sp_helpsort (Transact-SQL)"
-title: "sp_helpsort (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpsort_TSQL"
-  - "sp_helpsort"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpsort"
-ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpsort_TSQL"
+  - "sp_helpsort"
+helpviewer_keywords:
+  - "sp_helpsort"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpsort (Transact-SQL)

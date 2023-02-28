@@ -1,22 +1,19 @@
 ---
+title: "STInteriorRingN (geometry Data Type)"
 description: "STInteriorRingN (geometry Data Type)"
-title: "STInteriorRingN (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STInteriorRingN_TSQL"
   - "STInteriorRingN (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STInteriorRingN (geometry Data Type)"
-ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STInteriorRingN (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,18 +1,18 @@
 ---
+title: "Term Extraction Transformation"
 description: "Term Extraction Transformation"
-title: "Term Extraction Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.termextractiontrans.f1"
   - "sql13.dts.designer.termextraction.termextraction.f1"
   - "sql13.dts.designer.termextraction.inclusionexclusion.f1"
   - "sql13.dts.designer.termextraction.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "word boundaries [Integration Services]"
   - "extracting data [Integration Services]"
   - "sentence boundaries"
@@ -25,9 +25,6 @@ helpviewer_keywords:
   - "text extraction [Integration Services]"
   - "term extractions [Integration Services]"
   - "stemming words [Integration Services]"
-ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: chugugrace
-ms.author: chugu
 ---
 # Term Extraction Transformation
 

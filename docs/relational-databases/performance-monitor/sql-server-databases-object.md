@@ -1,19 +1,17 @@
 ---
 title: "SQL Server, Databases object"
-description: Learn about the SQLServer:Databases object, which provides counters for bulk copy operations, backup and restore throughput, and transaction log activities.
-ms.custom: ""
+description: "Learn about the SQLServer:Databases object, which provides counters for bulk copy operations, backup and restore throughput, and transaction log activities."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/05/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Databases object"
   - "SQLServer:Databases"
   - "Availability Groups [SQL Server], performance counters"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Databases object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

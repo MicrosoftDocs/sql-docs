@@ -1,22 +1,19 @@
 ---
+title: "sp_dropdynamicsnapshot_job (Transact-SQL)"
 description: "sp_dropdynamicsnapshot_job (Transact-SQL)"
-title: "sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropdynamicsnapshot_job_TSQL"
-  - "sp_dropdynamicsnapshot_job"
-helpviewer_keywords: 
-  - "sp_dropdynamicsnapshot_job"
-ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropdynamicsnapshot_job_TSQL"
+  - "sp_dropdynamicsnapshot_job"
+helpviewer_keywords:
+  - "sp_dropdynamicsnapshot_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

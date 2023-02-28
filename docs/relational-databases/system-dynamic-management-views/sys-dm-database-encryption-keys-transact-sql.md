@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_database_encryption_keys dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_database_encryption_keys (Transact-SQL)

@@ -1,22 +1,19 @@
 ---
+title: "sp_help_fulltext_columns (Transact-SQL)"
 description: "sp_help_fulltext_columns (Transact-SQL)"
-title: "sp_help_fulltext_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_fulltext_columns"
-  - "sp_help_fulltext_columns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_fulltext_columns"
-ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_fulltext_columns"
+  - "sp_help_fulltext_columns_TSQL"
+helpviewer_keywords:
+  - "sp_help_fulltext_columns"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

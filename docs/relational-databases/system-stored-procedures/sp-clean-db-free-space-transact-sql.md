@@ -1,23 +1,20 @@
 ---
+title: "sp_clean_db_free_space (Transact-SQL)"
 description: "sp_clean_db_free_space (Transact-SQL)"
-title: "sp_clean_db_free_space (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_clean_db_free_space_TSQL"
-  - "sp_clean_db_free_space"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_clean_db_free_space"
-  - "ghost records"
-ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_clean_db_free_space_TSQL"
+  - "sp_clean_db_free_space"
+helpviewer_keywords:
+  - "sp_clean_db_free_space"
+  - "ghost records"
+dev_langs:
+  - "TSQL"
 ---
 # sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

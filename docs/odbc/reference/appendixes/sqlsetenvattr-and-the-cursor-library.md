@@ -1,17 +1,14 @@
 ---
+title: "SQLSetEnvAttr and the Cursor Library"
 description: "SQLSetEnvAttr and the Cursor Library"
-title: "SQLSetEnvAttr and the Cursor Library | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLSetEnvAttr function [ODBC], Cursor Library"
-ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLSetEnvAttr function [ODBC], Cursor Library"
 ---
 # SQLSetEnvAttr and the Cursor Library
 > [!IMPORTANT]  

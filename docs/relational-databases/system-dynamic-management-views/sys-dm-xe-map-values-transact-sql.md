@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "xe"
 dev_langs:
   - "TSQL"
-ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 ---
 # sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

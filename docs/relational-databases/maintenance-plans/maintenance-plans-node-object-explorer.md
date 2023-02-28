@@ -10,7 +10,6 @@ ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.maint.maintplanproperties.reporting.f1"
   - "sql13.swb.maint.maintplanproperties.completebackup.f1"
-ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 ---
 # Maintenance Plans Node (Object Explorer)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

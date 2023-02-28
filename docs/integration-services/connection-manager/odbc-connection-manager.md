@@ -1,22 +1,19 @@
 ---
+title: "ODBC Connection Manager"
 description: "ODBC Connection Manager"
-title: "ODBC Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.odbcconnection.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], ODBC"
   - "ODBC connection manager"
   - "data sources [Integration Services], connections"
   - "connection managers [Integration Services], ODBC"
-ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-author: chugugrace
-ms.author: chugu
 ---
 # ODBC Connection Manager
 

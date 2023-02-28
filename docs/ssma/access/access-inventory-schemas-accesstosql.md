@@ -1,13 +1,13 @@
 ---
+title: "Access Inventory Schemas (AccessToSQL)"
 description: "Access Inventory Schemas (AccessToSQL)"
-title: "Access Inventory Schemas (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns table"
   - "databases table"
   - "exported metadata"
@@ -34,9 +34,6 @@ helpviewer_keywords:
   - "SSMA_Access_InventoryReports"
   - "SSMA_Access_InventoryTables"
   - "tables, inventory"
-ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Access Inventory Schemas (AccessToSQL)
 The following sections describe the tables that are created by SSMA when you export Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,22 +1,20 @@
 ---
-description: "Poll servers control how frequently the target server connects to the master server to download instructions and upload the results of job execution."
-
 title: "Poll Servers"
-ms.custom: seo-lt-2019
+description: "Poll servers control how frequently the target server connects to the master server to download instructions and upload the results of job execution."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
 ms.date: 04/18/2022
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "target servers [SQL Server], polling interval"
   - "polling master servers [SQL Server]"
   - "server polling [SQL Server]"
   - "master servers [SQL Server], polling"
   - "polling interval [SQL Server]"
-ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Poll servers

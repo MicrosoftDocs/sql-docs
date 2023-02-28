@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_external_script_execution_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_external_script_execution_stats

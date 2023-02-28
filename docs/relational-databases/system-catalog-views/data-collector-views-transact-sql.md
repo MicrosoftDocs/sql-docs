@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "data collector [SQL Server], views"
 dev_langs:
   - "TSQL"
-ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 ---
 # Data Collector Views (Transact-SQL)
 

@@ -1,16 +1,13 @@
 ---
+title: "Handling Events Programmatically"
 description: "Handling Events Programmatically"
-title: "Handling Events Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services 
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, events"
   - "SQL Server Integration Services packages, events"
   - "SSIS events, programmatically handling"
@@ -21,9 +18,9 @@ helpviewer_keywords:
   - "events [Integration Services], programmatically"
   - "tasks [Integration Services], events"
   - "IDTSEvents interface"
-ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Handling Events Programmatically
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSpub_identity_range system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 ---
 # MSpub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

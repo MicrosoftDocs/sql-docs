@@ -1,17 +1,14 @@
 ---
+title: "CursorPrepare Event Class"
 description: "CursorPrepare Event Class"
-title: "CursorPrepare Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "CursorPrepare event class"
-ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "CursorPrepare event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorPrepare Event Class

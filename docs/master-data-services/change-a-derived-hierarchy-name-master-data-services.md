@@ -1,17 +1,14 @@
 ---
-description: "Change a Derived Hierarchy Name (Master Data Services)"
 title: Change a Derived Hierarchy Name
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "derived hierarchies, changing name"
-ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
+description: "Change a Derived Hierarchy Name (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "derived hierarchies, changing name"
 ---
 # Change a Derived Hierarchy Name (Master Data Services)
 

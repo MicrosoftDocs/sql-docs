@@ -1,20 +1,17 @@
 ---
+title: "Installing ODBC Components"
 description: "Installing ODBC Components"
-title: "Installing ODBC Components | Microsoft Docs"
-ms.custom:
-  - intro-installation
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
+ms.custom: intro-installation
 helpviewer_keywords:
   - "installing ODBC components [ODBC]"
   - "installing ODBC components [ODBC], about installing"
   - "ODBC [ODBC], component installation"
-ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Installing ODBC Components
 > [!NOTE]  

@@ -1,22 +1,19 @@
 ---
+title: "xp_sscanf (Transact-SQL)"
 description: "xp_sscanf (Transact-SQL)"
-title: "xp_sscanf (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_sscanf_TSQL"
-  - "xp_sscanf"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_sscanf"
-ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_sscanf_TSQL"
+  - "xp_sscanf"
+helpviewer_keywords:
+  - "xp_sscanf"
+dev_langs:
+  - "TSQL"
 ---
 # xp_sscanf (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

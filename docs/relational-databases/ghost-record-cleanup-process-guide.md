@@ -1,18 +1,16 @@
 ---
-title: "Ghost cleanup process guide | Microsoft Docs"
+title: "Ghost cleanup process guide"
 description: Learn about the ghost cleanup process, a background process that deletes records off of pages that have been marked for deletion in SQL Server.
-ms.custom: ""
-ms.date: "05/02/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ghost cleanup"
-  - "ghost records"
-  - "ghost clean up process" 
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/02/2018"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ghost cleanup"
+  - "ghost records"
+  - "ghost clean up process"
 ---
 # Ghost cleanup process guide
 

@@ -1,15 +1,12 @@
 ---
-title: "Subreports in paginated reports | Microsoft Docs"
+title: "Subreports in paginated reports"
 description: Display a report inside another paginated report. Display and store them both in the same server folder in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Subreports in paginated reports (Report Builder)
 

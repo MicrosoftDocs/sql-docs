@@ -1,17 +1,14 @@
 ---
+title: "ODBC Driver for Oracle User's Guide"
 description: "ODBC Driver for Oracle User's Guide"
-title: "ODBC Driver for Oracle User's Guide | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC driver for Oracle [ODBC], using ODBC driver for Oracle"
-ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC driver for Oracle [ODBC], using ODBC driver for Oracle"
 ---
 # ODBC Driver for Oracle User's Guide
 > [!IMPORTANT]  

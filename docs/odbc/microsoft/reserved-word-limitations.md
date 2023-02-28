@@ -1,18 +1,15 @@
 ---
+title: "Reserved Word Limitations"
 description: "Reserved Keyword Limitations"
-title: "Reserved Word Limitations | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/01/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "ODBC desktop database drivers [ODBC]"
-  - "desktop database drivers [ODBC]"
-ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "05/01/2018"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "ODBC desktop database drivers [ODBC]"
+  - "desktop database drivers [ODBC]"
 ---
 # Reserved Keyword Limitations
 

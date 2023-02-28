@@ -1,16 +1,14 @@
 ---
 title: Use the Visual Studio Code mssql extension
 description: Use the mssql extension for Visual Studio Code to edit and run Transact-SQL scripts on Windows, macOS, and Linux.
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-ms.service: sql
-ms.subservice: tools-other
-ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.date: 1/25/2023
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 ---
 
 # SQL Server extension for Visual Studio Code

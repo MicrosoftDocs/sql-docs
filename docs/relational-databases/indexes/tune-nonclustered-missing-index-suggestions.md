@@ -6,7 +6,7 @@ ms.author: mikeray
 ms.date: 3/15/2022
 ms.service: sql
 ms.topic: how-to
-ms.custom: "template-how-to #Required; leave this attribute/value as-is."
+ms.custom: template-how-to #Required; leave this attribute/value as-is.
 ---
 
 # Tune nonclustered indexes with missing index suggestions

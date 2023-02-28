@@ -1,22 +1,19 @@
 ---
+title: "sp_xml_removedocument (Transact-SQL)"
 description: "sp_xml_removedocument (Transact-SQL)"
-title: "sp_xml_removedocument (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_xml_removedocument_TSQL"
-  - "sp_xml_removedocument"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_xml_removedocument"
-ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_xml_removedocument_TSQL"
+  - "sp_xml_removedocument"
+helpviewer_keywords:
+  - "sp_xml_removedocument"
+dev_langs:
+  - "TSQL"
 ---
 # sp_xml_removedocument (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

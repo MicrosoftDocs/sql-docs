@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.sql_logins catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_logins (Transact-SQL)

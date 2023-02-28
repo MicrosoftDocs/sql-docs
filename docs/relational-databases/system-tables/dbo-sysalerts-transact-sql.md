@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysalerts system table"
 dev_langs:
   - "TSQL"
-ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 ---
 # dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

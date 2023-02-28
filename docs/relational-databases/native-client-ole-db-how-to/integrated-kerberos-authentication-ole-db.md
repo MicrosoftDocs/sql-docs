@@ -1,15 +1,12 @@
 ---
+title: "Integrated Kerberos authentication (Native Client OLE DB provider)"
 description: "Integrated Kerberos authentication (Native Client OLE DB provider)"
-title: "Integrated Kerberos authentication (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Integrated Kerberos Authentication (Native Client OLE DB Provider)

@@ -1,22 +1,19 @@
 ---
+title: "sp_publisherproperty (Transact-SQL)"
 description: "sp_publisherproperty (Transact-SQL)"
-title: "sp_publisherproperty (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_publisherproperty"
-  - "sp_publisherproperty_TSQL"
-helpviewer_keywords: 
-  - "sp_publisherproperty"
-ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_publisherproperty"
+  - "sp_publisherproperty_TSQL"
+helpviewer_keywords:
+  - "sp_publisherproperty"
+dev_langs:
+  - "TSQL"
 ---
 # sp_publisherproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

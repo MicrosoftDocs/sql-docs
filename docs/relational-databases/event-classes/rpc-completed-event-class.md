@@ -1,17 +1,14 @@
 ---
-title: "RPC:Completed Event Class | Microsoft Docs"
+title: "RPC:Completed Event Class"
 description: "The RPC:Completed event class indicates that a remote procedure call has been completed in SQL Server."
-ms.custom: ""
-ms.date: "12/04/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "RPC:Completed event class"
-ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "12/04/2015"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "RPC:Completed event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RPC:Completed Event Class

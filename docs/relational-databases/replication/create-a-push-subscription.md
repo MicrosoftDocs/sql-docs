@@ -7,6 +7,7 @@ ms.date: "08/25/2016"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "push subscriptions [SQL Server replication], creating"
   - "merge replication subscribing [SQL Server replication], push subscriptions"

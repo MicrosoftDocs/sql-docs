@@ -62,6 +62,8 @@ A private endpoint is an optional fixed IP address in another virtual network th
 
 Learn more about private endpoints and how to configure them in [Azure Private Link for Azure SQL Managed Instance](private-endpoint-overview.md).
 
+# Connectivity architecture
+
 ## [Current connectivity architecture](#tab/current)
 
 The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
@@ -141,8 +143,6 @@ Let's take a closer look at the connectivity architecture of SQL Managed Instanc
 Clients connect to SQL Managed Instance by using a host name that has the form `<mi_name>.<dns_zone>.database.windows.net`. The host name resolves to a private IP address, although it's registered in a public Domain Name System (DNS) zone and is publicly resolvable. The value for `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster. For more information, see [Use auto failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-sql-mi.md#terminology-and-capabilities).
 
 The private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to the SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name to redirect traffic to the correct SQL engine service.
-
-#### Management endpoint
 
 ## Service-aided subnet configuration
 

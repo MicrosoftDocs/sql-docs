@@ -64,7 +64,7 @@ Learn more about private endpoints and how to configure them in [Azure Private L
 
 # Connectivity architecture
 
-## [Current connectivity architecture](#tab/current)
+## [Current architecture](#tab/current)
 
 The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
 
@@ -76,7 +76,7 @@ The *data plane* is deployed inside the customer's subnet for compatibility, con
 
 The *control plane* carries the deployment, management, and core service maintenance functions via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All control plane communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 
-## [Connectivity architecture prior to November 2022](#tab/before-feature-wave)
+## [Architecture prior to November 2022](#tab/before-feature-wave)
 
 The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
 
@@ -143,6 +143,8 @@ Let's take a closer look at the connectivity architecture of SQL Managed Instanc
 Clients connect to SQL Managed Instance by using a host name that has the form `<mi_name>.<dns_zone>.database.windows.net`. The host name resolves to a private IP address, although it's registered in a public Domain Name System (DNS) zone and is publicly resolvable. The value for `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster. For more information, see [Use auto failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-sql-mi.md#terminology-and-capabilities).
 
 The private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to the SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name to redirect traffic to the correct SQL engine service.
+
+---
 
 ## Service-aided subnet configuration
 

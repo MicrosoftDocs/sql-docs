@@ -1,6 +1,6 @@
 ---
-title: "BinaryPath Property (SqlService Class )"
-description: "BinaryPath Property (SqlService Class )"
+title: "BinaryPath Property (SqlService class)"
+description: "BinaryPath Property (SqlService class)"
 author: markingmyname
 ms.author: maghan
 ms.date: "03/06/2017"
@@ -10,9 +10,9 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "BinaryPath property"
 apilocation: "sqlmgmproviderxpsp2up.mof"
-apiname: "BinaryPath Property (SqlService Class )"
+apiname: "BinaryPath Property (SqlService class)"
 ---
-# BinaryPath Property (SqlService Class )
+# BinaryPath Property (SqlService class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the binary path of the service.  
   

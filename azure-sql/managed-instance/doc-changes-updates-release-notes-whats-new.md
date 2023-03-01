@@ -31,7 +31,6 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 
 | Feature | Details |
 | ---| --- |
-|[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. |
 |[Database copy and move](database-copy-move-how-to.md) | Perform an online database copy or move operation across managed instances. | 
 |[Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  | 
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
@@ -53,6 +52,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+|[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql)| March 2023 | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
 |[Backup transparency](backup-transparency.md) | November 2022 |  Query the `msdb` database to explore your backup history. | 
 |[Cross-subscription PITR](point-in-time-restore.md) | November 2022 | Restore your database to an instance in a different subscription than your original managed instance by using point-in-time restore (PITR) . 
 |[Migrate to SQL MI with Log Replay Service](log-replay-service-migrate.md) | November 2022 |  Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service. |
@@ -93,9 +93,13 @@ Eligible existing instances created prior to November 2022 can enroll into the f
 
 Learn about significant changes to the Azure SQL Managed Instance documentation.
 
+### 2023
+The following changes were added to SQL Managed Instance and the documentation in 2023: 
+| Changes | Details |
+| --- | --- |
+|**Approximate Percentile GA** | Support has been added to quickly compute percentiles using approximate percentile aggregate functions for large datasets with acceptable rank-based error bounds. This feature is GA now. To learn more, review [Approx_Percentile_Cont](/sql/t-sql/functions/approx-percentile-cont-transact-sql) and [Approx_Percentile_Disc](/sql/t-sql/functions/approx-percentile-disc-transact-sql). | 
 
 ### 2022
-
 The following changes were added to SQL Managed Instance and the documentation in 2022: 
 
 | Changes | Details |

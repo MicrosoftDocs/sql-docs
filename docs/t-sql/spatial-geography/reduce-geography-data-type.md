@@ -1,6 +1,6 @@
 ---
-title: Reduce (geography Data Type )
-description: "Reduce (geography Data Type )"
+title: Reduce (geography Data Type)
+description: "Reduce (geography Data Type)"
 author: MladjoA
 ms.author: mlandzic
 ms.date: "03/14/2017"
@@ -15,7 +15,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# Reduce (geography Data Type )
+# Reduce (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns an approximation of the given **geography** instance produced by running the Douglas-Peucker algorithm on the instance with the given tolerance.  

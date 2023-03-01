@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster_networks dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 ---
 # sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

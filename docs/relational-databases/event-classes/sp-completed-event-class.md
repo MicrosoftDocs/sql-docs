@@ -1,17 +1,14 @@
 ---
+title: "SP:Completed Event Class"
 description: "SP:Completed Event Class"
-title: "SP:Completed Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "SP:Completed event class"
-ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "SP:Completed event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:Completed Event Class

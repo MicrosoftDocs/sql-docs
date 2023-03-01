@@ -1,17 +1,14 @@
 ---
+title: "Finish"
 description: "Finish"
-title: "Finish | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "finish"
-ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "finish"
 ---
 # Finish 
 

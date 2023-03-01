@@ -5,11 +5,10 @@ author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: amitkh, vanto
 ms.date: 04/01/2022
-ms.topic: tutorial
 ms.service: sql
 ms.subservice: linux
-ms.custom:
-  - intro-deployment
+ms.topic: tutorial
+ms.custom: intro-deployment
 ---
 
 # Deploy availability group with DH2i for SQL Server containers on AKS

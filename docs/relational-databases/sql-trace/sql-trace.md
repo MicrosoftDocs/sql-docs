@@ -1,15 +1,11 @@
 ---
 title: SQL Trace
 description: SQL Trace
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: ""
-ms.custom: ""
 ms.date: 11/27/2018
+ms.service: sql
+ms.topic: conceptual
 ---
 
 # SQL Trace

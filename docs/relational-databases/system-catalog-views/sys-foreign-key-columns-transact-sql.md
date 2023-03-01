@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.foreign_key_columns catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.foreign_key_columns (Transact-SQL)

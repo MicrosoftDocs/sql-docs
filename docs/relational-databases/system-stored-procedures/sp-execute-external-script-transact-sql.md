@@ -1,24 +1,21 @@
 ---
+title: "sp_execute_external_script (Transact-SQL)"
 description: "sp_execute_external_script (Transact-SQL)"
-title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 08/06/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: machine-learning-services
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_execute_external_script_TSQL"
   - "sys.sp_execute_external_script"
   - "sys.sp_execute_external_script_TSQL"
   - "sp_execute_external_script"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_execute_external_script"
-ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)

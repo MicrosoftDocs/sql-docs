@@ -1,16 +1,15 @@
 ---
 title: "Example: Constructing Siblings with EXPLICIT Mode"
 description: View an example of an SQL query that uses EXPLICIT mode with the FOR XML clause to construct XML siblings.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "EXPLICIT FOR XML mode"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Construct siblings with EXPLICIT mode
 

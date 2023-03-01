@@ -1,22 +1,19 @@
 ---
+title: "sp_changemergepublication (Transact-SQL)"
 description: "sp_changemergepublication (Transact-SQL)"
-title: "sp_changemergepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changemergepublication_TSQL"
-  - "sp_changemergepublication"
-helpviewer_keywords: 
-  - "sp_changemergepublication"
-ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changemergepublication_TSQL"
+  - "sp_changemergepublication"
+helpviewer_keywords:
+  - "sp_changemergepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

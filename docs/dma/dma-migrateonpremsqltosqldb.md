@@ -12,7 +12,6 @@ ms.custom:
   - intro-migration
 helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
-keywords: ""
 ---
 
 # Migrate on-premises SQL Server or SQL Server on Azure VMs to Azure SQL Database using the Data Migration Assistant

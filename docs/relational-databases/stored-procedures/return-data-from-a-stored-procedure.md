@@ -1,17 +1,16 @@
 ---
 title: "Return data from a stored procedure"
 description: Learn how to return data from a procedure to a calling program by using result sets, output parameters, and return codes.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "12/15/2021"
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: FY22Q2Fresh
+helpviewer_keywords:
   - "stored procedures [SQL Server], returning data"
   - "returning data from stored procedure"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
-ms.date: "12/15/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Return data from a stored procedure

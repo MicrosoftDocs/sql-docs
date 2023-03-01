@@ -1,22 +1,19 @@
 ---
+title: "sp_OADestroy (Transact-SQL)"
 description: "sp_OADestroy (Transact-SQL)"
-title: "sp_OADestroy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_OADestroy_TSQL"
-  - "sp_OADestroy"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_OADestroy"
-ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_OADestroy_TSQL"
+  - "sp_OADestroy"
+helpviewer_keywords:
+  - "sp_OADestroy"
+dev_langs:
+  - "TSQL"
 ---
 # sp_OADestroy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

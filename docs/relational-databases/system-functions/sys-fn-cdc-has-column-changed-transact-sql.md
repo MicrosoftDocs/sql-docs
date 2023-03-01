@@ -1,25 +1,22 @@
 ---
+title: "sys.fn_cdc_has_column_changed (Transact-SQL)"
 description: "sys.fn_cdc_has_column_changed (Transact-SQL)"
-title: "sys.fn_cdc_has_column_changed (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_cdc_has_column_changed_TSQL"
   - "sys.fn_cdc_has_column_changed"
   - "fn_cdc_has_column_changed_TSQL"
   - "fn_cdc_has_column_changed"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.fn_cdc_has_column_changed"
   - "fn_cdc_has_column_changed"
-ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,24 +1,19 @@
 ---
+title: "SQLSetParam Function"
 description: "SQLSetParam Function"
-title: "SQLSetParam Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetParam"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetParam"
-helpviewer_keywords: 
-  - "SQLSetParam function [ODBC]"
-ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetParam"
+helpviewer_keywords:
+  - "SQLSetParam function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetParam"
+apitype: "dllExport"
 ---
 # SQLSetParam Function
 **Conformance**  

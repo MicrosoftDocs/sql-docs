@@ -1,17 +1,14 @@
 ---
+title: "Project Settings (Type Mapping) (SybaseToSQL)"
 description: "Project Settings (Type Mapping) (SybaseToSQL)"
-title: "Project Settings (Type Mapping) (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.sybase.projectsettingtypemapping.f1"
+f1_keywords:
+  - "ssma.sybase.projectsettingtypemapping.f1"
 ---
 # Project Settings (Type Mapping) (SybaseToSQL)
 The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts Sybase Adaptive Server Enterprise (ASE) data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  

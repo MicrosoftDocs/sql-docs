@@ -1,17 +1,14 @@
 ---
+title: "SQLGetPoolID Function"
 description: "SQLGetPoolID Function"
-title: "SQLGetPoolID Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLGetPoolID function [ODBC]"
-ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLGetPoolID function [ODBC]"
 ---
 # SQLGetPoolID Function
 **Conformance**  

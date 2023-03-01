@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_tran_locks dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_locks (Transact-SQL)

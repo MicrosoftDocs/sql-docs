@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.trace_subclass_values catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 ---
 # sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

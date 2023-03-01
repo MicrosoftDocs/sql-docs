@@ -4,12 +4,11 @@ titleSuffix: SQL Server (Transact-SQL)
 description: Remove query notification subscriptions from an instance. This statement can remove a specific subscription or all subscriptions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "07/27/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 f1_keywords:
   - "KILL QUERY NOTIFICATION SUBSCRIPTION"
   - "KILL_QUERY_NOTIFICATION_SUBSCRIPTION_TSQL"

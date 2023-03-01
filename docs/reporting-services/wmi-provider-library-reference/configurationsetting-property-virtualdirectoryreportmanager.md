@@ -1,17 +1,14 @@
 ---
+title: "ConfigurationSetting Property - VirtualDirectoryReportManager"
 description: "ConfigurationSetting Property - VirtualDirectoryReportManager"
-title: "ConfigurationSetting Property - VirtualDirectoryReportManager | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "VirtualDirectoryReportManager property"
-ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
-author: maggiesMSFT
-ms.author: maggies
 ---
 # ConfigurationSetting Property - VirtualDirectoryReportManager
   Returns the virtual directory for the report manager application. Read-only.  

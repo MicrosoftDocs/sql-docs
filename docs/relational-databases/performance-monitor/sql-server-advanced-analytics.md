@@ -1,19 +1,17 @@
 ---
 title: "SQL Server, Advanced Analytics object"
-description: Learn about the SQLServer:Advanced Analytics object, which provides counters to monitor advanced analytics predictive functions.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "language-reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Advanced Analytics object"
-  - "SQLServer:Advanced Analytics"
+description: "Learn about the SQLServer:Advanced Analytics object, which provides counters to monitor advanced analytics predictive functions."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "Advanced Analytics object"
+  - "SQLServer:Advanced Analytics"
+dev_langs:
+  - "TSQL"
 ---
 # SQL Server, Advanced Analytics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

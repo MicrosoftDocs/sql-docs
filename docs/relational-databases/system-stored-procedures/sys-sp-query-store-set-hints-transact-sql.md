@@ -1,25 +1,23 @@
 ---
-description: "The sys.sp_query_store_set_hints system stored procedure creates or updates Query Store hints for a given query, allowing you to influence queries without changing application code or database objects."
 title: "sys.sp_query_store_set_hints (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: "The sys.sp_query_store_set_hints system stored procedure creates or updates Query Store hints for a given query, allowing you to influence queries without changing application code or database objects."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/24/2022
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "language-reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sp_query_store_set_hints_TSQL"
   - "sys.sp_query_store_set_hints_TSQL"
   - "sp_query_store_set_hints"
   - "sys.sp_query_store_set_hints"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_query_store_set_hints"
   - "sp_query_store_set_hints"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_set_hints (Transact-SQL)

@@ -1,17 +1,14 @@
 ---
+title: "Persisting Custom Objects"
 description: "Persisting Custom Objects"
-title: "Persisting Custom Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom objects [Integration Services], persisting"
-ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom objects [Integration Services], persisting"
 ---
 # Persisting Custom Objects
 

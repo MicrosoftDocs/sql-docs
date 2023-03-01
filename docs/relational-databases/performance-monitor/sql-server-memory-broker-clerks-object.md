@@ -1,16 +1,14 @@
 ---
 title: "SQL Server, Memory Broker Clerks object"
-description: Learn about the SQLServer:Memory Broker Clerks performance object, which provides counters for statistics related to memory broker clerks.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:Memory Broker Clerks"
+description: "Learn about the SQLServer:Memory Broker Clerks performance object, which provides counters for statistics related to memory broker clerks."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:Memory Broker Clerks"
 ---
 # SQL Server, Memory Broker Clerks object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

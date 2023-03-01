@@ -1,25 +1,22 @@
 ---
+title: "sys.sp_cdc_cleanup_change_table (Transact-SQL)"
 description: "sys.sp_cdc_cleanup_change_table (Transact-SQL)"
-title: "sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: briancarrig
+ms.author: brcarrig
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cdc_cleanup_change_table"
   - "sp_cdc_cleanup_change_table_TSQL"
   - "sys.sp_cdc_cleanup_change_table"
   - "sys.sp_cdc_cleanup_change_table_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_cdc_cleanup_change_tables"
   - "sp_cdc_cleanup_change_tables"
-ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: briancarrig
-ms.author: brcarrig
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3431"
 description: "MSSQLSERVER_3431"
-title: "MSSQLSERVER_3431 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3431 (Database Engine error)"
-ms.assetid: 9541217f-e5c6-4a12-a19a-006058f1d3f3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3431 (Database Engine error)"
 ---
 # MSSQLSERVER_3431
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

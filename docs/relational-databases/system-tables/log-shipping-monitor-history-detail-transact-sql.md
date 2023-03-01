@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "log_shipping_monitor_history_detail system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 ---
 # log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

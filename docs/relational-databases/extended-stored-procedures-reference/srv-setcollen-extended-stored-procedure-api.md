@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_setcollen
 apitype: "DLLExport"
-ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 ---
 # srv_setcollen (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

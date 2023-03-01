@@ -1,21 +1,18 @@
 ---
+title: "IsNull (geometry Data Type)"
 description: "IsNull (geometry Data Type)"
-title: "IsNull (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "09/12/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IsNull (geometry Data Type)"
-dev_langs: 
+helpviewer_keywords:
+  - "IsNull (geometry Data Type)"
+dev_langs:
   - "TSQL"
-helpviewer_keywords: 
-  - "IsNull (geometry Data Type)"
-ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
-author: MladjoA
-ms.author: mlandzic 
 ---
 # IsNull (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

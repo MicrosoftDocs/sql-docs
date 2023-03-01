@@ -1,17 +1,14 @@
 ---
+title: "MultiPolygon"
 description: "MultiPolygon"
-title: "MultiPolygon | Microsoft Docs"
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "MultiPolygon geometry subtype [SQL Server]"
-  - "geometry subtypes [SQL Server]"
-ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "MultiPolygon geometry subtype [SQL Server]"
+  - "geometry subtypes [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiPolygon

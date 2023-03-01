@@ -1,21 +1,19 @@
 ---
-description: "The sp_statistics system stored procedure returns a list of all indexes and statistics on a specified table or indexed view."
 title: "sp_statistics (Transact-SQL)"
-ms.custom: ""
-ms.date: "03/11/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_statistics_TSQL"
-  - "sp_statistics"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_statistics"
+description: "The sp_statistics system stored procedure returns a list of all indexes and statistics on a specified table or indexed view."
 author: markingmyname
 ms.author: maghan
+ms.date: "03/11/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_statistics_TSQL"
+  - "sp_statistics"
+helpviewer_keywords:
+  - "sp_statistics"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_statistics (Transact-SQL)

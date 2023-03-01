@@ -8,7 +8,6 @@ ms.date: 10/20/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
-ms.custom:
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 ---
 

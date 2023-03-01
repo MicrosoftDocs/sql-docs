@@ -1,22 +1,19 @@
 ---
+title: "sp_addmergearticle (Transact-SQL)"
 description: "sp_addmergearticle (Transact-SQL)"
-title: "sp_addmergearticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergearticle"
-  - "sp_addmergearticle_TSQL"
-helpviewer_keywords: 
-  - "sp_addmergearticle"
-ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergearticle"
+  - "sp_addmergearticle_TSQL"
+helpviewer_keywords:
+  - "sp_addmergearticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,17 +1,14 @@
 ---
-description: "Change a Version Name (Master Data Services)"
 title: Change a Version Name
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "versions [Master Data Services], changing name"
-ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
+description: "Change a Version Name (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "versions [Master Data Services], changing name"
 ---
 # Change a Version Name (Master Data Services)
 

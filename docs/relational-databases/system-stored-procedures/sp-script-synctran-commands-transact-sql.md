@@ -1,22 +1,19 @@
 ---
+title: "sp_script_synctran_commands (Transact-SQL)"
 description: "sp_script_synctran_commands (Transact-SQL)"
-title: "sp_script_synctran_commands (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_script_synctran_commands"
-  - "sp_script_synctran_commands_TSQL"
-helpviewer_keywords: 
-  - "sp_script_synctran_commands"
-ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_script_synctran_commands"
+  - "sp_script_synctran_commands_TSQL"
+helpviewer_keywords:
+  - "sp_script_synctran_commands"
+dev_langs:
+  - "TSQL"
 ---
 # sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

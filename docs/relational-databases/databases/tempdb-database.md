@@ -1,18 +1,17 @@
 ---
 title: "tempdb database"
 description: This article provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
-ms.custom: "P360"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 02/24/2023
 ms.service: sql
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: P360
+helpviewer_keywords:
   - "temporary tables [SQL Server], tempdb database"
   - "tempdb database [SQL Server], about tempdb"
   - "temporary stored procedures [SQL Server]"
   - "tempdb database [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # tempdb database

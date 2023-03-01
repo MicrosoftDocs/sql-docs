@@ -1,20 +1,17 @@
 ---
-title: "Specify Parameters | Microsoft Docs"
+title: "Specify Parameters"
 description: Learn how to pass values into parameters and about how each of the parameter attributes is used during a procedure call.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: stored-procedures
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parameters [SQL Server], stored procedures"
   - "stored procedures [SQL Server], parameters"
   - "output parameters [SQL Server]"
   - "input parameters [SQL Server]"
-ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Parameters

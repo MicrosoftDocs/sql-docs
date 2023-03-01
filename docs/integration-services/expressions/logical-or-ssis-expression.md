@@ -1,19 +1,16 @@
 ---
+title: "|| (Logical OR) (SSIS Expression)"
 description: "|| (Logical OR) (SSIS Expression)"
-title: "|| (Logical OR) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OR operator"
   - "logical OR (||)"
   - "|| (logical OR)"
-ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-author: chugugrace
-ms.author: chugu
 ---
 # || (Logical OR) (SSIS Expression)
 

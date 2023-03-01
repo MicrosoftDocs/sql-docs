@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_41359"
 description: "MSSQLSERVER_41359"
-title: "MSSQLSERVER_41359 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "41359 (Database Engine error)"
-ms.assetid: 02b717c7-9170-4676-b0f6-4dec9eb5b5d4
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "41359 (Database Engine error)"
 ---
 # MSSQLSERVER_41359
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,15 @@
 ---
+title: "Stored Procedure Parameter Limitations"
 description: "Stored Procedure Parameter Limitations"
-title: "Stored Procedure Parameter Limitations | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "stored procedures [ODBC], ODBC driver for Oracle"
-  - "ODBC driver for Oracle [ODBC], stored procedures"
-ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "stored procedures [ODBC], ODBC driver for Oracle"
+  - "ODBC driver for Oracle [ODBC], stored procedures"
 ---
 # Stored Procedure Parameter Limitations
 > [!IMPORTANT]  

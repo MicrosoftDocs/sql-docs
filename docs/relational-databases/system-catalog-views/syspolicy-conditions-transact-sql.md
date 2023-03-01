@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "syspolicy_conditions view"
 dev_langs:
   - "TSQL"
-ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 ---
 # syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

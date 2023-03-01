@@ -1,22 +1,19 @@
 ---
-title: "sp_repldone (Transact-SQL) | Microsoft Docs"
+title: "sp_repldone (Transact-SQL)"
 description: Updates the record that identifies the last distributed transaction of the server. This stored procedure runs at the Publisher on the publication database.
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_repldone"
-  - "sp_repldone_TSQL"
-helpviewer_keywords: 
-  - "sp_repldone"
-ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_repldone"
+  - "sp_repldone_TSQL"
+helpviewer_keywords:
+  - "sp_repldone"
+dev_langs:
+  - "TSQL"
 ---
 # sp_repldone (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

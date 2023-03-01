@@ -1,19 +1,16 @@
 ---
-description: "WMI Provider for Server Events Classes and Properties"
 title: "WMI Provider for Server Events Classes and Properties"
-ms.custom: ""
+description: "WMI Provider for Server Events Classes and Properties"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: wmi
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event classes [WMI]"
   - "WMI Provider for Server Events, events listed"
   - "classes [WMI]"
-ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
-author: markingmyname
-ms.author: maghan
 ---
 # WMI Provider for Server Events Classes and Properties
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

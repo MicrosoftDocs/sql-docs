@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_volume_stats dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 ---
 # sys.dm_os_volume_stats (Transact-SQL)
 

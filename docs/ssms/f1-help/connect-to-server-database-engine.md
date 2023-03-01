@@ -1,22 +1,20 @@
 ---
 title: Connect to Server (Database Engine)
 description: "Connect to Server (Database Engine)"
+author: markingmyname
+ms.author: maghan
+ms.date: 04/07/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.connectoserverunknownservertype.f1"
   - "sql13.swb.connection.login.sqlce.f1"
   - "sql13.swb.connecttoce.f1"
   - "SQL13.SWB.CONNECTION.LOGIN.SQLSERVER.F1"
-  - "sql13.swb.connection.login.sqlserver.f1"
   - "sql13.swb.manageSS2k.f1"
   - "connect-to-server-database-engine"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 04/07/2020
 ---
 
 # Connect to Server (Database Engine)

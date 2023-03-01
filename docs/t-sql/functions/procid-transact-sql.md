@@ -3,12 +3,10 @@ title: "@@PROCID (Transact-SQL)"
 description: "&#x40;&#x40;PROCID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@PROCID"
   - "@@PROCID_TSQL"

@@ -1,22 +1,17 @@
 ---
+title: "SetDatabaseConnection Method (WMI MSReportServer_ConfigurationSetting)"
 description: "SetDatabaseConnection Method (WMI MSReportServer_ConfigurationSetting)"
-title: "SetDatabaseConnection Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SetDatabaseConnection method"
-ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - SetDatabaseConnection
   Sets the report server database connection to a particular report server database.  

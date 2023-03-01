@@ -3,12 +3,10 @@ title: "Comparison Operators (Transact-SQL)"
 description: "Comparison Operators (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "expressions [SQL Server], testing"
   - "operators [Transact-SQL], comparison"

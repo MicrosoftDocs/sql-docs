@@ -1,20 +1,17 @@
 ---
-description: "Tutorial: Ownership Chains and Context Switching"
 title: "Tutorial: Ownership Chains and Context Switching"
+description: "Tutorial: Ownership Chains and Context Switching"
+author: "MashaMSFT"
+ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: quickstart
 ms.custom:
   - seo-dt-2019
   - intro-quickstart
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: quickstart
 helpviewer_keywords:
   - "context switching [SQL Server], tutorials"
   - "ownership chains [SQL Server]"
-ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[sqlserver-asdbmi](../includes/applies-to-version/sql-asdbmi.md)]

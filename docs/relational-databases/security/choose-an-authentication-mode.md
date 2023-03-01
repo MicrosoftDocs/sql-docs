@@ -1,16 +1,16 @@
 ---
-title: "Choose an Authentication Mode | Microsoft Docs"
+title: "Choose an Authentication Mode"
 description: Choose between Windows Authentication mode and mixed mode authentication for the SQL Server Database Engine at setup time.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ins.instwizard.authenticationmode.f1"
   - "sql13.swb.passwordexpired.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sa account"
   - "authentication modes"
   - "trusted connection"
@@ -22,9 +22,6 @@ helpviewer_keywords:
   - "mixed authentication mode"
   - "SQL authentication mode"
   - "Password Expired dialog box"
-ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-author: VanMSFT
-ms.author: vanto
 ---
 # Choose an Authentication Mode
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Output Window) (DB2ToSQL)"
 description: "Global Settings (Output Window) (DB2ToSQL)"
-title: "Global Settings (Output Window) (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.globalsettingoutputwindow.f1"
+f1_keywords:
+  - "ssma.db2.globalsettingoutputwindow.f1"
 ---
 # Global Settings (Output Window) (DB2ToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

@@ -1,22 +1,19 @@
 ---
+title: "sp_add_category (Transact-SQL)"
 description: "sp_add_category (Transact-SQL)"
-title: "sp_add_category (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_category"
-  - "sp_add_category_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_category"
-ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_category"
+  - "sp_add_category_TSQL"
+helpviewer_keywords:
+  - "sp_add_category"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

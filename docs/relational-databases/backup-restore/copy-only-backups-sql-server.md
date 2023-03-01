@@ -1,19 +1,16 @@
 ---
-title: "Copy-Only Backups | Microsoft Docs"
+title: "Copy-Only Backups"
 description: A copy-only backup is a SQL Server backup that is independent of the sequence of SQL Server backups. It does not affect how later backups are restored.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "01/30/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "copy-only backups [SQL Server]"
   - "COPY_ONLY option [BACKUP statement]"
   - "backups [SQL Server], copy-only backups"
-ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Copy-Only Backups

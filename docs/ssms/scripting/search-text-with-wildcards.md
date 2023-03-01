@@ -1,21 +1,19 @@
 ---
 title: "Search Text with Wildcards"
-description: 'Learn how to use wildcards in the "Find what" field of a Find and Replace dialog box to specify a pattern to be matched.'
-ms.custom: seo-lt-2019
+description: "Learn how to use wildcards in the Find what field of a Find and Replace dialog box to specify a pattern to be matched."
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
+ms.custom: seo-lt-2019
 f1_keywords:
   - "vswildcardsbuilder"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "searches [SQL Server Management Studio], wildcards"
   - "Query Editor [SQL Server Management Studio], wildcard searches"
   - "wildcard options [SQL Server Management Studio]"
-ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Text with Wildcards

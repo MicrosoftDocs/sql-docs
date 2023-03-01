@@ -1,16 +1,15 @@
 ---
 title: "Example: Specifying the HIDE Directive"
 description: View an example of using the HIDE directive in an SQL query.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "HIDE directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Specify the HIDE directive
 

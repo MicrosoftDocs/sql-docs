@@ -1,18 +1,15 @@
 ---
+title: "Integration Services Data Types in Expressions"
 description: "Integration Services Data Types in Expressions"
-title: "Integration Services Data Types in Expressions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "expressions [Integration Services], data types"
-  - "data types [Integration Services], expressions"
-ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "expressions [Integration Services], data types"
+  - "data types [Integration Services], expressions"
 ---
 # Integration Services Data Types in Expressions
 

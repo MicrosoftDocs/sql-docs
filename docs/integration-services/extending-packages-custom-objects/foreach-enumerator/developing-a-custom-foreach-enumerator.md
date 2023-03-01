@@ -1,19 +1,16 @@
 ---
+title: "Developing a Custom ForEach Enumerator"
 description: "Developing a Custom ForEach Enumerator"
-title: "Developing a Custom ForEach Enumerator | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom foreach enumerators [Integration Services]"
   - "custom foreach enumerators [Integration Services], about custom foreach enumerators"
   - "foreach enumerators [Integration Services]"
-ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-author: chugugrace
-ms.author: chugu
 ---
 # Developing a Custom ForEach Enumerator
 

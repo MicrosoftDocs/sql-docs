@@ -1,18 +1,15 @@
 ---
+title: "Developing Custom Objects for Integration Services"
 description: "Developing Custom Objects for Integration Services"
-title: "Developing Custom Objects for Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom user interface [Integration Services]"
-  - "custom objects [Integration Services]"
-ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom user interface [Integration Services]"
+  - "custom objects [Integration Services]"
 ---
 # Developing Custom Objects for Integration Services
 

@@ -1,14 +1,14 @@
 ---
 title: SSIS Projects extension for VS2022 troubleshooting guide
 description: "View the release notes for all versions of SSIS that work with Visual Studio 2022 and earlier Visual Studio versions."
-ms.service: sql
-ms.subservice: ssdt
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan, drskwier
-ms.custom: seo-lt-2022
 ms.date: 11/21/2022
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+ms.custom: seo-lt-2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # SSIS Projects extension for VS2022 troubleshooting guide

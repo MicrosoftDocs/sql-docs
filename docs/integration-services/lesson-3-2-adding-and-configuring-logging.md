@@ -1,15 +1,12 @@
 ---
+title: "Step 2: Add and configure logging"
 description: "Lesson 3-2: Add and configure logging"
-title: "Step 2: Add and configure logging | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/04/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
+ms.date: "01/04/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 3-2: Add and configure logging
 

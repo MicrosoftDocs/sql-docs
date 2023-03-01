@@ -1,25 +1,22 @@
 ---
+title: "sys.sysindexkeys (Transact-SQL)"
 description: "sys.sysindexkeys (Transact-SQL)"
-title: "sys.sysindexkeys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysindexkeys"
   - "sys.sysindexkeys_TSQL"
   - "sysindexkeys_TSQL"
   - "sys.sysindexkeys"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysindexkeys system table"
   - "sys.sysindexkeys compatibility view"
-ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysindexkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_dropmergepartition (Transact-SQL)"
 description: "sp_dropmergepartition (Transact-SQL)"
-title: "sp_dropmergepartition (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropmergepartition_TSQL"
-  - "sp_dropmergepartition"
-helpviewer_keywords: 
-  - "sp_dropmergepartition"
-ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropmergepartition_TSQL"
+  - "sp_dropmergepartition"
+helpviewer_keywords:
+  - "sp_dropmergepartition"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_dropmergepartition (Transact-SQL)

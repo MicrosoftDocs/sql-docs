@@ -1,19 +1,16 @@
 ---
+title: "Extended Static Geography Methods"
 description: "Extended Static Geography Methods"
-title: "Extended Static Geography Methods | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Extended Static Geography Methods"
-ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Extended Static Geography Methods
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

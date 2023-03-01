@@ -1,16 +1,16 @@
 ---
 title: "Columns that Contain a Null Value By Default"
 description: Learn how to work with columns that contain a null value by default by using the ELEMENTS XSINIL keyword phrase in SQL.
-ms.custom: "fresh2019may"
-ms.date: 05/05/2022
-ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice: xml
-ms.topic: conceptual
-helpviewer_keywords:
-  - "columns [XML in SQL Server], null default value"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
+ms.topic: conceptual
+ms.custom: fresh2019may
+helpviewer_keywords:
+  - "columns [XML in SQL Server], null default value"
 ---
 # Columns that contain a null value by default
 

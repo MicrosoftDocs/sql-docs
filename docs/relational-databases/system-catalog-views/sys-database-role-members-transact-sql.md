@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_role_members catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_role_members (Transact-SQL)

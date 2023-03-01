@@ -2,15 +2,13 @@
 title: Modify Trace Templates
 titleSuffix: SQL Server Profiler
 description: Discover how to modify trace templates in SQL Server Profiler. Add or remove event classes and data columns, and change filters.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: conceptual
-ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 07/12/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 
 # Modify trace templates

@@ -1,23 +1,16 @@
 ---
-description: "ServerSettingsGeneralFlag Class"
 title: "ServerSettingsGeneralFlag Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "ServerSettingsGeneralFlag Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ServerSettingsGeneralFlag class"
-ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
+description: "ServerSettingsGeneralFlag Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ServerSettingsGeneralFlag class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ServerSettingsGeneralFlag Class"
+apitype: "MOFDef"
 ---
 # ServerSettingsGeneralFlag Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

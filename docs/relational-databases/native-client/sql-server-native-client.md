@@ -1,15 +1,12 @@
 ---
 title: "About"
 description: Learn about the features of SQL Server Native Client (SNAC). SQL Server Native Client refers to ODBC and OLE DB drivers for SQL Server.
-ms.date: "04/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.custom: ""
-ms.subservice: native-client
-ms.topic: conceptual
-ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
+ms.date: "04/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client

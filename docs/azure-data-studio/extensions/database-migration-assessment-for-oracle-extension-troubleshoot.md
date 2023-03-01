@@ -98,7 +98,7 @@ Try to create a new assessment after closing any open assessment file(s).
 
 **Possible causes:** This error may appear due to any of the given reasons:
 
-1. The lookup metadata file is either deleted or corrupted. 
+1. The lookup metadata file is either deleted or corrupted.
 2. The lookup metadata file is already in use by another program.
 
 **Remediation actions:** Try reinstalling the extension, close any open assessment file(s), and create a new assessment. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
@@ -266,7 +266,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 **Possible causes:** This error may appear due to any of the given reasons:
 
-1. The lookup metadata file is either deleted or corrupted. 
+1. The lookup metadata file is either deleted or corrupted.
 2. The lookup metadata file is already in use by another program.
 
 **Remediation actions:** Try reinstalling the extension, close any open assessment file(s), and create a new assessment. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
@@ -277,7 +277,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 **Possible causes:** This error may appear due to any of the given reasons:
 
-1. The lookup metadata file is either deleted or corrupted. 
+1. The lookup metadata file is either deleted or corrupted.
 2. The lookup metadata file is already in use by another program.
 
 **Remediation actions:** Try reinstalling the extension, close any open assessment file(s), and create a new assessment. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
@@ -288,7 +288,7 @@ If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).
 
 **Possible causes:** This error may appear due to any of the given reasons:
 
-1. The lookup metadata file is either deleted or corrupted. 
+1. The lookup metadata file is either deleted or corrupted.
 2. The lookup metadata file is already in use by another program.
 
 **Remediation actions:** Try reinstalling the extension, close any open assessment file(s), and create a new assessment. If the issue persists, [contact Microsoft for help](https://aka.ms/contactDMAO).

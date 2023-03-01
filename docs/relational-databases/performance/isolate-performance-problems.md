@@ -1,13 +1,13 @@
 ---
-title: "Isolate Performance Problems | Microsoft Docs"
+title: "Isolate Performance Problems"
 description: Use SQL Server Profiler and System Monitor to monitor and troubleshoot Transact-SQL, application-related problems, hardware, and system-related problems.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "isolating performance problems [SQL Server]"
   - "monitoring performance [SQL Server], isolating problems"
   - "database monitoring [SQL Server], isolating problems"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "monitoring server performance [SQL Server], isolating problems"
   - "database performance [SQL Server], isolating problems"
   - "server performance [SQL Server], isolating problems"
-ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Isolate Performance Problems

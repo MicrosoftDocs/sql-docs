@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "spatial_reference_systems"
 dev_langs:
   - "TSQL"
-ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.spatial_reference_systems (Transact-SQL)

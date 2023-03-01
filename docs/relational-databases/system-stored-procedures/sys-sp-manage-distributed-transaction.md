@@ -1,14 +1,12 @@
 ---
-description: "sys.sp_manage_distributed_transaction (Transact-SQL)"
 title: "sys.sp_manage_distributed_transaction (Transact-SQL)"
-ms.custom: ""
-ms.date: "02/24/2023"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
+description: "sys.sp_manage_distributed_transaction (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
 monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # sys.sp_manage_distributed_transaction (Transact-SQL)

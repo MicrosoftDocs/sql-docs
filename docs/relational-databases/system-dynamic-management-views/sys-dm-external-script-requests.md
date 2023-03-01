@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_external_script_requests dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_external_script_requests

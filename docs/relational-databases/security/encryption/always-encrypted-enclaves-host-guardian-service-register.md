@@ -1,15 +1,14 @@
 ---
 title: "Register computer with Host Guardian Service"
 description: "Register the SQL Server computer with the Host Guardian Service for Always Encrypted with Secure Enclaves."
-ms.custom:
-- event-tier1-build-2022
-ms.date: "02/15/2023"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
+ms.reviewer: vanto
+ms.date: "02/15/2023"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 monikerRange: ">= sql-server-ver15"
 ---
 

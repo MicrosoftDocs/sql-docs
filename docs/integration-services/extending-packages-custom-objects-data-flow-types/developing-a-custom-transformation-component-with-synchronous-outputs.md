@@ -1,16 +1,13 @@
 ---
+title: "Developing a Custom Transformation Component with Synchronous Outputs"
 description: "Developing a Custom Transformation Component with Synchronous Outputs"
-title: "Developing a Custom Transformation Component with Synchronous Outputs | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom data flow components [Integration Services], transformation components"
   - "ProcessInput method"
   - "buffer allocations [Integration Services]"
@@ -18,9 +15,9 @@ helpviewer_keywords:
   - "transformation components [Integration Services]"
   - "output columns [Integration Services]"
   - "data flow components [Integration Services], transformation components"
-ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing a Custom Transformation Component with Synchronous Outputs
 

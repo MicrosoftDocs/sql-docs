@@ -1,15 +1,15 @@
 ---
-description: "Data Quality Matching in the MDS Add-in for Excel"
 title: Data Quality Matching
-ms.custom: microsoft-excel-add-in, seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
+description: "Data Quality Matching in the MDS Add-in for Excel"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom:
+  - microsoft-excel-add-in
+  - seo-lt-2019
 ---
 # Data Quality Matching in the MDS Add-in for Excel
 

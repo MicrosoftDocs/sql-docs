@@ -1,15 +1,13 @@
 ---
+title: "Loading and Running a Local Package Programmatically"
 description: "Loading and Running a Local Package Programmatically"
-title: "Loading and Running a Local Package Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, running"
   - "events [Integration Services], capturing"
   - "packages [Integration Services], running"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "Visual Basic [Integration Services]"
   - "running packages [Integration Services]"
   - "programmatically load and run packages [SSIS]"
-ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Loading and Running a Local Package Programmatically
 

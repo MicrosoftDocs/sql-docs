@@ -1,19 +1,16 @@
 ---
+title: "Row-Wise Binding"
 description: "Row-Wise Binding"
-title: "Row-Wise Binding | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "row-wise binding [ODBC]"
   - "result sets [ODBC], binding columns"
   - "binding columns [ODBC]"
-ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Row-Wise Binding
 When using row-wise binding, an application defines a structure containing one or two, or in some cases three, elements for each column for which data is to be returned. The first element holds the data value, and the second element holds the length/indicator buffer. Indicators and length values can be stored in separate buffers by setting the SQL_DESC_INDICATOR_PTR and SQL_DESC_OCTET_LENGTH_PTR descriptor fields to different values; if this is done, the structure contains a third element. The application then allocates an array of these structures, which contains as many elements as there are rows in the rowset.  

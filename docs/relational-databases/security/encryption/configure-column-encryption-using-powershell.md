@@ -1,15 +1,13 @@
 ---
+title: "Configure column encryption using Always Encrypted with PowerShell"
 description: "Configure column encryption using Always Encrypted with PowerShell"
-title: "Configure column encryption using Always Encrypted with PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/31/2019"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "10/31/2019"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure column encryption using Always Encrypted with PowerShell

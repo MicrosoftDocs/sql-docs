@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_qn_subscriptions dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 ---
 # Query Notifications - sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

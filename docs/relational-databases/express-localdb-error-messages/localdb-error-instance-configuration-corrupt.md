@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT"
 description: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT"
-title: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

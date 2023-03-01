@@ -1,20 +1,19 @@
 ---
-description: "sp_refreshview (Transact-SQL)"
 title: "sp_refreshview updates the metadata for the specified non-schema-bound view."
-ms.custom: ""
+description: "sp_refreshview (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/03/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_refreshview"
   - "sp_refreshview_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_refreshview"
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refreshview (Transact-SQL)

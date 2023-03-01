@@ -1,18 +1,15 @@
 ---
+title: "Constraints of the Gregorian Calendar"
 description: "Constraints of the Gregorian Calendar"
-title: "Constraints of the Gregorian Calendar | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "data types [ODBC], Gregorian calendar"
-  - "Gregorian calendar [ODBC]"
-ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "data types [ODBC], Gregorian calendar"
+  - "Gregorian calendar [ODBC]"
 ---
 # Constraints of the Gregorian Calendar
 Date and datetime data types, and the trailing fields of interval data types, must conform to the constraints of the Gregorian calendar. These constraints are as follows:  

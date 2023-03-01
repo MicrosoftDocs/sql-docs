@@ -1,18 +1,15 @@
 ---
-description: "Database Object Security (Master Data Services)"
 title: Database Object Security
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database [Master Data Services], object security"
-  - "security [Master Data Services], database objects"
-ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
+description: "Database Object Security (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database [Master Data Services], object security"
+  - "security [Master Data Services], database objects"
 ---
 # Database Object Security (Master Data Services)
 

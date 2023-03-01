@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "conflict_<schema>_<table>"
 dev_langs:
   - "TSQL"
-ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 ---
 # conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

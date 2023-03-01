@@ -1,24 +1,19 @@
 ---
+title: "SQLStatistics Function"
 description: "SQLStatistics Function"
-title: "SQLStatistics Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLStatistics"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLStatistics"
-helpviewer_keywords: 
-  - "SQLStatistics function [ODBC]"
-ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLStatistics"
+helpviewer_keywords:
+  - "SQLStatistics function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLStatistics"
+apitype: "dllExport"
 ---
 # SQLStatistics Function
 **Conformance**  

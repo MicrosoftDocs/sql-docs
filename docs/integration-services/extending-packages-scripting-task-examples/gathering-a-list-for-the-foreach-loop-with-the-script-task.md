@@ -1,20 +1,17 @@
 ---
+title: "Gathering a List for the ForEach Loop with the Script Task"
 description: "Gathering a List for the ForEach Loop with the Script Task"
-title: "Gathering a List for the ForEach Loop with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Foreach Loop containers"
   - "Script task [Integration Services], Foreach loops"
   - "Script task [Integration Services], examples"
   - "SSIS Script task, Foreach loops"
-ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: chugugrace
-ms.author: chugu
 ---
 # Gathering a List for the ForEach Loop with the Script Task
 

@@ -1,18 +1,16 @@
 ---
-description: "Modify a SQL Server Agent Proxy"
 title: "Modify a SQL Server Agent Proxy"
+description: "Modify a SQL Server Agent Proxy"
+author: markingmyname
+ms.author: maghan
+ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "proxies [SQL Server Agent], modifying"
   - "modifying SQL Server Agent proxy"
-ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 06/03/2020
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

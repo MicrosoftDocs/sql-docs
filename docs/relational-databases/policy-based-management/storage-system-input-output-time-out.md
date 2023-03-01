@@ -1,17 +1,14 @@
 ---
+title: "Storage System Input-Output Time-out"
 description: "Storage System Input-Output Time-out"
-title: "Storage System Input-Output Time-out | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Storage System Input-Output Time-out
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_os_cluster_properties"
 dev_langs:
   - "TSQL"
-ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 ---
 # sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

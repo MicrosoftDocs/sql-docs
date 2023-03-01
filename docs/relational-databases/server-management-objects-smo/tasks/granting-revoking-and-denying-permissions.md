@@ -1,21 +1,17 @@
 ---
-description: "Granting, Revoking, and Denying Permissions"
 title: "Granting, Revoking, and Denying Permissions"
-ms.custom: seo-dt-2019
+description: "Granting, Revoking, and Denying Permissions"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "granting permissions [SMO]"
   - "denying permissions [SMO]"
   - "permissions [SMO]"
   - "revoking permissions [SMO]"
-ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Granting, Revoking, and Denying Permissions

@@ -1,15 +1,12 @@
 ---
+title: "catalog.create_environment_variable (SSISDB Database)"
 description: "catalog.create_environment_variable (SSISDB Database)"
-title: "catalog.create_environment_variable (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.create_environment_variable (SSISDB Database)
 

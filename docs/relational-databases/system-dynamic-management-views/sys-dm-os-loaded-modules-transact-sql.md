@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_loaded_modules dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016"
 ---
 # sys.dm_os_loaded_modules (Transact-SQL)

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_memory_brokers dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_memory_brokers (Transact-SQL)

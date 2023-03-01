@@ -1,22 +1,20 @@
 ---
-description: "PREDICT (Transact-SQL)"
 title: "PREDICT (Transact-SQL)"
 titleSuffix: SQL machine learning
-ms.custom: ""
-ms.date: "04/18/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: machine-learning
-ms.topic: reference
-f1_keywords: 
-  - "PREDICT"
-  - "PREDICT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "PREDICT clause"
+description: "PREDICT (Transact-SQL)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "04/18/2022"
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: reference
+f1_keywords:
+  - "PREDICT"
+  - "PREDICT_TSQL"
+helpviewer_keywords:
+  - "PREDICT clause"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest"
 ---
 # PREDICT (Transact-SQL)

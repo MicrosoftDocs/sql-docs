@@ -1,18 +1,15 @@
 ---
+title: "Parsing Data"
 description: "Parsing Data"
-title: "Parsing Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "parsing [Integration Services]"
-  - "data parsing [Integration Services]"
-ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "parsing [Integration Services]"
+  - "data parsing [Integration Services]"
 ---
 # Parsing Data
 

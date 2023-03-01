@@ -1,23 +1,20 @@
 ---
+title: "Data Mining Query Task"
 description: "Data Mining Query Task"
-title: "Data Mining Query Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataminingquerytask.f1"
   - "sql13.dts.designer.dmquerytask.miningmodel.f1"
   - "sql13.dts.designer.dmquerytask.query.f1"
   - "sql13.dts.designer.dmquerytask.output.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "prediction queries [Integration Services]"
   - "Data Mining Query task [Integration Services]"
-ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: chugugrace
-ms.author: chugu
 ---
 # Data Mining Query Task
 

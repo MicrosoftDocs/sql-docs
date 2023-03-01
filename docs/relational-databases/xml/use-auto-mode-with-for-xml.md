@@ -1,10 +1,11 @@
 ---
 title: "Use AUTO Mode with FOR XML"
 description: Learn how to use AUTO mode with the FOR XML clause to return query results as nested XML elements.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,8 +13,6 @@ helpviewer_keywords:
   - "ELEMENTS option"
   - "FOR XML AUTO mode"
   - "AUTO FOR XML mode"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use AUTO mode with FOR XML
 

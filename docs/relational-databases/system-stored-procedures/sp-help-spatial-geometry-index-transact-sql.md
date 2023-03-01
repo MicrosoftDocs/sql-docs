@@ -1,22 +1,19 @@
 ---
+title: "sp_help_spatial_geometry_index (Transact-SQL)"
 description: "sp_help_spatial_geometry_index (Transact-SQL)"
-title: "sp_help_spatial_geometry_index (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_spatial_geometry_index"
-  - "sp_help_spatial_geometry_index_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_spatial_geometry_index procedure"
-ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_spatial_geometry_index"
+  - "sp_help_spatial_geometry_index_TSQL"
+helpviewer_keywords:
+  - "sp_help_spatial_geometry_index procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

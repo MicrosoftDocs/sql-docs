@@ -1,21 +1,18 @@
 ---
+title: "Cache Transform"
 description: "Cache Transform"
-title: "Cache Transform | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.cachetrans.f1"
   - "sql13.dts.designer.cachetranscon.f1"
   - "sql13.dts.designer.cachetransmap.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Cache transform"
-ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: chugugrace
-ms.author: chugu
 ---
 # Cache Transform
 

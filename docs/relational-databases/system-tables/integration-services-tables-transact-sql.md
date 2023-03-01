@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "SSIS, system tables"
 dev_langs:
   - "TSQL"
-ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 ---
 # Integration Services Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

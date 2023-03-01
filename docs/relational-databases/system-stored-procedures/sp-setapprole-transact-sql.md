@@ -1,22 +1,19 @@
 ---
+title: "sp_setapprole (Transact-SQL)"
 description: "sp_setapprole (Transact-SQL)"
-title: "sp_setapprole (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_setapprole"
-  - "sp_setapprole_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_setapprole"
-ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
+ms.date: "10/12/2018"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_setapprole"
+  - "sp_setapprole_TSQL"
+helpviewer_keywords:
+  - "sp_setapprole"
+dev_langs:
+  - "TSQL"
 ---
 # sp_setapprole (Transact-SQL)
 

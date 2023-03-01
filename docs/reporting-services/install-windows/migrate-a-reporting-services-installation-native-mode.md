@@ -1,13 +1,12 @@
 ---
+title: "Migrate a Reporting Services Installation (Native Mode)"
 description: "Migrate a Reporting Services Installation (Native Mode)"
-title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
-ms.service: reporting-services
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.custom:
-  - intro-migration
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: intro-migration
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

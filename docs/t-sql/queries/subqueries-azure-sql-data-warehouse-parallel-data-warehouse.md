@@ -1,15 +1,14 @@
 ---
 title: Subqueries
-description: Subqueries in Azure Synapse Analytics and Parallel Data Warehouse
 titleSuffix: "Azure Synapse Analytics"
+description: Subqueries in Azure Synapse Analytics and Parallel Data Warehouse
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
-ms.date: "03/03/2017"
+ms.custom: seo-lt-2019
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 

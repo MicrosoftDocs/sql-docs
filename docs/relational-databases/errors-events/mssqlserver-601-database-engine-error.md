@@ -1,19 +1,16 @@
 ---
+title: "MSSQLSERVER_601"
 description: "MSSQLSERVER_601"
-title: "MSSQLSERVER_601 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-f1_keywords: 
-  - "601"
-helpviewer_keywords: 
-  - "601 (Database Engine error)"
-ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+f1_keywords:
+  - "601"
+helpviewer_keywords:
+  - "601 (Database Engine error)"
 ---
 # MSSQLSERVER_601
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.extended_properties catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Extended Properties Catalog Views - sys.extended_properties

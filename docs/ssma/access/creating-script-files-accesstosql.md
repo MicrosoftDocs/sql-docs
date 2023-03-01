@@ -1,15 +1,12 @@
 ---
+title: "Creating Script Files (AccessToSQL)"
 description: "Creating Script Files (AccessToSQL)"
-title: "Creating Script Files (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "08/17/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Creating script files (AccessToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  

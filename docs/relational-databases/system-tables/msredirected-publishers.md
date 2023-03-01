@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSRedirected_publishers system table"
 dev_langs:
   - "TSQL"
-ms.assetid: ea3dd634-28e1-4676-befc-d9bda87e6c1d
 ---
 # MSRedirected_publishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

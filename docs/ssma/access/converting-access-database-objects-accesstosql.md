@@ -1,13 +1,13 @@
 ---
-title: "Converting Access Database Objects (AccessToSQL) | Microsoft Docs"
+title: "Converting Access Database Objects (AccessToSQL)"
 description: Learn how to select Access database objects after you connect to SQL Server/Azure SQL Database, and then convert the schemas to SQL Server/SQL Database schemas.
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Access databases"
   - "Access databases, converting schemas"
   - "conversion"
@@ -27,9 +27,6 @@ helpviewer_keywords:
   - "tables, altering"
   - "translating Access to SQL Azure"
   - "translating Access to SQL Server"
-ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Converting Access Database Objects (AccessToSQL)
 After you have added Access databases and connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, SSMA displays metadata for Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects. You can now select Access database objects, and then convert the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure schemas.  

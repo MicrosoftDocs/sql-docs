@@ -1,15 +1,12 @@
 ---
+title: "Step 9: Test the Lesson 1 tutorial package"
 description: "Step 9: Test the Lesson 1 tutorial package"
-title: "Step 9: Test the Lesson 1 tutorial package | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
+ms.date: "01/03/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 1-9: Test the Lesson 1 package
 

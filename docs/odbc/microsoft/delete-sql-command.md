@@ -1,17 +1,14 @@
 ---
+title: "DELETE - SQL Command"
 description: "DELETE - SQL Command"
-title: "DELETE - SQL Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "DELETE [ODBC]"
-ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "DELETE [ODBC]"
 ---
 # DELETE - SQL Command
 Marks records for deletion.  

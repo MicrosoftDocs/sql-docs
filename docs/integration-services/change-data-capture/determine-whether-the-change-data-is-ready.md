@@ -1,17 +1,14 @@
 ---
+title: "Determine Whether the Change Data Is Ready"
 description: "Determine Whether the Change Data Is Ready"
-title: "Determine Whether the Change Data Is Ready | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "incremental load [Integration Services],determining readiness"
-ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "incremental load [Integration Services],determining readiness"
 ---
 # Determine Whether the Change Data Is Ready
 

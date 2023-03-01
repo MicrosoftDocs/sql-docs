@@ -1,13 +1,13 @@
 ---
-title: "Pause and Resume Shared Schedules | Microsoft Docs"
+title: "Pause and Resume Shared Schedules"
 description: In this article, learn how to pause and resume a shared schedule that's in use but not in progress. You can pause and resume in native mode or SharePoint mode.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: subscriptions
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "pausing schedules"
   - "report-specific schedules [Reporting Services]"
   - "shared schedules [Reporting Services], resuming"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "continuing schedules"
   - "schedules [Reporting Services], resuming"
   - "schedules [Reporting Services], pausing"
-ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Pause and Resume Shared Schedules
   You can pause and resume a shared schedule that is in use. Pausing a shared schedule provides a way to temporarily freeze a schedule that is used to trigger report processing and subscriptions. Only shared schedules can be paused and resumed. You cannot pause report-specific schedules.  

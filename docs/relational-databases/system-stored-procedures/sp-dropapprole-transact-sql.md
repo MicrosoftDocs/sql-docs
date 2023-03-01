@@ -1,22 +1,19 @@
 ---
+title: "sp_dropapprole (Transact-SQL)"
 description: "sp_dropapprole (Transact-SQL)"
-title: "sp_dropapprole (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_dropapprole_TSQL"
   - "sp_dropapprole"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_dropapprole"
-ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropapprole (Transact-SQL)
 

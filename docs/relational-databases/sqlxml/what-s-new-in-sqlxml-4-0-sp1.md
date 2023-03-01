@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "redistributing SQLXML"
   - "SQL Server Native Client, SQLXML"
   - "side-by-side installations [SQLXML]"
-ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # What's New in SQLXML 4.0 SP1

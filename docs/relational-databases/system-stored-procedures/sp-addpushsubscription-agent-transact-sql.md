@@ -1,22 +1,19 @@
 ---
+title: "sp_addpushsubscription_agent (Transact-SQL)"
 description: "sp_addpushsubscription_agent (Transact-SQL)"
-title: "sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/29/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addpushsubscription_agent_TSQL"
-  - "sp_addpushsubscription_agent"
-helpviewer_keywords: 
-  - "sp_addpushsubscription_agent"
-ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: markingmyname
 ms.author: maghan
+ms.date: "03/29/2021"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addpushsubscription_agent_TSQL"
+  - "sp_addpushsubscription_agent"
+helpviewer_keywords:
+  - "sp_addpushsubscription_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

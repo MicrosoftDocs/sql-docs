@@ -1,17 +1,15 @@
 ---
-description: "Add Multiple Conditions to a Business Rule (Master Data Services)"
 title: Add Conditions to a Business Rule
-ms.custom: "seo-lt-2019"
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "business rules [Master Data Services], multiple conditions"
-ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
+description: "Add Multiple Conditions to a Business Rule (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "business rules [Master Data Services], multiple conditions"
 ---
 # Add Multiple Conditions to a Business Rule (Master Data Services)
 

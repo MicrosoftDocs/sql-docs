@@ -1,18 +1,13 @@
 ---
+title: "Using Messages"
 description: "Using Messages"
-title: "Using Messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "messages [SMO]"
-ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "messages [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Messages

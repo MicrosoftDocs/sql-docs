@@ -1,20 +1,17 @@
 ---
 title: "Service Principal Name in connections"
 description: Learn about support for service principal names for mutual authentication in SQL Server Native Client.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "08/08/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client, SPNs"
   - "ODBC, SPNs"
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
-ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Service Principal Name (SPN) Support in Client Connections in SQL Server Native Client

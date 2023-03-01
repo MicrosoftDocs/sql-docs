@@ -1,19 +1,17 @@
 ---
 title: "Tutorial: Prepare for replication"
 description: In this tutorial, learn how to prepare your publisher, distributor, and subscriber for replication by creating Windows accounts, preparing the snapshot folder, and configuring distribution.
+author: "MashaMSFT"
+ms.author: "mathoma"
+ms.date: "04/02/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: quickstart
 ms.custom:
   - seo-lt-2019
   - intro-quickstart
-ms.date: "04/02/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: quickstart
 helpviewer_keywords:
   - "replication [SQL Server], tutorials"
-ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

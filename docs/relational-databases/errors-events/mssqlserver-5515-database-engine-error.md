@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_5515"
 description: "MSSQLSERVER_5515"
-title: "MSSQLSERVER_5515 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5515 (Database Engine error)"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/25/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5515 (Database Engine error)"
 ---
 # MSSQLSERVER_5515
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

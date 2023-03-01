@@ -1,17 +1,16 @@
 ---
-title: "CONTAINS (Transact-SQL) | Microsoft Docs"
+title: "CONTAINS (Transact-SQL)"
 description: "Transact-SQL reference for the CONTAINS language element. Used to search for words or phrases within another expression."
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/23/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CONTAINS_TSQL"
   - "CONTAINS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "precise or fuzzy (less precise) matches [full-text search]"
   - "CONTAINS predicate (Transact-SQL)"
   - "conditions [SQL Server], CONTAINS"
@@ -30,9 +29,8 @@ helpviewer_keywords:
   - "property searching [SQL Server], searching on a property"
   - "inflectional forms [full-text search]"
   - "prefix searches [full-text search]"
-ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 
 # CONTAINS (Transact-SQL)

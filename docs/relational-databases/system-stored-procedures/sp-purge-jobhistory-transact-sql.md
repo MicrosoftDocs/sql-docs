@@ -1,22 +1,19 @@
 ---
+title: "sp_purge_jobhistory (Transact-SQL)"
 description: "sp_purge_jobhistory (Transact-SQL)"
-title: "sp_purge_jobhistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_purge_jobhistory_TSQL"
-  - "sp_purge_jobhistory"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_purge_jobhistory"
-ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_purge_jobhistory_TSQL"
+  - "sp_purge_jobhistory"
+helpviewer_keywords:
+  - "sp_purge_jobhistory"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_purge_jobhistory (Transact-SQL)

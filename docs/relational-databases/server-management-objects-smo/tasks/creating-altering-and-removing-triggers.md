@@ -1,18 +1,14 @@
 ---
-description: "Creating, Altering, and Removing Triggers"
 title: "Creating, Altering, and Removing Triggers"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "triggers [SMO]"
-ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
+description: "Creating, Altering, and Removing Triggers"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+ms.custom: seo-dt-2019
+helpviewer_keywords:
+  - "triggers [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Triggers

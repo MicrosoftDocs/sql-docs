@@ -1,18 +1,16 @@
 ---
 title: "MSSQLSERVER_10061"
 description: The server did not respond to the client request in SQL Server. See an explanation of the error and possible resolutions.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-f1_keywords: 
-  - "10061"
-helpviewer_keywords: 
-  - "10061 (Database Engine error)"
 author: MashaMSFT
 ms.author: mathoma
-ms.custom: ""
 ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+f1_keywords:
+  - "10061"
+helpviewer_keywords:
+  - "10061 (Database Engine error)"
 ---
 
 # MSSQLSERVER_10061

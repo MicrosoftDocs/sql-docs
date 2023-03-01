@@ -1,21 +1,17 @@
 ---
+title: "Filter a Trace"
 description: "Filter a Trace"
-title: "Filter a Trace | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filters [SQL Server], events"
   - "events [SQL Server], filters"
   - "filters [SQL Server]"
   - "filters [SQL Server], traces"
   - "traces [SQL Server], filters"
-ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Filter a Trace
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

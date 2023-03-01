@@ -1,17 +1,14 @@
 ---
+title: "Performing Operation (SQL Server Import and Export Wizard)"
 description: "Performing Operation (SQL Server Import and Export Wizard)"
-title: "Performing Operation (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.performingoperation.f1"
-ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
+ms.date: "01/11/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.performingoperation.f1"
 ---
 # Performing Operation (SQL Server Import and Export Wizard)
 

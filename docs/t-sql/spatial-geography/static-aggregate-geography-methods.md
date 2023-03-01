@@ -1,19 +1,16 @@
 ---
+title: "Static Aggregate Geography Methods"
 description: "Static Aggregate Geography Methods"
-title: "Static Aggregate Geography Methods | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Aggregate Geography Methods [SQL Server]"
-ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Static Aggregate Geography Methods
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

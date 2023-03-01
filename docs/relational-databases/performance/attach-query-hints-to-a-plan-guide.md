@@ -1,15 +1,12 @@
 ---
-title: "Attach Query Hints to a Plan Guide | Microsoft Docs"
+title: "Attach Query Hints to a Plan Guide"
 description: Any combination of valid query hints can be used in a plan guide. Learn about attaching hints to a plan guide in SQL Server.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
 ---
 # Attach Query Hints to a Plan Guide
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

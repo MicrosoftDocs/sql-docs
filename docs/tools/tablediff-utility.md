@@ -1,13 +1,14 @@
 ---
 title: "tablediff Utility"
 description: Use the tablediff utility to compare the data in two tables for non-convergence and troubleshoot non-convergence in a replication topology.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "comparing data"
   - "tablediff utility"
   - "tables [SQL Server replication]"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "command prompt utilities [SQL Server], tablediff"
   - "troubleshooting [SQL Server replication], non-convergence"
   - "non-convergence [SQL Server]"
-ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # tablediff Utility

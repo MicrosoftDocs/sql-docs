@@ -1,20 +1,17 @@
 ---
+title: "Securable Items"
 description: "Securable Items"
-title: "Securable Items | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: security
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "securable items [Reporting Services]"
   - "roles [Reporting Services], securable items"
   - "security [Reporting Services], securable items listed"
   - "role-based security [Reporting Services], securable items"
-ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Securable Items
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses role-based security to control access to items that are stored on a report server. When you grant a user access to a report server, you typically do so by creating a pair of role assignments:  

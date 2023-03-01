@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2592"
 description: "MSSQLSERVER_2592"
-title: "MSSQLSERVER_2592 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2592 (Database Engine error)"
-ms.assetid: 8406a3a4-e8f0-46f4-a262-084bc119600b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2592 (Database Engine error)"
 ---
 # MSSQLSERVER_2592
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

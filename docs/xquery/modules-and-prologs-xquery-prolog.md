@@ -1,22 +1,19 @@
 ---
-title: "XQuery Prolog | Microsoft Docs"
+title: "XQuery Prolog"
 description: Learn about the XQuery prolog that contains a series of declarations and definitions which create the required environment for query processing.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "08/09/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XQuery, prolog"
   - "prolog"
   - "namespaces [XQuery]"
   - "default namespace declarations"
-ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Modules and Prologs - XQuery Prolog
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

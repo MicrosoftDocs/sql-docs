@@ -1,19 +1,16 @@
 ---
+title: "Data Profiling Task and Viewer"
 description: "Data Profiling Task and Viewer"
-title: "Data Profiling Task and Viewer | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data Profiling task [Integration Services], about data profiling"
   - "data profiling"
   - "profiling data"
-ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: chugugrace
-ms.author: chugu
 ---
 # Data Profiling Task and Viewer
 

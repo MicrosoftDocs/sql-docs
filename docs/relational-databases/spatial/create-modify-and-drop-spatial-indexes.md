@@ -1,21 +1,18 @@
 ---
+title: "Create, Modify, and Drop Spatial Indexes"
 description: "Create, Modify, and Drop Spatial Indexes"
-title: "Create, Modify, and Drop Spatial Indexes | Microsoft Docs"
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "indexes [SQL Server], creating"
   - "spatial indexes [SQL Server], dropping"
   - "spatial indexes [SQL Server], creating"
   - "indexes [SQL Server], dropping"
   - "indexes [SQL Server], modifying"
   - "spatial indexes [SQL Server], modifying"
-ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: MladjoA
-ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Modify, and Drop Spatial Indexes

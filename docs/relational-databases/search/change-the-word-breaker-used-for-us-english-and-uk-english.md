@@ -1,14 +1,13 @@
 ---
+title: "Change the Word Breaker Used for US English and UK English"
 description: "Change the Word Breaker Used for US English and UK English"
-title: "Change the Word Breaker Used for US English and UK English | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "05/11/2020"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change the Word Breaker Used for US English and UK English

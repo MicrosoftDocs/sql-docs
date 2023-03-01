@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.services catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 ---
 # sys.services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

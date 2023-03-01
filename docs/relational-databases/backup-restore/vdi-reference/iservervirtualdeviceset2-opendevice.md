@@ -1,13 +1,13 @@
 ---
-title: IServerVirtualDeviceSet2::OpenDevice
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IServerVirtualDeviceSet2::OpenDevice command.
+title: "IServerVirtualDeviceSet2::OpenDevice"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IServerVirtualDeviceSet2::OpenDevice command."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 08/30/2019
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: reference
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # IServerVirtualDeviceSet2::OpenDevice (VDI)

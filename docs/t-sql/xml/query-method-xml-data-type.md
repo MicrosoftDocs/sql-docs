@@ -1,20 +1,17 @@
 ---
-description: "query() Method (xml Data Type)"
 title: query() Method (xml Data Type)
-ms.custom: ""
-ms.date: 04/16/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "query method"
-  - "query() method"
-ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
+description: "query() Method (xml Data Type)"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 04/16/2020
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "query method"
+  - "query() method"
+dev_langs:
+  - "TSQL"
 ---
 # query() Method (xml Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

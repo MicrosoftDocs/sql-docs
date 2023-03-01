@@ -1,16 +1,14 @@
 ---
 title: "Set a database to single-user mode"
 description: "Set a database to single-user mode"
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "single-user mode [SQL Server], database option"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
 ms.date: "10/21/2021"
+ms.service: sql
+ms.topic: conceptual
+ms.custom: FY22Q2Fresh
+helpviewer_keywords:
+  - "single-user mode [SQL Server], database option"
 ---
 # Set a database to single-user mode
 

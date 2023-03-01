@@ -1,24 +1,19 @@
 ---
+title: "SQLPostInstallerError Function"
 description: "SQLPostInstallerError Function"
-title: "SQLPostInstallerError Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLPostInstallerError"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLPostInstallerError"
-helpviewer_keywords: 
-  - "SQLPostInstallerError function [ODBC]"
-ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLPostInstallerError"
+helpviewer_keywords:
+  - "SQLPostInstallerError function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLPostInstallerError"
+apitype: "dllExport"
 ---
 # SQLPostInstallerError Function
 **Conformance**  

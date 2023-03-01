@@ -1,20 +1,17 @@
 ---
-description: "View a Collection Set Report (SQL Server Management Studio)"
 title: "View a Collection Set Report (SSMS)"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dc.reporthistory.calendar.f1"
-helpviewer_keywords: 
-  - "collection sets [SQL Server], viewing reports"
-  - "reports [SQL Server], viewing collection set"
-ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
+description: "View a Collection Set Report (SQL Server Management Studio)"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dc.reporthistory.calendar.f1"
+helpviewer_keywords:
+  - "collection sets [SQL Server], viewing reports"
+  - "reports [SQL Server], viewing collection set"
 ---
 # View a Collection Set Report (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

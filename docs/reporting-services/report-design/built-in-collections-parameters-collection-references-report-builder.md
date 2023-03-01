@@ -1,15 +1,12 @@
 ---
-title: "Parameters collection references in a paginated report | Microsoft Docs"
-description: Discover how to use parameters in an expression to customize paginated report data and appearance based on user choices in Report Builder. 
+title: "Parameters collection references in a paginated report"
+description: Discover how to use parameters in an expression to customize paginated report data and appearance based on user choices in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Built-in collections - Parameters collection references in a paginated report (Report Builder)
 

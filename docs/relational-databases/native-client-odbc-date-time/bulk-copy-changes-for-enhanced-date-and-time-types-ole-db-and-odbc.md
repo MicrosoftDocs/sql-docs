@@ -1,17 +1,14 @@
 ---
-description: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)"
 title: "Bulk Copy, enhanced types, OLE DB"
-ms.custom: ""
-ms.date: 12/18/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "ODBC, bulk copy operations"
-ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
+description: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)"
 author: markingmyname
 ms.author: maghan
+ms.date: 12/18/2019
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ODBC, bulk copy operations"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)

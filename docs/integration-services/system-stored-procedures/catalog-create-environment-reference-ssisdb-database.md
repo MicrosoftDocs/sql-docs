@@ -1,15 +1,12 @@
 ---
+title: "catalog.create_environment_reference (SSISDB Database)"
 description: "catalog.create_environment_reference (SSISDB Database)"
-title: "catalog.create_environment_reference (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.create_environment_reference (SSISDB Database)
 

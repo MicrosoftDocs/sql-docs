@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_1462"
 description: "MSSQLSERVER_1462"
-title: "MSSQLSERVER_1462 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1462 (Database Engine error)"
-ms.assetid: 680e9c1c-a9d6-4765-b601-956d0a83324c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1462 (Database Engine error)"
 ---
 # MSSQLSERVER_1462
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

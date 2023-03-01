@@ -1,21 +1,18 @@
 ---
+title: "Data Profiling Task"
 description: "Data Profiling Task"
-title: "Data Profiling Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataprofilingtask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data Profiling task [Integration Services], about Data Profiling task"
   - "data profiling"
   - "profiling data"
-ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: chugugrace
-ms.author: chugu
 ---
 # Data Profiling Task
 

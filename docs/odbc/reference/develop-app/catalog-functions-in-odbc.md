@@ -1,18 +1,15 @@
 ---
+title: "Catalog Functions in ODBC"
 description: "Catalog Functions in ODBC"
-title: "Catalog Functions in ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "catalog functions [ODBC], listed"
-  - "functions [ODBC], catalog functions"
-ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "catalog functions [ODBC], listed"
+  - "functions [ODBC], catalog functions"
 ---
 # Catalog Functions in ODBC
 ODBC contains the following catalog functions:  

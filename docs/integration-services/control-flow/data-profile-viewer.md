@@ -1,20 +1,17 @@
 ---
+title: "Data Profile Viewer"
 description: "Data Profile Viewer"
-title: "Data Profile Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.dataprofileviewer.f1"
-helpviewer_keywords: 
-  - "Data Profile Viewer [Integration Services]"
-  - "Data Profiling task [Integration Services], output viewer"
-ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.dataprofileviewer.f1"
+helpviewer_keywords:
+  - "Data Profile Viewer [Integration Services]"
+  - "Data Profiling task [Integration Services], output viewer"
 ---
 # Data Profile Viewer
 

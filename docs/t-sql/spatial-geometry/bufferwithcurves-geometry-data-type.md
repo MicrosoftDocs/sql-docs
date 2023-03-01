@@ -1,19 +1,16 @@
 ---
+title: "BufferWithCurves (geometry Data Type)"
 description: "BufferWithCurves (geometry Data Type)"
-title: "BufferWithCurves (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BufferWithCurves method (geometry)"
-ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BufferWithCurves (geometry Data Type)

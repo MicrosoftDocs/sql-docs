@@ -1,22 +1,19 @@
 ---
+title: "sp_help_jobserver (Transact-SQL)"
 description: "sp_help_jobserver (Transact-SQL)"
-title: "sp_help_jobserver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobserver"
-  - "sp_help_jobserver_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobserver"
-ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobserver"
+  - "sp_help_jobserver_TSQL"
+helpviewer_keywords:
+  - "sp_help_jobserver"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

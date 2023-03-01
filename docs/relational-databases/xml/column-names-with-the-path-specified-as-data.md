@@ -1,16 +1,16 @@
 ---
 title: "Column Names with the Path Specified as data()"
 description: Learn about XML queries containing column names with the path specified as data().
-ms.custom: "fresh2019may"
-ms.date: 05/05/2022
-ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice: xml
-ms.topic: conceptual
-helpviewer_keywords:
-  - "names [SQL Server], columns with"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
+ms.topic: conceptual
+ms.custom: fresh2019may
+helpviewer_keywords:
+  - "names [SQL Server], columns with"
 ---
 # Column names with the path specified as data()
 

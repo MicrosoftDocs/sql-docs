@@ -1,21 +1,18 @@
 ---
+title: "Advanced Editor"
 description: "Advanced Editor"
-title: "Advanced Editor | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.advancededitor.columnproperties.f1"
   - "sql13.dts.designer.advancededitor.componentproperties.f1"
   - "sql13.dts.designer.advancededitor.inputcolumns.f1"
   - "sql13.dts.designer.advancededitor.connections.f1"
   - "sql13.dts.designer.advancededitor.columnmappings.f1"
-ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: chugugrace
-ms.author: chugu
 ---
 # Advanced Editor
 

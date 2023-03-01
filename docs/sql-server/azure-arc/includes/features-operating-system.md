@@ -2,8 +2,8 @@
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 02/22/2023
-ms.topic: include
 ms.service: sql
+ms.topic: include
 ---
 
 The following table identifies features available by operating system:

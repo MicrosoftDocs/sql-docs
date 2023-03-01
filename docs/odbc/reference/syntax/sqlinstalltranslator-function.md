@@ -1,24 +1,19 @@
 ---
+title: "SQLInstallTranslator Function"
 description: "SQLInstallTranslator Function"
-title: "SQLInstallTranslator Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLInstallTranslator"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLInstallTranslator"
-helpviewer_keywords: 
-  - "SQLInstallTranslator function [ODBC]"
-ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLInstallTranslator"
+helpviewer_keywords:
+  - "SQLInstallTranslator function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLInstallTranslator"
+apitype: "dllExport"
 ---
 # SQLInstallTranslator Function
 **Conformance**  

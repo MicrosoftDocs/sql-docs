@@ -1,25 +1,22 @@
 ---
+title: "Integration Services Paths"
 description: "Integration Services Paths"
-title: "Integration Services Paths | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.patheditor.general.f1"
   - "sql13.dts.designer.patheditor.metadata.f1"
   - "sql13.dts.designer.patheditor.visualizers.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "paths [Integration Services], about paths"
   - "data flow [Integration Services], paths"
   - "paths [Integration Services]"
   - "destinations [Integration Services], paths"
   - "sources [Integration Services], paths"
-ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Paths
 

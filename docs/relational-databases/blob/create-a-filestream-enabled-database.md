@@ -1,17 +1,14 @@
 ---
-title: "Create a FILESTREAM-Enabled Database | Microsoft Docs"
+title: "Create a FILESTREAM-Enabled Database"
 description: Configure a database to support FILESTREAM by using the CONTAINS FILESTREAM clause when you create or alter the database.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], FILESTREAM-enabled databases"
-ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FILESTREAM [SQL Server], FILESTREAM-enabled databases"
 ---
 # Create a FILESTREAM-Enabled Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

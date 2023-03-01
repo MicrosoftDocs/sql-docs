@@ -1,15 +1,12 @@
 ---
-title: "Previous function in a paginated report | Microsoft Docs"
-description: The Previous Function in Report Builder returns the value or the specified aggregate value for the previous instance of an item in a paginated report. 
+title: "Previous function in a paginated report"
+description: The Previous Function in Report Builder returns the value or the specified aggregate value for the previous instance of an item in a paginated report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Builder functions - Previous function in a paginated report (Report Builder)
 

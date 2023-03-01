@@ -1,23 +1,20 @@
 ---
+title: "DOMAIN_CONSTRAINTS (Transact-SQL)"
 description: "DOMAIN_CONSTRAINTS (Transact-SQL)"
-title: "DOMAIN_CONSTRAINTS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "DOMAIN_CONSTRAINTS"
-  - "DOMAIN_CONSTRAINTS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "INFORMATION_SCHEMA.DOMAIN_CONSTRAINTS view"
-  - "DOMAIN_CONSTRAINTS view"
-ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "DOMAIN_CONSTRAINTS"
+  - "DOMAIN_CONSTRAINTS_TSQL"
+helpviewer_keywords:
+  - "INFORMATION_SCHEMA.DOMAIN_CONSTRAINTS view"
+  - "DOMAIN_CONSTRAINTS view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DOMAIN_CONSTRAINTS (Transact-SQL)

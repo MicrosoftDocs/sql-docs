@@ -10,7 +10,6 @@ ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.maint.maintplanproperties.general.f1"
   - "sql13.swb.maint.subplanproperties.f1"
-ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 ---
 # Maintenance Plan (Subplan Properties)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

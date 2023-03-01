@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_1458"
 description: "MSSQLSERVER_1458"
-title: "MSSQLSERVER_1458 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1458 (Database Engine error)"
-ms.assetid: adc78c59-a6f2-432b-9a07-fdd1dc2b9026
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1458 (Database Engine error)"
 ---
 # MSSQLSERVER_1458
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

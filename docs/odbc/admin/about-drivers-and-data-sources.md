@@ -1,17 +1,14 @@
 ---
+title: "About Drivers and Data Sources"
 description: "About Drivers and Data Sources"
-title: "About Drivers and Data Sources | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC data source administrator [ODBC], concepts"
-ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC data source administrator [ODBC], concepts"
 ---
 # About Drivers and Data Sources
 *Drivers* are the components that process ODBC requests and return data to the application. If necessary, drivers modify an application's request into a form that is understood by the data source. You must use the driver's setup program to add or delete a driver from your computer.  

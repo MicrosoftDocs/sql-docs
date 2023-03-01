@@ -7,7 +7,9 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], properties"
 dev_langs:

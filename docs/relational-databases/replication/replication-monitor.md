@@ -7,6 +7,7 @@ ms.date: "03/20/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.beta2.f1"
 helpviewer_keywords:

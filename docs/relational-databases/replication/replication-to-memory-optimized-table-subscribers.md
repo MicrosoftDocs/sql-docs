@@ -7,6 +7,7 @@ ms.date: "11/21/2016"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication to Memory-Optimized Table Subscribers

@@ -7,7 +7,9 @@ ms.date: 07/01/2020
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"

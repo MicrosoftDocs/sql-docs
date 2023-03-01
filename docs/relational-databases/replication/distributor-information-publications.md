@@ -7,6 +7,7 @@ ms.date: "11/20/2018"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.Distributor.Publications.f1"
   - "sql13.rep.monitor.Distributor.commonjobs..f1"

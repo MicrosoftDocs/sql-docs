@@ -165,7 +165,7 @@ value is 0.
 ### gain_conf_level
 
 Tree fitting gain confidence requirement (should be in
-the range [0,1) ). The default value is 0.
+the range `[0,1]`). The default value is 0.
 
 
 ### train_threads

@@ -79,10 +79,6 @@ If you have a few SQL Server VMs that failed to [register automatically](sql-age
 
 If you notice that the SQL IaaS agent extension is consuming unexpectedly high CPU or memory, verify the extension is on the latest version. If so, restart **Microsoft SQL Server IaaS Agent** from services.msc. 
 
-## Error upgrading to full 
-
-If you receive an error when attempting to upgrade your extension mode from lightweight to full, check to see if your SQL Server is installed as a failover cluster instance (FCI). SQL Server FCI only supports registering with the extension in lightweight mode. 
-
 ## Can't extend disks 
 
 Extending your disks from the **Storage Configuration** page of the [SQL VM resource](manage-sql-vm-portal.md) is unavailable under the following conditions: 
@@ -116,11 +112,15 @@ Registering your SQL Server instance installed to your domain controller with th
 
 ## Next steps
 
-For answers to frequently asked questions about the extension, check out the [FAQ](frequently-asked-questions-faq.yml#sql-server-iaas-agent-extension). 
+- Review the benefits provided by the [SQL IaaS Agent extension](sql-agent-extension-automatic-registration-all-vms.md).
+- [Automatically register all VMs in a subscription](sql-agent-extension-manually-register-single-vm).
+- Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#privacy-statements).
+- Review the [best practices checklist](performance-guidelines-best-practices-checklist) to optimize for performance and security. 
 
-For more information, see the following articles:
+To learn more, review the following articles:
 
 * [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [Overview of the SQL IaaS agent extension](sql-server-iaas-agent-extension-automate-management.md)
+* [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
 * [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)
 * [What's new for SQL Server on Azure VMs](../windows/doc-changes-updates-release-notes-whats-new.md)
+

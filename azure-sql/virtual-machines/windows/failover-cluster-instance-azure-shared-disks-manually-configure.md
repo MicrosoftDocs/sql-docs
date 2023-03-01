@@ -203,9 +203,9 @@ After you've configured the failover cluster and all cluster components, includi
 
 ## Register with SQL IaaS extension 
 
-To manage your SQL Server VM from the portal, register it with the SQL IaaS Agent extension in [lightweight management mode](sql-agent-extension-manually-register-single-vm.md#lightweight-mode), which is currently the only mode supported with a failover cluster instance (FCI) deployed to SQL Server on Azure VMs. 
+To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). 
 
-Register a SQL Server VM in lightweight mode with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
+Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 
 ```powershell-interactive
 # Get the existing compute VM
@@ -223,7 +223,6 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 ## Limitations
 
 - Azure virtual machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on CSVs and a [standard load balancer](/azure/load-balancer/load-balancer-overview). MSDTC is not supported on Windows Server 2016 and earlier. 
-- Only registering with the SQL IaaS Agent extension in [lightweight management mode](sql-server-iaas-agent-extension-automate-management.md#management-modes) is supported.
 
 ## Next steps
 

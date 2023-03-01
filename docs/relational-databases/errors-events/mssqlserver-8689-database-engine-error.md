@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8689"
 description: "MSSQLSERVER_8689"
-title: "MSSQLSERVER_8689 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8689 (Database Engine error)"
-ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8689 (Database Engine error)"
 ---
 # MSSQLSERVER_8689
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,7 +10,6 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], adding"
   - "adding extended stored procedures"
   - "collations [SQL Server], extended stored procedures"
-ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 ---
 # Adding an Extended Stored Procedure to SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

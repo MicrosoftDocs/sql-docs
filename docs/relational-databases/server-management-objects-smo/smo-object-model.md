@@ -1,20 +1,15 @@
 ---
+title: "SMO Object Model"
 description: "SMO Object Model"
-title: "SMO Object Model | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "object models [SMO]"
   - "SMO [SQL Server], object model"
   - "SQL Server Management Objects, object model"
-ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Object Model

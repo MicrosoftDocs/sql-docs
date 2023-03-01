@@ -1,22 +1,19 @@
 ---
 title: "AsGml (geometry Data Type)"
 description: "AsGml (geometry Data Type)"
+author: MladjoA
+ms.author: mlandzic
+ms.date: "08/03/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "AsGml_(geometry_Data_Type)_TSQL"
   - "AsGml_(geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "AsGml (geometry Data Type)"
-ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
-author: MladjoA
-ms.author: mlandzic 
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "08/03/2017"
+dev_langs:
+  - "TSQL"
 ---
 # AsGml (geometry Data Type)
 

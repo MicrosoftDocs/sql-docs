@@ -1,23 +1,21 @@
 ---
 title: "CLOSE (Transact-SQL)"
 description: "CLOSE (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CLOSE_TSQL"
   - "CLOSE"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "closing cursors"
   - "cursors [SQL Server], closing"
   - "CLOSE statement"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/06/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # CLOSE (Transact-SQL)

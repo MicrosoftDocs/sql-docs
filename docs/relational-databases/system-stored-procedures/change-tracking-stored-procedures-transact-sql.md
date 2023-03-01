@@ -1,20 +1,17 @@
 ---
+title: "Change Tracking stored procedures (Transact-SQL)"
 description: "Change Tracking stored procedures (Transact-SQL)"
-title: "Change Tracking stored procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "system stored procedures [SQL Server], change tracking"
-  - "change tracking [SQL Server], stored procedures"
-ms.assetid: 
 author: JetterMcTedder
 ms.author: bspendolini
+ms.date: "10/21/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "system stored procedures [SQL Server], change tracking"
+  - "change tracking [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 
 # Change Tracking stored procedures (Transact-SQL)

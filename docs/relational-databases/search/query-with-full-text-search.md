@@ -1,21 +1,20 @@
 ---
+title: "Query with Full-Text Search"
 description: "Query with Full-Text Search"
-title: "Query with Full-Text Search | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [full-text search], about full-text queries"
   - "queries [full-text search], predicates"
   - "full-text queries [SQL Server], about full-text queries"
   - "full-text search [SQL Server], querying SQL Server"
   - "full-text queries [SQL Server]"
   - "queries [full-text search], functions"
-ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query with Full-Text Search

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_17300"
 description: "MSSQLSERVER_17300"
-title: "MSSQLSERVER_17300 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "17300 (Database Engine error)"
-ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "17300 (Database Engine error)"
 ---
 # MSSQLSERVER_17300
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

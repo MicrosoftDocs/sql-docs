@@ -1,19 +1,16 @@
 ---
-title: "Communicating with SQL Server (ODBC) | Microsoft Docs"
+title: "Communicating with SQL Server (ODBC)"
 description: Learn how an ODBC application communicates with an instance of SQL Server by using connections and connection resources.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, communicating with SQL Server"
   - "ODBC applications, communicating with SQL Server"
   - "ODBC, communicating with SQL Server"
-ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Communicating with SQL Server (ODBC)

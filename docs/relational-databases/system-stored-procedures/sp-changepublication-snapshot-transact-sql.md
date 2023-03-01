@@ -1,22 +1,19 @@
 ---
+title: "sp_changepublication_snapshot (Transact-SQL)"
 description: "sp_changepublication_snapshot (Transact-SQL)"
-title: "sp_changepublication_snapshot (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changepublication_snapshot_TSQL"
-  - "sp_changepublication_snapshot"
-helpviewer_keywords: 
-  - "sp_changepublication_snapshot"
-ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changepublication_snapshot_TSQL"
+  - "sp_changepublication_snapshot"
+helpviewer_keywords:
+  - "sp_changepublication_snapshot"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

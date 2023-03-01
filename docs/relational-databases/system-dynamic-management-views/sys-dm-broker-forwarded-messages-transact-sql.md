@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_broker_forwarded_messages dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 ---
 # sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,26 +1,23 @@
 ---
+title: "SQL Server Destination"
 description: "SQL Server Destination"
-title: "SQL Server Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.sqlserverdest.f1"
   - "sql13.dts.designer.sqlserverdestadapter.connection.f1"
   - "sql13.dts.designer.sqlserverdestadapter.mappings.f1"
   - "sql13.dts.designer.sqlserverdestadapter.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server destination"
   - "loading data"
   - "destinations [Integration Services], SQL Server"
   - "inserting data"
   - "bulk load [Integration Services]"
-ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-author: chugugrace
-ms.author: chugu
 ---
 # SQL Server Destination
 

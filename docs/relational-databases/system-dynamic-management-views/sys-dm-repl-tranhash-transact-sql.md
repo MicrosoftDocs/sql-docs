@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_repl_tranhash dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
 ---
 # sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

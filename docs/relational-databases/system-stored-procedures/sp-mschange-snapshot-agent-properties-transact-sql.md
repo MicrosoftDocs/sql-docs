@@ -1,22 +1,20 @@
 ---
 title: "sp_MSchange_snapshot_agent_properties (T-SQL)"
 description: Describes the sp_MSchange_snapshot_agent_properties stored procedure used to change the properties for the Snapshot Agent used for SQL Server Replication.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_MSchange_snapshot_agent_properties_TSQL"
-  - "sp_MSchange_snapshot_agent_properties"
-helpviewer_keywords: 
-  - "sp_MSchange_snapshot_agent_properties"
-ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sp_MSchange_snapshot_agent_properties_TSQL"
+  - "sp_MSchange_snapshot_agent_properties"
+helpviewer_keywords:
+  - "sp_MSchange_snapshot_agent_properties"
+dev_langs:
+  - "TSQL"
 ---
 # sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

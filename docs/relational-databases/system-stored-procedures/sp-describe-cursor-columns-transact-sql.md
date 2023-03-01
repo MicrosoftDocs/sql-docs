@@ -1,22 +1,19 @@
 ---
+title: "sp_describe_cursor_columns (Transact-SQL)"
 description: "sp_describe_cursor_columns (Transact-SQL)"
-title: "sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_describe_cursor_columns"
-  - "sp_describe_cursor_columns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_describe_cursor_columns"
-ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_describe_cursor_columns"
+  - "sp_describe_cursor_columns_TSQL"
+helpviewer_keywords:
+  - "sp_describe_cursor_columns"
+dev_langs:
+  - "TSQL"
 ---
 # sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

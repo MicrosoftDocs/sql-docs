@@ -1,19 +1,16 @@
 ---
+title: "Secure the Subscriber"
 description: "Secure the Subscriber"
-title: "Secure the Subscriber | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "subscriptions [SQL Server replication], security"
   - "Subscribers [SQL Server replication], security"
   - "security [SQL Server replication], Subscribers"
-ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Secure the Subscriber

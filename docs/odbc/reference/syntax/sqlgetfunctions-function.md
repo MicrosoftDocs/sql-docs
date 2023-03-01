@@ -1,29 +1,19 @@
 ---
+title: "SQLGetFunctions Function"
 description: "SQLGetFunctions Function"
-title: "SQLGetFunctions Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetFunctions"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetFunctions"
-helpviewer_keywords: 
-  - "SQLGetFunctions function [ODBC]"
-ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetFunctions"
+helpviewer_keywords:
+  - "SQLGetFunctions function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetFunctions"
+apitype: "dllExport"
 ---
 # SQLGetFunctions Function
 **Conformance**  

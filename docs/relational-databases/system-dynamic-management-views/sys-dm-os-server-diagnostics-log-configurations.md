@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_os_server_diagnostics_log_configurations"
 dev_langs:
   - "TSQL"
-ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_server_diagnostics_log_configurations

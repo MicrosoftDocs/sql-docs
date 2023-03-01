@@ -1,19 +1,16 @@
 ---
+title: "Interval Literal Syntax"
 description: "Interval Literal Syntax"
-title: "Interval Literal Syntax | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "literals [ODBC], interval"
   - "interval literals [ODBC]"
   - "ODBC literals [ODBC], interval"
-ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Interval Literal Syntax
 The following syntax is used for interval literals in ODBC.  

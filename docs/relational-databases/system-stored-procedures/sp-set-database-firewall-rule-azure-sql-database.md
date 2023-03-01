@@ -1,26 +1,24 @@
 ---
-description: "sp_set_database_firewall_rule (Azure SQL Database)"
 title: "sp_set_database_firewall_rule"
 titleSuffix: Azure SQL Database
+description: "sp_set_database_firewall_rule (Azure SQL Database)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/04/2017"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: seo-dt-2019
+f1_keywords:
   - "sp_set_database_firewall_rule"
   - "sp_set_database_firewall_rule_TSQL"
   - "sys.sp_set_database_firewall_rule"
   - "sys.sp_set_database_firewall_rule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_set_database_firewall_rule"
   - "firewall_rules, setting database rules"
-ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current"
-ms.custom: seo-dt-2019
 ---
 # sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]

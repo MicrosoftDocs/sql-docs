@@ -1,15 +1,12 @@
 ---
+title: "catalog.move_environment (SSISDB Database)"
 description: "catalog.move_environment (SSISDB Database)"
-title: "catalog.move_environment (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.move_environment (SSISDB Database)
 

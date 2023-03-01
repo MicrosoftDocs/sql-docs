@@ -1,24 +1,21 @@
 ---
+title: "Creating a Custom Data Flow Component"
 description: "Creating a Custom Data Flow Component"
-title: "Creating a Custom Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "design-time component interface [Integration Services]"
   - "custom data flow components [Integration Services], about data flow components"
   - "custom data flow components [Integration Services]"
   - "data flow components [Integration Services]"
   - "data flow components [Integration Services], developing"
-ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Creating a Custom Data Flow Component
 

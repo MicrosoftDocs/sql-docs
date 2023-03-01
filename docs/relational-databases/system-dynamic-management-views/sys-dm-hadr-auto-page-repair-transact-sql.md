@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_auto_page_repair dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 ---
 # sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

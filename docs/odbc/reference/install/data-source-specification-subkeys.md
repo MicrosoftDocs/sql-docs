@@ -1,19 +1,16 @@
 ---
+title: "Data Source Specification Subkeys"
 description: "Data Source Specification Subkeys"
-title: "Data Source Specification Subkeys | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data source specification subkeys [ODBC]"
   - "registry entries for data sources [ODBC], data source specification subkeys"
   - "subkeys [ODBC], data source specification subkeys"
-ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Data Source Specification Subkeys
 Each data source listed in the ODBC Data Sources subkey has a subkey of its own. This subkey has the same name as the corresponding value under the ODBC Data Sources subkey. The values under this subkey must list the driver DLL and may list a description of the data source. If the driver supports translators, the values may list the name of a default translator, the default translation DLL, and the default translation option. The values may also list other information required by the driver to connect to the data source. For example, the driver might require a server name, database name, or schema name.  

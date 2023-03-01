@@ -1,17 +1,14 @@
 ---
+title: "Broker:Connection Event Class"
 description: "Broker:Connection Event Class"
-title: "Broker:Connection Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Broker:Connection event class"
-ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "05/24/2019"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Broker:Connection event class"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Connection Event Class

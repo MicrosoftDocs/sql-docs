@@ -1,22 +1,20 @@
 ---
 title: Database Instant File Initialization
 description: Learn about instant file initialization and how to enable it on your SQL Server database.
-ms.custom: contperf-fy20q4
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 11/10/2022
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: contperf-fy20q4
+helpviewer_keywords:
   - "initializing files [SQL Server]"
   - "instant file initialization [SQL Server]"
   - "fast file initialization [SQL Server]"
   - "file initialization [SQL Server]"
   - "IFI [SQL Server]"
   - "database instant file initialization [SQL Server]"
-ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Instant File Initialization
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

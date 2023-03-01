@@ -3,12 +3,10 @@ title: "SIGNBYCERT (Transact-SQL)"
 description: "SIGNBYCERT (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SIGNBYCERT"
   - "SIGNBYCERT_TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "certificates [SQL Server], text signing"
   - "SignByCert function"
   - "signing text [SQL Server]"
-  - "SIGNBYCERT function"
   - "cryptography [SQL Server], certificates"
 dev_langs:
   - "TSQL"

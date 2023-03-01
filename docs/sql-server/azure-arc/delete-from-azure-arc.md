@@ -1,12 +1,12 @@
 ---
-title: Delete instance from or restore instances to Azure Arc #Required; page title is displayed in search results. Include the brand.
+title: "Delete instance from or restore instances to Azure Arc"
 description: Delete Azure Arc-enabled SQL Server instance from Azure Arc, or restore or re-enable an instance for Azure Arc.
-author: MikeRayMSFT #Required; your GitHub user alias, with correct capitalization.
-ms.author: mikeray #Required; microsoft alias of author; optional team alias.
-ms.service: sql #Required; service per approved list. slug assigned by ACOM.
-ms.topic: how-to #Required; leave this attribute/value as-is.
-ms.date: 02/01/2022 #Required; mm/dd/yyyy format.
-ms.custom: template-how-to-pattern #Required; leave this attribute/value as-is.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 02/01/2022
+ms.service: sql
+ms.topic: how-to
+ms.custom: template-how-to-pattern
 ---
 
 # Delete your Arc-enabled SQL Server resource

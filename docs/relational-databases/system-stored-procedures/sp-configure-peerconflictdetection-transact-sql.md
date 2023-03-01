@@ -1,22 +1,19 @@
 ---
+title: "sp_configure_peerconflictdetection (Transact-SQL)"
 description: "sp_configure_peerconflictdetection (Transact-SQL)"
-title: "sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/05/2021
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_configure_peerconflictdetection_TSQL"
-  - "sp_configure_peerconflictdetection"
-helpviewer_keywords: 
-  - "sp_configure_peerconflictdetection"
-ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: markingmyname
 ms.author: maghan
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_configure_peerconflictdetection_TSQL"
+  - "sp_configure_peerconflictdetection"
+helpviewer_keywords:
+  - "sp_configure_peerconflictdetection"
+dev_langs:
+  - "TSQL"
 ---
 # sp_configure_peerconflictdetection (Transact-SQL)
 

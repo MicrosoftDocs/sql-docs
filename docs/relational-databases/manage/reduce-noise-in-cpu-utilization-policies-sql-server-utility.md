@@ -1,17 +1,14 @@
 ---
-title: "Reduce Noise in CPU Utilization Policies (SQL Server Utility) | Microsoft Docs"
+title: "Reduce Noise in CPU Utilization Policies (SQL Server Utility)"
 description: View strategies for reducing noise and unwanted violations in SQL Server Utility results. See which policy options affect processor utilization reports.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.SWB.UE.ReduceNoise.F1"
-ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.SWB.UE.ReduceNoise.F1"
 ---
 # Reduce Noise in CPU Utilization Policies (SQL Server Utility)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

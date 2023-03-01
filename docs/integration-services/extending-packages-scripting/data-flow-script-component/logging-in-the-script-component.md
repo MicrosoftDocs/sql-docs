@@ -1,17 +1,14 @@
 ---
+title: "Logging in the Script Component"
 description: "Logging in the Script Component"
-title: "Logging in the Script Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Script component [Integration Services], logging"
-ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script component [Integration Services], logging"
 ---
 # Logging in the Script Component
 

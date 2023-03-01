@@ -1,13 +1,12 @@
 ---
-title: "SQL Server Integration Services DevOps overview | Microsoft Docs"
+title: "SQL Server Integration Services DevOps overview"
 description: Learn how to build SSIS CICD with SSIS DevOps Tools.
-ms.date: "4/21/2021"
-ms.topic: conceptual
-ms.service: sql
-ms.custom: ""
-ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "4/21/2021"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # SQL Server Integration Services (SSIS) DevOps Tools Azure DevOps extension
 

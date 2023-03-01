@@ -1,22 +1,19 @@
 ---
+title: "sp_repldropcolumn (Transact-SQL)"
 description: "sp_repldropcolumn (Transact-SQL)"
-title: "sp_repldropcolumn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_repldropcolumn_TSQL"
-  - "sp_repldropcolumn"
-helpviewer_keywords: 
-  - "sp_repldropcolumn"
-ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_repldropcolumn_TSQL"
+  - "sp_repldropcolumn"
+helpviewer_keywords:
+  - "sp_repldropcolumn"
+dev_langs:
+  - "TSQL"
 ---
 # sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

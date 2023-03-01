@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.numbered_procedure_parameters catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 ---
 # sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

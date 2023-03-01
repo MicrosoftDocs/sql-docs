@@ -1,10 +1,13 @@
 ---
 title: GROUP BY (Transact-SQL)
 description: "SELECT - GROUP BY- Transact-SQL"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "10/12/2021"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GROUP"
   - "CUBE"
   - "ROLLUP"
@@ -15,9 +18,7 @@ f1_keywords:
   - "GROUP_TSQL"
   - "CUBE_TSQL"
   - "ROLLUP_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GROUP BY clause, about GROUP BY clause"
   - "dividing tables into groups"
   - "GROUPING SETS"
@@ -25,11 +26,8 @@ helpviewer_keywords:
   - "table groups [SQL Server]"
   - "groups [SQL Server], tables divided into groups"
   - "summary values [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "10/12/2021"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

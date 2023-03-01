@@ -1,15 +1,12 @@
 ---
+title: "Extending Packages with Custom Objects"
 description: "Extending Packages with Custom Objects"
-title: "Extending Packages with Custom Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
 ---
 # Extending Packages with Custom Objects
 

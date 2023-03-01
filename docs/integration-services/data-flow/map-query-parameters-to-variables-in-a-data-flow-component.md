@@ -1,20 +1,17 @@
 ---
+title: "Map Query Parameters to Variables in a Data Flow Component"
 description: "Map Query Parameters to Variables in a Data Flow Component"
-title: "Map Query Parameters to Variables in a Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [Integration Services], parameter mapping"
   - "parameters [Integration Services]"
   - "mapping query parameters to variables [Integration Services]"
   - "variables [Integration Services], mapping parameters to"
-ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-author: chugugrace
-ms.author: chugu
 ---
 # Map Query Parameters to Variables in a Data Flow Component
 

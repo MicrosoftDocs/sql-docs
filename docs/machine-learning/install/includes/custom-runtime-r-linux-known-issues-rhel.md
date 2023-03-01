@@ -1,10 +1,10 @@
 ---
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 03/18/2021
-ms.topic: include
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 03/18/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: include
 ---
 ## Known issues
 

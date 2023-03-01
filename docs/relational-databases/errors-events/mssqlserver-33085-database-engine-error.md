@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_33085"
 description: "MSSQLSERVER_33085"
-title: "MSSQLSERVER_33085 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "33085 (Database Engine error)"
-ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "33085 (Database Engine error)"
 ---
 # MSSQLSERVER_33085
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

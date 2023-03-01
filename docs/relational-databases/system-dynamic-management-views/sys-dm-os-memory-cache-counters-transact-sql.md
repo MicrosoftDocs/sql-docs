@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_memory_cache_counters dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_memory_cache_counters (Transact-SQL)

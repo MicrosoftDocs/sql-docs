@@ -7,14 +7,13 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "IDREFS relationships [SQLXML]"
   - "parent attribute [SQLXML]"
   - "element relationships [SQLXML]"
   - "multiple element relationships"
   - "attribute relationships [SQLXML]"
-ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Relationships Using sql:relationship (SQLXML 4.0)

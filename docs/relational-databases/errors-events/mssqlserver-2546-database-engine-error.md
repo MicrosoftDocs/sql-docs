@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2546"
 description: "MSSQLSERVER_2546"
-title: "MSSQLSERVER_2546 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2546 (Database Engine error)"
-ms.assetid: c8f0e1b4-c7c4-45f2-9221-746714172313
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2546 (Database Engine error)"
 ---
 # MSSQLSERVER_2546
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

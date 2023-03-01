@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Broker Statistics object"
-description: Learn about the SQLServer:Broker Statistics performance object, which contains performance counters that report Service Broker information for Database Engine.
-ms.custom: ""
-ms.date: "07/14/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:Broker Statistics"
-  - "Broker Statistics object"
+description: "Learn about the SQLServer:Broker Statistics performance object, which contains performance counters that report Service Broker information for Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/14/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:Broker Statistics"
+  - "Broker Statistics object"
 ---
 # SQL Server, Broker Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

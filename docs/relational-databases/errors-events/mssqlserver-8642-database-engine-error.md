@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8642"
 description: "MSSQLSERVER_8642"
-title: "MSSQLSERVER_8642 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8642 (Database Engine error)"
-ms.assetid: fc498059-202f-4d0b-8599-4e784b47c186
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8642 (Database Engine error)"
 ---
 # MSSQLSERVER_8642
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

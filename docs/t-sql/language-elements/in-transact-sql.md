@@ -3,12 +3,10 @@ title: "IN (Transact-SQL)"
 description: "IN (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "08/29/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "IN_TSQL"
   - "IN"

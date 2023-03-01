@@ -1,19 +1,16 @@
 ---
+title: "Deleting Rows in the Rowset with SQLSetPos"
 description: "Deleting Rows in the Rowset with SQLSetPos"
-title: "Deleting Rows in the Rowset with SQLSetPos | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLSetPos function [ODBC], deleting rows"
   - "updating data [ODBC], SQLSetPos"
   - "data updates [ODBC], SQLSetPos"
-ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Deleting Rows in the Rowset with SQLSetPos
 The delete operation of **SQLSetPos** makes the data source delete one or more selected rows of a table. To delete rows with **SQLSetPos**, the application calls **SQLSetPos** with *Operation* set to SQL_DELETE and *RowNumber* set to the number of the row to delete. If *RowNumber* is 0, all rows in the rowset are deleted.  

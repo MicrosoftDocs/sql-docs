@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_host_info dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_host_info (Transact-SQL)

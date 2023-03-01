@@ -1,25 +1,22 @@
 ---
+title: "sys.sysusers (Transact-SQL)"
 description: "sys.sysusers (Transact-SQL)"
-title: "sys.sysusers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sysusers"
   - "sys.sysusers_TSQL"
   - "sysusers_TSQL"
   - "sysusers"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysusers system table"
   - "sys.sysusers compatibility view"
-ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysusers (Transact-SQL)

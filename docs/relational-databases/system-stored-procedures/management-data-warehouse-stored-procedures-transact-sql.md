@@ -1,19 +1,16 @@
 ---
+title: "Management Data Warehouse Stored Procedures (Transact-SQL)"
 description: "Management Data Warehouse Stored Procedures (Transact-SQL)"
-title: "Management Data Warehouse Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "management data warehouse, data collector stored procedures"
-ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "management data warehouse, data collector stored procedures"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Management Data Warehouse Stored Procedures (Transact-SQL)

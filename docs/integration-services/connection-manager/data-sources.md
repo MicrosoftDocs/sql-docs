@@ -1,17 +1,14 @@
 ---
+title: "Data Sources"
 description: "Data Sources for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages"
-title: "Data Sources | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "data sources [Integration Services], about data sources"
-ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
+ms.date: "08/27/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "data sources [Integration Services], about data sources"
 ---
 # Data Sources for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages
 

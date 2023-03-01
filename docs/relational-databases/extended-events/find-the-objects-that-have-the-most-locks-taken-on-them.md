@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "xe"
   - "extended events [SQL Server], locks"
   - "objects [SQL Server], locks"
-ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find the Objects That Have the Most Locks Taken on Them

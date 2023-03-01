@@ -1,18 +1,15 @@
 ---
+title: "Package and Project Parameters"
 description: "Integration Services (SSIS) Package and Project Parameters"
-title: "Package and Project Parameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.parameter.f1"
-  - "sql13.dts.designer.parameterwindow.f1"
-ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.parameter.f1"
+  - "sql13.dts.designer.parameterwindow.f1"
 ---
 # Integration Services (SSIS) Package and Project Parameters
 

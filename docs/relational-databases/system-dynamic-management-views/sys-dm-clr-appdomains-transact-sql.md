@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_clr_appdomains dynamic management dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 ---
 # sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

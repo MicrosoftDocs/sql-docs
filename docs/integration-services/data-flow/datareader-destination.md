@@ -1,20 +1,17 @@
 ---
+title: "DataReader Destination"
 description: "DataReader Destination"
-title: "DataReader Destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.datareaderdest.f1"
-helpviewer_keywords: 
-  - "DataReader destination"
-  - "destinations [Integration Services], DataReader"
-ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.datareaderdest.f1"
+helpviewer_keywords:
+  - "DataReader destination"
+  - "destinations [Integration Services], DataReader"
 ---
 # DataReader Destination
 

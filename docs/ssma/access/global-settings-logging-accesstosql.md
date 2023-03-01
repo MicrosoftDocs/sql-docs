@@ -1,18 +1,14 @@
 ---
+title: "Global Settings (Logging) (AccessToSQL)"
 description: "Global Settings (Logging) (AccessToSQL)"
-title: "Global Settings (Logging) (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.access.globalsettinglogging.f1"
-
 ---
 # Global Settings (Logging) (AccessToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  

@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_18210"
 description: "MSSQLSERVER_18210"
-title: "MSSQLSERVER_18210 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/06/2023"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "18210 (Database Engine error)"
 author: JamesFerebee
 ms.author: ramakoni
+ms.date: "02/06/2023"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "18210 (Database Engine error)"
 ---
 # MSSQLSERVER_18210
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

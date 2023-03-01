@@ -1,22 +1,19 @@
 ---
+title: "sp_dropmessage (Transact-SQL)"
 description: "sp_dropmessage (Transact-SQL)"
-title: "sp_dropmessage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dropmessage_TSQL"
-  - "sp_dropmessage"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dropmessage"
-ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropmessage_TSQL"
+  - "sp_dropmessage"
+helpviewer_keywords:
+  - "sp_dropmessage"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

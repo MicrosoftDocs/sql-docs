@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_purge_history (Transact-SQL)"
 description: "sp_syspolicy_purge_history (Transact-SQL)"
-title: "sp_syspolicy_purge_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_purge_history_TSQL"
-  - "sp_syspolicy_purge_history"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_purge_history"
-ms.assetid: 6db414e7-4946-4bd2-8264-6b490810b306
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_purge_history_TSQL"
+  - "sp_syspolicy_purge_history"
+helpviewer_keywords:
+  - "sp_syspolicy_purge_history"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_purge_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

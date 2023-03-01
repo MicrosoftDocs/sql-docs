@@ -1,20 +1,18 @@
 ---
+title: "What's New in Integration Services in SQL Server 2016"
 description: "What's New in Integration Services in SQL Server 2016"
-title: "What's New in Integration Services in SQL Server 2016 | Microsoft Docs"
+author: chugugrace
+ms.author: chugu
+ms.date: "09/28/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ms.custom:
   - SQL2016_New_Updated
   - intro-whats-new
-ms.date: "09/28/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
 helpviewer_keywords:
   - "Integration Services, what's new"
   - "what's new [Integration Services]"
-ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: chugugrace
-ms.author: chugu
 ---
 # What's New in Integration Services in SQL Server 2016
 

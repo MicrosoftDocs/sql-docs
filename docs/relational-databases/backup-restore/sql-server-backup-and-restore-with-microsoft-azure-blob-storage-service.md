@@ -1,17 +1,16 @@
 ---
-description: "SQL Server Backup and Restore with Microsoft Azure Blob Storage"
 title: "Backup & restore with Azure Blob Storage"
-storage: Learn about SQL Server backup to and restore from Azure Blob Storage, including the benefits of using Azure Blob Storage to store SQL Server backups.
-ms.custom:
-- seo-lt-2019
-- event-tier1-build-2022
-ms.date: 05/09/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
+description: "SQL Server Backup and Restore with Microsoft Azure Blob Storage"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/09/2022
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+ms.custom:
+  - seo-lt-2019
+  - event-tier1-build-2022
+storage: Learn about SQL Server backup to and restore from Azure Blob Storage, including the benefits of using Azure Blob Storage to store SQL Server backups.
 ---
 # SQL Server backup and restore with Azure Blob Storage
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

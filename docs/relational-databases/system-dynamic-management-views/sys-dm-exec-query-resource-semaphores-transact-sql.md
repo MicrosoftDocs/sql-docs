@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_query_resource_semaphores dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_resource_semaphores (Transact-SQL)

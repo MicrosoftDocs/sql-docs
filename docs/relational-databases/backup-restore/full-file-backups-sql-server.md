@@ -1,13 +1,13 @@
 ---
-title: "Full File Backups (SQL Server) | Microsoft Docs"
+title: "Full File Backups (SQL Server)"
 description: In SQL Server, you can back up and restore a whole filegroup instead of specifying each file individually.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full backups [SQL Server]"
   - "backing up [SQL Server], files or filegroups"
   - "backups [SQL Server], files or filegroups"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "files [SQL Server], backing up"
   - "filegroups [SQL Server], backing up"
   - "file backups [SQL Server]"
-ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Full File Backups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

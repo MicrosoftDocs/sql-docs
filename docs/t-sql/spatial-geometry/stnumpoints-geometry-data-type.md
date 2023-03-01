@@ -1,22 +1,19 @@
 ---
+title: "STNumPoints (geometry Data Type)"
 description: "STNumPoints (geometry Data Type)"
-title: "STNumPoints (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STNumPoints_TSQL"
   - "STNumPoints (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STNumPoints (geometry Data Type)"
-ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STNumPoints (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

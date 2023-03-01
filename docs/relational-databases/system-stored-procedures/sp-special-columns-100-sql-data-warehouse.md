@@ -1,16 +1,13 @@
 ---
-description: "sp_special_columns_100 (Azure Synapse Analytics)"
 title: "sp_special_columns_100 (Azure Synapse Analytics)"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
+description: "sp_special_columns_100 (Azure Synapse Analytics)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sp_special_columns_100 (Azure Synapse Analytics)

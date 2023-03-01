@@ -1,17 +1,14 @@
 ---
-description: "Add Members to a Collection (Master Data Services)"
 title: Add Members to a Collection
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "collections [Master Data Services], adding members"
-ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
+description: "Add Members to a Collection (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "collections [Master Data Services], adding members"
 ---
 # Add Members to a Collection (Master Data Services)
 

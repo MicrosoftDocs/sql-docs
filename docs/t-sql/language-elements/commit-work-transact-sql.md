@@ -3,12 +3,10 @@ title: COMMIT WORK (Transact-SQL)
 description: "COMMIT WORK (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "COMMIT_WORK_TSQL"
   - "WORK_TSQL"

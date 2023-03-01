@@ -1,15 +1,12 @@
 ---
 title: "High Availability, Recovery"
 description: Learn about SQL Server Native Client support for Always On availability groups, which was added in SQL Server 2012.
-ms.custom: ""
-ms.date: "04/04/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
+ms.date: "04/04/2018"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Support for High Availability, Disaster Recovery

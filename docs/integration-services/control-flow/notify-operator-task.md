@@ -1,21 +1,18 @@
 ---
+title: "Notify Operator Task"
 description: "Notify Operator Task"
-title: "Notify Operator Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.notifyoperatortask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Notify Operator task"
   - "notifications [Integration Services]"
   - "SQL Server Agent [Integration Services]"
-ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
-author: chugugrace
-ms.author: chugu
 ---
 # Notify Operator Task
 

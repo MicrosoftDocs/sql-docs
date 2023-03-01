@@ -1,13 +1,13 @@
 ---
-title: IClientVirtualDeviceSet2::OpenInSecondaryEx
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IClientVirtualDeviceSet2::OpenInSecondaryEx command.
+title: "IClientVirtualDeviceSet2::OpenInSecondaryEx"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IClientVirtualDeviceSet2::OpenInSecondaryEx command."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 08/30/2019
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: reference
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)

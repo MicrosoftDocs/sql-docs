@@ -1,22 +1,19 @@
 ---
+title: "sp_addsrvrolemember (Transact-SQL)"
 description: "sp_addsrvrolemember (Transact-SQL)"
-title: "sp_addsrvrolemember (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addsrvrolemember"
-  - "sp_addsrvrolemember_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addsrvrolemember"
-ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: markingmyname
 ms.author: maghan
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addsrvrolemember"
+  - "sp_addsrvrolemember_TSQL"
+helpviewer_keywords:
+  - "sp_addsrvrolemember"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

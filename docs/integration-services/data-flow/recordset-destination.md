@@ -1,22 +1,19 @@
 ---
+title: "Recordset Destination"
 description: "Recordset Destination"
-title: "Recordset Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.recordsetdest.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Recordset destination"
   - "ADO recordsets [Integration Services]"
   - "destinations [Integration Services], Recordset"
   - "in-memory ADO recordsets [Integration Services]"
-ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-author: chugugrace
-ms.author: chugu
 ---
 # Recordset Destination
 

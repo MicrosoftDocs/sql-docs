@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_tran_version_store_space_usage dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)

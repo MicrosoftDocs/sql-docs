@@ -1,19 +1,17 @@
 ---
-description: "Create an Alert Using an Error Number"
 title: "Create an Alert Using an Error Number"
-ms.custom: seo-lt-2019
+description: "Create an Alert Using an Error Number"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "alerts [SQL Server], creating"
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], error numbers"
-ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create an Alert Using an Error Number

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2516"
 description: "MSSQLSERVER_2516"
-title: "MSSQLSERVER_2516 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2516 (Database Engine error)"
-ms.assetid: 79ed14b5-f53c-40c6-8334-8a083f732207
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2516 (Database Engine error)"
 ---
 # MSSQLSERVER_2516
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

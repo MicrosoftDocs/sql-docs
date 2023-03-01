@@ -1,15 +1,11 @@
 ---
+title: "Lesson 2: Connecting from Another Computer"
 description: "Lesson 2: Connecting from Another Computer"
-title: "Lesson 2: Connecting from Another Computer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/08/2016"
+ms.service: sql
+ms.topic: conceptual
 ---
 # Lesson 2: Connecting from Another Computer
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

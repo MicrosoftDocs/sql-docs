@@ -1,22 +1,19 @@
 ---
 title: "Using connection string keywords"
 description: Some SQL Server Native Client APIs use connection strings to specify connection attributes. Connection strings are keyword/value pairs.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "02/15/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.connecttoserver.options.registeredservers.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [SQL Server Native Client], connection string keywords"
   - "SQLNCLI, connection string keywords"
   - "connection strings [SQL Server Native Client]"
   - "SQL Server Native Client, connection string keywords"
-ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Connection String Keywords with SQL Server Native Client

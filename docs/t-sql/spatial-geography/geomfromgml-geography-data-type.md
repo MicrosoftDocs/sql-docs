@@ -1,22 +1,20 @@
 ---
 title: GeomFromGML (geography Data Type)
 description: "GeomFromGML (geography Data Type)"
+author: MladjoA
+ms.author: mlandzic
+ms.date: "07/30/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GeomFromGML_TSQL"
   - "GeomFromGML"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GeomFromGML (geography Data Type)"
   - "GeomFromGML method"
-author: MladjoA
-ms.author: mlandzic 
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/30/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # GeomFromGML (geography Data Type)

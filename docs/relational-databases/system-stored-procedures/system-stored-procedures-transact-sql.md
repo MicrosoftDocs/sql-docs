@@ -1,26 +1,24 @@
 ---
+title: "System Stored Procedures (Transact-SQL)"
 description: "System Stored Procedures (Transact-SQL)"
-title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: randolphwest
 ms.date: 02/24/2023
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql13.TSQLSysNoExpandPortal.f1"
   - "sql13.TSQLSysNoExpandPortal.f1_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stored procedures [SQL Server]"
   - "APIs [SQL Server]"
   - "stored procedures [SQL Server], categories"
   - "system stored procedures [SQL Server], categories"
   - "system stored procedures [SQL Server]"
-ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Stored Procedures (Transact-SQL)

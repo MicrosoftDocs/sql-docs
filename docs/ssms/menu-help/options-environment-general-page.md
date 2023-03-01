@@ -1,17 +1,16 @@
 ---
 title: "Options (Environment - General Page)"
 description: "Options (Environment - General Page)"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
+ms.custom: seo-lt-2019
 f1_keywords:
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions"
   - "DevLang-TSQL"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Options (Environment - General Page)

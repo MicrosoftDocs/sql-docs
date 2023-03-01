@@ -1,11 +1,14 @@
 ---
+title: "Populate Full-Text Indexes"
 description: "Populate Full-Text Indexes"
-title: "Populate Full-Text Indexes | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index populations [full-text search]"
   - "incremental populations [full-text search]"
   - "populations [full-text search]"
@@ -19,10 +22,6 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], key column"
   - "full populations [full-text search]"
   - "full-text indexes [SQL Server], populations"
-ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Populate Full-Text Indexes

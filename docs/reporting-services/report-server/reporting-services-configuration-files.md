@@ -1,20 +1,17 @@
 ---
-title: "Reporting Services Configuration Files | Microsoft Docs"
+title: "Reporting Services Configuration Files"
 description: Learn about configuration files where Reporting Services stores component information. You might need to modify the files to add or configure advanced settings.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2019
 ms.service: reporting-services
 ms.subservice: report-server
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deploying [Reporting Services], configuration files"
   - "configuration options [Reporting Services]"
   - "modifying configuration files"
   - "configuration files [Reporting Services]"
-ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Configuration Files
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores component information in the registry and in configuration files that are copied to the file system during setup. Configuration files contain a combination of internal-use-only and user-defined values. User-defined values are specified through Setup, the configuration tools, the command line utilities, and by manually editing the configuration files.  

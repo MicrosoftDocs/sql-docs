@@ -1,20 +1,17 @@
 ---
+title: "Locks Event Category"
 description: "Locks Event Category"
-title: "Locks Event Category | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Locks event category [SQL Server]"
   - "SQL Server event classes, Locks event category"
   - "event classes [SQL Server], Locks event category"
   - "lock escalation [SQL Server], locks event category"
-ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Locks Event Category

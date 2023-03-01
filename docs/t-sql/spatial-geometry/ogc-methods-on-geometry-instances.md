@@ -1,19 +1,16 @@
 ---
+title: "OGC Methods on Geometry Instances"
 description: "OGC Methods on Geometry Instances"
-title: "OGC Methods on Geometry Instances | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OGC Methods on Geometry Instances [SQL Server]"
-ms.assetid: c0c0f441-bf33-410c-9df0-544e3d05b944
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OGC Methods on Geometry Instances

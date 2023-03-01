@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_50000"
 description: "SQL Server Native Client Error MSSQLSERVER_50000"
-title: "MSSQLSERVER_50000 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "50000 [SQL Server Native Client setup error]"
-ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "50000 [SQL Server Native Client setup error]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Error MSSQLSERVER_50000

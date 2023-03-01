@@ -1,13 +1,12 @@
 ---
 title: Previous versions of SQL Server documentation
 description: How to get online and offline documentation for previous versions of SQL Server, including 2005, 2008, 2012, and 2014.
+author: markingmyname
+ms.author: maghan
+ms.date: 08/12/2020
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.date: 08/12/2020
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 

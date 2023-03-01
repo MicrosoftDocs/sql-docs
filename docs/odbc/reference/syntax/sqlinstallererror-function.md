@@ -1,24 +1,19 @@
 ---
+title: "SQLInstallerError Function"
 description: "SQLInstallerError Function"
-title: "SQLInstallerError Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLInstallerError"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLInstallerError"
-helpviewer_keywords: 
-  - "SQLInstallerError [ODBC]"
-ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLInstallerError"
+helpviewer_keywords:
+  - "SQLInstallerError [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLInstallerError"
+apitype: "dllExport"
 ---
 # SQLInstallerError Function
 **Conformance**  

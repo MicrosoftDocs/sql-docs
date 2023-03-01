@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_cryptographic_provider_keys dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 ---
 # sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

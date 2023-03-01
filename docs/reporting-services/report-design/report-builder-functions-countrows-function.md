@@ -1,15 +1,12 @@
 ---
-title: "CountRows function in a paginated report | Microsoft Docs"
-description: Learn about the CountRows function, which returns the number of rows in a specified scope, including rows with null values in a paginated report. 
+title: "CountRows function in a paginated report"
+description: Learn about the CountRows function, which returns the number of rows in a specified scope, including rows with null values in a paginated report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Builder functions - CountRows function in a paginated report (Report Builder)
 

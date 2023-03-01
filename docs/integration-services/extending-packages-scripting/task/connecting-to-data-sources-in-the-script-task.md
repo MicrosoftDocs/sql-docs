@@ -1,15 +1,13 @@
 ---
+title: "Connecting to Data Sources in the Script Task"
 description: "Connecting to Data Sources in the Script Task"
-title: "Connecting to Data Sources in the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], scripts"
   - "Integration Services packages, connections"
   - "connection managers [Integration Services], scripts"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "Connections property"
   - "SQL Server Integration Services packages, connections"
   - "SSIS Script task, connections"
-ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Connecting to Data Sources in the Script Task
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSrepl_transactions system table"
 dev_langs:
   - "TSQL"
-ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 ---
 # MSrepl_transactions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

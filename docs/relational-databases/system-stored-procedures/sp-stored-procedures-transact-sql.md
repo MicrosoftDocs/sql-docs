@@ -1,22 +1,19 @@
 ---
+title: "sp_stored_procedures (Transact-SQL)"
 description: "sp_stored_procedures (Transact-SQL)"
-title: "sp_stored_procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_stored_procedures_TSQL"
-  - "sp_stored_procedures"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_stored_procedures"
-ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_stored_procedures_TSQL"
+  - "sp_stored_procedures"
+helpviewer_keywords:
+  - "sp_stored_procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_stored_procedures (Transact-SQL)
 

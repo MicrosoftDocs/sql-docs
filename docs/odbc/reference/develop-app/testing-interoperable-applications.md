@@ -1,18 +1,15 @@
 ---
+title: "Testing Interoperable Applications"
 description: "Testing Interoperable Applications"
-title: "Testing Interoperable Applications | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "interoperability [ODBC], testing interoperable applications"
-  - "testing interoperable applications [ODBC]"
-ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "interoperability [ODBC], testing interoperable applications"
+  - "testing interoperable applications [ODBC]"
 ---
 # Testing Interoperable Applications
 Testing interoperable applications is at best a time-consuming business and at worst impossible because new drivers continually appear on the market. However, a reasonable degree of testing is possible. Applications with limited or low interoperability need only be tested against those drivers they are guaranteed to support. However, they must be fully tested against these drivers.  

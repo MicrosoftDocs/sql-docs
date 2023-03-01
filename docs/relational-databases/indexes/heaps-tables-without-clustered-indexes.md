@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "forwarded record"
   - "forwarding pointer"
   - "RID"
-ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Heaps (Tables without Clustered Indexes)

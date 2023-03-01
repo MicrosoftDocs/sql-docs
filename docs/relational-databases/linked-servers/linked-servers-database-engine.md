@@ -1,12 +1,13 @@
 ---
-description: "Linked Servers (Database Engine)"
 title: "Linked Servers (Database Engine)"
+description: "Linked Servers (Database Engine)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 02/09/2023
 ms.service: sql
-ms.subservice: 
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "OLE DB, linked servers"
   - "OLE DB provider, linked servers"
   - "server management [SQL Server], linked servers"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "servers [SQL Server], linked"
   - "remote servers [SQL Server], linked servers"
   - "linked servers [SQL Server], about linked servers"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 ---
 # Linked Servers (Database Engine)
 

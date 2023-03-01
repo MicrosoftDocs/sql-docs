@@ -1,17 +1,15 @@
 ---
 title: "Row Compression Implementation"
 description: Learn how the SQL Server Database Engine implements row compression to help you plan the storage space that you need for your data.
-ms.custom: ""
-ms.date: "03/27/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "compression [SQL Server], row"
-  - "row compression [Database Engine]"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/27/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "compression [SQL Server], row"
+  - "row compression [Database Engine]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Row Compression Implementation

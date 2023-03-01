@@ -1,16 +1,13 @@
 ---
+title: "Developing a Custom Transformation Component with Asynchronous Outputs"
 description: "Developing a Custom Transformation Component with Asynchronous Outputs"
-title: "Developing a Custom Transformation Component with Asynchronous Outputs | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom data flow components [Integration Services], transformation components"
   - "asynchronous outputs [Integration Services]"
   - "ProcessInput method"
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "output columns [Integration Services]"
   - "PrimeOutput method"
   - "data flow components [Integration Services], transformation components"
-ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing a Custom Transformation Component with Asynchronous Outputs
 

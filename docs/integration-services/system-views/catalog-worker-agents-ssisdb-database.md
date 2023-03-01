@@ -1,15 +1,12 @@
 ---
+title: "catalog.worker_agents (SSISDB Database)"
 description: "catalog.worker_agents (SSISDB Database)"
-title: "catalog.worker_agents (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: chugugrace
 ms.author: chugu
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # catalog.worker_agents (SSISDB Database)
 

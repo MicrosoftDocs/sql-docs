@@ -1,23 +1,20 @@
 ---
+title: "Creating a Package Programmatically"
 description: "Creating a Package Programmatically"
-title: "Creating a Package Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services 
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS packages, creating"
   - "Integration Services packages, creating"
   - "packages [Integration Services], creating"
   - "SQL Server Integration Services packages, creating"
-ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Creating a Package Programmatically
 

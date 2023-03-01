@@ -1,19 +1,16 @@
 ---
+title: "Inserting Rows with SQLBulkOperations"
 description: "Inserting Rows with SQLBulkOperations"
-title: "Inserting Rows with SQLBulkOperations | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLBulkOperations function [ODBC], inserting rows"
   - "data updates [ODBC], SQLBulkOperations"
   - "updating data [ODBC], SQLBulkOperations"
-ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Inserting Rows with SQLBulkOperations
 Inserting data with **SQLBulkOperations** is similar to updating data with **SQLBulkOperations** because it uses data from the bound application buffers.  

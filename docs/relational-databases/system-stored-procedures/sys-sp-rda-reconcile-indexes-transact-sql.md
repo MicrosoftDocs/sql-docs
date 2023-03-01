@@ -1,22 +1,20 @@
 ---
-title: "sys.sp_rda_reconcile_indexes (Transact-SQL) | Microsoft Docs"
+title: "sys.sp_rda_reconcile_indexes (Transact-SQL)"
 description: Learn about sys.sp_rda_reconcile_indexes. See how to use this Transact-SQL stored procedure to queue a schema task to reconcile indexes on a remote table.
-ms.custom: ""
-ms.date: 07/25/2022
-ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice: stored-procedures
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_rda_reconcile_indexes"
-  - "sp_rda_reconcile_indexes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sys.sp_rda_reconcile_indexes stored procedure"
-ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: "reference"
+f1_keywords:
+  - "sp_rda_reconcile_indexes"
+  - "sp_rda_reconcile_indexes_TSQL"
+helpviewer_keywords:
+  - "sys.sp_rda_reconcile_indexes stored procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

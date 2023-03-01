@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_1461"
 description: "MSSQLSERVER_1461"
-title: "MSSQLSERVER_1461 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1461 (Database Engine error)"
-ms.assetid: fce10907-4753-441b-b624-f28e00ed7520
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1461 (Database Engine error)"
 ---
 # MSSQLSERVER_1461
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

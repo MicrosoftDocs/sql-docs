@@ -1,16 +1,13 @@
 ---
+title: "Project Settings (Synchronization) (SybaseToSQL)"
 description: "Project Settings (Synchronization) (SybaseToSQL)"
-title: "Project Settings (Synchronization) (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.sybase.projectsettingloadingobjects.f1"
 ---
 # Project Settings (Synchronization) (SybaseToSQL)

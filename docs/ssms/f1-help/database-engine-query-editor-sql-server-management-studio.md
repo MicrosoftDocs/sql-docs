@@ -1,20 +1,24 @@
 ---
-title: SSMS Query Editor 
+title: SSMS Query Editor
 description: SQL Server Management Studio (SSMS) Query Editor
+author: markingmyname
+ms.author: maghan
+ms.date: 08/28/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-f1_keywords: 
-  - sql13.swb.query.advanced.f1
-  - sql13.swb.query.ansi.f1
-  - sql13.swb.query.general.f1
-  - sql13.swb.query.grid.f1
-  - sql13.swb.sqleditors.multiserverresultssettings
-  - sql13.swb.tsqlquery.f1
-  - sql13.swb.tsqlresults.f1
-dev_langs: 
-  - TSQL
-helpviewer_keywords: 
+ms.custom:
+  - seo-lt-2019
+  - contperf-fy21q1
+f1_keywords:
+  - "sql13.swb.query.advanced.f1"
+  - "sql13.swb.query.ansi.f1"
+  - "sql13.swb.query.general.f1"
+  - "sql13.swb.query.grid.f1"
+  - "sql13.swb.sqleditors.multiserverresultssettings"
+  - "sql13.swb.tsqlquery.f1"
+  - "sql13.swb.tsqlresults.f1"
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], editor"
   - "SQL Server Management Studio [SQL Server], Database Engine Query Editor"
   - "SQL Server Management Studio [SQL Server], templates"
@@ -36,11 +40,8 @@ helpviewer_keywords:
   - "writing queries"
   - "scripts [SQL Server], SQL Server Management Studio"
   - "queries [SQL Server], SQL Server Management Studio"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019, contperf-fy21q1
-ms.date: 08/28/2020
+dev_langs:
+  - TSQL
 ---
 
 # SQL Server Management Studio (SSMS) Query Editor

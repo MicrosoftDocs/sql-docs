@@ -1,18 +1,15 @@
 ---
-description: "Common errors with database mail"
 title: "Common errors with database mail| Microsoft Docs"
-ms.custom: ""
+description: "Common errors with database mail"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "04/22/2019"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Common errors with database mail 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

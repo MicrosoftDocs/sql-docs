@@ -1,13 +1,13 @@
 ---
-title: How to tell if PolyBase external pushdown occurred 
-titlesuffix: SQL Server
+title: How to tell if PolyBase external pushdown occurred
+titleSuffix: SQL Server
 description: If a PolyBase query is performing slowly, you should determine if pushdown of your PolyBase query is occurring. Queries benefit from PolyBase external pushdown.
-ms.date: 05/20/2021
 author: WilliamDassafMSFT
 ms.author: wiassaf
-ms.topic: conceptual
+ms.date: 05/20/2021
 ms.service: sql
 ms.subservice: big-data-cluster
+ms.topic: conceptual
 ---
 # How to tell if external pushdown occurred
 

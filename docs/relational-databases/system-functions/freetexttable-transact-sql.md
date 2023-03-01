@@ -1,26 +1,23 @@
 ---
+title: "FREETEXTTABLE (Transact-SQL)"
 description: "FREETEXTTABLE (Transact-SQL)"
-title: "FREETEXTTABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "10/05/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "FREETEXTTABLE_TSQL"
   - "FREETEXTTABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search conditions [SQL Server], meaning matches"
   - "meaning matches [full-text search]"
   - "FREETEXTTABLE function (Transact-SQL)"
   - "ranked results [full-text search]"
   - "column searches [full-text search]"
-ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FREETEXTTABLE (Transact-SQL)

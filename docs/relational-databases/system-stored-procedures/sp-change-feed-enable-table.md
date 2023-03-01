@@ -1,19 +1,19 @@
 ---
-description: "The sp_change_feed_enable_table system stored procedure enables the creation of a new Azure Synapse Link table to an existing Azure Synapse Link table group."
 title: "sp_change_feed_enable_table (Transact-SQL)"
-ms.date: 02/03/2023
-ms.service: synapse-analytics
-ms.reviewer: wiassaf
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_feed_enable_table_TSQL"
-  - "sp_change_feed_enable_table_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_feed_enable_table"
+description: "The sp_change_feed_enable_table system stored procedure enables the creation of a new Azure Synapse Link table to an existing Azure Synapse Link table group."
 author: IdrisMotiwala
 ms.author: imotiwala
+ms.reviewer: wiassaf
+ms.date: 02/03/2023
+ms.service: synapse-analytics
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_feed_enable_table_TSQL"
+  - "sp_change_feed_enable_table_db"
+helpviewer_keywords:
+  - "sp_change_feed_enable_table"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 # sp_change_feed_enable_table (Transact-SQL)

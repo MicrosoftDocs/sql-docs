@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Dialogs) (MySQLToSQL)"
 description: "Global Settings (Dialogs) (MySQLToSQL)"
-title: "Global Settings (Dialogs) (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.globalsettingdialog.f1"
+f1_keywords:
+  - "ssma.mysql.globalsettingdialog.f1"
 ---
 # Global Settings (Dialogs) (MySQLToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

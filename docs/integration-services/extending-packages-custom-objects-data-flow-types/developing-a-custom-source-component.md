@@ -1,16 +1,13 @@
 ---
+title: "Developing a Custom Source Component"
 description: "Developing a Custom Source Component"
-title: "Developing a Custom Source Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "validation [Integration Services], components"
   - "external data sources [Integration Services]"
   - "data flow components [Integration Services], source components"
@@ -18,9 +15,9 @@ helpviewer_keywords:
   - "custom data flow components [Integration Services], source components"
   - "custom sources [Integration Services]"
   - "source components [Integration Services]"
-ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing a Custom Source Component
 

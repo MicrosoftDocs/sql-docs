@@ -1,21 +1,21 @@
 ---
-description: "Install Extensions in SQL Server Management Studio (SSMS)"
 title: Install Extensions in SQL Server Management Studio (SSMS)
+description: "Install Extensions in SQL Server Management Studio (SSMS)"
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
+ms.date: 07/29/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 keywords:
   - "extensions"
   - "vsix"
   - "install extension"
   - "install vsix"
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: maghan
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
-ms.date: 07/29/2020
 ---
 
 # Install Extensions in SQL Server Management Studio (SSMS)

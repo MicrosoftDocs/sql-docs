@@ -1,15 +1,12 @@
 ---
+title: "Step 1: Copy the Lesson 5 package"
 description: "Lesson 6-1: Copy the Lesson 5 package"
-title: "Step 1: Copy the Lesson 5 package | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: chugugrace
 ms.author: chugu
+ms.date: "01/11/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 6-1: Copy the Lesson 5 package
 

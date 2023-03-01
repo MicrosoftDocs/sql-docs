@@ -1,19 +1,16 @@
 ---
+title: "Installer DLL Function Summary"
 description: "Installer DLL Function Summary"
-title: "Installer DLL Function Summary | Microsoft Docs"
-ms.custom:
-  - intro-installation
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
+ms.custom: intro-installation
 helpviewer_keywords:
   - "functions [ODBC], installer DLL functions"
   - "installer DLL [ODBC]"
-ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Installer DLL Function Summary
 The following table describes the functions in the installer DLL. For more information about the syntax and semantics for each function, see [Installer DLL API Reference](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

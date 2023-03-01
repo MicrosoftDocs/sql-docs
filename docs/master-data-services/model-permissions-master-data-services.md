@@ -1,18 +1,15 @@
 ---
-description: "Model Permissions (Master Data Services)"
 title: Model Permissions
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "models [Master Data Services], permissions"
-  - "permissions [Master Data Services], models"
-ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
+description: "Model Permissions (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "models [Master Data Services], permissions"
+  - "permissions [Master Data Services], models"
 ---
 # Model Permissions (Master Data Services)
 

@@ -1,19 +1,16 @@
 ---
+title: "SQL Server Browsing Example"
 description: "SQL Server Browsing Example"
-title: "SQL Server Browsing Example | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLBrowseConnect function [ODBC], example"
   - "connecting to data source [ODBC], SqlBrowseConnect"
   - "connecting to driver [ODBC], SQLBrowseConnect"
-ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL Server Browsing Example
 The following example shows how **SQLBrowseConnect** might be used to browse the connections available with a driver for SQL Server. First, the application requests a connection handle:  

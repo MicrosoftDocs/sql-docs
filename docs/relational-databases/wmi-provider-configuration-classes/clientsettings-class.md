@@ -1,22 +1,15 @@
 ---
-description: "ClientSettings Class"
 title: "ClientSettings Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "ClientSettings Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "ClientSettings class"
-ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
+description: "ClientSettings Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ClientSettings class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ClientSettings Class"
 ---
 # ClientSettings Class
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

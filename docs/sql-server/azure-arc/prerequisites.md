@@ -21,7 +21,7 @@ An Azure Arc-enabled instance of SQL Server is an instance on-premises or in a c
 
 Before you can Arc-enable an instance of SQL Server you need to:
 
-- Have an Azure account with an active subscription. [Create one for free](https://azure.microsoft.com/free/)
+- Have an Azure account with an active subscription. If needed, [create a free Azure Account](https://azure.microsoft.com/free/)
 - Verify [Arc connected machine agent prerequisites](/azure/azure-arc/servers/prerequisites)
 - Verify [Arc connected machine agent network requirements](/azure/azure-arc/servers/network-requirements)
 - Register resource providers. Specifically:

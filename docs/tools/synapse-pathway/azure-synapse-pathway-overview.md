@@ -1,17 +1,17 @@
 ---
 title: Azure Synapse Pathway overview
 description: Azure Synapse Pathway is a tool to migrate a data warehouse to Azure Synapse Analytics.
-author: WilliamDAssafMSFT 
-ms.author: wiassaf 
-ms.topic: overview
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf
 ms.date: 02/11/2022
 ms.service: sql
 ms.subservice: tools-other
-monikerRange: "=azure-sqldw-latest"
+ms.topic: overview
 ms.custom:
   - template-overview
   - intro-overview
-ms.reviewer: wiassaf
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # Azure Synapse Pathway overview

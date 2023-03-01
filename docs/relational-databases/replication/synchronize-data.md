@@ -1,13 +1,13 @@
 ---
-title: "Synchronize Data | Microsoft Docs"
+title: "Synchronize Data"
 description: Synchronizing data in replication refers to data and schema changes propagating between the Publisher and Subscribers in SQL Server.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "synchronization [SQL Server replication], about synchronization"
   - "merge replication synchronization [SQL Server replication]"
   - "scripts [SQL Server replication], synchronization and"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "on demand script execution"
   - "replication [SQL Server], synchronization"
   - "scripts [SQL Server replication]"
-ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Synchronize Data

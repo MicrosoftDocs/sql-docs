@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster_members catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sys.dm_hadr_cluster_members (Transact-SQL)

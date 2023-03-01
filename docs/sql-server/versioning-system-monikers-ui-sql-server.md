@@ -1,12 +1,12 @@
 ---
-description: "Versioning system for SQL documentation"
 title: Versioning system SQL docs
+description: "Versioning system for SQL documentation"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 08/12/2020
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016"
 ---
 

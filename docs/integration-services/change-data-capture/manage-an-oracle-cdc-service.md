@@ -1,15 +1,12 @@
 ---
 title: Manage an Oracle CDC Service
 description: "Manage an Oracle CDC Service"
+author: chugugrace
+ms.author: chugu
+ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
-author: chugugrace
-ms.author: chugu
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/14/2017"
 ---
 
 # Manage an Oracle CDC Service

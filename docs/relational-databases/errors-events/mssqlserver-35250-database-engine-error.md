@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_35250"
 description: "MSSQLSERVER_35250"
-title: "MSSQLSERVER_35250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/06/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "35250 (Database Engine error)"
-ms.assetid: 
 author: pijocoder
 ms.author: jopilov
+ms.date: "05/06/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "35250 (Database Engine error)"
 ---
 # MSSQLSERVER_35250
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -5,13 +5,13 @@ description: "Learn how to install SQL Server 2022 Machine Learning Services on 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/26/2022
-ms.topic: how-to
 ms.service: sql
 ms.subservice: machine-learning-services
-monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
+ms.topic: how-to
 ms.custom:
-- intro-installation
-- event-tier1-build-2022
+  - intro-installation
+  - event-tier1-build-2022
+monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # Install SQL Server 2022 Machine Learning Services (Python and R) on Linux
 

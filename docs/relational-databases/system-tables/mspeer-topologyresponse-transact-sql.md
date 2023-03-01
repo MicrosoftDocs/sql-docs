@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_topologyresponse"
 dev_langs:
   - "TSQL"
-ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MSpeer_topologyresponse (Transact-SQL)

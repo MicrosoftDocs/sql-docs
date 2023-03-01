@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_cursors dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 ---
 # sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

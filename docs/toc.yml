@@ -109,7 +109,7 @@ items:
           href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
         - name: To a mirrored media set
           href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
-        - name: Schedule Database Backups
+        - name: Schedule database backups
           href: relational-databases/backup-restore/schedule-database-backup-operation-ssms.md
       - name: Restore
         items:

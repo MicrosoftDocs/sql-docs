@@ -1,16 +1,14 @@
 ---
-description: "SQL Server backup and restore with S3-compatible object storage preview"
 title: "Backup & restore with S3-compatible object storage"
-storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/24/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
+description: "SQL Server backup and restore with S3-compatible object storage preview"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
+storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # SQL Server backup and restore with S3-compatible object storage preview

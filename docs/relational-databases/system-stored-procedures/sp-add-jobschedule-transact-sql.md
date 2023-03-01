@@ -1,22 +1,19 @@
 ---
+title: "sp_add_jobschedule (Transact-SQL)"
 description: "sp_add_jobschedule (Transact-SQL)"
-title: "sp_add_jobschedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/28/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_jobschedule"
-  - "sp_add_jobschedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_jobschedule"
-ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
+ms.date: "07/28/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_jobschedule"
+  - "sp_add_jobschedule_TSQL"
+helpviewer_keywords:
+  - "sp_add_jobschedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

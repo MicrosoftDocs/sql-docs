@@ -1,20 +1,17 @@
 ---
+title: "Extend a Dataset by Using the Merge Join Transformation"
 description: "Extend a Dataset by Using the Merge Join Transformation"
-title: "Extend a Dataset by Using the Merge Join Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Merge Join transformation"
   - "datasets [Integration Services], joining"
   - "datasets [Integration Services], extending"
   - "joining datasets [Integration Services]"
-ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-author: chugugrace
-ms.author: chugu
 ---
 # Extend a Dataset by Using the Merge Join Transformation
 

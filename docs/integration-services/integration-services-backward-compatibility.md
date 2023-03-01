@@ -1,22 +1,19 @@
 ---
+title: "Integration Services Backward Compatibility"
 description: "Integration Services Backward Compatibility"
-title: "Integration Services Backward Compatibility | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "06/14/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "compatibility [Integration Services]"
   - "Data Transformation Services, support for"
   - "SQL Server Integration Services, backward compatibility"
   - "dtsrun utility"
   - "Integration Services, backward compatibility"
   - "backward compatibility [Integration Services]"
-ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Backward Compatibility
 

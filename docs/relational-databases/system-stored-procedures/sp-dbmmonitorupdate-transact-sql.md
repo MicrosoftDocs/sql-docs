@@ -1,23 +1,20 @@
 ---
+title: "sp_dbmmonitorupdate (Transact-SQL)"
 description: "sp_dbmmonitorupdate (Transact-SQL)"
-title: "sp_dbmmonitorupdate (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbmmonitorupdate"
-  - "sp_dbmmonitorupdate_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbmmonitorupdate"
-  - "database mirroring [SQL Server], monitoring"
-ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbmmonitorupdate"
+  - "sp_dbmmonitorupdate_TSQL"
+helpviewer_keywords:
+  - "sp_dbmmonitorupdate"
+  - "database mirroring [SQL Server], monitoring"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

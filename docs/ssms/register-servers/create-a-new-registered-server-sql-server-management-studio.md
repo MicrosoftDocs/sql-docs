@@ -1,20 +1,18 @@
 ---
-description: "Create a New Registered Server (SQL Server Management Studio)"
 title: Create a New Registered Server
+description: "Create a New Registered Server (SQL Server Management Studio)"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.registerserver.general.sqlce.f1"
   - "sql13.swb.registerserver.general.sqlserver.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Registered Servers [SQL Server], creating new registered servers"
-ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ---
 
 # Create a New Registered Server (SQL Server Management Studio)

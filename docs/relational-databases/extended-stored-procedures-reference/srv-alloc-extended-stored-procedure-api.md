@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_alloc
 apitype: "DLLExport"
-ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 ---
 # srv_alloc (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

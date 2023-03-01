@@ -1,24 +1,21 @@
 ---
+title: "READTEXT (Transact-SQL)"
 description: "READTEXT (Transact-SQL)"
-title: "READTEXT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/24/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "READTEXT_TSQL"
   - "READTEXT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column reading [SQL Server]"
   - "READTEXT statement"
   - "reading columns"
-ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # READTEXT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

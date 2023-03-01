@@ -1,18 +1,16 @@
 ---
-description: "Options (SQL Server Object Explorer - Scripting Page)"
 title: "Options (SQL Server Object Explorer - Scripting Page)"
-ms.custom: seo-lt-2019
-ms.date: "08/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.ObjectExplorerScripting"
-  - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting"
-ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
+description: "Options (SQL Server Object Explorer - Scripting Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/01/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "VS.ToolsOptionsPages.ObjectExplorerScripting"
+  - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting"
 ---
 # Options (SQL Server Object Explorer - Scripting Page)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

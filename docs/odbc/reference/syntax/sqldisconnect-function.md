@@ -1,29 +1,19 @@
 ---
+title: "SQLDisconnect Function"
 description: "SQLDisconnect Function"
-title: "SQLDisconnect Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLDisconnect"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLDisconnect"
-helpviewer_keywords: 
-  - "SQLDisconnect function [ODBC]"
-ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLDisconnect"
+helpviewer_keywords:
+  - "SQLDisconnect function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLDisconnect"
+apitype: "dllExport"
 ---
 # SQLDisconnect Function
 **Conformance**  

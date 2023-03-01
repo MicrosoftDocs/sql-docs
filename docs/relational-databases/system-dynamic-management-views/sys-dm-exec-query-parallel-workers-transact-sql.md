@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_query_parallel_workers dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9f
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_parallel_workers (Transact-SQL)

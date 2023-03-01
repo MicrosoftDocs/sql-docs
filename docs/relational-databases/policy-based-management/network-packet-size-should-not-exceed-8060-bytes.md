@@ -1,17 +1,14 @@
 ---
+title: "Network Packet Size Should Not Exceed 8060 Bytes"
 description: "Network Packet Size Should Not Exceed 8060 Bytes"
-title: "Network Packet Size Should Not Exceed 8060 Bytes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Network Packet Size Should Not Exceed 8060 Bytes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

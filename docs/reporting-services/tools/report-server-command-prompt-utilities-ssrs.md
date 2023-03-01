@@ -1,21 +1,18 @@
 ---
-title: "Report Server Command Prompt Utilities | Microsoft Docs"
+title: "Report Server Command Prompt Utilities"
 description: Learn about the SQL Server Reporting Services command line utilities that are used to administer a report server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: tools
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rsconfig utility"
   - "components [Reporting Services], command line utilities"
   - "rs utility"
   - "command prompt utilities [Reporting Services]"
   - "rskeymgmt utility"
-ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Server Command Prompt Utilities (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes several command line utilities that you can use to administer a report server. These utilities are installed automatically when you install a report server.  

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5250"
 description: "MSSQLSERVER_5250"
-title: "MSSQLSERVER_5250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5250 (Database Engine error)"
-ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5250 (Database Engine error)"
 ---
 # MSSQLSERVER_5250
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

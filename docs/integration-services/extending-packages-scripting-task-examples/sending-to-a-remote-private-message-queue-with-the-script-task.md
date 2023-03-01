@@ -1,21 +1,18 @@
 ---
+title: "Sending to a Remote Private Message Queue with the Script Task"
 description: "Sending to a Remote Private Message Queue with the Script Task"
-title: "Sending to a Remote Private Message Queue with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], remote private message queues"
   - "Message Queue task [Integration Services]"
   - "Script task [Integration Services], examples"
-ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Sending to a Remote Private Message Queue with the Script Task
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_depends (Transact-SQL)"
 description: "sp_depends (Transact-SQL)"
-title: "sp_depends (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_depends"
-  - "sp_depends_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_depends"
-ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_depends"
+  - "sp_depends_TSQL"
+helpviewer_keywords:
+  - "sp_depends"
+dev_langs:
+  - "TSQL"
 ---
 # sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

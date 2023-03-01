@@ -1,18 +1,15 @@
 ---
+title: "SQLError Mapping"
 description: "SQLError Mapping"
-title: "SQLError Mapping | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "mapping deprecated functions [ODBC], SQLError"
-  - "SQLError function [ODBC], mapping"
-ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "mapping deprecated functions [ODBC], SQLError"
+  - "SQLError function [ODBC], mapping"
 ---
 # SQLError Mapping
 When an application calls **SQLError** through an ODBC *3.x* driver, the call to  

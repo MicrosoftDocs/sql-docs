@@ -1,18 +1,15 @@
 ---
-description: "Database Mail"
 title: "Database Mail"
-ms.custom: ""
+description: "Database Mail"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/19/2022"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

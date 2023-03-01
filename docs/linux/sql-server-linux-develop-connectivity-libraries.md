@@ -1,13 +1,12 @@
 ---
 title: Connectivity libraries and frameworks
-description: Lists the connectivity drivers that client apps can use from various languages to connect to Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and also to Azure SQL Database and Azure Synapse Analytics. 
-author: VanMSFT 
+description: Lists the connectivity drivers that client apps can use from various languages to connect to Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and also to Azure SQL Database and Azure Synapse Analytics.
+author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
+ms.topic: conceptual
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server
 

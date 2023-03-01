@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_process_memory dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_process_memory (Transact-SQL)

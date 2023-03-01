@@ -1,19 +1,16 @@
 ---
+title: "Configure Dialog Box"
 description: "Configure Dialog Box"
-title: "Configure Dialog Box | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.configure.f1"
   - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
   - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
-ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: chugugrace
-ms.author: chugu
 ---
 # Configure Dialog Box
 

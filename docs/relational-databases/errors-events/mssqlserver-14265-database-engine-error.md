@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_14265"
 description: "MSSQLSERVER_14265"
-title: "MSSQLSERVER_14265 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "14265 (Database Engine error)"
-ms.assetid: ab91b9c4-a967-414f-b5d7-7a2a9f73cdc4
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "14265 (Database Engine error)"
 ---
 # MSSQLSERVER_14265
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

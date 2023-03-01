@@ -1,12 +1,14 @@
 ---
 title: "Troubleshoot full transaction log error 9002"
 description: Learn about possible responses to a full transaction log in SQL Server and how to avoid the problem in the future.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "09/14/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: troubleshooting
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "logs [SQL Server], full"
   - "troubleshooting [SQL Server], full transaction log"
   - "9002 (Database Engine error)"
@@ -14,9 +16,6 @@ helpviewer_keywords:
   - "back up transaction logs [SQL Server], full logs"
   - "transaction logs [SQL Server], full log"
   - "full transaction logs [SQL Server]"
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.custom: "seo-lt-2019"
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
  

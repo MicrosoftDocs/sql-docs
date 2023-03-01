@@ -213,7 +213,7 @@ To restore to another subscription, be sure to set the context (`az account set`
 
 
 ```azurecli-interactive
-az account set -s "“"sourceSubscriptionId"”"
+az account set -s "targetSubscriptionId" `
 
 az sql midb restore -s sourcesubscriptionid -g sourcegroup 
 --mi sourceinstance -n sourcemanageddb --dest-name targetDbName 
@@ -224,7 +224,7 @@ az sql midb restore -s sourcesubscriptionid -g sourcegroup
 
 ## Restore a deleted database
 
-You can restore a deleted database by using the Azure portal or PowerShell. Currently, you can't use the Azure CLI to restore a deleted database.
+You can restore a deleted database by using the Azure portal, Azure PowerShell or the Azure CLI. 
 
 # [Portal](#tab/azure-portal)
 

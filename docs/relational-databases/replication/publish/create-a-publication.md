@@ -8,6 +8,7 @@ ms.date: 01/30/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "publications [SQL Server replication], creating"
   - "articles [SQL Server replication], defining"

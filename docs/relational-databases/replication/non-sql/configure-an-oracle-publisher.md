@@ -7,6 +7,7 @@ ms.date: "09/05/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], configuring"
 ---

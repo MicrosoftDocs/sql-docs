@@ -18,8 +18,7 @@ SQL Server Native Client, also known as SNAC or SQLNCLI, is used to refer to the
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)] 
 
 > [!NOTE]
-> For more information and to download the SNAC or ODBC Drivers, see the [SNAC lifecycle explained blog post](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained).  For SQLNCLI that ships as a component of SQL Server Database engine, see this [Support Lifecycle exception](./applications/support-policies-for-sql-server-native-client.md#support-lifecycle-exception). 
-> For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+> For more information and to download the SNAC or ODBC Drivers, see the [SNAC lifecycle explained blog post](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained). For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
  Information on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client features released with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the last available version of SQL Server native Client:
 

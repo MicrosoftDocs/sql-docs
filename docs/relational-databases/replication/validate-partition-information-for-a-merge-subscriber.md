@@ -7,7 +7,9 @@ ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - updatefrequency5
 helpviewer_keywords:
   - "merge replication data validation [SQL Server replication], partitions"
   - "parameterized filters [SQL Server replication], validating partition information"

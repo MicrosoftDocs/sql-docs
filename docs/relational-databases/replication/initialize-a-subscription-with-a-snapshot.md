@@ -7,6 +7,7 @@ ms.date: 03/23/2020
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], initializing subscriptions"
   - "initializing subscriptions [SQL Server replication], snapshots"

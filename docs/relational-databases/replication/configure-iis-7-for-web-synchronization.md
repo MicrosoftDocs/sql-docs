@@ -7,6 +7,7 @@ ms.date: "09/12/2016"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "IIS 7 server configuration [SQL Server replication]"
   - "Web synchronization, IIS 7 servers"

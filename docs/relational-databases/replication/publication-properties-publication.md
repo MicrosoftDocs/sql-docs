@@ -7,7 +7,9 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.pubproperties.agentsecurity.f1"
   - "sql13.rep.newpubwizard.pubproperties.filterrows.f1"

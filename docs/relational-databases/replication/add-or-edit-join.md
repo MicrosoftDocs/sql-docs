@@ -7,6 +7,7 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rep.newpubwizard.addeditjoin.f1"
   - "sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1"

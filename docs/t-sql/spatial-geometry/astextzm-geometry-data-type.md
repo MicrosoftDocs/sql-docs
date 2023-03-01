@@ -1,21 +1,19 @@
 ---
 title: "AsTextZM (geometry Data Type)"
 description: "AsTextZM (geometry Data Type)"
+author: MladjoA
+ms.author: mlandzic
+ms.date: "08/03/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "AsTextZM_(geometry Data Type)"
   - "AsTextZM_(geometry_Data_Type)_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "AsTextZM (geometry Data Type)"
-author: MladjoA
-ms.author: mlandzic
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "08/03/2017"
+dev_langs:
+  - "TSQL"
 ---
 # AsTextZM (geometry Data Type)
 

@@ -1,13 +1,13 @@
 ---
-title: "Connecting with SQLDriverConnect | Microsoft Docs"
+title: "Connecting with SQLDriverConnect"
 description: "SQLDriverConnect provides additional connection functionality over SQLConnect, including options to prompt the user for more information."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "08/20/2020"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data sources [ODBC], connection functions"
   - "functions [ODBC], data source or driver connections"
   - "connecting to data source [ODBC], SQLDriverConnect"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "SQLDriverConnect function [ODBC], connecting"
   - "connection functions [ODBC]"
   - "ODBC drivers [ODBC], connection functions"
-ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Connecting with SQLDriverConnect
 

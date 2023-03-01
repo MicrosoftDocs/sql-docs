@@ -1,22 +1,19 @@
 ---
+title: "sys.sp_xtp_control_query_exec_stats (Transact-SQL)"
 description: "sys.sp_xtp_control_query_exec_stats (Transact-SQL)"
-title: "sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/13/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sys.sp_xtp_control_query_exec_stats_TSQL"
-  - "sys.sp_xtp_control_query_exec_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sys.sp_xtp_control_query_exec_stats"
-ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: markingmyname
 ms.author: maghan
+ms.date: "10/13/2015"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sys.sp_xtp_control_query_exec_stats_TSQL"
+  - "sys.sp_xtp_control_query_exec_stats"
+helpviewer_keywords:
+  - "sys.sp_xtp_control_query_exec_stats"
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2814"
 description: "MSSQLSERVER_2814"
-title: "MSSQLSERVER_2814 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/11/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2814 (Database Engine error)"
-ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "07/11/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2814 (Database Engine error)"
 ---
 # MSSQLSERVER_2814
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

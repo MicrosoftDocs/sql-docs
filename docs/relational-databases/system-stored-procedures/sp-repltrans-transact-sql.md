@@ -1,22 +1,19 @@
 ---
+title: "sp_repltrans (Transact-SQL)"
 description: "sp_repltrans (Transact-SQL)"
-title: "sp_repltrans (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_repltrans_TSQL"
-  - "sp_repltrans"
-helpviewer_keywords: 
-  - "sp_repltrans"
-ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_repltrans_TSQL"
+  - "sp_repltrans"
+helpviewer_keywords:
+  - "sp_repltrans"
+dev_langs:
+  - "TSQL"
 ---
 # sp_repltrans (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,12 +1,13 @@
 ---
-description: "Linked Servers (Database Engine)"
 title: "Linked Servers (Database Engine)"
-ms.date: "11/15/2021"
+description: "Linked Servers (Database Engine)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 02/09/2023
 ms.service: sql
-ms.subservice: 
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "OLE DB, linked servers"
   - "OLE DB provider, linked servers"
   - "server management [SQL Server], linked servers"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "servers [SQL Server], linked"
   - "remote servers [SQL Server], linked servers"
   - "linked servers [SQL Server], about linked servers"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 ---
 # Linked Servers (Database Engine)
 
@@ -109,6 +107,10 @@ Azure SQL Managed Instance linked servers support both SQL authentication, and A
 - Azure AD authentication is not supported for Managed Instances in different Azure AD tenants.
 - Azure AD authentication for linked servers is supported only with OLE DB driver version 18.2.1 and higher.
 - Azure AD authentication for linked servers from Managed Instance to SQL Server is supported for mapped local logins only. Propagating security context is not supported. That means that managed identity authentication is supported, while pass-through authentication is not supported.
+
+### MSOLEDBSQL19 and linked servers
+
+Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
 
 ## See also
 

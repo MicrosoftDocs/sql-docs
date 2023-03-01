@@ -1,22 +1,19 @@
 ---
 title: Table Properties - SSMS
 description: "Table Properties - SSMS"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql12.SWB.SELECTCOLUMNS.F1"
   - "sql13.SWB.SELECTCOLUMNS.F1"
   - "sql13.swb.tableproperties.storage.f1"
   - "sql13.swb.tableproperties.changetracking.f1"
   - "sql13.swb.tableproperties.general.f1"
   - "sql13.swb.tableproperties.filetable.f1"
-ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -3,7 +3,7 @@ title: "sys.dm_os_cluster_properties (Transact-SQL)"
 description: sys.dm_os_cluster_properties (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/09/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_os_cluster_properties"
 dev_langs:
   - "TSQL"
-ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 ---
 # sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,6 +38,10 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 ## Permissions  
  Requires VIEW SERVER STATE permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example uses sys.dm_os_cluster_properties to return the property settings for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster resource.  
   

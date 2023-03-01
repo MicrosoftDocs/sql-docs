@@ -1,17 +1,14 @@
 ---
+title: "Large CLR User-Defined Types"
 description: "Large CLR User-Defined Types in SQL Server Native Client"
-title: "Large CLR User-Defined Types | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/17/2017"
-ms.reviewer: ""
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "large CLR user-defined types"
-ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Large CLR User-Defined Types in SQL Server Native Client

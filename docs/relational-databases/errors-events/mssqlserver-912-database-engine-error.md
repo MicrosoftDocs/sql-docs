@@ -1,16 +1,14 @@
 ---
 title: "MSSQLSERVER_912"
 description: The database script level could not be upgraded to the latest required by the server.
-ms.custom: ""
-ms.date: "12/01/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "912 (Database Engine error)"
 author: PijoCoder
 ms.author: jopilov
+ms.date: "12/01/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "912 (Database Engine error)"
 ---
 # MSSQLSERVER_912
  [!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]

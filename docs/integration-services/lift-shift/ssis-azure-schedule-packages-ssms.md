@@ -1,14 +1,13 @@
 ---
-title: "Schedule SSIS packages in Azure with SSMS | Microsoft Docs"
+title: "Schedule SSIS packages in Azure with SSMS"
 description: "Describes how to schedule SSIS packages deployed to Azure SQL Database by using the Schedule command in SQL Server Management Studio (SSMS)."
-ms.date: "09/23/2018"
-ms.topic: conceptual
-ms.service: sql
-ms.custom: ""
-ms.subservice: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
+ms.date: "09/23/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Schedule the execution of SSIS packages deployed in Azure with SQL Server Management Studio (SSMS)
 

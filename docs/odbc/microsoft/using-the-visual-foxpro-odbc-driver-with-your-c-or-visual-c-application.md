@@ -1,21 +1,18 @@
 ---
+title: "Use Visual FoxPro ODBC Driver with C or Visual C++ Application"
 description: "Use the Visual FoxPro ODBC Driver with Your C or Visual C++ Application"
-title: "Use Visual FoxPro ODBC Driver with C or Visual C++ Application | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], C or C++ applications"
   - "C++ applications [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], C or C++ applications"
   - "Visual FoxPro data [ODBC], C or C++ applications"
   - "C applications [ODBC]"
-ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Use the Visual FoxPro ODBC Driver with Your C or Visual C++ Application
 Your C or C++ application communicates with Visual FoxPro data by sending a [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) or [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) statement to Visual FoxPro. This statement can contain the following:  

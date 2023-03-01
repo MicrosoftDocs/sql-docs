@@ -1,17 +1,14 @@
 ---
-title: "SQL Server Audit Records | Microsoft Docs"
+title: "SQL Server Audit Records"
 description: SQL Server audits consist of audit action items, which are recorded to an audit target. Check this summary for the records that can be sent to a target.
-ms.custom: ""
-ms.date: "03/23/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "audit records [SQL Server]"
-ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: sravanisaluru
 ms.author: srsaluru
+ms.date: "03/23/2022"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "audit records [SQL Server]"
 ---
 # SQL Server Audit Records
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

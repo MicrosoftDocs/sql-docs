@@ -13,18 +13,10 @@
   items:
   - name: Billing options
     items:
-    - name: vCore purchasing model 
-      href: database/service-tiers-vcore.md
     - name: Azure Hybrid Benefit
       href: azure-hybrid-benefit.md
     - name: Reserved capacity
       href: database/reserved-capacity-overview.md
-  - name: Service tiers
-    items:
-    - name: General Purpose
-      href: database/service-tier-general-purpose.md
-    - name: Business Critical
-      href: database/service-tier-business-critical.md
 
   - name: Shared concepts 
     items: 
@@ -110,6 +102,8 @@
           href: database/transparent-data-encryption-byok-overview.md
         - name: Managed identities with CMK
           href: database/transparent-data-encryption-byok-identity.md
+        - name: Cross-tenant CMK
+          href: database/transparent-data-encryption-byok-cross-tenant.md
 
     - name: Business continuity
       displayName: Backup, back up, restore, recovery
@@ -342,6 +336,11 @@
       items:
       - name: Always Encrypted with secure enclaves
         href: database/always-encrypted-enclaves-getting-started.md
+        items: 
+        - name: Always Encrypted with secure enclaves using SGX
+          href: database/always-encrypted-enclaves-getting-started-sgx.md
+        - name: Always Encrypted with secure enclaves using VBS
+          href: database/always-encrypted-enclaves-getting-started-vbs.md
       - name: Configure security
         href: database/secure-database-tutorial.md
       - name: Create users using service principals
@@ -425,10 +424,10 @@
           items:
           - name: Configure and use Always Encrypted with secure enclaves >
             href: /sql/relational-databases/security/encryption/configure-always-encrypted-enclaves
-          - name: Plan for Intel SGX enclaves and attestation
+          - name: Plan for secure enclaves and attestation
             href: database/always-encrypted-enclaves-plan.md
-          - name: Enable Intel SGX
-            href: database/always-encrypted-enclaves-enable-sgx.md
+          - name: Enable secure enclaves
+            href: database/always-encrypted-enclaves-enable.md
           - name: Configure Azure Attestation
             href: database/always-encrypted-enclaves-configure-attestation.md
         - name: Azure SQL Auditing
@@ -479,6 +478,8 @@
         href: database/active-geo-replication-overview.md
       - name: Auto-failover groups
         href: database/auto-failover-group-sql-db.md
+      - name: HA/DR checklist
+        href: database/high-availability-disaster-recovery-checklist.md
       - name: Outage recovery guidance
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills
@@ -649,8 +650,6 @@
           href: database/elastic-jobs-powershell-create.md
         - name: Create and manage (T-SQL)
           href: database/elastic-jobs-tsql-create-manage.md
-        - name: Migrate (from old Elastic jobs)
-          href: database/elastic-jobs-migrate.md
 
     - name: Secure 
       items: 
@@ -678,6 +677,8 @@
         href: database/dynamic-data-masking-configure-portal.md
       - name: Create server configured with UMI and customer-managed TDE
         href: database/transparent-data-encryption-byok-create-server.md
+      - name: Create server configured with cross-tenant customer-managed TDE
+        href: database/transparent-data-encryption-byok-create-server-cross-tenant.md
       - name: IP-based firewall
         href: database/firewall-configure.md
       - name: Ledger
@@ -734,6 +735,8 @@
         href: database/analyze-prevent-deadlocks.md
       - name: Configure the max degree of parallelism (MAXDOP)
         href: database/configure-max-degree-of-parallelism.md
+      - name: Optimized locking
+        href: /sql/relational-databases/performance/optimized-locking
 
     - name: Load and move data 
       items: 
@@ -1534,6 +1537,8 @@
           href: virtual-machines/windows/change-sql-server-version.md
         - name: Storage
           href: virtual-machines/windows/storage-configuration.md
+        - name: Azure AD authentication
+          href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
         - name: Automated Patching
           href: virtual-machines/windows/automated-patching.md
         - name: SQL best practices assessment
@@ -1825,6 +1830,12 @@
     href: https://social.msdn.microsoft.com/Forums/home
   - name: Stack Overflow
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
+  - name: What's New Archives
+    items: 
+    - name: What's new in Azure SQL Database? (Archive)
+      href: database/doc-changes-updates-release-notes-whats-new-archive.md
+    - name: What's new in Azure SQL Managed Instance? (Archive)
+      href: managed-instance/doc-changes-updates-release-notes-whats-new-archive.md
   - name: Troubleshoot
     items:
     - name: Known issues with Azure SQL Managed Instance 

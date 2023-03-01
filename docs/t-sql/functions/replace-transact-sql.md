@@ -3,7 +3,6 @@ title: "REPLACE (Transact-SQL)"
 description: "Transact-SQL reference for the REPLACE function, which replaces all occurrences of a specified string value with another string value."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "08/23/2017"
 ms.service: sql
 ms.subservice: t-sql

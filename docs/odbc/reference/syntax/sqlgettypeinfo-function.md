@@ -1,24 +1,19 @@
 ---
+title: "SQLGetTypeInfo Function"
 description: "SQLGetTypeInfo Function"
-title: "SQLGetTypeInfo Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetTypeInfo"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetTypeInfo"
-helpviewer_keywords: 
-  - "SQLGetTypeInfo function [ODBC]"
-ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetTypeInfo"
+helpviewer_keywords:
+  - "SQLGetTypeInfo function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetTypeInfo"
+apitype: "dllExport"
 ---
 # SQLGetTypeInfo Function
 **Conformance**  

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSreplication_objects system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 ---
 # MSreplication_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

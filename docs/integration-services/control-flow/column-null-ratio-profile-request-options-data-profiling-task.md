@@ -1,17 +1,14 @@
 ---
+title: "Column Null Ratio Profile Request Options (Data Profiling Task)"
 description: "Column Null Ratio Profile Request Options (Data Profiling Task)"
-title: "Column Null Ratio Profile Request Options (Data Profiling Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Data Profiling Task Editor"
-ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Profiling Task Editor"
 ---
 # Column Null Ratio Profile Request Options (Data Profiling Task)
 

@@ -3,7 +3,7 @@ title: "sys.dm_exec_query_statistics_xml (Transact-SQL)"
 description: sys.dm_exec_query_statistics_xml (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "11/16/2016"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_query_statistics_xml management view"
 dev_langs:
   - "TSQL"
-ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)
 
@@ -64,6 +63,10 @@ Due to a limitation in the number of nested levels allowed in the **xml** data t
 ## Permissions  
 On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission on the server.  
 On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or an **Azure Active Directory admin** account.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Examples  
   

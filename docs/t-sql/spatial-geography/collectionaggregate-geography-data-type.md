@@ -1,19 +1,16 @@
 ---
+title: "CollectionAggregate (geography Data Type)"
 description: "CollectionAggregate (geography Data Type)"
-title: "CollectionAggregate (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "05/18/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CollectionAggregate method (geography)"
-ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # CollectionAggregate (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

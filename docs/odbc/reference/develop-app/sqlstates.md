@@ -1,18 +1,15 @@
 ---
+title: "SQLSTATEs"
 description: "SQLSTATEs"
-title: "SQLSTATEs | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "diagnostic information [ODBC], sqlstates"
-  - "SQLSTATE [ODBC]"
-ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "diagnostic information [ODBC], sqlstates"
+  - "SQLSTATE [ODBC]"
 ---
 # SQLSTATEs
 SQLSTATEs provide detailed information about the cause of a warning or error. The SQLSTATEs in this manual are based on those found in the ISO/IEF CLI specification, although those SQLSTATEs that start with IM are specific to ODBC.  

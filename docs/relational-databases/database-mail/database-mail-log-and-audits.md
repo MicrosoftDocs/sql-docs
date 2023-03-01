@@ -1,21 +1,17 @@
 ---
+title: "Database Mail Log and Audits"
 description: "Database Mail Log and Audits"
-title: "Database Mail Log and Audits | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "auditing [SQL Server]"
   - "Database Mail [SQL Server], auditing"
   - "logs [Database Mail]"
   - "audits [SQL Server], Database Mail"
   - "Database Mail [SQL Server], logging"
-ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Mail Log and Audits
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.partition_schemes catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_schemes (Transact-SQL)

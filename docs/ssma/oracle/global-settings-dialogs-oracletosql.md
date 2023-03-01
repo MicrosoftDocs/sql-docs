@@ -1,19 +1,14 @@
 ---
+title: "Global Settings (Dialogs)  (OracleToSQL)"
 description: "Global Settings (Dialogs)  (OracleToSQL)"
-title: "Global Settings (Dialogs)  (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.oracle.globalsettingdialog.f1"
-
-
 ---
 # Global Settings (Dialogs)  (OracleToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

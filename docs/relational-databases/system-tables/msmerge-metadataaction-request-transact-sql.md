@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_metadataaction_request system table"
 dev_langs:
   - "TSQL"
-ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 ---
 # MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

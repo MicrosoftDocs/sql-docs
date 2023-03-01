@@ -1,14 +1,14 @@
 ---
+title: "Using Scalar Expressions"
 description: "Using Scalar Expressions"
-title: "Using Scalar Expressions | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: analysis-services
-ms.custom: mdx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: mdx
 ---
 # Using Scalar Expressions
 

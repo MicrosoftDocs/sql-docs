@@ -1,17 +1,14 @@
 ---
+title: "Assessing DB2 Schemas for Conversion (DB2ToSQL)"
 description: "Assessing DB2 Schemas for Conversion (DB2ToSQL)"
-title: "Assessing DB2 Schemas for Conversion (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.assessment.f1"
+f1_keywords:
+  - "ssma.db2.assessment.f1"
 ---
 # Assessing DB2 Schemas for Conversion (DB2ToSQL)
 Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you should determine how complex the migration will be and how much time the migration will take. SSMA can create an assessment report that shows the percentage of objects that will be successfully converted. SSMA also lets you view the specific issues that cause conversion failures.  

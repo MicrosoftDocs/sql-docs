@@ -23,9 +23,9 @@ To get started, review [Migrate databases from SQL Server to Azure SQL Managed I
 
 ## When to use Log Replay Service
 
-[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance) and LRS use the same underlying migration technology and APIs. LRS further enables complex custom migrations and hybrid architectures between on-premises SQL Server instances and SQL Managed Instance deployments.
+[Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance), the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension), and LRS all use the same underlying migration technology and APIs. LRS further enables complex custom migrations and hybrid architectures between on-premises SQL Server instances and SQL Managed Instance deployments.
 
-When you can't use Azure Database Migration Service for migration, you can use LRS directly with PowerShell, Azure CLI cmdlets, or APIs to manually build and orchestrate database migrations to SQL Managed Instance deployments. 
+When you can't use Azure Database Migration Service, or the Azure SQL extension for migration, you can use LRS directly with PowerShell, Azure CLI cmdlets, or APIs to manually build and orchestrate database migrations to SQL Managed Instance deployments. 
 
 Consider using LRS in the following cases, when:
 
@@ -33,6 +33,7 @@ Consider using LRS in the following cases, when:
 - There's little tolerance for downtime during migration cutover.
 - The Database Migration Service executable file can't be installed to your environment.
 - The Database Migration Service executable file doesn't have file access to your database backups.
+- The Azure SQL migration extension can't be installed to your environment, or it can't access your database backups. 
 - No access to the host operating system is available, or there are no administrator privileges.
 - You can't open network ports from your environment to Azure.
 - Network throttling, or proxy blocking issues, exist in your environment.
@@ -48,7 +49,7 @@ The following sources are supported:
 - Cloud SQL for SQL Server - GCP (Google Cloud Platform) 
 
 > [!NOTE]
-> - We recommend that you automate the migration of databases from SQL Server to Azure SQL Managed Instance by using Database Migration Service. Consider using LRS to orchestrate migrations when Database Migration Service doesn't fully support your scenarios.
+> - We recommend that you automate the migration of databases from SQL Server to Azure SQL Managed Instance by using the Azure SQL migration extension for Azure Data Studio. Consider using LRS to orchestrate migrations when the Azure SQL migration extension doesn't fully support your scenarios.
 > - LRS is the only method to restore differential backups on managed instances. It isn't possible to manually restore differential backups on managed instances or to manually set the `NORECOVERY` mode by using T-SQL.
 >
 
@@ -146,16 +147,16 @@ Consider the following limitations of LRS:
 - You have to configure a [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day and time. Plan to run and finish migrations outside the scheduled maintenance window.
 - Database backups that are taken without `CHECKSUM` take longer to restore than do database backups with `CHECKSUM` enabled. 
 - The shared access signature (SAS) token that LRS uses must be generated for the entire Azure Blob Storage container, and it must have Read and List permissions only. For example, if you grant Read, List, and Write permissions, LRS won't be able to start because of the extra Write permission.
-- Using SAS tokens created with permissions that are set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported. 
-
-  Follow the instructions in this article to manually specify Read and List permissions for the SAS token.
-
+- Using SAS tokens created with permissions that are set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported. Follow the instructions in this article to manually specify Read and List permissions for the SAS token.
 - Backup files that contain percent sign (%) or dollar sign ($) characters in the file name can't be consumed by LRS. Consider renaming such file names.
 - You must place backup files for different databases in separate folders on the Blob Storage account in a flat-file structure. Nesting folders inside database folders isn't supported.
 - If you're using autocomplete mode, the entire backup chain needs to be available in advance on the Blob Storage account. It isn't possible to add new backup files in autocomplete mode. Use continuous mode if you need to add new backup files while migration is in progress.
 - You must start LRS separately for each database that points to the full URI path that contains an individual database folder. 
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
 - A single LRS job can run for a maximum of 30 days, after which it will be automatically canceled.
+- While it's possible to use an Azure Storage account behind a firewall, extra configuration is necessary, and the storage account and managed instance must either be in the same region, or two paired regions. Review [Configure firewall](log-replay-service-migrate.md#configure-azure-storage-behind-a-firewall) to learn more. 
+
+   
 
 > [!TIP]
 > If you require a database to be read-only accessible during the migration, with a much longer time frame for performing the migration and with minimal downtime, consider using the [Azure SQL Managed Instance link](managed-instance-link-feature-overview.md) feature as a recommended migration solution.

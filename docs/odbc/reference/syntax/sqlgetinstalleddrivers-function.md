@@ -1,24 +1,19 @@
 ---
+title: "SQLGetInstalledDrivers Function"
 description: "SQLGetInstalledDrivers Function"
-title: "SQLGetInstalledDrivers Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetInstalledDrivers"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetInstalledDrivers"
-helpviewer_keywords: 
-  - "SQLGetInstalledDrivers function [ODBC]"
-ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetInstalledDrivers"
+helpviewer_keywords:
+  - "SQLGetInstalledDrivers function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetInstalledDrivers"
+apitype: "dllExport"
 ---
 # SQLGetInstalledDrivers Function
 **Conformance**  

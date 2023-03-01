@@ -7,8 +7,13 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (MicrosoftML), mutualInformation, feature, information, mutual, selection
+keywords:
+  - (MicrosoftML)
+  - mutualInformation
+  - feature
+  - information
+  - mutual
+  - selection
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 

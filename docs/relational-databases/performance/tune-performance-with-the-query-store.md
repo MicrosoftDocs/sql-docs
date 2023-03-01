@@ -1,17 +1,15 @@
 ---
 title: "Tune performance with the Query Store"
 description: The Query Store can be used to discover and tune query performance in all SQL Server and Azure SQL platforms.
-ms.custom: ""
-ms.date: 03/07/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Query Store performance tuning"
-  - "Query Store, performance tuning"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 03/07/2022
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Query Store performance tuning"
+  - "Query Store, performance tuning"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # Tune performance with the Query Store

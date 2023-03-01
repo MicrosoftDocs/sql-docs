@@ -1,20 +1,17 @@
 ---
-title: "View Plan Guide Properties | Microsoft Docs"
+title: "View Plan Guide Properties"
 description: Learn how to view the properties of plan guides in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "plan guides [SQL Server], view plan guide properties"
-  - "viewing plan guide properties"
-ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.planguideprop.general.f1"
+helpviewer_keywords:
+  - "plan guides [SQL Server], view plan guide properties"
+  - "viewing plan guide properties"
 ---
 # View Plan Guide Properties
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

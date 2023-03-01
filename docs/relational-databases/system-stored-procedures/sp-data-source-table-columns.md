@@ -1,23 +1,21 @@
 ---
 title: sp_data_source_table_columns
 description: sp_data_source_table_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "1/7/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
-f1_keywords: 
-  - sp_data_source_table_columns_TSQL
-  - sys.sp_data_source_table_columns_TSQL
-  - sp_data_source_table_columns
-  - sys.sp_data_source_table_columns
+f1_keywords:
+  - "sp_data_source_table_columns_TSQL"
+  - "sys.sp_data_source_table_columns_TSQL"
+  - "sp_data_source_table_columns"
+  - "sys.sp_data_source_table_columns"
+helpviewer_keywords:
+  - "PolyBase"
 dev_langs:
   - TSQL
-helpviewer_keywords: 
-  - "PolyBase"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: 
-ms.custom: ""
-ms.date: "1/7/2022"
 ---
 
 # sp_data_source_table_columns (Transact-SQL)

@@ -1,21 +1,19 @@
 ---
 title: sp_prepare (Transact SQL)
 description: "sp_prepare (Transact SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "02/28/2018"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sp_prepare_TSQL"
   - "sp_prepare"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_prepare"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "02/28/2018"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

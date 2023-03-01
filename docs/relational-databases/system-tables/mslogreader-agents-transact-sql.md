@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSlogreader_agents system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 ---
 # MSlogreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

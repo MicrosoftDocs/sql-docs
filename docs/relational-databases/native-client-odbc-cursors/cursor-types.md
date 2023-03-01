@@ -1,20 +1,17 @@
 ---
+title: "Cursor Types"
 description: "Cursor Types"
-title: "Cursor Types | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, cursors"
   - "ODBC applications, cursors"
   - "cursors [ODBC], types"
   - "ODBC cursors, types"
-ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursor Types

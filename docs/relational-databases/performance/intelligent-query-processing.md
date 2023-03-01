@@ -1,17 +1,16 @@
 ---
 title: "Intelligent query processing"
 description: "Intelligent query processing features to improve query performance in SQL Server, Azure SQL Managed Instance, and Azure SQL Database."
-ms.service: sql
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.reviewer: "wiassaf"
-ms.custom:
-- seo-dt-2019
-- event-tier1-build-2022
 ms.date: 10/12/2022
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom:
+  - seo-dt-2019
+  - event-tier1-build-2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -54,7 +53,7 @@ The following table details all intelligent query processing features, along wit
 | [Memory Grant, CE, and DOP feedback persistence](intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback) | No <!--Yes, starting with database compatibility level 160-->| Yes, starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) with database compatibility level 140 | Provides new functionality to persist memory grant feedback. CE and DOP feedback is always persisted. Requires Query Store to be enabled for the database and in READ_WRITE mode. |
 | [Optimized plan forcing](optimized-plan-forcing-query-store.md) | No <!--Yes, starting with database compatibility level 160--> | Yes, starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]). | Reduces compilation overhead for repeating forced queries. For more information, see [Optimized plan forcing with Query Store](optimized-plan-forcing-query-store.md). |
 | [Scalar UDF Inlining](intelligent-query-processing-details.md#scalar-udf-inlining) | Yes, starting with database compatibility level 150 | Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] with database compatibility level 150|Scalar UDFs are transformed into equivalent relational expressions that are "inlined" into the calling query, often resulting in significant performance gains.|
-| [Parameter Sensitivity Plan Optimization](/sql/relational-databases/performance/parameter-sensitive-plan-optimization) | No <!--Yes, starting with database compatibility level 160-->| Yes, (Starting in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) with database compatibility level 160 | Parameter Sensitivity Plan Optimization addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values, for example non-uniform data distributions. |
+| [Parameter Sensitivity Plan Optimization](./parameter-sensitive-plan-optimization.md) | No <!--Yes, starting with database compatibility level 160-->| Yes, (Starting in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) with database compatibility level 160 | Parameter Sensitivity Plan Optimization addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values, for example non-uniform data distributions. |
 | [Table Variable Deferred Compilation](intelligent-query-processing-details.md#table-variable-deferred-compilation) | Yes, starting with database compatibility level 150 | Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] with database compatibility level 150 | Uses the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
 
 ## <a id="sql2019"></a> IQP features for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]
@@ -99,7 +98,7 @@ Several of the suite of [intelligent query processing features](intelligent-quer
 | [Memory Grant, CE, and DOP feedback persistence](intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback) | No |
 | [Optimized plan forcing](optimized-plan-forcing-query-store.md) | Yes |
 | [Scalar UDF Inlining](intelligent-query-processing-details.md#scalar-udf-inlining) | No | 
-| [Parameter Sensitivity Plan Optimization](/sql/relational-databases/performance/parameter-sensitive-plan-optimization) | No, but recommended |
+| [Parameter Sensitivity Plan Optimization](./parameter-sensitive-plan-optimization.md) | No, but recommended |
 | [Table Variable Deferred Compilation](intelligent-query-processing-details.md#table-variable-deferred-compilation) | No |
 
 ## See also

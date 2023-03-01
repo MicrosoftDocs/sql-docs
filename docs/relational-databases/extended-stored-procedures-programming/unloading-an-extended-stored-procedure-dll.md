@@ -9,7 +9,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], unloading"
   - "unloading extended stored procedures"
-ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 ---
 # Unloading an Extended Stored Procedure DLL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

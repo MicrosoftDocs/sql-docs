@@ -1,20 +1,17 @@
 ---
+title: "Using 16-Bit and 32-Bit Applications with 32-Bit Drivers"
 description: "Using 16-Bit and 32-Bit Applications with 32-Bit Drivers"
-title: "Using 16-Bit and 32-Bit Applications with 32-Bit Drivers | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC drivers [ODBC], 16-bit applications"
   - "ODBC drivers [ODBC], 32-bit applications"
   - "32-bit applications with 32-bit drivers [ODBC]"
   - "16-bit applications with 32-bit drivers [ODBC]"
-ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using 16-Bit and 32-Bit Applications with 32-Bit Drivers
 > [!IMPORTANT]  

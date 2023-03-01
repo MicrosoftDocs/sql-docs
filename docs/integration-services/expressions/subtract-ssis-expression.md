@@ -1,18 +1,15 @@
 ---
+title: "- (Subtract) (SSIS Expression)"
 description: "- (Subtract) (SSIS Expression)"
-title: "- (Subtract) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "- (subtract)"
-  - "subtract operator (-)"
-ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "- (subtract)"
+  - "subtract operator (-)"
 ---
 # - (Subtract) (SSIS Expression)
 

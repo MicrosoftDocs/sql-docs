@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2508"
 description: "MSSQLSERVER_2508"
-title: "MSSQLSERVER_2508 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2508 (Database Engine error)"
-ms.assetid: c37d40e5-c665-4d66-a727-5cb845634fcc
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2508 (Database Engine error)"
 ---
 # MSSQLSERVER_2508
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

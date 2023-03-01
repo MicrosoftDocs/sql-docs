@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSdistributiondbs system table"
 dev_langs:
   - "TSQL"
-ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 ---
 # MSdistributiondbs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

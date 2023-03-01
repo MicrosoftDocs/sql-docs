@@ -1,18 +1,15 @@
 ---
+title: "Visual Studio Analyzer"
 description: "Visual Studio Analyzer"
-title: "Visual Studio Analyzer | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Visual Studio Analyzer [ODBC], about Visual Studio Analyzer"
-  - "Visual Studio Analyzer [ODBC]"
-ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Visual Studio Analyzer [ODBC], about Visual Studio Analyzer"
+  - "Visual Studio Analyzer [ODBC]"
 ---
 # Visual Studio Analyzer
 > [!IMPORTANT]  

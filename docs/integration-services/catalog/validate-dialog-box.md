@@ -1,18 +1,15 @@
 ---
+title: "Validate Dialog Box"
 description: "Validate Dialog Box"
-title: "Validate Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectvalidate.f1"
-  - "sql13.ssis.ssms.ispackagevalidate.f1"
-ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.ssms.isprojectvalidate.f1"
+  - "sql13.ssis.ssms.ispackagevalidate.f1"
 ---
 # Validate Dialog Box
 

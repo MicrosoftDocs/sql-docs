@@ -1,19 +1,16 @@
 ---
+title: "+ (Concatenate) (SSIS Expression)"
 description: "+ (Concatenate) (SSIS Expression)"
-title: "+ (Concatenate) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "concatenation [Integration Services]"
   - "+ (concatenate operator)"
   - "concatenate operator (+)"
-ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: chugugrace
-ms.author: chugu
 ---
 # + (Concatenate) (SSIS Expression)
 

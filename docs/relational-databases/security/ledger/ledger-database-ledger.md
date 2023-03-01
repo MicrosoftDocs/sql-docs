@@ -1,15 +1,14 @@
 ---
 title: "Database ledger"
 description: This article provides information on ledger database tables and associated views.
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: kendralittle, mathoma
 ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
-ms.custom:
-- event-tier1-build-2022
-ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
-author: VanMSFT
-ms.author: vanto
+ms.custom: event-tier1-build-2022
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 

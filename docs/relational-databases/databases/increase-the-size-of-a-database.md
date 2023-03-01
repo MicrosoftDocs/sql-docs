@@ -1,20 +1,16 @@
 ---
+title: "Increase the Size of a Database"
 description: "Increase the Size of a Database"
-title: "Increase the Size of a Database | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], size"
   - "increasing database size"
   - "database size [SQL Server], increasing"
   - "size [SQL Server], databases"
-ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Increase the Size of a Database

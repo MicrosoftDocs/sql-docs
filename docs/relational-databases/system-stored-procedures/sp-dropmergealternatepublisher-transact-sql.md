@@ -1,22 +1,19 @@
 ---
+title: "sp_dropmergealternatepublisher (Transact-SQL)"
 description: "sp_dropmergealternatepublisher (Transact-SQL)"
-title: "sp_dropmergealternatepublisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropmergealternatepublisher"
-  - "sp_dropmergealternatepublisher_TSQL"
-helpviewer_keywords: 
-  - "sp_dropmergealternatepublisher"
-ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropmergealternatepublisher"
+  - "sp_dropmergealternatepublisher_TSQL"
+helpviewer_keywords:
+  - "sp_dropmergealternatepublisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

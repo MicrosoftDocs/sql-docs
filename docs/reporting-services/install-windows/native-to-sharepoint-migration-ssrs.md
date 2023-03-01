@@ -1,14 +1,11 @@
 ---
+title: "Native to SharePoint Migration"
 description: "Native to SharePoint Migration (SSRS)"
-title: "Native to SharePoint Migration | Microsoft Docs"
-ms.date: 08/17/2017
-ms.service: reporting-services
-
-
-ms.topic: conceptual
-ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2017
+ms.service: reporting-services
+ms.topic: conceptual
 monikerRange: "= sql-server-2016"
 ---
 # Native to SharePoint Migration (SSRS)

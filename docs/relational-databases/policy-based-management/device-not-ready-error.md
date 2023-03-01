@@ -1,17 +1,14 @@
 ---
+title: "Device Not Ready Error"
 description: "Device Not Ready Error"
-title: "Device Not Ready Error | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/08/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 author: VanMSFT
 ms.author: vanto
+ms.date: "09/08/2022"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Device Not Ready Error
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

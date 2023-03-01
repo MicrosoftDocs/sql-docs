@@ -1,17 +1,14 @@
 ---
+title: "Appendix - 1 (SybaseToSQL)"
 description: "Appendix - 1 (SybaseToSQL)"
-title: "Appendix - 1 (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sybase Console,Appendix"
-ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Appendix - 1 (SybaseToSQL)
 Quick view of the SSMA Console command line options:  

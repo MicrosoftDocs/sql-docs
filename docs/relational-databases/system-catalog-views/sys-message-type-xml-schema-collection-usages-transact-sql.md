@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.message_type_xml_schema_collection_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
 ---
 # sys.message_type_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,24 +1,19 @@
 ---
+title: "SQLDrivers Function"
 description: "SQLDrivers Function"
-title: "SQLDrivers Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLDrivers"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLDrivers"
-helpviewer_keywords: 
-  - "SQLDrivers function [ODBC]"
-ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLDrivers"
+helpviewer_keywords:
+  - "SQLDrivers function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLDrivers"
+apitype: "dllExport"
 ---
 # SQLDrivers Function
 **Conformance**  

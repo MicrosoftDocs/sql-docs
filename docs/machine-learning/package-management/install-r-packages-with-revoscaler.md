@@ -1,15 +1,14 @@
 ---
 title: Use RevoScaleR to install R packages
 description: Learn how to use RevoScaleR functions to install R packages on SQL Server with Machine Learning Services or R Services.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 11/20/2019
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 11/20/2019
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
+ms.custom: intro-installation
 monikerRange: "=sql-server-2016||=sql-server-2017"
-ms.custom:
-  - intro-installation
 ---
 
 # Use RevoScaleR to install R packages

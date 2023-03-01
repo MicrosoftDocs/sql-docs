@@ -2,14 +2,13 @@
 title: Configure availability group for SQL Server on Linux
 description: Learn about creating a SQL Server Always On availability group (AG) for high availability on Linux.
 author: VanMSFT
-ms.custom: seo-lt-2019
 ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/24/2022
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.assetid: 
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 # Configure SQL Server Always On Availability Group for high availability on Linux
 

@@ -1,21 +1,18 @@
 ---
+title: "WMI Connection Manager"
 description: "WMI Connection Manager"
-title: "WMI Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.wmiconnection.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], WMI"
   - "connection managers [Integration Services], WMI"
   - "WMI connection manager [Integration Services]"
-ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
-author: chugugrace
-ms.author: chugu
 ---
 # WMI Connection Manager
 

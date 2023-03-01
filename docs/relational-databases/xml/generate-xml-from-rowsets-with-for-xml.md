@@ -1,16 +1,15 @@
 ---
 title: "Generate XML from Rowsets with FOR XML"
 description: Learn how to generate an xml data type instance from a rowset by using the TYPE directive with the FOR XML clause.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML clause, generating XML from rowsets"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Generate XML from rowsets with FOR XML
 

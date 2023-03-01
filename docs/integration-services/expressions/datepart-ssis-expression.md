@@ -1,18 +1,15 @@
 ---
+title: "DATEPART (SSIS Expression)"
 description: "DATEPART (SSIS Expression)"
-title: "DATEPART (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "dates [Integration Services], DATEPART"
-  - "DATEPART function"
-ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "dates [Integration Services], DATEPART"
+  - "DATEPART function"
 ---
 # DATEPART (SSIS Expression)
 

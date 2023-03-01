@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_fts_index_keywords_position_by_document dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 ---
 # sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

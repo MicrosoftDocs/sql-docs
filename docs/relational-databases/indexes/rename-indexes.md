@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "renaming indexes"
   - "index names [SQL Server]"
   - "indexes [SQL Server], renaming"
-ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Indexes

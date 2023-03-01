@@ -1,17 +1,14 @@
 ---
-title: "Set the AUTO_CLOSE Database Option to OFF | Microsoft Docs"
+title: "Set the AUTO_CLOSE Database Option to OFF"
 description: Check whether the AUTO_ CLOSE option is OFF. The AUTO_ CLOSE option has implications for performance in SQL Server.
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Set the AUTO_CLOSE Database Option to OFF
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

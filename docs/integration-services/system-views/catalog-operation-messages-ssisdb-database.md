@@ -1,18 +1,15 @@
 ---
+title: "catalog.operation_messages (SSISDB Database)"
 description: "catalog.operation_messages (SSISDB Database)"
-title: "catalog.operation_messages (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "catalog.operation_messages view [Integration Services]"
-  - "operation_messages view [Integration Services]"
-ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "catalog.operation_messages view [Integration Services]"
+  - "operation_messages view [Integration Services]"
 ---
 # catalog.operation_messages (SSISDB Database)
 

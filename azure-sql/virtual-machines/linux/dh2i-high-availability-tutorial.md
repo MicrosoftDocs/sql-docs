@@ -17,12 +17,12 @@ ms.custom: kr2b-contr-experiment
 
 This tutorial explains how to configure an SQL Server Always On availability group with DH2i DxEnterprise running on Linux-based Azure Virtual Machines (VMs).
 
-For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-availability-groups/).
+For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-high-availability/).
 
 > [!NOTE]
 > Microsoft supports data movement, availability groups, and the SQL Server components. Contact DH2i for support related to the documentation of DH2i DxEnterprise cluster, for the cluster and quorum management.
 
-In this tutorial, you'll set up a DxEnterprise cluster using [DxAdmin Client UI](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-dxadmin-client-ui-quick-start-guide/). Optionally, you can also set up the cluster using the [DxCLI](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-software-dxcli-guide/) command-line interface. For this example, we've used four VMs. Three of those VMs are running Ubuntu 18.04, and are part of the three node cluster. The fourth VM is running Windows 10 with the DxAdmin tool to manage and configure the cluster.
+In this tutorial, you'll set up a DxEnterprise cluster using [DxAdmin Client UI](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-admin-guide/). Optionally, you can also set up the cluster using the [DxCLI](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-dxcli-guide/) command-line interface. For this example, we've used four VMs. Three of those VMs are running Ubuntu 18.04, and are part of the three node cluster. The fourth VM is running Windows 10 with the DxAdmin tool to manage and configure the cluster.
 
 This tutorial consists of the following steps:
 
@@ -66,15 +66,15 @@ In this step, install DH2i DxEnterprise for Linux on the three Linux VMs. The fo
 To install DxEnterprise on the three Linux-based nodes, follow the DH2i DxEnterprise documentation based on the Linux operating system you choose. Install DxEnterprise using any one of the methods listed below.
 
 - Ubuntu
-  - [Repo Installation Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-ubuntu-installation-quick-start-guide/)
-  - [Extension Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-azure-extension-quick-start-guide/)
-  - [Marketplace Image Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-azure-marketplace-image-for-linux-quick-start-guide/)
+  - [Repo Installation Quick Start Guide](https://support.dh2i.com/docs/guides/dxenterprise/installation/dxe-linux-qsg/)
+  - [Extension Quick Start Guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/az-vm-extensions-qsg/)
+  - [Marketplace Image Quick Start Guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/az-marketplace-linux-qsg/)
 - RHEL
-  - [Repo Installation Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-rhel-centos-installation-quick-start-guide/)
-  - [Extension Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-azure-extension-quick-start-guide/)
-  - [Marketplace Image Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-azure-marketplace-image-for-linux-quick-start-guide/)
+  - [Repo Installation Quick Start Guide](https://support.dh2i.com/docs/guides/dxenterprise/installation/dxe-linux-qsg/)
+  - [Extension Quick Start Guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/az-vm-extensions-qsg/)
+  - [Marketplace Image Quick Start Guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/az-marketplace-linux-qsg/)
 
-To install just the DxAdmin client tool on the Windows VM, follow [DxAdmin Client UI Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-dxadmin-client-ui-quick-start-guide/).
+To install just the DxAdmin client tool on the Windows VM, follow [DxAdmin Client UI Quick Start Guide](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-admin-guide/).
 
 After this step, you should have the DxEnterprise cluster created on the Linux VMs, and DxAdmin client installed on the Windows Client machine.
 
@@ -88,14 +88,14 @@ In this step, you create a virtual host, availability group, and then add a data
 > [!NOTE]
 > During this step, the SQL Server instances are restarted to enable availability groups. 
 
-Connect to the Windows client machine running DxAdmin to connect to the cluster created in the step above. Follow the steps documented at [MSSQL Availability Groups with DxAdmin](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-mssql-availability-groups-with-dxadmin-quick-start-guide/) to enable Always On and create the virtual host and availability group.
+Connect to the Windows client machine running DxAdmin to connect to the cluster created in the step above. Follow the steps documented at [MSSQL Availability Groups with DxAdmin](https://support.dh2i.com/docs/guides/dxenterprise/sql_server/mssql-ag-dxadmin-qsg/) to enable Always On and create the virtual host and availability group.
 
 > [!TIP]
 > Before adding the databases, ensure the database is created and backed up on the primary instance of SQL Server.  
 
 ## Create the internal Azure Load Balancer for listener (optional)
 
-In this optional step, you can create and configure the Azure Load balancer that holds the IP addresses for the availability group listeners. For more information on Load Balancer, see [Azure Load Balancer](/azure/load-balancer/load-balancer-overview). To configure the Load Balancer and availability group listener using DxAdmin, see [Azure Load Balancer Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-azure-load-balancer-quick-start-guide/).
+In this optional step, you can create and configure the Azure Load balancer that holds the IP addresses for the availability group listeners. For more information on Load Balancer, see [Azure Load Balancer](/azure/load-balancer/load-balancer-overview). To configure the Load Balancer and availability group listener using DxAdmin, see [Azure Load Balancer Quick Start Guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/az-load-balancer-qsg/).
 
 After this step, you should have an availability group listener created and mapped to the internal load balancer.
 
@@ -112,7 +112,7 @@ You could also perform a manual failover by following the following steps:
 1. Expand the virtual host for the availability group.
 1. Right-click on the target node/secondary replica and select **Start Hosting on Member** to initiate the failover.
 
-For more information on more operations within DxEnterprise, See [DxEnterprise Admin Guide](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-admin-guide) and [DxEnterprise DxCLI Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-software-dxcli-guide/).
+For more information on more operations within DxEnterprise, See [DxEnterprise Admin Guide](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-admin-guide/) and [DxEnterprise DxCLI Guide](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-dxcli-guide/).
 
 ## Next Steps
 

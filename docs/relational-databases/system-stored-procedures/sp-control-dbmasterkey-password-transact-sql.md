@@ -1,22 +1,19 @@
 ---
+title: "sp_control_dbmasterkey_password (Transact-SQL)"
 description: "sp_control_dbmasterkey_password (Transact-SQL)"
-title: "sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/09/2020"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_control_dbmasterkey_password"
-  - "sp_control_dbmasterkey_password_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_control_dbmasterkey_password"
-ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
+ms.date: "04/09/2020"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_control_dbmasterkey_password"
+  - "sp_control_dbmasterkey_password_TSQL"
+helpviewer_keywords:
+  - "sp_control_dbmasterkey_password"
+dev_langs:
+  - "TSQL"
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

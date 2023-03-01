@@ -2,13 +2,13 @@
 title: "Tutorial: Build a clustering model in R"
 titleSuffix: SQL machine learning
 description: In part three of this four-part tutorial series, you'll build a K-Means model to perform clustering in R with SQL machine learning.
-ms.service: sql
-ms.subservice: machine-learning
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: garye, jroth
 ms.date: 05/21/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---

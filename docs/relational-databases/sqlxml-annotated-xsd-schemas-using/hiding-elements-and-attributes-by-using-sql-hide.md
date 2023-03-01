@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "hiding elements"
   - "element mapping [SQLXML], hiding attributes and elements"
   - "hide annotation"
-ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Hiding Elements and Attributes by Using sql:hide

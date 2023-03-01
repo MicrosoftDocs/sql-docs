@@ -1,22 +1,19 @@
 ---
+title: "sysmail_delete_log_sp (Transact-SQL)"
 description: "sysmail_delete_log_sp (Transact-SQL)"
-title: "sysmail_delete_log_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_delete_log_sp_TSQL"
-  - "sysmail_delete_log_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_delete_log_sp"
-ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_delete_log_sp_TSQL"
+  - "sysmail_delete_log_sp"
+helpviewer_keywords:
+  - "sysmail_delete_log_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

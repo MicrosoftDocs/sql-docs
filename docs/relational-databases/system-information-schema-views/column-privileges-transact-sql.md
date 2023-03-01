@@ -1,23 +1,20 @@
 ---
+title: "COLUMN_PRIVILEGES (Transact-SQL)"
 description: "COLUMN_PRIVILEGES (Transact-SQL)"
-title: "COLUMN_PRIVILEGES (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "COLUMN_PRIVILEGES"
-  - "COLUMN_PRIVILEGES_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "COLUMN_PRIVILEGES view"
-  - "INFORMATION_SCHEMA.COLUMN_PRIVILEGES view"
-ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "COLUMN_PRIVILEGES"
+  - "COLUMN_PRIVILEGES_TSQL"
+helpviewer_keywords:
+  - "COLUMN_PRIVILEGES view"
+  - "INFORMATION_SCHEMA.COLUMN_PRIVILEGES view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COLUMN_PRIVILEGES (Transact-SQL)

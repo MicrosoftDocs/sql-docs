@@ -1,22 +1,19 @@
 ---
-description: "Supporting Local Transactions in SQL Server Native Client"
 title: Supporting local transactions (Native Client OLE DB provider)
-ms.custom: ""
+description: "Supporting Local Transactions in SQL Server Native Client"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, transactions"
   - "autocommit mode"
   - "transactions [OLE DB]"
   - "ITransactionLocal interface"
   - "SQL Server Native Client OLE DB provider, transactions"
   - "local transactions [OLE DB]"
-ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supporting Local Transactions in SQL Server Native Client

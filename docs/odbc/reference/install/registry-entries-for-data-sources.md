@@ -1,21 +1,18 @@
 ---
+title: "Registry Entries for Data Sources"
 description: "Registry Entries for Data Sources"
-title: "Registry Entries for Data Sources | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "subkeys [ODBC]"
   - "data sources [ODBC], registry entries"
   - "registry entries for data sources [ODBC], about registry entries"
   - "data sources [ODBC], configuring"
   - "registry entries for data sources [ODBC]"
-ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Registry Entries for Data Sources
 > [!NOTE]  

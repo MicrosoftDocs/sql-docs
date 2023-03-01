@@ -1,15 +1,12 @@
 ---
+title: "Tutorial: Using the OData Source"
 description: "Tutorial: Using the OData Source"
-title: "Tutorial: Using the OData Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Tutorial: Using the OData Source
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_helplogins (Transact-SQL)"
 description: "sp_helplogins (Transact-SQL)"
-title: "sp_helplogins (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helplogins_TSQL"
-  - "sp_helplogins"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helplogins"
-ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helplogins_TSQL"
+  - "sp_helplogins"
+helpviewer_keywords:
+  - "sp_helplogins"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

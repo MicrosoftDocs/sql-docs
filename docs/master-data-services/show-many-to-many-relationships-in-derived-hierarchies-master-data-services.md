@@ -1,15 +1,13 @@
 ---
-description: "Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)"
 title: Show Many-to-Many Relationships in Derived Hierarchies
-ms.custom: "seo-lt-2019"
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
+description: "Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 # Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)
 

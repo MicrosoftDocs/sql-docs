@@ -1,25 +1,22 @@
 ---
+title: "sp_addserver (Transact-SQL)"
 description: "sp_addserver (Transact-SQL)"
-title: "sp_addserver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_addserver"
   - "sp_addserver_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_addserver"
   - "renaming servers"
   - "machine names [SQL Server]"
   - "computer names"
-ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_addserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

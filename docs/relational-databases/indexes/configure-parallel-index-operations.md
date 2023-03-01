@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "max degree of parallelism option"
   - "MAXDOP index option, parallel index operations"
   - "parallel index operations [SQL Server]"
-ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Parallel Index Operations

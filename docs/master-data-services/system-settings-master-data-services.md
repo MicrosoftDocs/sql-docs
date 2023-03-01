@@ -1,18 +1,15 @@
 ---
 title: System Settings
 description: Learn how to configure the system settings for all web applications and web services associated with a Master Data Services database.
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Master Data Services, system settings"
-  - "system settings [Master Data Services]"
-ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Master Data Services, system settings"
+  - "system settings [Master Data Services]"
 ---
 # System Settings (Master Data Services)
 

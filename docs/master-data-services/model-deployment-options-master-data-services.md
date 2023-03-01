@@ -1,15 +1,12 @@
 ---
-description: "Model Deployment Options (Master Data Services)"
 title: Model Deployment Options
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
+description: "Model Deployment Options (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Model Deployment Options (Master Data Services)
 

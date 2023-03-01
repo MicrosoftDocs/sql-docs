@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_41301"
 description: "MSSQLSERVER_41301"
-title: "MSSQLSERVER_41301 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "41301 (Database Engine error)"
-ms.assetid: c6127e1e-2846-4ee9-bc42-2d896ea9730e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "41301 (Database Engine error)"
 ---
 # MSSQLSERVER_41301
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

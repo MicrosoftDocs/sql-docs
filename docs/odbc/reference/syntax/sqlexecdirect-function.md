@@ -1,24 +1,19 @@
 ---
+title: "SQLExecDirect Function"
 description: "SQLExecDirect Function"
-title: "SQLExecDirect Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLExecDirect"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLExecDirect"
-helpviewer_keywords: 
-  - "SQLExecDirect function [ODBC]"
-ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLExecDirect"
+helpviewer_keywords:
+  - "SQLExecDirect function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLExecDirect"
+apitype: "dllExport"
 ---
 # SQLExecDirect Function
 **Conformance**  

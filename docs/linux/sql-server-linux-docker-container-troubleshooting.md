@@ -4,13 +4,13 @@ description: Explore the different troubleshooting techniques that you can use t
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto
-ms.custom: contperf-fy21q1
 ms.date: 03/31/2022
-ms.topic: troubleshooting
 ms.service: sql
 ms.subservice: linux
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017"
+ms.topic: troubleshooting
+ms.custom: contperf-fy21q1
 zone_pivot_groups: cs1-command-shell
+monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 ---
 
 # Troubleshooting SQL Server Docker containers

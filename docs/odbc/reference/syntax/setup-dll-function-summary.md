@@ -1,17 +1,14 @@
 ---
+title: "Setup DLL Function Summary"
 description: "Setup DLL Function Summary"
-title: "Setup DLL Function Summary | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "functions [ODBC], setup DLL functions"
-ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "functions [ODBC], setup DLL functions"
 ---
 # Setup DLL Function Summary
 The following table describes setup DLL functions. For more information about the syntax and semantics for each function, see [Setup DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md).  

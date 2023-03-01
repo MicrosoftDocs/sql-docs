@@ -1,22 +1,19 @@
 ---
+title: "Web Service Task"
 description: "Web Service Task"
-title: "Web Service Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/02/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.webservicetask.f1"
   - "sql13.dts.designer.webservicestask.general.f1"
   - "sql13.dts.designer.webservicestask.input.f1"
   - "sql13.dts.designer.webservicestask.output.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Web Service task [Integration Services]"
-ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: chugugrace
-ms.author: chugu
 ---
 # Web Service Task
 

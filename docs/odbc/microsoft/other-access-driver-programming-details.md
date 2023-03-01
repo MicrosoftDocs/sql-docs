@@ -1,19 +1,16 @@
 ---
+title: "Other Access Driver Programming Details"
 description: "Other Access Driver Programming Details"
-title: "Other Access Driver Programming Details | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], Access driver"
   - "Jet-based ODBC drivers [ODBC], Access driver"
   - "desktop database drivers [ODBC], Access driver"
-ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Other Access Driver Programming Details
 > [!NOTE]  

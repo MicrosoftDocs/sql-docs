@@ -1,18 +1,15 @@
 ---
+title: "Environment Handles"
 description: "Environment Handles"
-title: "Environment Handles | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "environment handles [ODBC]"
-  - "handles [ODBC], environment"
-ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "environment handles [ODBC]"
+  - "handles [ODBC], environment"
 ---
 # Environment Handles
 An *environment* is a global context in which to access data; associated with an environment is any information that is global in nature, such as:  

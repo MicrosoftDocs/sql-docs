@@ -1,13 +1,12 @@
 ---
-description: "Move User Databases"
 title: "Move User Databases"
-ms.custom: ""
+description: "Move User Databases"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/02/2021"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disaster recovery [SQL Server], moving database files"
   - "database files [SQL Server], moving"
   - "data files [SQL Server], moving"
@@ -21,8 +20,6 @@ helpviewer_keywords:
   - "relocating database files"
   - "planned database relocations [SQL Server]"
   - "databases [SQL Server], moving"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Move User Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

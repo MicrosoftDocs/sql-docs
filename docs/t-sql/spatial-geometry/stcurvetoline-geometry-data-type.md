@@ -1,19 +1,16 @@
 ---
+title: "STCurveToLine (geometry Data Type)"
 description: "STCurveToLine (geometry Data Type)"
-title: "STCurveToLine (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STCurveToLine method (geometry)"
-ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STCurveToLine (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

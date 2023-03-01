@@ -1,22 +1,19 @@
 ---
+title: "xp_logevent (Transact-SQL)"
 description: "xp_logevent (Transact-SQL)"
-title: "xp_logevent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_logevent"
-  - "xp_logevent_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_logevent"
-ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_logevent"
+  - "xp_logevent_TSQL"
+helpviewer_keywords:
+  - "xp_logevent"
+dev_langs:
+  - "TSQL"
 ---
 # xp_logevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

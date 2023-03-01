@@ -1,21 +1,18 @@
 ---
+title: "Cursor Transaction Isolation Level"
 description: "Cursor Transaction Isolation Level"
-title: "Cursor Transaction Isolation Level | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "isolation levels [ODBC]"
   - "ODBC applications, row versioning"
   - "cursors [ODBC], isolation levels"
   - "ODBC cursors, isolation levels"
   - "row versioning [SQL Server], ODBC"
-ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursor Transaction Isolation Level

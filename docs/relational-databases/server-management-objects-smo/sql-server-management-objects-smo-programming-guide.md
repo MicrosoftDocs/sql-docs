@@ -1,20 +1,16 @@
 ---
-description: "SQL Server Management Objects (SMO) Programming Guide"
 title: "SQL Server Management Objects (SMO) Programming Guide"
-ms.custom: seo-dt-2019
+description: "SQL Server Management Objects (SMO) Programming Guide"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "SMO [SQL Server]"
   - "SQL Server Management Objects"
   - "programming [SMO]"
-ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Management Objects (SMO) Programming Guide

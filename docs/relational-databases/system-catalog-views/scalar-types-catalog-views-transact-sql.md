@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "catalog views [SQL Server], scalar types"
 dev_langs:
   - "TSQL"
-ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 ---
 # Scalar Types Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

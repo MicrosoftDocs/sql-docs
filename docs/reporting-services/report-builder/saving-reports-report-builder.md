@@ -1,15 +1,12 @@
 ---
-title: "Saving Reports (Report Builder) | Microsoft Docs"
+title: "Saving Reports (Report Builder)"
 description: In Report Builder, you can save the definition of a report, which includes the layout but not the data. The data is refreshed every time you run the report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-builder
-
-
 ms.topic: conceptual
-ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Saving Reports (Report Builder)
   In Report Builder you can save a paginated report to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report server, SharePoint library, file share where you have write permission, or your computer. 

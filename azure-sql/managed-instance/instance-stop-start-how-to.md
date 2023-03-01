@@ -138,8 +138,7 @@ Select-AzSubscription -SubscriptionName $SubscriptionID
 Write-Host "Getting the profile information ..."
 $azContext = Get-AzContext
 $azProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile
-$profileClient = New-Object -TypeName Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient -
-ArgumentList ($azProfile)
+$profileClient = New-Object -TypeName Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient -ArgumentList ($azProfile)
 # Get authentication token
 Write-Host "Getting authentication token for REST API call ..."
 $token = $profileClient.AcquireAccessToken($azContext.Subscription.TenantId)

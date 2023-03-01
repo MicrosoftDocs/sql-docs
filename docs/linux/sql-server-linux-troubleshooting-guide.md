@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot SQL Server on Linux
 description: Troubleshoot SQL Server running on Linux or in a Linux container. Learn where to find information about supported features and known limitations.
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 02/24/2022
-ms.topic: troubleshooting
 ms.service: sql
 ms.subservice: linux
+ms.topic: troubleshooting
 ---
 # Troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux
 

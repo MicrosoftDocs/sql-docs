@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_556"
 description: "MSSQLSERVER_556"
-title: "MSSQLSERVER_556 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/15/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "556 (Database Engine error)"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "09/15/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "556 (Database Engine error)"
 ---
 # MSSQLSERVER_556
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

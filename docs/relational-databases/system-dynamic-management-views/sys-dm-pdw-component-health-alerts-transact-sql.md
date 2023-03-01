@@ -9,7 +9,6 @@ ms.subservice: data-warehouse
 ms.topic: conceptual
 dev_langs:
   - "TSQL"
-ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_alerts (Transact-SQL)

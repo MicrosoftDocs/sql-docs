@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_db_objects_impacted_on_version_change"
 dev_langs:
   - "TSQL"
-ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)

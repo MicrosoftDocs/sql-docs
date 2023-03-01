@@ -43,7 +43,7 @@ You can monitor communication using a tool such as Microsoft Network Monitor or 
 Alternatively, you can check the encryption status of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] connections using the Transact-SQL (T-SQL) commands. To do this, follow these steps:
 
 1. Open a new query window in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Management Studio (SSMS) and connect to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
-1. Execute the following T-SQL command to check the value of `is_encrypted` column. For encrypted connections the value will be `1`.
+1. Execute the following T-SQL command to check the value of `encrypt_option` column. For encrypted connections the value will be `TRUE`.
 
   ```sql
   SELECT * FROM sys.dm_exec_connections

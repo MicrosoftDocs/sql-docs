@@ -1,21 +1,17 @@
 ---
+title: "Limit Trace File and Table Sizes"
 description: "Limit Trace File and Table Sizes"
-title: "Limit Trace File and Table Sizes | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "maximum file size for traces"
   - "traces [SQL Server], file size"
   - "size [SQL Server], tables"
   - "file rollover option [SQL Server]"
   - "size [SQL Server], files"
-ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Limit Trace File and Table Sizes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

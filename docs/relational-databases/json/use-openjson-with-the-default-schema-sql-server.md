@@ -1,17 +1,15 @@
 ---
-description: "Use OPENJSON with the Default Schema"
 title: "Use OPENJSON with the Default Schema"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "OPENJSON, with default schema"
-ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
+description: "Use OPENJSON with the Default Schema"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
 ms.custom: seo-dt-2019
+helpviewer_keywords:
+  - "OPENJSON, with default schema"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with the Default Schema 

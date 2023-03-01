@@ -1,22 +1,19 @@
 ---
+title: "sp_detach_schedule (Transact-SQL)"
 description: "sp_detach_schedule (Transact-SQL)"
-title: "sp_detach_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_detach_schedule"
-  - "sp_detach_schedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_detach_schedule"
-ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_detach_schedule"
+  - "sp_detach_schedule_TSQL"
+helpviewer_keywords:
+  - "sp_detach_schedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

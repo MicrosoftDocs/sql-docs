@@ -5,9 +5,8 @@ author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray
 ms.date: 11/03/2022
-ms.topic: conceptual
-ms.custom:
 ms.service: sql
+ms.topic: conceptual
 ---
 
 # View SQL Server databases - Azure Arc
@@ -43,9 +42,110 @@ After you create, modify, or delete a database, changes are visible in Azure por
 
 :::image type="content" source="media/view-databases/database-properties.png" alt-text="Screenshot of Azure portal, SQL Server database properties.":::
 
+## How to Leverage Azure Resource Graph to Query Data
+
+Here are some example scenarios showing how you use [Azure Resource Graph ](/azure/governance/resource-graph/overview)to query data which is available with the public preview of viewing Databases for Azure Arc-enabled SQL Server.
+
+### Scenario 1: Get 10 databases
+
+Get 10 databases and return what properties are available to query:
+
+```kusto
+Resources
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| limit 10
+```
+
+Many of the most interesting properties to query on are in the `properties` property. To explore the available properties run this query and then select **See details** on a row.  This returns the properties in a json viewer on the right side.
+
+```kusto
+Resources
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| project properties
+```
+
+You can navigate the hierarchy of the properties json by using a period in between each level of the properties json.
+
+### Scenario 2: Get all the databases that are not encrypted
+
+```kusto
+Resources
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| where properties.databaseOptions.isEncrypted == false
+```
+
+### Scenario 3: Obtain the count of databases which are encrypted vs not encrypted
+
+```kusto
+Resources
+|extend isEncrypted =properties.databaseOptions.isEncrypted
+|where type contains("microsoft.azurearcdata/sqlserverinstances/databases")
+|project name,isEncrypted
+|summarize count() by tostring(isEncrypted)
+| order by ['isEncrypted'] asc
+```
+ 
+### Scenario 4: Show all the databases which are not encrypted
+
+```kusto
+Resources
+|extend isEncrypted =properties.databaseOptions.isEncrypted
+|where type contains("microsoft.azurearcdata/sqlserverinstances/databases") and isEncrypted ==false
+|project name,isEncrypted
+```
+
+### Scenario 5: Get all the databases by region and compatibility level
+
+This example returns all databases in `westus3` location with compatibility level of 160:
+
+```kusto
+Resources
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| where location == "westus3"
+| where  properties.compatibilityLevel == "160"
+```
+
+### Scenario 6: Show the SQL Server version distribution
+
+```kusto
+Resources
+|extend SQLversion =properties.version
+|where type contains("microsoft.azurearcdata/sqlserverinstances")
+|project name,SQLversion
+|summarize count() by tostring(SQLversion)
+```
+ 
+### Scenario 7: SQL Server by version, edition, and license type
+
+```kusto
+Resources
+|extend SQLversion =properties.version
+|extend SQLEdition =properties.edition
+|extend lincentype =properties.licenseType
+|where type contains("microsoft.azurearcdata/sqlserverinstances")
+|project name,SQLversion,SQLEdition,lincensetype
+```
+
+### Scenario 8: Show a count of databases by compatibility
+
+This example returns the number of databases, ordered by the compatibility level:
+
+```kusto
+Resources
+| where type =~ 'Microsoft.AzureArcData/sqlServerInstances/databases'
+| summarize count() by tostring(properties.compatibilityLevel)
+| order by properties_compatibilityLevel asc
+```
+
+You can also [create charts and pin them to dashboards](/azure/governance/resource-graph/first-query-portal).
+
+![Diagram of a pie chart that displays the query results for the count of databases by compatibility level.](media/view-databases/database-chart.png)
+
+
 ## Next steps
 
 * [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
 
 * [Configure SQL Assessment | Azure Arc-enabled SQL Server](assess.md)
+
 

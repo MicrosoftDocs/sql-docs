@@ -1,17 +1,16 @@
 ---
-description: "Troubleshooting SSMS installation problems"
 title: SSMS setup failed or requires restart
-ms.service: sql
-ms.subservice: ssms
-ms.topic: conceptual
-ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
+description: "Troubleshooting SSMS installation problems"
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: matteot, maghan
+ms.date: 06/18/2021
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
   - intro-installation
-ms.date: 06/18/2021
 ---
 
 
@@ -29,6 +28,7 @@ Following these steps to uninstall the "Microsoft ODBC Driver 17 for SQL Server"
 3. Locate the entry for "Microsoft ODBC Driver 17 for SQL Server" and uninstall.  This step may require a reboot.
 4. Begin the SSMS installation.  The latest version is available [here](../download-sql-server-management-studio-ssms.md).
 
+[!INCLUDE[get-help-sql-tools](../../includes/paragraph-content/get-help-sql-tools.md)]
+
 ## Next Steps
 - [Download SSMS](../download-sql-server-management-studio-ssms.md)
-- [SQL Server user feedback](https://aka.ms/sqlfeedback)

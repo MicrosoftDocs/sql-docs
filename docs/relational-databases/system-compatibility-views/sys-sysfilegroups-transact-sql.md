@@ -1,25 +1,22 @@
 ---
+title: "sys.sysfilegroups (Transact-SQL)"
 description: "sys.sysfilegroups (Transact-SQL)"
-title: "sys.sysfilegroups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysfilegroups_TSQL"
   - "sys.sysfilegroups"
   - "sysfilegroups"
   - "sys.sysfilegroups_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysfilegroups system table"
   - "sys.sysfilegroups compatibility view"
-ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysfilegroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

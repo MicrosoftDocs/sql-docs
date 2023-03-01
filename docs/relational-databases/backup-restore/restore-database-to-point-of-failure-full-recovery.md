@@ -1,19 +1,17 @@
 ---
 title: "Restore database: point of failure - full recovery"
 description: This article explains how to restore a SQL Server database to the point of failure for databases using the full or bulk-logged recovery models.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "point of failure [SQL Server]"
   - "restoring databases [SQL Server], point of failure"
   - "database restores [SQL Server], point of failure"
-ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Restore Database to Point of Failure - Full Recovery
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

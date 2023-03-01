@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2540"
 description: "MSSQLSERVER_2540"
-title: "MSSQLSERVER_2540 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2540 (Database Engine error)"
-ms.assetid: eb5ee2be-acbb-4fb7-9b45-dc6200bde06e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2540 (Database Engine error)"
 ---
 # MSSQLSERVER_2540
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

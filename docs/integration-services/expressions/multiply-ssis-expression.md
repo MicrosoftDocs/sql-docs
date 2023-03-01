@@ -1,18 +1,15 @@
 ---
+title: "* (Multiply) (SSIS Expression)"
 description: "* (Multiply) (SSIS Expression)"
-title: "* (Multiply) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "* (multiply operator)"
-  - "multiply operator (*)"
-ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "* (multiply operator)"
+  - "multiply operator (*)"
 ---
 # * (Multiply) (SSIS Expression)
 

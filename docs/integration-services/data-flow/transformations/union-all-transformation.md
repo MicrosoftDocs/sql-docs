@@ -1,23 +1,20 @@
 ---
+title: "Union All Transformation"
 description: "Union All Transformation"
-title: "Union All Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.unionalltrans.f1"
   - "sql13.dts.designer.unionalltransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "merging datasets [Integration Services]"
   - "combining datasets"
   - "Union All transformation"
   - "datasets [Integration Services], merging"
-ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-author: chugugrace
-ms.author: chugu
 ---
 # Union All Transformation
 

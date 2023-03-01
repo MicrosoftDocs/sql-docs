@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "restore system tables [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 ---
 # Backup and Restore Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

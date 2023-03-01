@@ -1,15 +1,12 @@
 ---
+title: "Microsoft Connector for SAP BW Components"
 description: "Microsoft Connector for SAP BW Components"
-title: "Microsoft Connector for SAP BW Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Microsoft Connector for SAP BW Components
 

@@ -3,11 +3,8 @@ title: Notebooks with Kqlmagic (Kusto Query Language) in Azure Data Studio
 description: This tutorial shows how you can create and run Kqlmagic in an Azure Data Studio notebook.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: 12/07/2022
 ms.service: azure-data-studio
-ms.subservice: ""
-ms.custonm: ""
 ms.topic: how-to
 ---
 

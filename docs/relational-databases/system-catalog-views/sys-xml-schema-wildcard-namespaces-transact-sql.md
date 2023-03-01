@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_schema_wildcard_namespaces catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
 ---
 # sys.xml_schema_wildcard_namespaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

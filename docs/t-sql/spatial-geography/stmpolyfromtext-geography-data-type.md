@@ -1,22 +1,19 @@
 ---
+title: "STMPolyFromText (geography Data Type)"
 description: "STMPolyFromText (geography Data Type)"
-title: "STMPolyFromText (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STMPolyFromText (geography Data Type)"
   - "STMPolyFromText_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STMPolyFromText method"
-ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STMPolyFromText (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

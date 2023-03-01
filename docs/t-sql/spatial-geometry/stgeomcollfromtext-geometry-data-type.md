@@ -1,22 +1,19 @@
 ---
+title: "STGeomCollFromText (geometry Data Type)"
 description: "STGeomCollFromText (geometry Data Type)"
-title: "STGeomCollFromText (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomCollFromText_TSQL"
   - "STGeomCollFromText (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STGeomCollFromText (geometry Data Type)"
-ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomCollFromText (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

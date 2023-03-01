@@ -1,23 +1,20 @@
 ---
+title: "sp_helplanguage (Transact-SQL)"
 description: "sp_helplanguage (Transact-SQL)"
-title: "sp_helplanguage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helplanguage"
-  - "sp_helplanguage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helplanguage"
-  - "default languages"
-ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helplanguage"
+  - "sp_helplanguage_TSQL"
+helpviewer_keywords:
+  - "sp_helplanguage"
+  - "default languages"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helplanguage (Transact-SQL)

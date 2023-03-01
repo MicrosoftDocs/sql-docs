@@ -4,7 +4,7 @@ description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azur
 author: markingmyname
 ms.author: maghan
 ms.reviewer: vanto, xiaoyul
-ms.date: 09/12/2022
+ms.date: 01/25/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -156,11 +156,12 @@ Assigns each row to one distribution by hashing the value stored in *distributio
 Distributes the rows based on the hash values of up to eight columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
 
 >[!NOTE]
-> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
+> - To enable this preview feature, join the preview by changing the database's compatibility level to 9000 with this command. For more information on setting the database compatibility level, see [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md). For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;`
 > - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
 >     - To regain access to MCD tables, opt-in the preview again. 
 >     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
-> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables isn't currently supported.
+> - Preview features are meant for testing only and should not be used on production instances or production data. Please keep a copy of your test data if the data is important.
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
@@ -180,7 +181,7 @@ Creates one or more table partitions. These partitions are horizontal table slic
 |*partition_column_name*| Specifies the column that [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] will use to partition the rows. This column can be any data type. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] sorts the partition column values in ascending order. The low-to-high ordering goes from `LEFT` to `RIGHT` in the `RANGE` specification. |  
 | `RANGE LEFT` | Specifies the boundary value belongs to the partition on the left (lower values). The default is LEFT. |
 | `RANGE RIGHT` | Specifies the boundary value belongs to the partition on the right (higher values). | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Specifies the boundary values for the partition. *boundary_value* is a constant expression. It can't be NULL. It must either match or be implicitly convertible to the data type of *partition_column_name*. It can't be truncated during implicit conversion so that the size and scale of the value don't match the data type of *partition_column_name*<br></br><br></br>If you specify the `PARTITION` clause, but don't specify a boundary value, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] will create a partitioned table with one partition. If applicable, you can split the table into two partitions at a later time.<br></br><br></br>If you specify one boundary value, the resulting table has two partitions; one for the values lower than the boundary value and one for the values higher than the boundary value. If you move a partition into a non-partitioned table, the non-partitioned table will receive the data, but will not have the partition boundaries in its metadata.| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Specifies the boundary values for the partition. *boundary_value* is a constant expression. It can't be NULL. It must either match or be implicitly convertible to the data type of *partition_column_name*. It can't be truncated during implicit conversion so that the size and scale of the value don't match the data type of *partition_column_name*<br></br><br></br>If you specify the `PARTITION` clause, but don't specify a boundary value, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] will create a partitioned table with one partition. If applicable, you can split the table into two partitions at a later time.<br></br><br></br>If you specify one boundary value, the resulting table has two partitions; one for the values lower than the boundary value and one for the values higher than the boundary value. If you move a partition into a non-partitioned table, the non-partitioned table will receive the data, but won't have the partition boundaries in its metadata.| 
 
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
@@ -351,7 +352,8 @@ For more information, see these articles:
 
 <a name="LimitationsRestrictions"></a>  
 ## Limitations and Restrictions  
- You can't define a DEFAULT constraint on a distribution column.  
+- You can't define a DEFAULT constraint on a distribution column.  
+- Table Name cannot be greater than 100 characters.
   
 ### Partitions
 When using partitions, the partition column can't have a Unicode-only collation. For example, the following statement fails.  

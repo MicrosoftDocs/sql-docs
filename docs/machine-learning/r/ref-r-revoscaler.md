@@ -1,12 +1,12 @@
 ---
 title: RevoScaleR R package
 description: RevoScaleR is an R package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. It also supports data import, data transformation, summarization, visualization, and analysis. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 07/14/2020
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 07/14/2020
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # RevoScaleR (R package in SQL Server Machine Learning Services)

@@ -1,20 +1,18 @@
 ---
 title: "Search Documents Using Results Lists"
 description: Learn how to search and replace text in all files contained in a project, solution, or file system folder. Matches appear in the Find Results 1 window, and you can double-click a match to see the line that contains it.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "searches [SQL Server Management Studio], result lists"
   - "result list searches [SQL Server Management Studio]"
   - "searches [SQL Server Management Studio], multiple files"
   - "Query Editor [SQL Server Management Studio], search multiple files"
-ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Documents Using Results Lists

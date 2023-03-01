@@ -1,18 +1,15 @@
 ---
+title: "SQLGetTypeInfo (Excel Driver)"
 description: "SQLGetTypeInfo (Excel Driver)"
-title: "SQLGetTypeInfo (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLGetTypeInfo function [ODBC], Excel Driver"
-  - "Excel driver [ODBC], SQLGetTypeInfo"
-ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLGetTypeInfo function [ODBC], Excel Driver"
+  - "Excel driver [ODBC], SQLGetTypeInfo"
 ---
 # SQLGetTypeInfo (Excel Driver)
 > [!NOTE]  

@@ -1,22 +1,17 @@
 ---
+title: "UnattendedExecutionAccount Property (WMI MSReportServer_ConfigurationSetting)"
 description: "UnattendedExecutionAccount Property (WMI MSReportServer_ConfigurationSetting)"
-title: "UnattendedExecutionAccount Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "UnattendedExecutionAccount"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UnattendedExecutionAccount property"
-ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "UnattendedExecutionAccount"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - UnattendedExecutionAccount
   Returns the user account that the report server impersonates when running reports unattended. Read-only.  

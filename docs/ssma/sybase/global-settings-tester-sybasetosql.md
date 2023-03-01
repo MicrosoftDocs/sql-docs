@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Tester) (SybaseToSQL)"
 description: "Global Settings (Tester) (SybaseToSQL)"
-title: "Global Settings (Tester) (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.sybase.globalsettingtester.f1"
+f1_keywords:
+  - "ssma.sybase.globalsettingtester.f1"
 ---
 # Global Settings (Tester) (SybaseToSQL)
 Use the Tester page of the **Global Settings** dialog box to specify settings for SSMA Tester.  

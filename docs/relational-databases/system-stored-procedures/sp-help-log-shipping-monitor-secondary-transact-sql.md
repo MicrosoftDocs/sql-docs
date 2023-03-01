@@ -1,22 +1,19 @@
 ---
+title: "sp_help_log_shipping_monitor_secondary (Transact-SQL)"
 description: "sp_help_log_shipping_monitor_secondary (Transact-SQL)"
-title: "sp_help_log_shipping_monitor_secondary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_log_shipping_monitor_secondary"
-  - "sp_help_log_shipping_monitor_secondary_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_log_shipping_monitor_secondary"
-ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/02/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_log_shipping_monitor_secondary"
+  - "sp_help_log_shipping_monitor_secondary_TSQL"
+helpviewer_keywords:
+  - "sp_help_log_shipping_monitor_secondary"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

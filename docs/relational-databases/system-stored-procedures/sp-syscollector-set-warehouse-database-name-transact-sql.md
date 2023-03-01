@@ -1,23 +1,20 @@
 ---
+title: "sp_syscollector_set_warehouse_database_name (Transact-SQL)"
 description: "sp_syscollector_set_warehouse_database_name (Transact-SQL)"
-title: "sp_syscollector_set_warehouse_database_name (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_set_warehouse_database_name"
-  - "sp_syscollector_set_warehouse_database_name_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syscollector_set_warehouse_database_name"
-  - "data collector [SQL Server], stored procedures"
-ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_set_warehouse_database_name"
+  - "sp_syscollector_set_warehouse_database_name_TSQL"
+helpviewer_keywords:
+  - "sp_syscollector_set_warehouse_database_name"
+  - "data collector [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

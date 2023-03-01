@@ -1,16 +1,13 @@
 ---
+title: "What's New in ODBC 3.8"
 description: "What's New in ODBC 3.8"
-title: "What's New in ODBC 3.8 | Microsoft Docs"
-ms.custom:
-  - intro-whats-new
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
 # What's New in ODBC 3.8
 Windows 8 includes an updated version of ODBC 3.8. ODBC 3.8 in Windows 8 includes the following features:  

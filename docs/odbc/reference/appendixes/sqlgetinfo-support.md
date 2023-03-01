@@ -1,19 +1,16 @@
 ---
+title: "SQLGetInfo Support"
 description: "SQLGetInfo Support"
-title: "SQLGetInfo Support | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "compatibility [ODBC], SQLGetInfo"
   - "backward compatibility [ODBC], SQLGetInfo"
   - "SQLGetInfo function [ODBC], support"
-ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQLGetInfo Support
 When an ODBC 2.*x* application calls **SQLGetInfo** to an ODBC 3*.x* driver, the *InfoType* arguments in the following table must be supported.  

@@ -1,24 +1,21 @@
 ---
+title: "Register a Database As a DAC"
 description: "Register a Database As a DAC"
-title: "Register a Database As a DAC | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/01/2017"
 ms.service: sql
-ms.subservice:
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.registerdacwizard.summary.f1"
   - "sql13.swb.registerdacwizard.introduction.f1"
   - "sql13.swb.registerdacwizard.setproperties.f1"
   - "sql13.swb.registerdacwizard.registerdac.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "wizard [DAC], register"
   - "How to [DAC], register"
   - "register DAC"
   - "data-tier application [SQL Server], register"
-ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Register a Database As a DAC
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

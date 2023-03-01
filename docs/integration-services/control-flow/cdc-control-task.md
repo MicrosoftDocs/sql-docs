@@ -1,18 +1,15 @@
 ---
+title: "CDC Control Task"
 description: "CDC Control Task"
-title: "CDC Control Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.cdccontroltask.f1"
-  - "sql13.ssis.designer.cdccontroltask.config.f1"
-ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.cdccontroltask.f1"
+  - "sql13.ssis.designer.cdccontroltask.config.f1"
 ---
 # CDC Control Task
 

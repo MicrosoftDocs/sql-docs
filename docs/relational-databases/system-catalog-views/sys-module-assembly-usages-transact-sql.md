@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.module_assembly_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: b0f9ffab-6ac7-49d5-8369-477fa6b1c02b
 ---
 # sys.module_assembly_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

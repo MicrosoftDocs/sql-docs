@@ -1,17 +1,14 @@
 ---
+title: "Expression Task"
 description: "Expression Task"
-title: "Expression Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.DTS.DESIGNER.EXPRESSIONTASK.F1"
-ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.DTS.DESIGNER.EXPRESSIONTASK.F1"
 ---
 # Expression Task
 

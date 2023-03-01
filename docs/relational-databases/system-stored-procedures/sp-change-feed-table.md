@@ -1,19 +1,19 @@
 ---
-description: "The sp_change_feed_table system stored procedure provides the provision or deprovision flow status of Azure Synapse Link for SQL."
 title: "sp_change_feed_table (Transact-SQL)"
-ms.date: 11/09/2022
-ms.service: synapse-analytics
-ms.reviewer: wiassaf
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_feed_table_TSQL"
-  - "sp_change_feed_table"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_feed_table"
+description: "The sp_change_feed_table system stored procedure provides the provision or deprovision flow status of Azure Synapse Link for SQL."
 author: im-microsoft
 ms.author: imotiwala
+ms.reviewer: wiassaf
+ms.date: 02/03/2023
+ms.service: synapse-analytics
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_feed_table_TSQL"
+  - "sp_change_feed_table"
+helpviewer_keywords:
+  - "sp_change_feed_table"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 # sp_change_feed_table (Transact-SQL)
@@ -63,7 +63,7 @@ The source table name
 
 ## Permissions  
 
-Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
+Currently, a user with [CONTROL database permissions](../security/permissions-database-engine.md), db_owner database role membership, or sysadmin server role membership can execute this procedure.
 
 ## See also  
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "xe"
 dev_langs:
   - "TSQL"
-ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 ---
 # sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE [sqlserver-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]

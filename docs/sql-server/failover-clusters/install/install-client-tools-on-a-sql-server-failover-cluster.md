@@ -1,17 +1,15 @@
 ---
 title: "Install Client Tools: Failover Cluster"
 description: Learn how to install client tools, such as SQL Server Management Studio, on a SQL Server failover instance.
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/13/2019"
-ms.reviewer: ""
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-author: MashaMSFT
-ms.author: mathoma
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ---
 # Install Client Tools on a SQL Server Failover Cluster
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

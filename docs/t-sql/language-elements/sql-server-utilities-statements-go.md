@@ -3,12 +3,10 @@ title: "SQL Server Utilities Statements - GO"
 description: "SQL Server Utilities Statements - GO"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "07/27/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "GO"
   - "GO_TSQL"

@@ -1,21 +1,19 @@
 ---
 title: sp_readerrorlog (Transact-SQL)
 description: sp_readerrorlog (Transact-SQL)
+author: pijocoder
+ms.author: jopilov
+ms.date: "02/08/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_readerrorlog_TSQL"
   - "sp_readerrorlog"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_readerrorlog"
-author: pijocoder
-ms.author: jopilov
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "02/08/2022"
+dev_langs:
+  - "TSQL"
 ---
 # sp_readerrorlog (Transact-SQL)
 

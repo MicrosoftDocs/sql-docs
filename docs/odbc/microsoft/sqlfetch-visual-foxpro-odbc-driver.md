@@ -1,17 +1,14 @@
 ---
+title: "SQLFetch (Visual FoxPro ODBC Driver)"
 description: "SQLFetch (Visual FoxPro ODBC Driver)"
-title: "SQLFetch (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLFetch function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLFetch function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLFetch (Visual FoxPro ODBC Driver)
 > [!NOTE]  

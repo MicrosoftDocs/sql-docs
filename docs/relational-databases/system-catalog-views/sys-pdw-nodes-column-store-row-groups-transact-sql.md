@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)

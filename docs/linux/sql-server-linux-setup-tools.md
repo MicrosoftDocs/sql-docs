@@ -229,7 +229,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools unixodbc-dev
 
 ### [Red Hat](#tab/redhat-offline)
 
-1. First, locate and copy the **mssql-tools** package for your Linux distribution. For Red Hat 8.0, this is located at [https://packages.microsoft.com/rhel/8.0/prod](https://packages.microsoft.com/rhel/7.3/prod).
+1. First, locate and copy the **mssql-tools** package for your Linux distribution. For Red Hat 8.0, this is located at [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod).
 
 1. Also locate and copy the **msodbcsql** package, which is a dependency. The **msodbcsql** package also has a dependency on **unixODBC-devel**. For Red Hat, the **msodbcsql** package is located at [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod).
 

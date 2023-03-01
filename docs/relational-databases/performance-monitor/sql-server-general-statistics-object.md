@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, General Statistics object"
-description: Learn about the SQLServer:General Statistics object, which provides counters to monitor general server-wide activity, such as the number of current connections.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:General Statistics"
-  - "General Statistics object"
+description: "Learn about the SQLServer:General Statistics object, which provides counters to monitor general server-wide activity, such as the number of current connections."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:General Statistics"
+  - "General Statistics object"
 ---
 # SQL Server, General Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

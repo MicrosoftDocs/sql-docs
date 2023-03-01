@@ -3,7 +3,7 @@ title: "sys.dm_fts_active_catalogs (Transact-SQL)"
 description: sys.dm_fts_active_catalogs returns information on the full-text catalogs that have some population activity in progress on the server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/03/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -55,6 +55,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
    
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Physical joins  
  
 :::image type="content" source="../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.svg" alt-text="Diagram of physical joins for sys.dm_fts_active_catalogs.":::

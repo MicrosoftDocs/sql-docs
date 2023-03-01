@@ -1,25 +1,22 @@
 ---
+title: "sys.sysfulltextcatalogs (Transact-SQL)"
 description: "sys.sysfulltextcatalogs (Transact-SQL)"
-title: "sys.sysfulltextcatalogs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysfulltextcatalogs"
   - "sys.sysfulltextcatalogs_TSQL"
   - "sysfulltextcatalogs_TSQL"
   - "sys.sysfulltextcatalogs"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sysfulltextcatalogs compatibility view"
   - "sysfulltextcatalogs system table"
-ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysfulltextcatalogs (Transact-SQL)

@@ -1,22 +1,19 @@
 ---
+title: "Adding Data Flow Components Programmatically"
 description: "Adding Data Flow Components Programmatically"
-title: "Adding Data Flow Components Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.subservice: integration-services 
-ms.reviewer: ""
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow task [Integration Services], components"
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
-ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Adding Data Flow Components Programmatically
 

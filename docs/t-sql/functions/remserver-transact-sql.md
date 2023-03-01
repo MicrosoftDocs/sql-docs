@@ -3,12 +3,10 @@ title: "@@REMSERVER (Transact-SQL)"
 description: "@@REMSERVER (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@REMSERVER"
   - "@@REMSERVER_TSQL"

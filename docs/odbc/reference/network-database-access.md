@@ -1,21 +1,18 @@
 ---
+title: "Network Database Access"
 description: "Network Database Access"
-title: "Network Database Access | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC [ODBC], database access"
   - "SQL [ODBC], database access"
   - "database access [ODBC]"
   - "network database access [ODBC]"
   - "standardizing database access [ODBC], network"
-ms.assetid: f31dd938-e992-436b-b613-145c23973064
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Network Database Access
 Accessing a database across a network requires a number of components, each of which is independent of, and resides beneath, the programming interface. These components are shown in the following illustration.  

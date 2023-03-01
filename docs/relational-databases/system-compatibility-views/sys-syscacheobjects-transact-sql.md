@@ -1,25 +1,22 @@
 ---
+title: "sys.syscacheobjects (Transact-SQL)"
 description: "sys.syscacheobjects (Transact-SQL)"
-title: "sys.syscacheobjects (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.syscacheobjects_TSQL"
   - "sys.syscacheobjects"
   - "syscacheobjects"
   - "syscacheobjects_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syscacheobjects system table"
   - "sys.syscacheobjects compatibility view"
-ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

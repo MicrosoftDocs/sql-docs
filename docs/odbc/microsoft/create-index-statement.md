@@ -1,18 +1,15 @@
 ---
+title: "CREATE INDEX Statement"
 description: "CREATE INDEX Statement"
-title: "CREATE INDEX Statement | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "CREATE INDEX [ODBC]"
-  - "SQL grammar [ODBC], create index"
-ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "CREATE INDEX [ODBC]"
+  - "SQL grammar [ODBC], create index"
 ---
 # CREATE INDEX Statement
 The syntax of the CREATE INDEX statement is:  

@@ -1,22 +1,19 @@
 ---
+title: "sp_helpreplfailovermode (Transact-SQL)"
 description: "sp_helpreplfailovermode (Transact-SQL)"
-title: "sp_helpreplfailovermode (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpreplfailovermode"
-  - "sp_helpreplfailovermode_TSQL"
-helpviewer_keywords: 
-  - "sp_helpreplfailovermode"
-ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpreplfailovermode"
+  - "sp_helpreplfailovermode_TSQL"
+helpviewer_keywords:
+  - "sp_helpreplfailovermode"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

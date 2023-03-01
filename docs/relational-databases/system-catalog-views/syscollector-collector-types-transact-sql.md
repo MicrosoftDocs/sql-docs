@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "syscollector_collector_types view"
 dev_langs:
   - "TSQL"
-ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 ---
 # syscollector_collector_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

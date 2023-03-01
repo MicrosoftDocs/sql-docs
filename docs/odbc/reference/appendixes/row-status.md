@@ -1,20 +1,17 @@
 ---
+title: "Row Status"
 description: "Row Status"
-title: "Row Status | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursor library [ODBC], cache"
   - "cursor library [ODBC], cache"
   - "row status [ODBC]"
   - "cache [ODBC]"
-ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Row Status
 > [!IMPORTANT]  

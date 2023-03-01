@@ -9,7 +9,6 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 ---
 # Spatial Data Catalog Views
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

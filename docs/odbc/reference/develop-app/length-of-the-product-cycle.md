@@ -1,18 +1,15 @@
 ---
+title: "Length of the Product Cycle"
 description: "Length of the Product Cycle"
-title: "Length of the Product Cycle | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "interoperability [ODBC], product cycle"
-  - "length of the product cycle [ODBC]"
-ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "interoperability [ODBC], product cycle"
+  - "length of the product cycle [ODBC]"
 ---
 # Length of the Product Cycle
 The final question about interoperability is time. Developing an interoperable application usually takes longer than developing a noninteroperable one. The reason is that the application must check DBMS capabilities, perform the same tasks differently for different DBMSs, work around functionality supported by some DBMSs but not others, and so on.  

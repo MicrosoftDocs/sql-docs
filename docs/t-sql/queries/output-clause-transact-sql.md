@@ -1,18 +1,16 @@
 ---
+title: "OUTPUT Clause (Transact-SQL)"
 description: "OUTPUT Clause (Transact-SQL)"
-title: "OUTPUT Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/14/2020"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OUTPUT_TSQL"
   - "OUTPUT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "displaying updated rows"
   - "INSERT statement [SQL Server], OUTPUT clause"
   - "outputs [SQL Server]"
@@ -27,9 +25,8 @@ helpviewer_keywords:
   - "viewing inserted rows"
   - "displaying deleted rows"
   - "UPDATE statement [SQL Server], OUTPUT clause"
-ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # OUTPUT Clause (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

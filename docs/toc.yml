@@ -10059,7 +10059,7 @@ items:
       href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
       href: relational-databases/tutorial-ownership-chains-and-context-switching.md
-    - name: Using Azure Blob Storage with SQL Server 2016 databases
+    - name: Use Azure Blob Storage with SQL Server databases
       href: relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
   - name: Writing T-SQL Statements
     href: t-sql/tutorial-writing-transact-sql-statements.md

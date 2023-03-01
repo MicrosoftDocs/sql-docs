@@ -9,7 +9,7 @@ ms.subservice: service-overview
 ms.topic: overview
 tags: azure-service-management
 ---
-# What is SQL Server on Windows Azure Virtual Machines?
+# What is SQL Server on Azure Windows Virtual Machines?
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!div class="op_single_selector"]
@@ -26,7 +26,7 @@ If you're new to SQL Server on Azure VMs, check out the *SQL Server on Azure VM 
 
 [SQL Server on Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/) enables you to use full versions of SQL Server in the cloud without having to manage any on-premises hardware. SQL Server virtual machines (VMs) also simplify licensing costs when you pay as you go.
 
-Azure virtual machines run in many different [geographic regions](https://azure.microsoft.com/regions/) around the world. They also offer a variety of [machine sizes](/azure/virtual-machines/sizes). The virtual machine image gallery allows you to create a SQL Server VM with the right version, edition, and operating system. This makes virtual machines a good option for many different SQL Server workloads.
+Azure virtual machines run in many different [geographic regions](https://azure.microsoft.com/regions/) around the world. They also offer various [machine sizes](/azure/virtual-machines/sizes). The virtual machine image gallery allows you to create a SQL Server VM with the right version, edition, and operating system. This makes virtual machines a good option for many different SQL Server workloads.
 
 
 ## Feature benefits
@@ -66,7 +66,7 @@ For videos about the latest features to optimize SQL Server VM performance and a
 
 ## High availability & disaster recovery
 
-On top of the built-in [high availability provided by Azure virtual machines](/azure/virtual-machines/availability), you can also leverage the high availability and disaster recovery features provided by SQL Server. 
+On top of the built-in [high availability provided by Azure virtual machines](/azure/virtual-machines/availability), you can also use the high availability and disaster recovery features provided by SQL Server. 
 
 To learn more, see the overview of [Always On availability groups](availability-group-overview.md), and [Always On failover cluster instances](failover-cluster-instance-overview.md). For more details, see the [business continuity overview](business-continuity-high-availability-disaster-recovery-hadr-overview.md). 
 
@@ -114,7 +114,7 @@ To bring your own license, you can either convert an existing pay-per-usage SQL 
 | **SQL Server 2014 SP2** |Windows Server 2012 R2 |[Enterprise BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2014SP2EnterpriseWindowsServer2012R2), [Standard BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2014SP2StandardWindowsServer2012R2) |
 | **SQL Server 2012 SP4** |Windows Server 2012 R2 |[Enterprise BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2012SP4EnterpriseWindowsServer2012R2), [Standard  BYOL](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2012SP4StandardWindowsServer2012R2) |
 
-It is possible to deploy an older image of SQL Server that is not available in the Azure portal using PowerShell. To view all available images using PowerShell, use the following command:
+It's possible to deploy an older image of SQL Server that isn't available in the Azure portal using PowerShell. To view all available images using PowerShell, use the following command:
 
   ```powershell
   Get-AzVMImageOffer -Location $Location -Publisher 'MicrosoftSQLServer'
@@ -126,7 +126,7 @@ For more information about deploying SQL Server VMs using PowerShell, view [How 
 
 ## Customer experience improvement program (CEIP)
 
-The Customer Experience Improvement Program (CEIP) is enabled by default. This periodically sends reports to Microsoft to help improve SQL Server. There is no management task required with CEIP unless you want to disable it after provisioning. You can customize or disable the CEIP by connecting to the VM with remote desktop. Then run the **SQL Server Error and Usage Reporting** utility. Follow the instructions to disable reporting. For more information about data collection, see the [SQL Server Privacy Statement](/sql/sql-server/sql-server-privacy).
+The Customer Experience Improvement Program (CEIP) is enabled by default. This periodically sends reports to Microsoft to help improve SQL Server. There's no management task required with CEIP unless you want to disable it after provisioning. You can customize or disable the CEIP by connecting to the VM with remote desktop. Then run the **SQL Server Error and Usage Reporting** utility. Follow the instructions to disable reporting. For more information about data collection, see the [SQL Server Privacy Statement](/sql/sql-server/sql-server-privacy).
 
 ## Related products and services
 

@@ -31,7 +31,7 @@ Once automatic registration is enabled for a subscription all current and future
 > [!CAUTION]
 > If the SQL Server hive is not present in the registry, removing the binaries might be impacted if there are [resource locks](/azure/governance/blueprints/concepts/resource-locking#locking-modes-and-states) in place. 
 
-For information about privacy, see the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#privacy-statements). 
+For information about privacy, see the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
 
 ## Integration with centrally managed Azure Hybrid Benefit
 
@@ -41,9 +41,9 @@ For information about privacy, see the [SQL IaaS agent extension privacy stateme
 - Ensure that all your SQL workloads are licensed in compliance with the existing license agreements.
 - Separate the license compliance management roles from devops roles using RBAC
 - Take advantage of free business continuity by ensuring that your passive & disaster recovery (DR) environments are properly identified. 
-- Leverage MSDN licenses in Azure for non-production environments. 
+- Use MSDN licenses in Azure for non-production environments. 
 
-CM-AHB uses data provided by the SQL IaaS Agent extension to account for the number of SQL Server licenses used by individual Azure VMs and provides recommendations to the billing admin during the license assignment process. Using the recommendations ensures that you get the maximum discount by using Azure Hybrid Benefit. If your VMs are not registered with the SQL IaaS Agent extension when CM-AHB is enabled by your billing admin, the service will not receive the full usage data from your Azure subscriptions and therefore the CM-AHB recommendations will be inaccurate.  
+CM-AHB uses data provided by the SQL IaaS Agent extension to account for the number of SQL Server licenses used by individual Azure VMs and provides recommendations to the billing admin during the license assignment process. Using the recommendations ensures that you get the maximum discount by using Azure Hybrid Benefit. If your VMs aren't registered with the SQL IaaS Agent extension when CM-AHB is enabled by your billing admin, the service won't receive the full usage data from your Azure subscriptions and therefore the CM-AHB recommendations will be inaccurate.  
 
 > [!IMPORTANT]
 > If automatic registration is activated after CM-AHB is enabled, you run the risk of unnecessary pay-as-you-go charges for your SQL Server on Azure VM workloads.
@@ -56,11 +56,11 @@ To enable automatic register of your SQL Server VM with the extension, you'll ne
 - An [Azure subscription](https://azure.microsoft.com/free/). 
 - The client credentials used to register the virtual machines to exist in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**. 
 
-Once automatic registration is enabled, SQL Server VMs will be registered if they:
+Once automatic registration is enabled, SQL Server VMs are registered if they:
 
-- Are deployed using an Azure Resource Model to a [Windows Server 2008 R2 (or later) virtual machine](/azure/virtual-machines/windows/quick-create-portal). Windows Server 2008 is not supported. 
+- Are deployed using an Azure Resource Model to a [Windows Server 2008 R2 (or later) virtual machine](/azure/virtual-machines/windows/quick-create-portal). Windows Server 2008 isn't supported. 
 - Have [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
-- Are deployed to the public or Azure Government cloud. Other clouds are not currently supported. 
+- Are deployed to the public or Azure Government cloud. Other clouds aren't currently supported. 
 
 ## Enable automatic registration 
 
@@ -74,11 +74,11 @@ To enable automatic registration of your SQL Server VMs in the Azure portal, fol
 
 1. Choose your subscription from the drop-down. 
 1. Read through the terms and if you agree, select **I accept**. 
-1. Select **Register** to enable the feature and automatically register all current and future SQL Server VMs with the SQL IaaS Agent extension. This will not restart the SQL Server service on any of the VMs. 
+1. Select **Register** to enable the feature and automatically register all current and future SQL Server VMs with the SQL IaaS Agent extension. This won't restart the SQL Server service on any of the VMs. 
 
 ## Disable automatic registration
 
-Use the [Azure CLI](/cli/azure/install-azure-cli) or [Azure PowerShell](/powershell/azure/install-az-ps) to disable the automatic registration feature. When the automatic registration feature is disabled, SQL Server VMs added to the subscription need to be manually registered with the SQL IaaS Agent extension. This will not unregister existing SQL Server VMs that have already been registered.
+Use the [Azure CLI](/cli/azure/install-azure-cli) or [Azure PowerShell](/powershell/azure/install-az-ps) to disable the automatic registration feature. When the automatic registration feature is disabled, SQL Server VMs added to the subscription need to be manually registered with the SQL IaaS Agent extension. This won't unregister existing SQL Server VMs that have already been registered.
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -107,14 +107,14 @@ To do so, follow these steps:
 1. Save [this script](https://github.com/microsoft/tigertoolbox/blob/master/AzureSQLVM/EnableBySubscription.ps1).
 1. Navigate to where you saved the script by using an administrative Command Prompt or PowerShell window. 
 1. Connect to Azure (`az login`).
-1. Execute the script, passing in SubscriptionIds as parameters. If no subscriptions are specified, the script will enable auto-registration for all the subscriptions in the  user account.    
+1. Execute the script, passing in SubscriptionIds as parameters. If no subscriptions are specified, the script enables auto-registration for all the subscriptions in the  user account.    
 
-   The following command will enable auto-registration for two subscriptions: 
+   The following command enables auto-registration for two subscriptions: 
 
    ```console
    .\EnableBySubscription.ps1 -SubscriptionList a1a1a-aa11-11aa-a1a1-a11a111a1,b2b2b2-bb22-22bb-b2b2-b2b2b2bb
    ```
-   The following command will enable auto-registration for all subscriptions: 
+   The following command enables auto-registration for all subscriptions: 
 
    ```console
    .\EnableBySubscription.ps1
@@ -125,10 +125,10 @@ Failed registration errors are stored in `RegistrationErrors.csv` located in the
 ## Next steps
 
 - Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
-- [Manually register a single VM](sql-agent-extension-manually-register-single-vm).
+- [Manually register a single VM](sql-agent-extension-manually-register-single-vm.md).
 - [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
-- Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#privacy-statements).
-- Review the [best practices checklist](performance-guidelines-best-practices-checklist) to optimize for performance and security. 
+- Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
+- Review the [best practices checklist](performance-guidelines-best-practices-checklist.md) to optimize for performance and security. 
 
 For more information, review the following articles:
 

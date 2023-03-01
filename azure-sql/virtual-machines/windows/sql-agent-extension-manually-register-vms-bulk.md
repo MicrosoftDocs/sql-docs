@@ -29,7 +29,7 @@ The registration process carries no risk, has no downtime, and will not restart 
 
 By default, Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). You can use bulk registration to register any SQL Server VMs that are not detected by the CEIP service. 
 
-For information about privacy, see the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#privacy-statements). 
+For information about privacy, see the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
 
 ## Prerequisites
 
@@ -235,11 +235,11 @@ Copy the full script and save it as `RegisterSqLVMs.psm1`.
 
 ## Next steps
 
-- Review the benefits provided by the [SQL IaaS Agent extension](sql-agent-extension-automatic-registration-all-vms.md).
+- Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
 - [Automatically register all VMs in a subscription](sql-agent-extension-manually-register-single-vm).
 - [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
-- Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#privacy-statements).
-- Review the [best practices checklist](performance-guidelines-best-practices-checklist) to optimize for performance and security. 
+- Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
+- Review the [best practices checklist](performance-guidelines-best-practices-checklist.md) to optimize for performance and security. 
 
 To learn more, review the following articles:
 

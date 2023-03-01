@@ -260,7 +260,7 @@ sections:
 
       - question: |
           Does Azure SQL virtual machine move or store customer data out of region?
-        answer:    No. In fact, Azure SQL virtual machine and the SQL IaaS Agent Extension do not store any customer data. Review the [SQL IaaS agent privacy statements](sql-server-iaas-agent-extension-automate-management.md#privacy-statements) to learn more. 
+        answer:    No. In fact, Azure SQL virtual machine and the SQL IaaS Agent Extension do not store any customer data. Review the [SQL IaaS agent privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency) to learn more. 
         
       - question: |
           What Azure Load Balancer SKU should be used for a cross-cluster migration of an availability group? 

@@ -94,21 +94,21 @@ Deployment, management, and core service maintenance operations are carried out 
 
 At a high level, SQL Managed Instance is a set of service components that are hosted on a dedicated set of isolated virtual machines that are joined to a virtual cluster. Some service components are deployed inside the customer's virtual network subnet. Other services operate in a secure network environment that Microsoft manages.
 
+:::image type="content" source="media/connectivity-architecture-overview/2-connectivity-architecture-diagram-sql-managed-instance.png" border="false" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance after November 2022.":::
+
 A virtual cluster can host multiple managed instances. The cluster automatically expands or contracts as needed to accommodate new and removed instances.
 
 Customer applications can connect to SQL Managed Instance and can query and update databases inside the virtual network, peered virtual network, or network connected by VPN or Azure ExpressRoute.
-
-:::image type="content" source="media/connectivity-architecture-overview/2-connectivity-architecture-diagram-sql-managed-instance.png" border="false" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance after November 2022.":::
 
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
 At a high level, SQL Managed Instance is a set of service components that are hosted on a dedicated set of isolated virtual machines that are joined to a virtual cluster. Some service components are deployed inside the customer's virtual network subnet. Other services operate in a secure network environment that Microsoft manages.
 
+:::image type="content" source="media/connectivity-architecture-overview/02-connectivity-architecture-sql-managed-instance.png" border="false" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance before November 2022.":::
+
 A virtual cluster can host multiple managed instances. The cluster automatically expands or contracts as needed to accommodate new and removed instances.
 
 Customer applications can connect to SQL Managed Instance and can query and update databases inside the virtual network, peered virtual network, or network connected by VPN or Azure ExpressRoute.
-
-:::image type="content" source="media/connectivity-architecture-overview/02-connectivity-architecture-sql-managed-instance.png" border="false" alt-text="Diagram that shows the high-level connectivity architecture for Azure SQL Managed Instance before November 2022.":::
 
 ### Management endpoint
 To facilitate the communication between the control plane and components deployed inside the customer's subnet, Azure SQL Managed Instances not participating in the November 2022 Feature Wave employ a management endpoint. This means that elements of the virtual network's infrastructure can harm management traffic by making the instance fail and become unavailable. Management and deployment services connect to SQL Managed Instance's management endpoint that maps to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the management components of SQL Managed Instance use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP ranges. Certificates mutually authenticate all communication between management components and the management plane.

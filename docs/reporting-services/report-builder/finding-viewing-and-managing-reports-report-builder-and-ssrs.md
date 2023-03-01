@@ -8,8 +8,9 @@ ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
 ---
-# Finding, Viewing, and Managing Reports (Report Builder and SSRS)
-  In Report Builder, you can browse folders on a report server or SharePoint site to find paginated reports, shared data sources, models, and other related report items and browse your computer to find local reports. To make it easier to find reports, Report Builder maintains a list of recently used servers and sites and provides direct access to the Desktop, My Documents and My Computer folders in the file system of your computer.  
+# Find, View, and Manage Reports (Report Builder and SSRS)
+
+In Report Builder, you can browse folders on a report server or SharePoint site to find paginated reports, shared data sources, models, and other related report items and browse your computer to find local reports. To make it easier to find reports, Report Builder maintains a list of recently used servers and sites and provides direct access to the Desktop, My Documents and My Computer folders in the file system of your computer.  
   
  In Report Designer, you can also browse your computer to find local paginated reports. After you deploy reports to a report server or SharePoint site, you can browse the report server by using the web portal, or search the SharePoint site to find reports. Reports and related items remain available locally after they are deployed.  
   
@@ -137,4 +138,3 @@ After you run a report, you can export it to another format, such as [!INCLUDE[m
 ## See also  
  [Saving Reports &#40;Report Builder&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- 

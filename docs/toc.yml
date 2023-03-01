@@ -109,7 +109,7 @@ items:
           href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
         - name: To a mirrored media set
           href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
-        - name: Schedule Database Backups
+        - name: Schedule database backups
           href: relational-databases/backup-restore/schedule-database-backup-operation-ssms.md
       - name: Restore
         items:
@@ -10059,7 +10059,7 @@ items:
       href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
       href: relational-databases/tutorial-ownership-chains-and-context-switching.md
-    - name: Using Azure Blob Storage with SQL Server 2016 databases
+    - name: Use Azure Blob Storage with SQL Server databases
       href: relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
   - name: Writing T-SQL Statements
     href: t-sql/tutorial-writing-transact-sql-statements.md

@@ -3,7 +3,7 @@ title: "Tutorial: Use Azure Blob Storage with SQL Server"
 description: "Tutorial: Use Azure Blob Storage with SQL Server"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 02/28/2023
+ms.date: 03/01/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -164,7 +164,7 @@ To create a SQL Server credential, follow these steps:
 
 1. Repeat steps 5 and 6 for any additional SQL Server instances that you wish to have access to the container.
 
-## 3 - Database backup to URL
+## 3 - Database BACKUP to URL
 
 In this section, you will back up the `AdventureWorks2016` database in your SQL Server instance to the container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
 
@@ -404,7 +404,7 @@ To restore a database to a new database from a transaction log backup using file
 1. In Object Explorer, connect to Azure storage.
 1. Expand **Containers**, expand the container that you created in section 1 (refresh if necessary) and verify that the new data and log files appear in the container, along with the blobs from the previous sections.
 
-    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png" alt-text="Azure container showing the data and log files for the new database.":::
+    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png" alt-text="Screenshot of SQL Server Management Studio's storage browser of Azure containers showing the data and log files for the new database.":::
 
 ## 9 - Manage backup sets and file-snapshot backups
 
@@ -426,7 +426,7 @@ To delete a file-snapshot backup set, follow these steps:
 1. In Object Explorer, connect to Azure storage.
 1. Expand **Containers**, expand the container that you created in section 1 and verify that the backup file you used in step 3 no longer appears in this container (refresh the node as necessary).
 
-    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/deleted-backup-snapshot.png" alt-text="Azure container showing the deletion of the log backup blob.":::
+    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/deleted-backup-snapshot.png" alt-text="Two screenshots of SQL Server Management Studios storage browser showing Azure containers and the deletion of the transaction log backup blob.":::
 
 1. Copy, paste, and execute the following Transact-SQL script into the query window to verify that two file snapshots have been deleted.
 
@@ -435,7 +435,7 @@ To delete a file-snapshot backup set, follow these steps:
     SELECT * from sys.fn_db_backup_file_snapshots ('AdventureWorks2016');
     ```
 
-    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png" alt-text="Results pane showing 2 file snapshots deleted.":::
+    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png" alt-text="Screenshot of the SSMS results pane showing two file snapshots deleted.":::
 
 ## 10 - Remove resources
 

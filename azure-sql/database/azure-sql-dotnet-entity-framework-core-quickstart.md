@@ -24,8 +24,9 @@ This quickstart follows the recommended passwordless approach to connect to the 
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * [Visual Studio](https://visualstudio.microsoft.com/vs/) or later.
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
+* The latest version of the [Entity Framework Core tools](/ef/core/cli/dotnet).
 
-## Configure the database
+## Configure the database server
 
 Secure, passwordless connections to Azure SQL Database with .NET require certain database configurations. Verify the following settings on your database server to properly connect to Azure SQL Database in both local and hosted environments:
 
@@ -95,100 +96,49 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 
 ## Add the code to connect to Azure SQL
 
-The `Microsoft.Data.SqlClient` library uses a class called `DefaultAzureCredential` to implement passwordless connections to Azure SQL Database, which you can learn more about on the [DefaultAzureCredential overview](/dotnet/azure/sdk/authentication#defaultazurecredential). **DefaultAzureCredential** is provided by the Azure Identity library on which the SQL client library depends.
+The Entity Framework Core libraries rely on the `Microsoft.Data.SqlClient` and `Azure Identity` libraries to implement passwordless connections to Azure SQL Database. The `Azure.Identity` library provides a class called [DefaultAzureCredential](/dotnet/azure/sdk/authentication#defaultazurecredential) that handles passwordless authentication to Azure.
 
 `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 
-Complete the following steps to connect to Azure SQL Database by using the SqlClient library and `DefaultAzureCredential`:
+Complete the following steps to connect to Azure SQL Database using Entity Framework Core and the underlying `DefaultAzureCredential` class:
 
-1) Update the `environmentVariables` section of the `launchSettings.json` file to match the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
+1) Add the `ConnectionStrings` section to the `appsettings.json` file that matches the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
 
-    The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which instructs the app to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `Microsoft.Data.SqlClient` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
+    The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which enables Entity Framework Core to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `Microsoft.Data.SqlClient` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
     
     > [!NOTE]
     > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
     
     ```json
-    "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "AZURE_SQL_CONNECTIONSTRING": "Server=tcp:<your-database-servername>.database.windows.net;Database=<your-database-name>;Authentication=Active Directory Default;"
-    }
+      "ConnectionStrings": {
+        "AZURE_SQL_CONNECTIONSTRING": "Data Source=<your database-server-name>.database.windows.net; Initial Catalog=<your-database-name>; Authentication=Active Directory Default; Encrypt=True;"
+      }
     ```
 
 1) Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
 
-    * Retrieves the passwordless connection string from the environment variables
-    * Creates a Person table in the database during startup (for testing scenarios only)
+    * Retrieves the passwordless connection string from the app settings
     * Creates an endpoint to retrieve the Person records stored in the database
     * Creates an endpoint to add new Person records to the database
 
     ```csharp
-    string connectionString = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
-    
-    try
+    app.MapGet("/Person", (MyDatabaseContext context) =>
     {
-        // Table would be created ahead of time in production
-        var conn = new SqlConnection(connectionString);
-        conn.Open();
-    
-        var command = new SqlCommand(
-            "CREATE TABLE Persons (ID int NOT NULL PRIMARY KEY IDENTITY, FirstName varchar(255), LastName varchar(255));",
-            conn);
-        SqlDataReader reader = command.ExecuteReader();
-    
-        reader.Close();
-    } catch(Exception e)
-    {
-        // Table may already exist
-        Console.WriteLine(e.Message);
-    }
-    
-    app.MapGet("/Person", () =>
-    {
-        var rows = new List<string>();
-
-        using (var conn = new SqlConnection(connectionString))
-        {
-            conn.Open();
-
-            var command = new SqlCommand("SELECT * FROM Persons", conn);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    rows.Add($"{reader.GetInt32(0)}, {reader.GetString(1)}, {reader.GetString(2)}");
-                }
-            }
-
-            reader.Close();
-        };
-
-        return rows;
+        return context.Person.ToList(); ;
     })
     .WithName("GetPersons")
     .WithOpenApi();
     
-    app.MapPost("/Person", (Person person) =>
+    app.MapPost("/Person", (Person person, MyDatabaseContext context) =>
     {
-        using(var conn = new SqlConnection(connectionString)) 
-        {
-            conn.Open();
-        
-            var command = new SqlCommand(
-                  $"INSERT INTO Persons (firstName, lastName) VALUES ('{person.FirstName}', '{person.LastName}')",
-                  conn);
-        
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Close();
-        };
+        context.Add(person);
+        context.SaveChanges();
     })
     .WithName("CreatePerson")
     .WithOpenApi();
     ```
 
-    Finally, add the `Person` class to the bottom of the `Program.cs` file. This class represents a single record in the database's `Persons` table.
+    Finally, add the `Person` and `PersonDbContext` classes to the bottom of the `Program.cs` file. The Person class represents a single record in the database's `Persons` table. The `PersonDbContext` class represents the Person database and allows you to perform operations on it through code.
 
     ```csharp
     public class Person
@@ -198,7 +148,26 @@ Complete the following steps to connect to Azure SQL Database by using the SqlCl
     }
     ```
 
-## Run and test the app locally
+## Run the migrations to create the database
+
+To create a database using Entity Framework Core you must use a migration. Entity Framework Core migrations can create and incrementally update a database schema to keep it in sync with your application's data model. You can learn more about this pattern in the [migrations overview](/ef/core/managing-schemas/migrations).
+
+1. Open a terminal window to the root of your project.
+1. Run the following command to generate an initial migration that can create the database:
+    
+    ```dotnetcli
+    dotnet ef migrations add InitialCreate
+    ```
+
+1. A `Migrations` folder should appear in your project directory, along with a file called `InitialCreate` with unique numbers prepended. Run the migration to create the database using the following command:
+
+    ```dotnetcli
+    dotnet ef database update
+    ```
+
+    The Entity Framework Core tooling will create a database in Azure with the schema defined by your `PersonDbContext` class.
+
+## Test the app locally
 
 The app is ready to be tested locally. Make sure you're signed in to Visual Studio or the Azure CLI with the same account you set as the admin for your database.
 

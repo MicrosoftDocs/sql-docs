@@ -1,5 +1,5 @@
 ---
-title: "Find, View, & Manage Reports (Report Builder & SSRS)"
+title: "Find, view, & manage reports (Report Builder & SSRS)"
 description: In Report Builder and Report Designer, you can browse to find paginated reports, shared data sources, models, and other related report items.
 author: maggiesMSFT
 ms.author: maggies
@@ -8,11 +8,11 @@ ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
 ---
-# Find, View, and Manage Reports (Report Builder and SSRS)
+# Find, view, and manage reports (Report Builder and SSRS)
 
 In Report Builder, you can browse folders on a report server or SharePoint site to find paginated reports, shared data sources, models, and other related report items and browse your computer to find local reports. To make it easier to find reports, Report Builder maintains a list of recently used servers and sites and provides direct access to the Desktop, My Documents and My Computer folders in the file system of your computer.  
   
- In Report Designer, you can also browse your computer to find local paginated reports. After you deploy reports to a report server or SharePoint site, you can browse the report server by using the web portal, or search the SharePoint site to find reports. Reports and related items remain available locally after they are deployed.  
+In Report Designer, you can also browse your computer to find local paginated reports. After you deploy reports to a report server or SharePoint site, you can browse the report server by using the web portal, or search the SharePoint site to find reports. Reports and related items remain available locally after they are deployed.  
   
 > [!NOTE]  
 > You can use Report Builder in local mode or connected to a report server. Certain limitations apply when you do not have an active connection to a report server.  
@@ -26,7 +26,7 @@ In Report Builder, you can browse folders on a report server or SharePoint site 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> Finding and Viewing Reports in Report Builder  
+##  <a name="FindingAndViewingReportsRB30"></a> Find and view reports in Report Builder  
  To find a report that you want to work with or to select a shared data source, image, or subreport to use in a report, browse your computer, folders on a report server, or SharePoint site integrated with Reporting Services.  
   
  To find reports on a report server, you must specify a URL for the report server and have the appropriate permissions on the folders that enable you to read and save report items. Ask the system administrator for the report server for the appropriate URL and permissions.  
@@ -42,7 +42,7 @@ In Report Builder, you can browse folders on a report server or SharePoint site 
 -   **Viewing reports** You preview a report in Report Builder when creating or updating reports. When Report Builder is connected to a report server the report server loads and processes the report; otherwise, the reports are processed locally. The report viewer in Report Builder displays the rendered report.  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> Viewing and Managing Reports on a Report Server  
+##  <a name="ViewingAndManagingReportServer"></a> View and manage reports on a Report Server  
  You use the web portal to view and manage reports on the report server. Browse the folders on the server to locate reports, run reports, to view them in a browser, and perform management tasks.  
   
  The web portal can help you with the following management tasks:  
@@ -73,7 +73,7 @@ After you run a report, you can export it to another format, such as [!INCLUDE[m
   
  After you run a report, you can refresh it to see new data.  
   
-### Refreshing Reports  
+### Refresh reports  
  Report data frequently changes and you might want to refresh the report to view the newest data. You can refresh a report in three different ways.  
   
 |Option|Result|  
@@ -83,7 +83,7 @@ After you run a report, you can export it to another format, such as [!INCLUDE[m
 |CTRL+F5 keyboard combination|Produces the same result as clicking the **Refresh** button on the report toolbar.|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> Viewing and Managing Report Server Items from a SharePoint Site  
+##  <a name="ViewingAndManagingSharePointSite"></a> View and Manage Report Server items from a SharePoint site  
  When the system administrator configures a report server to run in SharePoint integrated mode, you can view and manage reports and other report server items from a SharePoint site.  
   
  The SharePoint site includes pages to set data source properties, report history, report processing options, schedules, subscriptions, report parameters, and create shared schedules. You can manage report server items on a SharePoint site the same way you create and manage them from other tools in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -92,7 +92,7 @@ After you run a report, you can export it to another format, such as [!INCLUDE[m
   
  For more information about Reporting Services and SharePoint technology, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).
   
-### Finding Report Server Items on a SharePoint Site  
+### Find Report Server items on a SharePoint site  
  Before you can set properties, you must first be able to locate the item. Report server items are always stored in libraries or in a folder within a library.  
   
  When you access the SharePoint site, you see the Browse page and the Library Tools tab. The Browse page lists the libraries and the content of the selected library. You can view the report, and other items in the library, explore folders, and search the site to locate items.  
@@ -101,22 +101,22 @@ After you run a report, you can export it to another format, such as [!INCLUDE[m
   
  ![Sharepoint library with report server items](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Sharepoint library with report server items")  
   
-### Viewing Reports  
+### Viewing reports  
  Report definitions (.rdl files) that you upload to a SharePoint library are viewed through a Report Viewer Web Part that is installed by the Reporting Services Add-in. An .rdl file association is defined automatically when you install the add-in. When you select a report, it opens automatically in the Web Part. After the report is open, you can use the report toolbar that is included in the Web Part to navigate pages, search, zoom, and print the report. The toolbar includes the Export Data Feed option to export the report as an Atom data feed and an **Actions** menu with options to print, subscribe, and export the report to different formats such as PDF, Word, and Excel. From the **Actions** menu you can also open the report in Report Builder. The following image shows a report and the options of the Export options in the **Action** menu.  
   
  ![rs_SharePointRunReport](../../reporting-services/report-builder/media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
-### Managing Items Through Actions  
+### Managing items through actions  
  Management tasks are supported through actions on a drop-down menu for each item. Depending on your permissions, each item has common actions that are standard for items that are stored in a SharePoint library. **View Properties** and **Edit Properties** are examples of common actions. Custom actions provide item-specific management functionality. The following image shows the actions for a report definition. Examples of custom actions for a report definition include **Manage Subscriptions** and **Manage Processing Options**:  
   
  ![Menu commands for report server items](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Menu commands for report server items")  
   
   
-##  <a name="DeskTop"></a> Viewing Reports in a Desktop Application  
+##  <a name="DeskTop"></a> View reports in a desktop application  
  You can bypass browser viewing entirely and use a desktop application (such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) as your report viewer instead. To do this, define a subscription that specifies a desktop application format and a shared folder destination. The report server generates your report as an application file, appends a file name extension, and saves the report as a file on your hard disk. You can then use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel (or another application) instead of a browser to view your report.  
   
   
-##  <a name="AboutUserSessions"></a> About User Sessions  
+##  <a name="AboutUserSessions"></a> About user sessions  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses browser sessions to maintain consistency while viewing reports. Sessions are based on browser connections, not authenticated users. A new session is created every time that a user opens a report in a new browser window. Once a browser session is established, you continue to work with the version of the report that was opened when the session began, even if the report is modified on the report server. For example, if you open a report at 11:00 P.M., and a report author republishes the same report at 11:01 P.M., your session will contain the version that you opened for the duration of the session.  
   
  If you refresh a report within the same session using the browser's **Refresh** button, the original session version of the report is displayed. If you refresh an on-demand report using the **Refresh** button on the report toolbar, the report is re-run and new data, if any, is displayed.  
@@ -124,7 +124,7 @@ After you run a report, you can export it to another format, such as [!INCLUDE[m
  Session information is stored in the report server temporary database. The report server does not use [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] session management. If you restart the server or perform a database recovery operation, session state is not restored. For more information about session management, see [Identifying Execution State](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
  
-##  <a name="InThisSection"></a> In This Section  
+##  <a name="InThisSection"></a> In this section  
  The following articles provide additional information about viewing and managing reports.  
   
  [Find, view, and manage reports](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

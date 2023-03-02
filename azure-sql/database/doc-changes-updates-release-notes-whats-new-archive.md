@@ -1,7 +1,7 @@
 ---
 title: What's new? (Archive)
 titleSuffix: Azure SQL Database
-description: Learn about the new features and documentation improvements for Azure SQL Database. (Archive)
+description: Learn about the features and documentation improvements for Azure SQL Database made in previous years. (Archive)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
@@ -18,12 +18,12 @@ ms.custom:
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](doc-changes-updates-release-notes-whats-new.md)
-> * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new.md)
+> * [Azure SQL Database](doc-changes-updates-release-notes-whats-new-archive.md)
+> * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new-archive.md)
 
-This article summarizes older documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). To learn more about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md)
+This article summarizes older documentation changes associated with new features and improvements in the releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). To learn more about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md)
 
-Return to [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md).
+Return to [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
 
 ## 2021
 

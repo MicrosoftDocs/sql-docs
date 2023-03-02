@@ -1836,6 +1836,8 @@
       href: database/doc-changes-updates-release-notes-whats-new-archive.md
     - name: What's new in Azure SQL Managed Instance? (Archive)
       href: managed-instance/doc-changes-updates-release-notes-whats-new-archive.md
+    - name: What's new in SQL Server on Azure VMs? (Archive)
+      href: virtual-machines/windows/doc-changes-updates-release-notes-whats-new-archive.md
   - name: Troubleshoot
     items:
     - name: Known issues with Azure SQL Managed Instance 

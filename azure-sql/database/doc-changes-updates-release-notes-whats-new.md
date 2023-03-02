@@ -28,7 +28,7 @@ This article summarizes the documentation changes associated with new features a
 The following table lists the features of Azure SQL Database that are currently in preview.
 
 > [!NOTE]  
-> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure Synapse Analytics provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
+> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 | Feature | Details |
 | ---| --- |
@@ -81,9 +81,10 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 ## Documentation changes
 
-Learn about significant changes to the Azure SQL Database documentation.
+Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
 ### March 2023
+
 | Changes | Details |
 | --- | --- |
 | **Approximate Percentile GA** | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate. This feature is generally available now. Review  [Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) to learn more.  | 

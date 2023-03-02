@@ -27,7 +27,7 @@ This article summarizes the documentation changes associated with new features a
 The following table lists the features of Azure SQL Managed Instance that are currently in preview.
 
 > [!NOTE]  
-> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure Synapse Analytics provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
+> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure SQL Managed Instance provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 | Feature | Details |
 | ---| --- |
@@ -91,16 +91,16 @@ Eligible existing instances created prior to November 2022 can enroll into the f
 
 ## Documentation changes
 
-Learn about significant changes to the Azure SQL Managed Instance documentation.
+Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md)
 
-### 2023
-The following changes were added to SQL Managed Instance and the documentation in 2023: 
+### March 2023
 
 | Changes | Details |
 | --- | --- |
 |**Approximate Percentile GA** | Support has been added to quickly compute percentiles using approximate percentile aggregate functions for large datasets with acceptable rank-based error bounds. This feature is GA now. To learn more, review [Approx_Percentile_Cont](/sql/t-sql/functions/approx-percentile-cont-transact-sql) and [Approx_Percentile_Disc](/sql/t-sql/functions/approx-percentile-disc-transact-sql). | 
 
 ### 2022
+
 The following changes were added to SQL Managed Instance and the documentation in 2022: 
 
 | Changes | Details |

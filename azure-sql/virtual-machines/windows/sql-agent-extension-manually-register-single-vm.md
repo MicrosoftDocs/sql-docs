@@ -50,7 +50,7 @@ To register your SQL Server VM with the extension, you'll need:
 
 To register your SQL Server VM with the SQL IaaS Agent extension, you must first register your subscription with the **Microsoft.SqlVirtualMachine** resource provider (RP). This gives the SQL IaaS Agent extension the ability to create resources within your subscription. You can do so by using the Azure portal, the Azure CLI, or Azure PowerShell.
 
-### Azure portal
+### [Azure portal](#tab/azure-portal)
 
 Register your subscription with the resource provider by using the Azure portal:
 
@@ -62,11 +62,7 @@ Register your subscription with the resource provider by using the Azure portal:
 
    ![Modify the provider](./media/sql-agent-extension-manually-register-single-vm/select-resource-provider-sql.png)
 
-### Command line
-
-Register your Azure subscription with the **Microsoft.SqlVirtualMachine** provider using either Azure CLI or Azure PowerShell.
-
-#### [Azure PowerShell](#tab/powershell)
+### [Azure PowerShell](#tab/powershell)
 
 Register your subscription with the resource provider by using Azure PowerShell:
 
@@ -75,7 +71,7 @@ Register your subscription with the resource provider by using Azure PowerShell:
 Register-AzResourceProvider -ProviderNamespace Microsoft.SqlVirtualMachine
 ```
 
-#### [Azure CLI](#tab/azure-cli)
+### [Azure CLI](#tab/azure-cli)
 
 Register your subscription with the resource provider by using the Azure CLI:
 
@@ -93,7 +89,9 @@ You can manually register your SQL Server VM with the SQL IaaS agent extension b
 
 Provide the SQL Server license type as either pay-as-you-go (`PAYG`) to pay per usage, Azure Hybrid Benefit (`AHUB`) to use your own license, or disaster recovery (`DR`) to activate the [free DR replica license](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure).
 
-### [Azure PowerShell](#tab/powershell)
+
+
+### [Azure PowerShell](#tab/azure-powershell)
 
 Register a SQL Server VM with Azure PowerShell:
 
@@ -113,13 +111,19 @@ Register a SQL Server with the Azure CLI:
 # Register Enterprise or Standard self-installed VM
 az sql vm create --name <vm_name> --resource-group <resource_group_name> --location <vm_location> --license-type <license_type> --sql-mgmt-type Full
 ```
+
+### [Azure portal](#tab/azure-portal)
+
+It's not currently possible to register your SQL Server VM with the SQL IaaS agent extension by using the Azure portal. 
+
 ---
+
 
 ## Verify registration status
 
 You can verify if your SQL Server VM has already been registered with the SQL IaaS Agent extension by using the Azure portal, the Azure CLI, or Azure PowerShell.
 
-### Azure portal
+### [Azure portal](#tab/azure-portal)
 
 Verify the registration status with the Azure portal:
 
@@ -132,25 +136,24 @@ Verify the registration status with the Azure portal:
 
 Alternatively, you can check the status by choosing **Repair** under the **Support + troubleshooting** pane in the **SQL virtual machine** resource. The provisioning state for the SQL IaaS agent extension can be **Succeeded** or **Failed**. 
 
-### Command line
 
-Verify current SQL Server VM registration status using either Azure CLI or Azure PowerShell. `ProvisioningState` shows as `Succeeded` if registration was successful.
+### [Azure PowerShell](#tab/azure-powershell)
 
-#### [Azure PowerShell](#tab/powershell)
+Verify current SQL Server VM registration status by using Azure PowerShell. `ProvisioningState` shows as `Succeeded` if registration was successful.
 
 Verify the registration status with Azure PowerShell: 
 
-  ```powershell-interactive
-  Get-AzSqlVM -Name <vm_name> -ResourceGroupName <resource_group>
-  ```
+```powershell-interactive
+Get-AzSqlVM -Name <vm_name> -ResourceGroupName <resource_group>
+```
 
 #### [Azure CLI](#tab/azure-cli)
 
-Verify the registration status with the Azure CLI: 
+Verify current SQL Server VM registration status by using the Azure CLI.  `ProvisioningState` shows as `Succeeded` if registration was successful.
 
-  ```azurecli-interactive
-  az sql vm show -n <vm_name> -g <resource_group>
-  ```
+```azurecli-interactive
+az sql vm show -n <vm_name> -g <resource_group>
+```
 
 ---
 
@@ -182,7 +185,7 @@ To unregister your SQL Server VM with the SQL IaaS Agent extension, delete the S
 > **Use extreme caution** when unregistering your SQL Server VM from the extension. Follow the steps carefully because **it is possible to inadvertently delete the virtual machine** when attempting to remove the *resource*.
 
 
-### Azure portal
+### [Azure portal](#tab/azure-portal)
 
 Unregister your SQL Server VM from the extension using the Azure portal:
 
@@ -204,9 +207,8 @@ Unregister your SQL Server VM from the extension using the Azure portal:
 
 1. Select **Delete** to confirm the deletion of the SQL virtual machine *resource*, and not the SQL Server VM.
 
-### Command line
 
-#### [PowerShell](#tab/azure-powershell)
+### [Azure PowerShell](#tab/azure-powershell)
 
 To unregister your SQL Server VM from the extension with Azure PowerShell, use the [Remove-AzSqlVM](/powershell/module/az.sqlvirtualmachine/remove-azsqlvm) command. This removes the SQL Server VM *resource* but won't delete the virtual machine.
 
@@ -216,7 +218,7 @@ To unregister your SQL Server VM with Azure PowerShell:
 Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource name>
 ```
 
-#### [Azure CLI](#tab/azure-cli)
+### [Azure CLI](#tab/azure-cli)
 
 To unregister your SQL Server VM from the extension with the Azure CLI, use the [az sql vm delete](/cli/azure/sql/vm#az-sql-vm-delete) command. This removes the SQL Server VM *resource* but doesn't delete the virtual machine.
 

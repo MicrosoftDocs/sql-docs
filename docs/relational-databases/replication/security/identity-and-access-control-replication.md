@@ -7,6 +7,7 @@ ms.date: "11/20/2018"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "access controls [SQL Server replication]"
   - "security [SQL Server replication], identity and access control"

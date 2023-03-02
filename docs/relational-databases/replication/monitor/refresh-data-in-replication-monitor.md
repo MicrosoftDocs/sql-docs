@@ -7,6 +7,7 @@ ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "refreshing data"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"

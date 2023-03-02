@@ -7,6 +7,7 @@ ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "transactional replication, peer-to-peer replication"
   - "peer-to-peer transactional replication, conflict detection"

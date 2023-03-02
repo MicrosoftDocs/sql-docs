@@ -7,6 +7,7 @@ ms.date: "10/29/2016"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "agents [SQL Server replication], Queue Reader Agent"
   - "command prompt [SQL Server replication]"

@@ -26,7 +26,7 @@ This article describes how to generate graphical estimated execution plans by us
 
  To use this feature, users must have the appropriate permissions to execute the [!INCLUDE[tsql]](../../includes/tsql-md.md)] query for which a graphical execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
 
- Estimated execution plans through SSMS and [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) are available for dedicated SQL pools (formerly SQL DW) and dedicated SQL pools in Azure Synapse Analytics.
+ Estimated execution plans through SSMS, [EXPLAIN](../../t-sql/queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true), and [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) are available for dedicated SQL pools (formerly SQL DW) and dedicated SQL pools in Azure Synapse Analytics.
 
 ## Display the estimated execution plan for a query
 

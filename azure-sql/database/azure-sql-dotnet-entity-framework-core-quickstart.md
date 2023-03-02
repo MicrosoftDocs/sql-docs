@@ -96,7 +96,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 
 ## Add the code to connect to Azure SQL
 
-The Entity Framework Core libraries rely on the `Microsoft.Data.SqlClient` and `Azure Identity` libraries to implement passwordless connections to Azure SQL Database. The `Azure.Identity` library provides a class called [DefaultAzureCredential](/dotnet/azure/sdk/authentication#defaultazurecredential) that handles passwordless authentication to Azure.
+The Entity Framework Core libraries depend internally on the `Microsoft.Data.SqlClient` and `Azure.Identity` libraries to implement passwordless connections to Azure SQL Database. The `Azure.Identity` library provides a class called [DefaultAzureCredential](/dotnet/azure/sdk/authentication#defaultazurecredential) that handles passwordless authentication to Azure.
 
 `DefaultAzureCredential` supports multiple authentication methods and determines which to use at runtime. This approach enables your app to use different authentication methods in different environments (local vs. production) without implementing environment-specific code. The [Azure Identity library overview](/dotnet/api/overview/azure/Identity-readme#defaultazurecredential) explains the order and locations in which `DefaultAzureCredential` looks for credentials.
 

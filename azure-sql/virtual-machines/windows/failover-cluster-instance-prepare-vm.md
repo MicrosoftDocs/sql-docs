@@ -41,7 +41,7 @@ The configuration settings for your virtual machine vary depending on the storag
 
 ## Choose VM availability 
 
-The failover cluster feature requires virtual machines to be placed in an [availability set](/azure/virtual-machines/linux/tutorial-availability-sets) or an [availability zone](/azure/availability-zones/az-overview#availability-zones).
+The failover cluster feature requires virtual machines to be placed in an [availability set](/azure/virtual-machines/availability-set-overview) or an [availability zone](/azure/availability-zones/az-overview#availability-zones).
 
 Carefully select the VM availability option that matches your intended cluster configuration: 
 

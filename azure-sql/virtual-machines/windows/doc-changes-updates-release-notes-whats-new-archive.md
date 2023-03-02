@@ -1,6 +1,6 @@
 ---
 title: What's new? (Archive)
-description: Learn about the new features and documentation improvements for SQL Server on Azure VMs. (Archive)
+description: Learn about the features and documentation improvements for SQL Server on Azure VMs made in previous years. (Archive)
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
@@ -12,8 +12,9 @@ ms.custom:
   - references_regions
 ---
 # What's new in SQL Server on Azure VMs? (Archive)
+[!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This article summarizes older documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure VMs](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about SQL Server on Azure VMs, see the [overview](sql-managed-instance-paas-overview.md).
+This article summarizes older documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure VMs](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md).
 
 For current updates, review [What's new in SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md). 
 

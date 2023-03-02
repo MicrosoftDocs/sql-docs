@@ -352,7 +352,7 @@
           "data-quality-services/*.md": "UpdateFrequency5",
           "data-quality-services/install-windows/*.md": "UpdateFrequency5",
           "dea/*.md": "UpdateFrequency5",
-          "integration-services/*.md": "UpdateFrequency5",
+          "integration-services/**/*.md": "UpdateFrequency5",
           "integration-services/catalog/*.md": "UpdateFrequency5",
           "integration-services/change-data-capture/*.md": "UpdateFrequency5",
           "integration-services/connection-manager/*.md": "UpdateFrequency5",

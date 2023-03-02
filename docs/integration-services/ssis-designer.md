@@ -3,7 +3,7 @@ title: "SSIS Designer"
 description: "SSIS Designer"
 author: chugugrace
 ms.author: chugu
-ms.date: "08/31/2016"
+ms.date: "09/01/2016"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual

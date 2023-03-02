@@ -62,7 +62,7 @@ Register your subscription with the resource provider by using the Azure portal:
 
    ![Modify the provider](./media/sql-agent-extension-manually-register-single-vm/select-resource-provider-sql.png)
 
-### [Azure PowerShell](#tab/powershell)
+### [Azure PowerShell](#tab/azure-powershell)
 
 Register your subscription with the resource provider by using Azure PowerShell:
 

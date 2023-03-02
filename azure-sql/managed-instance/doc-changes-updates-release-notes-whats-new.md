@@ -95,6 +95,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 ### 2023
 The following changes were added to SQL Managed Instance and the documentation in 2023: 
+
 | Changes | Details |
 | --- | --- |
 |**Approximate Percentile GA** | Support has been added to quickly compute percentiles using approximate percentile aggregate functions for large datasets with acceptable rank-based error bounds. This feature is GA now. To learn more, review [Approx_Percentile_Cont](/sql/t-sql/functions/approx-percentile-cont-transact-sql) and [Approx_Percentile_Disc](/sql/t-sql/functions/approx-percentile-disc-transact-sql). | 

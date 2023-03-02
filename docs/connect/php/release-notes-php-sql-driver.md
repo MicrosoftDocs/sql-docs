@@ -43,9 +43,9 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 | New item |
 | :------- |
-| Added support for PHP 8.2. | &nbsp; |
-| Dropped support for PHP 7.4. | &nbsp; |
-| Dropped support for Debian 9, macOS 10.15, and Alpine 3.13. | &nbsp; |
+| Added support for PHP 8.2. |
+| Dropped support for PHP 7.4. |
+| Dropped support for Debian 9, macOS 10.15, and Alpine 3.13. |
 
 ## 5.10
 

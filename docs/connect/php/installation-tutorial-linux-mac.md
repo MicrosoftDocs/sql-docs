@@ -20,7 +20,7 @@ Also included are instructions for installing the PHP FastCGI Process Manager, P
 
 While these instructions contain commands to install both SQLSRV and PDO_SQLSRV drivers, the drivers can be installed and function independently. Users comfortable with customizing their configuration can adjust these instructions to be specific to SQLSRV or PDO_SQLSRV. Both drivers have the same dependencies except where noted below.
 
-Please refer to [Support Matrix](https://learn.microsoft.com/en-us/sql/connect/php/microsoft-php-drivers-for-sql-server-support-matrix?view=sql-server-ver16) for the latest supported operating systems version.
+Please refer to [Support Matrix](microsoft-php-drivers-for-sql-server-support-matrix) for the latest supported operating systems version.
 
 ## Installing on Ubuntu
 

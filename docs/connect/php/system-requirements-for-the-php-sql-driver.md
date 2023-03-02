@@ -80,6 +80,7 @@ On Windows, the following driver files are provided:
 |32-bit php_sqlsrv_82_ts.dll <br />32-bit php_pdo_sqlsrv_82_ts.dll |8.2|yes|32-bit php8ts.dll|
 |64-bit php_sqlsrv_82_nts.dll<br />64-bit php_pdo_sqlsrv_82_nts.dll|8.2|no |64-bit php8.dll|
 |64-bit php_sqlsrv_82_ts.dll <br />64-bit php_pdo_sqlsrv_82_ts.dll |8.2|yes|64-bit php8ts.dll|
+
 On Linux, the following driver files are provided:
 
 |Driver file|PHP version|Thread safe?|

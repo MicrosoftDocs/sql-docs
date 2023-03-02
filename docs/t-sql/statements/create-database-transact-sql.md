@@ -1076,13 +1076,13 @@ Following are the supported MAXSIZE values and defaults (D) for the service tier
 |1024 GB|N/A|N/A|√|√|√ (D)|
 |From 1024 GB up to 4096 GB in increments of 256 GB* |N/A|N/A|N/A|N/A|√|
 
-\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU model, see [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
+\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU model, see [DTU resource limits](/azure/azure-sql/database/resource-limits-dtu-single-databases).
 
 The MAXSIZE value for the DTU model, if specified, has to be a valid value shown in the previous table for the service tier specified.
 
 For limits such as maximum data size and `tempdb` size in the vCore purchasing model, refer to the articles for [resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
 
-If no `MAXSIZE` value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for vCore model, see [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
+If no `MAXSIZE` value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for vCore model, see [vCore resource limits](/azure/azure-sql/database/resource-limits-dtu-single-databases).
 
 #### EDITION
 
@@ -1270,7 +1270,7 @@ CREATE DATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;
 
 - [sys.dm_database_copies - Azure SQL Database](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 - [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-- [DTU resource limits](/azure/azure-sql/sql-database/sql-database-dtu-resource-limits)
+- [DTU resource limits](/azure/azure-sql/database/resource-limits-dtu-single-databases)
 - [vCore resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases)
 - [vCore Resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
 

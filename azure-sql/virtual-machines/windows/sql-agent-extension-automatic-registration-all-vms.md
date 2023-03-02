@@ -125,7 +125,7 @@ Failed registration errors are stored in `RegistrationErrors.csv` located in the
 ## Next steps
 
 - Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
-- [Manually register a single VM](sql-agent-extension-manually-register-single-vm.md).
+- [Manually register a single VM](sql-agent-extension-manually-register-single-vm.md)
 - [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
 - Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
 - Review the [best practices checklist](performance-guidelines-best-practices-checklist.md) to optimize for performance and security. 

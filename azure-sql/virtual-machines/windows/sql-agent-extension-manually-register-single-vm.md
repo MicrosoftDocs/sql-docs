@@ -66,15 +66,6 @@ Register your subscription with the resource provider by using the Azure portal:
 
 Register your Azure subscription with the **Microsoft.SqlVirtualMachine** provider using either Azure CLI or Azure PowerShell.
 
-#### [Azure CLI](#tab/azure-cli)
-
-Register your subscription with the resource provider by using the Azure CLI:
-
-```azurecli-interactive
-# Register the SQL IaaS Agent extension to your subscription 
-az provider register --namespace Microsoft.SqlVirtualMachine 
-```
-
 #### [Azure PowerShell](#tab/powershell)
 
 Register your subscription with the resource provider by using Azure PowerShell:
@@ -82,6 +73,15 @@ Register your subscription with the resource provider by using Azure PowerShell:
 ```powershell-interactive
 # Register the SQL IaaS Agent extension to your subscription
 Register-AzResourceProvider -ProviderNamespace Microsoft.SqlVirtualMachine
+```
+
+#### [Azure CLI](#tab/azure-cli)
+
+Register your subscription with the resource provider by using the Azure CLI:
+
+```azurecli-interactive
+# Register the SQL IaaS Agent extension to your subscription 
+az provider register --namespace Microsoft.SqlVirtualMachine 
 ```
 
 ---
@@ -113,7 +113,6 @@ Register a SQL Server with the Azure CLI:
 # Register Enterprise or Standard self-installed VM
 az sql vm create --name <vm_name> --resource-group <resource_group_name> --location <vm_location> --license-type <license_type> --sql-mgmt-type Full
 ```
-
 ---
 
 ## Verify registration status
@@ -145,7 +144,7 @@ Verify the registration status with Azure PowerShell:
   Get-AzSqlVM -Name <vm_name> -ResourceGroupName <resource_group>
   ```
 
-#### [Azure CLI](#tab/azurere-cli)
+#### [Azure CLI](#tab/azure-cli)
 
 Verify the registration status with the Azure CLI: 
 
@@ -207,7 +206,17 @@ Unregister your SQL Server VM from the extension using the Azure portal:
 
 ### Command line
 
-# [Azure CLI](#tab/azure-cli)
+#### [PowerShell](#tab/azure-powershell)
+
+To unregister your SQL Server VM from the extension with Azure PowerShell, use the [Remove-AzSqlVM](/powershell/module/az.sqlvirtualmachine/remove-azsqlvm) command. This removes the SQL Server VM *resource* but won't delete the virtual machine.
+
+To unregister your SQL Server VM with Azure PowerShell: 
+
+```powershell-interactive
+Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource name>
+```
+
+#### [Azure CLI](#tab/azure-cli)
 
 To unregister your SQL Server VM from the extension with the Azure CLI, use the [az sql vm delete](/cli/azure/sql/vm#az-sql-vm-delete) command. This removes the SQL Server VM *resource* but doesn't delete the virtual machine.
 
@@ -220,25 +229,15 @@ az sql vm delete
   --yes 
 ```
 
-# [PowerShell](#tab/azure-powershell)
-
-To unregister your SQL Server VM from the extension with Azure PowerShell, use the [Remove-AzSqlVM](/powershell/module/az.sqlvirtualmachine/remove-azsqlvm) command. This removes the SQL Server VM *resource* but won't delete the virtual machine.
-
-To unregister your SQL Server VM with Azure PowerShell: 
-
-```powershell-interactive
-Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource name>
-```
-
 ---
 
 ## Next steps
 
 - Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
-- [Automatically register all VMs in a subscription](sql-agent-extension-manually-register-single-vm).
+- [Automatically register all VMs in a subscription](sql-agent-extension-automatic-registration-all-vms.md).
 - [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
 - Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
-- Review the [best practices checklist](performance-guidelines-best-practices-checklist) to optimize for performance and security. 
+- Review the [best practices checklist](performance-guidelines-best-practices-checklist.md) to optimize for performance and security. 
 
 To learn more, review the following articles:
 

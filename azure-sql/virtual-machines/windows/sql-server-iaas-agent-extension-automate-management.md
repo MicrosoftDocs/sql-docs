@@ -43,7 +43,7 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
 
 - **Simplified license management**: The extension simplifies SQL Server license management, and allows you to quickly identify SQL Server VMs with the Azure Hybrid Benefit enabled using: 
 
-   ### [Azure portal](#tab/azure-powershell)
+   ### [Azure portal](#tab/azure-portal)
 
    You can use the [SQL virtual machine resource](manage-sql-vm-portal.md) in the Azure portal to quickly identify SQL Server VMs that are using the Azure Hybrid Benefit. 
 
@@ -134,7 +134,7 @@ Alternatively, to use a named instance with an Azure Marketplace SQL Server imag
 
 Use the Azure portal, Azure PowerShell or the Azure CLI to check the status of the extension. 
 
-### [Azure portal](#tab/azure-powershell)
+### [Azure portal](#tab/azure-portal)
 
 Verify the extension is installed in the Azure portal. 
 

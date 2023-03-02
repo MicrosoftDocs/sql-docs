@@ -113,7 +113,8 @@ Registering your SQL Server instance installed to your domain controller with th
 ## Next steps
 
 - Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
-- [Automatically register all VMs in a subscription](sql-agent-extension-manually-register-single-vm).
+- [Manually register a single VM](sql-agent-extension-manually-register-single-vm.md)
+- [Automatically register all VMs in a subscription](sql-agent-extension-automatic-registration-all-vms.md).
 - Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
 - Review the [best practices checklist](performance-guidelines-best-practices-checklist.md) to optimize for performance and security. 
 

@@ -18,7 +18,7 @@ ms.custom:
 
 This quickstart demonstrates how to configure a highly available SQL Server instance in a container on Azure Kubernetes Service (AKS), with persistent storage. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. Kubernetes also provides resiliency against a node failure.
 
-This quickstart uses [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) to manage the cluster.
+This quickstart uses [kubectl](https://kubernetes.io/docs/reference/kubectl/) to manage the cluster.
 
 ## Prerequisites
 

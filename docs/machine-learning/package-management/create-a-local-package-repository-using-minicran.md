@@ -8,7 +8,6 @@ ms.date: 11/20/2019
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: how-to
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Create a local R package repository using miniCRAN

@@ -7,7 +7,6 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: how-to
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

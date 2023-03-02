@@ -8,7 +8,6 @@ ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Create a Transact-SQL Script for Running a Trace (SQL Server Profiler)

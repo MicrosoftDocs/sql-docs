@@ -8,7 +8,6 @@ ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: performance
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 ---
 # SQL Server Express LocalDB Reference - Error Messages
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

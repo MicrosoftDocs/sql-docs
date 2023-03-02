@@ -7,7 +7,6 @@ ms.date: 10/14/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "language-reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "SYS.QUERY_STORE_QUERY_HINTS"
   - "QUERY_STORE_QUERY_HINTS"

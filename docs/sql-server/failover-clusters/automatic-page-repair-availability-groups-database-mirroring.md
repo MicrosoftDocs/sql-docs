@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: high-availability
 ms.topic: troubleshooting
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "automatic page repair"
   - "Availability Groups [SQL Server], automatic page repair"

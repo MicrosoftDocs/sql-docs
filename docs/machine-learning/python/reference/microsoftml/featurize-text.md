@@ -7,7 +7,10 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
-keywords: transform, featurizer, text
+keywords:
+  - transform
+  - featurizer
+  - text
 ms.devlang: Python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---

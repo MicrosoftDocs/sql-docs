@@ -7,7 +7,6 @@ ms.date: 12/16/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Server Agent jobs, action flow logic"
   - "successful jobs [SQL Server]"

@@ -7,9 +7,7 @@ ms.date: "09/28/2017"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-ms.custom:
-  - SQL2016_New_Updated
-  - intro-whats-new
+ms.custom: intro-whats-new
 helpviewer_keywords:
   - "Integration Services, what's new"
   - "what's new [Integration Services]"

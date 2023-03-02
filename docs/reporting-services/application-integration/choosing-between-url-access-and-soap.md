@@ -7,7 +7,6 @@ ms.date: 10/19/2017
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: seo-lt-2019
 monikerRange: "= sql-server-2016"
 ---
 # Choose between URL access and SOAP in Reporting Services

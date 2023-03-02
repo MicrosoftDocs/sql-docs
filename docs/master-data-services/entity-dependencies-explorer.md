@@ -7,7 +7,7 @@ ms.date: "04/06/2016"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-keywords: "master data services"
+keywords: master data services
 ---
 # Entity Dependencies Explorer
 

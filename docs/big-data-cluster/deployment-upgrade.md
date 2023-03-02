@@ -9,7 +9,6 @@ ms.date: 09/21/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 ---
 
 # How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

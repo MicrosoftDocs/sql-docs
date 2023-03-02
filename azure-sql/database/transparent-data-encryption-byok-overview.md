@@ -9,9 +9,7 @@ ms.date: 11/21/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom:
-  - "seo-lt-2019"
-  - "azure-synapse"
+ms.custom: azure-synapse
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Azure SQL transparent data encryption with customer-managed key

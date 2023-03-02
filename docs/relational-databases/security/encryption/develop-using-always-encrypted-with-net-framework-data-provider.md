@@ -8,7 +8,6 @@ ms.date: "02/15/2023"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Always Encrypted with the .NET Framework Data Provider for SQL Server

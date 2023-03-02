@@ -7,7 +7,6 @@ ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Master Data Services and Data Quality Services Features Support
 

@@ -8,9 +8,7 @@ ms.date: 09/16/2021
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: quickstart
-ms.custom:
-  - seo-lt-2019
-  - intro-quickstart
+ms.custom: intro-quickstart
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

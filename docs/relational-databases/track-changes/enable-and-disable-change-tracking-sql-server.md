@@ -6,7 +6,6 @@ ms.author: mikeray
 ms.date: "08/08/2016"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "change tracking [SQL Server], disabling"
   - "data changes [SQL Server]"

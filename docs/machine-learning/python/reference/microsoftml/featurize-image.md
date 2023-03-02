@@ -7,7 +7,14 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
-keywords: transform, image, featurize, dnn, cnn, resnet, alexnet
+keywords:
+  - transform
+  - image
+  - featurize
+  - dnn
+  - cnn
+  - resnet
+  - alexnet
 ms.devlang: Python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---

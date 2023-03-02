@@ -7,9 +7,6 @@ ms.date: "10/05/2022"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom:
-  - seo-dt-2019
-  - FY22Q2Fresh
 helpviewer_keywords:
   - "viewing logs"
   - "displaying logs"

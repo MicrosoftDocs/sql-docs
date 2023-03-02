@@ -9,7 +9,6 @@ ms.subservice: linux
 ms.topic: quickstart
 ms.custom:
   - template-quickstart
-  - seo-lt-2019
   - intro-deployment
 ---
 # Quickstart: Deploy a SQL Server container with Azure Kubernetes Services (AKS)

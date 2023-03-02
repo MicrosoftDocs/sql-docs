@@ -7,7 +7,6 @@ ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Report Server Web service, application integration"
   - "SOAP [Reporting Services]"

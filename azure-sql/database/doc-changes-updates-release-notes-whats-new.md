@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=2"
-  - "references_regions"
+  - sqldbrb=2
+  - references_regions
 ---
 # What's new in Azure SQL Database?
 

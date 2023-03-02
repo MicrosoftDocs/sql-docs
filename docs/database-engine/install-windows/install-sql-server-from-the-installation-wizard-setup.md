@@ -7,9 +7,7 @@ ms.date: 09/12/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 helpviewer_keywords:
   - "installing SQL Server, steps"
   - "Setup [SQL Server], steps"

@@ -6,7 +6,6 @@ ms.author: mikeray
 ms.date: "01/02/2019"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "change data"
   - "change data capture, query function scenarios"

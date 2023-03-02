@@ -7,7 +7,6 @@ ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sys.dm_change_feed_log_scan_sessions_TSQL"
   - "sys.dm_change_feed_log_scan_sessions"

@@ -7,7 +7,6 @@ ms.date: "08/31/2020"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ---

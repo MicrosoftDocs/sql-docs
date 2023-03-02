@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ---
 # Tutorial: Add an Azure SQL Database to an auto-failover group
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

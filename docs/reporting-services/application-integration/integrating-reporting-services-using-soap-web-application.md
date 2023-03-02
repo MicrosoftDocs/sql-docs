@@ -7,7 +7,6 @@ ms.date: 06/26/2019
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SOAP [Reporting Services], Web applications"
   - "impersonation [Reporting Services]"

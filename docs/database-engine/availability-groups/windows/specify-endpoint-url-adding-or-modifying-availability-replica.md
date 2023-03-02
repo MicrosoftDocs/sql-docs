@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
   - "endpoints [SQL Server], Always On Availability Groups"

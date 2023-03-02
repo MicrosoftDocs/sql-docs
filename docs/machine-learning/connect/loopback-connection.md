@@ -8,7 +8,6 @@ ms.date: 03/22/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Loopback connection to SQL Server from a Python or R script

@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.date: "12/02/2021"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "OLE DB, linked servers"
   - "OLE DB provider, linked servers"

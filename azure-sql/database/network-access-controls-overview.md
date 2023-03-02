@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=3"
-  - "devx-track-azurepowershell"
+  - sqldbrb=3
+  - devx-track-azurepowershell
 ---
 
 # Azure SQL Database and Azure Synapse Analytics network access controls

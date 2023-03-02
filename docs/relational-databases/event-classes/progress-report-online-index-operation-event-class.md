@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Progress Report: Online Index Operation event class [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

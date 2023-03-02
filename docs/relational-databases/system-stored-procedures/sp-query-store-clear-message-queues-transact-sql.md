@@ -7,7 +7,6 @@ ms.date: "04/26/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sp_query_store_clear_message_queues_TSQL"
   - "sp_query_store_clear_message_queues"

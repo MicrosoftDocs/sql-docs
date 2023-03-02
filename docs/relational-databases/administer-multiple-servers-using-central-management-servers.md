@@ -8,7 +8,6 @@ ms.date: "01/17/2023"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "multiserver queries"
   - "central management server"

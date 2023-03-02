@@ -8,7 +8,6 @@ ms.date: 07/26/2022
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # SSIS Projects extension for VS2019 troubleshooting guide

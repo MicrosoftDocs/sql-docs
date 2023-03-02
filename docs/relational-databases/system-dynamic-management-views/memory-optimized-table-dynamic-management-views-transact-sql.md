@@ -7,7 +7,6 @@ ms.date: "02/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

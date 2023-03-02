@@ -1,6 +1,6 @@
 ---
 title: "Enable Azure AD authentication"
-description: This article teaches you to configure Azure AD authentication for your SQL Server on Azure VM. 
+description: This article teaches you to configure Azure AD authentication for your SQL Server on Azure VM.
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
@@ -8,7 +8,6 @@ ms.date: 02/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: how-to
-ms.custom: 
 ---
 # Enable Azure AD authentication for SQL Server on Azure VMs (Preview)
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

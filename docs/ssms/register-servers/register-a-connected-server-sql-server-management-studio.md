@@ -7,7 +7,6 @@ ms.date: 07/28/2016
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.registerserver.f1"
 helpviewer_keywords:

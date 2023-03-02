@@ -7,7 +7,6 @@ ms.date: 04/12/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Local Audit"
 monikerRange: ">=sql-server-2016"

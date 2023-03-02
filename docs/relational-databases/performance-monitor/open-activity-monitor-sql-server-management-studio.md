@@ -7,7 +7,6 @@ ms.date: "07/12/2021"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "Activity Monitor [SQL Server], setting the refresh interval"
   - "refresh interval for Activity Monitor"

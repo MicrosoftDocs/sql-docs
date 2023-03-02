@@ -7,7 +7,6 @@ ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Open a Trace File (SQL Server Profiler)

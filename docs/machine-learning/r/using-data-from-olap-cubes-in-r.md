@@ -7,7 +7,6 @@ ms.date: 04/30/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Using data from OLAP cubes in R

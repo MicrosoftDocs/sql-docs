@@ -1832,11 +1832,11 @@
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
   - name: What's New Archives
     items: 
-    - name: What's new in Azure SQL Database? (Archive)
+    - name: Azure SQL Database
       href: database/doc-changes-updates-release-notes-whats-new-archive.md
-    - name: What's new in Azure SQL Managed Instance? (Archive)
+    - name: Azure SQL Managed Instance
       href: managed-instance/doc-changes-updates-release-notes-whats-new-archive.md
-    - name: What's new in SQL Server on Azure VMs? (Archive)
+    - name: SQL Server on Azure VMs
       href: virtual-machines/windows/doc-changes-updates-release-notes-whats-new-archive.md
   - name: Troubleshoot
     items:

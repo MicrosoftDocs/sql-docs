@@ -7,9 +7,7 @@ ms.date: 10/31/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"
 ---
 # Considerations for installing SQL Server using SysPrep

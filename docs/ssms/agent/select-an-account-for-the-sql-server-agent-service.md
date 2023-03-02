@@ -7,7 +7,6 @@ ms.date: 11/11/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

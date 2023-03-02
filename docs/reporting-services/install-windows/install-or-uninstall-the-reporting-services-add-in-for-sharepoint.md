@@ -7,8 +7,6 @@ ms.date: 12/04/2019
 ms.service: reporting-services
 ms.topic: conceptual
 ms.custom:
-  - seo-lt-2019​
-  - seo-mmd-2019
   - intro-installation
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---

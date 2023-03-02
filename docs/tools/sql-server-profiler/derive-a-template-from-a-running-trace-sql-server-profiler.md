@@ -8,7 +8,6 @@ ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Derive a Template from a Running Trace (SQL Server Profiler)

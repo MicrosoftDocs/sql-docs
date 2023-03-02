@@ -8,7 +8,6 @@ ms.date: 08/08/2022
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "vdt.dlgbox.fulltextindex"
 ---

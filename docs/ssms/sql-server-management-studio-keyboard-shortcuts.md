@@ -7,7 +7,6 @@ ms.date: 02/08/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "VS.ToolsOptionsPages.Environment.Keyboard"
   - "VS.ToolsOptionsPages.Environment.Keyboard.Query_Shortcuts"

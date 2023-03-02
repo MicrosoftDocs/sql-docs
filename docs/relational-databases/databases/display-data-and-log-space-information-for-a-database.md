@@ -7,7 +7,6 @@ ms.date: "06/16/2021"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "logs [SQL Server], space"
   - "status information [SQL Server], space"

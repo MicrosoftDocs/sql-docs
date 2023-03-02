@@ -6,7 +6,6 @@ ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # New Date and Time Features with Previous SQL Server Versions (OLE DB)

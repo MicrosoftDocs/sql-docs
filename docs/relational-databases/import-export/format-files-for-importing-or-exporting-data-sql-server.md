@@ -7,7 +7,6 @@ ms.date: 08/29/2022
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "bulk exporting [SQL Server], format files"
   - "bulk importing [SQL Server], format files"

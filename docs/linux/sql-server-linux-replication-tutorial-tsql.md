@@ -9,7 +9,6 @@ ms.date: 12/09/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Configure Replication with T-SQL

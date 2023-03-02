@@ -7,9 +7,7 @@ ms.date: "01/16/2019"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - updatefrequency5
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"

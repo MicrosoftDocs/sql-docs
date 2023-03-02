@@ -8,8 +8,6 @@ ms.date: 11/10/2022
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
-ms.metadata: seo-lt-2019
 monikerRange: ">= sql-server-linux-ver16 || >= sql-server-ver16"
 ---
 # Configure PolyBase to access external data in S3-compatible object storage

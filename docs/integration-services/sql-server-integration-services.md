@@ -7,7 +7,6 @@ ms.date: 12/10/2021
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: overview
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "SSIS"
   - "DTS [Integration Services]"
@@ -16,7 +15,7 @@ helpviewer_keywords:
   - "DTS [Integration Services], about Integration Services"
   - "data integration [Integration Services]"
   - "Data Transformation Services"
-keywords: "SSIS"
+keywords: SSIS
 ---
 
 # SQL Server Integration Services

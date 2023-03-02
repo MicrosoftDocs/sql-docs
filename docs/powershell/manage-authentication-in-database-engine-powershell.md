@@ -9,7 +9,6 @@ ms.date: 10/14/2020
 ms.service: sql
 ms.subservice: sql-server-powershell
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Manage authentication to SQL Server in PowerShell

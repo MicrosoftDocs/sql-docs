@@ -8,7 +8,6 @@ ms.date: 02/01/2022
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "command prompt utilities [SQL Server], SQLdiag"
   - "stopping diagnostic collection"

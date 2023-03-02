@@ -8,7 +8,6 @@ ms.date: 12/04/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "vs.debug.breakpt.hitcount"
 helpviewer_keywords:

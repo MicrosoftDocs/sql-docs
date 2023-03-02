@@ -7,7 +7,6 @@ ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: xevents
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Trace, convert script to extended events"
   - "extended events [SQL Server], convert SQL Trace script"

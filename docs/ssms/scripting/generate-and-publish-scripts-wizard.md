@@ -7,7 +7,6 @@ ms.date: 04/07/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql9.swb.generatescriptswizard.chooseviews.f1"
   - "sql13.swb.generatescriptswizard.manageproviders.f1"

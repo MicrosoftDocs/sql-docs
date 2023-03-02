@@ -7,7 +7,6 @@ ms.date: "08/02/2016"
 ms.service: sql
 ms.subservice: xevents
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server

@@ -10,8 +10,8 @@ ms.service: sql-db-mi
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=2"
-  - "references_regions"
+  - sqldbrb=2
+  - references_regions
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

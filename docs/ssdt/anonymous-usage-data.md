@@ -8,7 +8,6 @@ ms.date: "04/30/2021"
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # SQL Server Data Tools usage and diagnostic data collection

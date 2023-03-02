@@ -8,7 +8,6 @@ ms.date: 1/25/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 ---
 
 # SQL Server extension for Visual Studio Code

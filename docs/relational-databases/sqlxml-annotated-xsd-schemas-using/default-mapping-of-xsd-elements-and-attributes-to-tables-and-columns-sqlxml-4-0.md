@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "XSD schemas [SQLXML], mapping attributes and elements"
   - "mapping schema [SQLXML], default mapping"

@@ -7,7 +7,6 @@ ms.date: 05/25/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"

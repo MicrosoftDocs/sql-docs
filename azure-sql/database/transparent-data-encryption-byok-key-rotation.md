@@ -10,9 +10,10 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - "seo-lt-2019 sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
+  - seo-lt-2019
+  - sqldbrb=1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 ---
 # Rotate the Transparent data encryption (TDE) protector
 

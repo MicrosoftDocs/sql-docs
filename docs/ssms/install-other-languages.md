@@ -7,9 +7,7 @@ ms.date: 04/25/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 ---
 
 # Install non-English language versions of SQL Server Management Studio (SSMS)

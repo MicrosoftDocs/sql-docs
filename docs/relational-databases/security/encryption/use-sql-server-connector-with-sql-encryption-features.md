@@ -8,7 +8,6 @@ ms.date: "09/12/2019"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Server Connector, using"
   - "EKM, with SQL Server Connector"

@@ -6,7 +6,6 @@ ms.author: maggies
 ms.date: 12/04/2019
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019​, seo-mmd-2019
 helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "private keys [Reporting Services]"

@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 helpviewer_keywords:
   - "Transparent Data Encryption, AlwaysOn Availability Groups"
   - "Transparent Data Encryption, Always On Availability Groups"

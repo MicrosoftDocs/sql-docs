@@ -7,7 +7,6 @@ ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Enable Data Quality Services Integration with Master Data Services
 

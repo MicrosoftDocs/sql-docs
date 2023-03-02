@@ -7,7 +7,6 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "solutions [SQL Server Management Studio], closing"
   - "closing solutions"

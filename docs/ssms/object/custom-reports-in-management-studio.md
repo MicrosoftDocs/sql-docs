@@ -7,7 +7,6 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.summary.new.custom.report.f1"
   - "sql13.swb.summary.render.custom.report.f1"

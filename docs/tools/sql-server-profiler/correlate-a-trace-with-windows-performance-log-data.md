@@ -8,7 +8,6 @@ ms.date: 07/12/2017
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Correlate a trace with Windows Performance Log data

@@ -7,7 +7,6 @@ ms.date: 08/02/2016
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Change the Name of Registered Server or Registered Server Group

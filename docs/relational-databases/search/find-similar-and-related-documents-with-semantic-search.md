@@ -8,7 +8,6 @@ ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "semantic search [SQL Server], document similarity queries"
 ---

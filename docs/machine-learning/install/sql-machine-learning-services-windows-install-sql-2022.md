@@ -7,10 +7,7 @@ ms.date: 09/26/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
-  - event-tier1-build-2022
+ms.custom: intro-installation
 monikerRange: ">=sql-server-ver16"
 ---
 # Install SQL Server 2022 Machine Learning Services (Python and R) on Windows

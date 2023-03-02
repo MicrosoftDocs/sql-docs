@@ -8,7 +8,6 @@ ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
-ms.custom: fresh2019may
 f1_keywords:
   - "FOR_XML_TSQL"
 helpviewer_keywords:

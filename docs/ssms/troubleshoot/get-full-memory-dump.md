@@ -8,7 +8,6 @@ ms.date: 05/17/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Get Full Memory Dump

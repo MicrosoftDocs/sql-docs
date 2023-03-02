@@ -6,7 +6,6 @@ ms.author: maggies
 ms.date: 09/15/2022
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019​, seo-mmd-2019
 f1_keywords:
   - "SQL13.rsconfigtool.subscriptionsettings.F1"
 ---

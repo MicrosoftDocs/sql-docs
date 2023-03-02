@@ -8,10 +8,7 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
-ms.custom:
-  - seo-lt-2019
-  - intro-get-started
-  - event-tier1-build-2022
+ms.custom: intro-get-started
 monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server

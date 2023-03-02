@@ -7,7 +7,6 @@ ms.date: 08/06/2020
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Create a resource pool for SQL Server Machine Learning Services

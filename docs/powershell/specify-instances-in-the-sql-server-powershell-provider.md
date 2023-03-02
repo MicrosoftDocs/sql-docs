@@ -8,7 +8,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: sql-server-powershell
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Specify Instances in the SQL Server PowerShell Provider

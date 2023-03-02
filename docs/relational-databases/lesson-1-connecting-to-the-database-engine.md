@@ -7,9 +7,7 @@ ms.date: "12/16/2021"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart
-ms.custom:
-  - intro-quickstart
-  - FY22Q2Fresh
+ms.custom: intro-quickstart
 ---
 
 # Lesson 1: Connecting to the Database Engine

@@ -10,9 +10,9 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 ---
 # Azure SQL Database and Azure Synapse IP firewall rules
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

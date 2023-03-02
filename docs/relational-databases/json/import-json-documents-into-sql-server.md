@@ -7,7 +7,6 @@ ms.reviewer: jroth
 ms.date: 06/03/2020
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import JSON documents into SQL Server

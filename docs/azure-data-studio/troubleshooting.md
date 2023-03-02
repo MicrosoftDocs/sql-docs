@@ -7,7 +7,6 @@ ms.reviewer: hanqin, maghan
 ms.date: 11/24/2020
 ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 
 # Azure Data Studio Troubleshooting

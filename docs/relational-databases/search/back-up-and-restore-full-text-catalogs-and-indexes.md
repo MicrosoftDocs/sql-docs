@@ -8,7 +8,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "full-text indexes [SQL Server], backing up"
   - "full-text search [SQL Server], back up and restore"

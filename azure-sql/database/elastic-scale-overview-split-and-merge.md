@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ---
 # Moving data between scaled-out cloud databases
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

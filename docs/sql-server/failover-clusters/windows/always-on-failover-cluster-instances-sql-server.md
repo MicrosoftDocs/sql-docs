@@ -7,9 +7,7 @@ ms.date: "01/18/2017"
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-overview
+ms.custom: intro-overview
 helpviewer_keywords:
   - "clustering [SQL Server]"
   - "high availability [SQL Server], failover clustering"

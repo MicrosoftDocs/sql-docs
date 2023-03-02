@@ -7,7 +7,6 @@ ms.date: 06/13/2019
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Create graphs and plots using SQL and R (walkthrough)

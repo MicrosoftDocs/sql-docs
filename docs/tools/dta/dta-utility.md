@@ -7,7 +7,6 @@ ms.date: 05/11/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "physical design structures [SQL Server]"
   - "command prompt utilities [SQL Server], dta"

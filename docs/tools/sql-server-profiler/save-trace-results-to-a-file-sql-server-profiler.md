@@ -8,7 +8,6 @@ ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Save Trace Results to a File (SQL Server Profiler)

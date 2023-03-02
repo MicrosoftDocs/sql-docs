@@ -8,9 +8,7 @@ ms.date: 12/07/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-ms.custom:
-  - intro-whats-new
-  - event-tier1-build-2022
+ms.custom: intro-whats-new
 monikerRange: ">= sql-server-2016"
 ---
 

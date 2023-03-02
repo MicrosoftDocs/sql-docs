@@ -8,7 +8,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "keys [SQL Server], database encryption"
 ---

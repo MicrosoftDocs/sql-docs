@@ -8,9 +8,7 @@ ms.date: 11/11/2020
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
-ms.custom:
-  - intro-installation
-  - event-tier1-build-2022
+ms.custom: intro-installation
 monikerRange: ">=sql-server-ver15"
 ---
 

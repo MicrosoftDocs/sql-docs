@@ -6,7 +6,6 @@ ms.author: maghan
 ms.date: "03/04/2017"
 ms.service: sql
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "IRowsetFind comparability [ODBC]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

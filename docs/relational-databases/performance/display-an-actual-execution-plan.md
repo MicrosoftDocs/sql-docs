@@ -42,7 +42,7 @@ This article describes how to generate actual graphical execution plans by using
 
     Alternatively, you can view operator properties in the **Properties** window. If **Properties** is not visible, right-click an operator and select **Properties**. Select an operator to view its properties.  
 
-    :::image type="content" source="media/display-an-actual-execution-plan/planproperties.png" alt-text="A screenshot from SQL Server Management Studio indicating where to right-click Properties in a plan operator." lightbox="media/display-an-actual-execution-plan/planproperties.png":::
+    :::image type="content" source="media/display-an-actual-execution-plan/plan-properties.png" alt-text="A screenshot from SQL Server Management Studio indicating where to right-click Properties in a plan operator.":::
 
 1. You can alter the display of the execution plan by right-clicking the execution plan and selecting **Zoom In**, **Zoom Out**, **Custom Zoom**, or **Zoom to Fit**. **Zoom In** and **Zoom Out** allow you to zoom in or out on the execution plan, while **Custom Zoom** allows you to define your own zoom, such as zooming at 80 percent. **Zoom to Fit** magnifies the execution plan to fit the result pane. Alternatively, use a combination of the CTRL key and your mouse wheel to activate **dynamic zoom**.  
 

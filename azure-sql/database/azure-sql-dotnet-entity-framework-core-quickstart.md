@@ -13,9 +13,7 @@ monikerRange: "= azuresql || = azuresql-db"
 
 # Connect to and query Azure SQL Database using .NET and Entity Framework Core
 
-This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core.
-
-This quickstart follows the recommended passwordless approach to connect to the database without the use of connection strings. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
+This quickstart describes how to connect an application to a database in Azure SQL Database and perform queries using .NET and Entity Framework Core. You will also learn how to use passwordless connections to query the database without the use of connection strings. You can learn more about passwordless connections on the [passwordless hub](/azure/developer/intro/passwordless-overview).
 
 ## Prerequisites
 
@@ -70,7 +68,7 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 ## Add Entity Framework Core to the project
 
-To connect to Azure SQL Database using .NET and Entity Framework Core you need to install three NuGet packages using one of the following methods:
+To connect to Azure SQL Database using .NET and Entity Framework Core you need to add three NuGet packages to your project using one of the following methods:
 
 ## [Visual Studio](#tab/packages-visual-studio)
 
@@ -112,7 +110,7 @@ The Entity Framework Core libraries rely on the `Microsoft.Data.SqlClient` and `
 
 Complete the following steps to connect to Azure SQL Database using Entity Framework Core and the underlying `DefaultAzureCredential` class:
 
-1) Add the `ConnectionStrings` section to the `appsettings.json` file that matches the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
+1) Add a `ConnectionStrings` section to the `appsettings.json` file so that it matches the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
 
     The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which enables Entity Framework Core to use `DefaultAzureCredential` to connect to Azure services. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
 
@@ -120,9 +118,18 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
     > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
 
     ```json
-      "ConnectionStrings": {
-        "AZURE_SQL_CONNECTIONSTRING": "Data Source=<your database-server-name>.database.windows.net; Initial Catalog=<your-database-name>; Authentication=Active Directory Default; Encrypt=True;"
-      }
+    {
+        "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+        },
+        "ConnectionStrings": {
+        "AZURE_SQL_CONNECTIONSTRING": "Data Source=passwordlessdbserver.database.windows.net;
+            Initial Catalog=passwordlessdb; Authentication=Active Directory Default; Encrypt=True;"
+        }
+    }
     ```
 
 1. Add the following code to the `Program.cs` file above the line of code that reads `var app = builder.Build();`. This code performs the following configurations:
@@ -151,7 +158,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
     ```csharp
     app.MapGet("/Person", (PersonDbContext context) =>
     {
-        return context.Person.ToList(); ;
+        return context.Person.ToList();
     })
     .WithName("GetPersons")
     .WithOpenApi();
@@ -165,7 +172,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
     .WithOpenApi();
     ```
 
-    Finally, add the `Person` and `PersonDbContext` classes to the bottom of the `Program.cs` file. The Person class represents a single record in the database's `Persons` table. The `PersonDbContext` class represents the Person database and allows you to perform operations on it through code.
+    Finally, add the `Person` and `PersonDbContext` classes to the bottom of the `Program.cs` file. The Person class represents a single record in the database's `Persons` table. The `PersonDbContext` class represents the Person database and allows you to perform operations on it through code. You can read more about `DbContext` in the [Getting Started](/ef/core/get-started/overview/first-app) documentation for Entity Framework Core.
 
     ```csharp
     public class Person
@@ -187,7 +194,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
 
 ## Run the migrations to create the database
 
-To create a database using Entity Framework Core you must use a migration. Entity Framework Core migrations can create and incrementally update a database schema to keep it in sync with your application's data model. You can learn more about this pattern in the [migrations overview](/ef/core/managing-schemas/migrations).
+To update the database schema to match your data model using Entity Framework Core you must use a migration. Migrations can create and incrementally update a database schema to keep it in sync with your application's data model. You can learn more about this pattern in the [migrations overview](/ef/core/managing-schemas/migrations).
 
 1. Open a terminal window to the root of your project.
 1. Run the following command to generate an initial migration that can create the database:
@@ -319,3 +326,10 @@ The Azure portal allows you to work with managed identities and run queries agai
 Browse to the URL of the app to test that the connection to Azure SQL Database is working. You can locate the URL of your app on the App Service overview page. Append the `/person` path to the end of the URL to browse to the same endpoint you tested locally.
 
 The person you created locally should display in the browser. Congratulations! Your application is now connected to Azure SQL Database in both local and hosted environments.
+
+## Next steps
+
+- [Tutorial: Secure a database in Azure SQL Database](/azure/azure-sql/database/secure-database-tutorial)
+- [Authorize database access to SQL Database](/azure/azure-sql/database/logins-create-manage)
+- [An overview of Azure SQL Database security capabilities](security-overview.md)
+- [Azure SQL Database security best practices](security-best-practice.md)

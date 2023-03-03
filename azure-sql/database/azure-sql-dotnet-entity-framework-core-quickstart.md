@@ -110,7 +110,7 @@ The Entity Framework Core libraries rely on the `Microsoft.Data.SqlClient` and `
 
 Complete the following steps to connect to Azure SQL Database using Entity Framework Core and the underlying `DefaultAzureCredential` class:
 
-1) Add a `ConnectionStrings` section to the `appsettings.json` file so that it matches the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
+1. Add a `ConnectionStrings` section to the `appsettings.json` file so that it matches the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
 
     The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which enables Entity Framework Core to use `DefaultAzureCredential` to connect to Azure services. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
 
@@ -153,7 +153,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
             options.UseSqlServer(connection));
         ```
 
-1) Add the following endpoints to the bottom of the `Program.cs` file above `app.Run()` to retrieve and add entities in the database using the `PersonDbContext` class.
+1. Add the following endpoints to the bottom of the `Program.cs` file above `app.Run()` to retrieve and add entities in the database using the `PersonDbContext` class.
 
     ```csharp
     app.MapGet("/Person", (PersonDbContext context) =>

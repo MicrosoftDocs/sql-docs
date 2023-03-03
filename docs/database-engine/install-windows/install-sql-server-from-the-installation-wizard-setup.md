@@ -3,7 +3,7 @@ title: "Install using graphical user interface"
 description: This article provides a step-by-step procedure for installing a new instance of SQL Server by using the SQL Server Setup Installation Wizard.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/12/2022
+ms.date: 03/02/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -477,7 +477,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and others.
 
    > [!NOTE]
-   > If you're installing SQL Server 2022 on an Azure VM, you won't see the **Azure Extension for SQL Server** page during installation. Connectivity to Azure Services for SQL Server on Azure VMs is handled through the [SQL IaaS Agent Extension](/azure/azure-sql/virtual-machines/windows/sql-server-iaas-agent-extension-automate-management), which is automatically pushed to your Azure VM shortly after SQL Server installation. You can register your VM with the extension [manually](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm) if you don't want to wait for automatic registration. 
+   > If you're installing SQL Server 2022 on an Azure VM, you won't see the **Azure Extension for SQL Server** page during installation. Connectivity to Azure Services for SQL Server on Azure VMs is handled through the [SQL IaaS Agent Extension](/azure/azure-sql/virtual-machines/windows/sql-server-iaas-agent-extension-automate-management), which is automatically pushed to your Azure VM shortly after SQL Server installation. You can register your VM with the extension [manually](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm) if you don't want to wait for automatic registration. For more information on supported configurations, see [Supported SQL Server Versions and Operating Systems](../../sql-server/azure-arc/prerequisites.md#supported-sql-server-versions-and-operating-systems).
 
    This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
 

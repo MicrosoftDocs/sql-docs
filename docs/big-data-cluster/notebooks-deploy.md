@@ -10,7 +10,6 @@ ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
 ms.custom: intro-deployment
-ms.metadata: seo-lt-2019
 ---
 
 # Deploy SQL Server big data cluster with Azure Data Studio notebook

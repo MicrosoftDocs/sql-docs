@@ -7,7 +7,6 @@ ms.date: 10/07/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "command prompt utilities [SQL Server], sqlservr"
   - "command prompt [SQL Server], pausing/resuming instance of SQL Server"

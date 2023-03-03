@@ -6,7 +6,6 @@ ms.author: maggies
 ms.date: 11/04/2021
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 
 # Create a report server database, Report Server Configuration Manager  

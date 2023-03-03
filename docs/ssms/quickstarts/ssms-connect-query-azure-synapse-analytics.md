@@ -8,9 +8,7 @@ ms.date: 12/15/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: quickstart
-ms.custom:
-  - contperf-fy21q2
-  - intro-quickstart
+ms.custom: intro-quickstart
 ---
 
 # Quickstart: Connect and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics with SQL Server Management Studio (SSMS)

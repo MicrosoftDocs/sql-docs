@@ -7,7 +7,6 @@ ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 f1_keywords:
   - "MSpeer_conflictdetectionconfigrequest_TSQL"
   - "MSpeer_conflictdetectionconfigrequest"

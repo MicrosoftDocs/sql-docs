@@ -7,7 +7,6 @@ ms.date: 08/25/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Visual Database Tools [SQL Server], Table Designer"
   - "Table Designer, designing tables"

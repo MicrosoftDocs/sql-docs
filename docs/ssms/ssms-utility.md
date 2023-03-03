@@ -7,7 +7,6 @@ ms.date: 07/24/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], opening"
   - "command prompt utilities [SQL Server], sqlwb"

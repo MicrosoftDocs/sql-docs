@@ -7,7 +7,6 @@ ms.date: "08/30/2017"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 helpviewer_keywords:
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"

@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.date: 12/10/2021
 ms.service: sql
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "binary collations [SQL Server]"
   - "expression-level collations [SQL Server]"

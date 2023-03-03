@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing SQL_VARIANT in a Memory-Optimized Table

@@ -7,7 +7,6 @@ ms.date: 05/03/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Local audit for SSMS usage and diagnostic data collection

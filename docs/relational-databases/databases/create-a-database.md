@@ -7,7 +7,6 @@ ms.date: "10/21/2021"
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "databases [SQL Server], creating"
   - "database creation [SQL Server], SQL Server Management Studio"

@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: how-to
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ---
 
 # Manage rolling upgrades of cloud applications by using SQL Database active geo-replication

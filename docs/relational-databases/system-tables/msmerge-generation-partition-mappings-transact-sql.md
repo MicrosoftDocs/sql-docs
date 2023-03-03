@@ -7,7 +7,6 @@ ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 f1_keywords:
   - "MSmerge_generation_partition_mappings_TSQL"
   - "MSmerge_generation_partition_mappings"

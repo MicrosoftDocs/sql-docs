@@ -7,7 +7,6 @@ ms.date: "10/20/2016"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "vs.debug.error.sqlde_accessdenied"
   - "vs.debug.error.sqlde_register_failed"

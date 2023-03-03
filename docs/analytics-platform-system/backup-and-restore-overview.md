@@ -8,7 +8,6 @@ ms.date: 01/19/2019
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # Backup and restore
 

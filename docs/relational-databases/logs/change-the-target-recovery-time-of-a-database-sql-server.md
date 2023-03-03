@@ -8,7 +8,6 @@ ms.date: 08/26/2022
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Change the target recovery time of a database (SQL Server)
 

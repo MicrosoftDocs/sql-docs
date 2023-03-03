@@ -8,7 +8,6 @@ ms.date: 08/30/2022
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: seo-lt-2019
 ---
 # Release Notes for Report Viewer controls for WebForms and WinForms of SSRS
 

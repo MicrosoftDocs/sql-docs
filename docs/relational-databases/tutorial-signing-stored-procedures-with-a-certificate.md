@@ -6,9 +6,7 @@ ms.author: "mathoma"
 ms.date: "08/23/2018"
 ms.service: sql
 ms.topic: quickstart
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "signing stored procedures tutorial [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

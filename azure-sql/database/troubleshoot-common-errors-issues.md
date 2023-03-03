@@ -9,9 +9,8 @@ ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: troubleshooting
 ms.custom:
-  - "seo-lt-2019"
-  - "OKR 11/2019"
-  - "sqldbrb=1"
+  - OKR 11/2019
+  - sqldbrb=1
 ---
 
 # Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance

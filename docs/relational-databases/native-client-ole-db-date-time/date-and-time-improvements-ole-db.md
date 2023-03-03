@@ -6,7 +6,6 @@ ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "date/time [OLE DB]"
   - "OLE DB, date/time improvements"

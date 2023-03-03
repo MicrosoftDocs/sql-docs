@@ -7,7 +7,6 @@ ms.date: 03/31/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: troubleshooting
-ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Collect data to troubleshoot Python and R scripts with SQL Server Machine Learning Services

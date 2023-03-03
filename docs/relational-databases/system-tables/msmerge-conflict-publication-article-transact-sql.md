@@ -7,7 +7,6 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 f1_keywords:
   - "MSmerge_conflict_publication_article_TSQL"
   - "MSmerge_conflict_publication_article"

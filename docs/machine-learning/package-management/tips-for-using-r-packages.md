@@ -8,7 +8,6 @@ ms.date: 08/06/2019
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: how-to
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Tips for using R packages

@@ -8,7 +8,6 @@ ms.date: 01/30/2023
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 ---
 # Use ring buffers to obtain health information about Always On availability groups
 

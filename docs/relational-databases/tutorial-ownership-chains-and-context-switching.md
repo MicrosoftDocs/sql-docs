@@ -6,9 +6,7 @@ ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: quickstart
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "context switching [SQL Server], tutorials"
   - "ownership chains [SQL Server]"

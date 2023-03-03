@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
 ms.custom:
-  - "seo-lt-2019 sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ---
 # Tutorial: Add an Azure SQL Database elastic pool to a failover group
 

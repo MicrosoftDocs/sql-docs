@@ -7,7 +7,6 @@ ms.date: "05/03/2022"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "proxies [SQL Server Agent], creating"
 monikerRange: ">= sql-server-2016"

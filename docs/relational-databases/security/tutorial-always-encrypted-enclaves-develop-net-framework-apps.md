@@ -8,7 +8,6 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
-ms.custom: event-tier1-build-2022
 monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves

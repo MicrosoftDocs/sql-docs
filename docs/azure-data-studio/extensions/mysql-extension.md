@@ -1,13 +1,12 @@
 ---
 title: MySQL extension
-description: Learn how to install the MySQL extension for Azure Data Studio. It enables you to connect to, query, and develop for MySQL databases hosted on-premises, on VMs, on other clouds or on Azure Database for MySQL - Flexible Server. 
+description: Learn how to install the MySQL extension for Azure Data Studio. It enables you to connect to, query, and develop for MySQL databases hosted on-premises, on VMs, on other clouds or on Azure Database for MySQL - Flexible Server.
 author: shreyaaithal
 ms.author: shaithal
 ms.reviewer: erinstellato
 ms.date: 10/12/2022
 ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: ignite-2022
 ---
 
 # MySQL extension (Preview)

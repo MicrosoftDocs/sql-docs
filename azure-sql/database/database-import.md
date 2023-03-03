@@ -9,9 +9,9 @@ ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: quickstart
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "mode-api"
+  - sqldbrb=1
+  - devx-track-azurepowershell
+  - mode-api
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Import a .bacpac file to a database in Azure SQL Database or Azure SQL Managed Instance

@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - "seo-lt-2019 sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ---
 # Remove a Transparent Data Encryption (TDE) protector using PowerShell
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

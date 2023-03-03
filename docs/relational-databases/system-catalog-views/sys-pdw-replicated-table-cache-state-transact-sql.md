@@ -7,7 +7,6 @@ ms.date: "07/03/2017"
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
 monikerRange: "=azure-sqldw-latest"

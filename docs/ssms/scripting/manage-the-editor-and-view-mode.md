@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], managing window behavior"
   - "workbench view modes [SQL Server Management Studio]"

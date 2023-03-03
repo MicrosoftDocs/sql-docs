@@ -6,7 +6,6 @@ ms.author: randolphwest
 ms.date: 01/26/2023
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "guide, transaction locking and row versioning"
   - "transaction locking and row versioning guide"

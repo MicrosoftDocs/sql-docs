@@ -8,9 +8,7 @@ ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - ignite-fall-2021
+ms.custom: ignite-fall-2021
 tags: azure-resource-manager
 ---
 # Automate management with the Windows SQL Server IaaS Agent extension

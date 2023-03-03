@@ -1,9 +1,9 @@
 ---
 author: apduvuri
 ms.author: apduvuri
+ms.date: 10/03/2022
 ms.service: dms
 ms.topic: include
-ms.date: 10/03/2022
 ---
 
 The Azure PostgreSQL migration extension for Azure Data Studio enables you to assess and get the right-sized Azure recommendations.

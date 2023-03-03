@@ -7,7 +7,6 @@ ms.date: "10/21/2021"
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "modifying data types"
   - "column data types [SQL Server]"

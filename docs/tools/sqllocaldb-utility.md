@@ -8,7 +8,6 @@ ms.date: 12/29/2022
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SqlLocalDB utility [SQL Server]"
   - "local database runtime utility"

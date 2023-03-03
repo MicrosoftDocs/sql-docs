@@ -8,7 +8,6 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 ---
 # Configure column encryption in-place using Always Encrypted with secure enclaves
 

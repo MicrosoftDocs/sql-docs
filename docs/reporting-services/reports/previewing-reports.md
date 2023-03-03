@@ -7,7 +7,6 @@ ms.date: 12/14/2018
 ms.service: reporting-services
 ms.subservice: reports
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 # Preview Reports in SQL Server Reporting Services (SSRS)
 

@@ -7,7 +7,6 @@ ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: filestream
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "FileTables [SQL Server], using with other features"
 ---

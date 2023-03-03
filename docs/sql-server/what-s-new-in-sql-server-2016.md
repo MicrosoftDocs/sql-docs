@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQL Server, what's new"
   - "SQL Server 2016 what's new"
   - "what's new [SQL Server]"
-keywords: "new sql server"
+keywords: new sql server
 monikerRange: ">= sql-server-2016"
 ---
 # What's new in SQL Server 2016

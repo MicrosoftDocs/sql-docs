@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Security Audit event category [SQL Server]"
   - "event classes [SQL Server], Security Audit event category"

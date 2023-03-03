@@ -7,7 +7,6 @@ ms.date: "11/11/2021"
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 f1_keywords:
   - "sql13.swb.executeprocedure.general.f1"
   - "sql13.swb.executeprocedure.f1"

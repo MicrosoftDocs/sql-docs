@@ -7,7 +7,6 @@ ms.author: randolphwest
 ms.date: 06/10/2022
 ms.service: sql-database
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 f1_keywords:
   - "dm_geo_replication_link_status"
   - "dm_geo_replication_link_status_TSQL"

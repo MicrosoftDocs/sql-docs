@@ -8,7 +8,6 @@ ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler)

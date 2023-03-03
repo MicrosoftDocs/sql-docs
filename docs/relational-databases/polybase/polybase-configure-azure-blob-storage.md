@@ -7,10 +7,6 @@ ms.date: 11/23/2021
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
-ms.custom:
-  - seo-dt-2019
-  - seo-lt-2019
-  - event-tier1-build-2022
 monikerRange: ">= sql-server-2016"
 ---
 # Configure PolyBase to access external data in Azure Blob Storage

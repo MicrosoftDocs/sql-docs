@@ -7,7 +7,6 @@ ms.date: "06/09/2021"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "query store [SQL Server], catalog views"
   - "catalog views [SQL Server], query store"

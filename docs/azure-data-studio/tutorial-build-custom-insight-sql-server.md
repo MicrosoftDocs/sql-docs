@@ -7,7 +7,6 @@ ms.reviewer: alayu
 ms.date: 08/26/2020
 ms.service: azure-data-studio
 ms.topic: tutorial
-ms.custom: seodec18
 ---
 
 # Tutorial: Build a custom insight widget

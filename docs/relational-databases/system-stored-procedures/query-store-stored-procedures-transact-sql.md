@@ -7,7 +7,6 @@ ms.date: "04/26/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "system stored procedures [SQL Server], query store"
   - "stored procedures [SQL Server], query store"

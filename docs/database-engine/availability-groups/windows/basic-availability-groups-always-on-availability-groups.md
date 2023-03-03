@@ -7,7 +7,6 @@ ms.date: "02/01/2018"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 ---
 # Basic Always On availability groups for a single database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,6 @@ ms.date: 10/25/2021
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 f1_keywords:
   - "sql13.swb.schemas.general.f1"
 helpviewer_keywords:

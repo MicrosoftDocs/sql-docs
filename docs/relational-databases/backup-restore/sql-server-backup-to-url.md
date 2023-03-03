@@ -7,7 +7,6 @@ ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 ---
 # SQL Server backup to URL for Microsoft Azure Blob Storage
 

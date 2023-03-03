@@ -8,7 +8,6 @@ ms.date: 08/28/2017
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Configure failover cluster instance - NFS - SQL Server on Linux
 

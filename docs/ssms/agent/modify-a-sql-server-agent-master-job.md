@@ -7,7 +7,6 @@ ms.date: "02/28/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "jobs [SQL Server Agent], modifying"
   - "jobs [SQL Server Agent], master jobs"

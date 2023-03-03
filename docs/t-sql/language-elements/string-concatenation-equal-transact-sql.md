@@ -7,7 +7,6 @@ ms.date: "12/07/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "concatenate strings"
   - "string concatenation"

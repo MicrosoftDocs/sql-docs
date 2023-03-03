@@ -6,7 +6,6 @@ ms.author: maghan
 ms.date: 11/10/2022
 ms.service: sql
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 apilocation: "sqluserinstance.dll"
 ---
 # SQL Server Express LocalDB Header and Version Information

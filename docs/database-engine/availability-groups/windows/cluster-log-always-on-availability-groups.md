@@ -7,7 +7,6 @@ ms.date: "06/14/2017"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 ---
 # Generate and analyze the CLUSTER.LOG for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

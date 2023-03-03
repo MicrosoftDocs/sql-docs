@@ -7,7 +7,6 @@ ms.date: "08/24/2016"
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "ports [SQL Server], listening on"
   - "listening [SQL Server], on ports"

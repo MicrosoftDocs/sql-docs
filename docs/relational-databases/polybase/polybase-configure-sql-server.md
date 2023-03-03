@@ -8,7 +8,6 @@ ms.date: 10/18/2022
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 ---
 

@@ -7,9 +7,7 @@ ms.date: 04/26/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 ---
 
 # How to: Install and Manage Feature Extensions

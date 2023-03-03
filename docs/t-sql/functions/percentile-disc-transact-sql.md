@@ -7,7 +7,6 @@ ms.date: "10/20/2015"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "event-tier1-build-2022"
 f1_keywords:
   - "PERCENTILE_DISC"
   - "PERCENTILE_DISC_TSQL"

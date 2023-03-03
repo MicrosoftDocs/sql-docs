@@ -7,7 +7,6 @@ ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "dm_cdc_errors_TSQL"
   - "dm_cdc_errors"

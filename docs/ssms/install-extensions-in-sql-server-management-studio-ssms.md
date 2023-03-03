@@ -8,9 +8,7 @@ ms.date: 07/29/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 keywords:
   - "extensions"
   - "vsix"

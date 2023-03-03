@@ -8,7 +8,6 @@ ms.date: 09/18/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Get diagnostic data after a SQL Server Management Studio (SSMS) crash

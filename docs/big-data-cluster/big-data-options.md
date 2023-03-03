@@ -9,7 +9,6 @@ ms.date: 10/05/2022
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver15"
 ---
 

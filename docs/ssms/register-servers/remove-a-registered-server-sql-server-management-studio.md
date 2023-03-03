@@ -8,7 +8,6 @@ ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "removing registered servers"
   - "deleting registered servers"

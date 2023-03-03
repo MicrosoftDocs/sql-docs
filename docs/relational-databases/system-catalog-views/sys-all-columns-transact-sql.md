@@ -7,7 +7,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "all_columns_TSQL"
   - "all_columns"

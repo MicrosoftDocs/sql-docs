@@ -8,7 +8,6 @@ ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Specify paths and optimization hints for selective XML indexes
 

@@ -7,7 +7,6 @@ ms.date: 03/13/2018
 ms.service: sql
 ms.subservice: ssms
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "templates [SQL Server], SQL Server Management Studio"
   - "source controls [SQL Server Management Studio], tutorials"

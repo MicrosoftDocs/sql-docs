@@ -7,9 +7,7 @@ ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-migration
+ms.custom: intro-migration
 ---
 # Migrate managed backup settings
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

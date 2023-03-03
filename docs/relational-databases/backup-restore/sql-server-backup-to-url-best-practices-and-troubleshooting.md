@@ -7,9 +7,6 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 ---
 # SQL Server back up to URL for Microsoft Azure Blob Storage best practices and troubleshooting
 

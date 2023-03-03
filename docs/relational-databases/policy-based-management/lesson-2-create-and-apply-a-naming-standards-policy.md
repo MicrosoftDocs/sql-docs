@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

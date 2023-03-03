@@ -8,7 +8,6 @@ ms.date: 03/31/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting
-ms.custom: contperf-fy21q1
 zone_pivot_groups: cs1-command-shell
 monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 ---

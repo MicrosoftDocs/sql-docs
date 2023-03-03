@@ -7,7 +7,7 @@ ms.date: "02/13/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-keywords: "master data services"
+keywords: master data services
 ---
 # Web Application Requirements (Master Data Services)
 

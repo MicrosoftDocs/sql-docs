@@ -9,7 +9,6 @@ ms.date: 12/13/2019
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure Data Studio

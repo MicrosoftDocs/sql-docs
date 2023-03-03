@@ -7,7 +7,6 @@ ms.date: 09/16/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # SQL Server Launchpad service configuration

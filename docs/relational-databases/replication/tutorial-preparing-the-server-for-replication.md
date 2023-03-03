@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: replication
 ms.topic: quickstart
 ms.custom:
-  - seo-lt-2019
   - intro-quickstart
   - updatefrequency5
 helpviewer_keywords:

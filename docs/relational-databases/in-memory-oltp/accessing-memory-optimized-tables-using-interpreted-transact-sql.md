@@ -7,7 +7,6 @@ ms.date: "05/31/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Accessing Memory-Optimized Tables Using Interpreted Transact-SQL

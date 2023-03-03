@@ -7,7 +7,6 @@ ms.date: "12/15/2021"
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "stored procedures [SQL Server], returning data"
   - "returning data from stored procedure"

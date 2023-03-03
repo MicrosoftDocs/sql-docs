@@ -8,7 +8,6 @@ ms.date: 12/18/2021
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "SQL Server Import and Export Wizard"
   - "starting SQL Server Import and Export Wizard"

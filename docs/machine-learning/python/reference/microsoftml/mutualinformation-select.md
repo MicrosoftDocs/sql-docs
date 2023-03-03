@@ -7,7 +7,11 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
-keywords: feature, selection, mutual, information
+keywords:
+  - feature
+  - selection
+  - mutual
+  - information
 ms.devlang: Python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---

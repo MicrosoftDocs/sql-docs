@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "github-actions-azure"
-  - "mode-other"
+  - github-actions-azure
+  - mode-other
 ---
 
 # Use GitHub Actions to connect to Azure SQL Database

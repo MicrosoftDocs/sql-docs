@@ -7,7 +7,6 @@ ms.author: randolphwest
 ms.date: "11/28/2022"
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current"

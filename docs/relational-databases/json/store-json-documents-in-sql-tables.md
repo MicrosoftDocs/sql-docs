@@ -7,7 +7,6 @@ ms.reviewer: jroth
 ms.date: 06/03/2020
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # Store JSON documents in SQL Server or SQL Database
 SQL Server and Azure SQL Database have native JSON functions that enable you to parse JSON documents using standard SQL language. You can store JSON documents in SQL Server or SQL Database and query JSON data as in a NoSQL database. This article describes the options for storing JSON documents in SQL Server or SQL Database.

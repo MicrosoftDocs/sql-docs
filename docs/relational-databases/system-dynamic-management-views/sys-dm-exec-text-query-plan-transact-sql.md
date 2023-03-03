@@ -7,7 +7,6 @@ ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "dm_exec_text_query_plan"
   - "sys.dm_exec_text_query_plan_TSQL"

@@ -1,22 +1,22 @@
 ---
-title: "sp_change_feed_table (Transact-SQL)"
-description: "The sp_change_feed_table system stored procedure provides the provision or deprovision flow status of Azure Synapse Link for SQL."
+title: "sp_help_change_feed_table (Transact-SQL)"
+description: "The sp_help_change_feed_table system stored procedure provides the provision or deprovision flow status of Azure Synapse Link for SQL."
 author: im-microsoft
 ms.author: imotiwala
 ms.reviewer: wiassaf
-ms.date: 02/03/2023
+ms.date: 03/01/2023
 ms.service: synapse-analytics
 ms.topic: "reference"
 f1_keywords:
-  - "sp_change_feed_table_TSQL"
-  - "sp_change_feed_table"
+  - "sp_help_change_feed_table_TSQL"
+  - "sp_help_change_feed_table"
 helpviewer_keywords:
-  - "sp_change_feed_table"
+  - "sp_help_change_feed_table"
 dev_langs:
   - "TSQL"
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
-# sp_change_feed_table (Transact-SQL)
+# sp_help_change_feed_table (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Provides the provision or deprovision status and information of the [Azure Synapse Link for SQL](../../sql-server/synapse-link/synapse-link-sql-server-change-feed.md) table group and table metadata. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
@@ -26,7 +26,7 @@ Provides the provision or deprovision status and information of the [Azure Synap
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ```syntaxsql  
-EXECUTE sys.sp_change_feed_table;
+EXECUTE sys.sp_help_change_feed_table;
 ```
 
 ## Arguments  

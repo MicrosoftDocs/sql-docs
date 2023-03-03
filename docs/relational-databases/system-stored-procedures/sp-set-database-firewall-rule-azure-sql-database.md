@@ -7,7 +7,6 @@ ms.author: vanto
 ms.date: "08/04/2017"
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 f1_keywords:
   - "sp_set_database_firewall_rule"
   - "sp_set_database_firewall_rule_TSQL"

@@ -1,7 +1,7 @@
 ---
 title: What's new? (Archive)
 titleSuffix: Azure SQL Managed Instance
-description: Learn about the new features and documentation improvements for Azure SQL Managed Instance. (Archive)
+description: Learn about the features and documentation improvements for Azure SQL Managed Instance made in previous years. (Archive)
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
@@ -9,19 +9,18 @@ ms.date: 02/27/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom:
-  - references_regions
+ms.custom: references_regions
 ---
 # What's new in Azure SQL Managed Instance? (Archive)
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/doc-changes-updates-release-notes-whats-new.md)
-> * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new.md)
+> * [Azure SQL Database](../database/doc-changes-updates-release-notes-whats-new-archive.md)
+> * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new-archive.md)
 
-This article summarizes older documentation changes associated with new features and improvements in the recent releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see the [overview](sql-managed-instance-paas-overview.md).
+This article summarizes older documentation changes associated with new features and improvements in the releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see the [overview](sql-managed-instance-paas-overview.md).
 
-Return to [What's new in Azure SQL Managed Instance?](doc-changes-updates-release-notes-whats-new.md).
+Return to [What's new in Azure SQL Managed Instance?](doc-changes-updates-release-notes-whats-new.md)
 
 ## 2021
 

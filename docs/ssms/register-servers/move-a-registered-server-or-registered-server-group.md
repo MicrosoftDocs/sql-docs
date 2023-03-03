@@ -7,7 +7,6 @@ ms.date: 03/07/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "moving registered server or server group"
   - "Registered Servers [SQL Server], server groups"

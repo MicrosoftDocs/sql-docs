@@ -7,7 +7,6 @@ ms.reviewer: erinstellato
 ms.date: 09/10/2019
 ms.service: azure-data-studio
 ms.topic: "tutorial"
-ms.custom: seodec18; seo-lt-2019
 ---
 
 # Tutorial: Enable the table space usage sample insight widget using Azure Data Studio

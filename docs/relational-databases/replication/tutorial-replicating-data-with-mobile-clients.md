@@ -8,8 +8,8 @@ ms.service: sql
 ms.subservice: replication
 ms.topic: quickstart
 ms.custom:
-  - seo-lt-2019
   - intro-quickstart
+  - updatefrequency5
 helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

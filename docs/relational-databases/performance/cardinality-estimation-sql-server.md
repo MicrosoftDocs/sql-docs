@@ -8,7 +8,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "cardinality estimator"
   - "CE (cardinality estimator)"

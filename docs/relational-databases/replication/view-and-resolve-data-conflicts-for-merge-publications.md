@@ -7,7 +7,7 @@ ms.date: "11/20/2018"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], viewing conflicts"
   - "viewing conflict information"

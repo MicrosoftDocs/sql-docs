@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: conceptual
 ms.custom:
-  - "fasttrack-edit"
-  - "sqldbrb=1"
+  - fasttrack-edit
+  - sqldbrb=1
 ---
 # Azure SQL Database and Azure Synapse Analytics connectivity architecture
 

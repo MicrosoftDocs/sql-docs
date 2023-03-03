@@ -7,7 +7,7 @@ ms.date: "11/20/2018"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rep.configdistwizard.distdbproperties.f1"
   - "sql13.rep.configdistwizard.distproperties.general.f1"

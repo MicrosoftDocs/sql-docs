@@ -9,7 +9,6 @@ ms.date: 09/27/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
-ms.custom: seodec18
 helpviewer_keywords:
   - "Linux, AD authentication"
   - "Linux, Active Directory authentication"

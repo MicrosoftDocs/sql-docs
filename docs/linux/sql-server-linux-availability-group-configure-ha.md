@@ -8,7 +8,6 @@ ms.date: 08/24/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Configure SQL Server Always On Availability Group for high availability on Linux
 

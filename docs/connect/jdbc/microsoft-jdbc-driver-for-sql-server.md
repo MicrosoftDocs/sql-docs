@@ -7,7 +7,6 @@ ms.date: 12/10/2021
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 ---
 # Microsoft JDBC Driver for SQL Server
 

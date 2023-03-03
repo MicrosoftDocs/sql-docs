@@ -8,7 +8,6 @@ ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: contperf-fy21q3
 f1_keywords:
   - "dm_os_wait_stats_TSQL"
   - "dm_os_wait_stats"

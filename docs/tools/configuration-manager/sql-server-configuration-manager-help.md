@@ -7,7 +7,6 @@ ms.date: "02/01/2018"
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Server Configuration Manager, help"
 monikerRange: ">=sql-server-2016"

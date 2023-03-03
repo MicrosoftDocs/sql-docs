@@ -7,6 +7,7 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "modifying replication security settings"
   - "replication [SQL Server], security"

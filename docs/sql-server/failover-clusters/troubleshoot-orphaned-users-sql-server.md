@@ -7,7 +7,6 @@ ms.date: "07/14/2016"
 ms.service: sql
 ms.subservice: high-availability
 ms.topic: troubleshooting
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "orphaned users [SQL Server]"
   - "logins [SQL Server], orphaned users"

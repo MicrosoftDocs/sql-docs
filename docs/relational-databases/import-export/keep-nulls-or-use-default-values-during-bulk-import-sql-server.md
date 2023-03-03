@@ -7,7 +7,6 @@ ms.date: "09/20/2016"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "bulk importing [SQL Server], null values"
   - "bulk importing [SQL Server], default values"

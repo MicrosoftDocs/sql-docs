@@ -7,7 +7,6 @@ ms.date: "03/05/2017"
 ms.service: sql
 ms.subservice: xevents
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Trace, extended events equivalents"
   - "extended events [SQL Server], SQL Trace equivalents"

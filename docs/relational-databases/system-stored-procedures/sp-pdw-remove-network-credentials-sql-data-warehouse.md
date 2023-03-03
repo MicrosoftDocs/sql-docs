@@ -7,7 +7,6 @@ ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"

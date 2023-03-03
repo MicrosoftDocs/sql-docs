@@ -7,6 +7,7 @@ ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Publishers [SQL Server replication], information scripts"
   - "Distributors [SQL Server replication], information scripts"

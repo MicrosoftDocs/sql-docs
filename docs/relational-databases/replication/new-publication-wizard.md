@@ -7,6 +7,7 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.swb.dbpublishin"
   - "sql13.swb.dbpublishingwizard.choosetables.f1"

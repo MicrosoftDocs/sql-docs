@@ -8,8 +8,10 @@ ms.date: 12/14/2022
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
-keywords: install ssdt, download ssdt, latest ssdt
+keywords:
+  - install ssdt
+  - download ssdt
+  - latest ssdt
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 

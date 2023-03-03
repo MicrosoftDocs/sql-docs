@@ -7,7 +7,6 @@ ms.date: "07/11/2017"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "Resource Governor, classifier function create"
   - "classifier function [SQL Server], test"

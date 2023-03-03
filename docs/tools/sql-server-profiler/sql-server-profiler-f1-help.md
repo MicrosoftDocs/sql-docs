@@ -8,7 +8,6 @@ ms.date: 07/07/2017
 ms.service: sql
 ms.subservice: profiler
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 ---
 
 # SQL Server Profiler dialog boxes

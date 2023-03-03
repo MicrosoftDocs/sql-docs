@@ -9,7 +9,7 @@ ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords:
   - "data collection [SQL Server]"
-keywords: "Data Collection"
+keywords: Data Collection
 ---
 # Data Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

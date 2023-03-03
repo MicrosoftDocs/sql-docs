@@ -9,10 +9,10 @@ ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom:
-  - "contperf-fy21q1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
-  - "mode-ui"
+  - contperf-fy21q1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
+  - mode-ui
 ---
 # Quickstart: Create a single database - Azure SQL Database
 

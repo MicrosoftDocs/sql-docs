@@ -8,7 +8,6 @@ ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "identifiers [XML schema collections]"
   - "XML schema collections [SQL Server], limitations"

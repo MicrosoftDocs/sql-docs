@@ -8,7 +8,6 @@ ms.date: "08/10/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "GRANT statement, XML schema collections"
   - "XML schema collections [SQL Server], permissions"

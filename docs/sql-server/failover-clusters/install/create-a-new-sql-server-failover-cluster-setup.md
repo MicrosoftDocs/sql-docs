@@ -7,7 +7,6 @@ ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "adding nodes"
   - "failover clustering [SQL Server], creating clusters"

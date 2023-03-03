@@ -6,7 +6,6 @@ ms.author: "randolphwest"
 ms.date: 01/09/2019
 ms.service: sql
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "post-migration validation and optimization"
   - "guide, post-migration validation and optimization"

@@ -7,6 +7,7 @@ ms.date: "08/29/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "heterogeneous database replication, non-SQL Server Publishers"
   - "non-SQL Server Publishers"

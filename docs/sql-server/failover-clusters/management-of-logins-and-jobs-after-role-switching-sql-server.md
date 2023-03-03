@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: high-availability
 ms.topic: how-to
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "role switching [SQL Server]"
 ---

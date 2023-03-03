@@ -7,9 +7,7 @@ ms.reviewer: "vanto"
 ms.date: "03/04/2022"
 ms.service: sql
 ms.topic: conceptual
-ms.custom:
-  - seo-dt-2019
-  - intro-overview
+ms.custom: intro-overview
 helpviewer_keywords:
   - "change data capture, about"
   - "change data capture"

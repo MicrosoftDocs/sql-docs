@@ -7,6 +7,7 @@ ms.date: "01/22/2016"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "deprecated features [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"

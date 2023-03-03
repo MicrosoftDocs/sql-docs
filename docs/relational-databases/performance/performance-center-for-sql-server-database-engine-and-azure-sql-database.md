@@ -7,7 +7,6 @@ ms.date: "09/08/2022"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 f1_keywords:
   - "Performance (SQL Server)"
   - "Performance (SQL Database)"

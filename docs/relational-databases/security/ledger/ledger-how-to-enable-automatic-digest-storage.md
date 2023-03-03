@@ -8,7 +8,6 @@ ms.date: 07/25/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-ms.custom: event-tier1-build-2022
 zone_pivot_groups: as1-azuresql-sql
 monikerRange: "= azuresqldb-current"
 ---

@@ -7,9 +7,7 @@ ms.date: 08/06/2020
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom:
-  - contperf-fy20q4
-  - intro-installation
+ms.custom: intro-installation
 monikerRange: "=sql-server-2016"
 ---
 # Install SQL Server 2016 R Services

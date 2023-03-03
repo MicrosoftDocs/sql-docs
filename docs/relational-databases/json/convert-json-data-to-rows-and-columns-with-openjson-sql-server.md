@@ -7,7 +7,6 @@ ms.reviewer: jroth
 ms.date: 06/03/2020
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "OPENJSON"
   - "JSON, importing"

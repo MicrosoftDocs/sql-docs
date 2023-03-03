@@ -8,7 +8,6 @@ ms.date: "08/19/2016"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "deprecated features [full-text search]"
   - "full-text search [SQL Server], deprecated features"

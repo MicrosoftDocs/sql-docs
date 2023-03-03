@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Create New Policy or Open Policy Dialog Box, Description Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

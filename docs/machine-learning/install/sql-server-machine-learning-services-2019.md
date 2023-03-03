@@ -7,7 +7,6 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver15"
 ---
 # SQL Server on Windows: Isolation changes for Machine Learning Services

@@ -8,7 +8,6 @@ ms.date: 06/28/2021
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # SQL Server Profiler

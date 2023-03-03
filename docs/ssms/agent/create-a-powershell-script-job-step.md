@@ -7,7 +7,6 @@ ms.date: "01/20/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "PowerShell [SQL Server], job steps"
   - "jobs [SQL Server Agent], PowerShell"

@@ -7,6 +7,7 @@ ms.date: "11/20/2018"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "monitoring performance [SQL Server replication], about monitoring replication"
   - "transactional replication, monitoring"

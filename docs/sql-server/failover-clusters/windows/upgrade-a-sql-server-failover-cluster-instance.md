@@ -7,7 +7,6 @@ ms.date: "11/21/2019"
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "upgrading failover cluster instances"
   - "clusters [SQL Server], upgrading"

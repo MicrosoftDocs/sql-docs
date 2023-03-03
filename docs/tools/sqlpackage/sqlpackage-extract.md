@@ -51,7 +51,7 @@ SqlPackage /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" \
 
 
 # example extract to create a schema-only .dacpac file connecting using Azure Active Directory universal authentication
-SqlPackage /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" /UniversalAuthentication=True \
+SqlPackage /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" /UniversalAuthentication:True \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 

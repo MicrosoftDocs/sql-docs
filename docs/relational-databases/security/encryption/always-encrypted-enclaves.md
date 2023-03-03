@@ -8,9 +8,6 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 ---
 # Always Encrypted with secure enclaves
 

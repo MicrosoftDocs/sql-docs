@@ -34,7 +34,7 @@ Private endpoints to Azure SQL Managed Instance allow you to implement important
 
 The benefits of using private endpoints over a VNet-local or public endpoint include:
 
-- IP address predictability: a private endpoint to Azure SQL Managed Instance is assigned a fixed IP address from its subnet's address range. This IP address remains static even if the IP address of the VNet-local endpoint changes, as discussed in [the frequently asked questions](frequently-asked-questions-faq.md#can-my-managed-instance-have-a-static-ip-address).
+- IP address predictability: a private endpoint to Azure SQL Managed Instance is assigned a fixed IP address from its subnet's address range. This IP address remains static even if the IP addresses of VNet-local and public endpoints change.
 - Granular network access: a private endpoint is only visible inside its virtual network.
 - Strong network isolation: In a peering scenario, peered virtual networks establish two-way connectivity, while private endpoints are unidirectional and don't expose network resources inside their network to Azure SQL Managed Instance.
 - Avoiding address overlap: peering multiple virtual networks requires careful IP space allocation and can pose a problem when address spaces overlap.

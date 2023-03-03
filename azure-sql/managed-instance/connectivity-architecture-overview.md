@@ -126,31 +126,23 @@ Learn more about private endpoints and how to configure them in [Azure Private L
 
 ## Virtual cluster connectivity architecture
 
-## [Current architecture](#tab/current)
-
 Let's take a closer look at the connectivity architecture of SQL Managed Instance. The following diagram shows the conceptual layout of the virtual cluster:
+
+## [Current architecture](#tab/current)
 
 :::image type="content" source="media/connectivity-architecture-overview/3-connectivity-architecture-diagram-virtual-cluster.png" border="false" alt-text="Diagram that shows the virtual cluster connectivity architecture for Azure SQL Managed Instance after November 2022.":::
 
-Clients connect to SQL Managed Instance by using a host name that has the form `<mi_name>.<dns_zone>.database.windows.net`. The host name resolves to a private IP address, although it's registered in a public Domain Name System (DNS) zone and is publicly resolvable.
-
-This private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to a SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name as seen in the connection string to redirect traffic to the correct SQL engine service.
-
-The value for `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster.
-
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
-
-Let's take a closer look at the connectivity architecture of SQL Managed Instance. The following diagram shows the conceptual layout of the virtual cluster:
 
 :::image type="content" source="media/connectivity-architecture-overview/03-connectivity-architecture-virtual-cluster.png" border="false" alt-text="Diagram that shows the virtual cluster connectivity architecture for Azure SQL Managed Instance before November 2022.":::
 
-Clients connect to SQL Managed Instance by using a host name that has the form `<mi_name>.<dns_zone>.database.windows.net`. The host name resolves to a private IP address, although it's registered in a public Domain Name System (DNS) zone and is publicly resolvable.
-
-The private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to the SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name to redirect traffic to the correct SQL engine service.
-
-The value for `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster.s
-
 ---
+
+VNet-local endpoint's domain name resolves to the private IP address of an internal load balancer. Although this domain name is registered in a public Domain Name System (DNS) zone and is publicly resolvable, its IP address belongs to the subnet's address range and can by default only be reached from inside its virtual network.
+
+The load balancer directs traffic to a SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name as seen in the connection string to redirect traffic to the correct SQL engine service.
+
+The value for `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster.
 
 ## Service-aided subnet configuration
 

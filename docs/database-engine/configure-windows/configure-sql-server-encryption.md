@@ -118,9 +118,9 @@ In these environments, if you're using the automatically generated self-signed c
 - Since you now understand the reason for the flag, you can ignore the message (not recommended).
 - Upgrade to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] or a later version, that uses a stronger hash algorithm (SHA256) for self-signed certificates.
 
-### PowerShell script to create self-signed certificate for SQL Server
+### SQL Server self Signed Certificate using Windows OS store
 
-The following code snippet can be used to create a self-signed certificate on a computer running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The certificate meets requirements for encryption for a stand-alone [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance and is saved in the local computer's certificate store (PowerShell must be launched as an administrator):
+The following powershell code snippet can be used to create a self-signed certificate on a windows server running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The certificate meets requirements for encryption for a stand-alone [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance and is saved in the local computer's certificate store (PowerShell must be launched as an administrator):
 
 ```powershell
 New-SelfSignedCertificate -Type SSLServerAuthentication -Subject "CN=$env:COMPUTERNAME" `
@@ -129,3 +129,10 @@ New-SelfSignedCertificate -Type SSLServerAuthentication -Subject "CN=$env:COMPUT
 -NotAfter (Get-Date).AddMonths(36) -KeySpec KeyExchange -Provider "Microsoft RSA SChannel Cryptographic Provider" `
 -CertStoreLocation "cert:\LocalMachine\My"
 ```
+In a nutshell there are three methods to configure network encryption in SQL Server:
+
+SQL Server Generated Self Signed Certificate
+SQL Server using self Signed Certificate using Windows OS store
+SQL Server using TLS based Certificate
+
+

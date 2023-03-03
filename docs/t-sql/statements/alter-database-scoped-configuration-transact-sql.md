@@ -496,7 +496,7 @@ Enables or disables uploading ledger digests to Azure Blob Storage. To enable up
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
-Causes SQL Server to generate a Showplan XML fragment with the ParameterRuntimeValue when using the lightweight query execution statistics profiling infrastructure or executing the `sys.dm_exec_query_statistics` DMV while troubleshooting long running queries.
+Causes SQL Server to generate a Showplan XML fragment with the ParameterRuntimeValue when using the lightweight query execution statistics profiling infrastructure or executing the `sys.dm_exec_query_statistics_xml` DMV while troubleshooting long running queries.
 
 > [!IMPORTANT]  
 > The FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION database scoped configuration option isn't meant to be enabled continuously in a production environment, but only for time-limited troubleshooting purposes. Using this database scoped configuration option will introduce additional and possibly significant CPU and memory overhead as we will create a Showplan XML fragment with runtime parameter information, whether the `sys.dm_exec_query_statistics_xml` DMV or lightweight query execution statistics profile infrastructure is enabed or not.

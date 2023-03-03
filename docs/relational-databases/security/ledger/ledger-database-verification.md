@@ -26,7 +26,7 @@ Because the ledger verification recomputes all of the hashes for transactions in
 You accomplish database verification through two stored procedures, depending on whether you [use automatic digest storage](#database-verification-that-uses-automatic-digest-storage) or you [manually manage digests](#database-verification-that-uses-manual-digest-storage).
 
 > [!NOTE]
-> The database option [ALLOW_SNAPSHOT_ISOLATION](../../../t-sql/statements/alter-database-transact-sql-set-options?view=sql-server-ver16#allow_snapshot_isolation--on--off-) has to be enabled on the database before you can run the verifcation stored procedures.
+> The database option [ALLOW_SNAPSHOT_ISOLATION](../../../t-sql/statements/alter-database-transact-sql-set-options?view=sql-server-ver16#allow_snapshot_isolation--on--off-&preserve-view=true) has to be enabled on the database before you can run the verifcation stored procedures.
 
 ### Database verification that uses automatic digest storage
 

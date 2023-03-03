@@ -125,42 +125,38 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
       }
     ```
 
-1. Add the following code to the `Program.cs` file above the line of code that reads `var app = builder.Build();`. This code performs the following steps:
+1. Add the following code to the `Program.cs` file above the line of code that reads `var app = builder.Build();`. This code performs the following configurations:
 
     * Retrieves the passwordless database connection string from the `appsettings.json` file for local development, or from the environment variables for hosted production scenarios.
     * Registers the Entity Framework Core `DbContext` class with the .NET dependency injection container.
-
-    ```csharp
-    var connection = String.Empty;
-    if (builder.Environment.IsDevelopment())
-    {
-        builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.json");
-        connection = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
-    }
-    else
-    {
-        connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
-    }
     
-    builder.Services.AddDbContext<MyDatabaseContext>(options =>
-    options.UseSqlServer(connection));
-    ```
+        ```csharp
+        var connection = String.Empty;
+        if (builder.Environment.IsDevelopment())
+        {
+            builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.json");
+            connection = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
+        }
+        else
+        {
+            connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+        }
+        
+        builder.Services.AddDbContext<PersonDbContext>(options =>
+            options.UseSqlServer(connection));
+        ```
 
-1) Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
-
-    * Retrieves the passwordless connection string from the app settings
-    * Creates an endpoint to retrieve the Person records stored in the database
-    * Creates an endpoint to add new Person records to the database
+1) Add the following endpoints to the bottom of the `Program.cs` file above `app.Run()` to retrieve and add entities in the database using the `PersonDbContext` class.
 
     ```csharp
-    app.MapGet("/Person", (MyDatabaseContext context) =>
+    app.MapGet("/Person", (PersonDbContext context) =>
     {
         return context.Person.ToList(); ;
     })
     .WithName("GetPersons")
     .WithOpenApi();
     
-    app.MapPost("/Person", (Person person, MyDatabaseContext context) =>
+    app.MapPost("/Person", (Person person, PersonDbContext context) =>
     {
         context.Add(person);
         context.SaveChanges();
@@ -178,9 +174,9 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
-    public class MyDatabaseContext : DbContext
+    public class PersonDbContext : DbContext
     {
-        public MyDatabaseContext(DbContextOptions<MyDatabaseContext> options)
+        public PersonDbContext(DbContextOptions<PersonDbContext> options)
             : base(options)
         {
         }
@@ -206,7 +202,7 @@ To create a database using Entity Framework Core you must use a migration. Entit
     dotnet ef database update
     ```
 
-    The Entity Framework Core tooling will create a database in Azure with the schema defined by your `PersonDbContext` class.
+    The Entity Framework Core tooling will create the database schema in Azure defined by the `PersonDbContext` class.
 
 ## Test the app locally
 

@@ -104,15 +104,36 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
 
 1) Add the `ConnectionStrings` section to the `appsettings.json` file that matches the following code. Remember to update the `<your database-server-name>` and `<your-database-name>` placeholders.
 
-    The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which enables Entity Framework Core to use `DefaultAzureCredential` to connect to Azure services. This functionality is implemented internally by the `Microsoft.Data.SqlClient` library. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
-    
+    The passwordless connection string includes a configuration value of `Authentication=Active Directory Default`, which enables Entity Framework Core to use `DefaultAzureCredential` to connect to Azure services. When the app runs locally, it authenticates with the user you're signed into Visual Studio with. Once the app deploys to Azure, the same code discovers and applies the managed identity that is associated with the hosted app, which you'll configure later.
+
     > [!NOTE]
     > Passwordless connection strings are safe to commit to source control, since they do not contain any secrets such as usernames, passwords, or access keys.
-    
+
     ```json
       "ConnectionStrings": {
         "AZURE_SQL_CONNECTIONSTRING": "Data Source=<your database-server-name>.database.windows.net; Initial Catalog=<your-database-name>; Authentication=Active Directory Default; Encrypt=True;"
       }
+    ```
+
+1. Add the following code to the `Program.cs` file above the line of code that reads `var app = builder.Build();`. This code performs the following steps:
+
+    * Retrieves the passwordless database connection string from the `appsettings.json` file for local development, or from the environment variables for hosted production scenarios.
+    * Registers the Entity Framework Core `DbContext` class with the .NET dependency injection container.
+
+    ```csharp
+    var connection = String.Empty;
+    if (builder.Environment.IsDevelopment())
+    {
+        builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.json");
+        connection = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
+    }
+    else
+    {
+        connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+    }
+    
+    builder.Services.AddDbContext<MyDatabaseContext>(options =>
+    options.UseSqlServer(connection));
     ```
 
 1) Add the following sample code to the bottom of the `Program.cs` file above `app.Run()`. This code performs the following important steps:
@@ -143,8 +164,18 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
     ```csharp
     public class Person
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+    public int Id { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+
+    public class MyDatabaseContext : DbContext
+    {
+        public MyDatabaseContext(DbContextOptions<MyDatabaseContext> options)
+            : base(options)
+        {
+        }
+    
+        public DbSet<Person> Person { get; set; }
     }
     ```
 

@@ -19,7 +19,7 @@ ms.topic: how-to
 
 The default, VNet-local endpoint deployed with each Azure SQL Managed Instance behaves as if a computer running the service were physically attached to your virtual network. It allows near-complete traffic control via route tables, network security groups, DNS resolution, firewalls, and similar mechanisms. You can also use this endpoint to involve your instance in scenarios requiring connectivity on ports other than 1433, such as linked server, failover groups, and MI Link. However, great flexibility that this endpoint provides comes with complexity in configuring it for particular scenarios, especially those involving multiple virtual networks or tenants.
 
-By contrast, setting up a private endpoint is like extending a physical network cable from a computer running Azure SQL Managed Instance to another virtual network. This connectivity path is established virtually via Azure Private Link technology. It only allows connections in one direction: from the private endpoint to Azure SQL Managed Instance; and it only carries traffic on port 1433 (the standard TDS traffic port). In this way, your Azure SQL Managed Instance becomes available in a different virtual network without having to set up network peering, turning on the instance's public endpoint, and securing the link.
+By contrast, setting up a private endpoint is like extending a physical network cable from a computer running Azure SQL Managed Instance to another virtual network. This connectivity path is established virtually via Azure Private Link technology. It only allows connections in one direction: from the private endpoint to Azure SQL Managed Instance; and it only carries traffic on port 1433 (the standard TDS traffic port). In this way, your Azure SQL Managed Instance becomes available in a different virtual network without having to set up network peering or turn on the instance's public endpoint.
 
 For a more detailed discussion of the different types of endpoints supported by Azure SQL Managed Instance, see [Communication overview](connectivity-architecture-overview.md#communication-overview).
 
@@ -34,11 +34,11 @@ Private endpoints to Azure SQL Managed Instance allow you to implement important
 
 The benefits of using private endpoints over a VNet-local or public endpoint include:
 
+- IP address predictability: a private endpoint to Azure SQL Managed Instance is assigned a fixed IP address from its subnet's address range. This IP address remains static even if the IP address of the VNet-local endpoint changes, as discussed in [the frequently asked questions](frequently-asked-questions-faq.md#can-my-managed-instance-have-a-static-ip-address).
 - Granular network access: a private endpoint is only visible inside its virtual network.
 - Strong network isolation: In a peering scenario, peered virtual networks establish two-way connectivity, while private endpoints are unidirectional and don't expose network resources inside their network to Azure SQL Managed Instance.
 - Avoiding address overlap: peering multiple virtual networks requires careful IP space allocation and can pose a problem when address spaces overlap.
 - Conserving IP address real estate: a private endpoint only consumes one IP address from its subnet's address space.
-- IP address predictability: private endpoints to Azure SQL Managed Instance are assigned fixed IP addresses unique inside their subnets.
 
 There are a couple of caveats:
 
@@ -93,6 +93,8 @@ After you create a private endpoint to Azure SQL Managed Instance, you'll need t
 To set up domain name resolution for private endpoint to an instance whose FQDN is `<instance-name>.<dns-zone>.database.windows.net`, we'll consider two different virtual networks:
 - Instance virtual network: hosts Azure SQL Managed Instance.
 - Endpoint virtual network: hosts the private endpoint to the Azure SQL Managed Instance.
+
+Steps to set up domain name resolution differ depending on whether the instance virtual network is the same as (or peered with) the endpoint virtual network, or those are two entirely separate networks. Follow the appropriate steps below.
 
 #### [Separate virtual networks](#tab/separate-vnets)
 

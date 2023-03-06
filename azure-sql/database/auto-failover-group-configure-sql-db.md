@@ -9,9 +9,7 @@ ms.date: 03/01/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: how-to
-ms.custom:
-  - devx-track-azurecli
-  - azure-sql-split
+ms.custom: devx-track-azurecli, azure-sql-split, devx-track-azurepowershell
 zone_pivot_groups: azure-sql-deployment-option-single-elastic
 ---
 # Configure an auto-failover group for Azure SQL Database

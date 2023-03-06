@@ -22,7 +22,7 @@ This quickstart follows the recommended passwordless approach to connect to the 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
 * A SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](/azure/azure-sql/database/single-database-create-quickstart).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
-* [Visual Studio](https://visualstudio.microsoft.com/vs/) or later.
+* [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 
 ## Configure the database

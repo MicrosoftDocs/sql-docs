@@ -24,7 +24,7 @@ dev_langs:
 
 # IS [NOT] DISTINCT FROM (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Compares the equality of two expressions and guarantees a true or false result, even if one or both operands are NULL.
 

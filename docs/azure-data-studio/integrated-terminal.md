@@ -7,6 +7,7 @@ ms.reviewer: "maghan"
 ms.date: "09/24/2018"
 ms.service: azure-data-studio
 ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Integrated Terminal

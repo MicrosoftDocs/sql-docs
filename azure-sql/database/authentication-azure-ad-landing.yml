@@ -73,9 +73,7 @@ landingContent:
             url: authentication-aad-directory-readers-role-tutorial.md
           - text: Security in Azure SQL Managed Instance using Azure AD server principals (logins)
             url: ../managed-instance/aad-security-configure-tutorial.md
-          - text: Enable Azure AD authentication for SQL Server on Azure VMs
-            url: ../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
-
+          
 
   # Card
   - title: Azure AD authentication how-to guides
@@ -91,16 +89,18 @@ landingContent:
 
 
   # Card 
-  - title: Azure AD authentication for SQL Server
+  - title: Azure AD authentication for SQL Server and SQL Server on Azure Virtual Machines
     linkLists:
       - linkListType: concept
         links:
           - text: Azure AD authentication for SQL Server overview
             url: /sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview
+          - text: Security considerations for SQL Server on Azure Virtual Machines
+            url: ../virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview
 
 
   # Card
-  - title: Azure AD authentication for SQL Server tutorials
+  - title: Azure AD authentication for SQL Server and SQL Server on Azure Virtual Machines tutorials
     linkLists:
       - linkListType: tutorial
         links:
@@ -110,6 +110,8 @@ landingContent:
             url: /sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-automation-setup-tutorial
           - text: Linked server for SQL Server with Azure Active Directory authentication
             url: /sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-linked-server
+          - text: Enable Azure AD authentication for SQL Server on Azure VMs
+            url: ../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
 
 
   # Card 

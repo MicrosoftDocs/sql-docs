@@ -7,6 +7,7 @@ ms.reviewer: alayu
 ms.date: 06/01/2020
 ms.service: azure-data-studio
 ms.topic: tutorial
+ms.custom: updatefrequency5
 ---
 
 # Tutorial: Add the *five slowest queries* sample widget to the database dashboard

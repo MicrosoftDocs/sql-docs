@@ -7,6 +7,7 @@ ms.reviewer: erinstellato
 ms.date: 09/10/2019
 ms.service: azure-data-studio
 ms.topic: "tutorial"
+ms.custom: updatefrequency5
 ---
 
 # Tutorial: Enable the table space usage sample insight widget using Azure Data Studio

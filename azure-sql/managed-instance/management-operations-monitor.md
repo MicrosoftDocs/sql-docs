@@ -9,7 +9,6 @@ ms.date: 09/03/2020
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
 ---
 
 # Monitoring Azure SQL Managed Instance management operations

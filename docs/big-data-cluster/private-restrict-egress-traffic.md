@@ -8,7 +8,7 @@ ms.date: 06/20/2022
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment, devx-track-azurecli
 ---
 
 # Restrict egress traffic from big data clusters in Azure Kubernetes Service (AKS) private cluster

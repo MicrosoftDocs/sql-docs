@@ -8,7 +8,6 @@ ms.date: 03/06/2017
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Considerations for Replaying Traces (SQL Server Profiler)

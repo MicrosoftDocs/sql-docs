@@ -113,7 +113,7 @@ RESTORE LOG AdventureWorks
    FROM AdventureWorksBackups   
    WITH FILE = 4,  
    RECOVERY,   
-   STOPATMARK = 'ListPriceUpdate';  
+   STOPATMARK = 'UPDATE Product list prices';  
 ```  
   
 ## Forcing a Mark to Spread to Other Servers  

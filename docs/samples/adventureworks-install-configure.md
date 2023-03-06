@@ -7,7 +7,6 @@ ms.date: 11/12/2021
 ms.service: sql
 ms.subservice: samples
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # AdventureWorks sample databases
 

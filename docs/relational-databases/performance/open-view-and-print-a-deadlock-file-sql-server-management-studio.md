@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "deadlocks [SQL Server], printing files"
   - "deadlocks [SQL Server], opening files"

@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "proxies [SQL Server Agent], modifying"
   - "modifying SQL Server Agent proxy"

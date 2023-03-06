@@ -8,7 +8,6 @@ ms.date: "01/06/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "DBCC_SHRINKDATABASE_TSQL"
   - "DBCC SHRINKDATABASE"

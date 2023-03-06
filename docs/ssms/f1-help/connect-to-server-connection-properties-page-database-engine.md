@@ -7,7 +7,6 @@ ms.date: 08/14/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.connecttoce.connectionproperties.f1"
   - "sql13.swb.connecttosqlserver.connectionproperties.f1"

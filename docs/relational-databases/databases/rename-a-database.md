@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.date: "04/06/2022"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "databases [SQL Server], renaming"
   - "renaming databases"

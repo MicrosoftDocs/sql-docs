@@ -8,7 +8,6 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: overview
-ms.custom: seo-lt-2019
 editor: monicar
 tags: azure-service-management
 ---

@@ -7,9 +7,7 @@ ms.date: "12/21/2020"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: quickstart
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
+ms.custom: intro-quickstart
 ---
 
 # Quickstart: SQL backup and restore to Azure Blob Storage

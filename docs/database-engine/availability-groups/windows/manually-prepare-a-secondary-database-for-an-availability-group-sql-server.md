@@ -7,7 +7,6 @@ ms.date: "07/25/2017"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seodec18
 f1_keywords:
   - "sql13.swb.availabilitygroup.preparedbs.f1"
   - "sql13.swb.availabilitygroup.configsecondarydbs.f1"

@@ -7,7 +7,9 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
-keywords: loss, hinge
+keywords:
+  - loss
+  - hinge
 ms.devlang: Python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---

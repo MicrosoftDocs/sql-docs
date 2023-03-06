@@ -8,9 +8,7 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom:
-  - contperf-fy21q1
-  - engagement-fy23
+ms.custom: engagement-fy23
 monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 ---
 

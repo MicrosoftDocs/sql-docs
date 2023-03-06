@@ -8,9 +8,7 @@ ms.date: 02/02/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom:
-  - "references_regions"
-  - "event-tier1-build-2022"
+ms.custom: references_regions
 f1_keywords:
   - "DATABASE_TSQL"
   - "DATABASE"

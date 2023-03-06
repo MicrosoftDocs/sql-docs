@@ -7,7 +7,6 @@ ms.date: "04/12/2019"
 ms.service: sql
 ms.subservice: wmi
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "permissions [WMI]"
   - "connection strings [WMI]"

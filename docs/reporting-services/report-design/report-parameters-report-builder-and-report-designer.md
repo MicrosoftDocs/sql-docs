@@ -7,7 +7,6 @@ ms.date: 12/06/2018
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 
 # Paginated report parameters (Report Builder)

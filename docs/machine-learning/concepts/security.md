@@ -7,9 +7,6 @@ ms.date: 07/14/2020
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: conceptual
-ms.custom:
-  - contperf-fy21q1
-  - seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Security architecture for the extensibility framework in SQL Server Machine Learning Services

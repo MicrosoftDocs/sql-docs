@@ -8,9 +8,6 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption

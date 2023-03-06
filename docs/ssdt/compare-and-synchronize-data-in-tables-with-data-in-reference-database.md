@@ -7,7 +7,6 @@ ms.date: 03/27/2020
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Compare and Synchronize Data in One or More Tables with Data in a Reference Database

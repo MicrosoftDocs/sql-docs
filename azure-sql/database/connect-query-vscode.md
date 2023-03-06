@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "sqldbrb=2"
-  - "mode-ui"
+  - sqldbrb=2
+  - mode-ui
 keywords: connect to sql database
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

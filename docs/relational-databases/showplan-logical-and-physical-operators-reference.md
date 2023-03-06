@@ -6,7 +6,6 @@ ms.author: randolphwest
 ms.date: "10/12/2017"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 f1_keywords:
   - "sql13.swb.showplan.leftouterjoin.f1"
   - "sql13.swb.showplan.remotedelete.f1"

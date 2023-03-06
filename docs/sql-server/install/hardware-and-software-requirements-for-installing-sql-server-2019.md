@@ -7,7 +7,6 @@ ms.date: 09/16/2021
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: sqlfreshmay19
 helpviewer_keywords:
   - "Setup [SQL Server], software"
   - "software [SQL Server]"

@@ -8,7 +8,6 @@ ms.date: 08/09/2018
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 tags: azure-service-management
 ---
 # Pricing guidance for SQL Server on Azure VMs

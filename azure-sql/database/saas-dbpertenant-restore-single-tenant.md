@@ -8,9 +8,7 @@ ms.date: 12/04/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Restore a single tenant with a database-per-tenant SaaS application
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

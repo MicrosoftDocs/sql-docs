@@ -7,7 +7,6 @@ ms.author: vanto
 ms.date: "07/27/2016"
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 f1_keywords:
   - "sp_delete_firewall_rule_TSQL"
   - "sp_delete_firewall_rule"

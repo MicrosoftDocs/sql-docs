@@ -8,7 +8,6 @@ ms.date: 11/03/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Workaround to enable copying from find and replace window

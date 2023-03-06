@@ -8,7 +8,6 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 

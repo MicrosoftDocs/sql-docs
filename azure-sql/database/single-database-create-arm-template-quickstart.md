@@ -8,9 +8,9 @@ ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom:
-  - "subject-armqs sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "mode-arm"
+  - subject-armqs sqldbrb=1
+  - devx-track-azurepowershell
+  - mode-arm
 ---
 
 # Quickstart: Create a single database in Azure SQL Database using an ARM template

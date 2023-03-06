@@ -8,7 +8,6 @@ ms.date: 12/09/2022
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # SQL Server 2019 Big Data Clusters partners
 

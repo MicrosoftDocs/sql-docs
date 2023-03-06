@@ -7,7 +7,6 @@ ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "full differential backups [SQL Server]"
   - "database backups [SQL Server], full differential backups"

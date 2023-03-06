@@ -7,7 +7,6 @@ ms.date: 10/04/2022
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "bulk importing [SQL Server], from Azure Blob Storage"
   - "Azure Blob Storage, bulk import to SQL Server"

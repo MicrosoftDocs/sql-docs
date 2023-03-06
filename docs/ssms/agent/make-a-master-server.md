@@ -7,7 +7,6 @@ ms.date: 05/14/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.ag.msxwiz.operator.f1"
   - "sql13.ag.msxwiz.login.f1"

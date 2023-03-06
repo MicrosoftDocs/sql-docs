@@ -7,7 +7,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sql13.swb.shrinkfile.f1"
 helpviewer_keywords:

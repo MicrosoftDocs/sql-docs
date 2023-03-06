@@ -8,9 +8,7 @@ ms.date: 12/18/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Explore SaaS analytics with Azure SQL Database, Azure Synapse Analytics, Data Factory, and Power BI
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

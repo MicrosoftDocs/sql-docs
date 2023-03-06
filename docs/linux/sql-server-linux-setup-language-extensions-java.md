@@ -8,9 +8,7 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
-ms.custom:
-  - intro-installation
-  - event-tier1-build-2022
+ms.custom: intro-installation
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 

@@ -7,7 +7,6 @@ ms.date: "01/18/2017"
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "Windows Server Failover Clustering, with SQL Server"

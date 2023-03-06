@@ -6,9 +6,6 @@ ms.author: maggies
 ms.date: 01/04/2020
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019​
-  - seo-mmd-2019
 ---
 
 # Configure a Report Server Database Connection (Report Server Configuration Manager)

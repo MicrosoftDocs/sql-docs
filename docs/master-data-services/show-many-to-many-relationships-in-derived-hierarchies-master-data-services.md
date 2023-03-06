@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)
 

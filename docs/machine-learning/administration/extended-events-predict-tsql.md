@@ -7,7 +7,6 @@ ms.date: 09/24/2019
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Monitor PREDICT T-SQL statements with extended events in SQL Server Machine Learning Services

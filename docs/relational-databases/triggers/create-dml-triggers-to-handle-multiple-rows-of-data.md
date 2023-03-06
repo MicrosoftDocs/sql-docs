@@ -6,7 +6,6 @@ ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "multiple row DML triggers"
   - "UPDATE statement [SQL Server], DML triggers"

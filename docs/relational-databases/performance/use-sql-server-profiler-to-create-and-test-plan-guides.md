@@ -8,7 +8,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "checking plan guides"
   - "plan guides [SQL Server], testing"

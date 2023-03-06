@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "sqldbrb=2"
-  - "mode-other"
+  - sqldbrb=2
+  - mode-other
 ms.devlang: php
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

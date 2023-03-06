@@ -7,7 +7,6 @@ ms.date: 11/26/2018
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Build an R model and save to SQL Server (walkthrough)

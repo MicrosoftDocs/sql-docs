@@ -7,7 +7,6 @@ ms.date: 12/09/2019
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
-ms.custom: seodec18
 helpviewer_keywords:
   - "Reporting Services, tutorials"
   - "Reporting Services, tools"

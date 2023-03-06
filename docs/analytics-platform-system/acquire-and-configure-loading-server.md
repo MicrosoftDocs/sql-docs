@@ -8,7 +8,6 @@ ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Acquire and configure a loading server for Parallel Data Warehouse

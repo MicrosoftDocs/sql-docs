@@ -7,9 +7,7 @@ ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.service: sql-server-stretch-database
 ms.topic: quickstart
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
+ms.custom: intro-quickstart
 f1_keywords:
   - "sql13.swb.stretchwizard.f1"
   - "sql13.swb.stretchwizard.createdatabasecredentials.f1"

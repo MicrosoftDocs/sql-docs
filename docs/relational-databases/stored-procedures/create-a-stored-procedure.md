@@ -7,9 +7,7 @@ ms.date: 10/25/2021
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: quickstart
-ms.custom:
-  - intro-quickstart
-  - FY22Q2Fresh
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "new stored procedures"
   - "stored procedures [SQL Server], creating"

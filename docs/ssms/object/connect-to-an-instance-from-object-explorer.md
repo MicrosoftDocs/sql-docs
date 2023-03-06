@@ -7,7 +7,6 @@ ms.date: "01/28/2019"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Connect to a SQL Server or Azure SQL Database
 

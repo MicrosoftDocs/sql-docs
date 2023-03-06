@@ -7,7 +7,6 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting

@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Errors and Warnings event category [SQL Server]"
   - "SQL Server event classes, Errors and Warnings event category"

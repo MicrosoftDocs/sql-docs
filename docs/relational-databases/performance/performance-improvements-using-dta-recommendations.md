@@ -7,7 +7,6 @@ ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "Database Engine Tuning Advisor, performance improvements"
 ---

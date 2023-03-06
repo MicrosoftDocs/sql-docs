@@ -8,7 +8,6 @@ ms.date: 07/22/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Breakpoints Window [Transact-SQL]"
 monikerRange: ">= sql-server-2016"

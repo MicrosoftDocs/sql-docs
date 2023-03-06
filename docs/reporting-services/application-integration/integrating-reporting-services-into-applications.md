@@ -7,7 +7,6 @@ ms.date: 05/14/2019
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: seo-lt-2019
 monikerRange: "= sql-server-2016"
 ---
 # Integrating Reporting Services into Applications

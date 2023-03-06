@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Trace collector set"
 ---

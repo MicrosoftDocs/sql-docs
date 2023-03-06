@@ -7,7 +7,6 @@ ms.date: "07/28/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # High Availability and Disaster Recovery for Master Data Services

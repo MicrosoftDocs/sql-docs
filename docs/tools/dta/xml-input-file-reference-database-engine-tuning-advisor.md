@@ -8,7 +8,6 @@ ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # XML Input File Reference (Database Engine Tuning Advisor)

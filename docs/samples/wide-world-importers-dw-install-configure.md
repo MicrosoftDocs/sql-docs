@@ -7,9 +7,7 @@ ms.date: "08/04/2018"
 ms.service: sql
 ms.subservice: samples
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current"
 ---
 # WideWorldImportersDW Installation and configuration

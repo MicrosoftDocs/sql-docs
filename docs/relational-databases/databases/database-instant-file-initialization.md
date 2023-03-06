@@ -7,7 +7,6 @@ ms.date: 11/10/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-ms.custom: contperf-fy20q4
 helpviewer_keywords:
   - "initializing files [SQL Server]"
   - "instant file initialization [SQL Server]"

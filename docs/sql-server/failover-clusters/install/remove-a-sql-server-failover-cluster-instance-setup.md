@@ -7,7 +7,6 @@ ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "clusters [SQL Server], removing failover cluster instance"
   - "failover clustering [SQL Server], removing failover cluster instance"

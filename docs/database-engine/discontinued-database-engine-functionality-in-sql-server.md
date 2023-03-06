@@ -8,9 +8,6 @@ ms.date: 10/18/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 helpviewer_keywords:
   - "VIA protocol"
   - "unsupported features [SQL Server]"

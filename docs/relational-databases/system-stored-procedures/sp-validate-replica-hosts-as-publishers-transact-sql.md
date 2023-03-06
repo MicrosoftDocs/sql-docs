@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sp_validate_replica_hosts_as_publishers_TSQL"
   - "sp_validate_replica_hosts_as_publishers"

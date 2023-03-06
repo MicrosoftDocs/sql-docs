@@ -4,7 +4,7 @@ description: Describes prerequisites required by of Azure Arc-enabled SQL Server
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/25/2023
+ms.date: 03/02/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: references_regions
@@ -64,6 +64,9 @@ Azure Arc-enabled SQL Server supports SQL Server 2012 or higher running on one o
 > - SQL Server editions: Business Intelligence.
 > - SQL Server 2008, SQL Server 2008 R2, and older.
 > - Installing the Arc agent and SQL Server extension cannot be done as part of sysprep image creation.
+> - SQL Server in Azure VM
+> - SQL Server Azure VMWare Solution
+> - On VMware clusters outside of Azure, SQL Server 2022 Setup Installation Setup Wizard does not support installation of SQL Server Azure Extension for SQL Server. However, this component can be installed from the command line in quiet mode or by connecting SQL Server to Azure Arc. For more information, see [Install and connect to Azure](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure) and [Connect your SQL Server to Azure Arc](connect.md).
 
 ## Register resource providers
 

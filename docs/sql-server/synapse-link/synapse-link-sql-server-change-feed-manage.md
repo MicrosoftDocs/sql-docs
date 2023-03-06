@@ -7,7 +7,6 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 

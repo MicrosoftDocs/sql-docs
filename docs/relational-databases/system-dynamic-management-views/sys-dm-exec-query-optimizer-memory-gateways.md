@@ -8,7 +8,6 @@ ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: performance
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 f1_keywords:
   - "dm_exec_query_optimizer_memory_gateways_TSQL"
   - "dm_exec_query_optimizer_memory_gateways"

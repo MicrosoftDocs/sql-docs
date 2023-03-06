@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: how-to
 ms.custom:
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 ms.devlang: azurecli
 ---
 

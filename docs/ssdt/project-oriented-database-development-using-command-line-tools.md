@@ -7,7 +7,6 @@ ms.date: 04/26/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Project-Oriented Database Development using Command-Line Tools

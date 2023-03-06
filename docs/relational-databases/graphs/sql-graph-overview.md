@@ -7,7 +7,6 @@ ms.author: mikeray
 ms.date: "06/26/2019"
 ms.service: sql
 ms.topic: "language-reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "SQL graph"
   - "SQL graph, overview"

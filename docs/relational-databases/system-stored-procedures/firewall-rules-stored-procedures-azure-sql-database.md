@@ -7,7 +7,6 @@ ms.author: vanto
 ms.date: "07/28/2016"
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "firewall rules stored procedures"
   - "firewall_rules, setting"

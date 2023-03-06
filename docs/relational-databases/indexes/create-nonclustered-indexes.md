@@ -7,7 +7,6 @@ ms.date: 11/12/2021
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "index creation [SQL Server], nonclustered indexes"
   - "nonclustered indexes [SQL Server], creating"

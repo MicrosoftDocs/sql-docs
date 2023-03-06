@@ -7,7 +7,6 @@ ms.date: 09/19/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sys.query_store_wait_stats"
   - "query_store_wait_stats"

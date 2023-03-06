@@ -6,9 +6,6 @@ ms.author: maggies
 ms.date: 08/17/2022
 ms.service: reporting-services
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - seo-mmd-2019
 ---
 
 # Configure the Report Server Service Account (Report Server Configuration Manager)

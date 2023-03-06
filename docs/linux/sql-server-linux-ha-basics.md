@@ -8,7 +8,6 @@ ms.date: 10/19/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # SQL Server availability basics for Linux deployments
 

@@ -7,7 +7,6 @@ ms.date: 04/08/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: troubleshooting
-ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Troubleshoot issues with Launchpad service executing Python and R scripts in SQL Server Machine Learning Services

@@ -7,7 +7,6 @@ ms.date: 09/27/2018
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Use DMVs to Determine Usage Statistics and Performance of Views

@@ -143,7 +143,7 @@ landingContent:
           url: ../database/az-cli-script-samples-content-guide.md
         - text: PowerShell samples
           url: ../database/powershell-script-content-guide.md
-        - text: ARM template samples 
+        - text: Azure Resource Manager template samples 
           url: ../database/arm-templates-content-guide.md
       - linkListType: download
         links:

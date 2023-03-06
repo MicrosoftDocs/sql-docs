@@ -41,14 +41,14 @@ Avoid long-running transactions because any infrastructure or connection failure
 It's possible to connect your application to your Azure SQL resource by using the following languages: 
 
 - [.NET with Visual Studio](connect-query-dotnet-visual-studio.md)
-- [.NET with WIndows, Linux, and macOS](connect-query-dotnet-core.md)
+- [.NET with Windows, Linux, and macOS](connect-query-dotnet-core.md)
 - [Go](connect-query-go.md)
 - [Node.js](connect-query-nodejs.md)
 - [PHP](connect-query-php.md)
 - [Python](connect-query-python.md)
 - [Ruby](connect-query-ruby.md)
 
-It's possible to configure Azure AD authentication with your Azure SQL resource. Review the following articles for more information: 
+It's possible to configure Azure AD authentication to your Azure SQL resource. Review the following articles for more information: 
 
 - [Connect to Azure SQL with Azure AD authentication and SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication)
 - [Use Managed Identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)

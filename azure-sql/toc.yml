@@ -309,6 +309,8 @@
         href: database/local-dev-experience-quickstart.md
     - name: Connect to and query a database using .NET
       href: database/azure-sql-dotnet-quickstart.md
+    - name: Connect to a database using .NET and Entity Framework Core
+      href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
     - name: GitHub Actions
       href: database/connect-github-actions-sql-db.md
 

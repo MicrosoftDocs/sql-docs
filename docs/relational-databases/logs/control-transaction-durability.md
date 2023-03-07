@@ -173,8 +173,19 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 
 ## <a id="bkmk_OtherSQLFeatures"></a> Delayed durability and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 
- **Change tracking and change data capture**  
- All transactions with change tracking are fully durable. A transaction has the change tracking property if it does any write operations to tables that are enabled for change tracking. The use of delayed durability is not supported for databases, which use change data capture (CDC).
+ **Transactional Replication, Change Tracking, and Change Data Capture**  
+- The use of delayed durability is not supported for databases which use change data capture (CDC). 
+- Delayed durable transactions are not supported with Transactional Replication. 
+- All transactions with change tracking are fully durable. A transaction has the change tracking property if it does any write operations to tables that are enabled for change tracking. 
+
+    > [!NOTE]  
+    > Starting in SQL Server 2022 CU2 and SQL Server 2019 CU20, we will raise an error if you attempt to either:
+    > - Enable Transactional Replication, Change Tracking, or Change Data Capture for a database that is enabled for delayed durability. You will receive error 22891: Could not enable '_FeatureName_' for database '_DatabaseName_'. '_FeatureName_' cannot be enabled on a DB with delayed durability set.
+    > - Enable delayed durability for a database with Transactional Replication, Change Tracking, or Change Data Capture enabled. You will receive error 22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '_FeatureName_' is enabled.
+
+
+
+
 
  **Crash recovery**  
  Consistency is guaranteed, but some changes from delayed durable transactions that have committed may be lost.
@@ -183,14 +194,11 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  If a transaction is cross-database or distributed, it is fully durable, regardless of any database or transaction commit setting.
 
  **Always On Availability Groups and Mirroring**  
- Delayed durable transactions do not guarantee any durability on either the primary or any of the secondaries. In addition, they do not guarantee any knowledge about the transaction at the secondary. After commit, control is returned to the client before any acknowledgment is received from any synchronous secondary. Replication to secondary replicas does continue to happen as flush to disk on the primary happens.
+ Delayed durable transactions do not guarantee any durability on either the primary or any of the secondaries. In addition, they do not guarantee any knowledge about    the transaction at the secondary. After commit, control is returned to the client before any acknowledgment is received from any synchronous secondary. Replication to secondary replicas does continue to happen as flush to disk on the primary happens.
 
  **Failover clustering**  
  Some delayed durable transaction writes might be lost.
-
- **Transaction Replication**  
- Delayed durable transactions are not supported with Transactional Replication.
-
+ 
  **Azure Synapse Link for SQL**  
  Delayed durable transactions are not supported with Azure Synapse Link for SQL.
 

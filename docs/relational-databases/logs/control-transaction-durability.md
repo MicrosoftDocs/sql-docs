@@ -173,15 +173,16 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 
 ## <a id="bkmk_OtherSQLFeatures"></a> Delayed durability and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 
-**Transactional Replication, Change Tracking, and Change Data Capture**  
+**Azure Synapse Link for SQL, Transactional Replication, Change Tracking, and Change Data Capture**  
 - The use of delayed durability is not supported for databases which use change data capture (CDC). 
 - Delayed durable transactions are not supported with Transactional Replication. 
 - All transactions with change tracking are fully durable. A transaction has the change tracking property if it does any write operations to tables that are enabled for change tracking. 
+- Delayed durable transactions are not supported with Azure Synapse Link for SQL
 
     > [!NOTE]  
     > Starting in SQL Server 2022 CU2 and SQL Server 2019 CU20, we will raise an error if you attempt to either:
-    > - Enable Transactional Replication, Change Tracking, or Change Data Capture for a database that is enabled for delayed durability. You will receive error 22891: Could not enable '_FeatureName_' for database '_DatabaseName_'. '_FeatureName_' cannot be enabled on a DB with delayed durability set.
-    > - Enable delayed durability for a database with Transactional Replication, Change Tracking, or Change Data Capture enabled. You will receive error 22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '_FeatureName_' is enabled.
+    > - Enable Transactional Replication, Change Tracking, Azure Synapse Link for SQL, or Change Data Capture for a database that is enabled for delayed durability. You will receive error 22891: Could not enable '_FeatureName_' for database '_DatabaseName_'. '_FeatureName_' cannot be enabled on a DB with delayed durability set.
+    > - Enable delayed durability for a database with Transactional Replication, Change Tracking, Azure Synapse Link for SQL, or Change Data Capture enabled. You will receive error 22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '_FeatureName_' is enabled.
 
  **Crash recovery**  
  Consistency is guaranteed, but some changes from delayed durable transactions that have committed may be lost.
@@ -194,9 +195,6 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 
  **Failover clustering**  
  Some delayed durable transaction writes might be lost.
-
- **Azure Synapse Link for SQL**  
- Delayed durable transactions are not supported with Azure Synapse Link for SQL.
 
  **Log shipping**  
  Only transactions that have been made durable are included in the log that is shipped.

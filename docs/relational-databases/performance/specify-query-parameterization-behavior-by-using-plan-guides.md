@@ -1,15 +1,13 @@
 ---
 title: "Set query parameterization behavior using plan guides"
 description: Learn about options for parameterization, where parameters are substituted for literal values in a query in SQL Server.
-ms.custom:
-- seo-dt-2019
-- event-tier1-build-2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TEMPLATE plan guide"
   - "PARAMETERIZATION FORCED option"
   - "PARAMETERIZATION option"
@@ -18,9 +16,6 @@ helpviewer_keywords:
   - "overriding parameterization behavior"
   - "plan guides [SQL Server], parameterization"
   - "parameterized queries [SQL Server]"
-ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Specify Query Parameterization Behavior by Using Plan Guides
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

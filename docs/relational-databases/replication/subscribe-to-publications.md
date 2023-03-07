@@ -1,15 +1,16 @@
 ---
-title: "Subscribe to Publications | Microsoft Docs"
+title: "Subscribe to Publications"
 description: Learn about the types of subscriptions in SQL Server replication, how to choose the type you need, and how to create a subscription.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rep.conc.subtopubs.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "subscriptions [SQL Server replication], about subscriptions"
   - "pull subscriptions [SQL Server replication]"
   - "subscriptions [SQL Server replication]"
@@ -21,9 +22,6 @@ helpviewer_keywords:
   - "pull subscriptions [SQL Server replication], about pull subscriptions"
   - "snapshot replication [SQL Server], subscribing"
   - "transactional replication, subscribing"
-ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Subscribe to Publications

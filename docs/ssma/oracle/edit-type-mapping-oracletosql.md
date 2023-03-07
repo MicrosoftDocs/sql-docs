@@ -1,15 +1,12 @@
 ---
+title: "Edit Type Mapping (OracleToSQL)"
 description: "Edit Type Mapping (OracleToSQL)"
-title: "Edit Type Mapping (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Edit Type Mapping (OracleToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

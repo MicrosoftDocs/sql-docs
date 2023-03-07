@@ -1,17 +1,14 @@
 ---
+title: "Default Trace Log Files Disabled"
 description: "Default Trace Log Files Disabled"
-title: "Default Trace Log Files Disabled | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: c27761e6-75ed-4ee4-a236-0cbc42e500a1
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Default Trace Log Files Disabled
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

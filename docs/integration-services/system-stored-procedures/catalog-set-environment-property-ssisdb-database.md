@@ -1,15 +1,12 @@
 ---
+title: "catalog.set_environment_property (SSISDB Database)"
 description: "catalog.set_environment_property (SSISDB Database)"
-title: "catalog.set_environment_property (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.set_environment_property (SSISDB Database)
 

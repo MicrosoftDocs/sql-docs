@@ -7,9 +7,7 @@ ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Disaster recovery for a multi-tenant SaaS application using database geo-replication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

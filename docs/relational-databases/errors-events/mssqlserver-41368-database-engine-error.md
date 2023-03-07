@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_41368"
 description: "MSSQLSERVER_41368"
-title: "MSSQLSERVER_41368 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "41368 (Database Engine error)"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/25/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "41368 (Database Engine error)"
 ---
 # MSSQLSERVER_41368
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

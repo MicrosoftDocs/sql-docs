@@ -1,22 +1,17 @@
 ---
-description: "Size Property (ClientNetLibInfo Class)"
 title: "Size Property (ClientNetLibInfo)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "Size Property (ClientNetLibInfo Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "Size property"
-ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
+description: "Size Property (ClientNetLibInfo Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Size property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "Size Property (ClientNetLibInfo Class)"
+apitype: "MOFDef"
 ---
 # Size Property (ClientNetLibInfo Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

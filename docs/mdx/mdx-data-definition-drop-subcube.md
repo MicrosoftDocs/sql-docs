@@ -1,14 +1,14 @@
 ---
+title: "DROP SUBCUBE Statement (MDX)"
 description: "MDX Data Definition - DROP SUBCUBE"
-title: "DROP SUBCUBE Statement (MDX) | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: analysis-services
-ms.custom: mdx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: mdx
 ---
 # MDX Data Definition - DROP SUBCUBE
 

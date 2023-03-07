@@ -1,19 +1,15 @@
 ---
-description: "Collation Dialog Box (Visual Database Tools)"
 title: Collation Dialog Box
-ms.custom: seo-lt-2019
+description: "Collation Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.definecolumncollation"
   - "vdtsql.chm:65561"
-ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Collation Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

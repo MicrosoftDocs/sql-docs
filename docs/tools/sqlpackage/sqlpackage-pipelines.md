@@ -1,25 +1,30 @@
 ---
 title: SqlPackage in development pipelines
 description: Learn how to troubleshoot database development pipelines with SqlPackage.
-ms.service: sql
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
 ms.date: 09/17/2021
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # SqlPackage in development pipelines
 
 **SqlPackage** is a command-line utility that automates several database development tasks and can be incorporated into CI/CD pipelines.
 
+
 ## Virtual environments
+
+> [!NOTE]
+> Utilizing a standalone installation of SqlPackage for pipeline automation is recommended over using the SqlPackage executables bundled with other applications, including SQL Server Management Studio or Visual Studio.  The standalone installation of SqlPackage is updated more frequently and is not tied to the release cadence of other applications.
+
+On Windows, the standalone install of SqlPackage is available on the path `C:\Program Files\Microsoft SQL Server\160\DAC\bin` (DacFx.msi) or `%USERPROFILE%\.dotnet\tools` (dotnet tool).  On Linux, the standalone install of SqlPackage is available on the path `~/.dotnet/tools` (dotnet tool).  In both Windows and Linux environments, if you download the self-contained .zip SqlPackage for .NET Core, you can extract the executable to a location of your choosing.
 
 ### Managed virtual environments
 
-The virtual environments used for GitHub Actions hosted runners and Azure Pipelines VM images are managed in the [virtual-environments](https://github.com/actions/virtual-environments) GitHub repository.  SqlPackage is included in several environments including `windows-latest` and `ubuntu-latest`. Updates to the images in [virtual-environments](https://github.com/actions/virtual-environments) are made within a few weeks of each SqlPackage release.
+The virtual environments used for GitHub Actions hosted runners and Azure Pipelines VM images are managed in the [runner-images](https://github.com/actions/runner-images) GitHub repository.  SqlPackage is included in several environments including `windows-latest` and `ubuntu-latest`. Updates to the images in [runner-images](https://github.com/actions/runner-images) are made within a few weeks of each SqlPackage release.
 
 ### Self-hosted virtual environments
 

@@ -1,24 +1,19 @@
 ---
+title: "SQLReadFileDSN Function"
 description: "SQLReadFileDSN Function"
-title: "SQLReadFileDSN Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLReadFileDSN"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLReadFileDSN"
-helpviewer_keywords: 
-  - "SQLReadFileDSN function [ODBC]"
-ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLReadFileDSN"
+helpviewer_keywords:
+  - "SQLReadFileDSN function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLReadFileDSN"
+apitype: "dllExport"
 ---
 # SQLReadFileDSN Function
 **Conformance**  

@@ -1,15 +1,12 @@
 ---
+title: "Troubleshooting (DB2ToSQL)"
 description: "Troubleshooting (DB2ToSQL)"
-title: "Troubleshooting (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Troubleshooting (DB2ToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

@@ -1,17 +1,14 @@
 ---
+title: "Setting ExtendedAnsiSQL"
 description: "Setting ExtendedAnsiSQL"
-title: "Setting ExtendedAnsiSQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "extendedANSISQL [ODBC], setting"
-ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "extendedANSISQL [ODBC], setting"
 ---
 # Setting ExtendedAnsiSQL
 The attribute can be controlled in the connection string by adding the ExtendedAnsiSQL attribute:  

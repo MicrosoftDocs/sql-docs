@@ -1,14 +1,13 @@
 ---
-title: Load data into SQL Server or Azure SQL Database with SQL Server Integration Services (SSIS) | Microsoft Docs
+title: Load data into SQL Server or Azure SQL Database with SQL Server Integration Services (SSIS)
 description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources to SQL Server or to Azure SQL Database.
-documentationcenter: NA
+author: chugugrace
+ms.author: chugu
+ms.date: 08/20/2018
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
 ms.custom: loading
-ms.date: 08/20/2018
-ms.author: chugu
-author: chugugrace
 ---
 # Load data into SQL Server or Azure SQL Database with SQL Server Integration Services (SSIS)
 

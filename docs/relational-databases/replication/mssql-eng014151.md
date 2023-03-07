@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG014151"
 description: "MSSQL_ENG014151"
-title: "MSSQL_ENG014151 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG014151 error"
-ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG014151 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014151
@@ -38,7 +36,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   Check the agent history and job history for other errors that occurred around the same time. For information about viewing agent status and error details in Replication Monitor, see [View information and perform tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   Verify that basic connectivity is working between the computers accessed by the agent, and then connect to each computer with a utility like the [sqlcmd Utility](../../tools/sqlcmd-utility.md). When connecting, use the same account under which the agent makes connections. For more information about the permissions required by each agent account, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+-   Verify that basic connectivity is working between the computers accessed by the agent, and then connect to each computer with a utility like the [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md). When connecting, use the same account under which the agent makes connections. For more information about the permissions required by each agent account, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 -   If the error occurs while creating or applying a snapshot, check the files in the snapshot directory for errors. 
   
@@ -52,5 +50,3 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
-  
-  

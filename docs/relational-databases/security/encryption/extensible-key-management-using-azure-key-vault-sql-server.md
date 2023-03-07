@@ -1,22 +1,20 @@
 ---
 title: "Extensible Key Management using Azure Key Vault"
-description: Use the SQL Server Connector for Extensible Key Management with Azure Key Vault for SQL Server. 
-ms.custom: seo-lt-2019
+description: Use the SQL Server Connector for Extensible Key Management with Azure Key Vault for SQL Server.
+author: jaszymas
+ms.author: jaszymas
+ms.reviewer: vanto
 ms.date: "07/22/2016"
 ms.service: sql
-ms.reviewer: vanto
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Extensible Key Management with key vault"
   - "Transparent Data Encryption, using EKM and key vault"
   - "EKM, with key vault"
   - "TDE, EKM and key vault"
   - "Key Management with key vault"
   - "SQL Server Connector, about"
-ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-author: jaszymas
-ms.author: jaszymas
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

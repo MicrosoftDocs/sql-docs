@@ -1,24 +1,19 @@
 ---
+title: "SQLExecute Function"
 description: "SQLExecute Function"
-title: "SQLExecute Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLExecute"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLExecute"
-helpviewer_keywords: 
-  - "SQLExecute function [ODBC]"
-ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLExecute"
+helpviewer_keywords:
+  - "SQLExecute function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLExecute"
+apitype: "dllExport"
 ---
 # SQLExecute Function
 **Conformance**  

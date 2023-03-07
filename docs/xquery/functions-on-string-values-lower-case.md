@@ -1,20 +1,17 @@
 ---
-title: "lower-case  Function (XQuery) | Microsoft Docs"
+title: "lower-case  Function (XQuery)"
 description: Learn about the XQuery function lower-case() that converts each character in a specified string to its lower case equivalent.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "lower-case Function (XQuery)"
-  - "lower-case"
-ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "lower-case Function (XQuery)"
+  - "lower-case"
+dev_langs:
+  - "XML"
 ---
 # Functions on String Values - lower-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

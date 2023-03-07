@@ -1,19 +1,16 @@
 ---
+title: "Data Profiling Task Editor (General Page)"
 description: "Data Profiling Task Editor (General Page)"
-title: "Data Profiling Task Editor (General Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.general.f1"
-helpviewer_keywords: 
-  - "Data Profiling Task Editor"
-ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.dataprofilingtask.general.f1"
+helpviewer_keywords:
+  - "Data Profiling Task Editor"
 ---
 # Data Profiling Task Editor (General Page)
 

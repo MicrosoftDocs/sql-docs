@@ -1,18 +1,15 @@
 ---
+title: "SQLColumns (Excel Driver)"
 description: "SQLColumns (Excel Driver)"
-title: "SQLColumns (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLColumns function [ODBC], Excel Driver"
-  - "Excel driver [ODBC], SQLColumns"
-ms.assetid: 4bae3fcd-0287-4f79-ad7c-8f7ab2f6f940
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLColumns function [ODBC], Excel Driver"
+  - "Excel driver [ODBC], SQLColumns"
 ---
 # SQLColumns (Excel Driver)
 > [!NOTE]  

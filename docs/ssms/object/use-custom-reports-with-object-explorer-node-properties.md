@@ -1,17 +1,14 @@
 ---
-description: "Use Custom Reports with Object Explorer Node Properties"
 title: "Use Custom Reports with Object Explorer Node Properties"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], custom reports"
-ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
+description: "Use Custom Reports with Object Explorer Node Properties"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL Server Management Studio [SQL Server], custom reports"
 ---
 # Use Custom Reports with Object Explorer Node Properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

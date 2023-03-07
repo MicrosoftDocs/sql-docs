@@ -1,22 +1,17 @@
 ---
-description: "SetProtocolsOrder Method (ClientNetworkProtocol Class)"
 title: "SetProtocolsOrder Method (ClientNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetProtocolsOrder Method (ClientNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetProtocolsOrder method"
-ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
+description: "SetProtocolsOrder Method (ClientNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetProtocolsOrder method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetProtocolsOrder Method (ClientNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # SetProtocolsOrder Method (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

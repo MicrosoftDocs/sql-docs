@@ -1,22 +1,19 @@
 ---
 title: "XML Editor (SQL Server Management Studio)"
 description: Learn how to use the visual tools of the SQL Server Management Studio XML Editor to work with XML schemas (XSDs), ADO.NET datasets, and XML documents.
+author: markingmyname
+ms.author: maghan
+ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.editor.xml.f1"
   - "sql13.swb.editorxml.f1"
   - "vs.xmleditor"
   - "sql13.swb.xmleditor.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML Designer [SQL Server Management Studio]"
-ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

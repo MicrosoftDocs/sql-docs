@@ -1,22 +1,19 @@
 ---
+title: "sp_help_agent_default (Transact-SQL)"
 description: "sp_help_agent_default (Transact-SQL)"
-title: "sp_help_agent_default (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_help_agent_default"
-  - "sp_help_agent_default_TSQL"
-helpviewer_keywords: 
-  - "sp_help_agent_default"
-ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_agent_default"
+  - "sp_help_agent_default_TSQL"
+helpviewer_keywords:
+  - "sp_help_agent_default"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

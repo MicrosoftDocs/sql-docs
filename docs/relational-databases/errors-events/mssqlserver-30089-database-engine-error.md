@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_30089"
 description: "MSSQLSERVER_30089"
-title: "MSSQLSERVER_30089 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "9992 (Database Engine error)"
-ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "9992 (Database Engine error)"
 ---
 # MSSQLSERVER_30089
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

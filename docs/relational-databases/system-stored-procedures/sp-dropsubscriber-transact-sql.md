@@ -1,22 +1,19 @@
 ---
+title: "sp_dropsubscriber (Transact-SQL)"
 description: "sp_dropsubscriber (Transact-SQL)"
-title: "sp_dropsubscriber (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropsubscriber_TSQL"
-  - "sp_dropsubscriber"
-helpviewer_keywords: 
-  - "sp_dropsubscriber"
-ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropsubscriber_TSQL"
+  - "sp_dropsubscriber"
+helpviewer_keywords:
+  - "sp_dropsubscriber"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropsubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

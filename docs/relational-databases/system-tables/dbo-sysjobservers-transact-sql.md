@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysjobservers system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 ---
 # dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,11 +10,11 @@ ms.service: sql-db-mi
 ms.subservice: deployment-configuration
 ms.topic: sample
 ms.custom:
-  - "overview-samples"
-  - "mvc"
-  - "sqldbrb=2"
-  - "devx-track-azurecli"
-  - "seo-azure-cli"
+  - overview-samples
+  - mvc
+  - sqldbrb=2
+  - devx-track-azurecli
+  - seo-azure-cli
 keywords:
   - "sql database"
   - "managed instance"

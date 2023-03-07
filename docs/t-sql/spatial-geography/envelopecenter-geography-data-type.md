@@ -1,22 +1,19 @@
 ---
-description: "EnvelopeCenter (geography Data Type )"
-title: "EnvelopeCenter (geography Data Type ) | Microsoft Docs"
-ms.custom: ""
+title: "EnvelopeCenter (geography Data Type)"
+description: "EnvelopeCenter (geography Data Type)"
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "EnvelopeCenter"
   - "EnvelopeCenter_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "EnvelopeCenter method"
-ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # EnvelopeCenter (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

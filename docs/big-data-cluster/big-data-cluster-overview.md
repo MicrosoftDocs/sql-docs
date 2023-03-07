@@ -9,9 +9,7 @@ ms.date: 09/01/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: overview
-ms.custom:
-  - contperf-fy22q1
-  - intro-overview
+ms.custom: intro-overview
 ---
 
 # Introducing [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]

@@ -1,27 +1,24 @@
 ---
+title: "Multiple Flat Files Connection Manager"
 description: "Multiple Flat Files Connection Manager"
-title: "Multiple Flat Files Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.multifile.advanced.f1"
   - "sql13.dts.designer.multifile.columns.f1"
   - "sql13.dts.designer.multifile.general.f1"
   - "sql13.dts.designer.multifile.preview.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Multiple Flat Files connection manager"
   - "connections [Integration Services], flat files"
   - "flat files"
   - "flat file connections [Integration Services]"
   - "connection managers [Integration Services], Multiple Flat Files"
   - "multiple flat file connections"
-ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: chugugrace
-ms.author: chugu
 ---
 # Multiple Flat Files Connection Manager
 

@@ -1,25 +1,22 @@
 ---
+title: "sys.sysforeignkeys (Transact-SQL)"
 description: "sys.sysforeignkeys (Transact-SQL)"
-title: "sys.sysforeignkeys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysforeignkeys"
   - "sys.sysforeignkeys"
   - "sys.sysforeignkeys_TSQL"
   - "sysforeignkeys_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysforeignkeys system table"
   - "sys.sysforeignkeys compatibility view"
-ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysforeignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

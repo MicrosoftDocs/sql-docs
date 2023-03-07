@@ -1,18 +1,15 @@
 ---
+title: "SQLGetInfo (Paradox Driver)"
 description: "SQLGetInfo (Paradox Driver)"
-title: "SQLGetInfo (Paradox Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Paradox driver [ODBC], SQLGetInfo"
-  - "SQLGetInfo function [ODBC], Paradox Driver"
-ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Paradox driver [ODBC], SQLGetInfo"
+  - "SQLGetInfo function [ODBC], Paradox Driver"
 ---
 # SQLGetInfo (Paradox Driver)
 > [!NOTE]  

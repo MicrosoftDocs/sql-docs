@@ -1,17 +1,14 @@
 ---
+title: "SQLMoreResults (Visual FoxPro ODBC Driver)"
 description: "SQLMoreResults (Visual FoxPro ODBC Driver)"
-title: "SQLMoreResults (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLMoreResults (Visual FoxPro ODBC Driver)
 > [!NOTE]  

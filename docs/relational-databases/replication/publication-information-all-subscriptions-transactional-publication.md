@@ -1,17 +1,15 @@
 ---
 title: "All Subscriptions (Transactional - SSMS)"
 description: Describes the 'All Subscriptions' tab for the selected Transactional Publication in SQL Server Management Studio.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.allsubscriptions.tran.f1"
-ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.allsubscriptions.tran.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Information, All Subscriptions (Transactional Publication)

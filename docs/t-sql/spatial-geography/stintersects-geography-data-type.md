@@ -1,22 +1,19 @@
 ---
+title: "STIntersects (geography Data Type)"
 description: "STIntersects (geography Data Type)"
-title: "STIntersects (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STIntersects (geography Data Type)"
   - "STIntersects_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STIntersects method"
-ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STIntersects (geography Data Type)

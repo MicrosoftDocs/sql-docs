@@ -1,20 +1,18 @@
 ---
 title: sp_check_for_sync_trigger (Transact-SQL)
 description: "sp_check_for_sync_trigger (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_check_for_sync_trigger"
-dev_langs: 
+helpviewer_keywords:
+  - "sp_check_for_sync_trigger"
+dev_langs:
   - "TSQL"
-helpviewer_keywords: 
-  - "sp_check_for_sync_trigger"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/06/2017"
 ---
 
 # sp_check_for_sync_trigger (Transact-SQL)

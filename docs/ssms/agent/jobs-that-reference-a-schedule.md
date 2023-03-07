@@ -1,20 +1,17 @@
 ---
-description: "Jobs That Reference a Schedule"
 title: "Jobs That Reference a Schedule"
-ms.custom: seo-lt-2019
+description: "Jobs That Reference a Schedule"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.jobsreferencingaschedule.f1"
   - "sql13.ag.job.jobsreferencingaschedule.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Jobs Referencing a Schedule dialog box"
-ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Jobs That Reference a Schedule

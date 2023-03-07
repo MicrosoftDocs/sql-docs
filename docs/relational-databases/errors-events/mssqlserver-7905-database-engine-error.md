@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7905"
 description: "MSSQLSERVER_7905"
-title: "MSSQLSERVER_7905 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7905 (Database Engine error)"
-ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7905 (Database Engine error)"
 ---
 # MSSQLSERVER_7905
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

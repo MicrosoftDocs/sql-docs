@@ -1,22 +1,17 @@
 ---
-description: "CInstance Class - SetDefaults Method"
 title: "SetDefaults Method (CInstance)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetDefaults Method (CInstance Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetDefaults method"
-ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
+description: "CInstance Class - SetDefaults Method"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetDefaults method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetDefaults Method (CInstance Class)"
+apitype: "MOFDef"
 ---
 # CInstance Class - SetDefaults Method
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

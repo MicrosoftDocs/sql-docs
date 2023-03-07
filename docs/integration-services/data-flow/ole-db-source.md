@@ -1,23 +1,20 @@
 ---
+title: "OLE DB Source"
 description: "OLE DB Source"
-title: "OLE DB Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.oledbsource.f1"
   - "sql13.dts.designer.oledbsourceadapter.connection.f1"
   - "sql13.dts.designer.oledbsourceadapter.columns.f1"
   - "sql13.dts.designer.oledbsourceadapter.errorhandling.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sources [Integration Services], OLE DB"
   - "OLE DB source [Integration Services]"
-ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: chugugrace
-ms.author: chugu
 ---
 # OLE DB Source
 

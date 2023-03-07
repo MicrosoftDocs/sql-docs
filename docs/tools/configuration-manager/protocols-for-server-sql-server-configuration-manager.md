@@ -1,15 +1,12 @@
 ---
 title: "Protocols for &lt;server&gt; (SQL Server Configuration Manager)"
 description: Discover how to use SQL Server Configuration Manager to configure the protocols used by the Database Engine.
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: ee30d5f5-7f6a-4101-849e-73dfcc1b2528
 author: markingmyname
 ms.author: maghan
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # Protocols for &lt;server&gt; (SQL Server Configuration Manager)

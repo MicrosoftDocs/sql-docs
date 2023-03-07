@@ -3,7 +3,6 @@ title: "SUBSTRING (Transact-SQL)"
 description: "Transact-SQL reference for the SUBSTRING function. This function returns a portion of a specified character, binary, text, or image expression."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "10/21/2016"
 ms.service: sql
 ms.subservice: t-sql

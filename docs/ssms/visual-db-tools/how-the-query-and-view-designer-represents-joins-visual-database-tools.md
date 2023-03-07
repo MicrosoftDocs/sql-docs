@@ -1,20 +1,16 @@
 ---
-description: "How the Query and View Designer Represents Joins (Visual Database Tools)"
 title: How the Query and View Designer Represents Joins
-ms.custom: seo-lt-2019
+description: "How the Query and View Designer Represents Joins (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL pane [Visual Database Tools]"
   - "joins [SQL Server], Query and View Designer"
   - "Diagram pane [Visual Database Tools]"
-ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # How the Query and View Designer Represents Joins (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

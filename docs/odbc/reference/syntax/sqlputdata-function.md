@@ -1,24 +1,19 @@
 ---
+title: "SQLPutData Function"
 description: "SQLPutData Function"
-title: "SQLPutData Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLPutData"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLPutData"
-helpviewer_keywords: 
-  - "SQLPutData function [ODBC]"
-ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLPutData"
+helpviewer_keywords:
+  - "SQLPutData function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLPutData"
+apitype: "dllExport"
 ---
 # SQLPutData Function
 **Conformance**  

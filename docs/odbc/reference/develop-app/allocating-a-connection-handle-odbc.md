@@ -1,13 +1,13 @@
 ---
+title: "Allocating a Connection Handle ODBC"
 description: "Allocating a Connection Handle ODBC"
-title: "Allocating a Connection Handle ODBC | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "allocating connection handles [ODBC]"
   - "data sources [ODBC], connection handles"
   - "connecting to data source [ODBC], connection handles"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "connecting to driver [ODBC], connection handles"
   - "connection handles [ODBC]"
   - "handles [ODBC], connection"
-ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Allocating a Connection Handle ODBC
 Before the application can connect to a data source or driver, it must allocate a connection handle, as follows:  

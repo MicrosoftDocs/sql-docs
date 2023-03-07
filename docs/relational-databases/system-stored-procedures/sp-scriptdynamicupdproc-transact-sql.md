@@ -1,22 +1,19 @@
 ---
+title: "sp_scriptdynamicupdproc (Transact-SQL)"
 description: "sp_scriptdynamicupdproc (Transact-SQL)"
-title: "sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_scriptdynamicupdproc_TSQL"
-  - "sp_scriptdynamicupdproc"
-helpviewer_keywords: 
-  - "sp_scriptdynamicupdproc"
-ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_scriptdynamicupdproc_TSQL"
+  - "sp_scriptdynamicupdproc"
+helpviewer_keywords:
+  - "sp_scriptdynamicupdproc"
+dev_langs:
+  - "TSQL"
 ---
 # sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

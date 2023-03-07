@@ -1,22 +1,18 @@
 ---
+title: "Command Parameters (Native Client OLE DB provider)"
 description: "Command Parameters (Native Client OLE DB provider)"
-title: "Command Parameters (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parameters [SQL Server Native Client]"
   - "SQL Server Native Client OLE DB provider, parameters"
   - "SQL Server Native Client OLE DB provider, commands"
   - "parameters [SQL Server Native Client], OLE DB"
   - "commands [OLE DB]"
-ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Command Parameters

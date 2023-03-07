@@ -1,22 +1,19 @@
 ---
-title: "Error Handling (XQuery) | Microsoft Docs"
+title: "Error Handling (XQuery)"
 description: Learn about error handling in XQuery and view examples of handling dynamic errors.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "static errors"
   - "errors [XQuery]"
   - "XQuery, error handling"
   - "dynamic errors [XQuery]"
-ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Error Handling (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

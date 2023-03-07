@@ -1,18 +1,14 @@
 ---
-description: "Tables and Columns Dialog Box (Visual Database Tools)"
 title: Tables and Columns Dialog Box
-ms.custom: seo-lt-2019
+description: "Tables and Columns Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.tablesandcolumns"
-ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Tables and Columns Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

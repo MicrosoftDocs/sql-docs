@@ -7,7 +7,7 @@ ms.reviewer: erinstellato
 ms.date: "09/24/2018"
 ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: seodec18
+ms.custom: updatefrequency5
 ---
 
 # Keyboard shortcuts in Azure Data Studio

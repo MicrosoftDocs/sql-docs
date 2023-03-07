@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "systaskids system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
 ---
 # dbo.systaskids (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

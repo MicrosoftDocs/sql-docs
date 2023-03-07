@@ -1,20 +1,18 @@
 ---
-description: "Create Check Constraints"
 title: "Create Check Constraints"
-ms.custom: ""
+description: "Create Check Constraints"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "01/28/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table constraints [SQL Server]"
   - "attaching check constraints"
   - "columns [SQL Server], constraints"
   - "constraints [SQL Server], check"
   - "CHECK constraints, attaching"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Check Constraints

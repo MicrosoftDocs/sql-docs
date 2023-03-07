@@ -1,22 +1,19 @@
 ---
+title: "sp_changereplicationserverpasswords (Transact-SQL)"
 description: "sp_changereplicationserverpasswords (Transact-SQL)"
-title: "sp_changereplicationserverpasswords (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changereplicationserverpasswords_TSQL"
-  - "sp_changereplicationserverpasswords"
-helpviewer_keywords: 
-  - "sp_changereplicationserverpasswords"
-ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changereplicationserverpasswords_TSQL"
+  - "sp_changereplicationserverpasswords"
+helpviewer_keywords:
+  - "sp_changereplicationserverpasswords"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

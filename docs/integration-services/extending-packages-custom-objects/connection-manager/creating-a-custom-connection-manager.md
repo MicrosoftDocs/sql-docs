@@ -1,17 +1,14 @@
 ---
+title: "Creating a Custom Connection Manager"
 description: "Creating a Custom Connection Manager"
-title: "Creating a Custom Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom connection managers [Integration Services], creating"
-ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom connection managers [Integration Services], creating"
 ---
 # Creating a Custom Connection Manager
 

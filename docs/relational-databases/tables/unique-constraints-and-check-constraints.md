@@ -1,18 +1,15 @@
 ---
+title: "Unique Constraints and Check Constraints"
 description: "Unique Constraints and Check Constraints"
-title: "Unique Constraints and Check Constraints | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/27/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "constraints [SQL Server], Visual Database Tools"
-  - "Visual Database Tools [SQL Server], constraints"
-ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "06/27/2017"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "constraints [SQL Server], Visual Database Tools"
+  - "Visual Database Tools [SQL Server], constraints"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unique Constraints and Check Constraints

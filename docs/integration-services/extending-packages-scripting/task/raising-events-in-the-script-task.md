@@ -1,15 +1,13 @@
 ---
+title: "Raising Events in the Script Task"
 description: "Raising Events in the Script Task"
-title: "Raising Events in the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "events [Integration Services], scripts"
   - "warnings [Integration Services]"
   - "SSIS events, scripts"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "SSIS Script task, events"
   - "Events property"
   - "Script task [Integration Services], events"
-ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Raising Events in the Script Task
 

@@ -1,15 +1,12 @@
 ---
+title: "Set Parameter Value Dialog Box"
 description: "Set Parameter Value Dialog Box"
-title: "Set Parameter Value Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Set Parameter Value Dialog Box
 

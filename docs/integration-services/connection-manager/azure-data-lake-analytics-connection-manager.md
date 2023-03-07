@@ -1,18 +1,16 @@
 ---
-title: "Azure Data Lake Analytics connection manager | Microsoft Docs"
+title: "Azure Data Lake Analytics connection manager"
 description: A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Analytics connection manager to connect to a Data Lake Analytics account.
-ms.custom: ""
+author: "yanancai"
+ms.author: "yanacai"
+ms.reviewer: maghan
 ms.date: "05/18/2018"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "SQL13.DTS.DESIGNER.AFPADLSCM.F1"
   - "sql14.dts.designer.afpadlscm.f1"
-ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
-author: "yanancai"
-ms.author: "yanacai"
-ms.reviewer: maghan
 ---
 # Azure Data Lake Analytics connection manager
 

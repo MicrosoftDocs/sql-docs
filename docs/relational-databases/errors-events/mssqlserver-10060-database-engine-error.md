@@ -1,18 +1,16 @@
 ---
 title: "MSSQLSERVER_10060"
 description: The SQL Server client cannot connect to the server. See an explanation of error 10060 and possible resolutions.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-f1_keywords: 
-  - "10060"
-helpviewer_keywords: 
-  - "10060 (Database Engine error)"
 author: MashaMSFT
 ms.author: mathoma
-ms.custom: ""
 ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+f1_keywords:
+  - "10060"
+helpviewer_keywords:
+  - "10060 (Database Engine error)"
 ---
 # MSSQLSERVER_10060
 

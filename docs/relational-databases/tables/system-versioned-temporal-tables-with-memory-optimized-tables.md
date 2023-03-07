@@ -1,15 +1,12 @@
 ---
+title: "System-Versioned Temporal Tables with Memory-Optimized Tables"
 description: "System-Versioned Temporal Tables with Memory-Optimized Tables"
-title: "System-Versioned Temporal Tables with Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/12/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
+ms.date: "07/12/2016"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System-Versioned Temporal Tables with Memory-Optimized Tables

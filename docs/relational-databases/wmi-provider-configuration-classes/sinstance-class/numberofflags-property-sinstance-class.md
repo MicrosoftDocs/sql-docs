@@ -1,22 +1,17 @@
 ---
-description: "NumberOfFlags Property (SInstance Class)"
 title: "NumberOfFlags Property (SInstance)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "NumberOfFlags Property (SInstance Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "NumberOfFlags property"
-ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
+description: "NumberOfFlags Property (SInstance Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "NumberOfFlags property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "NumberOfFlags Property (SInstance Class)"
+apitype: "MOFDef"
 ---
 # NumberOfFlags Property (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

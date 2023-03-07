@@ -7,7 +7,6 @@ ms.date: 12/23/2022
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql.data.tools.datacompare.connection.datasources.f1"
   - "sql.data.tools.datacompare.watermark.f1"

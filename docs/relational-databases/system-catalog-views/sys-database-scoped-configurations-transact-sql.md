@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_scoped_configurations catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.database_scoped_configurations (Transact-SQL)

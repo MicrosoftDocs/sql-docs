@@ -1,22 +1,19 @@
 ---
+title: "Data Mining Query Transformation"
 description: "Data Mining Query Transformation"
-title: "Data Mining Query Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataminingquerytrans.f1"
   - "sql13.dts.designer.dmquerytransformation.miningmodel.f1"
   - "sql13.dts.designer.dmquerytransformation.query.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data Mining Query transformation"
   - "prediction queries [Integration Services]"
-ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-author: chugugrace
-ms.author: chugu
 ---
 # Data Mining Query Transformation
 

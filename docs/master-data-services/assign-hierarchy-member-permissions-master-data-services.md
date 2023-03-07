@@ -1,18 +1,15 @@
 ---
-description: "Assign Hierarchy Member Permissions (Master Data Services)"
 title: Assign Hierarchy Member Permissions
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "permissions [Master Data Services], assigning member permissions"
-  - "members [Master Data Services], assigning permissions"
-ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
+description: "Assign Hierarchy Member Permissions (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "permissions [Master Data Services], assigning member permissions"
+  - "members [Master Data Services], assigning permissions"
 ---
 # Assign Hierarchy Member Permissions (Master Data Services)
 

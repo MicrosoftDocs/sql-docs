@@ -1,14 +1,12 @@
 ---
+title: "Registry Settings"
 description: "Registry Settings"
-title: "Registry Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/31/2022"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: "reference"
 ---
 # Registry settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

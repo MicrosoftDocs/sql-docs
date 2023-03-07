@@ -1,22 +1,17 @@
 ---
-description: "StartService Method (SqlService Class)"
 title: "StartService Method (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "StartService Method (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "StartService method"
-ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
+description: "StartService Method (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "StartService method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "StartService Method (SqlService Class)"
+apitype: "MOFDef"
 ---
 # StartService Method (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

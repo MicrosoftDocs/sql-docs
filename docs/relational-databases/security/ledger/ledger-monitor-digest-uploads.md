@@ -1,16 +1,14 @@
 ---
 title: "Monitor digest uploads"
 description: This article provides information on monitoring the digest uploads for ledger.
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/25/2022
 ms.service: sql-database
 ms.subservice: security
-ms.custom:
-ms.reviewer:
 ms.topic: conceptual
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 zone_pivot_groups: as1-azuresql-sql
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Monitor digest uploads

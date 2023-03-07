@@ -9,7 +9,6 @@ ms.date: 12/30/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Database Engine [SQL Server], what's new"
   - "breaking changes [SQL Server]"

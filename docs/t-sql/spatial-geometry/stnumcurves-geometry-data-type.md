@@ -1,19 +1,16 @@
 ---
+title: "STNumCurves (geometry Data Type)"
 description: "STNumCurves (geometry Data Type)"
-title: "STNumCurves (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STNumCurves method (geometry)"
-ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STNumCurves (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSreplication_monitordata system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 ---
 # MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

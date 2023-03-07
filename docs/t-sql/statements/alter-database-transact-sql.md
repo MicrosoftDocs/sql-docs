@@ -609,7 +609,7 @@ To scale databases via T-SQL, ALTER DATABASE permissions are needed.  To scale d
 
 ### A. Check the edition options and change them
 
-Sets an edition and max size for database db1:
+Sets an edition and max size for database `db1`:
 
 ```sql
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
@@ -621,7 +621,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 
 ### B. Move a database to a different elastic pool
 
-Moves an existing database into a pool named pool1:
+Moves an existing database into a pool named `pool1`:
 
 ```sql
 ALTER DATABASE db1
@@ -630,7 +630,7 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 
 ### C. Add a Geo-Replication Secondary
 
-Creates a readable secondary database db1 on server `secondaryserver` of the db1 on the local server.
+Creates a readable secondary database `db1` on server `secondaryserver` of the `db1` on the local server.
 
 ```sql
 ALTER DATABASE db1
@@ -640,7 +640,7 @@ WITH ( ALLOW_CONNECTIONS = ALL )
 
 ### D. Remove a Geo-Replication Secondary
 
-Removes the secondary database db1 on server `secondaryserver`.
+Removes the secondary database `db1` on server `secondaryserver`.
 
 ```sql
 ALTER DATABASE db1
@@ -649,15 +649,18 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 
 ### E. Failover to a Geo-Replication Secondary
 
-Promotes a secondary database db1 on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`.
+Promotes a secondary database `db1` on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`.
 
 ```sql
 ALTER DATABASE db1 FAILOVER
 ```
 
-### E. Force Failover to a Geo-Replication Secondary with data loss
+> [!NOTE]
+> For more information, see [Azure SQL Database disaster recovery guidance](/azure/azure-sql/database/disaster-recovery-guidance) and the [Azure SQL Database high availability and disaster recovery checklist](/azure/azure-sql/database/high-availability-disaster-recovery-checklist).
 
-Forces a secondary database db1 on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`, in the event that the primary server becomes unavailable. This option may incur data loss.
+### F. Force Failover to a Geo-Replication Secondary with data loss
+
+Forces a secondary database `db1` on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`, in the event that the primary server becomes unavailable. This option may incur data loss.
 
 ```sql
 ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
@@ -692,6 +695,8 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
 - [System Databases](../../relational-databases/databases/system-databases.md)
+- [Azure SQL Database disaster recovery guidance](/azure/azure-sql/database/disaster-recovery-guidance)
+- [Azure SQL Database high availability and disaster recovery checklist](/azure/azure-sql/database/high-availability-disaster-recovery-checklist)
 - [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits)
 - [vCore resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases)
 - [vCore Resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)

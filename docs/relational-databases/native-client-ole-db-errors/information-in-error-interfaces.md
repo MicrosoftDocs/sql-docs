@@ -1,22 +1,19 @@
 ---
+title: "Information in Error Interfaces"
 description: "Information in OLE DB-defined Error Interfaces"
-title: "Information in Error Interfaces | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, errors"
   - "IErrorRecords interface"
   - "IErrorInfo interface"
   - "OLE DB error handling, error interfaces"
   - "ISQLErrorInfo interface"
   - "errors [OLE DB], error interfaces"
-ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Information in OLE DB-defined Error Interfaces

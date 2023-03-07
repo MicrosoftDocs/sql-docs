@@ -1,13 +1,13 @@
 ---
 title: "Ledger overview"
 description: Learn the basics of the ledger feature.
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: kendralittle, mathoma
 ms.date: "07/25/2022"
 ms.service: sql-database
 ms.subservice: security
-ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
-author: VanMSFT
-ms.author: vanto
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 

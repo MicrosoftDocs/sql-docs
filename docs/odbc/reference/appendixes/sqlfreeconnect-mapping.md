@@ -1,18 +1,15 @@
 ---
+title: "SQLFreeConnect Mapping"
 description: "SQLFreeConnect Mapping"
-title: "SQLFreeConnect Mapping | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "mapping deprecated functions [ODBC], SQLFreeConnect"
-  - "SQLFreeConnect function [ODBC], mapping"
-ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "mapping deprecated functions [ODBC], SQLFreeConnect"
+  - "SQLFreeConnect function [ODBC], mapping"
 ---
 # SQLFreeConnect Mapping
 When an application calls **SQLFreeConnect** through an ODBC *3.x* driver, the call to  

@@ -1,15 +1,12 @@
 ---
+title: "catalog.delete_folder (SSISDB Database)"
 description: "catalog.delete_folder (SSISDB Database)"
-title: "catalog.delete_folder (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.delete_folder (SSISDB Database)
 

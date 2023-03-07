@@ -1,19 +1,16 @@
 ---
+title: "SSIS Catalog"
 description: "SSIS Catalog"
-title: "SSIS Catalog | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: 09/17/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
-ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: chugugrace
-ms.author: chugu
 ---
 
 # SSIS Catalog

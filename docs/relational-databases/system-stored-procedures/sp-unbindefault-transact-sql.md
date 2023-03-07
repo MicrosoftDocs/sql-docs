@@ -1,22 +1,19 @@
 ---
+title: "sp_unbindefault (Transact-SQL)"
 description: "sp_unbindefault (Transact-SQL)"
-title: "sp_unbindefault (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_unbindefault_TSQL"
-  - "sp_unbindefault"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_unbindefault"
-ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_unbindefault_TSQL"
+  - "sp_unbindefault"
+helpviewer_keywords:
+  - "sp_unbindefault"
+dev_langs:
+  - "TSQL"
 ---
 # sp_unbindefault (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

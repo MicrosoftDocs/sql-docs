@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2519"
 description: "MSSQLSERVER_2519"
-title: "MSSQLSERVER_2519 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2519 (Database Engine error)"
-ms.assetid: 8dc6ad98-5db8-4c88-8dea-6d455e63b839
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2519 (Database Engine error)"
 ---
 # MSSQLSERVER_2519
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

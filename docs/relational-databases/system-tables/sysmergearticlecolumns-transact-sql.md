@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysmergearticlecolumns system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 ---
 # sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

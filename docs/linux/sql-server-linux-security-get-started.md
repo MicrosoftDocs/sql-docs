@@ -4,12 +4,10 @@ description: Walk through the security features of SQL Server on Linux to get an
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom:
-  - intro-get-started
+ms.topic: conceptual
+ms.custom: intro-get-started
 ---
 # Walkthrough for the security features of SQL Server on Linux
 

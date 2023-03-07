@@ -1,15 +1,12 @@
 ---
-title: "DataSources and DataSets collection references in a paginated report | Microsoft Docs"
+title: "DataSources and DataSets collection references in a paginated report"
 description: Learn about the collections of datasources and datasets. Find out how to make them available after the paginated report is published to a report server in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Built-in collections - DataSources and DataSets references in a paginated report (Report Builder)
 

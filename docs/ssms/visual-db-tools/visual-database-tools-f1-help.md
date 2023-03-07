@@ -1,18 +1,14 @@
 ---
-description: "Visual Database Tools F1 Help"
 title: Visual Database Tools F1 Help
-ms.custom: seo-lt-2019
+description: "Visual Database Tools F1 Help"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Visual Database Tools [SQL Server], help"
-ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Visual Database Tools F1 Help
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

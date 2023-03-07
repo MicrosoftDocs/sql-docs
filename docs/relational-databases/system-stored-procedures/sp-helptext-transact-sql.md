@@ -1,21 +1,19 @@
 ---
-description: "sp_helptext (Transact-SQL)"
 title: "sp_helptext (Transact-SQL)"
-ms.custom: ""
-ms.date: "08/19/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helptext"
-  - "sp_helptext_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helptext"
+description: "sp_helptext (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.date: "08/19/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helptext"
+  - "sp_helptext_TSQL"
+helpviewer_keywords:
+  - "sp_helptext"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helptext (Transact-SQL)

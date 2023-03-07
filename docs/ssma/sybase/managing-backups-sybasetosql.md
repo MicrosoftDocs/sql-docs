@@ -1,17 +1,14 @@
 ---
+title: "Managing Backups (SybaseToSQL)"
 description: "Managing Backups (SybaseToSQL)"
-title: "Managing Backups (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Tester Component,Managing Backups"
-ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Managing Backups (SybaseToSQL)
 Sybase Backup Management lets you backup and restore table data before or after running a test. You can also manage the backup content with Manage Backup Contents dialog.  

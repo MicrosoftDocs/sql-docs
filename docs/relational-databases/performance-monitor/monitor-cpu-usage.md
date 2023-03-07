@@ -1,13 +1,13 @@
 ---
 title: "Monitor CPU Usage"
 description: Monitor a SQL Server instance to determine if CPU usage rates are in a normal range. Use System Monitor to see how much time the CPU spends running a thread.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/12/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "monitoring performance [SQL Server], CPU usage"
   - "tuning databases [SQL Server], CPU usage"
   - "processors [SQL Server], monitoring usage"
@@ -19,8 +19,6 @@ helpviewer_keywords:
   - "processors [SQL Server]"
   - "CPU [SQL Server], monitoring"
   - "monitoring server performance [SQL Server], CPU usage"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Monitor CPU Usage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

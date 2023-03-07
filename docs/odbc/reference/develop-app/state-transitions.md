@@ -1,21 +1,18 @@
 ---
+title: "State Transitions"
 description: "State Transitions"
-title: "State Transitions | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "state transitions [ODBC]"
   - "unallocated state [ODBC]"
   - "handles [ODBC], state transitions"
   - "allocated state [ODBC]"
   - "connection state [ODBC]"
-ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # State Transitions
 ODBC defines discrete *states* for each environment, each connection, and each statement. For example, the environment has three possible states: Unallocated (in which no environment is allocated), Allocated (in which an environment is allocated but no connections are allocated), and Connection (in which an environment and one or more connections are allocated). Connections have seven possible states; statements have 13 possible states.  

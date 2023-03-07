@@ -1,18 +1,16 @@
 ---
-description: "Group Rows in Query Results (Visual Database Tools)"
 title: Group Rows in Query Results
+description: "Group Rows in Query Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "summarizing table subsets"
   - "grouping rows"
   - "grouping query results"
-ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Group Rows in Query Results (Visual Database Tools)

@@ -1,18 +1,15 @@
 ---
+title: "Read-Only Status (Excel Driver)"
 description: "Read-Only Status (Excel Driver)"
-title: "Read-Only Status (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "read-only status for Excel driver [ODBC]"
-  - "Excel driver [ODBC], read-only status"
-ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "read-only status for Excel driver [ODBC]"
+  - "Excel driver [ODBC], read-only status"
 ---
 # Read-Only Status (Excel Driver)
 When the Microsoft Excel driver is used, data source tables are opened as read-only by default, and can be opened by only one user at a time. Even though tables have read-only status, however, applications can perform insertions and updates for Microsoft Excel tables.  

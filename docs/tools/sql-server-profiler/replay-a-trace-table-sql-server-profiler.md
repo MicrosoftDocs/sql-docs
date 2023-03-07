@@ -2,15 +2,12 @@
 title: Replay a Trace Table
 titleSuffix: SQL Server Profiler
 description: Get help troubleshooting problems by replaying trace tables in SQL Server Profiler. Learn about replay capabilities and options.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: conceptual
-ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Replay a Trace Table (SQL Server Profiler)

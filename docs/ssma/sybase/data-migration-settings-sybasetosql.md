@@ -1,15 +1,12 @@
 ---
+title: "Data Migration Settings (SybaseToSQL)"
 description: "Data Migration Settings (SybaseToSQL)"
-title: "Data Migration Settings (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Data Migration Settings (SybaseToSQL)
   

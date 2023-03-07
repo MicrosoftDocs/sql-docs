@@ -1,22 +1,19 @@
 ---
-description: "delete (XML DML)"
 title: delete (XML DML)
-ms.custom: ""
+description: "delete (XML DML)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/26/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML DML [SQL Server]"
   - "delete keyword"
   - "delete statement [XML DML]"
   - "deleting nodes"
-ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # delete (XML DML)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

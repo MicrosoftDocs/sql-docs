@@ -1,22 +1,19 @@
 ---
+title: "sp_help_notification (Transact-SQL)"
 description: "sp_help_notification (Transact-SQL)"
-title: "sp_help_notification (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_notification"
-  - "sp_help_notification_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_notification"
-ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_notification"
+  - "sp_help_notification_TSQL"
+helpviewer_keywords:
+  - "sp_help_notification"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

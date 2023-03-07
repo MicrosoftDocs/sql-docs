@@ -8,7 +8,6 @@ ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "media sets [SQL Server], about media sets"
   - "backup media [SQL Server], about backup media"

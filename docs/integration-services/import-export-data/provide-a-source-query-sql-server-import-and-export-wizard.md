@@ -1,17 +1,14 @@
 ---
+title: "Provide a Source Query (SQL Server Import and Export Wizard)"
 description: "Provide a Source Query (SQL Server Import and Export Wizard)"
-title: "Provide a Source Query (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.providesourcequery.f1"
-ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.providesourcequery.f1"
 ---
 # Provide a Source Query (SQL Server Import and Export Wizard)
 

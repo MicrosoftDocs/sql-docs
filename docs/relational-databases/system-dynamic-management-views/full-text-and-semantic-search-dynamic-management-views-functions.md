@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "full-text search [SQL Server], dynamic management views"
 dev_langs:
   - "TSQL"
-ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions
 

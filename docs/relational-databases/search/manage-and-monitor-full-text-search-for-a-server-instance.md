@@ -1,19 +1,17 @@
 ---
-description: "Manage and Monitor Full-Text Search for a Server Instance"
 title: "Manage & monitor Full-Text Search for a SQL Server instance"
+description: "Manage and Monitor Full-Text Search for a Server Instance"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], server management"
-ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

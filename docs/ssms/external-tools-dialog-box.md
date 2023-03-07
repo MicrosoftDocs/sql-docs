@@ -1,19 +1,16 @@
 ---
 title: "External Tools Dialog Box"
 description: "External Tools Dialog Box"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "adding external tools"
   - "external tools [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], external tools"
-ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 # External Tools Dialog Box
 

@@ -1,22 +1,19 @@
 ---
+title: "Long (geography Data Type)"
 description: "Long (geography Data Type)"
-title: "Long (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "06/02/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Long_TSQL"
   - "Long"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Long method"
-ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 
 # Long (geography Data Type)

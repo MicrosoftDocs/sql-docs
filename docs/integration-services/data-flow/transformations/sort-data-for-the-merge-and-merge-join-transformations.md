@@ -1,18 +1,15 @@
 ---
+title: "Sort Data for the Merge and Merge Join Transformations"
 description: "Sort Data for the Merge and Merge Join Transformations"
-title: "Sort Data for the Merge and Merge Join Transformations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "sort attributes [Integration Services]"
-  - "output columns [Integration Services]"
-ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "sort attributes [Integration Services]"
+  - "output columns [Integration Services]"
 ---
 # Sort Data for the Merge and Merge Join Transformations
 

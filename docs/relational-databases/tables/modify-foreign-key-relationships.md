@@ -1,21 +1,18 @@
 ---
+title: "Modify Foreign Key Relationships"
 description: "Modify Foreign Key Relationships"
-title: "Modify Foreign Key Relationships | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "foreign keys [SQL Server], modifying"
-  - "modifying foreign keys"
-ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/25/2017"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+f1_keywords:
+  - "vdtsql.chm:65538"
+  - "vdt.ppg.relationships"
+helpviewer_keywords:
+  - "foreign keys [SQL Server], modifying"
+  - "modifying foreign keys"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Foreign Key Relationships

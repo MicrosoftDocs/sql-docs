@@ -8,9 +8,7 @@ ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Set up and use Azure Monitor logs with a multitenant Azure SQL Database SaaS app
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

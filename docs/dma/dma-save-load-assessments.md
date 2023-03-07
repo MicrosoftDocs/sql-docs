@@ -7,7 +7,6 @@ ms.date: "01/10/2020"
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ---

@@ -1,21 +1,18 @@
 ---
-description: "Delete One or More Jobs"
 title: "Delete One or More Jobs"
-ms.custom: seo-lt-2019
+description: "Delete One or More Jobs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, deleting"
   - "dropping jobs"
   - "jobs [SQL Server Agent], deleting"
   - "deleting jobs"
   - "removing jobs"
-ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Delete One or More Jobs

@@ -1,24 +1,21 @@
 ---
+title: "Design-time Methods of a Data Flow Component"
 description: "Design-time Methods of a Data Flow Component"
-title: "Design-time Methods of a Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom data flow components [Integration Services], method execution sequence"
   - "ProcessInput method"
   - "method execution sequence [Integration Services]"
   - "PrimeOutput method"
   - "data flow components [Integration Services], method execution sequence"
-ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Design-time Methods of a Data Flow Component
 

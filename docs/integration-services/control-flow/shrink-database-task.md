@@ -1,21 +1,18 @@
 ---
+title: "Shrink Database Task"
 description: "Shrink Database Task"
-title: "Shrink Database Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.shrinkdatabasetask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Shrink Database task"
   - "database shrinking [Integration Services]"
   - "shrinking databases"
-ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: chugugrace
-ms.author: chugu
 ---
 # Shrink Database Task
 

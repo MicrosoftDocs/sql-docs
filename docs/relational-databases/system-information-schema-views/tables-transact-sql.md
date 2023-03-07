@@ -1,22 +1,20 @@
 ---
 title: TABLES (Transact-SQL)
 description: "TABLES (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "05/20/2019"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "TABLES_TSQL"
   - "TABLES"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TABLES view"
   - "INFORMATION_SCHEMA.TABLES view"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "05/20/2019"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

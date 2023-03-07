@@ -1,22 +1,20 @@
 ---
-title: "Make Schema Changes on Publication Databases | Microsoft Docs"
+title: "Make Schema Changes on Publication Databases"
 description: Replication supports a range of schema changes to published objects. Learn about schema changes that are propagated by default to all SQL Server Subscribers.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/20/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "replication [SQL Server], schema changes"
   - "snapshot replication [SQL Server], replicating schema changes"
   - "merge replication [SQL Server replication], replicating schema changes"
   - "transactional replication, replicating schema changes"
   - "schemas [SQL Server replication], replicating changes"
   - "publishing [SQL Server replication], schema changes"
-ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Make Schema Changes on Publication Databases

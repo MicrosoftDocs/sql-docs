@@ -1,18 +1,15 @@
 ---
-title: "Detail Property | Microsoft Docs"
+title: "Detail Property"
 description: Learn about the Detail property of the Reporting Services SoapException class, specifically about the XML elements that define the property.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
 ms.service: reporting-services
 ms.subservice: report-server-web-service
-
-
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Detail property"
   - "SoapException class"
-ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Detail Property
   The **Detail** property of the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** class has the following XML structure:  

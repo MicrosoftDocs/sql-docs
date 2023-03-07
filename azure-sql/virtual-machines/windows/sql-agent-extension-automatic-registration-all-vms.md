@@ -8,7 +8,6 @@ ms.date: 01/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
 tags: azure-service-management
 ---
 # Automatic registration with SQL IaaS Agent extension

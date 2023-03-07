@@ -1,16 +1,13 @@
 ---
 title: SQL Server privacy supplement
 description: SQL Server privacy supplement
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: "wopeter"
 ms.date: 05/31/2022
 ms.service: sql
 ms.subservice: release-landing
-ms.reviewer: "wopeter"
-ms.custom: ""
 ms.topic: conceptual
-f1_keywords: 
-helpviewer_keywords: 
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 
 # SQL Server privacy supplement

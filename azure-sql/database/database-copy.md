@@ -9,9 +9,9 @@ ms.service: sql-database
 ms.subservice: data-movement
 ms.topic: how-to
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
 

@@ -127,7 +127,7 @@ conceptualContent:
     - title: Migrate
       links:
         - text: Data Migration Guide 
-          url: https://datamigration.microsoft.com/
+          url: /data-migration/
           itemType: overview
         - text: Database Compatibility Certification 
           url: ./database-engine/install-windows/compatibility-certification.md

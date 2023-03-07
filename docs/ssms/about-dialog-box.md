@@ -1,17 +1,15 @@
 ---
 title: "About Dialog Box"
 description: "About Dialog Box"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server Management Studio]"
   - "About dialog box"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # About Dialog Box

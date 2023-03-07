@@ -1,21 +1,18 @@
 ---
+title: "Transfer Logins Task"
 description: "Transfer Logins Task"
-title: "Transfer Logins Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.transferloginstask.f1"
   - "sql13.dts.designer.transferloginstask.general.f1"
   - "sql13.dts.designer.transferloginstask.logins.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transfer Logins task [Integration Services]"
-ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-author: chugugrace
-ms.author: chugu
 ---
 # Transfer Logins Task
 

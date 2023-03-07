@@ -3,7 +3,7 @@ title: "sys.dm_db_mirroring_connections (Transact-SQL)"
 description: Database Mirroring - sys.dm_db_mirroring_connections returns a row for each connection established for database mirroring.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/03/2022"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -54,6 +54,10 @@ dev_langs:
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
 ## Physical joins  
 

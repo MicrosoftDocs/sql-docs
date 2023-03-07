@@ -8,7 +8,6 @@ ms.date: 11/02/2022
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Upgrade availability group replicas
 

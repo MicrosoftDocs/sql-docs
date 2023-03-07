@@ -1,21 +1,18 @@
 ---
+title: "XML Task"
 description: "XML Task"
-title: "XML Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.f1"
-  - "sql13.dts.designer.xmltask.general.f1"
-helpviewer_keywords: 
-  - "XML [Integration Services]"
-  - "XML task [Integration Services]"
-ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.xmltask.f1"
+  - "sql13.dts.designer.xmltask.general.f1"
+helpviewer_keywords:
+  - "XML [Integration Services]"
+  - "XML task [Integration Services]"
 ---
 # XML Task
 

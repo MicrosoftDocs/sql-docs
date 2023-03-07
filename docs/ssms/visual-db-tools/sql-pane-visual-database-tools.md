@@ -1,20 +1,16 @@
 ---
-description: "SQL Pane (Visual Database Tools)"
 title: SQL Pane
-ms.custom: seo-lt-2019
+description: "SQL Pane (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Designer [SQL Server], SQL pane"
   - "View Designer, SQL pane"
   - "SQL pane [Visual Database Tools]"
-ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # SQL Pane (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,6 @@ ms.date: "06/13/2017"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: troubleshooting
-ms.custom: seo-lt-2019
 ---
 # Dynamic management views and system catalog views (Always On Availability Groups)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

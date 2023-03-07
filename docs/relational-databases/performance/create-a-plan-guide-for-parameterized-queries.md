@@ -1,18 +1,15 @@
 ---
-title: "Create a Plan Guide for Parameterized Queries | Microsoft Docs"
+title: "Create a Plan Guide for Parameterized Queries"
 description: Learn how to create a plan guide that matches any query that parameterizes to a specified form and directs SQL Server to force parameterization of the query.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "parameterized queries, plan guides for"
-  - "plan guides [SQL Server], parameterized queries"
-ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "parameterized queries, plan guides for"
+  - "plan guides [SQL Server], parameterized queries"
 ---
 # Create a Plan Guide for Parameterized Queries
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,19 +1,16 @@
 ---
+title: "String Padding (SSIS)"
 description: "String Padding (SSIS)"
-title: "String Padding (SSIS) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "padding strings [Integration Services]"
   - "expressions [Integration Services], string padding"
   - "string padding"
-ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
-author: chugugrace
-ms.author: chugu
 ---
 # String Padding (SSIS)
 

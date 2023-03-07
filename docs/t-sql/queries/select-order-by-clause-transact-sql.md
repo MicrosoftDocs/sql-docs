@@ -1,22 +1,20 @@
 ---
+title: "ORDER BY Clause (Transact-SQL)"
 description: "SELECT - ORDER BY Clause (Transact-SQL)"
-title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "12/24/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ORDER_TSQL"
   - "BY"
   - "ORDER_BY_TSQL"
   - "BY_TSQL"
   - "ORDER"
   - "ORDER BY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ad-hoc query paging"
   - "OFFSET clause"
   - "SELECT statement [SQL Server], FETCH clause"
@@ -35,9 +33,8 @@ helpviewer_keywords:
   - "limiting data returned in a query"
   - "sort orders [SQL Server], ORDER BY clause"
   - "FETCH clause"
-ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)

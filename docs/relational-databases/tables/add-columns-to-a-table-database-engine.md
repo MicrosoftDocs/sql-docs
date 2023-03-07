@@ -1,18 +1,16 @@
 ---
-description: "Add Columns to a Table (Database Engine)"
 title: "Add Columns to a Table (Database Engine)"
-ms.custom: ""
+description: "Add Columns to a Table (Database Engine)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "01/28/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inserting columns"
   - "columns [SQL Server], adding"
   - "adding columns"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Add Columns to a Table (Database Engine)

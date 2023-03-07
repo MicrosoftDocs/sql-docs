@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "system tables [SQL Server], log shipping"
 dev_langs:
   - "TSQL"
-ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 ---
 # Log Shipping Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,17 @@
 ---
-title: "Specifying Node Test in a Path Expression Step | Microsoft Docs"
+title: "Specifying Node Test in a Path Expression Step"
 description: Learn how to specify a node test in the axis step of an XQuery path expression.
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "axis step [XQuery]"
-  - "node test [XQuery]"
-ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "axis step [XQuery]"
+  - "node test [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Path Expressions - Specifying Node Test
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

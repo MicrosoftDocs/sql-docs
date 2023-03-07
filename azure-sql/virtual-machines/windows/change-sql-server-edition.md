@@ -8,7 +8,6 @@ ms.date: 01/14/2020
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom: seo-lt-2019
 tags: azure-resource-manager
 ---
 # In-place change of SQL Server edition on Azure VM

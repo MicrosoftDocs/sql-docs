@@ -153,8 +153,6 @@ For the deployment to work, all the accounts need to already be present in Activ
 
    - For **Domain FQDN**, enter a fully qualified domain name, such as **contoso.com**.
 
-   - For **Ou path**, enter an organizational unit (OU) path for Active Directory if you're using one.
-
     :::image type="content" source="./media/availability-group-az-portal-configure/windows-ad-domain.png" alt-text="Screenshot of the Azure portal that shows Windows Active Directory domain details.":::
 
 1. Under **SQL Server details**, provide the domain-joined account that you want to use to manage SQL Server on the VMs. You can choose to use the same user that created the cluster and joined the VMs to the domain by choosing **Same as domain join account**. Or you can select **Custom** and provide different account details to use with the SQL Server service account.  

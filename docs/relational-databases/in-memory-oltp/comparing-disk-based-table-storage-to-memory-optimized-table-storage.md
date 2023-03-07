@@ -7,8 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Comparing Disk-Based Table Storage to Memory-Optimized Table Storage

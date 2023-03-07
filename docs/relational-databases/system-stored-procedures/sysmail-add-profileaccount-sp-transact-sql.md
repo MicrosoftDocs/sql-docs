@@ -1,22 +1,19 @@
 ---
+title: "sysmail_add_profileaccount_sp (Transact-SQL)"
 description: "sysmail_add_profileaccount_sp (Transact-SQL)"
-title: "sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_add_profileaccount_sp"
-  - "sysmail_add_profileaccount_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_add_profileaccount_sp"
-ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_add_profileaccount_sp"
+  - "sysmail_add_profileaccount_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_add_profileaccount_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

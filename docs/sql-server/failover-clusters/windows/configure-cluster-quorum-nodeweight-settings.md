@@ -1,19 +1,16 @@
 ---
 title: "Configure cluster quorum NodeWeight settings"
-description: Describes how to configure the NodeWeight settings for a member node in a Windows Server Failover Cluster. 
-ms.custom: "seo-lt-2019"
+description: Describes how to configure the NodeWeight settings for a member node in a Windows Server Failover Cluster.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
   - "quorum [SQL Server], Always On and WSFC quorum"
-ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Configure Cluster Quorum NodeWeight Settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -9,7 +9,6 @@ ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # SQL Server Big Data Clusters Spark Streaming guide

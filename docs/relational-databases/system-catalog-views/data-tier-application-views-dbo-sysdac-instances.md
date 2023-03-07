@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sysdac_instances"
 dev_langs:
   - "TSQL"
-ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 ---
 # Data-tier Application Views - dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

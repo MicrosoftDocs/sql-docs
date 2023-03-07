@@ -9,9 +9,7 @@ ms.date: 04/01/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.custom:
-  - "ignite-fall-2021"
-  - "devx-track-azurecli"
+ms.custom: ignite-fall-2021, devx-track-azurecli, devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

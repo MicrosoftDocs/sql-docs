@@ -1,19 +1,16 @@
 ---
+title: "Cursors Event Category"
 description: "Cursors Event Category"
-title: "Cursors Event Category | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Cursors event category [SQL Server]"
   - "event classes [SQL Server], Cursors event category"
   - "SQL Server event classes, Cursors event category"
-ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursors Event Category

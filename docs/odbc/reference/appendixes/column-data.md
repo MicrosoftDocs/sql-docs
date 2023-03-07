@@ -1,20 +1,17 @@
 ---
+title: "Column Data"
 description: "Column Data"
-title: "Column Data | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column data [ODBC]"
   - "ODBC cursor library [ODBC], cache"
   - "cursor library [ODBC], cache"
   - "cache [ODBC]"
-ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Column Data
 > [!IMPORTANT]  

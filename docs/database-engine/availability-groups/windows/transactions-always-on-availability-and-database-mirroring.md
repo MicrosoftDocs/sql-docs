@@ -7,7 +7,6 @@ ms.date: "12/11/2018"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "database mirroring [SQL Server], interoperability"
   - "cross-database transactions [SQL Server]"

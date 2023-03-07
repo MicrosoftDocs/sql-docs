@@ -1,22 +1,18 @@
 ---
-description: "Column Properties (Visual Database Tools)"
 title: Column Properties
-ms.custom: seo-lt-2019
+description: "Column Properties (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.designers.properties.Column.ColumnIdentitySpec"
   - "vdt.designers.properties.Column"
   - "vdt.tablecolumn"
   - "vdt.designers.properties.Column.ColumnComputedColumnSpec"
   - "vdt.designers.properties.Column.ColumnFulltextSpec"
-ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Column Properties (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysjobactivity system table"
 dev_langs:
   - "TSQL"
-ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 ---
 # dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

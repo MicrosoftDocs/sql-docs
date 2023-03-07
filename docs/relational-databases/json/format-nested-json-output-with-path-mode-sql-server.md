@@ -1,15 +1,12 @@
 ---
-description: "Format Nested JSON Output with PATH Mode (SQL Server)"
 title: "Format Nested JSON Output with PATH Mode"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: 032761b0-6358-42e4-b05c-dbfd663ac881
+description: "Format Nested JSON Output with PATH Mode (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format Nested JSON Output with PATH Mode (SQL Server)

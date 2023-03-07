@@ -1,14 +1,13 @@
 ---
-title: "Schedule SSIS packages in Azure | Microsoft Docs"
+title: "Schedule SSIS packages in Azure"
 description: Provides an overview of the available methods for scheduling the execution of SSIS packages deployed to Azure SQL Database.
-ms.date: 11/08/2022
-ms.topic: conceptual
-ms.service: sql
-ms.custom: ""
-ms.subservice: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
+ms.date: 11/08/2022
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure
 

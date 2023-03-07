@@ -1,17 +1,14 @@
 ---
-title: "Database Properties (Files Page) | Microsoft Docs"
+title: "Database Properties (Files Page)"
 description: "Find out how to view or modify a database's properties and how to create a new database in SQL Server Management Studio."
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.databaseproperties.files.f1"
-ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.databaseproperties.files.f1"
 ---
 # Database Properties (Files Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

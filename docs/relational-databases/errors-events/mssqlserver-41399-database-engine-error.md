@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_41399"
 description: "MSSQLSERVER_41399"
-title: "MSSQLSERVER_41399 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "41399 (Database Engine error)"
-ms.assetid: 5e5acb07-16ca-4329-8210-cd2bab0c904f
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "41399 (Database Engine error)"
 ---
 # MSSQLSERVER_41399
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

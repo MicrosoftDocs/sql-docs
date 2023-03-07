@@ -1,20 +1,18 @@
 ---
-description: "Disable Foreign Key Constraints with INSERT and UPDATE Statements"
 title: Disable Foreign Key Constraints in INSERT and UPDATE Statements
-ms.custom: "seo-lt-2019"
+description: "Disable Foreign Key Constraints with INSERT and UPDATE Statements"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/13/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "constraints [SQL Server], foreign keys"
   - "foreign keys [SQL Server], disabling constraints"
   - "disabling constraints"
   - "UPDATE statement [SQL Server], foreign key constraints"
   - "INSERT statement [SQL Server], foreign key constraints"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable foreign key constraints with INSERT and UPDATE statements

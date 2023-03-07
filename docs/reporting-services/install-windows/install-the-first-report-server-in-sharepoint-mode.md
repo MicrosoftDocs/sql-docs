@@ -1,14 +1,13 @@
 ---
+title: "Install the first Report Server in SharePoint mode"
 description: "Install the first Report Server in SharePoint mode"
-title: "Install the first Report Server in SharePoint mode | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 10/05/2017
 ms.service: reporting-services
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
-ms.custom:
-  - intro-installation
 ---
 # Install the first Report Server in SharePoint mode
 

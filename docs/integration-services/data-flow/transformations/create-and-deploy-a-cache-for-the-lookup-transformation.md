@@ -1,19 +1,16 @@
 ---
+title: "Create and Deploy a Cache for the Lookup Transformation"
 description: "Create and Deploy a Cache for the Lookup Transformation"
-title: "Create and Deploy a Cache for the Lookup Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "creating cache files for Lookup transformation"
   - "deploying cache files for Lookup transformation"
   - "Lookup transformation cache files"
-ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: chugugrace
-ms.author: chugu
 ---
 # Create and Deploy a Cache for the Lookup Transformation
 

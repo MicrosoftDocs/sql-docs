@@ -9,7 +9,6 @@ ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: machine-learning-bdc
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Create, export, and score Spark machine learning models on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

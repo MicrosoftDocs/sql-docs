@@ -1,22 +1,19 @@
 ---
+title: "sp_browsesnapshotfolder (Transact-SQL)"
 description: "sp_browsesnapshotfolder (Transact-SQL)"
-title: "sp_browsesnapshotfolder (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_browsesnapshotfolder"
-  - "sp_browsesnapshotfolder_TSQL"
-helpviewer_keywords: 
-  - "sp_browsesnapshotfolder"
-ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_browsesnapshotfolder"
+  - "sp_browsesnapshotfolder_TSQL"
+helpviewer_keywords:
+  - "sp_browsesnapshotfolder"
+dev_langs:
+  - "TSQL"
 ---
 # sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

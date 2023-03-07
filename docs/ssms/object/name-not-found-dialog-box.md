@@ -1,19 +1,16 @@
 ---
-description: "Name Not Found Dialog Box"
 title: "Name Not Found Dialog Box"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.common.namenotfound.f1"
-helpviewer_keywords: 
-  - "Name Not Found dialog box"
-ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
+description: "Name Not Found Dialog Box"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.common.namenotfound.f1"
+helpviewer_keywords:
+  - "Name Not Found dialog box"
 ---
 # Name Not Found Dialog Box
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

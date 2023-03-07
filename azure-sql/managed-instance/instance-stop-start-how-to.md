@@ -1,6 +1,6 @@
 ---
 title: Stop and start an instance (preview)
-description: This article describes the stop and start feature of Azure SQL Managed Instance. 
+description: This article describes the stop and start feature of Azure SQL Managed Instance.
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
@@ -8,7 +8,6 @@ ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom:
 ---
 
 # Stop and start an instance (preview) - Azure SQL Managed Instance 
@@ -138,8 +137,7 @@ Select-AzSubscription -SubscriptionName $SubscriptionID
 Write-Host "Getting the profile information ..."
 $azContext = Get-AzContext
 $azProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile
-$profileClient = New-Object -TypeName Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient -
-ArgumentList ($azProfile)
+$profileClient = New-Object -TypeName Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient -ArgumentList ($azProfile)
 # Get authentication token
 Write-Host "Getting authentication token for REST API call ..."
 $token = $profileClient.AcquireAccessToken($azContext.Subscription.TenantId)

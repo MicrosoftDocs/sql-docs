@@ -1,18 +1,14 @@
 ---
-description: "Full-Text Index Columns Dialog Box (Visual Database Tools)"
 title: Full-Text Index Columns Dialog Box
-ms.custom: seo-lt-2019
+description: "Full-Text Index Columns Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.fulltextcolumn"
-ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Full-Text Index Columns Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

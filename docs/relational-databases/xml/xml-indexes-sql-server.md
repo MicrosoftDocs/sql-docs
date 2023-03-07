@@ -1,11 +1,11 @@
 ---
 title: "XML Indexes (SQL Server)"
 description: Learn how creating XML indexes on xml data type columns can benefit your application by improving query performance.
-ms.custom:
-- event-tier1-build-2022
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/09/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,8 +31,6 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], xml data type"
   - "PROPERTY index"
   - "XML indexes [SQL Server], creating"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # XML indexes (SQL Server)
 

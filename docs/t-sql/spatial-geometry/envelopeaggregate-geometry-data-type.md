@@ -1,19 +1,16 @@
 ---
+title: "EnvelopeAggregate (geometry Data Type)"
 description: "EnvelopeAggregate (geometry Data Type)"
-title: "EnvelopeAggregate (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "EnvelopeAggregate method (geometry)"
-ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # EnvelopeAggregate (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

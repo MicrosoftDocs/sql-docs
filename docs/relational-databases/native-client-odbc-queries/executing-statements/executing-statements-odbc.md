@@ -1,20 +1,17 @@
 ---
+title: "Executing Statements (ODBC)"
 description: "Executing Statements (ODBC)"
-title: "Executing Statements (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, statements"
   - "statements [ODBC]"
   - "ODBC applications, statements"
   - "statements [ODBC], executing"
-ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Statements (ODBC)

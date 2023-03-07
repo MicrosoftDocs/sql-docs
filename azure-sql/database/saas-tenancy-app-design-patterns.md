@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: scenario
 ms.topic: conceptual
 ms.custom:
-  - "seoapril2019"
-  - "sqldbrb=1"
+  - seoapril2019
+  - sqldbrb=1
 ---
 # Multi-tenant SaaS database tenancy patterns
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

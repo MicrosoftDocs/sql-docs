@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "annotated XSD schemas, updategrams"
   - "data types [SQLXML], mapping schema in updategrams"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "parent-child relationships [SQLXML]"
   - "mapping-schema attribute"
   - "mapping schema [SQLXML], updategrams"
-ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0)

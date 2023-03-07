@@ -1,20 +1,17 @@
 ---
+title: "Setting Options Programmatically for the dBASE Driver"
 description: "Setting Options Programmatically for the dBASE Driver"
-title: "Setting Options Programmatically for the dBASE Driver | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], DBasedriver"
   - "desktop database drivers [ODBC], DBasedriver"
   - "DBase driver [ODBC], setting options programmatically"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
-ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Setting Options Programmatically for the dBASE Driver
 

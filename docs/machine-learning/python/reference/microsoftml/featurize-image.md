@@ -1,29 +1,23 @@
---- 
- 
-# required metadata 
-title: "featurize_image: Machine Learning Image Featurization Transform" 
-description: "Featurizes an image using a pre-trained deep neural network model." 
-keywords: "transform, image, featurize, dnn, cnn, resnet, alexnet" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "featurize_image: Machine Learning Image Featurization Transform"
+description: "Featurizes an image using a pre-trained deep neural network model."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - transform
+  - image
+  - featurize
+  - dnn
+  - cnn
+  - resnet
+  - alexnet
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.featurize_image*: Converts an image into features
 
 

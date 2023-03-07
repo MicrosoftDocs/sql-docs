@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "indexes [SQL Server], unique"
   - "nonclustered indexes [SQL Server], unique"
   - "unique indexes, design guidelines"
-ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Unique Indexes

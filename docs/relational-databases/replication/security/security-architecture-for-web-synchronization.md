@@ -1,17 +1,15 @@
 ---
+title: "Security Architecture for Web Synchronization"
 description: "Security Architecture for Web Synchronization"
-title: "Security Architecture for Web Synchronization | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Web synchronization, security architecture"
-ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Web synchronization, security architecture"
 ---
 # Security Architecture for Web Synchronization
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

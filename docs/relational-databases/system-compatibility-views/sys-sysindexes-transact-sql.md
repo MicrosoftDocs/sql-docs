@@ -1,25 +1,22 @@
 ---
+title: "sys.sysindexes (Transact-SQL)"
 description: "sys.sysindexes (Transact-SQL)"
-title: "sys.sysindexes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysindexes"
   - "sysindexes_TSQL"
   - "sys.sysindexes"
   - "sys.sysindexes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysindexes system table"
   - "sys.sysindexes compatibility view"
-ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

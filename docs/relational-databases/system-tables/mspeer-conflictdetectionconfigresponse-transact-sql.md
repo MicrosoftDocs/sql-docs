@@ -7,7 +7,6 @@ ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 f1_keywords:
   - "MSpeer_conflictdetectionconfigresponse"
   - "MSpeer_conflictdetectionconfigresponse_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_conflictdetectionconfigureresponse"
 dev_langs:
   - "TSQL"
-ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 ---
 # MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

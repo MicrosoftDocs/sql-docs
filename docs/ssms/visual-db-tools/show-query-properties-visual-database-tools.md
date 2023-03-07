@@ -1,21 +1,17 @@
 ---
-description: "Show Query Properties (Visual Database Tools)"
 title: Show Query Properties
-ms.custom: seo-lt-2019
+description: "Show Query Properties (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing query properties"
   - "displaying query properties"
   - "showing query properties"
   - "queries [SQL Server], properties"
-ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Show Query Properties (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

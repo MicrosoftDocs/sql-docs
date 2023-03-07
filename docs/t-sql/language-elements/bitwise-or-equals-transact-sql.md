@@ -4,12 +4,10 @@ titleSuffix: SQL Server (Transact-SQL)
 description: "|= (Bitwise OR Assignment) (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "01/10/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
 f1_keywords:
   - "|="
   - "|=_TSQL"

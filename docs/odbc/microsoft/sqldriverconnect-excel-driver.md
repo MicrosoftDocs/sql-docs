@@ -1,18 +1,15 @@
 ---
+title: "SQLDriverConnect (Excel Driver)"
 description: "SQLDriverConnect (Excel Driver)"
-title: "SQLDriverConnect (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Excel driver [ODBC], SQLDriverConnect"
-  - "SQLDriverConnect function [ODBC], Excel Driver"
-ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Excel driver [ODBC], SQLDriverConnect"
+  - "SQLDriverConnect function [ODBC], Excel Driver"
 ---
 # SQLDriverConnect (Excel Driver)
 > [!NOTE]  

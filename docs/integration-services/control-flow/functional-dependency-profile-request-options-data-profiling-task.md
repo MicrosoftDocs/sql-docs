@@ -1,17 +1,14 @@
 ---
+title: "Functional Dependency Profile Request Options (Data Profiling Task)"
 description: "Functional Dependency Profile Request Options (Data Profiling Task)"
-title: "Functional Dependency Profile Request Options (Data Profiling Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Data Profiling Task Editor"
-ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Profiling Task Editor"
 ---
 # Functional Dependency Profile Request Options (Data Profiling Task)
 

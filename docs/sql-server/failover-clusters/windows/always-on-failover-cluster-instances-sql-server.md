@@ -1,14 +1,13 @@
 ---
 title: "Always On failover cluster instances"
 description: Learn how Always On Failover Cluster Instances provide local high availability through redundancy at the server-instance level in SQL Server.
-ms.custom:
-  - seo-lt-2019
-  - intro-overview
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "01/18/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: conceptual
+ms.custom: intro-overview
 helpviewer_keywords:
   - "clustering [SQL Server]"
   - "high availability [SQL Server], failover clustering"
@@ -20,9 +19,6 @@ helpviewer_keywords:
   - "failover clustering [SQL Server]"
   - "AlwaysOn [SQL Server], see failover clustering [SQL Server]"
   - "Always On [SQL Server], see failover clustering [SQL Server]"
-ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Always On Failover Cluster Instances (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

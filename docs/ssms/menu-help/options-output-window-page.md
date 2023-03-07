@@ -8,15 +8,14 @@ ms.date: 1/5/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-helpviewer_keywords:
-- "Output Window [SQL Server Management Studio]"
-- "Activity Monitor [SQL Server Management Studio]"
-- "Object Explorer [SQL Server Management Studio]"  
 f1_keywords:
   - "VS.ToolsOptionsPages.Query_Execution.Sql_Server.General"
+helpviewer_keywords:
+  - "Output Window [SQL Server Management Studio]"
+  - "Activity Monitor [SQL Server Management Studio]"
+  - "Object Explorer [SQL Server Management Studio]"
 dev_langs:
   - TSQL
-ms.custom: seo-lt-2019
 ---
 
 # Options (Output Window - General)

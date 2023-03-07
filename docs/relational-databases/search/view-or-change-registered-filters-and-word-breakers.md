@@ -1,21 +1,19 @@
 ---
-description: "View or Change Registered Filters and Word Breakers"
 title: "View or change registered filters & word breakers"
+description: "View or Change Registered Filters and Word Breakers"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], word breakers"
   - "full-text search [SQL Server], filters"
   - "filters [full-text search]"
   - "word breakers [full-text search]"
-ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # View or Change Registered Filters and Word Breakers
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

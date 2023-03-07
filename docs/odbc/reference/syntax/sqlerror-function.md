@@ -1,24 +1,19 @@
 ---
+title: "SQLError Function"
 description: "SQLError Function"
-title: "SQLError Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLError"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLError"
-helpviewer_keywords: 
-  - "SQLError function [ODBC]"
-ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLError"
+helpviewer_keywords:
+  - "SQLError function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLError"
+apitype: "dllExport"
 ---
 # SQLError Function
 **Conformance**  

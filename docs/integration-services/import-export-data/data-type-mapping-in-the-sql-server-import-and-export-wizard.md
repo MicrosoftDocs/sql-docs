@@ -1,15 +1,12 @@
 ---
+title: "Data Type Mapping in the SQL Server Import and Export Wizard"
 description: "Data Type Mapping in the SQL Server Import and Export Wizard"
-title: "Data Type Mapping in the SQL Server Import and Export Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
+ms.date: "01/11/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Data Type Mapping in the SQL Server Import and Export Wizard
 

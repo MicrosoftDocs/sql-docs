@@ -1,15 +1,12 @@
 ---
+title: "catalog.stop_operation (SSISDB Database)"
 description: "catalog.stop_operation (SSISDB Database)"
-title: "catalog.stop_operation (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.stop_operation (SSISDB Database)
 

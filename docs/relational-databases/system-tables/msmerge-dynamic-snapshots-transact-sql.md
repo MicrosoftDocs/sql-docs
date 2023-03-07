@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_dynamic_snapshots system table"
 dev_langs:
   - "TSQL"
-ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 ---
 # MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

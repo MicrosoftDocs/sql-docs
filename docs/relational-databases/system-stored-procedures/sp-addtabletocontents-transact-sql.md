@@ -1,22 +1,19 @@
 ---
+title: "sp_addtabletocontents (Transact-SQL)"
 description: "sp_addtabletocontents (Transact-SQL)"
-title: "sp_addtabletocontents (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addtabletocontents_TSQL"
-  - "sp_addtabletocontents"
-helpviewer_keywords: 
-  - "sp_addtabletocontents"
-ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addtabletocontents_TSQL"
+  - "sp_addtabletocontents"
+helpviewer_keywords:
+  - "sp_addtabletocontents"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

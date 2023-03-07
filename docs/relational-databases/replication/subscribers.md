@@ -1,19 +1,17 @@
 ---
+title: "Subscribers"
 description: "Subscribers"
-title: "Subscribers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.subscribers.f1"
-helpviewer_keywords: 
-  - "Subscribers [SQL Server replication]"
-ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.subscribers.f1"
+helpviewer_keywords:
+  - "Subscribers [SQL Server replication]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Subscribers

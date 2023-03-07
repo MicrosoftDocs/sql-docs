@@ -7,12 +7,9 @@ ms.date: 06/29/2020
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-migration
+ms.custom: intro-migration
 helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
-keywords: ""
 ---
 
 # Migrate on-premises SQL Server or SQL Server on Azure VMs to Azure SQL Database using the Data Migration Assistant

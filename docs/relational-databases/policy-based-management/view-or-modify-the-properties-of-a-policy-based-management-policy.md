@@ -1,18 +1,15 @@
 ---
 title: "View or modify properties of a Policy-Based Management policy"
 description: Learn to view or modify the properties of a Policy-Based Management policy for SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
-ms.date: "10/06/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, modify policies"
-  - "Policy-Based Management, view policies"
-ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
+ms.date: "10/06/2016"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, modify policies"
+  - "Policy-Based Management, view policies"
 ---
 # View or Modify the Properties of a Policy-Based Management Policy
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_help_targetservergroup (Transact-SQL)"
 description: "sp_help_targetservergroup (Transact-SQL)"
-title: "sp_help_targetservergroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_targetservergroup_TSQL"
-  - "sp_help_targetservergroup"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_targetservergroup"
-ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_targetservergroup_TSQL"
+  - "sp_help_targetservergroup"
+helpviewer_keywords:
+  - "sp_help_targetservergroup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

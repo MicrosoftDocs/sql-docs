@@ -3,12 +3,10 @@ title: "SUSER_ID (Transact-SQL)"
 description: "SUSER_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "09/07/2018"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SUSER_ID_TSQL"
   - "SUSER_ID"

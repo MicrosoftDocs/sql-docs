@@ -1,14 +1,13 @@
 ---
-title: "Troubleshoot SSIS Scale Out | Microsoft Docs"
+title: "Troubleshoot SSIS Scale Out"
 description: "Troubleshoot common issues with SSIS Scale Out like configuration mistakes and lack of access permissions."
-ms.custom: performance
-ms.date: 01/09/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
+ms.date: 01/09/2019
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: performance
 ---
 # Troubleshoot Scale Out
 

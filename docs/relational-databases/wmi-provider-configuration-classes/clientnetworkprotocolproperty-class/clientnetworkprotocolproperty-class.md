@@ -1,22 +1,15 @@
 ---
-description: "ClientNetworkProtocolProperty Class"
 title: "ClientNetworkProtocolProperty Class"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "ClientNetworkProtocolProperty Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "ClientNetworkProtocolProperty class"
-ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
+description: "ClientNetworkProtocolProperty Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ClientNetworkProtocolProperty class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ClientNetworkProtocolProperty Class"
 ---
 # ClientNetworkProtocolProperty Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

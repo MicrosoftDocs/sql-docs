@@ -9,7 +9,7 @@ ms.date: 01/20/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: article
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Playbook for addressing common security requirements with Azure SQL Database and Azure SQL Managed Instance

@@ -8,7 +8,6 @@ ms.date: 07/28/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "GENERATE_SERIES"
   - "GENERATE_SERIES_TSQL"

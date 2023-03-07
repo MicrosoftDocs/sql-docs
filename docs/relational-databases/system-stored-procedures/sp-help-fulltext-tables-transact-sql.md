@@ -1,22 +1,19 @@
 ---
+title: "sp_help_fulltext_tables (Transact-SQL)"
 description: "sp_help_fulltext_tables (Transact-SQL)"
-title: "sp_help_fulltext_tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_fulltext_tables"
-  - "sp_help_fulltext_tables_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_fulltext_tables"
-ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_fulltext_tables"
+  - "sp_help_fulltext_tables_TSQL"
+helpviewer_keywords:
+  - "sp_help_fulltext_tables"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

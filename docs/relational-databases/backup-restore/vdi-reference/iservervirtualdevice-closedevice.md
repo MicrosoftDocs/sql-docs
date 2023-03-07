@@ -1,13 +1,13 @@
 ---
-title: IServerVirtualDevice::CloseDevice
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IServerVirtualDevice::CloseDevice command.
+title: "IServerVirtualDevice::CloseDevice"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IServerVirtualDevice::CloseDevice command."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 08/30/2019
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: reference
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # IServerVirtualDevice::CloseDevice (VDI)

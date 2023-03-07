@@ -7,9 +7,6 @@ ms.date: "12/12/2021"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom:
-  - sqlfreshmay19
-  - FY22Q2Fresh
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database

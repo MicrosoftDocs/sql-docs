@@ -1,25 +1,22 @@
 ---
+title: "Dimension Processing Destination"
 description: "Dimension Processing Destination"
-title: "Dimension Processing Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dimensionprocessingdest.f1"
   - "sql13.dts.designer.dimprocessingtransformation.connection.f1"
   - "sql13.dts.designer.dimprocessingtransformation.mappings.f1"
   - "sql13.dts.designer.dimprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Dimension Processing destination"
   - "loading dimensions"
   - "destinations [Integration Services], Dimension Processing"
   - "dimensions [Analysis Services], processing"
-ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-author: chugugrace
-ms.author: chugu
 ---
 # Dimension Processing Destination
 

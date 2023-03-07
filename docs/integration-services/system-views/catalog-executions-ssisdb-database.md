@@ -1,18 +1,15 @@
 ---
+title: "catalog.executions (SSISDB Database)"
 description: "catalog.executions (SSISDB Database)"
-title: "catalog.executions (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/13/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "executions view [Integration Services]"
-  - "catalog.executions view [Integration Services]"
-ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
+ms.date: "04/13/2022"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "executions view [Integration Services]"
+  - "catalog.executions view [Integration Services]"
 ---
 # catalog.executions (SSISDB Database)
 

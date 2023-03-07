@@ -7,7 +7,6 @@ ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.service: sql-server-stretch-database
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # Configure compatible SQL Server features with Stretch Database
 

@@ -264,7 +264,7 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
         :::image type="content" source="media/passwordless-connections/create-app-service-small.png" lightbox="media/passwordless-connections/create-app-service.png" alt-text="A screenshot showing how to deploy with Visual Studio.":::
 
 1. Once the resource is created, make sure it's selected in the list of app services, and then select **Next**.
-1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then choose **Finish**.
+1. On the **API Management** step, select the **Skip this step** checkbox at the bottom and then select **Finish**.
 
 1. Select **Publish** in the upper right of the publishing profile summary to deploy the app to Azure.
 

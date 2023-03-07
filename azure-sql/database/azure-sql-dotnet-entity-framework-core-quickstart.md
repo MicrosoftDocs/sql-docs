@@ -70,7 +70,7 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 To connect to Azure SQL Database using .NET and Entity Framework Core you need to add three NuGet packages to your project using one of the following methods:
 
-## [Visual Studio](#tab/packages-visual-studio)
+## [Visual Studio](#tab/visual-studio)
 
 1. In the **Solution Explorer** window, right-click the project's **Dependencies** node and select **Manage NuGet Packages**.
 
@@ -80,9 +80,7 @@ To connect to Azure SQL Database using .NET and Entity Framework Core you need t
 * **Microsoft.EntityFrameworkCore.SqlServer**: Provides additional components to connect to SQL Server
 * **Microsoft.EntityFrameworkCore.Design**: Provides support for running Entity Framework migrations
 
-## [Visual Studio](#tab/visual-studio)
-
-Inside the Package Manager console, use the `Install-Package` cmdlet to install the following packages:
+Alternatively, you can also run the `Install-Package` cmdlet in the Package Manager console:
 
 ```powershell
 Install-Package Microsoft.EntityFrameworkCore

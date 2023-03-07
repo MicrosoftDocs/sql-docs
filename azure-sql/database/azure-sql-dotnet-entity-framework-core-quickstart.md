@@ -124,8 +124,8 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
             }
         },
         "ConnectionStrings": {
-        "AZURE_SQL_CONNECTIONSTRING": "Data Source=passwordlessdbserver.database.windows.net;
-            Initial Catalog=passwordlessdb; Authentication=Active Directory Default; Encrypt=True;"
+            "AZURE_SQL_CONNECTIONSTRING": "Data Source=passwordlessdbserver.database.windows.net;
+                Initial Catalog=passwordlessdb; Authentication=Active Directory Default; Encrypt=True;"
         }
     }
     ```
@@ -175,9 +175,10 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
     ```csharp
     public class Person
     {
-    public int Id { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
 
     public class PersonDbContext : DbContext
     {

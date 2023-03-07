@@ -111,7 +111,6 @@ The following Linux and macOS operating system versions (64-bit only) are suppor
 |Driver version&nbsp;&#8594;<br />&#8595; Operating system|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Ubuntu 22.04 (64-bit)               |Yes|Yes|   |   |   |   |   |   |   |   |
-|Ubuntu 21.04 (64-bit)               |Yes|Yes|   |   |   |   |   |   |   |   |
 |Ubuntu 20.04 (64-bit)               |Yes|Yes|Yes|Yes|   |   |   |   |   |   |
 |Ubuntu 18.04 (64-bit)               |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |Ubuntu 16.04 (64-bit)               |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |

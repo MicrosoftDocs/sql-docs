@@ -47,19 +47,19 @@ The following Microsoft PHP Drivers are no longer supported.
 ## SQL Server Version Certified Compatibility
  The following matrix lists database versions that have been tested and certified as compatible with the corresponding driver version. We strive to maintain backward compatibility with previous driver versions, but only the latest supported driver is tested and certified with new SQL Server versions as SQL Server is released.
 
-|Driver version&nbsp;&#8594;<br />&#8595; Database version|5.11|5.10|5.9|5.8|5.6|5.3|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Database        |Yes|Yes|Yes|Yes|Yes|Yes|
-|Azure SQL Managed Instance|Yes|Yes|Yes|Yes|Yes|Yes|
-|Azure Synapse Analytics   |Yes|Yes|Yes|Yes|Yes|Yes|
-|SQL Server 2022           |Yes|Yes|Yes|   |   |   |
-|SQL Server 2019           |Yes|Yes|Yes|   |   |   |
-|SQL Server 2017           |Yes|Yes|Yes|Yes|Yes|Yes|
-|SQL Server 2016           |Yes|Yes|Yes|Yes|Yes|Yes|
-|SQL Server 2014           |Yes|Yes|Yes|Yes|Yes|Yes|
-|SQL Server 2012           |Yes|Yes|Yes|Yes|Yes|Yes|
-|SQL Server 2008 R2        |   |   |   |Yes|Yes|Yes|
-|SQL Server 2008           |   |   |   |   |   |   |
+|Driver version&nbsp;&#8594;<br />&#8595; Database version|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Azure SQL Database        |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|Azure SQL Managed Instance|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|Azure Synapse Analytics   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|SQL Server 2022           |Yes|Yes|   |   |   |   |   |   |   |   |
+|SQL Server 2019           |Yes|Yes|Yes|Yes|   |   |   |   |   |   |
+|SQL Server 2017           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|SQL Server 2016           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
+|SQL Server 2014           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|SQL Server 2012           |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|SQL Server 2008 R2        |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|SQL Server 2008           |   |   |   |   |   |   |   |   |Yes|Yes|
 
 For information about using PHP with Azure SQL Database, see [Connecting to Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md).
 

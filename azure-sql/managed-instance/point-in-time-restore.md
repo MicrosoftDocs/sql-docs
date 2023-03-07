@@ -49,7 +49,7 @@ To recover a database, you must be either:
 - A member of the SQL Server Contributor role or [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role (depending on the recovery destination) in the subscription
 - The subscription owner 
 
-To restore database to a different target subscription, if you're not in the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor)role you should also have the following permissions:
+To restore database to a different target subscription, if you're not in the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role you should also have the following permissions:
 
 - **Microsoft.Sql/managedInstances/databases/readBackups/action** on the source SQL managed instance. 
 - **Microsoft.Sql/managedInstances/crossSubscriptionPITR/action** on the target SQL managed instance.

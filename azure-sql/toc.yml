@@ -309,7 +309,7 @@
         href: database/local-dev-experience-quickstart.md
     - name: Connect and query
       items:
-      - name: .NET
+      - name: .NET with SqlClient
         href: database/azure-sql-dotnet-quickstart.md
       - name: .NET with EF Core
         href: database/azure-sql-dotnet-entity-framework-core-quickstart.md

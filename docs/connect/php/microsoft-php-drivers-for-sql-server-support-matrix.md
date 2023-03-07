@@ -104,6 +104,7 @@ The following Windows operating system versions are supported with the listed ve
 |Windows 7 SP1                      |   |   |   |   |   |   |   |   |Yes|Yes|
 |Windows Vista SP2                  |   |   |   |   |   |   |   |   |Yes|Yes|
 
+
 The following Linux and macOS operating system versions (64-bit only) are supported with the listed version of the Microsoft PHP Drivers:
 
 |Driver version&nbsp;&#8594;<br />&#8595; Operating system|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|

@@ -32,7 +32,7 @@ There is a pay-as-you-go **SQL Server 2012 on Windows Server 2012 R2** image ava
 
 Customers who are on an earlier version of SQL Server will need to either self-install or upgrade to SQL Server 2012. Likewise, customers on an earlier version of Windows Server will need to either deploy their VM from a custom VHD or upgrade to Windows Server 2012 R2.
 
-Images deployed through Azure Marketplace come with the SQL IaaS extension pre-installed. The SQL IaaS extension is a requirement for flexible licensing and automated patching. Customers who deploy self-installed VMs will need to manually install the SQL IaaS extension.
+Images deployed through Azure Marketplace come with the SQL IaaS Agent extension pre-installed. The SQL IaaS Agent extension is a requirement for flexible licensing and automated patching. Customers who deploy self-installed VMs will need to manually install the SQL IaaS Agent extension.
 
 > [!NOTE]
 >  

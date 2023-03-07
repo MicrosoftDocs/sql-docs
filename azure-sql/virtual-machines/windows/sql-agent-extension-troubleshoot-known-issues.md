@@ -36,7 +36,7 @@ If you see the following error message:
 Consider the following:
 
 - The SQL VM may be stopped, deallocated, in a failed state, or not found. Validate the underlying virtual machine is running. 
-- Your SQL IaaS extension may be in a failed state. [Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
+- Your SQL IaaS Agent extension may be in a failed state. [Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
 
 [Unregister your SQL VM from the extension](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) and then register the SQL VM with the extension again if you did any of the following:
 
@@ -47,19 +47,15 @@ Consider the following:
 
 ## Provisioning failed 
 
-[Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if the SQL IaaS extension status shows as **Provisioning failed** in the Azure portal. 
+[Repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension) if the SQL IaaS Agent extension status shows as **Provisioning failed** in the Azure portal. 
 
 ## SQL VM resource unavailable in portal 
 
-If the SQL IaaS extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
+If the SQL IaaS Agent extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
 
 ## Features are grayed out
 
-If you navigate to your [SQL VM resource](manage-sql-vm-portal.md) in the Azure portal, and there are features that are grayed out, verify that the SQL VM is running, and that you have the extension registered in [Full mode](sql-server-iaas-agent-extension-automate-management.md#management-modes). 
-
-Grayed out features are expected if your SQL VM is registered in lightweight mode as the extension doesn't offer full capability, and many features are [unavailable](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
-
-Upgrade your extension to full mode to gain access to any unavailable features. Lightweight mode is the default mode for SQL Server instances that participate in a failover cluster instance (FCI) and can't be upgraded, so some features will always be grayed out. 
+If you navigate to your [SQL VM resource](manage-sql-vm-portal.md) in the Azure portal, and there are features that are grayed out, verify that the SQL VM is running, and that you have the latest version of the SQL IaaS Agent extension. 
 
 ## Changing service account
 
@@ -86,7 +82,7 @@ Extending your disks from the **Storage Configuration** page of the [SQL VM reso
 - If you uninstall and reinstall the SQL IaaS agent extension. 
 - If you uninstall and reinstall your instance of SQL Server. 
 - If you used custom naming conventions for the disk/storage pool name when deploying your SQL Server image from the Azure Marketplace. 
-- If your extension is registered in lightweight mode. 
+
 
 ## Disk configuration grayed out during deployment
 

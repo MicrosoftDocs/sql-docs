@@ -1,5 +1,5 @@
 ---
-title: Register with SQL IaaS Extension (Windows)
+title: Register with SQL IaaS Agent Extension (Windows)
 description: Learn how to register your SQL Server on Azure Windows VM with the SQL IaaS Agent extension to enable Azure features, for compliance, and improved manageability.
 author: adbadram
 ms.author: adbadram
@@ -14,7 +14,7 @@ ms.custom:
   - contperf-fy21q2
 tags: azure-resource-manager
 ---
-# Register Windows SQL Server VM with SQL IaaS Extension
+# Register Windows SQL Server VM with SQL IaaS Agent extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!div class="op_single_selector"]
@@ -33,7 +33,7 @@ Registering with the [SQL Server IaaS Agent extension](sql-server-iaas-agent-ext
 
 Deploying a SQL Server VM Azure Marketplace image through the Azure portal automatically registers the SQL Server VM with the extension. However, if you choose to self-install SQL Server on an Azure virtual machine, or provision an Azure virtual machine from a custom VHD, then you must register your SQL Server VM with the SQL IaaS Agent extension to unlock full feature benefits and manageability. By default, Azure VMs that have SQL Server 2016 or later installed will be automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server).  See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information. For information about privacy, see the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
 
-To utilize the SQL IaaS Agent extension, you must first [register your subscription with the **Microsoft.SqlVirtualMachine** provider](#register-subscription-with-rp), which gives the SQL IaaS extension the ability to create resources within that specific subscription. Then you can register your SQL Server VM with the extension. 
+To utilize the SQL IaaS Agent extension, you must first [register your subscription with the **Microsoft.SqlVirtualMachine** provider](#register-subscription-with-rp), which gives the SQL IaaS Agent extension the ability to create resources within that specific subscription. Then you can register your SQL Server VM with the extension. 
 
 
 ## Prerequisites

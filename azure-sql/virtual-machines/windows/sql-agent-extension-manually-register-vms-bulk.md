@@ -223,7 +223,7 @@ Errors are logged in the log file named `VMsNotRegisteredDueToError<Timestamp>.l
 
 When you register SQL Server VMs with the extension by using the provided script, consider the following:
 
-- Registration with the extension requires a guest agent running on the SQL Server VM. Windows Server 2008 images do not have a guest agent, so these virtual machines will fail and must be registered manually using the [NoAgent management mode](sql-server-iaas-agent-extension-automate-management.md#management-modes).
+- Registration with the extension requires a guest agent running on the SQL Server VM. Windows Server 2008 images do not have a guest agent, so these virtual machines will fail and must be [registered manually](sql-agent-extension-manually-register-single-vm.md#register-with-extension)  with [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
 - There is retry logic built-in to overcome transparent errors. If the virtual machine is successfully registered, then it is a rapid operation. However, if the registration fails, then each virtual machine will be retried.  As such, you should allow significant time to complete the registration process -  though actual time requirement is dependent on the type and number of errors. 
 
 

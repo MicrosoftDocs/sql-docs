@@ -169,7 +169,7 @@ Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
                               -TargetInstanceName $targetInstanceName 
 ```
 
-To restore the database to another subscription, set the context to the the target subscription (`Set-AzContext`) and be sure to provide a value for the required parameter `-TargetSubscriptionID`: 
+To restore the database to another subscription, set the context to the target subscription (`Set-AzContext`) and be sure to provide a value for the required parameter `-TargetSubscriptionID`: 
 
 ```powershell-interactive 
 Set-AzContext -SubscriptionID "targetSubscriptionID"

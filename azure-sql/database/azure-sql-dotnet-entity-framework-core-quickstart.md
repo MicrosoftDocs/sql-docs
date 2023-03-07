@@ -36,7 +36,7 @@ Secure, passwordless connections to Azure SQL Database with .NET require certain
 
     :::image type="content" source="media/passwordless-connections/enable-active-directory-small.png" lightbox="media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
 
-1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL](/azure/azure-sql/database/authentication-aad-configure) in order to assign your account as a SQL Server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
+1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](/azure/azure-sql/database/authentication-aad-configure) in order to assign your account as a SQL Server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
 
 ## Create the project
 
@@ -44,7 +44,7 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 ## [Visual Studio](#tab/visual-studio)
 
-1. In the Visual Studio menu, navigate to **File** > **New** > **Project..**.
+1. In the Visual Studio menu bar, navigate to **File** > **New** > **Project..**.
 
 1. In the dialog window, enter *ASP.NET* into the project template search box and select the ASP.NET Core Web API result. Choose **Next** at the bottom of the dialog.
 
@@ -80,7 +80,7 @@ To connect to Azure SQL Database using .NET and Entity Framework Core you need t
 * **Microsoft.EntityFrameworkCore.SqlServer**: Provides additional components to connect to SQL Server
 * **Microsoft.EntityFrameworkCore.Design**: Provides support for running Entity Framework migrations
 
-Alternatively, you can also run the `Install-Package` cmdlet in the Package Manager console:
+Alternatively, you can also run the `Install-Package` cmdlet in the **Package Manager Console** window:
 
 ```powershell
 Install-Package Microsoft.EntityFrameworkCore
@@ -100,7 +100,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 
 ---
 
-## Add the code to connect to Azure SQL
+## Add the code to connect to Azure SQL Database
 
 The Entity Framework Core libraries rely on the `Microsoft.Data.SqlClient` and `Azure.Identity` libraries to implement passwordless connections to Azure SQL Database. The `Azure.Identity` library provides a class called [DefaultAzureCredential](/dotnet/azure/sdk/authentication#defaultazurecredential) that handles passwordless authentication to Azure.
 
@@ -118,10 +118,10 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
     ```json
     {
         "Logging": {
-        "LogLevel": {
-            "Default": "Information",
-            "Microsoft.AspNetCore": "Warning"
-        }
+            "LogLevel": {
+                "Default": "Information",
+                "Microsoft.AspNetCore": "Warning"
+            }
         },
         "ConnectionStrings": {
         "AZURE_SQL_CONNECTIONSTRING": "Data Source=passwordlessdbserver.database.windows.net;

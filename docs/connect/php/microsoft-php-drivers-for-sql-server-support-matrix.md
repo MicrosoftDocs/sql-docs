@@ -101,6 +101,7 @@ The following Windows operating system versions are supported with the listed ve
 |Windows 10                         |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
 |Windows 8.1                        |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 
+
 |Windows 8                          |   |   |   |   |   |   |   |Yes|Yes|Yes|
 |Windows 7 SP1                      |   |   |   |   |   |   |   |   |Yes|Yes|
 |Windows Vista SP2                  |   |   |   |   |   |   |   |   |Yes|Yes|

@@ -54,7 +54,7 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 1. Choose **Create**. The new project opens inside the Visual Studio environment.
 
-## [.NET CLI](#tab/net-cli)
+## [.NET CLI](#tab/dotnet-cli)
 
 1. In a console window (such as cmd, PowerShell, or Bash), use the `dotnet new` command to create a new Web API app with the name *DotNetSQL*. This command creates a simple "Hello World" C# project with a single source file: *Program.cs*.
 
@@ -80,7 +80,17 @@ To connect to Azure SQL Database using .NET and Entity Framework Core you need t
 * **Microsoft.EntityFrameworkCore.SqlServer**: Provides additional components to connect to SQL Server
 * **Microsoft.EntityFrameworkCore.Design**: Provides support for running Entity Framework migrations
 
-## [.NET CLI](#tab/packages-net-cli)
+## [Visual Studio](#tab/visual-studio)
+
+Inside the Package Manager console, use the `Install-Package` cmdlet to install the following packages:
+
+```powershell
+Install-Package Microsoft.EntityFrameworkCore
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Design
+```
+
+## [.NET CLI](#tab/dotnet-cli)
 
 Use the `dotnet add package` command to install the following packages:
 
@@ -88,16 +98,6 @@ Use the `dotnet add package` command to install the following packages:
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.Design
-```
-
-## [Powershell](#tab/packages-powershell)
-
-Use the `Install-Package` cmdlet to install the following packages:
-
-```powershell
-Install-Package Microsoft.EntityFrameworkCore
-Install-Package Microsoft.EntityFrameworkCore.SqlServer
-Install-Package Microsoft.EntityFrameworkCore.Design
 ```
 
 ---
@@ -199,15 +199,35 @@ To update the database schema to match your data model using Entity Framework Co
 1. Open a terminal window to the root of your project.
 1. Run the following command to generate an initial migration that can create the database:
     
+    ## [Visual Studio](#tab/visual-studio)
+
+    ```powershell
+    Add-Migration InitialCreate
+    ```
+
+    ## [.NET CLI](#tab/dotnet-cli)
+
     ```dotnetcli
     dotnet ef migrations add InitialCreate
     ```
 
+    ---
+
 1. A `Migrations` folder should appear in your project directory, along with a file called `InitialCreate` with unique numbers prepended. Run the migration to create the database using the following command:
+
+    ## [Visual Studio](#tab/visual-studio)
+
+    ```powershell
+    Update-Database
+    ```
+
+    ## [.NET CLI](#tab/dotnet-cli)
 
     ```dotnetcli
     dotnet ef database update
     ```
+
+    ---
 
     The Entity Framework Core tooling will create the database schema in Azure defined by the `PersonDbContext` class.
 
@@ -223,7 +243,7 @@ The app is ready to be tested locally. Make sure you're signed in to Visual Stud
 
     :::image type="content" source="media/passwordless-connections/api-testing-small.png" lightbox="media/passwordless-connections/api-testing.png" alt-text="A screenshot showing how to test the API.":::
 
-1) Expand the **GET** method on the Swagger UI page and select **Try it**. Choose **Execute**, and the person you just created is returned.
+1) Expand the **GET** method on the Swagger UI page and select **Try it**. Select **Execute**, and the person you just created is returned.
 
 ## Deploy to Azure App Service
 

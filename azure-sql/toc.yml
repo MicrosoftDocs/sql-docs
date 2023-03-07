@@ -309,11 +309,12 @@
         href: database/local-dev-experience-quickstart.md
     - name: Connect and query
       items:
+      - name: .NET
         href: database/azure-sql-dotnet-quickstart.md
-      - name: Connect and query using .NET and EF Core
+      - name: .NET with EF Core
         href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
-      - name: GitHub Actions
-        href: database/connect-github-actions-sql-db.md
+    - name: GitHub Actions
+      href: database/connect-github-actions-sql-db.md
 
   - name: Tutorials
     items:

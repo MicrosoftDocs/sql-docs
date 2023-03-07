@@ -174,7 +174,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ## <a id="bkmk_OtherSQLFeatures"></a> Delayed durability and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 
 **Azure Synapse Link for SQL, Transactional Replication, Change Tracking, and Change Data Capture**  
-- The use of delayed durability is not supported for databases which use change data capture (CDC). 
+- The use of delayed durability is not supported on databases that use change data capture (CDC). 
+
 - Delayed durable transactions are not supported with Transactional Replication. 
 - All transactions with change tracking are fully durable. A transaction has the change tracking property if it does any write operations to tables that are enabled for change tracking. 
 - Delayed durable transactions are not supported with Azure Synapse Link for SQL

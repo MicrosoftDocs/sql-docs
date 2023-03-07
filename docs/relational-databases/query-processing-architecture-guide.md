@@ -7,7 +7,6 @@ ms.reviewer: maghan, randolphwest, wiassaf
 ms.date: 09/01/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "guide, query processing architecture"
   - "query processing architecture guide"

@@ -7,10 +7,7 @@ ms.reviewer: jroth
 ms.date: 10/21/2021
 ms.service: sql
 ms.topic: quickstart
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
-  - FY22Q2Fresh
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "JSON"
   - "JSON, built-in support"

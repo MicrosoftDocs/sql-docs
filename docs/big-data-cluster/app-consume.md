@@ -9,7 +9,6 @@ ms.date: 06/22/2020
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Consume an app deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] using a RESTful web service

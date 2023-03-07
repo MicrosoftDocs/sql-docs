@@ -7,10 +7,7 @@ ms.date: 12/15/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: overview
-ms.custom:
-  - intro-overview
-  - seo-lt-2019
-  - FY22Q2Fresh
+ms.custom: intro-overview
 f1_keywords:
   - "sql13.ssms.viewhelp.f1"
 helpviewer_keywords:

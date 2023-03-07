@@ -8,9 +8,7 @@ ms.date: 03/04/2022
 ms.service: sql
 ms.subservice: ssms
 ms.topic: quickstart
-ms.custom:
-  - contperf-fy21q2
-  - intro-quickstart
+ms.custom: intro-quickstart
 ---
 
 # Quickstart: Connect and query a SQL Server instance using SQL Server Management Studio (SSMS)

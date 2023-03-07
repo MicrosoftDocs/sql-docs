@@ -8,7 +8,6 @@ ms.date: 02/14/2023
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-ms.custom: seo-lt-2019
 ---
 # View and Read Failover Cluster Instance Diagnostics Log
 

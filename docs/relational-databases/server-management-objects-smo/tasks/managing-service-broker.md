@@ -6,7 +6,6 @@ ms.author: "maghan"
 ms.date: "05/24/2019"
 ms.service: sql
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "Service Broker [SMO]"
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

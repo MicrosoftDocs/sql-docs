@@ -79,6 +79,9 @@ Enhancements in version 1.*:
 - No need of installing out-of-box components.
 
 - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+### Limitations and known issues
+
+- SSIS Build task version 1.* doesn't support building the SSIS project containing SSIS package with digital signature. 
 
 ### Version 1.* only properties
 

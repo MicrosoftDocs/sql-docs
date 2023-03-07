@@ -9,9 +9,6 @@ ms.date: 12/01/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - sqlfreshmay19
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"
   - "Developer Edition [SQL Server]"

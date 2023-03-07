@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "data collection [SQL Server]"
   - "data collector [SQL Server], Transact-SQL"
   - "data collector [SQL Server], SQL Server Management Studio"
-keywords: "Data Collection"
+keywords: Data Collection
 ---
 # Manage Data Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

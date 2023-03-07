@@ -7,9 +7,7 @@ ms.date: 12/15/2020
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

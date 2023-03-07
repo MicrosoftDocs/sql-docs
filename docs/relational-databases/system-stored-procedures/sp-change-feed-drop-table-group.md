@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.date: 02/03/2023
 ms.service: synapse-analytics
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sp_change_feed_drop_table_group_TSQL"
   - "sp_change_feed_drop_table_group"

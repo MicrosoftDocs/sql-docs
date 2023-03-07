@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
 # NS$&lt;service name&gt; Properties (Advanced Tab)

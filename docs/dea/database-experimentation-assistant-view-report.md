@@ -8,7 +8,6 @@ ms.date: 02/04/2020
 ms.service: sql
 ms.subservice: dea
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # View analysis reports in Database Experimentation Assistant

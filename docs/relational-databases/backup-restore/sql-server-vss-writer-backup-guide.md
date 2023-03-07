@@ -7,7 +7,6 @@ ms.date: "06/16/2021"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: contperf-fy21q4-portal
 ---
 # SQL Server Backup Applications - Volume Shadow Copy Service (VSS) and SQL Writer
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

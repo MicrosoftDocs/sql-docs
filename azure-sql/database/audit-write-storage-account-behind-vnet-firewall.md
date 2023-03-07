@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - "azure-synapse"
-  - "subject-rbac-steps"
+  - azure-synapse
+  - subject-rbac-steps
 ---
 # Write audit to a storage account behind VNet and firewall
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

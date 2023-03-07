@@ -7,7 +7,6 @@ ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "links [Reporting Services], URL access"
   - "URL access [Reporting Services], Web applications"

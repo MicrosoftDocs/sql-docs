@@ -9,8 +9,8 @@ ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "azure-synapse"
-  - "sqldbrb=1"
+  - azure-synapse
+  - sqldbrb=1
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

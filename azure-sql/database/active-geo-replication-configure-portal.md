@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ---
 # Tutorial: Configure active geo-replication and failover (Azure SQL Database)
 

@@ -8,7 +8,6 @@ ms.date: 04/18/2022
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "target servers [SQL Server], polling interval"
   - "polling master servers [SQL Server]"

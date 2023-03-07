@@ -6,7 +6,6 @@ ms.author: mikeray
 ms.date: "06/07/2021"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "change data capture, monitoring"
   - "change data capture, administering"

@@ -7,7 +7,6 @@ ms.date: 11/11/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "language-reference"
-ms.custom: event-tier1-sqlpass-2022
 f1_keywords:
   - "SYS.QUERY_STORE_QUERY_VARIANT"
   - "QUERY_STORE_QUERY_VARIANT"

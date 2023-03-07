@@ -8,7 +8,6 @@ ms.date: 02/09/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-ms.custom: event-tier1-build-2022
 monikerRange: "= sql-server-ver16"
 ---
 

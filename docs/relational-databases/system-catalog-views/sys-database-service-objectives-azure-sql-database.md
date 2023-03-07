@@ -7,7 +7,6 @@ ms.author: randolphwest
 ms.date: 08/25/2022
 ms.service: sql-database
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 f1_keywords:
   - "DATABASE_SERVICE_OBJECTIVES_TSQL"
 dev_langs:

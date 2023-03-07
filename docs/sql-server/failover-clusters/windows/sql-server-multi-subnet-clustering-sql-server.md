@@ -7,7 +7,6 @@ ms.date: "09/01/2016"
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "stretch cluster"
   - "Availability Groups [SQL Server], WSFC clusters"

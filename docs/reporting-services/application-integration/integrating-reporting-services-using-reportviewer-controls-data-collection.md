@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: seo-lt-2019
 ---
 # Integrate Reporting Services Using ReportViewer Controls - Data Collection
 

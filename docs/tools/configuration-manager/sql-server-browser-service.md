@@ -7,7 +7,6 @@ ms.date: "02/03/2022"
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.browseservers.local.f1"
   - "sql13.swb.browseservers.network.f1"

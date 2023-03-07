@@ -7,7 +7,6 @@ ms.date: 07/22/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ---

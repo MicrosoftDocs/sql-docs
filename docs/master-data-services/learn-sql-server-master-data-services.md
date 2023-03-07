@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: master-data-services
 ms.topic: quickstart
 ms.custom: intro-quickstart
-keywords: "learn sql"
+keywords: learn sql
 ---
 # Learn SQL Server Master Data Services
 

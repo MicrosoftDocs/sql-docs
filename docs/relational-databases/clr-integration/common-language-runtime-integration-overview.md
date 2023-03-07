@@ -7,7 +7,6 @@ ms.date: "09/21/2021"
 ms.service: sql
 ms.subservice: clr
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "managed code [SQL Server]"
   - "common language runtime [SQL Server], about CLR integration"

@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.date: "08/09/2016"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "archiving mail messages and attachments [SQL Server]"
   - "removing mail messages and attachements"

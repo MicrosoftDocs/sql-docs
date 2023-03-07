@@ -7,9 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom:
-  - seo-dt-2019
-  - event-tier1-build-2022
 helpviewer_keywords:
   - "TEMPLATE plan guide"
   - "PARAMETERIZATION FORCED option"

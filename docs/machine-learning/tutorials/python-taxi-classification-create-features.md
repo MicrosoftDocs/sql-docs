@@ -8,7 +8,6 @@ ms.date: 09/17/2021
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
 

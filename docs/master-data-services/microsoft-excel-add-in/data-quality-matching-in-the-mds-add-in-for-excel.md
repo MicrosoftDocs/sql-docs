@@ -7,9 +7,7 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom:
-  - microsoft-excel-add-in
-  - seo-lt-2019
+ms.custom: microsoft-excel-add-in
 ---
 # Data Quality Matching in the MDS Add-in for Excel
 

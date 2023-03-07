@@ -7,7 +7,6 @@ ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure

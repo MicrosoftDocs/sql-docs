@@ -9,8 +9,7 @@ ms.date: 02/27/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom:
-  - references_regions
+ms.custom: references_regions
 ---
 # What's new in Azure SQL Managed Instance? (Archive)
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]

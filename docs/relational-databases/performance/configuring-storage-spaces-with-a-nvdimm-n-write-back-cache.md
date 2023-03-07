@@ -7,7 +7,6 @@ ms.date: "10/22/2021"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # Configuring Storage Spaces with a NVDIMM-N write-back cache
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

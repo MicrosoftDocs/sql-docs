@@ -7,9 +7,6 @@ ms.date: 09/21/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 monikerRange: ">=sql-server-2016"
 ---
 # CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services

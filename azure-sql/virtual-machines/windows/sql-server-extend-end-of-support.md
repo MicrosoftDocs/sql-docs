@@ -8,7 +8,6 @@ ms.date: 05/24/2022
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 tags: azure-service-management
 ---
 # Extend support for SQL Server with Azure

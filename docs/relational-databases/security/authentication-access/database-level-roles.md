@@ -8,7 +8,6 @@ ms.date: 12/16/2021
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 f1_keywords:
   - "sql13.swb.roleproperties.database.f1"
   - "sql13.swb.roleproperties.object.f1"

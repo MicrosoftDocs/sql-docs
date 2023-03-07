@@ -7,9 +7,6 @@ ms.date: 03/19/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - contperf-fy20q4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Grant database users permission to execute Python and R scripts with SQL Server Machine Learning Services

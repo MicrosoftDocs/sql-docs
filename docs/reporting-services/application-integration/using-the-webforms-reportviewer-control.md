@@ -7,7 +7,6 @@ ms.date: 06/12/2017
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "ReportViewer controls"
 ---

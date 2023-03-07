@@ -8,8 +8,8 @@ ms.date: 02/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
 ms.topic: conceptual
-tags: azure-service-management
 ms.custom: ignite-2022
+tags: azure-service-management
 ---
 # Security considerations for SQL Server on Azure Virtual Machines
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

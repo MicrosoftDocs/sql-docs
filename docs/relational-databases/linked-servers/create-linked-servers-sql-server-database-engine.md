@@ -6,9 +6,6 @@ ms.author: wiassaf
 ms.date: "1/10/2022"
 ms.service: sql
 ms.topic: conceptual
-ms.custom:
-  - seo-dt-2019
-  - FY22Q2Fresh
 f1_keywords:
   - "sql13.swb.linkedserver.properties.general.f1"
   - "sql13.swb.linkedserver.properties.security.f1"

@@ -8,7 +8,6 @@ ms.date: "07/27/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 f1_keywords:
   - "KILL QUERY NOTIFICATION SUBSCRIPTION"
   - "KILL_QUERY_NOTIFICATION_SUBSCRIPTION_TSQL"

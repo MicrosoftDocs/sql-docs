@@ -7,7 +7,6 @@ ms.date: 01/22/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
 # Protocols for MSSQLSERVER Properties (Advanced Tab)

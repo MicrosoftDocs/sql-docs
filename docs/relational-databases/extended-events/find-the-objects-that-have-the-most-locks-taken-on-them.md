@@ -7,7 +7,6 @@ ms.date: "10/18/2019"
 ms.service: sql
 ms.subservice: xevents
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "objects [SQL Server], extended events"
   - "xe"

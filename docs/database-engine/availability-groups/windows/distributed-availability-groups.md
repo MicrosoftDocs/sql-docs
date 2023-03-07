@@ -8,9 +8,7 @@ ms.date: 09/15/2022
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom:
-  - seodec18
-  - intro-overview
+ms.custom: intro-overview
 helpviewer_keywords:
   - "Availability Groups [SQL Server], distributed"
 ---

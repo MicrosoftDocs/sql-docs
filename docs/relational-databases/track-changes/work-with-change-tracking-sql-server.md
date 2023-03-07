@@ -7,7 +7,6 @@ ms.reviewer: randolphwest
 ms.date: 05/06/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "change tracking [SQL Server], making changes"
   - "change tracking [SQL Server], troubleshooting"

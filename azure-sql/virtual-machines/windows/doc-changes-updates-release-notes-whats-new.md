@@ -1,5 +1,5 @@
 ---
-title: What's new? 
+title: What's new?
 description: Learn about the new features for and improvements to SQL Server on Azure Virtual Machines.
 author: MashaMSFT
 ms.author: mathoma

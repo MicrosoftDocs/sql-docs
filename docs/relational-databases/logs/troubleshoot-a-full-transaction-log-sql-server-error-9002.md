@@ -7,7 +7,6 @@ ms.date: "09/14/2021"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: troubleshooting
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "logs [SQL Server], full"
   - "troubleshooting [SQL Server], full transaction log"

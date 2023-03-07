@@ -6,9 +6,7 @@ ms.author: randolphwest
 ms.date: "06/21/2017"
 ms.service: sql
 ms.topic: quickstart
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "tutorials [connecting]"
   - "tutorials [Database Engine]"

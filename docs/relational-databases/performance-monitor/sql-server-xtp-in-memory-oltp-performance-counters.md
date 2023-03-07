@@ -7,7 +7,6 @@ ms.date: "07/13/2021"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # SQL Server XTP (In-Memory OLTP) Performance Counters
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

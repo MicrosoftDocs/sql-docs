@@ -7,9 +7,7 @@ ms.date: 12/10/2021
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-ms.custom:
-  - intro-installation
-  - FY22Q2Fresh
+ms.custom: intro-installation
 helpviewer_keywords:
   - "Integration Services, installing"
   - "SSIS, installing"

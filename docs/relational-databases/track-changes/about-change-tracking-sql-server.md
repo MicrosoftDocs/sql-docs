@@ -6,7 +6,6 @@ ms.author: bspendolini
 ms.date: "10/20/2016"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "data changes [SQL Server]"
   - "tracking data changes [SQL Server]"

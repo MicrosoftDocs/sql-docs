@@ -7,7 +7,6 @@ ms.date: 11/02/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
 # NYC Taxi demo data for SQL Server Python and R tutorials

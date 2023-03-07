@@ -7,9 +7,6 @@ ms.date: 08/28/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-ms.custom:
-  - seo-lt-2019
-  - contperf-fy21q1
 f1_keywords:
   - "sql13.swb.query.advanced.f1"
   - "sql13.swb.query.ansi.f1"

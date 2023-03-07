@@ -5,6 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 03/01/2023
 ms.service: sql
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 ---
 # Tutorial: Use Azure Blob Storage with SQL Server

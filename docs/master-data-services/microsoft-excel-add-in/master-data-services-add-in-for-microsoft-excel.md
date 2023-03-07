@@ -7,9 +7,7 @@ ms.date: 07/25/2017
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom:
-  - microsoft-excel-add-in
-  - seo-lt-2019
+ms.custom: microsoft-excel-add-in
 ---
 # Master Data Services Add-in for Microsoft Excel
 

@@ -7,7 +7,6 @@ ms.date: "12/16/2022"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: seo-lt-2019, FY22Q2Fresh
 helpviewer_keywords:
   - "current databases"
   - "databases currently on server [SQL Server]"

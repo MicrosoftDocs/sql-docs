@@ -9,9 +9,6 @@ ms.date: 1/5/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom:
-  - "seo-lt-2019"
-  - "event-tier1-build-2022"
 f1_keywords:
   - "ALTER_DATABASE_SCOPED_CONFIGURATION"
   - "ALTER_DATABASE_SCOPED_CONFIGURATION_TSQL"

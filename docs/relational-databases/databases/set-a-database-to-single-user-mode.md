@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.date: "10/21/2021"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "single-user mode [SQL Server], database option"
 ---

@@ -8,9 +8,7 @@ ms.date: 10/21/2020
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: tutorial
-ms.custom:
-  - "seo-lt-2019"
-  - "devx-track-azurepowershell"
+ms.custom: devx-track-azurepowershell
 ---
 # Create an Elastic Job agent using PowerShell (preview)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

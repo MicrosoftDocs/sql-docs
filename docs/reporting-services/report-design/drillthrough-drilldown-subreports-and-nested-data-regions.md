@@ -3,7 +3,7 @@ title: "Drillthrough, drilldown, subreports, and nested data regions in a pagina
 description: Organize data in a paginated report to show the relationship of the general to the detailed and then display the data in a subreport or a separate drillthrough report.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/07/2017
+ms.date: 03/07/2023
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
@@ -24,7 +24,7 @@ ms.topic: conceptual
   
  D. Drilldown action  
   
- All of these have commonalities, but they serve different purposes and have different features. Two of them, drillthrough reports and subreports, are actually separate reports. Nesting is a means of putting one data region inside another data region. Drilldown is an action you can apply to any report item to hide and show other report items. They all are ways that you can organize and display data to help your users understand your report better.  
+ All of these have commonalities, but they serve different purposes and have different features. Two of them, drillthrough reports and subreports, are actually separate reports. Nesting means a hierarchy structure to drill through e.g. Report A -> Report B -> Report C. Drilldown is an action you can apply to any report item to hide and show other report items. They all are ways that you can organize and display data to help your users understand your report better.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

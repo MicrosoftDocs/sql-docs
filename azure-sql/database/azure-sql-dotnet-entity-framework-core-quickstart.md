@@ -26,21 +26,21 @@ This quickstart describes how to connect an application to a database in Azure S
 
 ## Configure the database server
 
-Secure, passwordless connections to Azure SQL Database with .NET require certain database configurations. Verify the following settings on your database server to properly connect to Azure SQL Database in both local and hosted environments:
+Secure, passwordless connections to Azure SQL Database with .NET require certain database configurations. Verify the following settings on your [logical server in Azure](logical-servers.md) to properly connect to Azure SQL Database in both local and hosted environments:
 
-1) For local development connections, make sure your [logical server](logical-servers.md) has a firewall rule enabled to allow your client IP address to connect. You can configure firewall rules on the **Networking** page of your server by selecting **Add your client IPv4 address(xx.xx.xx.xx)**.
+1) For local development connections, make sure your logical server has a firewall rule enabled to allow your client IP address to connect. You can configure firewall rules on the **Networking** page of your server by selecting **Add your client IPv4 address(xx.xx.xx.xx)**.
 
     :::image type="content" source="media/passwordless-connections/configure-firewall-small.png" lightbox="media/passwordless-connections/configure-firewall.png" alt-text="A screenshot showing how to configure firewall rules.":::
 
-1) The SQL Server must also have Azure AD authentication enabled with an Azure Active Directory admin account assigned. For local development connections, the Azure Active Directory admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
+1) The server must also have Azure AD authentication enabled with an Azure Active Directory admin account assigned. For local development connections, the Azure Active Directory admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
 
     :::image type="content" source="media/passwordless-connections/enable-active-directory-small.png" lightbox="media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
 
-1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](/azure/azure-sql/database/authentication-aad-configure) in order to assign your account as a SQL Server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
+1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](/azure/azure-sql/database/authentication-aad-configure) in order to assign your account as a server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
 
 ## Create the project
 
-For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or Visual Studio 2022.
+This steps in this section create a .NET Minimal Web API by using either the .NET CLI or Visual Studio 2022.
 
 ## [Visual Studio](#tab/visual-studio)
 
@@ -68,7 +68,7 @@ For the steps ahead, create a .NET Minimal Web API using either the .NET CLI or 
 
 ## Add Entity Framework Core to the project
 
-To connect to Azure SQL Database using .NET and Entity Framework Core you need to add three NuGet packages to your project using one of the following methods:
+To connect to Azure SQL Database by using .NET and Entity Framework Core you need to add three NuGet packages to your project using one of the following methods:
 
 ## [Visual Studio](#tab/visual-studio)
 
@@ -77,7 +77,7 @@ To connect to Azure SQL Database using .NET and Entity Framework Core you need t
 1. In the resulting window, search for *EntityFrameworkCore*. Locate and install the following packages:
 
 * **Microsoft.EntityFrameworkCore**: Provides essential Entity Framework Core functionality
-* **Microsoft.EntityFrameworkCore.SqlServer**: Provides additional components to connect to SQL Server
+* **Microsoft.EntityFrameworkCore.SqlServer**: Provides additional components to connect to the logical server
 * **Microsoft.EntityFrameworkCore.Design**: Provides support for running Entity Framework migrations
 
 Alternatively, you can also run the `Install-Package` cmdlet in the **Package Manager Console** window:
@@ -269,9 +269,9 @@ The app is ready to be deployed to Azure. Visual Studio can create an Azure App 
 
 When the deployment finishes, Visual Studio launches the browser to display the hosted app, but at this point the app doesn't work correctly on Azure. You still need to configure the secure connection between the App Service and the SQL database to retrieve your data.
 
-## Connect the App Service to Azure SQL
+## Connect the App Service to Azure SQL Database
 
-The following steps are required to connect the App Service instance to Azure SQL:
+The following steps are required to connect the App Service instance to Azure SQL Database:
 
 1) Create a managed identity for the App Service. The `Microsoft.Data.SqlClient` library included in your app will automatically discover the managed identity, just like it discovered your local Visual Studio user.
 2) Create a SQL database user and associate it with the App Service managed identity.
@@ -301,7 +301,7 @@ You can verify the changes made by Service Connector on the App Service settings
 
 ## [Azure portal](#tab/azure-portal)
 
-The Azure portal allows you to work with managed identities and run queries against Azure SQL Database. Complete the following steps to create a passwordless connection from your App Service instance to Azure SQL:
+The Azure portal allows you to work with managed identities and run queries against Azure SQL Database. Complete the following steps to create a passwordless connection from your App Service instance to Azure SQL Database:
 
 ### Create the managed identity
 

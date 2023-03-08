@@ -176,7 +176,6 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 **Transactional Replication, Change Tracking, and Change Data Capture**  
 - For databases enabled for Transactional Replication or Change Data Capture (CDC), the use of delayed durability is not supported. 
 
-- Delayed durable transactions are not supported with Transactional Replication. 
 - Change Tracking with Delayed Durability is supported. All transactions with Change Tracking are fully durable. A transaction has the change tracking property if it does any write operations to tables that have enabled change tracking. 
 
 Starting with SQL Server 2022 CU2 and SQL Server 2019 CU20, you may see: 

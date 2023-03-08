@@ -32,7 +32,7 @@ For best experience, it is recommended for customers to install the most recent 
 
 **Full Support** servicing phase: When running the latest current branch version of SQL Server Management Studio, you receive all updates - Security Updates, Critical Updates, new features etc.
 
-:::image type="content" source="media/ssms-supportpolicy/ssms-support-policy.png" alt-text="Screenshot of SSMS support life cycle.":::
+:::image type="content" source="media/support-policy/ssms-support-policy.png" alt-text="Screenshot of SSMS support life cycle.":::
 
 > [!NOTE]
 > The latest current branch version is always in the **Full Support** servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix.

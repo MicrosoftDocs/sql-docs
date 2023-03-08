@@ -5,7 +5,7 @@ description: Overview of how to manage and control network access for Azure SQL 
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 07/18/2022
+ms.date: 03/07/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -20,7 +20,7 @@ When you create a logical server from the [Azure portal](single-database-create-
 
 You can use the following network access controls to selectively allow access to a database via the public endpoint:
 
-- Allow Azure Services: When set to ON, other resources within the Azure boundary, for example an Azure Virtual Machine, can access SQL Database
+- Allow Azure services and resources to access this server: When enabled, other resources within the Azure boundary, for example an Azure Virtual Machine, can access SQL Database
 - IP firewall rules: Use this feature to explicitly allow connections from a specific IP address, for example from on-premises machines
 
 You can also allow private access to the database from [virtual networks](/azure/virtual-network/virtual-networks-overview) via:
@@ -37,26 +37,25 @@ See the below video for a high-level explanation of these access controls and wh
 
 ## Allow Azure services
 
-By default during creation of a new logical server [from the Azure portal](single-database-create-quickstart.md), this setting is set to **OFF**. This setting appears when connectivity is allowed using public service endpoint.
+By default during creation of a new logical server [from the Azure portal](single-database-create-quickstart.md), **Allow Azure services and resources to access this server** is unchecked and not enabled. This setting appears when connectivity is allowed using public service endpoint.
 
 You can also change this setting via the **Networking** setting after the logical server is created as follows: 
   
 ![Screenshot of manage server firewall][2]
 
-When set  to **ON**, your server allows communications from all resources inside the Azure boundary, that may or may not be part of your subscription.
+When **Allow Azure services and resources to access this server** is enabled, your server allows communications from all resources inside the Azure boundary, that may or may not be part of your subscription.
 
-In many cases, the **ON** setting is more permissive than what most customers want. You may want to set this setting to **OFF** and replace it with more restrictive IP firewall rules or virtual network firewall rules. 
+In many cases, enabling the setting is more permissive than what most customers want. You may want to uncheck this setting and replace it with more restrictive IP firewall rules or virtual network firewall rules. 
 
 However, doing so affects the following features that run on virtual machines in Azure that aren't part of your virtual network and hence connect to the database via an Azure IP address:
 
 ### Import Export Service
 
-Import Export Service doesn't work when **Allow access to Azure services** is set to **OFF**. However you can work around the problem [by manually running SqlPackage from an Azure VM or performing the export](./database-import-export-azure-services-off.md) directly in your code by using the DACFx API.
+Import Export Service doesn't work when **Allow Azure services and resources to access this server** is not enabled. However you can work around the problem [by manually running SqlPackage from an Azure VM or performing the export](./database-import-export-azure-services-off.md) directly in your code by using the DACFx API.
 
 ### Data Sync
 
-To use the Data sync feature with **Allow access to Azure services** set to **OFF**, you need to create individual firewall rule entries to [add IP addresses](firewall-create-server-level-portal-quickstart.md) from the **Sql service tag** for the region hosting the **Hub** database.
-Add these server-level firewall rules to the servers hosting both **Hub** and **Member** databases (which may be in different regions)
+To use the Data sync feature with **Allow Azure services and resources to access this server** not enabled, you need to create individual firewall rule entries to [add IP addresses](firewall-create-server-level-portal-quickstart.md) from the **Sql service tag** for the region hosting the **Hub** database. Add these server-level firewall rules to the servers hosting both **Hub** and **Member** databases (which may be in different regions)
 
 Use the following PowerShell script to generate IP addresses corresponding to the SQL service tag for West US region
 
@@ -97,7 +96,7 @@ start          end
 13.86.216.192  13.86.216.223
 ```
 
-You can now add these as distinct firewall rules and then set **Allow Azure services to access server**  to OFF.
+You can now add these as distinct firewall rules and then disable the setting **Allow Azure services and resources to access this server**.
 
 ## IP firewall rules
 
@@ -105,8 +104,7 @@ Ip based firewall is a feature of the logical server in Azure that prevents all 
 
 ## Virtual network firewall rules
 
-In addition to IP rules, the server firewall allows you to define *virtual network rules*.  
-To learn more, see [Virtual network service endpoints and rules for Azure SQL Database](vnet-service-endpoint-rule-overview.md) or watch this video:
+In addition to IP rules, the server firewall allows you to define *virtual network rules*. To learn more, see [Virtual network service endpoints and rules for Azure SQL Database](vnet-service-endpoint-rule-overview.md) or watch this video:
 
 > [!VIDEO https://learn.microsoft.com/shows/Data-Exposed/Data-Exposed--Demo--Vnet-Firewall-Rules-for-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 

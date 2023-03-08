@@ -174,7 +174,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ## <a id="bkmk_OtherSQLFeatures"></a> Delayed durability and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 
 **Transactional Replication, Change Tracking, and Change Data Capture**  
-- The use of delayed durability is not supported on databases that use change data capture (CDC). 
+- For databases enabled for Transactional Replication or Change Data Capture (CDC), the use of delayed durability is not supported. 
 
 - Delayed durable transactions are not supported with Transactional Replication. 
 - Change Tracking with Delayed Durability is supported. All transactions with Change Tracking are fully durable. A transaction has the change tracking property if it does any write operations to tables that have enabled change tracking. 

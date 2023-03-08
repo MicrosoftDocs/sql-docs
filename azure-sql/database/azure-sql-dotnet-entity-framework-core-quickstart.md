@@ -139,7 +139,7 @@ Complete the following steps to connect to Azure SQL Database using Entity Frame
         var connection = String.Empty;
         if (builder.Environment.IsDevelopment())
         {
-            builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.json");
+            builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.Development.json");
             connection = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
         }
         else

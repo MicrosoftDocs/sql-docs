@@ -1,13 +1,12 @@
 ---
 title: Configure parallel or concurrent R and Python script execution
 description: Configure parallel or concurrent R and Python script execution in a user account pool to scale SQL Server Machine Learning Services.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 09/25/2019
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 09/25/2019
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 # Scale concurrent execution of external scripts in SQL Server Machine Learning Services

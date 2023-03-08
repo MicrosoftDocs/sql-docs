@@ -1,17 +1,14 @@
 ---
+title: "Manage a CDC Service"
 description: "Manage a CDC Service"
-title: "Manage a CDC Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "manSer"
-ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "manSer"
 ---
 # Manage a CDC Service
 

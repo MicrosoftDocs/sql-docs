@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_847"
 description: "MSSQLSERVER_847"
-title: "MSSQLSERVER_847 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "847 (Database Engine error)"
-ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "847 (Database Engine error)"
 ---
 # MSSQLSERVER_847
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

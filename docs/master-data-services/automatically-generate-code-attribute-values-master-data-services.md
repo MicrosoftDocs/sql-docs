@@ -1,15 +1,12 @@
 ---
-description: "Automatically Generate Code Attribute Values (Master Data Services)"
 title: Automatically Generate Code Attribute Values
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
+description: "Automatically Generate Code Attribute Values (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Automatically Generate Code Attribute Values (Master Data Services)
 

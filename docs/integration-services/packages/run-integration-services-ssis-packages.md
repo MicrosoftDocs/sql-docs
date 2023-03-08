@@ -1,16 +1,16 @@
 ---
+title: "Run Integration Services (SSIS) Packages"
 description: "Run Integration Services (SSIS) Packages"
-title: "Run Integration Services (SSIS) Packages | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: 06/04/2018
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.ssms.ispackageexecute.f1"
   - "sql13.ssis.ssms.executepackage.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, running"
   - "SSIS packages, running"
   - "packages [Integration Services], running"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "executing packages [Integration Services]"
   - "running packages [Integration Services]"
   - "Integration Services, (See also Integration Services packages)"
-ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-author: chugugrace
-ms.author: chugu
 ---
 # Run Integration Services (SSIS) Packages
 

@@ -1,14 +1,13 @@
 ---
 title: SSIS Projects extension for VS2022 troubleshooting guide
 description: "View the release notes for all versions of SSIS that work with Visual Studio 2022 and earlier Visual Studio versions."
-ms.service: sql
-ms.subservice: ssdt
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan, drskwier
-ms.custom: seo-lt-2022
 ms.date: 11/21/2022
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # SSIS Projects extension for VS2022 troubleshooting guide
@@ -40,6 +39,8 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
+- If Oracle, Teradata, or other OOB component is not found after upgrading SSDT, please make sure that the connector for latest SQL Server version is installed.
+
 ## Known issues
 **Version 0.3**
   1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
@@ -47,7 +48,6 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   3. Can't design DQS related component.
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   5. Localization and globalization aren't supported.
-  6. Oracle Connection Manager execute failed with error code 0x80004005 when targeting SQL Server 2017.
   
 **Version 0.2**
   1. Target sever versions supported: SQL server 2019 and SQL server 2022

@@ -3,7 +3,7 @@ title: "sys.dm_xe_packages (Transact-SQL)"
 description: sys.dm_xe_packages (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "3/30/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
 dev_langs:
   - "TSQL"
-ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 ---
 # sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -38,6 +37,10 @@ Lists all the packages registered with the extended events engine.
 ## Permissions  
 Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
 
 The packages registered with the extended events engine expose events, the actions that can be taken at the time of event firing, and targets for both synchronous and asynchronous processing of event data.  

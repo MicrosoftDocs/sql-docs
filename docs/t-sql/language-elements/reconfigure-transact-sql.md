@@ -3,12 +3,10 @@ title: "RECONFIGURE (Transact-SQL)"
 description: "RECONFIGURE (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "05/20/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE_TSQL"

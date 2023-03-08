@@ -7,9 +7,7 @@ ms.reviewer: wiassaf
 ms.date: 10/14/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom:
-  - fasttrack-edit
-  - event-tier1-build-2022
+ms.custom: fasttrack-edit
 helpviewer_keywords:
   - "performance tuning [SQL Server]"
   - "automatic tuning"

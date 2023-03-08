@@ -3,7 +3,7 @@ title: "sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)"
 description: sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/09/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_resource_pool_volumes"
 dev_langs:
   - "TSQL"
-ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 ---
 # sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -49,6 +48,10 @@ ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 ## Permissions  
  Requires VIEW SERVER STATE permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   

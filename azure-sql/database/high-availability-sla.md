@@ -10,8 +10,8 @@ ms.service: sql-db-mi
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=2"
-  - "references_regions"
+  - sqldbrb=2
+  - references_regions
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -97,11 +97,14 @@ Consider the following when using zone redundancy:
 
 During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions:
 
-| Geography | Regions supporting zone redundancy for Business Critical service tier |
-| :--- | :--- |
-| Europe, Middle East, Africa | North Europe, Norway East, South Africa North, Sweden Central, Switzerland North, West Europe, UAE North, UK South |
-| Americas | Brazil South, Canada Central, East US, South Central US, West US 3 |
-| Asia Pacific | Australia East, East Asia, India Central, Japan East, Korea Central |
+| Americas | Europe | Middle East | Africa | Asia Pacific |
+|---|---|---|---|---|
+| Brazil South | North Europe | Qatar Central | South Africa North | Australia East |
+| Canada Central | Norway East | UAE North | | Central India |
+| East US | UK South | | | Japan East |
+| South Central US | West Europe | | | Korea Central |
+| West US 3 | Sweden Central | | | East Asia |
+| | Switzerland North | | | |
 
 ## Hyperscale service tier locally redundant availability
 

@@ -1,20 +1,17 @@
 ---
-description: "Choose Toolbox Items (Maintenance Tasks Page)"
 title: "Choose Toolbox Items (Maintenance Tasks Page)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "vs.chooseitems.maintenance_tasks"
-  - "VS.ToolboxPages.Maintenance_Tasks"
-helpviewer_keywords: 
-  - "Customize Toolbox dialog box"
-ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
+description: "Choose Toolbox Items (Maintenance Tasks Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "vs.chooseitems.maintenance_tasks"
+  - "VS.ToolboxPages.Maintenance_Tasks"
+helpviewer_keywords:
+  - "Customize Toolbox dialog box"
 ---
 # Choose Toolbox Items (Maintenance Tasks Page)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

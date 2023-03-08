@@ -1,16 +1,12 @@
 ---
 title: "Back up to URL best practices & troubleshooting for Microsoft Azure Blob Storage"
 description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to Azure Blob Storage.
-ms.custom:
-- seo-lt-2019
-- event-tier1-build-2022
-ms.date: 05/24/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
 ---
 # SQL Server back up to URL for Microsoft Azure Blob Storage best practices and troubleshooting
 

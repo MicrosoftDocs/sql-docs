@@ -1,24 +1,19 @@
 ---
+title: "SQLConnect Function"
 description: "SQLConnect Function"
-title: "SQLConnect Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLConnect"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLConnect"
-helpviewer_keywords: 
-  - "SQLConnect function [ODBC]"
-ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLConnect"
+helpviewer_keywords:
+  - "SQLConnect function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLConnect"
+apitype: "dllExport"
 ---
 # SQLConnect Function
 **Conformance**  

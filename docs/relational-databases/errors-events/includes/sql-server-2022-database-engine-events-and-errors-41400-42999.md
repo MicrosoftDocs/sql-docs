@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/02/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -263,13 +263,6 @@ ms.topic: include
 | 41963 | 16 | No | Certificate cannot be created as it is already used with '%.\*ls' feature. Consider using a different certificate. |
 | 41964 | 16 | No | The '%.\*ls' operation cannot be completed as there exists a database in the process of creation through Azure SQL Managed Instance link. Please wait for the link creation to complete, or alternatively delete the link and retry the operation again. |
 | 41965 | 16 | No | Setting the role cannot be applied as Azure SQL Managed Instance is already in the requested role. |
-| 41966 | 16 | No | The '%.\*ls' operation cannot be completed as '%.\*ls' server configuration option is not supported. |
-| 41967 | 16 | No | The '%.\*ls' operation cannot be completed as incorrect value was specified for '%.\*ls' server configuration option. |
-| 41968 | 16 | No | Changing the server role cannot be executed at this time as there exist a previous role change in progress on Azure SQL Managed Instance. Only when the previous role change completes, a new request could be submitted. Please wait for the previous role change to complete and retry again. |
-| 41969 | 16 | No | Setting the role has failed due to an unknown reason. Please check the error log file. If the issue persists, contact Azure support. |
-| 41970 | 16 | No | Switching to Primary role in planned fashion is not supported. |
-| 41973 | 16 | No | The link cannot be established because the endpoint certificate from SQL Server has not been imported to Azure SQL Managed Instance. Please import the endpoint certificate from SQL Server to Managed Instance, and retry the link creation again. Please see online documentation for Managed Instance link for more information. |
-| 41974 | 16 | No | The link cannot be established because the endpoint certificate from SQL Azure SQL Managed Instance has not been imported to SQL Server. Please download the endpoint certificate from Managed Instance and import it to SQL Server, and retry the link creation again. Please see online documentation for Managed Instance link for more information. |
 | 42001 | 16 | No | Failed to parse XML configuration. The operating system returned error %ls. |
 | 42002 | 16 | No | Failed to parse XML configuration. The parser returned error %.\*ls |
 | 42003 | 16 | No | Failed to parse XML configuration. A required attribute '%ls' is missing. |

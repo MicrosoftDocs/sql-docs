@@ -1,22 +1,17 @@
 ---
-description: "IpAddresses Property (ServerNetworkProtocol Class)"
 title: "IpAddresses Property (ServerNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "IpAddresses Property (ServerNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "IpAddresses property"
-ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
+description: "IpAddresses Property (ServerNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "IpAddresses property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "IpAddresses Property (ServerNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # IpAddresses Property (ServerNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysmail_allitems database mail view"
 dev_langs:
   - "TSQL"
-ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 ---
 # sysmail_allitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

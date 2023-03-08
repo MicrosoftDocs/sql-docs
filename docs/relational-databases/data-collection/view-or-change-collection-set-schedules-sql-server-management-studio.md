@@ -1,24 +1,21 @@
 ---
-description: "View or Change Collection Set Schedules (SQL Server Management Studio)"
 title: "View or change collection set schedules"
+description: "View or Change Collection Set Schedules (SQL Server Management Studio)"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 06/03/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.dc.collectionsetprop.uploads.f1"
   - "sql13.swb.dc.collectionsetprop.description.f1"
   - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "collection sets [SQL Server], changing schedules"
   - "schedules [SQL Server], changing collection set"
   - "collection sets [SQL Server], viewing schedules"
   - "schedules [SQL Server], viewing collection set"
-ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-author: MashaMSFT
-ms.author: mathoma
-ms.custom: "seo-lt-2019"
 ---
 # View or Change Collection Set Schedules (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -6,10 +6,8 @@ ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], querying"
-ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 ---
 # Querying Extended Stored Procedures Installed in SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

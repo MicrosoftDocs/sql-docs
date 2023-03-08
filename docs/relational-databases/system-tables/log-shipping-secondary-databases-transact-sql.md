@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "log_shipping_secondary_databases system table"
 dev_langs:
   - "TSQL"
-ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
 ---
 # log_shipping_secondary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

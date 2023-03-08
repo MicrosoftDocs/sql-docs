@@ -1,22 +1,19 @@
 ---
-description: "Create and update database tables"
 title: Create and Update Tables
+description: "Create and update database tables"
+author: markingmyname
+ms.author: maghan
+ms.date: 08/25/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Visual Database Tools [SQL Server], Table Designer"
   - "Table Designer, designing tables"
   - "opening tables"
   - "opening Table Designer"
   - "tables [SQL Server], opening"
   - "Table Designer, opening"
-ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 08/25/2017
 ---
 
 # Create and update database tables

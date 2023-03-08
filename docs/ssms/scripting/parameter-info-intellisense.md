@@ -1,20 +1,17 @@
 ---
 title: "Parameter Info (IntelliSense)"
 description: Learn how to use the IntelliSense Parameter info option, which provides information as you type about the parameters required by a function or stored procedure.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Parameter Info option [IntelliSense]"
   - "stored function parameter completion [Intellisense]"
   - "language references [SQL Server]"
   - "IntelliSense [SQL Server], Parameter Info option"
-ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Parameter Info (IntelliSense)

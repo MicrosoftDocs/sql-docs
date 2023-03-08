@@ -1,21 +1,18 @@
 ---
-description: "Import Registered Server Information (SQL Server Management Studio)"
 title: Import Registered Server Information
+description: "Import Registered Server Information (SQL Server Management Studio)"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.importregisteredservers.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transferring registered server information"
   - "Registered Servers [SQL Server], importing"
   - "importing registered server information"
-ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ---
 
 # Import Registered Server Information (SQL Server Management Studio)

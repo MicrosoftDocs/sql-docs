@@ -1,20 +1,17 @@
 ---
+title: "'Publisher Settings' (SSMS)"
 description: "SQL Server Replication 'Publisher Settings' dialog box"
-title: "'Publisher Settings' (SSMS) | Microsoft Docs"
-descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publishersettings.f1"
-helpviewer_keywords: 
-  - "Publisher Settings dialog box"
-ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publishersettings.f1"
+helpviewer_keywords:
+  - "Publisher Settings dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # SQL Server Replication 'Publisher Settings' dialog box

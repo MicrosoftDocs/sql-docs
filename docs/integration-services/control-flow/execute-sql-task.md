@@ -1,10 +1,10 @@
 ---
-description: "Execute SQL Task"
 title: Execute SQL Task
-ms.custom: ""
+description: "Execute SQL Task"
+author: chugugrace
+ms.author: chugu
 ms.date: "03/13/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -12,14 +12,11 @@ f1_keywords:
   - "sql13.dts.designer.executesqltask.general.f1"
   - "sql13.dts.designer.executesqltask.parametermapping.f1"
   - "sql13.dts.designer.executesqltask.resultset.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL statements, SSIS"
   - "statements [Integration Services]"
   - "batches [Integration Services]"
   - "Execute SQL task [Integration Services]"
-ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: chugugrace
-ms.author: chugu
 ---
 
 # Execute SQL Task

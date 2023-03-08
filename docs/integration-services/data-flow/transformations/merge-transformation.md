@@ -1,24 +1,21 @@
 ---
+title: "Merge Transformation"
 description: "Merge Transformation"
-title: "Merge Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.mergetrans.f1"
   - "sql13.dts.designer.mergetransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "merging datasets [Integration Services]"
   - "merging data [Integration Services]"
   - "Merge transformation"
   - "combining datasets"
   - "datasets [Integration Services], merging"
-ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-author: chugugrace
-ms.author: chugu
 ---
 # Merge Transformation
 

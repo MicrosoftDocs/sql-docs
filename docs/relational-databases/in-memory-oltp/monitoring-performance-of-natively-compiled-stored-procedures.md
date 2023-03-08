@@ -7,8 +7,6 @@ ms.date: "04/03/2018"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures

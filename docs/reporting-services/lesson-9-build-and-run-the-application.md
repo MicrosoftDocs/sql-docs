@@ -1,14 +1,12 @@
 ---
-title: "Lesson 9: Build and Run the Application | Microsoft Docs"
+title: "Lesson 9: Build and Run the Application"
 description: Learn how to build and run the website application after you create a data filter for the data table.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/18/2016
 ms.service: reporting-services
 ms.subservice: reporting-services
-
 ms.topic: conceptual
-ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Lesson 9: Build and Run the Application
 After you create a data filter for the data table, your next step is to build and run the website application.  

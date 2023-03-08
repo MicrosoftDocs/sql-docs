@@ -1,13 +1,13 @@
 ---
+title: "Calling a Stored Procedure (OLE DB)"
 description: "Stored Procedures - Calling in SQL Server Native Client"
-title: "Calling a Stored Procedure (OLE DB) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "calling stored procedures"
   - "RPC escape sequence"
   - "OLE DB, stored procedures"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "ODBC CALL escape sequence"
   - "stored procedures [OLE DB], calling"
   - "SQL Server Native Client OLE DB provider, stored procedures"
-ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures - Calling in SQL Server Native Client

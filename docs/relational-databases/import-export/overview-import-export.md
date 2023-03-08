@@ -7,7 +7,6 @@ ms.date: "10/27/2017"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import and export data from SQL Server and Azure SQL Database

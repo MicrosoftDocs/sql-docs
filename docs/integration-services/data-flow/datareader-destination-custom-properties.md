@@ -1,15 +1,12 @@
 ---
+title: "DataReader Destination Custom Properties"
 description: "DataReader Destination Custom Properties"
-title: "DataReader Destination Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # DataReader Destination Custom Properties
 

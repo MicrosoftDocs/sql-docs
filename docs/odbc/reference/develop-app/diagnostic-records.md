@@ -1,21 +1,18 @@
 ---
+title: "Diagnostic Records"
 description: "Diagnostic Records"
-title: "Diagnostic Records | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagnostic information [ODBC], diagnostic records"
   - "handles [ODBC], diagnostic records"
   - "header records [ODBC]"
   - "status records [ODBC]"
   - "diagnostic records [ODBC]"
-ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Diagnostic Records
 Associated with each environment, connection, statement, and descriptor handle are *diagnostic records*. These records contain diagnostic information about the last function called that used a particular handle. The records are replaced only when another function is called using that handle. There is no limit to the number of diagnostic records that can be stored at any one time.  

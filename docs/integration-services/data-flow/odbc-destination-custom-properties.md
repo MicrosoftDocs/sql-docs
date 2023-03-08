@@ -1,15 +1,12 @@
 ---
+title: "ODBC Destination Custom Properties"
 description: "ODBC Destination Custom Properties"
-title: "ODBC Destination Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # ODBC Destination Custom Properties
 

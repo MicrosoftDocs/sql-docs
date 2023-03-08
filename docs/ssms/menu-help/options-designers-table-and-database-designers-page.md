@@ -1,16 +1,14 @@
 ---
-description: "Options (Designers - Table and Database Designers Page)"
 title: "Options (Designers - Table and Database Designers Page)"
-ms.custom: seo-lt-2019
-ms.date: "12/08/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Designers.Table_Designer"
+description: "Options (Designers - Table and Database Designers Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "12/08/2021"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "VS.ToolsOptionsPages.Designers.Table_Designer"
 ---
 # Options (Designers - Table and Database Designers Page)
 [!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]

@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "index online operations [SQL Server]"
   - "online index operations"
   - "ONLINE option"
-ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Perform Index Operations Online

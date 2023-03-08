@@ -1,15 +1,12 @@
 ---
-title: "SQL Server Parallel Data Warehouse Connection Type | Microsoft Docs"
+title: "SQL Server Parallel Data Warehouse Connection Type"
 description: Use the information in this article about the SQL Server Parallel Data Warehouse connection type to learn how to build a data source.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2017
 ms.service: reporting-services
 ms.subservice: report-data
-
-
 ms.topic: conceptual
-ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # SQL Server Parallel Data Warehouse Connection Type (SSRS)

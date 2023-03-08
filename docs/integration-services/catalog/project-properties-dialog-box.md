@@ -1,18 +1,15 @@
 ---
+title: "Project Properties Dialog Box"
 description: "Project Properties Dialog Box"
-title: "Project Properties Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectprop.general.f1"
-  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
-ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.ssms.isprojectprop.general.f1"
+  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
 ---
 # Project Properties Dialog Box
 

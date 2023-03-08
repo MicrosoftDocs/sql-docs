@@ -8,7 +8,6 @@ ms.date: 10/24/2022
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sp_replmonitorsubscriptionpendingcmds_TSQL"
   - "sp_replmonitorsubscriptionpendingcmds"

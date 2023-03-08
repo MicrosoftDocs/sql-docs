@@ -3,7 +3,7 @@ title: "sys.dm_xe_map_values (Transact-SQL)"
 description: sys.dm_xe_map_values (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "3/30/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "xe"
 dev_langs:
   - "TSQL"
-ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 ---
 # sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -35,6 +34,10 @@ Returns a mapping of internal numeric keys to human-readable text.
 
 Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ### Relationship cardinalities  
   
 |From|To|Relationship|  

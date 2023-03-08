@@ -1,18 +1,15 @@
 ---
+title: "REVERSE (SSIS Expression)"
 description: "REVERSE (SSIS Expression)"
-title: "REVERSE (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "REVERSE function"
-  - "reverse character expressions"
-ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "REVERSE function"
+  - "reverse character expressions"
 ---
 # REVERSE (SSIS Expression)
 

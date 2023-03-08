@@ -1,17 +1,14 @@
 ---
+title: "Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)"
 description: "Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)"
-title: "Column Conversion Details Dialog Box (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.issuedetails.f1"
-ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
+ms.date: "02/16/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.issuedetails.f1"
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
 

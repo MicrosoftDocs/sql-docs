@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "cdc.captured_columns"
 dev_langs:
   - "TSQL"
-ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 ---
 # cdc.captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

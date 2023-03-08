@@ -1,17 +1,14 @@
 ---
+title: "Point"
 description: "Point"
-title: "Point | Microsoft Docs"
-ms.date: "02/02/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Point geometry subtype [SQL Server]"
-  - "geometry data type [SQL Server], spatial data"
-ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
+ms.date: "02/02/2021"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Point geometry subtype [SQL Server]"
+  - "geometry data type [SQL Server], spatial data"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Point

@@ -1,21 +1,18 @@
 ---
+title: "Database Engine Stored Procedures (Transact-SQL)"
 description: "Database Engine Stored Procedures (Transact-SQL)"
-title: "Database Engine Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/02/2015"
+author: markingmyname
+ms.author: maghan
+ms.date: 02/24/2023
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Engine [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], Database Engine"
   - "stored procedures [SQL Server], Database Engine"
-ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # Database Engine Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -224,6 +221,8 @@ ms.author: maghan
         [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)
 
         [sys.sp_xtp_checkpoint_force_garbage_collection](../../relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)
+
+        [sys.sp_xtp_force_gc](../../relational-databases/system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md)
 
         [sys.sp_xtp_unbind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)
     :::column-end:::

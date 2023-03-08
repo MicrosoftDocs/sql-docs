@@ -1,16 +1,13 @@
 ---
+title: "Adding Support for Debugging in a Custom Task"
 description: "Adding Support for Debugging in a Custom Task"
-title: "Adding Support for Debugging in a Custom Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BreakpointManager class"
   - "breakpoints [Integration Services]"
   - "custom tasks [Integration Services], debugging"
@@ -18,9 +15,9 @@ helpviewer_keywords:
   - "IDTSBreakpointSite interface"
   - "SSIS custom tasks, debugging"
   - "debugging [Integration Services], custom tasks"
-ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Adding Support for Debugging in a Custom Task
 

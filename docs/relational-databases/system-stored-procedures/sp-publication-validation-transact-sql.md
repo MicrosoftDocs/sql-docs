@@ -1,22 +1,19 @@
 ---
+title: "sp_publication_validation (Transact-SQL)"
 description: "sp_publication_validation (Transact-SQL)"
-title: "sp_publication_validation (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_publication_validation"
-  - "sp_publication_validation_TSQL"
-helpviewer_keywords: 
-  - "sp_publication_validation"
-ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_publication_validation"
+  - "sp_publication_validation_TSQL"
+helpviewer_keywords:
+  - "sp_publication_validation"
+dev_langs:
+  - "TSQL"
 ---
 # sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

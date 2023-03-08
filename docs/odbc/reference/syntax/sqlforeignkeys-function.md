@@ -1,24 +1,19 @@
 ---
+title: "SQLForeignKeys Function"
 description: "SQLForeignKeys Function"
-title: "SQLForeignKeys Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLForeignKeys"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLForeignKeys"
-helpviewer_keywords: 
-  - "SQLForeignKeys function [ODBC]"
-ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLForeignKeys"
+helpviewer_keywords:
+  - "SQLForeignKeys function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLForeignKeys"
+apitype: "dllExport"
 ---
 # SQLForeignKeys Function
 **Conformance**  

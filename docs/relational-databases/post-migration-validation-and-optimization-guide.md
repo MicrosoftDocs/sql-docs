@@ -1,19 +1,14 @@
 ---
+title: "Post-migration Validation and Optimization Guide"
 description: "Post-migration Validation and Optimization Guide"
-title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
-ms.date: 01/09/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-helpviewer_keywords: 
-  - "post-migration validation and optimization"
-  - "guide, post-migration validation and optimization"
-ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rwestMSFT
 ms.author: "randolphwest"
+ms.date: 01/09/2019
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "post-migration validation and optimization"
+  - "guide, post-migration validation and optimization"
 ---
 # Post-migration Validation and Optimization Guide
 

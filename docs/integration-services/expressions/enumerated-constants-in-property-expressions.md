@@ -1,22 +1,19 @@
 ---
+title: "Enumerated Constants in Property Expressions"
 description: "Enumerated Constants in Property Expressions"
-title: "Enumerated Constants in Property Expressions | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "enumerators [Integration Services]"
   - "packages [Integration Services], expressions"
   - "dynamic properties"
   - "updating package properties"
   - "enumerated constants [Integration Services]"
   - "property expressions [Integration Services]"
-ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: chugugrace
-ms.author: chugu
 ---
 # Enumerated Constants in Property Expressions
 

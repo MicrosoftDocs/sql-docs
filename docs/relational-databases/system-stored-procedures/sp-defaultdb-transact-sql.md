@@ -1,22 +1,19 @@
 ---
+title: "sp_defaultdb (Transact-SQL)"
 description: "sp_defaultdb (Transact-SQL)"
-title: "sp_defaultdb (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_defaultdb_TSQL"
-  - "sp_defaultdb"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_defaultdb"
-ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_defaultdb_TSQL"
+  - "sp_defaultdb"
+helpviewer_keywords:
+  - "sp_defaultdb"
+dev_langs:
+  - "TSQL"
 ---
 # sp_defaultdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

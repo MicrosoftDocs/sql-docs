@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "XML Bulk Load [SQLXML], .NET environment"
   - ".NET Framework [SQLXML], XML Bulk Load"
   - "bulk load [SQLXML], .NET environment"
-ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using Bulk Load

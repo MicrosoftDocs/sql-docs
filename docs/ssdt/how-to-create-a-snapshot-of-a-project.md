@@ -1,17 +1,15 @@
 ---
 title: Create a Snapshot of a Project
 description: Become familiar with data-tier application files, or snapshots, and see how to use them. Find out how to create or import snapshots and how to compare them.
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog"
   - "sql.data.tools.SqlProjectImportSnapshotDialog.dialog"
-ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Create a Snapshot of a Project

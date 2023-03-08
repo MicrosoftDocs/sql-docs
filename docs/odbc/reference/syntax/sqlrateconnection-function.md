@@ -1,17 +1,14 @@
 ---
+title: "SQLRateConnection Function"
 description: "SQLRateConnection Function"
-title: "SQLRateConnection Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLRateConnection function [ODBC]"
-ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLRateConnection function [ODBC]"
 ---
 # SQLRateConnection Function
 **Conformance**  

@@ -1,17 +1,15 @@
 ---
-title: "Distribution Database | Microsoft Docs"
+title: "Distribution Database"
 description: In SQL Server, the distribution database stores metadata and history data for all types of replication, and transactions for transactional replication.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.configuredistributionwizard.distributiondatabase.f1"
-ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.configuredistributionwizard.distributiondatabase.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Distribution Database

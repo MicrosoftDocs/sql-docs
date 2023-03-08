@@ -1,17 +1,14 @@
 ---
+title: "Queries"
 description: "Queries"
-title: "Queries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Queries

@@ -1,21 +1,17 @@
 ---
-description: "Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)"
 title: Customize the Amount of Information Displayed in Diagrams
-ms.custom: seo-lt-2019
+description: "Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database diagrams [SQL Server], information displayed"
   - "table views in database diagrams [SQL Server]"
   - "customizing database diagram information [SQL Server]"
   - "custom table views [SQL Server]"
-ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)
 

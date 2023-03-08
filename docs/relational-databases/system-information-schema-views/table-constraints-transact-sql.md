@@ -1,23 +1,20 @@
 ---
+title: "TABLE_CONSTRAINTS (Transact-SQL)"
 description: "TABLE_CONSTRAINTS (Transact-SQL)"
-title: "TABLE_CONSTRAINTS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "TABLE_CONSTRAINTS"
-  - "TABLE_CONSTRAINTS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "INFORMATION_SCHEMA.TABLE_CONSTRAINTS view"
-  - "TABLE_CONSTRAINTS view"
-ms.assetid: 687f3284-2849-4853-8a5c-fc936deceae0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "TABLE_CONSTRAINTS"
+  - "TABLE_CONSTRAINTS_TSQL"
+helpviewer_keywords:
+  - "INFORMATION_SCHEMA.TABLE_CONSTRAINTS view"
+  - "TABLE_CONSTRAINTS view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TABLE_CONSTRAINTS (Transact-SQL)

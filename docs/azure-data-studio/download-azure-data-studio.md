@@ -7,10 +7,7 @@ ms.reviewer: maghan, randolphwest
 ms.date: 02/10/2023
 ms.service: azure-data-studio
 ms.topic: overview
-ms.custom:
-  - seodec18
-  - contperf-fy21q4
-  - intro-overview
+ms.custom: intro-overview
 ---
 
 # Download and install Azure Data Studio

@@ -1,20 +1,17 @@
 ---
+title: "Copy Package Objects"
 description: "Copy Package Objects"
-title: "Copy Package Objects | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "control flow [Integration Services], copying objects"
   - "copying package objects [Integration Services]"
   - "data flow [Integration Services], copying objects"
   - "connection managers [Integration Services], copying"
-ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: chugugrace
-ms.author: chugu
 ---
 # Copy Package Objects
 

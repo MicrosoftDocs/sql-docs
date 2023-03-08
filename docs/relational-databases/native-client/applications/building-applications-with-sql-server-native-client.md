@@ -1,20 +1,17 @@
 ---
 title: "Building Applications"
 description: Find out how to build applications, with upgrades from MDAC, header and library files, and connection strings, with the SQL Server Native Client library.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: 12/16/2019
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [SQL Server Native Client], building applications"
   - "SQLNCLI, building applications"
   - "applications [SQL Server Native Client]"
   - "SQL Server Native Client, building applications"
-ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Building Applications with SQL Server Native Client

@@ -1,17 +1,14 @@
 ---
 title: "Rename a Database"
 description: "Rename a Database"
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "databases [SQL Server], renaming"
-  - "renaming databases"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
 ms.date: "04/06/2022"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "databases [SQL Server], renaming"
+  - "renaming databases"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Database

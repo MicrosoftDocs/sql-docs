@@ -8,10 +8,7 @@ ms.date: 02/07/2019
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
-ms.custom:
-  - "seoapril2019"
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Create performance counters to track performance of shard map manager
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

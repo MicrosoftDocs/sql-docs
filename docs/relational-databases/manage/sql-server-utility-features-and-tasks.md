@@ -1,22 +1,19 @@
 ---
-title: "SQL Server Utility Features and Tasks | Microsoft Docs"
+title: "SQL Server Utility Features and Tasks"
 description: Get acquainted with the SQL Server Utility. Learn about its features and find out how you can use it to monitor a SQL Server environment.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server utility [SQL Server]"
   - "utility control point"
   - "Utility growth rate"
   - "Multiserver management"
   - "UCP"
   - "Multi-server management [SQL Server]"
-ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # SQL Server Utility Features and Tasks
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

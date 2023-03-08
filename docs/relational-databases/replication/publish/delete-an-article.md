@@ -1,24 +1,22 @@
 ---
+title: "Delete an Article"
 description: "Delete an Article"
-title: "Delete an Article | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "articles [SQL Server replication], dropping"
   - "sp_droparticle"
   - "sp_dropmergearticle"
   - "deleting articles"
   - "removing articles"
   - "dropping articles"
-ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Delete an Article

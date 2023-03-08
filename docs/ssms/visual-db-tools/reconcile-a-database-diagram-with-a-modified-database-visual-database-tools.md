@@ -1,22 +1,18 @@
 ---
-description: "Reconcile a Database Diagram with a Modified Database (Visual Database Tools)"
 title: Reconcile a Database Diagram with a Modified Database
-ms.custom: seo-lt-2019
+description: "Reconcile a Database Diagram with a Modified Database (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "updating diagram to match database"
   - "reconciling database diagrams"
   - "diagrams [SQL Server], reconciling changes"
   - "updating database to match diagram"
   - "database diagrams [SQL Server], reconciling changes"
-ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Reconcile a Database Diagram with a Modified Database (Visual Database Tools)
 

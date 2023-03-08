@@ -1,17 +1,14 @@
 ---
-description: "Format JSON Output Automatically with AUTO Mode (SQL Server)"
 title: "Format JSON Output Automatically with AUTO Mode"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FOR JSON AUTO"
-ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
+description: "Format JSON Output Automatically with AUTO Mode (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FOR JSON AUTO"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format JSON Output Automatically with AUTO Mode (SQL Server)

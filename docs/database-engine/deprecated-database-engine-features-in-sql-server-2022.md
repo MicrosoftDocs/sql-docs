@@ -9,7 +9,6 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "deprecated changes 2022 [SQL Server]"
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"

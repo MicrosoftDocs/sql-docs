@@ -1,22 +1,19 @@
 ---
+title: "MSdistribution_status (Transact-SQL)"
 description: "MSdistribution_status (Transact-SQL)"
-title: "MSdistribution_status (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "MSdistribution_status_TSQL"
-  - "MSdistribution_status"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "MSdistribution_status view"
-ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "MSdistribution_status_TSQL"
+  - "MSdistribution_status"
+helpviewer_keywords:
+  - "MSdistribution_status view"
+dev_langs:
+  - "TSQL"
 ---
 # MSdistribution_status (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

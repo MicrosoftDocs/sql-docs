@@ -1,22 +1,19 @@
 ---
+title: "sp_addscriptexec (Transact-SQL)"
 description: "sp_addscriptexec (Transact-SQL)"
-title: "sp_addscriptexec (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addscriptexec"
-  - "sp_addscriptexec_TSQL"
-helpviewer_keywords: 
-  - "sp_addscriptexec"
-ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addscriptexec"
+  - "sp_addscriptexec_TSQL"
+helpviewer_keywords:
+  - "sp_addscriptexec"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,17 @@
 ---
-description: "Add Derived Tables to Queries (Visual Database Tools)"
 title: Add Derived Tables to Queries
+description: "Add Derived Tables to Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [Visual Database Tools]"
   - "joins [SQL Server], derived tables"
   - "table joins [SQL Server]"
   - "derived tables"
-ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Add Derived Tables to Queries (Visual Database Tools)

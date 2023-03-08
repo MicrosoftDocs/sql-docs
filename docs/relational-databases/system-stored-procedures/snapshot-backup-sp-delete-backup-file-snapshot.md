@@ -1,17 +1,14 @@
 ---
+title: "sp_delete_backup_file_snapshot (Transact-SQL)"
 description: "sp_delete_backup_file_snapshot (Transact-SQL)"
-title: "sp_delete_backup_file_snapshot (Transact-SQL) | Microsoft Docs"
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.custom: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_backup_file_snapshot (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -1,11 +1,13 @@
 ---
 title: FROM clause plus JOIN, APPLY, PIVOT (T-SQL)
 description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: "06/01/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "JOIN"
   - "FROM_TSQL"
   - "FROM"
@@ -16,9 +18,7 @@ f1_keywords:
   - "CROSS_APPLY_TSQL"
   - "APPLY_TSQL"
   - "CROSS_JOIN_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OUTER APPLY operator"
   - "hints [SQL Server], FROM clause"
   - "SELECT statement [SQL Server], FROM clause"
@@ -30,11 +30,8 @@ helpviewer_keywords:
   - "joins [SQL Server], FROM clause"
   - "UPDATE statement [SQL Server], FROM clause"
   - "derived tables"
-ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: VanMSFT
-ms.author: vanto
-ms.custom: ""
-ms.date: "06/01/2019"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

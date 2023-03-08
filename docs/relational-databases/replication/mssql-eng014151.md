@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG014151"
 description: "MSSQL_ENG014151"
-title: "MSSQL_ENG014151 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG014151 error"
-ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG014151 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014151

@@ -1,18 +1,15 @@
 ---
+title: "OData Connection Manager"
 description: "OData Connection Manager"
-title: "OData Connection Manager | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.custom: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-f1_keywords: 
-  - "sql13.dts.designer.odatasource.connectionmanager.f1"
-  - "sql13.dts.designer.odataconnectionmanager.f1"
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.odatasource.connectionmanager.f1"
+  - "sql13.dts.designer.odataconnectionmanager.f1"
 ---
 # OData Connection Manager
 

@@ -4,11 +4,10 @@ description: Learn to create a three-node cluster on Red Hat, SUSE, or Ubuntu, a
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh-msft
-ms.date: 11/28/2022
+ms.date: 03/06/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Configure a Pacemaker cluster for SQL Server availability groups
 
@@ -632,7 +631,7 @@ The steps to create an availability group on Linux servers for high availability
    sudo ufw disable
    ```
 
-1. Install Pacemaker packages. On all nodes, run the following commands:
+1. Install Pacemaker packages. On all nodes, run the following commands for Ubuntu 20.04. For more information about installing on previous versions, see [Ubuntu HA - MS SQL Server on Azure](https://discourse.ubuntu.com/t/ubuntu-ha-ms-sql-server-on-azure/27673).
 
    ```bash
    sudo apt-get install -y pacemaker pacemaker-cli-utils crmsh resource-agents fence-agents corosync python3-azure
@@ -643,30 +642,6 @@ The steps to create an availability group on Linux servers for high availability
    ```bash
    sudo passwd hacluster
    ```
-
-### Enable and start pcsd service and Pacemaker
-
-The following command enables and starts the `pcsd` service and Pacemaker. Run on all nodes. This allows the nodes to rejoin the cluster after reboot.
-
-```bash
-sudo systemctl enable pcsd
-sudo systemctl start pcsd
-sudo systemctl enable pacemaker
-```
-
-The `enable pacemaker` command may complete with the following error:
-
-```error
-pacemaker Default-Start contains no runlevels, aborting.
-```
-
-The error is harmless, and cluster configuration can continue.
-
-You can also try the following command instead:
-
-```bash
-sudo systemctl start pacemaker
-```
 
 ### Create the cluster
 

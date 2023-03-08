@@ -1,22 +1,19 @@
 ---
+title: "STPointFromWKB (geometry Data Type)"
 description: "STPointFromWKB (geometry Data Type)"
-title: "STPointFromWKB (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPointFromWKB (geometry Data Type)"
   - "STPointFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPointFromWKB (geometry Data Type)"
-ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPointFromWKB (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

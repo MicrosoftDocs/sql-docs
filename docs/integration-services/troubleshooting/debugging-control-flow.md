@@ -1,24 +1,21 @@
 ---
+title: "Debugging Control Flow"
 description: "Debugging Control Flow"
-title: "Debugging Control Flow | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.setbreakpoints.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "progress reporting [Integration Services]"
   - "breakpoints [Integration Services]"
   - "debugging [Integration Services], control flow"
   - "control flow [Integration Services], debugging"
   - "color-coded progress reporting [Integration Services]"
   - "Set Breakpoints dialog box"
-ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: chugugrace
-ms.author: chugu
 ---
 # Debugging Control Flow
 

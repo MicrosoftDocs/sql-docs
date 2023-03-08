@@ -1,22 +1,19 @@
 ---
+title: "STNumPoints (geography Data Type)"
 description: "STNumPoints (geography Data Type)"
-title: "STNumPoints (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STNumPoints (geography Data Type)"
   - "STNumPoints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STNumPoints method"
-ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STNumPoints (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

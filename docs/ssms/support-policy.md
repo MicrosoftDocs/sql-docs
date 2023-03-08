@@ -1,17 +1,17 @@
 ---
-description: "SQL Server Management Studio (SSMS) Support Policy"
 title: "SQL Server Management Studio (SSMS) Support Policy"
+description: "SQL Server Management Studio (SSMS) Support Policy"
 ms.date: "03/08/2023"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: maghan
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio"
-ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: erinstellato-ms
 ms.author: erinstellato
+ms.reviewer: maghan
 ---
+
 # SQL Server Management Studio (SSMS) Support Policy
 
 The support policy for SQL Server Management Studio is stated as follows.

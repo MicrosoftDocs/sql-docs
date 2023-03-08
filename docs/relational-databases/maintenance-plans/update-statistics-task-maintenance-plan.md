@@ -11,7 +11,6 @@ f1_keywords:
   - "sql13.swb.maint.statistics.f1"
 helpviewer_keywords:
   - "Updates Statistics Task dialog box"
-ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 ---
 # Update Statistics Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

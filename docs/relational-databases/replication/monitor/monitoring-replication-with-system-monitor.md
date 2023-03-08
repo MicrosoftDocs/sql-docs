@@ -1,19 +1,17 @@
 ---
+title: "Monitoring Replication with Performance Monitor"
 description: "Monitoring Replication with Performance Monitor"
-title: "Monitoring Replication with Performance Monitor | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "monitoring performance [SQL Server replication], Performance Monitor"
   - "Performance Monitor [SQL Server], replication"
   - "performance counters [SQL Server replication]"
-ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Monitoring Replication with Performance Monitor
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

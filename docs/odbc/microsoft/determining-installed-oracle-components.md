@@ -1,17 +1,14 @@
 ---
+title: "Determining Installed Oracle Components"
 description: "Determining Installed Oracle Components"
-title: "Determining Installed Oracle Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC driver for Oracle [ODBC], determining installed components"
-ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC driver for Oracle [ODBC], determining installed components"
 ---
 # Determining Installed Oracle Components
 > [!IMPORTANT]  

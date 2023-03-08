@@ -1,18 +1,15 @@
 ---
+title: "Using Test Repositories (OracleToSQL)"
 description: "Using Test Repositories (OracleToSQL)"
-title: "Using Test Repositories (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/29/2021"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Test Cases Repository"
   - "Test Results Repository"
-ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-author: cpichuka 
-ms.author: cpichuka 
 ---
 
 # Using Test Repositories (OracleToSQL)

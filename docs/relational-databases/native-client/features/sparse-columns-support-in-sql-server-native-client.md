@@ -1,19 +1,16 @@
 ---
-description: "Sparse Columns Support in SQL Server Native Client"
 title: "Sparse columns support"
-ms.custom: ""
+description: "Sparse Columns Support in SQL Server Native Client"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sparse columns, ODBC"
   - "sparse columns, SQL Server Native Client"
   - "sparse columns, OLE DB"
-ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sparse Columns Support in SQL Server Native Client

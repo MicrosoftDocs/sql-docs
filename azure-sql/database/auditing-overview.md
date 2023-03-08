@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "azure-synapse"
-  - "sqldbrb=1"
+  - azure-synapse
+  - sqldbrb=1
 ---
 # Auditing for Azure SQL Database and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

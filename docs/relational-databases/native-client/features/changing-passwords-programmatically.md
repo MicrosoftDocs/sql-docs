@@ -1,13 +1,13 @@
 ---
+title: "Changing Passwords Programmatically"
 description: "Changing SQL Server Native Client Passwords Programmatically"
-title: "Changing Passwords Programmatically | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
-ms.reviewer: ""
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [SQL Server Native Client], password expiration"
   - "SQL Server Native Client ODBC driver, passwords"
   - "SQL Server Native Client OLE DB provider, passwords"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "expired passwords [SQL Server Native Client]"
   - "SQL Server Native Client, password expiration"
   - "modifying passwords"
-ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Changing SQL Server Native Client Passwords Programmatically

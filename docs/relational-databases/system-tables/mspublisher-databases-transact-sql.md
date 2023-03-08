@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSpublisher_databases system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 ---
 # MSpublisher_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

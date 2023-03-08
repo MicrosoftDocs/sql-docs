@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.trigger_event_types catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 ---
 # sys.trigger_event_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]

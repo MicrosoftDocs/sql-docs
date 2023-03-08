@@ -1,13 +1,13 @@
 ---
-title: "Copy Databases with Backup and Restore | Microsoft Docs"
+title: "Copy Databases with Backup and Restore"
 description: In SQL Server, you can create a new database by restoring a backup of a user database created by using some previous versions.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/15/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], back up and restore"
   - "restoring databases [SQL Server], previous SQL Server versions"
   - "database restores [SQL Server], copying databases"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "restoring [SQL Server], onto another server instance"
   - "backing up databases [SQL Server], copying databases"
   - "database backups [SQL Server], copying databases"
-ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Copy Databases with Backup and Restore
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

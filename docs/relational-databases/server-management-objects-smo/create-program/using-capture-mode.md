@@ -1,20 +1,15 @@
 ---
+title: "Using Capture Mode"
 description: "Using Capture Mode"
-title: "Using Capture Mode | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Objects, capture mode"
   - "capture mode [SMO]"
   - "SMO [SQL Server], capture mode"
-ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Capture Mode

@@ -1,17 +1,14 @@
 ---
+title: "SP:StmtStarting Event Class"
 description: "SP:StmtStarting Event Class"
-title: "SP:StmtStarting Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "SP:StmtStarting event class"
-ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "SP:StmtStarting event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:StmtStarting Event Class

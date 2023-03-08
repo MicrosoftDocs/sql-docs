@@ -1,14 +1,13 @@
 ---
 title: "Specify instances in SQL Server PowerShell Provider"
-description: Learn how to specify instances when using the SQL Server PowerShell provider. 
-ms.custom: seo-lt-2019
+description: Learn how to specify instances when using the SQL Server PowerShell provider.
+author: markingmyname
+ms.author: maghan
+ms.reviewer: matteot, drskwier
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: sql-server-powershell
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: matteot, drskwier
 ---
 
 # Specify Instances in the SQL Server PowerShell Provider

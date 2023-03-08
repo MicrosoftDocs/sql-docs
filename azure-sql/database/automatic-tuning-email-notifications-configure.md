@@ -9,8 +9,8 @@ ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ---
 # Email notifications for automatic tuning
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

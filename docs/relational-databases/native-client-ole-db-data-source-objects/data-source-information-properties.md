@@ -1,21 +1,18 @@
 ---
+title: "Data source information properties (Native Client OLE DB provider)"
 description: "Data source information properties (Native Client OLE DB provider)"
-title: "Data source information properties (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, data source properties"
   - "properties [OLE DB]"
   - "data source properties [OLE DB]"
   - "information properties [OLE DB]"
   - "OLE DB data source properties [SQL Server Native Client]"
-ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 #  SQL Server Native Client Data Source Information Properties

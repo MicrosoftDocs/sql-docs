@@ -1,19 +1,17 @@
 ---
 title: "Validate partition information (Merge)"
-description: Describes how to validate partition information for a Merge Subscriber in SQL Server. 
-ms.custom: seo-lt-2019
+description: Describes how to validate partition information for a Merge Subscriber in SQL Server.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication data validation [SQL Server replication], partitions"
   - "parameterized filters [SQL Server replication], validating partition information"
   - "validating partition information"
-ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Validate Partition Information for a Merge Subscriber
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

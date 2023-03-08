@@ -1,24 +1,21 @@
 ---
+title: "Delete a Data-tier Application"
 description: "Delete a Data-tier Application"
-title: "Delete a Data-tier Application | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.subservice: 
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.deletedacwizard.deletedac.f1"
   - "sql13.swb.deletedacwizard.summary.f1"
   - "sql13.swb.deletedacwizard.introduction.f1"
   - "sql13.swb.deletedacwizard.choosemethod.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "How to [DAC], delete"
   - "data-tier application [SQL Server], delete"
   - "wizard [DAC], delete"
   - "delete DAC"
-ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Delete a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,17 +1,14 @@
 ---
-title: "Blocked Process Report Event Class | Microsoft Docs"
+title: "Blocked Process Report Event Class"
 description: The Blocked Process Report event class indicates that a task has been blocked for more than a specified amount of time in SQL Server.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Blocked Process Report event class"
-ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Blocked Process Report event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Blocked Process Report Event Class

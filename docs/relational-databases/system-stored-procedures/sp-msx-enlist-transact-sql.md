@@ -1,22 +1,19 @@
 ---
+title: "sp_msx_enlist (Transact-SQL)"
 description: "sp_msx_enlist (Transact-SQL)"
-title: "sp_msx_enlist (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_msx_enlist_TSQL"
-  - "sp_msx_enlist"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_msx_enlist"
-ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_msx_enlist_TSQL"
+  - "sp_msx_enlist"
+helpviewer_keywords:
+  - "sp_msx_enlist"
+dev_langs:
+  - "TSQL"
 ---
 # sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

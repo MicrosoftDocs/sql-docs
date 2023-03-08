@@ -1,20 +1,16 @@
 ---
-description: "Check the Status of E-Mail Messages Sent With Database Mail"
 title: "Status of E-Mail Messages Sent With Database Mail"
+description: "Check the Status of E-Mail Messages Sent With Database Mail"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "e-mail [SQL Server], status information"
   - "mail [SQL Server], status information"
   - "Database Mail [SQL Server], message status"
   - "status information [Database Mail]"
-ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 ---
 # Check the Status of E-Mail Messages Sent With Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

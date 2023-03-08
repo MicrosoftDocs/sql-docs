@@ -1,14 +1,12 @@
 ---
 title: Using data from OLAP cubes in R
 description: This article describes the olapR API, along with an overview of OLAP and MDX for R users who might be new to multidimensional cube databases.
-ms.service: sql
-ms.subservice: machine-learning-services
-
-ms.date: 04/30/2021 
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 04/30/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Using data from OLAP cubes in R

@@ -1,16 +1,15 @@
 ---
 title: "Examples: Using AUTO Mode"
 description: View examples of queries that use FOR XML AUTO mode.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "AUTO FOR XML mode, examples"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Examples: Using AUTO mode
 

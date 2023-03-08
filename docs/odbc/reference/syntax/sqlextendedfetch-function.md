@@ -1,29 +1,19 @@
 ---
+title: "SQLExtendedFetch Function"
 description: "SQLExtendedFetch Function"
-title: "SQLExtendedFetch Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLExtendedFetch"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLExtendedFetch"
-helpviewer_keywords: 
-  - "SQLExtendedFetch function [ODBC]"
-ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLExtendedFetch"
+helpviewer_keywords:
+  - "SQLExtendedFetch function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLExtendedFetch"
+apitype: "dllExport"
 ---
 # SQLExtendedFetch Function
 **Conformance**  

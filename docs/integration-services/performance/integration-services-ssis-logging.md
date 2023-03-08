@@ -1,18 +1,19 @@
 ---
+title: "Integration Services (SSIS) Logging"
 description: "Integration Services (SSIS) Logging"
-title: "Integration Services (SSIS) Logging | Microsoft Docs"
-ms.custom: supportability
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: supportability
+f1_keywords:
   - "sql13.dts.designer.configuredtslogs.containers.f1"
   - "sql13.dts.designer.configuredtslogs.loggingdetails.f1"
   - "sql13.dts.designer.configuredtslogs.providersandlogs.f1"
   - "SQL13.SSIS.SSMS.ISMANAGECUSTOMIZEDLOGGINGLEVEL.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "containers [Integration Services], logs"
   - "Windows Event log provider [Integration Services]"
   - "XML File log provider [Integration Services]"
@@ -26,9 +27,6 @@ helpviewer_keywords:
   - "packages [Integration Services], logs"
   - "Text File log provider"
   - "SQL Server log provider"
-ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Logging
 

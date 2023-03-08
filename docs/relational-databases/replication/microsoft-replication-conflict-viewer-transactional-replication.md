@@ -1,17 +1,15 @@
 ---
 title: "Replication Conflict Viewer (Peer-to-Peer)"
-description: Learn about the Replication Conflict Viewer and how to use it to view conflicts for Peer-to-Peer Transactional Replication and Transactional Replication with queued updating subscriptions. 
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.replconflictviewer.cvqueued.f1"
-ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
+description: Learn about the Replication Conflict Viewer and how to use it to view conflicts for Peer-to-Peer Transactional Replication and Transactional Replication with queued updating subscriptions.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.replconflictviewer.cvqueued.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Replication Conflict Viewer (Transactional Replication)

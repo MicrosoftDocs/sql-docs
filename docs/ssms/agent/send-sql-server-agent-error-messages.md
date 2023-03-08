@@ -1,20 +1,17 @@
 ---
-description: "Send SQL Server Agent Error Messages"
 title: "Send SQL Server Agent Error Messages"
-ms.custom: seo-lt-2019
+description: "Send SQL Server Agent Error Messages"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "messages [SQL Server], SQL Server Agent"
   - "sending messages"
   - "SQL Server Agent, errors"
   - "errors [SQL Server Agent]"
-ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Send SQL Server Agent Error Messages

@@ -1,19 +1,17 @@
 ---
-title: "Extensible Key Management (EKM) | Microsoft Docs"
+title: "Extensible Key Management (EKM)"
 description: Learn how to configure and use Extensible Key Management and how it fits into the data encryption capabilities for SQL Server.
-ms.custom: ""
+author: jaszymas
+ms.author: jaszymas
+ms.reviewer: vanto
 ms.date: "07/25/2019"
 ms.service: sql
-ms.reviewer: vanto
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Key Management"
   - "Extensible Key Management"
   - "EKM, described"
-ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: jaszymas
-ms.author: jaszymas
 ---
 # Extensible Key Management (EKM)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

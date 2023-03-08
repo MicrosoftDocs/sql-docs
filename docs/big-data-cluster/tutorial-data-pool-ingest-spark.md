@@ -9,7 +9,6 @@ ms.date: 12/13/2019
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: tutorial
-ms.metadata: seo-lt-2019
 ---
 
 # Tutorial: Ingest data into a SQL Server data pool with Spark jobs

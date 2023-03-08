@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS"
 description: "LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS"
-title: "LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: 66d92652-b46f-46d8-8093-fa9c6fc4e0d1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

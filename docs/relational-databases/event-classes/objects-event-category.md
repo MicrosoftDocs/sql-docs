@@ -1,19 +1,16 @@
 ---
+title: "Objects Event Category"
 description: "Objects Event Category"
-title: "Objects Event Category | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server event classes, Objects event category"
   - "Objects event category [SQL Server]"
   - "event classes [SQL Server], Objects event category"
-ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Objects Event Category

@@ -3,7 +3,7 @@ title: "sys.dm_hadr_cluster_members (Transact-SQL)"
 description: sys.dm_hadr_cluster_members (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "01/31/2019"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster_members catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sys.dm_hadr_cluster_members (Transact-SQL)
@@ -49,9 +48,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## Examples  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
-## See Also  
+## See also  
  [Always On Availability Groups Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

@@ -1,24 +1,22 @@
 ---
 title: "Upgrade replication scripts (Replication SP)"
 description: Learn how to use Replication Stored Procedures to upgrade the scripts used to programmatically configure a replication topology.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "scripts [SQL Server replication], upgrading"
   - "upgrading SQL Server, replicated databases"
   - "upgrading replication applications"
   - "replication [SQL Server], scripting"
   - "replication [SQL Server], upgrading"
   - "upgrading replicated databases"
-ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Upgrade Replication Scripts (Replication Transact-SQL Programming)

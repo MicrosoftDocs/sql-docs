@@ -1,17 +1,16 @@
 ---
 title: "Generate Siblings with a Nested AUTO Mode Query"
 description: Learn how to generate XML siblings by using a nested AUTO mode query as an alternative to using EXPLICIT mode.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "queries [XML in SQL Server], nested AUTO mode"
   - "nested AUTO mode query"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Generate siblings with a nested AUTO mode query
 

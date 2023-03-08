@@ -1,22 +1,19 @@
 ---
+title: "WMI Data Reader Task"
 description: "WMI Data Reader Task"
-title: "WMI Data Reader Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.wmidatareadertask.f1"
   - "sql13.dts.designer.wmidatareadertask.general.f1"
   - "sql13.dts.designer.wmidatareadertask.wmiquery.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Data Reader task [Integration Services]"
-ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: chugugrace
-ms.author: chugu
 ---
 # WMI Data Reader Task
 

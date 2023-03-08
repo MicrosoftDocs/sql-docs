@@ -1,18 +1,15 @@
 ---
-title: "Pass a Report Parameter Within a URL | Microsoft Docs"
+title: "Pass a Report Parameter Within a URL"
 description: Learn how to pass report parameters directly to the report processing engine by including them in a report URL.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "URL access [Reporting Services], passing parameters"
   - "passing parameters [Reporting Services]"
-ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Pass a Report Parameter Within a URL
   You can pass report parameters to a report by including them in a report URL. These URL parameters are not prefixed because they are passed directly to the report processing engine.  

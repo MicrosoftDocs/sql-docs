@@ -1,19 +1,16 @@
 ---
+title: "Executing the SSMA Console (OracleToSQL)"
 description: "Executing the SSMA Console (OracleToSQL)"
-title: "Executing the SSMA Console (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Oracle SSMA Console"
   - "Script File Commands, Script Generation Commands,Manageability Commands"
   - "Script File Commands,Project Commands"
-ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Executing the SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The console application uses certain standard script file commands as enumerated in this section.  

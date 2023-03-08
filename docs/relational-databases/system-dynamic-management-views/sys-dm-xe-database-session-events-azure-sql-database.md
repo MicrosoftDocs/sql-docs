@@ -7,10 +7,8 @@ ms.author: randolphwest
 ms.date: "11/28/2022"
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_xe_database_session_events (Azure SQL Database and Azure SQL Managed Instance)

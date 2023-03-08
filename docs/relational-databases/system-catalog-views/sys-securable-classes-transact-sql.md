@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.securable_classes catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.securable_classes (Transact-SQL)

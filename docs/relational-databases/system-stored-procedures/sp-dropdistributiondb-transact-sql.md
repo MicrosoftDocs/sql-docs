@@ -1,22 +1,19 @@
 ---
-title: "sp_dropdistributiondb (Transact-SQL) | Microsoft Docs"
+title: "sp_dropdistributiondb (Transact-SQL)"
 description: Drops a distribution database and files used by it if they are not used by another database. This stored procedure runs at the Distributor on any database.
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropdistributiondb_TSQL"
-  - "sp_dropdistributiondb"
-helpviewer_keywords: 
-  - "sp_dropdistributiondb"
-ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropdistributiondb_TSQL"
+  - "sp_dropdistributiondb"
+helpviewer_keywords:
+  - "sp_dropdistributiondb"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,18 +1,15 @@
 ---
 title: "Database recovery model best practice policy"
-description: Learn how to enable a policy to check the backup recovery model for user databases to reduce data loss. 
-ms.custom:
-- seo-lt-2019
-- kr2b-contr-experiment
-ms.date: 05/10/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
+description: Learn how to enable a policy to check the backup recovery model for user databases to reduce data loss.
 author: dzsquared
 ms.author: drskwier
+ms.date: 05/10/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: kr2b-contr-experiment
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 
 # Database recovery model best practice policy

@@ -1,29 +1,19 @@
 ---
+title: "SQLSetEnvAttr Function"
 description: "SQLSetEnvAttr Function"
-title: "SQLSetEnvAttr Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetEnvAttr"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetEnvAttr"
-helpviewer_keywords: 
-  - "SQLSetEnvAttr function [ODBC]"
-ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetEnvAttr"
+helpviewer_keywords:
+  - "SQLSetEnvAttr function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetEnvAttr"
+apitype: "dllExport"
 ---
 # SQLSetEnvAttr Function
 **Conformance**  

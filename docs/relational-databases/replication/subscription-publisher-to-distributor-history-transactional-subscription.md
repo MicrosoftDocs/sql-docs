@@ -1,17 +1,15 @@
 ---
 title: "Publisher to Distributor History (Transactional - SSMS)"
 description: Describes the 'Publisher to Distributor History' tab of Replication Monitor for a Transactional Publication in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.subscription.pubtodist.tran.f1"
-ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.subscription.pubtodist.tran.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Subscription, Publisher to Distributor History (Transactional Subscription)

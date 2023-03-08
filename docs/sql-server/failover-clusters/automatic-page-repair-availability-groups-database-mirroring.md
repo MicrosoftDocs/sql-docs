@@ -1,20 +1,17 @@
 ---
 title: "Automatic page repair for availability groups & database mirroring"
 description: Learn how to automatically repair certain types of page corruption when a database participates in an Always On availability group or database mirroring.
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: high-availability
 ms.topic: troubleshooting
-helpviewer_keywords: 
+helpviewer_keywords:
   - "automatic page repair"
   - "Availability Groups [SQL Server], automatic page repair"
   - "database mirroring [SQL Server], automatic page repair"
   - "suspect pages [SQL Server]"
-ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Automatic Page Repair (Availability Groups: Database Mirroring)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

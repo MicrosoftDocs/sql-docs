@@ -1,17 +1,14 @@
 ---
+title: "Auto Stats Event Class"
 description: "Auto Stats Event Class"
-title: "Auto Stats Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Auto Stats event class"
-ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Auto Stats event class"
 ---
 # Auto Stats Event Class
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

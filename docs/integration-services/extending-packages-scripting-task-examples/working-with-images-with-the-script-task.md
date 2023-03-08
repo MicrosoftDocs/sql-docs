@@ -1,15 +1,13 @@
 ---
+title: "Working with Images with the Script Task"
 description: "Working with Images with the Script Task"
-title: "Working with Images with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "graphics [Integration Services]"
   - "Script task [Integration Services], images"
   - "Drawing namespace"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "System.Drawing namespace"
   - "JPEG format [Integration Services]"
   - ".jpeg files"
-ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Working with Images with the Script Task
 

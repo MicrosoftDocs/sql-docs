@@ -1,24 +1,19 @@
 ---
+title: "SQLGetDescRec Function"
 description: "SQLGetDescRec Function"
-title: "SQLGetDescRec Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetDescRec"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetDescRec"
-helpviewer_keywords: 
-  - "SQLGetDescRec function [ODBC]"
-ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetDescRec"
+helpviewer_keywords:
+  - "SQLGetDescRec function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetDescRec"
+apitype: "dllExport"
 ---
 # SQLGetDescRec Function
 **Conformance**  

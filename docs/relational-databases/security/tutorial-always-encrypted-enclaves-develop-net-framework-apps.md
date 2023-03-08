@@ -1,17 +1,13 @@
 ---
+title: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves"
 description: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves"
-title: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: 02/15/2023
-ms.service: sql
-ms.reviewer: vanto
-ms.suite: "sql"
-ms.subservice: security
-ms.tgt_pltfrm: ""
-ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: security
+ms.topic: tutorial
 monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves

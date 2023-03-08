@@ -1,15 +1,12 @@
 ---
 title: Business Rule Examples
 description: Review these examples of business rules for Master Data Services. These examples are in sample models included with your installation of Master Data Services.
-ms.custom: ""
-ms.date: "01/05/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "01/05/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Business Rule Examples (Master Data Services)
 

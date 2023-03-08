@@ -1,21 +1,19 @@
 ---
+title: "Manage Identity Columns"
 description: "Manage Identity Columns"
-title: "Manage Identity Columns | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "identity values [SQL Server replication]"
   - "merge replication [SQL Server replication], identity range management"
   - "publishing [SQL Server replication], identity columns"
   - "transactional replication, identity range management"
   - "identity columns [SQL Server], replication"
-ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Manage Identity Columns

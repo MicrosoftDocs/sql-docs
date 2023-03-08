@@ -1,13 +1,13 @@
 ---
+title: "Integration Services (SSIS) Event Handlers"
 description: "Integration Services (SSIS) Event Handlers"
-title: "Integration Services (SSIS) Event Handlers | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, events"
   - "run-time [Integration Services]"
   - "SQL Server Integration Services packages, events"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "SSIS packages, events"
   - "containers [Integration Services], events"
   - "events [Integration Services], about events"
-ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Event Handlers
 

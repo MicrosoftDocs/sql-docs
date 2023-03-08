@@ -3,7 +3,7 @@ title: "sys.dm_xe_session_object_columns (Transact-SQL)"
 description: sys.dm_xe_session_object_columns (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/30/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_xe_session_object_columns dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 ---
 # sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +38,11 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-### Relationship cardinalities  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  

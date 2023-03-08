@@ -1,22 +1,19 @@
 ---
+title: "sp_refresh_log_shipping_monitor (Transact-SQL)"
 description: "sp_refresh_log_shipping_monitor (Transact-SQL)"
-title: "sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_refresh_log_shipping_monitor"
-  - "sp_refresh_log_shipping_monitor_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_refresh_log_shipping_monitor"
-ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_refresh_log_shipping_monitor"
+  - "sp_refresh_log_shipping_monitor_TSQL"
+helpviewer_keywords:
+  - "sp_refresh_log_shipping_monitor"
+dev_langs:
+  - "TSQL"
 ---
 # sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_pkeys (Transact-SQL)"
 description: "sp_pkeys (Transact-SQL)"
-title: "sp_pkeys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_pkeys"
-  - "sp_pkeys_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_pkeys"
-ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_pkeys"
+  - "sp_pkeys_TSQL"
+helpviewer_keywords:
+  - "sp_pkeys"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_pkeys (Transact-SQL)

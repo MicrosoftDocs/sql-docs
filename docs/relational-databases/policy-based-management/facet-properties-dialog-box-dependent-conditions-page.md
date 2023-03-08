@@ -1,17 +1,14 @@
 ---
+title: "Facet Properties Dialog Box, Dependent Conditions Page"
 description: "Facet Properties Dialog Box, Dependent Conditions Page"
-title: "Facet Properties Dialog Box, Dependent Conditions Page | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.facet.dependentconditions.f1"
-ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.facet.dependentconditions.f1"
 ---
 # Facet Properties Dialog Box, Dependent Conditions Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,16 @@
 ---
+title: "Working with Data Types in the Data Flow"
 description: "Working with Data Types in the Data Flow"
-title: "Working with Data Types in the Data Flow | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom data flow components [Integration Services], mapping data types"
   - "data flow components [Integration Services], mapping data types"
   - "data types [Integration Services], converting"
-ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: chugugrace
-ms.author: chugu
 ---
 # Working with Data Types in the Data Flow
 

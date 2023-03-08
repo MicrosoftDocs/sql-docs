@@ -1,13 +1,12 @@
 ---
+title: "Create Nested Triggers"
 description: "Create Nested Triggers"
-title: "Create Nested Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice:
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "recursive DML triggers [SQL Server]"
   - "DML triggers, nested"
   - "triggers [SQL Server], nested"
@@ -17,9 +16,6 @@ helpviewer_keywords:
   - "RECURSIVE_TRIGGERS option"
   - "indirect recursion [SQL Server]"
   - "nested DML triggers"
-ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nested Triggers

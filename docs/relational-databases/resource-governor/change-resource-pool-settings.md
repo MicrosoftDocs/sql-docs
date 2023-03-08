@@ -1,18 +1,15 @@
 ---
-title: "Change Resource Pool Settings | Microsoft Docs"
+title: "Change Resource Pool Settings"
 description: Learn how to change resource pool settings by using SQL Server Management Studio or Transact-SQL. You must have the CONTROL SERVER permission.
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Resource Governor, resource pool alter"
-  - "resource pools [SQL Server], alter"
-ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/17/2016"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Resource Governor, resource pool alter"
+  - "resource pools [SQL Server], alter"
 ---
 # Change Resource Pool Settings
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

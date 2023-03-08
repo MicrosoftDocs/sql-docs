@@ -1,22 +1,17 @@
 ---
-description: "InstanceName Property (SInstance Class)"
 title: "InstanceName Property (SInstance)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "InstanceName Property (SInstance Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "InstanceName property"
-ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
+description: "InstanceName Property (SInstance Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "InstanceName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "InstanceName Property (SInstance Class)"
+apitype: "MOFDef"
 ---
 # InstanceName Property (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_add_log_shipping_secondary_primary (Transact-SQL)"
 description: "sp_add_log_shipping_secondary_primary (Transact-SQL)"
-title: "sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_log_shipping_secondary_primary_TSQL"
-  - "sp_add_log_shipping_secondary_primary"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_log_shipping_secondary_primary"
-ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_log_shipping_secondary_primary_TSQL"
+  - "sp_add_log_shipping_secondary_primary"
+helpviewer_keywords:
+  - "sp_add_log_shipping_secondary_primary"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

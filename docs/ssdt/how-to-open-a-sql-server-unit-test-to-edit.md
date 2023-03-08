@@ -1,14 +1,12 @@
 ---
 title: Open a SQL Server Unit Test to Edit
 description: "Learn how to edit a SQL Server unit test so that you can add functionality or customize conditions. See different ways of opening the test's source code file."
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Open a SQL Server Unit Test to Edit

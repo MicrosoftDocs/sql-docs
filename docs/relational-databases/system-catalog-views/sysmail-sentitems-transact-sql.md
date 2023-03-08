@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysmail_sentitems database mail view"
 dev_langs:
   - "TSQL"
-ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 ---
 # sysmail_sentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

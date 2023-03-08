@@ -1,24 +1,21 @@
 ---
 title: "Shrink a file"
 description: Learn how to shrink a data or log file in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom:
-- event-tier1-build-2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/24/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "shrinking files"
   - "decreasing file size"
   - "databases [SQL Server], shrinking"
   - "reducing file size"
   - "size [SQL Server], files"
   - "file size [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Shrink a file

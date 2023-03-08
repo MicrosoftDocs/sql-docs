@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 02/17/2023
+ms.date: 03/02/2023
 ms.topic: include
 ---
 | Error| Severity | Event logged | Description|
@@ -458,6 +458,88 @@ ms.topic: include
 | 22786 | 16 | No | Synapse workspace FQDN is not in the list of Outbound Firewall Rules on the server. Please add this to the list of Outbound Firewall Rules on your server and retry the operation. |
 | 22787 | 16 | No | Change feed table group limit of %d groups exceeded |
 | 22788 | 16 | No | Could not enable Change Feed for database '%s'. Change Feed can not be enabled on a DB with delayed durability set. |
+| 22801 | 16 | No | Starting the Change Data Capture Collection Agent job. To report on the progress of the operation, query the sys.dm_cdc_log_scan_sessions dynamic management view. |
+| 22802 | 16 | No | Starting the Change Data Capture Cleanup Agent job using low watermark %s. |
+| 22803 | 16 | No | Change Data Capture has scanned the log from LSN{%s} to LSN{%s}, %d transactions with %d commands have been extracted. To report on the progress of the operation, query the sys.dm_cdc_log_scan_sessions dynamic management view. |
+| 22804 | 16 | No | Change Data Capture cannot proceed with the job-related action because transactional replication is enabled on database %s but Distributor information cannot be retrieved to determine the state of the logreader agent. Make the Distributor database available, or disable distribution. |
+| 22805 | 10 | No | For more information, query the sys.dm_cdc_errors dynamic management view. |
+| 22806 | 16 | No | The originator ID '%s' is not valid. You must specify a non-zero ID that has never been used in the topology. |
+| 22807 | 16 | No | The publication property '%s' cannot be modified because the peer-to-peer publication '%s' is not enabled for conflict detection. To enable the publication for conflict detection, use sp_configure_peerconflictdetection. |
+| 22808 | 16 | No | Cannot execute procedure '%s'. Publication '%s' must be enabled for peer-to-peer replication before you execute this procedure. To enable the publication for peer-to-peer replication, use sp_changepublication. |
+| 22809 | 10 | No | The existing conflict table '%s' was dropped. |
+| 22810 | 16 | No | The @action parameter value is not valid. Valid values are 'enable' and 'disable'. |
+| 22811 | 16 | No | The roundtrip time-out must be greater than 0. |
+| 22812 | 10 | No | The roundtrip '%s' finished with timeout:  %d seconds. |
+| 22813 | 10 | No | The topology contains peer node versions that do not support conflict detection. To use conflict detection, ensure that all nodes in the topology are SQL Server 2008 or later versions. |
+| 22814 | 10 | No | The topology contains a duplicate originator ID. To use conflict detection, the originator ID must be unique across the topology. |
+| 22815 | 10 | No | A conflict of type '%s' was detected at peer %d between peer %d (incoming), transaction id %s  and peer %d (on disk), transaction id %s for Table '%s' with Primary Key(s): %s Current Version '%s', Pre-Version '%s' and Post-Version '%s' |
+| 22816 | 16 | No | The qualified table name '%s' is too long to be enabled for peer-to-peer conflict detection. |
+| 22817 | 10 | No | %s has %s. |
+| 22818 | 10 | No | A delete-delete conflict was detected and resolved. The row could not be deleted from the peer since the row does not exist. The incoming delete was skipped. |
+| 22819 | 10 | No | A delete-update conflict between peer %d (incoming) and peer %d (on disk) was detected and could not be resolved automatically.  The incoming delete was skipped by peer %d. The conflict has to be resolved manually to guarantee data convergence between the peers. For steps on how to resolve the conflict refer to BOL. |
+| 22820 | 10 | No | A delete-update conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming delete was applied to peer %d. |
+| 22821 | 10 | No | An update-update conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming update was skipped by peer %d. |
+| 22822 | 10 | No | An update-update conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming update was applied to peer %d. |
+| 22823 | 10 | No | An update-delete conflict was detected and unresolved. The row could not be updated since the row does not exist. The incoming update was skipped. Check the priority of the destination peer and run data validation to ensure the delete conflict did not result in data non-convergence. |
+| 22824 | 10 | No | An insert-insert conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming insert was skipped by peer %d. |
+| 22825 | 10 | No | An insert-insert conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming insert was applied to peer %d. |
+| 22827 | 16 | No | Peer-to-peer conflict detection alert |
+| 22828 | 16 | No | The publication '%s' was already %s for peer-to-peer conflict detection. |
+| 22829 | 16 | No | The command %s failed. The values specified for the @ins_cmd, @del_cmd or @upd_cmd cannot be appended with schema name %s within the size limit %d. |
+| 22830 | 16 | No | Could not update the metadata that indicates database %s is enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22831 | 16 | No | Could not update the metadata that indicates database %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22832 | 16 | No | Could not update the metadata that indicates table %s is enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22833 | 16 | No | Could not update the metadata that indicates table %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22834 | 16 | No | Could not modify the the verbose logging status for table %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22835 | 16 | No | Could not update the metadata for database %s to indicate that a Change Data Capture job has been dropped. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22836 | 16 | No | Could not update the metadata for database %s to indicate that a Change Data Capture job has been added. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22837 | 16 | No | Could not delete table entries or drop objects associated with capture instance '%s'. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22838 | 16 | No | All columns of a CDC unique index must be defined as NOT NULL. Index '%s' selected as the CDC unique index for source table '%s.%s' does not meet this requirement. Define all columns of the selected index as NOT NULL or select another unique index as the CDC index and resubmit the request. |
+| 22840 | 16 | No | The application lock request '%s' needed to modify Change Data Capture metadata was not granted. The value returned from the request was %d: -1 = timeout; -2 = canceled; -3 = deadlock victim; -999 validation or other call error. Examine the error cause and resubmit the request. |
+| 22841 | 16 | No | Could not upgrade the metadata for database '%s' that is enabled for Change Data Capture. The failure occurred when executing the action '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22842 | 16 | No | ALTER TABLE SWITCH statement failed because the partitioned destination table is enabled for Change Data Capture and does not have @allow_partition_switch set to 1. |
+| 22843 | 16 | No | ALTER TABLE SWITCH statement failed because the partitioned source table is enabled for Change Data Capture and does not have @allow_partition_switch set to 1. |
+| 22844 | 16 | No | The '%s' option must be either 1 or 0. |
+| 22845 | 16 | No | Cannot enable change data capture in this edition of SQL Server. |
+| 22850 | 16 | No | The threshold value specified for the Change Data Capture cleanup process must be greater than 0. When creating or modifying the cleanup job, specify a positive threshold value. If this error is encountered when executing the sys.sp_cdc_cleanup_change_table stored procedure, reset the threshold value associated with the job to a non-negative value by using the sp_cdc_change_job stored procedure. |
+| 22851 | 16 | No | Could not update cdc.change_tables to indicate a change in the low water mark for database %s. |
+| 22852 | 10 | No | Could not delete change table entries made obsolete by a change in one or more low water marks for capture instances of database %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22853 | 10 | No | Could not delete obsolete entries in the cdc.lsn_time_mapping table for database %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request. |
+| 22854 | 16 | No | Can not enable Change Data Capture on table '%s' or add ColumnSet column to it because CDC does not support ColumnSet. |
+| 22855 | 10 | No | Warning: The @allow_partition_switch parameter is set to 1. Change data capture will not track changes introduced in the table resulting from a partition switch which will cause data inconsistency when changes are consumed. Refer to books online for more information about partition switching behavior when using Change Data Capture. |
+| 22856 | 10 | No | Warning: The @allow_partition_switch parameter is set to 0. ALTER TABLE ... SWITCH PARTITION statement will be disallowed on this partitioned table. Refer to books online for more information about partition switching behavior when using Change Data Capture. |
+| 22857 | 10 | No | Warning: The @allow_partition_switch parameter must be 1 for tables that are not partitioned. The explicit setting of the parameter to 0 was ignored. Refer to books online for more information about partition switching behavior when using Change Data Capture. |
+| 22858 | 16 | No | Unable to add entries to the Change Data Capture LSN time mapping table to reflect dml changes applied to the tracked tables. Refer to previous errors in the current session to identify the cause and correct any associated problems. |
+| 22859 | 16 | No | Log Scan process failed in processing log records. Refer to previous errors in the current session to identify the cause and correct any associated problems. |
+| 22860 | 16 | No | Log scan process failed in processing a ddl log record. Refer to previous errors in the current session to identify the cause and correct any associated problems. |
+| 22861 | 10 | No | Unable to upgrade database '%s'. Error '%d' was raised: '%s'. Use the reported error to determine the cause of the failure and then execute sys.sp_cdc_vupgrade in the database context to rerun upgrade. |
+| 22862 | 16 | No | The database snapshot '%s' does not exist. Correct the parameter value and resubmit the request. |
+| 22863 | 16 | No | Failed to insert rows into Change Data Capture change tables. Refer to previous errors in the current session to identify the cause and correct any associated problems. |
+| 22864 | 16 | No | The call to sp_MScdc_capture_job by the Capture Job for database '%s' failed. Look at previous errors for the cause of the failure. |
+| 22865 | 16 | No | The number of columns in the index '%s', used as the unique row identifier to support net changes for table '%s'.'%s', exceeds the limit of 14 columns. Set the parameter @supports_net_changes to 0 or use the @index_name parameter to identify a unique index with fewer than 15 columns as the unique row identifier and resubmit the request. |
+| 22866 | 10 | No | The value returned by %S_MSG is %I64d. |
+| 22867 | 10 | No | Total rows deleted: %I64u. |
+| 22868 | 10 | No | Cleanup Watermark = %I64u |
+| 22869 | 10 | No | Internal Change Tracking table name : %s |
+| 22870 | 10 | No | Deleted %I64u rows from %s |
+| 22871 | 16 | No | Change Data Capture is not supported on Free, Basic or Standard tier Single Database (S0,S1,S2) and Database in Elastic pool with max eDTUs \< 100 or max vCore \< 1. Please upgrade to a higher Service Objective. |
+| 22872 | 16 | No | The elastic pool cannot lower its service tier with database max eDTUs \< 100 or max vCore \< 1 since one or more of its database(s) use Change Data Capture (CDC). |
+| 22873 | 16 | No | The database cannot lower its service tier to Standard(S0,S1,S2), Basic or Free, or move to elastic pool with database max eDTUs \< 100 or max vCore \< 1 since it has Change Data Capture (CDC) enabled. |
+| 22874 | 16 | No | Cannot set @enable_extended_ddl_handling parameter to 1 as this feature is not enabled. |
+| 22875 | 16 | No | Capture instance name '%s' exceeds the length limit of 78 characters when @enable_extended_ddl_handling is enabled. Specify a name that satisfies the length constraint. |
+| 22876 | 16 | No | One capture instance already exist with DDL handling enabled for source table '%s.%s'. A table can have only one capture instance with DDL handling enabled. If the current tracking options are not appropriate, disable change tracking for the obsolete instance by using sys.sp_cdc_disable_table and retry the operation. |
+| 22877 | 16 | No | All columns are not captured for source table '%s.%s' when using DDL handling feature. DDL handling feature is only supported when all columns are captured in CT table. If user wants to use DDL handling feature then enable CDC on a table without the parameter @captured_column_list or pass NULL for this parameter, this is will by default capture all columns. |
+| 22878 | 16 | No | The @p2p_conflictdetection_policy parameter value is not valid. Valid values are 'originatorid' and 'lastwriter'. |
+| 22879 | 16 | No | Peer-to-peer publications with last writer conflict detection policy only supports CALL or SCALL command type for @upd_cmd. Change the value for parameter '@upd_cmd'. |
+| 22880 | 16 | No | An insert-insert conflict between peer %d (incoming) with commit datetime value of '%s' and peer %d (on disk) with commit datetime value of '%s' was detected and resolved. The incoming insert was applied to peer %d. |
+| 22881 | 16 | No | A conflict of type '%s' was detected at peer %d between peer %d (incoming), transaction id %s, commit datetime '%s'  and peer %d (on disk), transaction id %s, commit datetime '%s' for Table '%s' with Primary Key(s): %s Current Version '%s', Pre-Version '%s' and Post-Version '%s' |
+| 22882 | 10 | No | An update-update conflict between peer %d (incoming) with commit dateime value of '%s' and peer %d (on disk) with commit datetime value of '%s' was detected and resolved. The incoming update was skipped by peer %d. |
+| 22883 | 10 | No | An update-update conflict between peer %d (incoming) with commit datetime value of '%s' and peer %d (on disk) with commit datetime value of '%s' was detected and resolved. The incoming update was applied to peer %d. |
+| 22884 | 10 | No | An delete-update conflict between peer %d (incoming) with commit datetime value of '%s' and peer %d (on disk) with commit datetime value of '%s'was detected and resolved. The incoming delete was skipped by peer %d. |
+| 22885 | 16 | No | An insert-insert conflict between peer %d (incoming) with commit datetime value of '%s' and peer %d (on disk) with commit datetime value of '%s' was detected and resolved. The incoming insert was skipped by peer %d. |
+| 22886 | 10 | No | An update-delete conflict was detected. The row could not be updated since the row does not exist. The incoming update was skipped. |
+| 22887 | 16 | No | Could not enable Change Data Capture for database '%s'. Change Data Capture cannot be enabled on a DB with Change Feed enabled. |
+| 22888 | 16 | No | Could not alter captured column of a CDC tracked table with character/binary/unicode as target data type with ansi warnings turned off. |
 | 22901 | 16 | No | The database '%s' is not enabled for Change Data Capture. Ensure that the correct database context is set and retry the operation. To report on the databases enabled for Change Data Capture, query the is_cdc_enabled column in the sys.databases catalog view. |
 | 22902 | 16 | No | Caller is not authorized to initiate the requested action. %s privileges are required. |
 | 22903 | 16 | No | Another connection with session ID %I64d is already running 'sp_replcmds' for Change Data Capture in the current database. |

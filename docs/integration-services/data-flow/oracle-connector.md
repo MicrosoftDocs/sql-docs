@@ -1,14 +1,12 @@
 ---
+title: "Microsoft Connector for Oracle"
 description: "Microsoft Connector for Oracle"
-title: "Microsoft Connector for Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/14/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "08/14/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Microsoft Connector for Oracle
 
@@ -44,8 +42,8 @@ After you install the Connector, you must restart the SQL Server Integration Ser
 > [!NOTE]
 >
 > To design packages with SQL Server Integration Services Projects, you will need to install the connector for both the target and the latest SQL Server version.
->
-> To designing packages targeting SQL server 2017 and below,  you need SSDT version 17.8 for VS 2017 and below. SSIS projects for VS 2019 and VS 2022 do not support designing packages targeting SQL server 2019.
+> 
+> For example, if you upgrade to Visual Studio 2022, latest SQL server supported is SQL 2022, you need to install MicrosoftSSISOracleConnector-SQL22 and connector for target SQL Server verion. 
 
 To execute SSIS package targeting SQL Server 2017 and below, in addition to **Microsoft Connector for Oracle**, you will need to install **Oracle client** and **Microsoft Connector for Oracle by Attunity** with corresponding version from below links:
 

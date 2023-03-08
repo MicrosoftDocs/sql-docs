@@ -1,18 +1,18 @@
 ---
+title: "Fuzzy Grouping Transformation"
 description: "Fuzzy Grouping Transformation"
-title: "Fuzzy Grouping Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.fuzzygroupingtrans.f1"
   - "sql13.dts.designer.fuzzygroupingtransformation.connection.f1"
   - "sql13.dts.designer.fuzzygroupingtransformation.columns.f1"
   - "sql13.dts.designer.fuzzygroupingtransformation.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cleaning data"
   - "comparing data"
   - "token delimiters [Integration Services]"
@@ -25,9 +25,6 @@ helpviewer_keywords:
   - "similarity thresholds [Integration Services]"
   - "data cleaning [Integration Services]"
   - "duplicate data [Integration Services]"
-ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: chugugrace
-ms.author: chugu
 ---
 # Fuzzy Grouping Transformation
 

@@ -1,24 +1,19 @@
 ---
+title: "SQLGetStmtOption Function"
 description: "SQLGetStmtOption Function"
-title: "SQLGetStmtOption Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetStmtOption"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetStmtOption"
-helpviewer_keywords: 
-  - "SQLGetStmtOption function [ODBC]"
-ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetStmtOption"
+helpviewer_keywords:
+  - "SQLGetStmtOption function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetStmtOption"
+apitype: "dllExport"
 ---
 # SQLGetStmtOption Function
 **Conformance**  

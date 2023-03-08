@@ -2,14 +2,13 @@
 title: "Tutorial: Develop predictive model in R"
 titleSuffix: SQL machine learning
 description: In this four-part tutorial series, you'll develop data to train a predictive model in R with SQL machine learning.
-ms.service: sql
-ms.subservice: machine-learning
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: garye, jroth
 ms.date: 05/26/2020
-ms.custom: seo-lt-2019
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Tutorial: Develop a predictive model in R with SQL machine learning

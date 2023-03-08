@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_9955"
 description: "MSSQLSERVER_9955"
-title: "MSSQLSERVER_9955 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "9955 (Database Engine error)"
-ms.assetid: 77f30570-7790-4747-b372-eac71c036e19
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "9955 (Database Engine error)"
 ---
 # MSSQLSERVER_9955
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

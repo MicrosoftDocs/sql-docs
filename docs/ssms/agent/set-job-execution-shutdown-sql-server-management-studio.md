@@ -1,20 +1,17 @@
 ---
-description: "Set Job Execution Shutdown"
 title: Set Job Execution Shutdown
+description: "Set Job Execution Shutdown"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], stopping"
   - "SQL Server Agent jobs, stopping"
   - "stopping jobs"
   - "SQL Server Agent jobs, execution shutdowns"
-ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

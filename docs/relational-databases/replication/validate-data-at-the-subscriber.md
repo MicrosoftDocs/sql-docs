@@ -1,21 +1,19 @@
 ---
+title: "Validate Replicated Data"
 description: "Validate Replicated Data"
-title: "Validate Replicated Data | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Subscribers [SQL Server replication], data validation"
   - "replication [SQL Server], validating data"
   - "transactional replication, validating data"
   - "validating data"
   - "merge replication data validation [SQL Server replication], SQL Server Management Studio"
-ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Validate Replicated Data

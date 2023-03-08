@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_targetservergroup (Transact-SQL)"
 description: "sp_delete_targetservergroup (Transact-SQL)"
-title: "sp_delete_targetservergroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_targetservergroup_TSQL"
-  - "sp_delete_targetservergroup"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_targetservergroup"
-ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_targetservergroup_TSQL"
+  - "sp_delete_targetservergroup"
+helpviewer_keywords:
+  - "sp_delete_targetservergroup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

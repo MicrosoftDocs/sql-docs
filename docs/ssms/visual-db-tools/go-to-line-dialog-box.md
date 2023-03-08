@@ -1,14 +1,12 @@
 ---
-description: "Go To Line Dialog Box"
 title: Go To Line Dialog Box
+description: "Go To Line Dialog Box"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 779fdb9a-4ede-4784-b9eb-997a6683c26e
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Go To Line Dialog Box

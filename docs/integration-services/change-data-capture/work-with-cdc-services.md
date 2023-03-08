@@ -1,17 +1,14 @@
 ---
+title: "Work with CDC Services"
 description: "Work with CDC Services"
-title: "Work with CDC Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "cdcServ"
-ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "cdcServ"
 ---
 # Work with CDC Services
 

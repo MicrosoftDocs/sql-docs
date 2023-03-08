@@ -1,24 +1,21 @@
 ---
+title: "sys.sp_cdc_set_scheduler_job (Transact-SQL)"
 description: "sys.sp_cdc_set_scheduler_job (Transact-SQL)"
-title: "sys.sp_cdc_set_scheduler_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: abhimantiwari
+ms.author: abhtiwar
 ms.date: "04/21/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sp_cdc_set_scheduler_job_TSQL"
   - "sp_cdc_set_scheduler_job"
   - "sys.sp_cdc_set_scheduler_job"
   - "sp_cdc_set_scheduler_job_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_cdc_set_scheduler_job"
-ms.assetid:
-author: abhimantiwari
-ms.author: abhtiwar
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current"
 ---
 # sys.sp_cdc_set_scheduler_job (Transact-SQL)

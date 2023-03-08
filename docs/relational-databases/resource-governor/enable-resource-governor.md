@@ -1,17 +1,14 @@
 ---
-title: "Enable Resource Governor | Microsoft Docs"
+title: "Enable Resource Governor"
 description: Learn how to enable the Resource Governor by using either SQL Server Management Studio or Transact-SQL. You must have the CONTROL SERVER permission.
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Resource Governor, enabling"
-ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Resource Governor, enabling"
 ---
 # Enable Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

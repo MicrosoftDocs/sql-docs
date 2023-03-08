@@ -7,7 +7,7 @@ ms.reviewer: maghan
 ms.date: 09/24/2018
 ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: seodec18
+ms.custom: updatefrequency5
 ---
 
 # Modify User and Workspace Settings

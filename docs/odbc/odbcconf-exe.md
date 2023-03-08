@@ -1,17 +1,14 @@
 ---
+title: "ODBCCONF.EXE"
 description: "ODBCCONF.EXE"
-title: "ODBCCONF.EXE | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "odbcconf.exe"
-ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "odbcconf.exe"
 ---
 # ODBCCONF.EXE
 ODBCCONF.exe is a command-line tool that allows you to configure ODBC drivers and data source names.  

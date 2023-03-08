@@ -1,22 +1,17 @@
 ---
+title: "Creating SMO Programs"
 description: "Creating SMO Programs"
-title: "Creating SMO Programs | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Visual Basic [SMO]"
   - "Visual C# [SMO]"
   - "programming [SMO]"
   - "SQL Server Management Objects, programming"
   - "SMO [SQL Server], programming"
-ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating SMO Programs

@@ -1,13 +1,13 @@
 ---
+title: "Cursors (ODBC)"
 description: "Cursors (ODBC)"
-title: "Cursors (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "forward-only cursors [ODBC]"
   - "scrollable cursors [ODBC]"
   - "cursors [ODBC], about cursors"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "fetches [ODBC], cursors"
   - "result sets [ODBC], fetching"
   - "block cursors [ODBC]"
-ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-author: David-Engel
-ms.author: v-davidengel
 ---
 # ODBC Cursors
 An application fetches data with a *cursor*. A cursor is different from a result set: A result set is the set of rows that matches particular search criteria, whereas a cursor is the software that returns those rows to the application. The name *cursor,* as it applies to databases, probably originated from the blinking cursor on a computer terminal. Just as that cursor indicates the current position on the screen and where the typed words will appear next, a cursor on a result set indicates the current position in the result set and what row will be returned next.  

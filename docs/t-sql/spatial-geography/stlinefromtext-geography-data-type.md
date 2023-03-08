@@ -1,22 +1,19 @@
 ---
+title: "STLineFromText (geography Data Type)"
 description: "STLineFromText (geography Data Type)"
-title: "STLineFromText (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STLineFromText (geography Data Type)"
   - "STLineFromText_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STLineFromText method"
-ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STLineFromText (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

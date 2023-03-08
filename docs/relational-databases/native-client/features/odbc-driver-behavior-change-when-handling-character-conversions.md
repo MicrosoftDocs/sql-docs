@@ -1,15 +1,12 @@
 ---
-description: "ODBC Driver Behavior Change When Handling Character Conversions"
 title: "ODBC change handling char conversions"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
+description: "ODBC Driver Behavior Change When Handling Character Conversions"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC Driver Behavior Change When Handling Character Conversions

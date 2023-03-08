@@ -1,17 +1,14 @@
 ---
+title: "Import Policies Dialog Box"
 description: "Import Policies Dialog Box"
-title: "Import Policies Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.importpolicy.f1"
-ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.importpolicy.f1"
 ---
 # Import Policies Dialog Box
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

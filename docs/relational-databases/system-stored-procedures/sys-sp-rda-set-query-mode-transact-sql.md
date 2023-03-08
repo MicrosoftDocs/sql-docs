@@ -1,22 +1,20 @@
 ---
-title: "sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs"
-description: Use sys.sp_rda_set_query_mode to specify if queries against the current Stretch-enabled database and its tables return local and remote data, or local data only.  
-ms.custom: ""
-ms.date: 07/25/2022
-ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice: stored-procedures
-ms.topic: "reference"
-f1_keywords: 
-  - "sys.sp_rda_set_query_mode"
-  - "sys.sp_rda_set_query_mode_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sys.sp_rda_set_query_mode stored procedure"
-ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
+title: "sys.sp_rda_set_query_mode (Transact-SQL)"
+description: Use sys.sp_rda_set_query_mode to specify if queries against the current Stretch-enabled database and its tables return local and remote data, or local data only.
 author: markingmyname
 ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: "reference"
+f1_keywords:
+  - "sys.sp_rda_set_query_mode"
+  - "sys.sp_rda_set_query_mode_TSQL"
+helpviewer_keywords:
+  - "sys.sp_rda_set_query_mode stored procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

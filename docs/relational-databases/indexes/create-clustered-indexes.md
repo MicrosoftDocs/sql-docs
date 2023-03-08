@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "clustered indexes, PRIMARY KEY constraint"
   - "clustered indexes, UNIQUE constraint"
   - "indexes [SQL Server], clustered"
-ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Clustered Indexes

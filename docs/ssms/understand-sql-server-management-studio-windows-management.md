@@ -1,19 +1,17 @@
 ---
 title: "Understand SQL Server Management Studio Windows Management"
 description: "Understand SQL Server Management Studio Windows Management"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "autohide [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], tool windows"
   - "push pin [SQL Server Management Studio]"
   - "tool windows [SQL Server Management Studio]"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 # Understand SQL Server Management Studio windows management
 

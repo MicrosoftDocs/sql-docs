@@ -1,17 +1,14 @@
 ---
-description: "How Permissions Are Determined (Master Data Services)"
 title: How Permissions Are Determined
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "permissions [Master Data Services], determining permissions"
-ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
+description: "How Permissions Are Determined (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "permissions [Master Data Services], determining permissions"
 ---
 # How Permissions Are Determined (Master Data Services)
 

@@ -1,15 +1,12 @@
 ---
+title: "catalog.set_environment_variable_property (SSISDB Database)"
 description: "catalog.set_environment_variable_property (SSISDB Database)"
-title: "catalog.set_environment_variable_property (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.set_environment_variable_property (SSISDB Database)
 

@@ -1,22 +1,19 @@
 ---
+title: "sysmail_configure_sp (Transact-SQL)"
 description: "sysmail_configure_sp (Transact-SQL)"
-title: "sysmail_configure_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_configure_sp_TSQL"
-  - "sysmail_configure_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_configure_sp"
-ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_configure_sp_TSQL"
+  - "sysmail_configure_sp"
+helpviewer_keywords:
+  - "sysmail_configure_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,15 @@
 ---
-description: "Audit Database Principal Impersonation Event Class"
 title: "Audit Database Principal Impersonation Event Class"
-ms.date: 06/03/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Database Principal Impersonation event class"
-ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
+description: "Audit Database Principal Impersonation Event Class"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Database Principal Impersonation event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Audit Database Principal Impersonation Event Class
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

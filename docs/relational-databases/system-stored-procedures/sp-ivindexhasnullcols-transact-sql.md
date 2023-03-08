@@ -1,22 +1,19 @@
 ---
+title: "sp_ivindexhasnullcols (Transact-SQL)"
 description: "sp_ivindexhasnullcols (Transact-SQL)"
-title: "sp_ivindexhasnullcols (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_ivindexhasnullcols"
-  - "sp_ivindexhasnullcols_TSQL"
-helpviewer_keywords: 
-  - "sp_ivindexhasnullcols"
-ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_ivindexhasnullcols"
+  - "sp_ivindexhasnullcols_TSQL"
+helpviewer_keywords:
+  - "sp_ivindexhasnullcols"
+dev_langs:
+  - "TSQL"
 ---
 # sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

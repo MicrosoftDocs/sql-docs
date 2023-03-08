@@ -1,19 +1,16 @@
 ---
+title: "Develop applications using Always Encrypted with secure enclaves"
 description: "Develop applications using Always Encrypted with secure enclaves"
-title: "Develop applications using Always Encrypted with secure enclaves | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "02/15/2023"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-dev_langs: 
-  - "CSharp"
-ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current" 
+ms.reviewer: vanto
+ms.date: "02/15/2023"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+dev_langs:
+  - "CSharp"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Develop applications using Always Encrypted with secure enclaves
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]

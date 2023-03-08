@@ -8,9 +8,7 @@ ms.date: 09/27/2019
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: troubleshooting
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # Azure SQL Database and SQL Managed Instance Import/Export service takes a long time to import or export a database

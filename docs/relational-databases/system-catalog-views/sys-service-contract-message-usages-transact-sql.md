@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.service_contract_message_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
 ---
 # sys.service_contract_message_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

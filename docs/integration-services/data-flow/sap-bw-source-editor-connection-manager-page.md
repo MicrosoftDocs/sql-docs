@@ -1,17 +1,14 @@
 ---
+title: "SAP BW Source Editor (Connection Manager Page)"
 description: "SAP BW Source Editor (Connection Manager Page)"
-title: "SAP BW Source Editor (Connection Manager Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.connection.f1"
-ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.sapbwsource.connection.f1"
 ---
 # SAP BW Source Editor (Connection Manager Page)
 

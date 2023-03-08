@@ -1,27 +1,24 @@
 ---
+title: "Flat File Connection Manager"
 description: "Flat File Connection Manager"
-title: "Flat File Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.ffileconnection.general.f1"
   - "sql13.dts.designer.ffileconnection.columns.f1"
   - "sql13.dts.designer.ffileconnection.columnproperties.f1"
   - "sql13.dts.designer.ffileconnection.preview.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connection managers [Integration Services], Flat File"
   - "connections [Integration Services], flat files"
   - "files [Integration Services], connections"
   - "Flat File connection manager"
   - "flat files"
   - "flat file connections [Integration Services]"
-ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-author: chugugrace
-ms.author: chugu
 ---
 # Flat File Connection Manager
 

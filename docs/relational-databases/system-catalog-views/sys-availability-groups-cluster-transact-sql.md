@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
 dev_langs:
   - "TSQL"
-ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
 ---
 # sys.availability_groups_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,16 +1,14 @@
 ---
-description: "Plan Guide Unsuccessful Event Class"
 title: "Plan Guide Unsuccessful Event Class"
-ms.custom: ""
-ms.date: "06/22/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Plan Guide Unsuccessful event class"
+description: "Plan Guide Unsuccessful Event Class"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "06/22/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Plan Guide Unsuccessful event class"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan Guide Unsuccessful Event Class

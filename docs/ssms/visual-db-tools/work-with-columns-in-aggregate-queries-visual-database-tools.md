@@ -1,21 +1,17 @@
 ---
-description: "Work with Columns in Aggregate Queries (Visual Database Tools)"
 title: Work with Columns in Aggregate Queries
-ms.custom: seo-lt-2019
+description: "Work with Columns in Aggregate Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HAVING clause, query summary results"
   - "GROUP BY clause, query summary results"
   - "aggregate queries [SQL Server]"
   - "WHERE clause, query summary results"
-ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Work with Columns in Aggregate Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

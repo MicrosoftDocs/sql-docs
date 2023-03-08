@@ -20,7 +20,6 @@ dev_langs:
   - "TSQL"
   - "VB"
   - "CSharp"
-ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 ---
 # Accessing User-Defined Types - Updating UDT Columns with DataAdapters
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

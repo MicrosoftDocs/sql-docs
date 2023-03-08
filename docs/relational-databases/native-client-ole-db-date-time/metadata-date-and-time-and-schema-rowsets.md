@@ -1,18 +1,13 @@
 ---
-description: "Metadata - Date and Time and Schema Rowsets in SQL Server Native Client"
 title: "Date and Time and Schema Rowsets"
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "date/time [OLE DB], schema rowsets"
-ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
+description: "Metadata - Date and Time and Schema Rowsets in SQL Server Native Client"
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-dt-2019
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "date/time [OLE DB], schema rowsets"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata - Date and Time and Schema Rowsets in SQL Server Native Client

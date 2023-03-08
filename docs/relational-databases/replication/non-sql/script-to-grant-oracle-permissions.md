@@ -1,17 +1,15 @@
 ---
+title: "Script to Grant Oracle Permissions"
 description: "Script to Grant Oracle Permissions"
-title: "Script to Grant Oracle Permissions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Oracle publishing [SQL Server replication], script to grant permissions"
-ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Oracle publishing [SQL Server replication], script to grant permissions"
 ---
 # Script to Grant Oracle Permissions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,16 @@
 ---
-description: "Use Sparse Columns"
 title: "Use Sparse Columns"
-ms.custom: ""
+description: "Use Sparse Columns"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/09/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sparse columns, described"
   - "null columns"
   - "sparse columns"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use sparse columns

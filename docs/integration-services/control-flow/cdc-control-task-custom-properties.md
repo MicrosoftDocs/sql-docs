@@ -1,15 +1,12 @@
 ---
+title: "CDC Control Task Custom Properties"
 description: "CDC Control Task Custom Properties"
-title: "CDC Control Task Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # CDC Control Task Custom Properties
 

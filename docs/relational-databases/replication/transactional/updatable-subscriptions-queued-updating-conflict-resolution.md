@@ -1,21 +1,19 @@
 ---
+title: "Queued Updating Conflict Detection and Resolution"
 description: "Updatable Subscriptions - Queued Updating Conflict Resolution"
-title: "Queued Updating Conflict Detection and Resolution | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "conflict resolution [SQL Server replication], queued updating subscriptions"
   - "viewing queued updating conflicts"
   - "conflict resolution [SQL Server replication]"
   - "queued updating subscriptions [SQL Server replication]"
   - "articles [SQL Server replication], conflict resolution"
-ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Updatable Subscriptions - Queued Updating Conflict Resolution
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

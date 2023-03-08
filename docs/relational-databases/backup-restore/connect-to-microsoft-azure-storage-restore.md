@@ -1,17 +1,14 @@
 ---
-title: "Connect to Microsoft Azure Storage (Restore) | Microsoft Docs"
+title: "Connect to Microsoft Azure Storage (Restore)"
 description: In SQL Server, the Azure Storage Account dialog box lets you specify a connection to Azure storage account information to get files storage in an Azure account.
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.restore.connectstorage.f1"
-ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.restore.connectstorage.f1"
 ---
 # Connect to Microsoft Azure Storage (Restore)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

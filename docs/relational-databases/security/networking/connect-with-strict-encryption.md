@@ -1,14 +1,12 @@
 ---
 title: Connect to SQL Server with strict encryption
 description: This article describes how to connect to SQL Server using the strict encryption type
-ms.service: sql
-ms.subservice: security
-ms.topic: how-to
-ms.custom:
-- event-tier1-build-2022
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: security
+ms.topic: how-to
 monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 

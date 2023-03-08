@@ -1,20 +1,17 @@
 ---
+title: "Add or Delete a Task or a Container in a Control Flow"
 description: "Add or Delete a Task or a Container in a Control Flow"
-title: "Add or Delete a Task or a Container in a Control Flow | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "containers [Integration Services], adding"
   - "adding tasks"
   - "adding containers"
   - "tasks [Integration Services], adding"
-ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-author: chugugrace
-ms.author: chugu
 ---
 # Add or Delete a Task or a Container in a Control Flow
 

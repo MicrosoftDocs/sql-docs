@@ -7,7 +7,6 @@ ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "sessions [SQL Server], database mirroring"
   - "resuming database mirroring"

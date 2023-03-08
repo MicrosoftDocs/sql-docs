@@ -1,18 +1,15 @@
 ---
-description: "Close a Solution"
 title: "Close a Solution"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "solutions [SQL Server Management Studio], closing"
-  - "closing solutions"
-ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
+description: "Close a Solution"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "solutions [SQL Server Management Studio], closing"
+  - "closing solutions"
 ---
 # Close a Solution
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

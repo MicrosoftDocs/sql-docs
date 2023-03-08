@@ -7,14 +7,12 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "SQLXMLOLEDB Provider, applying XSL transformations"
   - "applying XSL transformations [SQLXML]"
   - "xsl property"
   - "Base Path property"
   - "XSL Transformations [SQLXML]"
-ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXMLOLEDB Provider)

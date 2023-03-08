@@ -1,12 +1,12 @@
 ---
 title: Create a Java jar file from class files
-description: Package your class files into a jar file when using SQL Server Language Extensions to execute Java code. 
+description: Package your class files into a jar file when using SQL Server Language Extensions to execute Java code.
 author: rothja
-ms.author: jroth 
+ms.author: jroth
 ms.date: 11/05/2019
-ms.topic: how-to
 ms.service: sql
 ms.subservice: language-extensions
+ms.topic: how-to
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Create a Java jar file from class files

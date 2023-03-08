@@ -1,14 +1,12 @@
 ---
 title: Create Test Conditions for the SQL Server Unit Test Designer
 description: See how to extend the TestCondition class to create a custom test condition for the SQL Server Unit Test Designer. View an example of a custom test condition.
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Create Test Conditions for the SQL Server Unit Test Designer

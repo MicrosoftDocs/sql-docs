@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG020596"
 description: "MSSQL_ENG020596"
-title: "MSSQL_ENG020596 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG020596 error"
-ms.assetid: fa33627c-2e99-4be3-9424-52ab83446e07
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG020596 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG020596

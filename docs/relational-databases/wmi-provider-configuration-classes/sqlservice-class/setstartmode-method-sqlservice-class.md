@@ -1,22 +1,17 @@
 ---
-description: "SetStartMode Method (SqlService Class)"
 title: "SetStartMode Method (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetStartMode Method (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetStartMode method"
-ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
+description: "SetStartMode Method (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetStartMode method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetStartMode Method (SqlService Class)"
+apitype: "MOFDef"
 ---
 # SetStartMode Method (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

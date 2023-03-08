@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.fulltext_semantic_language_statistics_database catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 ---
 # sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

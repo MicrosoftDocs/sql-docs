@@ -1,10 +1,11 @@
 ---
 title: "Use XML Data in Applications"
 description: Learn about the options that are available for working with the xml data type in your applications.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,8 +23,6 @@ helpviewer_keywords:
   - "columns [XML in SQL Server], ADO"
   - "xml data type [SQL Server], ADO.NET"
   - "XML [SQL Server], SQL Server Native Client"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use XML data in applications
 

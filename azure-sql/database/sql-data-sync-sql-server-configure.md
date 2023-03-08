@@ -4,7 +4,7 @@ description: This tutorial shows you how to set up SQL Data Sync for Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/16/2022
+ms.date: 03/08/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: tutorial
@@ -235,15 +235,18 @@ Yes, you must manually approve the service managed private endpoint, in the Priv
 
 **Why do I get a firewall error when the Sync job is provisioning my Azure database?**
 
-This may happen because Azure resources are not allowed to access your server. Ensure that the firewall on the Azure database has set "Allow Azure services and resources to access this server" to "Yes".
+This may happen because Azure resources are not allowed to access your server. There are two solutions:
 
+   1. Ensure that the firewall on the Azure database has set **Allow Azure services and resources to access this server** to **Yes**. 
+   1. Configure a [private link for Data Sync](sql-data-sync-data-sql-server-sql-database.md?view=azuresql&preserve-view=true#private-link-for-data-sync), which is different from an Azure Private Link.
 
 ## Next steps
 
-Congratulations. You've created a sync group that includes both a SQL Database instance and a SQL Server database.
+Congratulations. You've created a sync group that includes both an Azure SQL database and a SQL Server database.
 
 For more info about SQL Data Sync, see:
 
+- [What is SQL Data Sync for Azure?](sql-data-sync-data-sql-server-sql-database.md)
 - [Data Sync Agent for Azure SQL Data Sync](sql-data-sync-agent-overview.md)
 - [Best practices](sql-data-sync-best-practices.md) and [How to troubleshoot issues with Azure SQL Data Sync](sql-data-sync-troubleshoot.md)
 - [Monitor SQL Data Sync with Azure Monitor logs](./monitor-tune-overview.md)

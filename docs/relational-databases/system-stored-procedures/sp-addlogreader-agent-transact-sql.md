@@ -1,22 +1,19 @@
 ---
+title: "sp_addlogreader_agent (Transact-SQL)"
 description: "sp_addlogreader_agent (Transact-SQL)"
-title: "sp_addlogreader_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addlogreader_agent"
-  - "sp_addlogreader_agent_TSQL"
-helpviewer_keywords: 
-  - "sp_addlogreader_agent"
-ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addlogreader_agent"
+  - "sp_addlogreader_agent_TSQL"
+helpviewer_keywords:
+  - "sp_addlogreader_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

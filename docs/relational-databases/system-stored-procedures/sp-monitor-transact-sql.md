@@ -1,22 +1,19 @@
 ---
+title: "sp_monitor (Transact-SQL)"
 description: "sp_monitor (Transact-SQL)"
-title: "sp_monitor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_monitor_TSQL"
-  - "sp_monitor"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_monitor"
-ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_monitor_TSQL"
+  - "sp_monitor"
+helpviewer_keywords:
+  - "sp_monitor"
+dev_langs:
+  - "TSQL"
 ---
 # sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

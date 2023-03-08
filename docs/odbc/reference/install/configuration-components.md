@@ -1,17 +1,14 @@
 ---
+title: "Configuration Components"
 description: "Configuration Components"
-title: "Configuration Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "data sources [ODBC], configuring"
-ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "data sources [ODBC], configuring"
 ---
 # Configuration Components
 > [!NOTE]  

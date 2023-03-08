@@ -1,23 +1,20 @@
 ---
+title: "Integration Services Developer Documentation"
 description: "Integration Services Developer Documentation"
-title: "Integration Services Developer Documentation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services, programming"
   - "SSIS, programming"
   - "SQL Server Integration Services, programming"
   - "packages [Integration Services], programming"
-ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Integration Services Developer Documentation
 

@@ -1,15 +1,12 @@
 ---
-title: "Nested data regions in a paginated report | Microsoft Docs"
-description: Discover ways to nest a data region inside another data region in Report Builder. Display data summaries in a paginated report in a concise table or matrix. 
+title: "Nested data regions in a paginated report"
+description: Discover ways to nest a data region inside another data region in Report Builder. Display data summaries in a paginated report in a concise table or matrix.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Nested data regions in a paginated report (Report Builder)
 

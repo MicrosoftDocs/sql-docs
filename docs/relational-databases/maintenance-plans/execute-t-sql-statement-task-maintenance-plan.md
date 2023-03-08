@@ -11,7 +11,6 @@ f1_keywords:
   - "sql13.swb.maint.tsql.f1"
 helpviewer_keywords:
   - "Execute T-SQL Statement Task dialog box"
-ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 ---
 # Execute T-SQL Statement Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

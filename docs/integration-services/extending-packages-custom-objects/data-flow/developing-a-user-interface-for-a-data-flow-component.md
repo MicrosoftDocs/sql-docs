@@ -1,16 +1,13 @@
 ---
+title: "Developing a User Interface for a Data Flow Component"
 description: "Developing a User Interface for a Data Flow Component"
-title: "Developing a User Interface for a Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow components [Integration Services], custom editors"
   - "user interfaces [Integration Services]"
   - "custom data flow components [Integration Services], custom editors"
@@ -19,9 +16,9 @@ helpviewer_keywords:
   - "UITypeName property"
   - "custom user interface [Integration Services], custom data flow component"
   - "editors [Integration Services]"
-ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing a User Interface for a Data Flow Component
 

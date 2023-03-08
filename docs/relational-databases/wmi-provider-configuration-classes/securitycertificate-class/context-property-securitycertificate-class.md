@@ -1,22 +1,17 @@
 ---
-description: "Context Property (SecurityCertificate Class)"
 title: "Context Property (SecurityCertificate)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "Context Property (SecurityCertificate Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "Context property"
-ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
+description: "Context Property (SecurityCertificate Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Context property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "Context Property (SecurityCertificate Class)"
+apitype: "MOFDef"
 ---
 # Context Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,22 @@
 ---
+title: "core.sp_purge_data (Transact-SQL)"
 description: "core.sp_purge_data (Transact-SQL)"
-title: "core.sp_purge_data (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "08/09/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_purge_data_TSQL"
   - "sp_purge_data"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_purge_data"
   - "management data warehouse, data collector stored procedures"
   - "core.sp_purge_data stored procedure"
   - "data collector [SQL Server], stored procedures"
-ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

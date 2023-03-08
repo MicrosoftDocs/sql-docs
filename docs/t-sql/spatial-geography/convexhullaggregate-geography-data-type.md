@@ -1,22 +1,19 @@
 ---
+title: "ConvexHullAggregate (geography Data Type)"
 description: "ConvexHullAggregate (geography Data Type)"
-title: "ConvexHullAggregate (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ConvexHullAggregate_TSQL"
   - "ConvexHullAggregate"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ConvexHullAggregate method (geography)"
-ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # ConvexHullAggregate (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

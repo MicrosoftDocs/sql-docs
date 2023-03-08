@@ -1,17 +1,14 @@
 ---
+title: "SAP BW Destination Editor (Connection Manager Page)"
 description: "SAP BW Destination Editor (Connection Manager Page)"
-title: "SAP BW Destination Editor (Connection Manager Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.connection.f1"
-ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.sapbwdestination.connection.f1"
 ---
 # SAP BW Destination Editor (Connection Manager Page)
 

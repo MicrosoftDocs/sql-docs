@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_log_shipping_secondary_database (Transact-SQL)"
 description: "sp_delete_log_shipping_secondary_database (Transact-SQL)"
-title: "sp_delete_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_log_shipping_secondary_database_TSQL"
-  - "sp_delete_log_shipping_secondary_database"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_log_shipping_secondary_database"
-ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_log_shipping_secondary_database_TSQL"
+  - "sp_delete_log_shipping_secondary_database"
+helpviewer_keywords:
+  - "sp_delete_log_shipping_secondary_database"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

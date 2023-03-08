@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
 dev_langs:
   - "TSQL"
-ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 ---
 # sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

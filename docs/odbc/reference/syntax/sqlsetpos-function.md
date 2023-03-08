@@ -1,29 +1,19 @@
 ---
+title: "SQLSetPos Function"
 description: "SQLSetPos Function"
-title: "SQLSetPos Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSetPos"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSetPos"
-helpviewer_keywords: 
-  - "SQLSetPos function [ODBC]"
-ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSetPos"
+helpviewer_keywords:
+  - "SQLSetPos function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSetPos"
+apitype: "dllExport"
 ---
 # SQLSetPos Function
 **Conformance**  

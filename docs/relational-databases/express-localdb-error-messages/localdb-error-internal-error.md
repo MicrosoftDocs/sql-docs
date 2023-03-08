@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_INTERNAL_ERROR"
 description: "LOCALDB_ERROR_INTERNAL_ERROR"
-title: "LOCALDB_ERROR_INTERNAL_ERROR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_INTERNAL_ERROR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

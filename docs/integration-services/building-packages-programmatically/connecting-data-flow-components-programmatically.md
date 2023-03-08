@@ -1,23 +1,20 @@
 ---
+title: "Connecting Data Flow Components Programmatically"
 description: "Connecting Data Flow Components Programmatically"
-title: "Connecting Data Flow Components Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services 
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow task [Integration Services], components"
   - "paths [Integration Services], components"
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
-ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Connecting Data Flow Components Programmatically
 

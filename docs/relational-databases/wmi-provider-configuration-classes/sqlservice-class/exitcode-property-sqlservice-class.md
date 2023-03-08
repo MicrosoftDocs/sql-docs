@@ -1,22 +1,17 @@
 ---
-description: "ExitCode Property (SqlService Class)"
 title: "ExitCode Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ExitCode Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ExitCode property"
-ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
+description: "ExitCode Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ExitCode property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ExitCode Property (SqlService Class)"
+apitype: "MOFDef"
 ---
 # ExitCode Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

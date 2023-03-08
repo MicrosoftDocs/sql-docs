@@ -1,19 +1,16 @@
 ---
+title: "SSIS Toolbox"
 description: "SSIS Toolbox"
-title: "SSIS Toolbox | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "11/16/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.toolboxfavorites.F1"
   - "sql13.dts.designer.toolbox.F1"
   - "sql13.dts.designer.toolboxcommon.F1"
-ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: chugugrace
-ms.author: chugu
 ---
 # SSIS Toolbox
 

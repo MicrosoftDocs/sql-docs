@@ -1,17 +1,14 @@
 ---
+title: "SQLBindCol (Visual FoxPro ODBC Driver)"
 description: "SQLBindCol (Visual FoxPro ODBC Driver)"
-title: "SQLBindCol (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLBindCol function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLBindCol function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLBindCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.fn_get_health_status (Transact-SQL)"
 description: "managed_backup.fn_get_health_status (Transact-SQL)"
-title: "managed_backup.fn_get_health_status (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_get_health_status_TSQL"
   - "smart_admin.fn_get_health_status_TSQL"
   - "smart_admin.fn_get_health_status"
   - "fn_get_health_status"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "smart_admin.fn_get_health_status"
   - "fn_get_health_status"
-ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_identity_range_allocations system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 ---
 # MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

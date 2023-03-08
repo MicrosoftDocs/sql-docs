@@ -1,15 +1,12 @@
 ---
-description: "Options (Environment - Fonts and Colors Page)"
 title: "Options (Environment - Fonts and Colors Page)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
+description: "Options (Environment - Fonts and Colors Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
 ---
 # Options (Environment - Fonts and Colors Page)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

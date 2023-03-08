@@ -1,21 +1,18 @@
 ---
+title: "Reuse of Package Objects"
 description: "Reuse of Package Objects"
-title: "Reuse of Package Objects | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GUID regenerating [Integration Services]"
   - "reusing packages"
   - "templates [Integration Services]"
   - "copying packages"
   - "regenerating package GUID"
-ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-author: chugugrace
-ms.author: chugu
 ---
 # Reuse of Package Objects
 

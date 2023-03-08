@@ -1,20 +1,17 @@
 ---
+title: "Change Tracking Functions (Transact-SQL)"
 description: "Change Tracking Functions (Transact-SQL)"
-title: "Change Tracking Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "functions [SQL Server], change tracking"
-  - "change tracking [SQL Server], functions"
-ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "08/08/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "functions [SQL Server], change tracking"
+  - "change tracking [SQL Server], functions"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking Functions (Transact-SQL)

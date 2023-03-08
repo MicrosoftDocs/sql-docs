@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Transactions object"
 description: Learn about the Transactions object, which provides counters to monitor active transactions in Database Engine and the effects of transactions in SQL Server.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:Transactions"
-  - "Transactions object"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:Transactions"
+  - "Transactions object"
 ---
 # SQL Server, Transactions object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
 dev_langs:
   - "TSQL"
-ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 ---
 # sys.dm_fts_parser (Transact-SQL)
 

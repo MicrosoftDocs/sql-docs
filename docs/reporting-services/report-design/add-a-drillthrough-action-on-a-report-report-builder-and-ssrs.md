@@ -1,15 +1,12 @@
 ---
-title: "Add a drillthrough action on a paginated report | Microsoft Docs"
+title: "Add a drillthrough action on a paginated report"
 description: Improve query performance with the addition of a drillthrough action link in a text box, an image, or data points on a chart.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/30/2022
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Add a drillthrough action on a paginated report (Report Builder)
 

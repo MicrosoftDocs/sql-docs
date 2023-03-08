@@ -1,19 +1,16 @@
 ---
+title: "Data Collector Security"
 description: "Data Collector Security"
-title: "Data Collector Security | Microsoft Docs"
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data collection [SQL Server]"
   - "security [data collector]"
   - "data collector [SQL Server], security"
-ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Data Collector Security
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

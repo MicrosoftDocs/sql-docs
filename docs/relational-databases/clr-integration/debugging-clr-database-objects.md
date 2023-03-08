@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "debugging [CLR integration]"
   - "building database objects [CLR integration], debugging"
   - "common language runtime [SQL Server], debugging"
-ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 ---
 # How to debug CLR database objects
 

@@ -1,19 +1,15 @@
 ---
-description: "Create Table Aliases (Visual Database Tools)"
 title: Create Table Aliases
-ms.custom: seo-lt-2019
+description: "Create Table Aliases (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table aliases [SQL Server]"
   - "aliases [SQL Server], tables"
-ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Table Aliases (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

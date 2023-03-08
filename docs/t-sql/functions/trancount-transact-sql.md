@@ -3,12 +3,10 @@ title: "@@TRANCOUNT (Transact-SQL)"
 description: "@@TRANCOUNT (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "08/29/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@TRANCOUNT_TSQL"
   - "@@TRANCOUNT"

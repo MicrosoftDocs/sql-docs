@@ -7,10 +7,8 @@ ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_nodes_pdw_physical_databases (Transact-SQL)

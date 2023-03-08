@@ -1,19 +1,17 @@
 ---
+title: "Deliver a Snapshot Through FTP"
 description: "Deliver a Snapshot Through FTP"
-title: "Deliver a Snapshot Through FTP | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "snapshots [SQL Server replication], FTP snapshots"
   - "FTP snapshots [SQL Server replication]"
   - "snapshot replication [SQL Server], FTP"
-ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Deliver a Snapshot Through FTP
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,10 +1,13 @@
 ---
 title: dta utility
 description: The dta utility is a command prompt version of Database Engine Tuning Advisor that allows you to use functionality in applications and scripts.
+author: markingmyname
+ms.author: maghan
+ms.date: 05/11/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "physical design structures [SQL Server]"
   - "command prompt utilities [SQL Server], dta"
   - "dta utility"
@@ -14,11 +17,6 @@ helpviewer_keywords:
   - "performance [SQL Server], Database Engine Tuning Advisor"
   - "Database Engine Tuning Advisor [SQL Server], command prompt"
   - "optimizing databases [SQL Server]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 05/11/2021
 ---
 
 # dta utility

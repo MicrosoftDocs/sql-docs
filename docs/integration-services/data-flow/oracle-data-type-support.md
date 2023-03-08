@@ -1,14 +1,12 @@
 ---
+title: "Microsoft Connector for Oracle data type support"
 description: "Microsoft Connector for Oracle data type support"
-title: "Microsoft Connector for Oracle data type support | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/14/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "08/14/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Microsoft Connector for Oracle data type support
 

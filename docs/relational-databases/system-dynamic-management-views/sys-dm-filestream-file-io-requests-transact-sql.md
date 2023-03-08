@@ -3,7 +3,7 @@ title: "sys.dm_filestream_file_io_requests (Transact-SQL)"
 description: sys.dm_filestream_file_io_requests (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/03/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_filestream_file_io_requests catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 ---
 # sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +39,11 @@ ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Filestream and FileTable Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

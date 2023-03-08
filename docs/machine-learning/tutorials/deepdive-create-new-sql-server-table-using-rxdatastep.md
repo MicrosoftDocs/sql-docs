@@ -1,14 +1,12 @@
 ---
 title: Create table using rxDataStep
 description: "Learn how to move data between in-memory data frames, the SQL Server context, and local files by using rxDataStep."
-ms.service: sql
-ms.subservice: machine-learning-services
-
-ms.date: 11/27/2018  
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 11/27/2018
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: tutorial
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Create new SQL Server table using rxDataStep (SQL Server and RevoScaleR tutorial)

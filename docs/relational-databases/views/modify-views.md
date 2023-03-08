@@ -1,20 +1,17 @@
 ---
+title: "Modify Views"
 description: "Modify Views"
-title: "Modify Views | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "views [SQL Server], renaming"
   - "views [SQL Server], modifying"
   - "modifying views"
   - "renaming views"
-ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Views

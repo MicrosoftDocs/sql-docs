@@ -7,7 +7,6 @@ ms.author: randolphwest
 ms.date: 08/11/2022
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 f1_keywords:
   - "sys.elastic_pool_resource_stats catalog view"
 helpviewer_keywords:

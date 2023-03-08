@@ -1,25 +1,23 @@
 ---
+title: "Replication Management Objects Concepts"
 description: "Replication Management Objects Concepts"
-title: "Replication Management Objects Concepts | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "11/08/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "replication [SQL Server], RMO"
   - "programming interfaces [SQL Server replication]"
   - "replication [SQL Server], how-to topics"
   - "RMO [SQL Server]"
   - "Replication Management Objects"
   - "programming [SQL Server replication], RMO"
-ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "VB"
+  - "CSharp"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Management Objects Concepts

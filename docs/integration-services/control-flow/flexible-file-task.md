@@ -1,17 +1,15 @@
 ---
+title: "Flexible File Task"
 description: "Flexible File Task"
-title: "Flexible File Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/22/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.DTS.DESIGNER.AFPEXTFILETASK.F1"
-  - "SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1"
 author: chugugrace
 ms.author: chugu
+ms.date: "05/22/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.DTS.DESIGNER.AFPEXTFILETASK.F1"
+  - "SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1"
 ---
 # Flexible File Task
 

@@ -1,18 +1,14 @@
 ---
-description: "Set or change the database collation"
 title: "Set or change the database collation"
-ms.custom: ""
-ms.date: "02/03/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "collations [SQL Server], database"
-  - "database collations [SQL Server]"
-ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
+description: "Set or change the database collation"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "02/03/2022"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "collations [SQL Server], database"
+  - "database collations [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set or change the database collation

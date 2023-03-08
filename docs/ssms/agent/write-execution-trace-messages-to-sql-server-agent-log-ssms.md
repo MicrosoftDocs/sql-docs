@@ -1,21 +1,18 @@
 ---
-description: "Write Execution Trace Messages to the SQL Server Agent Error Log"
 title: Write Execution Trace Messages to SQL Server Agent Error Log
-ms.custom: seo-lt-2019
+description: "Write Execution Trace Messages to the SQL Server Agent Error Log"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logs [SQL Server], SQL Server Agent"
   - "writing trace messages"
   - "traces [SQL Server], SQL Server Agent logs"
   - "SQL Server Agent, errors"
   - "errors [SQL Server Agent]"
-ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Write Execution Trace Messages to the SQL Server Agent Error Log

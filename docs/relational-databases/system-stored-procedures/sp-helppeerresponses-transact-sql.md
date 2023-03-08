@@ -1,22 +1,19 @@
 ---
+title: "sp_helppeerresponses (Transact-SQL)"
 description: "sp_helppeerresponses (Transact-SQL)"
-title: "sp_helppeerresponses (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helppeerresponses_TSQL"
-  - "sp_helppeerresponses"
-helpviewer_keywords: 
-  - "sp_helppeerresponses"
-ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helppeerresponses_TSQL"
+  - "sp_helppeerresponses"
+helpviewer_keywords:
+  - "sp_helppeerresponses"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helppeerresponses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

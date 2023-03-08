@@ -1,13 +1,11 @@
 ---
-title: "Find the product key for SQL Server Reporting Services | Microsoft Docs"
+title: "Find the product key for SQL Server Reporting Services"
 description: "Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment."
-ms.date: 12/04/2019
-ms.service: reporting-services
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/04/2019
+ms.service: reporting-services
+ms.topic: conceptual
 monikerRange: ">= sql-server-2017"
 ---
 # Find the product key for SQL Server Reporting Services

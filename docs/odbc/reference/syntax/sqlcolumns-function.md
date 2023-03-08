@@ -1,24 +1,19 @@
 ---
+title: "SQLColumns Function"
 description: "SQLColumns Function"
-title: "SQLColumns Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLColumns"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLColumns"
-helpviewer_keywords: 
-  - "SQLColumns function [ODBC]"
-ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLColumns"
+helpviewer_keywords:
+  - "SQLColumns function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLColumns"
+apitype: "dllExport"
 ---
 # SQLColumns Function
 **Conformance**  

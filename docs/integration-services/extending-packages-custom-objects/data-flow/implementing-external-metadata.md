@@ -1,16 +1,13 @@
 ---
+title: "Implementing External Metadata"
 description: "Implementing External Metadata"
-title: "Implementing External Metadata | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disconnected validation [Integration Services]"
   - "connected validation [Integration Services]"
   - "custom data flow components [Integration Services], validating"
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "data flow components [Integration Services], external metadata"
   - "custom data flow components [Integration Services], external metadata"
   - "external metadata [Integration Services]"
-ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Implementing External Metadata
 

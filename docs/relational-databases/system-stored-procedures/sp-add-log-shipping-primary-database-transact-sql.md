@@ -1,22 +1,19 @@
 ---
+title: "sp_add_log_shipping_primary_database (Transact-SQL)"
 description: "sp_add_log_shipping_primary_database (Transact-SQL)"
-title: "sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_log_shipping_primary_database"
-  - "sp_add_log_shipping_primary_database_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_log_shipping_primary_database"
-ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_log_shipping_primary_database"
+  - "sp_add_log_shipping_primary_database_TSQL"
+helpviewer_keywords:
+  - "sp_add_log_shipping_primary_database"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

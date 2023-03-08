@@ -1,22 +1,19 @@
 ---
+title: "sp_unregister_custom_scripting (Transact-SQL)"
 description: "sp_unregister_custom_scripting (Transact-SQL)"
-title: "sp_unregister_custom_scripting (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_unregister_custom_scripting_TSQL"
-  - "sp_unregister_custom_scripting"
-helpviewer_keywords: 
-  - "sp_unregister_custom_scripting"
-ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_unregister_custom_scripting_TSQL"
+  - "sp_unregister_custom_scripting"
+helpviewer_keywords:
+  - "sp_unregister_custom_scripting"
+dev_langs:
+  - "TSQL"
 ---
 # sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

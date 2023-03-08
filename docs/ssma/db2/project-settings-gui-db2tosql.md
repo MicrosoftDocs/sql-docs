@@ -1,18 +1,14 @@
 ---
+title: "Project Settings (GUI) (DB2ToSQL)"
 description: "Project Settings (GUI) (DB2ToSQL)"
-title: "Project Settings (GUI) (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.projectsettingsgui.f1"
-
+f1_keywords:
+  - "ssma.db2.projectsettingsgui.f1"
 ---
 # Project Settings (GUI) (DB2ToSQL)
 The GUI project settings let you configure how data appears on the **Data** tab and whether to show the assessment report after conversion or not.  

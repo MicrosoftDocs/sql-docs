@@ -8,7 +8,6 @@ ms.date: 12/21/2022
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "multiserver queries"
   - "executing queries against multiple servers"

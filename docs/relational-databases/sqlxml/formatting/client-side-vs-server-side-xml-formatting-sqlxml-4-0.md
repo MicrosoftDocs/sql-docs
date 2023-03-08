@@ -7,7 +7,6 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "NESTED mode"
   - "FOR XML clause, formatting"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "server-side XML formatting"
   - "AUTO mode"
   - "client-side XPath"
-ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Client-side vs. Server-side XML Formatting (SQLXML 4.0)

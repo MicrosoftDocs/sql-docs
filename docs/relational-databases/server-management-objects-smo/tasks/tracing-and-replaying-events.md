@@ -1,21 +1,16 @@
 ---
+title: "Tracing and Replaying Events"
 description: "Tracing and Replaying Events"
-title: "Tracing and Replaying Events | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "replaying events"
   - "traces [SMO]"
   - "events [SMO], replaying"
   - "events [SMO], tracing"
-ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tracing and Replaying Events

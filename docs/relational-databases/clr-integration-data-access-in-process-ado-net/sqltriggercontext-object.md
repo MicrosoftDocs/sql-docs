@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "SqlTriggerContext object"
   - "triggers [CLR integration]"
   - "context [CLR integration]"
-ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 ---
 # SqlTriggerContext Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

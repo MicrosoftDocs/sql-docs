@@ -1,21 +1,18 @@
 ---
+title: "Length of Column Data"
 description: "Length of Column Data"
-title: "Length of Column Data | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column data [ODBC]"
   - "length of column data [ODBC]"
   - "ODBC cursor library [ODBC], cache"
   - "cursor library [ODBC], cache"
   - "cache [ODBC]"
-ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Length of Column Data
 > [!IMPORTANT]  

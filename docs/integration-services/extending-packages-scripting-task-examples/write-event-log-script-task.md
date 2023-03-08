@@ -1,14 +1,12 @@
 ---
-description: "This article helps you to configure the Script Task."
 title: Work with write event log script task.
-ms.custom: ""
-ms.date: "02/10/2023"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
+description: "This article helps you to configure the Script Task."
 author: ramakoni1
 ms.author: v-jayaramanp
+ms.date: "02/10/2023"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
 ---
 
 # Write information to the Application log

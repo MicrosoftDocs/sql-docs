@@ -1,18 +1,15 @@
 ---
-title: "Parameters | Microsoft Docs"
+title: "Parameters"
 description: Learn how to use parameters to exchange data between stored procedures and functions and the application or tool that called the stored procedure or function.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: stored-procedures
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stored procedures [SQL Server], parameters"
   - "user-defined functions [SQL Server], parameters"
-ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Parameters

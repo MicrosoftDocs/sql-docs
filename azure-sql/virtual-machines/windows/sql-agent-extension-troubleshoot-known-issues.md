@@ -1,6 +1,6 @@
 ---
 title: Known issues and troubleshooting the SQL Server IaaS agent extension
-description: Learn about the known issues and how to troubleshoot errors with the SQL Server Iaas Agent extension. 
+description: Learn about the known issues and how to troubleshoot errors with the SQL Server Iaas Agent extension.
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma
@@ -8,7 +8,6 @@ ms.date: 12/12/2022
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.custom:
 ---
 # Known issues and troubleshooting the SQL Server IaaS agent extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

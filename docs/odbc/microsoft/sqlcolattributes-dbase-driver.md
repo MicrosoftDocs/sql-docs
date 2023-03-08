@@ -1,18 +1,15 @@
 ---
+title: "SQLColAttributes (dBASE Driver)"
 description: "SQLColAttributes (dBASE Driver)"
-title: "SQLColAttributes (dBASE Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLColAttribute function [ODBC], dBASE Driver"
-  - "DBase driver [ODBC], SQLColAttributes"
-ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLColAttribute function [ODBC], dBASE Driver"
+  - "DBase driver [ODBC], SQLColAttributes"
 ---
 # SQLColAttributes (dBASE Driver)
 > [!NOTE]  

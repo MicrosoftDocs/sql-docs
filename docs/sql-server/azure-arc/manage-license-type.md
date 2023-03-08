@@ -73,7 +73,7 @@ The billing granularity is one hour. Pay-as-you-go charges are calculated based 
 - If two or more instances of the same edition are installed, the first instance in alphabetical order is billed.
 - The configured license type defines how the winning instance is billed.
    
-In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features are not included the LicenseOnly license type.  
+In addition to billing differences, license type determines what features will be available to your Arc-enabled SQL Server. The following features are not included in the LicenseOnly license type.  
 
 - Licensing benefit for fail-over servers. Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group and reporting the usage with a separate meter. You can track the usage of the DR benefit in Cost Management + Billing. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
 - Detailed database inventory. You can manage your SQL database inventory in Azure portal. See [View databases](view-databases.md) for details.

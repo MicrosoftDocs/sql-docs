@@ -1,12 +1,13 @@
 ---
-description: "Manage Job Steps"
 title: "Manage Job Steps"
-ms.custom: seo-lt-2019
+description: "Manage Job Steps"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "job steps [SQL Server replication]"
   - "job steps [SQL Server Agent]"
   - "jobs [SQL Server Agent], Integration Services package step"
@@ -20,10 +21,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, job steps"
   - "ActiveX scripting jobs [SQL Server]"
   - "job steps [Analysis Services]"
-ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Manage Job Steps

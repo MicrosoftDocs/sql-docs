@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Integration Servic
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan, randolphwest
-ms.date: 01/30/2023
+ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -14,10 +14,11 @@ ms.custom: intro-installation
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Follow the steps in this article to install SQL Server Integration Services (**mssql-server-is**) for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux. For more information about the features that are supported in Integration Services for Linux, see:
+Follow the steps in this article to install SQL Server Integration Services (**mssql-server-is**) on Linux. For more information about the features that are supported in Integration Services for Linux, see:
 
 - [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md)
 - [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md)
+- [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md)
 
 You can install SQL Server Integration Services (SSIS) on Red Hat Enterprise Linux (RHEL) and Ubuntu. SUSE Linux Enterprise Server (SLES) isn't supported. Installing SSIS on containers is also not supported.
 
@@ -57,12 +58,41 @@ To install the **mssql-server-is** package on RHEL, follow these steps:
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 1. Download the SQL Server Red Hat repository configuration file.
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
+   ```
+
+1. Run the following command to install SQL Server Integration Services.
+
+   ```bash
+   sudo yum install -y mssql-server-is
+   ```
+
+1. After installation, run **ssis-conf**. For more info, see [Configure SSIS on Linux with ssis-conf](sql-server-linux-configure-ssis.md).
+
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
+
+1. After the configuration is done, set the `PATH` environment variable.
+
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
+
+::: moniker-end
+
+<!--SQL Server 2022 on Linux-->
+::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+1. Download the SQL Server Red Hat repository configuration file.
+
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo
    ```
 
 1. Run the following command to install SQL Server Integration Services.
@@ -111,10 +141,10 @@ The SQL Server Integration Services package (**mssql-server-is**) is not support
 
 ## <a id="ubuntu"></a> Install SSIS on Ubuntu
 
+To install the **mssql-server-is** package on Ubuntu, follow these steps:
+
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-To install the **mssql-server-is** package on Ubuntu, follow these steps:
 
 1. Import the public repository GPG keys.
 
@@ -147,28 +177,10 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
    export PATH=/opt/ssis/bin:$PATH
    ```
 
-### Update SSIS
-
-If you already have **mssql-server-is** installed, update to the latest version with the following command:
-
-```bash
-sudo apt-get install mssql-server-is
-```
-
-### Remove SSIS
-
-To remove **mssql-server-is**, run the following command:
-
-```bash
-sudo apt-get remove mssql-server-is
-```
-
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
-
-To install the **mssql-server-is** package on Ubuntu, follow these steps:
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 1. Import the public repository GPG keys.
 
@@ -179,11 +191,8 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 1. Register the SQL Server Ubuntu repository.
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
    ```
-
-   > [!NOTE]  
-   > The SQL Server Integration Services package (**mssql-server-is**) is not supported on Ubuntu 20.04.
 
 1. Run the following commands to install SQL Server Integration Services.
 
@@ -204,6 +213,44 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
    export PATH=/opt/ssis/bin:$PATH
    ```
 
+::: moniker-end
+
+<!--SQL Server 2022 on Linux-->
+::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+1. Import the public repository GPG keys.
+
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
+1. Register the SQL Server Ubuntu repository.
+
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2022.list)"
+   ```
+
+1. Run the following commands to install SQL Server Integration Services.
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y mssql-server-is
+   ```
+
+1. After installing Integration Services, run **ssis-conf**. For more info, see [Configure SSIS on Linux with ssis-conf](sql-server-linux-configure-ssis.md).
+
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
+
+1. After the configuration is done, set the `PATH` environment variable.
+
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
+
+::: moniker-end
+
 ### Update SSIS
 
 If you already have **mssql-server-is** installed, update to the latest version with the following command:
@@ -219,8 +266,6 @@ To remove **mssql-server-is**, run the following command:
 ```bash
 sudo apt-get remove mssql-server-is
 ```
-
-::: moniker-end
 
 ---
 

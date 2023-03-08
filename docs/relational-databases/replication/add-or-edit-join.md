@@ -1,18 +1,16 @@
 ---
+title: "Add or Edit Join"
 description: "Add or Edit Join"
-title: "Add or Edit Join | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.addeditjoin.f1"
-  - "sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1"
-ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.addeditjoin.f1"
+  - "sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1"
 ---
 # Add or Edit Join
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

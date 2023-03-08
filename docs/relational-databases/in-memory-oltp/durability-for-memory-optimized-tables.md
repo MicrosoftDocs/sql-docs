@@ -7,7 +7,6 @@ ms.date: "03/20/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 ---
 # Durability for Memory-Optimized Tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

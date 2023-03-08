@@ -1,19 +1,16 @@
 ---
-description: "SQL Server Native Client Message Results"
 title: SQL Server message results (Native Client OLE DB provider)
-ms.custom: ""
+description: "SQL Server Native Client Message Results"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, errors"
   - "errors [OLE DB], SQL Server message results"
   - "OLE DB error handling, SQL Server message results"
-ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Message Results

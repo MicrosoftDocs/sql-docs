@@ -1,17 +1,14 @@
 ---
+title: "Import a Policy-Based Management Policy"
 description: "Import a Policy-Based Management Policy"
-title: "Import a Policy-Based Management Policy | Microsoft Docs"
-ms.custom: ""
-ms.date: 08/06/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, import policy"
-ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
+ms.date: 08/06/2020
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, import policy"
 ---
 # Import a Policy-Based Management Policy
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

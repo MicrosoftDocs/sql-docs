@@ -9,7 +9,6 @@ ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
 ms.custom: kr2b-contr-experiment
-ms.metadata: seo-lt-2019
 ---
 
 # An Index of Management notebooks for SQL Server Big Data Clusters

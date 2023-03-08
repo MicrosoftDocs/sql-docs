@@ -1,25 +1,19 @@
 ---
+title: "SQLAllocHandle Function"
 description: "SQLAllocHandle Function"
-title: "SQLAllocHandle Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLAllocHandle"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLAllocHandle"
-helpviewer_keywords: 
-  - "SQLAllocHandle function [ODBC]"
-ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLAllocHandle"
+helpviewer_keywords:
+  - "SQLAllocHandle function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLAllocHandle"
+apitype: "dllExport"
 ---
 # SQLAllocHandle Function
 **Conformance**  

@@ -8,9 +8,7 @@ ms.date: 01/03/2019
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Using the RecoveryManager class to fix shard map problems
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

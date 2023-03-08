@@ -1,25 +1,22 @@
 ---
+title: "sys.fn_cdc_get_min_lsn (Transact-SQL)"
 description: "sys.fn_cdc_get_min_lsn (Transact-SQL)"
-title: "sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_cdc_get_min_lsn"
   - "fn_cdc_get_min_lsn"
   - "fn_cdc_get_min_lsn_TSQL"
   - "sys.fn_cdc_get_min_lsn_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_get_min_lsn"
   - "sys.fn_cdc_get_min_lsn"
-ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

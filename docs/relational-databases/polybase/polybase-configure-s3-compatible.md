@@ -1,16 +1,13 @@
 ---
 title: "Access external data: S3-compatible object storage - PolyBase"
 description: The article explains how to use PolyBase on a SQL Server instance to query external data in S3-compatible object storage. Create external tables to reference the external data.
-ms.date: 11/10/2022
-ms.metadata: seo-lt-2019
-ms.service: sql
-ms.subservice: polybase
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
+ms.date: 11/10/2022
+ms.service: sql
+ms.subservice: polybase
+ms.topic: conceptual
 monikerRange: ">= sql-server-linux-ver16 || >= sql-server-ver16"
 ---
 # Configure PolyBase to access external data in S3-compatible object storage

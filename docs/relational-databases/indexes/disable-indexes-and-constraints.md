@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "statistical information [SQL Server], indexes"
   - "index disabling [SQL Server]"
   - "indexed views [SQL Server], disabled indexes"
-ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Indexes and Constraints

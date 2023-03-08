@@ -1,23 +1,20 @@
 ---
+title: "STGeomFromText (geography Data Type)"
 description: "STGeomFromText (geography Data Type)"
-title: "STGeomFromText (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomFromText (geography Data Type)"
   - "STGeomFromText_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full globe"
   - "STGeomFromText method"
-ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomFromText (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

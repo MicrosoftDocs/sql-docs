@@ -1,20 +1,16 @@
 ---
-description: "Draw Reflexive Relationships (Visual Database Tools)"
 title: Draw Reflexive Relationships
-ms.custom: seo-lt-2019
+description: "Draw Reflexive Relationships (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "drawing reflexive relationships"
   - "reflexive relationships"
   - "database diagrams [SQL Server], relationships"
-ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Draw Reflexive Relationships (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

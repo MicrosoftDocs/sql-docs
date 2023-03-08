@@ -7,9 +7,6 @@ ms.reviewer: maghan, randolphwest
 ms.date: 02/10/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom:
-  - seodec18
-  - contperf-fy21q4
 ---
 
 # Release notes for Azure Data Studio

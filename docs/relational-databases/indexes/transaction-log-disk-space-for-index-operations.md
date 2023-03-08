@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], disk space"
   - "disk space [SQL Server], transaction logs"
   - "space [SQL Server], transaction logs"
-ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 ---
 # Transaction Log Disk Space for Index Operations
  [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

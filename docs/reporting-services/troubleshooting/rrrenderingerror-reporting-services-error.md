@@ -1,17 +1,14 @@
 ---
-title: "rrRenderingError - Reporting Services Error | Microsoft Docs"
+title: "rrRenderingError - Reporting Services Error"
 description: "In this error reference page, learn about event ID 'rrRenderingError': An error occurred during rendering of the report."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: troubleshooting
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rrRenderingError"
-ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
-author: maggiesMSFT
-ms.author: maggies
 ---
 # rrRenderingError - Reporting Services Error
     

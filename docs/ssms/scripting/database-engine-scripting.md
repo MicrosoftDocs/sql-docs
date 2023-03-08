@@ -1,20 +1,17 @@
 ---
 title: "Database Engine Scripting"
 description: Learn how you can use the Microsoft PowerShell scripting environment to manage instances of the SQL Server Database Engine, and how you can build and run Database Engine queries that contain Transact-SQL and XQuery.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scripts [SQL Server], PowerShell"
   - "scripts [SQL Server]"
   - "scripting [SQL Server Database Engine]"
   - "scripting [SQL Server Database Engine], PowerShell"
-ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Engine Scripting

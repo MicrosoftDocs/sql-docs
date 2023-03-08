@@ -1,18 +1,17 @@
 ---
 title: "Shape XML with Nested FOR XML Queries"
 description: View an example of using nested FOR XML queries to shape the resulting XML.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML query"
   - "queries [XML in SQL Server], nested FOR XML"
   - "XML [SQL Server], FOR XML queries"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Shape XML with nested FOR XML queries
 

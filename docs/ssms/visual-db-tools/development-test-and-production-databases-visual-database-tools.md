@@ -1,20 +1,16 @@
 ---
-description: "Development, Test, and Production Databases (Visual Database Tools)"
 title: Development, Test, and Production Databases
-ms.custom: seo-lt-2019
+description: "Development, Test, and Production Databases (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "production databases [SQL Server]"
   - "testing databases"
   - "database testing [SQL Server]"
-ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Development, Test, and Production Databases (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

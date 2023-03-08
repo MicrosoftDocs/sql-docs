@@ -1,18 +1,15 @@
 ---
 title: "Drag and Drop Text"
 description: Learn how to drag text from an editor or Object Explorer and then drop it in an editor location or the Recycle Bin.
+author: markingmyname
+ms.author: maghan
+ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dragging and dropping text"
   - "Query Editor [SQL Server Management Studio], dragging and dropping text"
-ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

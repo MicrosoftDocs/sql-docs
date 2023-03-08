@@ -3,7 +3,7 @@ title: "sys.dm_exec_query_memory_grants (Transact-SQL)"
 description: sys.dm_exec_query_memory_grants (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "11/05/2021"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -65,6 +65,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
    
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
 
  Queries that use dynamic management views that include `ORDER BY` or aggregates may increase memory consumption and thus contribute to the problem they are troubleshooting.  

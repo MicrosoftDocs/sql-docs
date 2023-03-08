@@ -12,7 +12,6 @@ ms.topic: conceptual
 dev_langs:
   - "yaml"
   - "console"
-ms.metadata: seo-lt-2019
 ---
 
 # Introducing app deployment in [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]

@@ -1,15 +1,12 @@
 ---
-description: "ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory"
 title: "ConnectionValidSharedMemory dbmslpcn.dll"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157
+description: "ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory

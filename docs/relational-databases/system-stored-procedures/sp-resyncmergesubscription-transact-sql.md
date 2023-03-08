@@ -1,22 +1,19 @@
 ---
+title: "sp_resyncmergesubscription (Transact-SQL)"
 description: "sp_resyncmergesubscription (Transact-SQL)"
-title: "sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_resyncmergesubscription_TSQL"
-  - "sp_resyncmergesubscription"
-helpviewer_keywords: 
-  - "sp_resyncmergesubscription"
-ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_resyncmergesubscription_TSQL"
+  - "sp_resyncmergesubscription"
+helpviewer_keywords:
+  - "sp_resyncmergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

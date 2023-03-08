@@ -3,7 +3,7 @@ title: "sys.dm_server_services (Transact-SQL)"
 description: sys.dm_server_services (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "01/07/2018"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_server_services dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 ---
 # sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +37,14 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 |is_clustered|**nvarchar(1)**|Indicates whether the service is installed as a resource of a clustered server. Cannot be null.|  
 |cluster_nodename|**nvarchar(256)**|The name of the cluster node on which the service is installed. Is nullable.|
 |instant_file_initialization_enabled|**nvarchar(1)**|Specifies whether instant file initialization is enabled for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = instant file initialization is enabled for the service.<br /><br />N = instant file initialization is disabled for the service.<br /><br /> Is nullable.<br /><br /> **Note:** Does not apply to other services such as the SQL Server Agent.<br /><br /> **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later).|  
-
-## Security  
   
-### Permissions  
+## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER SECURITY STATE permission on the server.
+
+## See also  
  [sys.dm_server_registry &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "cdc.<capture_instance>_CT"
 dev_langs:
   - "TSQL"
-ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

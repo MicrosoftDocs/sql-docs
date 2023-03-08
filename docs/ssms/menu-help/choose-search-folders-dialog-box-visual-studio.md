@@ -1,15 +1,12 @@
 ---
-description: "Choose Search Folders Dialog Box (Visual Studio)"
 title: "Choose Search Folders Dialog Box (Visual Studio)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
+description: "Choose Search Folders Dialog Box (Visual Studio)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
 ---
 # Choose Search Folders Dialog Box (Visual Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

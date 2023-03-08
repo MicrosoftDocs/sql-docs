@@ -1,18 +1,15 @@
 ---
+title: "Using Operating System Authentication"
 description: "Using Operating System Authentication"
-title: "Using Operating System Authentication | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC driver for Oracle [ODBC], authentication"
-  - "authentication [ODBC]"
-ms.assetid: 613daef7-3171-42d0-b7e3-3879280f864d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC driver for Oracle [ODBC], authentication"
+  - "authentication [ODBC]"
 ---
 # Using Operating System Authentication
 > [!IMPORTANT]  

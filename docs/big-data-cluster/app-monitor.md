@@ -9,7 +9,6 @@ ms.date: 06/28/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Monitor applications with azdata and Grafana Dashboard

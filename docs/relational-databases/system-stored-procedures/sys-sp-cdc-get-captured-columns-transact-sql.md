@@ -1,26 +1,23 @@
 ---
+title: "sys.sp_cdc_get_captured_columns (Transact-SQL)"
 description: "sys.sp_cdc_get_captured_columns (Transact-SQL)"
-title: "sys.sp_cdc_get_captured_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cdc_get_captured_columns"
   - "sys.sp_cdc_get_captured_columns"
   - "sys.sp_cdc_get_captured_columns_TSQL"
   - "sp_cdc_get_captured_columns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_cdc_get_captured_columns"
   - "sp_cdc_get_captured_columns"
   - "change data capture [SQL Server], querying metadata"
-ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

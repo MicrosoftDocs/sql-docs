@@ -1,19 +1,16 @@
 ---
-title: "Resource Governor Workload Group | Microsoft Docs"
-description: In the SQL Server Resource Governor, a workload group is a container for session requests that have similar classification criteria. 
-ms.custom: ""
+title: "Resource Governor Workload Group"
+description: In the SQL Server Resource Governor, a workload group is a container for session requests that have similar classification criteria.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Resource Governor, workload group"
   - "workload groups [SQL Server]"
   - "workload groups [SQL Server], overview"
-ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Resource Governor Workload Group
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

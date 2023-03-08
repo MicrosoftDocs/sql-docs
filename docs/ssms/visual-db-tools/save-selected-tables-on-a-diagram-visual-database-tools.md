@@ -1,18 +1,14 @@
 ---
-description: "Save Selected Tables on a Diagram (Visual Database Tools)"
 title: Save Selected Tables on a Diagram
-ms.custom: seo-lt-2019
+description: "Save Selected Tables on a Diagram (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "saving tables"
-ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)
 

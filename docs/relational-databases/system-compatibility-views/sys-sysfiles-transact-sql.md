@@ -1,25 +1,22 @@
 ---
+title: "sys.sysfiles (Transact-SQL)"
 description: "sys.sysfiles (Transact-SQL)"
-title: "sys.sysfiles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysfiles"
   - "sys.sysfiles_TSQL"
   - "sys.sysfiles"
   - "sysfiles_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysfiles system table"
   - "sys.sysfiles compatibility view"
-ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

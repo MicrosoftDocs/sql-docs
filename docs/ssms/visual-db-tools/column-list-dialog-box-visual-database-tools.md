@@ -1,18 +1,14 @@
 ---
-description: "Column List Dialog Box (Visual Database Tools)"
 title: Column List Dialog Box
-ms.custom: seo-lt-2019
+description: "Column List Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.columnlist"
-ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Column List Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

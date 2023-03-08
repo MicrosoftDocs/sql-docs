@@ -7,7 +7,7 @@ ms.reviewer: alayu
 ms.date: 09/24/2019
 ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: seodec18
+ms.custom: updatefrequency5
 ---
 
 # Source control in Azure Data Studio

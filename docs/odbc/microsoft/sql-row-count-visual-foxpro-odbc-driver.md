@@ -1,17 +1,14 @@
 ---
+title: "SQL Row Count (Visual FoxPro ODBC Driver)"
 description: "SQL Row Count (Visual FoxPro ODBC Driver)"
-title: "SQL Row Count (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL row count [ODBC]"
-ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL row count [ODBC]"
 ---
 # SQL Row Count (Visual FoxPro ODBC Driver)
 > [!NOTE]  

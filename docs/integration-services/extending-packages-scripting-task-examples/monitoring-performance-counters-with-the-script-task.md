@@ -1,24 +1,21 @@
 ---
+title: "Monitoring Performance Counters with the Script Task"
 description: "Monitoring Performance Counters with the Script Task"
-title: "Monitoring Performance Counters with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "performance counters [Integration Services]"
   - "SSIS Script task, performance counters"
   - "custom performance counters [Integration Services]"
   - "Script task [Integration Services], examples"
   - "Script task [Integration Services], performance counters"
   - "counters [Integration Services]"
-ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Monitoring Performance Counters with the Script Task
 

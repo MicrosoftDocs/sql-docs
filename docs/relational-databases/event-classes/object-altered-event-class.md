@@ -1,17 +1,14 @@
 ---
+title: "Object:Altered Event Class"
 description: "Object:Altered Event Class"
-title: "Object:Altered Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Object:Altered event class"
-ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Object:Altered event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Object:Altered Event Class

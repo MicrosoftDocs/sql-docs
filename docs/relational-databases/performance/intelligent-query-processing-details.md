@@ -1,17 +1,13 @@
 ---
 title: "Intelligent query processing details"
 description: "Intelligent query processing features described in detail."
-ms.service: sql
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.reviewer: "wiassaf"
-ms.custom:
-- seo-dt-2019
-- event-tier1-build-2022
 ms.date: 11/01/2022
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

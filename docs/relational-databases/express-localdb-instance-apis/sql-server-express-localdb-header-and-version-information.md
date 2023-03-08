@@ -1,16 +1,12 @@
 ---
-description: "SQL Server Express LocalDB Header and Version Information"
 title: "SQL Server Express LocalDB header & version information"
-ms.date: 11/10/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apilocation: 
-  - "sqluserinstance.dll"
+description: "SQL Server Express LocalDB Header and Version Information"
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-dt-2019
+ms.date: 11/10/2022
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
 ---
 # SQL Server Express LocalDB Header and Version Information
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

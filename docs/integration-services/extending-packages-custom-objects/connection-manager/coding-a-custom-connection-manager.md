@@ -1,17 +1,14 @@
 ---
+title: "Coding a Custom Connection Manager"
 description: "Coding a Custom Connection Manager"
-title: "Coding a Custom Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom connection managers [Integration Services], coding"
-ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom connection managers [Integration Services], coding"
 ---
 # Coding a Custom Connection Manager
 

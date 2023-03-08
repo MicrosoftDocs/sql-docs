@@ -7,13 +7,11 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath queries [SQLXML], location paths"
   - "principal node types [SQLXML]"
   - "node tests [SQLXML]"
   - "location path for XPath query"
-ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Node Test in the Location Path (SQLXML 4.0)

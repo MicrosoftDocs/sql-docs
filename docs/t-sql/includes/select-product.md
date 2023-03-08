@@ -1,9 +1,9 @@
 ---
 author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 07/02/2020
 ms.service: sql
 ms.topic: include
-ms.date: 07/02/2020
-ms.author: mikeray
 ---
 ## Select a product
 

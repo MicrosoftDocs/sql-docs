@@ -11,7 +11,6 @@ f1_keywords:
   - "sql13.swb.maint.historycleanup.f1"
 helpviewer_keywords:
   - "History Cleanup Task dialog box"
-ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 ---
 # History Cleanup Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

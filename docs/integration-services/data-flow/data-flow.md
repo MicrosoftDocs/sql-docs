@@ -1,22 +1,19 @@
 ---
+title: "Data Flow"
 description: "Data Flow"
-title: "Data Flow | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "output data [Integration Services]"
   - "data flow [Integration Services], elements"
   - "input data [Integration Services]"
   - "external metadata [Integration Services]"
   - "data flow [Integration Services]"
   - "errors [Integration Services], data flow outputs"
-ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: chugugrace
-ms.author: chugu
 ---
 # Data Flow
 

@@ -1,15 +1,12 @@
 ---
+title: "New GUI Features in SSMA for Access to SQL"
 description: "New GUI Features in SSMA for Access to SQL"
-title: "New GUI Features in SSMA for Access to SQL | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # New GUI Features in SSMA for Access to SQL
 This chapter describes new features of SSMA User Interface  

@@ -1,25 +1,22 @@
 ---
+title: "sys.sysconstraints (Transact-SQL)"
 description: "sys.sysconstraints (Transact-SQL)"
-title: "sys.sysconstraints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysconstraints"
   - "sys.sysconstraints"
   - "sysconstraints_TSQL"
   - "sys.sysconstraints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sysconstraints compatibility view"
   - "sysconstraints system table"
-ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

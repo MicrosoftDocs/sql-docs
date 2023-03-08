@@ -1,15 +1,12 @@
 ---
-title: "RGDI Device Information Settings | Microsoft Docs"
+title: "RGDI Device Information Settings"
 description: Learn about the RGDI device information settings that are available for rendering in RGDI format.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
-
-
 ms.topic: conceptual
-ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
-author: maggiesMSFT
-ms.author: maggies
 ---
 # RGDI Device Information Settings
   The following table lists the device information settings for rendering in RGDI format.  

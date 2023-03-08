@@ -1,14 +1,13 @@
 ---
 title: "Plan for Always Encrypted with secure enclaves in SQL Server without attestation"
 description: "Plan for Always Encrypted with secure enclaves in SQL Server without attestation."
-ms.custom:
-ms.date: "02/01/2023"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "02/01/2023"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: ">= sql-server-ver15"
 ---
 

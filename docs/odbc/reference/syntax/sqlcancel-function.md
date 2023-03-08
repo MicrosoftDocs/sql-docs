@@ -1,24 +1,19 @@
 ---
+title: "SQLCancel Function"
 description: "SQLCancel Function"
-title: "SQLCancel Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLCancel"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLCancel"
-helpviewer_keywords: 
-  - "SQLCancel function [ODBC]"
-ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLCancel"
+helpviewer_keywords:
+  - "SQLCancel function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLCancel"
+apitype: "dllExport"
 ---
 # SQLCancel Function
 **Conformance**  

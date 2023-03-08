@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysmail_mailattachments database mail view"
 dev_langs:
   - "TSQL"
-ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 ---
 # sysmail_mailattachments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

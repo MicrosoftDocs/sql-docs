@@ -1,23 +1,20 @@
 ---
+title: "sp_serveroption (Transact-SQL)"
 description: "sp_serveroption (Transact-SQL)"
-title: "sp_serveroption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/11/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_serveroption_TSQL"
-  - "sp_serveroption"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "7343 (Database Engine error)"
-  - "sp_serveroption"
-ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: markingmyname
 ms.author: maghan
+ms.date: "09/11/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_serveroption_TSQL"
+  - "sp_serveroption"
+helpviewer_keywords:
+  - "7343 (Database Engine error)"
+  - "sp_serveroption"
+dev_langs:
+  - "TSQL"
 ---
 # sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

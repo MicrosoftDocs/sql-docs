@@ -1,19 +1,16 @@
 ---
-title: "Change the Configuration Settings for a Database | Microsoft Docs"
+title: "Change the Configuration Settings for a Database"
 description: "Learn how to change database-level options in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL."
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database configuration [SQL Server]"
   - "configuration options [SQL Server], databases"
   - "modifying database configuration settings"
-ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change the Configuration Settings for a Database

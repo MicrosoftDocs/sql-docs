@@ -1,13 +1,13 @@
 ---
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft SqlPackage.
-ms.custom: "tools|sos"
-ms.date: 2/13/2023
-ms.service: sql
-ms.reviewer: "llali"
-ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
+ms.reviewer: "llali"
+ms.date: 2/13/2023
+ms.service: sql
+ms.topic: conceptual
+ms.custom: tools|sos
 ---
 # Release notes for SqlPackage
 

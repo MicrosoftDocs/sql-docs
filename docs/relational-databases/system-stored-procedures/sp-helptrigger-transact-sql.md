@@ -1,22 +1,19 @@
 ---
+title: "sp_helptrigger (Transact-SQL)"
 description: "sp_helptrigger (Transact-SQL)"
-title: "sp_helptrigger (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helptrigger"
-  - "sp_helptrigger_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helptrigger"
-ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helptrigger"
+  - "sp_helptrigger_TSQL"
+helpviewer_keywords:
+  - "sp_helptrigger"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helptrigger (Transact-SQL)

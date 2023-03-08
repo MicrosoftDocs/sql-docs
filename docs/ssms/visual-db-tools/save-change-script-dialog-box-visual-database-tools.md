@@ -1,19 +1,15 @@
 ---
-description: "Save Change Script Dialog Box (Visual Database Tools)"
 title: Save Change Script Dialog Box
-ms.custom: seo-lt-2019
+description: "Save Change Script Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.generatechangescript"
   - "vdtsql.chm:65544"
-ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Save Change Script Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
-description: "Create a Central Management Server and Server Group"
 title: Create a Central Management Server
+description: "Create a Central Management Server and Server Group"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "configuration server"
-ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ---
 
 # Create a Central Management Server and Server Group

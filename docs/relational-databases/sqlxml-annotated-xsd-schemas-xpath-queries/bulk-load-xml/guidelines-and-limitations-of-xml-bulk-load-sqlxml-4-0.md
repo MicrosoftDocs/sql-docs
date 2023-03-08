@@ -7,11 +7,9 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XML Bulk Load [SQLXML], about XML Bulk Load"
   - "bulk load [SQLXML], about bulk load"
-ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines and Limitations of XML Bulk Load (SQLXML 4.0)

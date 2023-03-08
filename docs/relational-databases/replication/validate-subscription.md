@@ -1,19 +1,17 @@
 ---
+title: "Validate Subscription"
 description: "Validate Subscription"
-title: "Validate Subscription | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.validate.validateandresynch.f1"
-helpviewer_keywords: 
-  - "Validate Subscription dialog box"
-ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.validate.validateandresynch.f1"
+helpviewer_keywords:
+  - "Validate Subscription dialog box"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Validate Subscription

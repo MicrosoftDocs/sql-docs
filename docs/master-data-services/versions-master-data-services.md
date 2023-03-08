@@ -1,20 +1,17 @@
 ---
 title: Versions
 description: You can create multiple versions of the master data within a model in Master Data Services. Learn about versions and when to use them.
-ms.custom: ""
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "version flags [Master Data Services], about version flags"
   - "versions [Master Data Services]"
   - "version flags [Master Data Services]"
   - "versions [Master Data Services], version flags"
-ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Versions (Master Data Services)
 

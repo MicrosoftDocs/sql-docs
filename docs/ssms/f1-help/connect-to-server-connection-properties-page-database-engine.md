@@ -1,17 +1,15 @@
 ---
 title: Connect to Server (Connection Properties Page) Database Engine
 description: "Connect to Server (Connection Properties Page) Database Engine"
+author: markingmyname
+ms.author: maghan
+ms.date: 08/14/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.connecttoce.connectionproperties.f1"
   - "sql13.swb.connecttosqlserver.connectionproperties.f1"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 08/14/2017
 ---
 
 # Connect to Server (Connection Properties Page) Database Engine

@@ -1,14 +1,12 @@
 ---
 title: "SQL Server, Memory Node object"
 description: Learn about the Memory Node object, which provides counters to monitor server memory usage on NUMA nodes in SQL Server.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
 ---
 # SQL Server, Memory Node object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

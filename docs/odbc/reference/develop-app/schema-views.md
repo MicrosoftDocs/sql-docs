@@ -1,19 +1,16 @@
 ---
+title: "Schema Views"
 description: "Schema Views"
-title: "Schema Views | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "schema views [ODBC]"
   - "functions [ODBC], catalog functions"
   - "catalog functions [ODBC], schema views"
-ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Schema Views
 An application can retrieve metadata information from the DBMS either by calling ODBC catalog functions or by using INFORMATION_SCHEMA views. The views are defined by the ANSI SQL-92 standard.  

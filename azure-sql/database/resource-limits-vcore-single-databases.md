@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
 ms.custom:
-  - "sqldbrb=1"
-  - "references_regions"
+  - sqldbrb=1
+  - references_regions
 ---
 # Resource limits for single databases using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

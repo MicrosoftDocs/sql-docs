@@ -1,20 +1,17 @@
 ---
+title: "Creating an ODBC Destination with the Script Component"
 description: "Creating an ODBC Destination with the Script Component"
-title: "Creating an ODBC Destination with the Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "10/10/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script component [Integration Services], destination components"
   - "ODBC destination [Integration Services]"
   - "destinations [Integration Services], components"
   - "Script component [Integration Services], examples"
-ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-author: chugugrace
-ms.author: chugu
 ---
 # Creating an ODBC Destination with the Script Component
 

@@ -1,14 +1,13 @@
 ---
-title: Configure multiple-subnet availability group & FCI (Linux) 
-description: Learn to configure multiple-subnet Always On availability groups and failover cluster instances (FCI) for SQL Server on Linux. 
-ms.custom: seo-lt-2019
+title: Configure multiple-subnet availability group & FCI (Linux)
+description: Learn to configure multiple-subnet Always On availability groups and failover cluster instances (FCI) for SQL Server on Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto, randolphwest
 ms.date: 04/11/2022
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
+ms.topic: conceptual
 ---
 
 # Configure multiple-subnet Always On Availability Groups and failover cluster instances

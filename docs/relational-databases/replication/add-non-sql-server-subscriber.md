@@ -1,17 +1,15 @@
 ---
+title: "Add Non-SQL Server Subscriber"
 description: "Add Non-SQL Server Subscriber"
-title: "Add Non-SQL Server Subscriber | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.addnonsqlsubscriber.f1"
-ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.addnonsqlsubscriber.f1"
 ---
 # Add Non-SQL Server Subscriber
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

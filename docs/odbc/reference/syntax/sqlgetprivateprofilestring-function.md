@@ -1,24 +1,19 @@
 ---
+title: "SQLGetPrivateProfileString Function"
 description: "SQLGetPrivateProfileString Function"
-title: "SQLGetPrivateProfileString Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetPrivateProfileString"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetPrivateProfileString"
-helpviewer_keywords: 
-  - "SQLGetPrivateProfileString function [ODBC]"
-ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetPrivateProfileString"
+helpviewer_keywords:
+  - "SQLGetPrivateProfileString function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetPrivateProfileString"
+apitype: "dllExport"
 ---
 # SQLGetPrivateProfileString Function
 **Conformance**  

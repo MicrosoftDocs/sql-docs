@@ -1,23 +1,20 @@
 ---
+title: "Excel Destination"
 description: "Excel Destination"
-title: "Excel Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "04/02/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.exceldest.f1"
   - "sql13.dts.designer.exceldestadapter.connection.f1"
   - "sql13.dts.designer.exceldestadapter.mappings.f1"
   - "sql13.dts.designer.exceldestadapter.erroroutput.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "destinations [Integration Services], Excel"
   - "Excel [Integration Services]"
-ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: chugugrace
-ms.author: chugu
 ---
 # Excel Destination
 

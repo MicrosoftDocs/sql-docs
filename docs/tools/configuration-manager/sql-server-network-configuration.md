@@ -1,15 +1,12 @@
 ---
 title: "SQL Server Network Configuration"
 description: Get acquainted with the Server Network Configuration dialog boxes in SQL Server Configuration Manager.
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
 author: markingmyname
 ms.author: maghan
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Network Configuration

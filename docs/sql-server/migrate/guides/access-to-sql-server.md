@@ -1,15 +1,13 @@
 ---
-title: 'Access to SQL Server: Migration guide'
-description: 'This guide teaches you how to migrate your Microsoft Access databases to Microsoft SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access).'
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: migration-guide
-ms.topic: how-to
+title: "Access to SQL Server: Migration guide"
+description: "This guide teaches you how to migrate your Microsoft Access databases to Microsoft SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access)."
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 10/05/2021
-ms.custom:
-  - intro-migration
+ms.service: sql
+ms.subservice: migration-guide
+ms.topic: how-to
+ms.custom: intro-migration
 ---
 
 # Migration guide: Access to SQL Server

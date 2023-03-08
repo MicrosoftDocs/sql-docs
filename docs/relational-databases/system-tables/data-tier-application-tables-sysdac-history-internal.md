@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysdac_history_internal"
 dev_langs:
   - "TSQL"
-ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 ---
 # Data-tier Application Tables - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,23 +1,20 @@
 ---
+title: "ROUTINE_COLUMNS (Transact-SQL)"
 description: "ROUTINE_COLUMNS (Transact-SQL)"
-title: "ROUTINE_COLUMNS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "ROUTINE_COLUMNS_TSQL"
-  - "ROUTINE_COLUMNS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ROUTINE_COLUMNS view"
-  - "INFORMATION_SCHEMA.ROUTINE_COLUMNS view"
-ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "ROUTINE_COLUMNS_TSQL"
+  - "ROUTINE_COLUMNS"
+helpviewer_keywords:
+  - "ROUTINE_COLUMNS view"
+  - "INFORMATION_SCHEMA.ROUTINE_COLUMNS view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUTINE_COLUMNS (Transact-SQL)

@@ -8,7 +8,6 @@ ms.date: 12/12/2019
 ms.service: sql
 ms.subservice: dea
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Overview of Database Experimentation Assistant
 

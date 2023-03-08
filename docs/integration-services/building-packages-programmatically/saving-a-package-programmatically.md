@@ -1,18 +1,15 @@
 ---
+title: "Saving a Package Programmatically"
 description: "Saving a Package Programmatically"
-title: "Saving a Package Programmatically | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services 
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "programmatically saving a package"
-  - "saving a package programmatically"
-ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "programmatically saving a package"
+  - "saving a package programmatically"
 ---
 # Saving a Package Programmatically
 

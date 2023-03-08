@@ -1,14 +1,12 @@
 ---
-title: "WideWorldImporters OLAP database catalog - SQL | Microsoft Docs"
+title: "WideWorldImporters OLAP database catalog - SQL"
 description: Understand the schemas, tables, and stored procedures used for data warehousing and analytical processing in the WideWorldImportersDW database.
-ms.service: sql
-ms.subservice: samples
-ms.custom: ""
-ms.date: "08/04/2018"
-ms.reviewer: ""
-ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/04/2018"
+ms.service: sql
+ms.subservice: samples
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current"
 ---
 # WideWorldImportersDW database catalog

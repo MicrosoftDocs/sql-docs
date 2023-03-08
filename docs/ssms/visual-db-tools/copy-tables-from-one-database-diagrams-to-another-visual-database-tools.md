@@ -1,19 +1,15 @@
 ---
-description: "Copy Tables from One Database Diagrams to Another (Visual Database Tools)"
 title: Copy Tables from One Database Diagrams to Another
-ms.custom: seo-lt-2019
+description: "Copy Tables from One Database Diagrams to Another (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "copying tables"
   - "duplicating tables"
-ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Copy Tables from One Database Diagrams to Another (Visual Database Tools)
 

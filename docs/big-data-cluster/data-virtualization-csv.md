@@ -9,7 +9,6 @@ ms.date: 04/24/2020
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Virtualize CSV data from storage pool (Big Data Clusters)

@@ -1,29 +1,19 @@
---- 
- 
-# required metadata 
-title: "featurize_text: Machine Learning Text Transform" 
-description: "Text transforms that can be performed on data before training a model." 
-keywords: "transform, featurizer, text" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "featurize_text: Machine Learning Text Transform"
+description: "Text transforms that can be performed on data before training a model."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - transform
+  - featurizer
+  - text
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.featurize_text*: Converts text columns into numerical features
 
 

@@ -1,16 +1,16 @@
 ---
 title: SELECT (Transact-SQL)
 description: SELECT (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: "10/24/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SELECT_TSQL"
   - "SELECT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "retrieving rows"
   - "SELECT statement [SQL Server]"
   - "SELECT statement [SQL Server], about SELECT statement"
@@ -19,11 +19,8 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], SELECT statement"
   - "row retrieval [SQL Server]"
   - "queries [SQL Server], results"
-author: VanMSFT
-ms.author: vanto
-ms.custom:
-- event-tier1-build-2022
-ms.date: "10/24/2017"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT (Transact-SQL)

@@ -1,24 +1,22 @@
 ---
+title: "sys.fn_cdc_increment_lsn (Transact-SQL)"
 description: "sys.fn_cdc_increment_lsn (Transact-SQL)"
-title: "sys.fn_cdc_increment_lsn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/29/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_cdc_increment_lsn_TSQL"
   - "sys.fn_cdc_increment_lsn_TSQL"
   - "sys.fn_cdc_increment_lsn"
   - "fn_cdc_increment_lsn"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_increment_lsn"
   - "sys.fn_cdc_increment_lsn"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

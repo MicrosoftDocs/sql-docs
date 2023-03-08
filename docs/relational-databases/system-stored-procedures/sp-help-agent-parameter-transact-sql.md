@@ -1,22 +1,19 @@
 ---
+title: "sp_help_agent_parameter (Transact-SQL)"
 description: "sp_help_agent_parameter (Transact-SQL)"
-title: "sp_help_agent_parameter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_help_agent_parameter"
-  - "sp_help_agent_parameter_TSQL"
-helpviewer_keywords: 
-  - "sp_help_agent_parameter"
-ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_agent_parameter"
+  - "sp_help_agent_parameter_TSQL"
+helpviewer_keywords:
+  - "sp_help_agent_parameter"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

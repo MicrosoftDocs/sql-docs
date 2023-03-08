@@ -1,17 +1,15 @@
 ---
+title: "Updatable Subscriptions"
 description: "Updatable Subscriptions"
-title: "Updatable Subscriptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.updatablesubscriptions.f1"
-ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.updatablesubscriptions.f1"
 ---
 # Updatable Subscriptions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

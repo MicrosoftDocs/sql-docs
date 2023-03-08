@@ -1,16 +1,13 @@
 ---
 title: Install and Manage Feature Extensions
 description: Learn how to install feature extensions so that you can increase the functionality of SQL Server Data Tools. See where to install different types of extensions.
+author: markingmyname
+ms.author: maghan
+ms.date: 04/26/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-author: markingmyname
-ms.author: maghan
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
-ms.date: 04/26/2017
+ms.custom: intro-installation
 ---
 
 # How to: Install and Manage Feature Extensions

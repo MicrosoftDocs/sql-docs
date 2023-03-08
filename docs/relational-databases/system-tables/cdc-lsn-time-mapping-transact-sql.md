@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "cdc.lsn_time_mapping"
 dev_langs:
   - "TSQL"
-ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 ---
 # cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

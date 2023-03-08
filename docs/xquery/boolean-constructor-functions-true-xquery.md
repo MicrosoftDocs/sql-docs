@@ -1,20 +1,17 @@
 ---
-title: "true Function (XQuery) | Microsoft Docs"
+title: "true Function (XQuery)"
 description: Learn about the XQuery function true() that returns the Boolean value True.
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:true function"
-  - "true function"
-ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: "rothja"
 ms.author: "jroth"
+ms.date: "08/10/2016"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:true function"
+  - "true function"
+dev_langs:
+  - "XML"
 ---
 # Boolean Constructor Functions - true (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

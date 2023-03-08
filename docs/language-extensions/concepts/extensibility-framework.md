@@ -1,15 +1,12 @@
 ---
 title: Extensibility architecture in SQL Server Language Extensions
-titleSuffix:
 description: "Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. Starting in SQL Server 2019, Java, Python and R are supported. The code executes in a language runtime environment as an extension to the core database engine."
 author: rothja
-ms.author: jroth 
+ms.author: jroth
 ms.date: 05/24/2022
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 ms.service: sql
 ms.subservice: language-extensions
+ms.topic: conceptual
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 

@@ -1,24 +1,19 @@
 ---
+title: "SQLFreeEnv Function"
 description: "SQLFreeEnv Function"
-title: "SQLFreeEnv Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLFreeEnv"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLFreeEnv"
-helpviewer_keywords: 
-  - "SQLFreeEnv function [ODBC]"
-ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLFreeEnv"
+helpviewer_keywords:
+  - "SQLFreeEnv function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLFreeEnv"
+apitype: "dllExport"
 ---
 # SQLFreeEnv Function
 **Conformance**  

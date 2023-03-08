@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7904"
 description: "MSSQLSERVER_7904"
-title: "MSSQLSERVER_7904 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7904 (Database Engine error)"
-ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7904 (Database Engine error)"
 ---
 # MSSQLSERVER_7904
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

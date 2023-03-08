@@ -7,10 +7,8 @@ ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_dictionaries (Transact-SQL)

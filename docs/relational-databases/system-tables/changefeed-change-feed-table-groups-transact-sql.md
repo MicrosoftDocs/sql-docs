@@ -3,8 +3,8 @@ title: "changefeed.change_feed_table_groups (Transact-SQL)"
 description: "changefeed.change_feed_table_groups stores metadata with their associated indexes for Azure Synapse Link for SQL."
 author: im-microsoft
 ms.author: imotiwala
-ms.date: 11/07/2022
 ms.reviewer: wiassaf
+ms.date: 11/07/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"

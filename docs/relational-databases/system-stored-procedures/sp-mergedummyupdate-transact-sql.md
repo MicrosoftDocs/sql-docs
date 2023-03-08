@@ -1,22 +1,19 @@
 ---
+title: "sp_mergedummyupdate (Transact-SQL)"
 description: "sp_mergedummyupdate (Transact-SQL)"
-title: "sp_mergedummyupdate (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_mergedummyupdate_TSQL"
-  - "sp_mergedummyupdate"
-helpviewer_keywords: 
-  - "sp_mergedummyupdate"
-ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_mergedummyupdate_TSQL"
+  - "sp_mergedummyupdate"
+helpviewer_keywords:
+  - "sp_mergedummyupdate"
+dev_langs:
+  - "TSQL"
 ---
 # sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

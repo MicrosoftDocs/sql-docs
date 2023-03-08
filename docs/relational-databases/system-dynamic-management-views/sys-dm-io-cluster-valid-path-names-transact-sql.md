@@ -3,7 +3,7 @@ title: "sys.dm_io_cluster_valid_path_names (Transact-SQL)"
 description: sys.dm_io_cluster_valid_path_names (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "cluster shared volume names"
 dev_langs:
   - "TSQL"
-ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 ---
 # sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -42,6 +41,10 @@ ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 ## Permissions  
  The user must have VIEW SERVER STATE permission for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example uses sys.dm_io_cluster_valid_path_names to determine the shared drives on a clustered server instance:  
   
@@ -49,7 +52,7 @@ ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 SELECT * FROM sys.dm_io_cluster_valid_path_names;  
 ```  
   
-## See Also  
+## See also  
  [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

@@ -1,17 +1,15 @@
 ---
 title: "Tracer Tokens (Publication Information)"
 description: A description of the 'Tracer Tokens' tab of the 'Publication Information' page found in Replication Monitor within SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.tracertokens.f1"
-ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.tracertokens.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Information, Tracer Tokens (SQL Server 2005 and Later)

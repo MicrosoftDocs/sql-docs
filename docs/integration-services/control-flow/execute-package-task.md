@@ -1,24 +1,21 @@
 ---
+title: "Execute Package Task"
 description: "Execute Package Task"
-title: "Execute Package Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.executepackagetask.f1"
   - "sql13.dts.designer.executepackagetask.package.f1"
   - "sql13.dts.designer.executepackagetask.parameter.F1"
   - "sql13.dts.designer.executepackagetask.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Execution Package task [Integration Services]"
   - "child packages"
   - "parent packages [Integration Services]"
-ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: chugugrace
-ms.author: chugu
 ---
 # Execute Package Task
 

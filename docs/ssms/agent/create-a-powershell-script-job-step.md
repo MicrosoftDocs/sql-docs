@@ -1,20 +1,17 @@
 ---
-description: "Create a PowerShell Script Job Step"
 title: "Create a PowerShell Script Job Step"
-ms.custom: seo-lt-2019
+description: "Create a PowerShell Script Job Step"
+author: markingmyname
+ms.author: maghan
 ms.date: "01/20/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PowerShell [SQL Server], job steps"
   - "jobs [SQL Server Agent], PowerShell"
   - "job steps [PowerShell]"
   - "SQL Server Agent jobs, PowerShell steps"
-ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a PowerShell Script Job Step

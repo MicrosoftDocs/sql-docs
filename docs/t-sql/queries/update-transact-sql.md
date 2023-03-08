@@ -1,18 +1,16 @@
 ---
+title: "UPDATE (Transact-SQL)"
 description: "UPDATE (Transact-SQL)"
-title: "UPDATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/19/2020"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "UPDATE_TSQL"
   - "UPDATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DML [SQL Server], UPDATE statement"
   - "data updates [SQL Server], UPDATE statement"
   - "updating data [SQL Server]"
@@ -34,9 +32,8 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server]"
   - "FROM clause, UPDATE statement"
   - "WHERE clause, UPDATE statement"
-ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE (Transact-SQL)

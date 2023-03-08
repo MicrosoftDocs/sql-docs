@@ -1,17 +1,14 @@
 ---
-description: "Job Properties - New Job (Schedules Page)"
 title: "Job Properties - New Job (Schedules Page)"
-ms.custom: seo-lt-2019
+description: "Job Properties - New Job (Schedules Page)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.job.schedules.f1"
-ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Job Properties - New Job (Schedules Page)

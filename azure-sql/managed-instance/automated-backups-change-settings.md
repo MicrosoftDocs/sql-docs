@@ -10,10 +10,10 @@ ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom:
-  - "references_regions"
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
-  - "azure-sql-split"
+  - references_regions
+  - devx-track-azurepowershell
+  - devx-track-azurecli
+  - azure-sql-split
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Change automated backup settings for Azure SQL Managed Instance

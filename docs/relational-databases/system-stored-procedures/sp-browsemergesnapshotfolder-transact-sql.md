@@ -1,22 +1,19 @@
 ---
+title: "sp_browsemergesnapshotfolder (Transact-SQL)"
 description: "sp_browsemergesnapshotfolder (Transact-SQL)"
-title: "sp_browsemergesnapshotfolder (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_browsemergesnapshotfolder"
-  - "sp_browsemergesnapshotfolder_TSQL"
-helpviewer_keywords: 
-  - "sp_browsemergesnapshotfolder"
-ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_browsemergesnapshotfolder"
+  - "sp_browsemergesnapshotfolder_TSQL"
+helpviewer_keywords:
+  - "sp_browsemergesnapshotfolder"
+dev_langs:
+  - "TSQL"
 ---
 # sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

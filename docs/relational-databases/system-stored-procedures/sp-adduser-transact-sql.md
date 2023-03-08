@@ -1,22 +1,19 @@
 ---
+title: "sp_adduser (Transact-SQL)"
 description: "sp_adduser (Transact-SQL)"
-title: "sp_adduser (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_adduser"
-  - "sp_adduser_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_adduser"
-ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_adduser"
+  - "sp_adduser_TSQL"
+helpviewer_keywords:
+  - "sp_adduser"
+dev_langs:
+  - "TSQL"
 ---
 # sp_adduser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

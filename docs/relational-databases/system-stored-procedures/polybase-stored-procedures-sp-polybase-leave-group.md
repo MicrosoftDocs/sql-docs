@@ -1,21 +1,19 @@
 ---
-title: "sp_polybase_leave_group (Transact-SQL) | Microsoft Docs"
+title: "sp_polybase_leave_group (Transact-SQL)"
 description: The sp_polybase_leave_group Transact-SQL command removes a SQL Server instance from a PolyBase group for scale-out computation.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_polybase_leave_group"
   - "sp_polybase_leave_group_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_polybase_leave_group"
-ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -2,14 +2,13 @@
 title: Unattended install for SQL Server on RHEL
 titleSuffix: SQL Server
 description: Use a sample bash script to install SQL Server on Red Hat Enterprise Linux (RHEL) without interactive input.
-ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
+ms.topic: conceptual
 ---
 # Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux
 

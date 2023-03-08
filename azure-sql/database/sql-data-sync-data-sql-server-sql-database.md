@@ -9,9 +9,9 @@ ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
 ms.custom:
-  - "data sync"
-  - "sqldbrb=1"
-  - "fasttrack-edit"
+  - data sync
+  - sqldbrb=1
+  - fasttrack-edit
 ---
 # What is SQL Data Sync for Azure?
 

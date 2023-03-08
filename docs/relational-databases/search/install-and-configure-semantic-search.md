@@ -1,19 +1,17 @@
 ---
+title: "Install and Configure Semantic Search"
 description: "Install and Configure Semantic Search"
-title: "Install and Configure Semantic Search | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
+ms.custom: intro-installation
 helpviewer_keywords:
   - "semantic search [SQL Server], installing"
   - "semantic search [SQL Server], configuring"
-ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
-ms.custom:
-  - intro-installation
 ---
 # Install and Configure Semantic Search
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

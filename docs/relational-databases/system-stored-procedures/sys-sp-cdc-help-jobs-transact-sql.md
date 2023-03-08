@@ -1,24 +1,21 @@
 ---
+title: "sys.sp_cdc_help_jobs (Transact-SQL)"
 description: "sys.sp_cdc_help_jobs (Transact-SQL)"
-title: "sys.sp_cdc_help_jobs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cdc_help_jobs"
   - "sys.sp_cdc_help_jobs_TSQL"
   - "sp_cdc_help_jobs_TSQL"
   - "sys.sp_cdc_help_jobs"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_cdc_help_jobs"
-ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_926"
 description: "MSSQLSERVER_926"
-title: "MSSQLSERVER_926 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "926 (Database Engine error)"
-ms.assetid: 57e01668-883b-4be4-84a8-a111caaf0486
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "926 (Database Engine error)"
 ---
 # MSSQLSERVER_926
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

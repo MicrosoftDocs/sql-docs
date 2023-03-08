@@ -1,16 +1,13 @@
 ---
+title: "Using Error Outputs in a Data Flow Component"
 description: "Using Error Outputs in a Data Flow Component"
-title: "Using Error Outputs in a Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "errors [Integration Services], alternative outputs"
   - "synchronous error outputs [Integration Services]"
   - "alternative error outputs [Integration Services]"
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "redirecting error output [Integration Services]"
   - "error outputs [Integration Services]"
   - "asynchronous error outputs [Integration Services]"
-ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Using Error Outputs in a Data Flow Component
 

@@ -3,12 +3,10 @@ title: "SESSION_CONTEXT (Transact-SQL)"
 description: "SESSION_CONTEXT (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "05/14/2019"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SESSION_CONTEXT"
   - "sys.SESSION_CONTEXT"

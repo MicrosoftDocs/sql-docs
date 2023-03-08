@@ -1,13 +1,11 @@
 ---
+title: "Known errors and resolutions with change data capture for Oracle by Attunity"
 description: "Known errors and resolutions with change data capture for Oracle by Attunity"
-title: "Known errors and resolutions with change data capture for Oracle by Attunity | Microsoft Docs"
-ms.date: "07/23/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "07/23/2019"
+ms.service: sql
+ms.topic: reference
 ---
 # Known errors and resolutions with change data capture for Oracle by Attunity
 

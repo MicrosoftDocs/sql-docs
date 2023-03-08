@@ -1,13 +1,13 @@
 ---
+title: "Diagnostic Records and Fields"
 description: "Diagnostic Records and Fields"
-title: "Diagnostic Records and Fields | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "header records [ODBC]"
   - "SQL Server Native Client ODBC driver, errors"
   - "messages [ODBC], diagnostic records"
@@ -17,8 +17,6 @@ helpviewer_keywords:
   - "errors [ODBC], diagnostic records"
   - "fields [ODBC]"
   - "status information [ODBC]"
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Diagnostic Records and Fields

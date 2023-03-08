@@ -1,22 +1,19 @@
 ---
+title: "sp_setsubscriptionxactseqno (Transact-SQL)"
 description: "sp_setsubscriptionxactseqno (Transact-SQL)"
-title: "sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_setsubscriptionxactseqno"
-  - "sp_setsubscriptionxactseqno_TSQL"
-helpviewer_keywords: 
-  - "sp_setsubscriptionxactseqno"
-ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_setsubscriptionxactseqno"
+  - "sp_setsubscriptionxactseqno_TSQL"
+helpviewer_keywords:
+  - "sp_setsubscriptionxactseqno"
+dev_langs:
+  - "TSQL"
 ---
 # sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

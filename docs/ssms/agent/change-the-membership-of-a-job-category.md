@@ -1,20 +1,17 @@
 ---
-description: "Change the Membership of a Job Category"
 title: "Change the Membership of a Job Category"
-ms.custom: seo-lt-2019
+description: "Change the Membership of a Job Category"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, categories"
   - "jobs [SQL Server Agent], categories"
   - "categories [SQL Server Agent jobs]"
   - "members [SQL Server], job categories"
-ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Change the Membership of a Job Category

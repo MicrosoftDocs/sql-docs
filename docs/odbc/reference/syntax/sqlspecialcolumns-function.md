@@ -1,24 +1,19 @@
 ---
+title: "SQLSpecialColumns Function"
 description: "SQLSpecialColumns Function"
-title: "SQLSpecialColumns Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLSpecialColumns"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLSpecialColumns"
-helpviewer_keywords: 
-  - "SQLSpecialColumns function [ODBC]"
-ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLSpecialColumns"
+helpviewer_keywords:
+  - "SQLSpecialColumns function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLSpecialColumns"
+apitype: "dllExport"
 ---
 # SQLSpecialColumns Function
 **Conformance**  

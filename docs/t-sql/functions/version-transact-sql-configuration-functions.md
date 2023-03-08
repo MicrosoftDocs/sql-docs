@@ -3,12 +3,10 @@ title: "@@VERSION (Transact-SQL)"
 description: "@@VERSION - Transact SQL Configuration Functions"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/20/2018"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@VERSION"
   - "@@VERSION_TSQL"

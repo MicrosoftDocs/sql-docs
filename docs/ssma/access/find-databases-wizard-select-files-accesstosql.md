@@ -1,20 +1,16 @@
 ---
+title: "Find Databases Wizard (Select Files) (AccessToSQL)"
 description: "Find Databases Wizard (Select Files) (AccessToSQL)"
-title: "Find Databases Wizard (Select Files) (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Find Databases Wizard"
-ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.access.selectdatabase.f1"
-
+helpviewer_keywords:
+  - "Find Databases Wizard"
 ---
 # Find Databases Wizard (Select Files) (AccessToSQL)
 The Select Files page of the Find Databases Wizard lists the files that were found during the search. To select a file to add to SSMA, select the row that contains the file name. When you are finished selecting files, click **Next** to view the Verify Selection page.  

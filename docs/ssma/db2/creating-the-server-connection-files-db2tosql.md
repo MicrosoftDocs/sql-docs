@@ -1,15 +1,12 @@
 ---
+title: "Creating the Server Connection Files (DB2ToSQL)"
 description: "Creating the Server Connection Files (DB2ToSQL)"
-title: "Creating the Server Connection Files (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "07/14/2020"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
-author: cpichuka 
-ms.author: cpichuka 
 ---
 
 # Creating the Server Connection Files (DB2ToSQL)

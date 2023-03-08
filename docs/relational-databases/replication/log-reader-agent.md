@@ -1,19 +1,17 @@
 ---
+title: "Log Reader Agent"
 description: "Log Reader Agent"
-title: "Log Reader Agent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.logreaderagent.f1"
-helpviewer_keywords: 
-  - "Log Reader Agent dialog box"
-ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.logreaderagent.f1"
+helpviewer_keywords:
+  - "Log Reader Agent dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Log Reader Agent

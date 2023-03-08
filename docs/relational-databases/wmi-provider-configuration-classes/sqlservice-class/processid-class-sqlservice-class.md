@@ -1,22 +1,17 @@
 ---
-description: "ProcessId Class (SqlService Class)"
 title: "ProcessId Class (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ProcessId Class (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ProcessId property"
-ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
+description: "ProcessId Class (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ProcessId property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ProcessId Class (SqlService Class)"
+apitype: "MOFDef"
 ---
 # ProcessId Class (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

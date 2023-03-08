@@ -1,15 +1,12 @@
 ---
-description: "Use Large CLR UDTs  in SQL Server Native Client (OLE DB)"
 title: Use large CLR UDTs (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
+description: "Use Large CLR UDTs  in SQL Server Native Client (OLE DB)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Large CLR UDTs  in SQL Server Native Client (OLE DB)

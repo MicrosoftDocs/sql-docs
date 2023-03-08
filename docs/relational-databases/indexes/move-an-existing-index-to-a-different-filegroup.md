@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "moving indexes"
   - "indexes [SQL Server], moving"
   - "filegroups [SQL Server], switching"
-ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 ---
 # Move an existing index to a different filegroup
 

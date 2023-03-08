@@ -1,19 +1,17 @@
 ---
+title: "Snapshot Agent Security"
 description: "Snapshot Agent Security"
-title: "Snapshot Agent Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.security.SSA.f1"
-helpviewer_keywords: 
-  - "Snapshot Agent Security dialog box"
-ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.security.SSA.f1"
+helpviewer_keywords:
+  - "Snapshot Agent Security dialog box"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Snapshot Agent Security

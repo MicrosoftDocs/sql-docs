@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.resource_usage"
 dev_langs:
   - "TSQL"
-ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 monikerRange: "=azuresqldb-current"
 ---
 # sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)

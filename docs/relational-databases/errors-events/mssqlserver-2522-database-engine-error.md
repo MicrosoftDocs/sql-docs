@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2522"
 description: "MSSQLSERVER_2522"
-title: "MSSQLSERVER_2522 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2522 (Database Engine error)"
-ms.assetid: 19b9b00c-330f-4dd3-9052-9d88bce83849
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2522 (Database Engine error)"
 ---
 # MSSQLSERVER_2522
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

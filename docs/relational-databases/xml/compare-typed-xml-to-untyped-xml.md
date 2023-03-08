@@ -1,10 +1,11 @@
 ---
 title: "Compare Typed XML to Untyped XML"
 description: Learn about the differences between typed and untyped XML.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,8 +23,6 @@ helpviewer_keywords:
   - "document mode processing [SQL Server]"
   - "XML [SQL Server], untyped"
   - "xml data type [SQL Server], parameters"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Compare typed XML to untyped XML
 

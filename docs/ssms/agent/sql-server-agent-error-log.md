@@ -1,20 +1,17 @@
 ---
-description: "SQL Server Agent Error Log"
 title: SQL Server Agent Error Log
+description: "SQL Server Agent Error Log"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logs [SQL Server], SQL Server Agent"
   - "messages [SQL Server], SQL Server Agent"
   - "errors [SQL Server], logs"
   - "SQL Server Agent, errors"
-ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

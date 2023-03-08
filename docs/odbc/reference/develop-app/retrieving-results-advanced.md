@@ -1,19 +1,16 @@
 ---
+title: "Retrieving Results (Advanced)"
 description: "Retrieving Results (Advanced)"
-title: "Retrieving Results (Advanced) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "offsets [ODBC]"
   - "result sets [ODBC], about result sets"
   - "bind offsets [ODBC]"
-ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Retrieving Results (Advanced)
 An application can specify that an offset is added to bound data buffer addresses and the corresponding length/indicator buffer addresses when **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, or **SQLSetPos** is called. The results of these additions determine the addresses used in these operations.  

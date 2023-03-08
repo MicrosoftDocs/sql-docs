@@ -1,13 +1,13 @@
 ---
-title: "Script Deployment and Administrative Tasks | Microsoft Docs"
+title: "Script Deployment and Administrative Tasks"
 description: Learn about the tools, technologies and strategies for automating routine installation, deployment, and administrative tasks for a report server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2017
 ms.service: reporting-services
 ms.subservice: tools
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scripts [Reporting Services]"
   - "moving reports"
   - "report servers [Reporting Services], duplicating settings"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "scripts [Reporting Services], deployments"
   - "transferrng reports"
   - "reports [Reporting Services], migrating"
-ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Script Deployment and Administrative Tasks

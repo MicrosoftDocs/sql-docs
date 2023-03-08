@@ -4,7 +4,7 @@ description: sys.dm_db_page_info (Transact-SQL)
 author: bluefooted
 ms.author: pamela
 ms.reviewer: randolphwest
-ms.date: 12/14/2022
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -125,6 +125,10 @@ A new function, `sys.fn_PageResCracker`, takes the `page_resource` as input and 
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission in the database.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
 ## Examples
 

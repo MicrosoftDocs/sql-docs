@@ -1,18 +1,15 @@
 ---
-description: "Learn how to administer change tracking on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
 title: "Cleanup and troubleshoot Change Tracking"
+description: "Learn how to administer change tracking on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
+author: JetterMcTedder
+ms.author: bspendolini
 ms.date: "10/20/2022"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change tracking, cleanup"
   - "change tracking, troubleshooting"
   - "change tracking, troubleshoot"
-ms.assetid: 
-author: JetterMcTedder
-ms.author: bspendolini
 ---
 # Cleanup and troubleshoot change tracking
 
@@ -56,15 +53,15 @@ The sp_flush_CT_internal_table_on_demand stored procedure will do the following:
 
 - If the tablename parameter isn't passed (@TableToClean), then the procedure will do the following:
 
-    1. Determine the invalid version based on the retention period and persist this value in the sysobjvalues table.
+    1. Determine the invalid version based on the retention period.
 
-    1. Use the invalid version from step the previous step (2a) to do the cleanup on all side tables. If there are tables for which cleanup failed, it will add that to a separate list and proceed with the other tables. After completing all tables, check if there are any tables in the error list and retry these tables.
+    1. Use the invalid version from the previous step to do the cleanup on all side tables. If there are tables for which cleanup failed, it will add that to a separate list and proceed with the other tables. After completing all tables, check if there are any tables in the error list and retry these tables.
 
-    1. If the error list isn't empty even after a retry, return. If the error list is empty, proceed to step d.
+    1. If the error list isn't empty even after a retry, return. If the error list is empty, proceed to step 4.
 
     1. Update Hardened cleanup version and persist the value in sysobjvalues.
 
-    1. Clean up the syscommittab table with the hardened version from step 2d as the watermark.
+    1. Clean up the syscommittab table with the hardened version from step 2 as the watermark.
 
 ## Creating extended events for Change Tracking
 
@@ -146,7 +143,6 @@ drop table #CT_Tables
 ## See also
 
  [About Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
- [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)  
  [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
  [Change Tracking Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)  
  [Change Tracking System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-tracking-tables-transact-sql.md)  

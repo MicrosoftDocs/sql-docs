@@ -1,18 +1,15 @@
 ---
-description: "Open an Existing Solution"
 title: "Open an Existing Solution"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "opening solutions"
-  - "solutions [SQL Server Management Studio], opening"
-ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
+description: "Open an Existing Solution"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "opening solutions"
+  - "solutions [SQL Server Management Studio], opening"
 ---
 # Open an Existing Solution
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

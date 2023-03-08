@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: sample
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ms.devlang: PowerShell
 ---
 

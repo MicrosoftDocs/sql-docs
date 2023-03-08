@@ -9,8 +9,8 @@ ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:
-  - "seoapril2019"
-  - "devx-track-azurepowershell"
+  - seoapril2019
+  - devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

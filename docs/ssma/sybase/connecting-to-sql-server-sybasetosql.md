@@ -1,17 +1,14 @@
 ---
+title: "Connecting to SQL Server (SybaseToSQL)"
 description: "Connecting to SQL Server (SybaseToSQL)"
-title: "Connecting to SQL Server (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "11/16/2020"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Connecting to SQL Server"
-ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
-author: cpichuka 
-ms.author: cpichuka 
 ---
 
 # Connecting to SQL Server (SybaseToSQL)

@@ -1,22 +1,19 @@
 ---
+title: "sp_trace_setfilter (Transact-SQL)"
 description: "sp_trace_setfilter (Transact-SQL)"
-title: "sp_trace_setfilter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_trace_setfilter"
-  - "sp_trace_setfilter_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_trace_setfilter"
-ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_trace_setfilter"
+  - "sp_trace_setfilter_TSQL"
+helpviewer_keywords:
+  - "sp_trace_setfilter"
+dev_langs:
+  - "TSQL"
 ---
 # sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

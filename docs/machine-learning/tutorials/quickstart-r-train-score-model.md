@@ -2,15 +2,13 @@
 title: "Quickstart: Train a model in R"
 titleSuffix: SQL machine learning
 description: In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table, and then use the model to predict values from new data with SQL machine learning.
-ms.service: sql
-ms.subservice: machine-learning
-ms.date: 04/23/2020
-ms.topic: quickstart
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom:
-  - seo-lt-2019
-  - intro-quickstart
+ms.date: 04/23/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: quickstart
+ms.custom: intro-quickstart
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

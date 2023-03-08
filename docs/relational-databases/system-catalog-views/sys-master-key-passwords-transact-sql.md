@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.master_key_passwords catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 ---
 # sys.master_key_passwords (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

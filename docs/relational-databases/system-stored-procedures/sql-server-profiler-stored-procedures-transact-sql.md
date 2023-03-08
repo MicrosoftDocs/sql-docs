@@ -1,23 +1,20 @@
 ---
+title: "SQL Server Profiler Stored Procedures (Transact-SQL)"
 description: "SQL Server Profiler Stored Procedures (Transact-SQL)"
-title: "SQL Server Profiler Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system stored procedures [SQL Server], SQL Server Profiler"
   - "Profiler [SQL Server Profiler], stored procedures"
   - "SQL Server Profiler, stored procedures"
   - "monitoring performance [SQL Server], stored procedures"
   - "performance [SQL Server], stored procedures"
-ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # SQL Server Profiler Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

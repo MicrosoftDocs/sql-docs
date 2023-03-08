@@ -1,19 +1,16 @@
 ---
 title: "Piecemeal restore: simple recovery model"
 description: This example shows a piecemeal restore in SQL Server of a database to a new computer using the simple recovery model.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "piecemeal restores [SQL Server], simple recovery model"
   - "restore sequences [SQL Server], piecemeal"
   - "simple recovery model [SQL Server], RESTORE examples"
-ms.assetid: 9834b14a-4e56-4654-b190-c2a38624b6b4
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Example: Piecemeal Restore of Database (Simple Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

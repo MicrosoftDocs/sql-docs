@@ -7,7 +7,6 @@ ms.date: "09/15/2021"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: reference
-ms.custom: seodec18
 helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], interoperability"

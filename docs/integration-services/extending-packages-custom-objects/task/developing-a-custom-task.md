@@ -1,16 +1,13 @@
 ---
+title: "Developing a Custom Task"
 description: "Developing a Custom Task"
-title: "Developing a Custom Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom tasks [Integration Services], about custom tasks"
   - "Task class"
   - "custom tasks [Integration Services]"
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "DtsTaskAttribute attribute"
   - "tasks [Integration Services], custom"
   - "TaskHost object"
-ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing a Custom Task
 

@@ -1,19 +1,16 @@
 ---
-description: "Derived Hierarchies with Explicit Caps (Master Data Services)"
 title: Derived Hierarchies with Explicit Caps
-ms.custom: ""
+description: "Derived Hierarchies with Explicit Caps (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "hierarchies [Master Data Services], derived hierarchies with explicit caps"
   - "explicit hierarchies, derived hierarchies with explicit caps"
   - "derived hierarchies, derived hierarchies with explicit caps"
-ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Derived Hierarchies with Explicit Caps (Master Data Services)
 

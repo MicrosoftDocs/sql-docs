@@ -1,23 +1,20 @@
 ---
+title: "Adding the Data Flow Task Programmatically"
 description: "Adding the Data Flow Task Programmatically"
-title: "Adding the Data Flow Task Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services 
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "adding Data Flow task"
   - "SSIS data flow"
   - "data flow task [Integration Services], adding"
   - "MainPipe object"
-ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Adding the Data Flow Task Programmatically
 

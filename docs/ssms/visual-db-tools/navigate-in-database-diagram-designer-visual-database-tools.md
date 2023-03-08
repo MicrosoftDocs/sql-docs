@@ -1,20 +1,16 @@
 ---
-description: "Navigate in Database Diagram Designer (Visual Database Tools)"
 title: Navigate in Database Diagram Designer
-ms.custom: seo-lt-2019
+description: "Navigate in Database Diagram Designer (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Diagram Designer"
   - "database diagrams [SQL Server], Database Diagram Designer"
   - "diagrams [SQL Server], Database Diagram Designer"
-ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Navigate in Database Diagram Designer (Visual Database Tools)
 

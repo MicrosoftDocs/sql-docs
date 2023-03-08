@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XML Bulk Load [SQLXML], record generation process"
   - "node scopes [SQLXML]"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "bulk load [SQLXML], record generation process"
   - "leaving node scope [SQLXML]"
   - "schema mapping [SQLXML]"
-ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Record Generation Process (SQLXML 4.0)

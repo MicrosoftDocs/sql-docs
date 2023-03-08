@@ -22,8 +22,8 @@ This quickstart describes how to connect an application to a database in Azure S
 * [.NET 7.0](https://dotnet.microsoft.com/download) or later.
 * [Visual Studio](https://visualstudio.microsoft.com/vs/) or later with the **ASP.NET and web development** workload.
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
-* Visual Studio users should also install the latest version of the [Package Manager Console tools for Entity Framework Core](/ef/core/cli/powershell)
-* .NET CLI users should install the [Entity Framework Core tools](/ef/core/cli/dotnet).
+* Visual Studio users should install the latest version of the [Package Manager Console tools for Entity Framework Core](/ef/core/cli/powershell)
+* .NET CLI users should install the latest version of the [Entity Framework Core tools](/ef/core/cli/dotnet).
 
 ## Configure the database server
 

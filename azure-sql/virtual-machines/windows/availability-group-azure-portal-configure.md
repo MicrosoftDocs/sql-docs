@@ -51,9 +51,9 @@ To configure an Always On availability group by using the Azure portal, you must
 
 - The following account permissions:
 
-  - A domain admin user account that has **Create Computer Object** permissions in the domain. This user will create the cluster and availability group, and will install SQL Server. 
+  - A domain user account that has **Create Computer Object** permissions in the domain. This user will create the cluster and availability group, and will install SQL Server.
   
-    For example, a domain admin account (`account@domain.com`) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
+    For example, a domain user account (`account@domain.com`) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
 
   - A domain SQL Server service account to control SQL Server. This should be the same account for every SQL Server VM that you want to add to the availability group.
 

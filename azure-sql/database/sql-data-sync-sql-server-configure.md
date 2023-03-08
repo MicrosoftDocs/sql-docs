@@ -3,7 +3,7 @@ title: Set up SQL Data Sync
 description: This tutorial shows you how to set up SQL Data Sync for Azure
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: mathoma
 ms.date: 03/08/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
@@ -162,9 +162,9 @@ In the **Member Database** section, optionally add a SQL Server database to the 
 
 After the new sync group members are created and deployed, go to the **Tables** section in the **Database Sync Group** page.
 
-:::image type="content" source="./media/sql-data-sync-sql-server-configure/configure-sync-group.png" alt-text="In the Azure portal, un the Tables page, select tables and fields to sync.":::
+:::image type="content" source="./media/sql-data-sync-sql-server-configure/configure-sync-group.png" alt-text="In the Azure portal, on the Tables page, select tables and fields to sync.":::
 
-1. On the **Tables** page, select a database from the list of sync group members and select **Refresh schema**. Please expect a few minutes delay in refresh schema, the delay might be a few minutes longer if using private link.
+1. On the **Tables** page, select a database from the list of sync group members and select **Refresh schema**. Expect a few minutes delay in refresh schema, the delay might be a few minutes longer if using private link.
 
 1. From the list, select the tables you want to sync. By default, all columns are selected, so disable the checkbox for the columns you don't want to sync. Be sure to leave the primary key column selected.
 
@@ -215,7 +215,7 @@ New tables and columns don't impact the current sync and Data Sync ignores them 
 1. Add new tables or columns to the sync schema.
 1. Begin inserting values into the new tables and columns.
 
-For changing the data type of a column:
+To change the data type of a column:
 
 When you change the data type of an existing column, Data Sync continues to work as long as the new values fit the original data type defined in the sync schema. For example, if you change the type in the source database from **int** to **bigint**, Data Sync continues to work until you insert a value too large for the **int** data type. To complete the change, replicate the schema change manually to the hub and to all sync members, then update the sync schema.
 
@@ -232,7 +232,7 @@ For frequently asked questions about the client agent, see [Agent FAQ](sql-data-
 
 **Is it necessary to manually approve the link before I can start using it?**
 
-Yes, you must manually approve the service managed private endpoint, in the Private endpoint connections page of the Azure portal during the sync group deployment or by using PowerShell.
+Yes. You must manually approve the service managed private endpoint, in the Private endpoint connections page of the Azure portal during the sync group deployment or by using PowerShell.
 
 **Why do I get a firewall error when the Sync job is provisioning my Azure database?**
 

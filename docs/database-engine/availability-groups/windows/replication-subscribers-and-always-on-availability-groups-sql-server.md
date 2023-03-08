@@ -75,7 +75,7 @@ Go
 EXEC sp_addpullsubscription_agent 
         @publisher =  N'<publisher name>', 
         @subscriber = N'<availability group listener name>',
-        @Distributor = N'<Distributor availability group listener name>', --this parameter is not needed if Distribution DB is not in AG        
+        @Distributor = N'<Distributor availability group listener name>', -- this parameter should only be used if the Distribution database is part of an availability group. 
         @publisher_db= N'<publisher database name>',
         @publication= N'<publication name>' ;
         @job_login = null, @job_password = null, @subscriber_security_mode = 1;  

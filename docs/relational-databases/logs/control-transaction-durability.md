@@ -174,11 +174,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ## <a id="bkmk_OtherSQLFeatures"></a> Delayed durability and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 
 **Transactional Replication, Change Tracking, and Change Data Capture**  
+
 - For databases enabled for Transactional Replication or Change Data Capture (CDC), the use of delayed durability is not supported. 
 
 - Change Tracking with Delayed Durability is supported. All transactions with Change Tracking are fully durable. A transaction has the change tracking property if it does any write operations to tables that have enabled change tracking. 
 
-Starting with SQL Server 2022 CU2 and SQL Server 2019 CU20, you may see: 
+Starting with SQL Server 2022 CU 2, you may see: 
+
 - `Error 22891: Could not enable '_FeatureName_' for database '_DatabaseName_'. '_FeatureName_' cannot be enabled on a DB with delayed durability set` if you try to enable Transactional Replication or Change Data Capture on a database that has enabled delayed durability.
 
 - `Error 22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '_FeatureName_' is enabled` if you try to enable delayed durability on a database that is configured with Transactional Replication or Change Data Capture. 

@@ -12,7 +12,7 @@ ms.topic: conceptual
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic outlines the considerations when restoring a database using a backup stored in Azure Blob Storage. This applies to backups created either by using SQL Server Backup to URL backup or by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
- We recommend reviewing this topic if you have backups stored in Azure Blob Storage that you plan to restore, and then review the topics that describe the steps on how to restore a database which is the same for both on-premises and azure backups.  
+ We recommend reviewing this topic if you have backups stored in Azure Blob Storage that you plan to restore, and then review the topics that describe the steps on how to restore a database which is the same for both on-premises and Azure backups.  
   
 ## Overview  
  The tools and methods that are used to restore a database from an on-premises backup apply to restoring a database from a cloud backup.  The following sections describe these considerations and any differences you should know about when you use backups stored in Azure Blob Storage.  

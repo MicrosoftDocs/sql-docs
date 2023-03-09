@@ -22,7 +22,7 @@ This release is published March 9, 2023
 ### Azure extension for SQL Server
 
 - [Best practices assessment](assess.md) supports multiple instances of SQL Server on a physical or virtual server host.
-- Support for Microsoft Update to patch an Arc-enabled SQL Server. Automatically instals updates marked as Critical or Important. Does not automatically install other updates.
+- Support for Microsoft Update to patch an Arc-enabled SQL Server. Automatically installs updates marked as Critical or Important. Doesn't automatically install other updates.
 
 ## February, 2023
 
@@ -89,7 +89,7 @@ This release is published November 12, 2022
 - Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server now support billing through Azure when pay-as-you-go activation is selected in [SQL 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] includes the pay-as-you-go activation option that forces the installation of Azure extension for SQL Server during setup.
 - Billing meters are introduced to support pay-as-you-go billing through Azure
-- SQL Server Azure Arc instance now shows the databases registered to the SQL server. To view this, navigate to the data management tab of the SQL Server Azure Arc resource. For more details, review [View databases](view-databases.md).
+- SQL Server Azure Arc instance now shows the databases registered to the SQL server. To view databases, navigate to the data management tab of the SQL Server Azure Arc resource. For more details, review [View databases](view-databases.md).
 
 ### Other changes
 
@@ -107,7 +107,7 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 - Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
 - The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
-- SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
+- SQL Server on Azure Arc-enabled servers doesn't support SQL Server Failover Cluster Instances.
 - Azure extension for SQL Server is not supported in the following environments:
   - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [Delete your Arc-enabled SQL Server resource](delete-from-azure-arc.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
   - SQL Server in Linux containers

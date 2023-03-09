@@ -8,7 +8,7 @@ ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: quickstart
-ms.custom: mode-other
+ms.custom: mode-other, devx-track-azurepowershell, devx-track-azurecli
 ---
 
 # Quickstart: Create a database in Azure SQL Database with ledger enabled

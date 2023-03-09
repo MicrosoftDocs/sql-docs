@@ -170,7 +170,7 @@ Using the same time zone across a primary and secondary instance in a failover g
 | Libya Standard Time | (UTC+02:00) Tripoli |
 | Namibia Standard Time | (UTC+02:00) Windhoek |
 | Arabic Standard Time | (UTC+03:00) Baghdad |
-| Turkey Standard Time | (UTC+03:00) Istanbul |
+| Türkiye Standard Time | (UTC+03:00) Istanbul |
 | Arab Standard Time | (UTC+03:00) Kuwait, Riyadh |
 | Belarus Standard Time | (UTC+03:00) Minsk |
 | Russian Standard Time | (UTC+03:00) Moscow, St. Petersburg |

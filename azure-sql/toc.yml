@@ -71,9 +71,13 @@
         href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview?toc=/azure/azure-sql/toc.json
       - name: Logins, user accounts, roles, and permissions
         href: database/logins-create-manage.md
-      - name: Azure AD Authentication
-        href: database/authentication-aad-overview.md
+      - name: Azure AD authentication
         items:
+        - name: Azure AD authentication documentation
+          href: database/authentication-azure-ad-landing.yml
+          displayName: Azure Active Directory authentication
+        - name: Azure AD authentication overview
+          href: database/authentication-aad-overview.md
         - name: Configure Azure AD auth
           href: database/authentication-aad-configure.md
         - name: Multi-factor Azure AD auth
@@ -307,6 +311,8 @@
         href: database/firewall-create-server-level-portal-quickstart.md
       - name: Database project in a local dev environment
         href: database/local-dev-experience-quickstart.md
+    - name: Connect to and query a database using .NET
+      href: database/azure-sql-dotnet-quickstart.md
     - name: GitHub Actions
       href: database/connect-github-actions-sql-db.md
 

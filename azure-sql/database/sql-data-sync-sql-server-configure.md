@@ -238,8 +238,8 @@ Yes. You must manually approve the service managed private endpoint, in the Priv
 
 This may happen because Azure resources are not allowed to access your server. There are two solutions:
 
-   1. Ensure that the firewall on the Azure database has set **Allow Azure services and resources to access this server** to **Yes**. 
-   1. Configure a [private link for Data Sync](sql-data-sync-data-sql-server-sql-database.md?view=azuresql&preserve-view=true#private-link-for-data-sync), which is different from an Azure Private Link.
+   1. Ensure that the firewall on the Azure database has set **Allow Azure services and resources to access this server** to **Yes**. For more information, see [Azure SQL Database and network access controls](/azure/azure-sql/database/network-access-controls-overview?view=azuresql&preserve-view=true).
+   1. Configure a [private link for Data Sync](sql-data-sync-data-sql-server-sql-database.md?view=azuresql&preserve-view=true#private-link-for-data-sync), which is different from an Azure Private Link. Private Link is the way to create Sync groups using secure connection with databases sitting behind a firewall. SQL Data Sync Private Link is Microsoft-managed endpoint and internally creates a subnet within the existing VNet, so there is no need to create another VNet or subnet.
 
 ## Next steps
 

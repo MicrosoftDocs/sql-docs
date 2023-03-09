@@ -97,7 +97,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 
 ## Bulk importing from Azure Blob storage
 
-When importing from Azure Blob storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command.
+When importing from Azure Blob storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. Alternatively, create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on `MANAGED IDENTITY` to authorize requests for data access in non-public storage accounts. When using `MANAGED IDENTITY`, Azure storage must grant permissions to the managed identity of the instance by adding the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role that provides read/write access to the managed identity for the necessary Azure Blob Storage containers.
 
 > [!NOTE]
 > Do not use explicit transaction, or you receive a 4861 error.

@@ -3,7 +3,7 @@ title: "Access external data: Azure Blob Storage - PolyBase"
 description: The article uses PolyBase on a SQL Server instance with Azure Blob Storage. PolyBase is suited for ad-hoc queries of external tables and data import/export.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 03/02/2023
+ms.date: 03/09/2023
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
@@ -51,7 +51,16 @@ First, configure SQL Server PolyBase to use Azure Blob Storage.
    GO
    ```  
 
+1. Restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
+
+   - SQL Server PolyBase Data Movement Service  
+   - SQL Server PolyBase Engine  
+  
+   ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+
 ::: moniker-end
+::: moniker range=">=sql-server-ver16"
+
 
 1. Restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
 
@@ -59,18 +68,21 @@ First, configure SQL Server PolyBase to use Azure Blob Storage.
    - SQL Server PolyBase Engine  
   
    ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+
+::: moniker-end
+
   
 ## Configure an external table
 
 To query the data in your Hadoop data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
+
+::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
 
 1. Create a master key on the database. The master key is required to encrypt the credential secret.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';  
    ```
-
-::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
 
 1. Create a database scoped credential for Azure Blob Storage; `IDENTITY` can be anything as it's not used.
 
@@ -92,32 +104,6 @@ To query the data in your Hadoop data source, you must define an external table 
          CREDENTIAL = AzureStorageCredential  
    );  
    ```
-
-::: moniker-end
-::: moniker range=">=sql-server-ver16"
-
-1. Create a database scoped credential for Azure Blob Storage using a shared access signature (SAS); `IDENTITY` can be anything as it's not used.
-
-   ```sql
-   CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
-   WITH
-   IDENTITY = 'SHARED ACCESS SIGNATURE',
-   -- Remove ? from the beginning of the SAS token
-   SECRET = '<azure_shared_access_signature>' ;
-   ```
-
-1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Note that when connecting to the Azure Storage via the WASB[s] connector, authentication with a shared access signature (SAS).
-
-   ```sql
-   -- LOCATION:  Azure account storage account name and blob container name.  
-   -- CREDENTIAL: The database scoped credential created above.  
-   CREATE EXTERNAL DATA SOURCE AzureStorage with (  
-         LOCATION ='wasbs://<blob_container_name>@<azure_storage_account_name>.blob.core.windows.net',  
-         CREDENTIAL = AzureStorageCredential  
-   );  
-   ```
-
-::: moniker-end
 
 1. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -151,6 +137,71 @@ To query the data in your Hadoop data source, you must define an external table 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
    ```
+
+::: moniker-end
+::: moniker range=">=sql-server-ver16"
+
+1. Create a master key on the database. The master key is required to encrypt the credential secret.
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';  
+   ```
+
+1. Create a database scoped credential for Azure Blob Storage using a shared access signature (SAS); `IDENTITY` can be anything as it's not used.
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
+   WITH
+   IDENTITY = 'SHARED ACCESS SIGNATURE',
+   -- Remove ? from the beginning of the SAS token
+   SECRET = '<azure_shared_access_signature>' ;
+   ```
+
+1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Note that when connecting to the Azure Storage via the WASB[s] connector, authentication with a shared access signature (SAS).
+
+   ```sql
+   -- LOCATION:  Azure account storage account name and blob container name.  
+   -- CREDENTIAL: The database scoped credential created above.  
+   CREATE EXTERNAL DATA SOURCE AzureStorage with (  
+         LOCATION ='wasbs://<blob_container_name>@<azure_storage_account_name>.blob.core.windows.net',  
+         CREDENTIAL = AzureStorageCredential  
+   );  
+   ```
+
+1. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+
+   ```sql
+   -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
+   CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
+         FORMAT_TYPE = DELIMITEDTEXT,
+         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
+               USE_TYPE_DEFAULT = TRUE))  
+   ```
+
+1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data; `LOCATION` can't be `/` but `/Demo/` as in this example doesn't need to exist previously.
+
+   ```sql
+   -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
+   CREATE EXTERNAL TABLE [dbo].[CarSensor_Data] (  
+         [SensorKey] int NOT NULL,
+         [CustomerKey] int NOT NULL,
+         [GeographyKey] int NULL,
+         [Speed] float NOT NULL,
+         [YearMeasured] int NOT NULL  
+   )  
+   WITH (LOCATION='/Demo/',
+         DATA_SOURCE = AzureStorage,  
+         FILE_FORMAT = TextFileFormat  
+   );  
+   ```
+
+1. Create statistics on an external table.
+
+   ```sql
+   CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
+   ```
+
+::: moniker-end
 
 ## PolyBase queries
 

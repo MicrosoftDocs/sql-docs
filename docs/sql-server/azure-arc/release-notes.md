@@ -4,7 +4,7 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/05/2022
+ms.date: 03/09/2023
 ms.service: sql
 ms.topic: conceptual
 ---
@@ -18,6 +18,11 @@ This release is published March 9, 2023
 ### Extension version
 
 `1.1.2256.66`
+
+### Azure extension for SQL Server
+
+- [Best practices assessment](assess.md) supports multiple instances of SQL Server on a physical or virtual server host.
+- Support for Microsoft Update to patch an Arc-enabled SQL Server. Automatically instals updates marked as Critical or Important. Does not automatically install other updates.
 
 ## February, 2023
 

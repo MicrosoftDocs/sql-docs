@@ -353,7 +353,7 @@ The following table shows the default collation designations, as determined by t
 |Telugu (India)|0x044a|0x0439|Not available at server level|
 |Thai (Thailand)|0x041e|0x041e|Thai_CI_AS|
 |Tibetan (PRC)|0x0451|0x0451|Not available at server level|
-|Turkish (Turkey)|0x041f|0x041f|Turkish_CI_AS|
+|Turkish (Türkiye)|0x041f|0x041f|Turkish_CI_AS|
 |Turkmen (Turkmenistan)|0x0442|0x0442|Latin1_General_CI_AI|
 |Uighur (PRC)|0x0480|0x0480|Latin1_General_CI_AI|
 |Ukrainian (Ukraine)|0x0422|0x0422|Ukrainian_CI_AS|

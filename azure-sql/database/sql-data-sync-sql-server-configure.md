@@ -132,14 +132,14 @@ In the **Member Database** section, optionally add a SQL Server database to the 
 
     1. In the **Sync Metadata Database Configuration** dialog box, paste in the agent key copied from the Azure portal. Also provide the existing credentials for the server on which the metadata database is located. (If you created a metadata database, this database is on the same server as the hub database.) Select **OK** and wait for the configuration to finish.
 
-        :::image type="content" source="./media/sql-data-sync-sql-server-configure/datasync-preview-agent-enterkey.png" alt-text="Enter the agent key and server credentials.":::
+        :::image type="content" source="./media/sql-data-sync-sql-server-configure/datasync-preview-agent-enterkey.png" alt-text="A screenshot from the Microsoft SQL Data Sync 2.0 client agent app. Enter the agent key and server credentials.":::
 
         > [!NOTE]
         > If you get a firewall error, create a firewall rule on Azure to allow incoming traffic from the SQL Server computer. You can create the rule manually in the portal or in SQL Server Management Studio (SSMS). In SSMS, connect to the hub database on Azure by entering its name as `<hub_database_name>.database.windows.net`.
 
     1. Select **Register** to register a SQL Server database with the agent. The **SQL Server Configuration** dialog box opens.
 
-        :::image type="content" source="./media/sql-data-sync-sql-server-configure/datasync-preview-agent-adddb.png" alt-text="Add and configure a SQL Server database.":::
+        :::image type="content" source="./media/sql-data-sync-sql-server-configure/datasync-preview-agent-adddb.png" alt-text="A screenshot from the Microsoft SQL Data Sync 2.0 client agent app. Add and configure a SQL Server database.":::
 
     1. In the **SQL Server Configuration** dialog box, choose to connect using SQL Server authentication or Windows authentication. If you choose SQL Server authentication, enter the existing credentials. Provide the SQL Server name and the name of the database that you want to sync and select **Test connection** to test your settings. Then select **Save** and the registered database appears in the list.
 
@@ -162,7 +162,7 @@ In the **Member Database** section, optionally add a SQL Server database to the 
 
 After the new sync group members are created and deployed, go to the **Tables** section in the **Database Sync Group** page.
 
-:::image type="content" source="./media/sql-data-sync-sql-server-configure/configure-sync-group.png" alt-text="In the Azure portal, on the Tables page, select tables and fields to sync.":::
+:::image type="content" source="./media/sql-data-sync-sql-server-configure/configure-sync-group.png" alt-text="A screenshot from the Azure portal, on the Tables page, select tables and fields to sync.":::
 
 1. On the **Tables** page, select a database from the list of sync group members and select **Refresh schema**. Expect a few minutes delay in refresh schema, the delay might be a few minutes longer if using private link.
 

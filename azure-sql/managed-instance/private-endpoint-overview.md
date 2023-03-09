@@ -13,11 +13,11 @@ ms.topic: how-to
 # Azure Private Link for Azure SQL Managed Instance (Preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-[Private Link](/azure/private-link/private-link-overview) is an Azure technology that makes Azure SQL Managed Instance available in a virtual network of your choice. A network administrator can deploy [private endpoints](/azure/private-link/private-endpoint-overview) to Azure SQL Managed Instance in another virtual network, while an administrator of that network can accept or reject it before the endpoint goes live. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
+[Private Link](/azure/private-link/private-link-overview) is an Azure technology that makes Azure SQL Managed Instance available in a virtual network of your choice. A network administrator can establish a [private endpoint](/azure/private-link/private-endpoint-overview) to Azure SQL Managed Instance in their virtual network, while the SQL administrator will have a chance to accept or reject the endpoint before it becomes active. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
 
 ### How does a private endpoint differ from VNet-local endpoint?
 
-The default, VNet-local endpoint deployed with each Azure SQL Managed Instance behaves as if a computer running the service were physically attached to your virtual network. It allows near-complete traffic control via route tables, network security groups, DNS resolution, firewalls, and similar mechanisms. You can also use this endpoint to involve your instance in scenarios requiring connectivity on ports other than 1433, such as linked server, failover groups, and MI Link. However, great flexibility that this endpoint provides comes with complexity in configuring it for particular scenarios, especially those involving multiple virtual networks or tenants.
+The default, VNet-local endpoint deployed with each Azure SQL Managed Instance behaves as if a computer running the service were physically attached to your virtual network. It allows near-complete traffic control via route tables, network security groups, DNS resolution, firewalls, and similar mechanisms. You can also use this endpoint to involve your instance in scenarios requiring connectivity on ports other than 1433, such as auto-failover groups, distributed transactions, and MI Link. However, great flexibility that this endpoint provides comes with complexity in configuring it for particular scenarios, especially those involving multiple virtual networks or tenants.
 
 By contrast, setting up a private endpoint is like extending a physical network cable from a computer running Azure SQL Managed Instance to another virtual network. This connectivity path is established virtually via Azure Private Link technology. It only allows connections in one direction: from the private endpoint to Azure SQL Managed Instance; and it only carries traffic on port 1433 (the standard TDS traffic port). In this way, your Azure SQL Managed Instance becomes available in a different virtual network without having to set up network peering or turn on the instance's public endpoint.
 
@@ -27,7 +27,7 @@ For a more detailed discussion of the different types of endpoints supported by 
 
 Private endpoints to Azure SQL Managed Instance allow you to implement important connectivity scenarios more easily and securely than by using [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) or [public endpoint](connectivity-architecture-overview.md#public-endpoint). These scenarios include:
 
-- **Airlock**. Private endpoints to Azure SQL Managed Instance are deployed in a virtual network with jumpboxes and an ExpressRoute gateway, providing security and isolation between on-premises and cloud resources.
+- **Airlock**. Private endpoints to Azure SQL Managed Instance are deployed in a virtual network with jump servers and an ExpressRoute gateway, providing security and isolation between on-premises and cloud resources.
 - **Hub and spoke topology**. Private endpoints in spoke virtual networks conduct traffic from SQL clients and applications to Azure SQL Managed Instances in a hub virtual network, establishing clear network isolation and separation of responsibility.
 - **Publisher-consumer**. Publisher tenant (for example, an ISV) manages multiple Azure SQL Managed Instances in their virtual networks. Publisher creates private endpoints in other tenants' virtual networks to make instances available to their consumers.
 - **Integration of Azure PaaS and SaaS services.** Some PaaS and SaaS services, like [Azure Data Factory](/azure/data-factory/introduction), can create and manage private endpoints to Azure SQL Managed Instance.
@@ -74,7 +74,7 @@ Some Azure PaaS and SaaS services can use private endpoints to access your data 
 
 ### Review and approve a request to create a private endpoint
 
-Once a request to create a private endpoint is made, the SQL administrator can manage the private endpoint connection to Azure SQL Managed Instance. The first step to managing a new private endpoint connection is to review and approve it. This step is automatic if the user or service creating the private endpoint has sufficient Azure RBAC permissions on the Azure SQL Managed Instance resource. If they don't, then the review and approval must be done manually:
+Once a request to create a private endpoint is made, SQL administrator can manage the private endpoint connection to Azure SQL Managed Instance. The first step to managing a new private endpoint connection is to review and approve it. This step is automatic if the user or service creating the private endpoint has sufficient Azure RBAC permissions on the Azure SQL Managed Instance resource. If they don't, then the review and approval must be done manually:
 
 1. Navigate to your Azure SQL Managed Instance in Azure portal.
 2. In the sidebar, select Private endpoint connections.

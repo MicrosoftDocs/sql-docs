@@ -13,6 +13,14 @@ ms.custom: intro-whats-new
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
 
+## SSMA v9.3
+
+The v9.3 release of SSMA for MySQL contains the following changes:
+  * Add support for MySQL 8.X
+  * Add support for common table expressions
+  * Add support for SQL Server 2022 target
+  * Fix for precision loss of datetime datatype column migration
+
 ## SSMA v9.2
 
 The v9.2 release of SSMA for MySQL contains the following changes:
@@ -34,6 +42,7 @@ The v8.24 release of SSMA for MySQL contains the following changes:
 * Add support for YEAR datatype
 * Improve conversion of comment styles
 * Improve naming for "Save As" statements 
+* Fix issue 
 
 ## SSMA v8.23
 

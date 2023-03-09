@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 02/27/2023
+ms.date: 03/08/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -93,6 +93,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
+| **Azure SQL Database high availability and disaster recovery checklist** | [This guide provides a detailed review of proactive steps you can take](high-availability-disaster-recovery-checklist.md) to maximize availability, ensure recovery, and prepare for Azure outages. |
 | **Always Encrypted with VBS enclaves preview** | Take advantage of rich confidential queries and in-place cryptographic operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. This feature is currently in preview. Review [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) to learn more.  | 
 | **Optimized locking GA** | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Currently, optimized locking is available only in select regions. This feature is generally available. Review [Optimized locking](/sql/relational-databases/performance/optimized-locking) to learn more. |
 |**Cross-tenant CMK with TDE preview** | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. This feature is currently in preview. Review [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md) to learn more. 

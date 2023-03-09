@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
-## March, 2023
+## March 2023
 
 This release is published March 9, 2023
 
@@ -24,7 +24,7 @@ This release is published March 9, 2023
 - [Best practices assessment](assess.md) supports multiple instances of SQL Server on a physical or virtual server host.
 - Support for Microsoft Update to patch an Arc-enabled SQL Server. Automatically installs updates marked as Critical or Important. Doesn't automatically install other updates.
 
-## February, 2023
+## February 2023
 
 This release is published February 17, 2023
 

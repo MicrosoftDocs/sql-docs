@@ -13,6 +13,13 @@ ms.custom: intro-whats-new
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v9.3
+
+The v9.3 release of SSMA for DB2 contains the following changes:
+
+* Support for system version tables
+* Support for SQL Server 2022 target
+
 ## SSMA v9.2
 
 The v9.2 release of SSMA for DB2 contains minor performance improvements, bug fixes and enhanced get help experience.

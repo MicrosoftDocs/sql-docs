@@ -13,11 +13,17 @@ ms.custom: intro-whats-new
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
 
+## SSMA v9.3
+
+The v9.2 release of SSMA for Access contains the following changes:
+
+* Added support for SQL Server 2022 target
+
 ## SSMA v9.2
 
 The v9.2 release of SSMA for Access contains the following changes:
 
-* Support for DECIMAL type for Office 365 version 2209 and above.
+* Added support for DECIMAL type for Office 365 version 2209 and above.
 
 ## SSMA v9.1
 

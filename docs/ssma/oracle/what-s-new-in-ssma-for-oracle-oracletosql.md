@@ -13,6 +13,11 @@ ms.custom: intro-whats-new
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
 
+## SSMA v9.3
+
+The v9.3 release of SSMA for Oracle contains the following changes:
+  * Added support for SQL Server 2022 target
+
 ## SSMA v9.2
 
 The v9.2 release of SSMA for Oracle contains the following changes:

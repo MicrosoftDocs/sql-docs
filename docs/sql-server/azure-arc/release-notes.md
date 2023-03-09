@@ -11,6 +11,14 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
+## March, 2023
+
+This release is published March 9, 2023
+
+### Extension version
+
+`1.1.2256.66`
+
 ## February, 2023
 
 This release is published February 17, 2023

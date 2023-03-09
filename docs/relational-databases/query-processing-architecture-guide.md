@@ -1131,7 +1131,8 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn
 - The serial execution plan has a lower total estimated subtree cost than any parallel execution plan explored by the optimizer.
 - The query contains scalar or relational operators that can't be run in parallel. Certain operators can cause a section of the query plan to run in serial mode, or the whole plan to run in serial mode.
 
-Note that the total estimated subtree cost of a parallel plan may be lower than the cost threshold for parallelism setting. This indicates that the total estimated subtree cost of the serial plan exceeded it, and the query plan with the lower total estimated subtree cost was chosen.
+> [!NOTE]  
+> The total estimated subtree cost of a parallel plan may be lower than the cost threshold for parallelism setting. This indicates that the total estimated subtree cost of the serial plan exceeded it, and the query plan with the lower total estimated subtree cost was chosen.
 
 ### Degree of parallelism (DOP)
 <a id="DOP"></a>

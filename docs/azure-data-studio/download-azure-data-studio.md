@@ -35,7 +35,7 @@ Azure Data Studio 1.41.2 is the latest general availability (GA) version.
 | Linux | .tar.gz | [64 bit](https://go.microsoft.com/fwlink/?linkid=2222918) |
 | | .deb | [64 bit](https://go.microsoft.com/fwlink/?linkid=2222875) |
 | | .rpm | [64 bit](https://go.microsoft.com/fwlink/?linkid=2223105) |
-| Mac | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2222873)&emsp;[Intel CPU](https://go.microsoft.com/fwlink/?linkid=2222874)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2222680) |
+| Mac | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2222873)&emsp;[Intel Chip](https://go.microsoft.com/fwlink/?linkid=2222874)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2222680) |
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 

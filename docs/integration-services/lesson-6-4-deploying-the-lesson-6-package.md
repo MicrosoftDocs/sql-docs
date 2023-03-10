@@ -65,7 +65,7 @@ In this task, you:
 8.  On the Select Packages page, you should see all six packages from the SSIS Tutorial. In the **Packages** list, select **Lesson 6.dtsx**, then select **Next**.
 
 > [!IMPORTANT]
-> If the above step results in an error that _"One or more selected packages are not ready. Review the Status column for more information."_ with an Status message including _"The version or pipeline version or both for the specified component is higher than the current version. This package was probably created on a new version of DTS or the component than is installed on the current PC."_ Try changing the Project Properties in Visual Studio as follows:
+> The previous step may result in an error stating that "One or more selected packages are not ready. Review the Status column for more information." with a status message including "The version or pipeline version or both for the specified component is higher than the current version. This package was probably created on a new version of DTS or the component than is installed on the current PC." To resolve this error, change the Project Properties in Visual Studio as follows:
 > 
 > 1.  Right-click the **SSIS Tutorial (package deployment)** project and select **Properties**.
 > 

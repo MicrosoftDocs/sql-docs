@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to analyze deadlocks and prevent them from reoccurring in Azure SQL Database
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: mathoma, dfurman
+ms.reviewer: mathoma, dfurman, wiassaf
 ms.date: 03/10/2023
 ms.service: sql-database
 ms.subservice: performance
@@ -773,7 +773,7 @@ There are multiple techniques available to prevent deadlocks from reoccurring, i
     - Breaking apart transactions into smaller transactions when possible.
     - Using query hints, if necessary, to optimize performance. You can apply hints without changing application code [using Query Store](/sql/relational-databases/performance/query-store-hints?view=azuresqldb-current&preserve-view=true).
 
-Find more ways to [minimize deadlocks in the Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_minimizing).
+Find more ways to [minimize deadlocks in the Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_minimizing).
 
 > [!NOTE]
 > In some cases, you may wish to [adjust the deadlock priority](/sql/t-sql/statements/set-deadlock-priority-transact-sql) of one or more sessions involved in a deadlock if it is important for one of the sessions to complete successfully without retrying, or when one of the queries involved in the deadlock is not critical and should be always chosen as the victim. While this does not prevent the deadlock from reoccurring, it may reduce the impact of future deadlocks.
@@ -813,6 +813,7 @@ Learn more about performance in Azure SQL Database:
 
 - [Understand and resolve Azure SQL Database blocking problems](understand-resolve-blocking.md)
 - [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
+- [Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide)
 - [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)
 - [Azure SQL Database: improving performance tuning with automatic tuning](/Shows/Data-Exposed/Azure-SQL-Database-Improving-Performance-Tuning-with-Automatic-Tuning)
 - [Deliver consistent performance with Azure SQL](/training/modules/azure-sql-performance/)

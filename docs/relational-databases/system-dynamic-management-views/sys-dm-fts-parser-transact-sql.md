@@ -117,8 +117,8 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  In addition to the preceding usage scenarios, sys.dm_fts_parser can help significantly to understand and troubleshoot many other issues with full-text query.  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role and access rights to the specified stoplist.  
-  
+ Requires ALTER permission on the database, and access rights to the specified stoplist.  
+   
 ## Examples  
   
 ### A. Displaying the output of a given word breaker for a keyword or phrase  

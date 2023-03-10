@@ -7,7 +7,6 @@ ms.date: 10/12/2022
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "Query Store"
   - "Query Store, described"

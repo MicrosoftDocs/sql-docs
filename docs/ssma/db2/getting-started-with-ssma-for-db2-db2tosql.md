@@ -1,16 +1,13 @@
 ---
+title: "Getting Started with SSMA for DB2 (DB2ToSQL)"
 description: "Getting Started with SSMA for DB2 (DB2ToSQL)"
-title: "Getting Started with SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom:
-  - intro-get-started
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
-author: cpichuka 
-ms.author: cpichuka 
+ms.custom: intro-get-started
 ---
 # Getting Started with SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 lets you quickly convert DB2 database schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemas, upload the resulting schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and migrate data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -3,7 +3,7 @@ title: "sys.dm_xtp_gc_queue_stats (Transact-SQL)"
 description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/02/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,6 +44,10 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 ## Permissions  
  Requires VIEW SERVER STATE permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## User Scenario  
  This output shows that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is either running on 4 cores or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance has been affinitized to 4 cores:  
   
@@ -58,6 +62,6 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 3        15625                15625    0                    15625                1233571605761  
 ```  
   
-## See Also  
+## See also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   

@@ -7,12 +7,10 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "overflow-field annotation"
   - "unconsumed data"
   - "overflow data [SQLXML]"
-ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - sql:overflow-field

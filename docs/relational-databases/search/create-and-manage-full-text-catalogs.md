@@ -1,20 +1,19 @@
 ---
 title: Create and Manage Full-Text Catalogs
 description: "Create and Manage Full-Text Catalogs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
 f1_keywords:
-  - sql13.swb.fulltextsearch.ftcatalog.general.f1
-  - sql13.swb.fulltextsearch.fulltextindexproperties.general.f1
-helpviewer_keywords: 
+  - "sql13.swb.fulltextsearch.ftcatalog.general.f1"
+  - "sql13.swb.fulltextsearch.fulltextindexproperties.general.f1"
+helpviewer_keywords:
   - "full-text catalogs [SQL Server], creating"
   - "full-text search [SQL Server], using SQL Server Management Studio"
-ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

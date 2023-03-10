@@ -1,22 +1,19 @@
 ---
+title: "sp_changesubstatus (Transact-SQL)"
 description: "sp_changesubstatus (Transact-SQL)"
-title: "sp_changesubstatus (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changesubstatus"
-  - "sp_changesubstatus_TSQL"
-helpviewer_keywords: 
-  - "sp_changesubstatus"
-ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changesubstatus"
+  - "sp_changesubstatus_TSQL"
+helpviewer_keywords:
+  - "sp_changesubstatus"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changesubstatus (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

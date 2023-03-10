@@ -1,21 +1,18 @@
 ---
 title: Error List Window
-description: Learn how to use the Error List to view the errors and warnings that Intellisense generates when you edit Transact-SQL scripts.
 titleSuffix: T-SQL debugger
+description: Learn how to use the Error List to view the errors and warnings that Intellisense generates when you edit Transact-SQL scripts.
+author: markingmyname
+ms.author: maghan
+ms.date: 12/04/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "error list window"
   - "SQL Server Management Studio [SQL Server], error list window"
-ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 12/04/2019
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

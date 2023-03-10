@@ -1,22 +1,19 @@
 ---
-title: "Surface Area Configuration | Microsoft Docs"
+title: "Surface Area Configuration"
 description: Learn how to change feature defaults for SQL Server installation and selectively enable or disable features of a running instance of SQL Server.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reducing attackable surface area"
   - "upgrading SQL Server, security"
   - "surface area configuration [SQL Server]"
   - "surface area configuration [SQL Server], about surface area configuration"
   - "attackable surface area [SQL Server]"
   - "installing SQL Server, security"
-ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-author: VanMSFT
-ms.author: vanto
 ---
 # Surface Area Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,18 @@
 ---
+title: "Fetching rows (Native Client OLE DB provider)"
 description: "Fetching rows (Native Client OLE DB provider)"
-title: "Fetching rows (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fetching rows"
   - "OLE DB rowsets, fetching"
   - "rowsets [OLE DB], fetching"
   - "IRowset interface"
   - "SQL Server Native Client OLE DB provider, fetching"
-ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetching Rows (Native Client OLE DB Provider)

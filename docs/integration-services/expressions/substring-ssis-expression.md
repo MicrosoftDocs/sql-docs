@@ -1,18 +1,15 @@
 ---
+title: "SUBSTRING (SSIS Expression)"
 description: "SUBSTRING (SSIS Expression)"
-title: "SUBSTRING (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SUBSTRING function"
-  - "part of expression returned [Integration Services]"
-ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SUBSTRING function"
+  - "part of expression returned [Integration Services]"
 ---
 # SUBSTRING (SSIS Expression)
 

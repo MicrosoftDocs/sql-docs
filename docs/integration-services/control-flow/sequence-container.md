@@ -1,22 +1,19 @@
 ---
+title: "Sequence Container"
 description: "Sequence Container"
-title: "Sequence Container | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.sequencecontainer.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sequence container"
   - "grouping control flows"
   - "containers [Integration Services], Sequence"
   - "subset control flow [Integration Services]"
-ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-author: chugugrace
-ms.author: chugu
 ---
 # Sequence Container
 

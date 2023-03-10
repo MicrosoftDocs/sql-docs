@@ -1,19 +1,16 @@
 ---
+title: "Connect Options"
 description: "Connect Options"
-title: "Connect Options | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connection options [ODBC]"
   - "ODBC driver for Oracle [ODBC], connection options"
   - "custom connection options [ODBC]"
-ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Connect Options
 > [!IMPORTANT]  

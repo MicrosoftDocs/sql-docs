@@ -1,23 +1,20 @@
 ---
+title: "Pivot Transformation"
 description: "Pivot Transformation"
-title: "Pivot Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.pivottrans.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Pivot transformation"
   - "normalized data [Integration Services]"
   - "PivotUsage property"
   - "datasets [Integration Services], normalized data"
   - "less normalized data set [Integration Services]"
-ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: chugugrace
-ms.author: chugu
 ---
 # Pivot Transformation
 

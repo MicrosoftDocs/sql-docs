@@ -1,22 +1,19 @@
 ---
+title: "sp_helplogreader_agent (Transact-SQL)"
 description: "sp_helplogreader_agent (Transact-SQL)"
-title: "sp_helplogreader_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helplogreader_agent"
-  - "sp_helplogreader_agent_TSQL"
-helpviewer_keywords: 
-  - "sp_helplogreader_agent"
-ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helplogreader_agent"
+  - "sp_helplogreader_agent_TSQL"
+helpviewer_keywords:
+  - "sp_helplogreader_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,14 +1,12 @@
 ---
 title: Using MSDeploy with dbSqlPackage Provider
 description: Learn about the obsolete MSDeploy provider DbSqlPackage. View parameters, examples, and alternative SQL Server and Azure SQL Database publishing tools.
+author: markingmyname
+ms.author: maghan
+ms.date: 04/26/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 04/26/2017
 ---
 
 # Using MSDeploy with dbSqlPackage Provider

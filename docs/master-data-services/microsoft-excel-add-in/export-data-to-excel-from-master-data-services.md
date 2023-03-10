@@ -1,15 +1,13 @@
 ---
-description: "Export Data to Excel from Master Data Services"
 title: Export Data to Excel
-ms.custom: microsoft-excel-add-in, seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
+description: "Export Data to Excel from Master Data Services"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Export Data to Excel from Master Data Services
 

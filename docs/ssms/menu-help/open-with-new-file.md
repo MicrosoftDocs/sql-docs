@@ -1,17 +1,14 @@
 ---
-description: "Open With (New File)"
 title: "Open With (New File)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-helpviewer_keywords: 
-  - "Open With dialog box"
-ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
+description: "Open With (New File)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+helpviewer_keywords:
+  - "Open With dialog box"
 ---
 # Open With (New File)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

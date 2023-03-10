@@ -1,24 +1,19 @@
 ---
+title: "SQLGetCursorName Function"
 description: "SQLGetCursorName Function"
-title: "SQLGetCursorName Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/12/2020"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetCursorName"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetCursorName"
-helpviewer_keywords: 
-  - "SQLGetCursorName function [ODBC]"
-ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/12/2020"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetCursorName"
+helpviewer_keywords:
+  - "SQLGetCursorName function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetCursorName"
+apitype: "dllExport"
 ---
 # SQLGetCursorName Function
 **Conformance**  

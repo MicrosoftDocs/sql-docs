@@ -1,20 +1,17 @@
 ---
-title: "distinct-values Function (XQuery) | Microsoft Docs"
+title: "distinct-values Function (XQuery)"
 description: Learn how to use the distinct-values function in an XQuery to remove duplicate values from a sequence.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "distinct-values function"
-  - "fn:distinct-values function"
-ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "distinct-values function"
+  - "fn:distinct-values function"
+dev_langs:
+  - "XML"
 ---
 # Functions on Sequences - distinct-values
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

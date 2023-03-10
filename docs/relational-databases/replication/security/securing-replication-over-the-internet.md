@@ -1,18 +1,16 @@
 ---
+title: "Securing Replication Over the Internet"
 description: "Securing Replication Over the Internet"
-title: "Securing Replication Over the Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "security [SQL Server replication], Internet"
-  - "Internet [SQL Server replication], security"
-ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "security [SQL Server replication], Internet"
+  - "Internet [SQL Server replication], security"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Securing Replication Over the Internet

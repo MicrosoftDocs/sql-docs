@@ -1,18 +1,16 @@
 ---
-title: "Distributor and Publisher Information Script | Microsoft Docs"
+title: "Distributor and Publisher Information Script"
 description: Use this script to answer commonly asked questions about objects at the Distributor and Publisher in SQL Server.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Publishers [SQL Server replication], information scripts"
-  - "Distributors [SQL Server replication], information scripts"
-ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Publishers [SQL Server replication], information scripts"
+  - "Distributors [SQL Server replication], information scripts"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Distributor and Publisher Information Script

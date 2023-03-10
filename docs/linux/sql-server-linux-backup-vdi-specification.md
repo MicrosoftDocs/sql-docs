@@ -5,10 +5,9 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
+ms.topic: conceptual
 ---
 # SQL Server on Linux VDI client SDK Specification
 

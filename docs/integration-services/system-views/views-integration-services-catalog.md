@@ -1,17 +1,14 @@
 ---
+title: "Views (Integration Services Catalog)"
 description: "Views (Integration Services Catalog)"
-title: "Views (Integration Services Catalog) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "views [Integration Services]"
-ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: chugugrace
 ms.author: chugu
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "views [Integration Services]"
 ---
 # Views (Integration Services Catalog)
 

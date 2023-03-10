@@ -1,15 +1,14 @@
 ---
 title: Manage authentication to SQL Server in PowerShell
-description: Learn how to use SQL Server Authentication rather than Windows Authentication (the default) when connecting to an instance of the Database Engine.
 titleSuffix: SQL Server on Linux
-ms.service: sql
-ms.subservice: sql-server-powershell
-ms.topic: conceptual
+description: Learn how to use SQL Server Authentication rather than Windows Authentication (the default) when connecting to an instance of the Database Engine.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
-ms.custom: seo-lt-2019
 ms.date: 10/14/2020
+ms.service: sql
+ms.subservice: sql-server-powershell
+ms.topic: conceptual
 ---
 
 # Manage authentication to SQL Server in PowerShell

@@ -9,7 +9,6 @@ ms.date: 12/02/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
-ms.custom: 
 ---
 
 # Restore a database to SQL Server from Azure SQL Managed Instance

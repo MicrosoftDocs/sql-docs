@@ -1,19 +1,16 @@
 ---
+title: "Legal Notice (SSMA for Access)"
 description: "Legal Notice (SSMA for Access)"
-title: "Legal Notice (SSMA for Access) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "copyright"
   - "disclaimer"
   - "legal notice"
-ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Legal Notice (SSMA for Access)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  

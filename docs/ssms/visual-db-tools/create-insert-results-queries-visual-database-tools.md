@@ -1,22 +1,18 @@
 ---
-description: "Create Insert Results Queries (Visual Database Tools)"
 title: Create Insert Results Queries
-ms.custom: seo-lt-2019
+description: "Create Insert Results Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], types"
   - "result sets [SQL Server], queries"
   - "results [SQL Server], query"
   - "Insert Results query"
   - "queries [SQL Server], results"
-ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Insert Results Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

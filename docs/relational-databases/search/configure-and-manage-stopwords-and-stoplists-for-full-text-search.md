@@ -1,23 +1,21 @@
 ---
-description: "Configure and Manage Stopwords and Stoplists for Full-Text Search"
 title: "Configure & manage stopwords & stoplists for Full-Text Search"
+description: "Configure and Manage Stopwords and Stoplists for Full-Text Search"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "02/02/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stoplists [full-text search]"
   - "full-text search [SQL Server], stoplists"
   - "full-text search [SQL Server], noise words"
   - "noise words [full-text search]"
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
-ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Configure and Manage Stopwords and Stoplists for Full-Text Search
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

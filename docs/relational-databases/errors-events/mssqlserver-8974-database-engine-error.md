@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8974"
 description: "MSSQLSERVER_8974"
-title: "MSSQLSERVER_8974 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8974 (Database Engine error)"
-ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8974 (Database Engine error)"
 ---
 # MSSQLSERVER_8974
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

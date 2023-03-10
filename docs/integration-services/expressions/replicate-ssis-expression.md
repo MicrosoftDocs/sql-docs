@@ -1,17 +1,14 @@
 ---
+title: "REPLICATE (SSIS Expression)"
 description: "REPLICATE (SSIS Expression)"
-title: "REPLICATE (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "REPLICATE function"
-ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "REPLICATE function"
 ---
 # REPLICATE (SSIS Expression)
 

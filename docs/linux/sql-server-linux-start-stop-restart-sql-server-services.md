@@ -1,11 +1,14 @@
 ---
 title: Start, stop, and restart SQL Server services on Linux
 description: Find out how to start, stop, or restart various SQL Server services on Linux. See how to use Transact-SQL and command-line tools for these actions.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: randolphwest
 ms.date: 02/24/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server on Linux, startup options"
   - "Database Engine [SQL Server], starting and stopping services on Linux"
   - "command line [SQL Server], starting and stopping SQL Server services on Linux"
@@ -17,9 +20,6 @@ helpviewer_keywords:
   - "stopping SQL Server on Linux"
   - "SQL Server Database Engine on Linux setting startup options"
   - "administering SQL Server on Linux, starting and stopping services"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
 ---
 
 # Start, stop, and restart SQL Server services on Linux

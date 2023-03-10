@@ -1,18 +1,15 @@
 ---
+title: "ROUND (SSIS Expression)"
 description: "ROUND (SSIS Expression)"
-title: "ROUND (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "rounding expressions"
-  - "ROUND function [SSIS]"
-ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "rounding expressions"
+  - "ROUND function [SSIS]"
 ---
 # ROUND (SSIS Expression)
 

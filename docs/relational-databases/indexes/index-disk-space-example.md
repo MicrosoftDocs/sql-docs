@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "space [SQL Server], indexes"
   - "indexes [SQL Server], disk space requirements"
   - "offline index disk space [SQL Server]"
-ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 ---
 # Index Disk Space Example
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,13 +1,13 @@
 ---
 title: Configure persistent memory (PMEM) - Windows
 description: Learn how to configure persistent memory (PMEM) for SQL Server on Windows, and how to create namespaces for PMEM devices.
-author: briancarrig 
+author: briancarrig
 ms.author: brcarrig
 ms.reviewer: mikeray
 ms.date: 09/21/2022
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Configure persistent memory (PMEM) for SQL Server on Windows

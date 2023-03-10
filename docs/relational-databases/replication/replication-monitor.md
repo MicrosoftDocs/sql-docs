@@ -1,19 +1,17 @@
 ---
+title: "Replication Monitor"
 description: "Replication Monitor"
-title: "Replication Monitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.beta2.f1"
-helpviewer_keywords: 
-  - "Replication Monitor, help"
-ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.beta2.f1"
+helpviewer_keywords:
+  - "Replication Monitor, help"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Monitor

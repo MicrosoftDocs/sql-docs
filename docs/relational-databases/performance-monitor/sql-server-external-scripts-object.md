@@ -1,19 +1,17 @@
 ---
 title: "SQL Server, External Scripts object"
-description: Learn about the SQLServer:External Scripts object, which provides counters to monitor the actions associated with executing external scripts.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "language-reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "External Scripts object"
-  - "SQLServer:External Scripts"
+description: "Learn about the SQLServer:External Scripts object, which provides counters to monitor the actions associated with executing external scripts."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "External Scripts object"
+  - "SQLServer:External Scripts"
+dev_langs:
+  - "TSQL"
 ---
 # SQL Server, External Scripts object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

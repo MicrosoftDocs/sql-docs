@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "syssubscriptions system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 ---
 # syssubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,20 @@
 ---
-description: "Create or Edit a Server Group (SQL Server Management Studio)"
 title: Create or Edit a Server Group
-ms.service: sql
-ms.subservice: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.editgroup.f1"
-  - "sql13.swb.newgroup.f1"
-helpviewer_keywords: 
-  - "Registered Servers [SQL Server], server groups"
-  - "server groups [SQL Server]"
-  - "groups [SQL Server], server"
-ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
+description: "Create or Edit a Server Group (SQL Server Management Studio)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: "mikeray"
-ms.custom: seo-lt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.editgroup.f1"
+  - "sql13.swb.newgroup.f1"
+helpviewer_keywords:
+  - "Registered Servers [SQL Server], server groups"
+  - "server groups [SQL Server]"
+  - "groups [SQL Server], server"
 ---
 
 # Create or Edit a Server Group (SQL Server Management Studio)

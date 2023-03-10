@@ -1,15 +1,12 @@
 ---
-title: "SQL Server 2012 Service Pack release notes | Microsoft Docs"
+title: "SQL Server 2012 Service Pack release notes"
 description: This article contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
-ms.service: sql
-ms.subservice: release-landing
-ms.custom: ""
-ms.date: 07/22/2020
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 07/22/2020
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Service Pack release notes

@@ -1,20 +1,17 @@
 ---
-title: "Create a User-Defined Data Type Alias | Microsoft Docs"
+title: "Create a User-Defined Data Type Alias"
 description: "Learn how to create a user-defined data type alias in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL."
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.userdefineddatatype.general.f1"
-  - "sql13.swb.new.datatype.properties.general.f1"
-helpviewer_keywords: 
-  - "alias data types [SQL Server], creating"
-ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.userdefineddatatype.general.f1"
+  - "sql13.swb.new.datatype.properties.general.f1"
+helpviewer_keywords:
+  - "alias data types [SQL Server], creating"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a User-Defined Data Type Alias

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_permissions catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_permissions (Transact-SQL)

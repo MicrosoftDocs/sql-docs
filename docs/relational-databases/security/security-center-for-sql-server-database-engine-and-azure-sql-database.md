@@ -1,21 +1,17 @@
 ---
 title: "Security documentation for SQL Server & Azure SQL Database"
-description: A reference of security and protection-related content for SQL Server and Azure SQL Database. 
+description: A reference of security and protection-related content for SQL Server and Azure SQL Database.
+author: VanMSFT
+ms.author: vanto
+ms.date: "09/27/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server, security"
   - "security [SQL Server]"
   - "database security [SQL Server]"
   - "databases [SQL Server], security"
-ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-author: VanMSFT
-ms.author: vanto
-ms.custom: seo-lt-2019
-ms.date: "09/27/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

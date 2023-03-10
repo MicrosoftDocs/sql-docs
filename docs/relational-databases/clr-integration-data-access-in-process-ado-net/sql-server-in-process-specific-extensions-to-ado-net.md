@@ -7,7 +7,6 @@ ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: clr
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "data access [CLR integration]"
   - "ADO.NET [CLR integration]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "database objects [CLR integration], in-process extensions"
   - "in-process data access providers [CLR integration]"
   - "extensions [CLR integration]"
-ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

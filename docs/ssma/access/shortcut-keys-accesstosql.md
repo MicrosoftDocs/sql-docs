@@ -1,15 +1,12 @@
 ---
+title: "Shortcut Keys (AccessToSQL)"
 description: "Shortcut Keys (AccessToSQL)"
-title: "Shortcut Keys (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 25a06221-0045-4fb6-a150-1245649768ab
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Shortcut Keys (AccessToSQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

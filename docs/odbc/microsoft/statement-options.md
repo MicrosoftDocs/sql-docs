@@ -1,19 +1,16 @@
 ---
+title: "Statement Options"
 description: "Statement Options"
-title: "Statement Options | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom statement options [ODBC]"
   - "statement options [ODBC]"
   - "ODBC driver for Oracle [ODBC], statement options"
-ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Statement Options
 > [!IMPORTANT]  

@@ -1,17 +1,14 @@
 ---
+title: "Setup Program"
 description: "Setup Program"
-title: "Setup Program | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "installing ODBC components [ODBC], setup program"
-ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/31/2016"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "installing ODBC components [ODBC], setup program"
 ---
 # Setup Program
 > [!NOTE]  

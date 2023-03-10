@@ -1,15 +1,12 @@
 ---
 title: "Client Protocols (SQL Server Configuration Manager)"
 description: Find out how to configure the properties of protocols and the order in which the protocols are used by SQL Server clients.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # Client Protocols (SQL Server Configuration Manager)

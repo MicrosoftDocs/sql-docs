@@ -1,13 +1,14 @@
 ---
-title: "Configure Distribution | Microsoft Docs"
+title: "Configure Distribution"
 description: The SQL Server Distributor hosts the distribution database, which stores metadata and history for replication and transactions for transactional replication.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
   - "remote Distributors [SQL Server replication]"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication], about distribution databases"
   - "distribution databases [SQL Server replication]"
   - "merge replication [SQL Server replication], configuring distribution"
-ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Configure Distribution

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5243"
 description: "MSSQLSERVER_5243"
-title: "MSSQLSERVER_5243 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5243 (Database Engine error)"
-ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5243 (Database Engine error)"
 ---
 # MSSQLSERVER_5243
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

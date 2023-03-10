@@ -7,14 +7,12 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "nontransacted XML Bulk Load operations"
   - "XML Bulk Load [SQLXML], about XML Bulk Load"
   - "bulk load [SQLXML], about bulk load"
   - "transacted XML Bulk Load operations"
   - "streaming XML data"
-ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to XML Bulk Load (SQLXML 4.0)

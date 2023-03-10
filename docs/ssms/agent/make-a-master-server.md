@@ -1,20 +1,18 @@
 ---
 title: Make a master server
 description: Make a Master Server
+author: markingmyname
+ms.author: maghan
+ms.date: 05/14/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.msxwiz.operator.f1"
   - "sql13.ag.msxwiz.login.f1"
   - "sql13.ag.msxwiz.target.f1"
   - "sql13.ag.msxwiz.complete.f1"
   - "sql13.ag.msxwiz.cover.f1"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 05/14/2021
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

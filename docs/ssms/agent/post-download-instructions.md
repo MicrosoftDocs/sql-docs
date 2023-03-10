@@ -1,17 +1,14 @@
 ---
-description: "Post Download Instructions"
 title: "Post Download Instructions"
-ms.custom: seo-lt-2019
+description: "Post Download Instructions"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.target.post.f1"
-ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Post Download Instructions

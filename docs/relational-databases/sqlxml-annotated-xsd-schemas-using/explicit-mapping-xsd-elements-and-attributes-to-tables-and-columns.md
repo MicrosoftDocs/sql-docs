@@ -7,11 +7,9 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "explicit schema mapping [SQLXML]"
   - "XPath queries [SQLXML], annotated XSD schemas in queries"
-ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Custom XSD mappings to tables/columns (SQLXML)

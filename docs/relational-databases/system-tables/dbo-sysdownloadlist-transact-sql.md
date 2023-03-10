@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysdownloadlist system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 ---
 # dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

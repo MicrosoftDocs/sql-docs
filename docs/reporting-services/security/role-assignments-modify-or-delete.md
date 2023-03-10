@@ -1,21 +1,18 @@
 ---
+title: "Modify or Delete a Role Assignment (SSRS web portal)"
 description: "Modify or Delete a Role Assignment (SSRS web portal)"
-title: "Modify or Delete a Role Assignment (SSRS web portal) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/07/2019
 ms.service: reporting-services
 ms.subservice: security
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing role assignments"
   - "roles [Reporting Services], assignments"
   - "system roles [Reporting Services]"
   - "modifying role assignments"
   - "deleting role assignments"
-ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Role Assignments - Modify or Delete

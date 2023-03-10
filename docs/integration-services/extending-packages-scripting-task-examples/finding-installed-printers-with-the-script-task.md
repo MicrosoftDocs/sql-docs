@@ -1,15 +1,13 @@
 ---
+title: "Finding Installed Printers with the Script Task"
 description: "Finding Installed Printers with the Script Task"
-title: "Finding Installed Printers with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "System.Drawing.Printing namespace"
   - "printers [Integration Services]"
   - "SSIS Script task, printers"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "finding printers [SQL Server]"
   - "Script task [Integration Services], printers"
-ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Finding Installed Printers with the Script Task
 

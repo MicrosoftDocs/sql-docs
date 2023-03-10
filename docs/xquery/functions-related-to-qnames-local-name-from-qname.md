@@ -1,20 +1,17 @@
 ---
-title: "local-name-from-QName (XQuery) | Microsoft Docs"
+title: "local-name-from-QName (XQuery)"
 description: Learn how to use the local-name-from-QName() function to return the local name part of a QName.
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:local-name-from-QName function"
-  - "local-name-from-QName function"
-ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:local-name-from-QName function"
+  - "local-name-from-QName function"
+dev_langs:
+  - "XML"
 ---
 # Functions Related to QNames - local-name-from-QName
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

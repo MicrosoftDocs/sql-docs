@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3168"
 description: "MSSQLSERVER_3168"
-title: "MSSQLSERVER_3168 | Microsoft Docs"
-ms.custom: ""
-ms.date: 02/10/2023
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3168 (Database Engine error)"
-ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 02/10/2023
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3168 (Database Engine error)"
 ---
 # MSSQLSERVER_3168
 

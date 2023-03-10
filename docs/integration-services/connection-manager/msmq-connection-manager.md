@@ -1,22 +1,19 @@
 ---
+title: "MSMQ Connection Manager"
 description: "MSMQ Connection Manager"
-title: "MSMQ Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.msmqconnectionmanager.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], message queues"
   - "connection managers [Integration Services], MSMQ"
   - "MSMQ connection manager"
   - "message queue connections [Integration Services]"
-ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-author: chugugrace
-ms.author: chugu
 ---
 # MSMQ Connection Manager
 

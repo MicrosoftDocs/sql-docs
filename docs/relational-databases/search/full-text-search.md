@@ -1,16 +1,15 @@
 ---
+title: "Full-Text Search"
 description: "Full-Text Search"
-title: "Full-Text Search | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "12/29/2020"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server]"
-ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Full-Text Search

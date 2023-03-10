@@ -1,17 +1,14 @@
 ---
+title: "SQLAllocConnect (Visual FoxPro ODBC Driver)"
 description: "SQLAllocConnect (Visual FoxPro ODBC Driver)"
-title: "SQLAllocConnect (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLAllocConnect function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 70d48b12-def5-475c-b8e1-654a55fdfe0f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLAllocConnect function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLAllocConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8621"
 description: "MSSQLSERVER_8621"
-title: "MSSQLSERVER_8621 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8621 (Database Engine error)"
-ms.assetid: 67f59865-becd-4999-8bb0-90aedd7effbf
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8621 (Database Engine error)"
 ---
 # MSSQLSERVER_8621
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

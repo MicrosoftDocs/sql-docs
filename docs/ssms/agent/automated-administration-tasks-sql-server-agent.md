@@ -1,20 +1,17 @@
 ---
-description: "Automated Administration Tasks (SQL Server Agent)"
 title: "Automated Administration Tasks (SQL Server Agent)"
-ms.custom: seo-lt-2019
+description: "Automated Administration Tasks (SQL Server Agent)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "administrative tasks [SQL Server]"
   - "automating administrative tasks"
   - "SQL Server Agent"
   - "administering SQL Server, automatically"
-ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Automated Administration Tasks (SQL Server Agent)

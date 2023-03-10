@@ -1,17 +1,14 @@
 ---
 title: "'General Page of 'Create New Condition' or 'Open Condition' dialog box"
-description: Describes the 'General Page' of the 'Create New Condition' or 'Open Condition" dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.condition.f1"
-ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
+description: Describes the 'General Page' of the 'Create New Condition' or 'Open Condition dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.condition.f1"
 ---
 # Create New Condition or Open Condition Dialog Box, General Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

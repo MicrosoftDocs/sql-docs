@@ -1,14 +1,13 @@
 ---
-title: "Formatting a chart in a paginated report | Microsoft Docs"
-
-description:  Improve the appearance of your paginated report chart and highlight data points using the formatting options found in the properties of each chart element in Report Builder.
+title: "Formatting a chart in a paginated report"
+description: Improve the appearance of your paginated report chart and highlight data points using the formatting options found in the properties of each chart element in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "10214"
   - "sql13.rtp.rptdesigner.charttitleproperties.shadow.f1"
   - "sql13.rtp.rptdesigner.serieslabelproperties.font.f1"
@@ -49,9 +48,6 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.chartareaproperties.border.f1"
   - "sql13.rtp.rptdesigner.chartproperties.border.f1"
   - "10247"
-ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Formatting a chart in a paginated report (Report Builder)
 

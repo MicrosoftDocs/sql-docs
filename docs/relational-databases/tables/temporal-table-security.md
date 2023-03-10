@@ -1,15 +1,12 @@
 ---
+title: "Temporal Table Security"
 description: "Temporal Table Security"
-title: "Temporal Table Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/16/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: markingmyname
 ms.author: maghan
+ms.date: "10/16/2019"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Security

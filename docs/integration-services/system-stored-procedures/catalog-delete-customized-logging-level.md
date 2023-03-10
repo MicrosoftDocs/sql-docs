@@ -1,15 +1,12 @@
 ---
+title: "catalog.delete_customized_logging_level"
 description: "catalog.delete_customized_logging_level"
-title: "catalog.delete_customized_logging_level | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.delete_customized_logging_level 
 

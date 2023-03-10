@@ -1,24 +1,21 @@
 ---
+title: "sys.sp_flush_log (Transact-SQL)"
 description: "sys.sp_flush_log (Transact-SQL)"
-title: "sys.sp_flush_log (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_flush_log_TSQL"
   - "sys.sp_flush_log"
   - "sys.sp_flush_log_TSQL"
   - "sp_flush_log"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_flush_log"
-ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_flush_log (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

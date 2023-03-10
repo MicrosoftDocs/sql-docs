@@ -1,15 +1,12 @@
 ---
-title: "Include indicators and gauges in a gauge panel in paginated report | Microsoft Docs"
-description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your paginated reports in Report Builder. 
+title: "Include indicators and gauges in a gauge panel in paginated report"
+description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your paginated reports in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Include indicators and gauges in a gauge panel in paginated report (Report Builder)
 

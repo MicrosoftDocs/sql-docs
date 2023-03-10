@@ -1,20 +1,17 @@
 ---
 title: "Save Showplan XML Statistics Profile events separately"
-description: Learn how to save Showplan XML Statistics Profile events captured in traces to files with SQL Server Profiler. Open the files in SQL Server Management Studio.
 titleSuffix: SQL Server Profiler
-ms.custom: ""
+description: Learn how to save Showplan XML Statistics Profile events captured in traces to files with SQL Server Profiler. Open the files in SQL Server Management Studio.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Showplan XML events"
   - "saving Showplan XML events"
   - "events [SQL Server], Showplan XML"
-ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Save Showplan XML Statistics Profile events separately (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

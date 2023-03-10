@@ -1,14 +1,12 @@
 ---
 title: "Protocols for MSSQLSERVER Properties (Advanced Tab)"
 description: Learn about the benefits and requirements of the Extended Protection for Authentication for the SQL Server Database Engine. See how to enable and configure it.
-ms.custom: seo-lt-2019
-ms.date: 01/22/2021
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+ms.date: 01/22/2021
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # Protocols for MSSQLSERVER Properties (Advanced Tab)

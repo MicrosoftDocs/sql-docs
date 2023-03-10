@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_3201"
 description: "MSSQLSERVER_3201"
-title: "MSSQLSERVER_3201 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/15/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3201 (Database Engine error)"
 author: pijocoder
 ms.author: jopilov
+ms.date: "08/15/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3201 (Database Engine error)"
 ---
 # MSSQLSERVER_3201
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7934"
 description: "MSSQLSERVER_7934"
-title: "MSSQLSERVER_7934 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7934 (Database Engine error)"
-ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7934 (Database Engine error)"
 ---
 # MSSQLSERVER_7934
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

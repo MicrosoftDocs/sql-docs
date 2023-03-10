@@ -1,22 +1,19 @@
 ---
+title: "xp_cmdshell (Transact-SQL)"
 description: "xp_cmdshell (Transact-SQL)"
-title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/01/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_cmdshell"
-  - "xp_cmdshell_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_cmdshell"
-ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
+ms.date: "12/01/2019"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_cmdshell"
+  - "xp_cmdshell_TSQL"
+helpviewer_keywords:
+  - "xp_cmdshell"
+dev_langs:
+  - "TSQL"
 ---
 # xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

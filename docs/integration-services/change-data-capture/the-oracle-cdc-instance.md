@@ -1,15 +1,12 @@
 ---
+title: "The Oracle CDC Instance"
 description: "The Oracle CDC Instance"
-title: "The Oracle CDC Instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # The Oracle CDC Instance
 

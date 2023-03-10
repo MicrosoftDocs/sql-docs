@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3414"
 description: "MSSQLSERVER_3414"
-title: "MSSQLSERVER_3414 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3414 (Database Engine error)"
-ms.assetid: f25852f9-b91c-4356-b817-78bec9ec8db4
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3414 (Database Engine error)"
 ---
 # MSSQLSERVER_3414
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

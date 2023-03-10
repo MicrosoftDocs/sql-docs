@@ -1,17 +1,14 @@
 ---
+title: "Specify Table Copy or Query (SQL Server Import and Export Wizard)"
 description: "Specify Table Copy or Query (SQL Server Import and Export Wizard)"
-title: "Specify Table Copy or Query (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.specifytablecopyorquery.f1"
-ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
+ms.date: "02/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.specifytablecopyorquery.f1"
 ---
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)
 

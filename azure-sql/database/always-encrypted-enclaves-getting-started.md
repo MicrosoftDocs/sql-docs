@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
 ---
 # Getting started using Always Encrypted with secure enclaves

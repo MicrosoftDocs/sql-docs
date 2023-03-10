@@ -6,7 +6,6 @@ ms.author: maghan
 ms.date: 10/27/2021
 ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: seo-lt-2019
 ---
 
 # Notebook views (Preview)

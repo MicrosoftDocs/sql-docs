@@ -1,15 +1,12 @@
 ---
-description: "List Job Category Information"
 title: "List Job Category Information"
-ms.custom: seo-lt-2019
+description: "List Job Category Information"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # List Job Category Information

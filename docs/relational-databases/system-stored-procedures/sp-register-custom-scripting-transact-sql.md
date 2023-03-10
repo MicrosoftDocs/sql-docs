@@ -1,22 +1,19 @@
 ---
+title: "sp_register_custom_scripting (Transact-SQL)"
 description: "sp_register_custom_scripting (Transact-SQL)"
-title: "sp_register_custom_scripting (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_register_custom_scripting"
-  - "sp_register_custom_scripting_TSQL"
-helpviewer_keywords: 
-  - "sp_register_custom_scripting"
-ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_register_custom_scripting"
+  - "sp_register_custom_scripting_TSQL"
+helpviewer_keywords:
+  - "sp_register_custom_scripting"
+dev_langs:
+  - "TSQL"
 ---
 # sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

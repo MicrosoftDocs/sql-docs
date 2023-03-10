@@ -1,29 +1,19 @@
 ---
+title: "SQLNumParams Function"
 description: "SQLNumParams Function"
-title: "SQLNumParams Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLNumParams"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLNumParams"
-helpviewer_keywords: 
-  - "SQLNumParams function [ODBC]"
-ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLNumParams"
+helpviewer_keywords:
+  - "SQLNumParams function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLNumParams"
+apitype: "dllExport"
 ---
 # SQLNumParams Function
 **Conformance**  

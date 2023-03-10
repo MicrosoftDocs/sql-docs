@@ -1,19 +1,16 @@
 ---
+title: "Extract Data by Using the XML Source"
 description: "Extract Data by Using the XML Source"
-title: "Extract Data by Using the XML Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extracting data [Integration Services]"
   - "sources [Integration Services], XML"
   - "XML source [Integration Services]"
-ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-author: chugugrace
-ms.author: chugu
 ---
 # Extract Data by Using the XML Source
 

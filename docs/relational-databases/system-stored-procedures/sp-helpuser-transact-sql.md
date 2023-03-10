@@ -1,22 +1,19 @@
 ---
+title: "sp_helpuser (Transact-SQL)"
 description: "sp_helpuser (Transact-SQL)"
-title: "sp_helpuser (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpuser"
-  - "sp_helpuser_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpuser"
-ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpuser"
+  - "sp_helpuser_TSQL"
+helpviewer_keywords:
+  - "sp_helpuser"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

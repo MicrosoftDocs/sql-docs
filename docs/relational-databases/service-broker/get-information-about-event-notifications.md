@@ -1,19 +1,15 @@
 ---
+title: "Get Information About Event Notifications"
 description: "Get Information About Event Notifications"
-title: "Get Information About Event Notifications | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event notifications [SQL Server], metadata"
   - "status information [SQL Server], event notifications"
   - "metadata [SQL Server], event notifications"
-ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Get Information About Event Notifications
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

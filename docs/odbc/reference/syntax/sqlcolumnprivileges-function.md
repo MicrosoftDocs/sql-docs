@@ -1,24 +1,19 @@
 ---
+title: "SQLColumnPrivileges Function"
 description: "SQLColumnPrivileges Function"
-title: "SQLColumnPrivileges Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLColumnPrivileges"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLColumnPrivileges"
-helpviewer_keywords: 
-  - "SQLColumnPrivileges function [ODBC]"
-ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLColumnPrivileges"
+helpviewer_keywords:
+  - "SQLColumnPrivileges function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLColumnPrivileges"
+apitype: "dllExport"
 ---
 # SQLColumnPrivileges Function
 **Conformance**  

@@ -1,18 +1,15 @@
 ---
-title: "Manage FileTables | Microsoft Docs"
+title: "Manage FileTables"
 description: Explore common administrative tasks you can use to manage FileTables, and learn about FileTable security, backup, and auditing.
-ms.custom: ""
-ms.date: "08/23/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FileTables [SQL Server], security"
-  - "FileTables [SQL Server], managing access"
-ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "08/23/2017"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FileTables [SQL Server], security"
+  - "FileTables [SQL Server], managing access"
 ---
 # Manage FileTables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

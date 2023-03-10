@@ -1,15 +1,12 @@
 ---
+title: "catalog.add_execution_worker (SSISDB Database)"
 description: "catalog.add_execution_worker (SSISDB Database)"
-title: "catalog.add_execution_worker (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: chugugrace
 ms.author: chugu
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 monikerRange: ">= sql-server-2017"
 ---
 # catalog.add_execution_worker (SSISDB Database)

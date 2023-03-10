@@ -1,22 +1,19 @@
 ---
+title: "WMI Event Watcher Task"
 description: "WMI Event Watcher Task"
-title: "WMI Event Watcher Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.wmieventwatchertask.f1"
   - "sql13.dts.designer.wmieventwatcher.general.f1"
   - "sql13.dts.designer.wmieventwatcher.wmiquery.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Event Watcher task [Integration Services]"
-ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-author: chugugrace
-ms.author: chugu
 ---
 # WMI Event Watcher Task
 

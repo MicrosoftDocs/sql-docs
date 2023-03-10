@@ -1,18 +1,15 @@
 ---
+title: "Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard"
 description: "Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard"
-title: "Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Integration Services packages, upgrading"
-  - "upgrading Integration Services packages"
-ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Integration Services packages, upgrading"
+  - "upgrading Integration Services packages"
 ---
 # Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard
 

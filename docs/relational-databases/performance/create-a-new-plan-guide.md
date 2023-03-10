@@ -1,20 +1,17 @@
 ---
-title: "Create a New Plan Guide | Microsoft Docs"
+title: "Create a New Plan Guide"
 description: Learn how to create a plan guide by using SQL Server Management Studio or Transact-SQL. A Plan Guide applies a fixed query plan and query hints to a query.
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.designer.newplanguide.f1"
-helpviewer_keywords: 
-  - "creating plan guides"
-  - "plan guides [SQL Server]. creating"
-ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "08/02/2016"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.designer.newplanguide.f1"
+helpviewer_keywords:
+  - "creating plan guides"
+  - "plan guides [SQL Server]. creating"
 ---
 # Create a New Plan Guide
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

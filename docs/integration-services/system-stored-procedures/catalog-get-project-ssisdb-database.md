@@ -1,15 +1,12 @@
 ---
+title: "catalog.get_project (SSISDB Database)"
 description: "catalog.get_project (SSISDB Database)"
-title: "catalog.get_project (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.get_project (SSISDB Database)
 

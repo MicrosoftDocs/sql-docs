@@ -124,4 +124,3 @@ When you close the Integration Services Project Conversion Wizard, SSIS displays
 3.  On the message dialog box, select **Yes** to open the **Overview Report**.  
   
 The **Overview Report** for the package displays the name of the package and a status summary. The **Execution Overview** section shows the result from each task in the package. The **Parameters Used** section shows the names and values of all parameters used in the package execution, including **VarFolderName**.  
-  

@@ -1,19 +1,17 @@
 ---
 title: "Subscription validation options dialog box (Transactional)"
 description: Describes the 'Subscription Validation Options' dialog box for Transactional Replication in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.validate.options.f1"
-helpviewer_keywords: 
-  - "Subscription Validation Options dialog box"
-ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.validate.options.f1"
+helpviewer_keywords:
+  - "Subscription Validation Options dialog box"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Subscription Validation Options (Transactional Subscriptions)

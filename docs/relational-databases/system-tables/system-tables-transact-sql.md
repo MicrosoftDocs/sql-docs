@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "retrieving system table information"
 dev_langs:
   - "TSQL"
-ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 ---
 # System Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -7,7 +7,7 @@ ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: "references_regions"
+ms.custom: references_regions
 helpviewer_keywords:
   - "optimized locking"
 dev_langs:

@@ -1,19 +1,14 @@
 ---
-description: "Configuring SQL Server in SMO"
 title: "Configuring SQL Server in SMO"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server, configuring"
-  - "configuration options [SMO]"
-ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
+description: "Configuring SQL Server in SMO"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQL Server, configuring"
+  - "configuration options [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configuring SQL Server in SMO

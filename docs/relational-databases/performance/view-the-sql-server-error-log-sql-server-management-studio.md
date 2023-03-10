@@ -1,20 +1,18 @@
 ---
 title: "View the SQL Server error log (SSMS)"
 description: Learn about the SQL Server error log, which contains user-defined events and certain system events you can use for troubleshooting.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "10/05/2022"
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing logs"
   - "displaying logs"
   - "errors [SQL Server], logs"
   - "logs [SQL Server], SQL Server error logs"
   - "logs [SQL Server], viewing"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: seo-dt-2019, FY22Q2Fresh
-ms.date: "10/05/2022"
 ---
 # View the SQL Server error log in SQL Server Management Studio (SSMS)
 

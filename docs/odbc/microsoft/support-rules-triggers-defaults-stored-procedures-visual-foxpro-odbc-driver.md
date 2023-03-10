@@ -1,13 +1,13 @@
 ---
+title: "Support for Rules, Triggers, Default Values, and Stored Procedures"
 description: "Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)"
-title: "Support for Rules, Triggers, Default Values, and Stored Procedures | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], stored procedures"
   - "FoxPro ODBC driver [ODBC], commands and functions"
   - "commands for FoxPro ODBC driver [ODBC]"
@@ -25,9 +25,6 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], triggers"
   - "FoxPro ODBC driver [ODBC], stored procedures"
   - "Visual FoxPro commands and functions [ODBC]"
-ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)
 You cannot create Visual FoxPro rules, triggers, default values, or stored procedures using the Visual FoxPro ODBC Driver. However, your application might interact with existing rules, triggers, default values, or stored procedures as it inserts, updates, or deletes Visual FoxPro data stored in a database.  

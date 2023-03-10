@@ -7,14 +7,12 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "providers [SQLXML], SQLOLEDB Provider"
   - "ADO [SQLXML]"
   - "SQLXMLOLEDB Provider, DiffGrams"
   - "data providers [SQLXML], SQLOLEDB Provider"
   - "DiffGrams [SQLXML], ADO"
-ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a DiffGram by Using ADO (SQLXML 4.0)

@@ -1,13 +1,13 @@
 ---
+title: "Using Statement Parameters"
 description: "Using Statement Parameters"
-title: "Using Statement Parameters | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, parameters"
   - "parameters [SQL Server Native Client], ODBC"
   - "ODBC, parameters"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "parameter markers [ODBC]"
   - "SQL Server Native Client ODBC driver, statements"
   - "ODBC applications, statements"
-ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Statement Parameters

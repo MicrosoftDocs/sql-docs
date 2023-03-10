@@ -7,7 +7,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "all_columns_TSQL"
   - "all_columns"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.all_columns catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_columns (Transact-SQL)

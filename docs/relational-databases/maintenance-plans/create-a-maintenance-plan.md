@@ -9,7 +9,6 @@ ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords:
   - "maintenance plans [SQL Server], creating"
-ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 ---
 # Create a Maintenance Plan
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

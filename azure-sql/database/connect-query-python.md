@@ -10,11 +10,11 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "seo-python-october2019"
-  - "sqldbrb=2"
-  - "devx-track-python"
-  - "mode-api"
-  - "py-fresh-zinc"
+  - seo-python-october2019
+  - sqldbrb=2
+  - devx-track-python
+  - mode-api
+  - py-fresh-zinc
 ms.devlang: python
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

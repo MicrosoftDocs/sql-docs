@@ -1,19 +1,15 @@
 ---
-description: "Description Property Dialog Box (Visual Database Tools)"
 title: Description Property Dialog Box
-ms.custom: seo-lt-2019
+description: "Description Property Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:73728"
   - "vdt.dlgbox.description"
-ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Description Property Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

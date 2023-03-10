@@ -1,17 +1,14 @@
 ---
+title: "sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)"
 description: "sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)"
-title: "sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)

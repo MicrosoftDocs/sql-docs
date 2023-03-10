@@ -1,22 +1,19 @@
 ---
+title: "sp_dropmergepublication (Transact-SQL)"
 description: "sp_dropmergepublication (Transact-SQL)"
-title: "sp_dropmergepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropmergepublication"
-  - "sp_dropmergepublication_TSQL"
-helpviewer_keywords: 
-  - "sp_dropmergepublication"
-ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropmergepublication"
+  - "sp_dropmergepublication_TSQL"
+helpviewer_keywords:
+  - "sp_dropmergepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

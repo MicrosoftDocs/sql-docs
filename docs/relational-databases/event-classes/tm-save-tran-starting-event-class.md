@@ -1,17 +1,14 @@
 ---
+title: "TM: Save Tran Starting Event Class"
 description: "TM: Save Tran Starting Event Class"
-title: "TM: Save Tran Starting Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "TM: Save Tran Starting event class"
-ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "TM: Save Tran Starting event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Save Tran Starting Event Class

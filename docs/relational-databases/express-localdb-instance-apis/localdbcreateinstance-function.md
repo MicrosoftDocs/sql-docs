@@ -1,20 +1,14 @@
 ---
+title: "LocalDBCreateInstance Function"
 description: "LocalDBCreateInstance Function"
-title: "LocalDBCreateInstance Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBCreateInstance"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBCreateInstance"
+apitype: "DLLExport"
 ---
 # LocalDBCreateInstance Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

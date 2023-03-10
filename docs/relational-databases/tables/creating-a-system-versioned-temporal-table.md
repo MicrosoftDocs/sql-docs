@@ -1,13 +1,12 @@
 ---
 title: Create a system-versioned temporal table
 description: "Create a system-versioned temporal table. There are three ways to create a system-versioned temporal table."
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 05/16/2022
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-author: rwestMSFT
-ms.author: randolphwest
-ms.custom: ""
-ms.date: 05/16/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

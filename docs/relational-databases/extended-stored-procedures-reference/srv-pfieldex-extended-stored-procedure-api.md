@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_pfieldex
 apitype: "DLLExport"
-ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 ---
 # srv_pfieldex (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

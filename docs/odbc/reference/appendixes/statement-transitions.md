@@ -1,19 +1,16 @@
 ---
+title: "Statement Transitions"
 description: "Statement Transitions"
-title: "Statement Transitions | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transitioning states [ODBC], statement"
   - "state transitions [ODBC], statement"
   - "statement transitions [ODBC]"
-ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Statement Transitions
 ODBC statements have the following states.  

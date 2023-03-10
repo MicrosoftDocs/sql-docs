@@ -1,18 +1,15 @@
 ---
-description: "Table-Valued Parameter Data Conversion and Other Errors and Warnings"
 title: "Table-Valued Parameter data conversion"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters (ODBC), data conversion"
-  - "table-valued parameters (ODBC), error messages"
-ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
+description: "Table-Valued Parameter Data Conversion and Other Errors and Warnings"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters (ODBC), data conversion"
+  - "table-valued parameters (ODBC), error messages"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameter Data Conversion and Other Errors and Warnings

@@ -1,15 +1,13 @@
 ---
+title: "Manage keys for Always Encrypted with secure enclaves"
 description: "Manage keys for Always Encrypted with secure enclaves"
-title: "Manage keys for Always Encrypted with secure enclaves | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/24/2022
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: vanto
+ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-author: jaszymas
-ms.author: jaszymas
 monikerRange: ">= sql-server-ver15"
 ---
 # Manage keys for Always Encrypted with secure enclaves

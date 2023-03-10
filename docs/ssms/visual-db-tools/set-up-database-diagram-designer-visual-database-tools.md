@@ -1,22 +1,18 @@
 ---
-description: "Set Up Database Diagram Designer (Visual Database Tools)"
 title: Set Up Database Diagram Designer
-ms.custom: seo-lt-2019
+description: "Set Up Database Diagram Designer (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.diagnostic.InstallSqlDiagramSupport"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Diagram Designer"
   - "database diagrams [SQL Server], Database Diagram Designer"
   - "diagrams [SQL Server], Database Diagram Designer"
-ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Set Up Database Diagram Designer (Visual Database Tools)
 

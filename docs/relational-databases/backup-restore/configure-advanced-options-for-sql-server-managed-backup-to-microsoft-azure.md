@@ -1,18 +1,15 @@
 ---
 title: "Managed backup - configure advanced options"
-description: This tutorial describes how to set advanced options for SQL Server Managed Backup to Microsoft Azure, in the event default options don't suit your needs.
 titleSuffix: "to Microsoft Azure"
+description: This tutorial describes how to set advanced options for SQL Server Managed Backup to Microsoft Azure, in the event default options don't suit your needs.
+author: MashaMSFT
+ms.author: mathoma
+ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-f1_keywords: 
-  - sql13.swb.managedbackup.configure.f1
-ms.custom: seo-lt-2019
-ms.date: "12/17/2019"
-ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: ""
+f1_keywords:
+  - "sql13.swb.managedbackup.configure.f1"
 ---
 # Configure advanced options for SQL Server managed backup to Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

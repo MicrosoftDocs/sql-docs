@@ -1,17 +1,15 @@
 ---
-description: "Find Similar and Related Documents with Semantic Search"
 title: "Find similar & related documents with Semantic Search"
+description: "Find Similar and Related Documents with Semantic Search"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "semantic search [SQL Server], document similarity queries"
-ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Find Similar and Related Documents with Semantic Search
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "Project Versions Dialog Box"
 description: "Project Versions Dialog Box"
-title: "Project Versions Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectprop.versions.f1"
-ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.ssms.isprojectprop.versions.f1"
 ---
 # Project Versions Dialog Box
 

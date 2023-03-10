@@ -2,14 +2,12 @@
 title: Run SQL Server Profiler
 titleSuffix: SQL Server Profiler
 description: Learn which programs and menus you can start SQL Server Profiler from and which connection contexts, templates, and filters are used with trace output.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 12/13/2021
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Run SQL Server Profiler

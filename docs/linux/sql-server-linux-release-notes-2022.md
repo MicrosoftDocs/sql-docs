@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 02/16/2023
+ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -30,11 +30,14 @@ Most existing client tools that target [!INCLUDE[ssNoVersion](../includes/ssnove
 
 ## Latest versions for all packages
 
-This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022. The following table shows the most recent release, which is **CU 1**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022](sql-server-linux-release-history-2022.md).
+This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022. The following table shows the most recent release, which is **CU 1**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022](/troubleshoot/sql/linux/release-history-2022).
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
 | [!INCLUDE[ssSQL22](../includes/sssql22-md.md)] | CU 1 | 2023-02-16 | 16.0.4003.1 | [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate1)|
+
+
+- The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).
 
 | Distribution | Package name | Package version | Download |
 | --- | --- | --- | --- |
@@ -44,6 +47,7 @@ This section lists the latest versions of each package per distribution, for [!I
 | RHEL 8 | Full-Text Search | 16.0.4003.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-fts-16.0.4003.1-1.x86_64.rpm) |
 | RHEL 8 | High Availability | 16.0.4003.1-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-ha-16.0.4003.1-1.x86_64.rpm) |
 | RHEL 8 | PolyBase | 16.0.4003.1-1 | [PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-polybase-16.0.4003.1-1.x86_64.rpm) |
+| RHEL 8 | SSIS | 16.0.950.9-1 | [SSIS RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/mssql-server-is-16.0.950.9-1.x86_64.rpm) |
 | **SUSE Enterprise Linux Server** | | | |
 | SLES 15 | Database Engine | 16.0.4003.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/mssql-server-16.0.4003.1-1.x86_64.rpm) |
 | SLES 15 | Extensibility | 16.0.4003.1-1 | [Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/mssql-server-extensibility-16.0.4003.1-1.x86_64.rpm) |
@@ -56,6 +60,7 @@ This section lists the latest versions of each package per distribution, for [!I
 | Ubuntu 20.04 | Full-Text Search | 16.0.4003.1-1 | [Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server-fts/mssql-server-fts_16.0.4003.1-1_amd64.deb) |
 | Ubuntu 20.04 | High Availability | 16.0.4003.1-1 | [High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server-ha/mssql-server-ha_16.0.4003.1-1_amd64.deb) |
 | Ubuntu 20.04 | PolyBase | 16.0.4003.1-1 | [PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server-polybase/mssql-server-polybase_16.0.4003.1-1_amd64.deb) |
+| Ubuntu 20.04 | SSIS | 16.0.950.9-1 | [SSIS Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server-is/mssql-server-is_16.0.950.9-1_amd64.deb) |
 
 ## <a id="cuinstall"></a> How to install updates
 
@@ -65,6 +70,7 @@ If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 - [Install SQL Server package](sql-server-linux-setup.md#upgrade)
 - [Install Full-Text Search package](sql-server-linux-setup-full-text-search.md)
+- [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
@@ -75,9 +81,9 @@ The following table lists the release history for [!INCLUDE[ssSQL22](../includes
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
-| [CU 1](sql-server-linux-release-history-2022.md#CU1) | 16.0.4003.1   | 2023-02-16   |
-| [GDR 1](sql-server-linux-release-history-2022.md#GDR1) | 16.0.1050.5   | 2023-02-14   |
-| [GA](sql-server-linux-release-history-2022.md#GA) | 16.0.1000.6   | 2022-11-16   |
+| [CU 1](/troubleshoot/sql/linux/release-history-2022#CU1) | 16.0.4003.1   | 2023-02-16   |
+| [GDR 1](/troubleshoot/sql/linux/release-history-2022#GDR1) | 16.0.1050.5   | 2023-02-14   |
+| [GA](/troubleshoot/sql/linux/release-history-2022#GA) | 16.0.1000.6   | 2022-11-16   |
 
 ## Known issues
 

@@ -1,13 +1,13 @@
 ---
 title: "Restore files (and filegroups) over existing"
 description: This article shows you how to restore files and filegroups over existing files in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restoring files [SQL Server], how-to topics"
   - "restoring files [SQL Server], steps"
   - "file restores [SQL Server], how-to topics"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "restoring filegroups [SQL Server]"
   - "overwriting filegroups"
   - "overwriting files"
-ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Restore Files and Filegroups over Existing Files (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

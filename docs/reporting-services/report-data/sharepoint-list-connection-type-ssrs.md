@@ -1,15 +1,12 @@
 ---
-title: "SharePoint List Connection Type | Microsoft Docs"
+title: "SharePoint List Connection Type"
 description: Use the information in this article about the SharePoint List connection type to learn how to build a data source.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/10/2017
 ms.service: reporting-services
 ms.subservice: report-data
-
-
 ms.topic: conceptual
-ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: maggiesMSFT
-ms.author: maggies
 ---
 # SharePoint List Connection Type (SSRS)
 

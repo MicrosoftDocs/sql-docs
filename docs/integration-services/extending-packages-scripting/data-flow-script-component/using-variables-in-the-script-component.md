@@ -1,17 +1,14 @@
 ---
+title: "Using Variables in the Script Component"
 description: "Using Variables in the Script Component"
-title: "Using Variables in the Script Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Script component [Integration Services], using variables"
-ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script component [Integration Services], using variables"
 ---
 # Using Variables in the Script Component
 

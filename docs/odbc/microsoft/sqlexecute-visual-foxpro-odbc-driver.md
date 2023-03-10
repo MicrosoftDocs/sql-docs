@@ -1,17 +1,14 @@
 ---
+title: "SQLExecute (Visual FoxPro ODBC Driver)"
 description: "SQLExecute (Visual FoxPro ODBC Driver)"
-title: "SQLExecute (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLExecute function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLExecute function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLExecute (Visual FoxPro ODBC Driver)
 > [!NOTE]  

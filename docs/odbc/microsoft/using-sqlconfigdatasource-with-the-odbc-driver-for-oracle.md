@@ -1,17 +1,14 @@
 ---
+title: "Using SQLConfigDatasource with the ODBC Driver for Oracle"
 description: "Using SQLConfigDatasource with the ODBC Driver for Oracle"
-title: "Using SQLConfigDatasource with the ODBC Driver for Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLConfigDataSource function [ODBC], ODBC driver for Oracle"
-ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLConfigDataSource function [ODBC], ODBC driver for Oracle"
 ---
 # Using SQLConfigDatasource with the ODBC Driver for Oracle
 > [!IMPORTANT]  

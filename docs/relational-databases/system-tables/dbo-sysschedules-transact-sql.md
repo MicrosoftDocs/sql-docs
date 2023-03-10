@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysschedules system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 ---
 # dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

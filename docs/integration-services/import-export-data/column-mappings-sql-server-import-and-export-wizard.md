@@ -1,17 +1,14 @@
 ---
+title: "Column Mappings (SQL Server Import and Export Wizard)"
 description: "Column Mappings (SQL Server Import and Export Wizard)"
-title: "Column Mappings (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.columnmapandtransform.f1"
-ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.columnmapandtransform.f1"
 ---
 # Column Mappings (SQL Server Import and Export Wizard)
 

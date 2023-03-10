@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_26013"
 description: "MSSQLSERVER_26013"
-title: "MSSQLSERVER_26013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "26013 (Database Engine error)"
-ms.assetid: 7362fca4-b005-4872-bdfa-a3e32f834db8
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "26013 (Database Engine error)"
 ---
 # MSSQLSERVER_26013
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

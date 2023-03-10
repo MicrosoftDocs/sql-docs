@@ -1,19 +1,16 @@
 ---
+title: "Understanding the Differences between Local and Remote Execution"
 description: "Understanding the Differences between Local and Remote Execution"
-title: "Understanding the Differences between Local and Remote Execution | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, running"
   - "packages [Integration Services], running"
   - "packages [Integration Services], troubleshooting"
-ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
-author: chugugrace
-ms.author: chugu
 ---
 # Understanding the Differences between Local and Remote Execution
 

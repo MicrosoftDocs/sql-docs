@@ -1,15 +1,12 @@
 ---
+title: "Work with Sample Console Script FilesExecuting the SSMA Console"
 description: "Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL)"
-title: "Work with Sample Console Script FilesExecuting the SSMA Console | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

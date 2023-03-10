@@ -7,12 +7,10 @@ ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "registry keys [SQLXML]"
   - "cache [SQLXML]"
   - "templates [SQLXML], caching"
-ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Template Caching (SQLXML 4.0)

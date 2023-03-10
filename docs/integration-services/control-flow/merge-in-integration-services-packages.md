@@ -1,17 +1,14 @@
 ---
+title: "MERGE in Integration Services Packages"
 description: "MERGE in Integration Services Packages"
-title: "MERGE in Integration Services Packages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "MERGE statement [SQL Server]"
-ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "MERGE statement [SQL Server]"
 ---
 # MERGE in Integration Services Packages
 

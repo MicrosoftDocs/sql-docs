@@ -1,17 +1,15 @@
 ---
+title: "Configure Peer-to-Peer Topology Wizard"
 description: "Configure Peer-to-Peer Topology Wizard"
-title: "Configure Peer-to-Peer Topology Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Configure Peer-to-Peer Topology Wizard"
-ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Configure Peer-to-Peer Topology Wizard"
 ---
 # Configure Peer-to-Peer Topology Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

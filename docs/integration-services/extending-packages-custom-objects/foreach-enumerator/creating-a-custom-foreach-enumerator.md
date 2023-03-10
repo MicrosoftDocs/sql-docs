@@ -1,20 +1,17 @@
 ---
+title: "Creating a Custom Foreach Enumerator"
 description: "Creating a Custom Foreach Enumerator"
-title: "Creating a Custom Foreach Enumerator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "custom foreach enumerators [Integration Services], creating"
-ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom foreach enumerators [Integration Services], creating"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Creating a Custom Foreach Enumerator
 

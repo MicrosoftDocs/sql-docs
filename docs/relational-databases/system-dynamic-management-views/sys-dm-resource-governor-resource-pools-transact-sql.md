@@ -3,7 +3,7 @@ title: "sys.dm_resource_governor_resource_pools (Transact-SQL)"
 description: sys.dm_resource_governor_resource_pools (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "04/24/2018"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_resource_pools dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_resource_governor_resource_pools (Transact-SQL)
@@ -86,7 +85,11 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 ## Permissions  
  Requires `VIEW SERVER STATE` permission.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   

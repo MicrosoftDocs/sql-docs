@@ -1,18 +1,15 @@
 ---
+title: "Monitor Data-tier Applications"
 description: "Monitor Data-tier Applications"
-title: "Monitor Data-tier Applications | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.subservice:
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "monitoring [SQL Server], data-tier applications"
   - "monitoring server performance [SQL Server], DACs"
   - "data-tier application [SQL Server], monitor"
-ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Monitor Data-tier Applications
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

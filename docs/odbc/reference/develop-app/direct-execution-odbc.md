@@ -1,19 +1,16 @@
 ---
+title: "Direct Execution ODBC"
 description: "Direct Execution ODBC"
-title: "Direct Execution ODBC | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL statements [ODBC], direct execution"
   - "direct execution [ODBC]"
   - "SQL statements [ODBC], executing"
-ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Direct Execution ODBC
 Direct execution is the simplest way to execute a statement. When the statement is submitted for execution, the data source compiles it into an access plan and then executes that access plan.  

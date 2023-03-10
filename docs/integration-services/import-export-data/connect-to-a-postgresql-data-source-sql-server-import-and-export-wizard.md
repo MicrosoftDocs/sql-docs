@@ -1,15 +1,12 @@
 ---
+title: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)"
 description: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)"
-title: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/29/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
+ms.date: 06/29/2020
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)
 

@@ -1,17 +1,15 @@
 ---
+title: "Web Server Information"
 description: "Web Server Information"
-title: "Web Server Information | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.webserverinformation.f1"
-ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.webserverinformation.f1"
 ---
 # Web Server Information
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

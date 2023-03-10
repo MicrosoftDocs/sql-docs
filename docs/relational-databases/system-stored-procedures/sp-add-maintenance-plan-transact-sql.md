@@ -1,22 +1,19 @@
 ---
+title: "sp_add_maintenance_plan (Transact-SQL)"
 description: "sp_add_maintenance_plan (Transact-SQL)"
-title: "sp_add_maintenance_plan (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_maintenance_plan"
-  - "sp_add_maintenance_plan_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_maintenance_plan"
-ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_maintenance_plan"
+  - "sp_add_maintenance_plan_TSQL"
+helpviewer_keywords:
+  - "sp_add_maintenance_plan"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

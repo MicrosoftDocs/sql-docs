@@ -1,22 +1,19 @@
 ---
+title: "sp_can_tlog_be_applied (Transact-SQL)"
 description: "sp_can_tlog_be_applied (Transact-SQL)"
-title: "sp_can_tlog_be_applied (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_can_tlog_be_applied_TSQL"
-  - "sp_can_tlog_be_applied"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_can_tlog_be_applied"
-ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_can_tlog_be_applied_TSQL"
+  - "sp_can_tlog_be_applied"
+helpviewer_keywords:
+  - "sp_can_tlog_be_applied"
+dev_langs:
+  - "TSQL"
 ---
 # sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

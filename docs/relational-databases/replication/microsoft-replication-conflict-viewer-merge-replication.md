@@ -1,17 +1,15 @@
 ---
 title: "Replication Conflict Viewer (Merge)"
 description: Describes the Replication Conflict Viewer used for Merge Replication in SQL Server.
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.replconflictviewer.cvmerge.f1"
-ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.replconflictviewer.cvmerge.f1"
 ---
 # Microsoft Replication Conflict Viewer (Merge Replication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

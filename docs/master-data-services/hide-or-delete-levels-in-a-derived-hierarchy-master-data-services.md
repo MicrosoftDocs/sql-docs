@@ -1,18 +1,15 @@
 ---
-description: "Hide or Delete Levels in a Derived Hierarchy (Master Data Services)"
 title: Hide or Delete Levels in a Derived Hierarchy
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "derived hierarchies, hiding levels"
-  - "derived hierarchies, deleting levels"
-ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
+description: "Hide or Delete Levels in a Derived Hierarchy (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "derived hierarchies, hiding levels"
+  - "derived hierarchies, deleting levels"
 ---
 # Hide or Delete Levels in a Derived Hierarchy (Master Data Services)
 

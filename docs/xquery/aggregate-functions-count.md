@@ -1,20 +1,17 @@
 ---
+title: "count Function (XQuery)"
 description: "Aggregate Functions - count"
-title: "count Function (XQuery) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:count function"
-  - "count function [XQuery]"
-ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:count function"
+  - "count function [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Aggregate Functions - count
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
-description: "Table-Valued Parameter Rowset Creation in SQL Server Native Client"
 title: Table-valued parameter rowset creation (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters, rowset creation"
-ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
+description: "Table-Valued Parameter Rowset Creation in SQL Server Native Client"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters, rowset creation"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameter Rowset Creation in SQL Server Native Client

@@ -1,22 +1,19 @@
 ---
+title: "sp_changearticlecolumndatatype (Transact-SQL)"
 description: "sp_changearticlecolumndatatype (Transact-SQL)"
-title: "sp_changearticlecolumndatatype (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changearticlecolumndatatype"
-  - "sp_changearticlecolumndatatype_TSQL"
-helpviewer_keywords: 
-  - "sp_changearticlecolumndatatype"
-ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changearticlecolumndatatype"
+  - "sp_changearticlecolumndatatype_TSQL"
+helpviewer_keywords:
+  - "sp_changearticlecolumndatatype"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

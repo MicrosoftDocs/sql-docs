@@ -1,22 +1,19 @@
 ---
+title: "sp_help_log_shipping_primary_secondary (Transact-SQL)"
 description: "sp_help_log_shipping_primary_secondary (Transact-SQL)"
-title: "sp_help_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_log_shipping_primary_secondary"
-  - "sp_help_log_shipping_primary_secondary_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_log_shipping_primary_secondary"
-ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_log_shipping_primary_secondary"
+  - "sp_help_log_shipping_primary_secondary_TSQL"
+helpviewer_keywords:
+  - "sp_help_log_shipping_primary_secondary"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

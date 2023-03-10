@@ -1,15 +1,12 @@
 ---
-description: "Approve or Reject a Changeset (Master Data Services)"
 title: Approve or Reject a Changeset
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
+description: "Approve or Reject a Changeset (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Approve or Reject a Changeset (Master Data Services)
 

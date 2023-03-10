@@ -1,15 +1,12 @@
 ---
+title: "Menu commands and other shortcut keys (Sybase To SQL)"
 description: "Menu commands and other shortcut keys (Sybase To SQL)"
-title: "Menu commands and other shortcut keys (Sybase To SQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Menu commands and other shortcut keys (Sybase To SQL)
 The following sections describe the keyboard shortcuts to access menu commands and other shortcut keys used in various dialog boxes of SSMA for Sybase application.  

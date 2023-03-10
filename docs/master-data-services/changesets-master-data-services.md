@@ -1,15 +1,12 @@
 ---
-description: "Changesets (Master Data Services)"
 title: Changesets
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
+description: "Changesets (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Changesets (Master Data Services)
 

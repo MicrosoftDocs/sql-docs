@@ -1,19 +1,15 @@
 ---
-description: "Show Diagram Properties (Visual Database Tools)"
 title: Show Diagram Properties
-ms.custom: seo-lt-2019
+description: "Show Diagram Properties (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database diagrams [SQL Server], properties"
   - "diagrams [SQL Server], properties"
-ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Show Diagram Properties (Visual Database Tools)
 

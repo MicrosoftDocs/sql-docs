@@ -1,19 +1,15 @@
 ---
-title: "URL access parameter reference | Microsoft Docs"
+title: "URL access parameter reference"
 description: Use the parameters in this article as part of a URL to configure the look and feel of your Reporting Services reports.
-ms.date: 05/22/2020
-
-ms.service: reporting-services
-ms.subservice: reporting-services
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "reports [Reporting Services], display options"
-  - "URL access [Reporting Services], report display parameters"
-ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/22/2020
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "reports [Reporting Services], display options"
+  - "URL access [Reporting Services], report display parameters"
 ---
 # URL access parameter reference
 

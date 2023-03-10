@@ -1,22 +1,19 @@
 ---
+title: "sp_showrowreplicainfo (Transact-SQL)"
 description: "sp_showrowreplicainfo (Transact-SQL)"
-title: "sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_showrowreplicainfo_TSQL"
-  - "sp_showrowreplicainfo"
-helpviewer_keywords: 
-  - "sp_showrowreplicainfo"
-ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_showrowreplicainfo_TSQL"
+  - "sp_showrowreplicainfo"
+helpviewer_keywords:
+  - "sp_showrowreplicainfo"
+dev_langs:
+  - "TSQL"
 ---
 # sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

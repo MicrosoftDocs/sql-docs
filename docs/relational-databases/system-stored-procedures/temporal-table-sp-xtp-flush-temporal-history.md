@@ -1,24 +1,21 @@
 ---
+title: "sp_xtp_flush_temporal_history"
 description: "sp_xtp_flush_temporal_history (Transact-SQL)"
-title: "sp_xtp_flush_temporal_history | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "02/21/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_xtp_flush_temporal_history"
   - "sp_xtp_flush_temporal_history_TSQL"
   - "sys.sp_xtp_flush_temporal_history"
   - "sys.sp_xtp_flush_temporal_history_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_xtp_flush_temporal_history"
-ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_xtp_flush_temporal_history (Transact-SQL)

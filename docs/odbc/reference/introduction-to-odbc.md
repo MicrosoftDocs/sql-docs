@@ -1,18 +1,15 @@
 ---
+title: "Introduction to ODBC"
 description: "Introduction to ODBC"
-title: "Introduction to ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC [ODBC]"
-  - "ODBC [ODBC], about ODBC"
-ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC [ODBC]"
+  - "ODBC [ODBC], about ODBC"
 ---
 # Introduction to ODBC
 This section provides a brief history of Structured Query Language and ODBC, and includes conceptual information about the ODBC interface.  

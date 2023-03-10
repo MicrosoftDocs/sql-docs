@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG002601"
 description: "MSSQL_ENG002601"
-title: "MSSQL_ENG002601 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG002601 error"
-ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG002601 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG002601

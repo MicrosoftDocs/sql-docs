@@ -1,23 +1,20 @@
 ---
+title: "Developing a Custom Data Flow Component"
 description: "Developing a Custom Data Flow Component"
-title: "Developing a Custom Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow task [Integration Services], extending"
   - "data flow [Integration Services], extending"
   - "extending data flow task [Integration Services]"
   - "components [Integration Services], data flow"
-ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Developing a Custom Data Flow Component
 

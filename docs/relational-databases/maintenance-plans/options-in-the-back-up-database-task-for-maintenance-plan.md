@@ -12,7 +12,6 @@ f1_keywords:
   - "sql13.swb.maint.backup.f1"
 helpviewer_keywords:
   - "Back Up Database Task dialog box"
-ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 ---
 # Options in the Back Up Database Task for Maintenance Plan
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

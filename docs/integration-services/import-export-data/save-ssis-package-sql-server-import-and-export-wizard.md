@@ -1,17 +1,14 @@
 ---
+title: "Save SSIS Package (SQL Server Import and Export Wizard)"
 description: "Save SSIS Package (SQL Server Import and Export Wizard)"
-title: "Save SSIS Package (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.savedtspackage.f1"
-ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
+ms.date: "02/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.savedtspackage.f1"
 ---
 # Save SSIS Package (SQL Server Import and Export Wizard)
 

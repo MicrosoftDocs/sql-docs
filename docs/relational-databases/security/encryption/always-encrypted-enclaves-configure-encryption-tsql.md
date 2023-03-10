@@ -1,15 +1,13 @@
 ---
+title: "Configure column encryption in-place with Transact-SQL"
 description: "Configure column encryption in-place with Transact-SQL"
-title: "Configure column encryption in-place with Transact-SQL | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: 02/15/2023
-ms.service: sql
-ms.reviewer: "vanto"
-ms.subservice: security
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: "vanto"
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 ---
 # Configure column encryption in-place with Transact-SQL
 

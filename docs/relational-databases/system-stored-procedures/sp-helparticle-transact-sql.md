@@ -1,22 +1,19 @@
 ---
+title: "sp_helparticle (Transact-SQL)"
 description: "sp_helparticle (Transact-SQL)"
-title: "sp_helparticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helparticle_TSQL"
-  - "sp_helparticle"
-helpviewer_keywords: 
-  - "sp_helparticle"
-ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helparticle_TSQL"
+  - "sp_helparticle"
+helpviewer_keywords:
+  - "sp_helparticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "YY"
 dev_langs:
   - "TSQL"
-ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)
 

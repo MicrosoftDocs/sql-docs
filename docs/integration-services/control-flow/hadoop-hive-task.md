@@ -1,17 +1,14 @@
 ---
+title: "Hadoop Hive Task"
 description: "Hadoop Hive Task"
-title: "Hadoop Hive Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.hadoophivetask.f1"
-ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.hadoophivetask.f1"
 ---
 # Hadoop Hive Task
 

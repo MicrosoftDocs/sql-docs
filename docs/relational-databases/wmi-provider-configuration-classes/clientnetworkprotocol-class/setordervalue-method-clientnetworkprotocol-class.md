@@ -1,22 +1,17 @@
 ---
-description: "SetOrderValue Method (ClientNetworkProtocol Class)"
 title: "SetOrderValue Method (ClientNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetOrderValue Method (ClientNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetOrderValue method"
-ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
+description: "SetOrderValue Method (ClientNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetOrderValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetOrderValue Method (ClientNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # SetOrderValue Method (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

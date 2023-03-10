@@ -1,17 +1,14 @@
 ---
-title: "Database Properties (Mirroring Page) | Microsoft Docs"
+title: "Database Properties (Mirroring Page)"
 description: "Learn how to configure mirroring properties and view a mirroring session's status. See how to start, pause, or remove a mirroring session."
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.databaseproperties.mirroring.f1"
-ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "08/25/2016"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.databaseproperties.mirroring.f1"
 ---
 # Database Properties (Mirroring Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

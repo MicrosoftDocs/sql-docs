@@ -1,23 +1,20 @@
 ---
+title: "Bulk Insert Task"
 description: "Bulk Insert Task"
-title: "Bulk Insert Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.bulkinserttask.f1"
   - "sql13.dts.designer.bulkinserttask.connection.f1"
   - "sql13.dts.designer.bulkinserttask.general.f1"
   - "sql13.dts.designer.bulkinserttask.options.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Bulk Insert task"
   - "copying data [Integration Services]"
-ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: chugugrace
-ms.author: chugu
 ---
 # Bulk Insert Task
 

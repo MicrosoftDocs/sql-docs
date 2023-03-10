@@ -1,15 +1,12 @@
 ---
-title: "StDevP function in a paginated report | Microsoft Docs"
-description: Learn about this function that returns the population standard deviation of all non-null numeric values in a paginated report specified by an expression. 
+title: "StDevP function in a paginated report"
+description: Learn about this function that returns the population standard deviation of all non-null numeric values in a paginated report specified by an expression.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Builder functions - StDevP function in a paginated report (Report Builder)
 

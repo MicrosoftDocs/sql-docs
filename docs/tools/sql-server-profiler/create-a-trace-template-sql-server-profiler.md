@@ -9,7 +9,6 @@ ms.date: 12/26/2022
 ms.service: sql
 ms.subservice: profiler
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Create a Trace Template (SQL Server Profiler)

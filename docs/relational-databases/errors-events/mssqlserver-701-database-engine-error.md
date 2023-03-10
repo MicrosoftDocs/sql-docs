@@ -1,16 +1,15 @@
 ---
-description: "MSSQLSERVER_701"
 title: "MSSQLSERVER_701"
-ms.custom: ""
+description: "MSSQLSERVER_701"
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: wiassaf
 ms.date: "03/16/2021"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "701 (Database Engine error)"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: wiassaf
 ---
 # MSSQLSERVER_701
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

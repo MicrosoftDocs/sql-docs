@@ -1,14 +1,13 @@
 ---
 title: "Python tutorial: Train model"
 titleSuffix: SQL machine learning
-description: In part three of this four-part tutorial series, you'll train a linear regression model in Python to predict ski rentals with SQL machine learning. 
-ms.service: sql
-ms.subservice: machine-learning
-ms.date: 06/15/2022
-ms.topic: tutorial
+description: In part three of this four-part tutorial series, you'll train a linear regression model in Python to predict ski rentals with SQL machine learning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 06/15/2022
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Python tutorial: Train a linear regression model with SQL machine learning

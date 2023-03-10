@@ -1,25 +1,22 @@
 ---
+title: "Execution Plan and Buffer Allocation"
 description: "Execution Plan and Buffer Allocation"
-title: "Execution Plan and Buffer Allocation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "custom data flow components [Integration Services], buffer allocations"
   - "custom data flow components [Integration Services], execution plans"
   - "buffer allocations [Integration Services]"
   - "data flow components [Integration Services], buffer allocations"
   - "data flow components [Integration Services], execution plans"
   - "execution plans [Integration Services]"
-ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Execution Plan and Buffer Allocation
 

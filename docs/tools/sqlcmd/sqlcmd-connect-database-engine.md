@@ -8,7 +8,6 @@ ms.date: 01/10/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "sqlcmd utility, Database Engine connections"
   - "Named Pipes [SQL Server], sqlcmd utility"

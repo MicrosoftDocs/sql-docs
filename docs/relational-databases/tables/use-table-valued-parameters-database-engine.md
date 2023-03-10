@@ -1,20 +1,17 @@
 ---
+title: "Use Table-Valued Parameters (Database Engine)"
 description: "Use Table-Valued Parameters (Database Engine)"
-title: "Use Table-Valued Parameters (Database Engine) | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table-valued parameters"
   - "table-valued parameters, about table-valued parameters"
   - "parameters [SQL Server], table-valued"
   - "TVP See table-valued parameters"
-ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Table-Valued Parameters (Database Engine)

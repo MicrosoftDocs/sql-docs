@@ -21,7 +21,7 @@ For other migration guides, see [Azure Database Migration Guide](/data-migration
 
 Before you begin migrating your MySQL database to a SQL database, do the following:
 
-- Verify that your source environment is supported. Currently, MySQL 5.6 and 5.7 are supported. 
+- Verify that your source environment is supported. Currently, MySQL 4.1 and above is supported. 
 - Download and install [SQL Server Migration Assistant for MySQL](https://www.microsoft.com/download/details.aspx?id=54257).
 - Ensure that you have connectivity and sufficient permissions to access both the source and the target.
 
@@ -170,7 +170,7 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 - For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Service and tools for data migration](/azure/dms/dms-tools-matrix).
 
-- For other migration guides, see [Azure Database Migration Guide](https://datamigration.microsoft.com/). 
+- For other migration guides, see [Azure Database Migration Guide](/data-migration/).
 
 - For migration videos, see [Overview of the migration journey and recommended migration and assessment tools and services](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).
 

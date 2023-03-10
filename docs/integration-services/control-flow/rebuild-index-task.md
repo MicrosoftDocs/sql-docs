@@ -1,21 +1,18 @@
 ---
+title: "Rebuild Index Task"
 description: "Rebuild Index Task"
-title: "Rebuild Index Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.rebuildindextask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rebuilding indexes"
   - "indexes [Integration Services]"
   - "Rebuild Index task"
-ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-author: chugugrace
-ms.author: chugu
 ---
 # Rebuild Index Task
 

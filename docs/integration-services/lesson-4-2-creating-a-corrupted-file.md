@@ -1,15 +1,12 @@
 ---
+title: "Step 2: Create a corrupted file"
 description: "Lesson 4-2: Create a corrupted file"
-title: "Step 2: Create a corrupted file | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/07/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
+ms.date: "01/07/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 4-2: Create a corrupted file
 

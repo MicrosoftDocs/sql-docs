@@ -9,7 +9,6 @@ ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
 ms.custom:
-  - seo-lt-2019
   - devx-track-azurecli
   - devx-track-azurepowershell
 tags: azure-resource-manager

@@ -1,19 +1,16 @@
 ---
+title: "Filestream and FileTable System Stored Procedures (Transact-SQL)"
 description: "Filestream and FileTable System Stored Procedures (Transact-SQL)"
-title: "Filestream and FileTable System Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], catalog views"
-ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "FileTables [SQL Server], catalog views"
+dev_langs:
+  - "TSQL"
 ---
 # Filestream and FileTable system stored procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "Showplan Text (Unencoded) Event Class"
 description: "Showplan Text (Unencoded) Event Class"
-title: "Showplan Text (Unencoded) Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Showplan Text (Unencoded) event class"
-ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Showplan Text (Unencoded) event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Text (Unencoded) Event Class

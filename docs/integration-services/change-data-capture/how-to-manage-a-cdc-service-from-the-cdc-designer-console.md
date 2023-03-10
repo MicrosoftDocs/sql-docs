@@ -1,15 +1,12 @@
 ---
+title: "How to Manage a CDC Service from the CDC Designer Console"
 description: "How to Manage a CDC Service from the CDC Designer Console"
-title: "How to Manage a CDC Service from the CDC Designer Console | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # How to Manage a CDC Service from the CDC Designer Console
 

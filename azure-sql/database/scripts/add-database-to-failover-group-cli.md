@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: sample
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ms.devlang: azurecli
 ---
 

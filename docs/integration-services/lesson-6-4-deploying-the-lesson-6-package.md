@@ -71,7 +71,7 @@ In this task, you:
 > 
 > 2.  Under **Configuration Properties**, select **General**.
 > 
-> 3.  Set the **Deployment Target Version** to an older version, for example changing from **SQL Server 2022** to **SQL Server 2019**, then select **OK**.
+> 3.  Set the **Deployment Target Version** to an older version. For example, change from **SQL Server 2022** to **SQL Server 2019**, then select **OK**.
 > 
 > 4.  Retry the above step.
   

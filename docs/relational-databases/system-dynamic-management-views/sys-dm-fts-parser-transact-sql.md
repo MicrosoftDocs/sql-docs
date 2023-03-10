@@ -118,7 +118,9 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## Permissions  
  Requires membership in the **sysadmin** fixed server role and access rights to the specified stoplist.  
-  
+ 
+ Verified that the "create fulltext catalog" permission is the bare minimum permission needed.
+ 
 ## Examples  
   
 ### A. Displaying the output of a given word breaker for a keyword or phrase  

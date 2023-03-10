@@ -1,6 +1,6 @@
 ---
-title: "MSreplservers (Transact-SQL)"
-description: MSreplservers (Transact-SQL)
+title: "MSrepl_agent_jobs (Transact-SQL)"
+description: MSrepl_agent_jobs (Transact-SQL)
 author: briancarrig
 ms.author: brcarrig
 ms.date: "10/06/2021"
@@ -8,10 +8,10 @@ ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
-  - "MSreplservers_TSQL"
-  - "MSreplservers"
+  - "MSrepl_agent_jobs_tsql"
+  - "MSrepl_agent_jobs"
 helpviewer_keywords:
-  - "MSreplservers system table"
+  - "MSrepl_agent_jobs system table"
 dev_langs:
   - "TSQL"
 ---

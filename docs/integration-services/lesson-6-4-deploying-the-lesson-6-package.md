@@ -69,7 +69,7 @@ In this task, you:
 > 
 > 1.  Right-click the **SSIS Tutorial (package deployment)** project and select **Properties**.
 > 
-> 2.  Under **Configuration Properties** select **General**.
+> 2.  Under **Configuration Properties**, select **General**.
 > 
 > 3.  Set the **Deployment Target Version** to an older version, for example changing from **SQL Server 2022** to **SQL Server 2019**, then select **OK**.
 > 

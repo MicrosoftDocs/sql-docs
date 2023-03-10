@@ -106,6 +106,8 @@ Applications can connect to SQL Managed Instance via three types of endpoints. T
 
 The VNet-local endpoint is the default means to connect to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence "VNet-local", or an endpoint that is local to the virtual network. VNet-local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
 
+VNet-local endpoint supports the [redirect connection type](connection-types-overview.md).
+
 When connecting to the VNet-local endpoint, always use its domain name as the underlying IP address may occasionally change.
 
 ### Public endpoint
@@ -114,11 +116,17 @@ The public endpoint is an optional domain name of the form `<mi_name>.public.<dn
 
 When connecting to the VNet-local endpoint, always use its domain name as the underlying IP address may occasionally change.
 
+Public endpoint always operates in [proxy connection type](connection-types-overview.md).
+
 Learn how to set up a public endpoint in [Configure public endpoint for Azure SQL Managed Instance](public-endpoint-configure.md).
 
 ### Private endpoint (preview)
 
 A private endpoint is an optional fixed IP address in another virtual network that conducts traffic to Azure SQL Managed Instance. One Azure SQL Managed Instance can have multiple private endpoints in multiple virtual networks. Private endpoints allow TDS traffic only to reach SQL Managed Instance on port 1433 and cannot be used for integration scenarios, such as failover groups, Managed Instance Link, and similar.
+
+When connecting to a private endpoint, always use a domain name as connecting to Azure SQL Managed Instance via its IP address is not supported.
+
+Private endpoints always operate in [proxy connection type](connection-types-overview.md).
 
 Learn more about private endpoints and how to configure them in [Azure Private Link for Azure SQL Managed Instance](private-endpoint-overview.md).
 

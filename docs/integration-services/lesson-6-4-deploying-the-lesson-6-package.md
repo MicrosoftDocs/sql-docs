@@ -60,6 +60,17 @@ In this task, you:
 
 1. On the Select Packages page, you should see all six packages from the SSIS Tutorial. In the **Packages** list, select **Lesson 6.dtsx**, then select **Next**.
 
+   > [!IMPORTANT]
+   The previous step may result in an error stating that `One or more selected packages are not ready. Review the Status column for more information.` with a status message including `The version or pipeline version or both for the specified component is higher than the current version. This package was probably created on a new version of DTS or the component than is installed on the current PC.` To resolve this error, change the Project Properties in Visual Studio as follows:
+   >
+   > 1. Right-click the **SSIS Tutorial (package deployment)** project and select **Properties**.
+   >
+   > 1. Under **Configuration Properties**, select **General**.
+   >
+   > 1. Set the **Deployment Target Version** to an older version. For example, change from **SQL Server 2022** to **SQL Server 2019**, then select **OK**.
+   >
+   > 1. Retry the previous step.
+
 1. On the **Select Destination** page, enter **SSIS Tutorial Deployment** in the **Project Name** box then select **Next**.
 
 1. Select **Next** on each of the remaining wizard pages until you get to the **Review** page.

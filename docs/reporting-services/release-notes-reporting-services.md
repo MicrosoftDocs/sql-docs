@@ -4,7 +4,7 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 02/06/2023
+ms.date: 03/09/2023
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
@@ -103,6 +103,7 @@ Release Candidate 0 (RC0)
 - Fixed issue with certain parameters causing connection error to certain data sources.
 - Fixed issue with date time in some locales.
 - Fixed issue with spacing in PDF exports.
+- Fixed issue with email priority in a subscription set incorrectly.
 - Updated versions of some utilized open-source software.
 - Security fixes
 

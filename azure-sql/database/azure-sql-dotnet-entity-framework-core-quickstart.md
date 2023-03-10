@@ -42,7 +42,7 @@ Secure, passwordless connections to Azure SQL Database with .NET require certain
 
 ## Create the project
 
-This steps in this section create a .NET Minimal Web API by using either the .NET CLI or Visual Studio 2022.
+The steps in this section create a .NET Minimal Web API by using either the .NET CLI or Visual Studio 2022.
 
 ## [Visual Studio](#tab/visual-studio)
 

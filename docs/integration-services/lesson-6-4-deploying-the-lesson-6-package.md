@@ -73,7 +73,7 @@ In this task, you:
 > 
 > 3.  Set the **Deployment Target Version** to an older version. For example, change from **SQL Server 2022** to **SQL Server 2019**, then select **OK**.
 > 
-> 4.  Retry the above step.
+> 4.  Retry the previous step.
   
 9. On the **Select Destination** page, enter **SSIS Tutorial Deployment** in the **Project Name** box then select **Next**.
 

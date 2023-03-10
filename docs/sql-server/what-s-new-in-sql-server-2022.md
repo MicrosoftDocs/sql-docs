@@ -160,7 +160,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | :--- | :--- |
 | Azure Data Studio | Get the latest release at [Download and install Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). The latest release includes support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. |
 | Distributed Replay | SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the Admin executable, as a separate download |
-| SQL Server Management Studio | SSMS version 19.0 Preview 3 is now available and is the recommended version of SSMS for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). |
+| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). |
 | SqlPackage.exe | Version 19 of SqlPackage provides support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md). |
 | VS Code | Version 1.67 of VS Code and higher support [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Get the latest release at <https://code.visualstudio.com/>. |
 

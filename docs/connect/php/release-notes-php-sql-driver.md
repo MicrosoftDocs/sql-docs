@@ -4,7 +4,7 @@ description: This page discusses what was changed in each version of the Microso
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 06/16/2022
+ms.date: 02/28/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -31,26 +31,29 @@ For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
+## 5.11
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2226724)**  
+[GitHub Release Tag v5.11.0 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.0)
+
+- Release number: 5.11.0
+- Released: February 28, 2023
+
+### What's new in 5.11
+
+| New item |
+| :------- |
+| Added support for PHP 8.2. |
+| Dropped support for PHP 7.4. |
+| Dropped support for Debian 9, macOS 10.15, and Alpine 3.13. |
+
 ## 5.10
+
+- Release number: 5.10.1<sup>1</sup>
+- Released: January 31, 2022
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2199011)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.1)
-
-- Release number: 5.10.1
-- Released: June 14, 2022
-
-Fixed issues in 5.10.1:
-
-- Fixed User-Assigned Managed Identity (ActiveDirectoryMsi) Authentication when specifying UID
-- Removed block on ActiveDirectoryIntegrated authentication
-
-### Previous 5.10 releases
-
-- Release number: 5.10.0<sup>1</sup>
-- Released: January 31, 2022
-
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
-[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.0)
 
 ### What's new in 5.10
 

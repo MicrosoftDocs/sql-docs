@@ -3,7 +3,7 @@ title: "Back up to URL best practices & troubleshooting for Microsoft Azure Blob
 description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to Azure Blob Storage.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/24/2022
+ms.date: 03/08/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -35,7 +35,7 @@ ms.topic: conceptual
 
 - Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as recommended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
 
-- SQL Server is agnostic to the type of storage redundancy used. Backup to Page blobs and block blobs is supported for every storage redundancy (LRS\ZRS\GRS\RA-GRS\RA-GZRS\etc.).
+- SQL Server is agnostic to the type of storage redundancy used. Backup to page blobs and block blobs is supported for every storage redundancy (LRS\ZRS\GRS\RA-GRS\RA-GZRS\etc.).
   
 ## Handling Large Files  
   
@@ -43,7 +43,7 @@ ms.topic: conceptual
   
 -   Using the `WITH COMPRESSION` option as recommended in the [Managing Backups](#managing-backups-mb1) section, it is very important when backing up large files.  
   
-## Troubleshooting Backup To or Restore from URL  
+## Troubleshooting backup to or restore from URL  
 
 Following are some quick ways to troubleshoot errors when backing up to or restoring from the Azure Blob Storage.  
   
@@ -53,19 +53,16 @@ To avoid errors due to unsupported options or limitations, review the list of li
 
 Parallel backups to the same blob cause one of the backups to fail with an **Initialization failed** error. 
 
-If you're using page blobs, for example, `BACKUP... TO URL... WITH CREDENTIAL`, use the following error logs to help with troubleshooting backup errors:  
+- In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, block blob is preferred for Backup to URL. 
+
+- If you're using page blobs with BACKUP TO URL, you can use [Trace Flag 3051](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf3051) to turn on logging to a specific error log with the following format in: `BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log`, where `\<action>` is one of the following:   
+   - **DB**  
+   - **FILELISTONLY**  
+   - **LABELONLY**  
+   - **HEADERONLY**  
+   - **VERIFYONLY**  
   
-Set trace flag 3051 to turn on logging to a specific error log with the following format in:  
-  
-`BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log` Where `\<action>` is one of the following:  
-  
--   **DB**  
--   **FILELISTONLY**  
--   **LABELONLY**  
--   **HEADERONLY**  
--   **VERIFYONLY**  
-  
-You can also find information by reviewing the Windows Event Log - Under Application logs with the name `SQLBackupToUrl`.  
+You can also find information by reviewing the Windows Event Viewer, under **Application logs** with the name `SQLBackupToUrl`.  
 
 **The request could not be performed because of an I/O device error.**
 
@@ -187,13 +184,11 @@ BACKUP DATABASE is terminating abnormally.
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-If you turn on the verbose logging using the trace flag 3051, you may also see the following message in the logs:  
-  
-`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
+If using page blobs, you turn on the verbose logging using the Trace Flag 3051, you may also see the following message in the logs: `HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
  **Default Proxy Settings not picked up:**  
   
-Sometimes the default settings are not picked up causing proxy authentication errors such as the one shown below:
+Sometimes the default settings are not picked up causing proxy authentication errors such as:
  
  `A nonrecoverable I/O error occurred on file "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (407)* **Proxy Authentication Required.`  
   

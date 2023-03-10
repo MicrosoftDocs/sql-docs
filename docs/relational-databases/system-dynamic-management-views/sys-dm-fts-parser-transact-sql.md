@@ -126,7 +126,7 @@ In addition to the preceding usage scenarios, `sys.dm_fts_parser` can help signi
 
 ## Permissions
 
-Requires ALTER permission on the database, and access rights to the specified stoplist.
+Requires CREATE FULLTEXT CATALOG permission, and access rights to the specified stoplist.
 
 ## Examples
 

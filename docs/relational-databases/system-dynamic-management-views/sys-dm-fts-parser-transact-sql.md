@@ -118,6 +118,18 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## Permissions  
  Requires membership in the **sysadmin** fixed server role and access rights to the specified stoplist.  
+ 
+ Alter permission scoped on contextual database is sufficient.  
+ 
+ Alter permission granted using "use [database]; grant alter to [principal]".
+ 
+ Tested against SQL Server v2008-R2 thru SQL Server v2022.
+ 
+ When the alter permission is missing, the error returned is:-
+ 
+    Msg 262, Level 14, State 1, Line 26
+    CREATE FULLTEXT CATALOG permission denied in database    
+    
   
 ## Examples  
   

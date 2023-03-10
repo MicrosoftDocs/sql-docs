@@ -5,7 +5,7 @@ description: Learn how to analyze deadlocks and prevent them from reoccurring in
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, dfurman
-ms.date: 4/8/2022
+ms.date: 03/10/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.topic: conceptual
 
 This article teaches you how to identify deadlocks in Azure SQL Database, use deadlock graphs and Query Store to identify the queries in the deadlock, and plan and test changes to prevent deadlocks from reoccurring.
 
-This article focuses on identifying and analyzing deadlocks due to lock contention. Learn more about other types of deadlocks in [resources that can deadlock](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_resources).
+This article focuses on identifying and analyzing deadlocks due to lock contention. Learn more about other types of deadlocks in [resources that can deadlock](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_resources).
 
 ## How deadlocks occur in Azure SQL Database
 
@@ -212,15 +212,15 @@ Run the following Transact-SQL to create a master key if one does not exist:
 
 ```sql
 IF 0 = (SELECT COUNT(*)
-	FROM sys.symmetric_keys
-	WHERE symmetric_key_id = 101 and name=N'##MS_DatabaseMasterKey##')
+    FROM sys.symmetric_keys
+    WHERE symmetric_key_id = 101 and name=N'##MS_DatabaseMasterKey##')
 BEGIN
-	PRINT N'Creating master key';
-	CREATE MASTER KEY;
+    PRINT N'Creating master key';
+    CREATE MASTER KEY;
 END
 ELSE 
 BEGIN
-	PRINT N'Master key already exists, no action taken';
+    PRINT N'Master key already exists, no action taken';
 END
 GO
 ```
@@ -250,9 +250,9 @@ Create and start the XEvents session with the following Transact-SQL. Before run
 CREATE EVENT SESSION [deadlocks_eventfile] ON DATABASE 
 ADD EVENT sqlserver.database_xml_deadlock_report
 ADD TARGET package0.event_file
-	(SET filename =
-	'https://yourstorageaccountname.blob.core.windows.net/yourcontainername/deadlocks.xel'
-	)
+    (SET filename =
+    'https://yourstorageaccountname.blob.core.windows.net/yourcontainername/deadlocks.xel'
+    )
 WITH (STARTUP_STATE=ON, MAX_MEMORY=4 MB)
 GO
 
@@ -299,15 +299,15 @@ To complete this update, **Session B** needs a shared (S) lock on rows on the ta
 Return to **Session A**. Run the following Transact-SQL statement. This runs a second UPDATE statement as part of the open transaction.
 
 ```sql
-	UPDATE SalesLT.ProductDescription SET Description = Description
-		FROM SalesLT.ProductDescription as pd
-		JOIN SalesLT.ProductModelProductDescription as pmpd on
-			pd.ProductDescriptionID = pmpd.ProductDescriptionID
-		JOIN SalesLT.ProductModel as pm on
-			pmpd.ProductModelID = pm.ProductModelID
-		JOIN SalesLT.Product as p on
-			pm.ProductModelID=p.ProductModelID
-		WHERE p.Color = 'Red';
+    UPDATE SalesLT.ProductDescription SET Description = Description
+        FROM SalesLT.ProductDescription as pd
+        JOIN SalesLT.ProductModelProductDescription as pmpd on
+            pd.ProductDescriptionID = pmpd.ProductDescriptionID
+        JOIN SalesLT.ProductModel as pm on
+            pmpd.ProductModelID = pm.ProductModelID
+        JOIN SalesLT.Product as p on
+            pm.ProductModelID=p.ProductModelID
+        WHERE p.Color = 'Red';
 ```
 
 The second update statement in **Session A** will be blocked by **Session B** on the `SalesLT.ProductDescription`.
@@ -337,24 +337,24 @@ If you set up an XEvents session writing to the ring buffer, you can query deadl
 DECLARE @tracename sysname = N'deadlocks';
 
 WITH ring_buffer AS (
-	SELECT CAST(target_data AS XML) as rb
-	FROM sys.dm_xe_database_sessions AS s 
-	JOIN sys.dm_xe_database_session_targets AS t 
-		ON CAST(t.event_session_address AS BINARY(8)) = CAST(s.address AS BINARY(8))
-	WHERE s.name = @tracename and
-	t.target_name = N'ring_buffer'
+    SELECT CAST(target_data AS XML) as rb
+    FROM sys.dm_xe_database_sessions AS s 
+    JOIN sys.dm_xe_database_session_targets AS t 
+        ON CAST(t.event_session_address AS BINARY(8)) = CAST(s.address AS BINARY(8))
+    WHERE s.name = @tracename and
+    t.target_name = N'ring_buffer'
 ), dx AS (
-	SELECT 
-		dxdr.evtdata.query('.') as deadlock_xml_deadlock_report
-	FROM ring_buffer
-	CROSS APPLY rb.nodes('/RingBufferTarget/event[@name=''database_xml_deadlock_report'']') AS dxdr(evtdata)
+    SELECT 
+        dxdr.evtdata.query('.') as deadlock_xml_deadlock_report
+    FROM ring_buffer
+    CROSS APPLY rb.nodes('/RingBufferTarget/event[@name=''database_xml_deadlock_report'']') AS dxdr(evtdata)
 ) 
 SELECT 
-	d.query('/event/data[@name=''deadlock_cycle_id'']/value').value('(/value)[1]', 'int') AS [deadlock_cycle_id],
-	d.value('(/event/@timestamp)[1]', 'DateTime2') AS [deadlock_timestamp],
-	d.query('/event/data[@name=''database_name'']/value').value('(/value)[1]', 'nvarchar(256)') AS [database_name],
-	d.query('/event/data[@name=''xml_report'']/value/deadlock') AS deadlock_xml,
-	LTRIM(RTRIM(REPLACE(REPLACE(d.value('.', 'nvarchar(2000)'),CHAR(10),' '),CHAR(13),' '))) as query_text
+    d.query('/event/data[@name=''deadlock_cycle_id'']/value').value('(/value)[1]', 'int') AS [deadlock_cycle_id],
+    d.value('(/event/@timestamp)[1]', 'DateTime2') AS [deadlock_timestamp],
+    d.query('/event/data[@name=''database_name'']/value').value('(/value)[1]', 'nvarchar(256)') AS [database_name],
+    d.query('/event/data[@name=''xml_report'']/value/deadlock') AS deadlock_xml,
+    LTRIM(RTRIM(REPLACE(REPLACE(d.value('.', 'nvarchar(2000)'),CHAR(10),' '),CHAR(13),' '))) as query_text
 FROM dx
 CROSS APPLY deadlock_xml_deadlock_report.nodes('(/event/data/value/deadlock/process-list/process/inputbuf)') AS ib(d)
 ORDER BY [deadlock_timestamp] DESC;
@@ -421,34 +421,34 @@ Run the following Transact-SQL to query the currently active XEvents trace file.
 
 ```sql
 DECLARE @tracename sysname = N'deadlocks_eventfile',
-	@filename nvarchar(2000);
+    @filename nvarchar(2000);
 
 WITH eft as (SELECT CAST(target_data AS XML) as rb
-	FROM sys.dm_xe_database_sessions AS s 
-	JOIN sys.dm_xe_database_session_targets AS t 
-		ON CAST(t.event_session_address AS BINARY(8)) = CAST(s.address AS BINARY(8))
-	WHERE s.name = @tracename and
-	t.target_name = N'event_file'
+    FROM sys.dm_xe_database_sessions AS s 
+    JOIN sys.dm_xe_database_session_targets AS t 
+        ON CAST(t.event_session_address AS BINARY(8)) = CAST(s.address AS BINARY(8))
+    WHERE s.name = @tracename and
+    t.target_name = N'event_file'
 )
 SELECT @filename = ft.evtdata.value('(@name)[1]','nvarchar(2000)') 
 FROM eft
 CROSS APPLY rb.nodes('EventFileTarget/File') as ft(evtdata);
 
 WITH xevents AS (
-	SELECT cast(event_data as XML) as ed
-	FROM sys.fn_xe_file_target_read_file(@filename, null, null, null )
+    SELECT cast(event_data as XML) as ed
+    FROM sys.fn_xe_file_target_read_file(@filename, null, null, null )
 ), dx AS (
-	SELECT 
-		dxdr.evtdata.query('.') as deadlock_xml_deadlock_report
-	FROM xevents
-	CROSS APPLY ed.nodes('/event[@name=''database_xml_deadlock_report'']') AS dxdr(evtdata)
+    SELECT 
+        dxdr.evtdata.query('.') as deadlock_xml_deadlock_report
+    FROM xevents
+    CROSS APPLY ed.nodes('/event[@name=''database_xml_deadlock_report'']') AS dxdr(evtdata)
 ) 
 SELECT 
-	d.query('/event/data[@name=''deadlock_cycle_id'']/value').value('(/value)[1]', 'int') AS [deadlock_cycle_id],
-	d.value('(/event/@timestamp)[1]', 'DateTime2') AS [deadlock_timestamp],
-	d.query('/event/data[@name=''database_name'']/value').value('(/value)[1]', 'nvarchar(256)') AS [database_name],
-	d.query('/event/data[@name=''xml_report'']/value/deadlock') AS deadlock_xml,
-	LTRIM(RTRIM(REPLACE(REPLACE(d.value('.', 'nvarchar(2000)'),CHAR(10),' '),CHAR(13),' '))) as query_text
+    d.query('/event/data[@name=''deadlock_cycle_id'']/value').value('(/value)[1]', 'int') AS [deadlock_cycle_id],
+    d.value('(/event/@timestamp)[1]', 'DateTime2') AS [deadlock_timestamp],
+    d.query('/event/data[@name=''database_name'']/value').value('(/value)[1]', 'nvarchar(256)') AS [database_name],
+    d.query('/event/data[@name=''xml_report'']/value/deadlock') AS deadlock_xml,
+    LTRIM(RTRIM(REPLACE(REPLACE(d.value('.', 'nvarchar(2000)'),CHAR(10),' '),CHAR(13),' '))) as query_text
 FROM dx
 CROSS APPLY deadlock_xml_deadlock_report.nodes('(/event/data/value/deadlock/process-list/process/inputbuf)') AS ib(d)
 ORDER BY [deadlock_timestamp] DESC;
@@ -463,20 +463,20 @@ Run the following Transact-SQL query against your database to query a specific X
 declare @filename nvarchar(2000) = N'https://yourstorageaccountname.blob.core.windows.net/yourcontainername/yourfilename.xel';
 
 with xevents AS (
-	SELECT cast(event_data as XML) as ed
-	FROM sys.fn_xe_file_target_read_file(@filename, null, null, null )
+    SELECT cast(event_data as XML) as ed
+    FROM sys.fn_xe_file_target_read_file(@filename, null, null, null )
 ), dx AS (
-	SELECT 
-		dxdr.evtdata.query('.') as deadlock_xml_deadlock_report
-	FROM xevents
-	CROSS APPLY ed.nodes('/event[@name=''database_xml_deadlock_report'']') AS dxdr(evtdata)
+    SELECT 
+        dxdr.evtdata.query('.') as deadlock_xml_deadlock_report
+    FROM xevents
+    CROSS APPLY ed.nodes('/event[@name=''database_xml_deadlock_report'']') AS dxdr(evtdata)
 ) 
 SELECT 
-	d.query('/event/data[@name=''deadlock_cycle_id'']/value').value('(/value)[1]', 'int') AS [deadlock_cycle_id],
-	d.value('(/event/@timestamp)[1]', 'DateTime2') AS [deadlock_timestamp],
-	d.query('/event/data[@name=''database_name'']/value').value('(/value)[1]', 'nvarchar(256)') AS [database_name],
-	d.query('/event/data[@name=''xml_report'']/value/deadlock') AS deadlock_xml,
-	LTRIM(RTRIM(REPLACE(REPLACE(d.value('.', 'nvarchar(2000)'),CHAR(10),' '),CHAR(13),' '))) as query_text
+    d.query('/event/data[@name=''deadlock_cycle_id'']/value').value('(/value)[1]', 'int') AS [deadlock_cycle_id],
+    d.value('(/event/@timestamp)[1]', 'DateTime2') AS [deadlock_timestamp],
+    d.query('/event/data[@name=''database_name'']/value').value('(/value)[1]', 'nvarchar(256)') AS [database_name],
+    d.query('/event/data[@name=''xml_report'']/value/deadlock') AS deadlock_xml,
+    LTRIM(RTRIM(REPLACE(REPLACE(d.value('.', 'nvarchar(2000)'),CHAR(10),' '),CHAR(13),' '))) as query_text
 FROM dx
 CROSS APPLY deadlock_xml_deadlock_report.nodes('(/event/data/value/deadlock/process-list/process/inputbuf)') AS ib(d)
 ORDER BY [deadlock_timestamp] DESC;
@@ -505,15 +505,15 @@ The XML for this example deadlock graph is:
 unknown    </frame>
       </executionStack>
       <inputbuf>
-	UPDATE SalesLT.ProductDescription SET Description = Description
-		FROM SalesLT.ProductDescription as pd
-		JOIN SalesLT.ProductModelProductDescription as pmpd on
-			pd.ProductDescriptionID = pmpd.ProductDescriptionID
-		JOIN SalesLT.ProductModel as pm on
-			pmpd.ProductModelID = pm.ProductModelID
-		JOIN SalesLT.Product as p on
-			pm.ProductModelID=p.ProductModelID
-		WHERE p.Color = 'Red'   </inputbuf>
+    UPDATE SalesLT.ProductDescription SET Description = Description
+        FROM SalesLT.ProductDescription as pd
+        JOIN SalesLT.ProductModelProductDescription as pmpd on
+            pd.ProductDescriptionID = pmpd.ProductDescriptionID
+        JOIN SalesLT.ProductModel as pm on
+            pmpd.ProductModelID = pm.ProductModelID
+        JOIN SalesLT.Product as p on
+            pm.ProductModelID=p.ProductModelID
+        WHERE p.Color = 'Red'   </inputbuf>
     </process>
     <process id="process2476d07d088" taskpriority="0" logused="11360" waitresource="KEY: 8:72057594045267968 (39e18040972e)" waittime="2641" ownerId="1013536" transactionname="UPDATE" lasttranstarted="2022-03-08T15:44:46.807" XDES="0x2475ca80428" lockMode="S" schedulerid="2" kpid="94040" status="suspended" spid="95" sbid="0" ecid="0" priority="0" trancount="2" lastbatchstarted="2022-03-08T15:44:46.807" lastbatchcompleted="2022-03-08T15:44:46.760" lastattention="1900-01-01T00:00:00.760" clientapp="Microsoft SQL Server Management Studio - Query" hostname="LAPTOP-CHRISQ" hostpid="16716" loginname="chrisqpublic" isolationlevel="read committed (2)" xactid="1013536" currentdb="8" currentdbname="AdventureWorksLT" lockTimeout="4294967295" clientoption1="671088672" clientoption2="128056">
       <executionStack>
@@ -521,15 +521,15 @@ unknown    </frame>
 unknown    </frame>
       </executionStack>
       <inputbuf>
-	UPDATE SalesLT.ProductDescription SET Description = Description
-		FROM SalesLT.ProductDescription as pd
-		JOIN SalesLT.ProductModelProductDescription as pmpd on
-			pd.ProductDescriptionID = pmpd.ProductDescriptionID
-		JOIN SalesLT.ProductModel as pm on
-			pmpd.ProductModelID = pm.ProductModelID
-		JOIN SalesLT.Product as p on
-			pm.ProductModelID=p.ProductModelID
-		WHERE p.Color = 'Silver';   </inputbuf>
+    UPDATE SalesLT.ProductDescription SET Description = Description
+        FROM SalesLT.ProductDescription as pd
+        JOIN SalesLT.ProductModelProductDescription as pmpd on
+            pd.ProductDescriptionID = pmpd.ProductDescriptionID
+        JOIN SalesLT.ProductModel as pm on
+            pmpd.ProductModelID = pm.ProductModelID
+        JOIN SalesLT.Product as p on
+            pm.ProductModelID=p.ProductModelID
+        WHERE p.Color = 'Silver';   </inputbuf>
     </process>
   </process-list>
   <resource-list>
@@ -673,12 +673,12 @@ This Transact-SQL query looks for query plans matching the query plan hash we fo
 DECLARE @query_plan_hash binary(8) = 0x02b0f58d7730f798
 
 SELECT 
-	qrsi.end_time as interval_end_time,
-	qs.query_id,
-	qp.plan_id,
-	qt.query_sql_text, 
-	TRY_CAST(qp.query_plan as XML) as query_plan,
-	qrs.count_executions
+    qrsi.end_time as interval_end_time,
+    qs.query_id,
+    qp.plan_id,
+    qt.query_sql_text, 
+    TRY_CAST(qp.query_plan as XML) as query_plan,
+    qrs.count_executions
 FROM sys.query_store_query as qs
 JOIN sys.query_store_query_text as qt on qs.query_text_id=qt.query_text_id
 JOIN sys.query_store_plan as qp on qs.query_id=qp.query_id

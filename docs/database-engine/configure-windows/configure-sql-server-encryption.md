@@ -129,3 +129,11 @@ New-SelfSignedCertificate -Type SSLServerAuthentication -Subject "CN=$env:COMPUT
 -NotAfter (Get-Date).AddMonths(36) -KeySpec KeyExchange -Provider "Microsoft RSA SChannel Cryptographic Provider" `
 -CertStoreLocation "cert:\LocalMachine\My"
 ```
+To verify network encryption is confiugred and enabled successfully, execute the following T-SQL:
+
+use [master]
+select distinct(encrypt_option) from sys.dm_exec_connections;
+GO
+
+
+

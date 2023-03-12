@@ -4,7 +4,7 @@ description: Download the latest version of SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 02/24/2023
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -39,8 +39,8 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 SSMS 19.0.2 is the latest general availability (GA) version. If you have a *preview* version of SSMS 19 installed, you should uninstall it before installing SSMS 19.0.2.  If you have SSMS 19.x installed, installing SSMS 19.0.2 upgrades it to 19.0.2.
 
 - Release number: 19.0.2
-- Build number: 19.0.20204.0
-- Release date: February 24, 2023
+- Build number: 19.0.20209.0
+- Release date: March 14, 2023
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 

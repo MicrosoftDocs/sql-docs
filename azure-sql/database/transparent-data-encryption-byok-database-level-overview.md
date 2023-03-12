@@ -2,7 +2,7 @@
 title: Database Level Customer-managed transparent data encryption (TDE)
 titleSuffix: Azure SQL Database
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for SQL Database at a database level granularity. TDE with BYOK overview, benefits, how it works, considerations, and recommendations.
-author: GithubMirek
+author: strehan1993
 ms.author: mireks, strehan
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 03/11/2022
@@ -189,7 +189,7 @@ Once a database is encrypted with TDE using a key from Key Vault, any newly gene
 
 The following steps are needed for a point in time restore of a database configured with database level customer-managed keys:
 
-- Pre-populate the list of keys used by the primary database using [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) and the '-ExpandKeyList' '-KeysFilter "2023-01-01"' parameters (2023-01-01 here is an example of the point in time you wish to restore the database to). Exclude -KeysFilter if you wish to retrieve all the keys.
+- Pre-populate the list of keys used by the primary database using [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) and the '-ExpandKeyList' parameter. It's recommended to pass all the keys that the source database was using, but alternatively, restore may also be attempted with the keys provided by the deletion time as the '-KeysFilter'.
 - Select the user assigned identity (and federated client id if configuring cross tenant access).
 - Use [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) with the -FromPointInTimeBackup parameter and provide the pre-populated list of keys obtained from the above steps and the above identity (and federated client id if configuring cross tenant access) in the API call using the -KeyList, -AssignIdentity, -UserAssignedIdentityId, -EncryptionProtector (and -FederatedClientId) parameters.
 

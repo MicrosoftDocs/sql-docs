@@ -45,8 +45,8 @@ SSMS 19.0.2 is the latest general availability (GA) release of SSMS. If you need
 | Connection | Resolved SSMS crash behavior when logging into Azure and changing the user. |
 | Fulltext | Fixed an issue that caused a table's fulltext index to be rebuilt when moving the table to a different filegroup. |
 | General SSMS | Added digital signature to dll files. |
+| Link feature for Azure Managed Instance | Fixed error "Exception has been thrown by the target of an invocation" which occurred when a subscription with no resource groups was selected attempting to create a link using Managed Instance link wizard. | 
 | Managed Instance | Restored ability to view File and FileGroups pages on Database Properties window. See [bugs in 19.0.1](https://feedback.azure.com/d365community/idea/b3d026e6-b8b2-ed11-a81b-000d3ae6a6aa).|
-| Managed Instance | Fixed error "Exception has been thrown by the target of an invocation" which occurred when using Managed Instance Link wizard and a subscription with no resource groups was selected. | 
 | Profiler | Fixed issue that generated "Errors in the OLE DB provider. Unable to obtain authentication token using the credentials provided" error trying to run SQL Profiler with a Power BI workspace. |
 | Replication | Addressed error "Property Password cannot be changed or read after a connection string has been set" which occurred when trying to configure a replication subscriber. See [SSMS 19 - Issue while connecting to subsciber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e).|
 | Replication | Fixed error "SQL Server encountered one or more errors while retrieving information about publication" which occurred when trying to view the properties for a publication. See [SSMS 19.0.1 cannot open Properties dialog for local publications](https://feedback.azure.com/d365community/idea/3dba641e-a9a3-ed11-a81b-6045bd79fc6e).|

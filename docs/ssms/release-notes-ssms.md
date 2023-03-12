@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 02/24/2023
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -26,8 +26,8 @@ SSMS 19.0.2 is the latest general availability (GA) release of SSMS. If you need
 ### 19.0.2
 
 - Release number: 19.0.2
-- Build number: 19.0.20204.0
-- Release date: February 24, 2023
+- Build number: 19.0.20209.0
+- Release date: March 14, 2023
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x40a) |
 
@@ -41,10 +41,17 @@ SSMS 19.0.2 is the latest general availability (GA) release of SSMS. If you need
 
 | New Item | Details |
 | -------- | ------- |
+| Connection | Addressed error "Your app has been throttled by AAD due to too many requests" when using Azure Active Directory authentication.  See [SSMS 19 AAD Integrated: Your app has been throttled by AAD due to too many requests](https://feedback.azure.com/d365community/idea/b4b0d281-c2a0-ed11-a81b-6045bd8615b0). | 
+| Connection | Resolved SSMS crash behavior when logging into Azure and changing the user. |
 | Fulltext | Fixed an issue that caused a table's fulltext index to be rebuilt when moving the table to a different filegroup. |
 | General SSMS | Added digital signature to dll files. |
+| Managed Instance | Restored ability to view File and FileGroups pages on Database Properties window. See [bugs in 19.0.1](https://feedback.azure.com/d365community/idea/b3d026e6-b8b2-ed11-a81b-000d3ae6a6aa).|
+| Managed Instance | Fixed error "Exception has been thrown by the target of an invocation" which occurred when using Managed Instance Link wizard and a subscription with no resource groups was selected. | 
 | Profiler | Fixed issue that generated "Errors in the OLE DB provider. Unable to obtain authentication token using the credentials provided" error trying to run SQL Profiler with a Power BI workspace. |
 | Replication | Addressed error "Property Password cannot be changed or read after a connection string has been set" which occurred when trying to configure a replication subscriber. See [SSMS 19 - Issue while connecting to subsciber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e).|
+| Replication | Fixed error "SQL Server encountered one or more errors while retrieving information about publication" which occurred when trying to view the properties for a publication. See [SSMS 19.0.1 cannot open Properties dialog for local publications](https://feedback.azure.com/d365community/idea/3dba641e-a9a3-ed11-a81b-6045bd79fc6e).|
+| Reports | Corrected server startup time on Server Dashboard report. |
+| SQL Agent | Addressed inability to start the SQL Agent from SSMS. |
 
 #### Known issues (19.0.2)
 
@@ -67,7 +74,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 | SSMS version | Build number | Release date |
 | ------------ | ------------ | ------------ |
-| [19.0.1](#1901) | 19.0.20200.0 | February 24, 2023 |
+| [19.0.1](#1901) | 19.0.20200.0 | February 2, 2023 |
 | [19.0](#190) | 19.0.20196.0 | January 26, 2023 |
 | [18.12.1](#18121) | 15.0.18420.0 | June 21, 2022 |
 | [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |

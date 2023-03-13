@@ -59611,6 +59611,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver--1-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/errors-events/mssqlserver-2-database-engine-error.md",
       "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
       "redirect_document_id": false

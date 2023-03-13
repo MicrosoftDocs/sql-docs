@@ -1,15 +1,14 @@
 ---
 title: Install packages with Python tools
 description: Learn how to use standard Python tools to install new Python packages to an instance of SQL Server Machine Learning Services.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 10/05/2021
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
+ms.custom: intro-installation
 monikerRange: "=sql-server-2017"
-ms.custom:
-  - intro-installation
 ---
 # Install packages with Python tools on SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]

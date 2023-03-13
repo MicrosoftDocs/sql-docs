@@ -1,15 +1,12 @@
 ---
 title: "Add Transact-SQL Snippets"
 description: Learn how to add your own Transact-SQL code snippets to the set of pre-defined snippets included in SQL Server.
+author: markingmyname
+ms.author: maghan
+ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

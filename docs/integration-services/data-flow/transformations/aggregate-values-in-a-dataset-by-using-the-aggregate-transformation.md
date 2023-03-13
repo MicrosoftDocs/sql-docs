@@ -1,19 +1,16 @@
 ---
+title: "Aggregate Values in a Dataset with the Aggregate Transformation"
 description: "Aggregate Values in a Dataset with the Aggregate Transformation"
-title: "Aggregate Values in a Dataset with the Aggregate Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Aggregate transformation [Integration Services]"
   - "aggregate values [Integration Services]"
   - "datasets [Integration Services], aggregate values"
-ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-author: chugugrace
-ms.author: chugu
 ---
 # Aggregate Values in a Dataset with the Aggregate Transformation
 

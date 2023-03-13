@@ -1,18 +1,15 @@
 ---
-description: "Update Table Dialog Box (Visual Database Tools)"
 title: Update Table Dialog Box
+description: "Update Table Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.updatetable"
   - "vdtsql.chm:69643"
-ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Update Table Dialog Box (Visual Database Tools)

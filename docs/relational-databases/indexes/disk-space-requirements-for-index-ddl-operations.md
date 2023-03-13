@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "space [SQL Server], indexes"
   - "indexes [SQL Server], disk space requirements"
   - "temporary disk space [SQL Server]"
-ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 ---
 # Disk Space Requirements for Index DDL Operations
  [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

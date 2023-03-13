@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_file_audits catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 ---
 # sys.server_file_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

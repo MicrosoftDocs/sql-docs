@@ -1,14 +1,13 @@
 ---
 title: SqlPackage Import
 description: Learn how to automate database development tasks with SqlPackage Import. View examples and available parameters, properties, and SQLCMD variables.
-ms.service: sql
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
 ms.date: 9/29/2022
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # SqlPackage Import parameters and properties
@@ -46,7 +45,7 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
 
 # example import connecting using Azure Active Directory universal authentication
-SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication=True \
+SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication:True \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 

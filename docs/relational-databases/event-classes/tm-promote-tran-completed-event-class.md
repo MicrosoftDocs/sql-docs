@@ -1,17 +1,14 @@
 ---
+title: "TM: Promote Tran Completed Event Class"
 description: "TM: Promote Tran Completed Event Class"
-title: "TM: Promote Tran Completed Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "TM: Promote Tran Completed event class"
-ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "TM: Promote Tran Completed event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Promote Tran Completed Event Class

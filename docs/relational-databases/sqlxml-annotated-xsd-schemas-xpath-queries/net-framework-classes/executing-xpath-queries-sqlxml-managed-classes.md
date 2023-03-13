@@ -7,14 +7,12 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXML Managed Classes"
   - "queries [SQLXML], SQLXML Managed Classes"
   - "Managed Classes [SQLXML], executing XPath queries"
   - "mapping schema [SQLXML], XPath queries"
   - "SQLXML Managed Classes, executing XPath queries"
-ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXML Managed Classes)

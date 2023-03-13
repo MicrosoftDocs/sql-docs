@@ -1,15 +1,12 @@
 ---
+title: "Initializing Test Cases (OracleToSQL)"
 description: "Initializing Test Cases (OracleToSQL)"
-title: "Initializing Test Cases (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Initializing Test Cases (OracleToSQL)
 At this step you specify the initial information for the new test case.  

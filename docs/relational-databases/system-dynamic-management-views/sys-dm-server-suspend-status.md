@@ -35,7 +35,7 @@ Returns a row for each database in a suspended state. For more information, see 
   
 ## Permissions  
 
-Principals must have the **VIEW SERVER STATE** permission.  
+Principals must have the **VIEW SERVER PERFORMANCE STATE** permission.  
   
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

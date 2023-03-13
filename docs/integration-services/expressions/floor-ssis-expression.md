@@ -1,18 +1,15 @@
 ---
+title: "FLOOR (SSIS Expression)"
 description: "FLOOR (SSIS Expression)"
-title: "FLOOR (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "largest integer less than or equal to expression"
-  - "FLOOR function [SSIS]"
-ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "largest integer less than or equal to expression"
+  - "FLOOR function [SSIS]"
 ---
 # FLOOR (SSIS Expression)
 

@@ -1,18 +1,15 @@
 ---
+title: "Visual FoxPro ODBC Driver Programmer's Reference"
 description: "Visual FoxPro ODBC Driver Programmer's Reference"
-title: "Visual FoxPro ODBC Driver Programmer's Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Visual FoxPro ODBC driver [ODBC], technical reference"
-  - "FoxPro ODBC driver [ODBC], technical reference"
-ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Visual FoxPro ODBC driver [ODBC], technical reference"
+  - "FoxPro ODBC driver [ODBC], technical reference"
 ---
 # Visual FoxPro ODBC Driver Programmer's Reference
 This section of the Visual FoxPro ODBC Driver documentation contains the following topics:  

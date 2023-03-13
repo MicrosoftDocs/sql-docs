@@ -1,21 +1,18 @@
 ---
+title: "Comparing String Data"
 description: "Comparing String Data"
-title: "Comparing String Data | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "comparing string data"
   - "comparison options [Integration Services]"
   - "locales [Integration Services]"
   - "converting string data"
   - "string comparisons"
-ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: chugugrace
-ms.author: chugu
 ---
 # Comparing String Data
 

@@ -1,21 +1,18 @@
 ---
-description: "Set CPU Idle Time and Duration"
 title: Set CPU Idle Time and Duration
+description: "Set CPU Idle Time and Duration"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CPU [SQL Server], idle conditions"
   - "time [SQL Server], CPU idle and duration"
   - "duration of CPU idle [SQL Server]"
   - "SQL Server Agent, CPU idle conditions"
   - "idle time [SQL Server]"
-ms.assetid: 8647b465-d899-4cc7-9640-134a506d0a2e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

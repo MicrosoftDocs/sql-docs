@@ -1,24 +1,19 @@
 ---
+title: "SQLCreateDataSource Function"
 description: "SQLCreateDataSource Function"
-title: "SQLCreateDataSource Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLCreateDataSource"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLCreateDataSource"
-helpviewer_keywords: 
-  - "SQLCreateDataSource function [ODBC]"
-ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLCreateDataSource"
+helpviewer_keywords:
+  - "SQLCreateDataSource function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLCreateDataSource"
+apitype: "dllExport"
 ---
 # SQLCreateDataSource Function
 **Conformance**  

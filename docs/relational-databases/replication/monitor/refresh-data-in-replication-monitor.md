@@ -1,17 +1,15 @@
 ---
+title: "Refresh Data in Replication Monitor"
 description: "Refresh Data in Replication Monitor"
-title: "Refresh Data in Replication Monitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "refreshing data"
-ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "refreshing data"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Refresh Data in Replication Monitor

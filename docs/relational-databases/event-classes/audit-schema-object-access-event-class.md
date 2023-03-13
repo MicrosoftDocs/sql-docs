@@ -1,17 +1,14 @@
 ---
+title: "Audit Schema Object Access Event Class"
 description: "Audit Schema Object Access Event Class"
-title: "Audit Schema Object Access Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Schema Object Access event class"
-ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Schema Object Access event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Schema Object Access Event Class

@@ -1,11 +1,9 @@
 ---
-title: include file
-description: include file
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 05/06/2021
+ms.reviewer: randolphwest
+ms.date: 01/12/2023
+ms.service: reporting-services
 ms.topic: include
-ms.custom: include file
 ---
-
-✔️&nbsp;Microsoft&nbsp;Report&nbsp;Builder&nbsp;(SSRS)
+:::image type="icon" source="media/yes-icon.svg" border="false"::: Microsoft Report Builder (SSRS)

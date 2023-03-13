@@ -1,19 +1,16 @@
 ---
+title: "Using Concise Functions"
 description: "Using Concise Functions"
-title: "Using Concise Functions | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "concise functions [ODBC]"
   - "functions [ODBC], concise functions"
   - "descriptors [ODBC], concise functions"
-ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using Concise Functions
 Some ODBC functions gain implicit access to descriptors. Application writers may find them more convenient than calling **SQLSetDescField** or **SQLGetDescField**. These functions are called *concise* functions because they perform a number of functions, including setting or getting descriptor fields. Some concise functions let an application set or retrieve several related descriptor fields in a single function call.  

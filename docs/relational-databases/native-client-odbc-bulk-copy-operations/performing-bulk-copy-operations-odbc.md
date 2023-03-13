@@ -1,21 +1,18 @@
 ---
-title: "Performing Bulk Copy Operations (ODBC) | Microsoft Docs"
+title: "Performing Bulk Copy Operations (ODBC)"
 description: Learn how the SQL Server Native Client ODBC driver supports DB-Library functions that perform SQL Server bulk copy operations.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, bulk copy"
   - "bulk copy [ODBC]"
   - "ODBC, bulk copy operations"
   - "minimally logged operations [SQL Server Native Client]"
   - "bulk copy [ODBC], about bulk copy"
-ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Bulk Copy Operations (ODBC)

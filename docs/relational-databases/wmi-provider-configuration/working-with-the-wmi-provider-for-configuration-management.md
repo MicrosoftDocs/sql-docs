@@ -1,13 +1,13 @@
 ---
 title: "Use the WMI Provider for Configuration Management"
 description: Learn about the WMI Provider for Configuration Management, including binding, specifying a connection string, and permissions/server authentication.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "04/12/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: wmi
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [WMI]"
   - "connection strings [WMI]"
   - "security [WMI]"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "late binding [WMI]"
   - "WMI Provider for Configuration Management, late binding"
   - "binding [WMI]"
-ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-author: markingmyname
-ms.author: maghan
 ---
 # Working with the WMI Provider for Configuration Management
 

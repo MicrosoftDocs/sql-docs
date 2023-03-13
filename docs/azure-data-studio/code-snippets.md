@@ -7,7 +7,7 @@ ms.reviewer: alayu
 ms.date: "09/24/2018"
 ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: seodec18
+ms.custom: updatefrequency5
 ---
 
 # Create and use code snippets to quickly create Transact-SQL (T-SQL) scripts in Azure Data Studio

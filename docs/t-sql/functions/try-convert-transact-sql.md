@@ -3,12 +3,10 @@ title: "TRY_CONVERT (Transact-SQL)"
 description: "TRY_CONVERT (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "TRY_CONVERT_TSQL"
   - "TRY_CONVERT"

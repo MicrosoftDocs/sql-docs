@@ -1,14 +1,12 @@
 ---
 title: Add Test Conditions to SQL Server Unit Tests
 description: Find out how to add test conditions to a SQL Server unit. See how to use the SQL Server Unit Test Designer for this task.
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Add Test Conditions to SQL Server Unit Tests

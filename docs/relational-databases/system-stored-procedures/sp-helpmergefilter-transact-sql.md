@@ -1,22 +1,19 @@
 ---
+title: "sp_helpmergefilter (Transact-SQL)"
 description: "sp_helpmergefilter (Transact-SQL)"
-title: "sp_helpmergefilter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergefilter"
-  - "sp_helpmergefilter_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergefilter"
-ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergefilter"
+  - "sp_helpmergefilter_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergefilter"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -9,7 +9,6 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)

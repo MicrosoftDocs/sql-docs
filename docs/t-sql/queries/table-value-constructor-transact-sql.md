@@ -1,22 +1,19 @@
 ---
+title: "Table Value Constructor (Transact-SQL)"
 description: "Table Value Constructor (Transact-SQL)"
-title: "Table Value Constructor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/23/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inserting multiple rows"
   - "row value expression"
   - "row constructor [SQL Server]"
   - "table value constructor [SQL Server]"
-ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # Table Value Constructor (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

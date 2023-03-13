@@ -1,18 +1,16 @@
 ---
-title: "Security Role Requirements for Replication | Microsoft Docs"
+title: "Security Role Requirements for Replication"
 description: Learn about the authentication level necessary for common replication setup tasks and for common replication maintenance tasks in SQL Server.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "security [SQL Server replication], roles"
-  - "roles [SQL Server], replication"
-ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "security [SQL Server replication], roles"
+  - "roles [SQL Server], replication"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Security Role Requirements for Replication

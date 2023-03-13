@@ -1,19 +1,16 @@
 ---
+title: "HasM (geometry DataType)"
 description: "HasM (geometry DataType)"
-title: "HasM (geometry DataType) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "05/05/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HasM geometry"
-ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # HasM (geometry DataType)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

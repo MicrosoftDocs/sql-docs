@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7914"
 description: "MSSQLSERVER_7914"
-title: "MSSQLSERVER_7914 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7914 (Database Engine error)"
-ms.assetid: d32a81ce-4ca7-4b33-b536-c7ea0ed6f226
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7914 (Database Engine error)"
 ---
 # MSSQLSERVER_7914
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

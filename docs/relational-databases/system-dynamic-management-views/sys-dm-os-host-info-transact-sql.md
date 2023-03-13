@@ -3,7 +3,7 @@ title: "sys.dm_os_host_info (Transact-SQL)"
 description: sys.dm_os_host_info (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/10/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_host_info dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_host_info (Transact-SQL)
@@ -44,6 +43,9 @@ The `SELECT` permission on `sys.dm_os_host_info` is granted to the `public` role
 > [!CAUTION]
 >  Beginning with version [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] version 17 requires `SELECT` permission on `sys.dm_os_host_info` in order to connect to [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. If `SELECT` permission is revoked from `public`, only logins with `VIEW SERVER STATE` permission can connect with the newest version of SSMS. (Other tools, such as `sqlcmd.exe` can connect without `SELECT` permission on `sys.dm_os_host_info`.)
 
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
 ## Examples  
  The following example returns all columns from the **sys.dm_os_host_info** view.  
@@ -67,6 +69,6 @@ Here is a sample result set on Linux:
  |Linux	|Ubuntu	|16.04	|	|NULL	|1033 |  
 
   
-## See Also  
+## See also  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  

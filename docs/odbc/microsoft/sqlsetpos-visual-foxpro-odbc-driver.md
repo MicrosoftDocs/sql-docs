@@ -1,17 +1,14 @@
 ---
+title: "SQLSetPos (Visual FoxPro ODBC Driver)"
 description: "SQLSetPos (Visual FoxPro ODBC Driver)"
-title: "SQLSetPos (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLSetPos function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: ec8e5a9d-7aac-4e7f-a75f-cf670c036f33
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLSetPos function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLSetPos (Visual FoxPro ODBC Driver)
 > [!NOTE]  

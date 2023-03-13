@@ -1,22 +1,19 @@
 ---
+title: "sp_helpconstraint (Transact-SQL)"
 description: "sp_helpconstraint (Transact-SQL)"
-title: "sp_helpconstraint (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpconstraint"
-  - "sp_helpconstraint_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpconstraint"
-ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpconstraint"
+  - "sp_helpconstraint_TSQL"
+helpviewer_keywords:
+  - "sp_helpconstraint"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpconstraint (Transact-SQL)

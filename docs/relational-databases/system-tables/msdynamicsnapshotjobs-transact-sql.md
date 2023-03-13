@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSdynamicsnapshotjobs system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 ---
 # MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

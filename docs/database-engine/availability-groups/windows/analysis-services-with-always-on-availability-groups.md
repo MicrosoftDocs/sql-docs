@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 monikerRange: ">=sql-server-2016"
 ---
 # Analysis Services with Always On Availability Groups

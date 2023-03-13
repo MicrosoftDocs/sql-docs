@@ -1,15 +1,12 @@
 ---
+title: "Direct the CDC Stream According to the Type of Change"
 description: "Direct the CDC Stream According to the Type of Change"
-title: "Direct the CDC Stream According to the Type of Change | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Direct the CDC Stream According to the Type of Change
 

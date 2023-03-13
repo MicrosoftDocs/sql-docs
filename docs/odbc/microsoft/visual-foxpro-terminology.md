@@ -1,18 +1,15 @@
 ---
+title: "Visual FoxPro Terminology"
 description: "Visual FoxPro Terminology"
-title: "Visual FoxPro Terminology | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Visual FoxPro ODBC driver [ODBC], glossary"
-  - "FoxPro ODBC driver [ODBC], glossary"
-ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Visual FoxPro ODBC driver [ODBC], glossary"
+  - "FoxPro ODBC driver [ODBC], glossary"
 ---
 # Visual FoxPro Terminology
 **database**  

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2574"
 description: "MSSQLSERVER_2574"
-title: "MSSQLSERVER_2574 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2574 (Database Engine error)"
-ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2574 (Database Engine error)"
 ---
 # MSSQLSERVER_2574
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

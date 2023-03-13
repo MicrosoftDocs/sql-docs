@@ -1,18 +1,15 @@
 ---
+title: "SQLGetConnectOption Mapping"
 description: "SQLGetConnectOption Mapping"
-title: "SQLGetConnectOption Mapping | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "mapping deprecated functions [ODBC], SQLGetConnectOption"
-  - "SQLGetConnectOption function [ODBC], mapping"
-ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "mapping deprecated functions [ODBC], SQLGetConnectOption"
+  - "SQLGetConnectOption function [ODBC], mapping"
 ---
 # SQLGetConnectOption Mapping
 When an application calls **SQLGetConnectOption** through an ODBC *3.x* driver, the call to  

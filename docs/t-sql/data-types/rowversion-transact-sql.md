@@ -10,6 +10,8 @@ ms.topic: "reference"
 f1_keywords:
   - "timestamp_TSQL"
   - "timestamp"
+  - "rowversion_TSQL"
+  - "rowversion"
 helpviewer_keywords:
   - "rowversion data type"
   - "size [SQL Server], rowversion"

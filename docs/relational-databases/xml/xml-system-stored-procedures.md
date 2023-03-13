@@ -1,10 +1,11 @@
 ---
 title: "XML System Stored Procedures"
 description: Learn about the XML system stored procedures provided by SQL Server that are used to write queries with OPENXML.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,8 +14,6 @@ helpviewer_keywords:
   - "OPENXML statement, system stored procedures"
   - "sp_xml_preparedocument"
   - "XML [SQL Server], system stored procedures"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # XML system stored procedures
 

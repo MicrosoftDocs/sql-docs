@@ -1,22 +1,19 @@
 ---
+title: "sp_droprolemember (Transact-SQL)"
 description: "sp_droprolemember (Transact-SQL)"
-title: "sp_droprolemember (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/20/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_droprolemember_TSQL"
   - "sp_droprolemember"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_droprolemember"
-ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_droprolemember (Transact-SQL)

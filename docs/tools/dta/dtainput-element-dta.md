@@ -1,19 +1,16 @@
 ---
 title: "DTAInput Element (DTA)"
 description: In the dta utility, the DTAInput element contains the definition of XML input for Database Engine Tuning Advisor.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DTAInput element"
-ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+dev_langs:
+  - "XML"
 ---
 
 # DTAInput Element (DTA)

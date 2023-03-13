@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_subscribe_to_policy_category (Transact-SQL)"
 description: "sp_syspolicy_subscribe_to_policy_category (Transact-SQL)"
-title: "sp_syspolicy_subscribe_to_policy_category (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_subscribe_to_policy_category"
-  - "sp_syspolicy_subscribe_to_policy_category_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_subscribe_to_policy_category"
-ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_subscribe_to_policy_category"
+  - "sp_syspolicy_subscribe_to_policy_category_TSQL"
+helpviewer_keywords:
+  - "sp_syspolicy_subscribe_to_policy_category"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

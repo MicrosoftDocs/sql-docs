@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "assemblies [CLR integration], managing"
 dev_langs:
   - "TSQL"
-ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 ---
 # Managing CLR Integration Assemblies
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

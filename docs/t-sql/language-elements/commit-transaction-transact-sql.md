@@ -3,12 +3,10 @@ title: "COMMIT TRANSACTION (Transact-SQL)"
 description: "COMMIT TRANSACTION (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "09/09/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "COMMIT"
   - "COMMIT TRANSACTION"
@@ -90,7 +88,7 @@ Is the name of a user-defined variable containing a valid transaction name. The 
 ## Examples  
   
 ### A. Committing a transaction  
-**Applies to:** SQL Server, Azure SQL Database, [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+**Applies to:** SQL Server, Azure SQL Database, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
 
 The following example deletes a job candidate. It uses AdventureWorks. 
   

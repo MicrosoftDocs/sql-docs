@@ -1,15 +1,12 @@
 ---
-description: "System Administration Functional Area (Master Data Manager)"
 title: System Administration Functional Area
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
+description: "System Administration Functional Area (Master Data Manager)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "04/01/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # System Administration Functional Area (Master Data Manager)
 

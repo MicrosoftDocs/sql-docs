@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "sys.traces catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 ---
 # sys.traces (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The **sys.traces** catalog view contains the current running traces on the system. This view is intended as a replacement for the **fn_trace_getinfo** function.  
   

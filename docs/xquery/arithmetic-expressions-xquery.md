@@ -1,20 +1,17 @@
 ---
-title: "Arithmetic Expressions (XQuery) | Microsoft Docs"
+title: "Arithmetic Expressions (XQuery)"
 description: Learn about arithmetic expressions in XQuery and which arithmetic operators are supported.
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "expressions [XQuery], arithmetic"
-  - "arithmetic expressions"
-ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "expressions [XQuery], arithmetic"
+  - "arithmetic expressions"
+dev_langs:
+  - "XML"
 ---
 # Arithmetic Expressions (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

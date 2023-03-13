@@ -1,18 +1,15 @@
 ---
+title: "LOG (SSIS Expression)"
 description: "LOG (SSIS Expression)"
-title: "LOG (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "base-10 logarithms"
-  - "LOG function"
-ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "base-10 logarithms"
+  - "LOG function"
 ---
 # LOG (SSIS Expression)
 

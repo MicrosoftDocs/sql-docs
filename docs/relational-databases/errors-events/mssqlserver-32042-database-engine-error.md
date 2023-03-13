@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_32042"
 description: "MSSQLSERVER_32042"
-title: "MSSQLSERVER_32042 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "32042 (Database Engine error)"
-ms.assetid: 53a51c7a-dcd4-4c15-b4d2-6aaa9dce76da
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "32042 (Database Engine error)"
 ---
 # MSSQLSERVER_32042
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

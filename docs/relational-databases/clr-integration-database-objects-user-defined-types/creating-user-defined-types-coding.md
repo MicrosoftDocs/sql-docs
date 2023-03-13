@@ -28,7 +28,6 @@ helpviewer_keywords:
 dev_langs:
   - "VB"
   - "CSharp"
-ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 ---
 # Creating User-Defined Types - Coding
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

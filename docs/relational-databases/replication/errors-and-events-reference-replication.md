@@ -1,21 +1,19 @@
 ---
+title: "Errors and Events Reference (Replication)"
 description: "Errors and Events Reference (Replication)"
-title: "Errors and Events Reference (Replication) | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "errors [SQL Server replication], troubleshooting"
   - "troubleshooting [SQL Server replication], errors"
   - "replication [SQL Server], troubleshooting"
   - "errors [SQL Server replication]"
   - "errors and events reference [SQL Server replication]"
-ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Errors and Events Reference (Replication)

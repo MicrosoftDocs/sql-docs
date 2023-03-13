@@ -1,22 +1,17 @@
 ---
-description: "ServerName Property (SqlServerAlias Class)"
 title: "ServerName Property (SqlServerAlias)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ServerName Property (SqlServerAlias Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ServerName property"
-ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
+description: "ServerName Property (SqlServerAlias Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ServerName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ServerName Property (SqlServerAlias Class)"
+apitype: "MOFDef"
 ---
 # ServerName Property (SqlServerAlias Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

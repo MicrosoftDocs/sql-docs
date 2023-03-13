@@ -1,17 +1,14 @@
 ---
+title: "Project Settings (Type Mapping) (MySQLToSQL)"
 description: "Project Settings (Type Mapping) (MySQLToSQL)"
-title: "Project Settings (Type Mapping) (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.projectsettingtypemapping.f1"
+f1_keywords:
+  - "ssma.mysql.projectsettingtypemapping.f1"
 ---
 # Project Settings (Type Mapping) (MySQLToSQL)
 The Type Mapping project settings let you set default type mappings for the SSMA project.  

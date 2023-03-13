@@ -1,13 +1,13 @@
 ---
 title: "Whitepaper: Diagnose & resolve spinlock contention"
-description: This article is an in-depth look at diagnosing and resolving spinlock contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft."
-ms.date: 11/10/2022
-ms.service: sql
-ms.reviewer: wiassaf
-ms.subservice: performance
-ms.topic: troubleshooting
+description: This article is an in-depth look at diagnosing and resolving spinlock contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft.
 author: bluefooted
 ms.author: pamela
+ms.reviewer: wiassaf
+ms.date: 11/10/2022
+ms.service: sql
+ms.subservice: performance
+ms.topic: troubleshooting
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -78,7 +78,7 @@ A combination of several of the following symptoms may indicate spinlock content
 
 * A high number of spins and backoffs are observed for a particular spinlock type.
 
-* The system is experiencing heavy CPU utilization or spikes in CPU consumption. In heavy CPU scenarios, you see high signal waits on SOS_SCHEDULER_YEILD (reported by the DMV *sys.dm_os_wait_stats*).
+* The system is experiencing heavy CPU utilization or spikes in CPU consumption. In heavy CPU scenarios, you see high signal waits on SOS_SCHEDULER_YIELD (reported by the DMV *sys.dm_os_wait_stats*).
 
 * The system is experiencing high concurrency.
 

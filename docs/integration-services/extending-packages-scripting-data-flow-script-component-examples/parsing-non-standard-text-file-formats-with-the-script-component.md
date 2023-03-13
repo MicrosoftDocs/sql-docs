@@ -1,20 +1,17 @@
 ---
+title: "Parsing Non-Standard Text File Formats with the Script Component"
 description: "Parsing Non-Standard Text File Formats with the Script Component"
-title: "Parsing Non-Standard Text File Formats with the Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text file reading [Integration Services]"
   - "Script component [Integration Services], non-standard text file formats"
   - "transformations [Integration Services], components"
   - "Script component [Integration Services], examples"
-ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: chugugrace
-ms.author: chugu
 ---
 # Parsing Non-Standard Text File Formats with the Script Component
 

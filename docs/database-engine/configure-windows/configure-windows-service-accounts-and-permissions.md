@@ -7,7 +7,6 @@ ms.date: 08/10/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: reference
-ms.custom: contperf-fy20q4
 ---
 
 # Configure Windows service accounts and permissions
@@ -121,7 +120,20 @@ The following table lists the default service accounts used by setup when instal
 
 > [!IMPORTANT]  
 >
-> - Always use SQL Server tools such as SQL Server Configuration Manager to change the account used by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or SQL Server Agent services, or to change the password for the account. In addition to changing the account name, SQL Server Configuration Manager performs additional configuration such as updating the Windows local security store which protects the service master key for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Other tools such as the Windows Services Control Manager can change the account name but Don't change all the required settings.
+> - Always use SQL Server tools such as SQL Server Configuration Manager to change the account used by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or SQL Server Agent services, or to change the password for the account. In addition to changing the account name, SQL Server Configuration Manager performs additional configuration such as updating the Windows local security store which protects the service master key for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Other tools such as the Windows Services Control Manager can change the account name but doesn't change all the required settings. 
+> 
+>   If you change service accounts for any SQL service by using other means, it can lead to unexpected behavior or errors. For example, if you change SQL Agent service account to a domain account using Windows services applet, you may notice that SQL agent jobs that use Operating System (Cmdexec), Replication or SSIS job steps may fail with an error like the following:
+> 
+>   ```
+>   Executed as user : Domain\Account.
+>   The process could not be created for step Step Number of job Unique Job ID (reason: A required privilege is not held by the client). The step failed.
+>   ```
+>   To resolve this error, you should do the following using SQL Server Configuration Manager:
+> 
+>   1. Temporarily change the SQL Agent service account back to default virtual account (Default instance: NT Service\SQLSERVERAGENT. Named instance: NT Service\SQLAGENT$<instance_name>.)
+>   1. Restart  SQL Server Agent Service 
+>   1. Change the service account back to the desired domain account
+>   1. Restart SQL Server Agent service
 > - For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that you deploy in a SharePoint farm, always use SharePoint Central Administration to change the server accounts for [!INCLUDE[power-pivot-service-md](../../includes/power-pivot-service-md.md)] applications and the [!INCLUDE[analysis-services-service-md](../../includes/analysis-services-service-md.md)]. Associated settings and permissions are updated to use the new account information when you use Central Administration.
 > - To change [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] options, use the Reporting Services Configuration Tool.
 

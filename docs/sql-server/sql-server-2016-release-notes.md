@@ -1,17 +1,16 @@
 ---
-title: "SQL Server 2016 Release Notes | Microsoft Docs"
+title: "SQL Server 2016 Release Notes"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2016 releases.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: "pelopes"
 ms.date: "09/15/2021"
 ms.service: sql
-ms.reviewer: "pelopes"
-ms.custom: ""
 ms.subservice: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
   - "build notes"
   - "release issues"
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 
@@ -226,7 +225,7 @@ The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 installation may requi
 - [Download Service Pack 1 for Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 (SP1) Released](/archive/blogs/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released)
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545)
-- [SQL Server Update Center](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
+- [SQL Server Update Center](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
 ![Another screenshot of a horizontal bar.](media/horizontal-bar.png)
 
@@ -324,7 +323,7 @@ In SQL Server Management Studio and Visual Studio, the Help Viewer application m
 
 ## Additional Information
 + [SQL Server 2016 installation](../database-engine/install-windows/install-sql-server.md)
-+ [SQL Server Update Center - links and information for all supported versions](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
++ [SQL Server Update Center - links and information for all supported versions](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

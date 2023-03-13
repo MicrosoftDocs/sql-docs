@@ -9,7 +9,6 @@ ms.subservice: system-objects
 ms.topic: reference
 dev_langs:
   - "TSQL"
-ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_health_component_properties (Transact-SQL)

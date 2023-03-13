@@ -1,18 +1,15 @@
 ---
+title: "SQLAllocEnv Mapping"
 description: "SQLAllocEnv Mapping"
-title: "SQLAllocEnv Mapping | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLAllocEnv function [ODBC], mapping"
-  - "mapping deprecated functions [ODBC], SQLAllocEnv"
-ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLAllocEnv function [ODBC], mapping"
+  - "mapping deprecated functions [ODBC], SQLAllocEnv"
 ---
 # SQLAllocEnv Mapping
 When an application calls **SQLAllocEnv** through an ODBC *3.x* driver, the call to **SQLAllocEnv**(*phenv*) is mapped to **SQLAllocHandle** as follows:  

@@ -1,17 +1,15 @@
 ---
+title: "Snapshot Folder"
 description: "Snapshot Folder"
-title: "Snapshot Folder | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.replicationutilities.specifysnapshotfolder.f1"
-ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.replicationutilities.specifysnapshotfolder.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Snapshot Folder

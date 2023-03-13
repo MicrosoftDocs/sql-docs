@@ -4,13 +4,13 @@ description: Use Azure SQL from a GitHub Actions workflow
 author: juliakm
 ms.author: jukullam
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/28/2022
+ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "github-actions-azure"
-  - "mode-other"
+  - github-actions-azure
+  - mode-other
 ---
 
 # Use GitHub Actions to connect to Azure SQL Database
@@ -19,7 +19,7 @@ Get started with [GitHub Actions](https://docs.github.com/en/actions) by using a
 
 ## Prerequisites
 
-You will need:
+You need:
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 - A GitHub repository with a dacpac package (`Database.dacpac`). If you don't have a GitHub account, [sign up for free](https://github.com/join).  
 - An Azure SQL Database.
@@ -43,13 +43,13 @@ The file has two sections:
 
 ## Copy the SQL connection string
 
-In the Azure portal, go to your Azure SQL Database and open **Settings** > **Connection strings**. Copy the **ADO.NET** connection string. Replace the placeholder values for `your_database` and `your_password`. The connection string will look similar to this output. 
+In the Azure portal, go to your Azure SQL Database and open **Settings** > **Connection strings**. Copy the **ADO.NET** connection string. Replace the placeholder values for `your_database` and `your_password`. The connection string looks similar to this output. 
 
 ```output
     Server=tcp:my-sql-server.database.windows.net,1433;Initial Catalog={your-database};Persist Security Info=False;User ID={admin-name};Password={your-password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 ```
 
-You'll use the connection string as a GitHub secret. 
+Use the connection string as a GitHub secret. 
 
 ## Configure the GitHub secrets
 
@@ -73,7 +73,7 @@ You'll use the connection string as a GitHub secret.
         branches: [ main ]
     ```
 
-1. Rename your workflow `SQL for GitHub Actions` and add the checkout and login actions. These actions will check out your site code and authenticate with Azure using the `AZURE_CREDENTIALS` GitHub secret you created earlier.
+1. Rename your workflow `SQL for GitHub Actions` and add the checkout and login actions. These actions check out your site code and authenticate with Azure using the `AZURE_CREDENTIALS` GitHub secret you created earlier.
 
     # [Service principal](#tab/userlevel)
 
@@ -131,7 +131,7 @@ You'll use the connection string as a GitHub secret.
         action: 'Publish'
     ```
 
-1. Complete your workflow by adding an action to logout of Azure. Here's the completed workflow. The file will appear in the `.github/workflows` folder of your repository.
+1. Complete your workflow by adding an action to logout of Azure. Here's the completed workflow. The file appears in the `.github/workflows` folder of your repository.
 
     # [Service principal](#tab/userlevel)
 

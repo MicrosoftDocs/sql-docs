@@ -1,18 +1,15 @@
 ---
+title: "NULL (SSIS Expression)"
 description: "NULL (SSIS Expression)"
-title: "NULL (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "NULL function"
-  - "null values [Integration Services]"
-ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "NULL function"
+  - "null values [Integration Services]"
 ---
 # NULL (SSIS Expression)
 

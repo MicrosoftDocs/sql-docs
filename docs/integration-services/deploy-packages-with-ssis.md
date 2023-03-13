@@ -1,13 +1,13 @@
 ---
+title: "Deploy Packages with SSIS"
 description: "Deploy Packages with SSIS"
-title: "Deploy Packages with SSIS | Microsoft Docs"
-ms.custom:
-  - intro-quickstart
+author: chugugrace
+ms.author: chugu
 ms.date: "08/20/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: quickstart
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "deployment tutorial [Integration Services]"
   - "deploying packages [Integration Services]"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "walkthroughs [Integration Services]"
   - "deployment utility [Integration Services]"
   - "deploying packages [Integration Services], configurations"
-ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: chugugrace
-ms.author: chugu
 ---
 # Deploy Packages with SSIS
 

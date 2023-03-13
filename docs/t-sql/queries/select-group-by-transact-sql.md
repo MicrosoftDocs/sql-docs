@@ -1,10 +1,13 @@
 ---
 title: GROUP BY (Transact-SQL)
 description: "SELECT - GROUP BY- Transact-SQL"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "10/12/2021"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GROUP"
   - "CUBE"
   - "ROLLUP"
@@ -15,9 +18,7 @@ f1_keywords:
   - "GROUP_TSQL"
   - "CUBE_TSQL"
   - "ROLLUP_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GROUP BY clause, about GROUP BY clause"
   - "dividing tables into groups"
   - "GROUPING SETS"
@@ -25,11 +26,8 @@ helpviewer_keywords:
   - "table groups [SQL Server]"
   - "groups [SQL Server], tables divided into groups"
   - "summary values [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "10/12/2021"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -291,7 +289,7 @@ Applies to: SQL Server and Azure SQL Database
 >This syntax is provided for backward compatibility only. Avoid using this syntax in new development work, and plan to modify applications that currently use this syntax.
 
 ### WITH (DISTRIBUTED_AGG)
-Applies to: [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 The DISTRIBUTED_AGG query hint forces the massively parallel processing (MPP) system to redistribute a table on a specific column before performing an aggregation. Only one column in the GROUP BY clause can have a DISTRIBUTED_AGG query hint. After the query finishes, the redistributed table is dropped. The original table is not changed.  
 
@@ -318,7 +316,7 @@ NULL values:
   
 ## Limitations and Restrictions
 
-Applies to: SQL Server (starting with 2008) and [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]
+Applies to: SQL Server (starting with 2008) and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### Maximum capacity
 

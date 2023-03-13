@@ -1,18 +1,15 @@
 ---
+title: "&gt; (Greater Than) (SSIS Expression)"
 description: "&gt; (Greater Than) (SSIS Expression)"
-title: "&gt; (Greater Than) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "greater than operator (>)"
-  - "> (greater than operator)"
-ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "greater than operator (>)"
+  - "> (greater than operator)"
 ---
 # &gt; (Greater Than) (SSIS Expression)
 

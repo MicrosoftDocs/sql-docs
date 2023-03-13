@@ -1,18 +1,15 @@
 ---
-description: "Set a SQL Server Alias for the SQL Server Agent Service"
 title: Set a SQL Server Alias for the SQL Server Agent Service
+description: "Set a SQL Server Alias for the SQL Server Agent Service"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "aliases [SQL Server], creating"
   - "SQL Server Agent, aliases"
-ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

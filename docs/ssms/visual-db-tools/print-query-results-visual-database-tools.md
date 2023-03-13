@@ -1,21 +1,17 @@
 ---
-description: "Print Query Results (Visual Database Tools)"
 title: Print Query Results
-ms.custom: seo-lt-2019
+description: "Print Query Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "result sets [SQL Server], queries"
   - "results [SQL Server], query"
   - "queries [SQL Server], results"
   - "printing query results"
-ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Print Query Results (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

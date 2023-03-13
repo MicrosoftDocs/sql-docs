@@ -1,19 +1,16 @@
 ---
 title: Issue Element
 description: In SQL Server, the Issue element reports an issue found by the ssbdiagnose utility. The XML output file has one Issue element per issue reported.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "issue element"
   - "XML output file format [ssbdiagnose], issue element"
   - "ssbdiagnose"
-ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ---
 
 # Issue Element (ssbdiagnose)

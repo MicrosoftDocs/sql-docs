@@ -15,7 +15,7 @@ ms.topic: "reference"
 
   This sample works with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions. This sample does the following:  
   
--   Creates table-valued parameters by using dynamic discovery though IOpenRowset::OpenRowset.  
+-   Creates table-valued parameters by using dynamic discovery through IOpenRowset::OpenRowset.  
   
 -   Sends table-valued parameter rows by using the pull model in the EmployeesRowset class. In the pull model, the consumer provides data on demand to the provider.  
   

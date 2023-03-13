@@ -7,7 +7,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "UPDATE STATISTICS"
   - "UPDATE_STATISTICS_TSQL"
@@ -239,7 +238,7 @@ To determine when statistics were last updated, use the [STATS_DATE](../../t-sql
   
 ### PDW / Azure Synapse Analytics  
 
-The following syntax isn't supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]  
+The following syntax isn't supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
   
 ```sql
 UPDATE STATISTICS t1 (a,b);   

@@ -4,7 +4,7 @@ description: SSMS Options (Query Execution)
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 01/19/2021
+ms.date: 01/26/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -45,3 +45,9 @@ Use this page to specify the options for running Microsoft SQL Server queries. T
 
 - **Reset to Default**
     Resets all values on this page to the original default values.
+
+- **Prompt to save unsaved T-SQL query windows on close**
+    By default, a prompt appears asking if you want to save changes to file(s) with unsaved changes before closing them or exiting SSMS.  Unchecking this option could result in the loss of query editor information when closing query windows or SSMS.
+
+- **Check for open transactions before closing T-SQL query windows**
+    By default, SSMS will check to see if there are open transactions before closing a query editor window.  Unchecking this option bypasses this check, potentially resulting in open transactions not being committed.

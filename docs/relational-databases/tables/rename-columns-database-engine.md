@@ -8,7 +8,6 @@ ms.date: 07/27/2022
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "columns [SQL Server], names"
   - "renaming columns"

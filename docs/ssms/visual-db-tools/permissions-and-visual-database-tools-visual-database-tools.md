@@ -1,18 +1,14 @@
 ---
-description: "Permissions and Visual Database Tools (Visual Database Tools)"
 title: Permissions and Visual Database Tools
-ms.custom: seo-lt-2019
+description: "Permissions and Visual Database Tools (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiuser environments [Visual Database Tools]"
-ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Permissions and Visual Database Tools (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

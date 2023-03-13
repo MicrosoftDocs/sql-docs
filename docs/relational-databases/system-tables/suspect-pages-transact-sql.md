@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "suspect pages [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 ---
 # suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

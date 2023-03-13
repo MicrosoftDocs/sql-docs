@@ -1,21 +1,17 @@
 ---
-description: "Create Update Queries (Visual Database Tools)"
 title: Create Update Queries
-ms.custom: seo-lt-2019
+description: "Create Update Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tables [SQL Server], updating"
   - "queries [SQL Server], types"
   - "Update query"
   - "updating tables"
-ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Update Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

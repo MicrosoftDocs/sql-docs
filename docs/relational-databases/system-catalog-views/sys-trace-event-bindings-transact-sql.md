@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "sys.trace_event_bindings catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 ---
 # sys.trace_event_bindings (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The **sys.trace_event_bindings** catalog view contains a list of all possible usage combinations of events and columns. For each event listed in the **trace_event_id** column, all available columns are listed in the **trace_column_id** column. Not all available columns are populated each time a given event occurs. These values do not change for a given version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

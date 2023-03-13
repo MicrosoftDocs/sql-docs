@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.computed_columns catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.computed_columns (Transact-SQL)

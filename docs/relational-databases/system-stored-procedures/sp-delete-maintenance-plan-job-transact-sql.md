@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_maintenance_plan_job (Transact-SQL)"
 description: "sp_delete_maintenance_plan_job (Transact-SQL)"
-title: "sp_delete_maintenance_plan_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_maintenance_plan_job"
-  - "sp_delete_maintenance_plan_job_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_maintenance_plan_job"
-ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_maintenance_plan_job"
+  - "sp_delete_maintenance_plan_job_TSQL"
+helpviewer_keywords:
+  - "sp_delete_maintenance_plan_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

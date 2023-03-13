@@ -1,22 +1,19 @@
 ---
+title: "sp_reinitpullsubscription (Transact-SQL)"
 description: "sp_reinitpullsubscription (Transact-SQL)"
-title: "sp_reinitpullsubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_reinitpullsubscription_TSQL"
-  - "sp_reinitpullsubscription"
-helpviewer_keywords: 
-  - "sp_reinitpullsubscription"
-ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_reinitpullsubscription_TSQL"
+  - "sp_reinitpullsubscription"
+helpviewer_keywords:
+  - "sp_reinitpullsubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

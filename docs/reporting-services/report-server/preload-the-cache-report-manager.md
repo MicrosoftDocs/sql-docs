@@ -1,18 +1,15 @@
 ---
 title: "Preload the Cache (SSRS)| Microsoft Docs"
 description: Learn how to preload the cache for a shared dataset by creating a cache refresh plan for the shared dataset in a Reporting Services report server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/14/2019
 ms.service: reporting-services
 ms.subservice: report-server
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cache [Reporting Services]"
   - "preloading cache"
-ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Preload the cache  
   You can preload the cache for a shared dataset by creating a cache refresh plan for the shared dataset.  

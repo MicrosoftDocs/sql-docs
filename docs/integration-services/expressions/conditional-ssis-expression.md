@@ -1,18 +1,15 @@
 ---
+title: "? : (Conditional) (SSIS Expression)"
 description: "? : (Conditional) (SSIS Expression)"
-title: "? : (Conditional) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "conditional operator (?:)"
-  - "?: (conditional operator)"
-ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "conditional operator (?:)"
+  - "?: (conditional operator)"
 ---
 # ? : (Conditional) (SSIS Expression)
 

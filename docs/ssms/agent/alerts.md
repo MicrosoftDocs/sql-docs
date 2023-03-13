@@ -1,10 +1,13 @@
 ---
-description: "Alerts"
 title: Alerts
+description: "Alerts"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent alerts, event types"
   - "SQL Server Agent alerts, names"
   - "alerts [SQL Server], performance conditions"
@@ -16,12 +19,6 @@ helpviewer_keywords:
   - "SQL Server Agent alerts, performance conditions"
   - "SQL Server Agent alerts, about alerts"
   - "alerts [SQL Server], names"
-ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

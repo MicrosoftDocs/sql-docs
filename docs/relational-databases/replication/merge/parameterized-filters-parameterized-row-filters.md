@@ -1,13 +1,14 @@
 ---
+title: "Parameterized Row Filters"
 description: "Parameterized Filters - Parameterized Row Filters"
-title: "Parameterized Row Filters | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "publications [SQL Server replication], dynamic filters"
   - "merge replication [SQL Server replication], dynamic filters"
   - "parameterized filters [SQL Server replication]"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "parameterized filters [SQL Server replication], about parameterized filters"
   - "filters [SQL Server replication], parameterized"
   - "dynamic filters [SQL Server replication]"
-ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Parameterized Filters - Parameterized Row Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

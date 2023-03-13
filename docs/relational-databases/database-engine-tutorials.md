@@ -1,15 +1,12 @@
 ---
-title: "Database Engine Tutorials | Microsoft Docs"
+title: "Database Engine Tutorials"
 description: Use these tutorials to learn about the SQL Server Database Engine, including getting started and using the SQL Server Management Studio.
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 02/28/2023
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Engine Tutorials
@@ -43,10 +40,10 @@ This tutorial teaches how to create policies that enforce site administration st
 [Tutorial: SQL Server Backup and Restore to Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 This tutorial illustrates how to do a SQL Server backup and restore to Azure Blob Storage.  
   
-[Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+[Tutorial: Use Azure Blob Storage with SQL Server databases](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 This tutorial helps you understand how to store SQL Server data files in Azure Blob Storage directly.  
   
-## See Also  
+## Next steps
+
 [Tutorials for SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
 [TechNet WIKI: SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734)  
-  

@@ -1,22 +1,20 @@
 ---
+title: "Secure the Publisher"
 description: "Secure the Publisher"
-title: "Secure the Publisher | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "logins [SQL Server replication], publication access list"
   - "publications [SQL Server replication], publication access lists"
   - "publication access list (PAL)"
   - "PAL (publication access list)"
   - "Publishers [SQL Server replication], security"
   - "publications [SQL Server replication], security"
-ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Secure the Publisher
@@ -66,8 +64,6 @@ The following replication agents connect to the Publisher:
  There is one Queue Reader Agent for all Publishers and publications (that allow queued updating subscriptions) associated with a given Distributor. For more information, see [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
 ## See Also  
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
-  
-  

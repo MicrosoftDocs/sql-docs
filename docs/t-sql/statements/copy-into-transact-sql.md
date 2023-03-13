@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics for loading from 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
-ms.date: 01/04/2022
+ms.date: 2/1/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: language-reference
@@ -21,7 +21,7 @@ monikerRange: "=azure-sqldw-latest"
 # COPY (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-This article explains how to use the COPY statement in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]. Use COPY for the following capabilities:
+This article explains how to use the COPY statement in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse
 - Execute a single T-SQL statement without having to create any additional database objects
@@ -96,8 +96,8 @@ When a column list is not specified, COPY will map columns based on the source a
 #### *External locations(s)*
 Is where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
 
-- *External location* for Blob Storage: https://\<account\>.blob.core.windows.net/\<container\>/\<path\>
-- *External location* for ADLS Gen2: https://\<account\>.dfs.core.windows.net/\<container\>/\<path\>
+- *External location* for Blob Storage: `https://<account\>.blob.core.windows.net/<container\>/<path\>`
+- *External location* for ADLS Gen2: `https://<account\>.dfs.core.windows.net/<container\>/<path\>`
 
 > [!NOTE]  
 > The .blob endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the .blob endpoint when .dfs is not required for your authentication method.
@@ -119,7 +119,7 @@ Wildcards cards can be included in the path where
 
 Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
 
-- `https://\<account\>.blob.core.windows.net/\<container\>/\<path\>`, `https://\<account\>.blob.core.windows.net\<container\>/\<path\>`…
+- `https://<account>.blob.core.windows.net/<container\>/<path\>`, `https://<account\>.blob.core.windows.net/<container\>/<path\>`…
 
 #### *FILE_TYPE = { 'CSV' | 'PARQUET' | 'ORC' }*
 *FILE_TYPE* specifies the format of the external data.
@@ -293,7 +293,7 @@ The user executing the COPY command must have the following permissions:
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 
 ## Examples  
 
@@ -302,7 +302,8 @@ Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDEssazures
 The following example is the simplest form of the COPY command, which loads data from a public storage account. For this example, the COPY statement's defaults match the format of the line item csv file.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
+COPY INTO dbo.[lineitem] 
+FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 The default values of the COPY command are:
@@ -429,10 +430,15 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV. This guidance applies to gzip compressed files as well.
 
-### What is the file splitting guidance for the COPY command loading CSV files?
-Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. For a simple file splitting experience, refer to the following [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
+The COPY command will have better performance depending on your workload. 
+
+- Compressed files cannot be split automatically. For best loading performance, consider splitting your input into multiple files when loading compressed CSVs.
+- Large uncompressed CSV files can be split and loaded in parallel automatically, so there is no need to manually split uncompressed CSV files in most cases. In certain cases where auto file splitting is not feasible due to data characteristics, manually splitting large CSV’s may still benefit performance. 
+
+
+### What is the file splitting guidance for the COPY command loading compressed CSV files?
+Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. The number of files is determined by number of compute nodes multiplied by 60. For example, at 6000DWU we have 12 compute nodes and 12*60 = 720 partitions.  For a simple file splitting experience, refer to [How to maximize COPY load throughput with file splits](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474).
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |
@@ -461,18 +467,16 @@ There is no need to split Parquet and ORC files because the COPY command will au
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4 MB.
 
 ### Are there any known issues with the COPY statement?
-If you have a Azure Synapse workspace that was created prior to 12/07/2020, you may run into a similar error message when authenticating using Managed Identity:
-
-*com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.*
+If you have a Azure Synapse workspace that was created prior to 12/07/2020, you may run into a similar error message when authenticating using Managed Identity: `com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.`
 
 Follow these steps to work around this issue by re-registering the workspace's managed identity:
 
-1. Go to your Synapse workspace in the Azure portal
-2. Go to the Managed identities page 
-3. If the "Allow Pipelines" option is already checked, you must uncheck this setting and save
-4. Check the "Allow Pipelines" option and save
+1. Go to your Azure Synapse workspace in the Azure portal.
+2. Go to the Managed identities page.
+3. If the "Allow Pipelines" option is already checked, you must uncheck this setting and save.
+4. Check the "Allow Pipelines" option and save.
 
 
-## See also  
+## Next steps
 
- [Loading overview with [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Loading overview with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

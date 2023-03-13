@@ -1,20 +1,17 @@
 ---
 title: Specify a Hit Count
-description: Learn how to set a hit count for a breakpoint, so that the debugger won't break at that breakpoint until the hit count is reached.
 titleSuffix: T-SQL debugger
+description: Learn how to set a hit count for a breakpoint, so that the debugger won't break at that breakpoint until the hit count is reached.
+author: markingmyname
+ms.author: maghan
+ms.date: 12/04/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vs.debug.breakpt.hitcount"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL debugger, breakpoint hit count"
-ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

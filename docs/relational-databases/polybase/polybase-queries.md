@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Hadoop, export with PolyBase"
   - "Azure Blob Storage, import with PolyBase"
   - "Azure Blob Storage, export with PolyBase"
-keywords: "PolyBase"
+keywords: PolyBase
 monikerRange: ">= sql-server-2016"
 ---
 # PolyBase query scenarios

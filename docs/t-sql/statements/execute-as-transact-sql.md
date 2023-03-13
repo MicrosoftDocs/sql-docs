@@ -53,7 +53,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
 > [!NOTE]  
->  This option is not available in a contained database, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].  
+>  This option is not available in a contained database, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
  USER  
  Specifies the context to be impersonated is a user in the current database. The scope of impersonation is restricted to the current database. A context switch to a database user does not inherit the server-level permissions of that user.  
@@ -87,7 +87,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  When used inside a module, specifies the statements inside the module are executed in the context of the caller of the module.
  When used outside a module, the statement has no action.
  > [!NOTE]  
->  This option is not available in [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)].  
+>  This option is not available in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
 ## Remarks  
  The change in execution context remains in effect until one of the following occurs:  

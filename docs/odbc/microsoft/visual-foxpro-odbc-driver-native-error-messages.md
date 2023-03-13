@@ -1,19 +1,16 @@
 ---
+title: "Visual FoxPro ODBC Driver Native Error Messages"
 description: "Visual FoxPro ODBC Driver Native Error Messages"
-title: "Visual FoxPro ODBC Driver Native Error Messages | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "error messages [ODBC], Visual FoxPro ODBC driver"
   - "Visual FoxPro ODBC driver [ODBC], error messages"
   - "FoxPro ODBC driver [ODBC], error messages"
-ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Visual FoxPro ODBC Driver Native Error Messages
 The following tables list error messages native to the Visual FoxPro ODBC Driver.  

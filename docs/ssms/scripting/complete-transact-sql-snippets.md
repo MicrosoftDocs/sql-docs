@@ -1,19 +1,16 @@
 ---
 title: "Complete Transact-SQL Snippets"
 description: A Transact-SQL snippet is a code template. Learn how to customize its use by inserting content at its replacement points, and by adding syntax elements to the template.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IntelliSense [SQL Server], completing snippets"
   - "snippets [Transact-SQL], completing"
   - "Transact-SQL snippets, completing"
-ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Complete Transact-SQL Snippets

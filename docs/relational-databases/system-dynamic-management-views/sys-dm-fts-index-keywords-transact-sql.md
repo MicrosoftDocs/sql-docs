@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
 dev_langs:
   - "TSQL"
-ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 ---
 # sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

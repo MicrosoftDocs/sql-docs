@@ -8,10 +8,7 @@ ms.date: 12/20/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom:
-  - sqlfreshmay19
-  - intro-installation
-  - event-tier1-build-2022
+ms.custom: intro-installation
 ---
 # Installation guidance for SQL Server on Linux
 
@@ -22,7 +19,7 @@ This article provides guidance for installing, updating, and uninstalling [!INCL
 For other deployment scenarios, see:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
-- [Docker containers](./sql-server-linux-docker-container-deployment.md)
+- [Linux containers](./sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md) ([!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only)
 
 This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:

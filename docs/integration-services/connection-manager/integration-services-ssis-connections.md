@@ -1,16 +1,16 @@
 ---
+title: "Integration Services (SSIS) Connections"
 description: "Integration Services (SSIS) Connections"
-title: "Integration Services (SSIS) Connections | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.asvs.connectionmanager.f1"
   - "sql13.dts.designer.adddtsconnection.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, connections"
   - "SSIS packages, connections"
   - "sources [Integration Services], connections"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "connections [Integration Services], about connections"
   - "connections [Integration Services]"
   - "SQL Server Integration Services packages, connections"
-ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Connections
 

@@ -1,19 +1,16 @@
 ---
+title: "SQL Conformance Levels (ODBC Driver for Oracle)"
 description: "SQL Conformance Levels (ODBC Driver for Oracle)"
-title: "SQL Conformance Levels (ODBC Driver for Oracle) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "conformance levels [ODBC], SQL"
   - "SQL conformance levels [ODBC]"
   - "ODBC driver for Oracle [ODBC], conformance levels"
-ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL Conformance Levels (ODBC Driver for Oracle)
 > [!IMPORTANT]  

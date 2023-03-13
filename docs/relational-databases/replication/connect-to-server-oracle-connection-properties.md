@@ -1,19 +1,17 @@
 ---
+title: "Connect to Server (Oracle), Connection Properties"
 description: "Connect to Server (Oracle), Connection Properties"
-title: "Connect to Server (Oracle), Connection Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.oracleconnection.connectionprops.f1"
-helpviewer_keywords: 
-  - "Connect to Server dialog box, replication"
-ms.assetid: 1bb7396f-cbb2-4f88-b82b-543287ed4172
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.oracleconnection.connectionprops.f1"
+helpviewer_keywords:
+  - "Connect to Server dialog box, replication"
 ---
 # Connect to Server (Oracle), Connection Properties
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,16 @@
 ---
-description: "Create a Job Category"
 title: "Create a Job Category"
-ms.custom: seo-lt-2019
+description: "Create a Job Category"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, categories"
   - "jobs [SQL Server Agent], categories"
   - "categories [SQL Server Agent jobs]"
-ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a Job Category

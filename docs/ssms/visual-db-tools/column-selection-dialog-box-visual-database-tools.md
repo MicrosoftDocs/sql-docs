@@ -1,17 +1,15 @@
 ---
 title: Column Selection Dialog Box
 description: "Column Selection Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.columnselection"
   - "vdtsql.chm:65548"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Column Selection Dialog Box (Visual Database Tools)

@@ -1,16 +1,13 @@
 ---
+title: "Working with Variables Programmatically"
 description: "Working with Variables Programmatically"
-title: "Working with Variables Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "System namespace"
   - "scope [Integration Services]"
   - "variables [Integration Services], programmatically"
@@ -19,9 +16,9 @@ helpviewer_keywords:
   - "User namespace"
   - "custom variables [Integration Services]"
   - "variables [Integration Services], customizing"
-ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Working with Variables Programmatically
 

@@ -1,22 +1,17 @@
 ---
-description: "PropertyNumValue Property (SqlServiceAdvancedProperty Class)"
 title: "PropertyNumValue Property (SqlServiceAdvancedProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "PropertyNumValue Property (SqlServiceAdvancedProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "PropertyNumValue property"
-ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
+description: "PropertyNumValue Property (SqlServiceAdvancedProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "PropertyNumValue property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "PropertyNumValue Property (SqlServiceAdvancedProperty Class)"
+apitype: "MOFDef"
 ---
 # PropertyNumValue Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -34,7 +34,7 @@ helpviewer_keywords:
  You can configure the named pipe protocol to listen on a designated named pipe. By default, the default instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] listens on pipe \\\\.\pipe\sql\query for the default instance and \\\\.\pipe\MSSQL$*\<instancename>*\sql\query for a named instance. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can only listen on one named pipe, but you can change the pipe to another name if you wish. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service helps clients identify the pipe when they connect. For more information, see [Configure a Server to Listen on an Alternate Pipe &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## Force Encryption  
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be configured to require encryption when communicating with client applications. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be configured to require encryption when communicating with client applications. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](./configure-sql-server-encryption.md).  
   
 ## Extended Protection for Authentication  
  Support for Extended Protection for Authentication by using channel binding and service binding is available for operating systems that support Extended Protection. For more information, see [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
@@ -57,5 +57,3 @@ helpviewer_keywords:
  [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md)  
   
  [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
-  
-  

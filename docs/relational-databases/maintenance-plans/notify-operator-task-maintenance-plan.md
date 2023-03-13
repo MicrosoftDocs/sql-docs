@@ -11,7 +11,6 @@ f1_keywords:
   - "sql13.swb.maint.notifyoperator.f1"
 helpviewer_keywords:
   - "Notify Operator Task dialog box"
-ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 ---
 # Notify Operator Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

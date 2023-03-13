@@ -1,22 +1,19 @@
 ---
+title: "sp_cursoropen (Transact-SQL)"
 description: "sp_cursoropen (Transact-SQL)"
-title: "sp_cursoropen (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursoropen"
-  - "sp_cursoropen_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursoropen"
-ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursoropen"
+  - "sp_cursoropen_TSQL"
+helpviewer_keywords:
+  - "sp_cursoropen"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,15 @@
 ---
-description: "Create a New Database Diagram (Visual Database Tools)"
 title: Create a New Database Diagram
-ms.custom: seo-lt-2019
+description: "Create a New Database Diagram (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: "09/24/2018"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagrams [SQL Server], creating"
   - "database diagrams [SQL Server], creating"
-ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
 ---
 # Create a New Database Diagram (Visual Database Tools)
 

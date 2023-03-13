@@ -1,18 +1,15 @@
 ---
+title: "Spatial Reference Identifiers (SRIDs)"
 description: "Spatial Reference Identifiers (SRIDs)"
-title: "Spatial Reference Identifiers (SRIDs) | Microsoft Docs"
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/29/2019"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Spatial Reference Identifiers (SRIDs)"
   - "geodetic spatial data [SQL Server], identifiers"
   - "SRID"
-ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
-author: MladjoA
-ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Reference Identifiers (SRIDs)

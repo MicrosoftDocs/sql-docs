@@ -2,14 +2,14 @@
 title: Install Distributed Replay
 titleSuffix: SQL Server Distributed Replay
 description: "This article describes the ways you can install Distributed Replay: using the Installation Wizard, the Command Prompt window, or a configuration file."
-ms.service: sql
-ms.subservice: distributed-replay
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom: seo-lt-2019, intro-installation
 ms.date: 06/20/2022
+ms.service: sql
+ms.subservice: distributed-replay
+ms.topic: conceptual
+ms.custom: intro-installation
 monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 

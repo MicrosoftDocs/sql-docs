@@ -191,13 +191,20 @@ For a PowerShell script that shows how to perform geo-restore for a database in 
 
 ### Geo-restore considerations
 
-For detailed information about using geo-restore to recover from an outage, see [Recover from an outage](../database/disaster-recovery-guidance.md#recover-using-geo-restore).
-
 Geo-restore is the most basic disaster-recovery solution available in SQL Managed Instance. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and isn't critical to the business, geo-restore is an appropriate disaster-recovery solution. 
 
 For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-mi.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
 
 For more information about business continuity choices, see [Overview of business continuity](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
+
+## Limitations
+
+Consider the following limitations when working with backups and Azure SQL Managed Instance: 
+
+- Geo-restore of a database can only be performed to an instance in the same subscription as the source SQL managed instance. 
+- SQL Managed Instance databases can only be [restored to SQL Server 2022](restore-database-to-sql-server.md) (either on-premises, or on a virtual machine) if the source SQL Managed Instance has enrolled in the [November 2022 feature wave](november-2022-feature-wave-enroll.md).
+- SQL Managed Instance databases are encrypted with TDE by default. To restore your database to an instance other than the source SQL Managed Instance, the target instance must have access to the same key in Azure Key Vault used to encrypt the source database, or you must disable TDE encryption on the source database before taking the backup. 
+
 
 ## Next steps
 

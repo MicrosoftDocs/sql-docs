@@ -7,7 +7,6 @@ ms.date: 04/26/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "ISJSON"
   - "ISJSON_TSQL"
@@ -42,7 +41,7 @@ ISJSON ( expression [, json_type_constraint] )
   Specifies the JSON type to check in the input. Valid values are VALUE, ARRAY, OBJECT or SCALAR. Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 > [!NOTE]
-> The argument *json_type_constraint* is not supported in Azure Synapse Analytics
+> The argument *json_type_constraint* is not supported in Azure Synapse Analytics Dedicated pools
 
 ## Return value
 

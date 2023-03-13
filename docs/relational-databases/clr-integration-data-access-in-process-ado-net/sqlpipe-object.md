@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "custom result sets [CLR integration]"
   - "SqlPipe object"
   - "tabular results"
-ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 ---
 # SqlPipe Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

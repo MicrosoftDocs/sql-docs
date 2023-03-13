@@ -1,18 +1,15 @@
 ---
-title: "Enable Remote Errors (Reporting Services) | Microsoft Docs"
+title: "Enable Remote Errors (Reporting Services)"
 description: Learn how to set server properties on a Reporting Services report server to return additional information about error conditions that occur on remote servers.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/20/2017
 ms.service: reporting-services
 ms.subservice: report-server
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "remote data source [Reporting Services]"
   - "EnableRemoteError server property"
-ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Enable Remote Errors (Reporting Services)
   You can set server properties on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", you can set the **EnableRemoteErrors** property to access additional information that can help you troubleshoot the problem. For more information, see [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  

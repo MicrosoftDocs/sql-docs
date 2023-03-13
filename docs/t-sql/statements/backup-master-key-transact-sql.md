@@ -7,7 +7,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "BACKUP MASTER KEY"
   - "DUMP_MASTER_KEY_TSQL"
@@ -24,7 +23,7 @@ dev_langs:
   - "TSQL"
 ---
 # BACKUP MASTER KEY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Exports the database master key.  
 

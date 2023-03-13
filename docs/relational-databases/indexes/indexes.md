@@ -9,7 +9,6 @@ ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "index types [SQL Server]"
-ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes

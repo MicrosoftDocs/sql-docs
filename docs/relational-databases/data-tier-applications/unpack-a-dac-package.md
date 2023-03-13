@@ -1,19 +1,16 @@
 ---
-description: "Unpack a DAC Package"
 title: "Unpack a DAC Package"
-ms.custom: ""
+description: "Unpack a DAC Package"
+author: dzsquared
+ms.author: drskwier
 ms.date: "12/20/2022"
 ms.service: sql
-ms.subservice:
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "wizard [DAC], unpack"
   - "data-tier application [SQL Server], unpack"
   - "How to [DAC], unpack"
   - "unpack DAC"
-ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
-author: dzsquared
-ms.author: drskwier
 ---
 # Unpack a DAC Package
 

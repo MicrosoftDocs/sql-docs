@@ -124,7 +124,7 @@ ALTER AUTHORIZATION ON
 
 |Class|Product|
 |-|-|
-|OBJECT|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
+|OBJECT|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
 |ASSEMBLY|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |ASYMMETRIC KEY|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |AVAILABILITY GROUP |**Applies to:** SQL Server 2012 and later.|
@@ -138,7 +138,7 @@ ALTER AUTHORIZATION ON
 |REMOTE SERVICE BINDING|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
 |ROLE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |ROUTE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
-|SCHEMA|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
+|SCHEMA|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
 |SEARCH PROPERTY LIST|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |SERVER ROLE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
 |SERVICE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
@@ -214,7 +214,7 @@ The new owner principal must be one of the following:
 - A federated user (not a group) present in Azure AD.
 - A managed user (not a group) or an application present in Azure AD.
 
-If the new owner is an Azure Active Directory user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Azure AD user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring an Azure Active Directory users with SQL Database, see [Connecting to SQL Database or [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-configure).
+If the new owner is an Azure Active Directory user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Azure AD user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring an Azure Active Directory users with SQL Database, see [Connecting to SQL Database or [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-configure).
 
 **Requirements for the person executing the ALTER AUTHORIZATION statement:**
 You must connect to the target database to change the owner of that database.

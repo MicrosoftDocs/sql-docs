@@ -7,7 +7,6 @@ ms.date: 05/25/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"
@@ -54,7 +53,7 @@ Specific version and edition upgrade paths aren't available during community tec
 
 You can migrate databases from older versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], as long as the source database compatibility level is `90` or higher. Databases with a compatibility level of `90` (for example, on [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)]), are automatically upgraded to a compatibility level of `100` when migrated to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. If the compatibility level on the source database is `100` or higher, it will be unchanged on [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
-For information, see [Azure Database Migration Guide](https://datamigration.microsoft.com/scenario/sql-to-sqlserver).
+For information, see [Azure Database Migration Guide](../../sql-server/migrate/guides/sql-server-to-sql-server-upgrade-guide.md).
 
 The following tips and tools can help you plan and implement your migration.
 

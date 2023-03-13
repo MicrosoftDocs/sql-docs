@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_sql_referencing_entities dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_sql_referencing_entities (Transact-SQL)

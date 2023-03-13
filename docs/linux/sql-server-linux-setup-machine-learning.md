@@ -4,14 +4,12 @@ titleSuffix: SQL Server 2019 Machine Learning Services
 description: "Learn how to install SQL Server 2019 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/24/2022
-ms.topic: how-to
+ms.date: 01/27/2023
 ms.service: sql
 ms.subservice: machine-learning-services
+ms.topic: how-to
+ms.custom: intro-installation
 monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
-ms.custom:
-- intro-installation
-- event-tier1-build-2022
 ---
 # Install SQL Server 2019 Machine Learning Services (Python and R) on Linux
 
@@ -146,6 +144,9 @@ sudo su
 
 # Optionally, if your system does not have the https apt transport option
 apt-get install apt-transport-https
+
+# If you are on Ubuntu 20.04, install the following package (MRO 3.5 has a dependency on libtinfo.so.5 in Ubuntu 20.04)
+apt-get install libncurses5
 
 # Set the location of the package repo the "prod" directory containing the distribution.
 # This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.

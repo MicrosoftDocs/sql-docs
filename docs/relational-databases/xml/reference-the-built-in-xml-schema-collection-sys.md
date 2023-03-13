@@ -1,10 +1,11 @@
 ---
 title: "Reference the Built-in XML Schema Collection (sys)"
 description: Learn how to reference the built-in XML schema collection sys that is predefined for every database you create.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,8 +14,6 @@ helpviewer_keywords:
   - "predefined XML schema collections [SQL Server]"
   - "XML schema collections [SQL Server], predefined"
   - "built-in XML schema collections [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Reference the built-in XML schema collection (sys)
 

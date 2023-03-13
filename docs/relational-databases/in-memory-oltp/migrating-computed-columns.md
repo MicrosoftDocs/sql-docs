@@ -8,7 +8,6 @@ ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: intro-migration
-ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 monikerRange: "=sql-server-2016"
 ---
 # Migrating Computed Columns

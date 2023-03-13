@@ -1,16 +1,16 @@
 ---
-description: "Troubleshoot accelerated database recovery"
 title: "Troubleshoot accelerated database recovery"
+description: "Troubleshoot accelerated database recovery"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: kfarlee
 ms.date: 07/14/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "accelerated database recovery [SQL Server], recovery-only"
   - "database recovery [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: kfarlee
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 

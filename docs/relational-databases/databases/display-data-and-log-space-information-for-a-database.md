@@ -1,12 +1,13 @@
 ---
 title: "Display data & log space info for a database"
 description: Learn how to display the data and log space information for a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/16/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logs [SQL Server], space"
   - "status information [SQL Server], space"
   - "displaying space information"
@@ -15,11 +16,7 @@ helpviewer_keywords:
   - "viewing space information"
   - "space allocation [SQL Server], displaying"
   - "data space [SQL Server]"
-ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Display data and log space information for a database
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

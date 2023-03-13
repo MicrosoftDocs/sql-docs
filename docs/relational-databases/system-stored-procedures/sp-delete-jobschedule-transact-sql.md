@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_jobschedule (Transact-SQL)"
 description: "sp_delete_jobschedule (Transact-SQL)"
-title: "sp_delete_jobschedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_jobschedule"
-  - "sp_delete_jobschedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_jobschedule"
-ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_jobschedule"
+  - "sp_delete_jobschedule_TSQL"
+helpviewer_keywords:
+  - "sp_delete_jobschedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

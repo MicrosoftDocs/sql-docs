@@ -1,22 +1,19 @@
 ---
 title: "sp_validate_replica_hosts_as_publishers (T-SQL)"
-description: Describes the sp_validate_replica_hosts_as_publishers stored procedure which allows all secondary replicas to be validated. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_validate_replica_hosts_as_publishers_TSQL"
-  - "sp_validate_replica_hosts_as_publishers"
-helpviewer_keywords: 
-  - "sp_validate_replica_hosts_as_publishers"
-ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
+description: Describes the sp_validate_replica_hosts_as_publishers stored procedure which allows all secondary replicas to be validated.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_validate_replica_hosts_as_publishers_TSQL"
+  - "sp_validate_replica_hosts_as_publishers"
+helpviewer_keywords:
+  - "sp_validate_replica_hosts_as_publishers"
+dev_langs:
+  - "TSQL"
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

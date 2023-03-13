@@ -1,22 +1,18 @@
 ---
-description: "Upgrade a database using detach and attach (Transact-SQL)"
 title: "Upgrade a database using detach & attach (Transact-SQL)"
+description: "Upgrade a database using detach and attach (Transact-SQL)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/03/2020
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database attaching [SQL Server]"
   - "upgrading databases"
   - "database upgrades [SQL Server]"
   - "database detaching [SQL Server]"
   - "detaching databases [SQL Server]"
   - "attaching databases [SQL Server]"
-ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 ---
 # Upgrade a database using detach and attach (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

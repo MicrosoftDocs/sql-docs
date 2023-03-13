@@ -1,19 +1,17 @@
 ---
-title: "Data Type Mapping for Oracle Publishers | Microsoft Docs"
+title: "Data Type Mapping for Oracle Publishers"
 description: Learn about default mappings of data types between Oracle and SQL Server when data is moved from the Oracle Publisher to the SQL Server Distributor.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], data type mapping"
   - "data types [SQL Server replication], Oracle publishing"
   - "mapping data types [SQL Server replication]"
-ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Data Type Mapping for Oracle Publishers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

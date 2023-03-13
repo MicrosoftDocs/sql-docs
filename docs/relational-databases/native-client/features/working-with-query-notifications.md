@@ -1,13 +1,13 @@
 ---
-title: "Working with Query Notifications | Microsoft Docs"
+title: "Working with Query Notifications"
 description: Query notifications allow you to request notification during a time-out period when the underlying data of a query changes in SQL Server Native Client.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "05/24/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [SQL Server Native Client], query notifications"
   - "rowsets [SQL Server], notifications"
   - "SQL Server Native Client, query notifications"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "SQLNCLI, query notifications"
   - "SQL Server Native Client OLE DB provider, query notifications"
   - "consumer notification for rowset changes [SQL Server Native Client]"
-ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Query Notifications

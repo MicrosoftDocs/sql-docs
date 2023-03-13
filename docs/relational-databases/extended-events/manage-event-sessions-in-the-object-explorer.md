@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xevents
 ms.topic: tutorial
-ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Event Sessions in the Object Explorer

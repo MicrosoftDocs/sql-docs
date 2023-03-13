@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED"
 description: "LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED"
-title: "LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

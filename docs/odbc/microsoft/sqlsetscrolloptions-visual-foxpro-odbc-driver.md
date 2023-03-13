@@ -1,17 +1,14 @@
 ---
+title: "SQLSetScrollOptions (Visual FoxPro ODBC Driver)"
 description: "SQLSetScrollOptions (Visual FoxPro ODBC Driver)"
-title: "SQLSetScrollOptions (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLSetScrollOptions function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLSetScrollOptions function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLSetScrollOptions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

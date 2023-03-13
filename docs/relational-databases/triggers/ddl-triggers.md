@@ -1,17 +1,13 @@
 ---
+title: "DDL Triggers"
 description: "DDL Triggers"
-title: "DDL Triggers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice:
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "DDL triggers, about DDL triggers"
-ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "DDL triggers, about DDL triggers"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Triggers
@@ -118,5 +114,5 @@ GO
  [DML Triggers](../../relational-databases/triggers/dml-triggers.md)   
  [Logon Triggers](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
- [EVENT DATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

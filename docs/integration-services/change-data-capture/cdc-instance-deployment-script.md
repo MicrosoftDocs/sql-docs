@@ -1,15 +1,12 @@
 ---
+title: "CDC Instance Deployment Script"
 description: "CDC Instance Deployment Script"
-title: "CDC Instance Deployment Script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # CDC Instance Deployment Script
 

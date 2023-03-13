@@ -8,7 +8,6 @@ ms.date: 09/06/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "FILESTREAM_TSQL"
   - "TABLE"
@@ -54,7 +53,7 @@ dev_langs:
 Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]  
-> For [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)] syntax, see [CREATE TABLE ([!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
+> For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] syntax, see [CREATE TABLE ([!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

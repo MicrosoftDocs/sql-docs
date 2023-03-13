@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2596"
 description: "MSSQLSERVER_2596"
-title: "MSSQLSERVER_2596 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2596 (Database Engine error)"
-ms.assetid: 49ab892f-8ba3-4ba1-b562-ddf205019802
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2596 (Database Engine error)"
 ---
 # MSSQLSERVER_2596
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

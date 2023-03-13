@@ -1,22 +1,19 @@
 ---
+title: "sp_helpdb (Transact-SQL)"
 description: "sp_helpdb (Transact-SQL)"
-title: "sp_helpdb (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpdb"
-  - "sp_helpdb_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpdb"
-ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpdb"
+  - "sp_helpdb_TSQL"
+helpviewer_keywords:
+  - "sp_helpdb"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

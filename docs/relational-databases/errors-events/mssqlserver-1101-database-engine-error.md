@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_1101"
 description: "MSSQLSERVER_1101"
-title: "MSSQLSERVER_1101 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/23/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1101 (Database Engine error)"
-ms.assetid: d63b67d5-59f5-4f77-904e-5ba67f2dd850
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/23/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1101 (Database Engine error)"
 ---
 # MSSQLSERVER_1101
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

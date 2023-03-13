@@ -1,24 +1,21 @@
 ---
-description: "Template Explorer"
 title: "Template Explorer"
+description: "Template Explorer"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.templates.explorer.f1"
   - "sql13.wb.templates.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "templates [SQL Server]"
   - "SQL Server Management Studio [SQL Server], Template Explorer"
   - "Template Explorer"
   - "templates [Transact-SQL]"
   - "templates [SQL Server], Template Explorer"
-ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Template Explorer

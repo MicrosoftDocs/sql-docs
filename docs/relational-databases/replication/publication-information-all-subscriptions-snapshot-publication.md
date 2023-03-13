@@ -1,17 +1,15 @@
 ---
 title: "All Subscriptions (Snapshot - SSMS)"
-description: Describes the 'All Subscriptions' tab for a selected Snapshot Publication in SQL Server Management Studio (SSMS). 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1"
-ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
+description: Describes the 'All Subscriptions' tab for a selected Snapshot Publication in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Information, All Subscriptions (Snapshot Publication)

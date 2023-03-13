@@ -1,13 +1,13 @@
 ---
+title: "Descriptor Handles"
 description: "Descriptor Handles"
-title: "Descriptor Handles | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "application parameter descriptor [ODBC]"
   - "automatically allocated descriptors [ODBC]"
   - "implementation row descriptor [ODBC]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "ipd [ODBC]"
   - "ird [ODBC]"
   - "application row descriptor [ODBC]"
-ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Descriptor Handles
 A *descriptor* is a collection of metadata that describes the parameters of an SQL statement or the columns of a result set, as seen by the application or driver (also known as the *implementation*). Thus, a descriptor can fill any of four roles:  

@@ -1,23 +1,19 @@
 ---
-description: "Exclude Duplicate Rows (Visual Database Tools)"
 title: Exclude Duplicate Rows
-ms.custom: seo-lt-2019
+description: "Exclude Duplicate Rows (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search criteria [SQL Server], excluding rows"
   - "row duplicates [SQL Server]"
   - "duplicate rows"
   - "row excluded in search [SQL Server]"
   - "result sets [SQL Server], duplicate values"
   - "excluding rows"
-ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Exclude Duplicate Rows (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

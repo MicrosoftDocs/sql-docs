@@ -1,20 +1,17 @@
 ---
-title: "FileTables (SQL Server) | Microsoft Docs"
+title: "FileTables (SQL Server)"
 description: Explore the benefits and functionality of FileTables, the SQL Server feature that uses a directory structure to store files. Learn how to work with FileTables.
-ms.custom: ""
-ms.date: "10/24/2016"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "01/27/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: filestream
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FileTables [SQL Server], overview"
   - "FileTables [SQL Server]"
   - "FileTable [SQL Server], see FileTables [SQL Server]"
   - "FileTable [SQL Server]"
-ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # FileTables (SQL Server)
 
@@ -66,7 +63,7 @@ ms.author: mikeray
   
 -   When the database is configured for non-transactional access, the file and directory hierarchy represented in the FileTable is exposed under the FILESTREAM share configured for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. This provides file system access for Windows applications.  
   
- Some additional characteristics of FileTables include the following:  
+ ### Some additional characteristics of FileTables:  
   
 -   The file and directory data stored in a FileTable is exposed through a Windows share for non-transactional file access for Windows API based applications. For a Windows application, this looks like a normal share with its files and directories. Applications can use a rich set of Windows APIs to manage the files and directories under this share.  
   
@@ -74,7 +71,7 @@ ms.author: mikeray
   
 -   Calls to create or change a file or directory through the Windows share are intercepted by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component and reflected in the corresponding relational data in the FileTable.  
   
--   Windows API operations are non-transactional in nature, and are not associated with user transactions. However, transactional access to FILESTREAM data stored in a FileTable is fully supported, as is the case for any FILESTREAM column in a regular table.  
+-   Windows API operations are non-transactional in nature, and are not associated with user transactions. However, transactional access to FILESTREAM data stored in a FileTable is fully supported, as is the case for any FILESTREAM column in a regular table.  If you need to modify files frequently from multiple connections and ensure proper file protection, use transactional FILESTREAM access via [OpenSqlFilestream()](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md), rather than exclusive file locks at the Windows API level.  
   
 -   FileTables can also be queried and updated through normal [!INCLUDE[tsql](../../includes/tsql-md.md)] access. They are also integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools, and features such as backup.  
 

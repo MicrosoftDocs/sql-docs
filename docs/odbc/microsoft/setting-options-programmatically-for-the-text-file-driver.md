@@ -1,20 +1,17 @@
 ---
+title: "Setting Options Programmatically for the Text File Driver"
 description: "Setting Options Programmatically for the Text File Driver"
-title: "Setting Options Programmatically for the Text File Driver | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text file driver [ODBC], setting options programmatically"
   - "ODBC desktop database drivers [ODBC], text file driver"
   - "desktop database drivers [ODBC], text file driver"
   - "Jet-based ODBC drivers [ODBC], text file driver"
-ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Setting Options Programmatically for the Text File Driver
 

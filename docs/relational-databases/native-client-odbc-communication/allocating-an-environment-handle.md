@@ -1,20 +1,17 @@
 ---
+title: "Allocating an Environment Handle"
 description: "Allocating an Environment Handle"
-title: "Allocating an Environment Handle | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, environment handles"
   - "ODBC applications, connections"
   - "handles [SQL Server Native Client]"
   - "environment handles [SQLNCLI]"
-ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Allocating an Environment Handle

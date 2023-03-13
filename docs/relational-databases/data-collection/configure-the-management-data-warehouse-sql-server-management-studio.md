@@ -1,13 +1,13 @@
 ---
 title: "Configure the Management Data Warehouse (SSMS)"
-description: Learn how to configure the management data warehouse to support data storage on one or more instances of SQL Server that are using the data collector. 
-ms.custom: ""
+description: Learn how to configure the management data warehouse to support data storage on one or more instances of SQL Server that are using the data collector.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
   - "sql13.swb.dc.datacollection.wizard_config.f1"
   - "sql13.swb.dc.datacollection.wizard_finish.f1"
@@ -15,14 +15,11 @@ f1_keywords:
   - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
   - "sql13.swb.dc.datacollection.wizard_welcome.f1"
   - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data warehouse [SQL Server], multiple instances"
   - "data warehouse [SQL Server], configuring"
   - "Configure Management Data Warehouse Wizard"
   - "management data warehouse, configuring"
-ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Configure the Management Data Warehouse (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

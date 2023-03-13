@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_21898"
 description: "MSSQLSERVER_21898"
-title: "MSSQLSERVER_21898 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "21898 (Database Engine error)"
-ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "21898 (Database Engine error)"
 ---
 # MSSQLSERVER_21898
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

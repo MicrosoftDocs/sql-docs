@@ -1,20 +1,17 @@
 ---
+title: "Comparing the Script Task and the Script Component"
 description: "Comparing the Script Task and the Script Component"
-title: "Comparing the Script Task and the Script Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Script task [Integration Services], comparing to Script component"
-  - "Script component [Integration Services], comparing to Script task"
-ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script task [Integration Services], comparing to Script component"
+  - "Script component [Integration Services], comparing to Script task"
+dev_langs:
+  - "VB"
 ---
 # Comparing the Script Task and the Script Component
 

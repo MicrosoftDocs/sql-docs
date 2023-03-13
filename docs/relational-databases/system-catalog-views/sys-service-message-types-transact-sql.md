@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.service_message_types catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 ---
 # sys.service_message_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

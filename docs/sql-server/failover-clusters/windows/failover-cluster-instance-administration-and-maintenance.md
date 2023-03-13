@@ -1,13 +1,13 @@
 ---
 title: "Failover Cluster Instance administration & maintenance"
 description: Learn about maintenance and administration of SQL Server failover cluster instances with the SQL Server Setup program or the Failover Cluster Manager snap-in.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "user accounts [SQL Server], failover clustering"
   - "clusters [SQL Server], maintaining"
   - "nodes [Faillover Clustering]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "service accounts [SQL Server]"
   - "removing nodes"
   - "virtual servers [SQL Server], adding nodes"
-ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Failover Cluster Instance Administration and Maintenance
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

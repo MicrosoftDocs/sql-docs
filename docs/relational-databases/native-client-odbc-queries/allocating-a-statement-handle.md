@@ -1,13 +1,13 @@
 ---
+title: "Allocating a Statement Handle"
 description: "Allocating a Statement Handle"
-title: "Allocating a Statement Handle | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLSetStmtAttr function"
   - "statements [ODBC], statement handles"
   - "ODBC applications, executing queries"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "ODBC applications, statements"
   - "statement handles [ODBC]"
   - "SQLAllocHandle function"
-ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Allocating a Statement Handle

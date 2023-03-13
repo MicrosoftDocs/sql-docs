@@ -1,21 +1,18 @@
 ---
-description: "Execute SQL Server Agent Job Task"
 title: "Execute SQL Server Agent Job Task"
+description: "Execute SQL Server Agent Job Task"
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.executesqlserveragentjobtask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Execute SQL Server Agent Job task [Integration Services]"
   - "jobs [Integration Services]"
   - "SQL Server Agent [Integration Services]"
-ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
-author: chugugrace
-ms.author: chugu
-ms.custom: "seo-lt-2019"
 ---
 # Execute SQL Server Agent Job Task
 

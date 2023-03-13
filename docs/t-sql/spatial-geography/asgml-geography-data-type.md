@@ -1,21 +1,19 @@
 ---
 title: "AsGml (geography Data Type)"
 description: "AsGml (geography Data Type)"
+author: MladjoA
+ms.author: mlandzic
+ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "AsGml_(geography_Data_Type)_TSQL"
   - "AsGml_(geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "AsGml method"
-author: MladjoA
-ms.author: mlandzic 
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/14/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # AsGml - geography Data Type

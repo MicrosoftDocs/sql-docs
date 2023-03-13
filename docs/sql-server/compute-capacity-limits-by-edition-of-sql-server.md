@@ -1,19 +1,16 @@
 ---
-title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
+title: "Compute capacity limits by edition of SQL Server"
 description: This article discusses compute capacity limits for SQL Server 2019 and how they differ in physical and virtualized environments with hyperthreaded processors.
-ms.custom: ""
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: "11/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: release-landing
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "processors [SQL Server], supported"
   - "number of processors supported"
   - "maximum number of processors supported"
-ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
 ---
 # Compute capacity limits by edition of SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

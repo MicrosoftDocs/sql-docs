@@ -1,13 +1,15 @@
 ---
+title: "Assessing Access Database Objects for Conversion (AccessToSQL)"
 description: "Assessing Access Database Objects for Conversion (AccessToSQL)"
-title: "Assessing Access Database Objects for Conversion (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+f1_keywords:
+  - "ssma.access.assessment.f1"
+helpviewer_keywords:
   - "assessing SQL"
   - "assessing syntax"
   - "assessment reports"
@@ -16,12 +18,6 @@ helpviewer_keywords:
   - "reports"
   - "SQL, assessing"
   - "syntax, assessing"
-ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-  - "ssma.access.assessment.f1"
-
 ---
 # Assessing Access Database Objects for Conversion (AccessToSQL)
 Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you should determine how much of the migration will be successful, and how long the conversion might take. SSMA can create an assessment report that shows the percentage of objects that were successfully converted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure syntax and time estimates for performing the migration. SSMA also lets you view the specific issues that caused conversion failures.  

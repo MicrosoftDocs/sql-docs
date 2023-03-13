@@ -1,18 +1,15 @@
 ---
-description: "Job Activity Monitor"
 title: "Job Activity Monitor"
-ms.custom: seo-lt-2019
+description: "Job Activity Monitor"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.jobactivitymonitor.alljobs.f1"
   - "SQL13.SWB.ACTIVITYMON.F1"
-ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Job Activity Monitor

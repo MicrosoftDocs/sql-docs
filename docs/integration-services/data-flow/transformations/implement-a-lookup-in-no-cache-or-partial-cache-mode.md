@@ -1,20 +1,17 @@
 ---
+title: "Implement a Lookup in No Cache or Partial Cache Mode"
 description: "Implement a Lookup in No Cache or Partial Cache Mode"
-title: "Implement a Lookup in No Cache or Partial Cache Mode | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Lookup transformation"
   - "match exactly [Integration Services]"
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
-ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: chugugrace
-ms.author: chugu
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode
 

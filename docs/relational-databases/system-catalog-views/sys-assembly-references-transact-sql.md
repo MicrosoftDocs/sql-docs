@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.assembly_references catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
 ---
 # sys.assembly_references (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
-description: "Edit Model (Master Data Services)"
 title: Edit Model
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "models [Master Data Services], changing name"
-ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
+description: "Edit Model (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "models [Master Data Services], changing name"
 ---
 # Edit Model (Master Data Services)
 

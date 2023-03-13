@@ -18,7 +18,7 @@ monikerRange: "=azure-sqldw-latest"
 
 Controls the result set caching behavior for the current client session.  
 
-Applies to [!INCLUDEssazuresynapse-md(../../includes/ssazuresynapse-md.md)]  
+Applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,15 +1,12 @@
 ---
+title: "Partitioning with Temporal Tables"
 description: "Partitioning with Temporal Tables"
-title: "Partitioning with Temporal Tables | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/26/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
 author: markingmyname
 ms.author: maghan
+ms.date: "04/26/2016"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Partitioning with temporal tables

@@ -1,25 +1,22 @@
 ---
+title: "sys.sysconfigures (Transact-SQL)"
 description: "sys.sysconfigures (Transact-SQL)"
-title: "sys.sysconfigures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sysconfigures"
   - "sysconfigures"
   - "sys.sysconfigures_TSQL"
   - "sysconfigures_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sysconfigures compatibility view"
   - "sysconfigures system table"
-ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysconfigures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,15 @@
 ---
-description: "Connect to a Registered Server (SQL Server Management Studio)"
 title: Connect to a Registered Server
+description: "Connect to a Registered Server (SQL Server Management Studio)"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Registered Servers [SQL Server], connections"
   - "connections [SQL Server], registered servers"
-ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ---
 
 # Connect to a Registered Server (SQL Server Management Studio)

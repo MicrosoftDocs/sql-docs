@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: end-user-help
-ms.custom: seodec18
 f1_keywords:
   - "sql13.swb.agdashboard.agp3autofailover.issues.f1"
 helpviewer_keywords:

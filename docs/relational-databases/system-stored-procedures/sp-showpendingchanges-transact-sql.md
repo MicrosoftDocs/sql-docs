@@ -1,22 +1,19 @@
 ---
+title: "sp_showpendingchanges (Transact-SQL)"
 description: "sp_showpendingchanges (Transact-SQL)"
-title: "sp_showpendingchanges (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_showpendingchanges"
-  - "sp_showpendingchanges_TSQL"
-helpviewer_keywords: 
-  - "sp_showpendingchanges"
-ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_showpendingchanges"
+  - "sp_showpendingchanges_TSQL"
+helpviewer_keywords:
+  - "sp_showpendingchanges"
+dev_langs:
+  - "TSQL"
 ---
 # sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

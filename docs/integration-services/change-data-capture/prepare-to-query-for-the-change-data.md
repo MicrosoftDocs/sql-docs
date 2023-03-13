@@ -1,17 +1,14 @@
 ---
+title: "Prepare to Query for the Change Data"
 description: "Prepare to Query for the Change Data"
-title: "Prepare to Query for the Change Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "incremental load [Integration Services],preparing query"
-ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "incremental load [Integration Services],preparing query"
 ---
 # Prepare to Query for the Change Data
 

@@ -1,19 +1,15 @@
 ---
-description: "Sort in Ascending or Descending Order (Visual Database Tools)"
 title: Sort in Ascending or Descending Order
-ms.custom: seo-lt-2019
+description: "Sort in Ascending or Descending Order (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "descending sorts"
   - "ascending sorts"
-ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Sort in Ascending or Descending Order (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

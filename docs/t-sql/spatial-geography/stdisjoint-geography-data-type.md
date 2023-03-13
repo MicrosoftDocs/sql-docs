@@ -1,22 +1,19 @@
 ---
+title: "STDisjoint (geography Data Type)"
 description: "STDisjoint (geography Data Type)"
-title: "STDisjoint (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STDisjoint (geography Data Type)"
   - "STDisjoint_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STDisjoint"
-ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STDisjoint (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,21 +1,18 @@
 ---
+title: "Integration Services (SSIS) Expressions"
 description: "Integration Services (SSIS) Expressions"
-title: "Integration Services (SSIS) Expressions | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "packages [Integration Services], expressions"
   - "Integration Services packages, expressions"
   - "SQL Server Integration Services packages, expressions"
   - "expressions [Integration Services], packages"
   - "SSIS packages, expressions"
-ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Expressions
 

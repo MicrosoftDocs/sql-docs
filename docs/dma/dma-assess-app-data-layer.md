@@ -1,15 +1,13 @@
 ---
 title: "Assess an app's data access layer with Data Migration Assistant"
 description: Learn how to use the Data Migration Assistant to assess the data access layer for an application. The data access layer gives access to persisted data.
-author: rajeshsetlem
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: 05/18/2022
 ms.service: sql
 ms.subservice: dma
 ms.topic: how-to
-ms.custom:
-  - "seo-lt-2019"
-  - kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment
 helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ---

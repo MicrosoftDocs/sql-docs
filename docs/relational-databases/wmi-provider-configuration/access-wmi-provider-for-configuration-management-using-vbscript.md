@@ -1,21 +1,18 @@
 ---
 title: "Access the WMI Provider with VBScript"
 description: Learn how to create a VBScript program that lists the version of installed instances of SQL Server that are running on a computer.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: wmi
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "VBScript [WMI]"
   - "modifying SQL Server Service properties"
   - "WMI Provider for Configuration Management, VBScript"
-ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "VB"
 ---
 # Access WMI Provider for Configuration Management using VBScript
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

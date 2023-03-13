@@ -3,12 +3,10 @@ title: "BETWEEN (Transact-SQL)"
 description: "BETWEEN (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "08/28/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "BETWEEN"
   - "BETWEEN_TSQL"

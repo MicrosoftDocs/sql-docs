@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSsync_states system table"
 dev_langs:
   - "TSQL"
-ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 ---
 # MSsync_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

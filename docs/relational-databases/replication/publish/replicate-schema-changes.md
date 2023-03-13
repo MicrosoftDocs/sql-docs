@@ -1,18 +1,16 @@
 ---
-title: "Replicate Schema Changes | Microsoft Docs"
+title: "Replicate Schema Changes"
 description: Learn how to replicate schema changes in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "replication [SQL Server], schema changes"
-  - "schemas [SQL Server replication], replicating changes"
-ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "replication [SQL Server], schema changes"
+  - "schemas [SQL Server replication], replicating changes"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replicate Schema Changes

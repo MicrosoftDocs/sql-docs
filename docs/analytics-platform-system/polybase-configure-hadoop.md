@@ -8,9 +8,6 @@ ms.date: 10/04/2022
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom:
-  - seo-dt-2019
-  - seo-lt-2019
 ---
 # Configure PolyBase in Analytics Platform System (PDW) to access external data in Hadoop
 

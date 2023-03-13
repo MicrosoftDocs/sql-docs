@@ -1,15 +1,13 @@
 ---
 title: "Create & store column master keys for Always Encrypted"
-description: Learn how to select a key store and create column master keys for SQL Server Always Encrypted. 
-ms.custom: seo-lt-2019
-ms.date: "10/31/2019"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
+description: Learn how to select a key store and create column master keys for SQL Server Always Encrypted.
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "10/31/2019"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and store column master keys for Always Encrypted

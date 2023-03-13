@@ -1,20 +1,16 @@
 ---
-description: "Join Tables Manually (Visual Database Tools)"
 title: Join Tables Manually
-ms.custom: seo-lt-2019
+description: "Join Tables Manually (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "manual joins [SQL Server]"
   - "joins [SQL Server], manual"
   - "joins [SQL Server], creating"
-ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Join Tables Manually (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

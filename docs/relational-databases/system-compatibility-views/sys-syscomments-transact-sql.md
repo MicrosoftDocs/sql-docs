@@ -1,25 +1,22 @@
 ---
+title: "sys.syscomments (Transact-SQL)"
 description: "sys.syscomments (Transact-SQL)"
-title: "sys.syscomments (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.syscomments_TSQL"
   - "syscomments"
   - "syscomments_TSQL"
   - "sys.syscomments"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.syscomments compatibility view"
   - "syscomments system table"
-ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.syscomments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

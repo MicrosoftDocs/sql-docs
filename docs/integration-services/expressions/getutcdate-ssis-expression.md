@@ -1,20 +1,17 @@
 ---
+title: "GETUTCDATE (SSIS Expression)"
 description: "GETUTCDATE (SSIS Expression)"
-title: "GETUTCDATE (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [Integration Services], GETUTCDATE"
   - "current date"
   - "UTC time"
   - "GETUTCDATE function"
-ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-author: chugugrace
-ms.author: chugu
 ---
 # GETUTCDATE (SSIS Expression)
 

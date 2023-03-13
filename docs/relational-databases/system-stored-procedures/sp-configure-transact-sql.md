@@ -1,22 +1,19 @@
 ---
+title: "sp_configure (Transact-SQL)"
 description: "sp_configure (Transact-SQL)"
-title: "sp_configure (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 11/04/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_configure"
-  - "sp_configure_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_configure"
-ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
+ms.date: 11/04/2019
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_configure"
+  - "sp_configure_TSQL"
+helpviewer_keywords:
+  - "sp_configure"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sp_configure (Transact-SQL)

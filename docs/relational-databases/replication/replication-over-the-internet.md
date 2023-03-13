@@ -1,20 +1,18 @@
 ---
+title: "Replication over the Internet"
 description: "Replication over the Internet"
-title: "Replication over the Internet | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Web publishing [SQL Server replication], about Web publishing"
   - "Web publishing [SQL Server replication]"
   - "Internet [SQL Server replication]"
   - "Internet [SQL Server replication], publishing"
-ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication over the Internet

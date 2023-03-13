@@ -3,12 +3,10 @@ title: "Operators (Transact-SQL)"
 description: "Operators (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "06/02/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "operators [Transact-SQL], about operators"
   - "operators [Transact-SQL]"

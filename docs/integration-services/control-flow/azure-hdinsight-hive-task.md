@@ -1,18 +1,15 @@
 ---
+title: "Azure HDInsight Hive Task"
 description: "Azure HDInsight Hive Task"
-title: "Azure HDInsight Hive Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.afphivetask.f1"
-  - "sql14.dts.designer.afphivetask.f1"
-ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: chugugrace
 ms.author: chugu
+ms.date: "02/28/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.afphivetask.f1"
+  - "sql14.dts.designer.afphivetask.f1"
 ---
 # Azure HDInsight Hive Task
 

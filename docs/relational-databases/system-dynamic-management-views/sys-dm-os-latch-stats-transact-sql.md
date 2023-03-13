@@ -3,7 +3,7 @@ title: "sys.dm_os_latch_stats (Transact-SQL)"
 description: sys.dm_os_latch_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/18/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,11 +16,10 @@ helpviewer_keywords:
   - "sys.dm_os_latch_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asa-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns information about all latch waits organized by class. 
   
@@ -40,6 +39,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  sys.dm_os_latch_stats can be used to identify the source of latch contention by examining the relative wait numbers and wait times for the different latch classes. In some situations, you may be able to resolve or reduce latch contention. However, there might be situations that will require that you to contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support Services.  
   

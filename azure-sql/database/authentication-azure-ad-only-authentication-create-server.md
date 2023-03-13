@@ -8,6 +8,7 @@ ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/06/2022
 ms.service: sql-db-mi
 ms.subservice: security
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

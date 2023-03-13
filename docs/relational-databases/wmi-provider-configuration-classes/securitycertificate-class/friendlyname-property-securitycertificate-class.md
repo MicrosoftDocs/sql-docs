@@ -1,22 +1,17 @@
 ---
-description: "FriendlyName Property (SecurityCertificate Class)"
 title: "FriendlyName Property (SecurityCertificate)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "FriendlyName Property (SecurityCertificate Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "FriendlyName property"
-ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
+description: "FriendlyName Property (SecurityCertificate Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "FriendlyName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "FriendlyName Property (SecurityCertificate Class)"
+apitype: "MOFDef"
 ---
 # FriendlyName Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

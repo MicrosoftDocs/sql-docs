@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_log_shipping_alert_job (Transact-SQL)"
 description: "sp_delete_log_shipping_alert_job (Transact-SQL)"
-title: "sp_delete_log_shipping_alert_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_log_shipping_alert_job"
-  - "sp_delete_log_shipping_alert_job_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_log_shipping_alert_job"
-ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_log_shipping_alert_job"
+  - "sp_delete_log_shipping_alert_job_TSQL"
+helpviewer_keywords:
+  - "sp_delete_log_shipping_alert_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

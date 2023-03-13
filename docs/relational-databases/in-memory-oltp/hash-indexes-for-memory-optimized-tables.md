@@ -7,8 +7,6 @@ ms.date: "12/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Troubleshooting Hash Indexes for Memory-Optimized Tables

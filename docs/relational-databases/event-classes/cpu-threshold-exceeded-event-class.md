@@ -1,17 +1,14 @@
 ---
+title: "CPU Threshold Exceeded Event Class"
 description: "CPU Threshold Exceeded Event Class"
-title: "CPU Threshold Exceeded Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "CPU Threshold Exceeded Event Class"
-ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "CPU Threshold Exceeded Event Class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CPU Threshold Exceeded Event Class

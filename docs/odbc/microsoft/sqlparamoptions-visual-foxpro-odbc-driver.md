@@ -1,17 +1,14 @@
 ---
+title: "SQLParamOptions (Visual FoxPro ODBC Driver)"
 description: "SQLParamOptions (Visual FoxPro ODBC Driver)"
-title: "SQLParamOptions (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLParamOptions function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLParamOptions function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLParamOptions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

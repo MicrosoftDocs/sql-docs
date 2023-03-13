@@ -1,22 +1,17 @@
 ---
-description: "SetNumValue Method (ClientNetworkProtocolProperty Class)"
 title: "SetNumValue Method (ClientNetworkProtocolProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetNumValue Method (ClientNetworkProtocolProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetNumValue method"
-ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
+description: "SetNumValue Method (ClientNetworkProtocolProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetNumValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetNumValue Method (ClientNetworkProtocolProperty Class)"
+apitype: "MOFDef"
 ---
 # SetNumValue Method (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

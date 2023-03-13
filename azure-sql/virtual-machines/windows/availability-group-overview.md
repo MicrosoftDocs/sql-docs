@@ -105,6 +105,9 @@ For example, to explicitly connect using TCP/IP to the AG database AdventureWork
 
 ## Deployment options
 
+> [!TIP]
+> Eliminate the need for an Azure Load Balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+
 There are multiple options for deploying an availability group to SQL Server on Azure VMs, some with more automation than others. 
 
 The following table provides a comparison of the options available:

@@ -24,7 +24,7 @@ ms.topic: conceptual
   
  D. Drilldown action  
   
- All of these have commonalities, but they serve different purposes and have different features. Two of them, drillthrough reports and subreports, are actually separate reports. Nesting means a hierarchy structure to drill through e.g. Report A -> Report B -> Report C. Drilldown is an action you can apply to any report item to hide and show other report items. They all are ways that you can organize and display data to help your users understand your report better.  
+ All of these have commonalities, but they serve different purposes and have different features. Two of them, drillthrough reports and subreports, are actually separate reports. *Nesting* means a hierarchy structure to drill through. For example, Report A -> Report B -> Report C. *Drilldown* is an action you can apply to any report item to hide and show other report items. They all are ways that you can organize and display data to help your users understand your report better.
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -1,5 +1,5 @@
 ---
-title: Database level customer-managed transparent data encryption (TDE)
+title: Transparent data encryption (TDE) with database level customer-managed keys
 titleSuffix: Azure SQL Database
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for Azure SQL Database at a database level granularity
 author: strehan1993

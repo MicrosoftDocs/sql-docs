@@ -1,5 +1,5 @@
 ---
-title: Identity and key management for database level customer-managed keys with TDE
+title: Identity and key management for TDE with database level customer-managed keys
 titleSuffix: Azure SQL Database
 description: How-to guide on creating, updating, and utilizing database level customer-managed keys with transparent data encryption (TDE) in Azure SQL Database
 author: strehan1993
@@ -8,11 +8,11 @@ ms.reviewer:
 ms.date: 03/31/2023
 ms.service: sql-database
 ms.subservice: security
-ms.topic: conceptual
+ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Identity and key management for database level customer-managed keys with TDE
+# Identity and key management for TDE with database level customer-managed keys
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 

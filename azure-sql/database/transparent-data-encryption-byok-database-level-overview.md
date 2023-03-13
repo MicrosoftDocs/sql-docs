@@ -107,7 +107,7 @@ All requirements to configure Azure Key Vault (AKV) keys and Managed Identities 
 
 ## Key Management
 
-Rotating the TDE protector for a database means to switch to a new asymmetric key that protects the database. Key rotation is an online operation and should only take a few seconds to complete. The operation only decrypts and re-encrypts the database encryption key, not the entire database. Once a valid user assigned identity has been assigned to a database, rotating the key at the database level is a database CRUD operation which involves updating the encryption protector property of the database. [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) and the property -EncryptionProtector can be used to rotate keys. To create a new database configured with database level CMK, [Net-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) can be used with the -EncryptionProtector, -AssignIdentity, -UserAssignedIdentityId parameters.
+Rotating the TDE protector for a database means to switch to a new asymmetric key that protects the database. Key rotation is an online operation and should only take a few seconds to complete. The operation only decrypts and re-encrypts the database encryption key, not the entire database. Once a valid user assigned identity has been assigned to a database, rotating the key at the database level is a database CRUD operation which involves updating the encryption protector property of the database. [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) and the property -EncryptionProtector can be used to rotate keys. To create a new database configured with database level CMK, [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) can be used with the -EncryptionProtector, -AssignIdentity, -UserAssignedIdentityId parameters.
 
 Additionally, new keys can be added and existing keys can be removed from the database using similar requests and modifying the keys property for Microsoft.Sql/servers/databases resource. [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) with the parameter -KeyList and -KeysToRemove can be used for these operations. To retrieve the encryption protector, identity and keys setting [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) can be used. The ARM resource Microsoft.Sql/servers/databases by default only shows the TDE protector and managed identity configured on the database, to expand the full list of keys additional parameters i.e. -ExpandKeyList are needed. Additionally, -KeysFilter "current" and a point in time value e.g. "2023-01-01" can be used to retrieve the current keys used and keys used in the past at a specific point in time respectively.
 
@@ -119,7 +119,7 @@ In order for the Azure SQL database to use TDE protector stored in AKV for encry
 
 - **unwrapKey** - to be able to unprotect (decrypt) DEK
 
-[Cross-tenant customer managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md) describes how to setup a federated client id for server level CMK. Similar setup needs to be done for database level CMK and the federated client id must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [Net-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
+[Cross-tenant customer managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md) describes how to setup a federated client id for server level CMK. Similar setup needs to be done for database level CMK and the federated client id must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
 
 A database configured with database level CMK can be reverted to server level encryption if the server is configured with Microsoft managed key using
 [Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevert](/powershell/module/az.sql/invoke-azsqldatabasetransparentdataencryptionprotectorrevert).
@@ -194,7 +194,7 @@ Once a database is encrypted with TDE using a key from Key Vault, any newly gene
 
 The following steps are needed for a point in time restore of a database configured with database level customer-managed keys:
 
-- Pre-populate the list of keys used by the primary database using [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) and the '-ExpandKeyList' parameter. It's recommended to pass all the keys that the source database was using, but alternatively, restore may also be attempted with the keys provided by the deletion time as the '-KeysFilter'.
+- Pre-populate the list of keys used by the primary database using [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) and the '-ExpandKeyList' '-KeysFilter "2023-01-01"' parameters (2023-01-01 here is an example of the point in time you wish to restore the database to). Exclude -KeysFilter if you wish to retrieve all the keys.
 - Select the user assigned identity (and federated client id if configuring cross tenant access).
 - Use [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) with the -FromPointInTimeBackup parameter and provide the pre-populated list of keys obtained from the above steps and the above identity (and federated client id if configuring cross tenant access) in the API call using the -KeyList, -AssignIdentity, -UserAssignedIdentityId, -EncryptionProtector (and -FederatedClientId) parameters.
 
@@ -205,7 +205,7 @@ The following steps are needed for a point in time restore of a database configu
 
 The following steps are needed for a dropped database restore of a database configured with database level customer-managed keys:
 
-- Pre-populate the list of keys used by the primary database using [Get-AzSqlDeletedDatabaseBackup](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) and the '-ExpandKeyList' '-KeysFilter "2023-01-01"' parameters (2023-01-01 here is an example of the point in time you wish to restore the database to). Exclude -KeysFilter if you wish to retrieve all the keys.
+- Pre-populate the list of keys used by the primary database using [Get-AzSqlDeletedDatabaseBackup](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) and the '-ExpandKeyList' parameter. It's recommended to pass all the keys that the source database was using, but alternatively, restore may also be attempted with the keys provided by the deletion time as the '-KeysFilter'.
 - Select the user assigned identity (and federated client id if configuring cross tenant access).
 - Use [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase) with the -FromDeletedDatabaseBackup parameter and provide the pre-populated list of keys obtained from the above steps and the above identity (and federated client id if configuring cross tenant access) in the API call using the -KeyList, -AssignIdentity, -UserAssignedIdentityId, -EncryptionProtector (and -FederatedClientId) parameters.
 

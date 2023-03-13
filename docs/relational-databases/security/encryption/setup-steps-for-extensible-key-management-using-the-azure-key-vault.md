@@ -587,6 +587,31 @@ If the credential has a client secret that is about to expire, a new secret can 
 > [!NOTE]  
 > If you are using EKM in an availability group (AG), you will need to alter the credential and restart the SQL Server service on all nodes of the AG.
 
+## Rotating Asymmetric Key with a new AKV Key or a new AKV Key Version
+
+Currently, SQL Server doesn't have a mechanism to automatically rotate the Certificate or Asymmetric Key used for TDE.
+At high level, below are the steps to rotate Asymmetric Key manually.
+
+1. Create NEW_ASYMMETRIC_KEY pointing to same AKV key (points to most recent valid Key Version) or a new AKV key
+2. Create new TDE_LOGIN_NEW from NEW_ASYMMETRIC_KEY
+  ```sql
+   CREATE LOGIN TDE_LOGIN_NEW FROM ASYMMETRIC KEY NEW_ASYMMETRIC_KEY
+   ```
+3. Map AKV Credential to TDE_LOGIN_NEW
+   ```sql
+   ALTER LOGIN TDE_Login_New
+   ADD CREDENTIAL AKV_Credential
+   ```
+4. Alter the Database Encryption Key to re-encrypt with new Asymmetric Key
+   ```sql
+   ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY NEW_ASYMMETRIC_KEY
+   ```
+> [!NOTE]
+> Rotating the logical TDE protector for a server means to switch to a new asymmetric key or a certificate that protects the Database Encryption Key. Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the database's Database Encryption Key, not the entire database.
+
+> [!IMPORTANT]
+> Do not delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files and transaction log files.
+
 ## Next steps
 
 - [Use the SQL Server Connector with SQL encryption features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)

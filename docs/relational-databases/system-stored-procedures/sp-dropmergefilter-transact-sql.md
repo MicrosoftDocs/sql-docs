@@ -1,21 +1,19 @@
 ---
 title: sp_dropmergefilter (Transact-SQL)
 description: "sp_dropmergefilter (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_dropmergefilter_TSQL"
   - "sp_dropmergefilter"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_dropmergefilter"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/06/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # sp_dropmergefilter (Transact-SQL)
@@ -24,7 +22,7 @@ ms.date: "03/06/2017"
 
 Drops a merge filter. **sp_dropmergefilter** drops all the merge filter columns defined on the merge filter that is to be dropped. This stored procedure is executed at the Publisher on the publication database.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

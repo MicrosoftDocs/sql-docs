@@ -8,7 +8,6 @@ ms.date: 04/17/2018
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Appliance configuration checklists for Analytics Platform System

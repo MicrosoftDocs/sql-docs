@@ -7,13 +7,11 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "namespaces [SQLXML], annotated XSD schemas"
   - "targetNamespace attribute"
   - "XSD schemas [SQLXML], target namespaces"
   - "annotated XSD schemas, target namespaces"
-ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Target Namespace Using the targetNamespace Attribute (SQLXML 4.0)

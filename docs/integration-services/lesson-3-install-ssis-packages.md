@@ -1,15 +1,12 @@
 ---
+title: "Lesson 3: Install SSIS Packages"
 description: "Lesson 3: Install SSIS Packages"
-title: "Lesson 3: Install SSIS Packages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 3: Install SSIS Packages
 

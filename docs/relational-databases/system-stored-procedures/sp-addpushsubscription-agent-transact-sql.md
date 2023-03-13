@@ -1,22 +1,19 @@
 ---
+title: "sp_addpushsubscription_agent (Transact-SQL)"
 description: "sp_addpushsubscription_agent (Transact-SQL)"
-title: "sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/29/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addpushsubscription_agent_TSQL"
-  - "sp_addpushsubscription_agent"
-helpviewer_keywords: 
-  - "sp_addpushsubscription_agent"
-ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: markingmyname
 ms.author: maghan
+ms.date: "03/29/2021"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addpushsubscription_agent_TSQL"
+  - "sp_addpushsubscription_agent"
+helpviewer_keywords:
+  - "sp_addpushsubscription_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -24,9 +21,9 @@ ms.author: maghan
   Adds a new scheduled agent job used to synchronize a push subscription to a transactional publication. This stored procedure is executed at the Publisher on the publication database.  
   
 > [!IMPORTANT]  
->  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -225,5 +222,3 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
-  
-  

@@ -1,18 +1,15 @@
 ---
+title: "^ (Bitwise Exclusive OR) (SSIS Expression)"
 description: "^ (Bitwise Exclusive OR) (SSIS Expression)"
-title: "^ (Bitwise Exclusive OR) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "^ (bitwise exclusive OR operator)"
-  - "bitwise exclusive OR (^)"
-ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "^ (bitwise exclusive OR operator)"
+  - "bitwise exclusive OR (^)"
 ---
 # ^ (Bitwise Exclusive OR) (SSIS Expression)
 

@@ -1,17 +1,14 @@
 ---
-description: "Reverse a Transaction (Master Data Services)"
 title: Reverse a Transaction
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "transactions [Master Data Services], reversing"
-ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
+description: "Reverse a Transaction (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "transactions [Master Data Services], reversing"
 ---
 # Reverse a Transaction (Master Data Services)
 

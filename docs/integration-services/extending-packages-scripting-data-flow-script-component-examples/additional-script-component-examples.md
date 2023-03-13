@@ -1,19 +1,16 @@
 ---
+title: "Additional Script Component Examples"
 description: "Additional Script Component Examples"
-title: "Additional Script Component Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Script component [Integration Services], examples"
-ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script component [Integration Services], examples"
+dev_langs:
+  - "VB"
 ---
 # Additional Script Component Examples
 

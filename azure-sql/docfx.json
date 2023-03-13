@@ -123,7 +123,8 @@
       "sensitive-language-sl": {
         "exclude": [
           "virtual-machines/linux/rhel-high-availability-stonith-tutorial.md",
-          "virtual-machines/linux/rhel-high-availability-listener-tutorial.md"
+          "virtual-machines/linux/rhel-high-availability-listener-tutorial.md",
+          "virtual-machines/linux/sles-high-availability-stonith-tutorial.md"
         ]
       }
     }

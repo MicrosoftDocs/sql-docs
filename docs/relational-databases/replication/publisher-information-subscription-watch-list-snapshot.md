@@ -1,17 +1,15 @@
 ---
 title: "Subscription Watch List (Replication Monitor - Snapshot)"
 description: Describes the 'Subscription Watch List' tab of Replication Monitor for a Snapshot Publication in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.subscriptionssummary.snapshot.f1"
-ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publisherinfo.subscriptionssummary.snapshot.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publisher Information, Subscription Watch List (Snapshot)

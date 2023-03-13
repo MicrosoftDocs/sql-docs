@@ -1,28 +1,25 @@
 ---
+title: "snapshots.fn_trace_getdata (Transact-SQL)"
 description: "snapshots.fn_trace_getdata (Transact-SQL)"
-title: "snapshots.fn_trace_getdata (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "snapshots.fn_trace_getdata"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "snapshots.fn_trace_getdata function"
-ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "snapshots.fn_trace_getdata"
+helpviewer_keywords:
+  - "snapshots.fn_trace_getdata function"
+dev_langs:
+  - "TSQL"
 ---
 # snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This function returns all the events captured for the specified trace.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

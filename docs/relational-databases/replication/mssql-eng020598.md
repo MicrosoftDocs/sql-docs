@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG020598"
 description: "MSSQL_ENG020598"
-title: "MSSQL_ENG020598 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG020598 error"
-ms.assetid: 1c3032f2-23d1-4ead-94ee-16ac4d75cd0c
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG020598 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG020598

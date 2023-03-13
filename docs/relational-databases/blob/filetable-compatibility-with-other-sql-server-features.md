@@ -1,17 +1,14 @@
 ---
-title: "FileTable Compatibility | Microsoft Docs"
+title: "FileTable Compatibility"
 description: Find out how FileTables work with other SQL Server features. Read about which features SQL Server supports with FileTables and which constraints it enforces.
-ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FileTables [SQL Server], using with other features"
-ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "12/13/2019"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FileTables [SQL Server], using with other features"
 ---
 # FileTable compatibility with other SQL Server features
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

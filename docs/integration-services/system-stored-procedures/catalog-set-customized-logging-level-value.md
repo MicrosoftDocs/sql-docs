@@ -1,15 +1,12 @@
 ---
+title: "catalog.set_customized_logging_level_value"
 description: "catalog.set_customized_logging_level_value"
-title: "catalog.set_customized_logging_level_value | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.set_customized_logging_level_value 
 

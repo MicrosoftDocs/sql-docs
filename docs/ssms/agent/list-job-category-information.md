@@ -1,15 +1,12 @@
 ---
-description: "List Job Category Information"
 title: "List Job Category Information"
-ms.custom: seo-lt-2019
+description: "List Job Category Information"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # List Job Category Information
@@ -39,7 +36,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To list job category information  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

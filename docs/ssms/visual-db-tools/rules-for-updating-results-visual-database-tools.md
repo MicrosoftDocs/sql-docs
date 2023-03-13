@@ -1,21 +1,17 @@
 ---
-description: "Rules for Updating Results (Visual Database Tools)"
 title: Rules for Updating Results
-ms.custom: seo-lt-2019
+description: "Rules for Updating Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "View Designer, Results pane"
   - "updating query results"
   - "Query Designer [SQL Server], Results pane"
   - "Results pane"
-ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Rules for Updating Results (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

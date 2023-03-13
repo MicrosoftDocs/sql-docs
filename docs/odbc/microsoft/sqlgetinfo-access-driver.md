@@ -1,18 +1,15 @@
 ---
+title: "SQLGetInfo (Access Driver)"
 description: "SQLGetInfo (Access Driver)"
-title: "SQLGetInfo (Access Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLGetInfo function [ODBC], Access Driver"
-  - "Access driver [ODBC], SQLGetInfo"
-ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLGetInfo function [ODBC], Access Driver"
+  - "Access driver [ODBC], SQLGetInfo"
 ---
 # SQLGetInfo (Access Driver)
 > [!NOTE]  

@@ -1,29 +1,26 @@
 ---
+title: "sp_addmergefilter (Transact-SQL)"
 description: "sp_addmergefilter (Transact-SQL)"
-title: "sp_addmergefilter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergefilter"
-  - "sp_addmergefilter_TSQL"
-helpviewer_keywords: 
-  - "sp_addmergefilter"
-ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergefilter"
+  - "sp_addmergefilter_TSQL"
+helpviewer_keywords:
+  - "sp_addmergefilter"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a new merge filter to create a partition based on a join with another table. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

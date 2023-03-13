@@ -1,21 +1,19 @@
 ---
+title: "Replication Agent Executables Concepts"
 description: "Replication Agent Executables Concepts"
-title: "Replication Agent Executables Concepts | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "programming interfaces [SQL Server replication]"
   - "programming [SQL Server replication], agents"
   - "replication [SQL Server], agents and profiles"
   - "agents [SQL Server replication], executables"
   - "command prompt [SQL Server replication]"
-ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Agent Executables Concepts

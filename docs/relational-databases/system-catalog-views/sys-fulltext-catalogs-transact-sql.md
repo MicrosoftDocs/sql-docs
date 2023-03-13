@@ -17,10 +17,9 @@ helpviewer_keywords:
   - "sys.fulltext_catalogs catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
 ---
 # sys.fulltext_catalogs (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains a row for each full-text catalog.  
   

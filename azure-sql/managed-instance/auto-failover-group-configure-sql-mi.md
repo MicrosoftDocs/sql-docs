@@ -8,9 +8,7 @@ ms.date: 07/09/2022
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
-ms.custom:
-  - devx-track-azurecli
-  - "azure-sql-split"
+ms.custom: devx-track-azurecli, azure-sql-split, devx-track-azurepowershell
 ---
 # Configure an auto-failover group for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

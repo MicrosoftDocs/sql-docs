@@ -1,22 +1,19 @@
 ---
-description: "Validate, Query, and Change JSON Data with Built-in Functions (SQL Server)"
 title: "Validate, Query, and Change JSON Data with Built-in Functions"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "JSON, built-in functions"
-  - "functions (JSON)"
-ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
+description: "Validate, Query, and Change JSON Data with Built-in Functions (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "JSON, built-in functions"
+  - "functions (JSON)"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Validate, Query, and Change JSON Data with Built-in Functions (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 The built-in support for JSON includes the following built-in functions described briefly in this topic.  
   

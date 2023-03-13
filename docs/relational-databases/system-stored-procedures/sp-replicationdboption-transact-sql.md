@@ -1,29 +1,26 @@
 ---
+title: "sp_replicationdboption (Transact-SQL)"
 description: "sp_replicationdboption (Transact-SQL)"
-title: "sp_replicationdboption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replicationdboption_TSQL"
-  - "sp_replicationdboption"
-helpviewer_keywords: 
-  - "sp_replicationdboption"
-ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replicationdboption_TSQL"
+  - "sp_replicationdboption"
+helpviewer_keywords:
+  - "sp_replicationdboption"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Sets a replication database option for the specified database. This stored procedure is executed at the Publisher or Subscriber on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

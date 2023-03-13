@@ -1,18 +1,15 @@
 ---
-description: "Initiate Actions Based on Attribute Value Changes (Master Data Services)"
 title: Initiate Actions Based on Attribute Value Changes
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "business rules [Master Data Services], tracking attribute changes"
-  - "change tracking groups [Master Data Services], initiating actions"
-ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
+description: "Initiate Actions Based on Attribute Value Changes (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "business rules [Master Data Services], tracking attribute changes"
+  - "change tracking groups [Master Data Services], initiating actions"
 ---
 # Initiate Actions Based on Attribute Value Changes (Master Data Services)
 

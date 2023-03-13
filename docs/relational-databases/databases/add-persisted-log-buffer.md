@@ -1,22 +1,20 @@
 ---
-description: "Explains how to add a persisted log buffer to a database in SQL Server 2019 and later. Provides Transact SQL examples."
 title: "Add persisted log buffer to a database"
-ms.custom: ""
+description: "Explains how to add a persisted log buffer to a database in SQL Server 2019 and later. Provides Transact SQL examples."
+author: "briancarrig"
+ms.author: "brcarrig"
+ms.reviewer: mikeray
 ms.date: "10/30/2019"
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PMEM"
   - "persistent memory"
   - "persisted log buffer"
   - "add log file"
   - "create log buffer"
   - "remove log buffer"
-ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
-author: "briancarrig"
-ms.author: "brcarrig"
-ms.reviewer: mikeray
 ---
 
 # Add persisted log buffer to a database

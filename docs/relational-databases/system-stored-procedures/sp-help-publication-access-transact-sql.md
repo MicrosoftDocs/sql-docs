@@ -1,29 +1,26 @@
 ---
+title: "sp_help_publication_access (Transact-SQL)"
 description: "sp_help_publication_access (Transact-SQL)"
-title: "sp_help_publication_access (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_help_publication_access"
-  - "sp_help_publication_access_TSQL"
-helpviewer_keywords: 
-  - "sp_help_publication_access"
-ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_publication_access"
+  - "sp_help_publication_access_TSQL"
+helpviewer_keywords:
+  - "sp_help_publication_access"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a list of all granted logins for a publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

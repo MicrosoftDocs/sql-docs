@@ -1,23 +1,20 @@
 ---
+title: "Back Up Database Task"
 description: "Back Up Database Task"
-title: "Back Up Database Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.backupdatabasetask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database backups [Integration Services]"
   - "Back Up Database task [Integration Services]"
   - "backing up databases [Integration Services]"
   - "transaction log backups [Integration Services]"
   - "backing up transaction logs [Integration Services]"
-ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-author: chugugrace
-ms.author: chugu
 ---
 # Back Up Database Task
 

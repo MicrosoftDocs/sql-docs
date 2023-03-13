@@ -1,19 +1,16 @@
 ---
-description: "Tune Automated Administration Across an Enterprise"
 title: Tune Automated Administration Across an Enterprise
+description: "Tune Automated Administration Across an Enterprise"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "performance [SQL Server], automated administration"
   - "tuning automated administration [SQL Server]"
   - "monitoring performance [SQL Server], automated administration"
-ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

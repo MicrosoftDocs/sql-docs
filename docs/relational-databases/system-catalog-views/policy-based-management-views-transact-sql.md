@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "Policy-Based Management, system views"
 dev_langs:
   - "TSQL"
-ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 ---
 # Policy-Based Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

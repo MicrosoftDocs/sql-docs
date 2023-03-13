@@ -1,17 +1,15 @@
 ---
 title: "Agents (Transactional - SSMS)"
 description: Describes the 'Agents' tab for a selected Transactional Publication within SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1"
-ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Information, Agents (Transactional Publication)

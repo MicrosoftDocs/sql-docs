@@ -1,14 +1,12 @@
 ---
-title: "Tutorial: Add a Column Chart to Your Report (Report Builder) | Microsoft Docs"
+title: "Tutorial: Add a Column Chart to Your Report (Report Builder)"
 description: Learn how to create a Reporting Services paginated report with a column chart displaying a series as a set of vertical bars grouped by category.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 09/02/2016
 ms.service: reporting-services
 ms.subservice: reporting-services
-
 ms.topic: conceptual
-ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Tutorial: Add a Column Chart to Your Report (Report Builder)
 In this tutorial, you create a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a column chart displaying a series as a set of vertical bars grouped by category. 

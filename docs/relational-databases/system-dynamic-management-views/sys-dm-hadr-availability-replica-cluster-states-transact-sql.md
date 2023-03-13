@@ -3,7 +3,7 @@ title: "sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)"
 description: sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_availability_replica_cluster_states dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 ---
 # sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,12 +34,14 @@ ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 |**join_state**|**tinyint**|0 = Not joined<br /><br /> 1 = Joined, standalone<br /><br /> 2 = Joined, failover cluster instance|  
 |**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
-## Security  
-  
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

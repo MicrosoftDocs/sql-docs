@@ -1,29 +1,26 @@
 ---
+title: "sp_help_jobstep (Transact-SQL)"
 description: "sp_help_jobstep (Transact-SQL)"
-title: "sp_help_jobstep (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobstep_TSQL"
-  - "sp_help_jobstep"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobstep"
-ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobstep_TSQL"
+  - "sp_help_jobstep"
+helpviewer_keywords:
+  - "sp_help_jobstep"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information for the steps in a job used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to perform automated activities.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

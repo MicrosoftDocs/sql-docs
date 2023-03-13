@@ -7,7 +7,6 @@ ms.date: 05/10/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "RESTORE statement, arguments"
   - "RESTORE statement"
@@ -19,7 +18,7 @@ dev_langs:
 
 This articles documents the arguments that are described in the Syntax sections of the RESTORE {DATABASE|LOG} statement and of the associated set of auxiliary statements: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY, and RESTORE VERIFYONLY. Most of the arguments are supported by only a subset of these six statements. The support for each argument is indicated in the description of the argument.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
  For syntax, see the following articles:  
@@ -278,7 +277,7 @@ Be aware that using LOADHISTORY for backups which already exist in the `msdb` hi
 #### RESTRICTED_USER  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
- Restricts access for the newly restored database to members of the **db_owner**, **dbcreator**, or **sysadmin** roles.  RESTRICTED_USER replaces the DBO_ONLY option. DBO_ONLY has been discontinued with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ Restricts access for the newly restored database to members of the **db_owner**, **dbcreator**, or **sysadmin** roles.  RESTRICTED_USER replaces the DBO_ONLY option. DBO_ONLY has been discontinued with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
  Use with the RECOVERY option.  
   

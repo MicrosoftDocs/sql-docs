@@ -1,18 +1,15 @@
 ---
+title: "SQLTransact (Access Driver)"
 description: "SQLTransact (Access Driver)"
-title: "SQLTransact (Access Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Access driver [ODBC], SQLTransact"
-  - "SQLTransact function [ODBC], Access Driver"
-ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Access driver [ODBC], SQLTransact"
+  - "SQLTransact function [ODBC], Access Driver"
 ---
 # SQLTransact (Access Driver)
 > [!NOTE]  

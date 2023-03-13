@@ -1,12 +1,13 @@
 ---
-description: "Delete Rows in the Results Pane (Visual Database Tools)"
 title: Delete Rows in the Results Pane
-ms.custom: seo-lt-2019
+description: "Delete Rows in the Results Pane (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "View Designer, Results pane"
   - "removing rows"
   - "row removal [SQL Server], Visual Database Tools Results pane"
@@ -14,11 +15,6 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], Results pane"
   - "deleting rows"
   - "Results pane"
-ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Delete Rows in the Results Pane (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

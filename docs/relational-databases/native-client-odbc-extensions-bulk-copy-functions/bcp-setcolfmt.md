@@ -1,22 +1,17 @@
 ---
+title: "bcp_setcolfmt"
 description: "bcp_setcolfmt"
-title: "bcp_setcolfmt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apiname: 
-  - "bcp_setcolfmt"
-apilocation: 
-  - "sqlncli11.dll"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "bcp_setcolfmt function"
-ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "bcp_setcolfmt function"
+apilocation: "sqlncli11.dll"
+apiname: "bcp_setcolfmt"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_setcolfmt

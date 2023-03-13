@@ -1,22 +1,19 @@
 ---
+title: "sp_db_increased_partitions"
 description: "sp_db_increased_partitions"
-title: "sp_db_increased_partitions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_db_increased_partitions_TSQL"
-  - "sp_db_increased_partitions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_db_increased_partitions"
-ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_db_increased_partitions_TSQL"
+  - "sp_db_increased_partitions"
+helpviewer_keywords:
+  - "sp_db_increased_partitions"
+dev_langs:
+  - "TSQL"
 ---
 # sp_db_increased_partitions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

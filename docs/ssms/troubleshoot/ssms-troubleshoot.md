@@ -1,15 +1,13 @@
 ---
-description: "Get diagnostic data after a SQL Server Management Studio (SSMS) crash"
 title: Troubleshooting an unresponsive system or crash with SSMS
-ms.service: sql
-ms.subservice: ssms
-ms.topic: conceptual
-ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
+description: "Get diagnostic data after a SQL Server Management Studio (SSMS) crash"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: drskwier
-ms.custom: seo-lt-2019
 ms.date: 09/18/2019
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ---
 
 # Get diagnostic data after a SQL Server Management Studio (SSMS) crash

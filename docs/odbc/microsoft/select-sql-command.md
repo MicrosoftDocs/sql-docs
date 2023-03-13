@@ -1,17 +1,14 @@
 ---
+title: "SELECT - SQL Command"
 description: "SELECT - SQL Command"
-title: "SELECT - SQL Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "select [ODBC]"
-ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "select [ODBC]"
 ---
 # SELECT - SQL Command
 Retrieves data from one or more tables.  

@@ -25,7 +25,7 @@ dev_langs:
 
 Enables a DML, DDL, or logon trigger.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ DATABASE
 For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
 ALL SERVER  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -100,7 +100,7 @@ GO
 ### C. Enabling all triggers that were defined with the same scope  
 The following example enables all DDL triggers that were created at the server scope.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 ```sql  
 ENABLE Trigger ALL ON ALL SERVER;  

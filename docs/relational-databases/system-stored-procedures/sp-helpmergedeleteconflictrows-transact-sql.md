@@ -1,29 +1,26 @@
 ---
+title: "sp_helpmergedeleteconflictrows (Transact-SQL)"
 description: "sp_helpmergedeleteconflictrows (Transact-SQL)"
-title: "sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergedeleteconflictrows"
-  - "sp_helpmergedeleteconflictrows_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergedeleteconflictrows"
-ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergedeleteconflictrows"
+  - "sp_helpmergedeleteconflictrows_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergedeleteconflictrows"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information on data rows that lost delete conflicts. This stored procedure is executed at the Publisher on the publication database or at the Subscriber on the subscription database when decentralized conflict logging is used.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

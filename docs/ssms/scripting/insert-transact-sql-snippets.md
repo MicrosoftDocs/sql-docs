@@ -1,19 +1,16 @@
 ---
 title: "Insert Transact-SQL Snippets"
 description: Learn how to choose, insert, and modify a Transact-SQL code snippet that can serve as a starting point when writing new Transact-SQL statements in the Database Engine Query Editor.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IntelliSense [SQL Server], snippets"
   - "Transact-SQL snippets, code"
   - "snippets [Transact-SQL], how to insert"
-ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Insert Transact-SQL Snippets

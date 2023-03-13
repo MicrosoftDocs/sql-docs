@@ -1,20 +1,18 @@
 ---
 title: F1 Help for Server Connections
 description: "F1 Help for Server Connections (SQL Server Management Studio)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], Help"
   - "SQL Server Management Studio Help [SQL Server], server connections"
   - "connections [SQL Server Management Studio], help"
   - "connections [SQL Server Management Studio]"
   - "Connect to Server dialog box"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # F1 Help for Server Connections (SQL Server Management Studio)

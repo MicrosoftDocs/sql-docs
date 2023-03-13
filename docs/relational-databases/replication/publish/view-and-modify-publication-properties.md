@@ -1,13 +1,14 @@
 ---
-title: "View and Modify Publication Properties | Microsoft Docs"
+title: "View and Modify Publication Properties"
 description: Learn how to view and modify publication properties in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "viewing replication properties"
   - "modifying replication properties, articles"
   - "articles [SQL Server replication], modifying"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "articles [SQL Server replication], properties"
   - "modifying replication properties, publications"
   - "publications [SQL Server replication], modifying"
-ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # View and Modify Publication Properties

@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 helpviewer_keywords:
   - "database snapshots [SQL Server], AlwaysOn Availability Groups"
   - "database snapshots [SQL Server], Always On Availability Groups"

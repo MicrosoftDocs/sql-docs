@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "UDTs [CLR integration], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 ---
 # Creating User-Defined Types
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

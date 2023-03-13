@@ -9,7 +9,6 @@ ms.date: 09/22/2020
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Monitor Big Data Clusters status by using Azure Data Studio

@@ -1,10 +1,13 @@
 ---
 title: "Manage Code Formatting"
 description: Learn about the three styles of text indenting and how to use them, and learn how to create clickable URLs.
+author: markingmyname
+ms.author: maghan
+ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "indenting code [SQL Server]"
   - "displaying URLs"
   - "code formatting [SQL Server Management Studio]"
@@ -20,12 +23,6 @@ helpviewer_keywords:
   - "converting text to upper case"
   - "text [SQL Server]"
   - "unindenting code"
-ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

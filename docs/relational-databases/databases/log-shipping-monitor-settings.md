@@ -1,17 +1,13 @@
 ---
+title: "Log Shipping Monitor Settings"
 description: "Log Shipping Monitor Settings"
-title: "Log Shipping Monitor Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.monitor.f1"
-ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.databaseproperties.logshipping.settings.monitor.f1"
 ---
 # Log Shipping Monitor Settings
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

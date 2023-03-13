@@ -1,24 +1,21 @@
 ---
+title: "File Connection Manager"
 description: "File Connection Manager"
-title: "File Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.fileconnectionmanager.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "folders [Integration Services], connections"
   - "files [Integration Services], connections"
   - "files [Integration Services]"
   - "connection managers [Integration Services], File"
   - "connections [Integration Services], files"
   - "File connection manager"
-ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-author: chugugrace
-ms.author: chugu
 ---
 # File Connection Manager
 

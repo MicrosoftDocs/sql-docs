@@ -1,22 +1,19 @@
 ---
+title: "sp_dropextendedproc (Transact-SQL)"
 description: "sp_dropextendedproc (Transact-SQL)"
-title: "sp_dropextendedproc (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dropextendedproc"
-  - "sp_dropextendedproc_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dropextendedproc"
-ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: markingmyname
 ms.author: maghan
+ms.date: "10/04/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropextendedproc"
+  - "sp_dropextendedproc_TSQL"
+helpviewer_keywords:
+  - "sp_dropextendedproc"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +24,7 @@ ms.author: maghan
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) instead.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

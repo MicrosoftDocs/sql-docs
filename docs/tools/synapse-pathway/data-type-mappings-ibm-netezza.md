@@ -3,14 +3,14 @@ title: Azure Synapse Pathway data type mappings IBM Netezza
 description: data type mappings for IBM Netezza within Azure Synapse Pathway
 author: charlesfeddersen
 ms.author: charlesf
-ms.topic: overview
 ms.date: 02/10/2022
 ms.service: sql
 ms.subservice: tools-other
-monikerRange: "=azure-sqldw-latest"
+ms.topic: overview
 ms.custom:
   - template-overview
   - intro-overview
+monikerRange: "=azure-sqldw-latest"
 ---
 # IBM Netezza data type mapping
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]

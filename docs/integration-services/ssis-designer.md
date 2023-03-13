@@ -1,29 +1,26 @@
 ---
+title: "SSIS Designer"
 description: "SSIS Designer"
-title: "SSIS Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
+author: chugugrace
+ms.author: chugu
+ms.date: "09/01/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.controlflowwindow.f1"
   - "sql13.dts.designer.dataflowwindow.f1"
   - "sql13.dts.designer.eventhandlerwindow.f1"
   - "sql13.dts.designer.treeview.f1"
   - "sql13.dts.designer.progress.f1"
   - "sql13.dts.designer.connectionstray.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services, SSIS Designer"
   - "Business Intelligence Development Studio, Integration Services in"
   - "tools [Integration Services], SSIS Designer"
   - "SSIS, SSIS Designer"
   - "SSIS Designer, about SSIS Designer"
   - "Integration Services, SSIS Designer"
-ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: chugugrace
-ms.author: chugu
 ---
 # SSIS Designer
 

@@ -1,21 +1,20 @@
 ---
-description: "The sp_recompile system stored procedure causes stored procedures, triggers, and user-defined functions to be recompiled the next time that they are run."
 title: "sp_recompile (Transact-SQL)"
-ms.custom: ""
+description: "The sp_recompile system stored procedure causes stored procedures, triggers, and user-defined functions to be recompiled the next time that they are run."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: wiassaf
 ms.date: "08/01/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_recompile_TSQL"
   - "sp_recompile"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_recompile"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_recompile (Transact-SQL)
@@ -23,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Causes stored procedures, triggers, and user-defined functions to be recompiled the next time that they are run. It does this by dropping the existing plan from the procedure cache forcing a new plan to be created the next time that the procedure or trigger is run. In a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] collection, the event `SP:CacheInsert` is logged instead of the event `SP:Recompile`.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -46,7 +45,7 @@ sp_recompile [ @objname = ] 'object'
    
  Proactive execution of this stored procedure is usually unnecessary. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically recompiles stored procedures, triggers, and user-defined functions when it is advantageous. There are a variety of reasons the database engine may choose to recompile objects. Most commonly, automatic recompilation follows changes to the underlying cardinality estimate because of automatic or manual statistics updates.
  
- Recompiling a stored procedure with every execution is one of the less efficient ways to combat query plan issues caused by parameterization. The feature [Parameter Sensitive Plan optimization](../performance/parameter-sensitivity-plan-optimization.md) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] attempts to mitigate this problem automatically. In prior versions, instead of calling `sp_recompile` with each execution, consider:
+ Recompiling a stored procedure with every execution is one of the less efficient ways to combat query plan issues caused by parameterization. The feature [Parameter Sensitive Plan optimization](../performance/parameter-sensitive-plan-optimization.md) introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] attempts to mitigate this problem automatically. In prior versions, instead of calling `sp_recompile` with each execution, consider:
  
  - Append the [WITH RECOMPILE option](../stored-procedures/recompile-a-stored-procedure.md) to the query, requiring a code change.
  - Apply the `WITH RECOMPILE` option with a [plan guide](../performance/plan-guides.md).
@@ -74,4 +73,3 @@ GO
   
 ## Next steps
  - [Recompile a Stored Procedure](../stored-procedures/recompile-a-stored-procedure.md)
-  

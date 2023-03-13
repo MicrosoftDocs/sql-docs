@@ -3,7 +3,7 @@ title: "sys.dm_broker_queue_monitors (Transact-SQL)"
 description: sys.dm_broker_queue_monitors (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_broker_queue_monitors dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 ---
 # sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,6 +35,10 @@ ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Current status queue monitor  

@@ -1,29 +1,26 @@
 ---
+title: "sp_delete_log_shipping_primary_secondary (Transact-SQL)"
 description: "sp_delete_log_shipping_primary_secondary (Transact-SQL)"
-title: "sp_delete_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_log_shipping_primary_secondary_TSQL"
-  - "sp_delete_log_shipping_primary_secondary"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_log_shipping_primary_secondary"
-ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_log_shipping_primary_secondary_TSQL"
+  - "sp_delete_log_shipping_primary_secondary"
+helpviewer_keywords:
+  - "sp_delete_log_shipping_primary_secondary"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the entry for a secondary database on the primary server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

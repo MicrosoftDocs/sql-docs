@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2518"
 description: "MSSQLSERVER_2518"
-title: "MSSQLSERVER_2518 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2518 (Database Engine error)"
-ms.assetid: 54a13abc-4c33-43f0-b55d-e2e74a1381c8
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2518 (Database Engine error)"
 ---
 # MSSQLSERVER_2518
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

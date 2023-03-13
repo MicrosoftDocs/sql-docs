@@ -1,18 +1,15 @@
 ---
-description: "Organize Jobs"
 title: "Organize Jobs"
-ms.custom: seo-lt-2019
+description: "Organize Jobs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "job category"
   - "organize jobs"
-ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Organize Jobs

@@ -1,29 +1,26 @@
 ---
+title: "xp_sprintf (Transact-SQL)"
 description: "xp_sprintf (Transact-SQL)"
-title: "xp_sprintf (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2020"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_sprintf_TSQL"
-  - "xp_sprintf"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_sprintf"
-ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: markingmyname
 ms.author: maghan
+ms.date: "01/09/2020"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_sprintf_TSQL"
+  - "xp_sprintf"
+helpviewer_keywords:
+  - "xp_sprintf"
+dev_langs:
+  - "TSQL"
 ---
 # xp_sprintf (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Formats and stores a series of characters and values in the string output parameter. Each format argument is replaced with the corresponding argument.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

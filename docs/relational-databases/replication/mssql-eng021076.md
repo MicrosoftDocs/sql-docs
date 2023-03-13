@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG021076"
 description: "MSSQL_ENG021076"
-title: "MSSQL_ENG021076 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG021076 error"
-ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG021076 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG021076

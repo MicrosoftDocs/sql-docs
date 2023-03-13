@@ -1,14 +1,12 @@
 ---
 title: "R tutorial: Create graphs and plots"
 description: Learn techniques for generating plots and maps using R language with SQL Server data. Create a simple histogram and then develop a more complex map plot.
-ms.service: sql
-ms.subservice: machine-learning-services
-
-ms.date: 06/13/2019
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 06/13/2019
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: tutorial
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Create graphs and plots using SQL and R (walkthrough)

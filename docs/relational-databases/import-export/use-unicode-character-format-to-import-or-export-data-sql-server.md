@@ -7,7 +7,6 @@ ms.date: "09/30/2016"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "data formats [SQL Server], Unicode character"
   - "Unicode [SQL Server], bulk importing and exporting"

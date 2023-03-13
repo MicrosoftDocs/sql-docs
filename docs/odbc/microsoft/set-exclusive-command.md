@@ -1,17 +1,14 @@
 ---
+title: "SET EXCLUSIVE Command"
 description: "SET EXCLUSIVE Command"
-title: "SET EXCLUSIVE Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SET EXCLUSIVE command [ODBC]"
-ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SET EXCLUSIVE command [ODBC]"
 ---
 # SET EXCLUSIVE Command
 Specifies whether table files are opened for exclusive or shared use on a network.  

@@ -1,18 +1,15 @@
 ---
+title: "&lt; (Less Than) (SSIS Expression)"
 description: "&lt; (Less Than) (SSIS Expression)"
-title: "&lt; (Less Than) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "less than (<)"
-  - "< (less than operator)"
-ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "less than (<)"
+  - "< (less than operator)"
 ---
 # &lt; (Less Than) (SSIS Expression)
 

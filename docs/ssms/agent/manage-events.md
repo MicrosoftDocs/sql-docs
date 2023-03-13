@@ -1,12 +1,13 @@
 ---
-description: "Manage Events"
 title: "Manage Events"
-ms.custom: seo-lt-2019
+description: "Manage Events"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event forwarding servers [SQL Server]"
   - "events [SQL Server], forwarding"
   - "event-triggered jobs [SQL Server]"
@@ -14,10 +15,6 @@ helpviewer_keywords:
   - "alerts [SQL Server], forwarded events"
   - "alerts [SQL Server], management servers"
   - "SQL Server Agent alerts, management servers"
-ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Manage Events

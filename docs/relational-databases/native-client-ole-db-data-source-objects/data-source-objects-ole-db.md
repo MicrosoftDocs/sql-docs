@@ -1,13 +1,13 @@
 ---
+title: "Data source objects (Native Client OLE DB provider)"
 description: "SQL Server Native Client Data Source Objects (OLE DB)"
-title: "Data source objects (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [SQL Server Native Client], data source objects"
   - "SQL Server Native Client, data source objects"
   - "SQLNCLI, data source objects"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "OLE DB data source objects [SQL Server Native Client]"
   - "data source objects [OLE DB]"
   - "CLSID"
-ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 #  SQL Server Native Client Data Source Objects (OLE DB)

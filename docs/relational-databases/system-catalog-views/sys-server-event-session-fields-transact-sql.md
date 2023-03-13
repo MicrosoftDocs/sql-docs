@@ -17,10 +17,9 @@ helpviewer_keywords:
   - "xe"
 dev_langs:
   - "TSQL"
-ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 ---
 # sys.server_event_session_fields (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row for each customizable column that was explicitly set on events and targets.  
   

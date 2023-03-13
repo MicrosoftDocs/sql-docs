@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.partitions catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partitions (Transact-SQL)

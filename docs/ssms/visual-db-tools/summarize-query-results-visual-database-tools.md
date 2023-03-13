@@ -1,20 +1,16 @@
 ---
-description: "Summarize Query Results (Visual Database Tools)"
 title: Summarize Query Results
-ms.custom: seo-lt-2019
+description: "Summarize Query Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "summarizing query results"
   - "queries [SQL Server], results"
   - "aggregate queries [SQL Server]"
-ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Summarize Query Results (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

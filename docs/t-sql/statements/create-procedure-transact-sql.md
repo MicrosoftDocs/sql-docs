@@ -63,7 +63,7 @@ Use this statement to create a permanent procedure in the current database or a 
 
 Jump to [Simple Examples](#Simple) to skip the details of the syntax and get to a quick example of a basic stored procedure.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -162,7 +162,7 @@ The complete name for a procedure or a global temporary procedure, including `##
 
 #### ; *number*
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 An optional integer that is used to group procedures of the same name. These grouped procedures can be dropped together by using one DROP PROCEDURE statement.
 
@@ -222,7 +222,7 @@ To instruct the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to discard query pla
 
 #### ENCRYPTION
 
-**Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts the original text of the CREATE PROCEDURE statement to an obfuscated format. The output of the obfuscation isn't directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users who have no access to system tables or database files can't retrieve the obfuscated text. However, the text is available to privileged users who can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users who can attach a debugger to the server process can retrieve the decrypted procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -240,7 +240,7 @@ For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql
 
 #### FOR REPLICATION
 
-**Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies that the procedure is created for replication. Consequently, it can't be executed on the Subscriber. A procedure created with the FOR REPLICATION option is used as a procedure filter and is executed only during replication. Parameters can't be declared if FOR REPLICATION is specified. FOR REPLICATION can't be specified for CLR procedures. The RECOMPILE option is ignored for procedures created with FOR REPLICATION.
 
@@ -252,7 +252,7 @@ One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements comprising th
 
 #### EXTERNAL NAME *assembly_name*.*class_name*.*method_name*
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 Specifies the method of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly for a CLR procedure to reference. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (`.`) to separate namespace parts, the class name must be delimited by using brackets (`[]`) or quotation marks (`""`). The specified method must be a static method of the class.
 
@@ -568,7 +568,7 @@ GO
 
 The following example creates the `GetPhotoFromDB` procedure that references the `GetPhotoFromDB` method of the `LargeObjectBinary` class in the `HandlingLOBUsingCLR` assembly. Before the procedure is created, the `HandlingLOBUsingCLR` assembly is registered in the local database.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (if using an assembly created from *assembly_bits.*
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (if using an assembly created from *assembly_bits.*
 
 ```sql
 CREATE ASSEMBLY HandlingLOBUsingCLR
@@ -907,7 +907,7 @@ Examples in this section show how to obfuscate the definition of the stored proc
 
 The following example creates the `HumanResources.uspEncryptThis` procedure.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Database.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, and Azure SQL Database.
 
 ```sql
 CREATE PROCEDURE HumanResources.uspEncryptThis
@@ -1010,7 +1010,7 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;
 ```
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### O. Create a stored procedure that runs a SELECT statement
 

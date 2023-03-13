@@ -1,19 +1,16 @@
 ---
+title: "Extended Methods on Geometry Instances"
 description: "Extended Methods on Geometry Instances"
-title: "Extended Methods on Geometry Instances | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Extended Methods on Geometry Instances [SQLServer]"
-ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Extended Methods on Geometry Instances
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_current_partition_mappings system table"
 dev_langs:
   - "TSQL"
-ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 ---
 # MSmerge_current_partition_mappings
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

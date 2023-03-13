@@ -1,18 +1,15 @@
 ---
+title: "Additional Table-Valued Parameter Metadata"
 description: "Additional Table-Valued Parameter Metadata"
-title: "Additional Table-Valued Parameter Metadata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters (ODBC), catalog functions to retrieve metadata"
-  - "table-valued parameters (ODBC), metadata"
-ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters (ODBC), catalog functions to retrieve metadata"
+  - "table-valued parameters (ODBC), metadata"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Additional Table-Valued Parameter Metadata

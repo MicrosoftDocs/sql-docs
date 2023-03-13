@@ -1,15 +1,12 @@
 ---
+title: "catalog.master_properties (SSISDB Database)"
 description: "catalog.master_properties (SSISDB Database)"
-title: "catalog.master_properties (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # catalog.master_properties (SSISDB Database)
 

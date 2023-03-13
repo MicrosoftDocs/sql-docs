@@ -7,7 +7,6 @@ ms.date: 11/29/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "query plans [SQL Server], migrating"
   - "upgrading SQL Server, migrating query plans"

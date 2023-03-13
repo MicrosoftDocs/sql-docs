@@ -1,30 +1,27 @@
 ---
+title: "sp_update_proxy (Transact-SQL)"
 description: "sp_update_proxy (Transact-SQL)"
-title: "sp_update_proxy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_proxy"
-  - "sp_update_proxy_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ALTER PROXY statement"
-  - "sp_update_proxy"
-ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_proxy"
+  - "sp_update_proxy_TSQL"
+helpviewer_keywords:
+  - "ALTER PROXY statement"
+  - "sp_update_proxy"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the properties of an existing proxy.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

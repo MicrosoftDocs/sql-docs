@@ -1,19 +1,15 @@
 ---
-description: "Join Tables on Multiple Columns (Visual Database Tools)"
 title: Join Tables on Multiple Columns
-ms.custom: seo-lt-2019
+description: "Join Tables on Multiple Columns (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiple column joins"
   - "joins [SQL Server], multiple columns"
-ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Join Tables on Multiple Columns (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

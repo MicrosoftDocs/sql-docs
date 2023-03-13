@@ -1,15 +1,12 @@
 ---
+title: "Implementation Notes"
 description: "Implementation Notes"
-title: "Implementation Notes | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
 ---
 # Implementation Notes
 > [!IMPORTANT]  

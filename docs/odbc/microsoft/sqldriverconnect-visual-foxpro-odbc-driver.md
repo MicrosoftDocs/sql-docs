@@ -1,17 +1,14 @@
 ---
+title: "SQLDriverConnect (Visual FoxPro ODBC Driver)"
 description: "SQLDriverConnect (Visual FoxPro ODBC Driver)"
-title: "SQLDriverConnect (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLDriverConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

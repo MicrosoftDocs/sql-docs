@@ -1,14 +1,12 @@
 ---
 title: Security architecture for extensibility
 description: This article describes the security architecture for the extensibility framework in SQL Server Machine Learning Services. This includes security for login and user accounts, SQL Server launchpad service, worker accounts, running multiple scripts, and file permissions.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 07/14/2020
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
-ms.custom: contperf-fy21q1, seo-lt-2019
+ms.date: 07/14/2020
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Security architecture for the extensibility framework in SQL Server Machine Learning Services

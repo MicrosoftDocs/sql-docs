@@ -1,18 +1,16 @@
 ---
 title: "SQL Server Agent, Statistics object"
 description: Learn about the SQL Server Agent Statistics performance object, which contains performance counters that report information about SQL Server Agent.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/12/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Statistics object"
   - "SQL Agent Statistics object"
   - "SQLAgent:Statistics"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server Agent, Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

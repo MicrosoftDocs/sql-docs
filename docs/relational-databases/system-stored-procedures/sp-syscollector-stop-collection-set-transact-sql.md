@@ -1,30 +1,27 @@
 ---
+title: "sp_syscollector_stop_collection_set (Transact-SQL)"
 description: "sp_syscollector_stop_collection_set (Transact-SQL)"
-title: "sp_syscollector_stop_collection_set (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_stop_collection_set_TSQL"
-  - "sp_syscollector_stop_collection_set"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syscollector_stop_collection_set"
-  - "data collector [SQL Server], stored procedures"
-ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_stop_collection_set_TSQL"
+  - "sp_syscollector_stop_collection_set"
+helpviewer_keywords:
+  - "sp_syscollector_stop_collection_set"
+  - "data collector [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stops a collection set.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

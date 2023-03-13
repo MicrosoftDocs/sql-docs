@@ -1,20 +1,14 @@
 ---
+title: "LocalDBStartTracing Function"
 description: "LocalDBStartTracing Function"
-title: "LocalDBStartTracing Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBStartTracing"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBStartTracing"
+apitype: "DLLExport"
 ---
 # LocalDBStartTracing Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -8,7 +8,6 @@ ms.date: 07/02/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Configure Azure Kubernetes Service for SQL Server big data cluster deployments

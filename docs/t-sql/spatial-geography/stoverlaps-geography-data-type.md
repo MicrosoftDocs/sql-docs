@@ -1,19 +1,16 @@
 ---
+title: "STOverlaps (geography Data Type)"
 description: "STOverlaps (geography Data Type)"
-title: "STOverlaps (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STOverlaps method (geography)"
-ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STOverlaps (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

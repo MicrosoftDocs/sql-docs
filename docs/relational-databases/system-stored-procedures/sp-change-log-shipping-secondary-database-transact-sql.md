@@ -1,29 +1,26 @@
 ---
+title: "sp_change_log_shipping_secondary_database (Transact-SQL)"
 description: "sp_change_log_shipping_secondary_database (Transact-SQL)"
-title: "sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_log_shipping_secondary_database"
-  - "sp_change_log_shipping_secondary_database_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_log_shipping_secondary_database"
-ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_log_shipping_secondary_database"
+  - "sp_change_log_shipping_secondary_database_TSQL"
+helpviewer_keywords:
+  - "sp_change_log_shipping_secondary_database"
+dev_langs:
+  - "TSQL"
 ---
 # sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes secondary database settings.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

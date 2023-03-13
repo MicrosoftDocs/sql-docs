@@ -3,7 +3,7 @@ title: "sys.dm_clr_loaded_assemblies (Transact-SQL)"
 description: sys.dm_clr_loaded_assemblies (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/09/2016"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_clr_loaded_assemblies dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 ---
 # sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,6 +34,10 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  The **dm_clr_loaded_assemblies.appdomain_address** view has a many-to-one relationship with  **dm_clr_appdomains.appdomain_address**. The **dm_clr_loaded_assemblies.assembly_id** view has a one-to-many relationship with **sys.assemblies.assembly_id**.  
   

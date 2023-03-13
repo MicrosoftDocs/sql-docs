@@ -1,20 +1,16 @@
 ---
-description: "Create New Policy or Open Policy Dialog Box, General Page"
 title: "'Create New Policy' or 'Open Policy' dialog box, General Page"
-descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
+description: "Create New Policy or Open Policy Dialog Box, General Page"
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.dmf.policy.f1"
   - "sql13.swb.dmf.policy.filter.f1"
   - "sql13.swb.dmf.newgroup.f1"
-ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
-author: VanMSFT
-ms.author: vanto
 ---
 # Create New Policy or Open Policy Dialog Box, General Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

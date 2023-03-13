@@ -1,29 +1,26 @@
 ---
+title: "sp_syspolicy_add_policy_category_subscription (Transact-SQL)"
 description: "sp_syspolicy_add_policy_category_subscription (Transact-SQL)"
-title: "sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_add_policy_category_subscription"
-  - "sp_syspolicy_add_policy_category_subscription_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_add_policy_category_subscription"
-ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_add_policy_category_subscription"
+  - "sp_syspolicy_add_policy_category_subscription_TSQL"
+helpviewer_keywords:
+  - "sp_syspolicy_add_policy_category_subscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a policy category subscription to the specified database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,20 +1,17 @@
 ---
+title: "msdb Database"
 description: "msdb Database"
-title: "msdb Database | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: "andreas.wolter"
 ms.date: "11/16/2022"
 ms.service: sql
-ms.reviewer: "andreas.wolter"
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, msdb database"
   - "alerts [SQL Server], msdb database"
   - "jobs [SQL Server], msdb database"
   - "msdb database [SQL Server]"
-ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # msdb Database
  [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

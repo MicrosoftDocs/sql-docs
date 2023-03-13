@@ -1,18 +1,15 @@
 ---
+title: "SQLForeignKeys"
 description: "SQLForeignKeys"
-title: "SQLForeignKeys | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "SQLForeignKeys function"
-ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQLForeignKeys function"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLForeignKeys

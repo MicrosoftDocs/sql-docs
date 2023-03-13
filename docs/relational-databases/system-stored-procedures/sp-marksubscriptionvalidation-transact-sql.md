@@ -1,29 +1,26 @@
 ---
+title: "sp_marksubscriptionvalidation (Transact-SQL)"
 description: "sp_marksubscriptionvalidation (Transact-SQL)"
-title: "sp_marksubscriptionvalidation (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_marksubscriptionvalidation"
-  - "sp_marksubscriptionvalidation_TSQL"
-helpviewer_keywords: 
-  - "sp_marksubscriptionvalidation"
-ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_marksubscriptionvalidation"
+  - "sp_marksubscriptionvalidation_TSQL"
+helpviewer_keywords:
+  - "sp_marksubscriptionvalidation"
+dev_langs:
+  - "TSQL"
 ---
 # sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Marks the current open transaction to be a subscription-level validation transaction for the specified subscriber. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

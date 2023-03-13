@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_mirroring catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 ---
 # sys.database_mirroring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

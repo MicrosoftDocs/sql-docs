@@ -1,18 +1,18 @@
 ---
+title: "Fuzzy Lookup Transformation"
 description: "Fuzzy Lookup Transformation"
-title: "Fuzzy Lookup Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.fuzzylookuptrans.f1"
   - "sql13.dts.designer.fuzzylookuptransformation.referencetable.f1"
   - "sql13.dts.designer.fuzzylookuptransformation.columns.f1"
   - "sql13.dts.designer.fuzzylookuptransformation.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cleaning data"
   - "comparing data"
   - "token delimiters [Integration Services]"
@@ -30,9 +30,6 @@ helpviewer_keywords:
   - "fuzzy matches"
   - "missing values replaced [Integration Services]"
   - "similarity thresholds [Integration Services]"
-ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-author: chugugrace
-ms.author: chugu
 ---
 # Fuzzy Lookup Transformation
 

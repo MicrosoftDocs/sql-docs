@@ -1,15 +1,12 @@
 ---
-title: "Shape charts in a paginated report | Microsoft Docs"
-description: See how shape charts in a paginated report display value data as percentages of their whole in Report Builder. Shape charts are often used to show proportional comparisons between values in a set. 
+title: "Shape charts in a paginated report"
+description: See how shape charts in a paginated report display value data as percentages of their whole in Report Builder. Shape charts are often used to show proportional comparisons between values in a set.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Shape charts in a paginated report (Report Builder)
 

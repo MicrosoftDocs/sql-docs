@@ -1,18 +1,16 @@
 ---
+title: "Overview of the Replication Monitor Interface"
 description: "Overview of the Replication Monitor Interface"
-title: "Overview of the Replication Monitor Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Replication Monitor"
-  - "Replication Monitor, about Replication Monitor"
-ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Replication Monitor"
+  - "Replication Monitor, about Replication Monitor"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Overview of the Replication Monitor Interface
@@ -59,7 +57,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
          The grid on this tab displays error and warning icons for any subscriptions that require your attention.  
   
-     This tab is not available for Distributors that are running versions of [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or earlier.  
+     This tab is not available for Distributors that are running versions of [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] or earlier.  
   
 -   **Agents** tab  
   
@@ -155,7 +153,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
          View the total time for a transaction to travel through the system and also compare it to previous times.  
   
-     This tab is not displayed for Distributors running [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or earlier. For more information on tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+     This tab is not displayed for Distributors running [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] or earlier. For more information on tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 -   Detail windows for the agents associated with a publication. The following agents are associated with publications:  
   

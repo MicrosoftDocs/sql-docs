@@ -3,12 +3,10 @@ title: "SUSER_ID (Transact-SQL)"
 description: "SUSER_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "09/07/2018"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SUSER_ID_TSQL"
   - "SUSER_ID"
@@ -31,7 +29,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-li
 > [!NOTE]  
 >  Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], SUSER_ID returns the value listed as **principal_id** in the **sys.server_principals** catalog view.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

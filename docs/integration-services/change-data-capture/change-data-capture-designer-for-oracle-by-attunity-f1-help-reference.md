@@ -1,17 +1,14 @@
 ---
+title: "Change Data Capture Designer for Oracle by Attunity F1 Help Reference"
 description: "Change Data Capture Designer for Oracle by Attunity F1 Help Reference"
-title: "Change Data Capture Designer for Oracle by Attunity F1 Help Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-f1_keywords: 
-  - "f1Help"
-ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+f1_keywords:
+  - "f1Help"
 ---
 # Change Data Capture Designer for Oracle by Attunity F1 Help Reference
 

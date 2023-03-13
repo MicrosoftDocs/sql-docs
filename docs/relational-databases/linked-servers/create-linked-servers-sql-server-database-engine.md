@@ -1,20 +1,18 @@
 ---
-description: "Create linked servers (SQL Server Database Engine)"
 title: "Create linked servers"
+description: "Create linked servers (SQL Server Database Engine)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "1/10/2022"
 ms.service: sql
-ms.subservice: 
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.linkedserver.properties.general.f1"
   - "sql13.swb.linkedserver.properties.security.f1"
   - "sql13.swb.linkedserver.properties.provider.f1"
   - "sql13.swb.linkedserver.properties.options.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "linked servers [SQL Server], creating"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019, FY22Q2Fresh
 ---
 # Create linked servers (SQL Server Database Engine)
 

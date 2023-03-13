@@ -1,19 +1,16 @@
 ---
-description: "Designate an Events Forwarding Server"
 title: Designate an Events Forwarding Server
-ms.custom: seo-lt-2019
+description: "Designate an Events Forwarding Server"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event forwarding servers [SQL Server]"
   - "events [SQL Server], forwarding"
   - "alerts [SQL Server], forwarded events"
-ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Designate an Events Forwarding Server

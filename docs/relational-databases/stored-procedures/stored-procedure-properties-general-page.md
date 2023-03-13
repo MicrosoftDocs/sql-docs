@@ -1,18 +1,15 @@
 ---
-title: "Stored Procedure Properties (General Page) | Microsoft Docs"
+title: "Stored Procedure Properties (General Page)"
 description: Learn how to use the Stored Properties (General Page) to view read-only information about a stored procedure.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: stored-procedures
-ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.spassistededitor.storedprocedure.f1"
   - "sql13.swb.spproperties.general.f1"
-ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedure Properties (General Page)

@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_backuphistory (Transact-SQL)"
 description: "sp_delete_backuphistory (Transact-SQL)"
-title: "sp_delete_backuphistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_backuphistory"
-  - "sp_delete_backuphistory_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_backuphistory"
-ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_backuphistory"
+  - "sp_delete_backuphistory_TSQL"
+helpviewer_keywords:
+  - "sp_delete_backuphistory"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!NOTE]  
 >  The backup and restore history tables reside in the **msdb** database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,26 +1,22 @@
 ---
-description: "Make a Target Server"
 title: "Make a Target Server"
+description: "Make a Target Server"
+author: markingmyname
+ms.author: maghan
+ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.tsxwiz.complete.f1"
   - "sql13.ag.tsxwiz.cover.f1"
   - "sql13.ag.tsxwiz.credentials.f1"
   - "sql13.ag.tsxwiz.msx.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Target Server Wizard"
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], creating"
-ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 06/03/2020
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
-
 ---
 # Make a Target Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -77,7 +73,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
   
 #### To make a target server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

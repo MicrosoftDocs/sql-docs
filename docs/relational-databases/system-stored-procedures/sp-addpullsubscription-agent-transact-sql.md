@@ -1,29 +1,26 @@
 ---
+title: "sp_addpullsubscription_agent (Transact-SQL)"
 description: "sp_addpullsubscription_agent (Transact-SQL)"
-title: "sp_addpullsubscription_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/29/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_addpullsubscription_agent"
   - "sp_addpullsubscription_agent_TSQL"
 helpviewer_keywords:
   - "sp_addpullsubscription_agent"
-ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  
   Adds a new scheduled agent job used to synchronize a pull subscription to a transactional publication. This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

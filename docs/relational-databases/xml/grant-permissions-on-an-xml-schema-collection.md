@@ -1,17 +1,16 @@
 ---
 title: "Grant Permissions on an XML Schema Collection"
 description: Learn how to grant permissions to create an XML schema collection and also to grant permissions on an XML schema collection object.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "granting permissions [SQL Server], XML schema collections"
   - "ALTER permission"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Grant permissions on an XML schema collection
 
@@ -203,7 +202,7 @@ GO
 SETUSER 'TestLogin1';
 GO
 INSERT INTO MyTestTable VALUES('
-<telephone xmlns="https://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>
+<telephone xmlns="http://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>
 ');
 GO
 -- To query the table, TestLogin1 must have permissions: SELECT on the table and EXECUTE on the XML schema collection.
@@ -297,7 +296,7 @@ GO
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"
+            xmlns="http://schemas.adventure-works.com/Additional/ContactInfo"
 elementFormDefault="qualified">
 <xsd:element name="pager" type="xsd:string"/>
 </xsd:schema>';

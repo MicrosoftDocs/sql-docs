@@ -1,29 +1,26 @@
 ---
+title: "sp_helpreplfailovermode (Transact-SQL)"
 description: "sp_helpreplfailovermode (Transact-SQL)"
-title: "sp_helpreplfailovermode (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpreplfailovermode"
-  - "sp_helpreplfailovermode_TSQL"
-helpviewer_keywords: 
-  - "sp_helpreplfailovermode"
-ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpreplfailovermode"
+  - "sp_helpreplfailovermode_TSQL"
+helpviewer_keywords:
+  - "sp_helpreplfailovermode"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the current failover mode of a subscription. This stored procedure is executed at the Subscriber on any database. For more information about failover modes, see [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

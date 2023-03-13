@@ -1,17 +1,14 @@
 ---
+title: "SQLSetConnectAttrForDbcInfo Function"
 description: "SQLSetConnectAttrForDbcInfo Function"
-title: "SQLSetConnectAttrForDbcInfo Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLSetConnectAttrForDbcInfo function [ODBC]"
-ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLSetConnectAttrForDbcInfo function [ODBC]"
 ---
 # SQLSetConnectAttrForDbcInfo Function
 **Conformance**  

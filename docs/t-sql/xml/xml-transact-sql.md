@@ -1,21 +1,19 @@
 ---
 title: xml (Transact-SQL)
 description: xml (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "07/26/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "xml_TSQL"
   - "xml"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "xml data type [SQL Server], about xml data type"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/26/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # xml (Transact-SQL)
@@ -24,7 +22,7 @@ ms.date: "07/26/2017"
 
 It's the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

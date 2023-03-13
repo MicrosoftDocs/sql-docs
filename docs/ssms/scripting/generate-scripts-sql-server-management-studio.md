@@ -1,15 +1,13 @@
 ---
 title: Generate Scripts
 description: Learn how to use the Generate and Publish Scripts Wizard to create Transact-SQL scripts for multiple objects, and how to use the Script as menu in Object Explorer to generate scripts for individual or multiple objects.
-ms.service: sql
-ms.subservice: ssms
-ms.topic: conceptual
-ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mathoma
-ms.custom: seo-lt-2019
 ms.date: 04/07/2020
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

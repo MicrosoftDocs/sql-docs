@@ -8,9 +8,7 @@ ms.date: 11/28/2022
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom:
-  - ag-guide
-  - seodec18
+ms.custom: ag-guide
 ---
 # Configure Extended Events for availability groups
 

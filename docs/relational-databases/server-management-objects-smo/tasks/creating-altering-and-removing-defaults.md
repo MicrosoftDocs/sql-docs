@@ -1,18 +1,13 @@
 ---
-description: "Creating, Altering, and Removing Defaults"
 title: "Creating, Altering, and Removing Defaults"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "defaults [SMO]"
-ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
+description: "Creating, Altering, and Removing Defaults"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "defaults [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Defaults

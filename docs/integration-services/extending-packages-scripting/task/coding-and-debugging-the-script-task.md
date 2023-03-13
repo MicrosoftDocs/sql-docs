@@ -1,15 +1,13 @@
 ---
+title: "Coding and Debugging the Script Task"
 description: "Coding and Debugging the Script Task"
-title: "Coding and Debugging the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], debugging"
   - "SSIS Script task, development environment"
   - "SSIS Script task, debugging"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "debugging [Integration Services], scripts"
   - "VSTA"
   - "SSIS Script task, coding"
-ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Coding and Debugging the Script Task
 

@@ -1,19 +1,16 @@
 ---
+title: "ADO Connection Manager"
 description: "ADO Connection Manager"
-title: "ADO Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], ADO"
   - "connection managers [Integration Services], ADO"
   - "ADO connection manager [Integration Services]"
-ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
-author: chugugrace
-ms.author: chugu
 ---
 # ADO Connection Manager
 

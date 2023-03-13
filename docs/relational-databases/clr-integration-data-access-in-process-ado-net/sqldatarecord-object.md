@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "SqlDataRecord object"
   - "custom result sets [CLR integration]"
-ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 ---
 # SqlDataRecord Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

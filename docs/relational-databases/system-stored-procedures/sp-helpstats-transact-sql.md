@@ -1,22 +1,19 @@
 ---
+title: "sp_helpstats (Transact-SQL)"
 description: "sp_helpstats (Transact-SQL)"
-title: "sp_helpstats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpstats"
-  - "sp_helpstats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpstats"
-ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpstats"
+  - "sp_helpstats_TSQL"
+helpviewer_keywords:
+  - "sp_helpstats"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpstats (Transact-SQL)
@@ -27,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] To obtain information about statistics, query the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) and [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) catalog views.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

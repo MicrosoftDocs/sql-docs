@@ -1,15 +1,15 @@
 ---
+title: "Error Handling in Data"
 description: "Error Handling in Data"
-title: "Error Handling in Data | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.configureerroroutput.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "truncating data"
   - "data conversion errors [Integration Services]"
   - "errors [Integration Services], data flow components"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "error outputs [Integration Services]"
   - "data flow [Integration Services], errors"
   - "expressions [Integration Services], errors"
-ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: chugugrace
-ms.author: chugu
 ---
 # Error Handling in Data
 

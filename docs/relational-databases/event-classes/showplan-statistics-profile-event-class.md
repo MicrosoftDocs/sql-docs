@@ -1,17 +1,14 @@
 ---
+title: "Showplan Statistics Profile Event Class"
 description: "Showplan Statistics Profile Event Class"
-title: "Showplan Statistics Profile Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Showplan Statistics Profile event class"
-ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Showplan Statistics Profile event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Statistics Profile Event Class

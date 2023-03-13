@@ -1,25 +1,22 @@
 ---
+title: "sys.sp_flush_commit_table_on_demand (Transact-SQL)"
 description: "sys.sp_flush_commit_table_on_demand (Transact-SQL)"
-title: "sys.sp_flush_commit_table_on_demand (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: JetterMcTedder
+ms.author: bspendolini
 ms.date: "10/20/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_flush_commit_table_on_demand "
   - "sp_flush_commit_table_on_demand_TSQL"
   - "sys.sp_flush_commit_table_on_demand"
   - "sys.sp_flush_commit_table_on_demand_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_flush_commit_table_on_demand"
   - "sp_flush_commit_table_on_demand"
-ms.assetid: 
-author: JetterMcTedder
-ms.author: bspendolini
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_flush_commit_table_on_demand (Transact-SQL)
 
@@ -27,7 +24,7 @@ ms.author: bspendolini
 
   Deletes rows from syscommittab in batches.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
 

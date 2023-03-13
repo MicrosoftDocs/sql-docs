@@ -1,14 +1,14 @@
 ---
+title: "Distinct (MDX)"
 description: "Distinct (MDX)"
-title: "Distinct (MDX) | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.service: sql
 ms.subservice: analysis-services
-ms.custom: mdx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: mdx
 ---
 # Distinct (MDX)
 

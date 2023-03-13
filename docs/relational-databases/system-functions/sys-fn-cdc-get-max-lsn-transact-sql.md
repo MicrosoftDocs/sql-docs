@@ -1,32 +1,29 @@
 ---
+title: "sys.fn_cdc_get_max_lsn (Transact-SQL)"
 description: "sys.fn_cdc_get_max_lsn (Transact-SQL)"
-title: "sys.fn_cdc_get_max_lsn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_cdc_get_max_lsn"
   - "fn_cdc_get_max_lsn"
   - "fn_cdc_get_max_lsn_TSQL"
   - "sys.fn_cdc_get_max_lsn_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_get_max_lsn"
   - "sys.fn_cdc_get_max_lsn"
-ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the maximum log sequence number (LSN) from the start_lsn column in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) system table. You can use this function to return the high endpoint of the change data capture timeline for any capture instance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

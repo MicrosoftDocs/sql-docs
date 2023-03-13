@@ -1,22 +1,19 @@
 ---
+title: "fn_syscollector_get_execution_stats (Transact-SQL)"
 description: "fn_syscollector_get_execution_stats (Transact-SQL)"
-title: "fn_syscollector_get_execution_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "fn_syscollector_get_execution_stats"
-  - "fn_syscollector_get_execution_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "fn_syscollector_get_execution_stats function"
-ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "fn_syscollector_get_execution_stats"
+  - "fn_syscollector_get_execution_stats_TSQL"
+helpviewer_keywords:
+  - "fn_syscollector_get_execution_stats function"
+dev_langs:
+  - "TSQL"
 ---
 # fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +22,7 @@ ms.author: randolphwest
   
  The statistics are calculated from entries in the syscollector_execution_stats view.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

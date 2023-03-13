@@ -1,22 +1,19 @@
 ---
+title: "sp_trace_setevent (Transact-SQL)"
 description: "sp_trace_setevent (Transact-SQL)"
-title: "sp_trace_setevent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_trace_setevent_TSQL"
-  - "sp_trace_setevent"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_trace_setevent"
-ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_trace_setevent_TSQL"
+  - "sp_trace_setevent"
+helpviewer_keywords:
+  - "sp_trace_setevent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Events instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

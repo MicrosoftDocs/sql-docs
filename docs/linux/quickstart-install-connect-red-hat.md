@@ -9,9 +9,7 @@ ms.date: 10/20/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 ---
 # Quickstart: Install SQL Server and create a database on Red Hat
 
@@ -274,4 +272,4 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]

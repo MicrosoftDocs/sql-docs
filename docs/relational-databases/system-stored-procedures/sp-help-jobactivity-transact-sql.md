@@ -1,29 +1,26 @@
 ---
+title: "sp_help_jobactivity (Transact-SQL)"
 description: "sp_help_jobactivity (Transact-SQL)"
-title: "sp_help_jobactivity (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobactivity_TSQL"
-  - "sp_help_jobactivity"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobactivity"
-ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobactivity_TSQL"
+  - "sp_help_jobactivity"
+helpviewer_keywords:
+  - "sp_help_jobactivity"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists information about the runtime state of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

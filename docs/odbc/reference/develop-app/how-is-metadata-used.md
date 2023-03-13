@@ -1,18 +1,15 @@
 ---
+title: "How is Metadata Used?"
 description: "How is Metadata Used?"
-title: "How is Metadata Used? | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "result sets [ODBC], metadata"
-  - "metadata [ODBC]"
-ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "result sets [ODBC], metadata"
+  - "metadata [ODBC]"
 ---
 # How is Metadata Used?
 Applications require metadata for most result set operations. For example, the application uses the data type of a column to determine what kind of variable to bind to that column. It uses the byte length of a character column to determine how much space it needs to display data from that column. How an application determines the metadata for a column depends on the type of the application.  

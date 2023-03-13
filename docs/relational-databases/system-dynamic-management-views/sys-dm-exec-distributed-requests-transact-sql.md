@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "dm_exec_distributed_sql_requests management view"
 dev_langs:
   - "TSQL"
-ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_requests (Transact-SQL)

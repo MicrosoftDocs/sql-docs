@@ -1,22 +1,19 @@
 ---
+title: "sp_settriggerorder (Transact-SQL)"
 description: "sp_settriggerorder (Transact-SQL)"
-title: "sp_settriggerorder (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_settriggerorder"
-  - "sp_settriggerorder_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_settriggerorder"
-ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_settriggerorder"
+  - "sp_settriggerorder_TSQL"
+helpviewer_keywords:
+  - "sp_settriggerorder"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_settriggerorder (Transact-SQL)
@@ -24,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Specifies the AFTER triggers that are fired first or last. The AFTER triggers that are fired between the first and last triggers are executed in undefined order.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,7 +57,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  **\@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
  When *triggername* is a DDL trigger, **\@namespace** specifies whether *triggername* was created with database scope or server scope. If *triggername* is a logon trigger, SERVER must be specified. For more information about DDL trigger scope, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md). If not specified, or if NULL is specified, *triggername* is a DML trigger.  
   
-* SERVER applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+* SERVER applies to: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
   
 ## Return Code Values  
  0 (success) and 1 (failure)  

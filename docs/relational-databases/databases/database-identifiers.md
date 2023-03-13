@@ -1,15 +1,13 @@
 ---
-title: "Database Identifiers | Microsoft Docs"
+title: "Database Identifiers"
 description: "Get acquainted with database identifiers. Learn about their collation, various classes, delimiting requirements, and naming rules."
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "regular identifiers [SQL Server]"
   - "identifiers [SQL Server]"
   - "names [SQL Server], identifiers"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "SQL Server identifiers"
   - "Transact-SQL identifiers"
   - "database objects [SQL Server], names"
-ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Identifiers

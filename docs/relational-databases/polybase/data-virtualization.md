@@ -5,13 +5,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 12/13/2019
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 ms.service: sql
 ms.subservice: polybase
+ms.topic: conceptual
 monikerRange: ">= sql-server-ver15"
-ms.metadata: seo-lt-2019
 ---
 
 # Use the External Table Wizard with ODBC data sources

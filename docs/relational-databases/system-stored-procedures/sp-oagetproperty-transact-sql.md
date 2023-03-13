@@ -1,29 +1,26 @@
 ---
+title: "sp_OAGetProperty (Transact-SQL)"
 description: "sp_OAGetProperty (Transact-SQL)"
-title: "sp_OAGetProperty (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_OAGetProperty_TSQL"
-  - "sp_OAGetProperty"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_OAGetProperty"
-ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_OAGetProperty_TSQL"
+  - "sp_OAGetProperty"
+helpviewer_keywords:
+  - "sp_OAGetProperty"
+dev_langs:
+  - "TSQL"
 ---
 # sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gets a property value of an OLE object.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

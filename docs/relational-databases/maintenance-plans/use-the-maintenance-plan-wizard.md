@@ -31,7 +31,6 @@ helpviewer_keywords:
   - "Maintenance Plan Wizard"
   - "Database Maintenance Plan Wizard"
   - "Database Maintenance Plan Wizard, starting"
-ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 ---
 # Use the Maintenance Plan Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

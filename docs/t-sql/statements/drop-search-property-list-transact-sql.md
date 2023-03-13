@@ -19,7 +19,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a property list from the current database if the search property list is currently not associated with any full-text index in the database.  
   

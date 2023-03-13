@@ -1,25 +1,22 @@
 ---
+title: "sp_delete_maintenance_plan_db (Transact-SQL)"
 description: "sp_delete_maintenance_plan_db (Transact-SQL)"
-title: "sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_delete_maintenance_plan_db_TSQL"
   - "sp_delete_maintenance_plan_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_delete_maintenance_plan_db"
   - "maintenance plans [SQL Server], deleting"
   - "removing maintenance plan"
   - "disassociating maintenance plan"
-ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +28,7 @@ ms.author: maghan
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

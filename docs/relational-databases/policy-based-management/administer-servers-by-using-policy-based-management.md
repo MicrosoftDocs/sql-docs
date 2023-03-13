@@ -1,13 +1,13 @@
 ---
 title: "Administer servers using Policy-Based Management"
-description: Learn how to use Policy-Based Management to manage one or more instances of SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to use Policy-Based Management to manage one or more instances of SQL Server.
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/12/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "facet See facets"
   - "Declarative Management Framework See Policy-Based Management"
   - "surface area configuration [SQL Server], Policy-Based Management"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "conditions [Policy-Based Management]"
   - "facets [Policy-Based Management], about facets"
   - "PolicyAdministratorRole role"
-ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-author: VanMSFT
-ms.author: vanto
 ---
 # Administer Servers by Using Policy-Based Management
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
-title: "Database Properties (General Page) | Microsoft Docs"
+title: "Database Properties (General Page)"
 description: "Learn how to use the General tab in the Database Properties dialog box to view or modify the properties of a database."
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/27/2015"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.databaseproperties.general.f1"
   - "sql13.swb.databaseproperties.segments.f1"
   - "sql13.swb.databaseproperties.databasecapabilities.f1"
-ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Properties (General Page)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
   Use this page to view or modify properties for the selected database.  
   
 ## Options  

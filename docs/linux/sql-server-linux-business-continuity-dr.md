@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[sql-server-business-continuity](../includes/sql-server-business-continuity.md)]
+[!INCLUDE[business-continuity](../includes/business-continuity/business-continuity.md)]
 
 ## Next steps
 

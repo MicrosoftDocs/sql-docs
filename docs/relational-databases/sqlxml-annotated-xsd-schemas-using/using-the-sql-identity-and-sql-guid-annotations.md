@@ -7,7 +7,6 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the sql:identity and sql:guid Annotations

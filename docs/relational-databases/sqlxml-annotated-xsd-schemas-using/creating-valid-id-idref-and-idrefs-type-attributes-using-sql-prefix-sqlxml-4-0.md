@@ -7,14 +7,12 @@ ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "IDREFS relationships [SQLXML]"
   - "annotated XSD schemas, ID type attribute"
   - "IDREF type attribute [SQLXML]"
   - "annotated XSD schemas, IDREFS type attribute"
   - "ID type attribute [SQLXML]"
-ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Valid ID, IDREF, and IDREFS Type Attributes Using sql:prefix (SQLXML 4.0)

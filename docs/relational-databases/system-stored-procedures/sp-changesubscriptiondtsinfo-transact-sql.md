@@ -1,29 +1,26 @@
 ---
+title: "sp_changesubscriptiondtsinfo (Transact-SQL)"
 description: "sp_changesubscriptiondtsinfo (Transact-SQL)"
-title: "sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changesubscriptiondtsinfo"
-  - "sp_changesubscriptiondtsinfo_TSQL"
-helpviewer_keywords: 
-  - "sp_changesubscriptiondtsinfo"
-ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changesubscriptiondtsinfo"
+  - "sp_changesubscriptiondtsinfo_TSQL"
+helpviewer_keywords:
+  - "sp_changesubscriptiondtsinfo"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the Data Transformation Services (DTS) package properties of a subscription. This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

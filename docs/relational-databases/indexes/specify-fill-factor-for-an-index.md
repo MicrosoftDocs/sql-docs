@@ -10,11 +10,10 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "fill factor [SQL Server]"
   - "page splits [SQL Server]"
-ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Specify Fill Factor for an Index
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This topic describes what fill factor is and how to specify a fill factor value on an index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

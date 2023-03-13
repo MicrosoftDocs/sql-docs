@@ -1,18 +1,16 @@
 ---
+title: "Conflict Detection in Peer-to-Peer Replication"
 description: "Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication"
-title: "Conflict Detection in Peer-to-Peer Replication | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/05/2021
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "transactional replication, peer-to-peer replication"
-  - "peer-to-peer transactional replication, conflict detection"
-ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "transactional replication, peer-to-peer replication"
+  - "peer-to-peer transactional replication, conflict detection"
 ---
 # Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication
 

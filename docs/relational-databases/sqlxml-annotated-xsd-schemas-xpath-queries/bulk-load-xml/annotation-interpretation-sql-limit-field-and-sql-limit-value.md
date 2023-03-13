@@ -7,12 +7,10 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "limiting values [SQLXML]"
   - "limit-value annotation"
   - "limit-field annotation"
-ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - sql:limit-field and sql:limit-value

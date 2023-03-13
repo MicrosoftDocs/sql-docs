@@ -1,22 +1,19 @@
 ---
+title: "Querying the Active Directory with the Script Task"
 description: "Querying the Active Directory with the Script Task"
-title: "Querying the Active Directory with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], Active Directory access"
   - "SSIS Script task, Active Directory access"
   - "Script task [Integration Services], examples"
   - "Active Directory [Integration Services]"
-ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Querying the Active Directory with the Script Task
 

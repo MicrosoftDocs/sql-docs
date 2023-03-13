@@ -1,29 +1,26 @@
 ---
 title: "sp_replmonitorhelppublicationthresholds (T-SQL)"
 description: Describes the sp_replmonitorhelppublicationthresholds stored procedure which returns the threshold metrics set for a monitored publication.
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replmonitorhelppublicationthresholds"
-  - "sp_replmonitorhelppublicationthresholds_TSQL"
-helpviewer_keywords: 
-  - "sp_replmonitorhelppublicationthresholds"
-ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replmonitorhelppublicationthresholds"
+  - "sp_replmonitorhelppublicationthresholds_TSQL"
+helpviewer_keywords:
+  - "sp_replmonitorhelppublicationthresholds"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the threshold metrics set for a monitored publication. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,19 +1,15 @@
 ---
-description: "Reorder Output Columns (Visual Database Tools)"
 title: Reorder Output Columns
-ms.custom: seo-lt-2019
+description: "Reorder Output Columns (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reordering output columns [SQL Server]"
   - "output columns [SQL Server]"
-ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Reorder Output Columns (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

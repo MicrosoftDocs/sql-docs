@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "sysopentapes system table"
 dev_langs:
   - "TSQL"
-ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 ---
 # sysopentapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

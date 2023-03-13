@@ -1,22 +1,19 @@
 ---
+title: "sp_help_spatial_geometry_index_xml (Transact-SQL)"
 description: "sp_help_spatial_geometry_index_xml (Transact-SQL)"
-title: "sp_help_spatial_geometry_index_xml (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_spatial_geometry_index_xml_TSQL"
-  - "sp_help_spatial_geometry_index_xml"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_spatial_geometry_index_xml procedure"
-ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_spatial_geometry_index_xml_TSQL"
+  - "sp_help_spatial_geometry_index_xml"
+helpviewer_keywords:
+  - "sp_help_spatial_geometry_index_xml procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +22,7 @@ ms.author: maghan
   
  Results are returned in an XML fragment that displays the name and value of the properties selected.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

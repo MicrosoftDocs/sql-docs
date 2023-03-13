@@ -1,21 +1,18 @@
 ---
+title: "Conditional Split Transformation"
 description: "Conditional Split Transformation"
-title: "Conditional Split Transformation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.conditionalsplittrans.f1"
-  - "sql13.dts.designer.conditionalsplittransformation.f1"
-helpviewer_keywords: 
-  - "Conditional Split transformation"
-  - "route rows to different outputs [Integration Services]"
-ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.conditionalsplittrans.f1"
+  - "sql13.dts.designer.conditionalsplittransformation.f1"
+helpviewer_keywords:
+  - "Conditional Split transformation"
+  - "route rows to different outputs [Integration Services]"
 ---
 # Conditional Split Transformation
 

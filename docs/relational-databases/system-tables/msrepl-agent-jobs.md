@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "MSrepl_agent_jobs system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 50ca9254-a0d8-45fb-8cfd-e96ad8aca613
 ---
 # MSrepl_agent_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **MSrepl_agent_jobs** table contains transaction log sequence numbers (LSN) for supporting the 'sync with backup' option of the Distribution database. This table is stored in the distribution database.  
+  The **MSrepl_agent_jobs** table contains information about Replication agent jobs to sync between primary and secondary replicas when the Distribution database is part of an availability group. 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

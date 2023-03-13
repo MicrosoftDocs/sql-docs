@@ -107,7 +107,7 @@ Optional features or features that require you to choose specific values (such a
 
 ## Performance considerations
 
-Although managed instances within pools do have dedicated vCore and RAM, they share local disk (for tempdb usage) and network resources. It's not likely, but it is possible to experience the *noisy neighbor* effect if multiple instances in the pool have high resource consumption at the same time. If you observe this behavior, consider deploying these instances to a bigger pool or as single instances.
+Although managed instances within pools do have dedicated vCore and RAM, they share local disk (for `tempdb` usage) and network resources. It's not likely, but it is possible to experience the *noisy neighbor* effect if multiple instances in the pool have high resource consumption at the same time. If you observe this behavior, consider deploying these instances to a bigger pool or as single instances.
 
 ## Security considerations
 

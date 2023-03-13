@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_12308"
 description: "MSSQLSERVER_12308"
-title: "MSSQLSERVER_12308 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "12308 (Database Engine error)"
-ms.assetid: b8a8a2d7-eda5-409c-8cc3-7ba32f0d4fd7
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "12308 (Database Engine error)"
 ---
 # MSSQLSERVER_12308
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

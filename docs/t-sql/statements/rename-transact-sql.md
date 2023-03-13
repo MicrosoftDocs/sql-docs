@@ -14,9 +14,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 # RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table, a column in a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Renames a user-created table in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. Renames a user-created table, a column in a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
-This article applies to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:
+This article applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:
 
  - To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
  - To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. 
@@ -52,7 +52,7 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 ## Arguments
 
 #### RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ] *table_name* TO *new_table_name*
-**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Change the name of a user-defined table. Specify the table to be renamed with a one-, two-, or three-part name. Specify the new table *new_table_name* as a one-part name.
 
@@ -91,7 +91,7 @@ You can't rename an external table, indexes, or views. Instead of renaming, you 
 
 ### Cannot rename a table in use
 
-You can't rename a table or database while it is in use. Renaming a table requires an exclusive lock on the table. If the table is in use, you may need to terminate sessions that are using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. Include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+You can't rename a table or database while it is in use. Renaming a table requires an exclusive lock on the table. If the table is in use, you may need to terminate sessions that are using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] are prefixed by 'SID'. Include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
 
 ### Rename column restrictions
 
@@ -127,7 +127,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
 ### B. Rename a table
 
-**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 This example renames the Customer table to Customer1.
 
@@ -142,7 +142,7 @@ When renaming a table, all objects and properties associated with the table are 
 
 ### C. Move a table to a different schema
 
-**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 If your intent is to move the object to a different schema, use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md). For example, the following statement moves the table item from the product schema to the dbo schema.
 
@@ -152,9 +152,9 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 ### D. Terminate sessions before renaming a table
 
-**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-You can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. You'll need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+You can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] are prefixed by 'SID'. You'll need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
 
 ```sql
 -- View a list of the current sessions

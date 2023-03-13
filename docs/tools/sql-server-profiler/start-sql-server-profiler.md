@@ -2,19 +2,17 @@
 title: Run SQL Server Profiler
 titleSuffix: SQL Server Profiler
 description: Learn which programs and menus you can start SQL Server Profiler from and which connection contexts, templates, and filters are used with trace output.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 12/13/2021
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Run SQL Server Profiler
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 You can run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in several different ways, to support gathering trace output in a variety of scenarios. You can start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] from the Windows **Start** menu, from the **Tools** menu in [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor, and from several locations in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

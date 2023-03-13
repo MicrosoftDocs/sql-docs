@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_9017"
 description: "MSSQLSERVER_9017"
-title: "MSSQLSERVER_9017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/18/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "9017 (Database Engine error)"
 author: pijocoder
 ms.author: jopilov
+ms.date: "08/18/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "9017 (Database Engine error)"
 ---
 # MSSQLSERVER_9017
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 # Use Remote Blob Store (RBS) with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +32,7 @@ ms.custom: seodec18
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Books Online)  
+-   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)] Books Online)  
   
 -   [Running RBS Maintainer](/archive/blogs/sqlrbs/running-rbs-maintainer) (blog)  
   

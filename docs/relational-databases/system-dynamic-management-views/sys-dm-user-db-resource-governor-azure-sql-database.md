@@ -8,12 +8,12 @@ ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
-  - "sys.resource_governance"
-  - "sys.resource_governance_TSQL"
-  - "resource_governance"
-  - "resource_governance_TSQL"
+  - "sys.dm_user_db_resource_governance"
+  - "sys.dm_user_db_resource_governance_TSQL"
+  - "dm_user_db_resource_governance"
+  - "dm_user_db_resource_governance_TSQL"
 helpviewer_keywords:
-  - "sys.resource_governance catalog view"
+  - "sys.dm_user_db_resource_governance catalog view"
 dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current"
@@ -117,4 +117,4 @@ ORDER BY database_name;
 - [Transaction log rate governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Single database DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [Single database vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
-- [Elastic pool vCore resource limits](/azure/sql-database/resource-limits-vcore-elastic-pools)
+- [Elastic pool vCore resource limits](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)

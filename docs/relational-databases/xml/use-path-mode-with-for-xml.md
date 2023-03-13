@@ -1,10 +1,11 @@
 ---
 title: "Use PATH Mode with FOR XML"
 description: Learn how to use PATH mode with nested FOR XML queries and the TYPE directive to write less complex queries that return xml type instances.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,8 +16,6 @@ helpviewer_keywords:
   - "FOR XML PATH mode"
   - "column names [SQL Server]"
   - "XPath queries [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use PATH mode with FOR XML
 

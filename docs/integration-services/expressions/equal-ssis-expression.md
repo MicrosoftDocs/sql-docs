@@ -1,18 +1,15 @@
 ---
+title: "== (Equal) (SSIS Expression)"
 description: "== (Equal) (SSIS Expression)"
-title: "== (Equal) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "equal operator (==)"
-  - "== (equal operator)"
-ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "equal operator (==)"
+  - "== (equal operator)"
 ---
 # == (Equal) (SSIS Expression)
 

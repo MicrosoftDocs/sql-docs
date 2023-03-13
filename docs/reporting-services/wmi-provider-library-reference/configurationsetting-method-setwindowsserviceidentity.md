@@ -1,22 +1,17 @@
 ---
+title: "SetWindowsServiceIdentity Method (WMI MSReportServer_ConfigurationSetting)"
 description: "SetWindowsServiceIdentity Method (WMI MSReportServer_ConfigurationSetting)"
-title: "SetWindowsServiceIdentity Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SetWindowsServiceIdentity method"
-ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)"
+apitype: MOFDef
 ---
 # ConfigurationSetting Method - SetWindowsServiceIdentity
   Makes the Report Server Windows service run as a specified Windows user, and grants this account sufficient file system permissions to allow the report server to operate.  

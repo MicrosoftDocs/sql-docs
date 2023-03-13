@@ -1,16 +1,13 @@
 ---
-title: "What's New in SQL Server Installation | Microsoft Docs"
+title: "What's New in SQL Server Installation"
 description: This article summarizes some changes to the SQL Server installation process, including SysPrep support and upgrading from SQL Server 2005.
-ms.custom:
-  - intro-whats-new
-ms.date: "08/23/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: install
-ms.topic: conceptual
-ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "08/23/2017"
+ms.service: sql
+ms.subservice: install
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
 # What's New in SQL Server Installation
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

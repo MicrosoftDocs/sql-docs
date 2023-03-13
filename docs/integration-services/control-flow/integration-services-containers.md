@@ -1,21 +1,18 @@
 ---
+title: "Integration Services Containers"
 description: "Integration Services Containers"
-title: "Integration Services Containers | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS containers"
   - "containers [Integration Services]"
   - "containers [Integration Services], about containers"
   - "control flow [Integration Services], containers"
   - "SQL Server Integration Services containers"
-ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Containers
 

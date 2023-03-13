@@ -1,15 +1,12 @@
 ---
 title: Get R package information
 description: Learn how to get information about installed R packages on SQL Server Machine Learning Services and SQL Server R Services.
-ms.custom:
-- event-tier1-build-2022
-ms.service: sql
-ms.subservice: machine-learning
-ms.date: 05/24/2022
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

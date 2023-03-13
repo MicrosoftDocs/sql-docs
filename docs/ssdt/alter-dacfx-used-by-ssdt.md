@@ -1,16 +1,14 @@
 ---
 title: Alter DacFx used by SQL Server Data Tools (SSDT)
 description: "Learn how to manually change the DacFx version used by SQL Server Data Tools (SSDT)."
-ms.service: sql
-ms.subservice: ssdt
-ms.topic: conceptual
-keywords: "ssdt dacfx"
-ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: seo-lt-2019
 ms.date: 01/07/2022
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+keywords: ssdt dacfx
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 

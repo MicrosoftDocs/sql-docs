@@ -1,18 +1,15 @@
 ---
 title: Configure a ledger database
 description: This article discusses how to configure a ledger database in Azure SQL Database and SQL Server 2022
-ms.service: sql-database
-ms.subservice: security
-ms.devlang:
-ms.custom:
-- event-tier1-build-2022
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
 ms.date: "10/20/2022"
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Configure a ledger database
@@ -29,6 +26,9 @@ This article provides information on configuring a [ledger database](ledger-over
 - An Azure SQL Database.
 
 ## Enable ledger database
+
+> [!NOTE]
+> Enabling the ledger functionality at the database level will make all tables in this database updatable ledger tables. This option cannot be changed after the database is created. Creating a table with the option `LEDGER = OFF` will throw an error message.
 
 # [Portal](#tab/Portal)
 

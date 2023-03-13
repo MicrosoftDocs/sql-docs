@@ -1,20 +1,17 @@
 ---
+title: "Usage Counting"
 description: "Usage Counting"
-title: "Usage Counting | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "usage counts [ODBC]"
   - "file usage counts [ODBC]"
   - "installing ODBC components [ODBC], usage counts"
   - "subkeys [ODBC], usage counts"
-ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Usage Counting
 > [!NOTE]  

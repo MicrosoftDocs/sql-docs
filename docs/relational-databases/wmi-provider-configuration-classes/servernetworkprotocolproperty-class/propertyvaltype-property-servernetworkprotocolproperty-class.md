@@ -1,22 +1,17 @@
 ---
-description: "PropertyValType Property (ServerNetworkProtocolProperty Class)"
 title: "PropertyValType Property (ServerNetworkProtocolProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "PropertyValType Property (ServerNetworkProtocolProperty"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "PropertyValType property"
-ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
+description: "PropertyValType Property (ServerNetworkProtocolProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "PropertyValType property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "PropertyValType Property (ServerNetworkProtocolProperty"
+apitype: "MOFDef"
 ---
 # PropertyValType Property (ServerNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

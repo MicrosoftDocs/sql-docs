@@ -1,29 +1,26 @@
 ---
+title: "sp_validatemergepublication (Transact-SQL)"
 description: "sp_validatemergepublication (Transact-SQL)"
-title: "sp_validatemergepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_validatemergepublication"
-  - "sp_validatemergepublication_TSQL"
-helpviewer_keywords: 
-  - "sp_validatemergepublication"
-ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_validatemergepublication"
+  - "sp_validatemergepublication_TSQL"
+helpviewer_keywords:
+  - "sp_validatemergepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_validatemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Performs a publication-wide validation for which all subscriptions (push, pull, and anonymous) will be validated once. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

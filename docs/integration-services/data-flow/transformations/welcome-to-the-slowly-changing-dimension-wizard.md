@@ -1,17 +1,14 @@
 ---
+title: "Welcome to the Slowly Changing Dimension Wizard"
 description: "Welcome to the Slowly Changing Dimension Wizard"
-title: "Welcome to the Slowly Changing Dimension Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.welcome.f1"
-ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.loaddimwizard.welcome.f1"
 ---
 # Welcome to the Slowly Changing Dimension Wizard
 

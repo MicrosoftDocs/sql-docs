@@ -1,19 +1,15 @@
 ---
-description: "Query Properties (Visual Database Tools)"
 title: Query Properties
-ms.custom: seo-lt-2019
+description: "Query Properties (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:69636"
   - "vdt.ppg.querydesigner.query"
-ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Query Properties (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

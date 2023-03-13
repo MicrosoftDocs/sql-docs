@@ -1,22 +1,19 @@
 ---
+title: "STBuffer (geometry Data Type)"
 description: "STBuffer (geometry Data Type)"
-title: "STBuffer (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STBuffer (geometry Data Type)"
   - "STBuffer_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STBuffer (geometry Data Type)"
-ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STBuffer (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

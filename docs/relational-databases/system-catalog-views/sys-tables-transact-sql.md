@@ -7,7 +7,6 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sys.tables_TSQL"
   - "sys.tables"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sys.tables catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.tables (Transact-SQL)
@@ -49,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |temporal_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The text description of the type of table:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> When temporal_type = 2 or ledger_type = 2 returns object_id of the table that maintains historical data for a temporal table, otherwise returns NULL.|  
 |is_remote_data_archive_enabled|**bit**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indicates whether the table is Stretch-enabled.<br /><br /> 0 = The table isn't Stretch-enabled.<br /><br /> 1 = The table is Stretch-enabled.<br /><br /> For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
-|is_external|**bit**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)].<br /><br /> Indicates table is an external table.<br /><br /> 0 = The table isn't an external table.<br /><br /> 1 = The table is an external table.| 
+|is_external|**bit**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].<br /><br /> Indicates table is an external table.<br /><br /> 0 = The table isn't an external table.<br /><br /> 1 = The table is an external table.| 
 |history_retention_period|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing duration of the temporal history retention period in units specified with history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing type of temporal history retention period unit. <br /><br />-1: INFINITE <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6: YEAR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of type of temporal history retention period unit. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  

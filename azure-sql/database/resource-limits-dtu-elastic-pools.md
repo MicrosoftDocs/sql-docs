@@ -8,7 +8,9 @@ ms.date: 04/13/2022
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
-ms.custom: seo-lt-2019 sqldbrb=1 references_regions
+ms.custom:
+  - sqldbrb=1
+  - references_regions
 ---
 # Resource limits for elastic pools using the DTU purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -44,7 +46,7 @@ The resource limits of individual databases in elastic pools are generally the s
 For the same number of DTUs, resources provided to an elastic pool may exceed the resources provided to a single database outside of an elastic pool. This means it is possible for the eDTU utilization of an elastic pool to be less than the summation of DTU utilization across databases within the pool, depending on workload patterns. For example, in an extreme case with only one database in an elastic pool where database DTU utilization is 100%, it is possible for pool eDTU utilization to be 50% for certain workload patterns. This can happen even if max DTU per database remains at the maximum supported value for the given pool size.
 
 > [!NOTE]
-> The storage per pool resource limit in each of the following tables do not include tempdb and log storage.
+> The storage per pool resource limit in each of the following tables do not include `tempdb` and log storage.
 
 ### Basic elastic pool limits
 
@@ -194,7 +196,7 @@ Min and max per database DTU values apply to resource consumption by user worklo
 
 ## Tempdb sizes
 
-The following table lists tempdb sizes for single databases in Azure SQL Database: 
+The following table lists `tempdb` sizes for single databases in Azure SQL Database: 
 
 |Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
 |---|---:|---:|---:|

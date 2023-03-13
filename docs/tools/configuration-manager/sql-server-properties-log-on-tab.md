@@ -1,15 +1,12 @@
 ---
 title: "SQL Server Properties (Log On Tab)"
 description: Learn about the Log On tab of the SQL Server Properties dialog box. Use this tab to specify the account that SQL Server uses and to start or stop the service.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Properties (Log On Tab)

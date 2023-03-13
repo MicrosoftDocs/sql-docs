@@ -1,15 +1,12 @@
 ---
-description: "Remove Steps from a SQL Server Agent Master Job"
 title: "Remove Steps from a SQL Server Agent Master Job"
-ms.custom: seo-lt-2019
+description: "Remove Steps from a SQL Server Agent Master Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Remove Steps from a SQL Server Agent Master Job
@@ -52,7 +49,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 #### To remove steps from a SQL Server Agent master job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

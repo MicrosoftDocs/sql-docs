@@ -1,29 +1,26 @@
 ---
+title: "sp_help_schedule (Transact-SQL)"
 description: "sp_help_schedule (Transact-SQL)"
-title: "sp_help_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_schedule"
-  - "sp_help_schedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_schedule"
-ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_schedule"
+  - "sp_help_schedule_TSQL"
+helpviewer_keywords:
+  - "sp_help_schedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists information about schedules.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

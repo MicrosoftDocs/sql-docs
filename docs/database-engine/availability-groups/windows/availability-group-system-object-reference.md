@@ -7,7 +7,6 @@ ms.date: "04/03/2010"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: reference
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
 # Always On availability group system object reference

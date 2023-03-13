@@ -1,29 +1,26 @@
 ---
+title: "sp_replication_agent_checkup (Transact-SQL)"
 description: "sp_replication_agent_checkup (Transact-SQL)"
-title: "sp_replication_agent_checkup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replication_agent_checkup_TSQL"
-  - "sp_replication_agent_checkup"
-helpviewer_keywords: 
-  - "sp_replication_agent_checkup"
-ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replication_agent_checkup_TSQL"
+  - "sp_replication_agent_checkup"
+helpviewer_keywords:
+  - "sp_replication_agent_checkup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Checks each distribution database for replication agents that are running but have not logged history within the specified heartbeat interval. This stored procedure is executed at the Distributor on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

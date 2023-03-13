@@ -1,10 +1,11 @@
 ---
 title: Maintenance Window
-description: Understand how the Azure SQL Database and managed instance maintenance window can be configured.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Understand how the Azure SQL Database and Azure SQL Managed Instance maintenance window can be configured.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, urosmil
-ms.date: 12/01/2022
+ms.date: 2/10/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -71,6 +72,10 @@ Choosing a maintenance window other than the default is available on all SLOs **
 * Legacy Gen4 vCore
 * Basic, S0 and S1 
 * DC, Fsv2, M-series
+* Hyperscale service tier premium-series hardware (preview) 
+* Hyperscale service tier with zone redundancy
+
+<!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 
 ### Azure region support
 

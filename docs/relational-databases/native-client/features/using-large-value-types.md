@@ -1,22 +1,19 @@
 ---
-title: "Using Large Value Types | Microsoft Docs"
+title: "Using Large Value Types"
 description: Learn how SQL Server Native Client deals with large value data types that previously required special handling.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "large value data types"
   - "SQLNCLI, large value types"
   - "SQL Server Native Client, large value types"
   - "data access [SQL Server Native Client], large value types"
   - "SQL Server Native Client ODBC driver, large value data types"
   - "SQL Server Native Client OLE DB provider, large value data types"
-ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Large Value Types in SQL Server Native Client

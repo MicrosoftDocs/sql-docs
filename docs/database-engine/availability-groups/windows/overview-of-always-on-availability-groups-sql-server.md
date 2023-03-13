@@ -8,9 +8,7 @@ ms.date: 07/04/2022
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-overview
+ms.custom: intro-overview
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"

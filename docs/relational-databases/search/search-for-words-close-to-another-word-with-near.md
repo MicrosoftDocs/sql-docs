@@ -1,13 +1,14 @@
 ---
+title: "Search for Words Close to Another Word with NEAR"
 description: "Search for Words Close to Another Word with NEAR"
-title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "word searches [full-text search]"
   - "NEAR option [full-text search]"
   - "phrase searches [full-text search]"
@@ -15,10 +16,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], proximity searches"
   - "full-text queries [SQL Server], proximity"
   - "queries [full-text search], proximity"
-ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search for Words Close to Another Word with NEAR

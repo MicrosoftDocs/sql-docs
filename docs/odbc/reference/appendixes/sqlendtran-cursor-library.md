@@ -1,17 +1,14 @@
 ---
+title: "SQLEndTran (Cursor Library)"
 description: "SQLEndTran (Cursor Library)"
-title: "SQLEndTran (Cursor Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLEndTran function [ODBC], Cursor Library"
-ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLEndTran function [ODBC], Cursor Library"
 ---
 # SQLEndTran (Cursor Library)
 > [!IMPORTANT]  

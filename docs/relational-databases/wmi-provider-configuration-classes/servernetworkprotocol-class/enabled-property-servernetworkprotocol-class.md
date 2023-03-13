@@ -1,22 +1,17 @@
 ---
-description: "Enabled Property (ServerNetworkProtocol Class)"
 title: "Enabled Property (ServerNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "Enabled Property (ServerNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "Enabled property"
-ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
+description: "Enabled Property (ServerNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Enabled property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "Enabled Property (ServerNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # Enabled Property (ServerNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

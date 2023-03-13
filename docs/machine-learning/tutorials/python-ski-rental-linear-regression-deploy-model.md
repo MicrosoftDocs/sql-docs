@@ -2,13 +2,12 @@
 title: "Python tutorial: Deploy model"
 titleSuffix: SQL machine learning
 description: In part four of this four-part tutorial series, you'll deploy a Python model to predict ski rentals into a database with SQL machine learning.
-ms.service: sql
-ms.subservice: machine-learning
-ms.date: 08/06/2020
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 08/06/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Python Tutorial: Deploy a linear regression model with SQL machine learning

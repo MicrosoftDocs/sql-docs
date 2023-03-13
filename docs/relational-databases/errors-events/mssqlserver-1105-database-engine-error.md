@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_1105"
 description: "MSSQLSERVER_1105"
-title: "MSSQLSERVER_1105 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1105 (Database Engine error)"
-ms.assetid: e7f4ad02-8c7f-4bb9-9781-2c86253f2138
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1105 (Database Engine error)"
 ---
 # MSSQLSERVER_1105
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

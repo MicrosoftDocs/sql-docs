@@ -1,18 +1,15 @@
 ---
+title: "RTRIM (SSIS Expression)"
 description: "RTRIM (SSIS Expression)"
-title: "RTRIM (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RTRIM function"
-  - "trailing blanks"
-ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RTRIM function"
+  - "trailing blanks"
 ---
 # RTRIM (SSIS Expression)
 

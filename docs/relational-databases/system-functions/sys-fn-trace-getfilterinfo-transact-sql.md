@@ -1,25 +1,22 @@
 ---
+title: "sys.fn_trace_getfilterinfo (Transact-SQL)"
 description: "sys.fn_trace_getfilterinfo (Transact-SQL)"
-title: "sys.fn_trace_getfilterinfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_trace_getfilterinfo"
   - "fn_trace_getfilterinfo_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server], filters"
   - "sys.fn_trace_getfilterinfo function"
   - "filters [SQL Server], traces"
   - "fn_trace_getfilterinfo function"
-ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +27,7 @@ ms.author: randolphwest
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Events instead.  
   
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

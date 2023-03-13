@@ -1,10 +1,11 @@
 ---
 title: "Examples: Using OPENXML"
 description: View examples of how to use OPENXML to create a rowset view of an XML document.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,8 +24,6 @@ helpviewer_keywords:
   - "flags parameter"
   - "element-centric mapping [SQL Server]"
   - "edge tables"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Examples: Use OPENXML
 

@@ -60,17 +60,7 @@ For the latest release notes and what's new information, see the following:
 
 ## SQL Server editions
 
-The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-| Edition | Definition |
-| --- | --- |
-| Enterprise | The premium offering, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance, unlimited virtualization <sup>1</sup> , and end-to-end business intelligence - enabling high service levels for mission-critical workloads and end-user access to data insights. |
-| Standard | [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premises and cloud - enabling effective database management with minimal IT resources. |
-| Web | [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large-scale Web properties. |
-| Developer | [!INCLUDE [ssdeveloper-md](../includes/ssdeveloper-md.md)] edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build and test applications. |
-| Express | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB is a lightweight version of Express that has all of its programmability features, runs in user mode and has a fast, zero-configuration installation and a short list of prerequisites. |
-
-<sup>1</sup> Unlimited virtualization is available on Enterprise edition for customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). Deployments must comply with the licensing guide. For more information, see our pricing and licensing page.
+[!INCLUDE [sql-server-editions](../includes/paragraph-content/sql-server-editions.md)]
 
 ## Choose SQL Server features
 
@@ -82,7 +72,7 @@ Use the information in the following tables to determine the set of features tha
 
 | Feature | Description |
 | --- | --- |
-| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] | [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE[ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, in database analytics integration, and PolyBase integration for access to Hadoop and other heterogeneous data sources, and Machine Learning Services to run Python and R scripts with relational data. |
+| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] | [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE[ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, in database analytics integration, and PolyBase integration for access to heterogeneous data sources, and Machine Learning Services to run Python and R scripts with relational data. |
 | [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] | [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] includes the tools for creating and managing online analytical processing (OLAP) and data mining applications. |
 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes server and client components for creating, managing, and deploying tabular, matrix, graphical, and free-form reports. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is also an extensible platform that you can use to develop report applications. |
 | [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] | [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a set of graphical tools and programmable objects for moving, copying, and transforming data. It also includes the [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) component for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. |

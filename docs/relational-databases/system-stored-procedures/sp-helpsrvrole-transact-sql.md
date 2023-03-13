@@ -1,29 +1,26 @@
 ---
+title: "sp_helpsrvrole (Transact-SQL)"
 description: "sp_helpsrvrole (Transact-SQL)"
-title: "sp_helpsrvrole (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpsrvrole_TSQL"
-  - "sp_helpsrvrole"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpsrvrole"
-ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: markingmyname
 ms.author: maghan
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpsrvrole_TSQL"
+  - "sp_helpsrvrole"
+helpviewer_keywords:
+  - "sp_helpsrvrole"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fixed server roles.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

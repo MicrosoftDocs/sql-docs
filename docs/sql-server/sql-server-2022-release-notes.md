@@ -4,11 +4,10 @@ description: Find information about SQL Server 2022 (16.x) limitations, known is
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 12/01/2022
+ms.date: 02/09/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-ms.custom: event-tier1-build-2022
 monikerRange: "= sql-server-ver16"
 ---
 
@@ -82,6 +81,24 @@ Windows Server 2022 was released with VCRuntime version 14.28.29914.
 An issue in the TDS 8.0 protocol implementation may cause RPC calls to fail if the `Encrypt` option is set to `Strict` in your connection string, for example when running the `sp_who` system stored procedure.
 
 **Applies to**: [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] RTM
+
+### Availability group replica manager
+
+**Error 35221** states that the Always On availability groups replica manager is disabled. This error may be encountered when attempting to add a file to a FILESTREAM filegroup or a memory-optimized filegroup, or when attempting to add additional transaction log files to a database.
+
+**Applies to**: [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] RTM
+
+The fix for this issue will be released in Cumulative Update 1 for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+
+To work around this issue, you can use Trace Flag 12324 as either as startup trace flag, or at the session level (using `DBCC TRACEON`).
+
+### SQL Server services are set to Automatic (Delayed Start) start mode
+
+In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], setting the **Start Mode** for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service to *Automatic* in Configuration Manager, will configure that service to start in *Automatic (Delayed Start)* mode instead, even though the **Start Mode** shows as *Automatic*.
+
+### MSOLEDBSQL19 and linked servers
+
+Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
 
 ## Build number
 

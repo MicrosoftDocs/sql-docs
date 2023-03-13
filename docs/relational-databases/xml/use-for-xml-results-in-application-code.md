@@ -1,10 +1,11 @@
 ---
 title: "Use FOR XML Results in Application Code"
 description: Learn how to use the results of an SQL query with FOR XML clauses in an application.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,8 +16,6 @@ helpviewer_keywords:
   - "ADO [SQL Server]"
   - "XML data islands [SQL Server]"
   - "data islands [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use FOR XML Results in application code
 
@@ -179,7 +178,7 @@ The VBScript message box will then show the following original, unfiltered XML d
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">
   <Sales.Store>
     <Demographics>
-      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
+      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
         <AnnualSales>1500000</AnnualSales>
         <AnnualRevenue>150000</AnnualRevenue>
         <BankName>Primary International</BankName>
@@ -285,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
 
 SqlConnection opened.
 
-<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>
+<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>
 
 SqlConnection closed.
 ```

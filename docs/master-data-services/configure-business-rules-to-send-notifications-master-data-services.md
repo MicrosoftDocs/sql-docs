@@ -1,19 +1,16 @@
 ---
-description: "Configure Business Rules to Send Notifications (Master Data Services)"
 title: Configure Business Rules to Send Notifications
-ms.custom: ""
+description: "Configure Business Rules to Send Notifications (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "business rules [Master Data Services], configuring notifications"
   - "e-mail [Master Data Services], configuring business rules"
   - "notifications [Master Data Services], configuring business rules"
-ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Configure Business Rules to Send Notifications (Master Data Services)
 

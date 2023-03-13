@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "JSON functions"
 dev_langs:

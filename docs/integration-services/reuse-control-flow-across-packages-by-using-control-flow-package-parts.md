@@ -1,20 +1,17 @@
 ---
+title: "Reuse Control Flow across Packages by Using Control Flow Package Parts"
 description: "Reuse Control Flow across Packages by Using Control Flow Package Parts"
-title: "Reuse Control Flow across Packages by Using Control Flow Package Parts | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.toolboxcontrolflowtemplate.f1"
   - "sql13.dts.designer.addcopyexistingtemplate.f1"
   - "sql13.dts.designer.addcopyexistingpackagepart.f1"
   - "sql13.dts.designer.packagepart.general.f1"
-ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-author: chugugrace
-ms.author: chugu
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts
 

@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_10773"
 description: "MSSQLSERVER_10773"
-title: "MSSQLSERVER_10773 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "10773 (Database Engine error)"
-ms.assetid: 4a7d33e8-e98a-49f5-8d4b-8224f3c8e22d
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "10773 (Database Engine error)"
 ---
 # MSSQLSERVER_10773
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

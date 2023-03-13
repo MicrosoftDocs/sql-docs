@@ -1,22 +1,19 @@
 ---
+title: "sp_mergesubscription_cleanup (Transact-SQL)"
 description: "sp_mergesubscription_cleanup (Transact-SQL)"
-title: "sp_mergesubscription_cleanup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_mergesubscription_cleanup"
-  - "sp_mergesubscription_cleanup_TSQL"
-helpviewer_keywords: 
-  - "sp_mergesubscription_cleanup"
-ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_mergesubscription_cleanup"
+  - "sp_mergesubscription_cleanup_TSQL"
+helpviewer_keywords:
+  - "sp_mergesubscription_cleanup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_mergesubscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!NOTE]  
 >  For a pull subscription, metadata is removed when [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) is executed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

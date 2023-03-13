@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER"
 description: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER"
-title: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_CALLER_IS_NOT_OWNER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

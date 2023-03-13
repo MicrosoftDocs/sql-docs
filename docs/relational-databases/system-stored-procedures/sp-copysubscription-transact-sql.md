@@ -1,22 +1,19 @@
 ---
+title: "sp_copysubscription (Transact-SQL)"
 description: "sp_copysubscription (Transact-SQL)"
-title: "sp_copysubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_copysubscription"
-  - "sp_copysubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_copysubscription"
-ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_copysubscription"
+  - "sp_copysubscription_TSQL"
+helpviewer_keywords:
+  - "sp_copysubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_copysubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +24,7 @@ ms.author: maghan
   
  Copies a subscription database that has pull subscriptions, but no push subscriptions. Only single file databases can be copied. This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,22 +1,19 @@
 ---
+title: "sp_helprotect (Transact-SQL)"
 description: "sp_helprotect (Transact-SQL)"
-title: "sp_helprotect (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helprotect"
-  - "sp_helprotect_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helprotect"
-ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helprotect"
+  - "sp_helprotect_TSQL"
+helpviewer_keywords:
+  - "sp_helprotect"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +25,7 @@ ms.author: maghan
   
  Does not list permissions that are always assigned to the fixed server roles or fixed database roles. Does not include logins or users that receive permissions based on their membership in a role.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

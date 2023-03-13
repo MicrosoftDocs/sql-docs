@@ -1,14 +1,13 @@
 ---
 title: "Tutorial: Getting started with Always Encrypted"
 description: This tutorial teaches you how to encrypt columns using Always Encrypted and how to query encrypted columns in SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
-ms.custom:
-ms.date: 11/17/2022
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: security
+ms.topic: tutorial
 ---
 # Tutorial: Getting started with Always Encrypted
 
@@ -24,8 +23,8 @@ This tutorial teaches you how to get started with [Always Encrypted](always-encr
 > [!NOTE]
 > If you're looking for information on [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), see the following tutorials instead:
 >
-> - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
-> - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+> - [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+> - [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 
 ## Prerequisites
 
@@ -368,7 +367,7 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     SELECT [SSN], [Salary] FROM [HR].[Employees]
     ```
 
-    :::image type="content" source="media/always-encrypted-database-engine/always-encrypted-ssms-retrieving-cyphertext.png" alt-text="Screenshot of cyphertext results from encrypted columns.":::
+    :::image type="content" source="media/always-encrypted-database-engine/always-encrypted-ssms-retrieving-ciphertext.png" alt-text="Screenshot of cipher text results from encrypted columns.":::
 
 1. Connect to your database with Always Encrypted enabled for your connection.
     1. Right-click anywhere in the query window and select **Connection** > **Change Connection**. This will open the **Connect to Database Engine** dialog.

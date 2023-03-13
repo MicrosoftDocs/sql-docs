@@ -1,28 +1,26 @@
 ---
-description: "sp_create_plan_guide (Transact-SQL)"
 title: "sp_create_plan_guide (Transact-SQL)"
-ms.custom: ""
-ms.date: "06/22/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_create_plan_guide"
-  - "sp_create_plan_guide_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_create_plan_guide"
+description: "sp_create_plan_guide (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.date: "06/22/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_create_plan_guide"
+  - "sp_create_plan_guide_TSQL"
+helpviewer_keywords:
+  - "sp_create_plan_guide"
+dev_langs:
+  - "TSQL"
 ---
 # sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a plan guide for associating query hints or actual query plans with queries in a database. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

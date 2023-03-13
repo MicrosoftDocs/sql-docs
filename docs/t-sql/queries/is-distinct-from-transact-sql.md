@@ -24,13 +24,13 @@ dev_langs:
 
 # IS [NOT] DISTINCT FROM (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Compares the equality of two expressions and guarantees a true or false result, even if one or both operands are NULL.
 
 IS [NOT] DISTINCT FROM is a predicate used in the search condition of [WHERE](../../t-sql/queries/where-transact-sql.md) clauses and [HAVING](../../t-sql/queries/select-having-transact-sql.md) clauses, the join conditions of [FROM](../../t-sql/queries/from-transact-sql.md) clauses, and other constructs where a Boolean value is required.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -74,8 +74,6 @@ If we determine that the linked server can parse IS [NOT] DISTINCT FROM, we will
 The following example returns rows where the `id` field is distinct from the integer value of 17.
 
 ```sql
-USE tempdb;
-GO
 DROP TABLE IF EXISTS #SampleTempTable;
 GO
 CREATE TABLE #SampleTempTable (id INT, message nvarchar(50));
@@ -87,6 +85,8 @@ INSERT INTO #SampleTempTable VALUES (null, null);
 GO
 
 SELECT * FROM #SampleTempTable WHERE id IS DISTINCT FROM 17;
+DROP TABLE IF EXISTS #SampleTempTable;
+GO
 ```
 
 The results exclude all rows where `id` matched the value of 17.
@@ -104,8 +104,6 @@ NULL        NULL
 The following example returns rows where the `id` field isn't distinct from the integer value of 17.
 
 ```sql
-USE tempdb;
-GO
 DROP TABLE IF EXISTS #SampleTempTable;
 GO
 CREATE TABLE #SampleTempTable (id INT, message nvarchar(50));
@@ -117,6 +115,8 @@ INSERT INTO #SampleTempTable VALUES (null, null);
 GO
 
 SELECT * FROM #SampleTempTable WHERE id IS NOT DISTINCT FROM 17;
+DROP TABLE IF EXISTS #SampleTempTable;
+GO
 ```
 
 The results return only the rows where the `id` matched the value of 17.
@@ -133,8 +133,6 @@ id          message
 The following example returns rows where the `id` field is distinct from NULL.
 
 ```sql
-USE tempdb;
-GO
 DROP TABLE IF EXISTS #SampleTempTable;
 GO
 CREATE TABLE #SampleTempTable (id INT, message nvarchar(50));
@@ -146,6 +144,8 @@ INSERT INTO #SampleTempTable VALUES (null, null);
 GO
 
 SELECT * FROM #SampleTempTable WHERE id IS DISTINCT FROM NULL;
+DROP TABLE IF EXISTS #SampleTempTable;
+GO
 ```
 
 The results return only the rows where the `id` wasn't NULL.
@@ -163,8 +163,6 @@ id          message
 The following example returns rows where the `id` field isn't distinct from NULL.
 
 ```sql
-USE tempdb;
-GO
 DROP TABLE IF EXISTS #SampleTempTable;
 GO
 CREATE TABLE #SampleTempTable (id INT, message nvarchar(50));
@@ -176,6 +174,8 @@ INSERT INTO #SampleTempTable VALUES (null, null);
 GO
 
 SELECT * FROM #SampleTempTable WHERE id IS NOT DISTINCT FROM NULL;
+DROP TABLE IF EXISTS #SampleTempTable;
+GO
 ```
 
 The results return only the rows where the `id` was NULL.

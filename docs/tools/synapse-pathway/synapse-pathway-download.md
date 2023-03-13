@@ -1,15 +1,15 @@
 ---
 title: Azure Synapse Pathway download
 description: Learn how to get download Azure Synapse Pathway
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 09/22/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords:
-    -  "Azure Synapse Pathway, download"
-author: WilliamDAssafMSFT 
-ms.author: wiassaf 
 ms.custom: intro-installation
-ms.date: 09/22/2021
+helpviewer_keywords:
+  - "Azure Synapse Pathway, download"
 monikerRange: "=azure-sqldw-latest"
 ---
 

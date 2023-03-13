@@ -1,29 +1,26 @@
 ---
+title: "sp_register_custom_scripting (Transact-SQL)"
 description: "sp_register_custom_scripting (Transact-SQL)"
-title: "sp_register_custom_scripting (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_register_custom_scripting"
-  - "sp_register_custom_scripting_TSQL"
-helpviewer_keywords: 
-  - "sp_register_custom_scripting"
-ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_register_custom_scripting"
+  - "sp_register_custom_scripting_TSQL"
+helpviewer_keywords:
+  - "sp_register_custom_scripting"
+dev_langs:
+  - "TSQL"
 ---
 # sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Replication allows user-defined custom stored procedures to replace one or more of the default procedures used in transactional replication. When a schema change is made to a replicated table, these stored procedures are re-created. **sp_register_custom_scripting** registers a stored procedure or [!INCLUDE[tsql](../../includes/tsql-md.md)] script file that is executed when a schema change occurs to script out the definition for a new user-defined custom stored procedure. This new user-defined custom stored procedure should reflect the new schema for the table. **sp_register_custom_scripting** is executed at the Publisher on the publication database, and the registered script file or stored procedure is executed at the Subscriber when a schema change occurs.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

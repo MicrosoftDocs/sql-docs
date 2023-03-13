@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.sp_backup_config_basic (Transact-SQL)"
 description: "managed_backup.sp_backup_config_basic (Transact-SQL)"
-title: "managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "10/03/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_backup_config_basic_TSQL"
   - "sp_backup_config_basic"
   - "managed_backup.sp_backup_config_basic"
   - "managed_backup.sp_backup_config_basic_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "managed_backup.sp_backup_config_basic"
   - "sp_backup_config_basic"
-ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +26,7 @@ ms.author: maghan
 > [!NOTE]  
 >  This procedure can be called on its own to create a basic managed backup configuration. However, if you plan to add advanced features or a custom schedule, first configure those settings using [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) and [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) before enabling managed backup with this procedure.  
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

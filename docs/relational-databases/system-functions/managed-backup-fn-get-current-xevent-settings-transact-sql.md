@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.fn_get_current_xevent_settings (Transact-SQL)"
 description: "managed_backup.fn_get_current_xevent_settings (Transact-SQL)"
-title: "managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_get_current_xevent_settings"
   - "smart_admin.fn_get_current_xevent_settings_TSQL"
   - "fn_get_current_xevent_settings_TSQL"
   - "smart_admin.fn_get_current_xevent_settings"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "smart_admin.fn_get_current_xevent_settings"
   - "fn_get_current_xevent_settings"
-ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -28,7 +25,7 @@ ms.author: mikeray
   
  Use this function to return or review the current Extended Event settings to identify the type of events that are configurable and the current configurations.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

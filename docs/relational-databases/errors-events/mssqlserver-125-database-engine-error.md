@@ -1,22 +1,19 @@
 ---
+title: "MSSQLSERVER_125"
 description: "MSSQLSERVER_125"
-title: "MSSQLSERVER_125 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-f1_keywords: 
-  - "125"
-helpviewer_keywords: 
-  - "125 (Database Engine error)"
-ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+f1_keywords:
+  - "125"
+helpviewer_keywords:
+  - "125 (Database Engine error)"
 ---
 # MSSQLSERVER_125
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

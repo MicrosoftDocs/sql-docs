@@ -1,22 +1,19 @@
 ---
+title: "sp_changeobjectowner (Transact-SQL)"
 description: "sp_changeobjectowner (Transact-SQL)"
-title: "sp_changeobjectowner (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_changeobjectowner_TSQL"
-  - "sp_changeobjectowner"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_changeobjectowner"
-ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changeobjectowner_TSQL"
+  - "sp_changeobjectowner"
+helpviewer_keywords:
+  - "sp_changeobjectowner"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +26,7 @@ ms.author: vanto
 > [!IMPORTANT]
 >  A new permission requirement has been added to this stored procedure.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

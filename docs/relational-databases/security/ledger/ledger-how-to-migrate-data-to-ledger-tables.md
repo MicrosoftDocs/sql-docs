@@ -1,15 +1,13 @@
 ---
 title: "Migrate data from regular tables to ledger tables"
 description: Learn how to migrate data from regular tables to ledger tables.
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: kendralittle, mathoma
 ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
-ms.custom:
-- event-tier1-build-2022
-ms.reviewer: kendralittle, mathoma
 ms.topic: how-to
-author: VanMSFT
-ms.author: vanto
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 

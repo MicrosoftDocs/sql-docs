@@ -1,28 +1,26 @@
 ---
-description: "The sysmail_add_profile_sp system stored procedure created a new Database Mail profile in an instance of SQL Server or Azure SQL Managed Instance."
 title: "sysmail_add_profile_sp (Transact-SQL)"
-ms.custom: ""
-ms.date: "04/19/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_add_profile_sp_TSQL"
-  - "sysmail_add_profile_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_add_profile_sp"
+description: "The sysmail_add_profile_sp system stored procedure created a new Database Mail profile in an instance of SQL Server or Azure SQL Managed Instance."
 author: markingmyname
 ms.author: maghan
+ms.date: "04/19/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_add_profile_sp_TSQL"
+  - "sysmail_add_profile_sp"
+helpviewer_keywords:
+  - "sysmail_add_profile_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new [Database Mail](../../relational-databases/database-mail/database-mail.md) profile.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

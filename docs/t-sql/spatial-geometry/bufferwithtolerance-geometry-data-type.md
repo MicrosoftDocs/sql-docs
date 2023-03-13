@@ -1,22 +1,19 @@
 ---
+title: "BufferWithTolerance (geometry Data Type)"
 description: "BufferWithTolerance (geometry Data Type)"
-title: "BufferWithTolerance (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "BufferWithTolerance_TSQL"
   - "BufferWithTolerance"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BufferWithTolerance (geometry Data Type)"
-ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # BufferWithTolerance (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

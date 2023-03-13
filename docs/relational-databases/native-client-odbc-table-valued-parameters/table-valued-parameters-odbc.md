@@ -1,18 +1,15 @@
 ---
+title: "Table-Valued Parameters (ODBC)"
 description: "Table-Valued Parameters (ODBC)"
-title: "Table-Valued Parameters (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters (ODBC)"
-  - "ODBC, table-valued parameters"
-ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters (ODBC)"
+  - "ODBC, table-valued parameters"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameters (ODBC)
@@ -66,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Describes how to process errors on table-valued parameter column values.  
   
  [Cross-Version Compatibility](../../relational-databases/native-client-odbc-table-valued-parameters/cross-version-compatibility.md)  
- Describes conflicts that can occur when table-valued parameters are used by a client or server of a version earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ Describes conflicts that can occur when table-valued parameters are used by a client or server of a version earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
  [ODBC Table-Valued Parameter API Summary](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Lists the ODBC functions that support table-valued parameters.  

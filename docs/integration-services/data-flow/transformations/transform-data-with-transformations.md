@@ -1,19 +1,16 @@
 ---
+title: "Transform Data with Transformations"
 description: "Transform Data with Transformations"
-title: "Transform Data with Transformations | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow [Integration Services], transformations"
   - "transformations [Integration Services], about transformations"
   - "transforming data [Integration Services]"
-ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: chugugrace
-ms.author: chugu
 ---
 # Transform Data with Transformations
 

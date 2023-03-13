@@ -1,22 +1,19 @@
 ---
+title: "sp_droprole (Transact-SQL)"
 description: "sp_droprole (Transact-SQL)"
-title: "sp_droprole (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_droprole"
-  - "sp_droprole_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_droprole"
-ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_droprole"
+  - "sp_droprole_TSQL"
+helpviewer_keywords:
+  - "sp_droprole"
+dev_langs:
+  - "TSQL"
 ---
 # sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** was replaced by the DROP ROLE statement. **sp_droprole** is included only for compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and may not be supported in a future release.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

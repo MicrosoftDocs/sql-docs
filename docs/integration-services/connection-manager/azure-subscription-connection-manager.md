@@ -1,18 +1,15 @@
 ---
+title: "Azure Subscription Connection Manager"
 description: "Azure Subscription Connection Manager"
-title: "Azure Subscription Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.afpsubscrconn.f1"
-  - "sql14.dts.designer.afpsubscrconn.f1"
-ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.afpsubscrconn.f1"
+  - "sql14.dts.designer.afpsubscrconn.f1"
 ---
 # Azure Subscription Connection Manager
 

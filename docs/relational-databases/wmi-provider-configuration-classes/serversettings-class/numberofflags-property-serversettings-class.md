@@ -1,22 +1,17 @@
 ---
-description: "NumberOfFlags Property (ServerSettings Class)"
 title: "NumberOfFlags Property (ServerSettings)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "NumberOfFlags Property (ServerSettings Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "NumerOfFlags property"
-ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
+description: "NumberOfFlags Property (ServerSettings Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "NumerOfFlags property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "NumberOfFlags Property (ServerSettings Class)"
+apitype: "MOFDef"
 ---
 # NumberOfFlags Property (ServerSettings Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

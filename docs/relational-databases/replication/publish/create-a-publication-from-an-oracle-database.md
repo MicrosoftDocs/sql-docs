@@ -1,18 +1,16 @@
 ---
+title: "Create a Publication from an Oracle Database"
 description: "Create a Publication from an Oracle Database"
-title: "Create a Publication from an Oracle Database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "publications [SQL Server replication], Oracle databases"
-  - "Oracle publishing [SQL Server replication], configuring"
-ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "publications [SQL Server replication], Oracle databases"
+  - "Oracle publishing [SQL Server replication], configuring"
 ---
 # Create a Publication from an Oracle Database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

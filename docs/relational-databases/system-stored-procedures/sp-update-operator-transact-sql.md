@@ -1,29 +1,26 @@
 ---
+title: "sp_update_operator (Transact-SQL)"
 description: "sp_update_operator (Transact-SQL)"
-title: "sp_update_operator (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_operator_TSQL"
-  - "sp_update_operator"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_update_operator"
-ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_operator_TSQL"
+  - "sp_update_operator"
+helpviewer_keywords:
+  - "sp_update_operator"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates information about an operator (notification recipient) for use with alerts and jobs.  
   
-   ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+   :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,17 +1,14 @@
 ---
-title: "Reporting Services Login Dialog Box | Microsoft Docs"
-description: Learn how to use the Reporting Services Login dialog box to provide credentials to publish reports to the report server. 
+title: "Reporting Services Login Dialog Box"
+description: Learn how to use the Reporting Services Login dialog box to provide credentials to publish reports to the report server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: tools
-
-
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "sql13.rtp.rptdesigner.reportservicelogin.f1"
-ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Login Dialog Box (SSRS)
   Use the **Reporting Services Login** dialog box to provide credentials to publish reports to the report server.  

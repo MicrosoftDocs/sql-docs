@@ -1,18 +1,15 @@
 ---
-description: "Specify a Target Server's Location"
 title: Specify a Target Server Location
-ms.custom: seo-lt-2019
+description: "Specify a Target Server's Location"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], location"
-ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Specify a Target Server's Location
@@ -49,7 +46,7 @@ Requires membership in the **sysadmin** fixed server role.
   
 #### To specify a target server's location  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

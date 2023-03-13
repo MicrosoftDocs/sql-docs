@@ -1,24 +1,21 @@
 ---
+title: "sp_fulltext_load_thesaurus_file (Transact-SQL)"
 description: "sp_fulltext_load_thesaurus_file (Transact-SQL)"
-title: "sp_fulltext_load_thesaurus_file (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_fulltext_load_thesaurus_file"
   - "sp_fulltext_load_thesaurus_file_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_fulltext_load_thesaurus_file"
   - "full-text indexes [SQL Server], thesaurus files"
   - "thesaurus [full-text search], editing"
-ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -26,7 +23,7 @@ ms.author: maghan
 
   Causes the server instance to parse and load the data from the thesaurus file that corresponds to the language whose LCID is specified. This stored procedure is useful after updating a thesaurus file. Executing **sp_fulltext_load_thesaurus_file** causes recompilation of full-text queries that use the thesaurus of the specified LCID.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

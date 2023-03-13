@@ -1,17 +1,14 @@
 ---
+title: "RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)"
 description: "RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)"
-title: "RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RemoveSSLCertificateBindings method"
-ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
-author: maggiesMSFT
-ms.author: maggies
 ---
 # ConfigurationSetting Method - RemoveSSLCertificateBinding
   Removes a TLS/SSL Certificate binding.  

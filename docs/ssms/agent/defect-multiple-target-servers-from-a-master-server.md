@@ -1,22 +1,19 @@
 ---
-description: "Defect Multiple Target Servers from a Master Server"
 title: Defect Multiple Target Servers from a Master Server
+description: "Defect Multiple Target Servers from a Master Server"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], defecting"
   - "SQL Server Agent jobs, master servers"
   - "master servers [SQL Server], defecting target servers"
   - "defecting target servers"
   - "multiple target server defections"
-ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

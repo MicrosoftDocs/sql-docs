@@ -1,17 +1,14 @@
 ---
+title: "Slowly Changing Dimension Wizard F1 Help"
 description: "Slowly Changing Dimension Wizard F1 Help"
-title: "Slowly Changing Dimension Wizard F1 Help | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Slowly Changing Dimension Wizard"
-ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Slowly Changing Dimension Wizard"
 ---
 # Slowly Changing Dimension Wizard F1 Help
 

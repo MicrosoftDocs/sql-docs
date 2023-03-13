@@ -1,29 +1,26 @@
 ---
+title: "sp_publication_validation (Transact-SQL)"
 description: "sp_publication_validation (Transact-SQL)"
-title: "sp_publication_validation (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_publication_validation"
-  - "sp_publication_validation_TSQL"
-helpviewer_keywords: 
-  - "sp_publication_validation"
-ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_publication_validation"
+  - "sp_publication_validation_TSQL"
+helpviewer_keywords:
+  - "sp_publication_validation"
+dev_langs:
+  - "TSQL"
 ---
 # sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Initiates an article validation request for each article in the specified publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

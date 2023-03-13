@@ -3,7 +3,7 @@ title: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
 description: The sys.dm_db_missing_index_group_stats_query dynamic management view returns information about queries that needed a missing index from groups of missing indexes.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "3/7/2022"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -59,6 +59,10 @@ Database administrators should periodically make backup copies of the missing in
 ## Permissions  
  To query this dynamic management view, users must be granted the VIEW SERVER STATE permission or any permission that implies the VIEW SERVER STATE permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following examples illustrate how to use the `sys.dm_db_missing_index_group_stats_query` dynamic management view.  
   

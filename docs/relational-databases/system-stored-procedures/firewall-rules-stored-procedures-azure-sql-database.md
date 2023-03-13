@@ -1,28 +1,25 @@
 ---
-description: "Firewall Rules Stored Procedures (Azure SQL Database)"
 title: "Firewall Rules Stored Procedures"
 titleSuffix: Azure SQL Database
+description: "Firewall Rules Stored Procedures (Azure SQL Database)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/28/2016"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "firewall rules stored procedures"
   - "firewall_rules, setting"
   - "firewall_rules, Azure SQL Database"
   - "firewall systems, Azure SQL Database"
-ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
-author: VanMSFT
-ms.author: vanto
-ms.custom: seo-dt-2019
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Firewall Rules Stored Procedures (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-  This section contains the following stored procedures that set or delete firewall rules. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] firewall rules can be used with [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. For more information, see [Configure Azure SQL Database firewall rules - overview](/azure/azure-sql/database/firewall-configure).
+  This section contains the following stored procedures that set or delete firewall rules. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] firewall rules can be used with [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For more information, see [Configure Azure SQL Database firewall rules - overview](/azure/azure-sql/database/firewall-configure).
 
 :::row:::
     :::column:::

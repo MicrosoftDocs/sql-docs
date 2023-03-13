@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom:
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
@@ -29,7 +29,7 @@ An active Azure subscription.
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE[azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 # [PowerShell](#tab/powershell)
 
@@ -332,7 +332,7 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 
 ## Best practices
 If you use LTR backups to meet compliance or other mission-critical requirements:
-- Verify the LTR backups are taken as per the configured policy by following steps outlined in [view backups](/azure-sql/database/long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup) section either using Portal, Azure CLI or PowerShell. 
+- Verify the LTR backups are taken as per the configured policy by following steps outlined in [view backups](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup) section either using Portal, Azure CLI or PowerShell. 
 - Consider conducting periodic recovery drills to verify that restore of LTR backups results in expected database state.
 
  

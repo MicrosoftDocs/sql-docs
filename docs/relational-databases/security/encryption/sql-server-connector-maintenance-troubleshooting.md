@@ -1,17 +1,15 @@
 ---
 title: "SQL Server Connector maintenance & troubleshooting"
-description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector. 
-ms.custom: seo-lt-2019
-ms.date: "04/12/2022"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Connector, appendix, EKM"
-ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
+description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector.
 author: Rupp29
 ms.author: arupp
+ms.reviewer: vanto
+ms.date: "04/12/2022"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL Server Connector, appendix, EKM"
 ---
 # SQL Server Connector Maintenance & Troubleshooting
 
@@ -24,10 +22,11 @@ ms.author: arupp
 ### Key Rollover  
   
 > [!IMPORTANT]  
-> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.
-> Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a new key with a new key name must be created.  
-  
- Typically, server asymmetric keys for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers should not use that feature to implement versioning. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector cannot deal with changes in Key Vault key version. To implement key versioning, create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+> - The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit. Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a new key with a new key name must be created.  
+> -  When rotating versions of the key, do not disable the version originally used to encrypt the database. SQL Server will be unable to recover the database as it may get stuck in a 'recovery pending' state and generate a **Crypto Exception** memory dump until the original version is enabled.
+
+
+Typically, server asymmetric keys for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers should not use that feature to implement versioning. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector cannot deal with changes in Key Vault key version. To implement key versioning, create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  For TDE, this is how this would be achieved:  
   

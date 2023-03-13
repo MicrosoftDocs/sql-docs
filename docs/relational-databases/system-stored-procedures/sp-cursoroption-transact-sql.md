@@ -1,29 +1,26 @@
 ---
+title: "sp_cursoroption (Transact-SQL)"
 description: "sp_cursoroption (Transact-SQL)"
-title: "sp_cursoroption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursoroption_TSQL"
-  - "sp_cursoroption"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursoroption"
-ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursoroption_TSQL"
+  - "sp_cursoroption"
+helpviewer_keywords:
+  - "sp_cursoroption"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursoroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets cursor options or returns cursor information created by the sp_cursoropen stored procedure. sp_cursoroption is invoked by specifying ID =8 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,15 +1,12 @@
 ---
+title: "Change Data Capture Service for Oracle by Attunity System Architecture"
 description: "Change Data Capture Service for Oracle by Attunity System Architecture"
-title: "Change Data Capture Service for Oracle by Attunity System Architecture | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Change Data Capture Service for Oracle by Attunity System Architecture
 

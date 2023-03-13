@@ -1,22 +1,17 @@
 ---
-description: "InstanceName Property (ServerNetworkProtocolIPAddress Class)"
 title: "InstanceName Property (ServerNetworkProtocolIPAddress)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "InstanceName Property (ServerNetworkProtocolIPAddress Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "InstanceName property"
-ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
+description: "InstanceName Property (ServerNetworkProtocolIPAddress Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "InstanceName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "InstanceName Property (ServerNetworkProtocolIPAddress Class)"
+apitype: "MOFDef"
 ---
 # InstanceName Property (ServerNetworkProtocolIPAddress Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

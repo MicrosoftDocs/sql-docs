@@ -1,19 +1,15 @@
 ---
+title: "Create CLR Triggers"
 description: "Create CLR Triggers"
-title: "Create CLR Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice:
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CRL triggers"
   - "DML triggers, CLR triggers"
   - "DDL triggers, CLR triggers"
-ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Create CLR Triggers
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

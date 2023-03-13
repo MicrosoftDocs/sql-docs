@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "sys.dm_exec_valid_use_hints management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 ---
 # sys.dm_exec_valid_use_hints (Transact-SQL)
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) supported hint names. It lists one hint name per row.  
   

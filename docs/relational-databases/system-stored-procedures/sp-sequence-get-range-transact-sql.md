@@ -1,23 +1,20 @@
 ---
+title: "sp_sequence_get_range (Transact-SQL)"
 description: "sp_sequence_get_range (Transact-SQL)"
-title: "sp_sequence_get_range (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_sequence_get_range"
-  - "sp_sequence_get_range_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sequence number object, sp_sequence_get_range procedure"
-  - "sp_sequence_get_range"
-ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: markingmyname
 ms.author: maghan
+ms.date: "08/08/2015"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_sequence_get_range"
+  - "sp_sequence_get_range_TSQL"
+helpviewer_keywords:
+  - "sequence number object, sp_sequence_get_range procedure"
+  - "sp_sequence_get_range"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_sequence_get_range (Transact-SQL)
@@ -27,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
  For a more information about sequence numbers, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

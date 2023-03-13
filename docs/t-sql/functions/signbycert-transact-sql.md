@@ -3,12 +3,10 @@ title: "SIGNBYCERT (Transact-SQL)"
 description: "SIGNBYCERT (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SIGNBYCERT"
   - "SIGNBYCERT_TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "certificates [SQL Server], text signing"
   - "SignByCert function"
   - "signing text [SQL Server]"
-  - "SIGNBYCERT function"
   - "cryptography [SQL Server], certificates"
 dev_langs:
   - "TSQL"
@@ -28,7 +25,7 @@ dev_langs:
 
   Signs text with a certificate and returns the signature.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

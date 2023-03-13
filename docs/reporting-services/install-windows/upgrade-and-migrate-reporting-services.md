@@ -1,16 +1,16 @@
 ---
+title: "Upgrade and Migrate Reporting Services"
 description: "Upgrade and Migrate Reporting Services"
-title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 05/06/2021
 ms.service: reporting-services
-helpviewer_keywords: 
+ms.topic: conceptual
+helpviewer_keywords:
   - "SSRS, upgrading"
   - "Reporting Services, upgrades"
   - "SQL Server Reporting Services, upgrading"
   - "upgrading Reporting Services"
-author: maggiesMSFT
-ms.author: maggies
-ms.topic: conceptual
-ms.date: 05/06/2021
 ---
 
 # Upgrade and Migrate Reporting Services
@@ -55,9 +55,9 @@ ms.date: 05/06/2021
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+-   [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+-   [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]  
   
  For more information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the following:  
 
@@ -203,8 +203,8 @@ Cumulative Updates in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.m
   
      If you have a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation integrated with SharePoint 2010, you cannot upgrade in-place the SharePoint server. However you can migrate content databases and service application databases from the SharePoint 2010 farm to a SharePoint 2013/2016 farm.  
   
-### [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] to SQL Server Reporting Services  
- **Starting environment:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+### [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] to SQL Server Reporting Services  
+ **Starting environment:** [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], SharePoint 2010.  
   
  **Ending environment:** SQL Server Reporting Services, SharePoint 2013 or SharePoint 2016.  
  

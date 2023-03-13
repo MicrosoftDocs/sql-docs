@@ -1,17 +1,15 @@
 ---
+title: "Oracle Publisher"
 description: "Oracle Publisher"
-title: "Oracle Publisher | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.selectoraclepublisher.f1"
-ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.selectoraclepublisher.f1"
 ---
 # Oracle Publisher
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

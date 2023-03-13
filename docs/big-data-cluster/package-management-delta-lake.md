@@ -8,8 +8,7 @@ ms.reviewer: wiassaf
 ms.date: 10/06/2021
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: guide
-ms.metadata: seo-lt-2019
+ms.topic: conceptual
 ---
 
 # Delta Lake on SQL Server Big Data Clusters

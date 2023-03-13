@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_pfield
 apitype: "DLLExport"
-ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 ---
 # srv_pfield (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

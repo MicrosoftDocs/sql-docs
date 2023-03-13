@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_15661"
 description: "MSSQLSERVER_15661"
-title: "MSSQLSERVER_15661 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "15661 (Database Engine error)"
-ms.assetid: 88b01bfb-74ce-4aa0-aec0-7885261c7ef3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "15661 (Database Engine error)"
 ---
 # MSSQLSERVER_15661
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

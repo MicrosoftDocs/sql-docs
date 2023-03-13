@@ -1,19 +1,17 @@
 ---
+title: "Initialize a Subscription Manually"
 description: "Initialize a Subscription Manually"
-title: "Initialize a Subscription Manually | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "08/25/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "manual subscription initialization [SQL Server replication]"
   - "subscriptions [SQL Server replication], initializing"
   - "initializing subscriptions [SQL Server replication], without snapshots"
-ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Initialize a Subscription Manually

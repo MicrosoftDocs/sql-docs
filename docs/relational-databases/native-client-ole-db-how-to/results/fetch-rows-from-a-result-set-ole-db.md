@@ -1,17 +1,14 @@
 ---
+title: "Fetch rows from a result set (Native Client OLE DB provider)"
 description: "Fetch rows from a result set (Native Client OLE DB provider)"
-title: "Fetch rows from a result set (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "rows [OLE DB]"
-ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "rows [OLE DB]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch Rows from a Result Set (Native Client OLE DB Provider)

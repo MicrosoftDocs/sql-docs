@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "azure-synapse"
-  - "sqldbrb=1"
+  - azure-synapse
+  - sqldbrb=1
 ---
 # Auditing for Azure SQL Database and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
@@ -39,7 +39,6 @@ You can use SQL Database auditing to:
 
 ### Auditing limitations
 
-- **User managed identity** authentication type for enabling auditing to **storage behind firewall** is not currently supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
 - When you configure the auditing for your [logical server in Azure](logical-servers.md) or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD authentication only and not configured for access key usage, the auditing cannot be configured. <!-- REST API reference: - /rest/api/sql/2021-08-01-preview/server-blob-auditing-policies/create-or-update -->
@@ -84,7 +83,7 @@ An auditing policy can be defined for a specific database or as a default [serve
 
 ## <a id="setup-auditing"></a>Set up auditing for your server
 
-The default auditing policy includes all actions and the following set of action groups, which will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
+The default auditing policy includes the following set of action groups, which will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
   
 - BATCH_COMPLETED_GROUP
 - SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP

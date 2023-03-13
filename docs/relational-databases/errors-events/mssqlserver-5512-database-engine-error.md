@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_5512"
 description: "MSSQLSERVER_5512"
-title: "MSSQLSERVER_5512 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5512 (Database Engine error)"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/25/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5512 (Database Engine error)"
 ---
 # MSSQLSERVER_5512
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

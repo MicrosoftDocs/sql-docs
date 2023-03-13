@@ -1,17 +1,14 @@
 ---
+title: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)"
 description: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)"
-title: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 author: VanMSFT
 ms.author: vanto
+ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current"
 ---
 
@@ -25,7 +22,7 @@ This stored procedure implements the same ledger verification algorithm as [sp_v
 
 For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview)
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax  
   

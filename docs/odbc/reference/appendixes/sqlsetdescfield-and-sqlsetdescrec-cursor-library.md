@@ -1,18 +1,15 @@
 ---
+title: "SQLSetDescField and SQLSetDescRec (Cursor Library)"
 description: "SQLSetDescField and SQLSetDescRec (Cursor Library)"
-title: "SQLSetDescField and SQLSetDescRec (Cursor Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLSetDescField function [ODBC], Cursor Library"
-  - "SQLSetDescRec function [ODBC], Cursor Library"
-ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLSetDescField function [ODBC], Cursor Library"
+  - "SQLSetDescRec function [ODBC], Cursor Library"
 ---
 # SQLSetDescField and SQLSetDescRec (Cursor Library)
 > [!IMPORTANT]  

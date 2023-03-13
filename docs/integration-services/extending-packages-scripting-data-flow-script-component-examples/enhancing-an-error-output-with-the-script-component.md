@@ -1,20 +1,17 @@
 ---
+title: "Enhancing an Error Output with the Script Component"
 description: "Enhancing an Error Output with the Script Component"
-title: "Enhancing an Error Output with the Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "01/04/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transformations [Integration Services], components"
   - "Script component [Integration Services], examples"
   - "error outputs [Integration Services], enhancing"
   - "Script component [Integration Services], transformation components"
-ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-author: chugugrace
-ms.author: chugu
 ---
 # Enhancing an Error Output with the Script Component
 

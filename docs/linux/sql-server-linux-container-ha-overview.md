@@ -5,12 +5,14 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
 ms.date: 05/26/2022
-ms.topic: article
 ms.service: sql
 ms.subservice: linux
+ms.topic: article
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # High availability for SQL Server containers
+
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Create and manage your SQL Server instances natively in Kubernetes.
 

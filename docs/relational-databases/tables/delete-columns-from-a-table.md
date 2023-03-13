@@ -1,20 +1,17 @@
 ---
 title: "Delete columns from a table"
 description: "Delete columns from a table"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "12/15/2021"
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [SQL Server], deleting"
   - "removing columns"
   - "deleting columns"
   - "dropping columns"
-ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "12/15/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete columns from a table
@@ -56,7 +53,7 @@ The following steps explain how to delete columns with Table Designer in SSMS:
 
 ## <a name="TsqlProcedure"></a> Delete columns using Transact-SQL
 
-You can delete columns using Transact-SQL in SSMS, [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), or command-line tools such as the [sqlcmd utility](../../tools/sqlcmd-utility.md).
+You can delete columns using Transact-SQL in SSMS, [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), or command-line tools such as the [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md).
 
 The following example shows you how to delete a column.
 

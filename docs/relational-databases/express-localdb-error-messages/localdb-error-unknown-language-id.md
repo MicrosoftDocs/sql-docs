@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID"
 description: "LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID"
-title: "LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

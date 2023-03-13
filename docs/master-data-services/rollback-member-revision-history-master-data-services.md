@@ -1,15 +1,12 @@
 ---
-description: "Rollback Member Revision History (Master Data Services)"
 title: Rollback Member Revision History
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
+description: "Rollback Member Revision History (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Rollback Member Revision History (Master Data Services)
 

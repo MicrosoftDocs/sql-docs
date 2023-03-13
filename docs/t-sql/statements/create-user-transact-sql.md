@@ -48,9 +48,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   User based on a Windows user that has no login. `CREATE USER [Contoso\Fritz];`    
 -   User based on a Windows group that has no login. `CREATE USER [Contoso\Sales];`  
--   User in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] based on an Azure Active Directory user. `CREATE USER [Fritz@contoso.com] FROM EXTERNAL PROVIDER;`     
+-   User in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] based on an Azure Active Directory user. `CREATE USER [Fritz@contoso.com] FROM EXTERNAL PROVIDER;`     
 
--   Contained database user with password. (Not available in [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
+-   Contained database user with password. (Not available in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   
 **Users based on Windows principals that connect through Windows group logins**  
   
@@ -64,7 +64,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   User based on a certificate. Cannot login but can be granted permissions and can sign modules. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   User based on an asymmetric key. Cannot login but can be granted permissions and can sign modules. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -186,7 +186,7 @@ CREATE USER user_name
  Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* doesn't have a login. When connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the *windows_principal* doesn't have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary). Users based on Active Directory users, are limited to names of fewer than 21 characters.
   
  #### '*Azure_Active_Directory_principal*'  
- **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], Managed Instance, [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+ **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], SQL Managed Instance, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
  Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, an Azure Active Directory group, or an Azure Active Directory application. (Azure Active Directory users can't have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
 
@@ -199,7 +199,7 @@ CREATE USER user_name
 
 - [Azure Active Directory (Azure AD) server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) introduces creating users that are mapped to Azure AD logins in the virtual master database. `CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com]`
 
-- Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups aren't supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+- Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups aren't supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 - DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications. If you had the *Nurses* security group, you would use:  
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
@@ -215,12 +215,12 @@ CREATE USER user_name
  Specifies that the user shouldn't be mapped to an existing login.  
   
 #### CERTIFICATE *cert_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the certificate for which the database user is being created.  
   
 #### ASYMMETRIC KEY *asym_key_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the asymmetric key for which the database user is being created.  
   
@@ -346,7 +346,7 @@ When creating the user in the Azure SQL database, the *login_name* must correspo
   
  When using contained database users on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure access using a database-level firewall rule, instead of a server-level firewall rule. For more information, see [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] contained database users, SSMS can support Multi-Factor Authentication. For more information, see [SSMS support for Azure AD MFA with SQL Database and [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/azure-sql/database/authentication-mfa-ssms-overview).  
+For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] contained database users, SSMS can support Multi-Factor Authentication. For more information, see [SSMS support for Azure AD MFA with SQL Database and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/azure-sql/database/authentication-mfa-ssms-overview).  
   
 ### Permissions  
  Requires ALTER ANY USER permission on the database.  
@@ -360,7 +360,7 @@ For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
-Change to a user database. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the `USE AdventureWorks2012` statement. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you must make a new connection to the user database.
+Change to a user database. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the `USE AdventureWorks2012` statement. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you must make a new connection to the user database.
 
 ```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  
@@ -382,7 +382,7 @@ GO
 ### C. Creating a database user from a certificate  
  The following example creates a database user `JinghaoLiu` from certificate `CarnationProduction50`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 ```sql  
 USE AdventureWorks2012;  

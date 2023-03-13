@@ -1,19 +1,17 @@
 ---
 title: "Optimized plan forcing with Query Store"
 description: Learn about optimized plan forcing and optimization replay scripts in Query Store.
-ms.custom:
-- event-tier1-build-2022
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: wiassaf
 ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Store"
 dev_langs:
- - "TSQL"
-author: thesqlsith
-ms.author: derekw 
-ms.reviewer: wiassaf
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 

@@ -1,28 +1,27 @@
 ---
-title: Database Level Customer-managed transparent data encryption (TDE)
+title: Database level customer-managed transparent data encryption (TDE)
 titleSuffix: Azure SQL Database
-description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for SQL Database at a database level granularity. TDE with BYOK overview, benefits, how it works, considerations, and recommendations.
+description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for Azure SQL Database at a database level granularity
 author: strehan1993
-ms.author: mireks, strehan
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 03/11/2022
-ms.service: sql-db
+ms.author: strehan
+ms.reviewer:
+ms.date: 03/31/2023
+ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Azure SQL transparent data encryption with customer-managed key at the database level
+# Transparent data encryption with customer-managed keys at the database level
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!NOTE]
 > Database Level CMK is in public preview.
-
-> [!NOTE]
+>
 > This preview feature is available for Azure SQL Database (all SQL DB editions). It is not available for Managed Instance, SQL Server 2022 on-premises, Azure VMs and Dedicated SQL Pools (formerly SQL DW).
 
-Azure SQL today offers encryption at rest capability to customers through [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) with [customer-managed key (CMK)](/azure-sql/database/transparent-data-encryption-byok-overview.md) that enables Bring Your Own Key (BYOK) scenario for data protection at rest wherein the TDE Protector, or the Encryption Key stored in Azure Key Vault which encrypts the Database Encryption Keys, is set at the server level, and is inherited by all encrypted databases associated with that server. This new feature allows setting the TDE Protector as a customer-managed key individually for each database within the server. Any Microsoft.Sql/servers/databases resource with a valid, non-empty encryptionProtector property is configured with database level customer-managed keys.
+Azure SQL today offers encryption at rest capability to customers through [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) with [customer-managed key (CMK)](transparent-data-encryption-byok-overview.md) that enables Bring Your Own Key (BYOK) scenario for data protection at rest wherein the TDE Protector, or the Encryption Key stored in Azure Key Vault which encrypts the Database Encryption Keys, is set at the server level, and is inherited by all encrypted databases associated with that server. This new feature allows setting the TDE Protector as a customer-managed key individually for each database within the server. Any Microsoft.Sql/servers/databases resource with a valid, non-empty encryptionProtector property is configured with database level customer-managed keys.
 
 In this scenario, an asymmetric key which is stored in a customer-owned and customer-managed [Azure Key Vault (AKV)](/azure/key-vault/general/security-features), a cloud-based external key management system can be used individually for each database within a server to encrypt the Database Encryption Key (DEK), called TDE protector. There is an option to add keys, remove keys and change the User Assigned Managed identity for each database. For more information on identities, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
 
@@ -45,7 +44,7 @@ The diagram below summarizes the new functionality indicated above. It presents 
 
 ![Setup and functioning of the customer-managed TDE at the database level](./media/transparent-data-encryption-byok-database-level-overview/customer-managed-tde-at-the-database-level.PNG)
 
-For more information on cross-tenant identity configuration see the server level document [Cross-tenant customer managed keys with transparent data encryption](/azure-sql/database/transparent-data-encryption-byok-cross-tenant.md).
+For more information on cross-tenant identity configuration see the server level document [Cross-tenant customer managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md).
 
 ## Supported Key Management Scenarios
 
@@ -95,7 +94,7 @@ Database1 is configured with a database level customer-managed key while the ser
 
 ### Key Vault and Managed identity
 
-All requirements to configure Azure Key Vault (AKV) keys and Managed Identities including key settings and permissions granted to the identity covered in the server level customer-managed key feature apply to database level CMK. For more details refer [Transparent Data Encryption (TDE) with BYOK](/azure-sql/database/transparent-data-encryption-byok-overview.md) and [Managed Identities with CMK](/azure-sql/database/transparent-data-encryption-byok-identity.md)
+All requirements to configure Azure Key Vault (AKV) keys and Managed Identities including key settings and permissions granted to the identity covered in the server level customer-managed key feature apply to database level CMK. For more details refer [Transparent Data Encryption (TDE) with BYOK](transparent-data-encryption-byok-overview.md) and [Managed Identities with CMK](transparent-data-encryption-byok-identity.md)
 
 ### Additional Considerations
 
@@ -120,12 +119,12 @@ In order for the Azure SQL database to use TDE protector stored in AKV for encry
 
 - **unwrapKey** - to be able to unprotect (decrypt) DEK
 
-[Cross-tenant customer managed keys with transparent data encryption](/azure-sql/database/transparent-data-encryption-byok-cross-tenant.md) describes how to setup a federated client id for server level CMK. Similar setup needs to be done for database level CMK and the federated client id must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [Net-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
+[Cross-tenant customer managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md) describes how to setup a federated client id for server level CMK. Similar setup needs to be done for database level CMK and the federated client id must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [Net-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
 
 A database configured with database level CMK can be reverted to server level encryption if the server is configured with Microsoft managed key using
 [Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevert](/powershell/module/az.sql/invoke-azsqldatabasetransparentdataencryptionprotectorrevert).
 
-In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with BYOK](/azure-sql/database/transparent-data-encryption-byok-overview.md), once the key access has been corrected, [Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevalidation](/powershell/module/az.sql/invoke-azsqldatabasetransparentdataencryptionprotectorrevalidation) can be used to make the database accessible.
+In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with BYOK](transparent-data-encryption-byok-overview.md), once the key access has been corrected, [Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevalidation](/powershell/module/az.sql/invoke-azsqldatabasetransparentdataencryptionprotectorrevalidation) can be used to make the database accessible.
 
 > [!NOTE]
 > [**Database level CMK Identity and Key Management**](transparent-data-encryption-byok-database-level-basic-actions.md) describes the identity and key management operations for database level CMK in detail along with Powershell, CLI and REST API examples.
@@ -139,9 +138,9 @@ New databases can be configured with database level CMK during creation and exis
 
 ### Database configured with server level CMK without Geo Replication
 
-1. Use the [sys.dm_db_log_info (Transact-SQL) - SQL Server](/docs/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) for your database and look for VLFs which are active.
+1. Use the [sys.dm_db_log_info (Transact-SQL) - SQL Server](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql) for your database and look for VLFs which are active.
 2. For all active VLFs note down the vlf_encryptor_thumbprint from the above DMV result.
-3. The use the  [sys.dm_database_encryption_keys (Transact-SQL) - SQL Server](/docs/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) for your database to check for encryptor_thumbprint. Note down this encryptor thumbprint.
+3. The use the  [sys.dm_database_encryption_keys (Transact-SQL) - SQL Server](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) for your database to check for encryptor_thumbprint. Note down this encryptor thumbprint.
 4. Use the [Get-AzSqlServerKeyVaultKey](/powershell/module/az.sql/get-azsqlserverkeyvaultkey) cmdlet to get all the server level keys configured on the server. From these pick the ones which have the same thumbprint that matches your list from above result.
 5. Make an update database API call to the database which you want to migrate and along with the identity and encryption protector pass the above keys as database level keys using [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) using -UserAssignedIdentityId, -AssignIdentity, -KeyList and -EncryptionProtector (and -FederatedClientId) parameters.
 
@@ -182,7 +181,7 @@ In order to use a database configured with database level CMK in a failover grou
 > [**Geo Replication with and Backup Restore with Database level CMK**](transparent-data-encryption-byok-database-level-geo-replication-restore.md) describes how to setup geo replication and failover groups using REST APIs, Powershell and CLI.
 
 > [!NOTE]
-> All the best practices regarding geo replication and high availability highlighted in [**Transparent Data Encryption (TDE) with BYOK**](/azure-sql/database/transparent-data-encryption-byok-overview.md) for server level CMK apply to database level CMK.
+> All the best practices regarding geo replication and high availability highlighted in [**Transparent Data Encryption (TDE) with BYOK**](transparent-data-encryption-byok-overview.md) for server level CMK apply to database level CMK.
 
 ## Database backup and restore with customer-managed TDE at the database level
 

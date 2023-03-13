@@ -1,28 +1,27 @@
 ---
-title: Database Level Customer-managed transparent data encryption (TDE)
+title: Identity and key management for database level customer-managed keys with TDE
 titleSuffix: Azure SQL Database
-description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for SQL Database at a database level granularity. TDE with BYOK overview, benefits, how it works, considerations, and recommendations.
+description: How-to guide on creating, updating, and utilizing database level customer-managed keys with transparent data encryption (TDE) in Azure SQL Database
 author: strehan1993
-ms.author: mireks, strehan
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 03/11/2022
-ms.service: sql-db
+ms.author: strehan
+ms.reviewer:
+ms.date: 03/31/2023
+ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Azure SQL Database Identity and Key Management for database level customer-managed keys
+# Identity and key management for database level customer-managed keys with TDE
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!NOTE]
 > Database Level CMK is in public preview.
-
-> [!NOTE]
+>
 > This preview feature is available for Azure SQL Database (all SQL DB editions). It is not available for Managed Instance, SQL Server 2022 on-premises, Azure VMs and Dedicated SQL Pools (formerly SQL DW).
 
-In this guide, we'll go through the steps to create, update and retrieve an Azure SQL Database with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal) that is in an Azure Active Directory (Azure AD) that is distinct from the Azure SQL logical server tenant. For more information, see [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md).
+In this guide, we'll go through the steps to create, update, and retrieve an Azure SQL Database with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal) that is in an Azure Active Directory (Azure AD) that is distinct from the Azure SQL logical server tenant. For more information, see [Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md).
 
 > [!NOTE]
 > The same guide can be applied to configure database level customer-managed keys in the same tenant by excluding the federated client id parameter.
@@ -198,6 +197,8 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ```
 
+---
+
 ## Update an existing Azure SQL Database with database level customer-managed keys
 
 This guide will walk you through the process of updating an existing database on Azure SQL with a user-assigned managed identity, as well as how to set a cross-tenant customer managed key at the database level. The user-assigned managed identity is a must for setting up a customer-managed key for transparent data encryption during the database creation phase.
@@ -359,6 +360,8 @@ An example of the encryption_protector and keys_to_add parameter is:
 > [!IMPORTANT]
 > To remove a key from the database, the keys dictionary value of a particular key must be passed as null, e.g. "https://yourvault.vault.azure.net/keys/yourkey1/fd021f84a0d94d43b8ef33154bca0000": null.
 
+---
+
 ## View the database level customer-managed key settings on an Azure SQL Database
 
 This guide will walk you through the process of retrieving the database level customer-managed keys for a database. The ARM resource Microsoft.Sql/servers/databases by default only shows the TDE protector and managed identity configured on the database, to expand the full list of keys additional parameters e.g. -ExpandKeyList are needed. Additionally, filters such as -KeysFilter "current" and a point in time value e.g. "2023-01-01" can be used to retrieve the current keys used and keys used in the past at a specific point in time respectively.
@@ -418,7 +421,7 @@ Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName
 Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter '2023-02-03 00:00:00'
 ```
 
-# [REST API](#tab/arm-template)
+# [REST API](#tab/rest-api)
 
 Use the 2022-08-01-preview REST API for Azure SQL Database.
 
@@ -446,9 +449,11 @@ Retrieve the basic database level customer-managed key settings from a database 
 GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview$expand=keys($filter=pointInTime('2023-02-04T01:57:42.49Z'))
 ```
 
+---
+
 ## Revalidate the database level customer-managed key on an Azure SQL Database
 
-In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with BYOK](/azure-sql/database/transparent-data-encryption-byok-overview.md), once the key access has been corrected, revalidate key operation can be used make the database accessible. This guide covers this in depth.
+In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with BYOK](transparent-data-encryption-byok-overview.md), once the key access has been corrected, revalidate key operation can be used make the database accessible. This guide covers this in depth.
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -471,13 +476,15 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevalidation -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName>
 ```
 
-# [REST API](#tab/arm-template)
+# [REST API](#tab/rest-api)
 
 Use the 2022-08-01-preview REST API for Azure SQL Database.
 
 ```rest
 POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/current/revalidate?api-version=2022-08-01-preview
 ```
+
+---
 
 ## Revert the database level customer-managed key on an Azure SQL Database
 
@@ -504,13 +511,15 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevert -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName>
 ```
 
-# [REST API](#tab/arm-template)
+# [REST API](#tab/rest-api)
 
 Use the 2022-08-01-preview REST API for Azure SQL Database.
 
 ```rest
 POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/current/revert?api-version=2022-08-01-preview
 ```
+
+---
 
 ## Next steps
 

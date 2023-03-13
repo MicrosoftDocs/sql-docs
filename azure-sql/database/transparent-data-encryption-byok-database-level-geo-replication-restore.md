@@ -1,25 +1,24 @@
 ---
-title: Database Level Customer-managed transparent data encryption (TDE)
+title: Configure geo replication with database level customer-managed keys with transparent data encryption (TDE)
 titleSuffix: Azure SQL Database
-description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for SQL Database at a database level granularity. TDE with BYOK overview, benefits, how it works, considerations, and recommendations.
+description: How-to guide for configuring geo replication with database level customer-managed keys with transparent data encryption (TDE) for Azure SQL Database
 author: strehan1993
-ms.author: mireks, strehan
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 03/11/2022
-ms.service: sql-db
+ms.author: strehan
+ms.reviewer:
+ms.date: 03/31/2023
+ms.service: sql-database
 ms.subservice: security
-ms.topic: conceptual
+ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
-# Azure SQL Database Identity and Key Management for database level customer-managed keys
+# Configure geo replication with database level customer-managed keys with transparent data encryption
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!NOTE]
 > Database Level CMK is in public preview.
-
-> [!NOTE]
+>
 > This preview feature is available for Azure SQL Database (all SQL DB editions). It is not available for Managed Instance, SQL Server 2022 on-premises, Azure VMs and Dedicated SQL Pools (formerly SQL DW).
 
 In this guide, we'll go through the steps to configure geo replication and restore an Azure SQL Database which is configured with transparent data encryption (TDE) and customer-managed keys (CMK) at the database level, utilizing a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal) that is in an Azure Active Directory (Azure AD) that the same as the Azure SQL database tenant. This guide presupposes that you have an Azure SQL Database configured with customer-managed keys at the database level which is the source database for these operations.
@@ -102,7 +101,7 @@ For more information and ARM templates, see [Azure Resource Manager templates fo
 
 Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/Microsoft.Template), and **Build your own template in the editor**. Next, **Save** the configuration once you pasted in the example.
 
-- Pre-populate the list of current keys in use by the primary database using the following REST API request
+- Pre-populate the list of current keys in use by the primary database using the following REST API request:
 
 ```rest
 GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime(‘current’))
@@ -255,6 +254,8 @@ An example of the encryption_protector and keys_to_add parameter is:
 }
 ```
 
+---
+
 ## Restore an Azure SQL Database with database level customer-managed keys
 
 This guide will walk you through the steps to restore an Azure SQL database configured with database level customer-managed keys. A user-assigned managed identity is a must for setting up a customer-managed key for transparent data encryption during the database creation phase.
@@ -303,6 +304,8 @@ $database = Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName
 # Create a restored database
 Restore-AzSqlDatabase -FromPointInTimeBackup -PointInTime <Timestamp> -ResourceId '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}' -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
 ```
+
+---
 
 ## Dropped database restore
 
@@ -354,6 +357,8 @@ $database = Get-AzSqlDeletedDatabaseBackup -ResourceGroupName <ResourceGroupName
 # Create a restored database
 Restore-AzSqlDatabase -FromDeletedDatabaseBackup -DeletionDate <Timestamp> -ResourceId '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/restorableDroppedDatabases/{databaseName}' -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
 ```
+
+---
 
 ## Geo restore
 
@@ -408,6 +413,8 @@ Restore-AzSqlDatabase -FromGeoBackup -ResourceId "/subscriptions/{subscriptionId
 
 > [!NOTE]
 > The ARM template highlighted in the Geo Replication section can be referenced to restore the database with an ARM template by changing the createMode parameter.
+
+---
 
 ## Next steps
 

@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 03/14/2023
+ms.date: 03/13/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -27,7 +27,7 @@ SSMS 19.0.2 is the latest general availability (GA) release of SSMS. If you need
 
 - Release number: 19.0.2
 - Build number: 19.0.20209.0
-- Release date: March 14, 2023
+- Release date: March 13, 2023
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2226343&clcid=0x40a) |
 

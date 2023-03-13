@@ -141,8 +141,9 @@ FROM <backup_device>
 |**KeyAlgorithm**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The encryption algorithm used to encrypt the backup. NO_Encryption indicates that the backup was not encrypted. When the correct value cannot be determined the value should be NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The thumbprint of the encryptor which can be used to find certificate or the asymmetric key in the database. When the backup was not encrypted, this value is NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The type of encryptor used: Certificate or Asymmetric Key. When the backup was not encrypted, this value is NULL.|
-|**LastValidRestoreTime**|**datetime**|**Applies beginning with**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. The last valid restore time.|
-|**TimeZone**|**nvarchar(32)**|**Applies beginning with**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. The time zone of the server from which the backup was taken.|
+|**LastValidRestoreTime**|**datetime**|**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions. The last valid restore time.|
+
+|**TimeZone**|**nvarchar(32)**|**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions. The time zone of the server from which the backup was taken.|
 |**CompressionAlgorithm**|**nvarchar(32)**|**Applies beginning with**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Identifies the compression algorithm used to compress the backup file. Default is MS_XPRESS. See [BACKUP (Transact-SQL)](backup-transact-sql.md#compression).|
   
 > [!NOTE]  

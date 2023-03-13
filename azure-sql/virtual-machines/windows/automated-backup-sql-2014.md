@@ -42,7 +42,7 @@ To use Automated Backup, consider the following prerequisites:
 **Database configuration**:
 
 - Target _user_ databases must use the full recovery model. System databases do not have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
-- The SQL Server VM has been registered with the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md) and the **automated backup** feature is enabled. Since automated backup relies on the extension, automated backup is only supported on target databases from the default instance, or a single named instance. If there is no default instance, and multiple named instances, the SQL IaaS Agent extension fails and automated backup won't work. 
+- The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **automated backup** feature is enabled. Since automated backup relies on the extension, automated backup is only supported on target databases from the default instance, or a single named instance. If there is no default instance, and multiple named instances, the SQL IaaS Agent extension fails and automated backup won't work. 
 
 ## Settings
 

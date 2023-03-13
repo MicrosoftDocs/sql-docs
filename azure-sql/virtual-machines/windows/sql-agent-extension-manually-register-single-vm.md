@@ -31,7 +31,7 @@ This article teaches you to register a single SQL Server VM with the SQL IaaS Ag
 
 Registering with the [SQL Server IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) creates the [**SQL virtual machine** _resource_](manage-sql-vm-portal.md) within your subscription, which is a _separate_ resource from the virtual machine resource. Unregistering your SQL Server VM from the extension removes the **SQL virtual machine** _resource_ but won't drop the actual virtual machine.
 
-Deploying a SQL Server VM Azure Marketplace image through the Azure portal automatically registers the SQL Server VM with the extension. However, if you choose to self-install SQL Server on an Azure virtual machine, or provision an Azure virtual machine from a custom VHD, then you must register your SQL Server VM with the SQL IaaS Agent extension to unlock full feature benefits and manageability. By default, Azure VMs that have SQL Server 2016 or later installed will be automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server).  See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information. For information about privacy, see the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
+Deploying a SQL Server VM Azure Marketplace image through the Azure portal automatically registers the SQL Server VM with the extension. However, if you choose to self-install SQL Server on an Azure virtual machine, or provision an Azure virtual machine from a custom VHD, then you must register your SQL Server VM with the SQL IaaS Agent extension to unlock full feature benefits and manageability. By default, Azure VMs that have SQL Server 2016 or later installed will be automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server).  See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information. For information about privacy, see the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
 
 To utilize the SQL IaaS Agent extension, you must first [register your subscription with the **Microsoft.SqlVirtualMachine** provider](#register-subscription-with-rp), which gives the SQL IaaS Agent extension the ability to create resources within that specific subscription. Then you can register your SQL Server VM with the extension. 
 
@@ -114,7 +114,7 @@ az sql vm create --name <vm_name> --resource-group <resource_group_name> --locat
 
 ### [Azure portal](#tab/azure-portal)
 
-It's not currently possible to register your SQL Server VM with the SQL IaaS agent extension by using the Azure portal. 
+It's not currently possible to register your SQL Server VM with the SQL IaaS Agent extension by using the Azure portal. 
 
 ---
 
@@ -238,7 +238,7 @@ az sql vm delete
 - Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
 - [Automatically register all VMs in a subscription](sql-agent-extension-automatic-registration-all-vms.md).
 - [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
-- Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
+- Review the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
 - Review the [best practices checklist](performance-guidelines-best-practices-checklist.md) to optimize for performance and security. 
 
 To learn more, review the following articles:

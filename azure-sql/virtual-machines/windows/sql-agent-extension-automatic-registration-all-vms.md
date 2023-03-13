@@ -13,7 +13,7 @@ tags: azure-service-management
 # Automatic registration with SQL IaaS Agent extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-By default, Azure VMs with SQL Server 2016 or later are automatically registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) when detected by the CEIP service. You can enable the automatic registration feature for your subscription to easily and automatically register any SQL Server VMs not picked up by the CEIP service, such as older versions of SQL Server. 
+By default, Azure VMs with SQL Server 2016 or later are automatically registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). You can enable the automatic registration feature for your subscription to easily and automatically register any SQL Server VMs not picked up by the CEIP service, such as older versions of SQL Server. 
 
 This article teaches you to enable the automatic registration feature. Alternatively, you can [register a single VM](sql-agent-extension-manually-register-single-vm.md), or [register your VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md) with the SQL IaaS Agent extension. 
 
@@ -32,7 +32,7 @@ Automatic registration offers limited functionality of the extension, such as li
 > [!CAUTION]
 > If the SQL Server hive is not present in the registry, removing the binaries might be impacted if there are [resource locks](/azure/governance/blueprints/concepts/resource-locking#locking-modes-and-states) in place. 
 
-For information about privacy, see the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
+For information about privacy, see the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency). 
 
 ## Integration with centrally managed Azure Hybrid Benefit
 
@@ -52,7 +52,7 @@ To mitigate this risk, adjust your license assignments in CM-AHB to account for 
 
 ## Prerequisites
 
-To enable automatic register of your SQL Server VM with the extension, you'll need: 
+To enable automatic registration of your SQL Server VM with the extension, you'll need: 
 
 - An [Azure subscription](https://azure.microsoft.com/free/). 
 - The client credentials used to register the virtual machines to exist in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**. 
@@ -128,7 +128,7 @@ Failed registration errors are stored in `RegistrationErrors.csv` located in the
 - Review the benefits provided by the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md).
 - [Manually register a single VM](sql-agent-extension-manually-register-single-vm.md)
 - [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
-- Review the [SQL IaaS agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
+- Review the [SQL IaaS Agent extension privacy statements](sql-server-iaas-agent-extension-automate-management.md#in-region-data-residency).
 - Review the [best practices checklist](performance-guidelines-best-practices-checklist.md) to optimize for performance and security. 
 
 For more information, review the following articles:

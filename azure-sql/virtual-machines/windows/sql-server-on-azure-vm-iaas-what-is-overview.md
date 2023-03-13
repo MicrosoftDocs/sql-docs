@@ -31,7 +31,7 @@ Azure virtual machines run in many different [geographic regions](https://azure.
 
 ## Feature benefits
 
-When you register your SQL Server on Azure VM with the [SQL IaaS agent extension](sql-server-iaas-agent-extension-automate-management.md) you unlock a number of feature benefits. Registering with the extension is completely free. 
+When you register your SQL Server on Azure VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) you unlock a number of feature benefits. Registering with the extension is completely free. 
 
 The following table details the benefits unlocked by the extension: 
 

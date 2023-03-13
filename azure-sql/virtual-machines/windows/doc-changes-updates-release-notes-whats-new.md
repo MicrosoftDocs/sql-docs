@@ -24,7 +24,7 @@ For updates made in previous years, see the [What's new archive](doc-changes-upd
 
 | Changes | Details |
 | --- | --- |
-| **Removed extension management modes** | The architecture for the SQL IaaS agent extension has been updated to remove management modes. All newly deployed SQL Server VMs are registered with the extension by using the same default configuration and least privileged security model. To learn more, review [Management modes](sql-server-iaas-agent-extension-automate-management.md#management-modes). |
+| **Removed extension management modes** | The architecture for the SQL IaaS Agent extension has been updated to remove management modes. All newly deployed SQL Server VMs are registered with the extension by using the same default configuration and least privileged security model. To learn more, review [Management modes](sql-server-iaas-agent-extension-automate-management.md#management-modes). |
 
 ## February 2023 
 

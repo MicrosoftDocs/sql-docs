@@ -79,7 +79,7 @@ The following table details the benefits available through the SQL IaaS agent ex
 
 ## Permissions models
 
-There are two permission models for the SQL Server IaaS agent extension - either full sysadmin rights, or the principle of least privilege. The least privileged permission model grants the minimum permissions required for each feature that you enable. Each feature that you use is assigned a custom role, and the custom role is only granted permissions that are required to perform actions related to the feature. 
+There are two permission models for the SQL Server IaaS Agent extension - either full sysadmin rights, or the principle of least privilege. The least privileged permission model grants the minimum permissions required for each feature that you enable. Each feature that you use is assigned a custom role in SQL Server, and the custom role is only granted permissions that are required to perform actions related to the feature. 
 
 The principle of least privilege model is enabled by default for SQL Server VMs deployed via Azure Marketplace after October 2022. Existing SQL Server VMs deployed prior to this date, or VMs with self-installed SQL Server instances, use the sysadmin model by default and can enable the least privileged permissions model in the Azure portal. 
 
@@ -107,11 +107,11 @@ The following table defines the permissions and custom roles used by each featur
 
 ## Installation
 
-When you register your SQL Server VM with the SQL IaaS agent extension, binaries are copied to the VM. Once you enable a feature that relies on it, the SQL IaaS agent extension is installed to the VM and has access to SQL Server. By default, the agent follows the model of least privilege, and only has permissions within SQL Server that are associated with the features that you enable - unless you manually installed SQL Server to the VM yourself, or deployed a SQL Server image from the marketplace prior to October 2022, in which case the agent has sysadmin rights within SQL Server. 
+When you register your SQL Server VM with the SQL IaaS Agent extension, binaries are copied to the VM. Once you enable a feature that relies on it, the SQL IaaS Agent extension is installed to the VM and has access to SQL Server. By default, the agent follows the model of least privilege, and only has permissions within SQL Server that are associated with the features that you enable - unless you manually installed SQL Server to the VM yourself, or deployed a SQL Server image from the marketplace prior to October 2022, in which case the agent has sysadmin rights within SQL Server. 
 
 Deploying a SQL Server VM Azure Marketplace image through the Azure portal automatically registers the SQL Server VM with the extension. However, if you choose to self-install SQL Server on an Azure virtual machine, or provision an Azure virtual machine from a custom VHD, then you must register your SQL Server VM with the SQL IaaS Agent extension to unlock feature benefits. By default, self-installed Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). SQL Server VMs not detected by the CEIP should be manually registered. 
 
-When you register with the SQL IaaS agent extension, two services run on the virtual machine: 
+When you register with the SQL IaaS Agent extension, binaries are copied to the virtual machine, but the agent is not installed by default. The agent will only be installed when you enable one of the [features](#feature-benefits) that require it, and the following two services will then run on the virtual machine: 
 
 - **Microsoft SQL Server IaaS agent** is the main service for the SQL IaaS agent extension and should run under the **Local System** account. 
 - **Microsoft SQL Server IaaS Query Service** is a helper service that helps the extension run queries within SQL Server and should run under the **NT Service** account `NT Service\SqlIaaSExtensionQuery`. 
@@ -126,7 +126,7 @@ Registering your SQL Server VM with the SQL Server IaaS Agent extension creates 
 
 ### Multiple instance support
 
-The SQL IaaS agent extension only works on virtual machines with multiple instances if there is a default instance. When you register your virtual machine with the SQL IaaS Agent extension, it registers the default instance, and that's the instance you'll be able to manage from the Azure portal. 
+The SQL IaaS Agent extension only works on virtual machines with multiple instances if there is a default instance. When you register your virtual machine with the SQL IaaS Agent extension, it registers the default instance, and that's the instance you'll be able to manage from the Azure portal. 
 
 The SQL IaaS Agent extension does not support virtual machines with multiple named instances if there is no default instance. 
 

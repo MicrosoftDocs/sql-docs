@@ -203,9 +203,9 @@ After you've configured the failover cluster and all cluster components, includi
 
 ## Register with SQL IaaS Agent extension 
 
-To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) with [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
+To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Note that only [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) will be available on SQL VMs that have failover clustered instances of SQL Server (FCIs).
 
-If your SQL Server VM has already been registered with the SQL IaaS agent extension and you've enabled any features that require the agent, you'll need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the extension and register it again after your FCI is installed. 
+If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the extension and register it again after your FCI is installed. 
 
 
 Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
@@ -226,7 +226,7 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 ## Limitations
 
 - Azure virtual machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on CSVs and a [standard load balancer](/azure/load-balancer/load-balancer-overview). MSDTC is not supported on Windows Server 2016 and earlier. 
-- Due to limited functionality, SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. 
+- SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
 
 
 ## Next steps

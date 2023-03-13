@@ -160,11 +160,11 @@ Consider the following limitations for failover cluster instances with SQL Serve
 
 ### Limited extension support
 
-At this time, SQL Server failover cluster instances on Azure virtual machines registered with the SQL IaaS agent extension only support a limited number of features. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
+At this time, SQL Server failover cluster instances on Azure virtual machines registered with the SQL IaaS Agent extension only support a limited number of features. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
 
 If your SQL Server VM has already been registered with the SQL IaaS agent extension and you've enabled any features that require the agent, you'll need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) from the extension by deleting the **SQL virtual machine** resource for the corresponding VMs and then register it with the SQL IaaS Agent extension again. When you're deleting the **SQL virtual machine** resource by using the Azure portal, clear the check box next to the correct virtual machine to avoid deleting the virtual machine. 
 
-Due to limited functionality, SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. 
+SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. See the [table of benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
 
 ### MSDTC 
 

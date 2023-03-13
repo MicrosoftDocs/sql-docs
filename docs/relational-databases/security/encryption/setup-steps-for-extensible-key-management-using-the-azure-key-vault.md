@@ -4,7 +4,7 @@ description: Install and configure the SQL Server Connector for Azure Key Vault.
 author: Rupp29
 ms.author: arupp
 ms.reviewer: vanto, randolphwest
-ms.date: 01/26/2023
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -453,7 +453,7 @@ For a note about the minimum permission levels needed for each action in this se
 
 1. Open your Azure key vault key in your SQL Server instance.
 
-   Whether you created a new key or imported an asymmetric key, as described in [Step 2: Create a key vault](#step-2-create-a-key-vault), you will need to open the key. Open it by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.
+   Whether you created a new key or imported an asymmetric key, as described in [Step 2: Create a key vault](#step-2-create-a-key-vault), you need to open the key. Open it by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.
 
      > [!IMPORTANT]  
      > Be sure to first complete the Registry prerequisites for this step.
@@ -586,6 +586,36 @@ If the credential has a client secret that is about to expire, a new secret can 
 
 > [!NOTE]  
 > If you are using EKM in an availability group (AG), you will need to alter the credential and restart the SQL Server service on all nodes of the AG.
+
+## Rotate asymmetric key with a new AKV key or a new AKV key version
+
+SQL Server doesn't have a mechanism to automatically rotate the certificate or asymmetric key used for TDE. The steps to rotate an asymmetric key manually are as follows.
+
+1. Create NEW_ASYMMETRIC_KEY pointing to same AKV key (points to most recent valid key version) or a new AKV key.
+1. Create a new login from the new asymmetric key:
+
+   ```sql
+   CREATE LOGIN TDE_LOGIN_NEW FROM ASYMMETRIC KEY NEW_ASYMMETRIC_KEY;
+   ```
+
+1. Map AKV credential to the new login:
+
+   ```sql
+   ALTER LOGIN TDE_LOGIN_NEW;
+   ADD CREDENTIAL AKV_Credential;
+   ```
+
+1. Alter the database encryption key (DEK) to re-encrypt with the new asymmetric key:
+
+   ```sql
+   ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY NEW_ASYMMETRIC_KEY;
+   ```
+
+> [!NOTE]  
+> Rotating the logical TDE protector for a server means switching to a new asymmetric key or certificate that protects the database encryption key (DEK). Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the DEK, not the entire database.
+
+> [!IMPORTANT]  
+> Don't delete previous versions of the key after rotation. When keys are rotated, some data is still encrypted with the previous keys, such as older database backups, backed-up log files, and transaction log files.
 
 ## Next steps
 

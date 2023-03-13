@@ -197,7 +197,7 @@ After you've configured the failover cluster and all cluster components, includi
 
 To manage your SQL Server VM from the portal, register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Note that only [limited functionality](sql-server-iaas-agent-extension-automate-management.md#feature-benefits) will be available on SQL VMs that have failover clustered instances of SQL Server (FCIs).
 
-If your SQL Server VM has already been registered with the SQL IaaS agent extension and you've enabled any features that require the agent, you'll need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the extension and register it again after your FCI is installed. 
+If your SQL Server VM has already been registered with the SQL IaaS Agent extension and you've enabled any features that require the agent, you'll need to [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the extension and register it again after your FCI is installed. 
 
 Register a SQL Server VM with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 

@@ -295,7 +295,7 @@ sections:
                 
       - question: | 
            What permissions does the SQL Server IaaS agent extension use? 
-        answer: October 2022 introduced the least privilege permissions model for the extension, granting minimal permissions necessary for each feature used by the extension. SQL Server VMs deployed after October 2022 via Azure Marketplace have the least privilege permissions model enabled by default. The extension uses sysadmin rights for SQL Server VMs that were deployed prior to October 2022, or self-installed SQL Server VMs, that have not manually enabled the least privilege model in the Azure portal. Review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) to learn more. 
+        answer: October 2022 introduced the least privilege permissions model for the extension, granting minimal permissions necessary for each feature used by the extension. SQL Server VMs deployed after October 2022 via Azure Marketplace have the least privilege permissions model enabled by default. The extension uses sysadmin rights for SQL Server VMs that were deployed prior to October 2022, or self-installed SQL Server VMs, that have not manually enabled the least privilege model in the Azure portal. Review [SQL IaaS Agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions-models) to learn more. 
       
       - question: |
           Will registering with the SQL IaaS Agent extension restart SQL Server on my VM?
@@ -314,7 +314,7 @@ sections:
         answer: |
               Yes. If you deployed SQL Server from your own media, and installed the SQL IaaS Agent extension you can register your SQL Server VM with the extension to get the manageability benefits provided by the SQL IaaS Agent extension.    
       - question: |
-          Is it possible to repair the SQL IaaS agent extension? 
+          Is it possible to repair the SQL IaaS Agent extension? 
         answer: |
               Yes. Navigate to the **SQL virtual machines** resource for your SQL Server VM, and choose **Repair** under **Support & troubleshooting** to open the [repair](sql-agent-extension-manually-register-single-vm.md#repair-extension) page and repair the extension. 
 
@@ -374,7 +374,7 @@ sections:
       
       - question: |
           Is the extension necessary to receive Extended Security Updates (ESU)?
-        answer: No. [Extended Security Updates (ESU)](/sql/sql-server/end-of-support/sql-server-extended-security-updates) are applied automatically to the VM whether or not your SQL Server VM has registered with the SQL IaaS agent extension. 
+        answer: No. [Extended Security Updates (ESU)](/sql/sql-server/end-of-support/sql-server-extended-security-updates) are applied automatically to the VM whether or not your SQL Server VM has registered with the SQL IaaS Agent extension. 
 
       - question: |
           What happened to management modes of the SQL IaaS Agent extension? 

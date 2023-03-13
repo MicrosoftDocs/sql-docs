@@ -85,7 +85,7 @@ az provider register --namespace Microsoft.SqlVirtualMachine
 
 ## Register with extension 
 
-You can manually register your SQL Server VM with the SQL IaaS agent extension by using Azure PowerShell or the Azure CLI. 
+You can manually register your SQL Server VM with the SQL IaaS Agent extension by using Azure PowerShell or the Azure CLI. 
 
 Provide the SQL Server license type as either pay-as-you-go (`PAYG`) to pay per usage, Azure Hybrid Benefit (`AHUB`) to use your own license, or disaster recovery (`DR`) to activate the [free DR replica license](business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure).
 
@@ -134,7 +134,7 @@ Verify the registration status with the Azure portal:
 
    ![Verify status with SQL RP registration](./media/sql-agent-extension-manually-register-single-vm/verify-registration-status.png)
 
-Alternatively, you can check the status by choosing **Repair** under the **Support + troubleshooting** pane in the **SQL virtual machine** resource. The provisioning state for the SQL IaaS agent extension can be **Succeeded** or **Failed**. 
+Alternatively, you can check the status by choosing **Repair** under the **Support + troubleshooting** pane in the **SQL virtual machine** resource. The provisioning state for the SQL IaaS Agent extension can be **Succeeded** or **Failed**. 
 
 
 ### [Azure PowerShell](#tab/azure-powershell)
@@ -161,7 +161,7 @@ An error indicates that the SQL Server VM hasn't been registered with the extens
 
 ## Repair extension
 
-It's possible for your SQL IaaS agent extension to be in a failed state. Use the Azure portal to repair the SQL IaaS agent extension. 
+It's possible for your SQL IaaS Agent extension to be in a failed state. Use the Azure portal to repair the SQL IaaS Agent extension. 
 
 To repair the extension with the Azure portal:  
 

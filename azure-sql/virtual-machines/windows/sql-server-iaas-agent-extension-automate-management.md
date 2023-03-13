@@ -73,7 +73,7 @@ Starting in March 2023, when you first register with the extension, binaries are
 
 The SQL Server IaaS Agent extension unlocks a number of feature benefits for managing your SQL Server VM, letting you pick and choose which benefit suits your business needs. When you first register with the extension, the functionality is limited to a few features that don't rely on the SQL IaaS agent. Once you enable a feature that requires it, the agent is installed to the SQL Server VM. 
 
-The following table details the benefits available through the SQL IaaS agent extension, and whether or not the agent is required: 
+The following table details the benefits available through the SQL IaaS Agent extension, and whether or not the agent is required: 
 
 [!INCLUDE [SQL VM feature benefits](../../includes/sql-vm-feature-benefits.md)]
 
@@ -113,7 +113,7 @@ Deploying a SQL Server VM Azure Marketplace image through the Azure portal autom
 
 When you register with the SQL IaaS Agent extension, binaries are copied to the virtual machine, but the agent is not installed by default. The agent will only be installed when you enable one of the [features](#feature-benefits) that require it, and the following two services will then run on the virtual machine: 
 
-- **Microsoft SQL Server IaaS agent** is the main service for the SQL IaaS agent extension and should run under the **Local System** account. 
+- **Microsoft SQL Server IaaS agent** is the main service for the SQL IaaS Agent extension and should run under the **Local System** account. 
 - **Microsoft SQL Server IaaS Query Service** is a helper service that helps the extension run queries within SQL Server and should run under the **NT Service** account `NT Service\SqlIaaSExtensionQuery`. 
 
 There are three ways to register with the extension: 
@@ -133,7 +133,7 @@ The SQL IaaS Agent extension does not support virtual machines with multiple nam
 
 ### Named instance support
 
-The SQL IaaS Agent extension works with a named instance of SQL Server if it's the only SQL Server instance available on the virtual machine. The SQL IaaS agent extension does not support VMs with multiple named instances. 
+The SQL IaaS Agent extension works with a named instance of SQL Server if it's the only SQL Server instance available on the virtual machine. The SQL IaaS Agent extension does not support VMs with multiple named instances. 
 
 To use a named instance of SQL Server, deploy an Azure virtual machine, install a single named SQL Server instance to it, and then register it with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
 

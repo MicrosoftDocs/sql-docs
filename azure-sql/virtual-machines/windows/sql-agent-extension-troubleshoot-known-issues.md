@@ -62,23 +62,23 @@ Changing the service accounts for either of the two services associated with the
 
 The two services should run under the following accounts:
 
-- **Microsoft SQL Server IaaS agent** is the main service for the SQL IaaS agent extension and should run under the **Local System** account. 
+- **Microsoft SQL Server IaaS agent** is the main service for the SQL IaaS Agent extension and should run under the **Local System** account. 
 - **Microsoft SQL Server IaaS Query Service** is a helper service that helps the extension run queries within SQL Server and should run under the **NT Service** account `NT Service\SqlIaaSExtensionQuery`. 
 
 
 ## Automatic registration failed
 
-If you have a few SQL Server VMs that failed to [register automatically](sql-agent-extension-automatic-registration-all-vms.md), check the version of SQL Server on the VMs that failed to register. By default, Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). SQL Server VMs that have versions earlier than 2016 have to be manually registered [individually](sql-agent-extension-manually-register-single-vm.md) or [in bulk](sql-agent-extension-manually-register-vms-bulk.md).
+If you have a few SQL Server VMs that failed to [register automatically](sql-agent-extension-automatic-registration-all-vms.md), check the version of SQL Server on the VMs that failed to register. By default, Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). SQL Server VMs that have versions earlier than 2016 have to be manually registered [individually](sql-agent-extension-manually-register-single-vm.md) or [in bulk](sql-agent-extension-manually-register-vms-bulk.md).
 
 ## High resource consumption 
 
-If you notice that the SQL IaaS agent extension is consuming unexpectedly high CPU or memory, verify the extension is on the latest version. If so, restart **Microsoft SQL Server IaaS Agent** from services.msc. 
+If you notice that the SQL IaaS Agent extension is consuming unexpectedly high CPU or memory, verify the extension is on the latest version. If so, restart **Microsoft SQL Server IaaS Agent** from services.msc. 
 
 ## Can't extend disks 
 
 Extending your disks from the **Storage Configuration** page of the [SQL VM resource](manage-sql-vm-portal.md) is unavailable under the following conditions: 
 
-- If you uninstall and reinstall the SQL IaaS agent extension. 
+- If you uninstall and reinstall the SQL IaaS Agent extension. 
 - If you uninstall and reinstall your instance of SQL Server. 
 - If you used custom naming conventions for the disk/storage pool name when deploying your SQL Server image from the Azure Marketplace. 
 
@@ -93,7 +93,7 @@ If your [SQL VM resource](manage-sql-vm-portal.md) displays **Automated backup i
 
 ## Extension stuck in transition 
 
-Your SQL IaaS agent extension may get stuck in a transitioning state in the following scenarios:
+Your SQL IaaS Agent extension may get stuck in a transitioning state in the following scenarios:
 
 - You've removed the `NT service\SQLIaaSExtension` service from the SQL Server logins and/or the local administrator's group.
 - Either of these two services are stopped in services.msc 
@@ -102,7 +102,7 @@ Your SQL IaaS agent extension may get stuck in a transitioning state in the foll
 
 ## Fails to install on domain controller
 
-Registering your SQL Server instance installed to your domain controller with the SQL IaaS agent extension isn't supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user can't be created on the domain controller, registering this VM with the SQL IaaS agent isn't supported. 
+Registering your SQL Server instance installed to your domain controller with the SQL IaaS Agent extension isn't supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user can't be created on the domain controller, registering this VM with the SQL IaaS agent isn't supported. 
 
 
 ## Next steps

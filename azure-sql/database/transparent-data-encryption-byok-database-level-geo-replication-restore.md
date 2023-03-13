@@ -264,7 +264,7 @@ This guide will walk you through the steps to restore an Azure SQL database conf
 
 The following section describes how to restore a database configured with customer-managed keys at the database level to a given point in time. To learn more about backup recovery for SQL Database, see [Recover a database in SQL Database](recovery-using-backups.md).
 
-# [Azure CLI](#tab/azure-cli)
+# [Azure CLI](#tab/azure-cli2)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
@@ -285,7 +285,7 @@ az sql db restore --dest-name $destName --name $databaseName --resource-group $r
 > [!IMPORTANT]
 > $keys is a space separated list of keys retrieved from the source database.
 
-# [PowerShell](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell2)
 
 For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
 
@@ -311,7 +311,7 @@ Restore-AzSqlDatabase -FromPointInTimeBackup -PointInTime <Timestamp> -ResourceI
 
 The following section describes how to restore a deleted database that was configured with customer-managed keys at the database level. To learn more about backup recovery for SQL Database, see [Recover a database in SQL Database](recovery-using-backups.md).
 
-# [Azure CLI](#tab/azure-cli)
+# [Azure CLI](#tab/azure-cli2)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
@@ -335,7 +335,7 @@ az sql db restore --dest-name $destName --name $databaseName --resource-group $r
 > [!IMPORTANT]
 > $keys is a space separated list of keys retrieved from the source database.
 
-# [PowerShell](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell2)
 
 For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
 
@@ -364,7 +364,7 @@ Restore-AzSqlDatabase -FromDeletedDatabaseBackup -DeletionDate <Timestamp> -Reso
 
 The following section describes how to restore a geo-replicated backup of database that is configured with customer-managed keys at the database level. To learn more about backup recovery for SQL Database, see [Recover a database in SQL Database](recovery-using-backups.md).
 
-# [Azure CLI](#tab/azure-cli)
+# [Azure CLI](#tab/azure-cli2)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
@@ -385,7 +385,7 @@ az sql db geo-backup restore --geo-backup-id "/subscriptions/{subscriptionId}/re
 > [!IMPORTANT]
 > $keys is a space separated list of keys retrieved from the source database.
 
-# [PowerShell](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell2)
 
 For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
 

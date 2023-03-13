@@ -366,7 +366,7 @@ An example of the encryption_protector and keys_to_add parameter is:
 
 This guide will walk you through the process of retrieving the database level customer-managed keys for a database. The ARM resource Microsoft.Sql/servers/databases by default only shows the TDE protector and managed identity configured on the database, to expand the full list of keys additional parameters e.g. -ExpandKeyList are needed. Additionally, filters such as -KeysFilter "current" and a point in time value e.g. "2023-01-01" can be used to retrieve the current keys used and keys used in the past at a specific point in time respectively.
 
-# [Azure CLI](#tab/azure-cli)
+# [Azure CLI](#tab/azure-cli2)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
@@ -401,7 +401,7 @@ az sql db show \
     --keys-filter 01-01-2015
 ```
 
-# [PowerShell](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell2)
 
 For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
 
@@ -421,7 +421,7 @@ Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName
 Get-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -ExpandKeyList -KeysFilter '2023-02-03 00:00:00'
 ```
 
-# [REST API](#tab/rest-api)
+# [REST API](#tab/rest-api2)
 
 Use the 2022-08-01-preview REST API for Azure SQL Database.
 
@@ -455,7 +455,7 @@ GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 In case of an inaccessible TDE protector as described in [Transparent Data Encryption (TDE) with BYOK](transparent-data-encryption-byok-overview.md), once the key access has been corrected, revalidate key operation can be used make the database accessible. This guide covers this in depth.
 
-# [Azure CLI](#tab/azure-cli)
+# [Azure CLI](#tab/azure-cli2)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
@@ -466,7 +466,7 @@ az sql db tde key revalidate \
     --name mySampleDatabase \
 ```
 
-# [PowerShell](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell2)
 
 For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
 
@@ -476,7 +476,7 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevalidation -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName>
 ```
 
-# [REST API](#tab/rest-api)
+# [REST API](#tab/rest-api2)
 
 Use the 2022-08-01-preview REST API for Azure SQL Database.
 
@@ -490,7 +490,7 @@ POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/
 
 A database configured with database level CMK can be reverted to server level encryption if the server is configured with Microsoft managed key using
 
-# [Azure CLI](#tab/azure-cli)
+# [Azure CLI](#tab/azure-cli2)
 
 For information on installing the current release of Azure CLI, see [Install the Azure CLI](/cli/azure/install-azure-cli) article.
 
@@ -501,7 +501,7 @@ az sql db tde key revert \
     --name mySampleDatabase \
 ```
 
-# [PowerShell](#tab/azure-powershell)
+# [PowerShell](#tab/azure-powershell2)
 
 For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
 
@@ -511,7 +511,7 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 Invoke-AzSqlDatabaseTransparentDataEncryptionProtectorRevert -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName>
 ```
 
-# [REST API](#tab/rest-api)
+# [REST API](#tab/rest-api2)
 
 Use the 2022-08-01-preview REST API for Azure SQL Database.
 

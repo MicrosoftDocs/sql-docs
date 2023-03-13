@@ -1,18 +1,15 @@
 ---
+title: "MONTH (SSIS Expression)"
 description: "MONTH (SSIS Expression)"
-title: "MONTH (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "dates [Integration Services], MONTH"
-  - "MONTH function"
-ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "dates [Integration Services], MONTH"
+  - "MONTH function"
 ---
 # MONTH (SSIS Expression)
 

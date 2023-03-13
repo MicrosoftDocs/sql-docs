@@ -27,6 +27,8 @@ landingContent:
         url: /azure/azure-sql/database/sql-database-paas-overview
       - text: Azure SQL Managed Instance
         url: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
+      - text: Connect to Azure SQL 
+        url: /azure/azure-sql/database/develop-overview#client-connections
       - text: SQL Server on Azure Windows VMs
         url:  /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
       - text: SQL Server on Azure Linux VMs
@@ -36,6 +38,7 @@ landingContent:
       - text: Azure Database Migration Service
         url: /azure/dms/dms-overview
 
+
   - title: Migration
     linkLists:
     - linkListType: overview
@@ -43,7 +46,7 @@ landingContent:
       - text: Migration content
         url:  migrate/index.yml
       - text: Data migration guide
-        url:  https://datamigration.microsoft.com/
+        url:  /data-migration/
       - text: Database compatibility certification
         url: ../database-engine/install-windows/compatibility-certification.md
       - text: Data Migration Assistant (DMA)

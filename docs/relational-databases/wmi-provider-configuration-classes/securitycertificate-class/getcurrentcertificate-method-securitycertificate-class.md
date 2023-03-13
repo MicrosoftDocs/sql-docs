@@ -1,22 +1,17 @@
 ---
-description: "GetCurrentCertificate Method (SecurityCertificate Class)"
 title: "GetCurrentCertificate Method (SecurityCertificate)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "GetCurrentCertificate Method (SecurityCertificate Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "GetCurrentCertificate method"
-ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
+description: "GetCurrentCertificate Method (SecurityCertificate Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "GetCurrentCertificate method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "GetCurrentCertificate Method (SecurityCertificate Class)"
+apitype: "MOFDef"
 ---
 # GetCurrentCertificate Method (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "Setup of the Data Profiling Task"
 description: "Setup of the Data Profiling Task"
-title: "Setup of the Data Profiling Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Data Profiling task [Integration Services], configuring"
-ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Profiling task [Integration Services], configuring"
 ---
 # Setup of the Data Profiling Task
 

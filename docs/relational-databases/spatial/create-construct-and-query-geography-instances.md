@@ -1,18 +1,15 @@
 ---
+title: "Create, Construct, and Query geography Instances"
 description: "Create, Construct, and Query geography Instances"
-title: "Create, Construct, and Query geography Instances | Microsoft Docs"
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "geography data type [SQL Server]"
   - "geodetic data type [SQL Server]"
   - "geography data type [SQL Server], about geography data type"
-ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-author: MladjoA
-ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Construct, and Query geography Instances

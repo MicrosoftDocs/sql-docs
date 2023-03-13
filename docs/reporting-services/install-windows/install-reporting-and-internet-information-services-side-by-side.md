@@ -1,16 +1,14 @@
 ---
+title: "Install Reporting and Internet Information Services Side-by-Side"
 description: "Install Reporting and Internet Information Services Side-by-Side"
-title: "Install Reporting and Internet Information Services Side-by-Side | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 07/02/2017
 ms.service: reporting-services
 ms.topic: conceptual
+ms.custom: intro-installation
 helpviewer_keywords:
   - "deploying [Reporting Services], IIS"
-ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-author: maggiesMSFT
-ms.author: maggies
-ms.custom:
-  - intro-installation
 ---
 
 # Install Reporting and Internet Information Services Side-by-Side

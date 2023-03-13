@@ -1,17 +1,14 @@
 ---
+title: "System Security Functions"
 description: "System Security Functions"
-title: "System Security Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 ---
 # System Security Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

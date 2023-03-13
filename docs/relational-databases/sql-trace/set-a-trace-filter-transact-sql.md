@@ -1,18 +1,14 @@
 ---
+title: "Set a Trace Filter (Transact-SQL)"
 description: "Set a Trace Filter (Transact-SQL)"
-title: "Set a Trace Filter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "filters [SQL Server], traces"
-  - "traces [SQL Server], filters"
-ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "filters [SQL Server], traces"
+  - "traces [SQL Server], filters"
 ---
 # Set a Trace Filter (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

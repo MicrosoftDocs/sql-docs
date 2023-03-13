@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_set_log_on_success (Transact-SQL)"
 description: "sp_syspolicy_set_log_on_success (Transact-SQL)"
-title: "sp_syspolicy_set_log_on_success (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_set_log_on_success_TSQL"
-  - "sp_syspolicy_set_log_on_success"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_set_log_on_success"
-ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_set_log_on_success_TSQL"
+  - "sp_syspolicy_set_log_on_success"
+helpviewer_keywords:
+  - "sp_syspolicy_set_log_on_success"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

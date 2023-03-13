@@ -1,17 +1,14 @@
 ---
+title: "SAP BW Connection Manager"
 description: "SAP BW Connection Manager"
-title: "SAP BW Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
-f1_keywords: 
-  - "sql13.dts.designer.sapbwconnectionmanager.f1"
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.sapbwconnectionmanager.f1"
 ---
 # SAP BW Connection Manager
 

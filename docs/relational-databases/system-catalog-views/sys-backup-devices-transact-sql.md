@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.backup_devices catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 ---
 # sys.backup_devices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

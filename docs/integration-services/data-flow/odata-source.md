@@ -1,20 +1,17 @@
 ---
+title: "OData Source"
 description: "OData Source"
-title: "OData Source | Microsoft Docs"
+author: chugugrace
+ms.author: chugu
 ms.date: "09/17/2018"
 ms.service: sql
-ms.reviewer: ""
-ms.custom: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.DTS.DESIGNER.ODATASOURCE.F1"
   - "sql13.dts.designer.odatasource.connection.f1"
   - "sql13.dts.designer.odatasource.columns.f1"
   - "sql13.dts.designer.odatasource.erroroutput.f1"
-ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: chugugrace
-ms.author: chugu
 ---
 # OData Source
 

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.sql_expression_dependencies catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)

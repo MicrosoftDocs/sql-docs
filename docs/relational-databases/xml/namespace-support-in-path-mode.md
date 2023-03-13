@@ -1,17 +1,16 @@
 ---
 title: "Namespace Support in PATH Mode"
 description: Learn about namespace support when using PATH mode to generate XML from a SELECT query.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "PATH FOR XML mode, namespace support"
   - "namespaces [XML in SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Namespace support in PATH mode
 

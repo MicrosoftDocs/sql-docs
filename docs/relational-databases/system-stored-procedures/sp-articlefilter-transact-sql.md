@@ -1,22 +1,19 @@
 ---
+title: "sp_articlefilter (Transact-SQL)"
 description: "sp_articlefilter (Transact-SQL)"
-title: "sp_articlefilter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_articlefilter_TSQL"
-  - "sp_articlefilter"
-helpviewer_keywords: 
-  - "sp_articlefilter"
-ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_articlefilter_TSQL"
+  - "sp_articlefilter"
+helpviewer_keywords:
+  - "sp_articlefilter"
+dev_langs:
+  - "TSQL"
 ---
 # sp_articlefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

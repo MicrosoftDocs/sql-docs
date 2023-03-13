@@ -1,22 +1,19 @@
 ---
+title: "Analysis Services Execute DDL Task"
 description: "Analysis Services Execute DDL Task"
-title: "Analysis Services Execute DDL Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.asexecuteddltask.f1"
   - "sql13.dts.designer.asexecuteddltask.general.f1"
   - "sql13.dts.designer.asexecuteddltask.ddl.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Analysis Services Execute DDL task"
   - "DDL"
-ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-author: chugugrace
-ms.author: chugu
 ---
 # Analysis Services Execute DDL Task
 

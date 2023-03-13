@@ -1,19 +1,16 @@
 ---
-description: "Arrange Tables in Diagrams (Visual Database Tools)"
 title: Arrange Tables in Diagrams
+description: "Arrange Tables in Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "organizing database diagram objects [SQL Server]"
   - "database diagrams [SQL Server], arranging objects"
   - "arranging database diagram objects"
-ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Arrange Tables in Diagrams (Visual Database Tools)

@@ -1,29 +1,19 @@
---- 
- 
-# required metadata 
-title: "count_select: Machine Learning Count Mode Feature Selection Transform" 
-description: "Selects the features for which the count of non-default values is greater than or equal to a threshold." 
-keywords: "feature, selection, count" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "count_select: Machine Learning Count Mode Feature Selection Transform"
+description: "Selects the features for which the count of non-default values is greater than or equal to a threshold."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - feature
+  - selection
+  - count
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.count_select*: Feature selection based on counts
 
 

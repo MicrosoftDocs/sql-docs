@@ -1,22 +1,19 @@
 ---
+title: "sp_certify_removable (Transact-SQL)"
 description: "sp_certify_removable (Transact-SQL)"
-title: "sp_certify_removable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_certify_removable_TSQL"
-  - "sp_certify_removable"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_certify_removable"
-ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_certify_removable_TSQL"
+  - "sp_certify_removable"
+helpviewer_keywords:
+  - "sp_certify_removable"
+dev_langs:
+  - "TSQL"
 ---
 # sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

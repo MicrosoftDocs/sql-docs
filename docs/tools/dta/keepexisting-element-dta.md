@@ -1,19 +1,16 @@
 ---
 title: "KeepExisting Element (DTA)"
 description: In the dta utility, the KeepExisting element specifies physical design structures that Database Engine Tuning Advisor retains when it generates recommendations.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "KeepExisting element"
-ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+dev_langs:
+  - "XML"
 ---
 
 # KeepExisting Element (DTA)

@@ -1,19 +1,16 @@
 ---
+title: "Generating Reports (OracleToSQL)"
 description: "Generating Reports (OracleToSQL)"
-title: "Generating Reports (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Report Generation in Oracle Console, synchronize-target"
   - "Report Generation in Oracle Console,refresh-from-database"
   - "Report Generation in Oracle Console,write-summary-report-to"
-ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Generating Reports (OracleToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

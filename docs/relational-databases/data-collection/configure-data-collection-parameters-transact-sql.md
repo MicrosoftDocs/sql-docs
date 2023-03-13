@@ -1,17 +1,14 @@
 ---
-description: "Configure Data Collection Parameters (Transact-SQL)"
 title: "Configure Data Collection Parameters (T-SQL)"
-ms.date: 06/03/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "data collection [SQL Server]"
-ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
+description: "Configure Data Collection Parameters (Transact-SQL)"
 author: MashaMSFT
 ms.author: mathoma
-ms.custom: "seo-lt-2019"
+ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+helpviewer_keywords:
+  - "data collection [SQL Server]"
 ---
 # Configure Data Collection Parameters (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

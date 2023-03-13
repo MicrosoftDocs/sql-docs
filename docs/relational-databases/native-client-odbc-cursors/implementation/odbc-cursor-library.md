@@ -1,13 +1,13 @@
 ---
+title: "ODBC Cursor Library"
 description: "ODBC Cursor Library"
-title: "ODBC Cursor Library | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursors [ODBC], library"
   - "SQL_CUR_USE_DRIVER option"
   - "ODBC applications, cursors"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "SQL_CUR_USE_IF_NEEDED option"
   - "SQLSetConnectAttr function"
   - "SQL_CUR_USE_ODBC option"
-ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC Cursor Library

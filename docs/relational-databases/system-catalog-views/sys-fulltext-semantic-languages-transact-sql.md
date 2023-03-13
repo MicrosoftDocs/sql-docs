@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.fulltext_semantic_languages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 ---
 # sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

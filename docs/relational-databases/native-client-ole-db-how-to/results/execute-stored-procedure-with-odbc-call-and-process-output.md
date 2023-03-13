@@ -1,18 +1,15 @@
 ---
-description: "Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output"
 title: "Stored Procedure, ODBC CALL, Output"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "stored procedures [ODBC]"
-  - "ODBC CALL syntax"
-ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
+description: "Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "stored procedures [ODBC]"
+  - "ODBC CALL syntax"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output

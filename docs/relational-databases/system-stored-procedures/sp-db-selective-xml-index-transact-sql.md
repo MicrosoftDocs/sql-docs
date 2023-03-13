@@ -1,21 +1,19 @@
 ---
-description: "sp_db_selective_xml_index (Transact-SQL)"
 title: "sp_db_selective_xml_index (Transact-SQL)"
-ms.custom: ""
-ms.date: "02/11/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_db_selective_xml_index_TSQL"
-  - "sp_db_selective_xml_index"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_db_selective_xml_index procedure"
+description: "sp_db_selective_xml_index (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.date: "02/11/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_db_selective_xml_index_TSQL"
+  - "sp_db_selective_xml_index"
+helpviewer_keywords:
+  - "sp_db_selective_xml_index procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

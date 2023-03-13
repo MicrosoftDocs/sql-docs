@@ -1,24 +1,19 @@
 ---
+title: "SQLMoreResults Function"
 description: "SQLMoreResults Function"
-title: "SQLMoreResults Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLMoreResults"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLMoreResults"
-helpviewer_keywords: 
-  - "SQLMoreResults function [ODBC]"
-ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLMoreResults"
+helpviewer_keywords:
+  - "SQLMoreResults function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLMoreResults"
+apitype: "dllExport"
 ---
 # SQLMoreResults Function
 **Conformance**  

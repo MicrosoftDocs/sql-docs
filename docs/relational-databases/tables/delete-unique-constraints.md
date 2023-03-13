@@ -1,21 +1,18 @@
 ---
+title: "Delete Unique Constraints"
 description: "Delete Unique Constraints"
-title: "Delete Unique Constraints | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/12/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing constraints"
   - "UNIQUE constraints [SQL Server], deleting"
   - "constraints [SQL Server], deleting"
   - "deleting constraints"
   - "constraints [SQL Server], unique"
-ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Unique Constraints

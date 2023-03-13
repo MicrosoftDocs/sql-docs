@@ -1,17 +1,14 @@
 ---
+title: "SQLGetCursorName (Visual FoxPro ODBC Driver)"
 description: "SQLGetCursorName (Visual FoxPro ODBC Driver)"
-title: "SQLGetCursorName (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLGetCursorName function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLGetCursorName function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLGetCursorName (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -1,17 +1,14 @@
 ---
-title: "Modify a Resource Health Policy Definition (SQL Server Utility) | Microsoft Docs"
+title: "Modify a Resource Health Policy Definition (SQL Server Utility)"
 description: Learn how to use SQL Server Management Studio to modify a resource health policy definition so that you can better evaluate SQL Server performance data.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.SWB.UE.UTILITY.ADMINISTRATION.F1"
-ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.SWB.UE.UTILITY.ADMINISTRATION.F1"
 ---
 # Modify a Resource Health Policy Definition (SQL Server Utility)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -19,6 +16,9 @@ ms.author: mikeray
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource utilization policies can be configured for data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource utilization policies can be defined globally for all data-tier applications and managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, or they can be defined individually for each data-tier application and for each managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. You can also implement global policies and have individual data-tier applications or managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configured with their own policy definitions.  
   
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
+
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### Modify global resource utilization policies in a SQL Server Utility.  

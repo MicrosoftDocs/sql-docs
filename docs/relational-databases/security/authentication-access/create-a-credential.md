@@ -1,19 +1,16 @@
 ---
-title: "Create a Credential | Microsoft Docs"
+title: "Create a Credential"
 description: Learn how to create a credential in SQL Server by using SQL Server Management Studio or Transact-SQL. Find out how to work within the limitations and restrictions.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/25/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "credentials [SQL Server], creating"
   - "authentication [SQL Server], credentials"
   - "logins [SQL Server], credentials"
-ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
-author: VanMSFT
-ms.author: vanto
 ---
 # Create a Credential
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "Use a Statement (ODBC)"
 description: "Use a Statement (ODBC)"
-title: "Use a Statement (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "statements [ODBC]"
-ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "statements [ODBC]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use a Statement (ODBC)

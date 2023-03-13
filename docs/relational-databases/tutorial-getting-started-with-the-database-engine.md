@@ -1,23 +1,18 @@
 ---
-description: "Tutorial: Getting Started with the Database Engine"
 title: "Tutorial: Getting Started with the Database Engine"
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
+description: "Tutorial: Getting Started with the Database Engine"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/21/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: quickstart
+ms.custom: intro-quickstart
 helpviewer_keywords:
   - "tutorials [connecting]"
   - "tutorials [Database Engine]"
   - "unable to connect [SQL Server]"
   - "failure to connect [SQL Server]"
   - "connecting tutorial [SQL Server]"
-ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Getting Started with the Database Engine

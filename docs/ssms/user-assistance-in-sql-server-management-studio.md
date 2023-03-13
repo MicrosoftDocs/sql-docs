@@ -1,17 +1,15 @@
 ---
-description: "User Assistance in SQL Server Management Studio"
 title: "User Assistance in SQL Server Management Studio"
+description: "User Assistance in SQL Server Management Studio"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Help [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], user assistance"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 # User Assistance in SQL Server Management Studio
 

@@ -1,23 +1,16 @@
 ---
-description: "ServerNetworkProtocolIPAddress Class"
 title: "ServerNetworkProtocolIPAddress Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "ServerNetworkProtocolIPAddress Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ServerNetworkProtocolIPAddress class"
-ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
+description: "ServerNetworkProtocolIPAddress Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ServerNetworkProtocolIPAddress class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ServerNetworkProtocolIPAddress Class"
+apitype: "MOFDef"
 ---
 # ServerNetworkProtocolIPAddress Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

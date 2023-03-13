@@ -1,15 +1,12 @@
 ---
+title: "Connect to MySQL (MySQLToSQL)"
 description: "Connect to MySQL (MySQLToSQL)"
-title: "Connect to MySQL (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Connect to MySQL (MySQLToSQL)
 Use the **Connect to MySQL** dialog box to connect to the MySQL database that you want to migrate.  

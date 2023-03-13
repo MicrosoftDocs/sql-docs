@@ -7,10 +7,8 @@ ms.date: "02/01/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory-Optimized Table Dynamic Management Views (Transact-SQL)

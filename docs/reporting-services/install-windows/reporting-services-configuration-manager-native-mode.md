@@ -1,17 +1,16 @@
 ---
+title: "Report Server Configuration Manager (Native Mode)"
 description: "Report Server Configuration Manager (Native Mode)"
-title: "Report Server Configuration Manager (Native Mode) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 09/20/2017
 ms.service: reporting-services
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
   - "components [Reporting Services], Reporting Services Configuration tool"
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Report Server Configuration Manager (Native Mode)

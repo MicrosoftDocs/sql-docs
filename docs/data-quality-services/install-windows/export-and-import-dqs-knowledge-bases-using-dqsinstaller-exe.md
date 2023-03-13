@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: data-quality-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Export and Import DQS Knowledge Bases Using DQSInstaller.exe
 

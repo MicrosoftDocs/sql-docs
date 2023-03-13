@@ -1,22 +1,19 @@
 ---
+title: "The ODBC Cursor Library"
 description: "The ODBC Cursor Library"
-title: "The ODBC Cursor Library | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursor library [ODBC], about cursor library"
   - "ODBC cursor library [ODBC]"
   - "cursor library [ODBC], about cursor library"
   - "scrollable cursors [ODBC]"
   - "cursors [ODBC], cursor library"
   - "block cursors [ODBC]"
-ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
-author: David-Engel
-ms.author: v-davidengel
 ---
 # The ODBC Cursor Library
 > [!IMPORTANT]  

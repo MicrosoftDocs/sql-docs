@@ -1,22 +1,19 @@
 ---
+title: "sp_add_log_shipping_secondary_database (Transact-SQL)"
 description: "sp_add_log_shipping_secondary_database (Transact-SQL)"
-title: "sp_add_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_log_shipping_secondary_database"
-  - "sp_add_log_shipping_secondary_database_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_log_shipping_secondary_database"
-ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_log_shipping_secondary_database"
+  - "sp_add_log_shipping_secondary_database_TSQL"
+helpviewer_keywords:
+  - "sp_add_log_shipping_secondary_database"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

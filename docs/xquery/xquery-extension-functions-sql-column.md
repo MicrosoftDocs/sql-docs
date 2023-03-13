@@ -1,20 +1,17 @@
 ---
-title: "sql:column() Function (XQuery) | Microsoft Docs"
-description: Learn how the XQuery function sql:column() can be used to bind non-XML relational data inside XML and bring relational and XML data together.
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "sql:column function"
-  - "sql:column() function"
-ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
+title: "sql:column() Function (XQuery)"
+description: "Learn how the XQuery function sql:column() can be used to bind non-XML relational data inside XML and bring relational and XML data together."
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "sql:column function"
+  - "sql:column() function"
+dev_langs:
+  - "XML"
 ---
 # XQuery Extension Functions - sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

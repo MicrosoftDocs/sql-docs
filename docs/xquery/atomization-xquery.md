@@ -1,20 +1,17 @@
 ---
-title: "Atomization (XQuery) | Microsoft Docs"
+title: "Atomization (XQuery)"
 description: Learn about the process of atomization in XQuery in which the typed values of an item are extracted.
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "XQuery, atomization"
-  - "atomization [XQuery]"
-ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: "rothja"
 ms.author: "jroth"
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "XQuery, atomization"
+  - "atomization [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Atomization (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

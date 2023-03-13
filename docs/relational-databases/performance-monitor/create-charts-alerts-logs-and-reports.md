@@ -1,13 +1,13 @@
 ---
 title: "Create Charts, Alerts, Logs, and Reports in System Monitor"
-description: Learn how to create charts, alerts, logs, and reports to monitor an instance of SQL Server by using Windows System Monitor. 
-ms.custom: ""
+description: Learn how to create charts, alerts, logs, and reports to monitor an instance of SQL Server by using Windows System Monitor.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/13/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "System Monitor [SQL Server], charts and reports"
   - "charts [SQL Server]"
   - "reports [SQL Server]"
@@ -16,8 +16,6 @@ helpviewer_keywords:
   - "logs [SQL Server], System Monitor"
   - "System Monitor [SQL Server], logs"
   - "Windows System Monitor [SQL Server], logs"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Create Charts, Alerts, Logs, and Reports
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]

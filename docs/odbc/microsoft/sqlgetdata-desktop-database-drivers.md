@@ -1,17 +1,14 @@
 ---
+title: "SQLGetData (Desktop Database Drivers)"
 description: "SQLGetData (Desktop Database Drivers)"
-title: "SQLGetData (Desktop Database Drivers) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLGetData function [ODBC], Desktop Database Drivers"
-ms.assetid: c9d9a32d-5dc2-4189-9bfb-2b008bc3d6a3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLGetData function [ODBC], Desktop Database Drivers"
 ---
 # SQLGetData (Desktop Database Drivers)
 This function can retrieve data from any column, whether or not there are bound columns after it and regardless of the order in which the columns are retrieved.  

@@ -1,13 +1,13 @@
 ---
+title: "Foreach Loop Container"
 description: "Foreach Loop Container"
-title: "Foreach Loop Container | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "05/22/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.foreachloopcontainer.f1"
   - "sql13.dts.designer.foreachloopcontainer.general.f1"
   - "sql13.dts.designer.foreachloopcontainer.collection.f1"
@@ -22,14 +22,11 @@ f1_keywords:
   - "sql14.dts.designer.schemarestrictions.f1"
   - "sql14.dts.designer.foreachitemcolumns.f1"
   - "sql14.dts.designer.selectsmoenumeration.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "repeating control flow"
   - "Foreach Loop containers"
   - "foreach enumerators [Integration Services]"
   - "containers [Integration Services], Foreach Loop"
-ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: chugugrace
-ms.author: chugu
 ---
 # Foreach Loop Container
 

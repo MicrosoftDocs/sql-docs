@@ -437,7 +437,7 @@ Government customers that are unable to connect or register their [!INCLUDE [ssn
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Manage Windows updates by using Azure Automation](/azure/automation/update-management/overview)
 - [SQL Server VM automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching)
-- [Microsoft Data Migration Guide](https://datamigration.microsoft.com/)
+- [Microsoft Data Migration Guide](/data-migration/)
 - [Azure migrate: lift-and-shift options to move your current SQL Server into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [ESU-related scripts on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)

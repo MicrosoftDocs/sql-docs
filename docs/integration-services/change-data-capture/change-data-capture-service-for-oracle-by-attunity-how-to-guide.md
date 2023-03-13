@@ -1,15 +1,12 @@
 ---
+title: "Change Data Capture Service for Oracle by Attunity How to Guide"
 description: "Change Data Capture Service for Oracle by Attunity How to Guide"
-title: "Change Data Capture Service for Oracle by Attunity How to Guide | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Change Data Capture Service for Oracle by Attunity How to Guide
 

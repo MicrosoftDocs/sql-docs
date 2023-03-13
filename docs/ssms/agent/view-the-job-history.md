@@ -1,21 +1,18 @@
 ---
-description: "View the Job History"
 title: "View the Job History"
-ms.custom: seo-lt-2019
+description: "View the Job History"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], history"
   - "viewing job history"
   - "SQL Server Agent jobs, history"
   - "historical information [SQL Server], jobs"
   - "displaying job history"
-ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # View the Job History

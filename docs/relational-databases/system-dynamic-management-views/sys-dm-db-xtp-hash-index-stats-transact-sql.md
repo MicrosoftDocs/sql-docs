@@ -3,7 +3,7 @@ title: "sys.dm_db_xtp_hash_index_stats (Transact-SQL)"
 description: For In-Memory OLTP tables, sys.dm_db_xtp_hash_index_stats helps you understand bucket counts hash indexes in memory-optimized tables.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -48,7 +48,11 @@ For more information, see [Hash Indexes for Memory-Optimized Tables](../../relat
 |xtp_object_id|**bigint**|The [!INCLUDE[inmemory](../../includes/inmemory-md.md)] object ID that corresponds to the memory-optimized table.|  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission on the server.  
+ Requires VIEW DATABASE STATE permission on the database.  
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
 ## Examples  
   

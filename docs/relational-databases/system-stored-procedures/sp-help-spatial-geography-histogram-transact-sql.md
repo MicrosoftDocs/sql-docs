@@ -1,22 +1,19 @@
 ---
+title: "sp_help_spatial_geography_histogram (Transact-SQL)"
 description: "sp_help_spatial_geography_histogram (Transact-SQL)"
-title: "sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_spatial_geography_histogram_TSQL"
-  - "sp_help_spatial_geography_histogram"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_spatial_geography_histogram"
-ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_spatial_geography_histogram_TSQL"
+  - "sp_help_spatial_geography_histogram"
+helpviewer_keywords:
+  - "sp_help_spatial_geography_histogram"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

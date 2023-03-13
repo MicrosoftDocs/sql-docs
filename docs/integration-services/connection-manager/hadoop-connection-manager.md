@@ -1,17 +1,14 @@
 ---
+title: "Hadoop Connection Manager"
 description: "Hadoop Connection Manager"
-title: "Hadoop Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/29/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.hadoopconn.f1"
-ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
+ms.date: 06/29/2020
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.hadoopconn.f1"
 ---
 # Hadoop Connection Manager
 

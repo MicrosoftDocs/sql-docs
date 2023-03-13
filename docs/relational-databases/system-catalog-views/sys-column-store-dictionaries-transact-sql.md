@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.column_store_dictionaries catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 ---
 # sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[SQL Server 2012 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2012-asdbmi.md)]

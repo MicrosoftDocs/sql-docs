@@ -1,18 +1,16 @@
 ---
+title: "Breaking Changes in SQL Server Replication"
 description: "Breaking Changes in SQL Server Replication"
-title: "Breaking Changes in SQL Server Replication | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "replication [SQL Server], what's new"
-  - "breaking changes [SQL Server replication]"
-ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "01/22/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "replication [SQL Server], what's new"
+  - "breaking changes [SQL Server replication]"
 ---
 # Breaking Changes in SQL Server Replication
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

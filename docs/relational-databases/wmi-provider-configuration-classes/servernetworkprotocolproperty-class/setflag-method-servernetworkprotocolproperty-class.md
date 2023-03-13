@@ -1,22 +1,17 @@
 ---
-description: "SetFlag Method (ServerNetworkProtocolProperty Class)"
 title: "SetFlag Method (ServerNetworkProtocolProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetFlag Method (ServerNetworkProtocolProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetFlag method"
-ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
+description: "SetFlag Method (ServerNetworkProtocolProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetFlag method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetFlag Method (ServerNetworkProtocolProperty Class)"
+apitype: "MOFDef"
 ---
 # SetFlag Method (ServerNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

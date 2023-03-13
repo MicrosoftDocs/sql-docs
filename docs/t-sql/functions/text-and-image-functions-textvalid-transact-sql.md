@@ -3,12 +3,10 @@ title: "TEXTVALID (Transact-SQL)"
 description: "Text and Image Functions - TEXTVALID (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "TEXTVALID_TSQL"
   - "TEXTVALID"

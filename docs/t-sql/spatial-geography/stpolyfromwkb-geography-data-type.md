@@ -1,22 +1,19 @@
 ---
+title: "STPolyFromWKB (geography Data Type)"
 description: "STPolyFromWKB (geography Data Type)"
-title: "STPolyFromWKB (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPolyFromWKB_TSQL"
   - "STPolyFromWKB (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPolyFromWKB method"
-ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPolyFromWKB (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

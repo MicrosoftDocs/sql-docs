@@ -1,19 +1,16 @@
 ---
+title: "GETDATE (SSIS Expression)"
 description: "GETDATE (SSIS Expression)"
-title: "GETDATE (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "current date"
   - "GETDATE function"
   - "dates [Integration Services], GETDATE"
-ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-author: chugugrace
-ms.author: chugu
 ---
 # GETDATE (SSIS Expression)
 

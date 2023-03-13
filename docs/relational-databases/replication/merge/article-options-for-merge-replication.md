@@ -1,18 +1,16 @@
 ---
+title: "Article Options for Merge Replication"
 description: "Article Options for Merge Replication"
-title: "Article Options for Merge Replication | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "merge replication [SQL Server replication], article options"
-  - "articles [SQL Server replication], merge replication options"
-ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "merge replication [SQL Server replication], article options"
+  - "articles [SQL Server replication], merge replication options"
 ---
 # Article Options for Merge Replication
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

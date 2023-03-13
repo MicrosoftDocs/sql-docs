@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_rename_policy_category (Transact-SQL)"
 description: "sp_syspolicy_rename_policy_category (Transact-SQL)"
-title: "sp_syspolicy_rename_policy_category (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_rename_policy_category_TSQL"
-  - "sp_syspolicy_rename_policy_category"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_rename_policy_category"
-ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_rename_policy_category_TSQL"
+  - "sp_syspolicy_rename_policy_category"
+helpviewer_keywords:
+  - "sp_syspolicy_rename_policy_category"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

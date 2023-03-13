@@ -1,18 +1,15 @@
 ---
+title: "SQLTables (Paradox Driver)"
 description: "SQLTables (Paradox Driver)"
-title: "SQLTables (Paradox Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Paradox driver [ODBC], SQLTables"
-  - "SQLTables function [ODBC], Paradox Driver"
-ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Paradox driver [ODBC], SQLTables"
+  - "SQLTables function [ODBC], Paradox Driver"
 ---
 # SQLTables (Paradox Driver)
 > [!NOTE]  

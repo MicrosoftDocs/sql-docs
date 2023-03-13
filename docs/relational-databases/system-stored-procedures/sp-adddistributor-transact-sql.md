@@ -1,22 +1,19 @@
 ---
+title: "sp_adddistributor (Transact-SQL)"
 description: "sp_adddistributor (Transact-SQL)"
-title: "sp_adddistributor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/29/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_adddistributor"
-  - "sp_adddistributor_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_adddistributor"
-ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
+ms.date: "03/29/2021"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_adddistributor"
+  - "sp_adddistributor_TSQL"
+helpviewer_keywords:
+  - "sp_adddistributor"
+dev_langs:
+  - "TSQL"
 ---
 # sp_adddistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

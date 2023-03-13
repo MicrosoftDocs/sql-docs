@@ -1,22 +1,18 @@
 ---
-description: "Verify Queries (Visual Database Tools)"
 title: Verify Queries
-ms.custom: seo-lt-2019
+description: "Verify Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:100644"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "verifying queries"
   - "queries [SQL Server], verifying"
   - "checking queries"
-ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Verify Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

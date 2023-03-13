@@ -1,22 +1,19 @@
 ---
+title: "sp_lock (Transact-SQL)"
 description: "sp_lock (Transact-SQL)"
-title: "sp_lock (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_lock_TSQL"
-  - "sp_lock"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_lock"
-ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_lock_TSQL"
+  - "sp_lock"
+helpviewer_keywords:
+  - "sp_lock"
+dev_langs:
+  - "TSQL"
 ---
 # sp_lock (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

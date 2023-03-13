@@ -1,27 +1,24 @@
 ---
+title: "Integration Services Service (SSIS Service)"
 description: "Integration Services Service (SSIS Service)"
-title: "Integration Services Service (SSIS Service) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssiseditserverregistration.connectionproperties.f1"
   - "sql13.swb.connecttodts.connectionproperties.f1"
   - "sql13.swb.connection.login.dtsserver.f1"
   - "sql13.swb.connecttodts.login.f1"
   - "sql13.swb.connecttodtsserver.login.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services service, about Integration Services service"
   - "SQL Server Integration Services service"
   - "service [Integration Services],about Integration Services service"
   - "service [Integration Services]"
   - "SQL Server Integration Services, service"
-ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Service (SSIS Service)
 

@@ -1,20 +1,17 @@
 ---
-title: "position Function (XQuery) | Microsoft Docs"
-description: Learn about the XQuery function position() that returns an integer value indicating the position of a context item within a sequence of items.  
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "position function"
-  - "fn:position function"
-ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
+title: "position Function (XQuery)"
+description: Learn about the XQuery function position() that returns an integer value indicating the position of a context item within a sequence of items.
 author: "rothja"
 ms.author: "jroth"
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "position function"
+  - "fn:position function"
+dev_langs:
+  - "XML"
 ---
 # Context Functions - position (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

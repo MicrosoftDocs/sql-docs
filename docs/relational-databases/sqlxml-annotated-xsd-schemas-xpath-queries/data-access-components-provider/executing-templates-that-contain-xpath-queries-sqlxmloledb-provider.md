@@ -7,7 +7,6 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "SQLXMLOLEDB Provider, executing template files"
   - "Base Path property"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "Mapping Schema property"
   - "XML templates [SQLXML]"
-ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Templates That Contain XPath Queries (SQLXMLOLEDB Provider)

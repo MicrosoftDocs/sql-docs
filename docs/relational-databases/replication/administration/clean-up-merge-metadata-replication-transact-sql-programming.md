@@ -1,20 +1,18 @@
 ---
 title: "Clean up Merge metadata (Replication SP)"
 description: Progrommatically clean up data in the Merge replication tables using replication stored procedures
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "metadata [SQL Server replication]"
-  - "sp_mergemetadataretentioncleanup"
-ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "metadata [SQL Server replication]"
+  - "sp_mergemetadataretentioncleanup"
+dev_langs:
+  - "TSQL"
 ---
 # Clean Up Merge Metadata (Replication Transact-SQL Programming)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

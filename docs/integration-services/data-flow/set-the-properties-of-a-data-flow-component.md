@@ -1,17 +1,14 @@
 ---
+title: "Set the Properties of a Data Flow Component"
 description: "Set the Properties of a Data Flow Component"
-title: "Set the Properties of a Data Flow Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "components [Integration Services], properties"
-ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "components [Integration Services], properties"
 ---
 # Set the Properties of a Data Flow Component
 

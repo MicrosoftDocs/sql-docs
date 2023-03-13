@@ -1,18 +1,15 @@
 ---
+title: "SQLFetchScroll"
 description: "SQLFetchScroll"
-title: "SQLFetchScroll | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "SQLFetchScroll function"
-ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: markingmyname
 ms.author: maghan
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQLFetchScroll function"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLFetchScroll

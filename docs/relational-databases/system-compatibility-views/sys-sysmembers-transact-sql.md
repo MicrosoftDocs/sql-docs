@@ -1,25 +1,22 @@
 ---
+title: "sys.sysmembers (Transact-SQL)"
 description: "sys.sysmembers (Transact-SQL)"
-title: "sys.sysmembers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sysmembers_TSQL"
   - "sysmembers"
   - "sys.sysmembers"
   - "sysmembers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmembers system table"
   - "sys.sysmembers compatibility view"
-ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysmembers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

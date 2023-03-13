@@ -1,22 +1,17 @@
 ---
-description: "Properties Property (ServerNetworkProtocol Class)"
 title: "Properties Property (ServerNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "Properties Property (ServerNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "Properties property"
-ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
+description: "Properties Property (ServerNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Properties property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "Properties Property (ServerNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # Properties Property (ServerNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

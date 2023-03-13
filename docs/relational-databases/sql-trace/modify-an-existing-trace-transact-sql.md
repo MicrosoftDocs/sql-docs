@@ -1,18 +1,14 @@
 ---
+title: "Modify an Existing Trace (Transact-SQL)"
 description: "Modify an Existing Trace (Transact-SQL)"
-title: "Modify an Existing Trace (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "traces [SQL Server], modifying"
-  - "modifying traces"
-ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "traces [SQL Server], modifying"
+  - "modifying traces"
 ---
 # Modify an Existing Trace (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

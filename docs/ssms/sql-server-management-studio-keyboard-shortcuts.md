@@ -1,13 +1,16 @@
 ---
 title: SQL Server Management Studio keyboard shortcuts
 description: SQL Server Management Studio keyboard shortcuts
+author: markingmyname
+ms.author: maghan
+ms.date: 02/08/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - VS.ToolsOptionsPages.Environment.Keyboard
-  - VS.ToolsOptionsPages.Environment.Keyboard.Query_Shortcuts
-helpviewer_keywords: 
+f1_keywords:
+  - "VS.ToolsOptionsPages.Environment.Keyboard"
+  - "VS.ToolsOptionsPages.Environment.Keyboard.Query_Shortcuts"
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], shortcuts"
   - "keyboard shortcuts [SQL Server Management Studio]"
   - "menu shortcuts [SQL Server Management Studio]"
@@ -17,11 +20,6 @@ helpviewer_keywords:
   - "keyboard shortcuts [SQL Server Management Studio], list of shortcuts"
   - "shortcuts [SQL Server Management Studio]"
   - "accelerator keys"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 02/08/2021
 ---
 
 # SQL Server Management Studio keyboard shortcuts

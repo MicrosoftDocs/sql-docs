@@ -1,18 +1,15 @@
 ---
-description: "sp_pdw_add_network_credentials (Azure Synapse Analytics)"
 title: "sp_pdw_add_network_credentials"
 titleSuffix: Azure Synapse Analytics
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
+description: "sp_pdw_add_network_credentials (Azure Synapse Analytics)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
-ms.custom: seo-dt-2019
 ---
 # sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

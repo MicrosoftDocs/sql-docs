@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.default_constraints catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.default_constraints (Transact-SQL)

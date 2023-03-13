@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7913"
 description: "MSSQLSERVER_7913"
-title: "MSSQLSERVER_7913 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7913 (Database Engine error)"
-ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7913 (Database Engine error)"
 ---
 # MSSQLSERVER_7913
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

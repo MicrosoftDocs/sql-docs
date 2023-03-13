@@ -7,14 +7,12 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "queries [SQLXML], SQLXML Managed Classes"
   - "SQLXML Managed Classes, executing SQL queries"
   - "Managed Classes [SQLXML], executing SQL queries"
   - "ExecuteToStream method"
   - "SQL queries [SQLXML]"
-ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries (SQLXML Managed Classes)

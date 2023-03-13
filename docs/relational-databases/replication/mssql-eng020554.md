@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG020554"
 description: "MSSQL_ENG020554"
-title: "MSSQL_ENG020554 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG020554 error"
-ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG020554 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG020554

@@ -4,11 +4,10 @@ description: This article describes known problems or limitations with the Pytho
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/06/2022
+ms.date: 2/2/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: troubleshooting
-ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Known issues for Python and R in SQL Server Machine Learning Services
@@ -280,6 +279,29 @@ The best solution is to upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-
 
 > [!IMPORTANT]  
 > If you do the steps above, you must manually remove the added key prior to upgrading to a later version of SQL Server.
+
+## Performance issues of Process Pooling in ML Services (R and Python) 
+This section contains known issues and workarounds for using ML services (R and Python) in SQL Server.
+
+### Cold start Performance of Process Pooling in ML Services
+Upon execution of `sp_execute_external_script`, the launchpad service launches satellite processes that start the external runtimes such as R and Python. To amortize the startup cost, a pool of processes is created that can be used in the subsequent execution of `sp_execute_external_script`. This pool of processes is specific to this user, database, and the used language (R or Python in ML Services). 
+
+#### First query execution
+The satellite processes need to be warmed up when `sp_execute_external_script` is executed for the first time or after a period of idle time (the processes are terminated via a cleanup task if they are not used for a while). Cold start of such pooled processes may be slow (for example, due to resource constraints). 
+
+#### Workaround
+If the performance of the first call is important, it is recommended to keep the queries warm. For example, a background task can be executed that fires a simple `sp_execute_external_script` query before the processes get expired. For instance, to keep R queries warm, you may execute the following query periodically.
+
+```sql
+EXECUTE sp_execute_external_script @language = N'R', @script = N'';
+GO
+```
+
+#### High number of concurrent queries
+If the number of concurrent execution of `sp_execute_external_script` is higher than the active R/Python processes in the pool, the cold start of adding additional processes to the pool may be slow (for example, due to resource constraints).
+
+#### Workaround
+To overcome the scaling performance issue, multiple requests can be batched (for example, via [loopback connections](../connect/loopback-connection.md) or rewriting the script to handle multiple requests). In addition, for real-time scenarios [SQL PREDICT](../predictions/native-scoring-predict-transact-sql.md) can be utilized.
 
 ## R script execution issues
 
@@ -558,6 +580,14 @@ Executing an R script with `sp_execute_external_script` allows money, numeric, d
 - **money**: Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.
 - **numeric/decimal**: `sp_execute_external_script` with an R script doesn't support the full range of those data types and would alter the last few decimal digits especially those with fraction.
 - **bigint**: R only support up to 53-bit integers and then it will start to have precision loss.
+
+### Issues with the rxExecBy function - rxExecBy function cannot find installed package
+
+When the `rxExecBy` function is called, a new R runtime process starts. This new process does not have updated library paths, hence, packages installed in locations other than the default library path are not found during execution.
+
+#### Workaround
+
+The path to R packages needs to be explicitly updated. Suppose the packages are installed in the external libraries path, the following R script could be used to update library path: `.libPaths(c(Sys.getenv("MRS_EXTLIB_USER_PATH"), Sys.getenv("MRS_EXTLIB_SHARED_PATH"), .libPaths()))`
 
 ## Python script execution issues
 

@@ -1,22 +1,17 @@
 ---
-description: "SetDefaults Method (ServerSettings Class)"
 title: "SetDefaults Method (ServerSettings)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetDefaults Method (ServerSettings Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetDefaults method"
-ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
+description: "SetDefaults Method (ServerSettings Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetDefaults method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetDefaults Method (ServerSettings Class)"
+apitype: "MOFDef"
 ---
 # SetDefaults Method (ServerSettings Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

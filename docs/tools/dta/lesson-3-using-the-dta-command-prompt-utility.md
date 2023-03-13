@@ -1,17 +1,14 @@
 ---
 title: Using the dta Command Prompt Utility
 description: Learn about the functionality that the dta command-prompt utility offers in addition to that provided by the SQL Server Database Engine Tuning Advisor.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Engine [SQL Server], tutorials"
-ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 ---
 # Lesson 3: Using the dta Command Prompt Utility
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

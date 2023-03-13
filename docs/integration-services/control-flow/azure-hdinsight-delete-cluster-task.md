@@ -1,18 +1,15 @@
 ---
+title: "Azure HDInsight Delete Cluster Task"
 description: "Azure HDInsight Delete Cluster Task"
-title: "Azure HDInsight Delete Cluster Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.afpdelcltask.f1"
-  - "sql14.dts.designer.afpdelcltask.f1"
-ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
+ms.date: "02/28/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.afpdelcltask.f1"
+  - "sql14.dts.designer.afpdelcltask.f1"
 ---
 # Azure HDInsight Delete Cluster Task
 

@@ -1,15 +1,12 @@
 ---
-description: "Manage Changesets (Master Data Services)"
 title: Manage Changesets
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
+description: "Manage Changesets (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Manage Changesets (Master Data Services)
 

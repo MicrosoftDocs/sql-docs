@@ -1,18 +1,15 @@
 ---
+title: "SQRT (SSIS Expression)"
 description: "SQRT (SSIS Expression)"
-title: "SQRT (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQRT function"
-  - "square root of given expression"
-ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQRT function"
+  - "square root of given expression"
 ---
 # SQRT (SSIS Expression)
 

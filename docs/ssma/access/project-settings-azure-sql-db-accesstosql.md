@@ -1,21 +1,17 @@
 ---
+title: "Project Settings (Azure SQL Database) (AccessToSQL)"
 description: "Project Settings (Azure SQL Database) (AccessToSQL)"
-title: "Project Settings (Azure SQL Database) (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+f1_keywords:
+  - "ssma.access.projectsettingssqlazure.f1"
+helpviewer_keywords:
   - "Project Settings dialog box, SQL Azure"
   - "SQL Azure settings"
-ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-  - "ssma.access.projectsettingssqlazure.f1"
-
 ---
 # Project Settings (Azure SQL Database) (AccessToSQL)
 The SQL Azure project settings let you configure the Azure SQL Database suffix to be added in the connection dialog and also allow implementing heartbeat mechanism in SQL Azure connection.  

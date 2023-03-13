@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2576"
 description: "MSSQLSERVER_2576"
-title: "MSSQLSERVER_2576 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2576 (Database Engine error)"
-ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2576 (Database Engine error)"
 ---
 # MSSQLSERVER_2576
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

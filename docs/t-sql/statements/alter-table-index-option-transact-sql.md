@@ -8,7 +8,6 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "index_option"
 dev_langs:

@@ -1,15 +1,12 @@
 ---
+title: "How to Create the SQL Server Change Database Instance"
 description: "How to Create the SQL Server Change Database Instance"
-title: "How to Create the SQL Server Change Database Instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # How to Create the SQL Server Change Database Instance
 

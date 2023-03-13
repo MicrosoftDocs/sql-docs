@@ -1,19 +1,16 @@
 ---
+title: "Cursor Rowset Size"
 description: "Cursor Rowset Size"
-title: "Cursor Rowset Size | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursors [ODBC], rowset size"
   - "ODBC cursors, rowset size"
   - "rowsets [ODBC]"
-ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursor Rowset Size

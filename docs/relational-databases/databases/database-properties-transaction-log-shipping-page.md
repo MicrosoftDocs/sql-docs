@@ -1,17 +1,14 @@
 ---
-title: "Database Properties (Transaction Log Shipping Page) | Microsoft Docs"
+title: "Database Properties (Transaction Log Shipping Page)"
 description: "Use the Transaction Log Shipping tab in the Database Properties dialog box to enable a database as a log shipping primary database and set its options."
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.f1"
-ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.databaseproperties.logshipping.f1"
 ---
 # Database Properties (Transaction Log Shipping Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

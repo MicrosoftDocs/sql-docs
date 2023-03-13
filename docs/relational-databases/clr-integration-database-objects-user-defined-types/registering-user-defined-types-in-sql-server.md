@@ -30,7 +30,6 @@ helpviewer_keywords:
   - "ADD FILE clause"
 dev_langs:
   - "TSQL"
-ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 ---
 # Registering User-Defined Types in SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

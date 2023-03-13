@@ -1,18 +1,17 @@
 ---
 title: Create a New Database Project
 description: Find out how to create a new database project. See how to import the schema from an existing database into the new project.
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.dbprojectwizard.importschema"
   - "sql.data.tools.SqlProjectImportDatabaseDialog.dialog"
   - "sql.data.tools.importscriptwizard.welcome"
   - "sql.data.tools.importscriptwizard.fileselection"
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Create a New Database Project

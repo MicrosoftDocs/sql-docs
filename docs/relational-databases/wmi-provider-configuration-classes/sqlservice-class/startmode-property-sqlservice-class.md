@@ -1,22 +1,17 @@
 ---
-description: "StartMode Property (SqlService Class)"
 title: "StartMode Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "StartMode Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "StartMode property"
-ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
+description: "StartMode Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "StartMode property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "StartMode Property (SqlService Class)"
+apitype: "MOFDef"
 ---
 # StartMode Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

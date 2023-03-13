@@ -1,13 +1,13 @@
 ---
+title: "Integration Services (SSIS) Variables"
 description: "Integration Services (SSIS) Variables"
-title: "Integration Services (SSIS) Variables | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "variables [Integration Services], passing between packages"
   - "user-defined variables [Integration Services]"
   - "scope [Integration Services]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "variables [Integration Services]"
   - "variables [Integration Services], about variables"
   - "values [Integration Services]"
-ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Variables
 

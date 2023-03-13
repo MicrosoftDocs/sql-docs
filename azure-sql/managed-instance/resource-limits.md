@@ -2,7 +2,6 @@
 title: Resource limits
 titleSuffix: Azure SQL Managed Instance
 description: This article provides an overview of the resource limits for Azure SQL Managed Instance.
-services: sql-database
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
@@ -95,7 +94,7 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 | Max data file size | Maximum size of each data file is 8 TB. Use at least two data files for databases larger than 8 TB. | Up to currently available instance size (depending on the number of vCores). |
 | Max log file size | Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. |
 | Data/Log IOPS (approximate) | 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)| 16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. |
-| Log write throughput limit (per instance) | 3 MiB/s per vCore<br/>Max 120 MiB/s per instance<br/>22 - 65 MiB/s per DB (depending on log file size)<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4 MiB/s per vCore<br/>Max 96 MiB/s |
+| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br/>Max 120 MiB/s per instance<br/>22 - 65 MiB/s per DB (depending on log file size)<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4.5 MiB/s per vCore<br/>Max 96 MiB/s |
 | Data throughput (approximate) | 100 - 250 MiB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Not limited. |
 | Storage IO latency (approximate) | 5-10 ms | 1-2 ms |
 | In-memory OLTP | Not supported | Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
@@ -118,6 +117,10 @@ Find more information about the [resource limits in SQL Managed Instance pools i
 
 ### Data and log storage
 
+<!--
+The information in this section is duplicated in /managed-instance/service-tiers-managed-instance-vcore.md. Please make sure any changes are made to both articles. 
+--->
+
 The following factors affect the amount of storage used for data and log files, and apply to General Purpose and Business Critical tiers. 
 
 - In the General Purpose service tier, `tempdb` uses local SSD storage, and this storage cost is included in the vCore price.
@@ -125,7 +128,7 @@ The following factors affect the amount of storage used for data and log files, 
 - The maximum storage size for a SQL Managed Instance must be specified in multiples of 32 GB.
 
 > [!IMPORTANT]
-> In the General Purpose and Business Critical tiers, you are charged for the maximum storage size configured for a managed instance. 
+> In both service tiers, you are charged for the maximum storage size configured for a managed instance. 
 
 To monitor total consumed instance storage size for SQL Managed Instance, use the *storage_space_used_mb* [metric](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances). To monitor the current allocated and used storage size of individual data and log files in a database using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
 
@@ -215,7 +218,7 @@ If you need more instances in your current regions, send a support request to ex
 
 This section includes details on previously available hardware. Consider [moving your instance of SQL Managed Instance to the standard-series (Gen5)](../database/service-tiers-vcore.md) hardware to experience a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
 
 ### Hardware characteristics
 
@@ -229,7 +232,7 @@ This section includes details on previously available hardware. Consider [moving
 
 ### In-memory OLTP available space
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
   
 The amount of In-memory OLTP space in [Business Critical](../database/service-tier-business-critical.md) service tier depends on the number of vCores and hardware configuration. The following table lists limits of memory that can be used for In-memory OLTP objects.
 
@@ -242,7 +245,7 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 
 ### Service tier characteristics
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
   
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |

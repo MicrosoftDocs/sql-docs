@@ -1,22 +1,19 @@
 ---
+title: "sp_update_alert (Transact-SQL)"
 description: "sp_update_alert (Transact-SQL)"
-title: "sp_update_alert (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_alert_TSQL"
-  - "sp_update_alert"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_update_alert"
-ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_alert_TSQL"
+  - "sp_update_alert"
+helpviewer_keywords:
+  - "sp_update_alert"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

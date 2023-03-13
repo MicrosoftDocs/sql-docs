@@ -1,19 +1,16 @@
 ---
-description: "Create a SQL Server Agent Master Job"
 title: "Create a SQL Server Agent Master Job"
-ms.custom: seo-lt-2019
+description: "Create a SQL Server Agent Master Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], master jobs"
   - "jobs [SQL Server Agent], creating"
   - "master SQL Server Agent job [SQL Server]"
-ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a SQL Server Agent Master Job

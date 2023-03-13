@@ -1,19 +1,15 @@
 ---
+title: "Implement Event Notifications"
 description: "Implement Event Notifications"
-title: "Implement Event Notifications | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event notifications [SQL Server], target service"
   - "target service [SQL Server]"
   - "event notifications [SQL Server], creating"
-ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Implement Event Notifications
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

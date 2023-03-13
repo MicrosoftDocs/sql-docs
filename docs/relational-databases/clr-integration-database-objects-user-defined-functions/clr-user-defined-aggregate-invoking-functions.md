@@ -15,7 +15,6 @@ dev_langs:
   - "TSQL"
   - "VB"
   - "CSharp"
-ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 ---
 # CLR User-Defined Aggregate - Invoking Functions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

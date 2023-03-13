@@ -1,22 +1,19 @@
 ---
+title: "sp_cursorexecute (Transact-SQL)"
 description: "sp_cursorexecute (Transact-SQL)"
-title: "sp_cursorexecute (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursorexecute"
-  - "sp_cursorexecute_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursor_execute"
-ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursorexecute"
+  - "sp_cursorexecute_TSQL"
+helpviewer_keywords:
+  - "sp_cursor_execute"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursorexecute (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

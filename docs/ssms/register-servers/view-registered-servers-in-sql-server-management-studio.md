@@ -1,15 +1,12 @@
 ---
-description: "View Registered Servers in SQL Server Management Studio"
 title: View Registered Servers
+description: "View Registered Servers in SQL Server Management Studio"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ---
 
 # View Registered Servers in SQL Server Management Studio

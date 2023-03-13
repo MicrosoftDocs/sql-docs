@@ -1,15 +1,11 @@
 ---
-description: "Create Manual Traces using Stored Procedures"
 title: "Create Manual Traces using Stored Procedures"
-ms.custom: seo-dt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
+description: "Create Manual Traces using Stored Procedures"
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
 ---
 # Create Manual Traces using Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

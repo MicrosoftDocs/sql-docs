@@ -9,7 +9,6 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 8ef966f8-d14e-40d3-9626-3508ada9b8fb
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_lock_waits (Transact-SQL)

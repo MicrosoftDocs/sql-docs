@@ -7,7 +7,6 @@ ms.date: "08/04/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 ---
 # Cross-Database Queries
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

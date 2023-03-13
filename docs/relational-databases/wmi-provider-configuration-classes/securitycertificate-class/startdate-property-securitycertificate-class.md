@@ -1,22 +1,17 @@
 ---
-description: "StartDate Property (SecurityCertificate Class)"
 title: "StartDate Property (SecurityCertificate)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "StartDate Property (SecurityCertificate Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "StartDate property"
-ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
+description: "StartDate Property (SecurityCertificate Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "StartDate property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "StartDate Property (SecurityCertificate Class)"
+apitype: "MOFDef"
 ---
 # StartDate Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

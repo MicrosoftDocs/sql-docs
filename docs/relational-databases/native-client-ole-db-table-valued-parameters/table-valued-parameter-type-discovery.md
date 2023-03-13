@@ -1,17 +1,14 @@
 ---
-description: "Table-Valued Parameter Type Discovery"
 title: Table-valued parameter type discovery (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters, type discovery"
-ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
+description: "Table-Valued Parameter Type Discovery"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters, type discovery"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameter Type Discovery

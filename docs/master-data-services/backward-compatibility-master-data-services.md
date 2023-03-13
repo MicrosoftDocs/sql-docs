@@ -1,15 +1,12 @@
 ---
-description: "Backward Compatibility (Master Data Services)"
 title: Backward Compatibility
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
+description: "Backward Compatibility (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Backward Compatibility (Master Data Services)
 

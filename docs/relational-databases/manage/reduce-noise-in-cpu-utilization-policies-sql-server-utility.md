@@ -1,22 +1,22 @@
 ---
-title: "Reduce Noise in CPU Utilization Policies (SQL Server Utility) | Microsoft Docs"
+title: "Reduce Noise in CPU Utilization Policies (SQL Server Utility)"
 description: View strategies for reducing noise and unwanted violations in SQL Server Utility results. See which policy options affect processor utilization reports.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.SWB.UE.ReduceNoise.F1"
-ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.SWB.UE.ReduceNoise.F1"
 ---
 # Reduce Noise in CPU Utilization Policies (SQL Server Utility)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the following strategies to reduce reporting noise and unwanted violations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource utilization policies.  
   
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
+
+
 ## How frequently should processor utilization be in violation before it is reported as overutilized?  
  The evaluation time period and tolerance for percent violations are both configurable using the **Policy** tab settings in the **Utility Administration** node of Utility Explorer. To change policies, use the slider controls to the right of policy descriptions, then click **Apply**. You can also restore default values or discard changes using buttons at the bottom of the display.  
   

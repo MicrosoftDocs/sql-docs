@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_15581"
 title: MSSQLSERVER_15581
-ms.custom: ""
-ms.date: 09/03/2020
-ms.service: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha, VenCher
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "15581 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_15581"
 author: suresh-kandoth
 ms.author: ramakoni
+ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha, VenCher
+ms.date: 09/03/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "15581 (Database Engine error)"
 ---
 # MSSQLSERVER_15581
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

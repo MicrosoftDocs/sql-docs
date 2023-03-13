@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Logging)  (MySQLToSQL)"
 description: "Global Settings (Logging)  (MySQLToSQL)"
-title: "Global Settings (Logging)  (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.globalsettinglogging.f1"
+f1_keywords:
+  - "ssma.mysql.globalsettinglogging.f1"
 ---
 # Global Settings (Logging)  (MySQLToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  

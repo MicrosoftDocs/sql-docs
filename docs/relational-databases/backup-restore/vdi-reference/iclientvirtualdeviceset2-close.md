@@ -1,13 +1,13 @@
 ---
-title: IClientVirtualDeviceSet2::Close
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IClientVirtualDeviceSet2::Close command.
+title: "IClientVirtualDeviceSet2::Close"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IClientVirtualDeviceSet2::Close command."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 08/30/2019
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: reference
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # IClientVirtualDeviceSet2::Close (VDI)

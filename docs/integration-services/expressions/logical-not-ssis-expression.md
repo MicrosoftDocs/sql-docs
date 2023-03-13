@@ -1,18 +1,15 @@
 ---
+title: "! (Logical Not) (SSIS Expression)"
 description: "! (Logical Not) (SSIS Expression)"
-title: "! (Logical Not) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "logical Not (!)"
-  - "! (logical Not)"
-ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "logical Not (!)"
+  - "! (logical Not)"
 ---
 # ! (Logical Not) (SSIS Expression)
 

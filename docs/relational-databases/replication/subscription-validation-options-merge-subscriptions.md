@@ -1,19 +1,17 @@
 ---
 title: "Subscription Validation Options (Merge)"
 description: Describes the 'Subscription Validation Options' dialog box within SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.validate.mergeoptions.f1"
-helpviewer_keywords: 
-  - "Subscription Validation Options dialog box"
-ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.validate.mergeoptions.f1"
+helpviewer_keywords:
+  - "Subscription Validation Options dialog box"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Subscription Validation Options (Merge Subscriptions)

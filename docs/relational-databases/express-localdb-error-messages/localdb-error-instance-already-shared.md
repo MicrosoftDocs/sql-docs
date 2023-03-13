@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_INSTANCE_ALREADY_SHARED"
 description: "LOCALDB_ERROR_INSTANCE_ALREADY_SHARED"
-title: "LOCALDB_ERROR_INSTANCE_ALREADY_SHARED | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

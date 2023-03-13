@@ -8,7 +8,6 @@ ms.date: "01/06/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: "language-reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "SHRINKFILE"
   - "DBCC_SHRINKFILE_TSQL"
@@ -60,13 +59,12 @@ DBCC SHRINKFILE
 ]
        
 < wait_at_low_priority_option_list > ::=  
-	<wait_at_low_priority_option>
-	| <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
+    <wait_at_low_priority_option>
+    | <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
  
 < wait_at_low_priority_option > ::=
-	MAX_DURATION = { 'timeout' } [ MINUTES ]
-    | , ABORT_AFTER_WAIT = { SELF | BLOCKERS }
-````  
+    ABORT_AFTER_WAIT = { SELF | BLOCKERS }
+```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -133,13 +131,6 @@ When a shrink command is executed in WAIT_AT_LOW_PRIORITY mode, new queries requ
 
 If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will silently exit. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in WAIT_AT_LOW_PRIORITY mode knowing that there would be no impact to the application.
 
-#### MAX_DURATION = 1 [MINUTES]
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-
-This is an optional parameter. The default value when not specified = 1 minute. 
-
-The shrink operation's Sch-M lock request will wait with low priority when executing the command for the MAX_DURATION in minutes. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed. MAX_DURATION time is always in minutes, and the word MINUTES can be omitted. 
-
 #### ABORT_AFTER_WAIT = [ **SELF** | BLOCKERS ]
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -173,6 +164,8 @@ You can stop `DBCC SHRINKFILE` operations at any point and any completed work is
 When a `DBCC SHRINKFILE` operation fails, an error is raised.
 
 Other users can work in the database during file shrinking; the database doesn't have to be in single-user mode. You don't have to run the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode to shrink the system databases.
+
+When specified with WAIT_AT_LOW_PRIORITY, the shrink operation's Sch-M lock request will wait with low priority when executing the command for 1 minute. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed.
 
 ### Understand concurrency issues with DBCC SHRINKFILE
 

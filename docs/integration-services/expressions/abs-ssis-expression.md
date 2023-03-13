@@ -1,18 +1,15 @@
 ---
+title: "ABS (SSIS Expression)"
 description: "ABS (SSIS Expression)"
-title: "ABS (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ABS function"
-  - "absolute positive value"
-ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ABS function"
+  - "absolute positive value"
 ---
 # ABS (SSIS Expression)
 

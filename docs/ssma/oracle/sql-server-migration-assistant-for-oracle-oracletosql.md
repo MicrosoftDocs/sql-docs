@@ -1,18 +1,14 @@
 ---
-title: "SQL Server Migration Assistant for Oracle (OracleToSQL) | Microsoft Docs"
+title: "SQL Server Migration Assistant for Oracle (OracleToSQL)"
 description: Learn about SSMA for Oracle and follow step-by-step instructions for migrating Oracle databases to SQL Server.
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "10/10/2019"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
-f1_keywords: 
+f1_keywords:
   - "ssma.oracle.general.f1"
-author: cpichuka 
-ms.author: cpichuka 
-
 ---
 # SQL Server Migration Assistant for Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle is a tool for migrating Oracle databases to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 on Windows and Linux, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019 on Windows and Linux, and Azure SQL Database. SSMA for Oracle converts Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects, creates those objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then migrates data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

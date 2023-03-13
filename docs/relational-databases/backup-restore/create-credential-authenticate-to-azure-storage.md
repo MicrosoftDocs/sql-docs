@@ -1,17 +1,14 @@
 ---
-title: "Create Credential - Authenticate to Azure Storage | Microsoft Docs"
+title: "Create Credential - Authenticate to Azure Storage"
 description: In SQL Server, use the Create Credential page of the Back Up Database dialog box to provide an Azure Management Certificate to validate your connection.
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.backuptourl.createcred.f1"
-ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.backuptourl.createcred.f1"
 ---
 # Create Credential - Authenticate to Azure Storage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

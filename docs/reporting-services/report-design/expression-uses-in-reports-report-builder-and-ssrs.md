@@ -1,17 +1,14 @@
 ---
-title: "Expression uses in paginated reports | Microsoft Docs"
+title: "Expression uses in paginated reports"
 description: Specify or calculate values with paginated report expressions for parameters, queries, filters, and text box properties in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "expressions [Reporting Services], about expressions"
-ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Expression uses in paginated reports (Report Builder)
 

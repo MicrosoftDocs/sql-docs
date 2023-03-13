@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysoperators system table"
 dev_langs:
   - "TSQL"
-ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 ---
 # dbo.sysoperators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

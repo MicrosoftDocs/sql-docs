@@ -1,20 +1,17 @@
 ---
+title: "Upgrade Integration Services"
 description: "Upgrade Integration Services"
-title: "Upgrade Integration Services | Microsoft Docs"
-ms.custom: ""
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services, upgrading"
   - "SSIS, upgrading"
   - "SQL Server Integration Services, upgrading"
   - "upgrading Integration Services"
-ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
 ---
 # Upgrade Integration Services
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_helpsubscriptionerrors (Transact-SQL)"
 description: "sp_helpsubscriptionerrors (Transact-SQL)"
-title: "sp_helpsubscriptionerrors (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpsubscriptionerrors_TSQL"
-  - "sp_helpsubscriptionerrors"
-helpviewer_keywords: 
-  - "sp_helpsubscriptionerrors"
-ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpsubscriptionerrors_TSQL"
+  - "sp_helpsubscriptionerrors"
+helpviewer_keywords:
+  - "sp_helpsubscriptionerrors"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

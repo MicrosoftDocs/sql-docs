@@ -8,7 +8,6 @@ ms.date: 05/25/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: language-reference
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"

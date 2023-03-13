@@ -1,14 +1,11 @@
 ---
+title: "CurvePolygon"
 description: "CurvePolygon"
-title: "CurvePolygon | Microsoft Docs"
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CurvePolygon

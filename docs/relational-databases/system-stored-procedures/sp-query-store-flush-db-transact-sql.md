@@ -7,7 +7,6 @@ ms.date: 09/30/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sp_query_store_flush_db_TSQL"
   - "sys.sp_query_store_flush_db_TSQL"

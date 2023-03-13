@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_tombstone system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 ---
 # MSmerge_tombstone (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

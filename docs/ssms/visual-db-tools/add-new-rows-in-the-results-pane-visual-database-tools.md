@@ -1,22 +1,19 @@
 ---
-description: "Add New Rows in the Results Pane (Visual Database Tools)"
 title: Add New Rows in the Results Pane
+description: "Add New Rows in the Results Pane (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "View Designer, Results pane"
   - "inserting rows"
   - "Query Designer [SQL Server], Results pane"
   - "Results pane"
   - "adding rows"
   - "row additions [SQL Server], Results pane"
-ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Add New Rows in the Results Pane (Visual Database Tools)

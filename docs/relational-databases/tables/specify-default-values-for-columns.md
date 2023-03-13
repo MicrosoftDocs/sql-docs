@@ -1,17 +1,15 @@
 ---
 title: "Specify Default Values for Columns"
 description: "Specify Default Values for Columns"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 10/21/2021
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [SQL Server], defaults"
   - "default values"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
-ms.date: 10/21/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Default Values for Columns

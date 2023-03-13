@@ -1,17 +1,14 @@
 ---
+title: "Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard"
 description: "Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard"
-title: "Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.attriboption.f1"
-ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.loaddimwizard.attriboption.f1"
 ---
 # Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
 

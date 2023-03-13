@@ -1,15 +1,13 @@
 ---
 title: "Database verification"
 description: This article provides information on database verification for a ledger database.
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: kendralittle, mathoma
 ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
-ms.custom:
-- event-tier1-build-2022
-ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
-author: VanMSFT
-ms.author: vanto
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
@@ -27,10 +25,10 @@ Because the ledger verification recomputes all of the hashes for transactions in
 
 You accomplish database verification through two stored procedures, depending on whether you [use automatic digest storage](#database-verification-that-uses-automatic-digest-storage) or you [manually manage digests](#database-verification-that-uses-manual-digest-storage).
 
-### Database verification that uses automatic digest storage
-
 > [!NOTE]
-> Database verification using automatic digest storage is currently available in Azure SQL Database, but not supported on SQL Server.
+> The database option [ALLOW_SNAPSHOT_ISOLATION](../../../t-sql/statements/alter-database-transact-sql-set-options.md) has to be enabled on the database before you can run the verifcation stored procedures.
+
+### Database verification that uses automatic digest storage
 
 When you're using automatic digest storage for generating and storing database digests, the location of the digest storage is in the system catalog view [sys.database_ledger_digest_locations](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md) as JSON objects. Running database verification consists of executing the [sp_verify_database_ledger_from_digest_storage](../../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md) system stored procedure. Specify the JSON objects from the [sys.database_ledger_digest_locations](../../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)  system catalog view where database digests are configured to be stored. 
 

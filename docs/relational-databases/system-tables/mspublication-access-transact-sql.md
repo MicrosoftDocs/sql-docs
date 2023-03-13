@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSpublication_access system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 ---
 # MSpublication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

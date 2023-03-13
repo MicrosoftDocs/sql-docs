@@ -1,13 +1,14 @@
 ---
-title: "Strategies for Backing Up and Restoring Snapshot and Transactional Replication | Microsoft Docs"
+title: "Strategies for Backing Up and Restoring Snapshot and Transactional Replication"
 description: Learn about considerations for designing a backup and restore strategy for snapshot and transactional replication in SQL Server.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "backups [SQL Server replication], snapshot replication"
   - "restoring [SQL Server replication], transactional replication"
   - "snapshot replication [SQL Server], backup and restore"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "recovery [SQL Server replication], snapshot replication"
   - "sync with backup [SQL Server replication]"
   - "backups [SQL Server replication], transactional replication"
-ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication

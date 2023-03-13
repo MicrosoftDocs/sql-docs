@@ -1,19 +1,17 @@
 ---
+title: "Specify a Merge Article Resolver"
 description: "Specify a Merge Article Resolver"
-title: "Specify a Merge Article Resolver | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "articles [SQL Server replication], conflict resolution"
   - "conflict resolution [SQL Server replication], merge replication"
   - "merge replication conflict resolution [SQL Server replication], merge article resolvers"
-ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Specify a Merge Article Resolver
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

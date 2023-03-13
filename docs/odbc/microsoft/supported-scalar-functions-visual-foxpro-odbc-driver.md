@@ -1,19 +1,16 @@
 ---
+title: "Supported Scalar Functions (Visual FoxPro ODBC Driver)"
 description: "Supported Scalar Functions (Visual FoxPro ODBC Driver)"
-title: "Supported Scalar Functions (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], scalar functions"
   - "scalar functions [ODBC], Visual FoxPro ODBC driver"
   - "Visual FoxPro ODBC driver [ODBC], scalar functions"
-ms.assetid: 6541192e-e562-4de0-9f20-40afa41fb84a
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Supported Scalar Functions (Visual FoxPro ODBC Driver)
 The Visual FoxPro ODBC Driver supports three types of scalar functions as defined in the ODBC SQL grammar: string, numeric, and time and date functions.  

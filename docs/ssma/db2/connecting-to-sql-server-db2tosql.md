@@ -1,15 +1,12 @@
 ---
+title: "Connecting to SQL Server (DB2ToSQL)"
 description: "Connecting to SQL Server (DB2ToSQL)"
-title: "Connecting to SQL Server (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "11/16/2020"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
-author: cpichuka 
-ms.author: cpichuka 
 ---
 
 # Connecting to SQL Server (DB2ToSQL)

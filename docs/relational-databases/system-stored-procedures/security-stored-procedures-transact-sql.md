@@ -1,22 +1,18 @@
 ---
+title: "Security Stored Procedures (Transact-SQL)"
 description: "Security Stored Procedures (Transact-SQL)"
-title: "Security Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/24/2022
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system stored procedures [SQL Server], security"
   - "stored procedures [SQL Server], security"
   - "security [SQL Server], stored procedures"
-ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Security Stored Procedures (Transact-SQL)

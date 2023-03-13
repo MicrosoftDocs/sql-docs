@@ -1,17 +1,14 @@
 ---
-description: "Updating an Application from SQL Server 2005 Native Client"
 title: "Update from SQL 2005"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Native Client, updating applications"
-ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
+description: "Updating an Application from SQL Server 2005 Native Client"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQL Server Native Client, updating applications"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating an Application from SQL Server 2005 Native Client

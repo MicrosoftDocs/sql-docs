@@ -3,7 +3,7 @@ title: Start, stop, pause, resume, and restart SQL Server services
 description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/16/2022
+ms.date: 02/21/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -96,7 +96,7 @@ The SQL Server Configuration Manager is a snap-in for the Microsoft Management C
 
 ### <a id="configmande"></a> Start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
-1. Start SQL Server Configuration Manager, using the instructions above.
+1. Start SQL Server Configuration Manager, using the instructions in the previous section.
 
 1. If the **User Account Control** dialog box appears, select **Yes**.
 
@@ -114,7 +114,7 @@ The SQL Server Configuration Manager is a snap-in for the Microsoft Management C
 
 ### Start, stop, pause, resume, or restart the SQL Server Browser or an instance of the SQL Server Agent
 
-1. Start SQL Server Configuration Manager, using the instructions above.
+1. Start SQL Server Configuration Manager, using the instructions in the previous section.
 
 1. If the **User Account Control** dialog box appears, select **Yes**.
 
@@ -125,7 +125,7 @@ The SQL Server Configuration Manager is a snap-in for the Microsoft Management C
 1. Select **OK** to close the SQL Server Configuration Manager.
 
 > [!NOTE]  
-> SQL Server Agent cannot be paused.
+> SQL Server Agent can't be paused.
 
 ## SQL Server Management Studio
 
@@ -242,11 +242,11 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
 
 ### <a id="pauseStop"></a> Pause or stop services from the command prompt window
 
-- To pause or stop services, modify the commands in the following ways.
+To pause or stop services, modify the commands in the following ways.
 
 - To pause a service, replace **net start** with **net pause**.
 
-- To stop a service, replace **net start** with use **net stop**.
+- To stop a service, replace **net start** with **net stop**.
 
 ## <a id="TsqlProcedure"></a> Transact-SQL
 
@@ -338,6 +338,20 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN (Transact-S
     # Display the state of the service.
     $DfltInstance
     ```
+
+## Check and enable disabled instances
+
+To determine whether a SQL Server service instance is disabled, follow these steps:
+
+1. Identify the service that you're trying to check by using the information in the [Identify the Service](start-stop-pause-resume-restart-sql-server-services.md) section.
+1. In [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md), select **SQL Server Services** and then locate the service you're interested in.
+1. If the value of the **Start Mode** column is set to **Other (Boot, System, Disabled or Unknown)**, it typically means the corresponding service is disabled. To enable the service, follow these steps:
+
+    a. In the Name column, right-click on the corresponding service and then switch to **Service** tab in the ***\<Service name\>* Properties** window.  
+
+    b. Review the value in the **Start Mode** column and verify that it's set to **Disabled**.
+
+    c. Change the value to either **Manual** or **Automatic** per your requirements. For more information, see [Configure Server Startup Options (SQL Server Configuration Manager)](scm-services-configure-server-startup-options.md).
 
 ## <a id="ServiceController"></a> Use the ServiceController class
 

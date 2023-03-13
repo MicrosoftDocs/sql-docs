@@ -1,17 +1,14 @@
 ---
+title: "SQLGetFunctions (Visual FoxPro ODBC Driver)"
 description: "SQLGetFunctions (Visual FoxPro ODBC Driver)"
-title: "SQLGetFunctions (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLGetFunctions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

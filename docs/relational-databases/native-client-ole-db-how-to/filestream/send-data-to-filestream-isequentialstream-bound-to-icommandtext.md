@@ -1,15 +1,12 @@
 ---
-description: "Send Data to FILESTREAM in SQL Server Native Client - ISequentialStream Bound to ICommandText"
 title: "Data FILESTREAM, ISequentialStream ICommandText"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
+description: "Send Data to FILESTREAM in SQL Server Native Client - ISequentialStream Bound to ICommandText"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Send Data to FILESTREAM in SQL Server Native Client - ISequentialStream Bound to ICommandText

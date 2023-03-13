@@ -1,22 +1,19 @@
 ---
+title: "SHORTEST PATH (SQL Graph)"
 description: "SHORTEST_PATH (Transact-SQL)"
-title: "SHORTEST PATH (SQL Graph) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 07/01/2020
 ms.service: sql
-ms.reviewer: ""
-ms.subservice:
 ms.topic: "language-reference"
 f1_keywords:
   - "SHORTEST PATH"
   - "SHORTEST_PATH"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "MATCH statement [SQL Server], SQL graph"
   - "SQL graph, MATCH statement"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current"
 ---
 # SHORTEST_PATH (Transact-SQL)

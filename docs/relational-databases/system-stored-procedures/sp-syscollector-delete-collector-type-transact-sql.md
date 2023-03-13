@@ -1,23 +1,20 @@
 ---
+title: "sp_syscollector_delete_collector_type (Transact-SQL)"
 description: "sp_syscollector_delete_collector_type (Transact-SQL)"
-title: "sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_delete_collector_type"
-  - "sp_syscollector_delete_collector_type_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data collector [SQL Server], stored procedures"
-  - "sp_syscollector_delete_collector_type"
-ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_delete_collector_type"
+  - "sp_syscollector_delete_collector_type_TSQL"
+helpviewer_keywords:
+  - "data collector [SQL Server], stored procedures"
+  - "sp_syscollector_delete_collector_type"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

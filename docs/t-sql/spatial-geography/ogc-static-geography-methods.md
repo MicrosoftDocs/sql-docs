@@ -1,17 +1,14 @@
 ---
+title: "OGC Static Geography Methods"
 description: "OGC Static Geography Methods"
-title: "OGC Static Geography Methods | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
-author: MladjoA
-ms.author: mlandzic 
 ---
 # OGC Static Geography Methods
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,13 +1,13 @@
 ---
-title: "Copy Databases to Other Servers | Microsoft Docs"
+title: "Copy Databases to Other Servers"
 description: Learn how to copy a SQL Server database from one computer to another for testing, to make it available to remote-branch operations, or for other reasons.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "servers [SQL Server], copying databases between"
   - "bulk exporting [SQL Server], between servers"
   - "database copying [SQL Server]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "moving databases"
   - "copying databases"
   - "bulk importing [SQL Server], between servers"
-ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Copy Databases to Other Servers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

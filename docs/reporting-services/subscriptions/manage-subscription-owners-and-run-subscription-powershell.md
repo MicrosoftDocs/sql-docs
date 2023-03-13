@@ -1,14 +1,12 @@
 ---
-title: "Manage Subscription Owners and Run Subscription - PowerShell | Microsoft Docs"
+title: "Manage Subscription Owners and Run Subscription - PowerShell"
 description: Learn how to programmatically transfer the ownership of a Reporting Services subscription from one user to another.
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 01/16/2020
 ms.service: reporting-services
 ms.subservice: subscriptions
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
-ms.reviewer: ""
-ms.custom: ""
-ms.date: 01/16/2020
 ---
 
 # Manage Subscription Owners and Run Subscription - PowerShell

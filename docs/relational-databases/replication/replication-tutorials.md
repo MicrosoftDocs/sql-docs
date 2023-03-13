@@ -1,19 +1,17 @@
 ---
-title: "Replication tutorials | Microsoft Docs"
+title: "Replication tutorials"
 description: Use these tutorials to help prepare your server for replication in SQL Server, and then learn to configure both transactional and merge replication.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "04/09/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "tutorials [SQL Server replication]"
   - "walkthroughs [SQL Server replication]"
   - "replication [SQL Server], tutorials"
-ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication tutorials

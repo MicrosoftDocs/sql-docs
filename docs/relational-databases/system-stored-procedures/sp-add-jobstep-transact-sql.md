@@ -1,22 +1,19 @@
 ---
-description: "sp_add_jobstep (Transact-SQL)"
 title: sp_add_jobstep (Transact-SQL)
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_add_jobstep_TSQL"
-  - "sp_add_jobstep"
-helpviewer_keywords: 
-  - "sp_add_jobstep"
-ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
+description: "sp_add_jobstep (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
 ms.date: 03/15/2017
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_jobstep_TSQL"
+  - "sp_add_jobstep"
+helpviewer_keywords:
+  - "sp_add_jobstep"
+dev_langs:
+  - "TSQL"
 ---
 
 # sp_add_jobstep (Transact-SQL)

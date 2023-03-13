@@ -1,20 +1,17 @@
 ---
-title: "avg Function (XQuery) | Microsoft Docs"
+title: "avg Function (XQuery)"
 description: Learn about the XQuery function avg() that returns the average of a specified sequence of numbers.
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:avg function"
-  - "avg function [XQuery]"
-ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: "rothja"
 ms.author: "jroth"
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:avg function"
+  - "avg function [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Aggregate Functions - avg
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

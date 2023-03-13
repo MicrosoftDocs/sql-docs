@@ -1,15 +1,12 @@
 ---
 title: Get Python package information
 description: Learn how to get information about installed Python packages, including versions and installation locations, on SQL Server Machine Learning Services.
-ms.custom: ""
-ms.service: sql
-ms.subservice: machine-learning
-
-ms.date: 06/03/2020
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
+ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: how-to
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

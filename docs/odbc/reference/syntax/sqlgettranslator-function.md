@@ -1,24 +1,19 @@
 ---
+title: "SQLGetTranslator Function"
 description: "SQLGetTranslator Function"
-title: "SQLGetTranslator Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetTranslator"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetTranslator"
-helpviewer_keywords: 
-  - "SQLGetTranslator function [ODBC]"
-ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetTranslator"
+helpviewer_keywords:
+  - "SQLGetTranslator function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetTranslator"
+apitype: "dllExport"
 ---
 # SQLGetTranslator Function
 **Conformance**  

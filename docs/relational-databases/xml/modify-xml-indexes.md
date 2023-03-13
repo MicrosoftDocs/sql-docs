@@ -1,17 +1,16 @@
 ---
 title: "Modify XML indexes"
 description: Learn how the ALTER INDEX (Transact-SQL) DDL statement can be used to modify existing XML and non-XML indexes.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "XML indexes [SQL Server], modifying"
   - "modifying indexes"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Modify XML indexes
 

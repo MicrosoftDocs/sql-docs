@@ -1,19 +1,18 @@
 ---
+title: "Semantic Search (SQL Server)"
 description: "Semantic Search (SQL Server)"
-title: "Semantic Search (SQL Server) | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "semantic search [SQL Server]"
   - "semantic search [SQL Server], overview"
   - "statistical semantic search [SQL Server]"
   - "statistical semantic search [SQL Server], overview"
-ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 ---
 # Semantic Search (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

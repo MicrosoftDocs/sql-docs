@@ -7,10 +7,8 @@ ms.author: randolphwest
 ms.date: "4/18/2022"
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_xe_database_session_object_columns (Azure SQL Database and Azure SQL Managed Instance)

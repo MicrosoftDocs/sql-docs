@@ -1,21 +1,18 @@
 ---
+title: "Grant user access to a report server"
 description: "Grant user access to a report server"
-title: "Grant user access to a report server | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/6/2019
 ms.service: reporting-services
 ms.subservice: security
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing role assignments"
   - "permissions [Reporting Services], granting report server access"
   - "roles [Reporting Services], assignments"
   - "modifying role assignments"
   - "deleting role assignments"
-ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Grant user access to a report server
 

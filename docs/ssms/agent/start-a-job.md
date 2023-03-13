@@ -1,19 +1,16 @@
 ---
-description: "Start a Job"
 title: "Start a Job"
-ms.custom: seo-lt-2019
+description: "Start a Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], starting"
   - "SQL Server Agent jobs, starting"
   - "starting jobs"
-ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Start a Job

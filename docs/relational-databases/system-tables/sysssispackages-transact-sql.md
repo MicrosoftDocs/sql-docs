@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysssispackages system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 ---
 # sysssispackages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

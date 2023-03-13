@@ -9,8 +9,8 @@ ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:
-  - "seoapril2019"
-  - "devx-track-azurepowershell"
+  - seoapril2019
+  - devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -58,10 +58,10 @@ This diagnostic telemetry can be streamed to one of the following Azure resource
   Data streamed to a [Log Analytics workspace](/azure/azure-monitor/essentials/resource-logs#send-to-log-analytics-workspace) can be consumed by [SQL Analytics](/azure/azure-monitor/insights/azure-sql). SQL Analytics is a cloud only monitoring solution that provides intelligent monitoring of your databases that includes performance reports, alerts, and mitigation recommendations. Data streamed to a Log Analytics workspace can be analyzed with other monitoring data collected and also enables you to leverage other Azure Monitor features such as alerts and visualizations
 - **[Azure Event Hubs](#stream-into-event-hubs)**:
 
-  Data streamed to an [Azure Event Hub](/azure/azure-monitor/essentials/resource-logs#send-to-azure-event-hubs)provides the following functionality:
+  Data streamed to an [Azure Event Hub](/azure/azure-monitor/essentials/resource-logs#send-to-azure-event-hubs) provides the following functionality:
 
   - **Stream logs to 3rd party logging and telemetry systems**: Stream all of your metrics and resource logs to a single event hub to pipe log data to a third-party SIEM or log analytics tool.
-  - **Build a custom telemetry and logging platform**: The highly scalable publish-subscribe nature of Azure Event Hubs allows you to flexibly ingest metrics and resource logs into a custom telemetry platform. See [Designing and Sizing a Global Scale Telemetry Platform on Azure Event Hubs](https://azure.microsoft.com/documentation/videos/build-2015-designing-and-sizing-a-global-scale-telemetry-platform-on-azure-event-Hubs/) for details.
+  - **Build a custom telemetry and logging platform**: The highly scalable publish-subscribe nature of Azure Event Hubs allows you to flexibly ingest metrics and resource logs into a custom telemetry platform. For more information, see [Azure Event Hubs](/azure/event-hubs/event-hubs-about).
   - **View service health by streaming data to Power BI**: Use Event Hubs, Stream Analytics, and Power BI to transform your diagnostics data into near real-time insights on your Azure services. See [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](/azure/stream-analytics/stream-analytics-power-bi-dashboard) for details on this solution.
 - **[Azure Storage](#stream-into-azure-storage)**:
 
@@ -382,7 +382,7 @@ You can use streamed metrics in Event Hubs to:
 
 - **Build a custom telemetry and logging platform**
 
-  Do you already have a custom-built telemetry platform or are considering building one? The highly scalable publish-subscribe nature of Event Hubs allows you to flexibly ingest metrics and resource logs. See [Dan Rosanova's guide to using Event Hubs in a global-scale telemetry platform](https://azure.microsoft.com/documentation/videos/build-2015-designing-and-sizing-a-global-scale-telemetry-platform-on-azure-event-Hubs/).
+  Do you already have a custom-built telemetry platform or are considering building one? The highly scalable publish-subscribe nature of Event Hubs allows you to flexibly ingest metrics and resource logs. For more information, see [Azure Event Hubs](/azure/event-hubs/event-hubs-about).
 
 ## Stream into Azure Storage
 

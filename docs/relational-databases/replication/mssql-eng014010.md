@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG014010"
 description: "MSSQL_ENG014010"
-title: "MSSQL_ENG014010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG014010 error"
-ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "08/26/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG014010 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014010

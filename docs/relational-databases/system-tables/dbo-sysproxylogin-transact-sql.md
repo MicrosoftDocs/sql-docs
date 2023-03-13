@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysproxylogin system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 ---
 # dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

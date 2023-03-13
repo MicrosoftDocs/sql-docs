@@ -1,17 +1,21 @@
 ---
 title: SqlPackage for Azure Synapse Analytics
 description: Tips for using SqlPackage in Azure Synapse Analytics scenarios
-ms.custom: "tools|sos"
-ms.date: 12/19/2022
-ms.service: sql
-ms.reviewer: "llali"
-ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
+ms.reviewer: "llali"
+ms.date: 2/13/2023
+ms.service: sql
+ms.topic: conceptual
+ms.custom: tools|sos
 ---
 # SqlPackage for Azure Synapse Analytics
 
-This article covers SqlPackage integration with Azure Blob Storage for accessing data in parquet files.  This functionality is only available for Azure Synapse Analytics databases.
+This article covers SqlPackage support for [Azure Synapse Analytics](/azure/synapse-analytics/sql/overview-architecture).  It includes information on the following topics:
+- integration with Azure Blob Storage for accessing data in parquet files
+- support for serverless SQL pools
+
+Both dedicated and serverless SQL pools do not support the import/export actions in SqlPackage or `.bacpac` files. SqlPackage supports Azure Synapse Analytics with `.dacpac` files and can read and write data in parquet format files in Azure Blog Storage.  To import or export data from a dedicated SQL pool, you must use the publish or extract actions with data as detailed below.
 
 ## Extract (export data)
 To export data from an Azure Synapse Analytics database to Azure Blob Storage, the SqlPackage [extract](sqlpackage-extract.md) action is used with following properties:
@@ -56,6 +60,14 @@ SqlPackage /Action:Publish /SourceFile:databaseschema.dacpac /TargetServerName:y
 
 See [SqlPackage publish](sqlpackage-publish.md#examples) for more examples of authentication types available.
 
+## Support for serverless SQL pools
+
+Synapse serverless SQL pools are supported for both the extract and publish actions.  The T-SQL surface area of serverless SQL pools is limited by [design](/azure/synapse-analytics/sql/on-demand-workspace-overview#t-sql-support) to external tables, external views, stored procedures, functions, statistics, and credentials.  The following features are included in support for serverless SQL pools:
+
+- delta external file format
+- openrowset provider CosmosDB with PROVIDER, CONNECTION, OBJECT, and CREDENTIAL or SERVER_CREDENTIAL specified
+- openrowset format SStream
+- `with ()` clause on openrowset
 
 ## Next Steps
 - Learn more about [Extract](sqlpackage-extract.md)

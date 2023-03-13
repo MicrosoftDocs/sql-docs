@@ -1,15 +1,12 @@
 ---
-description: "Send Data to a FILESTREAM Column Using IRowsetFastUpload SQL Server Native Client (OLE DB)"
 title: "Data FILESTREAM, IRowsetFastUpload (OLE DB)"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
+description: "Send Data to a FILESTREAM Column Using IRowsetFastUpload SQL Server Native Client (OLE DB)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload SQL Server Native Client (OLE DB)

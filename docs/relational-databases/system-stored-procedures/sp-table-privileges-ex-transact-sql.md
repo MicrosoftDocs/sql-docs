@@ -1,22 +1,19 @@
 ---
+title: "sp_table_privileges_ex (Transact-SQL)"
 description: "sp_table_privileges_ex (Transact-SQL)"
-title: "sp_table_privileges_ex (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_table_privileges_ex"
-  - "sp_table_privileges_ex_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_table_privileges_ex"
-ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_table_privileges_ex"
+  - "sp_table_privileges_ex_TSQL"
+helpviewer_keywords:
+  - "sp_table_privileges_ex"
+dev_langs:
+  - "TSQL"
 ---
 # sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,23 @@
 ---
 title: sp_check_dynamic_filters (Transact-SQL)
 description: "sp_check_dynamic_filters (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dynamic_filters_TSQL"
   - "sp_check_dynamic filter"
   - "check_dynamic_filters_TSQL"
   - "dynamic filters"
   - "check dynamic filters"
   - "sp_check_dynamic filter_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_check_dynamic_filters"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/06/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # sp_check_dynamic_filters (Transact-SQL)

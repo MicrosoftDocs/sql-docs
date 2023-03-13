@@ -1,19 +1,17 @@
 ---
+title: "Provision Subscriptions and Alerts for SSRS Service Applications"
 description: "Provision Subscriptions and Alerts for SSRS Service Applications"
-title: "Provision Subscriptions and Alerts for SSRS Service Applications | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/03/2016
 ms.service: reporting-services
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Reporting Services Shared Service"
   - "SharePoint Mode [Reporting Services]"
   - "SharePoint Mode"
   - "Reporting Services Service Application"
   - "SSRS service application"
-ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-author: maggiesMSFT
-ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Provision Subscriptions and Alerts for SSRS Service Applications

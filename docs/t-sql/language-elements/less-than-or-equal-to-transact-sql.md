@@ -3,12 +3,10 @@ title: "<= (Less Than or Equal To) (Transact-SQL)"
 description: "&lt;= (Less Than or Equal To) (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/13/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "<=_TSQL"
 helpviewer_keywords:

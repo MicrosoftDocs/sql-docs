@@ -1,22 +1,19 @@
 ---
+title: "sp_who (Transact-SQL)"
 description: "sp_who (Transact-SQL)"
-title: "sp_who (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_who_TSQL"
-  - "sp_who"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_who"
-ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_who_TSQL"
+  - "sp_who"
+helpviewer_keywords:
+  - "sp_who"
+dev_langs:
+  - "TSQL"
 ---
 # sp_who (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

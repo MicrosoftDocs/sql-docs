@@ -80,7 +80,7 @@ landingContent:
       - text: SQL Server Migration Center
         url: https://azure.microsoft.com/migration/sql-server/
       - text: Database migration guide
-        url: https://datamigration.microsoft.com/
+        url: /data-migration/
       - text: Azure Migration Service
         url: https://azure.microsoft.com/services/azure-migrate/
       - text: Data migration blog

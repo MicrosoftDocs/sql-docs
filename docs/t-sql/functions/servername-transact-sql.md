@@ -3,12 +3,10 @@ title: "@@SERVERNAME (Transact-SQL)"
 description: "@@SERVERNAME (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "09/07/2018"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@SERVERNAME"
   - "@@SERVERNAME_TSQL"

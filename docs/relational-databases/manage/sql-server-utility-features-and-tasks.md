@@ -1,27 +1,26 @@
 ---
-title: "SQL Server Utility Features and Tasks | Microsoft Docs"
+title: "SQL Server Utility Features and Tasks"
 description: Get acquainted with the SQL Server Utility. Learn about its features and find out how you can use it to monitor a SQL Server environment.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server utility [SQL Server]"
   - "utility control point"
   - "Utility growth rate"
   - "Multiserver management"
   - "UCP"
   - "Multi-server management [SQL Server]"
-ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # SQL Server Utility Features and Tasks
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] customers have a requirement to manage their [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment as a whole, addressed in this release through the concept of application and multiserver management in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
+
 ## Benefits of the SQL Server Utility  
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility models an organization's [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-related entities in a unified view. Utility Explorer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility viewpoints in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) provide administrators a holistic view of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource health through an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that serves as a utility control point (UCP). The combination of summary and detailed data presented in the UCP for both underutilization and overutilization policies, and for a variety of key parameters, enables resource consolidation opportunities and resource overutilization to be identified with ease. Health policies are configurable, and can be adjusted to change either upper or lower resource utilization thresholds. You can change global monitoring policies, or configure individual monitoring policies for each entity managed in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   

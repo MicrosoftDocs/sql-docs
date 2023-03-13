@@ -7,9 +7,7 @@ ms.date: "06/13/2017"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom:
-  - ag-guide
-  - seodec18
+ms.custom: ag-guide
 ---
 # Monitor performance for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,20 +28,42 @@ ms.custom:
 |6|Redo|Redo the flushed pages on the secondary replica. Pages are kept in the redo queue as they wait to be redone.|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) and [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Wait type [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
 ##  Flow control gates  
- Availability groups are designed with flow control gates on the primary replica to avoid excessive resource consumption, such as network and memory resources, on all availability replicas. These flow control gates do not affect the synchronization health state of the availability replicas, but they can affect the overall performance of your availability databases, including RPO.  
-  
- After the logs have been captured on the primary replica, they are subject to two levels of flow controls, as shown in the following table.  
-  
+
+Availability groups are designed with flow control gates on the primary replica to avoid excessive resource consumption, such as network and memory resources, on all availability replicas. These flow control gates do not affect the synchronization health state of the availability replicas, but they can affect the overall performance of your availability databases, including RPO.  
+
+
+After the logs have been captured on the primary replica, they are subject to two levels of flow controls. Once the message threshold of either gate is reached, log messages are no longer sent to a specific replica or for a specific database. Messages can be sent once acknowledgment messages are received for the sent messages to bring the number of sent messages below the threshold.  
+
+In addition to the flow control gates, there is another factor that can prevent the log messages from being sent. The synchronization of replicas ensures that the messages are sent and applied in the order of the log sequence numbers (LSN). Before a log message is sent, its LSN also checked against the lowest acknowledged LSN number to make sure that it is less than one of thresholds (depending on the message type). If the gap between the two LSN numbers is larger than the threshold, the messages are not sent. Once the gap is below the threshold again, the messages are sent.  
+
+SQL Server 2022 increases the limits to the number of messages that each gate allows. By using trace flag 12310, the increased limit is also available to the following versions of SQL Server, starting with: SQL Server 2019 CU9, SQL Server 2017 CU18, and SQL Server 2016 SP1 CU16. 
+
+The following table compares message limits: 
+
+# [New limits](#tab/new-limits)
+
+SQL Server 2022, and supported versions of SQL Server (starting with SQL Server 2019 CU9, SQL Server 2017 CU18, and SQL Server 2016 SP1 CU16) that enable trace flag 12310 see the following limits: 
+
+|Level|Number of gates|Number of messages|Useful metrics|  
+|-|-|-|-|  
+|Transport|1 per availability replica|16384|Extended event **database_transport_flow_control_action**|  
+|Database|1 per availability database|7168|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
+
+
+# [Old limits](#tab/old-limits)
+
+Unsupported SQL Server versions, or supported SQL Server versions (starting with SQL Server 2019 CU9, SQL Server 2017 CU18, and SQL Server 2016 SP1 CU16) that **do not** have trace flag 12310 enabled see the following limits: 
+
 |Level|Number of gates|Number of messages|Useful metrics|  
 |-|-|-|-|  
 |Transport|1 per availability replica|8192|Extended event **database_transport_flow_control_action**|  
-|Database|1 per availability database|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
+|Database|1 per availability database|1792 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
+
+---
+
   
- Once the message threshold of either gate is reached, log messages are no longer sent to a specific replica or for a specific database. Messages can be sent once acknowledgment messages are received for the sent messages to bring the number of sent messages below the threshold.  
+Two useful performance counters, [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), show you, within the last second, how many times flow control was activated and how much time was spent waiting on flow control. Higher wait time on the flow control translate to higher RPO. For more information on the types of issues that can cause a high wait time on the flow control, see [Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md).  
   
- In addition to the flow control gates, there is another factor that can prevent the log messages from being sent. The synchronization of replicas ensures that the messages are sent and applied in the order of the log sequence numbers (LSN). Before a log message is sent, its LSN also checked against the lowest acknowledged LSN number to make sure that it is less than one of thresholds (depending on the message type). If the gap between the two LSN numbers is larger than the threshold, the messages are not sent. Once the gap is below the threshold again, the messages are sent.  
-  
- Two useful performance counters, [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), show you, within the last second, how many times flow control was activated and how much time was spent waiting on flow control. Higher wait time on the flow control translate to higher RPO. For more information on the types of issues that can cause a high wait time on the flow control, see [Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md).  
   
 ##  Estimating failover time (RTO)  
  The RTO in your SLA depends on the failover time of your Always On implementation at any given time, which can be expressed in the following formula:  

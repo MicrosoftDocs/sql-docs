@@ -1,17 +1,15 @@
 ---
+title: "Configure Topology (Peer-to-Peer Replication)"
 description: "Configure Topology (Peer-to-Peer Replication)"
-title: "Configure Topology (Peer-to-Peer Replication) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.p2pwizard.peers.f1"
-ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.p2pwizard.peers.f1"
 ---
 # Configure Topology (Peer-to-Peer Replication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

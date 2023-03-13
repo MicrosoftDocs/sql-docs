@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "data types [CLR integration]"
   - "parameter collation [CLR integration]"
   - "collations [CLR integration]"
-ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
 ---
 # Collation and CLR Integration Data Types
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

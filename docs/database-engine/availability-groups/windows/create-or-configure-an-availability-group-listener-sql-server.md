@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.availabilitygroup.newaglistener.general.f1"
 helpviewer_keywords:

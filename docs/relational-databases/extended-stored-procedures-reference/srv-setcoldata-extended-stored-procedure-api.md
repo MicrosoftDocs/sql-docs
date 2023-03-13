@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_setcoldata
 apitype: "DLLExport"
-ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 ---
 # srv_setcoldata (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

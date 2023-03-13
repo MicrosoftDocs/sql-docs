@@ -1,19 +1,17 @@
 ---
 title: "SQL Server, Broker TO Statistics object"
-description: Learn about the SQLServer:Broker TO Statistics performance object, which reports information about Service Broker request transmission objects.
-ms.custom: ""
+description: "Learn about the SQLServer:Broker TO Statistics performance object, which reports information about Service Broker request transmission objects."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/12/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Broker Transmission Object object"
   - "SQL Server: Broker Transmission Object"
   - "SQL Server:Broker TO Statistics"
   - "Broker TO Statistics"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Broker TO Statistics object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

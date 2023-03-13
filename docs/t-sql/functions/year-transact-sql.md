@@ -3,12 +3,10 @@ title: "YEAR (Transact-SQL)"
 description: "YEAR (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "YEAR"
   - "YEAR_TSQL"

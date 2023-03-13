@@ -1,19 +1,17 @@
 ---
+title: "Common Actions Requiring an Updated Backup"
 description: "Common Actions Requiring an Updated Backup"
-title: "Common Actions Requiring an Updated Backup | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "recovery [SQL Server replication], actions requiring a backup"
   - "restoring [SQL Server replication], actions requiring a backup"
   - "backups [SQL Server replication], actions requiring a backup"
-ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Common Actions Requiring an Updated Backup

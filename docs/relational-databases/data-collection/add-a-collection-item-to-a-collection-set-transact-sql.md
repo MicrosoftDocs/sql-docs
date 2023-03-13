@@ -1,18 +1,15 @@
 ---
-description: "Add a Collection Item to a Collection Set (Transact-SQL)"
 title: "Add Collection Item to Collection Set (T-SQL)"
-ms.date: 06/03/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "collection items [SQL Server]"
-  - "collection sets [SQL Server], adding items"
-ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
+description: "Add a Collection Item to a Collection Set (Transact-SQL)"
 author: MashaMSFT
 ms.author: mathoma
-ms.custom: "seo-lt-2019"
+ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+helpviewer_keywords:
+  - "collection items [SQL Server]"
+  - "collection sets [SQL Server], adding items"
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

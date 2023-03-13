@@ -1,15 +1,12 @@
 ---
-title: "Interactive Functionality - Different Report Rendering Extensions | Microsoft Docs"
+title: "Interactive Functionality - Different Report Rendering Extensions"
 description: Reporting Services allows you to interact with a paginated report at runtime. This article describes how the interactive features work in specific formats.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-builder
-
-
 ms.topic: conceptual
-ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Interactive Functionality - Different Report Rendering Extensions
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides features for interacting with a paginated report at run time. Not all of the report rendering formats support the full range of interactive features. Use the following table to understand how each interactive feature works in specific formats.  

@@ -1,14 +1,13 @@
 ---
 title: Work With SQL Server PowerShell Paths
 description: Learn how to manipulate and retrieve information using either cmdlets or the methods and properties of the object identified by the provider path.
-ms.service: sql
-ms.subservice: sql-server-powershell
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
-ms.custom: ""
 ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: sql-server-powershell
+ms.topic: conceptual
 ---
 
 # Work With SQL Server PowerShell Paths

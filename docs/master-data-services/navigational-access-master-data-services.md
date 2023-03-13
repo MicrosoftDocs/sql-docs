@@ -1,18 +1,15 @@
 ---
-description: "Navigational Access (Master Data Services)"
 title: Navigational Access
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "navigational access [Master Data Services]"
-  - "security [Master Data Services], navigational access"
-ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
+description: "Navigational Access (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "navigational access [Master Data Services]"
+  - "security [Master Data Services], navigational access"
 ---
 # Navigational Access (Master Data Services)
 

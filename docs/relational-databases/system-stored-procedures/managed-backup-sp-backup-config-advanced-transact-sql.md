@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.sp_backup_config_advanced (Transact-SQL)"
 description: "managed_backup.sp_backup_config_advanced (Transact-SQL)"
-title: "managed_backup.sp_backup_config_advanced (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_backup_config_optional"
   - "sp_backup_config_optional_TSQL"
   - "managed_backup.sp_backup_config_optional_TSQL"
   - "managed_backup.sp_backup_config_optional"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_backup_config_optional"
   - "managed_backup.sp_backup_config_optional"
-ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

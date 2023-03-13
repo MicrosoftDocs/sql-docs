@@ -1,17 +1,14 @@
 ---
+title: "Suggest Column Types Dialog Box UI Reference"
 description: "Suggest Column Types Dialog Box UI Reference"
-title: "Suggest Column Types Dialog Box UI Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.suggestdatatypes.f1"
-ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.suggestdatatypes.f1"
 ---
 # Suggest Column Types Dialog Box UI Reference
 

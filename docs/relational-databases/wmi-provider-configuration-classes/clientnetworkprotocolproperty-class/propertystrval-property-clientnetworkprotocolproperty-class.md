@@ -1,22 +1,17 @@
 ---
-description: "PropertyStrVal Property (ClientNetworkProtocolProperty Class)"
 title: "PropertyStrVal Property (ClientNetworkProtocolProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "PropertyStrVal Property (ClientNetworkProtocolProperty)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "PropertyStrVal property"
-ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
+description: "PropertyStrVal Property (ClientNetworkProtocolProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "PropertyStrVal property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "PropertyStrVal Property (ClientNetworkProtocolProperty)"
+apitype: "MOFDef"
 ---
 # PropertyStrVal Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -3,12 +3,10 @@ title: "+= String concatenation"
 description: Concatenate two strings and set the string to the result of the operation.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "12/07/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "concatenate strings"
   - "string concatenation"

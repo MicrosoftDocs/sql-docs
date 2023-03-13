@@ -10,8 +10,8 @@ ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:
-  - "azure-sql-split"
-  - "sqldbrb=2"
+  - azure-sql-split
+  - sqldbrb=2
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views

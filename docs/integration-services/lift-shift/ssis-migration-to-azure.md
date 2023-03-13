@@ -1,14 +1,13 @@
 ---
 title: "SQL Server Integration Services migration to Azure overview| Microsoft Docs"
 description: This article highlights process and tools to migrate SQL Server Integration Services migration to Azure.
-ms.date: "04/10/2020"
-ms.topic: conceptual
-ms.service: sql
-ms.custom:
-  - intro-migration
-ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "04/10/2020"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: intro-migration
 ---
 
 # Migrate on-premises SSIS workloads to SSIS in ADF

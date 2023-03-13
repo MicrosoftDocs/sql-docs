@@ -1,29 +1,22 @@
---- 
- 
-# required metadata 
-title: "rx_fast_linear: Fast Linear Model - Stochastic Dual Coordinate Ascent" 
-description: "A Stochastic Dual Coordinate Ascent (SDCA) optimization trainer for linear binary classification and regression." 
-keywords: "models, linear, SDCA, stochastic, classification, regression" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "rx_fast_linear: Fast Linear Model - Stochastic Dual Coordinate Ascent"
+description: "A Stochastic Dual Coordinate Ascent (SDCA) optimization trainer for linear binary classification and regression."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - models
+  - linear
+  - SDCA
+  - stochastic
+  - classification
+  - regression
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.rx_fast_linear*: Linear Model with Stochastic Dual Coordinate Ascent
 
 

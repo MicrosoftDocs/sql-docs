@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "monitoring database mirroring [SQL Server]"
   - "thresholds [SQL Server]"

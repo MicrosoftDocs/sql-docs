@@ -25,7 +25,7 @@ With the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Q
 > [!NOTE]
 > Be aware of the following size limitations when interacting with the workbook in MDS Excel add-in.
 >
-> - Excel on the web has a payload size limit for requests and responses of 5MB. RichAPI.Error will be thrown if that limit is exceeded.
+> - Excel on the web has a payload size limit for requests and responses of 5 MB. A `RichAPI.Error` will be thrown if that limit is exceeded.
 > - A range is limited to five million cells for get operations.
 
 ## Downloads

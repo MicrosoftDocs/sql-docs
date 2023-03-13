@@ -1,17 +1,14 @@
 ---
+title: "Symmetric Keys on System Databases"
 description: "Symmetric Keys on System Databases"
-title: "Symmetric Keys on System Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Symmetric Keys on System Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

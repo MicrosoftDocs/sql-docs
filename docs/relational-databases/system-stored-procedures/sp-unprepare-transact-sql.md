@@ -1,22 +1,19 @@
 ---
+title: "sp_unprepare (Transact-SQL)"
 description: "sp_unprepare (Transact-SQL)"
-title: "sp_unprepare (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursor_unprepare_TSQL"
-  - "sp_cursor_unprepare"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_unprepare"
-ms.assetid: 14320251-c551-49d8-b933-057406114978
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursor_unprepare_TSQL"
+  - "sp_cursor_unprepare"
+helpviewer_keywords:
+  - "sp_unprepare"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_unprepare (Transact-SQL)
@@ -48,7 +45,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example prepares, executes, and unprepares a simple statement.  
   
 ```SQL  

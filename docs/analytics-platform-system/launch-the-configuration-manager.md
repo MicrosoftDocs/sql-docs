@@ -8,7 +8,6 @@ ms.date: 04/17/2018
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Launch the Configuration Manager in Analytics Platform System

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "syscollector_execution_log_full view"
 dev_langs:
   - "TSQL"
-ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 ---
 # syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

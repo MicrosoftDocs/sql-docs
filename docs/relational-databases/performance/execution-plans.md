@@ -1,21 +1,19 @@
 ---
-title: "Execution Plans | Microsoft Docs"
-description: Learn about execution plans or query plans, which the Query Optimizer creates for the SQL Server Database Engine to run queries. 
-ms.custom: ""
+title: "Execution Plans"
+description: Learn about execution plans or query plans, which the Query Optimizer creates for the SQL Server Database Engine to run queries.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf
 ms.date: "03/01/2020"
 ms.service: sql
-ms.reviewer: wiassaf
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query plans [SQL Server]"
   - "execution plans [SQL Server]"
   - "execution plan [SQL Server]"
   - "query plan [SQL Server]"
   - "query execution plans"
-ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Execution Plans
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -40,7 +38,7 @@ A query execution plan is a definition of the following:
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
 > -  The ***[Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** is the compiled plan, as produced by the Query Optimizer based on estimations. This is the query plan that is stored in the plan cache.        
-> -  The ***[Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md)*** is the compiled plan plus its [execution context](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). It becomes available **after the query execution has completed**. This includes actual runtime information such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], the elapsed and CPU time used during execution.         
+> -  The ***[Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md)*** is the compiled plan plus its [execution context](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). It becomes available **after the query execution has completed**. This includes actual runtime information such as execution warnings, or in newer versions of the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)], the elapsed and CPU time used during execution.         
 > -  The ***[Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)*** is the compiled plan plus its execution context. It is available for **in-flight query executions**, and updated every second. This includes runtime information such as the actual number of rows flowing through the [operators](../../relational-databases/showplan-logical-and-physical-operators-reference.md), elapsed time, and the estimated query progress.
 
 > [!TIP]

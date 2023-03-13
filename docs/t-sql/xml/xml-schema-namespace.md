@@ -1,33 +1,30 @@
 ---
-description: "xml_schema_namespace"
 title: xml_schema_namespace (Transact-SQL)
-ms.custom: ""
+description: "xml_schema_namespace"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/27/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "xml_schema_namespace_TSQL"
   - "xml_schema_namespace"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML schema collections [SQL Server], reconstructing schemas"
   - "xml_schema_namespace function"
   - "reconstructing schemas"
   - "schemas [SQL Server], XML"
   - "schema collections [SQL Server], reconstructing schemas"
-ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # xml_schema_namespace
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reconstructs all the schemas or a specific schema in the specified XML schema collection. This function returns an **xml** data type instance.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

@@ -1,18 +1,15 @@
 ---
+title: "Azure Feature Pack for Integration Services (SSIS)"
 description: "Azure Feature Pack for Integration Services (SSIS)"
-title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/24/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.SSIS.AZURE.F1"
-  - "SQL14.SSIS.AZURE.F1"
-ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
+ms.date: "12/24/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.SSIS.AZURE.F1"
+  - "SQL14.SSIS.AZURE.F1"
 ---
 # Azure Feature Pack for Integration Services (SSIS)
 
@@ -23,6 +20,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension th
 
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SSIS Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)**
 
+- For SQL Server 2022 - [Microsoft SQL Server 2022 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=104811)
 - For SQL Server 2019 - [Microsoft SQL Server 2019 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - For SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - For SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)

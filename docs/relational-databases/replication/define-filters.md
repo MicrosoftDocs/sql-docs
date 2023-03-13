@@ -1,19 +1,17 @@
 ---
+title: "Define Filters"
 description: "Define Filters"
-title: "Define Filters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.replconflictviewer.definefilters.f1"
-helpviewer_keywords: 
-  - "Define Filters dialog box"
-ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.replconflictviewer.definefilters.f1"
+helpviewer_keywords:
+  - "Define Filters dialog box"
 ---
 # Define Filters
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

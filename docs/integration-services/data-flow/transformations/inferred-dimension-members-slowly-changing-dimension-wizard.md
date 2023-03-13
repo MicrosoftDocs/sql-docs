@@ -1,17 +1,14 @@
 ---
+title: "Inferred Dimension Members (Slowly Changing Dimension Wizard)"
 description: "Inferred Dimension Members (Slowly Changing Dimension Wizard)"
-title: "Inferred Dimension Members (Slowly Changing Dimension Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.inferrdim.f1"
-ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.loaddimwizard.inferrdim.f1"
 ---
 # Inferred Dimension Members (Slowly Changing Dimension Wizard)
 

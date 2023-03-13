@@ -1,17 +1,14 @@
 ---
+title: "Audit Server Principal Management Event Class"
 description: "Audit Server Principal Management Event Class"
-title: "Audit Server Principal Management Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Server Principal Management event class"
-ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Server Principal Management event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Principal Management Event Class

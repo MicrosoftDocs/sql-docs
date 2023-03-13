@@ -167,7 +167,7 @@ To create a geo-secondary in a subscription different from the subscription of t
    alter role db_owner add member geodrsetup;
    ```
 
-7. In the master database on the **secondary** server, create the same login as on the primary server, using the same name, password, and SID. Replace the hexadecimal SID value in the sample command below with the one obtained in Step 4.
+7. In the `master` database on the **secondary** server, create the same login as on the primary server, using the same name, password, and SID. Replace the hexadecimal SID value in the sample command below with the one obtained in Step 4.
 
    ```sql
    create login geodrsetup with password = 'ComplexPassword01', sid=0x010600000000006400000000000000001C98F52B95D9C84BBBA8578FACE37C3E;
@@ -180,7 +180,7 @@ To create a geo-secondary in a subscription different from the subscription of t
    alter role dbmanager add member geodrsetup;
    ```
 
-9. Connect to the master database on the **primary** server using the new `geodrsetup` login, and initiate geo-secondary creation on the secondary server. Adjust database name and secondary server name as needed. Once the command is executed, you can monitor geo-secondary creation by querying the [sys.dm_geo_replication_link_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database) view in the **primary** database, and the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) view in the master database on the **primary** server. The time needed to create a geo-secondary depends on the primary database size.
+9. Connect to the `master` database on the **primary** server using the new `geodrsetup` login, and initiate geo-secondary creation on the secondary server. Adjust database name and secondary server name as needed. Once the command is executed, you can monitor geo-secondary creation by querying the [sys.dm_geo_replication_link_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database) view in the **primary** database, and the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) view in the `master` database on the **primary** server. The time needed to create a geo-secondary depends on the primary database size.
 
    ```sql
    alter database [dbrep] add secondary on server [servername];

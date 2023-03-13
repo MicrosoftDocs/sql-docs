@@ -1,15 +1,12 @@
 ---
 title: Alias Properties (Alias Tab)
 description: Use the Alias tab of the Properties dialog box to configure an alias so that you can use an alternate name when connecting to an instance of SQL Server.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 

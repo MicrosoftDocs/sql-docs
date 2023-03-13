@@ -1,19 +1,18 @@
 ---
-title: "SQL Server 2014 Release Notes | Microsoft Docs"
+title: "SQL Server 2014 Release Notes"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2014 (12.x) releases.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 07/22/2020
 ms.service: sql
 ms.subservice: release-landing
-ms.reviewer: ""
 ms.topic: conceptual
-ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+
 This article describes known issues with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] releases, including related service packs.
 
 ## SQL Server 2014 Service Pack 2 (SP2)
@@ -359,7 +358,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **More Information:**  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] includes MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks use MSOLAP.5. If MSOLAP.5 is not installed on the computer running Excel Services, Excel Services cannot load the data models.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] includes MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[power-pivot-md](../includes/power-pivot-md.md)] workbooks use MSOLAP.5. If MSOLAP.5 is not installed on the computer running Excel Services, Excel Services cannot load the data models.  
   
 #### MSOLAP.5 must be downloaded, installed and registered for a SharePoint 2013 new farm configured with SQL Server 2014  
 **Issue:**  

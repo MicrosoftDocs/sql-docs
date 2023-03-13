@@ -1,23 +1,22 @@
 ---
-description: "sp_data_source_objects returns list of table objects that are available to be virtualized."
 title: "sp_data_source_objects"
-ms.custom: ""
+description: "sp_data_source_objects returns list of table objects that are available to be virtualized."
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf
 ms.date: 06/06/2022
 ms.service: sql
-ms.reviewer: wiassaf
 ms.subservice: system-objects
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_data_source_objects_TSQL"
   - "sys.sp_data_source_objects_TSQL"
   - "sp_data_source_objects"
   - "sys.sp_data_source_objects"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PolyBase"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sp_data_source_objects (Transact-SQL)
 
@@ -27,7 +26,7 @@ Returns list of table objects that are available to be virtualized.
 
 ## Syntax  
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ```syntaxsql
 sp_data_source_objects  

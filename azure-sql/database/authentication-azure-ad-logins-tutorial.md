@@ -18,13 +18,13 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 > [!NOTE]
 > Azure Active Directory (Azure AD) server principals (logins) are currently in public preview for Azure SQL Database. Azure SQL Managed Instance can already utilize Azure AD logins.
 
-This article guides you through creating and utilizing [Azure Active Directory (Azure AD) principals (logins)](authentication-azure-ad-logins.md) in the virtual master database of Azure SQL.
+This article guides you through creating and utilizing [Azure Active Directory (Azure AD) principals (logins)](authentication-azure-ad-logins.md) in the virtual `master` database of Azure SQL.
 
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> - Create an Azure AD login in the virtual master database with the new syntax extension for Azure SQL Database
-> - Create a user mapped to an Azure AD login in the virtual master database
+> - Create an Azure AD login in the virtual `master` database with the new syntax extension for Azure SQL Database
+> - Create a user mapped to an Azure AD login in the virtual `master` database
 > - Grant server roles to an Azure AD user
 > - Disable an Azure AD login
 
@@ -32,7 +32,7 @@ In this tutorial, you learn how to:
 
 - A SQL Database or SQL Managed Instance with a database. See [Quickstart: Create an Azure SQL Database single database](single-database-create-quickstart.md) if you haven't already created an Azure SQL Database, or [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
 - Azure AD authentication set up for SQL Database or Managed Instance. For more information, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md).
-- This article instructs you on creating an Azure AD login and user within the virtual master database. Only an Azure AD admin can create a user within the virtual master database, so we recommend you use the Azure AD admin account when going through this tutorial. An Azure AD principal with the `loginmanager` role can create a login, but not a user within the virtual master database.
+- This article instructs you on creating an Azure AD login and user within the virtual `master` database. Only an Azure AD admin can create a user within the virtual `master` database, so we recommend you use the Azure AD admin account when going through this tutorial. An Azure AD principal with the `loginmanager` role can create a login, but not a user within the virtual `master` database.
 
 ## Create Azure AD login
 
@@ -65,13 +65,13 @@ In this tutorial, you learn how to:
    bob@contoso.com                 EXTERNAL_LOGIN  E      0 
    ```
 
-1. The login `bob@contoso.com` has been created in the virtual master database.
+1. The login `bob@contoso.com` has been created in the virtual `master` database.
 
 ## Create user from an Azure AD login
 
-1. Now that we've created an Azure AD login, we can create a database-level Azure AD user that is mapped to the Azure AD login in the virtual master database. We'll continue to use our example, `bob@contoso.com` to create a user in the virtual master database, as we want to demonstrate adding the user to special roles. Only an Azure AD admin or SQL server admin can create users in the virtual master database.
+1. Now that we've created an Azure AD login, we can create a database-level Azure AD user that is mapped to the Azure AD login in the virtual `master` database. We'll continue to use our example, `bob@contoso.com` to create a user in the virtual `master` database, as we want to demonstrate adding the user to special roles. Only an Azure AD admin or SQL server admin can create users in the virtual `master` database.
 
-1. We're using the virtual master database, but you can switch to a database of your choice if you want to create users in other databases. Run the following query.
+1. We're using the virtual `master` database, but you can switch to a database of your choice if you want to create users in other databases. Run the following query.
 
    ```sql
    Use master
@@ -141,20 +141,20 @@ SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
 
 ## Grant special roles for Azure AD users
 
-[Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to users in the virtual master database.
+[Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to users in the virtual `master` database.
 
-In order to grant one of the special database roles to a user, the user must exist in the virtual master database. 
+In order to grant one of the special database roles to a user, the user must exist in the virtual `master` database. 
 
 To add a user to a role, you can run the following query:
 
 ```sql
-ALTER ROLE [dbamanger] ADD MEMBER [AzureAD_object] 
+ALTER ROLE [dbmanager] ADD MEMBER [AzureAD_object] 
 ```
 
 To remove a user from a role, run the following query:
 
 ```sql
-ALTER ROLE [dbamanger] DROP MEMBER [AzureAD_object] 
+ALTER ROLE [dbmanager] DROP MEMBER [AzureAD_object] 
 ```
 
 `AzureAD_object` can be an Azure AD user, group, or service principal in Azure AD.
@@ -164,7 +164,7 @@ In our example, we created the user `bob@contoso.com`. Let's give the user the *
 1. Run the following query:
 
    ```sql
-   ALTER ROLE [dbamanger] ADD MEMBER [bob@contoso.com] 
+   ALTER ROLE [dbmanager] ADD MEMBER [bob@contoso.com] 
    ALTER ROLE [loginmanager] ADD MEMBER [bob@contoso.com] 
    ```
 
@@ -184,9 +184,9 @@ In our example, we created the user `bob@contoso.com`. Let's give the user the *
    You would see a similar output to the following:
 
    ```output
-   DatabaseRoleName	   DatabaseUserName 
+   DatabaseRoleName       DatabaseUserName 
    dbmanager              bob@contoso.com
-   loginmanager	       bob@contoso.com
+   loginmanager           bob@contoso.com
    ```
 
 ## Optional - Disable a login

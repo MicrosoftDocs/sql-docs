@@ -1,18 +1,15 @@
 ---
+title: "Add or Delete a Component in a Data Flow"
 description: "Add or Delete a Component in a Data Flow"
-title: "Add or Delete a Component in a Data Flow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "adding components"
-  - "components [Integration Services], data flow"
-ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "adding components"
+  - "components [Integration Services], data flow"
 ---
 # Add or Delete a Component in a Data Flow
 

@@ -34,7 +34,7 @@ Creates a scheme in the current database that maps the partitions of a partition
 >[!NOTE]
 >In Azure SQL Database only primary filegroups are supported. Learn more about filegroups and partitioning strategies in [Filegroups](../../relational-databases/partitions/partitioned-tables-and-indexes.md#filegroups).
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

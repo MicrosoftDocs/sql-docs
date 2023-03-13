@@ -1,13 +1,12 @@
 ---
+title: "Set a Session Language"
 description: "Set a Session Language"
-title: "Set a Session Language | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "errors [SQL Server], international considerations"
   - "globalization [SQL Server], sessions"
   - "time [SQL Server]"
@@ -19,9 +18,6 @@ helpviewer_keywords:
   - "time [SQL Server], session languages"
   - "messages [SQL Server], international considerations"
   - "server-side session language"
-ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set a Session Language

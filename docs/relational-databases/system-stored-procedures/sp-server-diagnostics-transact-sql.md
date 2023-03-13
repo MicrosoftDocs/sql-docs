@@ -1,22 +1,19 @@
 ---
+title: "sp_server_diagnostics (Transact-SQL)"
 description: "sp_server_diagnostics (Transact-SQL)"
-title: "sp_server_diagnostics (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_server_diagnostics"
-  - "sp_server_diagnostics_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_server_diagnostics"
-ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: markingmyname
 ms.author: maghan
+ms.date: "11/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_server_diagnostics"
+  - "sp_server_diagnostics_TSQL"
+helpviewer_keywords:
+  - "sp_server_diagnostics"
+dev_langs:
+  - "TSQL"
 ---
 # sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +22,7 @@ Captures diagnostic data and health information about [!INCLUDE[ssNoVersion](../
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later).  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

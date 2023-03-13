@@ -3,7 +3,7 @@ title: "sys.dm_hadr_cluster_networks (Transact-SQL)"
 description: sys.dm_hadr_cluster_networks (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster_networks dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 ---
 # sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +37,16 @@ ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 ||||  
 |**network_subnet_prefix_length**|**int**|Network IP prefix length that specifies the subnet to which the computer belongs.|  
 |**is_public**|**bit**|Whether the network is private or public on the WSFC cluster, one of:<br /><br /> 0 = Private<br /><br /> 1 = Public|  
-|**is_ipv4**|**bit**|Type of the subnet, one of:<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
+|**is_ipv4**|**bit**|Type of the subnet, one of:<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|   
   
-## Security  
-  
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Failover Clustering and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   

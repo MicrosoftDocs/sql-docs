@@ -1,22 +1,19 @@
 ---
+title: "sp_xml_preparedocument (Transact-SQL)"
 description: "sp_xml_preparedocument (Transact-SQL)"
-title: "sp_xml_preparedocument (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_xml_preparedocument_TSQL"
-  - "sp_xml_preparedocument"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_xml_preparedocument"
-ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_xml_preparedocument_TSQL"
+  - "sp_xml_preparedocument"
+helpviewer_keywords:
+  - "sp_xml_preparedocument"
+dev_langs:
+  - "TSQL"
 ---
 # sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +36,7 @@ ms.author: maghan
 > [!NOTE]  
 >  **sp_xml_preparedocument** limits the number of elements that can be open at one time to 256.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,9 +1,11 @@
 ---
 title: "Generate elements for NULL values with XSINIL"
 description: Learn how to generate XML elements for NULL values by using the XSINIL parameter on the ELEMENTS directive.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,9 +13,6 @@ helpviewer_keywords:
   - "null values [SQL Server], XML"
   - "ELEMENTS directive"
   - "XSINIL parameter"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Generate elements for NULL values with the XSINIL parameter
 

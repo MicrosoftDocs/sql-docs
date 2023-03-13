@@ -1,17 +1,14 @@
 ---
+title: "Raising Events in the Script Component"
 description: "Raising Events in the Script Component"
-title: "Raising Events in the Script Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Script component [Integration Services], raising events"
-ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script component [Integration Services], raising events"
 ---
 # Raising Events in the Script Component
 

@@ -1,22 +1,19 @@
 ---
+title: "semantickeyphrasetable (Transact-SQL)"
 description: "semantickeyphrasetable (Transact-SQL)"
-title: "semantickeyphrasetable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "semantickeyphrasetable"
-  - "semantickeyphrasetable_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "semantickeyphrasetable function"
-ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "semantickeyphrasetable"
+  - "semantickeyphrasetable_TSQL"
+helpviewer_keywords:
+  - "semantickeyphrasetable function"
+dev_langs:
+  - "TSQL"
 ---
 # semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +22,7 @@ ms.author: mikeray
   
  This rowset function can be referenced in the FROM clause of a SELECT statement as if it were a regular table name.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

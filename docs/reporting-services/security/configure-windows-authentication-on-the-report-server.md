@@ -1,18 +1,15 @@
 ---
+title: "Configure Windows Authentication on the Report Server"
 description: "Configure Windows Authentication on the Report Server"
-title: "Configure Windows Authentication on the Report Server | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/22/2020
 ms.service: reporting-services
 ms.subservice: security
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Windows authentication [Reporting Services]"
   - "Reporting Services, configuration"
-ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Configure Windows Authentication on the Report Server
   By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without additional configuration. If you want to use a different security provider for Windows integrated security (for example, if you want to use Kerberos directly), or if you modified the default values and want to restore the original settings, you can use the information in this topic to specify authentication settings on the report server.  
@@ -41,7 +38,7 @@ ms.author: maggies
  The following instructions are intended for a native mode report server. If the report server is deployed in SharePoint integrated mode, you must use the default authentication settings that specify Windows integrated security. The report server uses internal features in the default Windows Authentication extension to support report servers in SharePoint integrated mode.  
   
 ## Extended Protection for Authentication  
- Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection is determined by settings in the RSReportServer.config file. The file can be updated by either editing the file or using WMI APIs. For more information, see [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
+ Beginning with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection is determined by settings in the RSReportServer.config file. The file can be updated by either editing the file or using WMI APIs. For more information, see [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
 ### To configure a report server to use Windows integrated security  
   

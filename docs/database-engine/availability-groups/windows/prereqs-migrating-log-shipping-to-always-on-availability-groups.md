@@ -7,9 +7,7 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom:
-  - seodec18
-  - intro-migration
+ms.custom: intro-migration
 helpviewer_keywords:
   - "log shipping [SQL Server], AlwaysOn Availability Groups"
   - "log shipping [SQL Server], Always On Availability Groups"

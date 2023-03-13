@@ -1,26 +1,23 @@
 ---
-description: "WITH XMLNAMESPACES"
 title: WITH XMLNAMESPACES (Transact-SQL)
-ms.custom: ""
+description: "WITH XMLNAMESPACES"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WITH_XMLNAMESPACES_TSQL"
   - "WITH XMLNAMESPACES"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "adding XML namespaces"
   - "XML namespace declarations [SQL Server]"
   - "clauses [SQL Server], WITH XMLNAMESPACES"
   - "WITH XMLNAMESPACES clause"
   - "declaring XML namespaces"
-ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # WITH XMLNAMESPACES
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,7 +25,7 @@ ms.author: mikeray
   Declares one or more XML namespaces.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

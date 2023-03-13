@@ -1,24 +1,19 @@
 ---
+title: "SQLTransact Function"
 description: "SQLTransact Function"
-title: "SQLTransact Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLTransact"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLTransact"
-helpviewer_keywords: 
-  - "SQLTransact function [ODBC]"
-ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLTransact"
+helpviewer_keywords:
+  - "SQLTransact function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLTransact"
+apitype: "dllExport"
 ---
 # SQLTransact Function
 **Conformance**  

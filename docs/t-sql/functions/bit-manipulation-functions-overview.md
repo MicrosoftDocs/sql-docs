@@ -15,8 +15,7 @@ dev_langs:
 monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 # Bit manipulation functions
-
-[!INCLUDE [_ss2022](../../includes/applies-to-version/_ss2022.md)]
+[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Bit manipulation functions such as moving, retrieving (getting), setting, or counting single bits within an integer or binary value, allow you to process and store data more efficiently than with individual bits.
 

@@ -8,20 +8,23 @@ ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 4/6/2022
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurecli, devx-track-azurepowershell
 ms.topic: conceptual
 ---
 
-# Outbound firewall rules for Azure SQL Database and Azure Synapse Analytics 
+# Outbound firewall rules for Azure SQL Database and Azure Synapse Analytics
+
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa-formerly-sqldw.md)] 
 
 Outbound firewall rules limit network traffic from the Azure SQL [logical server](logical-servers.md) to a customer defined list of Azure Storage accounts and Azure SQL logical servers. Any attempt to access storage accounts or databases not in this list is denied. The following [Azure SQL Database](sql-database-paas-overview.md) features support this feature:
 
 - [Auditing](auditing-overview.md)
-- [Vulnerability assessment](sql-vulnerability-assessment.md)
+- [Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
 - [Import/Export service](database-import-export-azure-services-off.md)
 - [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql)
 - [Bulk Insert](/sql/t-sql/statements/bulk-insert-transact-sql)
 - [Elastic query](elastic-query-overview.md)
+- [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql)
 
 > [!IMPORTANT]
 > - This article applies to both Azure SQL Database and [dedicated SQL pool (formerly SQL DW)](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) in Azure Synapse Analytics. These settings apply to all SQL Database and dedicated SQL pool (formerly SQL DW) databases associated with the server. For simplicity, the term 'database' refers to both databases in Azure SQL Database and Azure Synapse Analytics. Likewise, any references to 'server' is referring to the [logical SQL server](logical-servers.md) that hosts Azure SQL Database and dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics. This article does *not* apply to Azure SQL Managed Instance or dedicated SQL pools in Azure Synapse Analytics workspaces.

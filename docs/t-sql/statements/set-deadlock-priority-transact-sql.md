@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
   Specifies the relative importance that the current session continue processing if it is deadlocked with another session.
 
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

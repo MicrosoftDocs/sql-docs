@@ -65,45 +65,43 @@ The Wingtip Tickets SaaS Multi-tenant Database scripts and application source co
 
 ## Create a job agent database and new job agent
 
-This tutorial requires that you use PowerShell to create the job agent database and job agent. Like the MSDB database used by SQL Agent, a job agent uses a database in Azure SQL Database to store job definitions, job status, and history. After the job agent is created, you can create and monitor jobs immediately.
+This tutorial requires that you use PowerShell to create the job agent database and job agent. Like the `msdb` database used by SQL Agent, a job agent uses a database in Azure SQL Database to store job definitions, job status, and history. After the job agent is created, you can create and monitor jobs immediately.
 
 1. In **PowerShell ISE**, open *...\\Learning Modules\\Schema Management\\Demo-SchemaManagement.ps1*.
 2. Press **F5** to run the script.
 
-The *Demo-SchemaManagement.ps1* script calls the *Deploy-SchemaManagement.ps1* script to create a database named _jobagent_ on the catalog server. The script then creates the job agent, passing the _jobagent_ database as a parameter.
+The *Demo-SchemaManagement.ps1* script calls the *Deploy-SchemaManagement.ps1* script to create a database named `jobagent` on the catalog server. The script then creates the job agent, passing the `jobagent` database as a parameter.
 
 ## Create a job to deploy new reference data to all tenants
 
 #### Prepare
 
-Each tenant's database includes a set of venue types in the **VenueTypes** table. Each venue type defines the kind of events that can be hosted at a venue. These venue types correspond to the background images you see in the tenant events app.  In this exercise, you deploy an update to all databases to add two additional venue types: *Motorcycle Racing* and *Swimming Club*.
+Each tenant's database includes a set of venue types in the `VenueTypes` table. Each venue type defines the kind of events that can be hosted at a venue. These venue types correspond to the background images you see in the tenant events app.  In this exercise, you deploy an update to all databases to add two additional venue types: *Motorcycle Racing* and *Swimming Club*.
 
-First, review the venue types included in each tenant database. Connect to one of the tenant databases in SQL Server Management Studio (SSMS) and inspect the VenueTypes table.  You can also query this table in the Query editor in the Azure portal, accessed from the database page.
+First, review the venue types included in each tenant database. Connect to one of the tenant databases in SQL Server Management Studio (SSMS) and inspect the `VenueTypes` table.  You can also query this table in the Query editor in the Azure portal, accessed from the database page.
 
-1. Open SSMS and connect to the tenant server: *tenants1-dpt-&lt;user&gt;.database.windows.net*
-1. To confirm that *Motorcycle Racing* and *Swimming Club* **are not** currently included, browse to the *contosoconcerthall* database on the *tenants1-dpt-&lt;user&gt;* server and query the *VenueTypes* table.
-
-
+1. Open SSMS and connect to the tenant server: `tenants1-dpt-<user>.database.windows.net`.
+1. To confirm that *Motorcycle Racing* and *Swimming Club* **are not** currently included, browse to the `contosoconcerthall` database on the `tenants1-dpt-<user>` server and query the `VenueTypes` table.
 
 #### Steps
 
-Now you create a job to update the **VenueTypes** table in each tenants database, by adding the two new venue types.
+Now you create a job to update the `VenueTypes` table in each tenants database, by adding the two new venue types.
 
-To create a new job, you use the set of jobs system stored procedures that were created in the _jobagent_ database. The stored procedures were created when the job agent was created.
+To create a new job, you use the set of jobs system stored procedures that were created in the `jobagent` database. The stored procedures were created when the job agent was created.
 
-1. In SSMS, connect to the tenant server: tenants1-mt-&lt;user&gt;.database.windows.net
+1. In SSMS, connect to the tenant server: `tenants1-mt-<user>.database.windows.net`.
 
-2. Browse to the *tenants1* database.
+2. Browse to the `tenants1` database.
 
-3. Query the *VenueTypes* table to confirm that *Motorcycle Racing* and *Swimming Club* are not yet in the results list.
+3. Query the `VenueTypes` table to confirm that *Motorcycle Racing* and *Swimming Club* are not yet in the results list.
 
-4. Connect to the catalog server, which is *catalog-mt-&lt;user&gt;.database.windows.net*.
+4. Connect to the catalog server, which is `catalog-mt-<user>.database.windows.net`.
 
-5. Connect to the _jobagent_ database in the catalog server.
+5. Connect to the `jobagent` database in the catalog server.
 
 6. In SSMS, open the file *...\\Learning Modules\\Schema Management\\DeployReferenceData.sql*.
 
-7. Modify the statement: set @User = &lt;user&gt; and substitute the User value used when you deployed the Wingtip Tickets SaaS Multi-tenant Database application.
+7. Modify the statement: `set @User = <user>` and substitute the User value used when you deployed the Wingtip Tickets SaaS Multi-tenant Database application.
 
 8. Press **F5** to run the script.
 
@@ -115,24 +113,24 @@ Observe the following items in the *DeployReferenceData.sql* script:
 
 - **sp\_add\_target\_group\_member** adds the following items:
     - A *server* target member type.
-        - This is the *tenants1-mt-&lt;user&gt;* server that contains the tenants databases.
+        - This is the `tenants1-mt-<user>` server that contains the tenants databases.
         - Including the server includes the tenant databases that exist at the time the job executes.
-    - A *database* target member type for the template database (*basetenantdb*) that resides on *catalog-mt-&lt;user&gt;* server,
-    - A *database* target member type to include the *adhocreporting* database that is used in a later tutorial.
+    - A *database* target member type for the template database (`basetenantdb`) that resides on `catalog-mt-<user>` server,
+    - A *database* target member type to include the `adhocreporting` database that is used in a later tutorial.
 
 - **sp\_add\_job** creates a job called *Reference Data Deployment*.
 
-- **sp\_add\_jobstep** creates the job step containing T-SQL command text to update the reference table, VenueTypes.
+- **sp\_add\_jobstep** creates the job step containing T-SQL command text to update the reference table, `VenueTypes`.
 
 - The remaining views in the script display the existence of the objects and monitor job execution. Use these queries to review the status value in the **lifecycle** column to determine when the job has  finished. The job updates the tenants database, and updates the two additional databases that contain the reference table.
 
-In SSMS, browse to the tenant database on the *tenants1-mt-&lt;user&gt;* server. Query the *VenueTypes* table to confirm that *Motorcycle Racing* and *Swimming Club* are now added to the table. The total count of venue types should have increased by two.
+In SSMS, browse to the tenant database on the `tenants1-mt-<user>` server. Query the `VenueTypes` table to confirm that *Motorcycle Racing* and *Swimming Club* are now added to the table. The total count of venue types should have increased by two.
 
 ## Create a job to manage the reference table index
 
 This exercise creates a job to rebuild the index on the reference table primary key on all the tenant databases. An index rebuild is a typical database management operation that an administrator might run after loading a large amount of data load, to improve performance.
 
-1. In SSMS, connect to _jobagent_ database in *catalog-mt-&lt;User&gt;.database.windows.net* server.
+1. In SSMS, connect to `jobagent` database in `catalog-mt-<user>.database.windows.net` server.
 
 2. In SSMS, open *...\\Learning Modules\\Schema Management\\OnlineReindex.sql*.
 
@@ -142,11 +140,11 @@ This exercise creates a job to rebuild the index on the reference table primary 
 
 Observe the following items in the *OnlineReindex.sql* script:
 
-* **sp\_add\_job** creates a new job called *Online Reindex PK\_\_VenueTyp\_\_265E44FD7FD4C885*.
+* `sp_add_job` creates a new job called *Online Reindex PK\_\_VenueTyp\_\_265E44FD7FD4C885*.
 
-* **sp\_add\_jobstep** creates the job step containing T-SQL command text to update the index.
+* `sp_add_jobstep` creates the job step containing T-SQL command text to update the index.
 
-* The remaining views in the script monitor job execution. Use these queries to review the status value in the **lifecycle** column to determine when the job has successfully finished on all target group members.
+* The remaining views in the script monitor job execution. Use these queries to review the status value in the `lifecycle` column to determine when the job has successfully finished on all target group members.
 
 ## Additional resources
 

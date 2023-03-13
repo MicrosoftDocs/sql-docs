@@ -8,9 +8,7 @@ ms.date: 10/21/2020
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: tutorial
-ms.custom:
-  - "seo-lt-2019"
-  - "devx-track-azurepowershell"
+ms.custom: devx-track-azurepowershell
 ---
 # Create an Elastic Job agent using PowerShell (preview)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -132,7 +130,7 @@ $jobAgent
 
 ### Create the job credentials
 
-Jobs use database scoped credentials to connect to the target databases specified by the target group upon execution and execute scripts. These database scoped credentials are also used to connect to the master database to enumerate all the databases in a server or an elastic pool, when either of these are used as the target group member type.
+Jobs use database scoped credentials to connect to the target databases specified by the target group upon execution and execute scripts. These database scoped credentials are also used to connect to the `master` database to enumerate all the databases in a server or an elastic pool, when either of these are used as the target group member type.
 
 The database scoped credentials must be created in the job database. All target databases must have a login with sufficient permissions for the job to complete successfully.
 

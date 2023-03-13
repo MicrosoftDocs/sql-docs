@@ -9,7 +9,6 @@ ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.maint.reportinglogging.f1"
-ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 ---
 # Maintenance Plan (Reporting and Logging Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

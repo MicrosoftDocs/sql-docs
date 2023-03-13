@@ -9,7 +9,6 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
@@ -54,7 +53,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]). | When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Levels are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
+Upgrade from version 100 ([!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)]). | When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Levels are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
 
 ### Database objects
 

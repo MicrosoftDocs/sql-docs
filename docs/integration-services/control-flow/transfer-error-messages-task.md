@@ -1,21 +1,18 @@
 ---
+title: "Transfer Error Messages Task"
 description: "Transfer Error Messages Task"
-title: "Transfer Error Messages Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.transfererrormessagestask.f1"
   - "sql13.dts.designer.transfererrormessagestask.general.f1"
   - "sql13.dts.designer.transfererrormessagestask.errormessages.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transfer Error Messages task [Integration Services]"
-ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: chugugrace
-ms.author: chugu
 ---
 # Transfer Error Messages Task
 

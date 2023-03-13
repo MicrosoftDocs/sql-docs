@@ -1,19 +1,15 @@
 ---
-description: "Run Queries (Visual Database Tools)"
 title: Run Queries
-ms.custom: seo-lt-2019
+description: "Run Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], executing"
   - "executing queries [SQL Server]"
-ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Run Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

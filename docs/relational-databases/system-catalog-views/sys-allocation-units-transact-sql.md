@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.allocation_units catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.allocation_units (Transact-SQL)

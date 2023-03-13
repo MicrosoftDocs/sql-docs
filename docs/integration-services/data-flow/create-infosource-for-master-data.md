@@ -1,15 +1,12 @@
 ---
+title: "Create InfoSource for Master Data"
 description: "Create InfoSource for Master Data"
-title: "Create InfoSource for Master Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Create InfoSource for Master Data
 

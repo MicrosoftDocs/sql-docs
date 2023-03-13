@@ -1,17 +1,14 @@
 ---
+title: "Audit Database Object Access Event Class"
 description: "Audit Database Object Access Event Class"
-title: "Audit Database Object Access Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Database Object Access event class"
-ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Database Object Access event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Object Access Event Class

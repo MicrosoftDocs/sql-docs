@@ -1,16 +1,13 @@
 ---
+title: "Getting Started with SSMA for Access Console (AccessToSQL)"
 description: "Getting Started with SSMA for Access Console (AccessToSQL)"
-title: "Getting Started with SSMA for Access Console (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom:
-  - intro-get-started
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-author: cpichuka 
-ms.author: cpichuka 
+ms.custom: intro-get-started
 ---
 # Getting Started with SSMA for Access Console (AccessToSQL)
 This section describes the procedure to launch and get started with the Access console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  

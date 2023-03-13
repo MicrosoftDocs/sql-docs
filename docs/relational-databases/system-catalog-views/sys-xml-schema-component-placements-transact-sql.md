@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.xml_schema_component_placements catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
 ---
 # sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

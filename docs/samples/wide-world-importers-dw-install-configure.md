@@ -1,17 +1,14 @@
 ---
 title: "Install & configure DW WideWorldImporters sample database"
 description: Follow these instructions to download, install, and configure the WideWorldImportersDW sample database with SQL Server Management Studio.
-ms.service: sql
-ms.subservice: samples
-ms.date: "08/04/2018"
-ms.reviewer: ""
-ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/04/2018"
+ms.service: sql
+ms.subservice: samples
+ms.topic: conceptual
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current"
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
 ---
 # WideWorldImportersDW Installation and configuration
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

@@ -7,7 +7,6 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: tutorial
-ms.custom: event-tier1-build-2022
 ---
 
 # Example demonstrating use of Azure Key Vault provider with Always Encrypted

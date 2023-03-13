@@ -1,13 +1,14 @@
 ---
 title: "Configure distribution database in availability group"
-description: Configure the distribution database for SQL Server replication with an Always On availability group. 
-ms.custom: seo-lt-2019
+description: Configure the distribution database for SQL Server replication with an Always On availability group.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/16/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
   - "remote Distributors [SQL Server replication]"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication], about distribution databases"
   - "distribution databases [SQL Server replication]"
   - "merge replication [SQL Server replication], configuring distribution"
-ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Set up replication distribution database in Always On availability group
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +51,7 @@ After a distribution database in the AG is configured based on the steps describ
 - Oracle publisher is not supported.
 - Merge replication is not supported.
 - Transactional replication with immediate or queued updating subscriber is not supported.
-- Peer to peer replication is not supported.
+- Peer to peer replication is not supported prior to SQL Server 2019 (15.x) CU 17
 - All SQL Server 2017 instances hosting distribution database replicas must be SQL Server 2017 CU 6 or later. 
 - All SQL Server 2016 instances hosting distribution database replicas must be SQL Server 2016 SP2-CU3 or later.
 - All SQL Server instances hosting distribution database replicas must be the same version, except during the narrow timeframe when upgrade takes place.

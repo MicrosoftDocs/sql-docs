@@ -1,29 +1,26 @@
 ---
+title: "sp_adjustpublisheridentityrange (Transact-SQL)"
 description: "sp_adjustpublisheridentityrange (Transact-SQL)"
-title: "sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_adjustpublisheridentityrange_TSQL"
-  - "sp_adjustpublisheridentityrange"
-helpviewer_keywords: 
-  - "sp_adjustpublisheridentityrange"
-ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_adjustpublisheridentityrange_TSQL"
+  - "sp_adjustpublisheridentityrange"
+helpviewer_keywords:
+  - "sp_adjustpublisheridentityrange"
+dev_langs:
+  - "TSQL"
 ---
 # sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adjusts the identity range on a publication and reallocates new ranges based on the threshold value on the publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

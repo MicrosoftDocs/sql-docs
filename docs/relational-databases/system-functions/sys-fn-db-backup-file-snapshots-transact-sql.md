@@ -1,24 +1,21 @@
 ---
+title: "sys.fn_db_backup_file_snapshots (Transact-SQL)"
 description: "sys.fn_db_backup_file_snapshots (Transact-SQL)"
-title: "sys.fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "06/03/2015"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Returns Azure snapshots associated with the database files. If the specified database is not found or if the database files are not stored in the Microsoft Azure Blob Storage, no rows are returned. Use this system function in conjunction with the **sys.sp_delete_backup_file_snapshot** system stored procedure to identify and delete orphaned backup snapshots. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,22 +1,19 @@
 ---
+title: "sp_unbindefault (Transact-SQL)"
 description: "sp_unbindefault (Transact-SQL)"
-title: "sp_unbindefault (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_unbindefault_TSQL"
-  - "sp_unbindefault"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_unbindefault"
-ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_unbindefault_TSQL"
+  - "sp_unbindefault"
+helpviewer_keywords:
+  - "sp_unbindefault"
+dev_langs:
+  - "TSQL"
 ---
 # sp_unbindefault (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you create default definitions by using the DEFAULT keyword in the [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) statements instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

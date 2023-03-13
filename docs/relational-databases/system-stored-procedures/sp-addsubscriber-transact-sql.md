@@ -1,22 +1,19 @@
 ---
+title: "sp_addsubscriber (Transact-SQL)"
 description: "sp_addsubscriber (Transact-SQL)"
-title: "sp_addsubscriber (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addsubscriber"
-  - "sp_addsubscriber_TSQL"
-helpviewer_keywords: 
-  - "sp_addsubscriber"
-ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addsubscriber"
+  - "sp_addsubscriber_TSQL"
+helpviewer_keywords:
+  - "sp_addsubscriber"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addsubscriber (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  This stored procedure has been deprecated. You are no longer required to explicitly register a Subscriber at the Publisher.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

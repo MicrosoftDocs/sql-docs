@@ -2,20 +2,17 @@
 title: Filter Events Based on the Event Start Time
 titleSuffix: SQL Server Profiler
 description: Filter events by start time during a trace. Learn how to set up a filter on the event start time in SQL Server Profiler.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: conceptual
-ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Filter Events Based on the Event Start Time (SQL Server Profiler)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how to filter trace events based on the event start time by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

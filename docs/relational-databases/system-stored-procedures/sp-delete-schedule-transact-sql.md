@@ -1,29 +1,26 @@
 ---
+title: "sp_delete_schedule (Transact-SQL)"
 description: "sp_delete_schedule (Transact-SQL)"
-title: "sp_delete_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_schedule"
-  - "sp_delete_schedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_schedule"
-ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_schedule"
+  - "sp_delete_schedule_TSQL"
+helpviewer_keywords:
+  - "sp_delete_schedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes a schedule.  
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

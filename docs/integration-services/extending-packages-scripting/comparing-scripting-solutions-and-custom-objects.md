@@ -1,22 +1,19 @@
 ---
+title: "Comparing Scripting Solutions and Custom Objects"
 description: "Comparing Scripting Solutions and Custom Objects"
-title: "Comparing Scripting Solutions and Custom Objects | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "managed tasks [Integration Services]"
   - "Script task [Integration Services], vs. custom managed tasks"
   - "SSIS Script task, vs. custom managed tasks"
   - "custom tasks [Integration Services], scripts"
-ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Comparing Scripting Solutions and Custom Objects
 

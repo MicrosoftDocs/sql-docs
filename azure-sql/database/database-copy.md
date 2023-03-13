@@ -4,14 +4,14 @@ description: Create a transactionally consistent copy of an existing database in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 6/14/2022
+ms.date: 12/19/2022
 ms.service: sql-database
 ms.subservice: data-movement
 ms.topic: how-to
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
 
@@ -43,9 +43,9 @@ If you use server level logins for data access and copy the database to a differ
 
 ## Copy using the Azure portal
 
-To copy a database by using the Azure portal, open the page for your database, and then click **Copy**.
+To copy a database by using the Azure portal, open the page for your database, and then choose **Copy** to open the **Create SQL Database - Copy database** page. Fill in the values for the target server where you want to copy your database to.
 
-   ![Database copy](./media/database-copy/database-copy.png)
+   :::image type="content" source="./media/database-copy/database-copy.png" alt-text="Screenshot of Azure portal, showing Database copy option highlighted on the database overview page.":::
 
 ## Copy using PowerShell or the Azure CLI
 
@@ -55,7 +55,7 @@ To copy a database, use the following examples.
 
 For PowerShell, use the [New-AzSqlDatabaseCopy](/powershell/module/az.sql/new-azsqldatabasecopy) cmdlet.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > The PowerShell Azure Resource Manager (RM) module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. The AzureRM module will continue to receive bug fixes until at least December 2020.  The arguments for the commands in the Az module and in the AzureRm modules are substantially identical. For more about their compatibility, see [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
 
 ```powershell
@@ -63,7 +63,7 @@ New-AzSqlDatabaseCopy -ResourceGroupName "<resourceGroup>" -ServerName $sourcese
     -CopyResourceGroupName "myResourceGroup" -CopyServerName $targetserver -CopyDatabaseName "CopyOfMySampleDatabase"
 ```
 
-The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the the target database using the [Remove-AzSqlDatabase](/powershell/module/az.sql/remove-azsqldatabase) cmdlet.
+The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the target database using the [Remove-AzSqlDatabase](/powershell/module/az.sql/remove-azsqldatabase) cmdlet.
 
 For a complete sample PowerShell script, see [Copy a database to a new server](scripts/copy-database-to-new-server-powershell.md).
 
@@ -74,27 +74,27 @@ az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myRes
     --name "<databaseName>" --resource-group "<resourceGroup>" --server $sourceserver
 ```
 
-The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the the target database using the [az sql db delete](/cli/azure/sql/db#az-sql-db-delete) command.
+The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the target database using the [az sql db delete](/cli/azure/sql/db#az-sql-db-delete) command.
 
-* * *
+---
 
 ## Copy using Transact-SQL
 
-Log in to the master database with the server administrator login or the login that created the database you want to copy. For database copy to succeed, logins that are not the server administrator must be members of the `dbmanager` role. For more information about logins and connecting to the server, see [Manage logins](logins-create-manage.md).
+Log in to the `master` database with the server administrator login or the login that created the database you want to copy. For database copy to succeed, logins that are not the server administrator must be members of the `dbmanager` role. For more information about logins and connecting to the server, see [Manage logins](logins-create-manage.md).
 
 Start copying the source database with the [CREATE DATABASE ... AS COPY OF](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true#copy-a-database) statement. The T-SQL statement continues running until the database copy operation is complete.
 
-> [!NOTE]
+> [!NOTE]  
 > Terminating the T-SQL statement does not terminate the database copy operation. To terminate the operation, drop the target database.
->
+>  
 > Database copy using T-SQL is not supported when connecting to the destination server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, database copy is supported when connected to the destination server from a public IP address. Once the copy operation completes, public access can be [denied](connectivity-settings.md#deny-public-network-access).
 
-> [!IMPORTANT]
-> Selecting backup storage redundancy when using T-SQL CREATE DATABASE ... AS COPY OF command is not supported yet. 
+> [!IMPORTANT]  
+> Selecting backup storage redundancy when using T-SQL CREATE DATABASE ... AS COPY OF command is not supported yet.
 
 ### Copy to the same server
 
-Log in to the master database with the server administrator login or the login that created the database you want to copy. For database copying to succeed, logins that are not the server administrator must be members of the `dbmanager` role.
+Log in to the `master` database with the server administrator login or the login that created the database you want to copy. For database copying to succeed, logins that are not the server administrator must be members of the `dbmanager` role.
 
 This command copies Database1 to a new database named Database2 on the same server. Depending on the size of your database, the copying operation might take some time to complete.
 
@@ -105,11 +105,11 @@ This command copies Database1 to a new database named Database2 on the same serv
 
 ### Copy to an elastic pool
 
-Log in to the master database with the server administrator login or the login that created the database you want to copy. For database copying to succeed, logins that are not the server administrator must be members of the `dbmanager` role.
+Log in to the `master` database with the server administrator login or the login that created the database you want to copy. For database copying to succeed, logins that are not the server administrator must be members of the `dbmanager` role.
 
 This command copies Database1 to a new database named Database2 in an elastic pool named pool1. Depending on the size of your database, the copying operation might take some time to complete.
 
-Database1 can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies will not succeed. For example, you can copy a single or elastic standard db into a General Purpose pool, but you can't copy a standard elastic db into a premium pool. 
+Database1 can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies will not succeed. For example, you can copy a single or elastic standard db into a General Purpose pool, but you can't copy a standard elastic db into a premium pool.
 
    ```sql
    -- Execute on the master database to start copying
@@ -120,7 +120,7 @@ Database1 can be a single or pooled database. Copying between different tier poo
 
 ### Copy to a different server
 
-Log in to the master database of the target server where the new database is to be created. Use a login that has the same name and password as the database owner of the source database on the source server. The login on the target server must also be a member of the `dbmanager` role, or be the server administrator login.
+Log in to the `master` database of the target server where the new database is to be created. Use a login that has the same name and password as the database owner of the source database on the source server. The login on the target server must also be a member of the `dbmanager` role, or be the server administrator login.
 
 This command copies Database1 on server1 to a new database named Database2 on server2. Depending on the size of your database, the copying operation might take some time to complete.
 
@@ -129,7 +129,7 @@ This command copies Database1 on server1 to a new database named Database2 on se
 CREATE DATABASE Database2 AS COPY OF server1.Database1;
 ```
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Both servers' firewalls must be configured to allow inbound connection from the IP of the client issuing the T-SQL CREATE DATABASE ... AS COPY OF command. To determine the source IP address of current connection, execute `SELECT client_net_address FROM sys.dm_exec_connections WHERE session_id = @@SPID;`
 
 Similarly, the below command copies Database1 on server1 to a new database named Database2 within an elastic pool called pool2, on server2.
@@ -143,8 +143,8 @@ CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELAS
 
 You can use the steps in the [Copy a SQL Database to a different server](#copy-to-a-different-server) section to copy your database to a server in a different subscription using T-SQL. Make sure you use a login that has the same name and password as the database owner of the source database. Additionally, the login must be a member of the `dbmanager` role or a server administrator, on both source and target servers.
 
-> [!TIP]
-> When copying databases in the same Azure Active Directory tenant, authorization on the source and destination servers is simplified if you initiate the copy command using an AAD authentication login with sufficient access on both servers. The minimum necessary level of access is membership in the `dbmanager` role in the master database on both servers. For example, you can use an AAD login is a member of an AAD group designated as the server administrator on both servers.
+> [!TIP]  
+> When copying databases in the same Azure Active Directory tenant, authorization on the source and destination servers is simplified if you initiate the copy command using an AAD authentication login with sufficient access on both servers. The minimum necessary level of access is membership in the `dbmanager` role in the `master` database on both servers. For example, you can use an AAD login is a member of an AAD group designated as the server administrator on both servers.
 
 ```sql
 --Step# 1
@@ -188,58 +188,54 @@ CREATE DATABASE new_database_name
 AS COPY OF source_server_name.source_database_name;
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > The [Azure portal](https://portal.azure.com), PowerShell, and the Azure CLI do not support database copy to a different subscription.
 
-> [!TIP]
+> [!TIP]  
 > Database copy using T-SQL supports copying a database from a subscription in a different Azure tenant. This is only supported when using a SQL authentication login to log in to the target server.
 > Creating a database copy on a logical server in a different Azure tenant is not supported when [Azure Active Directory](https://techcommunity.microsoft.com/t5/azure-sql/support-for-azure-ad-user-creation-on-behalf-of-azure-ad/ba-p/2346849) auth is active (enabled) on either source or target logical server.
 
 ## Monitor the progress of the copying operation
 
-Monitor the copying process by querying the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql), [sys.dm_database_copies](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database), and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) views. While the copying is in progress, the **state_desc** column of the sys.databases view for the new database is set to **COPYING**.
+Monitor the copying process by querying the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql), [sys.dm_database_copies](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database), and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) views. While the copying is in progress, the `state_desc` column of the `sys.databases` view for the new database is set to **COPYING**.
 
-* If the copying fails, the **state_desc** column of the sys.databases view for the new database is set to **SUSPECT**. Execute the DROP statement on the new database, and try again later.
-* If the copying succeeds, the **state_desc** column of the sys.databases view for the new database is set to **ONLINE**. The copying is complete, and the new database is a regular database that can be changed independent of the source database.
+- If the copying fails, the `state_desc` column of the `sys.databases` view for the new database is set to **SUSPECT**. Execute the DROP statement on the new database, and try again later.
+- If the copying succeeds, the `state_desc` column of the `sys.databases` view for the new database is set to **ONLINE**. The copying is complete, and the new database is a regular database that can be changed independent of the source database.
 
-> [!NOTE]
+> [!NOTE]  
 > If you decide to cancel the copying while it is in progress, execute the [DROP DATABASE](/sql/t-sql/statements/drop-database-transact-sql) statement on the new database.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > If you need to create a copy with a substantially smaller service objective than the source, the target database may not have sufficient resources to complete the seeding process and it can cause the copy operation to fail. In this scenario use a geo-restore request to create a copy in a different server and/or a different region. See [Recover an Azure SQL Database using database backups](recovery-using-backups.md#geo-restore) for more information.
 
 ## Azure RBAC roles and permissions to manage database copy
 
 To create a database copy, you will need to be in the following roles
 
-* Subscription Owner or
-* SQL Server Contributor role or
-* Custom role on the source and target databases with following permission:
-
-   Microsoft.Sql/servers/databases/read
-   Microsoft.Sql/servers/databases/write
+- Subscription Owner or
+- SQL Server Contributor role or
+- Custom role on the source and target databases with following permission:
+  - Microsoft.Sql/servers/databases/read
+  - Microsoft.Sql/servers/databases/write
 
 To cancel a database copy, you will need to be in the following roles
 
-* Subscription Owner or
-* SQL Server Contributor role or
-* Custom role on the source and target databases with following permission:
-
-   Microsoft.Sql/servers/databases/read
-   Microsoft.Sql/servers/databases/write
+- Subscription Owner or
+- SQL Server Contributor role or
+- Custom role on the source and target databases with following permission:
+  - Microsoft.Sql/servers/databases/read
+  - Microsoft.Sql/servers/databases/write
 
 To manage database copy using the Azure portal, you will also need the following permissions:
 
-   Microsoft.Resources/subscriptions/resources/read
-   Microsoft.Resources/subscriptions/resources/write
-   Microsoft.Resources/deployments/read
-   Microsoft.Resources/deployments/write
-   Microsoft.Resources/deployments/operationstatuses/read
+- Microsoft.Resources/subscriptions/resources/read
+- Microsoft.Resources/deployments/read
+- Microsoft.Resources/deployments/write
+- Microsoft.Resources/deployments/operationstatuses/read
 
 If you want to see the operations under deployments in the resource group on the portal, operations across multiple resource providers including SQL operations, you will need these additional permissions:
-
-   Microsoft.Resources/subscriptions/resourcegroups/deployments/operations/read
-   Microsoft.Resources/subscriptions/resourcegroups/deployments/operationstatuses/read
+- Microsoft.Resources/subscriptions/resourcegroups/deployments/operations/read
+- Microsoft.Resources/subscriptions/resourcegroups/deployments/operationstatuses/read
 
 ## Resolve logins
 
@@ -254,22 +250,22 @@ To learn about managing users and logins when you copy a database to a different
 The following errors can be encountered while copying a database in Azure SQL Database. For more information, see [Copy an Azure SQL Database](database-copy.md).
 
 | Error code | Severity | Description |
-| ---:| ---:|:--- |
-| 40635 |16 |Client with IP address '%.&#x2a;ls' is temporarily disabled. |
-| 40637 |16 |Create database copy is currently disabled. |
-| 40561 |16 |Database copy failed. Either the source or target database does not exist. |
-| 40562 |16 |Database copy failed. The source database has been dropped. |
-| 40563 |16 |Database copy failed. The target database has been dropped. |
-| 40564 |16 |Database copy failed due to an internal error. Please drop target database and try again. |
-| 40565 |16 |Database copy failed. No more than 1 concurrent database copy from the same source is allowed. Please drop target database and try again later. |
-| 40566 |16 |Database copy failed due to an internal error. Please drop target database and try again. |
-| 40567 |16 |Database copy failed due to an internal error. Please drop target database and try again. |
-| 40568 |16 |Database copy failed. Source database has become unavailable. Please drop target database and try again. |
-| 40569 |16 |Database copy failed. Target database has become unavailable. Please drop target database and try again. |
-| 40570 |16 |Database copy failed due to an internal error. Please drop target database and try again later. |
-| 40571 |16 |Database copy failed due to an internal error. Please drop target database and try again later. |
+| ---: | ---: | :--- |
+| 40635 | 16 | Client with IP address '%.&#x2a;ls' is temporarily disabled. |
+| 40637 | 16 | Create database copy is currently disabled. |
+| 40561 | 16 | Database copy failed. Either the source or target database does not exist. |
+| 40562 | 16 | Database copy failed. The source database has been dropped. |
+| 40563 | 16 | Database copy failed. The target database has been dropped. |
+| 40564 | 16 | Database copy failed due to an internal error. Please drop target database and try again. |
+| 40565 | 16 | Database copy failed. No more than 1 concurrent database copy from the same source is allowed. Please drop target database and try again later. |
+| 40566 | 16 | Database copy failed due to an internal error. Please drop target database and try again. |
+| 40567 | 16 | Database copy failed due to an internal error. Please drop target database and try again. |
+| 40568 | 16 | Database copy failed. Source database has become unavailable. Please drop target database and try again. |
+| 40569 | 16 | Database copy failed. Target database has become unavailable. Please drop target database and try again. |
+| 40570 | 16 | Database copy failed due to an internal error. Please drop target database and try again later. |
+| 40571 | 16 | Database copy failed due to an internal error. Please drop target database and try again later. |
 
 ## Next steps
 
-* For information about logins, see [Manage logins](logins-create-manage.md) and [How to manage Azure SQL Database security after disaster recovery](active-geo-replication-security-configure.md).
-* To export a database, see [Export the database to a BACPAC](database-export.md).
+- For information about logins, see [Manage logins](logins-create-manage.md) and [How to manage Azure SQL Database security after disaster recovery](active-geo-replication-security-configure.md).
+- To export a database, see [Export the database to a BACPAC](database-export.md).

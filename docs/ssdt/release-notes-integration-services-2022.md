@@ -1,14 +1,13 @@
 ---
 title: SSIS Projects extension for VS2022 troubleshooting guide
 description: "View the release notes for all versions of SSIS that work with Visual Studio 2022 and earlier Visual Studio versions."
-ms.service: sql
-ms.subservice: ssdt
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan, drskwier
-ms.custom: seo-lt-2022
 ms.date: 11/21/2022
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # SSIS Projects extension for VS2022 troubleshooting guide
@@ -20,19 +19,55 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.
 
+## Component Download
+- To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL Server prior to SQL 2019, in addition to the [Microsoft Oracle Connector](https://aka.ms/SSISMSOracleConnector) and [Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
+  - [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
+  - [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)
+  - [Microsoft Connector Version 3.0 for Oracle and Teradata by Attunity targeting SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)
+  - [Microsoft Connector Version 2.0 for Oracle and Teradata by Attunity targeting SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283)
+
+- Since version 3.3, Power Query Source for SQL Server 2017-2022 have been excluded from the installation of this product. To continue using this component, manually download and install them by yourselves. Here are the download links: [Power Query Source for SQL Server 2017-2022](https://www.microsoft.com/download/details.aspx?id=100619)
+
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
+
+- Third party components aren't supported yet.
+
+- Sometimes this product or Visual Studio Tools for Applications 2022 may be somehow deleted during VS instance upgrade. If your existing SSIS projects cannot be loaded, try to repair this product via control panel. If VS doesn't pop up when clicking on "Edit Script", try to repair VSTA 2022 via control panel. 
+
+- **SSDT side by side issue**. SQL Server Analysis Services and SQL Server Reporting Services extensions can now work side-by-side with this extension in VS2022 17.4 and previous version. The workaround is to download Visual Studio 2022 17.5 Preview 2 or later.
+
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
+- If Oracle, Teradata, or other OOB component is not found after upgrading SSDT, please make sure that the connector for latest SQL Server version is installed.
+
 ## Known issues
+**Version 0.3**
+  1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
+  2. Can't design Dimension Processing and Partition Processing.
+  3. Can't design DQS related component.
+  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  5. Localization and globalization aren't supported.
+  
+**Version 0.2**
+  1. Target sever versions supported: SQL server 2019 and SQL server 2022
+  2. Can't design Dimension Processing and Partition Processing.
+  3. Can't design DQS related component.
+  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  5. Side by side, localization and globalization aren't supported.
+  6. Azure-enabled SSIS projects aren't supported
+  7. Repair action doesn't take effct. Reinstall it instead.
+  8. Logging container can't choose packages.
+  
 **Version 0.1**
-  1. Target server version supported: SQL server 2019 and SQL server 2022 
+  1. Target server versions supported: SQL server 2019 and SQL server 2022 
   1. Can't design Dimension Processing and Partition Processing.
   1. Can't design DQS related component.
-  1. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  1. Project name in Solution Explorer UI doesn't show target server version as suffix.
   1. Side by side, localization and globalization aren't supported.
   1. Packages using Oracle and Teradata connectors aren't supported. 
   1. Azure-enabled SSIS projects aren't supported.
+  1. Logging container can't choose packages.
   1. Right click Package and select SSIS Import and Export Wizard throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\DTSWizard.exe
   1. Right click Package and select Upgrade All Packages throws error, workaround: execute Common7\IDE\CommonExtensions\Microsoft\SSIS\160\Binn\SSISUpgrade.exe
 ## Installation issues
@@ -52,11 +87,11 @@ If you get an error during installation, and find **"Bundle action failed: Inval
       ```
    1. Repair the vs2022
    1. Restart and reinstall
-- When the error is "Object reference not set to an instance of an object.":
-  - delete the broken instance folder “%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
-- When the error is "Error 0x80091007: Failed to verify hash of payload":
+- When the error is "Object reference not set to an instance of an object.",
+  - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
+- When the error is "Error 0x80091007: Failed to verify hash of payload",
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
-- When it isn't above error in ISVsix.log, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
+- When the error isn't in the above list, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
 ## Offline installation
 

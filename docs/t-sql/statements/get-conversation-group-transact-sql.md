@@ -27,7 +27,7 @@ dev_langs:
 
   Returns the conversation group identifier for the next message to be received, and locks the conversation group for the conversation that contains the message. The conversation group identifier can be used to retrieve conversation state information before retrieving the message itself.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

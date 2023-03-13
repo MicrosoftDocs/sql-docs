@@ -1,18 +1,15 @@
 ---
-title: "Manage My Data Alerts in Data Alert Manager | Microsoft Docs"
+title: "Manage My Data Alerts in Data Alert Manager"
 description: Learn how to view a list of the data alerts that they created and information about the alerts in Data Alert Manager.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/17/2017
 ms.service: reporting-services
 ms.subservice: reporting-services
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"
-ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-author: maggiesMSFT
-ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Manage My Data Alerts in Data Alert Manager

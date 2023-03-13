@@ -1,21 +1,18 @@
 ---
+title: "Cast (SSIS Expression)"
 description: "Cast (SSIS Expression)"
-title: "Cast (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CAST function"
   - "cast operator"
   - "converting data types [Integration Services]"
   - "data types [Integration Services], expressions"
   - "data types [Integration Services], converting"
-ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: chugugrace
-ms.author: chugu
 ---
 # Cast (SSIS Expression)
 

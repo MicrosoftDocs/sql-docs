@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XSD schemas [SQLXML], mapping attributes and elements"
   - "mapping schema [SQLXML], default mapping"
@@ -24,7 +23,6 @@ helpviewer_keywords:
   - "xml data type [SQL Server], SQLXML"
   - "table/view mapping [SQLXML], default mapping"
   - "element/attribute mapping [SQLXML]"
-ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Default Mapping of XSD Elements and Attributes to Tables and Columns (SQLXML 4.0)

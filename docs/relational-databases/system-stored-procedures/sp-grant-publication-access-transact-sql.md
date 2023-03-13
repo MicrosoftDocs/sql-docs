@@ -1,22 +1,19 @@
 ---
+title: "sp_grant_publication_access (Transact-SQL)"
 description: "sp_grant_publication_access (Transact-SQL)"
-title: "sp_grant_publication_access (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_grant_publication_access_TSQL"
   - "sp_grant_publication_access"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_grant_publication_access"
-ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_grant_publication_access (Transact-SQL)
 
@@ -24,7 +21,7 @@ author: VanMSFT
 
   Adds a login to the access list of the publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

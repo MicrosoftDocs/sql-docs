@@ -24,7 +24,7 @@ dev_langs:
 
   Creates a new service. A [!INCLUDE[ssSB](../../includes/sssb-md.md)] service is a name for a specific task or set of tasks. [!INCLUDE[ssSB](../../includes/sssb-md.md)] uses the name of the service to route messages, deliver messages to the correct queue within a database, and enforce the contract for a conversation.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

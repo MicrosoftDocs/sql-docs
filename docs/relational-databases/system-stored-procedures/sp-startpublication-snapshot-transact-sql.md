@@ -1,29 +1,26 @@
 ---
+title: "sp_startpublication_snapshot (Transact-SQL)"
 description: "sp_startpublication_snapshot (Transact-SQL)"
-title: "sp_startpublication_snapshot (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_startpublication_snapshot"
-  - "sp_startpublication_snapshot_TSQL"
-helpviewer_keywords: 
-  - "sp_startpublication_snapshot"
-ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_startpublication_snapshot"
+  - "sp_startpublication_snapshot_TSQL"
+helpviewer_keywords:
+  - "sp_startpublication_snapshot"
+dev_langs:
+  - "TSQL"
 ---
 # sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used to start the Snapshot Agent job that generates the initial snapshot for a publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

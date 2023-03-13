@@ -1,17 +1,15 @@
 ---
+title: "Publication Information, Agents (Merge Publication)"
 description: "Publication Information, Agents (Merge Publication)"
-title: "Publication Information, Agents (Merge Publication) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1"
-ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1"
 ---
 # Publication Information, Agents (Merge Publication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

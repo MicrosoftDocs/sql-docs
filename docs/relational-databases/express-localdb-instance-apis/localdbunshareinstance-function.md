@@ -1,20 +1,14 @@
 ---
+title: "LocalDBUnshareInstance Function"
 description: "LocalDBUnshareInstance Function"
-title: "LocalDBUnshareInstance Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBUnshareInstance"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBUnshareInstance"
+apitype: "DLLExport"
 ---
 # LocalDBUnshareInstance Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -3,12 +3,10 @@ title: "RECONFIGURE (Transact-SQL)"
 description: "RECONFIGURE (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "05/20/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE_TSQL"
@@ -27,7 +25,7 @@ dev_langs:
 
   Updates the currently configured value (the **config_value** column in the **sp_configure** result set) of a configuration option changed with the **sp_configure** system stored procedure. Because some configuration options require a server stop and restart to update the currently running value, RECONFIGURE does not always update the currently running value (the **run_value** column in the **sp_configure** result set) for a changed configuration value.    
     
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## Syntax    
     

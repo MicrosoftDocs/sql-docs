@@ -1,21 +1,19 @@
 ---
 title: "Cardinality Estimation (SQL Server)"
 description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
-ms.service: sql
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "cardinality estimator"
-  - "CE (cardinality estimator)"
-  - "estimating cardinality"
-dev_langs: 
-- "TSQL"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "katsmith"
-ms.custom:
-- event-tier1-build-2022
 ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "cardinality estimator"
+  - "CE (cardinality estimator)"
+  - "estimating cardinality"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -180,11 +178,7 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
   
   - Further, setting a lower compatibility level also misses a number of improvements in the query optimizer for latest versions, and affects all queries against the database.
   
-- You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
-
-  - Further, setting a lower compatibility level also misses many improvements in the query optimizer for latest versions, and affects all queries against the database.
-
-- You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
+- You could use `LEGACY_CARDINALITY_ESTIMATION` database scoped configuration option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
 
 - You could use `LEGACY_CARDINALITY_ESTIMATION` query hint, to have a single query use the older CE, while retaining other improvements in the query optimizer.
 
@@ -287,7 +281,7 @@ For more information about the Query Store, see [Monitoring Performance By Using
 
 ## Constant folding and expression evaluation during Cardinality Estimation
 
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`. For more information, see [Constant Folding](../../relational-databases/query-processing-architecture-guide.md#constant-folding-and-expression-evaluation).
+The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`. For more information, see [Constant Folding](../../relational-databases/query-processing-architecture-guide.md#constant-folding-and-expression-evaluation).
 
 In addition, some expressions that aren't constant folded but whose arguments are known at compile time, whether the arguments are parameters or constants, are evaluated by the result-set size (cardinality) estimator that is part of the Query Optimizer during optimization. For more information, see [Expression Evaluation](../../relational-databases/query-processing-architecture-guide.md#constant-folding-and-expression-evaluation).
 

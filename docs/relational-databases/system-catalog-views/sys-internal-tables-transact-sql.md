@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.internal_tables catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 ---
 # sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

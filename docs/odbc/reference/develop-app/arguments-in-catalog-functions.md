@@ -1,20 +1,17 @@
 ---
+title: "Arguments in Catalog Functions"
 description: "Arguments in Catalog Functions"
-title: "Arguments in Catalog Functions | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "arguments in catalog functions [ODBC]"
   - "catalog functions [ODBC], arguments"
   - "arguments in catalog functions [ODBC], about arguments"
   - "functions [ODBC], catalog functions"
-ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Arguments in Catalog Functions
 All catalog functions accept arguments with which an application can restrict the scope of the data returned. For example, the first and second calls to **SQLTables** in the following code return a result set containing information about all tables, while the third call returns information about the Orders table:  

@@ -1,20 +1,17 @@
 ---
-title: "Create, Modify, and Delete Data-Driven Subscriptions | Microsoft Docs"
+title: "Create, Modify, and Delete Data-Driven Subscriptions"
 description: In this article, learn how to create, modify, and delete a data-driven subscription. Also learn tips on defining a query to retrieve subscription information.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/12/2019
 ms.service: reporting-services
 ms.subservice: subscriptions
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query-based subscriptions [Reporting Services]"
   - "queries [Reporting Services], data-driven subscriptions"
   - "subscriptions [Reporting Services], data-driven"
   - "data-driven subscriptions"
-ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Create, Modify, and Delete Data-Driven Subscriptions
   A data-driven subscription is a query-based subscription that gets the data values used for processing the subscription at run time. When the subscription is triggered, a query is processed to get up-to-date information about recipients, report delivery options, rendering formats, and parameter settings. The query results are combined with the subscription definition to create a dynamic subscription that uses data you already maintain in an employee database, a customer database, or any other database that contains information that can be used as subscriber data.  

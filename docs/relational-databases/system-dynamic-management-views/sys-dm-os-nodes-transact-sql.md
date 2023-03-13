@@ -3,7 +3,7 @@ title: "sys.dm_os_nodes (Transact-SQL)"
 description: sys.dm_os_nodes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/13/2018"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_nodes dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_nodes (Transact-SQL)
@@ -30,7 +29,7 @@ An internal component named the SQLOS creates node structures that mimic hardwar
 The following table provides information about these nodes.  
   
 > [!NOTE]
-> To call this DMV from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_nodes**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+> To call this DMV from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_nodes**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,7 +50,7 @@ The following table provides information about these nodes.
 |online_scheduler_mask|**bigint**|Identifies the process affinity mask for this node.|  
 |processor_group|**smallint**|Identifies the group of processors for this node.|  
 |cpu_count |**int** |Number of CPUs available for this node. |
-|pdw_node_id|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## Permissions
 
@@ -59,6 +58,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
 
-## See Also    
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also    
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  

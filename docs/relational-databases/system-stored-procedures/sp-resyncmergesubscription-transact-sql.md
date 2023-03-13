@@ -1,29 +1,26 @@
 ---
+title: "sp_resyncmergesubscription (Transact-SQL)"
 description: "sp_resyncmergesubscription (Transact-SQL)"
-title: "sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_resyncmergesubscription_TSQL"
-  - "sp_resyncmergesubscription"
-helpviewer_keywords: 
-  - "sp_resyncmergesubscription"
-ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_resyncmergesubscription_TSQL"
+  - "sp_resyncmergesubscription"
+helpviewer_keywords:
+  - "sp_resyncmergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Resynchronizes a merge subscription to a known validation state that you specify. This allows you to force convergence or synchronize the subscription database to a specific point in time, such as the last time there was a successful validation, or to a specified date. The snapshot is not reapplied when resynchronizing a subscription using this method. This stored procedure is not used for snapshot replication subscriptions or transactional replication subscriptions. This stored procedure is executed at the Publisher, on the publication database, or at the Subscriber, on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

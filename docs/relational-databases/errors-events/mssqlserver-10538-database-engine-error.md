@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_10538"
 description: "MSSQLSERVER_10538"
-title: "MSSQLSERVER_10538 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "10538 (Database Engine error)"
-ms.assetid: 284d19b4-4979-4cbe-a9be-ac1104433c69
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "10538 (Database Engine error)"
 ---
 # MSSQLSERVER_10538
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

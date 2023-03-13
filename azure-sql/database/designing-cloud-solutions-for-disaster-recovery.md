@@ -52,13 +52,12 @@ After an outage in the primary region, SQL Database detects that the primary dat
 If an outage happens in region B, the replication process between the primary and the secondary database gets suspended but the link between the two remains intact (1). Traffic Manager detects that connectivity to Region B is broken and marks the endpoint web app 2 as Degraded (2). The application's performance is not impacted in this case, but the database becomes exposed and therefore at higher risk of data loss in case region A fails in succession.
 
 > [!NOTE]
-> For disaster recovery, we recommend the configuration with application deployment limited to two regions. This is because most of the Azure geographies have only two regions. This configuration does not protect your application from a simultaneous catastrophic failure of both regions. In an unlikely event of such a failure, you can recover your databases in a third region using [geo-restore operation](disaster-recovery-guidance.md#recover-using-geo-restore).
->
+> For disaster recovery, we recommend the configuration with application deployment limited to two regions. This is because most of the Azure geographies have only two regions. This configuration does not protect your application from a simultaneous catastrophic failure of both regions. In an unlikely event of such a failure, you can recover your databases in a third region using [geo-restore operation](recovery-using-backups.md#geo-restore). For more information, see [Azure SQL Database disaster recovery guidance](disaster-recovery-guidance.md).
 
  Once the outage is mitigated, the secondary database automatically resynchronizes with the primary. During synchronization, performance of the primary can be impacted. The specific impact depends on the amount of data the new primary acquired since the failover. 
 
 > [!NOTE]
-> After the outage is mitigated, Traffic  Manager will start routing the connections to the application in Region A as a higher priority end-point. If you intend to keep the primary in Region B for a while, you should change the priority table in the Trafic Manager profile accordingly. 
+> After the outage is mitigated, Traffic  Manager will start routing the connections to the application in Region A as a higher priority end-point. If you intend to keep the primary in Region B for a while, you should change the priority table in the Traffic Manager profile accordingly. 
 >
  
  The following diagram illustrates an outage in the secondary region:

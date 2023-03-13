@@ -1,21 +1,18 @@
 ---
+title: "Execute Process Task"
 description: "Execute Process Task"
-title: "Execute Process Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.executeprocesstask.f1"
   - "sql13.dts.designer.executeprocesstask.general.f1"
   - "sql13.dts.designer.executeprocesstask.process.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Execute Process task [Integration Services]"
-ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: chugugrace
-ms.author: chugu
 ---
 # Execute Process Task
 

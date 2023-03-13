@@ -1,22 +1,19 @@
 ---
+title: "sp_helpuser (Transact-SQL)"
 description: "sp_helpuser (Transact-SQL)"
-title: "sp_helpuser (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpuser"
-  - "sp_helpuser_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpuser"
-ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpuser"
+  - "sp_helpuser_TSQL"
+helpviewer_keywords:
+  - "sp_helpuser"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  **sp_helpuser** does not return information about securables that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Use [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

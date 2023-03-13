@@ -8,7 +8,6 @@ ms.date: 05/09/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "ALTER INDEX"
   - "ALTER_INDEX_TSQL"
@@ -53,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Modifies an existing table or view index (rowstore, columnstore, or XML) by disabling, rebuilding, or reorganizing the index; or by setting options on the index.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -410,9 +409,9 @@ For an XML index or spatial index, only `ONLINE = OFF` is supported, and if ONLI
 > [!IMPORTANT]  
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
 >  
->- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
->- [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
->- [Editions and Supported Features for SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
+>- [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
+>- [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+>- [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
 
 ON  
 Long-term table locks aren't held during the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This allows queries or updates to the underlying table and indexes to continue. At the start of the operation, a Shared (S) lock is very briefly held on the source object. At the end of the operation, an S lock is very briefly held on the source if a nonclustered index is being created. A Schema Modification (Sch-M) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE can't be set to ON when an index is being created on a local temporary table.
@@ -507,7 +506,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]  
-> Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+> Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 #### COMPRESSION_DELAY = { 0 | *duration [Minutes]* }
 
@@ -662,7 +661,7 @@ When `ALL` is specified, relational indexes, both clustered and nonclustered, an
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
 
 > [!IMPORTANT]  
-> For an [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort the data use `ALTER INDEX REBUILD`.
+> For an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort the data use `ALTER INDEX REBUILD`.
 
 ## <a id="disabling-indexes"></a> Disabling indexes
 

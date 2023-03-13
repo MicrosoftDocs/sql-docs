@@ -10,7 +10,6 @@ ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
 ms.custom: intro-deployment
-ms.metadata: seo-lt-2019
 ---
 
 # How to deploy an app on SQL Server Big Data Clusters

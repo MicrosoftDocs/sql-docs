@@ -1,16 +1,12 @@
 ---
-title: "Page layout and rendering in paginated reports | Microsoft Docs"
-
-description: Design or improve your paginated reports with rendering extensions for page layout, page breaks, and paper size in Report Builder.  
+title: "Page layout and rendering in paginated reports"
+description: Design or improve your paginated reports with rendering extensions for page layout, page breaks, and paper size in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Page layout and rendering in paginated reports (Report Builder)
 

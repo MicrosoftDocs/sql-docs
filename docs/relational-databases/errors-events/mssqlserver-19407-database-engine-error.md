@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_19407"
 description: "MSSQLSERVER_19407"
-title: "MSSQLSERVER_19407 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "19407 (Database Engine error)"
 author: pijocoder
 ms.author: jopilov
+ms.date: "11/04/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "19407 (Database Engine error)"
 ---
 # MSSQLSERVER_19407
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +28,7 @@ ms.author: jopilov
 
 Error 19407 is raised in the SQL Server error log when the communication between SQL Server and the Windows Server Failover cluster is lost. Typically a  corrective action occurs - a failover to another Always On node. 
 
-A lease is a time-based communication mechanism that takes place between the SQL Server and the Windows Server Failover Cluster (WSFC) process, specifically the RHS.EXE process. The two processes communicate with each other periodically to ensure the other process is running and responding. This communication takes place using Windows [event objects](/windows/win32/sync/event-objects) and ensures that a failover of the AG resource doesn't occur without the knowledge of the WSFC. If one of the processes doesn't respond to the lease communication based on a predefined lease period, a lease timeout occurs. For detailed information, see [Lease Mechanism](../../database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout.md). Also see [How It Works: SQL Server AlwaysOn Lease Timeout[(https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)
+A lease is a time-based communication mechanism that takes place between the SQL Server and the Windows Server Failover Cluster (WSFC) process, specifically the RHS.EXE process. The two processes communicate with each other periodically to ensure the other process is running and responding. This communication takes place using Windows [Event objects](/windows/win32/sync/event-objects) and ensures that a failover of the AG resource doesn't occur without the knowledge of the WSFC. If one of the processes doesn't respond to the lease communication based on a predefined lease period, a lease timeout occurs. For detailed information, see [Lease Mechanism](../../database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout.md). Also see [How It Works: SQL Server AlwaysOn Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)
 
 ### Causes
 
@@ -71,7 +69,7 @@ If there are occurrences of low virtual or physical memory on the system, the SQ
    - **Process\Working Set** - to check individual processes memory usage
    - **Memory\Available MBytes** - to check overall memory usage on the system
 
-   Below is a PowerShell script to identify overall memory usage across all process and the available memory on the system. If you would like to get individual processes memory usage, change it `"\Process(_Total)\Working Set"` to `"\Process(*)\Working Set"`.
+   You can use the following PowerShell script to identify overall memory usage across all process and the available memory on the system. If you would like to get individual processes memory usage, change it `"\Process(_Total)\Working Set"` to `"\Process(*)\Working Set"`.
 
    ```powershell
    $serverName = $env:COMPUTERNAME
@@ -97,7 +95,7 @@ If there are occurrences of low virtual or physical memory on the system, the SQ
 
 ### Reduce or avoid large memory dumps of the SQL Server or cluster process
 
-In some cases SQL Server process may be encountering exceptions, asserts, scheduler issues and so on. In those cases, SQL Server will by default trigger the SQLDumper.exe process to generate a minidump with indirect memory. However, if that dump generation takes a long time, the SQL Server process will stop responding and this may trigger a lease timeout. Frequent causes for a memory dump taking a long time include large memory usage by the process, the I/O subsystem where the dump is written is slow, or the default setting was changed from mini dump to a filtered or full dump. To avoid a lease timeout, do the following on AG systems:
+In some cases SQL Server process may be encountering exceptions, asserts, scheduler issues and so on. In those cases, SQL Server will by default trigger the SQLDumper.exe process to generate a minidump with indirect memory. However, if that dump generation takes a long time, the SQL Server process will stop responding which may trigger a lease timeout. Common causes for a memory dump to take a long time include large memory usage by the process, the I/O subsystem where the dump is written is slow, or the default setting was changed from mini dump to a filtered or full dump. To avoid a lease timeout, use the following steps on AG systems:
 
 - Increase session-timeout, for example, 120 seconds for all replicas
 - Change the auto failover of all replicas to manual failover
@@ -107,7 +105,7 @@ For more information, see [Impact of dump generation](/troubleshoot/sql/tools/us
 
 ### Check virtual machine (VM) configuration for overprovisioning
 
-If you're using a virtual machine, ensure that you aren't overprovisioning or overcommitting CPUs and memory resources. Overprovisioning CPUs or memory may cause the guest OS to run out of resources and show the same problems described above - high CPU and low memory. Frequently if you're viewing things inside the guest OS, you'll have a hard time explaining why you're running out of computing resources because things are happening outside of the virtual machine itself. Overcommitting resources can cause temporary halts of processing, which are likely to cause lease timeouts. For more information on how to address overcommitting, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003) and [Virtualization – Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623).
+If you're using a virtual machine, ensure that you aren't overprovisioning or overcommitting CPUs and memory resources. Overprovisioning CPUs or memory may cause the guest OS to run out of resources and show the same problems described earlier - high CPU and low memory. Frequently if you're viewing things inside the guest OS, you'll have a hard time explaining why you're running out of computing resources because things are happening outside of the virtual machine itself. Overcommitting resources can cause temporary halts of processing, which are likely to cause lease timeouts. For more information on how to address overcommitting, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003) and [Virtualization – Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623).
 
 ### Check for virtual machine (VM) migration or backup
 

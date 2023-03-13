@@ -1,22 +1,19 @@
 ---
+title: "sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)"
 description: "sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)"
-title: "sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_fulltext_semantic_unregister_language_statistics_db_TSQL"
-  - "sp_fulltext_semantic_unregister_language_statistics_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_fulltext_semantic_unregister_language_statistics_db"
-ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_fulltext_semantic_unregister_language_statistics_db_TSQL"
+  - "sp_fulltext_semantic_unregister_language_statistics_db"
+helpviewer_keywords:
+  - "sp_fulltext_semantic_unregister_language_statistics_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +22,7 @@ ms.author: maghan
   
  This statement does not detach the database or remove the physical database file from the file system. After you unregister the database, you can detach it and delete the physical database file.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

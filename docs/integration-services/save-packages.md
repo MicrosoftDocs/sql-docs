@@ -1,23 +1,20 @@
 ---
+title: "Save Packages"
 description: "Save Packages"
-title: "Save Packages | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.savecopyas.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, saving"
   - "packages [Integration Services], saving"
   - "saving packages"
   - "SSIS packages, saving"
   - "SQL Server Integration Services packages, saving"
-ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-author: chugugrace
-ms.author: chugu
 ---
 # Save Packages
 

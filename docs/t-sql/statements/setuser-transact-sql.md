@@ -19,14 +19,14 @@ dev_langs:
   - "TSQL"
 ---
 # SETUSER (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Allows a member of the **sysadmin** fixed server role or the owner of a database to impersonate another user.  
   
 > [!IMPORTANT]  
 >  SETUSER is included for backward compatibility only. SETUSER may not be supported in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. We recommend that you use [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

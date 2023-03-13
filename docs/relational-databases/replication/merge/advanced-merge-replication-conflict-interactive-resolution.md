@@ -1,20 +1,18 @@
 ---
+title: "Interactive Conflict Resolution"
 description: "Advanced Merge Replication Conflict - Interactive Resolution"
-title: "Interactive Conflict Resolution | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "interactive conflict resolution [SQL Server replication]"
   - "interactive resolver [SQL Server replication]"
   - "articles [SQL Server replication], conflict resolution"
   - "conflict resolution [SQL Server replication], merge replication"
-ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Advanced Merge Replication Conflict - Interactive Resolution
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

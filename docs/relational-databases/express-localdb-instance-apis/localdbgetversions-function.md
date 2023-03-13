@@ -1,20 +1,14 @@
 ---
+title: "LocalDBGetVersions Function"
 description: "LocalDBGetVersions Function"
-title: "LocalDBGetVersions Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBGetVersions"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBGetVersions"
+apitype: "DLLExport"
 ---
 # LocalDBGetVersions Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

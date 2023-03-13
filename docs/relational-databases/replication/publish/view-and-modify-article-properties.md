@@ -1,15 +1,14 @@
 ---
+title: "View and Modify Article Properties"
 description: "View and Modify Article Properties"
-title: "View and Modify Article Properties | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "sp_changearticle"
   - "sp_helparticle"
   - "viewing replication properties"
@@ -18,9 +17,8 @@ helpviewer_keywords:
   - "modifying replication properties, articles"
   - "articles [SQL Server replication], modifying"
   - "articles [SQL Server replication], properties"
-ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # View and Modify Article Properties

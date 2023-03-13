@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "sys.column_master_keys catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_master_keys (Transact-SQL)

@@ -1,22 +1,19 @@
 ---
+title: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL)"
 description: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL)"
-title: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/28/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sys.sp_xtp_merge_checkpoint_files_TSQL"
-  - "sys.sp_xtp_merge_checkpoint_files"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sys.sp_xtp_merge_checkpoint_files"
-ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: markingmyname
 ms.author: maghan
+ms.date: "11/28/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sys.sp_xtp_merge_checkpoint_files_TSQL"
+  - "sys.sp_xtp_merge_checkpoint_files"
+helpviewer_keywords:
+  - "sys.sp_xtp_merge_checkpoint_files"
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +22,7 @@ ms.author: maghan
   
  For more information, see [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ||  
 |-|  

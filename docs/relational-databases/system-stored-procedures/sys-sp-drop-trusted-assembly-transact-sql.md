@@ -1,24 +1,21 @@
 ---
+title: "sys.sp_drop_trusted_assembly (Transact-SQL)"
 description: "sys.sp_drop_trusted_assembly (Transact-SQL)"
-title: "sys.sp_drop_trusted_assembly (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_drop_trusted_assembly_TSQL"
   - "sp_drop_trusted_assembly"
   - "sys.sp_drop_trusted_assembly_TSQL"
   - "sys.sp_drop_trusted_assembly"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_drop_trusted_assembly"
-ms.assetid: 
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  
@@ -26,7 +23,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
 Drops an assembly from the list of trusted assemblies on the server.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
 ## Syntax

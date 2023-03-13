@@ -1,29 +1,26 @@
 ---
+title: "sp_start_job (Transact-SQL)"
 description: "sp_start_job (Transact-SQL)"
-title: "sp_start_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_start_job"
-  - "sp_start_job_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_start_job"
-ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_start_job"
+  - "sp_start_job_TSQL"
+helpviewer_keywords:
+  - "sp_start_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Instructs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to execute a job immediately.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

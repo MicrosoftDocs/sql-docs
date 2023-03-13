@@ -1,15 +1,12 @@
 ---
+title: "catalog.execution_data_taps"
 description: "catalog.execution_data_taps"
-title: "catalog.execution_data_taps | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.execution_data_taps 
 

@@ -8,9 +8,6 @@ ms.date: 10/18/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 helpviewer_keywords:
   - "VIA protocol"
   - "unsupported features [SQL Server]"
@@ -94,7 +91,7 @@ For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Tra
 
 - Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014&preserve-view=true).
 
-- Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+- Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](./configure-windows/configure-sql-server-encryption.md).
 
 - `precompute rank` Server configuration option was discontinued beginning with SQL Server 2008. The article has been removed from documentation.
 

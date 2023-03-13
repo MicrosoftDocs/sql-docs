@@ -1,22 +1,19 @@
 ---
+title: "IHextendedArticleView (Transact-SQL)"
 description: "IHextendedArticleView (Transact-SQL)"
-title: "IHextendedArticleView (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "IHextendedArticleView_TSQL"
-  - "IHextendedArticleView"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "IHextendedArticleView view"
-ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "IHextendedArticleView_TSQL"
+  - "IHextendedArticleView"
+helpviewer_keywords:
+  - "IHextendedArticleView view"
+dev_langs:
+  - "TSQL"
 ---
 # IHextendedArticleView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

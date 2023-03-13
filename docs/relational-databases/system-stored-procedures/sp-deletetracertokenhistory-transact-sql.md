@@ -1,22 +1,19 @@
 ---
+title: "sp_deletetracertokenhistory (Transact-SQL)"
 description: "sp_deletetracertokenhistory (Transact-SQL)"
-title: "sp_deletetracertokenhistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_deletetracertokenhistory"
-  - "sp_deletetracertokenhistory_TSQL"
-helpviewer_keywords: 
-  - "sp_deletetracertokenhistory"
-ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_deletetracertokenhistory"
+  - "sp_deletetracertokenhistory_TSQL"
+helpviewer_keywords:
+  - "sp_deletetracertokenhistory"
+dev_langs:
+  - "TSQL"
 ---
 # sp_deletetracertokenhistory (Transact-SQL)
 
@@ -24,7 +21,7 @@ ms.author: maghan
 
 Removes tracer token records from the [MStracer_tokens &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) and [MStracer_history &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mstracer-history-transact-sql.md) system tables. This stored procedure is executed at the Publisher on the publication database or at the Distributor on the distribution database.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

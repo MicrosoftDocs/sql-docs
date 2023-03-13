@@ -3,12 +3,10 @@ title: "@@VERSION (Transact-SQL)"
 description: "@@VERSION - Transact SQL Configuration Functions"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/20/2018"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@VERSION"
   - "@@VERSION_TSQL"
@@ -26,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Returns system and build information for the current installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 > [!NOTE]  
 > We are aware of an issue where the product version reported by @@VERSION is incorrect for **Azure SQL Database**, **Azure SQL Managed Instance** and **Azure Synapse Analytics**.
@@ -85,9 +83,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### B. Return the current version of [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### B. Return the current version of [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
   
 ```sql
 SELECT @@VERSION AS 'SQL Server PDW Version';  

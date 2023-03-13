@@ -9,7 +9,6 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_tables (Transact-SQL)
@@ -35,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |is_tracked_by_cdc|**bit**|1 = Table is enabled for change data capture|Always 0; no CDC support.|  
 |lock_escalation|**tinyint**|The value of the LOCK_ESCALATION option for the table: 2 = AUTO|Always 2.|  
 |lock_escalation_desc|**nvarchar(60)**|A text description of the lock_escalation option.|Always ꞌAUTOꞌ.|  
-|pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|NOT NULL|  
+|pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node.|NOT NULL|  
   
 ## See Also  
  [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

@@ -1,23 +1,20 @@
 ---
+title: "sp_detach_db (Transact-SQL)"
 description: "sp_detach_db (Transact-SQL)"
-title: "sp_detach_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_detach_db"
-  - "sp_detach_db_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_detach_db"
-  - "detaching databases [SQL Server]"
-ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: markingmyname
 ms.author: maghan
+ms.date: "09/30/2015"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_detach_db"
+  - "sp_detach_db_TSQL"
+helpviewer_keywords:
+  - "sp_detach_db"
+  - "detaching databases [SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +24,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  For a replicated database to be detached, it must be unpublished. For more information, see the "Remarks" section later in this topic.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

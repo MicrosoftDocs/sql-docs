@@ -1,5 +1,5 @@
 ---
-title: Restrict BDC egress traffic with firewall 
+title: Restrict BDC egress traffic with firewall
 description: Learn how to restrict egress traffic from Big Data Clusters in Azure Kubernetes Service (AKS) private cluster.
 author: HugoMSFT
 ms.author: hudequei
@@ -8,7 +8,7 @@ ms.date: 06/20/2022
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.custom: kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment, devx-track-azurecli
 ---
 
 # Restrict egress traffic from big data clusters in Azure Kubernetes Service (AKS) private cluster

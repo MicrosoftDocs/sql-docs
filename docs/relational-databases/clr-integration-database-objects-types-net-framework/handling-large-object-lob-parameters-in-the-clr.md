@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "LOB data [SQL Server], CLR integration"
   - "SqlBytes data type"
   - "SqlChars data type"
-ms.assetid: d07956f6-9543-4476-9426-536f95991150
 ---
 # Handling Large Object (LOB) Parameters in the CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

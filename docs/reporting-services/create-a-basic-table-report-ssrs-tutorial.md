@@ -1,18 +1,16 @@
 ---
-title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
-description: Use the Report Designer tool in Visual Studio / SQL Server Data Tools (SSDT) and then create a SQL Server Reporting Services (SSRS) paginated report. 
+title: "Create a Basic Table Report (SSRS Tutorial)"
+description: Use the Report Designer tool in Visual Studio / SQL Server Data Tools (SSDT) and then create a SQL Server Reporting Services (SSRS) paginated report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 04/16/2019
 ms.service: reporting-services
 ms.subservice: reporting-services
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "walkthroughs [Reporting Services]"
   - "tutorials [Reporting Services]"
   - "reports [Reporting Services], creating"
-ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Create a Basic Table Report (SSRS Tutorial)
 

@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Cursor Manager by Type object"
-description: Learn about the SQLServer:Cursor Manager by Type object, which provides counters to monitor cursors, grouped by type.
-ms.custom: ""
-ms.date: "07/12/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Cursor Manager by Type object"
-  - "SQLServer:Cursor Manager by Type"
+description: "Learn about the SQLServer:Cursor Manager by Type object, which provides counters to monitor cursors, grouped by type."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/12/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Cursor Manager by Type object"
+  - "SQLServer:Cursor Manager by Type"
 ---
 # SQL Server, Cursor Manager by Type object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

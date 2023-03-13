@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], transactions"
   - "System.Transactions namespace"
   - "transactions [CLR integration]"
-ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 ---
 # CLR Integration and Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

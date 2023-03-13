@@ -1,15 +1,13 @@
 ---
+title: "SELECT Examples (Transact-SQL)"
 description: "SELECT Examples (Transact-SQL)"
-title: "SELECT Examples (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parentheses [SQL Server]"
   - "GROUP BY clause, SELECT statement"
   - "query hints [SQL Server]"
@@ -27,9 +25,8 @@ helpviewer_keywords:
   - "UNION operator [SQL Server]"
   - "computed sums"
   - "WHERE clause, SELECT statement"
-ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SELECT Examples (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

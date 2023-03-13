@@ -1,22 +1,19 @@
 ---
+title: "sp_trace_setfilter (Transact-SQL)"
 description: "sp_trace_setfilter (Transact-SQL)"
-title: "sp_trace_setfilter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_trace_setfilter"
-  - "sp_trace_setfilter_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_trace_setfilter"
-ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_trace_setfilter"
+  - "sp_trace_setfilter_TSQL"
+helpviewer_keywords:
+  - "sp_trace_setfilter"
+dev_langs:
+  - "TSQL"
 ---
 # sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Events instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,15 +1,12 @@
 ---
-title: "Print Reports from Other Applications (Report Builder) | Microsoft Docs"
+title: "Print Reports from Other Applications (Report Builder)"
 description: Report Builder lets you export to view a report in other applications. For printing, export a report if the application has print features that you want to use.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-builder
-
-
 ms.topic: conceptual
-ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Print Reports from Other Applications (Report Builder and SSRS)
   Report Builder provides an export option that allows you to easily view a report in other applications. The **Export** command is available on the report toolbar that appears at the top of a report when you open it in a browser or Web-based application. Exporting a report displays it in a different application (for example, exporting a report to Excel opens the report in [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]). For printing purposes, exporting a report is recommended only if the application has specific printing features that you want to use.  

@@ -1,22 +1,19 @@
 ---
+title: "STCentroid (geometry Data Type)"
 description: "STCentroid (geometry Data Type)"
-title: "STCentroid (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STCentroid_TSQL"
   - "STCentroid (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STCentroid (geometry Data Type)"
-ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STCentroid (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

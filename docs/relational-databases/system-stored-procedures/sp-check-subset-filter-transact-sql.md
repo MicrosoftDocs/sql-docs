@@ -1,21 +1,19 @@
 ---
 title: sp_check_subset_filter (Transact-SQL)
 description: "sp_check_subset_filter (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_check_subset_filter"
   - "sp_check_subset_filter_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_check_subset_filter"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/06/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # sp_check_subset_filter (Transact-SQL)
@@ -24,7 +22,7 @@ ms.date: "03/06/2017"
 
 Is used to check a filter clause against any table to determine if the filter clause is valid for the table. This stored procedure returns information about the supplied filter, including if the filter qualifies for use with precomputed partitions. This stored procedure is executed at the Publisher on the database containing the publication.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

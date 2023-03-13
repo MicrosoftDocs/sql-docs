@@ -1,25 +1,22 @@
 ---
+title: "sys.sysprocesses (Transact-SQL)"
 description: "sys.sysprocesses (Transact-SQL)"
-title: "sys.sysprocesses (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysprocesses_TSQL"
   - "sys.sysprocesses_TSQL"
   - "sys.sysprocesses"
   - "sysprocesses"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sysprocesses compatibility view"
   - "sysprocesses system table"
-ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

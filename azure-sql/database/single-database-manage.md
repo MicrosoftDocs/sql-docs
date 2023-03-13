@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ---
 # Create and manage servers and single databases in Azure SQL Database
 
@@ -24,13 +24,13 @@ You can create the resource group for Azure SQL Database ahead of time or while 
 
 To create a server using the [Azure portal](https://portal.azure.com), create a new [server](logical-servers.md) resource from Azure Marketplace. Alternatively, you can create the server when you deploy an Azure SQL Database.
 
-  ![create server](./media/single-database-manage/create-logical-sql-server.png)
+  :::image type="content" source="./media/single-database-manage/create-logical-sql-server.png" alt-text="A screenshot of the Azure portal resource search for 'sql server', showing 'SQL server (logical server)' as the result.":::
 
 ### Create a blank or sample database
 
 To create a single Azure SQL Database using the [Azure portal](https://portal.azure.com), choose the Azure SQL Database resource in Azure Marketplace. You can create the resource group and server ahead of time or while creating the single database itself. You can create a blank database or create a sample database based on Adventure Works LT.
 
-  ![create database-1](./media/single-database-manage/create-database-1.png)
+  :::image type="content" source="./media/single-database-manage/create-database-1.png" alt-text="A screenshot of the Azure portal, with the Create a new SQL Database boxed in red.":::
 
 > [!IMPORTANT]
 > For information on selecting the pricing tier for your database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
@@ -41,7 +41,7 @@ To manage an existing server, navigate to the server using a number of methods -
 
 To manage an existing database, navigate to the **SQL databases** page and select the database you wish to manage. The following screenshot shows how to begin setting a server-level firewall for a database from the **Overview** page for a database.
 
-   ![server firewall rule](./media/single-database-manage/server-firewall-rule.png)
+   :::image type="content" source="./media/single-database-manage/server-firewall-rule.png" alt-text="A screenshot of the Azure portal Set Server firewall rule page for an Azure SQL Database.":::
 
 > [!IMPORTANT]
 > To configure performance properties for a database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
@@ -117,18 +117,18 @@ To create and manage the servers, databases, and firewalls with Transact-SQL, us
 
 | Command | Description |
 | --- | --- |
-|[CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true)|Creates a new single database. You must be connected to the master database to create a new database.|
+|[CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true)|Creates a new single database. You must be connected to the `master` database to create a new database.|
 | [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true) |Modifies a database or elastic pool. |
 |[DROP DATABASE](/sql/t-sql/statements/drop-database-transact-sql)|Deletes a database.|
-|[sys.database_service_objectives](/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database)|Returns the edition (service tier), service objective (pricing tier), and elastic pool name, if any, for Azure SQL Database or a dedicated SQL pool in Azure Synapse Analytics. If logged on to the master database in a server in SQL Database, returns information on all databases. For Azure Synapse Analytics, you must be connected to the master database.|
+|[sys.database_service_objectives](/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database)|Returns the edition (service tier), service objective (pricing tier), and elastic pool name, if any, for Azure SQL Database or a dedicated SQL pool in Azure Synapse Analytics. If logged on to the `master` database in a server in SQL Database, returns information on all databases. For Azure Synapse Analytics, you must be connected to the `master` database.|
 |[sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database)| Returns CPU, IO, and memory consumption for a database in Azure SQL Database. One row exists for every 15 seconds, even if there's no activity in the database.|
 |[sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database)|Returns CPU usage and storage data for a database in Azure SQL Database. The data is collected and aggregated within five-minute intervals.|
 |[sys.database_connection_stats](/sql/relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database)|Contains statistics for SQL Database connectivity events, providing an overview of database connection successes and failures. |
 |[sys.event_log](/sql/relational-databases/system-catalog-views/sys-event-log-azure-sql-database)|Returns successful Azure SQL Database connections and connection failures. You can use this information to track or troubleshoot your database activity with SQL Database.|
-|[sp_set_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)|Creates or updates the server-level firewall settings for your server. This stored procedure is only available in the master database to the server-level principal login. A server-level firewall rule can only be created using Transact-SQL after the first server-level firewall rule has been created by a user with Azure-level permissions|
+|[sp_set_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)|Creates or updates the server-level firewall settings for your server. This stored procedure is only available in the `master` database to the server-level principal login. A server-level firewall rule can only be created using Transact-SQL after the first server-level firewall rule has been created by a user with Azure-level permissions|
 |[sys.firewall_rules](/sql/relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database)|Returns information about the server-level firewall settings associated with your database in Azure SQL Database.|
-|[sp_delete_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database)|Removes server-level firewall settings from your server. This stored procedure is only available in the master database to the server-level principal login.|
-|[sp_set_database_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)|Creates or updates the database-level firewall rules for your database in Azure SQL Database. Database firewall rules can be configured for the master database, and for user databases on SQL Database. Database firewall rules are useful when using contained database users. |
+|[sp_delete_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database)|Removes server-level firewall settings from your server. This stored procedure is only available in the `master` database to the server-level principal login.|
+|[sp_set_database_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)|Creates or updates the database-level firewall rules for your database in Azure SQL Database. Database firewall rules can be configured for the `master` database, and for user databases on SQL Database. Database firewall rules are useful when using contained database users. |
 |[sys.database_firewall_rules](/sql/relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database)|Returns information about the database-level firewall settings associated with your database in Azure SQL Database. |
 |[sp_delete_database_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database)|Removes database-level firewall setting from a database. |
 

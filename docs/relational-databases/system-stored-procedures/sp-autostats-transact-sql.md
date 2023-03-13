@@ -1,22 +1,19 @@
 ---
+title: "sp_autostats (Transact-SQL)"
 description: "sp_autostats (Transact-SQL)"
-title: "sp_autostats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_autostats_TSQL"
-  - "sp_autostats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_autostats"
-ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_autostats_TSQL"
+  - "sp_autostats"
+helpviewer_keywords:
+  - "sp_autostats"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_autostats (Transact-SQL)
@@ -26,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  For more information about the AUTO_UPDATE_STATISTICS option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Statistics](../../relational-databases/statistics/statistics.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

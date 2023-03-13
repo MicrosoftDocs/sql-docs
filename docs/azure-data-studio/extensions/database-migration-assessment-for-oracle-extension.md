@@ -18,8 +18,8 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio help
 
 ## Prerequisites
 
-- An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10g or higher.
 - [Azure Data Studio version 1.39 or above](../download-azure-data-studio.md).
+- An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10g or higher.
 - Oracle users should have CONNECT and SELECT ANY DICTIONARY privileges assigned.
 
 ## Install Azure Data Studio extension
@@ -142,7 +142,7 @@ When you select **View report details**, it first shows the assessment summary.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="Screenshot showing assessment summary.":::
 
-If the target selected is Database for Azure PostgreSQL, either the Database details tab or Code assessment tab will be visible based on the assessment type selection.
+If the target selected is Database for Azure PostgreSQL, either the Database details tab or Code assessment tab will be available based on the assessment type selection.
 
 The following Database details tab provides the breakdown per schema basis. It shows the list of schemas discovered, the migration feasibility, and the estimated time to convert the schema in hours.
 
@@ -190,11 +190,11 @@ You can also cancel an ongoing assessment, delete an assessment and move assessm
 
 ## Change assessment path
 
-1. Go to the extension marketplace and search for "Database Migration Assessment for Oracle".
+1. Go to the extension marketplace and search for *Database Migration Assessment for Oracle*.
 1. Select the Manage icon, and select Extensions settings.
 1. Provide the new assessment path under Oracle Assessment: Assessment Path.
 
-   :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="Screenshot showing the Change assessment path option.":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="Screenshot showing the Change assessment path option.":::
 
 ## Troubleshoot
 
@@ -211,13 +211,15 @@ The extension stores errors, warnings, and other diagnostic logs in the default 
 
 To change the log directory, update the `LogDirectory` property in the extension settings file.
 
-|Operating system|Path|
-|---|---|
+| Operating system | Path |
+|------------------|------|
 |Windows|`C:\Users\<username>\.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-<VersionNumber>\bin\service\Properties\ConfigSettings\extension-settings.json`|
-|Linux|`~/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
-|macOS|`/Users/<username>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+|Linux|`~/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-<VersionNumber>/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
+|macOS|`/Users/<username>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-<VersionNumber>/<VersionNumber>/bin/service/Properties/ConfigSettings/extension-settings.json`|
 
-### Known issues
+For more information about troubleshooting issues, visit [Troubleshooting Database Migration Assessment for Oracle extension errors](database-migration-assessment-for-oracle-extension-troubleshoot.md).
+
+### Known issues and limitations
 
 - **Path provided doesn't exist.**
 
@@ -237,9 +239,13 @@ To change the log directory, update the `LogDirectory` property in the extension
   - Check if firewall rules block the Oracle listening port.
   - Run `tnsping` and see if the Service ID gets resolved.
 
+## Contact Microsoft for help
+
+If you need further assistance from Microsoft, contact [@Dmasupport](mailto:dmasupport@microsoft.com). For faster turnaround, you may attach the logs from [default log directory](#logs).
+
 ## Next steps
 
-- [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [Oracle extension](extension-for-oracle.md)
+- [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [Data Schema Conversion](dsct/database-schema-conversion-toolkit.md)
-- [Add extensions](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)
+- [Azure Data Studio extensions](add-extensions.md)

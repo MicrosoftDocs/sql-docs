@@ -13,11 +13,10 @@ helpviewer_keywords:
   - "moving indexes"
   - "indexes [SQL Server], moving"
   - "filegroups [SQL Server], switching"
-ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 ---
 # Move an existing index to a different filegroup
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 

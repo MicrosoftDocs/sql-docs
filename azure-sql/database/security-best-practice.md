@@ -5,11 +5,11 @@ description: This article provides common security requirements and best practic
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 08/30/2022
+ms.date: 01/20/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: article
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Playbook for addressing common security requirements with Azure SQL Database and Azure SQL Managed Instance
@@ -136,7 +136,7 @@ Azure AD Multi-Factor Authentication helps provides additional security by requi
   - Use Interactive Authentication supported in SQL Server Data Tools (SSDT). See the article, [Azure Active Directory support in SQL Server Data Tools (SSDT)](/sql/ssdt/azure-active-directory?view=azuresqldb-current&preserve-view=true).
   - Use other SQL tools supporting Multi-Factor Authentication.
     - SSMS Wizard support for export/extract/deploy database  
-    - [sqlpackage.exe](/sql/tools/sqlpackage): option '/ua'
+    - [SqlPackage](/sql/tools/sqlpackage): option '/ua'
     - [sqlcmd Utility](/sql/tools/sqlcmd-utility): option -G (interactive)
     - [bcp Utility](/sql/tools/bcp-utility): option -G (interactive)
 
@@ -338,7 +338,7 @@ For the readers that want to dive deeper into SoD, we recommend the following re
 - For Azure SQL Database and SQL Managed Instance:  
   - [Controlling and granting database access](logins-create-manage.md)
   - [Engine Separation of Duties for the Application Developer](/previous-versions/sql/sql-server-2008/cc974525(v=sql.100))
-  - [Separation of Duties](https://www.microsoft.com/download/details.aspx?id=39269)
+  - [Separation of Duties](https://download.microsoft.com/download/d/2/d/d2d931e9-b6b5-4e3b-b0af-22c749f9bb7e/sql_server_separation_of_duties_white_paper_jul2011.docx)
   - [Signing Stored Procedures](/dotnet/framework/data/adonet/sql/signing-stored-procedures-in-sql-server)
 
 - For Azure Resource Management:
@@ -714,7 +714,7 @@ Proactively improve your database security by discovering and remediating potent
 **Further resources**
 
 - [SQL Vulnerability Assessment](/sql/relational-databases/security/sql-vulnerability-assessment)
-- [SQL Vulnerability Assessment service helps you identify database vulnerabilities](sql-vulnerability-assessment.md)
+- [SQL Vulnerability Assessment service helps you identify database vulnerabilities](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
 
 ### Identify and tag sensitive data
 

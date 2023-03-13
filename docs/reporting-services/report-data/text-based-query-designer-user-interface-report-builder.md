@@ -1,19 +1,16 @@
 ---
-title: "Text-based Query Designer User Interface (Report Builder) | Microsoft Docs"
-description: Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. 
+title: "Text-based Query Designer User Interface (Report Builder)"
+description: Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: report-data
-
-
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "10010"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query designers, text-based"
-ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Text-based Query Designer User Interface (Report Builder)
   Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. You can specify multiple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, query or command syntax for custom data processing extensions, and queries that are specified as expressions. Because the text-based query designer does not preprocess the query and can accommodate any kind of query syntax, this is the default query designer tool for many data source types.  

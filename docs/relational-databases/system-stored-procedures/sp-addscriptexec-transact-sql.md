@@ -1,29 +1,26 @@
 ---
+title: "sp_addscriptexec (Transact-SQL)"
 description: "sp_addscriptexec (Transact-SQL)"
-title: "sp_addscriptexec (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addscriptexec"
-  - "sp_addscriptexec_TSQL"
-helpviewer_keywords: 
-  - "sp_addscriptexec"
-ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addscriptexec"
+  - "sp_addscriptexec_TSQL"
+helpviewer_keywords:
+  - "sp_addscriptexec"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Posts a SQL script (.sql file) to all Subscribers of a publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -65,9 +62,9 @@ sp_addscriptexec [ @publication = ] publication
   
  To use **sp_addscriptexec**, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must have read and write permissions on the snapshot location and read permissions on the location where any scripts are stored.  
   
- The [sqlcmd utility](../../tools/sqlcmd-utility.md) is used to execute the script at the Subscriber, and the script is executed in the security context used by the Distribution Agent or Merge Agent when connecting to the subscription database. When the agent is run on a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [osql utility](../../tools/osql-utility.md) is used instead of [sqlcmd](../../tools/sqlcmd-utility.md).  
+ The [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md) is used to execute the script at the Subscriber, and the script is executed in the security context used by the Distribution Agent or Merge Agent when connecting to the subscription database. When the agent is run on a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [osql utility](../../tools/osql-utility.md) is used instead of [sqlcmd](../../tools/sqlcmd/sqlcmd-utility.md).  
   
- **sp_addscriptexec** is useful in applying scripts to subscribers, and uses [sqlcmd](../../tools/sqlcmd-utility.md) to apply the contents of the script to the Subscriber. However, because Subscriber configurations can vary, scripts tested prior to posting to the Publisher may still cause errors on a Subscriber. *skiperror* provides the ability to have the Distribution Agent or Merge Agent ignore errors and continue on. Use [sqlcmd](../../tools/sqlcmd-utility.md) to test scripts prior to running **sp_addscriptexec**.  
+ **sp_addscriptexec** is useful in applying scripts to subscribers, and uses [sqlcmd](../../tools/sqlcmd/sqlcmd-utility.md) to apply the contents of the script to the Subscriber. However, because Subscriber configurations can vary, scripts tested prior to posting to the Publisher may still cause errors on a Subscriber. *skiperror* provides the ability to have the Distribution Agent or Merge Agent ignore errors and continue on. Use [sqlcmd](../../tools/sqlcmd/sqlcmd-utility.md) to test scripts prior to running **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Skipped errors will continue to be logged in the Agent history for reference.  
@@ -81,5 +78,3 @@ sp_addscriptexec [ @publication = ] publication
  [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Synchronize Data](../../relational-databases/replication/synchronize-data.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

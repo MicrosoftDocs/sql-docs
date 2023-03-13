@@ -1,22 +1,19 @@
 ---
+title: "sp_add_maintenance_plan_db (Transact-SQL)"
 description: "sp_add_maintenance_plan_db (Transact-SQL)"
-title: "sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_maintenance_plan_db_TSQL"
-  - "sp_add_maintenance_plan_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_maintenance_plan_db"
-ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_maintenance_plan_db_TSQL"
+  - "sp_add_maintenance_plan_db"
+helpviewer_keywords:
+  - "sp_add_maintenance_plan_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +25,7 @@ ms.author: mathoma
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

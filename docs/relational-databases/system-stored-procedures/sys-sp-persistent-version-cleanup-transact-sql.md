@@ -1,21 +1,19 @@
 ---
-description: "The sys.sp_persistent_version_cleanup system stored procedure manually starts persistent version store (PVS) cleanup process, a key element of accelerated database recovery (ADR)."
 title: "sys.sp_persistent_version_cleanup (Transact-SQL)"
-ms.custom: ""
+description: "The sys.sp_persistent_version_cleanup system stored procedure manually starts persistent version store (PVS) cleanup process, a key element of accelerated database recovery (ADR)."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 07/12/2022
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_persistent_version_cleanup"
   - "sys.sp_persistent_version_cleanup"
   - "sys.sp_persistent_version_cleanup_TSQL"
   - "sp_persistent_version_cleanup_TSQL"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 
@@ -28,7 +26,7 @@ It is not typically necessary to start the PVS cleanup process manually using `s
 
 For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax  
   

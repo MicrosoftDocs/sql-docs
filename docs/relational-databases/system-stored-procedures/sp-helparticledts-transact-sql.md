@@ -1,29 +1,26 @@
 ---
+title: "sp_helparticledts (Transact-SQL)"
 description: "sp_helparticledts (Transact-SQL)"
-title: "sp_helparticledts (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helparticledts"
-  - "sp_helparticledts_TSQL"
-helpviewer_keywords: 
-  - "sp_helparticledts"
-ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helparticledts"
+  - "sp_helparticledts_TSQL"
+helpviewer_keywords:
+  - "sp_helparticledts"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helparticledts (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Used to get information on the correct custom task names to use when creating a transformation subscription using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

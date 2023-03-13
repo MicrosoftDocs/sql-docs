@@ -1,22 +1,17 @@
 ---
-description: "DisplayName Property (SqlService Class)"
 title: "DisplayName Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "DisplayName Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "DisplayName property"
-ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
+description: "DisplayName Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "DisplayName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "DisplayName Property (SqlService Class)"
+apitype: "MOFDef"
 ---
 # DisplayName Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

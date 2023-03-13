@@ -1,20 +1,16 @@
 ---
-description: "Work with Diagram Layout (Visual Database Tools)"
 title: Work with Diagram Layout
-ms.custom: seo-lt-2019
+description: "Work with Diagram Layout (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database diagrams [SQL Server], layouts"
   - "layouts [SQL Server]"
   - "appearance of database diagrams"
-ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Work with Diagram Layout (Visual Database Tools)
 

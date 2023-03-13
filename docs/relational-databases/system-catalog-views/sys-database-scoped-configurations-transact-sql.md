@@ -16,12 +16,10 @@ helpviewer_keywords:
   - "sys.database_scoped_configurations catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.database_scoped_configurations (Transact-SQL)
-
-[!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Contains one row per configuration. 
 

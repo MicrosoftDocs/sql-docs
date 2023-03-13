@@ -1,30 +1,27 @@
 ---
+title: "sp_syscollector_create_collection_item (Transact-SQL)"
 description: "sp_syscollector_create_collection_item (Transact-SQL)"
-title: "sp_syscollector_create_collection_item (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_create_collection_item"
-  - "sp_syscollector_create_collection_item_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syscollector_create_collection_item"
-  - "data collector [SQL Server], stored procedures"
-ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_create_collection_item"
+  - "sp_syscollector_create_collection_item_TSQL"
+helpviewer_keywords:
+  - "sp_syscollector_create_collection_item"
+  - "data collector [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a collection item in a user-defined collection set. A collection item defines the data to be collected and the frequency with which the data is collected.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

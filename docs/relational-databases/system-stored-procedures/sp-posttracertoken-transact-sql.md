@@ -1,31 +1,28 @@
 ---
+title: "sp_posttracertoken (Transact-SQL)"
 description: "sp_posttracertoken (Transact-SQL)"
-title: "sp_posttracertoken (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "posttracerttoken"
   - "posttracerttoken_TSQL"
   - "sp_posttracertoken"
   - "sp_posttracertoken_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_posttracertoken"
-ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_posttracertoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This procedure posts a tracer token into the transaction log at the Publisher and begins the process of tracking latency statistics. Information is recorded when the tracer token is written to the transaction log, when it is picked up by the Log Reader Agent, and when it is applied by the Distribution Agent. This stored procedure is executed at the Publisher on the publication database. For more information, see [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,5 +1,5 @@
 ---
-title: "Extended Stored Procedures Programmer&#39;s Reference"
+title: "Extended Stored Procedures Programmer's Reference"
 description: Learn how the Database Engine Extended Stored Procedures provide a server-based application programming interface (API) for expanding SQL Server functionality.
 author: VanMSFT
 ms.author: vanto
@@ -9,7 +9,6 @@ ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], listed"
-ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 ---
 # Database Engine Extended Stored Procedures - Reference
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

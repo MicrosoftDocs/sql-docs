@@ -7,7 +7,6 @@ ms.date: "05/02/2018"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 

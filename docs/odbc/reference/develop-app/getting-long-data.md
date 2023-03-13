@@ -1,21 +1,18 @@
 ---
+title: "Getting Long Data"
 description: "Getting Long Data"
-title: "Getting Long Data | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "long data [ODBC]"
   - "fetches [ODBC], long data"
   - "result sets [ODBC], fetching"
   - "SQLGetData function [ODBC], getting long data"
   - "retrieving long data [ODBC]"
-ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Getting Long Data
 DBMSs define *long data* as any character or binary data over a certain size, such as 255 characters. This data may be small enough to be stored in a single buffer, such as a part description of several thousand characters. However, it might be too long to store in memory, such as long text documents or bitmaps. Because such data cannot be stored in a single buffer, it is retrieved from the driver in parts with **SQLGetData** after the other data in the row has been fetched.  

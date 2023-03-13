@@ -1,18 +1,15 @@
 ---
+title: "CREATE INDEX for Paradox"
 description: "CREATE INDEX for Paradox"
-title: "CREATE INDEX for Paradox | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "CREATE INDEX [ODBC]"
-  - "Paradox driver [ODBC], create index"
-ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "CREATE INDEX [ODBC]"
+  - "Paradox driver [ODBC], create index"
 ---
 # CREATE INDEX for Paradox
 The syntax of the CREATE INDEX statement for the ODBC Paradox driver is:  

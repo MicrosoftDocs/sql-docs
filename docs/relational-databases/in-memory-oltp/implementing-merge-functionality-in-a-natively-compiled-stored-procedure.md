@@ -7,8 +7,6 @@ ms.date: 07/01/2020
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing MERGE Functionality in a Natively Compiled Stored Procedure

@@ -1,33 +1,30 @@
 ---
+title: "sys.sp_cdc_disable_table (Transact-SQL)"
 description: "sys.sp_cdc_disable_table (Transact-SQL)"
-title: "sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sp_cdc_disable_table"
   - "sp_cdc_disable_table"
   - "sys.sp_cdc_disable_table_TSQL"
   - "sp_cdc_disable_table_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_cdc_disable_table"
   - "sys.sp_cdc_disable_table"
   - "change data capture [SQL Server], disabling tables"
-ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Disables change data capture for the specified source table and capture instance in the current database. Change data capture is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

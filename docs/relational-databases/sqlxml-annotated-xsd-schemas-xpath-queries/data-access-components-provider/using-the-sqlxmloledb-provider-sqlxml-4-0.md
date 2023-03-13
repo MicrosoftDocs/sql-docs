@@ -7,12 +7,10 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "sample applications [SQLXML]"
   - "SQLXMLOLEDB Provider, samples"
   - "ClientSideXML property"
-ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the SQLXMLOLEDB Provider (SQLXML 4.0)

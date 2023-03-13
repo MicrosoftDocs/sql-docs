@@ -1,22 +1,19 @@
 ---
+title: "STMPolyFromWKB (geometry Data Type)"
 description: "STMPolyFromWKB (geometry Data Type)"
-title: "STMPolyFromWKB (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STMPolyFromWKB (geometry Data Type)"
   - "STMPolyFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STMPolyFromWKB (geometry Data Type)"
-ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STMPolyFromWKB (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -11,10 +11,10 @@ helpviewer_keywords:
   - "data space catalog views [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 ---
 # Data Spaces (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views.  
 

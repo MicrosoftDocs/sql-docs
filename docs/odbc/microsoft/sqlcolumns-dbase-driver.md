@@ -1,18 +1,15 @@
 ---
+title: "SQLColumns (dBASE Driver)"
 description: "SQLColumns (dBASE Driver)"
-title: "SQLColumns (dBASE Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLColumns function [ODBC], dBASE Driver"
-  - "DBase driver [ODBC], SQLColumns"
-ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLColumns function [ODBC], dBASE Driver"
+  - "DBase driver [ODBC], SQLColumns"
 ---
 # SQLColumns (dBASE Driver)
 > [!NOTE]  

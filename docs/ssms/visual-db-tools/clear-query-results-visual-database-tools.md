@@ -1,22 +1,18 @@
 ---
-description: "Clear Query Results (Visual Database Tools)"
 title: Clear Query Results
-ms.custom: seo-lt-2019
+description: "Clear Query Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "result sets [SQL Server], queries"
   - "results [SQL Server], query"
   - "queries [SQL Server], results"
   - "Results pane"
   - "clearing query results"
-ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Clear Query Results (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

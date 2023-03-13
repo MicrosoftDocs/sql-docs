@@ -1,23 +1,20 @@
 ---
+title: "Character Map Transformation"
 description: "Character Map Transformation"
-title: "Character Map Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.charactertrans.f1"
   - "sql13.dts.designer.charactermaptransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "mutually exclusive mapping [Integration Services]"
   - "mapping data [Integration Services]"
   - "string functions"
   - "Character Map transformation [Integration Services]"
-ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: chugugrace
-ms.author: chugu
 ---
 # Character Map Transformation
 

@@ -1,29 +1,26 @@
 ---
+title: "sp_add_jobschedule (Transact-SQL)"
 description: "sp_add_jobschedule (Transact-SQL)"
-title: "sp_add_jobschedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/28/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_jobschedule"
-  - "sp_add_jobschedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_jobschedule"
-ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
+ms.date: "07/28/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_jobschedule"
+  - "sp_add_jobschedule_TSQL"
+helpviewer_keywords:
+  - "sp_add_jobschedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a schedule for a SQL Agent job.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
   > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.

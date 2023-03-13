@@ -1,19 +1,16 @@
 ---
+title: "Extract Data by Using the OLE DB Source"
 description: "Extract Data by Using the OLE DB Source"
-title: "Extract Data by Using the OLE DB Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extracting data [Integration Services]"
   - "sources [Integration Services], OLE DB"
   - "OLE DB source [Integration Services]"
-ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: chugugrace
-ms.author: chugu
 ---
 # Extract Data by Using the OLE DB Source
 

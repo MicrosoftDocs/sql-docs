@@ -1,17 +1,14 @@
 ---
+title: "Stored Procedures (Integration Services Catalog)"
 description: "Stored Procedures (Integration Services Catalog)"
-title: "Stored Procedures (Integration Services Catalog) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "stored procedures [Integration Services]"
-ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "stored procedures [Integration Services]"
 ---
 # Stored Procedures (Integration Services Catalog)
 

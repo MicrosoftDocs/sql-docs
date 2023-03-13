@@ -1,15 +1,12 @@
 ---
+title: "Refresh from Database (AccessToSQL)"
 description: "Refresh from Database (AccessToSQL)"
-title: "Refresh from Database (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Refresh from Database (AccessToSQL)
 The **Refresh from Database** dialog box lets you select which objects to refresh from the Access database. Rows in the dialog box are color coded based on the state of the metadata:  

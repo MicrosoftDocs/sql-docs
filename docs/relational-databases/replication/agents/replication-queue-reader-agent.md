@@ -1,20 +1,18 @@
 ---
+title: "Replication Queue Reader Agent"
 description: "Replication Queue Reader Agent"
-title: "Replication Queue Reader Agent | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "10/29/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "agents [SQL Server replication], Queue Reader Agent"
   - "command prompt [SQL Server replication]"
   - "Queue Reader Agent, parameter reference"
   - "Queue Reader Agent, executables"
-ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Replication Queue Reader Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

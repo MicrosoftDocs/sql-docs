@@ -1,19 +1,16 @@
 ---
-title: "The Transaction Log (SQL Server) | Microsoft Docs"
+title: "The Transaction Log (SQL Server)"
 description: Learn about the transaction log. Every SQL Server database records all transactions and database modifications that you need if there is a system failure.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "10/23/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction logs [SQL Server], about"
   - "databases [SQL Server], transaction logs"
   - "logs [SQL Server], transaction logs"
-ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # The Transaction Log (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +36,7 @@ For information about the transaction log architecture and internals, see the [S
 -   Supporting high availability and disaster recovery solutions: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping.
 
 ### Individual transaction recovery
-If an application issues a `ROLLBACK` statement, or if the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects an error such as the loss of communication with a client, the log records are used to roll back the modifications made by an incomplete transaction. 
+If an application issues a `ROLLBACK` statement, or if the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] detects an error such as the loss of communication with a client, the log records are used to roll back the modifications made by an incomplete transaction. 
 
 ### Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started
 If a server fails, the databases may be left in a state where some modifications were never written from the buffer cache to the data files, and there may be some modifications from incomplete transactions in the data files. When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, it runs a recovery of each database. Every modification recorded in the log that may not have been written to the data files is rolled forward. Every incomplete transaction found in the transaction log is then rolled back to make sure the integrity of the database is preserved. For more information, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
@@ -47,7 +44,7 @@ If a server fails, the databases may be left in a state where some modifications
 ### Rolling a restored database, file, filegroup, or page forward to the point of failure
 After a hardware loss or disk failure affecting the database files, you can restore the database to the point of failure. You first restore the last full database backup and the last differential database backup, and then restore the subsequent sequence of the transaction log backups to the point of failure. 
 
-As you restore each log backup, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reapplies all the modifications recorded in the log to roll forward all the transactions. When the last log backup is restored, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] then uses the log information to roll back all transactions that were not complete at that point. For more information, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+As you restore each log backup, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reapplies all the modifications recorded in the log to roll forward all the transactions. When the last log backup is restored, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] then uses the log information to roll back all transactions that were not complete at that point. For more information, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### Supporting transactional replication
 The Log Reader Agent monitors the transaction log of each database configured for transactional replication and copies the transactions marked for replication from the transaction log into the distribution database. For more information, see [How Transactional Replication Works](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).

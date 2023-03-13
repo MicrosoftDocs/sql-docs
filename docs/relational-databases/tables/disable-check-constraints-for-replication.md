@@ -1,20 +1,17 @@
 ---
+title: "Disable Check Constraints for Replication"
 description: "Disable Check Constraints for Replication"
-title: "Disable Check Constraints for Replication | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CHECK constraints, disabling"
   - "constraints [SQL Server], disabling"
   - "disabling constraints"
   - "constraints [SQL Server], check"
-ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Check Constraints for Replication

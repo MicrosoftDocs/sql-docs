@@ -2,20 +2,17 @@
 title: Import a Trace Template
 titleSuffix: SQL Server Profiler
 description: Learn how to import a user-defined template in SQL Server Profiler to make it available for traces along with the predefined system templates.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: conceptual
-ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Import a Trace Template (SQL Server Profiler)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how to import a trace template file (.tdf) by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

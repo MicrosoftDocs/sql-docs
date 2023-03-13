@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   To provide a backward compatible interface to emulate a table whose schema has changed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -138,7 +138,7 @@ AS <select_statement>
 >  The CHECK OPTION only applies to updates made through the view. It has no applicability to any updates performed directly to a view's underlying tables.  
   
 #### ENCRYPTION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Encrypts the entries in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
   
@@ -368,7 +368,7 @@ GO
 ### B. Using WITH ENCRYPTION  
  The following example uses the `WITH ENCRYPTION` option and shows computed columns, renamed columns, and multiple columns.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
@@ -463,7 +463,7 @@ INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd'
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### F. Creating a simple view  
  The following example creates a view by selecting only some of the columns from the source table.  

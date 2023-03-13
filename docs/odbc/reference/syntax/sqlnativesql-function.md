@@ -1,24 +1,19 @@
 ---
+title: "SQLNativeSql Function"
 description: "SQLNativeSql Function"
-title: "SQLNativeSql Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLNativeSql"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLNativeSql"
-helpviewer_keywords: 
-  - "SQLNativeSql function [ODBC]"
-ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLNativeSql"
+helpviewer_keywords:
+  - "SQLNativeSql function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLNativeSql"
+apitype: "dllExport"
 ---
 # SQLNativeSql Function
 **Conformance**  

@@ -64,7 +64,7 @@ f1_keywords:
  The alternatives are as follows:  
   
  **Import**  
- Full-text catalogs are imported. This operation is significantly faster than **Rebuild**. However, an imported full-text catalog does not use the new and enhanced word breakers that are introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Therefore, you might want to rebuild your full-text catalogs eventually.  
+ Full-text catalogs are imported. This operation is significantly faster than **Rebuild**. However, an imported full-text catalog does not use the new and enhanced word breakers that are introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. Therefore, you might want to rebuild your full-text catalogs eventually.  
   
  If a full-text catalog is not available, the associated full-text indexes are rebuilt. This option is available for only [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] databases.  
   

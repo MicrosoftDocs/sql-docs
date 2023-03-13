@@ -3,7 +3,7 @@ title: "sys.dm_hadr_automatic_seeding (Transact-SQL)"
 description: sys.dm_hadr_automatic_seeding (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "04/20/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_hadr_automatic_seeding dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 ---
 # sys.dm_hadr_automatic_seeding (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +44,10 @@ Query sys.dm_hadr_automatic_seeding on the primary replica to check the status o
 
 Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Next steps
 
 Learn more about related concepts in the following articles:

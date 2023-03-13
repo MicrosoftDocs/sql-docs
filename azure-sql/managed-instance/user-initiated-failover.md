@@ -9,7 +9,6 @@ ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: how-to
 ms.custom:
-  - seo-lt-2019
   - sqldbrb=1
   - devx-track-azurepowershell
 ---

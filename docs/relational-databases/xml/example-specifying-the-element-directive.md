@@ -1,20 +1,19 @@
 ---
 title: "Example: Specifying the ELEMENT Directive"
 description: View an example of how to specify the ELEMENT directive in an SQL query to generate element-centric XML.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "ELEMENT directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Specify the ELEMENT directive
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This retrieves employee information and generates element-centric XML as shown in the following:
 

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysjobschedules system table"
 dev_langs:
   - "TSQL"
-ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 ---
 # dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_REPL020011"
 description: "MSSQL_REPL020011"
-title: "MSSQL_REPL020011 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_REPL020011 error"
-ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_REPL020011 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_REPL020011

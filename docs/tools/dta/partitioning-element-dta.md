@@ -1,19 +1,16 @@
 ---
 title: "Partitioning Element (DTA)"
 description: In the dta utility, the Partitioning element contains the partitioning scheme that you would like Database Engine Tuning Advisor to use during analysis.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Partitioning element"
-ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+dev_langs:
+  - "XML"
 ---
 
 # Partitioning Element (DTA)

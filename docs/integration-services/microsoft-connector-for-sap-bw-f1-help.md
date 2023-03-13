@@ -1,17 +1,14 @@
 ---
+title: "Microsoft Connector for SAP BW F1 Help"
 description: "Microsoft Connector for SAP BW F1 Help"
-title: "Microsoft Connector for SAP BW F1 Help | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.dts.designer.sapbw.f1"
-ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+f1_keywords:
+  - "sql13.dts.designer.sapbw.f1"
 ---
 # Microsoft Connector for SAP BW F1 Help
 

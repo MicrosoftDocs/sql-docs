@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Plan Cache object"
 description: Learn about the Plan Cache object, which provides counters to monitor how SQL Server uses memory to store objects such as stored procedures and triggers.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Plan Cache object"
-  - "SQLServer:Plan Cache"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Plan Cache object"
+  - "SQLServer:Plan Cache"
 ---
 # SQL Server, Plan Cache object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

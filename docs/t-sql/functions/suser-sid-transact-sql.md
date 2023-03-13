@@ -3,12 +3,10 @@ title: "SUSER_SID (Transact-SQL)"
 description: "SUSER_SID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SUSER_SID"
   - "SUSER_SID_TSQL"
@@ -29,7 +27,7 @@ dev_langs:
 
   Returns the security identification number (SID) for the specified login name.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -41,7 +39,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 
 ## Arguments
  **'** *login* **'**  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Is the login name of the user. *login* is **sysname**. *login*, which is optional, can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user or group. If *login* is not specified, information about the current security context is returned. If the parameter contains the word NULL will return NULL.  
   

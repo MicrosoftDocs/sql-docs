@@ -1,15 +1,12 @@
 ---
+title: "SQL Server Compact Edition Destination Custom Properties"
 description: "SQL Server Compact Edition Destination Custom Properties"
-title: "SQL Server Compact Edition Destination Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # SQL Server Compact Edition Destination Custom Properties
 

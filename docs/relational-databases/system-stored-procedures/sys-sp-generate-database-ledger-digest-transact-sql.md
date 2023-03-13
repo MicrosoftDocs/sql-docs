@@ -1,17 +1,14 @@
 ---
+title: "sys.sp_generate_database_ledger_digest (Transact-SQL)"
 description: "sys.sp_generate_database_ledger_digest (Transact-SQL)"
-title: "sys.sp_generate_database_ledger_digest (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 author: VanMSFT
 ms.author: vanto
+ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
@@ -21,7 +18,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 Generates the ledger digest, which is the hash of the last block in sys.database_ledger_blocks. If the last block is open (transactions have been grouped to the block but no final block hash has been generated), this stored procedure will close the block and generate the hash. Future transactions will then be assigned to the next block.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax  
   

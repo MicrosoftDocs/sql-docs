@@ -1,17 +1,15 @@
 ---
-title: "Security Best Practices with Contained Databases | Microsoft Docs"
+title: "Security Best Practices with Contained Databases"
 description: Understand and mitigate the unique threats to contained databases, including those related to the USER WITH PASSWORD authentication process in SQL Server.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: jaszymas
 ms.date: "03/14/2016"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "contained database, threats"
-ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: jaszymas
 ---
 # Security Best Practices with Contained Databases
  [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,29 +1,26 @@
 ---
+title: "sp_OAGetErrorInfo (Transact-SQL)"
 description: "sp_OAGetErrorInfo (Transact-SQL)"
-title: "sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_OAGetErrorInfo_TSQL"
-  - "sp_OAGetErrorInfo"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_OAGetErrorInfo"
-ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_OAGetErrorInfo_TSQL"
+  - "sp_OAGetErrorInfo"
+helpviewer_keywords:
+  - "sp_OAGetErrorInfo"
+dev_langs:
+  - "TSQL"
 ---
 # sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Obtains OLE Automation error information.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,15 +1,12 @@
 ---
+title: "Step 3: Add and configure an OLE DB connection manager"
 description: "Lesson 1-3: Add and configure an OLE DB connection manager"
-title: "Step 3: Add and configure an OLE DB connection manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
+ms.date: "01/03/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 1-3: Add and configure an OLE DB connection manager
 

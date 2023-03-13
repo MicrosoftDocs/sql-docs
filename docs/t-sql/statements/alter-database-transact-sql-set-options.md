@@ -8,7 +8,6 @@ ms.date: 11/04/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "online database state [SQL Server]"
   - "database options [SQL Server]"
@@ -32,7 +31,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 ---
 # ALTER DATABASE SET options (Transact-SQL)
 
-Sets database options in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Sets database options in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
 > [!NOTE]  
 > Setting some options with ALTER DATABASE may require exclusive database access. If the ALTER DATABASE statement does not complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
@@ -462,13 +461,13 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-d
 
 - ON
 
-  The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan.
 
-  If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if the [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) isn't enabled or if the Query Store isn't in *Read-Write* mode.
+  If there are performance gains, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will produce a new query plan. The statement will fail if the [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) isn't enabled or if the Query Store isn't in *Read-Write* mode.
 
 - OFF
 
-  The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. The default value is OFF.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. The default value is OFF.
 
 #### \<change_tracking_option> ::=
 
@@ -1091,7 +1090,7 @@ Consider the following important points when you use the PAGE_VERIFY option:
 - When a user or system database is upgraded to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version, the PAGE_VERIFY value (NONE or TORN_PAGE_DETECTION) isn't changed. We recommend that you change to CHECKSUM.
 
   > [!NOTE]  
-  > In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the `tempdb` database and can't be modified. Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the default value for the `tempdb` database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the `tempdb` database.
+  > In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the `tempdb` database and can't be modified. Starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], the default value for the `tempdb` database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the `tempdb` database.
 
 - TORN_PAGE_DETECTION may use fewer resources but provides a minimal subset of the CHECKSUM protection.
 - PAGE_VERIFY can be set without taking the database offline, locking the database, or otherwise impeding concurrency on that database.
@@ -2062,11 +2061,11 @@ Enables or disables automatic plan correction `FORCE_LAST_GOOD_PLAN` option of [
 
 - ON
 
-  The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if the Query Store isn't enabled or if it's not in *Read-Write* mode.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will produce a new query plan. The statement will fail if the Query Store isn't enabled or if it's not in *Read-Write* mode.
 
 - OFF
 
-  The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
 
 #### \<change_tracking_option> ::=
 
@@ -3072,11 +3071,11 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-d
 
 - ON
 
-  The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if the Query Store isn't enabled or if it's not in *Read-Write* mode.  This is the default value.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will produce a new query plan. The statement will fail if the Query Store isn't enabled or if it's not in *Read-Write* mode.  This is the default value.
 
 - OFF
 
-  The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
+  The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view.
 
 #### \<change_tracking_option> ::=
 
@@ -3822,7 +3821,7 @@ Controls whether the Query Store is enabled in this data warehouse.
   Disables the Query Store. OFF is the default value.
 
 > [!NOTE]  
-> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance isn't supported.
+> For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance isn't supported.
 
 > [!NOTE]  
 > For Azure Synapse Analytics, the Query Store can be enabled as on other platforms but additional configuration options are not supported.

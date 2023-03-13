@@ -1,15 +1,12 @@
 ---
+title: "Sparse Columns Support (ODBC)"
 description: "Sparse Columns Support (ODBC)"
-title: "Sparse Columns Support (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sparse Columns Support (ODBC)

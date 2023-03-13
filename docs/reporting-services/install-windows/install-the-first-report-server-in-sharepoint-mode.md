@@ -1,14 +1,13 @@
 ---
+title: "Install the first Report Server in SharePoint mode"
 description: "Install the first Report Server in SharePoint mode"
-title: "Install the first Report Server in SharePoint mode | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 10/05/2017
 ms.service: reporting-services
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
-ms.custom:
-  - intro-installation
 ---
 # Install the first Report Server in SharePoint mode
 
@@ -40,8 +39,8 @@ ms.custom:
 |-|-|  
 |**(1)**|SharePoint service installed from SQL Server installation. You can create one or more Reporting Services service applications.|  
 |**(2)**|Reporting Services add-in for SharePoint products provides the user interface components on the SharePoint Servers.|  
-|**(3)**|The Excel Service Application used by Power View and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. This isn't available in a single server deployment for SharePoint 2016. An [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) is required. |  
-|**(4)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.|  
+|**(3)**|The Excel Service Application used by Power View and [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]. This isn't available in a single server deployment for SharePoint 2016. An [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) is required. |  
+|**(4)**|[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] service application.|  
   
  ![SSRS SharePoint Mode Single Server Deployment](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint Mode Single Server Deployment")  
   
@@ -430,7 +429,7 @@ Also, the application pool security account used by the Reporting Services servi
 
 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
+[Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_10785"
 description: "MSSQLSERVER_10785"
-title: "MSSQLSERVER_10785 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "10785 (Database Engine error)"
-ms.assetid: 32f96c1e-9e94-4603-9bcd-b0c2e4af9fda
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "10785 (Database Engine error)"
 ---
 # MSSQLSERVER_10785
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

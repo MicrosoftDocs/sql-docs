@@ -1,28 +1,25 @@
 ---
+title: "sys.fn_get_sql (Transact-SQL)"
 description: "sys.fn_get_sql (Transact-SQL)"
-title: "sys.fn_get_sql (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_get_sql"
   - "sys.fn_get_sql_TSQL"
   - "fn_get_sql_TSQL"
   - "sys.fn_get_sql"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_get_sql function"
   - "text [SQL Server], SQL handles"
   - "sys.fn_get_sql function"
   - "valid SQL handles [SQL Server]"
   - "SQL handles"
-ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_get_sql (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +31,7 @@ ms.author: randolphwest
   
  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

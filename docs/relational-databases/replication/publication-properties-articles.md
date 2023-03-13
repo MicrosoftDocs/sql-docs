@@ -1,17 +1,15 @@
 ---
+title: "Publication Properties, Articles"
 description: "Publication Properties, Articles"
-title: "Publication Properties, Articles | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.pubproperties.articles.f1"
-ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.pubproperties.articles.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Properties, Articles

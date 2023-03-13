@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysdbmaintplan_jobs system table"
 dev_langs:
   - "TSQL"
-ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
 ---
 # sysdbmaintplan_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

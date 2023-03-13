@@ -1,18 +1,15 @@
 ---
-description: "Create an Attribute Group (Master Data Services)"
 title: Create an Attribute Group
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "attribute groups [Master Data Services], creating"
-  - "creating attribute groups [Master Data Services]"
-ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
+description: "Create an Attribute Group (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "attribute groups [Master Data Services], creating"
+  - "creating attribute groups [Master Data Services]"
 ---
 # Create an Attribute Group (Master Data Services)
 

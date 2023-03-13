@@ -1,22 +1,19 @@
 ---
+title: "sp_changemergesubscription (Transact-SQL)"
 description: "sp_changemergesubscription (Transact-SQL)"
-title: "sp_changemergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changemergesubscription_TSQL"
-  - "sp_changemergesubscription"
-helpviewer_keywords: 
-  - "sp_changemergesubscription"
-ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changemergesubscription_TSQL"
+  - "sp_changemergesubscription"
+helpviewer_keywords:
+  - "sp_changemergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +21,7 @@ ms.author: maghan
   Changes selected properties of a merge push subscription. This stored procedure is executed at the Publisher on the publication database.  
   
 > [!IMPORTANT]  
->  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
 ## Syntax  
   
@@ -89,5 +86,3 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

@@ -1,21 +1,19 @@
 ---
+title: "Manage Logins in the Publication Access List"
 description: "Manage Logins in the Publication Access List"
-title: "Manage Logins in the Publication Access List | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "logins [SQL Server replication], publication access list"
   - "publications [SQL Server replication], publication access lists"
   - "publication access list (PAL)"
   - "PAL (publication access list)"
   - "logins [SQL Server replication], managing"
-ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Manage Logins in the Publication Access List

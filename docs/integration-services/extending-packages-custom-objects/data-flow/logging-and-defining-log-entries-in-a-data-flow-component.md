@@ -1,20 +1,17 @@
 ---
+title: "Logging and Defining Log Entries in a Data Flow Component"
 description: "Logging and Defining Log Entries in a Data Flow Component"
-title: "Logging and Defining Log Entries in a Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logs [Integration Services], custom"
   - "custom log entries [Integration Services]"
   - "custom data flow components [Integration Services], logging"
   - "data flow components [Integration Services], logging"
-ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-author: chugugrace
-ms.author: chugu
 ---
 # Logging and Defining Log Entries in a Data Flow Component
 

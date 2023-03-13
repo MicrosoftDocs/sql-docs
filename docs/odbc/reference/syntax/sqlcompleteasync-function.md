@@ -1,19 +1,16 @@
 ---
+title: "SQLCompleteAsync Function"
 description: "SQLCompleteAsync Function"
-title: "SQLCompleteAsync Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-f1_keywords: 
-  - "SQLCompleteAsync"
-helpviewer_keywords: 
-  - "SQLCompleteAsync function [ODBC]"
-ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLCompleteAsync"
+helpviewer_keywords:
+  - "SQLCompleteAsync function [ODBC]"
 ---
 # SQLCompleteAsync Function
 **Conformance**  

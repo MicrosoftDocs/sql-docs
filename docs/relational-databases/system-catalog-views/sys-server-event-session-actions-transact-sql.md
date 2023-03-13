@@ -17,10 +17,9 @@ helpviewer_keywords:
   - "xe"
 dev_langs:
   - "TSQL"
-ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 ---
 # sys.server_event_session_actions (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row for each action on each event of an event session.  
   

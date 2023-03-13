@@ -1,24 +1,19 @@
 ---
+title: "SQLGetConnectOption Function"
 description: "SQLGetConnectOption Function"
-title: "SQLGetConnectOption Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetConnectOption"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetConnectOption"
-helpviewer_keywords: 
-  - "SQLGetConnectOption function [ODBC]"
-ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetConnectOption"
+helpviewer_keywords:
+  - "SQLGetConnectOption function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetConnectOption"
+apitype: "dllExport"
 ---
 # SQLGetConnectOption Function
 **Conformance**  

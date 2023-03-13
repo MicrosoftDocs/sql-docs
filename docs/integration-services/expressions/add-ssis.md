@@ -1,19 +1,16 @@
 ---
+title: "+ (Add) (SSIS)"
 description: "+ (Add) (SSIS)"
-title: "+ (Add) (SSIS) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "+ (add)"
   - "add operator (+)"
   - "adding expressions"
-ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: chugugrace
-ms.author: chugu
 ---
 # + (Add) (SSIS)
 

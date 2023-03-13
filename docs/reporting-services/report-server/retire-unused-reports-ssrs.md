@@ -1,13 +1,12 @@
 ---
-title: "Find and retire unused reports | Microsoft Docs"
+title: "Find and retire unused reports"
 description: You don't want to migrate unused reports to the Power BI service. As you plan for a migration to the cloud, we suggest doing some housekeeping to get rid of unused SSRS reports.
-ms.date: 11/21/2022
-ms.service: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.subservice: report-server
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 11/21/2022
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
 ---
 
 # Find and retire unused reports (SSRS)
@@ -18,7 +17,7 @@ There are two processes for checking unused reports. We extend the cleanup to un
 
 ## Run an audit (optional)  
 
-First, we suggest that you create a [server audit and database audit specification](/sql/relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification). Auditing an instance of the SQL Server Database Engine or an individual database involves tracking and logging events that occur on the Database Engine. SQL Server audit lets you create server audits, which can contain server audit specifications for server level events, and database audit specifications for database level events. Audited events can be written to the event logs or to audit files.
+First, we suggest that you create a [server audit and database audit specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md). Auditing an instance of the SQL Server Database Engine or an individual database involves tracking and logging events that occur on the Database Engine. SQL Server audit lets you create server audits, which can contain server audit specifications for server level events, and database audit specifications for database level events. Audited events can be written to the event logs or to audit files.
 
 Once you've filled your audit log with tables and stored procedures used for reports, you can export those objects to an Excel file and share them with stakeholders. Let them know you are preparing to deprecate unused objects.  
 

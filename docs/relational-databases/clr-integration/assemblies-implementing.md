@@ -9,7 +9,6 @@ ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "assemblies [CLR integration], implementing"
-ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 ---
 # Assemblies - Implementing
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

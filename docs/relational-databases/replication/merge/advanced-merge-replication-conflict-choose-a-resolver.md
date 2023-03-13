@@ -1,19 +1,17 @@
 ---
+title: "Choose a Resolver"
 description: "Advanced Merge Replication Conflict - Choose a Resolver"
-title: "Choose a Resolver | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "default conflict resolver"
   - "articles [SQL Server replication], conflict resolution"
   - "conflict resolution [SQL Server replication], merge replication"
-ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Advanced Merge Replication Conflict - Choose a Resolver
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

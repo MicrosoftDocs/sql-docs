@@ -1,22 +1,19 @@
 ---
+title: "sp_vupgrade_mergeobjects (Transact-SQL)"
 description: "sp_vupgrade_mergeobjects (Transact-SQL)"
-title: "sp_vupgrade_mergeobjects (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_vupgrade_mergeobjects"
-  - "sp_vupgrade_mergeobjects_TSQL"
-helpviewer_keywords: 
-  - "sp_vupgrade_mergeobjects"
-ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_vupgrade_mergeobjects"
+  - "sp_vupgrade_mergeobjects_TSQL"
+helpviewer_keywords:
+  - "sp_vupgrade_mergeobjects"
+dev_langs:
+  - "TSQL"
 ---
 # sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +26,7 @@ ms.author: maghan
   
  Executing this stored procedure does not require reinitialization of subscriptions. This procedure is not required if you install a service pack or upgrade to a new version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

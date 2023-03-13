@@ -1,29 +1,26 @@
 ---
+title: "sp_helpqreader_agent (Transact-SQL)"
 description: "sp_helpqreader_agent (Transact-SQL)"
-title: "sp_helpqreader_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpqreader_agent_TSQL"
-  - "sp_helpqreader_agent"
-helpviewer_keywords: 
-  - "sp_helpqreader_agent"
-ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpqreader_agent_TSQL"
+  - "sp_helpqreader_agent"
+helpviewer_keywords:
+  - "sp_helpqreader_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns properties of the Queue Reader agent. This stored procedure is executed at the Distributor on the distribution database or at the Publisher on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

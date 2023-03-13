@@ -1,25 +1,22 @@
 ---
+title: "Extract a DAC From a Database"
 description: "Extract a DAC From a Database"
-title: "Extract a DAC From a Database | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/18/2016"
 ms.service: sql
-ms.subservice: 
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.extractdacwizard.validationandsummary.f1"
   - "sql13.swb.extractdacwizard.introduction.f1"
   - "sql13.swb.extractdacwizard.selectdatapage.f1"
   - "sql13.swb.extractdacwizard.setdacproperties.f1"
   - "sql13.swb.extractdacwizard.buildandsave.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extract DAC"
   - "How to [DAC], extract"
   - "data-tier application [SQL Server], extract"
   - "wizard [DAC], extract"
-ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Extract a DAC From a Database
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

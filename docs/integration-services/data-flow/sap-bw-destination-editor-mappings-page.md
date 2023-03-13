@@ -1,17 +1,14 @@
 ---
+title: "SAP BW Destination Editor (Mappings Page)"
 description: "SAP BW Destination Editor (Mappings Page)"
-title: "SAP BW Destination Editor (Mappings Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.columns.f1"
-ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.sapbwdestination.columns.f1"
 ---
 # SAP BW Destination Editor (Mappings Page)
 

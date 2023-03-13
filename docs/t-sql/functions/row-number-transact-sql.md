@@ -3,7 +3,6 @@ title: "ROW_NUMBER (Transact-SQL)"
 description: "Transact-SQL reference for the ROW_NUMBER function. This function numbers the output of a result set."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "09/11/2017"
 ms.service: sql
 ms.subservice: t-sql
@@ -30,7 +29,7 @@ Numbers the output of a result set. More specifically, returns the sequential nu
 > [!NOTE]
 > `ROW_NUMBER` is a temporary value calculated when the query is run. To persist numbers in a table, see [IDENTITY Property](../../t-sql/statements/create-table-transact-sql-identity-property.md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## Syntax  
@@ -212,7 +211,7 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### E. Returning the row number for salespeople  
  The following example returns the `ROW_NUMBER` for sales representatives based on their assigned sales quota.  

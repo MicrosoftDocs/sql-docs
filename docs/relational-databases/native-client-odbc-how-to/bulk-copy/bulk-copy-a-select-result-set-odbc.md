@@ -1,19 +1,16 @@
 ---
+title: "Bulk Copy a SELECT Result Set (ODBC)"
 description: "Bulk Copy a SELECT Result Set (ODBC)"
-title: "Bulk Copy a SELECT Result Set (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [ODBC]"
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
-ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy a SELECT Result Set (ODBC)

@@ -8,7 +8,9 @@ ms.date: 04/13/2022
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
-ms.custom: seo-lt-2019 sqldbrb=1 references_regions
+ms.custom:
+  - sqldbrb=1
+  - references_regions
 ---
 # Resource limits for elastic pools using the DTU purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -21,6 +23,9 @@ This article provides the detailed resource limits for databases in Azure SQL Da
 * For more information regarding the different purchasing models, see [Purchasing models and service tiers](purchasing-models.md).
 
 Each read-only replica has its own resources such as DTUs, workers, and sessions. Each read-only replica is subject to the resource limits detailed later in this article.
+
+> [!NOTE]
+> The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
 
 ## Elastic pool: Storage sizes and compute sizes
 
@@ -41,7 +46,7 @@ The resource limits of individual databases in elastic pools are generally the s
 For the same number of DTUs, resources provided to an elastic pool may exceed the resources provided to a single database outside of an elastic pool. This means it is possible for the eDTU utilization of an elastic pool to be less than the summation of DTU utilization across databases within the pool, depending on workload patterns. For example, in an extreme case with only one database in an elastic pool where database DTU utilization is 100%, it is possible for pool eDTU utilization to be 50% for certain workload patterns. This can happen even if max DTU per database remains at the maximum supported value for the given pool size.
 
 > [!NOTE]
-> The storage per pool resource limit in each of the following tables do not include tempdb and log storage.
+> The storage per pool resource limit in each of the following tables do not include `tempdb` and log storage.
 
 ### Basic elastic pool limits
 
@@ -60,7 +65,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
-<sup>2</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+<sup>2</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 <sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
@@ -83,7 +88,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 
 <sup>2</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
-<sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+<sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
@@ -106,7 +111,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 
 <sup>2</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
-<sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+<sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
@@ -129,7 +134,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 
 <sup>2</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
-<sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+<sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
@@ -152,7 +157,7 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 
 <sup>2</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
-<sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+<sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
@@ -191,7 +196,7 @@ Min and max per database DTU values apply to resource consumption by user worklo
 
 ## Tempdb sizes
 
-The following table lists tempdb sizes for single databases in Azure SQL Database: 
+The following table lists `tempdb` sizes for single databases in Azure SQL Database: 
 
 |Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
 |---|---:|---:|---:|

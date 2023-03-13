@@ -1,13 +1,13 @@
 ---
+title: "Processing SELECT FOR UPDATE Statements"
 description: "Processing SELECT FOR UPDATE Statements"
-title: "Processing SELECT FOR UPDATE Statements | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursor library [ODBC], statement processing"
   - "SQL statements [ODBC], select for update statements"
   - "select for update [ODBC]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "cursor library [ODBC], select for update statements"
   - "ODBC cursor library [ODBC], select for update statements"
   - "cursor library [ODBC], statement processing"
-ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Processing SELECT FOR UPDATE Statements
 > [!IMPORTANT]  

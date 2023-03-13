@@ -1,22 +1,17 @@
 ---
-description: "SupportAlias Property (ClientNetworkProtocol Class)"
 title: "SupportAlias Property (ClientNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SupportAlias Property (ClientNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SupportAlias property"
-ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
+description: "SupportAlias Property (ClientNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SupportAlias property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SupportAlias Property (ClientNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # SupportAlias Property (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

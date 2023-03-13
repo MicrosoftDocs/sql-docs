@@ -1,17 +1,14 @@
 ---
-description: "Proxy Account Properties (References Tab)"
 title: Proxy Account Properties (References Tab)
+description: "Proxy Account Properties (References Tab)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.proxy.references.f1"
-ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

@@ -1,18 +1,15 @@
 ---
+title: "SQLTransact Mapping"
 description: "SQLTransact Mapping"
-title: "SQLTransact Mapping | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "mapping deprecated functions [ODBC], SQLTransact"
-  - "SQLTransact function [ODBC], mapping"
-ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "mapping deprecated functions [ODBC], SQLTransact"
+  - "SQLTransact function [ODBC], mapping"
 ---
 # SQLTransact Mapping
 **SQLTransact** is now replaced by **SQLEndTran**. The major difference between the two functions is that **SQLEndTran** contains an argument *HandleType*, which specifies the scope of the work to be done. The *HandleType* argument can specify the environment or the connection handle. The following call to **SQLTransact**:  

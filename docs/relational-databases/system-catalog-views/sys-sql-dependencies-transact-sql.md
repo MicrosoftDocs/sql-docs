@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "sys.sql_dependencies catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 ---
 # sys.sql_dependencies (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains a row for each dependency on a referenced entity as referenced in the [!INCLUDE[tsql](../../includes/tsql-md.md)] expression or statements that define some other referencing object.  
   

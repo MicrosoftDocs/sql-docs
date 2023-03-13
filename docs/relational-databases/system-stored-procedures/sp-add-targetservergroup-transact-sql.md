@@ -1,29 +1,26 @@
 ---
+title: "sp_add_targetservergroup (Transact-SQL)"
 description: "sp_add_targetservergroup (Transact-SQL)"
-title: "sp_add_targetservergroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_targetservergroup"
-  - "sp_add_targetservergroup_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_targetservergroup"
-ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_targetservergroup"
+  - "sp_add_targetservergroup_TSQL"
+helpviewer_keywords:
+  - "sp_add_targetservergroup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds the specified server group.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

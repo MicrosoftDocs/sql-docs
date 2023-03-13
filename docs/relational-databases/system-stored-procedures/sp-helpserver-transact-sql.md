@@ -1,29 +1,26 @@
 ---
+title: "sp_helpserver (Transact-SQL)"
 description: "sp_helpserver (Transact-SQL)"
-title: "sp_helpserver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpserver"
-  - "sp_helpserver_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpserver"
-ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpserver"
+  - "sp_helpserver_TSQL"
+helpviewer_keywords:
+  - "sp_helpserver"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports information about a particular remote or replication server, or about all servers of both types. Provides the server name, the network name of the server, the replication status of the server, the identification number of the server, and the collation name. Also provides time-out values for connecting to, or queries against, linked servers.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

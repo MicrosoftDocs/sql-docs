@@ -9,13 +9,12 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Returns indexes for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+  Returns indexes for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -37,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |allow_page_locks|**bit**|1 = Index allows page locks.|Always 1.|  
 |has_filter|**bit**|0 = Index does not have a filter.|Always 0.|  
 |filter_definition|**nvarchar(max)**|Expression for the subset of rows included in the filtered index.|Always NULL.|  
-|pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|NOT NULL|  
+|pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node.|NOT NULL|  
   
 ## Permissions  
  Requires CONTROL SERVER permission.  

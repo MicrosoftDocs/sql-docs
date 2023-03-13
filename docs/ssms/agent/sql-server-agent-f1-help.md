@@ -1,15 +1,12 @@
 ---
-description: "SQL Server Agent F1 Help"
 title: "SQL Server Agent F1 Help"
-ms.custom: seo-lt-2019
+description: "SQL Server Agent F1 Help"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # SQL Server Agent F1 Help

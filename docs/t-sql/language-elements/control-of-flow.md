@@ -3,12 +3,10 @@ title: "Control-of-Flow"
 description: "Control-of-Flow"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "keywords [SQL Server], control-of-flow language"
   - "control-of-flow language [SQL Server], keywords listed"

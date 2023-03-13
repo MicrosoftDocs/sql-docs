@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.sp_backup_master_switch (Transact-SQL)"
 description: "managed_backup.sp_backup_master_switch (Transact-SQL)"
-title: "managed_backup.sp_backup_master_switch (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_ backup_master_switch"
   - "smart_admin.sp_backup_master_switch"
   - "sp_ backup_master_switch_TSQL"
   - "smart_admin.sp_backup_master_switch_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_ backup_master_switch"
   - "smart_admin.sp_backup_master_switch"
-ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_backup_master_switch (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +27,7 @@ ms.author: maghan
   
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

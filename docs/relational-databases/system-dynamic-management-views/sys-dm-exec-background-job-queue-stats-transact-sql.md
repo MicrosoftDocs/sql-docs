@@ -3,7 +3,7 @@ title: "sys.dm_exec_background_job_queue_stats (Transact-SQL)"
 description: sys.dm_exec_background_job_queue_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/15/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_background_job_queue_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 27f62ab5-46c4-417e-814d-8d6437034d1c
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_background_job_queue_stats (Transact-SQL)
@@ -25,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns a row that provides aggregate statistics for each query processor job submitted for asynchronous (background) execution.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_background_job_queue_stats**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+>  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_background_job_queue_stats**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**enqueue_failed_duplicate_count**|**int**|Number of duplicate enqueue attempts.|  
 |**elapsed_avg_ms**|**int**|Average elapsed time of request in milliseconds.|  
 |**elapsed_max_ms**|**int**|Elapsed time of the longest request in milliseconds.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Remarks  
  This view returns information only for asynchronous update statistics jobs. For more information about asynchronous update statistics, see [Statistics](../../relational-databases/statistics/statistics.md).  
@@ -50,6 +49,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Examples  
   

@@ -1,18 +1,15 @@
 ---
+title: "SQLSetConnectOption (Excel Driver)"
 description: "SQLSetConnectOption (Excel Driver)"
-title: "SQLSetConnectOption (Excel Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLSetConnectOption function [ODBC], Excel Driver"
-  - "Excel driver [ODBC], SQLSetConnectOption"
-ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLSetConnectOption function [ODBC], Excel Driver"
+  - "Excel driver [ODBC], SQLSetConnectOption"
 ---
 # SQLSetConnectOption (Excel Driver)
 > [!NOTE]  

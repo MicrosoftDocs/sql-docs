@@ -1,23 +1,20 @@
 ---
 title: XML data (SQL Server)
 description: Use XML data for developing rich applications for semi-structured data management.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 05/09/2022
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "XML [SQL Server]"
   - "XML [SQL Server], about XML"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: randolphwest
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/09/2022
-# monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # XML data (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a powerful platform for developing rich applications for semi-structured data management. Support for XML is integrated into all the components in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the following ways:
 

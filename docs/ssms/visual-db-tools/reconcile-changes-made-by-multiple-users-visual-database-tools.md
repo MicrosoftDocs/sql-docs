@@ -1,20 +1,16 @@
 ---
-description: "Reconcile Changes Made by Multiple Users (Visual Database Tools)"
 title: Reconcile Changes Made by Multiple Users
-ms.custom: seo-lt-2019
+description: "Reconcile Changes Made by Multiple Users (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table modifications [SQL Server], multiple users"
   - "reconciling changes made by multiple users"
   - "modifications made by multiple users"
-ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Reconcile Changes Made by Multiple Users (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSrepl_version system table"
 dev_langs:
   - "TSQL"
-ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 ---
 # MSrepl_version (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

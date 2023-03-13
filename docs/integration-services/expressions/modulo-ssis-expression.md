@@ -1,19 +1,16 @@
 ---
+title: "(Modulo) (SSIS Expression)"
 description: "(Modulo) (SSIS Expression)"
-title: "(Modulo) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "% (modulo operator)"
   - "remainder of division operation"
   - "modulo operator (%)"
-ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: chugugrace
-ms.author: chugu
 ---
 # (Modulo) (SSIS Expression)
 

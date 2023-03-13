@@ -1,17 +1,14 @@
 ---
-title: "System Role Properties (Management Studio) | Microsoft Docs"
+title: "System Role Properties (Management Studio)"
 description: Learn about the options on the System Roles page where you can view the system role definitions that are currently defined for the report server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: tools
-
-
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.reportserver.systemroleproperties.f1"
-ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
-author: maggiesMSFT
-ms.author: maggies
 ---
 # System Role Properties (Management Studio)
   Use the System Roles page to view the system role definitions that are currently defined for the report server. A system role definition contains a named collection of tasks that are performed relative to the entire site, instead of an individual item. Role definitions are assigned to a user or groups to create a resulting role assignment. The tasks in the role definition specify what the user or group can do.  

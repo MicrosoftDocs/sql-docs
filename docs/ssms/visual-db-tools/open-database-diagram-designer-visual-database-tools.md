@@ -1,20 +1,17 @@
 ---
-description: "Open Database Diagram Designer (Visual Database Tools)"
 title: Open Database Diagram Designer
-ms.custom: seo-lt-2019
+description: "Open Database Diagram Designer (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "opening Database Diagram Designer"
   - "Database Diagram Designer"
   - "database diagrams [SQL Server], Database Diagram Designer"
   - "diagrams [SQL Server], Database Diagram Designer"
-ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
 ---
 # Open Database Diagram Designer (Visual Database Tools)
 

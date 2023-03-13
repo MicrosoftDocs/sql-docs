@@ -1,29 +1,26 @@
 ---
+title: "sp_mergearticlecolumn (Transact-SQL)"
 description: "sp_mergearticlecolumn (Transact-SQL)"
-title: "sp_mergearticlecolumn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_mergearticlecolumn"
-  - "sp_mergearticlecolumn_TSQL"
-helpviewer_keywords: 
-  - "sp_mergearticlecolumn"
-ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_mergearticlecolumn"
+  - "sp_mergearticlecolumn_TSQL"
+helpviewer_keywords:
+  - "sp_mergearticlecolumn"
+dev_langs:
+  - "TSQL"
 ---
 # sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Partitions a merge publication vertically. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

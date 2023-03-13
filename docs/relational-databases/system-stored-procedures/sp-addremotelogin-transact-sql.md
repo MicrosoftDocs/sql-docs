@@ -1,22 +1,19 @@
 ---
+title: "sp_addremotelogin (Transact-SQL)"
 description: "sp_addremotelogin (Transact-SQL)"
-title: "sp_addremotelogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addremotelogin_TSQL"
-  - "sp_addremotelogin"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addremotelogin"
-ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addremotelogin_TSQL"
+  - "sp_addremotelogin"
+helpviewer_keywords:
+  - "sp_addremotelogin"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: vanto
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use linked servers and linked server stored procedures instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

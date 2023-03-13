@@ -8,7 +8,6 @@ ms.date: 10/24/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "Query_Hint_TSQL"
   - "Query_TSQL"
@@ -73,7 +72,7 @@ Query hints specify that the indicated hints are used in the scope of a query. T
 - [UPDATE](../queries/update-transact-sql.md)
 - [MERGE](../statements/merge-transact-sql.md)
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -246,7 +245,7 @@ The minimum memory grant size in PERCENT of configured memory limit. The query i
 
 #### MAXDOP <integer_value>
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Overrides the **max degree of parallelism** configuration option of `sp_configure`. Also overrides the Resource Governor for the query specifying this option. The MAXDOP query hint can exceed the value configured with `sp_configure`. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP (Transact-SQL)](../statements/alter-workload-group-transact-sql.md). All semantic rules used with the **max degree of parallelism** configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 

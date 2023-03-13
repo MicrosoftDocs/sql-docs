@@ -7,8 +7,6 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 ---
 # Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure
 

@@ -1,17 +1,14 @@
 ---
+title: "SQLError (Visual FoxPro ODBC Driver)"
 description: "SQLError (Visual FoxPro ODBC Driver)"
-title: "SQLError (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLError function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLError function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLError (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -7,7 +7,6 @@ ms.date: 10/11/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom:
 f1_keywords:
   - "SYS.QUERY_STORE_REPLICAS_TSQL"
   - "QUERY_STORE_REPLICAS_TSQL"

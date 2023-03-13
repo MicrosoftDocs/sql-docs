@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "indexes [CLR integration]"
 dev_langs:
   - "TSQL"
-ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 ---
 # Working with User-Defined Types - Defining UDT Tables and Columns
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

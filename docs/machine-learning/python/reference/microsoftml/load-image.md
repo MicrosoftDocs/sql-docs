@@ -1,29 +1,18 @@
---- 
- 
-# required metadata 
-title: "load_image: Machine Learning Load Image Transform" 
-description: "Loads image data." 
-keywords: "transform, image" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "load_image: Machine Learning Load Image Transform"
+description: "Loads image data."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - transform
+  - image
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.load_image*: Loads an image
 
 

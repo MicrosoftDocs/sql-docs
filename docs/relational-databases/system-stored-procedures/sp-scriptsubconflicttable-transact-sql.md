@@ -1,29 +1,26 @@
 ---
+title: "sp_scriptsubconflicttable (Transact-SQL)"
 description: "sp_scriptsubconflicttable (Transact-SQL)"
-title: "sp_scriptsubconflicttable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_scriptsubconflicttable"
-  - "sp_scriptsubconflicttable_TSQL"
-helpviewer_keywords: 
-  - "sp_scriptsubconflicttable"
-ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_scriptsubconflicttable"
+  - "sp_scriptsubconflicttable_TSQL"
+helpviewer_keywords:
+  - "sp_scriptsubconflicttable"
+dev_langs:
+  - "TSQL"
 ---
 # sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Generates script for creating a conflict table on the Subscriber for a given queued subscription article. The script that is generated is executed at the Subscriber on the subscription database. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

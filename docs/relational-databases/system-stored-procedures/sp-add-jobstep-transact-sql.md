@@ -1,22 +1,19 @@
 ---
-description: "sp_add_jobstep (Transact-SQL)"
 title: sp_add_jobstep (Transact-SQL)
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_add_jobstep_TSQL"
-  - "sp_add_jobstep"
-helpviewer_keywords: 
-  - "sp_add_jobstep"
-ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
+description: "sp_add_jobstep (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
 ms.date: 03/15/2017
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_jobstep_TSQL"
+  - "sp_add_jobstep"
+helpviewer_keywords:
+  - "sp_add_jobstep"
+dev_langs:
+  - "TSQL"
 ---
 
 # sp_add_jobstep (Transact-SQL)
@@ -25,7 +22,7 @@ ms.date: 03/15/2017
 
 Adds a step (operation) to a SQL Agent job.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent job types are supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.

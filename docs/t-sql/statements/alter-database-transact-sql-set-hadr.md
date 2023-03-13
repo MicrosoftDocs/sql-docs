@@ -27,7 +27,7 @@ dev_langs:
 
   This topic contains the ALTER DATABASE syntax for setting [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options on a secondary database. Only one SET HADR option is permitted per ALTER DATABASE statement. These options are supported only on secondary replicas.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

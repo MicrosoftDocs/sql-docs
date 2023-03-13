@@ -1,19 +1,16 @@
 ---
+title: "Expression Builder"
 description: "Expression Builder"
-title: "Expression Builder | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.expressionbuilder.f1"
-helpviewer_keywords: 
-  - "Expression Builder dialog box"
-ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.expressionbuilder.f1"
+helpviewer_keywords:
+  - "Expression Builder dialog box"
 ---
 # Expression Builder
 

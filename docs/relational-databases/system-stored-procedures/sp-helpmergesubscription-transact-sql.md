@@ -1,29 +1,26 @@
 ---
+title: "sp_helpmergesubscription (Transact-SQL)"
 description: "sp_helpmergesubscription (Transact-SQL)"
-title: "sp_helpmergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergesubscription"
-  - "sp_helpmergesubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergesubscription"
-ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergesubscription"
+  - "sp_helpmergesubscription_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about a subscription to a merge publication, both push and pull. This stored procedure is executed at the Publisher on the publication database or at a republishing Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

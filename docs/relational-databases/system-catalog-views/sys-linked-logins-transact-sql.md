@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "sys.linked_logins catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 ---
 # sys.linked_logins (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row per linked-server-login mapping, for use by RPC and distributed queries from local server to the corresponding linked server.  
   

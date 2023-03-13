@@ -1,15 +1,12 @@
 ---
-title: "Level function in a paginated report | Microsoft Docs"
+title: "Level function in a paginated report"
 description: Discover the Level function in Report Builder. This function returns the current level of depth in a recursive hierarchy in a paginated report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Builder functions - Level function in a paginated report (Report Builder)
 

@@ -1,19 +1,16 @@
 ---
 title: "Configure multi-homed computer for access"
 description: Learn how to configure SQL Server and Windows Firewall to provide for network connections to an instance of SQL Server in a multi-homed environment.
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/13/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ports [SQL Server], multi-homed computer"
   - "multi-homed computer [SQL Server] configuring ports"
   - "firewall systems [Database Engine], multi-homed computer"
-ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure a Multi-Homed Computer for SQL Server Access
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -100,7 +97,7 @@ ms.author: randolphwest
 10. On the **Action** page, review the options. In this example, you are not using the firewall to force secure connections. Therefore, click **Allow the connection**, and then click **Next**.  
   
     > [!NOTE]  
-    >  Your environment might require secure connections. If you select one of the secure connections options, you might have to configure a certificate and the **Force Encryption** option. For more information about secure connections, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) and [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Your environment might require secure connections. If you select one of the secure connections options, you might have to configure a certificate and the **Force Encryption** option. For more information about secure connections, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md) and [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
 11. On the **Profile** page, select one or more profiles for the rule. If you are unfamiliar with firewall profiles, click the **Learn more about profiles** link in the firewall program.  
   
@@ -137,5 +134,3 @@ ms.author: randolphwest
 ## See Also  
  [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Connect to SQL Server Through a Proxy Server &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
-  
-  

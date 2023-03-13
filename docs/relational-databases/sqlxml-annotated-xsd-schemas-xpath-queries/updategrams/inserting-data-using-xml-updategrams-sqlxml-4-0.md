@@ -7,8 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
-ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Inserting Data Using XML Updategrams (SQLXML 4.0)
@@ -658,7 +656,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

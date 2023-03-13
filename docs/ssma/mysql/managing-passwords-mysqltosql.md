@@ -1,18 +1,15 @@
 ---
+title: "Managing Passwords (MySQLToSQL)"
 description: "Managing Passwords (MySQLToSQL)"
-title: "Managing Passwords (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: 07/06/2020
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Password management, importing or exporting encrypted password"
   - "Password management, securing password"
-ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Managing Passwords (MySQLToSQL)
 This article is about securing database passwords and the procedure to import or export them across servers.

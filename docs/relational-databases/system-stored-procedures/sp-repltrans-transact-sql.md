@@ -1,29 +1,26 @@
 ---
+title: "sp_repltrans (Transact-SQL)"
 description: "sp_repltrans (Transact-SQL)"
-title: "sp_repltrans (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_repltrans_TSQL"
-  - "sp_repltrans"
-helpviewer_keywords: 
-  - "sp_repltrans"
-ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_repltrans_TSQL"
+  - "sp_repltrans"
+helpviewer_keywords:
+  - "sp_repltrans"
+dev_langs:
+  - "TSQL"
 ---
 # sp_repltrans (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a result set of all the transactions in the publication database transaction log that are marked for replication but have not been marked as distributed. This stored procedure is executed at the Publisher on a publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

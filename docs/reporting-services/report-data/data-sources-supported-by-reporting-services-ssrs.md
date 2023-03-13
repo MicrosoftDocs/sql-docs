@@ -1,13 +1,13 @@
 ---
-title: "Data Sources Supported by Reporting Services | Microsoft Docs"
+title: "Data Sources Supported by Reporting Services"
 description: Learn about the various data sources that are supported by Reporting Services, including Microsoft SQL Server, Oracle, and ODBC.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 10/21/2021
 ms.service: reporting-services
 ms.subservice: report-data
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server data processing extension [Reporting Services]"
   - "XML data processing extension [Reporting Services]"
   - "reports [Reporting Services], data"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "data sources [Reporting Services], about data sources"
   - "ODBC data processing extension"
   - "Reporting Services, data sources"
-ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Data Sources Supported by Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit).  
@@ -28,7 +25,7 @@ ms.author: maggies
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], and tabular models  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)], and tabular models  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
   
@@ -100,7 +97,7 @@ ms.author: maggies
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database|[ODBC](#ODBC)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.OdbcClient|Y|Y|SQL Server 2012 and later.|Y|Y|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.SqlClient|N/A|N/A|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|Y|
 |Azure Synapse Analytics|[Microsoft Azure SQL Database](#Azure)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.SqlClient|N/A|N/A|Azure Synapse Analytics|Y|Y| 
-|[!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance|[Microsoft Parallel Data Warehouse](#PWD)|Deprecated [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|N/A|N/A|N/A|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
+|[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance|[Microsoft Parallel Data Warehouse](#PWD)|Deprecated [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|N/A|N/A|N/A|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional or tabular database|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y|  
 |Power BI Premium dataset (Starting with Reporting Services 2019 and Power BI Report Server January 2020) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y|
 |Azure Analysis Services |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y| 
@@ -128,7 +125,7 @@ ms.author: maggies
  The following data processing extensions are automatically installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. For more information and to verify the installation, see [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md) and [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
 > [!NOTE]
->  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
+>  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
  For more information about data processing extensions supported by Report Builder, see [Create data connection strings - Report Builder & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
   
@@ -251,12 +248,12 @@ This data source has been deprecated. Use the SQL Server data source type to con
   
 |[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Teradata version|.NET Framework Data Provider for Teradata version|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|13.00|13.0.0.1|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|12.00|12.00.01|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|6.20|12.00.01|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|13.00|13.0.0.1|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|12.00|12.00.01|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|6.20|12.00.01|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|13.00|13.0.0.1|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|12.00|12.00.01|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|6.20|12.00.01|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|13.00|13.0.0.1|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|6.20|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|13.00|13.0.0.1|  

@@ -1,14 +1,12 @@
 ---
+title: "Compare shared and embedded  data sources - Report Builder & Reporting Services"
 description: "Compare shared and embedded data sources - Report Builder & Reporting Services (SSRS)"
-title: "Compare shared and embedded  data sources - Report Builder & Reporting Services | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/18/2019
 ms.service: reporting-services
 ms.subservice: report-data
-
-
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Compare shared and embedded data sources - Report Builder & Reporting Services (SSRS)
 

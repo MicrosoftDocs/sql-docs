@@ -1,20 +1,18 @@
 ---
+title: "Non-SQL Server Publishers"
 description: "Non-SQL Server Publishers"
-title: "Non-SQL Server Publishers | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "08/29/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "heterogeneous database replication, non-SQL Server Publishers"
   - "non-SQL Server Publishers"
   - "heterogeneous data sources, non-SQL Server Publishers"
   - "Publishers [SQL Server replication], Oracle"
-ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Non-SQL Server Publishers  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Defines a collation of a database or table column, or a collation cast operation when applied to character string expression. Collation name can be either a Windows collation name or a SQL collation name. If not specified during database creation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If not specified during table column creation, the column is assigned the default collation of the database.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3151"
 description: "MSSQLSERVER_3151"
-title: "MSSQLSERVER_3151 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3151 (Database Engine error)"
-ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3151 (Database Engine error)"
 ---
 # MSSQLSERVER_3151
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

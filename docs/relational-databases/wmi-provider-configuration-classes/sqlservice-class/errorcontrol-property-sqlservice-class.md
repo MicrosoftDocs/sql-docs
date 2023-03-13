@@ -1,22 +1,17 @@
 ---
-description: "ErrorControl Property (SqlService Class)"
 title: "ErrorControl Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ErrorControl Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ErrorControl property"
-ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
+description: "ErrorControl Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ErrorControl property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ErrorControl Property (SqlService Class)"
+apitype: "MOFDef"
 ---
 # ErrorControl Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

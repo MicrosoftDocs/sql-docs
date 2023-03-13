@@ -1,22 +1,19 @@
 ---
+title: "sp_addsynctriggers (Transact-SQL)"
 description: "sp_addsynctriggers (Transact-SQL)"
-title: "sp_addsynctriggers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addsynctriggers_TSQL"
-  - "sp_addsynctriggers"
-helpviewer_keywords: 
-  - "sp_addsynctriggers"
-ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addsynctriggers_TSQL"
+  - "sp_addsynctriggers"
+helpviewer_keywords:
+  - "sp_addsynctriggers"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addsynctriggers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  The [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) procedure should be used instead of **sp_addsynctrigger**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) generates a script that contains the **sp_addsynctrigger** calls.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

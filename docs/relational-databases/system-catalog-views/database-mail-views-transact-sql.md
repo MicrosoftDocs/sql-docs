@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "status information [SQL Server], Database Mail"
 dev_langs:
   - "TSQL"
-ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 ---
 # Database Mail Views (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Database Mail has the following views for displaying Database Mail e-mail content, status of e-mails, and any messages received, such as errors logged by Database Mail. These views are in the **msdb** database.  
 

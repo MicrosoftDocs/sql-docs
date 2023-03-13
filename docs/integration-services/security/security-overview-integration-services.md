@@ -1,13 +1,14 @@
 ---
+title: "Security Overview (Integration Services)"
 description: "Security Overview (Integration Services)"
-title: "Security Overview (Integration Services) | Microsoft Docs"
-ms.custom: security
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: security
+helpviewer_keywords:
   - "SSIS packages, security"
   - "Integration Services, security"
   - "security [Integration Services], about security"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "SSIS, security"
   - "Integration Services packages, security"
   - "SQL Server Integration Services packages, security"
-ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-author: chugugrace
-ms.author: chugu
 ---
 # Security Overview (Integration Services)
 

@@ -1,15 +1,13 @@
 ---
-title: "Quantified Expressions (XQuery) | Microsoft Docs"
+title: "Quantified Expressions (XQuery)"
 description: Learn how to use quantified expressions in XQuery to apply either existential or universal quantification to an expression over one or several sequences.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "universal quantifiers"
   - "effective Boolean value [XQuery]"
   - "quantified expressions [XQuery]"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "some expression [XQuery]"
   - "EBV"
   - "expressions [XQuery], quantifiers"
-ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Quantified Expressions (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

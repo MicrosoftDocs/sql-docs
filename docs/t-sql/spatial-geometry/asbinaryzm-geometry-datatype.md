@@ -1,19 +1,16 @@
 ---
+title: "AsBinaryZM (geometry DataType)"
 description: "AsBinaryZM (geometry DataType)"
-title: "AsBinaryZM (geometry DataType) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "AsBinaryZM geometry"
-ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # AsBinaryZM (geometry DataType)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

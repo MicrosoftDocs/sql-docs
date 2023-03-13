@@ -1,14 +1,13 @@
 ---
+title: "Deploy an SSIS project with .NET code (C#)"
 description: "Deploy an SSIS project with C# code in a .NET app"
-title: "Deploy an SSIS project with .NET code (C#) | Microsoft Docs"
-ms.date: "05/21/2018"
-ms.topic: quickstart
-ms.service: sql
-ms.custom:
-  - intro-quickstart
-ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "05/21/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: quickstart
+ms.custom: intro-quickstart
 ---
 # Deploy an SSIS project with C# code in a .NET app
 

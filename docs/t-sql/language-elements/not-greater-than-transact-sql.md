@@ -3,12 +3,10 @@ title: "!&gt; (Not Greater Than) (Transact-SQL)"
 description: "!&gt; (Not Greater Than) (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/13/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "!>_TSQL"
   - "!>"
@@ -25,7 +23,7 @@ dev_langs:
 
 Compares two expressions (a comparison operator). When you compare non-null expressions, the result is TRUE if the left operand doesn't have a greater value than the right operand. Otherwise, the result is FALSE. Unlike the = (equality) comparison operator, the result of the !> comparison of two NULL values doesn't depend on the ANSI_NULLS setting.  
   
-![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

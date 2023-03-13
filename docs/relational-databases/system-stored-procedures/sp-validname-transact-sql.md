@@ -1,22 +1,19 @@
 ---
+title: "sp_validname (Transact-SQL)"
 description: "sp_validname (Transact-SQL)"
-title: "sp_validname (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_validname"
-  - "sp_validname_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_validname"
-ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_validname"
+  - "sp_validname_TSQL"
+helpviewer_keywords:
+  - "sp_validname"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_validname (Transact-SQL)
@@ -24,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Checks for valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier names. All nonbinary and nonzero data, including Unicode data that can be stored by using the **nchar**, **nvarchar**, or **ntext** data types, are accepted as valid characters for identifier names.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

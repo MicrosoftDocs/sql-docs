@@ -1,17 +1,14 @@
 ---
+title: "Working with the Sample Console Script Files (SybaseToSQL)"
 description: "Working with the Sample Console Script Files (SybaseToSQL)"
-title: "Working with the Sample Console Script Files (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sybase Console,Sample Console Script Files"
-ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Working with the Sample Console Script Files (SybaseToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

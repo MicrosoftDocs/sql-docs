@@ -1,20 +1,17 @@
 ---
-title: "Partial Backups (SQL Server) | Microsoft Docs"
+title: "Partial Backups (SQL Server)"
 description: A partial backup in SQL Server contains the data in the primary filegroup, all read-write filegroups, and, optionally, one or more read-only files.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full backups [SQL Server]"
   - "partial backups [SQL Server]"
   - "READ_WRITE_FILEGROUPS option"
   - "database backups [SQL Server], about backing up databases"
-ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Partial Backups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

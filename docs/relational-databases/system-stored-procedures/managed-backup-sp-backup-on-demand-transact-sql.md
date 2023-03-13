@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.sp_backup_on_demand (Transact-SQL)"
 description: "managed_backup.sp_backup_on_demand (Transact-SQL)"
-title: "managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "smart_admin.sp_backup_on_demand"
   - "smart_admin.sp_backup_on_demand_TSQL"
   - "sp_backup_on_demand_TSQL"
   - "sp_backup_on_demand"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "smart_admin.sp_backup_on_demand"
   - "sp_backup_on_demand"
-ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +29,7 @@ ms.author: maghan
   
  An error is returned if [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is in the process of executing a backup of given type for the specified database. In this case, the error message returned includes the full backup file path where the current backup is being uploaded to.  
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

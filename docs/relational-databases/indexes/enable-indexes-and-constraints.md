@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "disabled indexes [SQL Server], how to enable"
   - "constraints [SQL Server], enabling"
   - "clustered indexes, enabling disabled indexes"
-ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enable Indexes and Constraints

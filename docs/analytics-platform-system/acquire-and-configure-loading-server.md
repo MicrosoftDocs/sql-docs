@@ -4,11 +4,10 @@ description: This article describes how to acquire and configure a loading serve
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 04/17/2018
+ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Acquire and configure a loading server for Parallel Data Warehouse
@@ -32,13 +31,14 @@ The loading system can be designed as one or more loading servers that perform c
   
 The system requirements for a loading server depend almost completely on your own workload. Use the [Loading Server Capacity Planning Worksheet](loading-server-capacity-planning-worksheet.md) to help determine your capacity requirements.  
   
-## <a name="Step2"></a>Step 2: Acquire the sServer  
+## <a name="Step2"></a>Step 2: Acquire the Server  
 Now that you better understand your capacity requirements, you can plan the servers and networking components that you will need to purchase or provision. Incorporate the following list of requirements into your purchasing plan, and then purchase your server or provision an existing server.  
   
 ### <a name="R"></a>Software Requirements  
 Supported Operating Systems:  
   
--   Windows Server 2012 or Windows Server 2012 R2. These operating systems require the FDR network adapter.  
+-   Windows Server 2012, Windows Server 2012 R2, or later versions. These operating systems require the FDR network adapter.  
+
   
 -   Windows Server 2008 R2. This OS requires the DDR network adapter.  
   

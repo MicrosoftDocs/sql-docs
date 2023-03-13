@@ -1,15 +1,12 @@
 ---
+title: "Step 2: Add and configure a Flat File connection manager"
 description: "Lesson 1-2: Add and configure a Flat File connection manager"
-title: "Step 2: Add and configure a Flat File connection manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
+ms.date: "01/03/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 1-2: Add and configure a Flat File connection manager
 

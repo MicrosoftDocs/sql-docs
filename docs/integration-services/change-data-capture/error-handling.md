@@ -1,15 +1,12 @@
 ---
+title: "Error Handling"
 description: "Error Handling"
-title: "Error Handling | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Error Handling
 

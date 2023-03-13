@@ -28,7 +28,7 @@ Creates a classifier object for use in workload management.  The classifier assi
 > [!NOTE]
 > Classifying managed identities (MI) behavior differs between the dedicated SQL pool in Azure Synapse workspaces and the standalone dedicated SQL pool (formerly SQL DW).  While the standalone dedicated SQL pool MI maintains the assigned identity, Azure Synapse workspaces adds MI to the **dbo** role.  This cannot be changed.  The dbo role, by default, is classified  to smallrc.  Creating a classifier for the dbo role allows for assigning requests to a workload group other than smallrc.  If dbo alone is too generic for classification and has broader impacts, consider using label, session or time-based classification in conjunction with the dbo role classification.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
 
@@ -176,7 +176,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## See Also
 
-[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
+[[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)</br>
 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)

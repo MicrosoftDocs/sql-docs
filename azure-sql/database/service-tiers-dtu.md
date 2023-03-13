@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
-  - "references_regions"
-  - "azure-sql-split"
+  - references_regions
+  - azure-sql-split
 ---
 # DTU-based purchasing model overview 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

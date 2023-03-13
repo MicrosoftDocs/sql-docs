@@ -1,23 +1,20 @@
 ---
+title: "Data Flow Task"
 description: "Data Flow Task"
-title: "Data Flow Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataflowtask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data flow task [Integration Services]"
   - "performance [Integration Services]"
   - "data flow [Integration Services], performance"
   - "data flow [Integration Services], Data Flow task"
   - "Integration Services, performance"
-ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: chugugrace
-ms.author: chugu
 ---
 # Data Flow Task
 

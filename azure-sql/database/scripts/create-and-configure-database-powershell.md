@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: sample
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ms.devlang: PowerShell
 ---
 # Use PowerShell to create a single database and configure a server-level firewall rule

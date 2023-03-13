@@ -1,23 +1,19 @@
 ---
+title: "Modify or Rename DML Triggers"
 description: "Modify or Rename DML Triggers"
-title: "Modify or Rename DML Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice:
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "renaming triggers"
   - "modifying triggers"
   - "DML triggers, modifying"
-ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify or Rename DML Triggers
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to modify or rename a DML trigger in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  

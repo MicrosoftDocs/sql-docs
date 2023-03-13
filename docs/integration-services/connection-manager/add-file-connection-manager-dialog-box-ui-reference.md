@@ -1,19 +1,16 @@
 ---
+title: "Add File Connection Manager Dialog Box UI Reference"
 description: "Add File Connection Manager Dialog Box UI Reference"
-title: "Add File Connection Manager Dialog Box UI Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.fileconnection.f1"
-helpviewer_keywords: 
-  - "Add File Connection Manager"
-ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.fileconnection.f1"
+helpviewer_keywords:
+  - "Add File Connection Manager"
 ---
 # Add File Connection Manager Dialog Box UI Reference
 

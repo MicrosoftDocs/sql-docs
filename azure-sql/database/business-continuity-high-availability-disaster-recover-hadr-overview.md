@@ -103,7 +103,7 @@ Use auto-failover groups if your application meets any of these criteria:
 
 You may choose to use a combination of database backups and active geo-replication depending upon your application requirements. For a discussion of design considerations for stand-alone databases and for elastic pools using these business continuity features, see [Design an application for cloud disaster recovery](designing-cloud-solutions-for-disaster-recovery.md) and [Elastic pool disaster recovery strategies](disaster-recovery-strategies-for-applications-with-elastic-pool.md).
 
-The following sections provide an overview of the steps to recover using either database backups or active geo-replication. For detailed steps including planning requirements, post recovery steps, and information about how to simulate an outage to perform a disaster recovery drill, see [Recover a database in SQL Database from an outage](disaster-recovery-guidance.md).
+The following sections provide an overview of the steps to recover using either database backups or active geo-replication. For detailed steps including planning requirements, post recovery steps, and information about how to simulate an outage to perform a disaster recovery drill, see [Azure SQL Database disaster recovery guidance](disaster-recovery-guidance.md).
 
 ### Prepare for an outage
 
@@ -124,7 +124,7 @@ If you are using active geo-replication or auto-failover groups as your recovery
 
 ### Perform a geo-restore
 
-If you are using the automated backups with geo-redundant storage (enabled by default), you can recover the database using [geo-restore](disaster-recovery-guidance.md#recover-using-geo-restore). Recovery usually takes place within 12 hours - with data loss of up to one hour determined by when the last log backup was taken and replicated. Until the recovery completes, the database is unable to record any transactions or respond to any queries. Note, geo-restore only restores the database to the last available point in time.
+If you are using the automated backups with geo-redundant storage (enabled by default), you can recover the database using [geo-restore](recovery-using-backups.md#geo-restore). Recovery usually takes place within 12 hours - with data loss of up to one hour determined by when the last log backup was taken and replicated. Until the recovery completes, the database is unable to record any transactions or respond to any queries. Note, geo-restore only restores the database to the last available point in time.
 
 > [!NOTE]
 > If the datacenter comes back online before you switch your application over to the recovered database, you can cancel the recovery.
@@ -135,7 +135,7 @@ After recovery from either recovery mechanism, you must perform the following ad
 
 - Redirect clients and client applications to the new server and restored database.
 - Ensure appropriate server-level IP firewall rules are in place for users to connect or use [database-level firewalls](firewall-configure.md#use-the-azure-portal-to-manage-server-level-ip-firewall-rules) to enable appropriate rules.
-- Ensure appropriate logins and master database level permissions are in place (or use [contained users](/sql/relational-databases/security/contained-database-users-making-your-database-portable)).
+- Ensure appropriate logins and `master` database level permissions are in place (or use [contained users](/sql/relational-databases/security/contained-database-users-making-your-database-portable)).
 - Configure auditing, as appropriate.
 - Configure alerts, as appropriate.
 
@@ -149,3 +149,5 @@ Sometimes an application must be taken offline because of planned maintenance su
 ## Next steps
 
 For a discussion of application design considerations for single databases and for elastic pools, see [Design an application for cloud disaster recovery](designing-cloud-solutions-for-disaster-recovery.md) and [Elastic pool disaster recovery strategies](disaster-recovery-strategies-for-applications-with-elastic-pool.md).
+
+Review the [Azure SQL Database disaster recovery guidance](disaster-recovery-guidance.md) and [Azure SQL Database high availability and disaster recovery checklist](high-availability-disaster-recovery-checklist.md).

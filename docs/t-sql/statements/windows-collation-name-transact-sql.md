@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The Windows collation name is composed of the collation designator and the comparison styles.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -223,10 +223,10 @@ The following table lists all Windows collations supported in [!INCLUDE[ssnovers
 |Yi (PRC)|Latin1_General_100_|Not available|
 |Yoruba (Nigeria)|Latin1_General_100_|Not available|
 |Zulu/isiZulu (South Africa)|Latin1_General_100_|Not available|
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Hindi|Hindi|
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Macedonian|Macedonian|
+|Deprecated, not available at server level in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later|Hindi|Hindi|
+|Deprecated, not available at server level in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
+|Deprecated, not available at server level in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|
+|Deprecated, not available at server level in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later|Macedonian|Macedonian|
 
 <sup>1</sup> Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
 

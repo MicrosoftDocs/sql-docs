@@ -1,20 +1,18 @@
 ---
+title: "Backup and Restore for Oracle Publishers"
 description: "Backup and Restore for Oracle Publishers"
-title: "Backup and Restore for Oracle Publishers | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "recovery [SQL Server replication], Oracle publishing"
   - "backups [SQL Server replication], Oracle publishing"
   - "Oracle publishing [SQL Server replication], backup and restore"
   - "restoring [SQL Server replication], Oracle publishing"
-ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Backup and Restore for Oracle Publishers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

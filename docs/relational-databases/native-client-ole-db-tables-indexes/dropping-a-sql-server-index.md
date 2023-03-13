@@ -1,23 +1,19 @@
 ---
+title: "Drop SQL Server index (Native Client OLE DB provider)"
 description: "Drop SQL Server index (Native Client OLE DB provider)"
-title: "Drop SQL Server index (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing indexes"
   - "deleting indexes"
   - "DropIndex function"
   - "dropping indexes"
   - "SQL Server Native Client OLE DB provider, indexes"
   - "indexes [OLE DB]"
-ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
-author: markingmyname
-ms.author: maghan
 ---
 # Dropping a SQL Server Native Client Index
 

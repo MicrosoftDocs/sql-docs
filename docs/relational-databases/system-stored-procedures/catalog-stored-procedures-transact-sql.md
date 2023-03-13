@@ -1,27 +1,27 @@
 ---
-description: "An index of catalog stored procedures in SQL Server Transact-SQL."
 title: "Catalog Stored Procedures (Transact-SQL)"
-ms.custom: ""
+description: "An index of catalog stored procedures in SQL Server Transact-SQL."
+author: markingmyname
+ms.author: maghan
 ms.date: "04/13/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC applications, catalog stored procedures"
   - "isolating ODBC applications from changes"
   - "ODBC data dictionary functions"
   - "system stored procedures [SQL Server], catalog"
   - "catalog system stored procedures [SQL Server]"
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
+
 # Catalog Stored Procedures (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that implement ODBC data dictionary functions and isolate ODBC applications from changes to underlying system tables.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that implement ODBC data dictionary functions and isolate ODBC applications from changes to underlying system tables.  
 
 :::row:::
     :::column:::
@@ -66,7 +66,6 @@ Stored procedures for certain platforms only as specified, including Azure Synap
 
 
 
-## See also  
- - [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+## See also
+
+- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)

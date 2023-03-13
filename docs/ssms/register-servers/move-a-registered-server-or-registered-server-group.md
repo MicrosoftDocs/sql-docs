@@ -1,21 +1,18 @@
 ---
-description: "Move a Registered Server or Registered Server Group"
 title: Move a Registered Server or Server Group
+description: "Move a Registered Server or Registered Server Group"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/07/2017
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "moving registered server or server group"
   - "Registered Servers [SQL Server], server groups"
   - "server groups [SQL Server]"
   - "Registered Servers [SQL Server], moving server or server group"
   - "groups [SQL Server], server"
-ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 03/07/2017
 ---
 
 # Move a Registered Server or Registered Server Group

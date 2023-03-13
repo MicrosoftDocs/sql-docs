@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Use read-only replicas to offload read-only query workloads
@@ -105,7 +105,7 @@ The following views are commonly used for replica monitoring and troubleshooting
 |[sys.dm_io_virtual_file_stats()](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql)| Provides storage IOPS, throughput, and latency statistics for all database files. |
 
 > [!NOTE]
-> The `sys.resource_stats` and `sys.elastic_pool_resource_stats` DMVs in the logical master database return resource utilization data of the primary replica.
+> The `sys.resource_stats` and `sys.elastic_pool_resource_stats` DMVs in the logical `master` database return resource utilization data of the primary replica.
 
 ### Monitoring read-only replicas with Extended Events
 

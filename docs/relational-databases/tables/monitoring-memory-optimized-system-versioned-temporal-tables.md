@@ -1,17 +1,13 @@
 ---
+title: "Monitoring Memory-Optimized System-Versioned Temporal Tables"
 description: "Monitoring Memory-Optimized System-Versioned Temporal Tables"
-title: "Monitoring Memory-Optimized System-Versioned Temporal Tables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/28/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: markingmyname
 ms.author: maghan
+ms.date: "03/28/2016"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-
 ---
 # Monitoring Memory-Optimized System-Versioned Temporal Tables
 

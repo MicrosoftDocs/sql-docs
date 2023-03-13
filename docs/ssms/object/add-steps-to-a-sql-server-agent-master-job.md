@@ -1,15 +1,12 @@
 ---
-description: "Add Steps to a SQL Server Agent Master Job"
 title: "Add Steps to a SQL Server Agent Master Job"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
+description: "Add Steps to a SQL Server Agent Master Job"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ---
 # Add Steps to a SQL Server Agent Master Job
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

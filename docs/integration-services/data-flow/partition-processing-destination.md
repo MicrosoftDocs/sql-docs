@@ -1,24 +1,21 @@
 ---
+title: "Partition Processing Destination"
 description: "Partition Processing Destination"
-title: "Partition Processing Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.partitionprocessingdest.f1"
   - "sql13.dts.designer.partprocessingtransformation.connection.f1"
   - "sql13.dts.designer.partprocessingtransformation.mapping.f1"
   - "sql13.dts.designer.partprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "partitions [Analysis Services], processing"
   - "Partition Processing destination [Integration Services]"
   - "destinations [Integration Services], Partition Processing"
-ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-author: chugugrace
-ms.author: chugu
 ---
 # Partition Processing Destination
 

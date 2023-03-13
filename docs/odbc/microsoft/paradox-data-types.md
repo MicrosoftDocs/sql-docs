@@ -1,22 +1,19 @@
 ---
+title: "Paradox Data Types"
 description: "Paradox Data Types"
-title: "Paradox Data Types | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], Paradox driver"
   - "desktop database drivers [ODBC], Paradox driver"
   - "Paradox data types [ODBC]"
   - "Jet-based ODBC drivers [ODBC], Paradox driver"
   - "data types [ODBC], Paradox driver"
   - "Paradox driver [ODBC], data types"
-ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Paradox Data Types
 The ODBC Paradox driver maps Paradox data types to ODBC SQL data types. The following table lists all Paradox data types and shows the ODBC SQL data types they are mapped to.  

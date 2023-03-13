@@ -1,16 +1,14 @@
 ---
 title: "Database Engine Tuning Advisor"
 description: Learn how to use Database Engine Tuning Advisor to troubleshoot, tune a large set of queries, analyze design changes, and manage storage space in SQL Server.
-ms.custom: ""
-ms.date: "05/11/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dta.general.f1"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "05/11/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dta.general.f1"
 ---
 # Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,20 @@
 ---
+title: "Initialize a Subscription"
 description: "Initialize a Subscription"
-title: "Initialize a Subscription | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "snapshot replication [SQL Server], initializing subscriptions"
   - "transactional replication, initializing subscriptions"
   - "initializing subscriptions [SQL Server replication]"
   - "subscriptions [SQL Server replication], initializing"
   - "initializing subscriptions [SQL Server replication], about initializing subscriptions"
   - "merge replication [SQL Server replication], initializing subscriptions"
-ms.assetid: d6013845-cb7a-4203-8e21-edce32f1d330
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Initialize a Subscription

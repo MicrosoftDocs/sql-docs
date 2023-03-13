@@ -1,17 +1,14 @@
 ---
-description: "Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option"
 title: "Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "WITHOUT_ARRAY_WRAPPER"
-ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
+description: "Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "WITHOUT_ARRAY_WRAPPER"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option

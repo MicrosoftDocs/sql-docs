@@ -1,19 +1,16 @@
 ---
+title: "CollectionAggregate (geometry Data Type)"
 description: "CollectionAggregate (geometry Data Type)"
-title: "CollectionAggregate (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CollectionAggregate method (geometry)"
-ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # CollectionAggregate (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

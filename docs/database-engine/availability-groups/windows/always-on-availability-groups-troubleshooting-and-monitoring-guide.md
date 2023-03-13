@@ -8,7 +8,6 @@ ms.date: 12/29/2022
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: reference
-ms.custom: seo-lt-2019
 ---
 # Monitor and troubleshoot availability groups
 

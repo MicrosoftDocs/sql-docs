@@ -1,19 +1,16 @@
 ---
+title: "Data Collector Functions  (Transact-SQL)"
 description: "Data Collector Functions  (Transact-SQL)"
-title: "Data Collector Functions  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data collector [SQL Server], functions"
-ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "data collector [SQL Server], functions"
+dev_langs:
+  - "TSQL"
 ---
 # Data Collector Functions  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

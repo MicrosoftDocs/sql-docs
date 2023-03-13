@@ -1,17 +1,14 @@
 ---
 title: "Manage Bookmarks"
-description: The Bookmarks window in a code editor enables you to create links to locations in code . Learn how to create, delete, activate, and disable bookmarks, and how to use them to navigate through your code.  
+description: The Bookmarks window in a code editor enables you to create links to locations in code . Learn how to create, delete, activate, and disable bookmarks, and how to use them to navigate through your code.
+author: markingmyname
+ms.author: maghan
+ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bookmarks [SQL Server Management Studio]"
-ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

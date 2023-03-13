@@ -8,7 +8,6 @@ ms.date: 12/16/2022
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "guide, thread and task architecture"
   - "thread and task architecture guide"

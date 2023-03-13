@@ -1,18 +1,15 @@
 ---
+title: "Limitations of Using Keyset-Driven Cursors"
 description: "Limitations of Using Keyset-Driven Cursors"
-title: "Limitations of Using Keyset-Driven Cursors | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC driver for Oracle [ODBC], cursors"
-  - "keyset-driven cursors [ODBC]"
-ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC driver for Oracle [ODBC], cursors"
+  - "keyset-driven cursors [ODBC]"
 ---
 # Limitations of Using Keyset-Driven Cursors
 > [!IMPORTANT]  

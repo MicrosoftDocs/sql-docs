@@ -1,26 +1,23 @@
 ---
+title: "Export Column Transformation"
 description: "Export Column Transformation"
-title: "Export Column Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.exportcolumntrans.f1"
   - "sql13.dts.designer.fileextractortransformation.columns.f1"
   - "sql13.dts.designer.fileextractortransformation.errorhandling.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "exporting data"
   - "append options [Integration Services]"
   - "Export Column transformation [Integration Services]"
   - "columns [Integration Services], exporting"
   - "inserting data"
   - "truncate options [Integration Services]"
-ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: chugugrace
-ms.author: chugu
 ---
 # Export Column Transformation
 

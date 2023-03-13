@@ -1,24 +1,21 @@
 ---
+title: "sys.sp_cdc_change_job (Transact-SQL)"
 description: "sys.sp_cdc_change_job (Transact-SQL)"
-title: "sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sp_cdc_change_job_TSQL"
   - "sys.sp_cdc_change_job"
   - "sp_cdc_change_job_TSQL"
   - "sp_cdc_change_job"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_cdc_change_job"
-ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

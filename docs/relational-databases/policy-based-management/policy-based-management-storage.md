@@ -1,17 +1,14 @@
 ---
+title: "Policy-Based Management Storage"
 description: "Policy-Based Management Storage"
-title: "Policy-Based Management Storage | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, storage"
-ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/09/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, storage"
 ---
 # Policy-Based Management Storage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

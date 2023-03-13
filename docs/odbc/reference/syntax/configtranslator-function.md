@@ -1,24 +1,19 @@
 ---
+title: "ConfigTranslator Function"
 description: "ConfigTranslator Function"
-title: "ConfigTranslator Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "ConfigTranslator"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "ConfigTranslator"
-helpviewer_keywords: 
-  - "ConfigTranslator [ODBC]"
-ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "ConfigTranslator"
+helpviewer_keywords:
+  - "ConfigTranslator [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "ConfigTranslator"
+apitype: "dllExport"
 ---
 # ConfigTranslator Function
 **Conformance**  

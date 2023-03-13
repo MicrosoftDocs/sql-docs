@@ -1,12 +1,13 @@
 ---
-description: "Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)"
 title: Conventions for Combining Search Conditions in the Criteria Pane
-ms.custom: seo-lt-2019
+description: "Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search conditions [SQL Server], combining"
   - "precedence [SQL Server], Criteria pane"
   - "search criteria [SQL Server], combining conditions"
@@ -15,11 +16,6 @@ helpviewer_keywords:
   - "OR operator"
   - "AND, Criteria pane"
   - "multiple AND clauses"
-ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

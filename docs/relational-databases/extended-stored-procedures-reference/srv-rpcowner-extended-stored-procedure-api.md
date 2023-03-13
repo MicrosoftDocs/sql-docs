@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_rpcowner
 apitype: "DLLExport"
-ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 ---
 # srv_rpcowner (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

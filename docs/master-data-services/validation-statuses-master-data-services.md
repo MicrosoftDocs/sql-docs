@@ -1,15 +1,12 @@
 ---
-description: "Validation Statuses (Master Data Services)"
 title: Validation Statuses
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
+description: "Validation Statuses (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Validation Statuses (Master Data Services)
 

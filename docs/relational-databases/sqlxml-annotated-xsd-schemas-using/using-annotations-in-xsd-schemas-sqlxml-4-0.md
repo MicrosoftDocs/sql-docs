@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "annotated XSD schemas, about annotated XSD schemas"
   - "annotations [SQLXML]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "relationships [SQLXML], hierarchical relationships"
   - "hierarchical relationships [SQLXML]"
   - "mapping schema [SQLXML], scenarios for using"
-ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Annotations in XSD Schemas (SQLXML 4.0)

@@ -1,17 +1,16 @@
 ---
 title: "TYPE Directive in FOR XML Queries"
 description: Learn how to use the TYPE directive with the FOR XML clause to request that the result of a query be returned as XML data.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML clause, TYPE directive"
   - "TYPE directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # TYPE directive in FOR XML queries
 

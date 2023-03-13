@@ -1,22 +1,19 @@
 ---
+title: "sp_helparticlecolumns (Transact-SQL)"
 description: "sp_helparticlecolumns (Transact-SQL)"
-title: "sp_helparticlecolumns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helparticlecolumns"
-  - "sp_helparticlecolumns_TSQL"
-helpviewer_keywords: 
-  - "sp_helparticlecolumns"
-ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helparticlecolumns"
+  - "sp_helparticlecolumns_TSQL"
+helpviewer_keywords:
+  - "sp_helparticlecolumns"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

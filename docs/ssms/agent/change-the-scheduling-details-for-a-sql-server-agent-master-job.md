@@ -1,15 +1,12 @@
 ---
-description: "Change the Scheduling Details for a SQL Server Agent Master Job"
 title: Change the Scheduling Details for a Master Job
+description: "Change the Scheduling Details for a SQL Server Agent Master Job"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

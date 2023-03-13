@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_17832"
 description: "MSSQLSERVER_17832"
-title: "MSSQLSERVER_17832 | Microsoft Docs"
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "04/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "17828 (Database Engine error)"
   - "maxtokensize"
   - "17832 (Database Engine error)"
   - "login packet (bad)"
-ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
-author: MashaMSFT
-ms.author: mathoma
 ---
 # MSSQLSERVER_17832
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

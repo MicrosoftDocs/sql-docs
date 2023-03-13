@@ -1,24 +1,19 @@
 ---
+title: "SQLGetData Function"
 description: "SQLGetData Function"
-title: "SQLGetData Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetData"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetData"
-helpviewer_keywords: 
-  - "SQLGetData function [ODBC]"
-ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetData"
+helpviewer_keywords:
+  - "SQLGetData function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetData"
+apitype: "dllExport"
 ---
 # SQLGetData Function
 **Conformance**  

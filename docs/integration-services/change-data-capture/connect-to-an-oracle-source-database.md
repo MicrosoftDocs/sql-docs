@@ -1,17 +1,14 @@
 ---
+title: "Connect to an Oracle Source Database"
 description: "Connect to an Oracle Source Database"
-title: "Connect to an Oracle Source Database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "oraDb"
-ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "oraDb"
 ---
 # Connect to an Oracle Source Database
 

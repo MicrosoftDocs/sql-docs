@@ -1,19 +1,16 @@
 ---
+title: "TRIM (SSIS Expression)"
 description: "TRIM (SSIS Expression)"
-title: "TRIM (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "leading blanks"
   - "TRIM function"
   - "trailing blanks"
-ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: chugugrace
-ms.author: chugu
 ---
 # TRIM (SSIS Expression)
 

@@ -1,18 +1,15 @@
 ---
+title: "FILESTREAM Support (OLE DB)"
 description: "FILESTREAM Support (OLE DB)"
-title: "FILESTREAM Support (OLE DB) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "OLE DB [FILESTREAM support]"
-  - "FILESTREAM [SQL Server], OLE DB"
-ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "OLE DB [FILESTREAM support]"
+  - "FILESTREAM [SQL Server], OLE DB"
 ---
 # FILESTREAM Support (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

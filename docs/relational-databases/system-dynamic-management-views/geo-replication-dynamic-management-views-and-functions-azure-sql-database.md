@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "geo-replication [Azure SQL Database]"
 dev_langs:
   - "TSQL"
-ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)

@@ -1,10 +1,13 @@
 ---
-description: "Properties Window F1 Help (Management Studio)"
 title: "Properties Window F1 Help (Management Studio)"
+description: "Properties Window F1 Help (Management Studio)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-f1_keywords: 
+f1_keywords:
   - ".SPID"
   - ".ExecutionTime"
   - "sql13.swb.propertywindow.f1"
@@ -13,16 +16,10 @@ f1_keywords:
   - ".RowsReturned"
   - ".Server"
   - ".Version"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], Help"
   - "Properties window [SQL Server Management Studio]"
   - "SQL Server Management Studio Help [SQL Server], properties window"
-ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-author: markingmyname
-ms.author: maghan 
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Properties Window F1 Help (Management Studio)

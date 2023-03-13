@@ -1,18 +1,15 @@
 ---
+title: "Creating the Server Connection Files (SybaseToSQL)"
 description: "Creating the Server Connection Files (SybaseToSQL)"
-title: "Creating the Server Connection Files (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sybase Console,Creating Server Connection Files"
   - "Sybase Console,Server Connection File Validation"
-ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Creating the Server Connection Files (SybaseToSQL)
 Server information can be specified either in the servers section of the script file or in a separate server connection file. The command line parameter for the server connection file is, `-c <serverconnectionfile>`. If the same server id is present in both the script file and server connection file, then the server definition in the script file is considered.  

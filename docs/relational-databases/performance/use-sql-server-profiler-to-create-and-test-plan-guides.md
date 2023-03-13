@@ -1,14 +1,14 @@
 ---
 title: "Create and test plan guides"
-titleSuffix:  SQL Server Profiler
+titleSuffix: SQL Server Profiler
 description: Use SQL Server Profiler to capture exact query text for use in the statement_text argument of the sp_create_plan_guide stored procedure in SQL Server.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "checking plan guides"
   - "plan guides [SQL Server], testing"
   - "plan guides [SQL Server], SQL Server Profiler"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "verifying plan guides"
   - "Profiler [SQL Server Profiler], plan guides"
   - "query-to-plan guide matching [SQL Server]"
-ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Use SQL Server Profiler to create and test plan guides
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

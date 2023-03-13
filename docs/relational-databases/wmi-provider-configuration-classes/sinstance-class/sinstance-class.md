@@ -1,23 +1,16 @@
 ---
-description: "SInstance Class"
 title: "SInstance Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "SInstance Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SInstance class"
-ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
+description: "SInstance Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SInstance class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SInstance Class"
+apitype: "MOFDef"
 ---
 # SInstance Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

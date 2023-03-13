@@ -1,16 +1,15 @@
 ---
 title: "Example: Specifying the ELEMENTXSINIL Directive"
-description: Learn how to specify the ELEMENTXSINIL directive in SQL to generate XML elements for NULL values where the xsi:nil attribute is true.
-ms.custom: ""
+description: "Learn how to specify the ELEMENTXSINIL directive in SQL to generate XML elements for NULL values where the xsi:nil attribute is true."
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "ELEMENTXSINIL directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Specify the ELEMENTXSINIL directive
 

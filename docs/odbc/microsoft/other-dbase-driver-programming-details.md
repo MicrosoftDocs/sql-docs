@@ -1,19 +1,16 @@
 ---
+title: "Other dBASE Driver Programming Details"
 description: "Other dBASE Driver Programming Details"
-title: "Other dBASE Driver Programming Details | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], DBasedriver"
   - "desktop database drivers [ODBC], DBasedriver"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
-ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Other dBASE Driver Programming Details
 > [!NOTE]  

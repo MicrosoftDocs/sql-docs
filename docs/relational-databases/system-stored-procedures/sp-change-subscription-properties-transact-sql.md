@@ -1,22 +1,19 @@
 ---
+title: "sp_change_subscription_properties (Transact-SQL)"
 description: "sp_change_subscription_properties (Transact-SQL)"
-title: "sp_change_subscription_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_change_subscription_properties_TSQL"
-  - "sp_change_subscription_properties"
-helpviewer_keywords: 
-  - "sp_change_subscription_properties"
-ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_subscription_properties_TSQL"
+  - "sp_change_subscription_properties"
+helpviewer_keywords:
+  - "sp_change_subscription_properties"
+dev_langs:
+  - "TSQL"
 ---
 # sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

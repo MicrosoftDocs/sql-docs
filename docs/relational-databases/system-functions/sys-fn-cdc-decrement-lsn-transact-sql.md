@@ -1,24 +1,22 @@
 ---
-description: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
 title: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
-ms.custom: ""
+description: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/29/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn_TSQL"
   - "sys.fn_cdc_decrement_lsn"
   - "fn_cdc_decrement_lsn_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

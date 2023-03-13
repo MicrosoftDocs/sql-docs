@@ -3,12 +3,10 @@ title: "Transactions (Transact-SQL)"
 description: "Transactions (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "09/25/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "Transactions"
   - "Transactions_TSQL"

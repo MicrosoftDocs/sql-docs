@@ -1,22 +1,19 @@
 ---
+title: "STIsClosed (geography Data Type)"
 description: "STIsClosed (geography Data Type)"
-title: "STIsClosed (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STIsClosed (geography Data Type)"
   - "STIsClosed_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STIsClosed method"
-ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STIsClosed (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,19 +1,17 @@
 ---
 title: "Group changes to related rows with logical records"
-description: Learn how to make changes to related rows as a unit with Merge Replication in SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to make changes to related rows as a unit with Merge Replication in SQL Server.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication logical records [SQL Server replication]"
   - "articles [SQL Server replication], logical records"
   - "logical records [SQL Server replication]"
-ms.assetid: ad76799c-4486-4b98-9705-005433041321
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Group Changes to Related Rows with Logical Records
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

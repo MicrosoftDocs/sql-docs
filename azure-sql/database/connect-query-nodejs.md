@@ -10,11 +10,11 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "seo-javascript-september2019"
-  - "seo-javascript-october2019"
-  - "sqldbrb=2"
-  - "devx-track-js"
-  - "mode-api"
+  - seo-javascript-september2019
+  - seo-javascript-october2019
+  - sqldbrb=2
+  - devx-track-js
+  - mode-api
 ms.devlang: javascript
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

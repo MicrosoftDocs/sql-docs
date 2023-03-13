@@ -1,22 +1,19 @@
 ---
+title: "sp_cycle_agent_errorlog (Transact-SQL)"
 description: "sp_cycle_agent_errorlog (Transact-SQL)"
-title: "sp_cycle_agent_errorlog (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cycle_agent_errorlog"
-  - "sp_cycle_agent_errorlog_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cycle_agent_errorlog"
-ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cycle_agent_errorlog"
+  - "sp_cycle_agent_errorlog_TSQL"
+helpviewer_keywords:
+  - "sp_cycle_agent_errorlog"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

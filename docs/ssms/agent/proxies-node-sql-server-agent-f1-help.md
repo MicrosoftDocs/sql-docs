@@ -1,15 +1,12 @@
 ---
-description: "Proxies Node (SQL Server Agent F1 Help)"
 title: "Proxies Node (SQL Server Agent F1 Help)"
-ms.custom: seo-lt-2019
+description: "Proxies Node (SQL Server Agent F1 Help)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 1f911829-8c73-4542-b75e-6273f0dd52bf
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Proxies Node (SQL Server Agent F1 Help)

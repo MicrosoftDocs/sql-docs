@@ -1,17 +1,14 @@
 ---
+title: "Data Streaming Destination"
 description: "Data Streaming Destination"
-title: "Data Streaming Destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1"
-ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1"
 ---
 # Data Streaming Destination
 

@@ -1,18 +1,15 @@
 ---
-title: "Online Restore (SQL Server) | Microsoft Docs"
-description: In SQL Server Enterprise edition, in some cases, you can restore data by file, page, or piecemeal restore while a database remains online. 
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "online restores [SQL Server]"
-  - "online restores [SQL Server], about online restores"
-ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
+title: "Online Restore (SQL Server)"
+description: In SQL Server Enterprise edition, in some cases, you can restore data by file, page, or piecemeal restore while a database remains online.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+helpviewer_keywords:
+  - "online restores [SQL Server]"
+  - "online restores [SQL Server], about online restores"
 ---
 # Online Restore (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

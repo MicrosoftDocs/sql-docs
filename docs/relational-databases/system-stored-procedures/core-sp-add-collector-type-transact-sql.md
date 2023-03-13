@@ -1,25 +1,22 @@
 ---
+title: "core.sp_add_collector_type (Transact-SQL)"
 description: "core.sp_add_collector_type (Transact-SQL)"
-title: "core.sp_add_collector_type (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_add_collector_type"
   - "sp_add_collector_type_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "core.sp_add_collector_type stored procedure"
   - "management data warehouse, data collector stored procedures"
   - "sp_add_collector_type"
   - "data collector [SQL Server], stored procedures"
-ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

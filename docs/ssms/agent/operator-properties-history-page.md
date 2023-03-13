@@ -1,17 +1,14 @@
 ---
-description: "Operator Properties (History Page)"
 title: Operator Properties (History Page)
+description: "Operator Properties (History Page)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.operator.history.f1"
-ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

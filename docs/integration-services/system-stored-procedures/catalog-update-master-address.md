@@ -1,14 +1,12 @@
 ---
+title: "catalog.update_master_address (SSISDB Database)"
 description: "catalog.update_master_address (SSISDB Database)"
-title: "catalog.update_master_address (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
 author: "haoqian"
 ms.author: "haoqian"
+ms.date: "07/18/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 monikerRange: ">= sql-server-2017"
 ---
 # catalog.update_master_address (SSISDB Database)

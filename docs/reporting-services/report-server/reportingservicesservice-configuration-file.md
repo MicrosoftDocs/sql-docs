@@ -1,19 +1,16 @@
 ---
-title: "ReportingServicesService Configuration File | Microsoft Docs"
+title: "ReportingServicesService Configuration File"
 description: Learn about the file location, editing guidelines, and configuration settings of ReportingServicesService.exe.config used for tracing in Reporting Services.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2019
 ms.service: reporting-services
 ms.subservice: report-server
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "traces [Reporting Services]"
   - "Report Server Windows service, ReportingServicesService configuration file"
   - "ReportingServicesService configuration file"
-ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-author: maggiesMSFT
-ms.author: maggies 
 ---
 # ReportingServicesService Configuration File
 

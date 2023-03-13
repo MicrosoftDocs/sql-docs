@@ -1,20 +1,17 @@
 ---
+title: "Driver Manager Connection Pooling"
 description: "Driver Manager Connection Pooling"
-title: "Driver Manager Connection Pooling | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connection pooling [ODBC]"
   - "pooled connections [ODBC]"
   - "connecting to driver [ODBC], connection pooling"
   - "connecting to data source [ODBC], connection pooling"
-ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Driver Manager Connection Pooling
 Connection pooling enables an application to use a connection from a pool of connections that do not need to be re-established for each use. Once a connection has been created and placed in a pool, an application can reuse that connection without performing the complete connection process.  

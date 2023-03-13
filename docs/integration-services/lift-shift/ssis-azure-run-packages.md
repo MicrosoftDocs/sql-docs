@@ -1,14 +1,13 @@
 ---
-title: "Run SSIS packages in Azure | Microsoft Docs"
+title: "Run SSIS packages in Azure"
 description: "Provides an overview of the available methods for running SSIS packages deployed to Azure SQL Database."
-ms.date: "05/29/2018"
-ms.topic: conceptual
-ms.service: sql
-ms.custom: ""
-ms.subservice: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
+ms.date: "05/29/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Run SQL Server Integration Services (SSIS) packages deployed in Azure
 

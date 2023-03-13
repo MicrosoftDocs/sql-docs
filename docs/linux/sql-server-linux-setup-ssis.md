@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Integration Servic
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan, randolphwest
-ms.date: 01/17/2023
+ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual

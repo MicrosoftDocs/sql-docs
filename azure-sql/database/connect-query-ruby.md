@@ -9,9 +9,9 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "sqldbrb=2"
-  - "mode-other"
-  - "kr2b-contr-experiment"
+  - sqldbrb=2
+  - mode-other
+  - kr2b-contr-experiment
 ms.devlang: ruby
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

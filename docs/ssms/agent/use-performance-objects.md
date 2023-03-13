@@ -1,12 +1,13 @@
 ---
-description: "Use Performance Objects"
 title: "Use Performance Objects"
-ms.custom: seo-lt-2019
+description: "Use Performance Objects"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, monitoring"
   - "SQL Server Agent service, monitoring"
   - "SQL Server Agent service, performance objects"
@@ -16,10 +17,6 @@ helpviewer_keywords:
   - "monitoring [SQL Server Agent]"
   - "performance counters [SQL Server], SQL Server Agent"
   - "counters [SQL Server], SQL Server Agent"
-ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Use Performance Objects

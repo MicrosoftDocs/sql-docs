@@ -8,7 +8,6 @@ ms.date: 01/16/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Configure usage & diagnostic data collection for SQL Server on Linux
 

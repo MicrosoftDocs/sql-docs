@@ -1,15 +1,12 @@
 ---
+title: "Data Migration Settings (DB2ToSQL)"
 description: "Data Migration Settings (DB2ToSQL)"
-title: "Data Migration Settings (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Data Migration Settings (DB2ToSQL)
   

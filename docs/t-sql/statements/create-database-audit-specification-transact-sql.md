@@ -8,7 +8,6 @@ ms.date: "03/23/2022"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 f1_keywords:
   - "CREATE DATABASE AUDIT"
   - "DATABASE_AUDIT_SPECIFICATION_TSQL"

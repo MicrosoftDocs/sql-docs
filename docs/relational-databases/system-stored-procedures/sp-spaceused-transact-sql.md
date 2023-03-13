@@ -1,22 +1,20 @@
 ---
-description: "sp_spaceused displays the number of rows, disk space reserved, and disk space used by objects in the database."
 title: "sp_spaceused (Transact-SQL)"
-ms.custom: ""
-ms.date: 07/25/2022
-ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_spaceused_TSQL"
-  - "sp_spaceused"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_spaceused"
-ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
+description: "sp_spaceused displays the number of rows, disk space reserved, and disk space used by objects in the database."
 author: markingmyname
 ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_spaceused_TSQL"
+  - "sp_spaceused"
+helpviewer_keywords:
+  - "sp_spaceused"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_spaceused (Transact-SQL)

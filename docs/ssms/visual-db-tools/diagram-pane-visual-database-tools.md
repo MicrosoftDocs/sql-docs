@@ -1,21 +1,17 @@
 ---
-description: "Diagram Pane (Visual Database Tools)"
 title: Diagram Pane
-ms.custom: seo-lt-2019
+description: "Diagram Pane (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Designer [SQL Server], Diagram pane"
   - "View Designer, Diagram pane"
   - "joins [SQL Server], Query and View Designer"
   - "Diagram pane [Visual Database Tools]"
-ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Diagram Pane (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

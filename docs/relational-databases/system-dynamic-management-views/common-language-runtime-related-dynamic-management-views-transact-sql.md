@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], common language runtime"
 dev_langs:
   - "TSQL"
-ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
 ---
 # Common Language Runtime Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,17 @@
 ---
+title: "Publish Data over the Internet Using VPN"
 description: "Publish Data over the Internet Using VPN"
-title: "Publish Data over the Internet Using VPN | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "VPNs [SQL Server replication]"
   - "Web publishing [SQL Server replication], VPNs"
   - "Internet [SQL Server replication], VPNs"
-ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Publish Data over the Internet Using VPN
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

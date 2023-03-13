@@ -1,12 +1,11 @@
 ---
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 03/18/2021
-ms.topic: include
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom:
-  - intro-installation
+ms.date: 03/18/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: include
+ms.custom: intro-installation
 ---
 + RExtension requires GLIBCXX_3.4.20. Make sure the version of **libstdc++.so.6** on your Red Hat Enterprise Linux (RHEL) installation provides this.
 

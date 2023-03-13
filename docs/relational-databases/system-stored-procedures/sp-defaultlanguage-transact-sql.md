@@ -1,22 +1,19 @@
 ---
+title: "sp_defaultlanguage (Transact-SQL)"
 description: "sp_defaultlanguage (Transact-SQL)"
-title: "sp_defaultlanguage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_defaultlanguage"
-  - "sp_defaultlanguage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_defaultlanguage"
-ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_defaultlanguage"
+  - "sp_defaultlanguage_TSQL"
+helpviewer_keywords:
+  - "sp_defaultlanguage"
+dev_langs:
+  - "TSQL"
 ---
 # sp_defaultlanguage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

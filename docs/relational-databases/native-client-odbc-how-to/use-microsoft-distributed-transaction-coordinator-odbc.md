@@ -1,17 +1,14 @@
 ---
-description: "Use Microsoft Distributed Transaction Coordinator (ODBC)"
 title: "Distributed Transaction Coordinator (ODBC)"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "MS DTC, using"
-ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
+description: "Use Microsoft Distributed Transaction Coordinator (ODBC)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "MS DTC, using"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)

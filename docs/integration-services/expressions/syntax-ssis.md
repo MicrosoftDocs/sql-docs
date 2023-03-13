@@ -1,18 +1,15 @@
 ---
+title: "Syntax (SSIS)"
 description: "Syntax (SSIS)"
-title: "Syntax (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "expressions [Integration Services], syntax"
-  - "syntax [Integration Services]"
-ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "expressions [Integration Services], syntax"
+  - "syntax [Integration Services]"
 ---
 # Syntax (SSIS)
 

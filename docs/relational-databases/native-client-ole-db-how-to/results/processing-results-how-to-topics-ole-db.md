@@ -1,17 +1,14 @@
 ---
-description: "Processing Results How-to Topics (Native Client OLE DB provider)"
 title: Processing results how-to topics (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "OLE DB, processing results"
-ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
+description: "Processing Results How-to Topics (Native Client OLE DB provider)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "OLE DB, processing results"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results How-to Topics (Native Client OLE DB provider)

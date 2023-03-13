@@ -1,18 +1,16 @@
 ---
 title: "Modify Columns (Database Engine)"
 description: "Modify Columns (Database Engine)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "10/21/2021"
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying data types"
   - "column data types [SQL Server]"
   - "data types [SQL Server], columns"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: FY22Q2Fresh
-ms.reviewer: ""
-ms.date: "10/21/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Columns (Database Engine)

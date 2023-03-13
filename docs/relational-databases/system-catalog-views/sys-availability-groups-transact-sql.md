@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.availability_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 ---
 # sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

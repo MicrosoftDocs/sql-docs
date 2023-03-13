@@ -1,22 +1,18 @@
 ---
-description: "Understand Database Diagram Ownership (Visual Database Tools)"
 title: Understand Database Diagram Ownership
-ms.custom: seo-lt-2019
+description: "Understand Database Diagram Ownership (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.diagnostic.CannotOpenWithInvalidOwner"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagrams [SQL Server], ownership"
   - "database diagrams [SQL Server], ownership"
   - "owners [SQL Server], database diagrams"
-ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 
 # Understand Database Diagram Ownership (Visual Database Tools)

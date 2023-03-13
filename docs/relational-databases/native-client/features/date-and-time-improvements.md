@@ -1,15 +1,12 @@
 ---
+title: "Date and Time Improvements"
 description: "SQL Server Native Client Date and Time Improvements"
-title: "Date and Time Improvements | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.reviewer: ""
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
-ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Date and Time Improvements

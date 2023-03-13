@@ -1,18 +1,15 @@
 ---
+title: "Package Properties Dialog Box"
 description: "Package Properties Dialog Box"
-title: "Package Properties Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.ssms.ispackageprop.general.f1"
-  - "sql13.ssis.ssms.packageproperties.f1"
-ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
+ms.date: "08/26/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.ssms.ispackageprop.general.f1"
+  - "sql13.ssis.ssms.packageproperties.f1"
 ---
 # Package Properties Dialog Box
 

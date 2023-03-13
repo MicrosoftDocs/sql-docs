@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_21871"
 description: "MSSQLSERVER_21871"
-title: "MSSQLSERVER_21871 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "21871 (Database Engine error)"
-ms.assetid: d3215378-9282-444f-a18b-00b96fd0133d
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "21871 (Database Engine error)"
 ---
 # MSSQLSERVER_21871
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

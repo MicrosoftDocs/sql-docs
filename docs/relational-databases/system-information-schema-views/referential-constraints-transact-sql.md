@@ -1,23 +1,20 @@
 ---
+title: "REFERENTIAL_CONSTRAINTS (Transact-SQL)"
 description: "REFERENTIAL_CONSTRAINTS (Transact-SQL)"
-title: "REFERENTIAL_CONSTRAINTS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "REFERENTIAL_CONSTRAINTS"
-  - "REFERENTIAL_CONSTRAINTS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS view"
-  - "REFERENTIAL_CONSTRAINTS view"
-ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "REFERENTIAL_CONSTRAINTS"
+  - "REFERENTIAL_CONSTRAINTS_TSQL"
+helpviewer_keywords:
+  - "INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS view"
+  - "REFERENTIAL_CONSTRAINTS view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REFERENTIAL_CONSTRAINTS (Transact-SQL)

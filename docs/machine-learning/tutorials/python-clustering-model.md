@@ -2,15 +2,13 @@
 title: "Python tutorial: Categorize customers"
 titleSuffix: SQL machine learning
 description: In this four-part tutorial series, you'll  cluster customers, using K-Means, in a database using Python with SQL machine learning.
-ms.service: sql
-ms.subservice: machine-learning
-ms.devlang: python
-ms.date: 05/26/2020
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
-ms.custom: seo-lt-2019
+ms.date: 05/26/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Python tutorial: Categorizing customers using k-means clustering with SQL machine learning

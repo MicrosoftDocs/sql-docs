@@ -1,20 +1,18 @@
 ---
-title: "Specify Synchronization Schedules | Microsoft Docs"
+title: "Specify Synchronization Schedules"
 description: Learn how to specify synchronization schedules in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [SQL Server replication], synchronizing"
   - "scheduling synchronization [SQL Server replication]"
   - "synchronization [SQL Server replication], schedules"
   - "replication [SQL Server], synchronization"
-ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Specify Synchronization Schedules

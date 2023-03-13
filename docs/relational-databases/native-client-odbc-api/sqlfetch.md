@@ -1,17 +1,14 @@
 ---
+title: "SQLFetch"
 description: "SQLFetch"
-title: "SQLFetch | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQLFetch function"
-ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 author: markingmyname
 ms.author: maghan
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQLFetch function"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLFetch

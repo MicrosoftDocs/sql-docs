@@ -8,7 +8,6 @@ ms.date: 10/26/2018
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # Configure PolyBase Hadoop security
 

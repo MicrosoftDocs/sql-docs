@@ -1,22 +1,19 @@
 ---
+title: "sp_enumcustomresolvers (Transact-SQL)"
 description: "sp_enumcustomresolvers (Transact-SQL)"
-title: "sp_enumcustomresolvers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_enumcustomresolvers"
-  - "sp_enumcustomresolvers_TSQL"
-helpviewer_keywords: 
-  - "sp_enumcustomresolvers"
-ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_enumcustomresolvers"
+  - "sp_enumcustomresolvers_TSQL"
+helpviewer_keywords:
+  - "sp_enumcustomresolvers"
+dev_langs:
+  - "TSQL"
 ---
 # sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

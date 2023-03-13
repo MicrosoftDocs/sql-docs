@@ -1,15 +1,12 @@
 ---
-title: "Linking multiple data regions to the same dataset in a paginated report | Microsoft Docs"
+title: "Linking multiple data regions to the same dataset in a paginated report"
 description: Find out how to add multiple data regions to a paginated report to provide different views of data from the same report dataset in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Linking multiple data regions to the same dataset in a paginated report (Report Builder)

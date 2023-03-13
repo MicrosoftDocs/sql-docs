@@ -1,18 +1,15 @@
 ---
 title: "Client Protocols - Shared Memory Properties (Protocol Tab)"
 description: Turn the shared memory protocol on or off by using the Protocol tab of the Shared Memory Properties dialog box in Microsoft SQL Server Configuration Manager.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "shared memory [SQL Server]"
-  - "client protocols [SQL Server]"
-ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+helpviewer_keywords:
+  - "shared memory [SQL Server]"
+  - "client protocols [SQL Server]"
 monikerRange: ">=sql-server-2016"
 ---
 # Client Protocols - Shared Memory Properties (Protocol Tab)

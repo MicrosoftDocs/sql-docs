@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_17803"
 description: "MSSQLSERVER_17803"
-title: "MSSQLSERVER_17803 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "17803 (Database Engine error)"
-ms.assetid: 28591a19-258d-4891-b78a-4686789bb2d7
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "17803 (Database Engine error)"
 ---
 # MSSQLSERVER_17803
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

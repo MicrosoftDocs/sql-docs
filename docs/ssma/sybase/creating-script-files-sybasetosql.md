@@ -1,20 +1,17 @@
 ---
+title: "Creating Script Files (SybaseToSQL)"
 description: "Creating Script Files (SybaseToSQL)"
-title: "Creating Script Files (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sybase Console,Configuring Settings"
   - "Sybase Console,Script Commands"
   - "Sybase Console,Script File Validation"
   - "Sybase Console,Server Connection Parameters"
-ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Creating Script Files (SybaseToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  

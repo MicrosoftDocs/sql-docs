@@ -1,17 +1,14 @@
 ---
+title: "Save and Run Package (SQL Server Import and Export Wizard)"
 description: "Save and Run Package (SQL Server Import and Export Wizard)"
-title: "Save and Run Package (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.saveschedule.f1"
-ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
+ms.date: "02/16/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.saveschedule.f1"
 ---
 # Save and Run Package (SQL Server Import and Export Wizard)
 

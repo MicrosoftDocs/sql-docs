@@ -1,15 +1,12 @@
 ---
-title: Compare Options for Storing Blobs (SQL Server) | Microsoft Docs
+title: Compare Options for Storing Blobs (SQL Server)
 description: SQL Server can store binary large object (blob) data used by Windows applications. Compare options in this relational database for storing unstructured data.
-ms.custom: ""
-ms.date: 03/04/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: filestream
-ms.topic: conceptual
-ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 03/04/2019
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
 ---
 # Compare Options for Storing Blobs (SQL Server)
 

@@ -1,21 +1,16 @@
 ---
-description: "AdvancedProperties Property (SqlService Class)"
 title: "AdvancedProperties Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "AdvancedProperties Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "AdvancedProperties property"
-ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
+description: "AdvancedProperties Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "AdvancedProperties property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "AdvancedProperties Property (SqlService Class)"
 ---
 # AdvancedProperties Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

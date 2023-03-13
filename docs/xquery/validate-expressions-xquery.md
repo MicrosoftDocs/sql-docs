@@ -1,20 +1,17 @@
 ---
-title: "Validate Expressions (XQuery) | Microsoft Docs"
+title: "Validate Expressions (XQuery)"
 description: Learn about the validate expression in XQuery.
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "expressions [XQuery], validate"
-  - "validate expressions [XQuery]"
-ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "expressions [XQuery], validate"
+  - "validate expressions [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Validate Expressions (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

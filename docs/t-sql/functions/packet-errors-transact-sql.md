@@ -3,12 +3,10 @@ title: "@@PACKET_ERRORS (Transact-SQL)"
 description: "&#x40;&#x40;PACKET_ERRORS (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "09/18/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@PACKET_ERRORS"
   - "@@PACKET_ERRORS_TSQL"

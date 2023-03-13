@@ -1,16 +1,14 @@
 ---
 title: "SQL Server, LogPool FreePool object"
-description: Learn about the SQLServer:LogPool FreePool performance object, wich provides counters for statistics for the free pool inside the Log Pool.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:LogPool FreePool"
+description: "Learn about the SQLServer:LogPool FreePool performance object, wich provides counters for statistics for the free pool inside the Log Pool."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:LogPool FreePool"
 ---
 # SQL Server, LogPool FreePool object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

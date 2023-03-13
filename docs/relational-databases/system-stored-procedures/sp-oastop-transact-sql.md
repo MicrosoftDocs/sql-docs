@@ -1,22 +1,19 @@
 ---
+title: "sp_OAStop (Transact-SQL)"
 description: "sp_OAStop (Transact-SQL)"
-title: "sp_OAStop (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_OAStop"
-  - "sp_OAStop_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_OAStop"
-ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_OAStop"
+  - "sp_OAStop_TSQL"
+helpviewer_keywords:
+  - "sp_OAStop"
+dev_langs:
+  - "TSQL"
 ---
 # sp_OAStop (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "Incorporate a Data Profiling Task in Package Workflow"
 description: "Incorporate a Data Profiling Task in Package Workflow"
-title: "Incorporate a Data Profiling Task in Package Workflow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Data Profiling task [Integration Services], using output in workflow"
-ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Profiling task [Integration Services], using output in workflow"
 ---
 # Incorporate a Data Profiling Task in Package Workflow
 

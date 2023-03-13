@@ -1,20 +1,16 @@
 ---
+title: "Value for Extended Property Dialog Box"
 description: "Value for Extended Property Dialog Box"
-title: "Value for Extended Property Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.common.value.f1"
-  - "sql13.swb.extendedpropertiesvalue.f1"
-helpviewer_keywords: 
-  - "Value for Extended Property dialog box"
-ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/01/2017"
+ms.service: sql
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.common.value.f1"
+  - "sql13.swb.extendedpropertiesvalue.f1"
+helpviewer_keywords:
+  - "Value for Extended Property dialog box"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Value for Extended Property Dialog Box

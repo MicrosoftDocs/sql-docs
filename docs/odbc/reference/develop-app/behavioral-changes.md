@@ -1,19 +1,16 @@
 ---
+title: "Behavioral Changes"
 description: "Behavioral Changes"
-title: "Behavioral Changes | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backward compatibility [ODBC], behavioral changes"
   - "behavioral changes [ODBC]"
   - "compatibility [ODBC], behavioral changes"
-ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Behavioral Changes
 Behavioral changes are those changes for which the *syntax* of the interface remains the same, but the *semantics* have changed. For these changes, functionality used in ODBC 2.*x* behaves differently than the same functionality in ODBC 3.*x*.  

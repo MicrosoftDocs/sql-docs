@@ -1,16 +1,14 @@
 ---
 title: Connect to Server (Login Page) Database Engine
 description: "Connect to Server (Login Page) Database Engine"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: 04/07/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.connecttosqlserver.login.f1"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 04/07/2020
 ---
 
 # Connect to Server (Login Page) Database Engine

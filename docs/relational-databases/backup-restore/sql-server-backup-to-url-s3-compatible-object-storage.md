@@ -7,7 +7,6 @@ ms.date: 10/15/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # SQL Server backup to URL for S3-compatible object storage
@@ -177,21 +176,21 @@ For more information see [SQL Server back up to URL for S3-compatible storage be
 
 ### Region
 
-Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTION` or `RESTORE_OPTION`. These options require the value to be declared in JSON format.
+Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTIONS` or `RESTORE_OPTIONS`. These options require the value to be declared in JSON format.
 
 If no value is declared *us-east-1* will be assigned as default.
 
 Backup example:
 ```sql
 WITH
-    BACKUP_OPTION = '{"s3": {"region":"us-west-1"}}'
+    BACKUP_OPTIONS = '{"s3": {"region":"us-west-1"}}'
 ```
 
 Restore example:
 
 ```sql
 WITH
-    RESTORE_OPTION = '{"s3": {"region":"us-west-1"}}'
+    RESTORE_OPTIONS = '{"s3": {"region":"us-west-1"}}'
 ```
 
 ### Linux support

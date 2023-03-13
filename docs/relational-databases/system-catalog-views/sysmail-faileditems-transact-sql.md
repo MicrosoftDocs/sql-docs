@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysmail_faileditems database mail view"
 dev_langs:
   - "TSQL"
-ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 ---
 # sysmail_faileditems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

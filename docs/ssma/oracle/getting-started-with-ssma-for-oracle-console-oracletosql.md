@@ -1,19 +1,16 @@
 ---
+title: "Getting Started with SSMA  for Oracle Console (OracleToSQL)"
 description: "Getting Started with SSMA  for Oracle Console (OracleToSQL)"
-title: "Getting Started with SSMA  for Oracle Console (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom:
-  - intro-get-started
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom: intro-get-started
 helpviewer_keywords:
   - "Oracle Console, Console Output Conventions"
   - "Oracle Console, Launching Console"
-ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Getting Started with SSMA  for Oracle Console (OracleToSQL)
 This section describes the procedure to launch and get started with the Oracle console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  

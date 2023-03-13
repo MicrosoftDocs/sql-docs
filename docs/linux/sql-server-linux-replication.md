@@ -5,9 +5,9 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/09/2019
-ms.topic: article
 ms.service: sql
 ms.subservice: linux
+ms.topic: article
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # SQL Server Replication on Linux

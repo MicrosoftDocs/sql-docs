@@ -1,19 +1,15 @@
 ---
-description: "Save Queries (Visual Database Tools)"
 title: Save Queries
-ms.custom: seo-lt-2019
+description: "Save Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], saving"
   - "saving queries"
-ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Save Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

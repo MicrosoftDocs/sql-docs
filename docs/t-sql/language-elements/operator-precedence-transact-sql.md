@@ -3,12 +3,10 @@ title: "Operator Precedence (Transact-SQL)"
 description: "Operator Precedence (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "operators [Transact-SQL], precedence"
   - "operator precedence [Transact-SQL]"

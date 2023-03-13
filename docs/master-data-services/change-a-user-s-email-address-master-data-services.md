@@ -1,17 +1,14 @@
 ---
-description: "Change a User's Email Address (Master Data Services)"
 title: Change a User's Email Address
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "users [Master Data Services], changing e-mail address"
-ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
+description: "Change a User's Email Address (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "users [Master Data Services], changing e-mail address"
 ---
 # Change a User's Email Address (Master Data Services)
 

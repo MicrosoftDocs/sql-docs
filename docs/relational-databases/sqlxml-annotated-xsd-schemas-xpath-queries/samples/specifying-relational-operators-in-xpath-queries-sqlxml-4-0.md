@@ -7,13 +7,11 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath queries [SQLXML], relational operators"
   - "relational operators [SQLXML]"
   - "XPath operators [SQLXML]"
   - "operators [SQLXML]"
-ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Relational Operators in XPath Queries (SQLXML 4.0)

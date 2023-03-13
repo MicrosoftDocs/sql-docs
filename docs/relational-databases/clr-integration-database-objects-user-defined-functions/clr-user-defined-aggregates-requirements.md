@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "custom aggregates [CLR integration]"
   - "user-defined functions [CLR integration]"
   - "UDTs [CLR integration], user-defined aggregates"
-ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 ---
 # CLR User-Defined Aggregates - Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

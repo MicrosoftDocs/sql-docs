@@ -1,20 +1,18 @@
 ---
+title: "Specify Schema Options for SQL Server replication"
 description: "Specify Schema Options for SQL Server replication"
-title: "Specify Schema Options for SQL Server replication | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "schemas [SQL Server replication], options"
   - "articles [SQL Server replication], transactional replication options"
   - "articles [SQL Server replication], merge replication options"
   - "articles [SQL Server replication], schema options"
-ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Specify Schema Options for SQL Server replication

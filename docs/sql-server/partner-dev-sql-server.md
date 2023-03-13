@@ -8,7 +8,6 @@ ms.date: 12/09/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # SQL Server development partners
 

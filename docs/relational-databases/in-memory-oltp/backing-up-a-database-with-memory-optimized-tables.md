@@ -7,8 +7,6 @@ ms.date: "03/20/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 ---
 # Backing Up a Database with Memory-Optimized Tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

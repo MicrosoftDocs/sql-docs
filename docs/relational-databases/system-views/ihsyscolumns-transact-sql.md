@@ -1,22 +1,19 @@
 ---
+title: "IHsyscolumns (Transact-SQL)"
 description: "IHsyscolumns (Transact-SQL)"
-title: "IHsyscolumns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "IHsyscolumns"
-  - "IHsyscolumns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "IHsyscolumns view"
-ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "IHsyscolumns"
+  - "IHsyscolumns_TSQL"
+helpviewer_keywords:
+  - "IHsyscolumns view"
+dev_langs:
+  - "TSQL"
 ---
 # IHsyscolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

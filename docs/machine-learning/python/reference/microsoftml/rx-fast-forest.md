@@ -1,29 +1,19 @@
---- 
- 
-# required metadata 
-title: "rx_fast_forest: Fast Forest" 
-description: "Machine Learning Fast Forest" 
-keywords: "models, classification, regression" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "rx_fast_forest: Fast Forest"
+description: "Machine Learning Fast Forest"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - models
+  - classification
+  - regression
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.rx_fast_forest*: Random Forest
 
 
@@ -178,7 +168,7 @@ value is 0.
 ### gain_conf_level
 
 Tree fitting gain confidence requirement (should be in
-the range [0,1) ). The default value is 0.
+the range `[0,1]`). The default value is 0.
 
 
 ### train_threads

@@ -9,7 +9,6 @@ ms.service: sql-database
 ms.subservice: development
 ms.topic: tutorial
 ms.custom:
-  - seo-lt-2019
   - sqldbrb=1
   - devx-track-csharp
 ---

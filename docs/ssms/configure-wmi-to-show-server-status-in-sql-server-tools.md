@@ -1,18 +1,15 @@
 ---
-description: "Configure WMI to Show Server Status in SQL Server Tools"
 title: "Configure WMI to Show Server Status in SQL Server Tools"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "WMI Provider for Server Events, setting permissions"
-  - "WMI permissions [SQL Server]"
-ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
+description: "Configure WMI to Show Server Status in SQL Server Tools"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "WMI Provider for Server Events, setting permissions"
+  - "WMI permissions [SQL Server]"
 ---
 # Configure WMI to Show Server Status in SQL Server Tools
 

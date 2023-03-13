@@ -1,17 +1,14 @@
 ---
+title: "SQLFreeConnect (Visual FoxPro ODBC Driver)"
 description: "SQLFreeConnect (Visual FoxPro ODBC Driver)"
-title: "SQLFreeConnect (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLFreeConnect function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLFreeConnect function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLFreeConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -3,12 +3,10 @@ title: "PWDCOMPARE (Transact-SQL)"
 description: "PWDCOMPARE (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "PWDCOMPARE"
   - "PWDCOMPARE_TSQL"

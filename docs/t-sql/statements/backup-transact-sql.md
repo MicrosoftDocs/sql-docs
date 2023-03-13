@@ -7,7 +7,6 @@ ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "BACKUP_TSQL"
   - "BACKUP"
@@ -1114,7 +1113,7 @@ BACKUP DATABASE { database_name | @database_name_var }
 Specifies a complete database backup. During a database backup, Azure SQL Managed Instance backs up enough of the transaction log to produce a consistent database when the backup is restored.
 
 > [!IMPORTANT]
-> A database backup created on a managed instance can only be restored on another Azure SQL Managed Instance. It cannot be restored to a SQL Server on-premises instance (similar to the way that a backup of a SQL Server 2016 database cannot be restored to a SQL Server 2012 instance).
+> A database backup created on a managed instance can only be restored on another Azure SQL Managed Instance or to a SQL Server 2022 instance only. This is because SQL Managed Instance has a higher internal database version compared to other versions of SQL Server. For more information, review [Restore a SQL Managed Instance database backup to SQL Server 2022](/azure/azure-sql/managed-instance/restore-database-to-sql-server).
 
 When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from SQL Managed Instance automatic backups, see [Restore a database to an Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 

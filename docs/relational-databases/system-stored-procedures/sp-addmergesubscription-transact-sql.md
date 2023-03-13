@@ -1,22 +1,19 @@
 ---
+title: "sp_addmergesubscription (Transact-SQL)"
 description: "sp_addmergesubscription (Transact-SQL)"
-title: "sp_addmergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergesubscription_TSQL"
-  - "sp_addmergesubscription"
-helpviewer_keywords: 
-  - "sp_addmergesubscription"
-ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergesubscription_TSQL"
+  - "sp_addmergesubscription"
+helpviewer_keywords:
+  - "sp_addmergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

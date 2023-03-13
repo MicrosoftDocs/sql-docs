@@ -1,17 +1,15 @@
 ---
+title: "Sort Columns"
 description: "Sort Columns"
-title: "Sort Columns | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.sortcolumns.f1"
-ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.sortcolumns.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Sort Columns

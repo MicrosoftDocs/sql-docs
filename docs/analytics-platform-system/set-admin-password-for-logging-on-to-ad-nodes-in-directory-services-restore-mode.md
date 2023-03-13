@@ -8,7 +8,6 @@ ms.date: 04/17/2018
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode (DSRM) - Analytics Platform System

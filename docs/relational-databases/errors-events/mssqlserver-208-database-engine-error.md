@@ -1,17 +1,14 @@
 ---
-title: "MSSQLSERVER_208 | Microsoft Docs"
+title: "MSSQLSERVER_208"
 description: The specified object cannot be found, giving rise to an invalid object name message. See an explanation of the error and possible resolutions.
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "208 (Database Engine error)"
-ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "208 (Database Engine error)"
 ---
 # MSSQLSERVER_208
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,15 @@
 ---
-description: "Semantic Search DDL, Functions, Stored Procedures, and Views"
 title: "Semantic Search DDL, functions, stored procedures, & views"
+description: "Semantic Search DDL, Functions, Stored Procedures, and Views"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/20/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "semantic search [SQL Server], database objects"
-ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Semantic Search DDL, Functions, Stored Procedures, and Views
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

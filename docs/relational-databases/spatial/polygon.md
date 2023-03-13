@@ -1,17 +1,14 @@
 ---
+title: "Polygon"
 description: "Polygon"
-title: "Polygon | Microsoft Docs"
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "geometry subtypes [SQL Server]"
-  - "Polygon geometry subtype [SQL Server]"
-ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
+ms.date: "03/07/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "geometry subtypes [SQL Server]"
+  - "Polygon geometry subtype [SQL Server]"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Polygon

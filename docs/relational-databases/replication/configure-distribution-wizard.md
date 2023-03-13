@@ -1,17 +1,15 @@
 ---
+title: "Configure Distribution Wizard"
 description: "Configure Distribution Wizard"
-title: "Configure Distribution Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Configure Distribution Wizard"
-ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Configure Distribution Wizard"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Configure Distribution Wizard

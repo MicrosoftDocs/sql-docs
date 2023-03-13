@@ -1,19 +1,17 @@
 ---
 title: "Optimize performance with conditional delete tracking (Merge)"
-description: Learn how to optimize Merge Replication performance by using conditional delete tracking for SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to optimize Merge Replication performance by using conditional delete tracking for SQL Server.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "conditional delete tracking [SQL Server replication]"
   - "merge replication [SQL Server replication], conditional delete tracking"
   - "articles [SQL Server replication], conditional delete tracking"
-ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Optimize Merge Replication Performance with Conditional Delete Tracking
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

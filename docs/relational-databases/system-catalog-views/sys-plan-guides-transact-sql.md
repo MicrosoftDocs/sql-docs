@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.plan_guides catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.plan_guides (Transact-SQL)

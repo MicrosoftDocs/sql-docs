@@ -1,15 +1,13 @@
 ---
-description: "Data Quality Matching Columns (MDS Add-in for Excel)"
 title: Data Quality Matching Columns
-ms.custom: microsoft-excel-add-in
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
+description: "Data Quality Matching Columns (MDS Add-in for Excel)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Data Quality Matching Columns (MDS Add-in for Excel)
 

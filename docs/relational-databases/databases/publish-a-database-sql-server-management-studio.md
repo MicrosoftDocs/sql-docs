@@ -1,15 +1,11 @@
 ---
+title: "Publish a Database (SQL Server Management Studio)"
 description: "Publish a Database (SQL Server Management Studio)"
-title: "Publish a Database (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/12/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/12/2021"
+ms.service: sql
+ms.topic: conceptual
 ---
 # Publish a Database (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

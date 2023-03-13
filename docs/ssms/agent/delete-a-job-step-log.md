@@ -1,20 +1,17 @@
 ---
-description: "Delete a Job Step Log"
 title: "Delete a Job Step Log"
-ms.custom: seo-lt-2019
+description: "Delete a Job Step Log"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "job steps [SQL Server Agent]"
   - "deleting job step logs"
   - "logs [SQL Server], jobs"
   - "removing job step logs"
-ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Delete a Job Step Log

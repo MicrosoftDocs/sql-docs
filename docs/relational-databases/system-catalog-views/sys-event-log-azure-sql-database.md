@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.event_log"
 dev_langs:
   - "TSQL"
-ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 monikerRange: "=azuresqldb-current"
 ---
 # sys.event_log (Azure SQL Database)

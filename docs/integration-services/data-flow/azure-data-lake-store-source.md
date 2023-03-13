@@ -1,18 +1,15 @@
 ---
+title: "Azure Data Lake Store Source"
 description: "Azure Data Lake Store Source"
-title: "Azure Data Lake Store Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/16/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.DTS.DESIGNER.AFPADLSSRC.F1"
-  - "sql14.dts.designer.afpadlssrc.f1"
-ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
+ms.date: "08/16/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.DTS.DESIGNER.AFPADLSSRC.F1"
+  - "sql14.dts.designer.afpadlssrc.f1"
 ---
 # Azure Data Lake Store Source
 

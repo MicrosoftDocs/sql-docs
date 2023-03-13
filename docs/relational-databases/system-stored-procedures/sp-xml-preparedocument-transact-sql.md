@@ -1,22 +1,19 @@
 ---
+title: "sp_xml_preparedocument (Transact-SQL)"
 description: "sp_xml_preparedocument (Transact-SQL)"
-title: "sp_xml_preparedocument (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_xml_preparedocument_TSQL"
-  - "sp_xml_preparedocument"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_xml_preparedocument"
-ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_xml_preparedocument_TSQL"
+  - "sp_xml_preparedocument"
+helpviewer_keywords:
+  - "sp_xml_preparedocument"
+dev_langs:
+  - "TSQL"
 ---
 # sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

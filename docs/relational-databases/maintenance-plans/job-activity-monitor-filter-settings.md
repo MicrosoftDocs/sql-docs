@@ -9,7 +9,6 @@ ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.jobactivitymon.filter.f1"
-ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 ---
 # Job Activity Monitor (Filter Settings)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

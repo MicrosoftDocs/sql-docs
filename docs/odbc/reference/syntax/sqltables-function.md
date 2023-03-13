@@ -1,24 +1,19 @@
 ---
+title: "SQLTables Function"
 description: "SQLTables Function"
-title: "SQLTables Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLTables"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLTables"
-helpviewer_keywords: 
-  - "SQLTables function [ODBC]"
-ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLTables"
+helpviewer_keywords:
+  - "SQLTables function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLTables"
+apitype: "dllExport"
 ---
 # SQLTables Function
 **Conformance**  

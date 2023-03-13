@@ -1,21 +1,17 @@
 ---
-description: "Select Rows That Do Not Match a Value (Visual Database Tools)"
 title: Select Rows That Do Not Match a Value
-ms.custom: seo-lt-2019
+description: "Select Rows That Do Not Match a Value (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search conditions [SQL Server], rows not matching value"
   - "row not matching value [SQL Server]"
   - "NOT operator [Visual Database Tools]"
   - "search criteria [SQL Server], rows not matching value"
-ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Select Rows That Do Not Match a Value (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

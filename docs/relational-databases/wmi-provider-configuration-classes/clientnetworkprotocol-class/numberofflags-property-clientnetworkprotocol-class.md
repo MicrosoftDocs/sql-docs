@@ -1,22 +1,17 @@
 ---
-description: "NumberOfFlags Property (ClientNetworkProtocol Class)"
 title: "NumberOfFlags Property (ClientNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "NumberOfFlags Property (ClientNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "NumberOfFlags property"
-ms.assetid: 7a656644-2154-419f-9787-99877f597770
+description: "NumberOfFlags Property (ClientNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "NumberOfFlags property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "NumberOfFlags Property (ClientNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # NumberOfFlags Property (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

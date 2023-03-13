@@ -1,19 +1,17 @@
 ---
+title: "Heterogeneous Database Replication"
 description: "Heterogeneous Database Replication"
-title: "Heterogeneous Database Replication | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "08/28/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "heterogeneous database replication, about heterogeneous database replication"
   - "replication [SQL Server], heterogeneous database replication"
   - "heterogeneous database replication"
-ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Heterogeneous Database Replication  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

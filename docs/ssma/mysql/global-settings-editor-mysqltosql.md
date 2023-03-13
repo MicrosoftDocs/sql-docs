@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Editor) (MySQLToSQL)"
 description: "Global Settings (Editor) (MySQLToSQL)"
-title: "Global Settings (Editor) (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.globalsettingeditor.f1"
+f1_keywords:
+  - "ssma.mysql.globalsettingeditor.f1"
 ---
 # Global Settings (Editor) (MySQLToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

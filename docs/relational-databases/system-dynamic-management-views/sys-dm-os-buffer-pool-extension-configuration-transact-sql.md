@@ -3,7 +3,7 @@ title: "sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)"
 description: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "09/09/2017"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_buffer_pool_extension_configuration dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 ---
 # sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -37,6 +36,10 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Returning configuration buffer pool extension information  
@@ -57,7 +60,7 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## See Also  
+## See also  
  [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)   
  [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   

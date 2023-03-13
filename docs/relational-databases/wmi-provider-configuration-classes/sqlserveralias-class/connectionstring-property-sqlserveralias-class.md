@@ -1,21 +1,16 @@
 ---
-description: "ConnectionString Property (SqlServerAlias Class)"
 title: "ConnectionString Property (SqlServerAlias)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ConnectionString Property (SqlServerAlias Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "ConnectionString property"
-ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
+description: "ConnectionString Property (SqlServerAlias Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ConnectionString property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ConnectionString Property (SqlServerAlias Class)"
 ---
 # ConnectionString Property (SqlServerAlias Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

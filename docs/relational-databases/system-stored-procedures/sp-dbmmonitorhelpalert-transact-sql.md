@@ -1,23 +1,20 @@
 ---
+title: "sp_dbmmonitorhelpalert (Transact-SQL)"
 description: "sp_dbmmonitorhelpalert (Transact-SQL)"
-title: "sp_dbmmonitorhelpalert (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbmmonitorhelpalert_TSQL"
-  - "sp_dbmmonitorhelpalert"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbmmonitorhelpalert"
-  - "database mirroring [SQL Server], monitoring"
-ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbmmonitorhelpalert_TSQL"
+  - "sp_dbmmonitorhelpalert"
+helpviewer_keywords:
+  - "sp_dbmmonitorhelpalert"
+  - "database mirroring [SQL Server], monitoring"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

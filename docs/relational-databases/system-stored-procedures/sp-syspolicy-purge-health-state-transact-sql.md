@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_purge_health_state (Transact-SQL)"
 description: "sp_syspolicy_purge_health_state (Transact-SQL)"
-title: "sp_syspolicy_purge_health_state (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_purge_health_state_TSQL"
-  - "sp_syspolicy_purge_health_state"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_purge_health_state"
-ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_purge_health_state_TSQL"
+  - "sp_syspolicy_purge_health_state"
+helpviewer_keywords:
+  - "sp_syspolicy_purge_health_state"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,16 @@
 ---
-description: "Query with Parameters (Visual Database Tools)"
 title: Query with Parameters
-ms.custom: seo-lt-2019
+description: "Query with Parameters (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parameters [SQL Server], Visual Database Tools"
   - "Visual Database Tools [SQL Server], queries"
   - "parameters [SQL Server], queries"
-ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Query with Parameters (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

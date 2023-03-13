@@ -3,12 +3,10 @@ title: "PARSE (Transact-SQL)"
 description: "PARSE (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "07/05/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "PARSE"
   - "PARSE_TSQL"

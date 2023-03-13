@@ -1,15 +1,12 @@
 ---
-title: "Interactive sort in a paginated report | Microsoft Docs"
+title: "Interactive sort in a paginated report"
 description: Add interactive sort buttons to enable a user to toggle between ascending and descending order for rows in a table in a paginated report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Interactive sort in a paginated report (Report Builder)
 

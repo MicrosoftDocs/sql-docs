@@ -1,17 +1,15 @@
 ---
 title: "General User Interface Elements"
 description: "General User Interface Elements"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], user interface elements"
   - "user interface [SQL Server Management Studio]"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 # General User Interface Elements
 

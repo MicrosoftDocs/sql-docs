@@ -1,15 +1,12 @@
 ---
-description: "Discontinued Master Data Services Features"
 title: Discontinued Master Data Services Features
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
+description: "Discontinued Master Data Services Features"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Discontinued Master Data Services Features
 

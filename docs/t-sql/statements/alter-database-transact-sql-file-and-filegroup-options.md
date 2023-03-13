@@ -8,7 +8,6 @@ ms.date: "09/15/2021"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 f1_keywords:
   - "ADD FILE"
   - "ADD_FILE_TSQL"

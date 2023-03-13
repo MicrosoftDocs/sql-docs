@@ -1,24 +1,21 @@
 ---
+title: "HTTP Connection Manager"
 description: "HTTP Connection Manager"
-title: "HTTP Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.httpconnection.server.f1"
   - "sql13.dts.designer.httpconnection.proxy.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HTTP connection manager"
   - "Web site connections [Integration Services]"
   - "connection managers [Integration Services], HTTP"
   - "Web server connections [Integration Services]"
   - "connections [Integration Services], HTTP"
-ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: chugugrace
-ms.author: chugu
 ---
 # HTTP Connection Manager
 

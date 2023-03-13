@@ -1,16 +1,15 @@
 ---
 title: "Automatic Matching of Syntax Pairs"
 description: Learn about automatic matching of syntax pairs in Query Editor (delimiter matching), XMLA Query Editor (brace matching), and MDX and DMX (parenthesis matching).
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IntelliSense [SQL Server], delimiter highlighting"
   - "IntelliSense [SQL Server], syntax pair matching"
-ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Automatic Matching of Syntax Pairs

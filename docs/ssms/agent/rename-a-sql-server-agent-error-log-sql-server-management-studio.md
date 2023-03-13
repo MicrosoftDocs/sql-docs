@@ -1,20 +1,17 @@
 ---
-description: "Rename a SQL Server Agent Error Log"
 title: Rename a SQL Server Agent Error Log
-ms.custom: seo-lt-2019
+description: "Rename a SQL Server Agent Error Log"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logs [SQL Server], SQL Server Agent"
   - "renaming SQL Server Agent error log"
   - "SQL Server Agent, errors"
   - "errors [SQL Server Agent]"
-ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Rename a SQL Server Agent Error Log

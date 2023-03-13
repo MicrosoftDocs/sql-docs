@@ -1,25 +1,22 @@
 ---
+title: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
 description: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
-title: "sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/25/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_cdc_get_column_ordinal"
   - "fn_cdc_get_column_ordinal_TSQL"
   - "fn_cdc_get_column_ordinal"
   - "sys.fn_cdc_get_column_ordinal_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_get_column_ordinal"
   - "sys.fn_cdc_get_column_ordinal"
-ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

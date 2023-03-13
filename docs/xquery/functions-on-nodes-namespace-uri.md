@@ -1,20 +1,17 @@
 ---
-title: "namespace-uri Function (XQuery) | Microsoft Docs"
+title: "namespace-uri Function (XQuery)"
 description: Learn how to use the namespace-uri function in an XQuery to return the namespace URI of a specified QName.
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "fn:namespace-uri function"
-  - "namespace-uri function"
-ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: "rothja"
 ms.author: "jroth"
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "fn:namespace-uri function"
+  - "namespace-uri function"
+dev_langs:
+  - "XML"
 ---
 # Functions on Nodes - namespace-uri
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

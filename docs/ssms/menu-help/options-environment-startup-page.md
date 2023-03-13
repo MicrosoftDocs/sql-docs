@@ -1,12 +1,12 @@
 ---
 title: " SQL Server Options page - Environment - Startup"
 description: "Options (Environment - Startup page)"
-ms.service: sql
-ms.subservice: ssms
-ms.topic: ui-reference
 author: "markingmyname"
 ms.author: "maghan"
 ms.date: 11/05/2018
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
 ---
 
 # Options (Environment - Startup page)

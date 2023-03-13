@@ -1,19 +1,17 @@
 ---
 title: "SQL Server, Availability Replica object"
-description: Learn about SQLServer:Availability Replica performance object, which contains performance counters about availability replicas in Always On availability groups.
-ms.custom: ""
+description: "Learn about SQLServer:Availability Replica performance object, which contains performance counters about availability replicas in Always On availability groups."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/12/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "performance counters [SQL Server], AlwaysOn Availability Groups"
   - "SQLServer:Availability Replica"
   - "Availability Groups [SQL Server], performance counters"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Availability Replica object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,16 @@
 ---
+title: "MinDbCompatibilityLevel (geometry Data Type)"
 description: "MinDbCompatibilityLevel (geometry Data Type)"
-title: "MinDbCompatibilityLevel (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MinDbCompatibilityLevel method (geometry)"
-ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # MinDbCompatibilityLevel (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

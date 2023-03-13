@@ -1,22 +1,19 @@
 ---
+title: "sp_droprole (Transact-SQL)"
 description: "sp_droprole (Transact-SQL)"
-title: "sp_droprole (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_droprole"
-  - "sp_droprole_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_droprole"
-ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_droprole"
+  - "sp_droprole_TSQL"
+helpviewer_keywords:
+  - "sp_droprole"
+dev_langs:
+  - "TSQL"
 ---
 # sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

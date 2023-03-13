@@ -1,18 +1,15 @@
 ---
-title: "SQL Server 2008 R2 SP2 Release Notes | Microsoft Docs"
+title: "SQL Server 2008 R2 SP2 Release Notes"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2008 R2 Service Pack 2.
-ms.service: sql
-ms.subservice: release-landing
-ms.custom: ""
-ms.date: 07/22/2020
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server 2008 R2 SP2"
-  - "Release Notes, SQL Server 2008 R2 SP2"
-ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 07/22/2020
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL Server 2008 R2 SP2"
+  - "Release Notes, SQL Server 2008 R2 SP2"
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2008 R2 SP2 Release Notes

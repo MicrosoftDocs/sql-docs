@@ -7,7 +7,6 @@ ms.date: "06/19/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supported Data Types for In-Memory OLTP

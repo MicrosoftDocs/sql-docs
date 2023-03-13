@@ -1,12 +1,13 @@
 ---
-description: "Disable or Reactivate an Alert"
 title: "Disable or Reactivate an Alert"
-ms.custom: seo-lt-2019
+description: "Disable or Reactivate an Alert"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], reactivating"
   - "deleting alerts"
@@ -16,10 +17,6 @@ helpviewer_keywords:
   - "alerts [SQL Server], disabling"
   - "reactivating alerts"
   - "removing alerts"
-ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Disable or Reactivate an Alert

@@ -10,8 +10,8 @@ ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "seoapril2019"
-  - "sqldbrb=1"
+  - seoapril2019
+  - sqldbrb=1
 tags: azure-synapse
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

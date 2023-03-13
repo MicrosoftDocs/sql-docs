@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8443"
 description: "MSSQLSERVER_8443"
-title: "MSSQLSERVER_8443 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8443 (Database Engine error)"
-ms.assetid: a3541b9c-b1a8-4280-add1-275f08696b62
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8443 (Database Engine error)"
 ---
 # MSSQLSERVER_8443
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

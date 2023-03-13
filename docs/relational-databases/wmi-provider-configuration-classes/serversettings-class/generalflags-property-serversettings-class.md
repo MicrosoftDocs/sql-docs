@@ -1,22 +1,17 @@
 ---
-description: "GeneralFlags Property (ServerSettings Class)"
 title: "GeneralFlags Property (ServerSettings)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "GeneralFlags Property (ServerSettings Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "GeneralFlags property"
-ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
+description: "GeneralFlags Property (ServerSettings Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "GeneralFlags property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "GeneralFlags Property (ServerSettings Class)"
+apitype: "MOFDef"
 ---
 # GeneralFlags Property (ServerSettings Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

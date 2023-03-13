@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_10531"
 description: "MSSQLSERVER_10531"
-title: "MSSQLSERVER_10531 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "10531 (Database Engine error)"
-ms.assetid: bb40e994-231c-44ce-933f-8d767fb2f450
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "10531 (Database Engine error)"
 ---
 # MSSQLSERVER_10531
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

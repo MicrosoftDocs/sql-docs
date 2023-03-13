@@ -1,15 +1,11 @@
 ---
+title: "Save Trace Results to a File"
 description: "Save Trace Results to a File"
-title: "Save Trace Results to a File | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
 ---
 # Save Trace Results to a File
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

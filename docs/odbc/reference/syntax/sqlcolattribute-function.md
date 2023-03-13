@@ -1,24 +1,19 @@
 ---
+title: "SQLColAttribute Function"
 description: "SQLColAttribute Function"
-title: "SQLColAttribute Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLColAttribute"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLColAttribute"
-helpviewer_keywords: 
-  - "SQLColAttribute function [ODBC]"
-ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLColAttribute"
+helpviewer_keywords:
+  - "SQLColAttribute function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLColAttribute"
+apitype: "dllExport"
 ---
 # SQLColAttribute Function
 **Conformance**  

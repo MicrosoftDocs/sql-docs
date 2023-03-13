@@ -1,19 +1,16 @@
 ---
+title: "&amp;&amp; (Logical AND) (SSIS Expression)"
 description: "&amp;&amp; (Logical AND) (SSIS Expression)"
-title: "&amp;&amp; (Logical AND) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "&& (logical AND)"
   - "AND, logical AND"
   - "logical AND (&&)"
-ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-author: chugugrace
-ms.author: chugu
 ---
 # &amp;&amp; (Logical AND) (SSIS Expression)
 

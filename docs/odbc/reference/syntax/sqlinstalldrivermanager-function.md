@@ -1,24 +1,19 @@
 ---
+title: "SQLInstallDriverManager Function"
 description: "SQLInstallDriverManager Function"
-title: "SQLInstallDriverManager Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLInstallDriverManager"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLInstallDriverManager"
-helpviewer_keywords: 
-  - "SQLInstallDriverManager function [ODBC]"
-ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLInstallDriverManager"
+helpviewer_keywords:
+  - "SQLInstallDriverManager function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLInstallDriverManager"
+apitype: "dllExport"
 ---
 # SQLInstallDriverManager Function
 **Conformance**  

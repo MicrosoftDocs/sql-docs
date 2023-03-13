@@ -7,11 +7,9 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "mapping data types [SQLXML]"
   - "type attribute"
-ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type conversions and the sql:datatype Annotation (SQLXML 4.0)

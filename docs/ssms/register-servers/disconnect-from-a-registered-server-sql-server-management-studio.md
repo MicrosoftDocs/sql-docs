@@ -1,20 +1,17 @@
 ---
-description: "Disconnect from a Registered Server (SQL Server Management Studio)"
 title: Disconnect from a Registered Server
+description: "Disconnect from a Registered Server (SQL Server Management Studio)"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Registered Servers [SQL Server], connections"
   - "connections [SQL Server], registered servers"
   - "Registered Servers [SQL Server], disconnecting"
   - "disconnecting registered servers [SQL Server]"
-ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ---
 
 # Disconnect from a Registered Server (SQL Server Management Studio)

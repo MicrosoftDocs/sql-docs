@@ -8,10 +8,7 @@ ms.date: 12/20/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom:
-  - sqlfreshmay19
-  - intro-installation
-  - event-tier1-build-2022
+ms.custom: intro-installation
 ---
 # Installation guidance for SQL Server on Linux
 

@@ -3,12 +3,10 @@ title: "SWITCHOFFSET (Transact-SQL)"
 description: "SWITCHOFFSET (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "12/02/2015"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SWITCHTZ"
   - "SWITCHTZ_TSQL"

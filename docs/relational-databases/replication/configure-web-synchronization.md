@@ -1,13 +1,14 @@
 ---
+title: "Configure Web Synchronization"
 description: "Configure Web Synchronization"
-title: "Configure Web Synchronization | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "01/10/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.VIRDIRINFO.F1"
@@ -26,12 +27,9 @@ f1_keywords:
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.COMPLETEWIZ.F1"
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.VIRDIRINFO.F1"
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.WEBSERV.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Web synchronization, security best practices"
   - "Web synchronization, configuring"
-ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Configure Web Synchronization
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

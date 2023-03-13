@@ -1,22 +1,18 @@
 ---
-description: "Combine Conditions When OR Has Precedence (Visual Database Tools)"
 title: Combine Conditions When OR Has Precedence
-ms.custom: seo-lt-2019
+description: "Combine Conditions When OR Has Precedence (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search conditions [SQL Server], combining"
   - "precedence [SQL Server], Criteria pane"
   - "search criteria [SQL Server], combining conditions"
   - "combining search conditions"
   - "OR operator"
-ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

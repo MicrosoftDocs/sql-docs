@@ -1,18 +1,15 @@
 ---
 title: "sqlps Utility"
 description: The sqlps utility starts a Windows PowerShell session with the SQL Server PowerShell provider and cmdlets loaded and registered.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "sqlps utility"
-  - "PowerShell [SQL Server], sqlps utility"
-ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+helpviewer_keywords:
+  - "sqlps utility"
+  - "PowerShell [SQL Server], sqlps utility"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sqlps Utility

@@ -1,17 +1,14 @@
 ---
+title: "Outdated Backup"
 description: "Outdated Backup"
-title: "Outdated Backup | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Outdated Backup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

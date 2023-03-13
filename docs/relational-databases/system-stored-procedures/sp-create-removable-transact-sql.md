@@ -1,22 +1,19 @@
 ---
+title: "sp_create_removable (Transact-SQL)"
 description: "sp_create_removable (Transact-SQL)"
-title: "sp_create_removable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_create_removable"
-  - "sp_create_removable_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_create_removable"
-ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_create_removable"
+  - "sp_create_removable_TSQL"
+helpviewer_keywords:
+  - "sp_create_removable"
+dev_langs:
+  - "TSQL"
 ---
 # sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

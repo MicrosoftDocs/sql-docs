@@ -1,22 +1,17 @@
 ---
-description: "RemoveCertificate Method (SInstance Class)"
 title: "RemoveCertificate Method (SInstance)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "RemoveCertificate Method (SInstance Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "RemoveCertificate method"
-ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
+description: "RemoveCertificate Method (SInstance Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "RemoveCertificate method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "RemoveCertificate Method (SInstance Class)"
+apitype: "MOFDef"
 ---
 # RemoveCertificate Method (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

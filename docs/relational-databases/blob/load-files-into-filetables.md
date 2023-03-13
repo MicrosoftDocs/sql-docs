@@ -1,19 +1,16 @@
 ---
-title: "Load Files into FileTables | Microsoft Docs"
+title: "Load Files into FileTables"
 description: Discover how to load and migrate files into FileTables in SQL Server when the files are stored in a variety of ways. Read about bulk loading operations.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: filestream
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FileTables [SQL Server], migrating files"
   - "FileTables [SQL Server], bulk loading"
   - "FileTables [SQL Server], loading files"
-ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Load Files into FileTables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

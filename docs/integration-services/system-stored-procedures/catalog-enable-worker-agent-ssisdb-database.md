@@ -1,15 +1,12 @@
 ---
+title: "catalog.enable_worker_agent (SSISDB Database)"
 description: "catalog.enable_worker_agent (SSISDB Database)"
-title: "catalog.enable_worker_agent (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
 author: chugugrace
 ms.author: chugu
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # catalog.enable_worker_agent (SSISDB Database)
 

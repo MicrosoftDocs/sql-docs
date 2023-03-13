@@ -1,24 +1,21 @@
 ---
+title: "Derived Column Transformation"
 description: "Derived Column Transformation"
-title: "Derived Column Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/02/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.derivedcolumntrans.f1"
   - "sql13.dts.designer.derivedcolumntransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiple derived columns"
   - "expressions [Integration Services], derived columns"
   - "derived columns"
   - "columns [Integration Services], derivations"
   - "Derived Column transformation"
-ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: chugugrace
-ms.author: chugu
 ---
 # Derived Column Transformation
 

@@ -1,15 +1,12 @@
 ---
+title: "Command Line Options in SSMA Console (AccessToSQL)"
 description: "Command-line options in the SSMA Console (AccessToSQL)"
-title: "Command Line Options in SSMA Console (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "08/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Command-line options in the SSMA Console (AccessToSQL)
 Microsoft provides you with a robust set of command-line options to execute and control SSMA activities. The ensuing sections provide additional detail.  

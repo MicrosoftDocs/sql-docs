@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], index"
 dev_langs:
   - "TSQL"
-ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
 ---
 # Index Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,27 +1,24 @@
 ---
+title: "sp_db_vardecimal_storage_format (Transact-SQL)"
 description: "sp_db_vardecimal_storage_format (Transact-SQL)"
-title: "sp_db_vardecimal_storage_format (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_db_vardecimal_storage_format"
   - "sp_db_vardecimal_storage_format_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_db_vardecimal_storage_format"
   - "decimal data type, compressing"
   - "compressing decimal data"
   - "numeric data type, compressing"
   - "database compression [SQL Server]"
   - "table compression [SQL Server]"
-ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

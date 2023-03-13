@@ -1,13 +1,13 @@
 ---
+title: "Interval Data Type Precision"
 description: "Interval Data Type Precision"
-title: "Interval Data Type Precision | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data types [ODBC], interval data types"
   - "precision [ODBC], interval data types"
   - "seconds precision [ODBC]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "precision [ODBC]"
   - "interval leading precision [ODBC]"
   - "interval precision [ODBC]"
-ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Interval Data Type Precision
 Precision for an interval data type includes interval leading precision, interval precision, and seconds precision.  

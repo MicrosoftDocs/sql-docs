@@ -1,19 +1,16 @@
 ---
 title: Output Window
-description: Learn how to use the Output window to view status messages and other output from the SQL Server Management Studio debugger and other tools.
 titleSuffix: T-SQL Debugger
+description: Learn how to use the Output window to view status messages and other output from the SQL Server Management Studio debugger and other tools.
+author: markingmyname
+ms.author: maghan
+ms.date: 12/04/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Output Window [Transact-SQL]"
   - "Output Window [SQL Server Management Studio]"
-ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

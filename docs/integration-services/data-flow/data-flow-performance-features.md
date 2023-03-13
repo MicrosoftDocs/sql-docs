@@ -1,13 +1,13 @@
 ---
+title: "Data Flow Performance Features"
 description: "Data Flow Performance Features"
-title: "Data Flow Performance Features | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Aggregate transformation [Integration Services]"
   - "Integration Services packages, performance"
   - "performance [Integration Services]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "queries [Integration Services], troubleshooting"
   - "sorting data [Integration Services]"
   - "aggregations [Integration Services]"
-ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: chugugrace
-ms.author: chugu
 ---
 # Data Flow Performance Features
 

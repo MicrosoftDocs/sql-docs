@@ -51,9 +51,9 @@ To configure an Always On availability group by using the Azure portal, you must
 
 - The following account permissions:
 
-  - A domain admin user account that has **Create Computer Object** permissions in the domain. This user will create the cluster and availability group, and will install SQL Server. 
+  - A domain user account that has **Create Computer Object** permissions in the domain. This user will create the cluster and availability group, and will install SQL Server.
   
-    For example, a domain admin account (`account@domain.com`) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
+    For example, a domain user account (`account@domain.com`) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
 
   - A domain SQL Server service account to control SQL Server. This should be the same account for every SQL Server VM that you want to add to the availability group.
 
@@ -152,8 +152,6 @@ For the deployment to work, all the accounts need to already be present in Activ
    - For **Domain join user name** and **Domain join password**, enter the credentials for the account that creates the Windows Server failover cluster name in Active Directory and joins the VMs to the domain. *This account must have Create Computer Objects permissions*.
 
    - For **Domain FQDN**, enter a fully qualified domain name, such as **contoso.com**.
-
-   - For **Ou path**, enter an organizational unit (OU) path for Active Directory if you're using one.
 
     :::image type="content" source="./media/availability-group-az-portal-configure/windows-ad-domain.png" alt-text="Screenshot of the Azure portal that shows Windows Active Directory domain details.":::
 
@@ -339,7 +337,7 @@ To view the logs for the deployment and check the deployment history:
 
    :::image type="content" source="media/availability-group-az-portal-configure/failed-deployment.png" alt-text="Screenshot of the Azure portal that shows a failed availability group deployment in a list of deployments." :::
 
-If the deployment fails and you want to redeploy by using the portal, you need to manually clean up the resources because the UX portal deployment isn't idempotent. These clean-up tasks include deleting VMs and removing entries in Active Directory and/or DNS. However, if you deployed an availability group by using the template for automation, clean-up of resources isn't necessary because the template is idempotent.
+If the deployment fails and you want to redeploy by using the portal, you need to manually cleanup the resources because deployment through the portal isn't idempotent (repeatable). These clean-up tasks include deleting VMs and removing entries in Active Directory and/or DNS. However, if you use the Azure portal to create a template to deploy your availability group, and then use the template for automation, clean-up of resources isn't necessary because the template is idempotent.
 
 ## Next steps
 

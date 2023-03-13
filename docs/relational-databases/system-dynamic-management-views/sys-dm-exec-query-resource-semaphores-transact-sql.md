@@ -3,7 +3,7 @@ title: "sys.dm_exec_query_resource_semaphores (Transact-SQL)"
 description: sys.dm_exec_query_resource_semaphores (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "08/09/2016"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_query_resource_semaphores dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_resource_semaphores (Transact-SQL)
@@ -53,6 +52,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  Queries that use dynamic management views that include ORDER BY or aggregates might increase memory consumption and thus contribute to the problem they are troubleshooting.  
   

@@ -1,24 +1,22 @@
 ---
-description: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 title: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
-ms.custom: ""
+description: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/29/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_net_changes_TSQL"
   - "fn_net_changes_TSQL"
   - "fn_net_changes"
   - "sys.fn_net_changes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_net_changes_<capture_instance>"
   - "sys.fn_net_changes_<capture_instance>"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

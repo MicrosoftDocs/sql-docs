@@ -408,13 +408,13 @@ $database = Get-AzSqlDatabaseGeoBackup -ResourceGroupName <ResourceGroupName> -S
 Restore-AzSqlDatabase -FromGeoBackup -ResourceId "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/recoverableDatabases/{databaseName}" -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -TargetDatabaseName <TargetDatabaseName> -KeyList $database.Keys.Keys -EncryptionProtector <EncryptionProtector> -UserAssignedIdentityId <UserAssignedIdentityId> -AssignIdentity
 ```
 
+---
+
 > [!IMPORTANT]
 > Long term retention (LTR) backups don't provide the list of keys used by the backup. To restore an LTR backup all the keys used by the source database must be passed to the LTR restore target.
 
 > [!NOTE]
 > The ARM template highlighted in the Geo Replication section can be referenced to restore the database with an ARM template by changing the createMode parameter.
-
----
 
 ## Next steps
 

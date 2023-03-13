@@ -773,7 +773,7 @@ There are multiple techniques available to prevent deadlocks from reoccurring, i
     - Breaking apart transactions into smaller transactions when possible.
     - Using query hints, if necessary, to optimize performance. You can apply hints without changing application code [using Query Store](/sql/relational-databases/performance/query-store-hints?view=azuresqldb-current&preserve-view=true).
 
-Find more ways to [minimize deadlocks in the Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_minimizing).
+Find more ways to [minimize deadlocks in the Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide#minimize_deadlocks).
 
 > [!NOTE]
 > In some cases, you may wish to [adjust the deadlock priority](/sql/t-sql/statements/set-deadlock-priority-transact-sql) of one or more sessions involved in a deadlock if it is important for one of the sessions to complete successfully without retrying, or when one of the queries involved in the deadlock is not critical and should be always chosen as the victim. While this does not prevent the deadlock from reoccurring, it may reduce the impact of future deadlocks.

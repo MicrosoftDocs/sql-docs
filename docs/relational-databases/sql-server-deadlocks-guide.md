@@ -364,22 +364,22 @@ Implementing an error handler that traps error message 1205 allows an applicatio
 
 The application should pause briefly before resubmitting its query. This gives the other transaction involved in the deadlock a chance to complete and release its locks that formed part of the deadlock cycle. This minimizes the likelihood of the deadlock reoccurring when the resubmitted query requests its locks.  
   
-## <a id="deadlock_minimizing"></a> Minimize deadlocks
+## Minimize deadlocks
 
 Although deadlocks cannot be completely avoided, following certain coding conventions can minimize the chance of generating a deadlock. Minimizing deadlocks can increase transaction throughput and reduce system overhead because fewer transactions are:  
   
--   Rolled back, undoing all the work performed by the transaction.  
--   Resubmitted by applications because they were rolled back when deadlocked.  
+- Rolled back, undoing all the work performed by the transaction.  
+- Resubmitted by applications because they were rolled back when deadlocked.  
   
 To help minimize deadlocks:  
   
--   Access objects in the same order.  
--   Avoid user interaction in transactions.  -   Keep transactions short and in one batch.  
--   Use a lower isolation level.  
--   Use a row versioning-based isolation level.  
-    -   Set `READ_COMMITTED_SNAPSHOT` database option on to enable read-committed transactions to use row versioning.  
-    -  Use snapshot isolation.  
--   Use bound connections.  
+- Access objects in the same order.  
+- Avoid user interaction in transactions.  -   Keep transactions short and in one batch.  
+- Use a lower isolation level.  
+- Use a row versioning-based isolation level.  
+  - Set `READ_COMMITTED_SNAPSHOT` database option on to enable read-committed transactions to use row versioning.  
+  - Use snapshot isolation.  
+- Use bound connections.  
   
 ### Access objects in the same order
 

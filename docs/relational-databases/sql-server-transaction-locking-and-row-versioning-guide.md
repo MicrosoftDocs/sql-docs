@@ -1640,7 +1640,7 @@ The only lock taken that references `HumanResources.Employee` is a schema stabil
 
 In [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md).
 
-### <a id="Customize"></a> Customize locking for an index
+### Customize locking for an index
 
 When optimized locking is enabled, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does not keep low-level locks for the duration of a transaction. There is no need to customize locking strategies for an index or to disable low-level locks.
 
@@ -1826,7 +1826,7 @@ You may have to use the KILL statement. Use this statement very carefully, howev
 Deadlocks are a complex topic related to locking, but different from blocking.
 
 - For more information on deadlocks, including monitoring, diagnosis, and samples, see the [Deadlocks guide for the SQL Server database engine](sql-server-deadlocks-guide.md).
-- For more information on deadlocks specific to Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](../../azure-sql/database/analyze-prevent-deadlocks.md).
+- For more information on deadlocks specific to Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](/azure/azure-sql/database/analyze-prevent-deadlocks).
 
 ## <a id="Additional_Reading"></a> See also
 
@@ -1839,4 +1839,4 @@ Deadlocks are a complex topic related to locking, but different from blocking.
 ## Next steps
 
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking)
-- [Understand and resolve Azure SQL Database blocking problems](../../azure-sql/database/understand-resolve-blocking.md)
+- [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)

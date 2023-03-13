@@ -18,7 +18,7 @@ For answers to frequently asked questions about the extension, check out the [FA
 
 ## Check prerequisites 
 
-To avoid errors due to unsupported options or limitations, verify the [prerequisites](sql-agent-extension-manually-register-single-vm.md#prerequisites) for the extension. 
+To avoid errors due to unsupported options or limitations, verify the [prerequisites](sql-agent-extension-manually-register-single-vm.md#prerequisites) for the extension. Repair, Installation and Uninstallation of IaaS extension would not preserve your existing settings except Licensing changes and you would have to reconfigure your Auto backup, automated patching, etc.
 
 ## Not valid state for management
 

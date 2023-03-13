@@ -15,9 +15,6 @@ An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnov
 
 ## Before you deploy
 
-> [!NOTE]  
-> If you connected an instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to Azure Arc prior to December 2020, you need to follow the [prerequisite steps](prerequisites.md) to migrate the existing Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resources to the new namespace.
-
 Before you can Arc-enable an instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you need to:
 
 - Have an Azure account with an active subscription. If needed, [create a free Azure Account](https://azure.microsoft.com/free/)

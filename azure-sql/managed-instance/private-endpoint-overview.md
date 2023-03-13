@@ -12,12 +12,18 @@ ms.topic: how-to
 # Azure Private Link for Azure SQL Managed Instance (Preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-[Private Link](/azure/private-link/private-link-overview) is Azure technology that makes Azure SQL Managed Instance available in a virtual network of your choice. A network administrator can establish a [private endpoint](/azure/private-link/private-endpoint-overview) to Azure SQL Managed Instance in their virtual network, while the SQL administrator chooses to accept or reject the endpoint before it becomes active. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
+This article provides an overview of the private endpoint for Azure SQL Managed Instance, as well as steps to configuring it. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
 
 > [!NOTE]
-> Private Link with Azure SQL Managed Instance is currently in preview. 
+> Private Link for Azure SQL Managed Instance is currently in preview. 
 
-### How does a private endpoint differ from VNet-local endpoint?
+
+## Overview
+
+[Private Link](/azure/private-link/private-link-overview) is Azure technology that makes Azure SQL Managed Instance available in a virtual network of your choice. A network administrator can establish a [private endpoint](/azure/private-link/private-endpoint-overview) to Azure SQL Managed Instance in their virtual network, while the SQL administrator chooses to accept or reject the endpoint before it becomes active. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
+
+
+### How private endpoints differ from VNet-local endpoints
 
 The default VNet-local endpoint deployed with each Azure SQL Managed Instance behaves as if a computer running the service were physically attached to your virtual network. It allows near-complete traffic control via route tables, network security groups, DNS resolution, firewalls, and similar mechanisms. You can also use this endpoint to involve your instance in scenarios requiring connectivity on ports other than 1433, such as auto-failover groups, distributed transactions, and Managed Instance Link. Although the VNet-local endpoint provides flexibility, it adds complexity when configuring for specific scenarios, especially those involving multiple virtual networks or tenants. 
 
@@ -44,15 +50,15 @@ The benefits of using private endpoints over a VNet-local or public endpoint inc
 
 Consider the following caveats:
 
-- Private endpoint only allows connections to port 1433, which means that more involved connectivity, automation and integration scenarios can't be implemented over it. These scenarios include linked server scenarios, Managed Instance link, failover groups, and other similar technologies.
-- During preview, private endpoints require a special setup to configure the correct required DNS resolution for Azure SQL Managed Instance.
+- Private endpoints only allow connections to port 1433, which means technology with more involved connectivity, automation and integration scenarios can't be implemented with a private endpoint. These scenarios include linked server scenarios, Managed Instance link, failover groups, and other similar technologies.
+- During preview, private endpoints require a special setup to configure the required DNS resolution for Azure SQL Managed Instance.
 
 ## Limitations
 
 - Instances enrolled in the [November 2022 Feature wave](november-2022-feature-wave-enroll.md) may exhibit occasional issues with Private Link connectivity while the feature is in public preview.
-- Azure SQL Managed Instance requires the exact instance _hostname_ to appear in the connection string sent by the SQL client. Using the IP address of the private endpoint will fail. To resolve this, configure your DNS server, or use a private DNS zone as described in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint).
+- Azure SQL Managed Instance requires the exact instance _hostname_ to appear in the connection string sent by the SQL client. Using the IP address of the private endpoint is not supported and will fail. To resolve this, configure your DNS server, or use a private DNS zone as described in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint).
 - Automatic registration of DNS names is disabled while in preview. Follow the steps in [Set up domain name resolution for private endpoint](#set-up-domain-name-resolution-for-private-endpoint) instead.
-- Private endpoints to SQL Managed Instance can only be used to connect to port 1433, the standard TDS port for SQL traffic. More complex connectivity scenarios requiring communication on other ports must be established via instance's VNet-local endpoint.
+- Private endpoints to SQL Managed Instance can only be used to connect to port 1433, the standard TDS port for SQL traffic. More complex connectivity scenarios requiring communication on other ports must be established via the instance's VNet-local endpoint.
 
 ## Create a private endpoint in a virtual network
 
@@ -100,12 +106,12 @@ To approve a private endpoint, follow these steps:
 
 After you create a private endpoint to Azure SQL Managed Instance, you'll need to configure domain name resolution, as, otherwise, login attempts will fail. The method below works for virtual networks that use Azure DNS resolution. If your virtual network is configured to use a custom DNS server, adjust the steps accordingly.
 
-To set up domain name resolution for private endpoint to an instance whose FQDN is `<instance-name>.<dns-zone>.database.windows.net`, consider the two involved virtual networks:
+To set up domain name resolution for a private endpoint to an instance whose FQDN is `<instance-name>.<dns-zone>.database.windows.net`, consider the two involved virtual networks:
 
-- Instance virtual network: hosts Azure SQL Managed Instance.
-- Endpoint virtual network: hosts the private endpoint to the Azure SQL Managed Instance.
+- Instance virtual network: hosts the SQL managed instance.
+- Endpoint virtual network: hosts the private endpoint to Azure SQL Managed Instance.
 
-The steps to set up domain name resolution are different if the instance and endpoint virtual network is the same (or peered) network, or two different networks. 
+The steps to set up domain name resolution are different if the virtual network between the instance and endpoint is the same (or peered) network, or two different networks. 
 
 ### [Separate virtual networks](#tab/separate-vnets)
 
@@ -114,7 +120,7 @@ Follow the steps in this section if the instance and endpoint virtual networks a
 After you complete these steps, SQL clients connecting to `<instance-name>.<dns-zone>.database.windows.net` from inside the endpoint virtual network will be transparently routed through the private endpoint.
 
 1. Obtain the IP address of the private endpoint either by visiting Private Link Center or by performing the following steps:
-1. 
+
     1. Go to your Azure SQL Managed Instance in the [Azure portal](https://portal.azure.com).
     1. Under **Security**, choose **Private endpoint connections**.
     1. Locate the private endpoint connection in the table and choose the **Private endpoint name** for your chosen connection. 
@@ -125,7 +131,7 @@ After you complete these steps, SQL clients connecting to `<instance-name>.<dns-
     
        ![Screenshot of the Azure portal, private endpoint connection overview with a highlight on network interface.](media/private-endpoint/pec-nic-click.png)
     
-    1. In Overview, check **Essentials** to identify and copy the **Private IP address**.
+    1. On the **Overview** page, check **Essentials** to identify and copy the **Private IP address**.
     
        ![Screenshot of the Azure portal, private endpoint connection's network interface with a highlight on its private IP address.](media/private-endpoint/pec-ip-display.png)
 
@@ -146,30 +152,31 @@ After you complete these steps, SQL clients inside the endpoint virtual network 
 > When the instance and endpoint virtual networks are the same (or peered), you don't have the ability to establish trusted encrypted connections and to transparently re-route SQL clients via the private endpoint.
 
 1. Obtain the IP address of the private endpoint either by visiting Private Link Center or by performing the following steps:
-    1. Navigate to your Azure SQL Managed Instance in Azure portal.
-    1. In the sidebar, select Private endpoint connections.
-    1. Locate the private endpoint connection in the table and select its name.
-    
-    ![Screenshot of private endpoint connections blade with a highlight on one private endpoint name](media/private-endpoint/pec-click.png)
-    
-    1. In Overview, select the network interface.
-    
-    ![Screenshot of private endpoint connection overview with a highlight on network interface](media/private-endpoint/pec-nic-click.png)
-    
-    1. In Overview, Private IP address is shown in the Essentials section.
-    
-    ![Screenshot of private endpoint connection's network interface with a highlight on its private IP address](media/private-endpoint/pec-ip-display.png)
 
-1. [Create a private Azure DNS zone](/azure/dns/private-dns-getstarted-portal#create-a-private-dns-zone) named _anything other than_ privatelink.\<dns-zone\>.database.windows.net; for example: `privatelink.site`.
+    1. Go to your Azure SQL Managed Instance in Azure portal.
+    1. Under **Security**, choose **Private endpoint connections**.
+    1. Locate the private endpoint connection in the table and choose the **Private endpoint name** for your chosen connection. 
+    
+    ![Screenshot of the Azure portal, connections blade with one private endpoint named highlighted.](media/private-endpoint/pec-click.png)
+    
+    1. On the ***Overview** page, select the network interface.
+    
+    ![Screenshot of the Azure portal, private endpoint connection overview with a network interface highlighted.](media/private-endpoint/pec-nic-click.png)
+    
+    1. On the **Overview** page, check **Essentials** to identify and copy the **Private IP address**.
+    
+    ![Screenshot of the Azure portal, private endpoint connection's network interface with the private IP address highlighted.](media/private-endpoint/pec-ip-display.png)
 
-    > [!IMPORTANT]
-    > Do not name the private DNS zone `privatelink.<dns-zone>.database.windows.net` because this disrupts the instance's internal connectivity and causes management operations to fail.
+1. [Create a private Azure DNS zone](/azure/dns/private-dns-getstarted-portal#create-a-private-dns-zone) named **_anything other than_** `privatelink.\<dns-zone\>.database.windows.net`; for example: `privatelink.site`.
+
+    > [!WARNING]
+    > Naming the private DNS zone `privatelink.<dns-zone>.database.windows.net` disrupts the instance's internal connectivity and causes management operations to fail.
 
 1. [Link the private DNS zone to the endpoint virtual network](/azure/dns/private-dns-getstarted-portal#link-the-virtual-network).
 1. In the DNS zone, create a new record set with the following values:
    - Name: `<instance-name>`
    - Type: A
-   - IP address: IP address of the private endpoint obtained in step 1.
+   - IP address: IP address of the private endpoint obtained in the previous steps.
 
 ## Next steps
 

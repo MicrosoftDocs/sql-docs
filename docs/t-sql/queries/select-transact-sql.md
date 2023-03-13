@@ -1,17 +1,16 @@
 ---
 title: SELECT (Transact-SQL)
 description: SELECT (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+author: VanMSFT
+ms.author: vanto
+ms.date: "10/24/2017"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SELECT_TSQL"
   - "SELECT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "retrieving rows"
   - "SELECT statement [SQL Server]"
   - "SELECT statement [SQL Server], about SELECT statement"
@@ -20,11 +19,8 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], SELECT statement"
   - "row retrieval [SQL Server]"
   - "queries [SQL Server], results"
-author: VanMSFT
-ms.author: vanto
-ms.custom:
-- event-tier1-build-2022
-ms.date: "10/24/2017"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT (Transact-SQL)
@@ -40,15 +36,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
 
- [ [WINDOW *window expression*](../../t-sql/queries/select-window-transact-sql.md)]
-  
  [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
-  
+
+ [ [WINDOW *window expression*](../../t-sql/queries/select-window-transact-sql.md)]
+ 
  [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
  The [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT, and INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) operators can be used between queries to combine or compare their results into one result set.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

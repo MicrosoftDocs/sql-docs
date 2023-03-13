@@ -4,9 +4,8 @@ description: MSsnapshot_agents (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSsnapshot_agents"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSsnapshot_agents system table"
 dev_langs:
   - "TSQL"
-ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 ---
 # MSsnapshot_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

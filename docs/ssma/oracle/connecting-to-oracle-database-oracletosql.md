@@ -1,20 +1,16 @@
 ---
-title: "Connecting to Oracle Database (OracleToSQL) | Microsoft Docs"
+title: "Connecting to Oracle Database (OracleToSQL)"
 description: Learn how to connect to the Oracle database to migrate that Oracle database to SQL Server. SSMA obtains and displays metadata about all Oracle schemas.
 author: cpichuka
-
-ms.prod: sql
-ms.custom: ""
-ms.date: "06/04/2020"
-ms.reviewer: ""
-ms.technology: ssma
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Refreshing Oracle Metadata"
-ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
 ms.author: cpichuka
-f1_keywords: 
+ms.date: "06/04/2020"
+ms.service: sql
+ms.subservice: ssma
+ms.topic: conceptual
+f1_keywords:
   - "ssma.oracle.connectoracleform.f1"
+helpviewer_keywords:
+  - "Refreshing Oracle Metadata"
 ---
 
 # Connecting to Oracle Database (OracleToSQL)

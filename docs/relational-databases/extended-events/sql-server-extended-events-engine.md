@@ -4,13 +4,11 @@ description: The SQL Server Extended Events engine enables the definition of eve
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: conceptual
 helpviewer_keywords:
   - "extended events [SQL Server], engine"
-ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Extended Events Engine

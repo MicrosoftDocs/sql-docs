@@ -4,8 +4,8 @@ description: Learn about remote servers, which have been replaced with linked se
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "server management [SQL Server], remote servers"

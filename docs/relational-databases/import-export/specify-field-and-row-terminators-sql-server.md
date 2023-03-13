@@ -4,9 +4,8 @@ description: Field terminators and row terminators indicate to programs that rea
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/26/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
   - "bcp utility [SQL Server], terminators"

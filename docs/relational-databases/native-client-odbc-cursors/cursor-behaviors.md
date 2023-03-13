@@ -1,14 +1,13 @@
 ---
+title: "Cursor Behaviors"
 description: "Cursor Behaviors"
-title: "Cursor Behaviors | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "10/24/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scrollable cursors [SQL Server]"
   - "SQL Server Native Client ODBC driver, cursors"
   - "version-based optimistic concurrency"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "SQL_ATTR_CURSOR_SCROLLABLE option"
   - "sensitivity behavior of cursor"
   - "ODBC cursors, cursor behaviors"
-ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursor Behaviors

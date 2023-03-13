@@ -4,8 +4,8 @@ description: Manage access to the big data cluster
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 07/09/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 

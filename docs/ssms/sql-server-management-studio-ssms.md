@@ -1,12 +1,13 @@
 ---
 title: SQL Server Management Studio (SSMS)
 description: Learn details about SQL Server Management Studio (SSMS) and what SMMS can do, including how to manage Analysis Services Solutions.
-ms.prod: sql
-ms.technology: ssms
-ms.topic: overview
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 12/15/2021
+ms.service: sql
+ms.subservice: ssms
+ms.topic: overview
+ms.custom: intro-overview
 f1_keywords:
   - "sql13.ssms.viewhelp.f1"
 helpviewer_keywords:
@@ -14,9 +15,6 @@ helpviewer_keywords:
   - "SQL Server Management Studio for Integration Services"
   - "SQL Server Management Studio for Reporting Services"
   - "SQL Server Management Studio for Analysis Services"
-ms.custom: intro-overview, seo-lt-2019, FY22Q2Fresh
-ms.date: 12/15/2021
-#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users.
 ---
 
 # What is SQL Server Management Studio (SSMS)?
@@ -43,16 +41,16 @@ SQL Server Management Studio (SSMS) is an integrated environment for managing an
 
 ## SQL Server Management Studio for Business Intelligence
 
-To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], Integration Services, and Reporting Services, use SQL Server Management Studio. Although all three business intelligence technologies rely on SQL Server Management Studio, the administrative tasks associated with each of these technologies are slightly different.
+To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Integration Services, and Reporting Services, use SQL Server Management Studio. Although all three business intelligence technologies rely on SQL Server Management Studio, the administrative tasks associated with each of these technologies are slightly different.
 
 > [!NOTE]
 > To create and modify Analysis Services, Reporting Services, and Integration Services solutions, use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], not SQL Server Management Studio. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a development environment that is based on Microsoft[!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 ### Manage Analysis Services Solutions using SQL Server Management Studio
 
-SQL Server Management Studio enables you to manage [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] objects, such as performing back-ups and processing objects.
+SQL Server Management Studio enables you to manage [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, such as performing back-ups and processing objects.
 
-[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides an [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script project in which you develop and save scripts written in Multidimensional Expressions (MDX), Data Mining Extensions (DMX), and XML for Analysis (XMLA). You use [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Scripts projects to perform management tasks or re-create objects, such as database and cubes, on [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] instances. For example, you can develop an XMLA script in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script project that creates new objects directly on an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] instance. The [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Scripts projects can be saved as part of a solution and integrated with source code control.
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Script project in which you develop and save scripts written in Multidimensional Expressions (MDX), Data Mining Extensions (DMX), and XML for Analysis (XMLA). You use [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripts projects to perform management tasks or re-create objects, such as database and cubes, on [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instances. For example, you can develop an XMLA script in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Script project that creates new objects directly on an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripts projects can be saved as part of a solution and integrated with source code control.
   
 For more information about how to use SQL Server Management Studio, see [Developing and Implementing Using SQL Server Management Studio](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
   

@@ -4,9 +4,8 @@ description: sys.key_encryptions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.key_encryptions"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.key_encryptions catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.key_encryptions (Transact-SQL)

@@ -4,12 +4,10 @@ description: This article describes the different options for migrating database
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.custom:
-  - intro-migration
+ms.custom: intro-migration
 ---
 # Migrate databases and structured data to SQL Server on Linux 
 

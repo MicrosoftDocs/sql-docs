@@ -1,25 +1,22 @@
 ---
 title: Connect to Server (Connection Properties Page) Database Engine
 description: "Connect to Server (Connection Properties Page) Database Engine"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "sql13.swb.connecttoce.connectionproperties.f1"
-  - "sql13.swb.connecttosqlserver.connectionproperties.f1"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 08/14/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "sql13.swb.connecttoce.connectionproperties.f1"
+  - "sql13.swb.connecttosqlserver.connectionproperties.f1"
 ---
 
 # Connect to Server (Connection Properties Page) Database Engine
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Use this tab to view or specify options when connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or registering [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+Use this tab to view or specify options when connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or registering [!INCLUDE[ssDE](../../includes/ssde-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 **Connect to database**  
 Select a database to connect to from the list. If you select **\<default\>**, you connect to the default database for the server. If you select **\<Browse server\>**, you can browse the server for the database to which to connect.  
@@ -44,7 +41,7 @@ Enter the amount of time in seconds to wait before execution of a task is comple
 Forces encryption of the connection.  
   
 **Use custom color**  
-Select to specify the background color for the status bar in a [!INCLUDE[ssDE](../../includes/ssde_md.md)] Query Editor window. To specify the color, click **Select**. In the **Color** dialog box, select a predefined color from the **Basic Colors** grid or click **Define Custom Colors** to define and use a custom color.  
+Select to specify the background color for the status bar in a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. To specify the color, click **Select**. In the **Color** dialog box, select a predefined color from the **Basic Colors** grid or click **Define Custom Colors** to define and use a custom color.  
   
 -   When you specify a color for a server entry in the **Object Explorer** pane, that color is used when you open a Query Editor window. To open a Query Editor window, either right-click the server entry and select **New Query**; or, when the **Object Explorer** pane is active and focused on this server, click **New Query** on the toolbar.  
   
@@ -65,7 +62,7 @@ Attempt a connection using the listed values.
 Click to change the dialog box and hide the additional server connection options, such as remembering the password.  
   
 **Test**  
-When registering [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Registered Servers**, click to test the connection.  
+When registering [!INCLUDE[ssDE](../../includes/ssde-md.md)] in **Registered Servers**, click to test the connection.  
   
 **Save**  
 Saves the settings in **Registered Servers**.  

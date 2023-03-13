@@ -1,15 +1,13 @@
 ---
 title: Installation and Configuration
 description: Learn how to install Master Data Services on a Windows Server 2012 R2 computer, configure the MDS database and website, and deploy the sample models and data.
-ms.date: 03/24/2021
-ms.prod: sql
-ms.prod_service: "mds"
-ms.technology: master-data-services
-ms.topic: quickstart
 author: CordeliaGrey
 ms.author: jiwang6
-ms.custom:
-  - intro-quickstart
+ms.date: 03/24/2021
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: quickstart
+ms.custom: intro-quickstart
 ---
 # Master Data Services Installation and Configuration
 
@@ -224,7 +222,7 @@ For more information about the settings on the Web Configuration page, see [Web 
   
  For information about prerequisites for running this tool, see [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
- For information about updates made to the data to support new features in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], see [SQL Server Samples: Model Deployment Packages (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ For information about updates made to the data to support new features in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], see [SQL Server Samples: Model Deployment Packages (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
  **To deploy the sample models**  
   

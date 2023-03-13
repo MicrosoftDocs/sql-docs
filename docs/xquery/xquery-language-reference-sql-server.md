@@ -1,22 +1,18 @@
 ---
-title: "XQuery Language Reference (SQL Server) | Microsoft Docs"
+title: "XQuery Language Reference (SQL Server)"
 description: Learn about the XQuery language for SQL Server and view a complete language reference.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XQuery"
   - "XQuery, about XQuery"
   - "xml data type [SQL Server], XQuery"
   - "XML [SQL Server], XQuery"
   - "queries [XML in SQL Server], XQuery"
-ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-author: "rothja"
-ms.author: "jroth"
 ---
 # XQuery Language Reference (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

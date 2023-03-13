@@ -1,23 +1,20 @@
 ---
+title: "ORDER BY Clause (Transact-SQL)"
 description: "SELECT - ORDER BY Clause (Transact-SQL)"
-title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "12/24/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ORDER_TSQL"
   - "BY"
   - "ORDER_BY_TSQL"
   - "BY_TSQL"
   - "ORDER"
   - "ORDER BY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ad-hoc query paging"
   - "OFFSET clause"
   - "SELECT statement [SQL Server], FETCH clause"
@@ -36,9 +33,8 @@ helpviewer_keywords:
   - "limiting data returned in a query"
   - "sort orders [SQL Server], ORDER BY clause"
   - "FETCH clause"
-ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
@@ -51,10 +47,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Determine the order in which [ranking function](../../t-sql/functions/ranking-functions-transact-sql.md) values are applied to the result set.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
->  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+>  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 ## Syntax  
   
@@ -490,7 +486,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.  
   
 ```sql

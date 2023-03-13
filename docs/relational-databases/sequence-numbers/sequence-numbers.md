@@ -1,22 +1,17 @@
 ---
+title: "Sequence Numbers"
 description: "Sequence Numbers"
-title: "Sequence Numbers | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sequence number object, overview"
   - "sequence [Database Engine]"
   - "autonumbers, sequences"
   - "sequence numbers [SQL Server]"
   - "sequence number object"
-ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sequence Numbers

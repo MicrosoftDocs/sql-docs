@@ -4,10 +4,9 @@ description: "Describes the options of the 'Summary' page of the Always On Avail
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.newagwizard.summary.f1"
   - "sql13.swb.adddatabasewizard.summary.f1"

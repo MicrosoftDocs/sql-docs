@@ -4,11 +4,9 @@ description: View examples of how to specify Boolean-valued predicates in XPath 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath queries [SQLXML], predicates"
   - "nested predicates"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "top-level predicates"
   - "Boolean-valued predicates"
   - "multiple predicates"
-ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Boolean-Valued Predicates in XPath Queries (SQLXML 4.0)

@@ -1,25 +1,19 @@
 ---
-description: "SetStringValue Method (SqlServiceAdvancedProperty Class )"
-title: "SetStringValue Method (SqlServiceAdvancedProperty Class )"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetStringValue Method (SqlServiceAdvancedProperty Class )"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetStringValue method"
-ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
+title: "SetStringValue Method (SqlServiceAdvancedProperty class)"
+description: "SetStringValue Method (SqlServiceAdvancedProperty class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetStringValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetStringValue Method (SqlServiceAdvancedProperty class)"
+apitype: "MOFDef"
 ---
-# SetStringValue Method (SqlServiceAdvancedProperty Class )
+# SetStringValue Method (SqlServiceAdvancedProperty class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets the string value of a property.  
   

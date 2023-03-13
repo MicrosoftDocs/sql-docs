@@ -5,8 +5,8 @@ author: HugoMSFT
 ms.author: hudequei 
 ms.reviewer: wiassaf
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: tutorial
 dev_langs:
   - "TSQL"
@@ -74,7 +74,7 @@ For example, if your storage account is named `delta_lake_sample` and the contai
 CREATE EXTERNAL DATA SOURCE Delta_ED
 WITH
 (
- LOCATION = 'abs://sink@delta_lake_sample.dfs.core.windows.net'
+ LOCATION = 'adls://sink@delta_lake_sample.dfs.core.windows.net'
 ,CREDENTIAL = delta_storage_dsc
 )
 ```
@@ -119,7 +119,7 @@ CREATE EXTERNAL FILE FORMAT DeltaTableFormat WITH(FORMAT_TYPE = DELTA);
 
 ### 2. Create external table
 
-The delta table files are located at `/delta/Delta_yob/` and the external data source for this example, is an S3-compatible object storage, previously configured under the data source `s3_eds`. PolyBase can use the as LOCATION the delta table folder or the absolute file itself, which would be located at `delta/Delta_yob/_delta_log/00000000000000000000.json`.
+The delta table files are located at `/delta/Delta_yob/` and the external data source for this example is S3-compatible object storage, previously configured under the data source `s3_eds`. PolyBase can use the as LOCATION the delta table folder or the absolute file itself, which would be located at `delta/Delta_yob/_delta_log/00000000000000000000.json`.
 
 ```sql
 -- Create External Table using delta

@@ -1,30 +1,26 @@
 ---
+title: "sp_syspolicy_purge_history (Transact-SQL)"
 description: "sp_syspolicy_purge_history (Transact-SQL)"
-title: "sp_syspolicy_purge_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_purge_history_TSQL"
-  - "sp_syspolicy_purge_history"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_purge_history"
-ms.assetid: 6db414e7-4946-4bd2-8264-6b490810b306
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_purge_history_TSQL"
+  - "sp_syspolicy_purge_history"
+helpviewer_keywords:
+  - "sp_syspolicy_purge_history"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_purge_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the policy evaluation history according to the history retention interval setting.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

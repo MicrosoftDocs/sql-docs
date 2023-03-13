@@ -5,10 +5,9 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: "martinle"
 ms.date: "12/17/2018"
-ms.prod: "sql"
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "conceptual"
-ms.custom: seo-dt-2019
 monikerRange: ">= aps-pdw-2016-au7"
 ---
 # Common subexpression elimination explained

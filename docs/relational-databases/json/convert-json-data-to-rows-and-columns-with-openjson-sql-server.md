@@ -1,19 +1,16 @@
 ---
-description: "Parse and Transform JSON Data with OPENJSON (SQL Server)"
 title: "Parse and Transform JSON Data with OPENJSON"
-ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "OPENJSON"
-  - "JSON, importing"
-  - "importing JSON"
-ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
+description: "Parse and Transform JSON Data with OPENJSON (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "OPENJSON"
+  - "JSON, importing"
+  - "importing JSON"
 monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Parse and Transform JSON Data with OPENJSON (SQL Server)

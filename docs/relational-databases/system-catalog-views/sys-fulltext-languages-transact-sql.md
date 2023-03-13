@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.fulltext_languages"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "sys.fulltext_languages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_languages (Transact-SQL)

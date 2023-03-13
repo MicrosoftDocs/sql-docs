@@ -1,21 +1,19 @@
 ---
-title: "Move a UCP from One Instance of SQL Server to Another (SQL Server Utility) | Microsoft Docs"
+title: "Move a UCP from One Instance of SQL Server to Another (SQL Server Utility)"
 description: Learn how to use SQL Server Management Studio to move a utility control point (UCP) from one instance of SQL Server to another.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 # Move a UCP from One Instance of SQL Server to Another (SQL Server Utility)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to move a utility control point (UCP) from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another, by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### Move a UCP from one instance of SQL Server to another.  

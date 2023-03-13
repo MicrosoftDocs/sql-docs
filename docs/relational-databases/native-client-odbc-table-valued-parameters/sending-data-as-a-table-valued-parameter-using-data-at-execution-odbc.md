@@ -1,18 +1,14 @@
 ---
-description: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)"
 title: "Table-Valued Parameter, Data-At-Execution (ODBC)"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters (ODBC), sending data to a stored procedure one row at a time"
-ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
+description: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters (ODBC), sending data to a stored procedure one row at a time"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)

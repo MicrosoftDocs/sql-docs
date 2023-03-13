@@ -4,10 +4,9 @@ description: "Describes the options of the 'Add IP Address' dialog box found on 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: end-user-help
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
 ---

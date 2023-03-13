@@ -4,9 +4,8 @@ description: MSreplservers (Transact-SQL)
 author: briancarrig
 ms.author: brcarrig
 ms.date: "10/06/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSreplservers_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSreplservers system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 6d572526-b523-454c-bd20-9e7ae10c9191
 ---
 # MSreplservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

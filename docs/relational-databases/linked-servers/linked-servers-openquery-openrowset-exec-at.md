@@ -1,13 +1,12 @@
 ---
-description: "Compares OPENROWSET, OPENQUERY, EXECUTE AT as options for remote execution"
 title: "Query remote servers (Database Engine)"
+description: "Compares OPENROWSET, OPENQUERY, EXECUTE AT as options for remote execution"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/02/2021"
-ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, linked servers"
   - "OLE DB provider, linked servers"
   - "server management [SQL Server], linked servers"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "servers [SQL Server], linked"
   - "remote servers [SQL Server], linked servers"
   - "linked servers [SQL Server], about linked servers"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 ---
 
 # Compare query remote execution options
@@ -85,9 +81,11 @@ The following example uses a pass-through `SELECT` query to select the rows with
 
 ```sql
 SELECT a.*
-FROM OPENROWSET('SQLNCLI', [linkedserver],
+FROM OPENROWSET('MSOLEDBSQL', [linkedserver],
      'SELECT * FROM AdventureWorksLT.SalesLT.Customer') AS a;
 ```
+
+[!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
 ### C. Execute a SELECT pass-through query with EXECUTE AT
 

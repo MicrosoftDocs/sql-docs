@@ -4,8 +4,8 @@ description: "Catalog Object Properties, Methods, and Events (ADO MD)"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "Catalog object [ADO MD], members"

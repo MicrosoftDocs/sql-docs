@@ -4,9 +4,8 @@ description: sys.asymmetric_keys (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "asymmetric_keys"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.asymmetric_keys catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.asymmetric_keys (Transact-SQL)

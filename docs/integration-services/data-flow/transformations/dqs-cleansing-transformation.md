@@ -1,22 +1,18 @@
 ---
+title: "DQS Cleansing Transformation"
 description: "DQS Cleansing Transformation"
-title: "DQS Cleansing Transformation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssdqs.designer.cleansing.f1"
-  - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"
-helpviewer_keywords: 
-  - "data correction"
-  - "correct data"
-ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssdqs.designer.cleansing.f1"
+  - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"
+helpviewer_keywords:
+  - "data correction"
+  - "correct data"
 ---
 # DQS Cleansing Transformation
 

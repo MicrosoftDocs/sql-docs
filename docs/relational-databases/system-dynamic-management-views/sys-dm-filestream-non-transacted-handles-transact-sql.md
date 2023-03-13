@@ -4,8 +4,8 @@ description: sys.dm_filestream_non_transacted_handles (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_filestream_non_transacted_handles_TSQL"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_filestream_non_transacted_handles dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 ---
 # sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

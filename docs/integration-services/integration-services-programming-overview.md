@@ -1,14 +1,13 @@
 ---
+title: "Integration Services Programming Overview"
 description: "Integration Services Programming Overview"
-title: "Integration Services Programming Overview | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services, programming"
   - "architecture [Integration Services]"
   - "assemblies [Integration Services]"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "packages [Integration Services], programming"
   - "data flow engine [Integration Services]"
   - "languages [Integration Services]"
-ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Programming Overview
 

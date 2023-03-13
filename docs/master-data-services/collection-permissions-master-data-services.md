@@ -1,19 +1,15 @@
 ---
-description: "Collection Permissions (Master Data Services)"
 title: Collection Permissions
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "collections [Master Data Services], permissions"
-  - "permissions [Master Data Services], collections"
-ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
+description: "Collection Permissions (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "collections [Master Data Services], permissions"
+  - "permissions [Master Data Services], collections"
 ---
 # Collection Permissions (Master Data Services)
 

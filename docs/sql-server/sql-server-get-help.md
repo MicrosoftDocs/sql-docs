@@ -1,14 +1,12 @@
 ---
-title: SQL Server help and feedback | Microsoft Docs
-description: A resource for finding ways to get help with your issue or submit feedback for either the SQL Server product, or the SQL Server technical documentation. 
-ms.date: 12/20/2021
-ms.prod: sql
-ms.technology: release-landing
-ms.reviewer: ""
-ms.custom: ""
-ms.topic: conceptual
+title: SQL Server help and feedback
+description: A resource for finding ways to get help with your issue or submit feedback for either the SQL Server product, or the SQL Server technical documentation.
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 12/20/2021
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 

@@ -4,14 +4,12 @@ description: Learn how SQLXML 4.0 recognizes instances of the xml data type and 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "SQLXML, xml data type support"
   - "xml data type [SQL Server], SQLXML"
-ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # xml Data Type Support in SQLXML 4.0

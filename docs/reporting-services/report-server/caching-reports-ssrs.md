@@ -1,14 +1,13 @@
 ---
-title: "Caching Reports | Microsoft Docs"
-description: Learn about caching reports in Report Manager, which speeds up viewing for a processed report while it remains cached. 
+title: "Caching Reports"
+description: Learn about caching reports in Report Manager, which speeds up viewing for a processed report while it remains cached.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "report execution properties [Reporting Services]"
   - "cache [Reporting Services]"
   - "report processing [Reporting Services], caching"
@@ -20,9 +19,6 @@ helpviewer_keywords:
   - "performance [Reporting Services]"
   - "expiration [Reporting Services]"
   - "snapshots [Reporting Services], caching"
-ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Caching Reports (SSRS)
   A report server can cache a copy of a processed report and return that copy when a user opens the report. To a user, the only evidence available to indicate the report is a cached copy is the date and time that the report ran. If the date or time is not current and the report is not a snapshot, the report was retrieved from cache.  

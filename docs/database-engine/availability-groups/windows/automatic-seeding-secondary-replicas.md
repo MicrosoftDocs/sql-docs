@@ -4,10 +4,9 @@ description: "Learn about how automatic seeding can initialize secondary replica
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "03/05/2021"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Automatic seeding [SQL Server], secondary replica"
 ---

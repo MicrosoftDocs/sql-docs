@@ -1,11 +1,12 @@
 ---
-description: "Import a BACPAC File to Create a New User Database"
 title: "Import a BACPAC file to create a new user database"
+description: "Import a BACPAC File to Create a New User Database"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb. importdac.results.f1"
   - "sql13.swb.importdac.settings.f1"
   - "sql13.swb.importdac.storagebrowser.f1"
@@ -16,15 +17,11 @@ f1_keywords:
   - "sql13.swb. importdac.progress.f1"
   - "sql13.swb.importdac.welcome.f1"
   - "sql13.swb. importdac.settings.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data-tier application"
   - "SQL Server DAC"
   - "Migrate database"
   - "DAC"
-ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import a BACPAC File to Create a New User Database

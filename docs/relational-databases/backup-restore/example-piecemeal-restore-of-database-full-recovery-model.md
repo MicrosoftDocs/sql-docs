@@ -1,20 +1,16 @@
 ---
 title: "Piecemeal restore: full recovery model"
 description: This example shows a piecemeal restore in SQL Server of a database using the full recovery model, beginning with a tail-log backup.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full recovery model [SQL Server], RESTORE example"
   - "piecemeal restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], piecemeal"
-ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Example: Piecemeal Restore of Database (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

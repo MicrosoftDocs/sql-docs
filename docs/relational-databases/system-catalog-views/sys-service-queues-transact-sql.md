@@ -4,9 +4,8 @@ description: sys.service_queues (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.service_queues"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.service_queues catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 ---
 # sys.service_queues (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

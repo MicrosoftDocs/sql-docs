@@ -4,9 +4,8 @@ description: sys.backup_devices (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "backup_devices_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.backup_devices catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 ---
 # sys.backup_devices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

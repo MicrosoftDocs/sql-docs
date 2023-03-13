@@ -1,16 +1,12 @@
 ---
+title: "CDC Flow Components"
 description: "CDC Flow Components"
-title: "CDC Flow Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # CDC Flow Components
 
@@ -56,7 +52,7 @@ The CDC components for SSIS are supported on the following operating systems and
 -   Windows Server 2016
   
 ### Running the Installation Program  
- Before you run the installation wizard, be sure that the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed. Then follow the directions in the installation wizard.  
+ Before you run the installation wizard, be sure that the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed. Then follow the directions in the installation wizard.  
   
 ### Restart SSIS Service 
 After you install the CDC components, you must restart the SSIS service to be sure that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -64,10 +60,10 @@ After you install the CDC components, you must restart the SSIS service to be su
 A message is displayed after you install the components. Click **Yes** when prompted.  
   
 ### Uninstalling the Microsoft CDC Components  
- You uninstall the CDC source, CDC splitter, or CDC Control task, by using the uninstall wizard. If you are using the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] for package development, make sure the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed before running the uninstall wizard.  
+ You uninstall the CDC source, CDC splitter, or CDC Control task, by using the uninstall wizard. If you are using the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] for package development, make sure the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed before running the uninstall wizard.  
   
 ## Benefits  
- The CDC Components for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components allow SSIS developers to easily build SSIS packages that process change data. These components enhance the ability of SSIS developers to deal with CDC and reduce the complexity of CDC packages.  
+ The CDC Components for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components allow SSIS developers to easily build SSIS packages that process change data. These components enhance the ability of SSIS developers to deal with CDC and reduce the complexity of CDC packages.  
   
  The SSIS CDC components are used to provide the change data in a way that is easy to further process it for replication, loading a data warehouse, updating slowly changing dimensions for OLAP, auditing changes, or for additional possible uses. The type of further processing used is determined by the SSIS developer.  
   
@@ -78,7 +74,7 @@ A message is displayed after you install the components. Click **Yes** when prom
   
  ![Trickle Feed Processing Package Control Flow](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
   
- This [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Control Flow contains two CDC Control Tasks and the Data Flow task. The first task called **Get CDC Processing Range** establishes the LSN range for the changes that are processed in the data-flow task called **Process Changes**. This range is established based on what was processed during the last package run and was saved in a persistent store.  
+ This [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Control Flow contains two CDC Control Tasks and the Data Flow task. The first task called **Get CDC Processing Range** establishes the LSN range for the changes that are processed in the data-flow task called **Process Changes**. This range is established based on what was processed during the last package run and was saved in a persistent store.  
   
  For more information about using the CDC Control Task, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) and [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
@@ -200,8 +196,6 @@ A message is displayed after you install the components. Click **Yes** when prom
 -   [Define a State Variable](../../integration-services/data-flow/define-a-state-variable.md)  
   
 ## Related Content  
-  
--   Blog entry, [CDC in SSIS for SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/), on mattmasson.com.  
   
 -   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](https://sqlblog.iridule.net/index.php/2013/04/15/sql-server-2012-cdc-for-oracle-a-review-of-one-implementation/), on blogs.msdn.com.  
   

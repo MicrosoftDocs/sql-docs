@@ -1,19 +1,15 @@
 ---
-title: "Migrating DB2 Databases to SQL Server (DB2ToSQL) | Microsoft Docs"
+title: "Migrating DB2 Databases to SQL Server (DB2ToSQL)"
 description: Use this recommended process to migrate DB2 databases to SQL Server or Azure SQL Database using SQL Server Migration Assistant (SSMA).
-ms.prod: sql
-ms.custom:
-  - intro-migration
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.migratedata.f1"
-
+ms.custom: intro-migration
+f1_keywords:
+  - "ssma.db2.migratedata.f1"
 ---
 # Migrating DB2 Databases to SQL Server (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 is a comprehensive environment that helps you quickly migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database. By using SSMA for DB2, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database. Note that you cannot migrate SYS and SYSTEM DB2 schemas.  

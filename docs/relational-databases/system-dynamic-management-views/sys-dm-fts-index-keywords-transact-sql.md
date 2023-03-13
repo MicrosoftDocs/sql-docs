@@ -4,8 +4,8 @@ description: sys.dm_fts_index_keywords (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_fts_index_keywords"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
 dev_langs:
   - "TSQL"
-ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 ---
 # sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

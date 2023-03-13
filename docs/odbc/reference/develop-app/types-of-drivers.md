@@ -1,21 +1,17 @@
 ---
+title: "Types of Drivers"
 description: "Types of Drivers"
-title: "Types of Drivers | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "driver compatibility issues [ODBC]"
   - "ODBC drivers [ODBC], backward compatibility"
   - "backward compatibility [ODBC], application and driver compatibility"
   - "compatibility [ODBC], application and driver compatibility"
-ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Types of Drivers
 ODBC drivers can be classified as follows:  

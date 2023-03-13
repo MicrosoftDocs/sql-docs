@@ -1,25 +1,21 @@
 ---
+title: "Precedence Constraints"
 description: "Precedence Constraints"
-title: "Precedence Constraints | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.precedenceconstraint.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tasks [Integration Services], precedence constraints"
   - "control flow [Integration Services], precedence constraints"
   - "precedence constraints [Integration Services]"
   - "constraints [Integration Services]"
   - "sequence execution options [Integration Services]"
   - "containers [Integration Services], precedence constraints"
-ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: chugugrace
-ms.author: chugu
 ---
 # Precedence Constraints
 

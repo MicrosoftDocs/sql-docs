@@ -4,9 +4,8 @@ description: sys.conversation_endpoints (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "conversation_endpoints_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.conversation_endpoints catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 ---
 # sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

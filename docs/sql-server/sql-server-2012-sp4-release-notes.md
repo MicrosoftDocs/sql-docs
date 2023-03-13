@@ -1,15 +1,12 @@
 ---
-title: "SQL Server 2012 Service Pack release notes | Microsoft Docs"
+title: "SQL Server 2012 Service Pack release notes"
 description: This article contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
-ms.prod: sql
-ms.technology: release-landing
-ms.custom: ""
-ms.date: 07/22/2020
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 07/22/2020
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Service Pack release notes
@@ -159,7 +156,7 @@ For a complete list of bugs and known issues fixed in this service pack, see [th
 **Workaround:**  If you installed [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode before the SharePoint farm was configured, the required work around depends on what other components are installed.  
   
 #### Power View in SharePoint Server 2013 Requires Microsoft.AnalysisServices.SPClient.dll  
-**Issue:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not install a required component, **Microsoft.AnalysisServices.SPClient.dll**. If you install SharePoint Server 2013 Preview and [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, but do not download and install the PowerPivot for SharePoint 2013 installer package, **spPowerPivot.msi** then Power View will not work and Power View will exhibit the following symptoms.  
+**Issue:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not install a required component, **Microsoft.AnalysisServices.SPClient.dll**. If you install SharePoint Server 2013 Preview and [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, but do not download and install the PowerPivot for SharePoint 2013 installer package, **spPowerPivot.msi** then Power View will not work and Power View will exhibit the following symptoms.  
   
 **Symptoms:** When you attempt to create a Power View report, you see an error message similar to the following:  
   

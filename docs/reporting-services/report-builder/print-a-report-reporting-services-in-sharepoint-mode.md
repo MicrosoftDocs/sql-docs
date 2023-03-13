@@ -1,21 +1,16 @@
 ---
-title: "Print a Report (Reporting Services in SharePoint Mode) | Microsoft Docs"
+title: "Print a Report (Reporting Services in SharePoint Mode)"
 description: If a report server runs in SharePoint mode, you can print a report from a SharePoint Web application from a SharePoint site, a browser, or a target application.
-ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "printing reports, SharePoint Web application"
-  - "printing reports"
-ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/14/2019
+ms.service: reporting-services
+ms.subservice: report-builder
+ms.topic: conceptual
+helpviewer_keywords:
+  - "printing reports, SharePoint Web application"
+  - "printing reports"
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
-
 ---
 # Print a Report (Reporting Services in SharePoint Mode)
   For a report server that runs in SharePoint mode, there are three ways to print a report from a SharePoint Web application:  

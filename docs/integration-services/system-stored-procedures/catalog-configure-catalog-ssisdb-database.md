@@ -1,16 +1,12 @@
 ---
+title: "catalog.configure_catalog (SSISDB Database)"
 description: "catalog.configure_catalog (SSISDB Database)"
-title: "catalog.configure_catalog (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.configure_catalog (SSISDB Database)
 

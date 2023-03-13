@@ -1,30 +1,26 @@
 ---
+title: "sp_change_log_shipping_primary_database (Transact-SQL)"
 description: "sp_change_log_shipping_primary_database (Transact-SQL)"
-title: "sp_change_log_shipping_primary_database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_log_shipping_primary_database"
-  - "sp_change_log_shipping_primary_database_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_log_shipping_primary_database"
-ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_log_shipping_primary_database"
+  - "sp_change_log_shipping_primary_database_TSQL"
+helpviewer_keywords:
+  - "sp_change_log_shipping_primary_database"
+dev_langs:
+  - "TSQL"
 ---
 # sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the primary database settings.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

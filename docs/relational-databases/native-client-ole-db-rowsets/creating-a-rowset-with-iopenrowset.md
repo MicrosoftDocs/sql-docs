@@ -1,21 +1,17 @@
 ---
+title: "Create rowset with IOpenRowset (Native Client OLE DB provider)"
 description: "Create rowset with IOpenRowset (Native Client OLE DB provider)"
-title: "Create rowset with IOpenRowset (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IOpenRowset interface"
   - "rowsets [OLE DB], creating"
   - "SQL Server Native Client OLE DB provider, rowsets"
   - "OLE DB rowsets, creating"
-ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Rowset with IOpenRowset in SQL Server Native Client

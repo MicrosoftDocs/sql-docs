@@ -5,16 +5,14 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: mikeray
 ms.date: 10/02/2016
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 helpviewer_keywords:
   - "extended events [SQL Server], system health session"
   - "extended events [SQL Server], system_health session"
   - "system_health session [SQL Server extended events]"
   - "system health session [SQL Server extended events]"
-ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Use the SSMS XEvent Profiler

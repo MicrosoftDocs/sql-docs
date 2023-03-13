@@ -4,9 +4,8 @@ description: Index Disk Space Example
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "online index disk space"
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "space [SQL Server], indexes"
   - "indexes [SQL Server], disk space requirements"
   - "offline index disk space [SQL Server]"
-ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 ---
 # Index Disk Space Example
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
   Whenever an index is created, rebuilt, or dropped, disk space for both the old (source) and new (target) structures is required in their appropriate files and filegroups. The old structure is not deallocated until the index creation transaction commits. Additional temporary disk space for sorting operations may also be needed. For more information, see [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  In this example, disk space requirements to create a clustered index are determined.  

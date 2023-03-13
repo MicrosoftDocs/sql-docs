@@ -1,21 +1,17 @@
 ---
+title: "Distributed Queries Stored Procedures (Transact-SQL)"
 description: "Distributed Queries Stored Procedures (Transact-SQL)"
-title: "Distributed Queries Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "system stored procedures [SQL Server], distributed queries"
-  - "distributed queries [SQL Server], stored procedures"
-ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "system stored procedures [SQL Server], distributed queries"
+  - "distributed queries [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # Distributed Queries Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

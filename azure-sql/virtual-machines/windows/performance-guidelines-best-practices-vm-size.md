@@ -8,8 +8,8 @@ ms.date: 10/14/2022
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-tags: azure-service-management
 ms.custom: ignite-2022
+tags: azure-service-management
 ---
 
 # VM size: Performance best practices for SQL Server on Azure VMs
@@ -46,10 +46,10 @@ Start the development environments with the lower-tier D-Series, B-Series, or Av
 
 Use the SQL Server VM marketplace images with the storage configuration in the portal. This will make it easier to properly create the storage pools necessary to get the size, IOPS, and throughput necessary for your workloads. It is important to choose SQL Server VMs that support premium storage and premium storage caching. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more.
 
-Use the SQL Server VM Azure Marketplace images with the storage configuration in the portal. This will make it easier to properly create the storage pools necessary to get the size, IOPS, and throughput required for your workloads. It is important to choose SQL Server VMs that support premium storage and premium storage caching. Currently, the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) provides the highest I/O throughput-to-vCore ratio available in Azure. If you do not know the I/O requirements for your SQL Server workload, this series is the one most likely to meet your needs. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more. 
+Currently, the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) provides the highest I/O throughput-to-vCore ratio available in Azure. If you do not know the I/O requirements for your SQL Server workload, this series is the one most likely to meet your needs. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more. 
 
 > [!NOTE]
-> If you are interested in participating in the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) public preview, please sign up at [https://aka.ms/signupEbsv5Preview](https://aka.ms/signupEbsv5Preview).
+> If you are interested in participating in the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) public preview for the new large NVMe sizes, please sign up at [https://aka.ms/Ebsv5NVMePublicPreview](https://aka.ms/Ebsv5NVMePublicPreview).
 
 SQL Server data warehouse and mission critical environments will often need to scale beyond the 8 memory-to-vCore ratio. For medium environments, you may want to choose a 16 memory-to-vCore ratio, and a 32 memory-to-vCore ratio for larger data warehouse environments.
 

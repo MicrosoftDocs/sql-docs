@@ -4,10 +4,9 @@ description: "Mechanics and guidelines for the lease, cluster, and health check 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/02/2018"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 

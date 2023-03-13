@@ -4,8 +4,8 @@ description: sys.sensitivity_classifications (Transact-SQL)
 author: Madhumitatripathy
 ms.author: matripathy
 ms.date: 04/19/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 f1_keywords:
   - "sys.sensitivity_classifications "

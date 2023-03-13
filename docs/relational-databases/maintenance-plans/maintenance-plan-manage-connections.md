@@ -4,13 +4,11 @@ description: Maintenance Plan (Manage Connections)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.maint.connections.f1"
-ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 ---
 # Maintenance Plan (Manage Connections)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

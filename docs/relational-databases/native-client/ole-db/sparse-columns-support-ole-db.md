@@ -1,25 +1,24 @@
 ---
+title: "Sparse Columns Support (OLE DB)"
 description: "Sparse Columns Support in SQL Server Native Client (OLE DB)"
-title: "Sparse Columns Support (OLE DB) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sparse Columns Support in SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
+
   This topic provides information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB support for sparse columns. For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md). For a sample, see [Display Column and Catalog Metadata for Sparse Columns &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
   
 ## OLE DB Statement Metadata  
- Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a new DBCOLUMNFLAGS flag value, DBCOLUMNFLAGS_SS_ISCOLUMNSET, is available. This value should be set for columns that are **column_set** values. The DBCOLUMNFLAGS flag can be retrieved through the *dwFlags* parameter of IColumnsInfo::GetColumnsInfo and the DBCOLUMN_FLAGS column of the rowset returned by IColumnsRowset::GetColumnsRowset.  
+ Beginning with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], a new DBCOLUMNFLAGS flag value, DBCOLUMNFLAGS_SS_ISCOLUMNSET, is available. This value should be set for columns that are **column_set** values. The DBCOLUMNFLAGS flag can be retrieved through the *dwFlags* parameter of IColumnsInfo::GetColumnsInfo and the DBCOLUMN_FLAGS column of the rowset returned by IColumnsRowset::GetColumnsRowset.  
   
 ## OLE DB Catalog Metadata  
  Two additional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific columns have been added to DBSCHEMA_COLUMNS.  

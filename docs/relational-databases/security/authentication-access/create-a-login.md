@@ -1,28 +1,24 @@
 ---
-title: "Create a Login | Microsoft Docs"
+title: "Create a Login"
 description: Learn how to create a login in SQL Server or Azure SQL Database by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/31/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.login.status.f1"
   - "sql13.swb.login.effectivepermissions.f1"
   - "sql13.swb.login.general.f1"
   - "sql13.swb.login.databaseaccess.f1"
   - "sql13.swb.login.serverroles.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "authentication [SQL Server], logins"
   - "logins [SQL Server], creating"
   - "creating logins with Management Studio"
   - "Create login [SQL Server]"
   - "SQL Server logins"
-ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Login

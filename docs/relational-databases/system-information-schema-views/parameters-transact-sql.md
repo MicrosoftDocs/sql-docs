@@ -1,24 +1,20 @@
 ---
+title: "PARAMETERS (Transact-SQL)"
 description: "PARAMETERS (Transact-SQL)"
-title: "PARAMETERS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "PARAMETERS_TSQL"
-  - "PARAMETERS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "PARAMETERS view"
-  - "INFORMATION_SCHEMA.PARAMETERS view"
-ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "PARAMETERS_TSQL"
+  - "PARAMETERS"
+helpviewer_keywords:
+  - "PARAMETERS view"
+  - "INFORMATION_SCHEMA.PARAMETERS view"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PARAMETERS (Transact-SQL)

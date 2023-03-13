@@ -1,17 +1,13 @@
 ---
+title: "Adding Connections Programmatically"
 description: "Adding Connections Programmatically"
-title: "Adding Connections Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services 
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connection managers [Integration Services], packages"
   - "Integration Services packages, connections"
   - "connections [Integration Services], packages"
@@ -22,9 +18,9 @@ helpviewer_keywords:
   - "ConnectionManager class"
   - "SSIS connection managers"
   - "adding package connections"
-ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Adding Connections Programmatically
 

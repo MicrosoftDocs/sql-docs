@@ -4,10 +4,9 @@ description: RESTORE Statements restore SQL database backups taken using the BAC
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "RESTORE DATABASE"
   - "RESTORE_TSQL"
@@ -45,7 +44,7 @@ Restores SQL database backups taken using the [BACKUP](backup-transact-sql.md) c
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -185,6 +184,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 --Backup Set Options
  | FILE = { backup_set_file_number | @backup_set_file_number }
  | PASSWORD = { password | @password_variable }
+ | [ METADATA_ONLY | SNAPSHOT ] [ DBNAME = { database_name | @database_name_variable } ]
 
 --Media Set Options
  | MEDIANAME = { media_name | @media_name_variable }
@@ -295,7 +295,7 @@ For more information, see [Online Restore](../../relational-databases/backup-res
 
 ### Discontinued RESTORE Keywords
 
-The following keywords were discontinued in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:
+The following keywords were discontinued in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]:
 
 |Discontinued keyword|Replaced by...|Example of replacement keyword|
 |--------------------------|------------------|------------------------------------|
@@ -478,6 +478,7 @@ The RESTORE examples include the following:
 - I. [Restoring using FILE and FILEGROUP syntax](#restoring_using_FILE_n_FG)
 - J. [Reverting from a database snapshot](#reverting_from_db_snapshot)
 - K. [Restoring from the Microsoft Azure Blob Storage](#Azure_Blob)
+- L. [Restore from a snapshot backup](#snapshot_backup)
 
 > [!NOTE]  
 > For additional examples, see the restore how-to topics that are listed in [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
@@ -735,6 +736,41 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
+### <a id="snapshot_backup"></a> L. Restore from snapshot backup
+
+Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
+
+**L1. Restore a full backup**
+
+```sql
+RESTORE DATABASE Sales
+  FROM DISK = 'D:\MSSQL\Backup\SalesSnapshotFull.bkm'
+  WITH METADATA_ONLY;
+```
+
+**L2. Restore a backup and apply a transaction log**
+
+```sql
+RESTORE DATABASE Sales
+  FROM DISK = 'D:\MSSQL\Backup\SalesSnapshotFull.bkm'
+  WITH METADATA_ONLY,
+  NORECOVERY;
+
+RESTORE LOG Sales
+  FROM DISK = 'D:\MSSQL\Backup\SalesLog.trn'
+  WITH RECOVERY;
+```
+
+**L3. Restore from a snapshot backup and place database and log files in a new location**
+
+```sql
+RESTORE DATABASE Sales
+  FROM DISK = 'D:\MSSQL\Backup\SalesSnapshotFull.bkm'
+  WITH METADATA_ONLY,
+  MOVE Sales_Data TO 'D:\MSSQL\Sales.mdf',
+  MOVE Sales_Log TO 'D:\MSSQL\Sales_log.ldf;
+```
+
 [&#91;Top of examples&#93;](#examples)
 
 ## Next steps
@@ -982,8 +1018,8 @@ Requires the `CREATE ANY DATABASE` permission.
 Requires a Windows account that has permission to access and read from the backup directory. You must also store the Windows account name and password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 - To verify the credentials are already there, use [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
-- To add or update the credentials, use [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
-- To remove credentials from [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
+- To add or update the credentials, use [sp_pdw_add_network_credentials - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+- To remove credentials from [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_pdw_remove_network_credentials - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
 ## Error Handling
 
@@ -1006,7 +1042,7 @@ After a restore, the user database will have database compatibility level 120. T
 
 ## Restore to an appliance with a larger number of compute nodes
 
-Run [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) after restoring a database from a smaller to larger appliance since redistribution will increase transaction log.
+Run [DBCC SHRINKLOG ([!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) after restoring a database from a smaller to larger appliance since redistribution will increase transaction log.
 
 Restoring a backup to an appliance with a larger number of Compute nodes grows the allocated database size in proportion to the number of Compute nodes.
 

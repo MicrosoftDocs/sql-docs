@@ -1,18 +1,14 @@
 ---
+title: "Managed Backup Stored Procedures (Transact-SQL)"
 description: "Managed Backup Stored Procedures (Transact-SQL)"
-title: "Managed Backup Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 ---
 # Managed Backup Stored Procedures (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

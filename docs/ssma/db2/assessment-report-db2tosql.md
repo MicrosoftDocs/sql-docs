@@ -1,18 +1,14 @@
 ---
+title: "Assessment Report (DB2ToSQL)"
 description: "Assessment Report (DB2ToSQL)"
-title: "Assessment Report (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.assessmentreport.f1"
-
+f1_keywords:
+  - "ssma.db2.assessmentreport.f1"
 ---
 # Assessment Report (DB2ToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

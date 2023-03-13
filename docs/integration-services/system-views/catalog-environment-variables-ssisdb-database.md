@@ -1,16 +1,12 @@
 ---
+title: "catalog.environment_variables (SSISDB Database)"
 description: "catalog.environment_variables (SSISDB Database)"
-title: "catalog.environment_variables (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.environment_variables (SSISDB Database)
 

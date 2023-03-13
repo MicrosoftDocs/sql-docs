@@ -4,8 +4,8 @@ description: "FLOOR (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "FLOOR_TSQL"
@@ -23,7 +23,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || 
 
   Returns the largest integer less than or equal to the specified numeric expression.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,7 +54,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 123            -124          123.0000     
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example shows positive numeric, negative numeric, and values with the `FLOOR` function.  
   
 ```sql  

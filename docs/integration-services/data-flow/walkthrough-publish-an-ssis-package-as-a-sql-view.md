@@ -1,18 +1,14 @@
 ---
+title: "Walkthrough: Publish an SSIS Package as a SQL View"
 description: "Walkthrough: Publish an SSIS Package as a SQL View"
-title: "Walkthrough: Publish an SSIS Package as a SQL View | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.packagepublishwizard.f1"
-ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.packagepublishwizard.f1"
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
 

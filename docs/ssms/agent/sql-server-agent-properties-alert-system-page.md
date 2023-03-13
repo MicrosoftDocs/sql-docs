@@ -1,18 +1,14 @@
 ---
-description: "SQL Server Agent Properties (Alert System Page)"
 title: "SQL Server Agent Properties (Alert System Page)"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.agent.alert.f1"
-ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
+description: "SQL Server Agent Properties (Alert System Page)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.agent.alert.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # SQL Server Agent Properties (Alert System Page)

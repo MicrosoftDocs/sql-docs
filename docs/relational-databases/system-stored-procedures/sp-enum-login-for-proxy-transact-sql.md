@@ -1,23 +1,19 @@
 ---
+title: "sp_enum_login_for_proxy (Transact-SQL)"
 description: "sp_enum_login_for_proxy (Transact-SQL)"
-title: "sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_enum_login_for_proxy_TSQL"
   - "sp_enum_login_for_proxy"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_enum_login_for_proxy"
-ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_enum_login_for_proxy (Transact-SQL)
 
@@ -25,7 +21,7 @@ author: VanMSFT
 
   Lists associations between security principals and proxies.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,17 +1,14 @@
 ---
-title: "SQL Server 2012 Release Notes | Microsoft Docs"
+title: "SQL Server 2012 Release Notes"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012.
-ms.prod: sql
-ms.technology: release-landing
-ms.custom: ""
-ms.date: 07/22/2020
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Release Notes, SQL Server"
-ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 07/22/2020
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Release Notes, SQL Server"
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Release Notes

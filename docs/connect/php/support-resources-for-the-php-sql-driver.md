@@ -4,8 +4,8 @@ description: Helpful resources when you're developing applications that use the 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 05/06/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "support"

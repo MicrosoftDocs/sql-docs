@@ -5,10 +5,9 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
 ms.date: 04/17/2018
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # Parallel Data Warehouse firewall configuration in Analytics Platform System
 

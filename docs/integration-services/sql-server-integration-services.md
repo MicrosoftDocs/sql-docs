@@ -1,13 +1,13 @@
 ---
 title: SQL Server Integration Services
 description: Learn about SQL Server Integration Services, Microsoft's platform for building enterprise-level data integration and data transformations solutions.
-ms.prod: sql
-ms.prod_service: integration-services
-ms.technology: integration-services
+author: chugugrace
+ms.author: chugu
+ms.date: 12/10/2021
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: overview
-keywords: 
-  - "SSIS"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS"
   - "DTS [Integration Services]"
   - "SQL Server Integration Services"
@@ -15,11 +15,7 @@ helpviewer_keywords:
   - "DTS [Integration Services], about Integration Services"
   - "data integration [Integration Services]"
   - "Data Transformation Services"
-author: chugugrace
-ms.author: chugu
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
-ms.date: 12/10/2021
+keywords: SSIS
 ---
 
 # SQL Server Integration Services

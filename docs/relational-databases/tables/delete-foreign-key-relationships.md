@@ -1,20 +1,16 @@
 ---
+title: "Delete Foreign Key Relationships"
 description: "Delete Foreign Key Relationships"
-title: "Delete Foreign Key Relationships | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/25/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "foreign keys [SQL Server], deleting"
   - "removing foreign keys"
   - "deleting foreign keys"
-ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Foreign Key Relationships

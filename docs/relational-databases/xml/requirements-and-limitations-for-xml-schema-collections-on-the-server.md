@@ -1,11 +1,12 @@
 ---
 title: "Requirements and limitations (XML schema collections)"
 description: Learn about the requirements and limitations for modifying your XML schema collections in SQL Server.
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "identifiers [XML schema collections]"
@@ -21,13 +22,10 @@ helpviewer_keywords:
   - "precision decimals [XML in SQL Server]"
   - "schema collections [SQL Server], guidelines"
   - "lexical representation"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Requirements and limitations for XML schema collections on the server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The XML schema definition language (XSD) validation has some limitations regarding SQL columns that use the **xml** data type. The following table provides details about those limitations and guidelines for modifying your XSD schema so it can work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The articles in this section provide additional information about specific limitations and guidance for working with them.
 
@@ -53,7 +51,7 @@ The XML schema definition language (XSD) validation has some limitations regardi
 |Out-of-memory conditions|When working with large XML schema collections, an out-of-memory condition might occur. For solutions to this problem, see [Large XML Schema Collections and Out-of-Memory Conditions](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md).|
 |Repeated values|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects schemas in which the block or final attribute has repeated values such as "restriction restriction" and "extension extension".|
 |Schema component identifiers|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limits identifiers of schema components to a maximum length of 1000 Unicode characters. Also,  surrogate character pairs within identifiers are not supported.|
-|Time zone information|In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, time zone information is fully supported for **xs:date**, **xs:time**, and **xs:dateTime** values for XML Schema validation. With [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] backwards-compatibility mode, time zone information is always normalized to Coordinated Universal Time (Greenwich Mean Time). For elements of **dateTime** type, the server converts the time provided to GMT by using the offset value ("-05:00") and returning the corresponding GMT time.|
+|Time zone information|In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, time zone information is fully supported for **xs:date**, **xs:time**, and **xs:dateTime** values for XML Schema validation. With [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] backwards-compatibility mode, time zone information is always normalized to Coordinated Universal Time (Greenwich Mean Time). For elements of **dateTime** type, the server converts the time provided to GMT by using the offset value ("-05:00") and returning the corresponding GMT time.|
 |Union types|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't support restrictions from union types.|
 |Variable precision decimals|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't support variable precision decimals. The **xs:decimal** type represents arbitrary precision decimal numbers. Minimally conforming XML processors must support decimal numbers with a minimum of `totalDigits=18`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports `totalDigits=38,` but limits the fractional digits to 10. All **xs:decimal** instanced values are represented internally by the server by using the SQL type numeric (38, 10).|
 

@@ -1,13 +1,12 @@
 ---
-title: "Configure a Report Server on a Network Load Balancing Cluster | Microsoft Docs"
+title: "Configure a Report Server on a Network Load Balancing Cluster"
 description: Learn how to configure a report server scale-out to run on an NLB. Implement an NLB cluster solution to support a Reporting Services scale-out deployment.
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.technology: report-server
-ms.topic: conceptual
 ms.date: 03/23/2021
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
 ---
 
 # Configure a Report Server on a Network Load Balancing Cluster

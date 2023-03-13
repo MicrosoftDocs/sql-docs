@@ -1,22 +1,20 @@
 ---
 title: Create XML data type variables and columns
 description: Learn how to create columns and variables of the XML data type in SQL Server.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "xml data type [SQL Server], variables"
   - "xml data type [SQL Server], columns"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Create XML data type variables and columns
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The **xml** data type is a built-in data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is somewhat similar to other built-in types such as **int** and **varchar**. As with other built-in types, you can use the **xml** data type as a column type when you create a table as a variable type, a parameter type, a function-return type, or in [CAST and CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).
 

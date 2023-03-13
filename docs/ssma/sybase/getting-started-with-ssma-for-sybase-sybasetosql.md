@@ -1,16 +1,13 @@
 ---
-title: "Getting Started with SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
+title: "Getting Started with SSMA for SAP ASE (SybaseToSQL)"
 description: Learn about the SQL Server Migration Assistant (SSMA) for SAP ASE installation process, and familiarize yourself with the SSMA user interface.
-ms.custom:
-  - intro-get-started
+author: cpichuka
+ms.author: cpichuka
 ms.date: "09/30/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-author: cpichuka 
-ms.author: cpichuka 
+ms.custom: intro-get-started
 ---
 # Getting Started with SSMA for SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for SAP ASE lets you quickly convert SAP Adaptive Server Enterprise (ASE) database schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database schemas, upload the resulting schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, and migrate data from SAP ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  
@@ -20,7 +17,7 @@ This topic introduces the installation process, and then helps familiarize you w
 ## Installing and licensing SSMA  
 To use SSMA, you first must install the SSMA client program on a computer that can access both the source instance of SAP ASE and the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database. To use server-side data migration, you must install extension pack and at least one of the SAP ASE providers (OLE DB or ADO.NET) on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These components support data migration and the emulation of SAP ASE system functions. For installation instructions, see [Installing SSMA for SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md).  
   
-To start SSMA, click **Start**, point to **All Programs**, point to **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase**, and then select **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase**. The first time that you start SSMA, a licensing dialog box appears. You must license SSMA by using a Windows Live ID before you can use SSMA. Licensing instructions are included with the installation instructions in the [Installing SSMA  for Sybase Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md) topic.  
+To start SSMA, click **Start**, point to **All Programs**, point to **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase**, and then select **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase**. The first time that you start SSMA, a licensing dialog box appears. You must license SSMA by using a Windows Live ID before you can use SSMA. Licensing instructions are included with the installation instructions in the [Installing SSMA  for Sybase Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md) topic.  
   
 ## SSMA for SAP ASE user interface  
 After SSMA is installed and licensed, you can use SSMA to migrate SAP ASE databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database. It helps to become familiar with the SSMA user interface before you start. The following diagram shows the user interface for SSMA, including the metadata explorers, metadata, toolbars, output pane, and error list pane:  

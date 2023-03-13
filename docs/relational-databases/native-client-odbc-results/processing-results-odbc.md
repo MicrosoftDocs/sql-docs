@@ -1,14 +1,13 @@
 ---
-title: "Processing Results (ODBC) | Microsoft Docs"
+title: "Processing Results (ODBC)"
 description: Find out about processing data that SQL Server returns when an ODBC application submits an SQL statement.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "result sets [ODBC], about result sets"
   - "SQLRowCount function"
   - "SQL Server Native Client ODBC driver, result sets"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "COMPUTE clause"
   - "result sets [ODBC]"
   - "COMPUTE BY clause"
-ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results (ODBC)

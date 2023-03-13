@@ -4,9 +4,8 @@ description: sys.service_queue_usages (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.service_queue_usages"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.service_queue_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
 ---
 # sys.service_queue_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

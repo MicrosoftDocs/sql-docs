@@ -1,19 +1,16 @@
 ---
-description: "Delete Primary Keys"
 title: "Delete Primary Keys"
-ms.custom: ""
+description: "Delete Primary Keys"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing primary keys"
   - "deleting primary keys"
   - "primary keys [SQL Server], deleting"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Primary Keys

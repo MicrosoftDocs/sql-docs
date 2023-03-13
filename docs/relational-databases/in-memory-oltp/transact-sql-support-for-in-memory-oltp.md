@@ -4,11 +4,9 @@ description: Learn about Transact-SQL statements that include syntax options to 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Support for In-Memory OLTP

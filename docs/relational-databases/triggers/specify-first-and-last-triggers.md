@@ -1,25 +1,21 @@
 ---
+title: "Specify First and Last Triggers"
 description: "Specify First and Last Triggers"
-title: "Specify First and Last Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "first triggers [SQL Server]"
   - "last triggers"
   - "DML triggers, first or last triggers"
   - "INSTEAD OF triggers"
   - "AFTER triggers"
-ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify First and Last Triggers
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   You can specify that one of the AFTER triggers associated with a table be either the first AFTER trigger or the last AFTER trigger that is fired for each INSERT, DELETE, and UPDATE triggering actions. The AFTER triggers that are fired between the first and last triggers are executed in undefined order.  
   
  To specify the order for an AFTER trigger, use the **sp_settriggerorder** stored procedure. **sp_settriggerorder** has the following options.  

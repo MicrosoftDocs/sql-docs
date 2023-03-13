@@ -1,18 +1,15 @@
 ---
+title: "MSSQL_ENG014160"
 description: "MSSQL_ENG014160"
-title: "MSSQL_ENG014160 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG014160 error"
-ms.assetid: d0f3855e-d095-4a81-a5bd-9d7ad51f2c77
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG014160 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014160

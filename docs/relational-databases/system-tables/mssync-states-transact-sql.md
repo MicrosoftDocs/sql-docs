@@ -4,9 +4,8 @@ description: MSsync_states (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSsync_states"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSsync_states system table"
 dev_langs:
   - "TSQL"
-ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 ---
 # MSsync_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,18 @@
 ---
+title: "sp_polybase_join_group"
 description: "sp_polybase_join_group (Transact-SQL)"
-title: "sp_polybase_join_group | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_polybase_join_group"
-helpviewer_keywords: 
-  - "PolyBase"
-ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: markingmyname
 ms.author: maghan
+ms.date: "05/24/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: conceptual
+f1_keywords:
+  - "sp_polybase_join_group"
+helpviewer_keywords:
+  - "PolyBase"
+dev_langs:
+  - "TSQL"
 ---
 # sp_polybase_join_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -25,7 +21,7 @@ ms.author: maghan
   
  The SQL Server instance must have the  [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.  PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure Blob Storage. See also [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

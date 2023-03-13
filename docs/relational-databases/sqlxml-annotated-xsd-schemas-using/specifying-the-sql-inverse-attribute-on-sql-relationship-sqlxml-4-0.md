@@ -4,12 +4,9 @@ description: "Learn how to use the sql:inverse attribute on the sql:relationship
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
-ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying the sql:inverse Attribute on sql:relationship (SQLXML 4.0)

@@ -1,17 +1,14 @@
 ---
 title: "Replace in Files"
 description: Learn how to use the Replace in Files feature of the Find and Replace window to search the text of a set of files for a string or expression and change some or all of the found text.
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: ssms
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Replace in Files dialog box"
-ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Replace in Files dialog box"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Replace in Files

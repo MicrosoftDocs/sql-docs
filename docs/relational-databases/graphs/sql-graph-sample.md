@@ -1,19 +1,14 @@
 ---
-title: SQL Graph Database Sample | Microsoft Docs
+title: SQL Graph Database Sample
 description: A quick sample that will help you get started with the new syntax introduced in SQL graph database.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "04/19/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.custom: ""
-ms.technology:
+ms.service: sql
 ms.topic: "language-reference"
 helpviewer_keywords:
   - "SQL graph"
   - "SQL graph, tsql reference"
-ms.assetid:
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

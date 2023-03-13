@@ -1,21 +1,19 @@
 ---
-title: "Remove a Utility Control Point (SQL Server Utility) | Microsoft Docs"
+title: "Remove a Utility Control Point (SQL Server Utility)"
 description: Find out how to remove a SQL Server utility control point (UCP) from the SQL Server Utility. You can use Transact-SQL to run a stored procedure for this task.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 # Remove a Utility Control Point (SQL Server Utility)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to remove a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utility control point (UCP) from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
+
  **In This Topic**  
   
 -   **Before you begin:**  

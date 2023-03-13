@@ -1,19 +1,16 @@
 ---
 title: Web Browser
 description: "SQL Server Management Studio Web Browser"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "hosting Web browsers"
   - "Web browsers [SQL Server Management Studio]"
   - "integrated Web browsers [SQL Server Management Studio]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # SQL Server Management Studio Web Browser

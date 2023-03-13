@@ -4,9 +4,8 @@ description: syscollector_execution_log_full (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "syscollector_execution_log_full"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "syscollector_execution_log_full view"
 dev_langs:
   - "TSQL"
-ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 ---
 # syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -4,10 +4,9 @@ description: "A reference for the various tools available to monitor the perform
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seodec18
 helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], troubleshooting"

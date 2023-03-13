@@ -5,9 +5,8 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 06/28/2021
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 
 # SQL Server Profiler extension (Preview)

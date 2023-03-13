@@ -1,16 +1,12 @@
 ---
+title: "LEFT (SSIS Expression)"
 description: "LEFT (SSIS Expression)"
-title: "LEFT (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # LEFT (SSIS Expression)
 

@@ -1,16 +1,12 @@
 ---
-title: "Create invoices and forms with lists in a paginated report | Microsoft Docs"
-description: Find out how to define and use lists to create free-form reports or forms and how to use lists in conjunction with other data regions in paginated reports in Report Builder. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
+title: "Create invoices and forms with lists in a paginated report"
+description: Find out how to define and use lists to create free-form reports or forms and how to use lists in conjunction with other data regions in paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
 ---
 # Create invoices and forms with lists in a paginated report (Report Builder)
 

@@ -4,9 +4,9 @@ description: This quickstart shows how to install SQL Server on SUSE Linux Enter
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 10/13/2022
-ms.prod: sql
-ms.technology: linux
+ms.date: 01/23/2023
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom: intro-installation
 ---
@@ -88,7 +88,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SLES,
    ```
 
    > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true#install) version of this article.
+   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true#install) or [[!INCLUDE [sssql22-md](../includes/sssql22-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver16&preserve-view=true#install) version of this article.
 
 1. Refresh your repositories.
 
@@ -102,7 +102,9 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SLES,
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
+1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
+
+1. Now, you are ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 
    ```bash
    sudo zypper install -y mssql-server
@@ -144,7 +146,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
    > SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.1 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE[sssql22](../includes/sssql22-md.md)].
 
    > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) version of this article.
+   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) or [[!INCLUDE [sssql22-md](../includes/sssql22-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver16&preserve-view=true#install) version of this article.
 
 1. Refresh your repositories.
 
@@ -158,7 +160,9 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
+1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
+
+1. Now, you are ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 
    ```bash
    sudo zypper install -y mssql-server
@@ -192,11 +196,11 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] SLES repository configuration file:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-preview.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo
    ```
 
    > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) or [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-v15&preserve-view=true#install) version of this article.
+   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) or [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true#install) version of this article.
 
 1. Refresh your repositories.
 
@@ -210,7 +214,9 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
+1. Before you install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and after you have registered and activated your SUSE Linux Enterprise Server with SUSE Customer Center, you must activate both the [Desktop Applications module and Development Tools module](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-register-sle.html). These modules are required for some of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package dependencies.
+
+1. Now, you are ready to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
 
    ```bash
    sudo zypper install -y mssql-server
@@ -271,4 +277,4 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]

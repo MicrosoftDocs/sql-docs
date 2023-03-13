@@ -4,16 +4,14 @@ description: Learn how to execute a DiffGram file in the Microsoft .NET Framewor
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "DiffGrams [SQLXML], Managed Classes"
   - "SQLXML Managed Classes, DiffGrams"
   - "Managed Classes [SQLXML], DiffGrams"
   - "SQLXML, Managed Classes"
-ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a DiffGram by Using SQLXML Managed Classes

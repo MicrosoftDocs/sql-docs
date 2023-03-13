@@ -1,21 +1,19 @@
 ---
 title: GeomFromGml (geometry Data Type)
 description: "GeomFromGml (geometry Data Type)"
-ms.prod: sql
-ms.technology: t-sql
+author: MladjoA
+ms.author: mlandzic
+ms.date: "08/03/2017"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GeomFromGML_TSQL"
   - "GeomFromGML"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GeomFromGML (geometry Data Type)"
-author: MladjoA
-ms.author: mlandzic 
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "08/03/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # GeomFromGml (geometry Data Type)
@@ -58,7 +56,7 @@ GeomFromGml ( GML_input, SRID )
 ```sql
 DECLARE @g geometry;  
 DECLARE @x xml;  
-SET @x = '<LineString xmlns="https://www.opengis.net/gml"> <posList>100 100 20 180 180 180</posList> </LineString>';  
+SET @x = '<LineString xmlns="http://www.opengis.net/gml"> <posList>100 100 20 180 180 180</posList> </LineString>';  
 SET @g = geometry::GeomFromGml(@x, 0);  
 SELECT @g.ToString();  
 ```  

@@ -3,9 +3,9 @@ title: "Dynamic Management Views (Transact-SQL)"
 description: "Dynamic management views and functions return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "09/01/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "database scoped dynamic management objects [SQL Server]"
@@ -25,16 +25,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # System Dynamic Management Views
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Dynamic management views and functions return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance.  
+  Dynamic management views (DMV) and functions return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance.  
   
 > [!IMPORTANT]  
 >  Dynamic management views and functions return internal, implementation-specific state data. Their schemas and the data they return may change in future releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Therefore, dynamic management views and functions in future releases may not be compatible with the dynamic management views and functions in this release. For example, in future releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Microsoft may augment the definition of any dynamic management view by adding columns to the end of the column list. We recommend against using the syntax `SELECT * FROM dynamic_management_view_name` in production code because the number of columns returned might change and break your application.  
   
  There are two types of dynamic management views and functions:  
   
--   Server-scoped dynamic management views and functions. These require VIEW SERVER STATE permission on the server.  
+-   Server-scoped dynamic management views and functions. These require VIEW SERVER STATE permission on the server. For SQL Server 2022 and later, VIEW SERVER PERFORMANCE STATE is required, or VIEW SERVER SECURITY STATE is required for a few DMVs that are security related.
+
   
--   Database-scoped dynamic management views and functions. These require VIEW DATABASE STATE permission on the database.  
+-   Database-scoped dynamic management views and functions. These require VIEW DATABASE STATE permission on the database. For SQL Server 2022 and later, VIEW DATABASE PERFORMANCE STATE is required, or VIEW DATABASE SECURITY STATE is required for a few DMVs that are security related.
+
   
 ## Querying Dynamic Management Views  
  Dynamic management views can be referenced in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by using two-part, three-part, or four-part names. Dynamic management functions on the other hand can be referenced in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by using either two-part or three-part names. Dynamic management views and functions cannot be referenced in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by using one-part names.  

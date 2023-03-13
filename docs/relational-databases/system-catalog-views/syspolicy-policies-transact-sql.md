@@ -4,9 +4,8 @@ description: syspolicy_policies (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "syspolicy_policies_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "syspolicy_policies view"
 dev_langs:
   - "TSQL"
-ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 ---
 # syspolicy_policies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

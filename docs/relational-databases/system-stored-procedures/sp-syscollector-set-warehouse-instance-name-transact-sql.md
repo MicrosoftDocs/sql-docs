@@ -1,31 +1,27 @@
 ---
+title: "sp_syscollector_set_warehouse_instance_name (Transact-SQL)"
 description: "sp_syscollector_set_warehouse_instance_name (Transact-SQL)"
-title: "sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_set_warehouse_instance_name_TSQL"
-  - "sp_syscollector_set_warehouse_instance_name"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data collector [SQL Server], stored procedures"
-  - "sp_syscollector_set_warehouse_instance_name"
-ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_set_warehouse_instance_name_TSQL"
+  - "sp_syscollector_set_warehouse_instance_name"
+helpviewer_keywords:
+  - "data collector [SQL Server], stored procedures"
+  - "sp_syscollector_set_warehouse_instance_name"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies the instance name for the connection string used to connect to the management data warehouse.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

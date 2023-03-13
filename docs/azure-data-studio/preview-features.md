@@ -5,9 +5,9 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 10/14/2020
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: ignite-2022
+ms.custom: updatefrequency5
 ---
 
 # Preview features in Azure Data Studio
@@ -63,7 +63,6 @@ You can enable or disable preview features anytime in your Settings.
 * Oracle
 * MySQL
 * PostgreSQL
-* Query History
 * SandDance for Azure Data Studio
 * Server Reports
 * SQL Assessment

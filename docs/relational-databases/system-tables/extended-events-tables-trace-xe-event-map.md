@@ -4,9 +4,8 @@ description: Extended Events Tables - trace_xe_event_map
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "trace_xe_event_map_TSQL"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], tables"
 dev_langs:
   - "TSQL"
-ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 ---
 # Extended Events Tables - trace_xe_event_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

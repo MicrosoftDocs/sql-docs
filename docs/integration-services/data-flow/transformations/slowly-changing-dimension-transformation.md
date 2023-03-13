@@ -1,23 +1,19 @@
 ---
+title: "Slowly Changing Dimension Transformation"
 description: "Slowly Changing Dimension Transformation"
-title: "Slowly Changing Dimension Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "08/31/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.slowlychangingdimtrans.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Slowly Changing Dimension transformation"
   - "slowly changing dimensions"
   - "SCD transformation"
   - "updating slowly changing dimensions"
-ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: chugugrace
-ms.author: chugu
 ---
 # Slowly Changing Dimension Transformation
 

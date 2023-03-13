@@ -1,16 +1,13 @@
 ---
-title: "What's new in Reporting Services | Microsoft Docs"
+title: "What's new in Reporting Services"
 description: Learn about what's new in the different versions of SQL Server Reporting Services, including changes to the major feature areas.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
-ms.custom:
-  - intro-whats-new
 ms.date: 09/16/2022
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)

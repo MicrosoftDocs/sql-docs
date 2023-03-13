@@ -1,21 +1,17 @@
 ---
+title: "Text File Driver Programming Considerations"
 description: "Text File Driver Programming Considerations"
-title: "Text File Driver Programming Considerations | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text file driver [ODBC]"
   - "ODBC desktop database drivers [ODBC], text file driver"
   - "desktop database drivers [ODBC], text file driver"
   - "Jet-based ODBC drivers [ODBC], text file driver"
-ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Text File Driver Programming Considerations
 This section contains the following topics:  

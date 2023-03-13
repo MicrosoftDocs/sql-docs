@@ -4,8 +4,8 @@ description: Describes how to add existing constraints to a DataSet.
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "11/30/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"

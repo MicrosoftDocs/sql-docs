@@ -1,15 +1,13 @@
 ---
-title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
+title: "Configure Always Encrypted using PowerShell"
 description: Learn how to import and use the SqlServer PowerShell module, which provides cmdlets for configuring Always Encrypted in both Azure SQL Database and SQL Server.
-ms.custom: ""
-ms.date: 04/12/2022
-ms.prod: sql
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
-ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 04/12/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted using PowerShell

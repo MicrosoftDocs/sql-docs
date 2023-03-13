@@ -1,18 +1,14 @@
 ---
+title: "Configure TLS Connections on a Native Mode Report Server"
 description: "Configure TLS Connections on a Native Mode Report Server"
-title: "Configure TLS Connections on a Native Mode Report Server | Microsoft Docs"
-ms.date: 09/27/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Secure Sockets Layer (SSL)"
-ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/27/2020
+ms.service: reporting-services
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Secure Sockets Layer (SSL)"
 ---
 # Configure TLS connections on a native mode report server
 

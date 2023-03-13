@@ -3,12 +3,10 @@ title: "NULL and UNKNOWN (Transact-SQL)"
 description: "NULL and UNKNOWN (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 dev_langs:
   - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || = azure-sqldw-latest"

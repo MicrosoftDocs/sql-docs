@@ -1,33 +1,29 @@
 ---
+title: "managed_backup.sp_backup_config_schedule (Transact-SQL)"
 description: "managed_backup.sp_backup_config_schedule (Transact-SQL)"
-title: "managed_backup.sp_backup_config_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "02/20/2020"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_backup_config_schedule_TSQL"
   - "managed_backup.sp_backup_config_schedule"
   - "managed_backup.sp_backup_config_schedule_TSQL"
   - "sp_backup_config_schedule"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "managed_backup.sp_backup_config_schedule"
   - "sp_backup_config_schedule"
-ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-author: MashaMSFT
-ms.author: mathoma
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Configures automated or custom scheduling options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
     
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

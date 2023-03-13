@@ -1,23 +1,19 @@
 ---
+title: "sp_add_notification (Transact-SQL)"
 description: "sp_add_notification (Transact-SQL)"
-title: "sp_add_notification (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_notification_TSQL"
-  - "sp_add_notification"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_notification"
-ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_notification_TSQL"
+  - "sp_add_notification"
+helpviewer_keywords:
+  - "sp_add_notification"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

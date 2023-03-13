@@ -4,8 +4,8 @@ description: This article provides information about installing updates for SQL 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/05/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"

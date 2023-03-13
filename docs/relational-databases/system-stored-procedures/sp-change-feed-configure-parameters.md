@@ -1,20 +1,19 @@
 ---
-description: "The sp_change_feed_configure_parameters system stored procedure is used to reduce latency or reduce the cost by increasing the batch size with higher transactions"
 title: "sp_change_feed_configure_parameters (Transact-SQL)"
-ms.date: 11/04/2022
-ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: wiassaf
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_feed_configure_parameters_TSQL"
-  - "sp_change_feed_configure_parameters"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_feed_configure_parameters"
+description: "The sp_change_feed_configure_parameters system stored procedure is used to reduce latency or reduce the cost by increasing the batch size with higher transactions"
 author: IdrisMotiwala
 ms.author: imotiwala
+ms.reviewer: wiassaf
+ms.date: 02/03/2023
+ms.service: synapse-analytics
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_feed_configure_parameters_TSQL"
+  - "sp_change_feed_configure_parameters"
+helpviewer_keywords:
+  - "sp_change_feed_configure_parameters"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 # sp_change_feed_configure_parameters (Transact-SQL)
@@ -27,7 +26,7 @@ Used to reduce latency – by decreasing change batch size with maxtrans or to r
 
 ## Syntax  
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ```syntaxsql  
 EXECUTE sys.sp_change_feed_configure_parameters
@@ -52,7 +51,7 @@ Returns: 0 - Success, 1 - Failure
 
 ## Permissions  
 
- Only a member of the sysadmin server role or db_owner database role can execute this procedure. 
+  Currently, a user with [CONTROL database permissions](../security/permissions-database-engine.md), db_owner database role membership, or sysadmin server role membership can execute this procedure. 
 
 ## See also  
 

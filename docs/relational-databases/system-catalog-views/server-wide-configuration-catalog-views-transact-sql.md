@@ -4,16 +4,14 @@ description: Server-wide Configuration Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/01/2015"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "catalog views [SQL Server], server-wide configuration"
   - "server-wide configuration catalog views [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 ---
 # Server-wide Configuration Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,14 @@
 ---
+title: "SQL Graph Architecture"
 description: "SQL Graph Architecture"
-title: "SQL Graph Architecture | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/24/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: "language-reference"
 helpviewer_keywords:
   - "SQL graph"
   - "SQL graph, architecture"
-ms.assetid:
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Graph Architecture

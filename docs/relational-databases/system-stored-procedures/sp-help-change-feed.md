@@ -1,20 +1,19 @@
 ---
-description: "The sp_help_change_feed system stored procedure monitors the current Azure Synapse Link configuration."
 title: "sp_help_change_feed (Transact-SQL)"
-ms.date: 11/04/2022
-ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: wiassaf
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_change_feed_TSQL"
-  - "sp_help_change_feed"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_change_feed"
+description: "The sp_help_change_feed system stored procedure monitors the current Azure Synapse Link configuration."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: wiassaf
+ms.date: 11/09/2022
+ms.service: synapse-analytics
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_change_feed_TSQL"
+  - "sp_help_change_feed"
+helpviewer_keywords:
+  - "sp_help_change_feed"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 # sp_help_change_feed (Transact-SQL)
@@ -24,7 +23,7 @@ Monitors the current configuration of the [Azure Synapse Link change feed](../..
 
 ## Syntax  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ```syntaxsql  
 EXECUTE sys.sp_help_change_feed;
@@ -55,7 +54,7 @@ EXECUTE sys.sp_help_change_feed;
  
 ## Permissions  
 
-Currently, a user must be a member of the sysadmin server role or db_owner database role.
+ Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
 
 ## See also  
 

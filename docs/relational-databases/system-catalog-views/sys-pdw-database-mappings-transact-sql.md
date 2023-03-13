@@ -4,12 +4,11 @@ description: sys.pdw_database_mappings (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/17/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_database_mappings (Transact-SQL)

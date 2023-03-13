@@ -1,13 +1,12 @@
 ---
 title: "Configure PolyBase scale-out groups on Windows"
 description: Set up a PolyBase scale-out group to create a cluster of SQL Server instances. This improves query performance for large data sets from external sources.
-ms.date: 02/22/2022
-ms.prod: sql
-ms.technology: polybase
-ms.topic: "tutorial"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
+ms.date: 02/22/2022
+ms.service: sql
+ms.subservice: polybase
+ms.topic: "tutorial"
 monikerRange: ">= sql-server-2016"
 ---
 # Configure PolyBase scale-out groups on Windows

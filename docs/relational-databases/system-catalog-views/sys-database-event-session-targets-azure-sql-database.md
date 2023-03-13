@@ -5,18 +5,16 @@ description: sys.database_event_session_targets (Azure SQL Database and Azure SQ
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "4/18/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-[!INCLUDE [sqlserver2016-asdb](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 Returns a row for each event target for a database-scoped event session. For information about *active* database-scoped sessions, see [sys.dm_xe_database_session_targets](../system-dynamic-management-views/sys-dm-xe-database-session-targets-azure-sql-database.md).
 

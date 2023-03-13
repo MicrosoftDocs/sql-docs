@@ -1,14 +1,13 @@
 ---
 title: Manage Tab Completion (SQL Server PowerShell)
 description: Learn how to control Windows PowerShell tab completion by making proper use of three variables in the SQL Server PowerShell modules.
-ms.prod: sql
-ms.technology: sql-server-powershell
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
-ms.custom: ""
 ms.date: 10/14/2020
+ms.service: sql
+ms.subservice: sql-server-powershell
+ms.topic: conceptual
 ---
 
 # Manage Tab Completion with SQL Server PowerShell

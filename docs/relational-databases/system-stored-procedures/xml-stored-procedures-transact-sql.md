@@ -1,21 +1,17 @@
 ---
+title: "XML Stored Procedures (Transact-SQL)"
 description: "XML Stored Procedures (Transact-SQL)"
-title: "XML Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "system stored procedures [SQL Server], XML"
-  - "XML [SQL Server], system stored procedures"
-ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "system stored procedures [SQL Server], XML"
+  - "XML [SQL Server], system stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # XML Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

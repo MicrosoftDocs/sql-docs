@@ -4,24 +4,26 @@ description: Learn about how to use Azure Active Directory for authentication wi
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 08/11/2021
+ms.date: 11/16/2022
 ms.service: sql-db-mi
 ms.subservice: security
-ms.topic: how-to
+ms.topic: conceptual
 ms.custom:
-  - "azure-synapse"
-  - "sqldbrb=1"
+  - azure-synapse
+  - sqldbrb=1
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Use Azure Active Directory authentication
-
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-Azure Active Directory (Azure AD) authentication is a mechanism for connecting to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Synapse SQL in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) by using identities in Azure AD.
+This article provides an overview of using Azure Active Directory to authenticate to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [SQL Server on Windows Azure VMs](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md), [Synapse SQL in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) and [SQL Server for Windows and Linux](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview) by using identities in Azure AD.
 
-> [!NOTE]
-> This article applies to Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics.
+To learn how to create and populate Azure AD, and then configure Azure AD with Azure SQL Database, Azure SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics, review [Configure Azure AD](authentication-aad-configure.md) and [Azure AD with SQL Server on Azure VMs](../virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview).
+
+## Overview
+
+Azure Active Directory (Azure AD) authentication is a mechanism to connect to your SQL resource by using identities in Azure AD.
 
 With Azure AD authentication, you can centrally manage the identities of database users and other Microsoft services in one central location. Central ID management provides a single place to manage database users and simplifies permission management. Benefits include the following:
 
@@ -44,9 +46,6 @@ With Azure AD authentication, you can centrally manage the identities of databas
 
 - Azure AD supports similar connections from SQL Server Data Tools (SSDT) that use Active Directory Interactive Authentication. For more information, see [Azure Active Directory support in SQL Server Data Tools (SSDT)](/sql/ssdt/azure-active-directory)
 
-> [!NOTE]  
-> Connecting to a SQL Server instance that's running on an Azure virtual machine (VM) is not supported using Azure Active Directory or Azure Active Directory Domain Services. Use an Active Directory domain account instead.
-
 The configuration steps include the following procedures to configure and use Azure Active Directory authentication.
 
 1. Create and populate Azure AD.
@@ -57,12 +56,12 @@ The configuration steps include the following procedures to configure and use Az
 6. Connect to your database by using Azure AD identities.
 
 > [!NOTE]
-> To learn how to create and populate Azure AD, and then configure Azure AD with Azure SQL Database, SQL Managed Instance, and Synapse SQL in Azure Synapse Analytics, see [Configure Azure AD with Azure SQL Database](authentication-aad-configure.md).
+> For Azure SQL, Azure VMs and SQL Server 2022, Azure AD authentication only supports access tokens which originate from Azure AD and doesn't support third-party access tokens. Azure AD also doesn't support redirecting Azure AD queries to third-party endpoints. This applies to all SQL platforms and all operating systems that support Azure AD authentication.
 
 ## Trust architecture
 
-- Only the cloud portion of Azure AD, SQL Database, SQL Managed Instance, and Azure Synapse is considered to support Azure AD native user passwords.
-- To support Windows single sign-on credentials (or user/password for Windows credential), use Azure Active Directory credentials from a federated or managed domain that is configured for seamless single sign-on for pass-through and password hash authentication. For more information, see [Azure Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
+- Only the cloud portion of Azure AD, SQL Database, SQL Managed Instance, [SQL Server on Windows Azure VMs], and Azure Synapse is considered to support Azure AD native user passwords.
+- To support Windows single sign-on credentials (or user/password for Windows credential), use Azure Active Directory credentials from a federated or managed domain that is configured for seamless single sign-on for pass-through and password hash authentication. For more information, see [Azure Active Directory seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso).
 - To support Federated authentication (or user/password for Windows credentials), the communication with ADFS block is required.
 
 For more information on Azure AD hybrid identities, the setup, and synchronization, see the following articles:
@@ -89,36 +88,39 @@ When using Azure AD authentication, there are two Administrator accounts: the or
 
 To create new users, you must have the `ALTER ANY USER` permission in the database. The `ALTER ANY USER` permission can be granted to any database user. The `ALTER ANY USER` permission is also held by the server administrator accounts, and database users with the `CONTROL ON DATABASE` or `ALTER ON DATABASE` permission for that database, and by members of the `db_owner` database role.
 
-To create a contained database user in Azure SQL Database, SQL Managed Instance, or Azure Synapse, you must connect to the database or instance using an Azure AD identity. To create the first contained database user, you must connect to the database by using an Azure AD administrator (who is the owner of the database). This is demonstrated in [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](authentication-aad-configure.md). Azure AD authentication is only possible if the Azure AD admin was created for Azure SQL Database, SQL Managed Instance, or Azure Synapse. If the Azure Active Directory admin was removed from the server, existing Azure Active Directory users created previously inside SQL Server can no longer connect to the database using their Azure Active Directory credentials.
+To create a contained database user in Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse, you must connect to the database or instance using an Azure AD identity. To create the first contained database user, you must connect to the database by using an Azure AD administrator (who is the owner of the database). This is demonstrated in [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](authentication-aad-configure.md). Azure AD authentication is only possible if the Azure AD admin was created for Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse. If the Azure Active Directory admin was removed from the server, existing Azure Active Directory users created previously inside SQL Server can no longer connect to the database using their Azure Active Directory credentials.
 
 ## Azure AD features and limitations
 
 - The following members of Azure AD can be provisioned for Azure SQL Database:
 
   - Native members: A member created in Azure AD in the managed domain or in a customer domain. For more information, see [Add your own domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain).
-  - Members of an Active Directory domain federated with Azure Active Directory on a managed domain configured for seamless single sign-on with pass-through or password hash authentication. For more information, see [Microsoft Azure now supports federation with Windows Server Active Directory](https://azure.microsoft.com/blog/windows-azure-now-supports-federation-with-windows-server-active-directory//) and [Azure Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
-  - Imported members from other Azure AD's who are native or federated domain members.
+  - Members of an Active Directory domain federated with Azure Active Directory on a managed domain configured for seamless single sign-on with pass-through or password hash authentication. For more information, see [Microsoft Azure now supports federation with Windows Server Active Directory](https://azure.microsoft.com/blog/windows-azure-now-supports-federation-with-windows-server-active-directory//) and [Azure Active Directory seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso).
+  - Imported members from other Azure ADs who are native or federated domain members.
   - Active Directory groups created as security groups.
 
-- Azure AD users that are part of a group that has `db_owner` server role cannot use the **[CREATE DATABASE SCOPED CREDENTIAL](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)** syntax against Azure SQL Database and Azure Synapse. You will see the following error:
 
-    `SQL Error [2760] [S0001]: The specified schema name 'user@mydomain.com' either does not exist or you do not have permission to use it.`
+- Azure AD users that are part of a group that is member of the `db_owner` database role cannot use the **[CREATE DATABASE SCOPED CREDENTIAL](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)** syntax against Azure SQL Database and Azure Synapse. You'll see the following error:
 
-    Grant the `db_owner` role directly to the individual Azure AD user to mitigate the **CREATE DATABASE SCOPED CREDENTIAL** issue.
+    `SQL Error [2760] [S0001]: The specified schema name 'user@mydomain.com' either doesn't exist or you do not have permission to use it.`
 
-- These system functions return NULL values when executed under Azure AD principals:
+    To mitigate the **CREATE DATABASE SCOPED CREDENTIAL** issue add the individual Azure AD user the `db_owner` role directly.
+
+- These system functions aren't supported and return NULL values when executed under Azure AD principals:
 
   - `SUSER_ID()`
-  - `SUSER_NAME(<admin ID>)`
-  - `SUSER_SNAME(<admin SID>)`
-  - `SUSER_ID(<admin name>)`
-  - `SUSER_SID(<admin name>)`
+  - `SUSER_NAME(<ID>)`
+  - `SUSER_SNAME(<SID>)`
+  - `SUSER_ID(<name>)`
+  - `SUSER_SID(<name>)`
 
 ### SQL Managed Instance
 
 - Azure AD server principals (logins) and users are supported for [SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
-- Setting Azure AD server principals (logins) mapped to an Azure AD group as database owner is not supported in [SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
-  - An extension of this is that when a group is added as part of the `dbcreator` server role, users from this group can connect to the SQL Managed Instance and create new databases, but will not be able to access the database. This is because the new database owner is SA, and not the Azure AD user. This issue does not manifest if the individual user is added to the `dbcreator` server role.
+- Setting Azure AD server principals (logins) mapped to an Azure AD group as database owner isn't supported in [SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
+
+  - An extension of this is that when a group is added as part of the `dbcreator` server role, users from this group can connect to the SQL Managed Instance and create new databases, but won't be able to access the database. This is because the new database owner is SA, and not the Azure AD user. This issue doesn't manifest if the individual user is added to the `dbcreator` server role.
+
 - SQL Agent management and jobs execution are supported for Azure AD server principals (logins).
 - Database backup and restore operations can be executed by Azure AD server principals (logins).
 - Auditing of all statements related to Azure AD server principals (logins) and authentication events is supported.
@@ -148,11 +150,11 @@ The following authentication methods are supported for Azure AD server principal
 - Only one Azure AD administrator (a user or group) can be configured for a server in SQL Database or Azure Synapse at any time.
   - The addition of Azure AD server principals (logins) for SQL Managed Instance allows the possibility of creating multiple Azure AD server principals (logins) that can be added to the `sysadmin` role.
 - Only an Azure AD administrator for the server can initially connect to the server or managed instance using an Azure Active Directory account. The Active Directory administrator can configure subsequent Azure AD database users.
-- Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+- Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups aren't supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 - We recommend setting the connection timeout to 30 seconds.
 - SQL Server 2016 Management Studio and SQL Server Data Tools for Visual Studio 2015 (version 14.0.60311.1April 2016 or later) support Azure Active Directory authentication. (Azure AD authentication is supported by the **.NET Framework Data Provider for SqlServer**; at least version .NET Framework 4.6). Therefore the newest versions of these tools and data-tier applications (DAC and BACPAC) can use Azure AD authentication.
 - Beginning with version 15.0.1, [sqlcmd utility](/sql/tools/sqlcmd-utility) and [bcp utility](/sql/tools/bcp-utility) support Active Directory Interactive authentication with Multi-Factor Authentication.
-- SQL Server Data Tools for Visual Studio 2015 requires at least the April 2016 version of the Data Tools (version 14.0.60311.1). Currently, Azure AD users are not shown in SSDT Object Explorer. As a workaround, view the users in [sys.database_principals](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql).
+- SQL Server Data Tools for Visual Studio 2015 requires at least the April 2016 version of the Data Tools (version 14.0.60311.1). Currently, Azure AD users aren't shown in SSDT Object Explorer. As a workaround, view the users in [sys.database_principals](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql).
 - [Microsoft JDBC Driver 6.0 for SQL Server](https://www.microsoft.com/download/details.aspx?id=11774) supports Azure AD authentication. Also, see [Setting the Connection Properties](/sql/connect/jdbc/setting-the-connection-properties).
 - PolyBase cannot authenticate by using Azure AD authentication.
 - Azure AD authentication is supported for Azure SQL Database and Azure Synapse by using the Azure portal **Import Database** and **Export Database** blades. Import and export using Azure AD authentication is also supported from a PowerShell command.
@@ -160,7 +162,7 @@ The following authentication methods are supported for Azure AD server principal
 
 ## Next steps
 
-- To learn how to create and populate an Azure AD instance and then configure it with Azure SQL Database, SQL Managed Instance, or Azure Synapse, see [Configure and manage Azure Active Directory authentication with SQL Database, SQL Managed Instance, or Azure Synapse](authentication-aad-configure.md).
+- To learn how to create and populate an Azure AD instance and then configure it with Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse, see [Configure and manage Azure Active Directory authentication with SQL Database, SQL Managed Instance, or Azure Synapse](authentication-aad-configure.md).
 - For a tutorial of using Azure AD server principals (logins) with SQL Managed Instance, see [Azure AD server principals (logins) with SQL Managed Instance](../managed-instance/aad-security-configure-tutorial.md)
 - For an overview of logins, users, database roles, and permissions in SQL Database, see [Logins, users, database roles, and permissions](logins-create-manage.md).
 - For more information about database principals, see [Principals](/sql/relational-databases/security/authentication-access/principals-database-engine).

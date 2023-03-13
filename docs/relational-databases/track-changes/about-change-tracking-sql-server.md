@@ -1,22 +1,17 @@
 ---
-description: "About Change Tracking (SQL Server)"
 title: "About Change Tracking"
-ms.custom: seo-dt-2019
+description: "About Change Tracking (SQL Server)"
+author: JetterMcTedder
+ms.author: bspendolini
 ms.date: "10/20/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data changes [SQL Server]"
   - "tracking data changes [SQL Server]"
   - "change tracking [SQL Server], about change tracking"
   - "change tracking [SQL Server]"
   - "data [SQL Server], changing"
-ms.assetid:
-author: JetterMcTedder
-ms.author: bspendolini
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # About Change Tracking (SQL Server)

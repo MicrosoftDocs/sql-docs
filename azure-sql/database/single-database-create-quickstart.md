@@ -9,10 +9,10 @@ ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
 ms.custom:
-  - "contperf-fy21q1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
-  - "mode-ui"
+  - contperf-fy21q1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
+  - mode-ui
 ---
 # Quickstart: Create a single database - Azure SQL Database
 
@@ -86,7 +86,7 @@ The Azure CLI code blocks in this section create a resource group, server, singl
 
 [!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../includes/azure-cli-prepare-your-environment-h3.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-h3.md)]
 
 [!INCLUDE [cli-launch-cloud-shell-sign-in.md](../includes/cli-launch-cloud-shell-sign-in.md)]
 
@@ -135,11 +135,11 @@ az sql db create \
 
 # [Azure CLI (sql up)](#tab/azure-cli-sql-up)
 
-The Azure CLI code blocks in this section use the [az sql up](/cli/azure/sql#az-sql-up) command to simplify the database creation process.  With it, you can create a database and all of its associated resources with a single command. This includes the resource group, server name, server location, database name, and login information. The database is created with a default pricing tier of General Purpose, Provisioned, Gen5, 2 vCores.
+The Azure CLI code blocks in this section use the [az sql up](/cli/azure/sql#az-sql-up) command to simplify the database creation process.  With it, you can create a database and all of its associated resources with a single command. This includes the resource group, server name, server location, database name, and login information. The database is created with a default pricing tier of General Purpose, Provisioned, standard-series (Gen5), 2 vCores.
 
 [!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment-h3.md](../includes/azure-cli-prepare-your-environment-h3.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-h3.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-h3.md)]
 
 [!INCLUDE [cli-launch-cloud-shell-sign-in.md](../includes/cli-launch-cloud-shell-sign-in.md)]
 

@@ -4,10 +4,9 @@ description: "A description for how to manage and maintain a database that is ac
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/18/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"

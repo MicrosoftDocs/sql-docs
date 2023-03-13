@@ -4,9 +4,8 @@ description: Learn about the data access components in SQLXML 4.0 - SQLXMLOLEDB 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "data access [SQLXML]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "data providers [SQLXML], listed"
   - "providers [SQLXML]"
   - "providers [SQLXML], listed"
-ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 Data Access Components - SQLXMLOLEDB Provider

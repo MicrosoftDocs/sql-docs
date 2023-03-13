@@ -1,19 +1,15 @@
 ---
-description: "Create a Job"
 title: "Create a Job"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "jobs [SQL Server Agent], creating"
-  - "SQL Server Agent jobs, creating"
-ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
+description: "Create a Job"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "jobs [SQL Server Agent], creating"
+  - "SQL Server Agent jobs, creating"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a Job
@@ -90,7 +86,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To create a SQL Server Agent job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -1,17 +1,14 @@
 ---
-description: "Revert word breakers used by Search to previous version (SQL Server Search)"
 title: "Revert word breakers used by Search to previous version"
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
-ms.topic: conceptual
-ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
+description: "Revert word breakers used by Search to previous version (SQL Server Search)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: search
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Revert word breakers used by Search to previous version (SQL Server Search)
 
@@ -100,7 +97,7 @@ ms.custom: "seo-lt-2019"
   
 2.  Back up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll to another location.  
   
-3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
+3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -146,7 +143,7 @@ ms.custom: "seo-lt-2019"
   
 3.  Back up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll to another location.  
   
-4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
+4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] into the Binn folder of the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  

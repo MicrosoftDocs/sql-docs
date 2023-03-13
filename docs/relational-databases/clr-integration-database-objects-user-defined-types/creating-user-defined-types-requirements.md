@@ -4,8 +4,8 @@ description: This article describes important design decisions you need to make 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "UDTs [CLR integration], requirements"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "user-defined serialization [CLR integration]"
   - "user-defined types [CLR integration], Native serialization"
   - "UDTs [CLR integration], Native serialization"
-ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 ---
 # Creating User-Defined Types - Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

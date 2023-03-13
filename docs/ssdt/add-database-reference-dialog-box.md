@@ -1,17 +1,16 @@
 ---
 title: Add Database Reference Dialog Box
 description: Learn about database references and how to use them. View the procedures you can perform in the Add Database Reference dialog box.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-f1_keywords:
-  - sql.data.tools.adddatabasereference.dialog
-  - sql.data.tools.newdatabase.dialog
-  - sql.data.tools.criticalerror.dialog
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+f1_keywords:
+  - "sql.data.tools.adddatabasereference.dialog"
+  - "sql.data.tools.newdatabase.dialog"
+  - "sql.data.tools.criticalerror.dialog"
 ---
 
 # Add Database Reference Dialog Box

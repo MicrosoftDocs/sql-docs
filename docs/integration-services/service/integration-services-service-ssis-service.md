@@ -1,28 +1,24 @@
 ---
+title: "Integration Services Service (SSIS Service)"
 description: "Integration Services Service (SSIS Service)"
-title: "Integration Services Service (SSIS Service) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssiseditserverregistration.connectionproperties.f1"
   - "sql13.swb.connecttodts.connectionproperties.f1"
   - "sql13.swb.connection.login.dtsserver.f1"
   - "sql13.swb.connecttodts.login.f1"
   - "sql13.swb.connecttodtsserver.login.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services service, about Integration Services service"
   - "SQL Server Integration Services service"
   - "service [Integration Services],about Integration Services service"
   - "service [Integration Services]"
   - "SQL Server Integration Services, service"
-ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Service (SSIS Service)
 
@@ -138,7 +134,7 @@ ms.author: chugu
 7.  On the **File** menu, click **Exit** to close the **Services** snap-in.  
 
 ## Grant permissions to the service
-  In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], by default when you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all users in the Users group had access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. When you install the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], users do not have access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. The service is secure by default. After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, the administrator must grant access to the service.  
+  In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], by default when you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all users in the Users group in Local Users and Groups had access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. When you install [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, users do not have access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. The service is secure by default. After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, the administrator must grant access to the service.
   
 ### To grant access to the Integration Services service  
   

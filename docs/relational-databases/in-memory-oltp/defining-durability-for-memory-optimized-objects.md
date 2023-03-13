@@ -4,11 +4,9 @@ description: "Learn about the durability options for memory-optimized tables in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Defining Durability for Memory-Optimized Objects

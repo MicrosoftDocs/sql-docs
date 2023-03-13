@@ -1,20 +1,15 @@
 ---
-description: "Table Properties (Visual Database Tools)"
 title: Table Properties
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vdt.tabledesigner"
-  - "vdt.designers.properties.Table"
-ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
+description: "Table Properties (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vdt.tabledesigner"
+  - "vdt.designers.properties.Table"
 ---
 # Table Properties (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

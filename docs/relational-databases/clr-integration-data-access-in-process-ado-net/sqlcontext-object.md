@@ -4,15 +4,13 @@ description: When you invoke managed code in SQL Server in a user connection, ac
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "Windows identity [CLR integration]"
   - "SqlContext object"
   - "context [CLR integration]"
-ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 ---
 # SqlContext Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

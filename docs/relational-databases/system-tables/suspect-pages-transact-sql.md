@@ -4,9 +4,8 @@ description: suspect_pages (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "suspect_page_table"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "suspect pages [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 ---
 # suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

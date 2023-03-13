@@ -1,23 +1,19 @@
 ---
+title: "sp_stored_procedures (Transact-SQL)"
 description: "sp_stored_procedures (Transact-SQL)"
-title: "sp_stored_procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_stored_procedures_TSQL"
-  - "sp_stored_procedures"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_stored_procedures"
-ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_stored_procedures_TSQL"
+  - "sp_stored_procedures"
+helpviewer_keywords:
+  - "sp_stored_procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_stored_procedures (Transact-SQL)
 
@@ -25,7 +21,7 @@ ms.author: maghan
 
   Returns a list of stored procedures in the current environment.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

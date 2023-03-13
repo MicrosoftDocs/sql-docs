@@ -5,12 +5,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/08/2021
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.custom:
-  - intro-migration
+ms.custom: intro-migration
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 

@@ -1,14 +1,12 @@
 ---
-title: "SQL Server Integration Services DevOps overview | Microsoft Docs"
+title: "SQL Server Integration Services DevOps overview"
 description: Learn how to build SSIS CICD with SSIS DevOps Tools.
-ms.date: "4/21/2021"
-ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.custom: ""
-ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "4/21/2021"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # SQL Server Integration Services (SSIS) DevOps Tools Azure DevOps extension
 
@@ -81,6 +79,9 @@ Enhancements in version 1.*:
 - No need of installing out-of-box components.
 
 - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+### Limitations and known issues
+
+- SSIS Build task version 1.* doesn't support building the SSIS project containing SSIS package with digital signature. 
 
 ### Version 1.* only properties
 

@@ -4,15 +4,14 @@ description: Common Language Runtime Related Dynamic Management Views (Transact-
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], dynamic management views"
   - "dynamic management objects [SQL Server], common language runtime"
 dev_langs:
   - "TSQL"
-ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
 ---
 # Common Language Runtime Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

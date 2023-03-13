@@ -1,18 +1,14 @@
 ---
+title: "Building, Deploying, and Debugging Custom Objects"
 description: "Building, Deploying, and Debugging Custom Objects"
-title: "Building, Deploying, and Debugging Custom Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom objects [Integration Services]"
-ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom objects [Integration Services]"
 ---
 # Building, Deploying, and Debugging Custom Objects
 

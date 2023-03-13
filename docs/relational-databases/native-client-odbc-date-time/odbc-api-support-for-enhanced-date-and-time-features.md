@@ -1,18 +1,14 @@
 ---
-description: "ODBC API Support for Enhanced Date and Time Features"
 title: "ODBC API for Date Time"
-ms.custom: ""
-ms.date: 12/18/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "date/time [ODBC], API support"
-ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
+description: "ODBC API Support for Enhanced Date and Time Features"
 author: markingmyname
 ms.author: maghan
+ms.date: 12/18/2019
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "date/time [ODBC], API support"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC API Support for Enhanced Date and Time Features

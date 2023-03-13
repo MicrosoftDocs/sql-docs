@@ -1,12 +1,12 @@
 ---
+title: "Upgrade a Data-tier Application"
 description: "Upgrade a Data-tier Application"
-title: "Upgrade a Data-tier Application | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.upgradedacwizard.summary.f1"
   - "sql13.swb.upgradedacwizard.reviewplan.f1"
   - "sql13.swb.upgradedacwizard.upgradedac.f1"
@@ -15,14 +15,11 @@ f1_keywords:
   - "sql13.swb.upgradedacwizard.selectoptions.f1"
   - "sql13.swb.upgradedacwizard.checkdrift.f1"
   - "sql13.swb.upgradedacwizard.introduction.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "upgrade DAC"
   - "data-tier application [SQL Server], upgrade"
   - "wizard [DAC], upgrade"
   - "How to [DAC], upgrade"
-ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Upgrade a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

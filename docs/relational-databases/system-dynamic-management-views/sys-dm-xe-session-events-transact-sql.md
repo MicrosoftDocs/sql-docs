@@ -3,9 +3,9 @@ title: "sys.dm_xe_session_events (Transact-SQL)"
 description: sys.dm_xe_session_events (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/30/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_xe_session_events"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
 dev_langs:
   - "TSQL"
-ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
 ---
 # sys.dm_xe_session_events (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,12 +31,23 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 |event_name|**nvarchar(256)**|The name of the event that an action is bound to. Is not nullable.|  
 |event_package_guid|**uniqueidentifier**|The GUID for the package containing the event. Is not nullable.|  
 |event_predicate|**nvarchar(3072)**|An XML representation of the predicate tree that is applied to the event. Is nullable.|  
+|event_fire_count|**bigint**|The number of times the event has fired (was published) since the session was started. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
+|event_fire_average_time|**bigint**|The average time taken to publish the event, in microseconds. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
+|event_fire_min_time|**bigint**|The minimum time taken to publish the event, in microseconds. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
+|event_fire_max_time|**bigint**|The maximum time taken to publish the event, in microseconds. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
   
+> [!NOTE]
+> The `event_fire_count` and `event_fire_average_time` columns are populated only when trace flag 9708 is enabled.
+
 ## Permissions
 
 Requires VIEW SERVER STATE permission on the server.  
   
-### Relationship cardinalities  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  

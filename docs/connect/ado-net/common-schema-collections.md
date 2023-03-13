@@ -4,8 +4,8 @@ description: Describes all of the common schema collections supported by all of 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 11/30/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Common schema collections

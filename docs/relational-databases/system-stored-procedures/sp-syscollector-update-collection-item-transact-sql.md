@@ -1,24 +1,20 @@
 ---
+title: "sp_syscollector_update_collection_item (Transact-SQL)"
 description: "sp_syscollector_update_collection_item (Transact-SQL)"
-title: "sp_syscollector_update_collection_item (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_update_collection_item"
-  - "sp_syscollector_update_collection_item_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data collector [SQL Server], stored procedures"
-  - "sp_syscollector_update_collection_item"
-ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_update_collection_item"
+  - "sp_syscollector_update_collection_item_TSQL"
+helpviewer_keywords:
+  - "data collector [SQL Server], stored procedures"
+  - "sp_syscollector_update_collection_item"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +22,7 @@ ms.author: maghan
   Used to modify the properties of a user-defined collection item or to rename a user-defined collection item.  
   
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

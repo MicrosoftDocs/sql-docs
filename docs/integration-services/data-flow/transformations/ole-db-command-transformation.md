@@ -1,21 +1,17 @@
 ---
+title: "OLE DB Command Transformation"
 description: "OLE DB Command Transformation"
-title: "OLE DB Command Transformation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.oledbcommandtrans.f1"
-helpviewer_keywords: 
-  - "statements [Integration Services]"
-  - "OLE DB Command transformation"
-ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.oledbcommandtrans.f1"
+helpviewer_keywords:
+  - "statements [Integration Services]"
+  - "OLE DB Command transformation"
 ---
 # OLE DB Command Transformation
 

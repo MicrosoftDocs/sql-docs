@@ -1,22 +1,16 @@
 ---
+title: "SMO Namespaces"
 description: "SMO Object Model Namespaces"
-title: "SMO Namespaces | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "object models [SMO]"
   - "SMO [SQL Server], namespaces"
   - "namespaces [SMO]"
   - "SQL Server Management Objects, namespaces"
-ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Object Model Namespaces

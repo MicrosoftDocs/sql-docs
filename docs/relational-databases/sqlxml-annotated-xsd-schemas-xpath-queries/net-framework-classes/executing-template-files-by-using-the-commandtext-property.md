@@ -4,18 +4,15 @@ description: View an example of how to use the SQLXML CommandText property to sp
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "Managed Classes [SQLXML], executing template files"
   - "SQLXML Managed Classes, executing template files"
   - "templates [SQLXML], SQLXML Managed Classes"
   - "executing template files [SQLXML]"
   - "CommandText property"
-ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandText Property

@@ -1,17 +1,12 @@
 ---
-description: "Create a Custom Workflow - Example"
 title: Custom Workflow Example
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-
-ms.topic: "reference"
-ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
+description: "Create a Custom Workflow - Example"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: "reference"
 ---
 # Create a Custom Workflow - Example
 

@@ -4,12 +4,11 @@ description: sys.dm_pdw_node_status (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_node_status (Transact-SQL)

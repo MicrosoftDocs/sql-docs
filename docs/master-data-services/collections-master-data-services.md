@@ -1,19 +1,15 @@
 ---
-description: "Collections (Master Data Services)"
 title: Collections
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "collections [Master Data Services]"
-  - "collections [Master Data Services], about collections"
-ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
+description: "Collections (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "04/01/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "collections [Master Data Services]"
+  - "collections [Master Data Services], about collections"
 ---
 # Collections (Master Data Services)
 

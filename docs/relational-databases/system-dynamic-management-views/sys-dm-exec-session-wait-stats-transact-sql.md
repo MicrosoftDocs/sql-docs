@@ -3,9 +3,9 @@ title: "sys.dm_exec_session_wait_stats (Transact-SQL)"
 description: sys.dm_exec_session_wait_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "04/24/2018"
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_session_wait_stats"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_session_wait_stats"
 dev_langs:
   - "TSQL"
-ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 ---
 # sys.dm_exec_session_wait_stats (Transact-SQL)
 
@@ -43,6 +42,10 @@ ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 ## Permissions  
  If the user has **VIEW SERVER STATE** permission on the server, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

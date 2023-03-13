@@ -1,21 +1,17 @@
 ---
-description: "Register a Connected Server (SQL Server Management Studio)"
 title: Register a Connected Server
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.registerserver.f1"
-helpviewer_keywords: 
-  - "Registered Servers [SQL Server], register connected servers"
-  - "connected server registrations [SQL Server]"
-ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
+description: "Register a Connected Server (SQL Server Management Studio)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 07/28/2016
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.registerserver.f1"
+helpviewer_keywords:
+  - "Registered Servers [SQL Server], register connected servers"
+  - "connected server registrations [SQL Server]"
 ---
 
 # Register a Connected Server (SQL Server Management Studio)

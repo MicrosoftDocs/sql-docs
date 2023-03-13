@@ -1,21 +1,17 @@
 ---
+title: "Row bookmarks (Native Client OLE DB provider)"
 description: "Row bookmarks (Native Client OLE DB provider)"
-title: "Row bookmarks (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bookmarks [OLE DB]"
   - "SQL Server Native Client OLE DB provider, bookmarks"
   - "rowsets [OLE DB], bookmarks"
   - "OLE DB rowsets, bookmarks"
-ms.assetid: 7d9076f2-bf9c-452e-b816-70371a0c1644
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bookmarks in SQL Server Native Client

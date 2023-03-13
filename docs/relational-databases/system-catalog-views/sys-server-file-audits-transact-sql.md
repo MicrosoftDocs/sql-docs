@@ -4,9 +4,8 @@ description: sys.server_file_audits (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_file_audits_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_file_audits catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 ---
 # sys.server_file_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

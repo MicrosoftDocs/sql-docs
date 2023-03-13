@@ -1,23 +1,17 @@
 ---
+title: "Using Filegroups and Files to Store Data"
 description: "Using Filegroups and Files to Store Data"
-title: "Using Filegroups and Files to Store Data | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filegroups [SMO]"
   - "storing data [SMO]"
   - "files [SMO]"
   - "files [SMO], about files"
   - "storage [SMO]"
-ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Filegroups and Files to Store Data

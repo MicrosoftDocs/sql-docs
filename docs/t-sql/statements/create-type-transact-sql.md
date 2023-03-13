@@ -4,9 +4,8 @@ description: CREATE TYPE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "12/05/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "sql13.swb.sysdatatype.properties.f1"
@@ -35,7 +34,7 @@ dev_langs:
 > [!NOTE]  
 >  The integration of .NET Framework CLR into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is discussed in this topic. CLR integration does not apply to [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)].
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -210,7 +209,7 @@ Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data t
  Specifies whether the type can hold a null value. If not specified, NULL is the default.  
   
  *assembly_name*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]).  
   
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assembly that references the implementation of the user-defined type in the common language runtime. *assembly_name* should match an existing assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current database.  
   
@@ -218,7 +217,7 @@ Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data t
 >  EXTERNAL_NAME is not available in a contained database.  
   
  **[.** *class_name*  **]**  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]).  
   
  Specifies the class within the assembly that implements the user-defined type. *class_name* must be a valid identifier and must exist as a class in the assembly with assembly visibility. *class_name* is case-sensitive, regardless of the database collation, and must exactly match the class name in the corresponding assembly. The class name can be a namespace-qualified name enclosed in square brackets (**[ ]**) if the programming language that is used to write the class uses the concept of namespaces, such as C#. If *class_name* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumes it is the same as *type_name*.  
   
@@ -310,7 +309,7 @@ FROM varchar(11) NOT NULL ;
 ### B. Creating a user-defined type  
  The following example creates a type `Utf8String` that references class `utf8string` in the assembly `utf8string`. Before creating the type, assembly `utf8string` is registered in the local database. Replace the binary portion of the CREATE ASSEMBLY statement with a valid description.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]).  
   
 ```sql  
 CREATE ASSEMBLY utf8string  

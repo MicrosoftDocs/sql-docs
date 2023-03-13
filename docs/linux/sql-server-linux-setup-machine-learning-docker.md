@@ -1,16 +1,15 @@
 ---
 title: Install on Docker
 titleSuffix: SQL Server Machine Learning Services
-description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Docker.'
+description: "Learn how to install SQL Server Machine Learning Services (Python and R) on Docker."
 author: rothja
 ms.author: jroth
 ms.date: 05/11/2020
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.custom: intro-installation
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
-ms.custom:
-  - intro-installation
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Docker
 
@@ -22,7 +21,7 @@ This article explains how to install [SQL Server Machine Learning Services](../m
 
 - Git command-line interface.
 
-- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Get Docker](https://docs.docker.com/get-docker/).
+- Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Get Docker](https://docs.docker.com/get-docker/). SQL Server in containers are not supported on Windows or macOS for production use.
 
 - See also the [system requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -89,7 +88,7 @@ Complete the following steps to build the docker image:
    > [!NOTE]
    > The process for running production SQL Server editions in containers is slightly different. For more information, see [Configure SQL Server container images on Docker](./sql-server-linux-docker-container-deployment.md). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
 
-2. To view your Docker containers, run the `docker ps` command:
+2. To view your containers, run the `docker ps` command:
 
    ```bash
    sudo docker ps -a

@@ -3,10 +3,10 @@ title: "Row-Level Security"
 description: Learn how Row-Level Security uses group membership or execution context to control access to rows in a database table in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/16/2022
-ms.prod: sql
 ms.reviewer: wiassaf
-ms.technology: "security"
+ms.date: 09/16/2022
+ms.service: sql
+ms.subservice: "security"
 ms.topic: conceptual
 helpviewer_keywords:
   - "access control predicates"

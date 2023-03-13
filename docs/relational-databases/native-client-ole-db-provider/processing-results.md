@@ -1,21 +1,17 @@
 ---
-description: "Processing Results (Native Client OLE DB provider)"
 title: Processing results (Native Client OLE DB provider)
-ms.custom: ""
+description: "Processing Results (Native Client OLE DB provider)"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, results processing"
   - "OLE DB, processing results"
   - "rowsets [SQL Server], results processing"
   - "results [SQL Server Native Client]"
-ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results (Native Client OLE DB provider)

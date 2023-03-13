@@ -1,16 +1,12 @@
 ---
-description: "Approval Required (Master Data Services)"
 title: Approval Required
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
+description: "Approval Required (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Approval Required (Master Data Services)
 

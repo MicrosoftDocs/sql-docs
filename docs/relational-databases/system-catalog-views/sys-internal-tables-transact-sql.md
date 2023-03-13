@@ -4,9 +4,8 @@ description: sys.internal_tables (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.internal_tables"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.internal_tables catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 ---
 # sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

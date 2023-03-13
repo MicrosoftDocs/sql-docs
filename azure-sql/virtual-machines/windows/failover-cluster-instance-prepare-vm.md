@@ -24,7 +24,7 @@ To learn more, see an overview of [FCI with SQL Server on Azure VMs](failover-cl
 
 ## Prerequisites 
 
-- A Microsoft Azure subscription. Get started for [free](https://azure.microsoft.com/free/). 
+- A Microsoft Azure subscription. Get started with a [free Azure account](https://azure.microsoft.com/free/). 
 - A Windows domain on Azure virtual machines or an on-premises active directory extended to Azure with virtual network pairing.
 - An account that has permissions to create objects on Azure virtual machines and in Active Directory.
 - An Azure virtual network and one or more subnets with enough IP address space for these components:
@@ -41,7 +41,7 @@ The configuration settings for your virtual machine vary depending on the storag
 
 ## Choose VM availability 
 
-The failover cluster feature requires virtual machines to be placed in an [availability set](/azure/virtual-machines/linux/tutorial-availability-sets) or an [availability zone](/azure/availability-zones/az-overview#availability-zones).
+The failover cluster feature requires virtual machines to be placed in an [availability set](/azure/virtual-machines/availability-set-overview) or an [availability zone](/azure/availability-zones/az-overview#availability-zones).
 
 Carefully select the VM availability option that matches your intended cluster configuration: 
 
@@ -245,7 +245,7 @@ This table details the ports that you might need to open, depending on your FCI 
    | Purpose | Port | Notes
    | ------ | ------ | ------
    | SQL Server | TCP 1433 | Normal port for default instances of SQL Server. If you used an image from the gallery, this port is automatically opened. </br> </br> **Used by**: All FCI configurations. |
-   | Health probe | TCP 59999 | Any open TCP port. Configure the load balancer [health probe](failover-cluster-instance-vnn-azure-load-balancer-configure.md#configure-health-probe) and the cluster  to use this port. </br> </br> **Used by**: FCI with load balancer in single subnet scenario. |
+   | Health probe | TCP 59999 | Any open TCP port. Configure the load balancer [health probe](failover-cluster-instance-vnn-azure-load-balancer-configure.md#configure-a-health-probe) and the cluster  to use this port. </br> </br> **Used by**: FCI with load balancer in single subnet scenario. |
    | File share | UDP 445 | Port that the file share service uses. </br> </br> **Used by**: FCI with Premium file share. |
 
 ## Join the domain

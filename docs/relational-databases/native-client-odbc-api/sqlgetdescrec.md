@@ -1,18 +1,14 @@
 ---
+title: "SQLGetDescRec"
 description: "SQLGetDescRec"
-title: "SQLGetDescRec | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQLGetDescRec function"
-ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: markingmyname
 ms.author: maghan
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQLGetDescRec function"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLGetDescRec

@@ -1,25 +1,21 @@
 ---
 title: Utility Explorer F1 Help
 description: Get acquainted with functionality that is offered in various areas of the SQL Server Utility. Learn about views, the dashboard, and the Utility Administration tabs.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.ue.navigation.f1"
   - "sql13.SWB.UE.dac.details.F1"
   - "sql13.SQB.UE.dac.details.F1"
   - "utility details"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Utility"
   - "management"
   - "data-tier application"
-ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 
 # Utility Explorer F1 Help
@@ -27,6 +23,8 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following sections document [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility functionality and associated operations.  
   
+[!INCLUDE[instances-managed-by-utility](../../includes/instances-managed-by-utility.md)]
+
   ## Utility Dashboard (SQL Server Utility)
  To see data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility dashboard, select the top node in the Utility Explorer tree - labeled "Utility<UCP_Name>\\(ComputerName\UCP)." The dashboard includes summary and detail data from all managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and all data-tier applications in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. To refresh data in the dashboard, right-click the top node in the Utility Explorer tree, and select **Refresh**.  
   

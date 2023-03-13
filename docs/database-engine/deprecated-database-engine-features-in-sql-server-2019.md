@@ -6,10 +6,9 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "deprecated changes 2019 [SQL Server]"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"

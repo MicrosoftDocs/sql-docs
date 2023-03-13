@@ -4,10 +4,9 @@ description: "Steps to configure a database mirroring relationship between a pri
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Windows authentication [SQL Server]"
   - "database mirroring [SQL Server], security"

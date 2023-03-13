@@ -1,12 +1,12 @@
 ---
+title: "Export a Data-tier Application"
 description: "Export a Data-tier Application"
-title: "Export a Data-tier Application | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.exportdac.progress.f1"
   - "sql13.swb.exportdac.summary.f1"
   - "sql13.swb.exportdac.results.f1"
@@ -15,14 +15,11 @@ f1_keywords:
   - "sql13.swb. exportdac.settings.f1"
   - "sql13.swb.exportdac.welcome.f1"
   - "sql13.swb.exportdac.settings.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "How to [DAC], export"
   - "wizard [DAC], export"
   - "export DAC"
   - "data-tier application [SQL Server], export"
-ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Export a Data-tier Application

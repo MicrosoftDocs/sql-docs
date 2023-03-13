@@ -1,16 +1,15 @@
 ---
 title: "Find errors with transactional replication"
 description: Describes how to locate and identify errors with Transactional Replication, as well as the troubleshooting methodology for addressing issues with replication.
-ms.custom: seo-lt-2019
-ms.date: 07/01/2020
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "replication [SQL Server], tutorials"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 07/01/2020
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "replication [SQL Server], tutorials"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Troubleshooter: Find errors with SQL Server transactional replication 

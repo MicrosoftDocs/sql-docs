@@ -3,14 +3,14 @@ title: Azure Synapse Pathway data type mappings
 description: Data type mappings for source platforms within Azure Synapse Pathway
 author: charlesfeddersen
 ms.author: charlesf
-ms.topic: overview
 ms.date: 07/14/2021
-ms.prod: sql
-ms.technology: tools-other
-monikerRange: "=azure-sqldw-latest"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: overview
 ms.custom:
   - template-overview
   - intro-overview
+monikerRange: "=azure-sqldw-latest"
 ---
 # Data type mappings in Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]

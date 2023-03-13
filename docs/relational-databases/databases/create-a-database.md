@@ -1,19 +1,16 @@
 ---
 title: "Create a Database"
 description: "Find out how to create a database in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL. View recommendations for the procedure."
-ms.custom: FY22Q2Fresh
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], creating"
   - "database creation [SQL Server], SQL Server Management Studio"
   - "creating databases"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Create a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +55,7 @@ ms.author: wiassaf
 5.  To change the owner name, select (**...**) to select another owner.  
   
     > [!NOTE]  
-    >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], all user databases are full-text enabled.  
+    >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], all user databases are full-text enabled.  
   
 6.  To change the default values of the primary data and transaction log files, in the **Database files** grid, select the appropriate cell and enter the new value. For more information, see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   

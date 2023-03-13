@@ -3,11 +3,10 @@ title: "sys.dm_cdc_log_scan_sessions (Transact-SQL)"
 description: The Change Data Capture DMV sys.dm_cdc_log_scan_sessions returns status information about the current log scan session, or aggregated information about all sessions since the instance was last started.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/10/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "dm_cdc_log_scan_sessions"
   - "dm_cdc_log_scan_sessions_TSQL"
@@ -57,6 +56,10 @@ The `sys.dm_cdc_log_scan_sessions` can contain up to 32 scan sessions and an agg
 ## Permissions  
  Requires VIEW DATABASE STATE permission to query the `sys.dm_cdc_log_scan_sessions` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Examples  
  The following example returns information for the most current session.  
   

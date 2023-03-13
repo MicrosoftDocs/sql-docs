@@ -1,16 +1,12 @@
 ---
+title: "Step 2: Convert the project to the Project Deployment Model"
 description: "Lesson 6-2: Convert the project to the Project Deployment Model"
-title: "Step 2: Convert the project to the Project Deployment Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: chugugrace
 ms.author: chugu
+ms.date: "01/11/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 6-2: Convert the project to the Project Deployment Model
 

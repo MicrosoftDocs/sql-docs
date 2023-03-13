@@ -3,13 +3,10 @@ title: "String Functions (Transact-SQL)"
 description: "String Functions (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "08/15/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "functions [SQL Server], strings"
   - "strings [SQL Server], functions"

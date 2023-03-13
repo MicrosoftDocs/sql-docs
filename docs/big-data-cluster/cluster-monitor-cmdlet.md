@@ -6,10 +6,9 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 07/16/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Monitor Big Data Clusters by using azdata and kubectl

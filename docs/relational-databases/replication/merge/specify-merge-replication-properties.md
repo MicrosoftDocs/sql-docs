@@ -1,20 +1,17 @@
 ---
-description: "Specify Merge Replication properties"
 title: "Specify Merge Replication properties| Microsoft Docs"
-ms.custom: ""
+description: "Specify Merge Replication properties"
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "11/20/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication [SQL Server replication], download-only articles"
   - "articles [SQL Server replication], download-only"
   - "download-only articles"
-ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Specify Merge Replication properties
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

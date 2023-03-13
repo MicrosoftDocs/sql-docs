@@ -5,11 +5,9 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "database backups [SQL Server], recovery models"
   - "recovery [SQL Server], recovery model"
@@ -138,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Database Maintenance Plans](../maintenance-plans/maintenance-plans.md) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online)  
+-   [Database Maintenance Plans](../maintenance-plans/maintenance-plans.md) (in [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] Books Online)  
   
 ## See Also  
  [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   

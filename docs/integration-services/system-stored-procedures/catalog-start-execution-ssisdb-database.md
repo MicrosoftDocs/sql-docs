@@ -1,16 +1,12 @@
 ---
+title: "catalog.start_execution (SSISDB Database)"
 description: "catalog.start_execution (SSISDB Database)"
-title: "catalog.start_execution (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.start_execution (SSISDB Database)
 

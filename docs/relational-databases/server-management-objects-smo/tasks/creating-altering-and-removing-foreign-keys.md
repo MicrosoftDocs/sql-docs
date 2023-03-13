@@ -1,19 +1,13 @@
 ---
-description: "Creating, Altering, and Removing Foreign Keys"
 title: "Creating, Altering, and Removing Foreign Keys"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "foreign keys [SMO]"
-ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
+description: "Creating, Altering, and Removing Foreign Keys"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "foreign keys [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Foreign Keys

@@ -1,23 +1,20 @@
 ---
 title: CHECK_CONSTRAINTS (Transact-SQL)
 description: "CHECK_CONSTRAINTS (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "CHECK_CONSTRAINTS"
-  - "CHECK_CONSTRAINTS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CHECK_CONSTRAINTS view"
-  - "INFORMATION_SCHEMA.CHECK_CONSTRAINTS view"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "CHECK_CONSTRAINTS"
+  - "CHECK_CONSTRAINTS_TSQL"
+helpviewer_keywords:
+  - "CHECK_CONSTRAINTS view"
+  - "INFORMATION_SCHEMA.CHECK_CONSTRAINTS view"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

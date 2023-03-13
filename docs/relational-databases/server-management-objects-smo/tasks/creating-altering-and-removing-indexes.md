@@ -1,19 +1,13 @@
 ---
-description: "Creating, Altering, and Removing Indexes"
 title: "Creating, Altering, and Removing Indexes"
-ms.custom: seo-dt-2019
-ms.date: 01/11/2019
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "indexes [SMO]"
-ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
+description: "Creating, Altering, and Removing Indexes"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: 01/11/2019
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "indexes [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Indexes

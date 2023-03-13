@@ -4,9 +4,8 @@ description: dbo.sysproxylogin (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.sysproxylogin_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sysproxylogin system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 ---
 # dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

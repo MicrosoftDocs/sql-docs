@@ -1,23 +1,19 @@
 ---
+title: "Full-Text Search and Semantic Search Stored Procedures (Transact-SQL)"
 description: "Full-Text Search and Semantic Search Stored Procedures (Transact-SQL)"
-title: "Full-Text Search and Semantic Search Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text indexes [SQL Server], stored procedures"
   - "full-text search [SQL Server], stored procedures"
   - "full-text catalogs [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], full-text search"
-ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # Full-Text Search and Semantic Search Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +32,7 @@ ms.author: maghan
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) instead.  
   
  [sp_fulltext_database](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)  
- Has no effect on full-text catalogs in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions and is supported for backward compatibility only.  
+ Has no effect on full-text catalogs in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions and is supported for backward compatibility only.  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   

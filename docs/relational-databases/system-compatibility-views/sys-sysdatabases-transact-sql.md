@@ -1,26 +1,22 @@
 ---
+title: "sys.sysdatabases (Transact-SQL)"
 description: "sys.sysdatabases (Transact-SQL)"
-title: "sys.sysdatabases (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdatabases_TSQL"
   - "sys.sysdatabases_TSQL"
   - "sys.sysdatabases"
   - "sysdatabases"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sysdatabases compatibility view"
   - "sysdatabases system table"
-ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysdatabases (Transact-SQL)

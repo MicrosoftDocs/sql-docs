@@ -4,10 +4,9 @@ description: "Learn how to configure your SQL Server Always On availability grou
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 05/24/2018
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 ---
 # Configure read-scale for an Always On availability group
 

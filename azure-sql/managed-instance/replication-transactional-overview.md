@@ -1,22 +1,20 @@
 ---
 title: Transactional replication
 titleSuffix: Azure SQL Managed Instance
-description: Learn about using SQL Server transactional replication with Azure SQL Managed Instance (Preview).
+description: Learn about using SQL Server transactional replication with Azure SQL Managed Instance
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma
-ms.date: 05/10/2020
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: sqldbrb=1
 ---
-# Transactional replication with Azure SQL Managed Instance (Preview)
+# Transactional replication with Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 Transactional replication is a feature of Azure SQL Managed Instance and SQL Server that enables you to replicate data from a table in Azure SQL Managed Instance or a SQL Server instance to tables placed on remote databases. This feature allows you to synchronize multiple tables in different databases. 
-
-Transactional replication is currently in public preview for SQL Managed Instance. 
 
 ## Overview
 
@@ -168,7 +166,7 @@ If a **publisher** or **distributor** SQL Managed Instance is in a [failover gro
    EXEC sp_removedbreplication
    ```
 
-1. Forcefully drop old distributor from original primary SQL Managed Instance (if failing back over to an old primary that used to have a distributor). Run the following script on the master database in old distributor SQL Managed Instance:
+1. Forcefully drop old distributor from original primary SQL Managed Instance (if failing back over to an old primary that used to have a distributor). Run the following script on the `master` database in old distributor SQL Managed Instance:
 
    ```sql
    EXEC sp_dropdistributor 1,1

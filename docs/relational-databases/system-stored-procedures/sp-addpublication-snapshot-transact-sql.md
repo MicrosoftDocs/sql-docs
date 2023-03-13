@@ -1,23 +1,19 @@
 ---
+title: "sp_addpublication_snapshot (Transact-SQL)"
 description: "sp_addpublication_snapshot (Transact-SQL)"
-title: "sp_addpublication_snapshot (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addpublication_snapshot_TSQL"
-  - "sp_addpublication_snapshot"
-helpviewer_keywords: 
-  - "sp_addpublication_snapshot"
-ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: markingmyname
 ms.author: maghan
+ms.date: "06/15/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addpublication_snapshot_TSQL"
+  - "sp_addpublication_snapshot"
+helpviewer_keywords:
+  - "sp_addpublication_snapshot"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -25,9 +21,9 @@ ms.author: maghan
   Creates the Snapshot Agent for the specified publication. This stored procedure is executed at the Publisher on the publication database.  
   
 > [!IMPORTANT]  
->  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -166,5 +162,3 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
-  
-  

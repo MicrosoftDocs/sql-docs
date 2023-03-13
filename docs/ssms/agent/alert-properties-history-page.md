@@ -1,18 +1,14 @@
 ---
 title: "Alert Properties (History Page)"
 description: "Alert Properties (History Page)"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.alert.history.f1"
-ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.alert.history.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

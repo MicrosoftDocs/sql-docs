@@ -4,9 +4,8 @@ description: sys.server_audit_specification_details (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_audit_specification_details"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "sys.server_audit_specification_details catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 ---
 # sys.server_audit_specification_details (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains information about the server audit specification details (actions) in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit on a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). For a list of all audit_action_id's and their names, query [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   

@@ -4,9 +4,8 @@ description: Learn how to create a single or multiserver maintenance plan using 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "06/20/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.ag.maintwiz.integrity.f1"
@@ -32,7 +31,6 @@ helpviewer_keywords:
   - "Maintenance Plan Wizard"
   - "Database Maintenance Plan Wizard"
   - "Database Maintenance Plan Wizard, starting"
-ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 ---
 # Use the Maintenance Plan Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

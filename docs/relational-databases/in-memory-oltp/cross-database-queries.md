@@ -4,11 +4,9 @@ description: Learn how to use memory-optimized table variables in cross-database
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/04/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 ---
 # Cross-Database Queries
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

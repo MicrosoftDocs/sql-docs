@@ -1,22 +1,18 @@
 ---
+title: "ToString (geometry Data Type)"
 description: "ToString (geometry Data Type)"
-title: "ToString (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "ToString (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ToString (geometry Data Type)"
-ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "08/03/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "ToString (geometry Data Type)"
+helpviewer_keywords:
+  - "ToString (geometry Data Type)"
+dev_langs:
+  - "TSQL"
 ---
 # ToString (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

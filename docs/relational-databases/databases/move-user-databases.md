@@ -1,14 +1,12 @@
 ---
-description: "Move User Databases"
 title: "Move User Databases"
-ms.custom: ""
+description: "Move User Databases"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/02/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disaster recovery [SQL Server], moving database files"
   - "database files [SQL Server], moving"
   - "data files [SQL Server], moving"
@@ -22,8 +20,6 @@ helpviewer_keywords:
   - "relocating database files"
   - "planned database relocations [SQL Server]"
   - "databases [SQL Server], moving"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Move User Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +35,7 @@ ms.author: wiassaf
   
  The procedures in this article require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) catalog view.  
   
- Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], full-text catalogs are integrated into the database rather than being stored in the file system. The full-text catalogs now move automatically when you move a database.  
+ Starting with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], full-text catalogs are integrated into the database rather than being stored in the file system. The full-text catalogs now move automatically when you move a database.  
 
 > [!NOTE]
 > Make sure the service account for the [SQL Server Database Services service](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) has permissions to the new file location in the file system. For more information, see [Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).

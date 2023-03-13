@@ -5,8 +5,8 @@ author: blakhani-msft
 ms.author: blakhani
 ms.reviewer: "maghan"
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "PERCENTILE_DISC"
@@ -25,7 +25,7 @@ monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-20
 
 This function returns the value from the set of values in a group based on the provided percentile and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. As this approximate percentile is based on a discrete distribution of the column values, the output value would be equal to one of the specific values in the column. This function can be used as an alternative to PERCENTILE_DISC for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 
-[Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+[Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 

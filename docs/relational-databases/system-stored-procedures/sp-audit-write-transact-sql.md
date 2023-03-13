@@ -1,30 +1,26 @@
 ---
+title: "sp_audit_write (Transact-SQL)"
 description: "sp_audit_write (Transact-SQL)"
-title: "sp_audit_write (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_audit_write"
-  - "sp_audit_write_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_audit_write"
-ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: sravanisaluru
 ms.author: srsaluru
+ms.date: "03/23/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_audit_write"
+  - "sp_audit_write_TSQL"
+helpviewer_keywords:
+  - "sp_audit_write"
+dev_langs:
+  - "TSQL"
 ---
 # sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a user-defined audit event to the **USER_DEFINED_AUDIT_GROUP**. If **USER_DEFINED_AUDIT_GROUP** is not enabled, **sp_audit_write** is ignored.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

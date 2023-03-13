@@ -4,10 +4,9 @@ description: "Describes the 'Service Accounts' page of the 'Configure Database M
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.configdbmsecurwiz.serviceaccounts.f1"
 ---

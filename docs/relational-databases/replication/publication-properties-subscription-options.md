@@ -1,18 +1,15 @@
 ---
+title: "Publication Properties, Subscription Options"
 description: "Publication Properties, Subscription Options"
-title: "Publication Properties, Subscription Options | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1"
-ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Properties, Subscription Options
@@ -74,10 +71,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  Applies to only [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. Determines whether the publication supports peer-to-peer replication. Setting this option to **True** sets other publication properties to support peer-to-peer replication. This option is read-only if subscriptions exist. This option cannot be set to **True** if **Allow immediate updating subscriptions** or **Allow queued updating subscriptions**, or **Allow non-SQL Server Subscribers** is set to **True**. For more information, see [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Allow peer-to-peer conflict detection**  
- Applies to only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. Specifies whether conflict detection is enabled for this publication. To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version; and detection must be enabled for all nodes. To use conflict detection, you must also specify a value for **Peer originator id**. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ Applies to only [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions. Specifies whether conflict detection is enabled for this publication. To use conflict detection, all nodes must be running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or a later version; and detection must be enabled for all nodes. To use conflict detection, you must also specify a value for **Peer originator id**. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  **Peer originator id**  
- Applies to only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. Specifies an ID for a node in a peer-to-peer topology. This ID is used for conflict detection if **Allow peer-to-peer conflict detection** is set to **True**. Specify a positive, nonzero ID that has never been used in the topology. For a list of IDs that have already been used, query the [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) system table.  
+ Applies to only [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions. Specifies an ID for a node in a peer-to-peer topology. This ID is used for conflict detection if **Allow peer-to-peer conflict detection** is set to **True**. Specify a positive, nonzero ID that has never been used in the topology. For a list of IDs that have already been used, query the [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) system table.  
   
 ### Updatable Subscriptions  
  **Allow immediate updating subscriptions**  

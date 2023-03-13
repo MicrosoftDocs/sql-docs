@@ -4,12 +4,10 @@ description: Learn how to simulate computed columns in memory-optimized tables. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/17/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: intro-migration
-ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 monikerRange: "=sql-server-2016"
 ---
 # Migrating Computed Columns

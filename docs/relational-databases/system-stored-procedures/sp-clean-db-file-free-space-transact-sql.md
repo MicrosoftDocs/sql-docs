@@ -1,31 +1,27 @@
 ---
+title: "sp_clean_db_file_free_space (Transact-SQL)"
 description: "sp_clean_db_file_free_space (Transact-SQL)"
-title: "sp_clean_db_file_free_space (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_clean_db_file_free_space"
-  - "sp_clean_db_file_free_space_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ghost records"
-  - "sp_clean_db_file_free_space"
-ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_clean_db_file_free_space"
+  - "sp_clean_db_file_free_space_TSQL"
+helpviewer_keywords:
+  - "ghost records"
+  - "sp_clean_db_file_free_space"
+dev_langs:
+  - "TSQL"
 ---
 # sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes residual information left on database pages because of data modification routines in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sp_clean_db_file_free_space cleans all pages in only one file of a database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

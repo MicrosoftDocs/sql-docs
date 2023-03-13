@@ -4,11 +4,9 @@ description: Learn how to specify namespaces in SQLXML 4.0 when executing XPath 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "SQLXMLOLEDB Provider, executing XPath queries"
   - "namespaces property"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], namespaces"
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "namespaces [SQLXML], XPath queries"
-ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)

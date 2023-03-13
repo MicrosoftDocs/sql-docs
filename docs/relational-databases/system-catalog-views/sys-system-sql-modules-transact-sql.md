@@ -4,9 +4,8 @@ description: sys.system_sql_modules (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "system_sql_modules_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.system_sql_modules catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.system_sql_modules (Transact-SQL)

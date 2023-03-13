@@ -4,8 +4,8 @@ description: "Create a Domain Rule"
 author: swinarko
 ms.author: sawinark
 ms.date: "11/08/2011"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 f1_keywords:
   - "sql13.dqs.dm.testdomainrule.f1"

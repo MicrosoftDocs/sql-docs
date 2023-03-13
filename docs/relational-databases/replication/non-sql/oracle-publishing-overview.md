@@ -1,22 +1,19 @@
 ---
+title: "Oracle Publishing Overview"
 description: "Oracle Publishing Overview"
-title: "Oracle Publishing Overview | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "08/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "publishing [SQL Server replication], Oracle publishing"
   - "snapshot replication [SQL Server], Oracle publishing"
   - "Oracle publishing [SQL Server replication]"
   - "transactional replication, Oracle publishing"
   - "Oracle publishing [SQL Server replication], about Oracle publishing"
-ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Oracle Publishing Overview  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

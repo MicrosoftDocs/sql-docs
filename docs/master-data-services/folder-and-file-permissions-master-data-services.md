@@ -1,20 +1,16 @@
 ---
-description: "Folder and File Permissions (Master Data Services)"
 title: Folder and File Permissions
-ms.custom: ""
+description: "Folder and File Permissions (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "security [Master Data Services], file and folder"
   - "folders [Master Data Services]"
   - "files [Master Data Services]"
-ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Folder and File Permissions (Master Data Services)
 

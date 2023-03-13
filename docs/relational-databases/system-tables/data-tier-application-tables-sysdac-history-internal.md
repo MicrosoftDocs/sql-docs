@@ -4,9 +4,8 @@ description: Data-tier Application Tables - sysdac_history_internal
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysdac_history_internal"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysdac_history_internal"
 dev_langs:
   - "TSQL"
-ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 ---
 # Data-tier Application Tables - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

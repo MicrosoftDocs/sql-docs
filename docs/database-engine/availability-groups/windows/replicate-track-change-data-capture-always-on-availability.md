@@ -4,10 +4,9 @@ description: Learn about the interoperability of replication, change tracking, a
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
   - "change tracking [SQL Server], Always On Availability Groups"
@@ -157,7 +156,7 @@ helpviewer_keywords:
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
-    @provider=N'SQLNCLI11',   
+    @provider=N'MSOLEDBSQL',   
     @datasrc=N'AG_Listener_Name',   
     @provstr=N'ApplicationIntent=ReadOnly',   
     @catalog=N'MY_DB_NAME';  
@@ -207,13 +206,15 @@ If Change Data Capture needs to be disabled on a database that is part of an Alw
 |Replication|Publisher|Distributor<sup>1</sup>|Subscriber|  
 |-|-|-|-|  
 |**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|Yes|Yes|
-|**Peer-to-peer**<sup>2</sup>|Yes|No|Yes|  
+|**Peer-to-peer**<sup>2</sup>|Yes|Yes<sup>3</sup>|Yes|  
 |**Merge**|Yes|No|No|  
 |**Snapshot**|Yes|No|Yes|
   
 <sup>1</sup> The Distributor database is not supported for use with database mirroring.
 
 <sup>2</sup> Requires SQL Server 2019 CU 13 or later.
+
+<sup>3</sup> Requires SQL Server 2019 CU 17 or later.
   
 ### Considerations  
   

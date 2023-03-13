@@ -4,16 +4,14 @@ description: Learn how to re-create the indexes on the tables in a SQL Server da
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "07/21/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "reindex"
   - "sql13.swb.maint.reindex.f1"
 helpviewer_keywords:
   - "Rebuild Index Task dialog box"
-ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 ---
 # Rebuild Index Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

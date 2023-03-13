@@ -1,15 +1,13 @@
 ---
 title: Troubleshooting issues and performance with SqlPackage
-description: Learn how to troubleshoot with SqlPackage.exe.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
-ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
+description: Learn how to troubleshoot with SqlPackage.
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
 ms.date: 7/29/2022
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # Troubleshooting issues and performance with SqlPackage
@@ -17,7 +15,7 @@ ms.date: 7/29/2022
 In some scenarios, SqlPackage operations take longer than expected or fail to complete.  This article describes some frequently suggested tactics to troubleshoot or improve performance of these operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage operations.
 
 ## Overall strategy
-As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#windows-net-6) of SqlPackage.exe.
+As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#windows-net-6) of SqlPackage.
 
 1. [Download](sqlpackage-download.md#windows-net-6) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
 2. Unzip archive as directed on the download page.
@@ -25,8 +23,8 @@ As general guideline, better performance can be obtained via the [.NET Core vers
 
 It is important to use the latest available version of SqlPackage as performance improvements and bug fixes are released regularly.
 
-### Substitute SqlPackage.exe for the Import/Export Service
-If you have attempted to use the Import/Export Service to import or export your database, you may be interested in using SqlPackage.exe to perform the same operation with more control on optional parameters and properties.
+### Substitute SqlPackage for the Import/Export Service
+If you have attempted to use the Import/Export Service to import or export your database, you may be interested in using SqlPackage to perform the same operation with more control on optional parameters and properties.
 
 For Import, an example command is:
 ```bash
@@ -44,7 +42,7 @@ Alternative to username and password, [Universal Authentication](/azure/azure-sq
 
 ### Timeout errors
 
-For issues related to timeouts, the following properties can be used to tune the connection between SqlPackage.exe and the SQL instance:
+For issues related to timeouts, the following properties can be used to tune the connection between SqlPackage and the SQL instance:
 
 - `/p:CommandTimeout=`: Specifies the command timeout in seconds when a query is executed. Default: 60
 - `/p:DatabaseLockTimeout=`: Specifies the database lock timeout in seconds.  -1 can be used to wait indefinitely, default: 60
@@ -54,7 +52,7 @@ For issues related to timeouts, the following properties can be used to tune the
 
 For the export and extract commands, table data is passed to a temporary directory to buffer before being written to the bacpac/dacpac file. This storage requirement may be large and is relative to the full size of the data to be exported.  Specify an alternative temporary directory with the property `/p:TempDirectoryForTableData=<path>`.
 
-The schema model is compiled in memory, so for large database schemas the memory requirement on the client machine running SqlPackage.exe may be significant.
+The schema model is compiled in memory, so for large database schemas the memory requirement on the client machine running SqlPackage may be significant.
 
 
 ### Low server resource consumption
@@ -70,9 +68,9 @@ $Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Cred
 $AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
 $AccessToken = $AccessToken_Object.Token
 
-sqlpackage.exe /at:$AccessToken
+SqlPackage /at:$AccessToken
 # OR
-sqlpackage.exe /at:$($AccessToken_Object.Token) 
+SqlPackage /at:$($AccessToken_Object.Token) 
 ```
 
 ### Connection
@@ -99,12 +97,12 @@ Set-Item -Path Env:DACFX_PERF_TRACE -Value true
 ```
 
 ## Import action tips
-For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` may improve performance. These properties modify the index rebuild operation to occur offline or not occur, respectively. Those and other properties are available to tune the [SqlPackage.exe Import](sqlpackage-import.md) operation.
+For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` may improve performance. These properties modify the index rebuild operation to occur offline or not occur, respectively. Those and other properties are available to tune the [SqlPackage Import](sqlpackage-import.md) operation.
 
 ## Export action tips
 A common cause of performance degradation during export is unresolved object references, which causes SqlPackage to attempt to resolve the object multiple times. For example, a view is defined that references a table and the table no longer exists in the database. If unresolved references appear in the export log, consider correcting the schema of the database to improve the export performance.
 
-In scenarios where the OS disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. The space required for this action may be large and is relative to the full size of the database. That and other properties are available to tune the [SqlPackage.exe Export](sqlpackage-export.md) operation.
+In scenarios where the OS disk space is limited and runs out during the export, the use of `/p:TempDirectoryForTableData` allows the data for export to be buffered on an alternative disk. The space required for this action may be large and is relative to the full size of the database. That and other properties are available to tune the [SqlPackage Export](sqlpackage-export.md) operation.
 
 During an export process the table data is compressed in the bacpac file. The use of `/p:CompressionOption` set to `Fast`, `SuperFast`, or `NotCompressed` may improve the export process speed while compressing the output bacpac file less.
 

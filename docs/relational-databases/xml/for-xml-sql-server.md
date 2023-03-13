@@ -1,14 +1,15 @@
 ---
 title: FOR XML (SQL Server)
 description: Learn about the FOR XML clause that is used in SQL queries to retrieve results as XML.
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: xml
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 f1_keywords:
   - "FOR_XML_TSQL"
-dev_langs:
-  - TSQL
 helpviewer_keywords:
   - "FOR XML clause, about FOR XML clause"
   - "PATH FOR XML mode, construction"
@@ -18,12 +19,8 @@ helpviewer_keywords:
   - "XML [SQL Server], FOR XML clause"
   - "AUTO FOR XML mode"
   - "XML [SQL Server], construction"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: randolphwest
-ms.custom: "fresh2019may"
-ms.date: 05/05/2022
-# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
+dev_langs:
+  - TSQL
 ---
 # FOR XML (SQL Server)
 

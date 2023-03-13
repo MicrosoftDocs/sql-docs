@@ -1,31 +1,27 @@
 ---
+title: "sp_syscollector_disable_collector (Transact-SQL)"
 description: "sp_syscollector_disable_collector (Transact-SQL)"
-title: "sp_syscollector_disable_collector (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_disable_collector_TSQL"
-  - "sp_syscollector_disable_collector"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data collector [SQL Server], stored procedures"
-  - "sp_syscollector_disable_collector"
-ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_disable_collector_TSQL"
+  - "sp_syscollector_disable_collector"
+helpviewer_keywords:
+  - "data collector [SQL Server], stored procedures"
+  - "sp_syscollector_disable_collector"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Disables the data collector. Because there is only one data collector per server, no parameters are required.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

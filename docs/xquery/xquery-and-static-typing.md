@@ -1,23 +1,19 @@
 ---
-title: "XQuery and Static Typing | Microsoft Docs"
-description: Learn about static type inference and static type checking in XQuery. 
-ms.custom: ""
+title: "XQuery and Static Typing"
+description: Learn about static type inference and static type checking in XQuery.
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XQuery, static typing"
   - "static typing"
   - "checking static types"
   - "inference [XQuery]"
-ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # XQuery and Static Typing
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

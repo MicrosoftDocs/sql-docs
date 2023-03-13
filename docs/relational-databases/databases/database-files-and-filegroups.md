@@ -1,14 +1,13 @@
 ---
-title: "Database Files and Filegroups | Microsoft Docs"
+title: "Database Files and Filegroups"
 description: "Learn about database files and how to create filegroups in SQL Server for allocation and administrative purposes. View examples, rules, and recommendations."
-ms.custom: "contperf-fy20q4"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/29/2020"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "databases [SQL Server], files"
   - "filegroups [SQL Server]"
   - "transaction logs [SQL Server], about"
@@ -30,12 +29,9 @@ helpviewer_keywords:
   - "filegroups [SQL Server], about filegroups"
   - "primary files [SQL Server]"
   - "file types [SQL Server]"
-ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Files and Filegroups
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
   At a minimum, every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database has two operating system files: a data file and a log file. Data files contain data and objects such as tables, indexes, stored procedures, and views. Log files contain the information that is required to recover all transactions in the database. Data files can be grouped together in filegroups for allocation and administration purposes.  
   
 ## Database Files  

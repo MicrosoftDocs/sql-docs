@@ -4,9 +4,8 @@ description: sysmail_event_log (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysmail_event_log"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysmail_event_log database mail view"
 dev_langs:
   - "TSQL"
-ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 ---
 # sysmail_event_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

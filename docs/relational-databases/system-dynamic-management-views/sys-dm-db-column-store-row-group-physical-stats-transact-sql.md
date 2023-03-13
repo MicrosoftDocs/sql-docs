@@ -3,10 +3,9 @@ title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)"
 description: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "05/05/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_column_store_row_group_physical_stats_TSQL"
@@ -56,6 +55,10 @@ This extends the catalog view [sys.column_store_row_groups &#40;Transact-SQL&#41
 ## Permissions  
 Requires `CONTROL` permission on the table and `VIEW DATABASE STATE` permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Examples  
   
 ### A. Calculate fragmentation to decide when to reorganize or rebuild a columnstore index.  

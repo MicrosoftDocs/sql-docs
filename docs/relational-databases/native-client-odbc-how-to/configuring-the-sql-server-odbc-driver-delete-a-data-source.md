@@ -1,18 +1,14 @@
 ---
-title: "Delete a Data Source (ODBC) | Microsoft Docs"
+title: "Delete a Data Source (ODBC)"
 description: Learn how to delete a data source by using ODBC Administrator, programmatically, or using a file, before using ODBC applications with SQL Server 2005 or later.
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "data sources [ODBC]"
-ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: markingmyname
 ms.author: maghan
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "data sources [ODBC]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configuring the SQL Server ODBC Driver - Delete a Data Source

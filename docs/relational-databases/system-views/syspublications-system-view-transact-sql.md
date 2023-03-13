@@ -1,23 +1,19 @@
 ---
+title: "syspublications (System View) (Transact-SQL)"
 description: "syspublications (System View) (Transact-SQL)"
-title: "syspublications (System View) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "syspublications"
-  - "syspublications_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "syspublications view"
-ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "syspublications"
+  - "syspublications_TSQL"
+helpviewer_keywords:
+  - "syspublications view"
+dev_langs:
+  - "TSQL"
 ---
 # syspublications (System View) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +57,7 @@ ms.author: wiassaf
 |**conflict_policy**|**int**|Specifies the conflict resolution policy followed when the queued updating subscriber option is used. Can be one of these values:<br /><br /> **1** = Publisher wins the conflict.<br /><br /> **2** = Subscriber wins the conflict.<br /><br /> **3** = Subscription is reinitialized.|  
 |**queue_type**|**int**|Specifies which type of queue is used. Can be one of these values:<br /><br /> **1** = .msmq, which uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing to store transactions.<br /><br /> **2** = .sql, which uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store transactions.<br /><br /> Note: Using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing has been deprecated and is no longer supported.|  
 |**ad_guidname**|**sysname**|Specifies whether the publication is published in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. A valid globally-unique identifier (GUID) specifies that the publication is published in the Active Directory, and the GUID is the corresponding Active Directory publication object objectGUID. If NULL, the publication is not published in Active Directory.<br /><br /> Note: Publishing to Active Directory is no longer supported.|  
-|**backward_comp_level**|**int**|Database compatibility level, which can be one of the following values:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Database compatibility level, which can be one of the following values:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Indicates whether Subscribers can initialize a subscription to this publication from a backup rather than an initial snapshot. **1** means that subscriptions can be initialized from a backup, and **0** means that they cannot. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Indicates whether schema replication is supported for the publication.<br /><br /> **1** = DDL statements executed at the publisher are replicated.<br /><br /> **0** = Indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  

@@ -4,9 +4,8 @@ description: MSreplication_monitordata (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSreplication_monitordata_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSreplication_monitordata system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 ---
 # MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

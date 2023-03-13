@@ -4,9 +4,8 @@ description: dbo.systaskids (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "systaskids_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "systaskids system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
 ---
 # dbo.systaskids (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

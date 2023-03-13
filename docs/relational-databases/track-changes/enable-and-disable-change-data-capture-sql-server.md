@@ -1,21 +1,16 @@
 ---
-description: "Enable and Disable change data capture"
 title: "Enable and Disable change data capture"
-ms.custom: seo-dt-2019
+description: "Enable and Disable change data capture"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/02/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change data capture, enabling tables"
   - "change data capture, enabling databases"
   - "change data capture, disabling databases"
   - "change data capture, disabling tables"
-ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Enable and disable change data capture
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

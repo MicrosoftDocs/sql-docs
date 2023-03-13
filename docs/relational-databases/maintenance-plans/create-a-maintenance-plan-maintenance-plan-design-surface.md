@@ -4,14 +4,11 @@ description: Learn how to create a single server or multiserver maintenance plan
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "Maintenance Plan Design Surface"
-ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 ---
 # Create a Maintenance Plan (Maintenance Plan Design Surface)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

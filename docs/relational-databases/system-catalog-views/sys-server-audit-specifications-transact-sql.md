@@ -4,9 +4,8 @@ description: sys.server_audit_specifications (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_audit_specifications_TSQL"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "sys.server_audit_specifications catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 ---
 # sys.server_audit_specifications (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains information about the server audit specifications in a SQL Server audit on a server instance. For more information on SQL Server Audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

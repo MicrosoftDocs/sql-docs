@@ -4,9 +4,8 @@ description: sys.security_predicates (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "SYS.SECURITY_PREDICATES"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "security_predicates catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.security_predicates (Transact-SQL)

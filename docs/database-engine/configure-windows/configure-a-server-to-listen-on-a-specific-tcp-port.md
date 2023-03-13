@@ -4,10 +4,9 @@ description: Learn how to use SQL Server Configuration Manager to configure the 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/17/2021
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "fixed port"
   - "static ports"

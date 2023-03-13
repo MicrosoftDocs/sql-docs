@@ -1,21 +1,18 @@
 ---
-description: "How FOR JSON converts SQL Server data types to JSON data types (SQL Server)"
 title: "How FOR JSON converts SQL Server data types to JSON data types"
-ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FOR JSON, data type conversion"
-ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
+description: "How FOR JSON converts SQL Server data types to JSON data types (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FOR JSON, data type conversion"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How FOR JSON converts SQL Server data types to JSON data types (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   The **FOR JSON** clause uses the following rules to convert SQL Server data types to JSON types in the JSON output.  
   

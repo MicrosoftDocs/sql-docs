@@ -1,18 +1,15 @@
 ---
 title: Auto Restart SQL Server Agent
 description: "Auto Restart SQL Server Agent"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Agent, starting"
-  - "autostart SQL Server Agent"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 07/28/2021
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL Server Agent, starting"
+  - "autostart SQL Server Agent"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

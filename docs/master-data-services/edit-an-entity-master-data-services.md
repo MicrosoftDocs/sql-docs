@@ -1,18 +1,14 @@
 ---
-description: "Edit an Entity (Master Data Services)"
 title: Edit an Entity
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "entities [Master Data Services], changing name"
-ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
+description: "Edit an Entity (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "entities [Master Data Services], changing name"
 ---
 # Edit an Entity (Master Data Services)
 

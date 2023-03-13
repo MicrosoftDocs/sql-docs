@@ -1,18 +1,16 @@
 ---
+title: "WINDOW (Transact-SQL)"
 description: "SELECT - WINDOW - Transact-SQL"
-title: "WINDOW (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: mikeray
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WINDOW"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "WINDOW clause, about WINDOW clause"
   - "dividing tables into groups"
   - "WINDOW SETS"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "table groups [SQL Server]"
   - "groups [SQL Server], tables divided into groups"
   - "summary values [SQL Server]"
-author: thesqlsith 
-ms.author: derekw
-ms.reviewer: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 

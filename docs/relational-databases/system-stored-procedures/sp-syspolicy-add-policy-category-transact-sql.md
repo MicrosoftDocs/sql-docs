@@ -1,30 +1,26 @@
 ---
+title: "sp_syspolicy_add_policy_category (Transact-SQL)"
 description: "sp_syspolicy_add_policy_category (Transact-SQL)"
-title: "sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_add_policy_category"
-  - "sp_syspolicy_add_policy_category_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_add_policy_category"
-ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_add_policy_category"
+  - "sp_syspolicy_add_policy_category_TSQL"
+helpviewer_keywords:
+  - "sp_syspolicy_add_policy_category"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a policy category that can be used with Policy-Based Management. Policy categories enable you to organize policies, and to set policy scope.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

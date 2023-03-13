@@ -4,11 +4,9 @@ description: Learn about checkpoints for memory-optimized tables in SQL Server. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Checkpoint Operation for Memory-Optimized Tables

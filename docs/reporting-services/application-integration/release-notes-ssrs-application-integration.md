@@ -1,17 +1,13 @@
 ---
 title: "Release Notes for Report Viewer controls"
 description: The release notes for the Report Viewer controls of WebForms and WinForms, related to Reporting Services.
-ms.date: 08/30/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: application-integration
-ms.custom: seo-lt-2019
-
-ms.topic: reference
-ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: petebro
+ms.reviewer: maggies
+ms.date: 08/30/2022
+ms.service: reporting-services
+ms.subservice: application-integration
+ms.topic: reference
 ---
 # Release Notes for Report Viewer controls for WebForms and WinForms of SSRS
 

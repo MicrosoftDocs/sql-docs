@@ -5,10 +5,9 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 09/21/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # How to use distributed transactions with SQL Server Linux containers

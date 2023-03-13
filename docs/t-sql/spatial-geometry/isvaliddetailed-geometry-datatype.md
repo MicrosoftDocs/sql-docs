@@ -1,20 +1,16 @@
 ---
+title: "IsValidDetailed (geometry DataType)"
 description: "IsValidDetailed (geometry DataType)"
-title: "IsValidDetailed (geometry DataType) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "IsValidDetailed geometry"
-ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "08/03/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "IsValidDetailed geometry"
+dev_langs:
+  - "TSQL"
 ---
 # IsValidDetailed (geometry DataType)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

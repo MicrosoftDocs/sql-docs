@@ -5,11 +5,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/11/2017
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.custom:
-  - intro-deployment
+ms.custom: intro-deployment
 ---
 
 # Deploy a Pacemaker cluster for SQL Server on Linux

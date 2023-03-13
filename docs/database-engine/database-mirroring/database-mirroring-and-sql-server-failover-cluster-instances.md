@@ -4,10 +4,9 @@ description: You can combine database mirroring with SQL Server failover cluster
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "failover clustering [SQL Server], database mirroring"
   - "database mirroring [SQL Server], failover"

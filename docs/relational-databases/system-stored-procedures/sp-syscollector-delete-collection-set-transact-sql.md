@@ -1,31 +1,27 @@
 ---
+title: "sp_syscollector_delete_collection_set (Transact-SQL)"
 description: "sp_syscollector_delete_collection_set (Transact-SQL)"
-title: "sp_syscollector_delete_collection_set (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_delete_collection_set_TSQL"
-  - "sp_syscollector_delete_collection_set"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data collector [SQL Server], stored procedures"
-  - "sp_syscollector_delete_collecton_set"
-ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_delete_collection_set_TSQL"
+  - "sp_syscollector_delete_collection_set"
+helpviewer_keywords:
+  - "data collector [SQL Server], stored procedures"
+  - "sp_syscollector_delete_collecton_set"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes a user-defined collection set and all its collection items.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -4,8 +4,8 @@ description: Learn about standard OLE DB methods that support table-valued param
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "table-valued parameters (OLE DB), API support (methods)"

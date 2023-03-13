@@ -1,16 +1,13 @@
 ---
 title: Toggle a Breakpoint
-description: Learn how to toggle a breakpoint to highlight the associated Transact-SQL statement, and to perform various actions on the statement (such as editing). 
 titleSuffix: T-SQL debugger
-ms.prod: sql
-ms.technology: ssms
-ms.topic: conceptual
-ms.assetid: c477ab89-a1cd-4f2c-aa7c-40525041100f
+description: Learn how to toggle a breakpoint to highlight the associated Transact-SQL statement, and to perform various actions on the statement (such as editing).
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

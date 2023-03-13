@@ -4,9 +4,8 @@ description: sys.xml_schema_model_groups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.xml_schema_model_groups"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_schema_model_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 ---
 # sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

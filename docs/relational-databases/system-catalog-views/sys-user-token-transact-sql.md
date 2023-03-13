@@ -4,9 +4,8 @@ description: sys.user_token (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/27/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.user_token"
@@ -21,11 +20,10 @@ helpviewer_keywords:
   - "user_token catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # sys.user_token (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for every database principal that is part of the user token in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

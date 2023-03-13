@@ -1,20 +1,17 @@
 ---
+title: "Generate SQL Script (Replication Objects)"
 description: "Generate SQL Script (Replication Objects)"
-title: "Generate SQL Script (Replication Objects) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.generatesqlscript.f1"
-helpviewer_keywords: 
-  - "Generate SQL Script dialog box"
-ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.generatesqlscript.f1"
+helpviewer_keywords:
+  - "Generate SQL Script dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Generate SQL Script (Replication Objects)

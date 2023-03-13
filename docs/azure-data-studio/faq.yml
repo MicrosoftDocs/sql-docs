@@ -2,7 +2,7 @@
 metadata:
   title: Azure Data Studio FAQ
   description: 'Get answers to questions frequently asked about Azure Data Studio, such as "What does it do?", "Who should use it?", and "How much does it cost?".'
-  ms.prod: azure-data-studio
+  ms.service: azure-data-studio
   ms.topic: conceptual
   author: dzsquared
   ms.author: drskwier
@@ -18,7 +18,7 @@ sections:
     questions:
       - question: What is Azure Data Studio?
         answer: |
-          [Azure Data Studio](what-is-azure-data-studio.md) is an open source, cross-platform desktop environment for data professionals using the Azure Data family of on-premises and cloud data platforms on Windows, macOS, and Linux. Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with lightning fast IntelliSense, code snippets, source control integration, and an integrated terminal. it's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
+          [Azure Data Studio](what-is-azure-data-studio.md) is an open source, cross-platform desktop environment for data professionals using the Azure Data family of on-premises and cloud data platforms on Windows, macOS, and Linux. Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with lightning fast IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
           
           Research has shown that users spend an order of magnitude more time working on query editing than on any other task with SQL Server Management Studio. For that reason, Azure Data Studio has been designed to focus deeply on the functionality that is used the most, with additional experiences made available as optional extensions into the product. Every user is allowed to customize their environment to the workflows that they use most often.
           
@@ -85,11 +85,11 @@ sections:
         answer: |
           The SMO APIs aren't yet available on Linux or macOS in a consumable way. We ported over a subset of the SMO APIs to .NET Core that we needed for Azure Data Studio and we plan to expand as part of the roadmap. The SQL Tools Service is on GitHub: [https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice).
           
-      - question: Do you plan to port the DACFx APIs and/or sqlpackage.exe and/or SSDT to Linux and macOS?
+      - question: Do you plan to port the DACFx APIs and/or SqlPackage and/or SSDT to Linux and macOS?
         answer: |
           Yes.
           
-          [SqlPackage.exe](../tools/sqlpackage/sqlpackage-download.md) is now available on .NET Core for Windows, macOS, and Linux.  SQL Projects (SSDT) functionality is enabled in Azure Data Studio in the [SQL Database Projects extension](extensions/sql-database-project-extension.md).
+          [SqlPackage](../tools/sqlpackage/sqlpackage-download.md) is now available on .NET Core for Windows, macOS, and Linux.  SQL Projects (SSDT) functionality is enabled in Azure Data Studio in the [SQL Database Projects extension](extensions/sql-database-project-extension.md).
           
       - question: Will SQL PowerShell cmdlets be available on Linux and macOS?
         answer: |

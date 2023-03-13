@@ -4,9 +4,8 @@ description: Change Tracking Catalog Views - sys.change_tracking_databases
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/08/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "change_tracking_databases"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "change tracking [SQL Server], sys.change_tracking_databases"
 dev_langs:
   - "TSQL"
-ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_databases

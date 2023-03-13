@@ -1,18 +1,14 @@
 ---
 title: "Find and Replace"
 description: Learn how to use the Find and Replace dialog box to find and replace text.
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Find and Replace dialog box"
-ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Find and Replace dialog box"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find and Replace

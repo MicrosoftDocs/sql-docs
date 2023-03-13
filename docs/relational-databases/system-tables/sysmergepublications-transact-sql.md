@@ -4,9 +4,8 @@ description: sysmergepublications (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "sysmergepublications"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysmergepublications system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 ---
 # sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +56,7 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 |**allow_synctoalternate**|**bit**|Specifies whether an alternate synchronization partner is allowed to synchronize with this Publisher. **0** means that a synchronization partner is not allowed.|  
 |**validate_subscriber_info**|**nvarchar(500)**|Lists the functions that are being used to retrieve Subscriber information and validate the parameterized row filtering criteria on the Subscriber.|  
 |**ad_guidname**|**sysname**|Specifies whether the publication is published in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. A valid GUID specifies that the publication is published in the Active Directory, and the GUID is the corresponding Active Directory publication object **objectGUID**. If NULL, the publication is not published in Active Directory.|  
-|**backward_comp_level**|**int**|Database compatibility level. Can be one of the following values:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Database compatibility level. Can be one of the following values:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].|  
 |**max_concurrent_merge**|**int**|The maximum number of allowed concurrent merge processes. A value of **0** for this property means that there is no limit to the number of concurrent merge processes running at any given time. This property sets a limit as to the number of concurrent merge processes that can be run against a merge publication at one time. If there are more snapshot processes scheduled at the same time than the value allows to run, then the excess jobs will be put into a queue and wait until a currently-running merge process finishes.|  
 |**max_concurrent_dynamic_snapshots**|**int**|The maximum number of allowed concurrent filtered data snapshot sessions that can be running against the merge publication. If **0**, there is no limit to the maximum number of concurrent filtered data snapshot sessions that can run simultaneously against the publication at any given time. This property sets a limit as to the number of concurrent snapshot processes that can be run against a merge publication at one time. If there are more snapshot processes scheduled at the same time than the value allows to run, then the excess jobs will be put into a queue and wait until a currently-running merge process finishes.|  
 |**use_partition_groups**|**smallint**|Specifies whether the publication uses precomputed partitions.|  

@@ -1,13 +1,13 @@
 ---
 title: "Whitepaper: Diagnose & resolve spinlock contention"
-description: This article is an in-depth look at diagnosing and resolving spinlock contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft."
-ms.date: 09/30/2020
-ms.prod: sql
-ms.reviewer: wiassaf
-ms.technology: performance
-ms.topic: troubleshooting
+description: This article is an in-depth look at diagnosing and resolving spinlock contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft.
 author: bluefooted
 ms.author: pamela
+ms.reviewer: wiassaf
+ms.date: 11/10/2022
+ms.service: sql
+ms.subservice: performance
+ms.topic: troubleshooting
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -31,6 +31,8 @@ This section describes how to diagnose issues with *spinlock contention*, which 
 Spinlocks are lightweight synchronization primitives that are used to protect access to data structures. Spinlocks are not unique to SQL Server. The operating system uses them when access to a given data structure is only needed for a short time. When a thread attempting to acquire a spinlock is unable to obtain access, it executes in a loop periodically checking to determine if the resource is available instead of immediately yielding. After some period of time, a thread waiting on a spinlock will yield before it is able to acquire the resource. Yielding allows other threads running on the same CPU to execute. This behavior is known as a backoff and will be discussed in more depth later in this article.
 
 SQL Server utilizes spinlocks to protect access to some of its internal data structures. Spinlocks are used within the engine to serialize access to certain data structures in a similar fashion to latches. The main difference between a latch and a spinlock is the fact that spinlocks will spin (execute a loop) for a period of time checking for availability of a data structure while a thread attempting to acquire access to a structure protected by a latch will immediately yield if the resource is not available. Yielding requires context switching of a thread off the CPU so that another thread can execute. This is a relatively expensive operation and for resources that are held for a short duration it is more efficient overall to allow a thread to execute in a loop periodically checking for availability of the resource.
+
+Internal adjustments to the Database Engine introduced in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] make spinlocks more efficient.
 
 ## Symptoms
 
@@ -76,7 +78,7 @@ A combination of several of the following symptoms may indicate spinlock content
 
 * A high number of spins and backoffs are observed for a particular spinlock type.
 
-* The system is experiencing heavy CPU utilization or spikes in CPU consumption. In heavy CPU scenarios, you see high signal waits on SOS_SCHEDULER_YEILD (reported by the DMV *sys.dm_os_wait_stats*).
+* The system is experiencing heavy CPU utilization or spikes in CPU consumption. In heavy CPU scenarios, you see high signal waits on SOS_SCHEDULER_YIELD (reported by the DMV *sys.dm_os_wait_stats*).
 
 * The system is experiencing high concurrency.
 

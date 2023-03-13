@@ -1,20 +1,16 @@
 ---
+title: "Driver Setup DLL"
 description: "Driver Setup DLL"
-title: "Driver Setup DLL | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "installing ODBC components [ODBC], driver setup DLL"
   - "ODBC drivers [ODBC], driver setup DLL"
   - "driver setup DLL [ODBC]"
-ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Driver Setup DLL
 > [!NOTE]  

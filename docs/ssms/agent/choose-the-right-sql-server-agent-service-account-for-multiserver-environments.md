@@ -1,19 +1,15 @@
 ---
-description: "Choose the Right SQL Server Agent Service Account for Multiserver Environments"
 title: Choose the Agent Service Account for Multiserver Environments
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Agent, service accounts"
-  - "multiserver environments [SQL Server], SQL Server Agent service account behavior"
-ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
+description: "Choose the Right SQL Server Agent Service Account for Multiserver Environments"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL Server Agent, service accounts"
+  - "multiserver environments [SQL Server], SQL Server Agent service account behavior"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

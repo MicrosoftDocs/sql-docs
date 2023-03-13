@@ -1,20 +1,16 @@
 ---
 title: "Piecemeal restore: some filegroups (full recovery model)"
 description: This example shows a piecemeal restore of only some filegroups in SQL Server of a database using the full recovery model.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full recovery model [SQL Server], RESTORE example"
   - "piecemeal restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], piecemeal"
-ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Example: Piecemeal Restore of Only Some Filegroups (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

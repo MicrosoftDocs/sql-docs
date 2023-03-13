@@ -1,23 +1,19 @@
 ---
-title: "Maps in a paginated report | Microsoft Docs"
-description: Get acquainted with how to add a map to your paginated report showing business data against a geographical background in your paginated report in Report Builder. 
+title: "Maps in a paginated report"
+description: Get acquainted with how to add a map to your paginated report showing business data against a geographical background in your paginated report in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "10508"
   - "MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME"
   - "sql13.rtp.rptdesigner.mapproperties.general.f1"
   - "MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE"
   - "10500"
   - "sql13.rtp.rptdesigner.maptitleproperties.general.f1"
-ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Maps in a paginated report (Report Builder)
 

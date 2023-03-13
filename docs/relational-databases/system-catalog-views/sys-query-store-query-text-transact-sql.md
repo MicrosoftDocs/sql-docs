@@ -4,9 +4,8 @@ description: sys.query_store_query_text (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/23/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "SYS.QUERY_STORE_QUERY_TEXT"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "query_store_query_text catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_query_text (Transact-SQL)

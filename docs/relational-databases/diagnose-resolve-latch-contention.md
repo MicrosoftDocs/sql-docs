@@ -1,13 +1,13 @@
 ---
 title: "Whitepaper: Diagnose & resolve latch contention"
-description: This article is an in-depth look at diagnosing and resolving latch contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft."
-ms.date: 03/12/2021
-ms.prod: sql
-ms.reviewer: wiassaf
-ms.technology: performance
-ms.topic: troubleshooting
+description: This article is an in-depth look at diagnosing and resolving latch contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft.
 author: bluefooted
 ms.author: pamela
+ms.reviewer: wiassaf
+ms.date: 03/12/2021
+ms.service: sql
+ms.subservice: performance
+ms.topic: troubleshooting
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

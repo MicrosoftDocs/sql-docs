@@ -1,22 +1,20 @@
 ---
 title: "Retrieve and query XML data"
 description: Learn about the query options that must be specified when querying XML data, and about the parts of XML instances that aren't preserved when stored in databases.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "XML data [SQL Server], retrieving"
   - "XML instance retrieval"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Retrieve and query XML data
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that aren't preserved when they're stored in databases.
 

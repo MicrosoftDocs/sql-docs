@@ -4,9 +4,8 @@ description: sys.availability_group_listeners (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "availability_group_listeners_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
 dev_langs:
   - "TSQL"
-ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 ---
 # sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

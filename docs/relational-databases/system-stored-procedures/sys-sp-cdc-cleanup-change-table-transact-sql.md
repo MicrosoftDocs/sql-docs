@@ -1,33 +1,29 @@
 ---
+title: "sys.sp_cdc_cleanup_change_table (Transact-SQL)"
 description: "sys.sp_cdc_cleanup_change_table (Transact-SQL)"
-title: "sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: briancarrig
+ms.author: brcarrig
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cdc_cleanup_change_table"
   - "sp_cdc_cleanup_change_table_TSQL"
   - "sys.sp_cdc_cleanup_change_table"
   - "sys.sp_cdc_cleanup_change_table_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_cdc_cleanup_change_tables"
   - "sp_cdc_cleanup_change_tables"
-ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: briancarrig
-ms.author: brcarrig
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes rows from the change table in the current database based on the specified *low_water_mark* value. This stored procedure is provided for users who want to directly manage the change table cleanup process. Caution should be used, however, because the procedure affects all consumers of the data in the change table.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 ``` 

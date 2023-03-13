@@ -1,18 +1,14 @@
 ---
+title: "CDC Splitter"
 description: "CDC Splitter"
-title: "CDC Splitter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsplitter.f1"
-ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.cdcsplitter.f1"
 ---
 # CDC Splitter
 

@@ -1,19 +1,13 @@
 ---
+title: "Using XML Schemas"
 description: "Using XML Schemas"
-title: "Using XML Schemas | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/11/2019
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "XML [SMO]"
-ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: 01/11/2019
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "XML [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XML Schemas

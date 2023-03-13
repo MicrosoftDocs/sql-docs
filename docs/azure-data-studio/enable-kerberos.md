@@ -5,9 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.date: 05/03/2021
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: seodec18
 ---
 
 # Connect Azure Data Studio to SQL Server using Kerberos

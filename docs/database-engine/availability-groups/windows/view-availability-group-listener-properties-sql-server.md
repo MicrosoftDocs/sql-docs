@@ -4,10 +4,9 @@ description: "Describes how to view the properties of an Always On availability 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "07/11/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.availabilitygrouplistenerproperties.general.f1"
 helpviewer_keywords:

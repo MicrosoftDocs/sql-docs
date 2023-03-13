@@ -1,13 +1,13 @@
 ---
 title: "Header and Library Files"
-description: Learn how to use the SQL Server Native Client header and library files to develop an application. Copy required files to your development environment. 
-ms.custom: ""
+description: Learn how to use the SQL Server Native Client header and library files to develop an application. Copy required files to your development environment.
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "header files [SQL Server Native Client]"
   - "SQLNCLI, header files"
   - "OLE DB, header files"
@@ -19,13 +19,13 @@ helpviewer_keywords:
   - "SQL Server Native Client, library files"
   - "ODBC applications, header files"
   - "SQLNCLI, library files"
-ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the SQL Server Native Client Header and Library Files
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header and library files are installed with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. When developing an application, it is important to copy and install all of the required files for development to your development environment. For more information about installing and redistributing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   

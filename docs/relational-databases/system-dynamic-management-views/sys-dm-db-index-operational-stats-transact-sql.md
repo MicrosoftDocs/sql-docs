@@ -3,10 +3,9 @@ title: "sys.dm_db_index_operational_stats (Transact-SQL)"
 description: sys.dm_db_index_operational_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.technology: system-objects
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_index_operational_stats"
@@ -29,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > [!NOTE]    
 >  **sys.dm_db_index_operational_stats** does not return information about memory-optimized indexes. For information about memory-optimized index use, see [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
         
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## Syntax    
     
@@ -185,9 +184,10 @@ sys.dm_db_index_operational_stats (
     
 -   `CONTROL` permission on the specified object within the database    
     
--   `VIEW DATABASE STATE` permission to return information about all objects within the specified database, by using the object wildcard @*object_id* = NULL    
+-   `VIEW DATABASE STATE` or `VIEW DATABASE PERFORMANCE STATE` (SQL Server 2022) permission to return information about all objects within the specified database, by using the object wildcard @*object_id* = NULL    
     
--   `VIEW SERVER STATE` permission to return information about all databases, by using the database wildcard @*database_id* = NULL    
+-   `VIEW SERVER STATE` `VIEW SERVER PERFORMANCE STATE` (SQL Server 2022) permission to return information about all databases, by using the database wildcard @*database_id* = NULL    
+
     
  Granting `VIEW DATABASE STATE` allows all objects in the database to be returned, regardless of any CONTROL permissions denied on specific objects.    
     

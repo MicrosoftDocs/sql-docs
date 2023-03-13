@@ -1,23 +1,19 @@
 ---
+title: "sp_attach_db (Transact-SQL)"
 description: "sp_attach_db (Transact-SQL)"
-title: "sp_attach_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_attach_db_TSQL"
-  - "sp_attach_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_attach_db"
-ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_attach_db_TSQL"
+  - "sp_attach_db"
+helpviewer_keywords:
+  - "sp_attach_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

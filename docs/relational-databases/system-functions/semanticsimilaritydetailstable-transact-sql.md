@@ -1,23 +1,19 @@
 ---
+title: "semanticsimilaritydetailstable (Transact-SQL)"
 description: "semanticsimilaritydetailstable (Transact-SQL)"
-title: "semanticsimilaritydetailstable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "semanticsimilaritydetailstable"
-  - "semanticsimilaritydetailstable_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "semanticsimilaritydetailstable function"
-ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "semanticsimilaritydetailstable"
+  - "semanticsimilaritydetailstable_TSQL"
+helpviewer_keywords:
+  - "semanticsimilaritydetailstable function"
+dev_langs:
+  - "TSQL"
 ---
 # semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +22,7 @@ ms.author: mikeray
   
  This rowset function can be referenced in the FROM clause of a SELECT statement 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

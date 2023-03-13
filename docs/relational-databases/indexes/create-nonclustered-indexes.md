@@ -4,18 +4,15 @@ description: Create Nonclustered Indexes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 11/12/2021
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "index creation [SQL Server], nonclustered indexes"
   - "nonclustered indexes [SQL Server], creating"
   - "nonclustered indexes [SQL Server], UNIQUE constraint"
   - "indexes [SQL Server], nonclustered"
   - "nonclustered indexes [SQL Server], PRIMARY KEY constraint"
-ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nonclustered Indexes

@@ -4,8 +4,8 @@ description: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/03/2020
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 ms.topic: language-reference
 dev_langs:
   - "TSQL"

@@ -4,10 +4,9 @@ description: sys.pdw_replicated_table_cache_state (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "07/03/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
 monikerRange: "=azure-sqldw-latest"

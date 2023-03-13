@@ -1,21 +1,17 @@
 ---
+title: "ODBC Source"
 description: "ODBC Source"
-title: "ODBC Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.designer.odbcsource.f1"
   - "sql13.ssis.designer.odbcsource.connection.f1"
   - "sql13.ssis.designer.odbcsource.columns.f1"
   - "sql13.ssis.designer.odbcsource.errorhandling.f1"
-ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: chugugrace
-ms.author: chugu
 ---
 # ODBC Source
 

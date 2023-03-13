@@ -4,8 +4,8 @@ description: The Microsoft ODBC Driver for SQL Server allows ODBC applications t
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using Azure Active Directory with the ODBC Driver
@@ -125,6 +125,7 @@ For user-assigned identity with object ID equals to myObjectId,<br>
 >- To connect using Windows Integrated or Active Directory Integrated (Windows, and Linux/macOS 17.6+, driver only) authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. For driver versions 17.7 or earlier, `UID` and `PWD` must not be specified. Beginning with driver version 17.8, `UID` and `PWD` are ignored.
 >- To connect using Active Directory Interactive (Windows driver only) authentication, `UID` must be specified. For driver versions 17.7 and earlier, `PWD` must not be specified. Beginning with driver version 17.8, `PWD` is ignored.
 >- Starting with version 18.1, `Trusted_Connection=Yes` no longer uses Azure Active Directory federated authentication by default and uses SSPI-integrated instead. To use Azure Active Directory for this option, `TrustedConnection_UseAAD=Yes` should be configured.
+>- ODBC driver versions 17.7 and lower have a known issue with connection timeout when AAD authentication and Force Encryption are enabled on a SQL instance. SQL Server errorlog may contain error messages such as: "_Error: 33155, Severity: 20, State: 1. A disconnect event was raised when server is waiting for Federated Authentication token. This could be due to client close or server timeout expired_.". If you are using SQL high availability solutions such as Availability Groups or Failover Cluster Instances, the internal cluster communication for SQL may be affected by this behavior which can affect resource availability. In the cluster log, you may see error messages such as: “_[hadrag] Connect to SQL Server ...ODBC Error: [HY000] [Microsoft][ODBC Driver 17 for SQL Server]An unknown error has occurred. Detailed error information is not available. (0)_”. ODBC driver versions 17.10 and higher fix this issue and with SQL Server 2022 GDR KB5021522 /CU1 KB5022375, the latest driver which contains this fix is installed with SQL installation. You can verify which version of ODBC driver you have installed by referring to the ODBC Data Source Administrator.
 
 ## Authenticating with an Access Token
 

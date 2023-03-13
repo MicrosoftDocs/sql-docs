@@ -1,13 +1,12 @@
 ---
 title: "XML Indexes (SQL Server)"
 description: Learn how creating XML indexes on xml data type columns can benefit your application by improving query performance.
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/09/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/09/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "removing indexes"
@@ -32,12 +31,10 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], xml data type"
   - "PROPERTY index"
   - "XML indexes [SQL Server], creating"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # XML indexes (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 XML indexes can be created on **xml** data type columns. They index all tags, values and paths over the XML instances in the column and benefit query performance. Your application may benefit from an XML index in the following situations:
 

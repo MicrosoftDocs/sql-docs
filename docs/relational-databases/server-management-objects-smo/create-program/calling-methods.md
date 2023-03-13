@@ -1,22 +1,16 @@
 ---
+title: "Calling Methods"
 description: "Calling Methods"
-title: "Calling Methods | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "methods [SMO]"
   - "calling methods"
   - "SQL Server Management Objects, method calling"
   - "SMO [SQL Server], method calling"
-ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Calling Methods

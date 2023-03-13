@@ -3,10 +3,9 @@ title: "sys.dm_db_xtp_index_stats (Transact-SQL)"
 description: For In-Memory OLTP tables, sys.dm_db_xtp_index_stats contains statistics collected since the last database restart.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_xtp_index_stats"
@@ -51,6 +50,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the current database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## See also
 
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)

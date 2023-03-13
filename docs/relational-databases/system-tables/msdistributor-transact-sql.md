@@ -4,9 +4,8 @@ description: MSdistributor (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSdistributor"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSdistributor system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
 ---
 # MSdistributor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

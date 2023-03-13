@@ -1,16 +1,13 @@
 ---
 title: Status Bar (Database Engine Query Editor)
-description: Learn how to color code the status bar of a Database Engine Query Editor window to indicate which instance of the DataBase engine the window is connected to.
 titleSuffix: T-SQL debugger
-ms.prod: sql
-ms.technology: ssms
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
+description: Learn how to color code the status bar of a Database Engine Query Editor window to indicate which instance of the DataBase engine the window is connected to.
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 12/04/2019
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -1,22 +1,20 @@
 ---
 title: GeomFromGML (geography Data Type)
 description: "GeomFromGML (geography Data Type)"
-ms.prod: sql
-ms.technology: t-sql
+author: MladjoA
+ms.author: mlandzic
+ms.date: "07/30/2017"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GeomFromGML_TSQL"
   - "GeomFromGML"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GeomFromGML (geography Data Type)"
   - "GeomFromGML method"
-author: MladjoA
-ms.author: mlandzic 
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/30/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # GeomFromGML (geography Data Type)
@@ -61,7 +59,7 @@ GeomFromGml ( GML_input, SRID )
 ```sql
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
+SET @x = '<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  
@@ -71,7 +69,7 @@ SELECT @g.ToString();
 ```sql
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<FullGlobe xmlns="https://schemas.microsoft.com/sqlserver/2011/geography" />';  
+SET @x = '<FullGlobe xmlns="http://schemas.microsoft.com/sqlserver/2011/geography" />';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  

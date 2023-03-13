@@ -1,18 +1,15 @@
 ---
-description: "Change Column Order in a Table"
 title: "Change Column Order in a Table"
-ms.custom: ""
-ms.date: "01/14/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "columns [SQL Server], change order in a table"
-  - "column order, change"
+description: "Change Column Order in a Table"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "01/14/2021"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "columns [SQL Server], change order in a table"
+  - "column order, change"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Column Order in a Table

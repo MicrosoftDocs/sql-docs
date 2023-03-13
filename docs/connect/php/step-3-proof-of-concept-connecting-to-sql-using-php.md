@@ -4,8 +4,8 @@ description: Step 3 is a proof of concept, which shows how you can connect to SQ
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 05/05/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using PHP

@@ -1,14 +1,14 @@
 ---
+title: "DistinctCount (MDX)"
 description: "DistinctCount (MDX)"
-title: "DistinctCount (MDX) | Microsoft Docs"
-ms.date: 01/12/2021
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: mdx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 01/12/2021
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: mdx
 ---
 # DistinctCount (MDX)
 

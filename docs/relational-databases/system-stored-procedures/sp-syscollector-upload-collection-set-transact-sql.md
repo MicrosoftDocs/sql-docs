@@ -1,24 +1,20 @@
 ---
+title: "sp_syscollector_upload_collection_set (Transact-SQL)"
 description: "sp_syscollector_upload_collection_set (Transact-SQL)"
-title: "sp_syscollector_upload_collection_set (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_upload_collection_set"
-  - "sp_syscollector_upload_collection_set_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syscollector_upload_collection_set"
-  - "data collector [SQL Server], stored procedures"
-ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_upload_collection_set"
+  - "sp_syscollector_upload_collection_set_TSQL"
+helpviewer_keywords:
+  - "sp_syscollector_upload_collection_set"
+  - "data collector [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +24,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  This stored procedure can only be used for collection sets that are configured for cached mode data collection and upload.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

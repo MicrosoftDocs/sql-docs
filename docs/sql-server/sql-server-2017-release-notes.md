@@ -1,15 +1,12 @@
 ---
-title: "SQL Server 2017 Release Notes | Microsoft Docs"
+title: "SQL Server 2017 Release Notes"
 description: This article describes limitations and issues with SQL Server 2017 and provides links to related information.
-ms.custom: ""
-ms.date: "11/01/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: release-landing
-ms.topic: conceptual
-ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "11/01/2017"
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 monikerRange: "= sql-server-2017"
 ---
 # SQL Server 2017 Release Notes
@@ -147,7 +144,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ## More information
 - [SQL Server Reporting Services release notes](../reporting-services/release-notes-reporting-services.md).
 - [Known Issues for Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
-- [SQL Server Update Center - links and information for all supported versions](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [SQL Server Update Center - links and information for all supported versions](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

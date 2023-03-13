@@ -4,9 +4,8 @@ description: sys.resource_governor_configuration (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.resource_governor_configuration_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.resource_governor_configuration catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 ---
 # sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

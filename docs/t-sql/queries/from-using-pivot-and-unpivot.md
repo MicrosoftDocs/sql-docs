@@ -1,17 +1,15 @@
 ---
-title: "Using PIVOT and UNPIVOT | Microsoft Docs"
+title: "Using PIVOT and UNPIVOT"
 description: "Transact-SQL reference for PIVOT and UNPIVOT relational operators. Use these operators on SELECT statements to change a table-valued expression into another table."
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/14/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "PIVOT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FROM clause, UNPIVOT operator"
   - "unpivoting tables"
   - "table pivoting [SQL Server]"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "pivoting tables"
   - "FROM clause, PIVOT operator"
   - "rotating columns"
-ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FROM - Using PIVOT and UNPIVOT

@@ -1,21 +1,17 @@
 ---
-title: "Running Stored Procedures | Microsoft Docs"
+title: "Running Stored Procedures"
 description: A stored procedure is an executable object stored in a database. SQL Server supports stored procedures and extended stored procedures.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC, stored procedures"
   - "stored procedures [ODBC], running"
   - "SQL Server Native Client ODBC driver, stored procedures"
   - "stored procedures [ODBC], executing"
-ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Running Stored Procedures

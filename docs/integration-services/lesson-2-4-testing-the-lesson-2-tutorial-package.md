@@ -1,16 +1,12 @@
 ---
+title: "Step 4: Test the Lesson 2 tutorial package"
 description: "Lesson 2-4: Test the Lesson 2 tutorial package"
-title: "Step 4: Test the Lesson 2 tutorial package | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
+ms.date: "01/03/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 2-4: Test the Lesson 2 tutorial package
 

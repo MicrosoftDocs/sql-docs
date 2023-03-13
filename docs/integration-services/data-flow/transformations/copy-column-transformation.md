@@ -1,23 +1,19 @@
 ---
+title: "Copy Column Transformation"
 description: "Copy Column Transformation"
-title: "Copy Column Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.copycolumntrans.f1"
   - "sql13.dts.designer.copymaptransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [Integration Services], copying"
   - "copying columns"
   - "Copy Column transformation"
-ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-author: chugugrace
-ms.author: chugu
 ---
 # Copy Column Transformation
 

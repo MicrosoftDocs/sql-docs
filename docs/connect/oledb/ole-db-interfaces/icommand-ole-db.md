@@ -4,8 +4,8 @@ description: "Learn about behavior of the ICommand::Execute method that is speci
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords:
   - "ICommand [OLE DB Driver for SQL Server]"

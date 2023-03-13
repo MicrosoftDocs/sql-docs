@@ -4,10 +4,9 @@ description: If the principal server fails while the mirror server is available,
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "forced service [SQL Server]"
   - "database mirroring [SQL Server], forcing service"

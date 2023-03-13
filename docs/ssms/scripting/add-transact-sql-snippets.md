@@ -1,16 +1,12 @@
 ---
 title: "Add Transact-SQL Snippets"
 description: Learn how to add your own Transact-SQL code snippets to the set of pre-defined snippets included in SQL Server.
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.topic: conceptual
-ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -57,7 +53,7 @@ You can add your own Transact-SQL code snippets to the set of pre-defined snippe
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <_locDefinition xmlns="urn:locstudio">  
         <_locDefault _loc="locNone" />  
         <_locTag _loc="locData">Title</_locTag>  

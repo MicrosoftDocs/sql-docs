@@ -4,11 +4,9 @@ description: Learn about restoring a database with memory-optimized tables in SQ
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 ---
 # Restore a Database and Bind it to a Resource Pool
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

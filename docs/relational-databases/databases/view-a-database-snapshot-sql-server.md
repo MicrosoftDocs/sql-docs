@@ -1,20 +1,16 @@
 ---
-title: "View a Database Snapshot (SQL Server) | Microsoft Docs"
+title: "View a Database Snapshot (SQL Server)"
 description: Learn how to view a SQL Server database snapshot using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database snapshots [SQL Server], viewing"
   - "displaying database snapshots"
   - "viewing database snapshots"
-ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # View a Database Snapshot (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,15 +1,12 @@
 ---
+title: "Oracle Destination"
 description: "Oracle Destination"
-title: "Oracle Destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/14/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "08/14/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Oracle destination
 

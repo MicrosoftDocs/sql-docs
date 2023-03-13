@@ -4,10 +4,9 @@ description: "Describes the properties found on the 'Choose Servers' page of the
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.configdbmsecurwiz.choosesrvrs.f1"
 ---

@@ -4,12 +4,12 @@ description: "Takes a Query object or an MDX string, and returns the result as a
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
-ms.service: ""
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (olapR), executeMD
+keywords:
+  - (olapR)
+  - executeMD
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 

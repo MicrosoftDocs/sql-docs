@@ -1,23 +1,19 @@
 ---
+title: "Configuring the Script Component in the Script Component Editor"
 description: "Configuring the Script Component in the Script Component Editor"
-title: "Configuring the Script Component in the Script Component Editor | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS Script component"
   - "Script Component Editor"
   - "SSIS Script component, configuring"
   - "Script component [Integration Services], configuring"
-ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Configuring the Script Component in the Script Component Editor
 

@@ -1,16 +1,12 @@
 ---
-description: "Change a SQL Server Native Client Authentication User Password (OLE DB)"
 title: "SQL Authentication User Password (OLE DB)"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
+description: "Change a SQL Server Native Client Authentication User Password (OLE DB)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change a SQL Server Native Client Authentication User Password (OLE DB)

@@ -1,22 +1,20 @@
 ---
-title: "Query Profling Infrastructure | Microsoft Docs"
+title: "Query Profling Infrastructure"
 description: Learn how the SQL Server Database Engine accesses runtime information on query execution plans to understand the workload and how resource usage is driven.
-ms.custom: ""
-ms.date: 04/23/2019
-ms.prod: sql
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.date: 04/23/2019
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query plans [SQL Server]"
   - "execution plans [SQL Server]"
   - "query profiling"
   - "lightweight query profiling"
   - "lightweight profiling"
   - "lwp"
-ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Query Profiling Infrastructure
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

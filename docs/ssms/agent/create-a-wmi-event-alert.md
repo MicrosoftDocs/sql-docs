@@ -5,10 +5,9 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 09/20/2022
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "WMI event alerts [SQL Server Management Studio]"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
@@ -58,7 +57,7 @@ By default, only members of the **sysadmin** fixed server role can execute `sp_a
 
 ## <a id="TsqlProcedure"></a> Use Transact-SQL
 
-1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 1. On the Standard bar, select **New Query**.
 

@@ -4,8 +4,8 @@ description: "Example code demonstrating how to use asynchronous execution (usin
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 09/01/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Asynchronous Execution (Notification Method) Sample

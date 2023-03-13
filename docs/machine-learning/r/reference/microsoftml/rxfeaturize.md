@@ -4,12 +4,13 @@ description: "Transforms data from an input data set to an output data set (Micr
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
-ms.service: ""
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (MicrosoftML), rxFeaturize, manip
+keywords:
+  - (MicrosoftML)
+  - rxFeaturize
+  - manip
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 

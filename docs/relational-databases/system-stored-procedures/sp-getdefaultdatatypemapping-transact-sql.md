@@ -1,30 +1,26 @@
 ---
+title: "sp_getdefaultdatatypemapping (Transact-SQL)"
 description: "sp_getdefaultdatatypemapping (Transact-SQL)"
-title: "sp_getdefaultdatatypemapping (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_getdefaultdatatypemapping_TSQL"
-  - "sp_getdefaultdatatypemapping"
-helpviewer_keywords: 
-  - "sp_getdefaultdatatypemapping"
-ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_getdefaultdatatypemapping_TSQL"
+  - "sp_getdefaultdatatypemapping"
+helpviewer_keywords:
+  - "sp_getdefaultdatatypemapping"
+dev_langs:
+  - "TSQL"
 ---
 # sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information on the default mapping for the specified data type between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management system (DBMS). This stored procedure is executed at the Distributor on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,14 +1,13 @@
 ---
+title: "Compatibility Matrix"
 description: "Compatibility Matrix"
-title: "Compatibility Matrix | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "driver compatibility issues [ODBC]"
   - "ODBC drivers [ODBC], backward compatibility"
   - "backward compatibility [ODBC], application and driver compatibility"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "application compatibility issues [ODBC]"
   - "application upgrades [ODBC], compatibility matrix"
   - "upgrading applications [ODBC], compatibility matrix"
-ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Compatibility Matrix
 The following table describes the compatibility of the types of applications and drivers defined previously in this section.  

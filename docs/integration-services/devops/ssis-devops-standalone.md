@@ -1,14 +1,12 @@
 ---
-title: "Standalone SQL Server Integration Services (SSIS) DevOps Tools | Microsoft Docs"
+title: "Standalone SQL Server Integration Services (SSIS) DevOps Tools"
 description: Learn how to build SSIS CICD with standalone SSIS DevOps Tools.
-ms.date: "10/16/2020"
-ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.custom: ""
-ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "10/16/2020"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Standalone SQL Server Integration Service (SSIS) DevOps Tools
 

@@ -1,18 +1,14 @@
 ---
+title: "Working with Connection Managers Programmatically"
 description: "Working with Connection Managers Programmatically"
-title: "Working with Connection Managers Programmatically | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "connection managers [Integration Services], programming"
-ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "connection managers [Integration Services], programming"
 ---
 # Working with Connection Managers Programmatically
 

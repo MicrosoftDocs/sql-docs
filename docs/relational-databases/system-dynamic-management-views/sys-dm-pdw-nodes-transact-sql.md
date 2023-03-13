@@ -4,12 +4,11 @@ description: sys.dm_pdw_nodes (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_nodes (Transact-SQL)

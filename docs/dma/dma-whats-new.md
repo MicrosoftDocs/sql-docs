@@ -1,17 +1,16 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server)"
 description: Learn about the new features in each release of Data Migration Assistant for SQL Server and Azure SQL Database.
-author: aciortea
-ms.author: aciortea
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom: intro-whats-new
 helpviewer_keywords:
   - "Data Migration Assistant, new features"
-keywords: ""
 ---
 
 # What's new in Data Migration Assistant

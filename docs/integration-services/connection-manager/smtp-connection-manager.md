@@ -1,22 +1,18 @@
 ---
+title: "SMTP Connection Manager"
 description: "SMTP Connection Manager"
-title: "SMTP Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.smtpconnection.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], SMTP"
   - "SMTP connection manager [Integration Services]"
   - "connection managers [Integration Services], SMTP"
-ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-author: chugugrace
-ms.author: chugu
 ---
 # SMTP Connection Manager
 

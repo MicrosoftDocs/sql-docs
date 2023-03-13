@@ -1,14 +1,12 @@
 ---
-description: "Manage retention of historical data in system-versioned temporal tables"
 title: Manage historical data in System-Versioned Temporal Tables
-ms.custom: "seo-lt-2019"
-ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
-ms.topic: conceptual
+description: "Manage retention of historical data in system-versioned temporal tables"
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage retention of historical data in system-versioned temporal tables

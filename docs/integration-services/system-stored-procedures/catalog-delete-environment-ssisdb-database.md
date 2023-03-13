@@ -1,16 +1,12 @@
 ---
+title: "catalog.delete_environment (SSISDB Database)"
 description: "catalog.delete_environment (SSISDB Database)"
-title: "catalog.delete_environment (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.delete_environment (SSISDB Database)
 

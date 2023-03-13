@@ -5,9 +5,9 @@ author: yanancai
 ms.author: yanacai
 ms.reviewer: erinstellato
 ms.date: 09/24/2018
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: seodec18
+ms.custom: updatefrequency5
 ---
 
 # Explore and manage Azure SQL resources with Azure Resource Explorer

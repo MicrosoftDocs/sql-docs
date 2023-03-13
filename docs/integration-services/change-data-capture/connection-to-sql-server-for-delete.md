@@ -1,16 +1,12 @@
 ---
+title: "Connection to SQL Server for Delete"
 description: "Connection to SQL Server for Delete"
-title: "Connection to SQL Server for Delete | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Connection to SQL Server for Delete
 

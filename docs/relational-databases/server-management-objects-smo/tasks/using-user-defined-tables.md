@@ -1,19 +1,13 @@
 ---
+title: "Using User-Defined Tables"
 description: "Using User-Defined Tables"
-title: "Using User-Defined Tables | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "user-defined tables [SQL Server]"
-ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "user-defined tables [SQL Server]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using User-Defined Tables

@@ -4,9 +4,8 @@ description: sys.xml_schema_facets (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.xml_schema_facets"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_schema_facets catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
 ---
 # sys.xml_schema_facets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,16 +1,12 @@
 ---
 title: "Lesson 2: Create & apply naming standards policy"
-description: This tutorial teaches you to create and apply a naming standards policy for Policy-Based Management in SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: security
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
+description: This tutorial teaches you to create and apply a naming standards policy for Policy-Based Management in SQL Server.
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

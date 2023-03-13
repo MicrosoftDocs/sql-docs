@@ -1,13 +1,13 @@
 ---
+title: "Import and Export Data with the SQL Server Import and Export Wizard"
 description: "Import and Export Data with the SQL Server Import and Export Wizard"
-title: "Import and Export Data with the SQL Server Import and Export Wizard | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "10/17/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "exporting data"
   - "mapping files [Integration Services]"
   - "SQL Server Import and Export Wizard"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "copying data [Integration Services]"
   - "importing data, SSIS packages"
   - "sources [Integration Services], copying data"
-ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-author: chugugrace
-ms.author: chugu
 ---
 # Import and Export Data with the SQL Server Import and Export Wizard
 

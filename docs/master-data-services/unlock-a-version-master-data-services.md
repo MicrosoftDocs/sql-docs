@@ -1,19 +1,15 @@
 ---
-description: "Unlock a Version (Master Data Services)"
 title: Unlock a Version
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "unlocking versions [Master Data Services]"
-  - "versions [Master Data Services], unlocking"
-ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
+description: "Unlock a Version (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "unlocking versions [Master Data Services]"
+  - "versions [Master Data Services], unlocking"
 ---
 # Unlock a Version (Master Data Services)
 

@@ -1,20 +1,15 @@
 ---
-description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
 title: "Administer and monitor change data capture"
+description: "Learn how to administer and monitor change data capture on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/07/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change data capture, monitoring"
   - "change data capture, administering"
   - "change data capture, jobs"
-ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: seo-dt-2019
 ---
 # Administer and monitor change data capture 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,20 +1,16 @@
 ---
-description: "Job Categories - Manage Job Categories"
 title: "Job Categories - Manage Job Categories"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.job.categories.f1"
-helpviewer_keywords: 
-  - "Job Categories dialog box"
-ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
+description: "Job Categories - Manage Job Categories"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.job.categories.f1"
+helpviewer_keywords:
+  - "Job Categories dialog box"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Job Categories - Manage Job Categories

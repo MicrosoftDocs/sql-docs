@@ -4,8 +4,8 @@ description: SQL Server supports upgrading replicated databases from previous ve
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/24/2016"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "merge replication database upgrades [SQL Server replication]"

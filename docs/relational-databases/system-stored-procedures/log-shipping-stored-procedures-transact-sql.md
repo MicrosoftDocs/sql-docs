@@ -1,21 +1,17 @@
 ---
+title: "Log Shipping Stored Procedures (Transact-SQL)"
 description: "Log Shipping Stored Procedures (Transact-SQL)"
-title: "Log Shipping Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "log shipping [SQL Server], stored procedures"
-  - "system stored procedures [SQL Server], log shipping"
-ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "log shipping [SQL Server], stored procedures"
+  - "system stored procedures [SQL Server], log shipping"
+dev_langs:
+  - "TSQL"
 ---
 # Log Shipping Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

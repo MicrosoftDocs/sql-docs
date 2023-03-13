@@ -4,12 +4,16 @@ description: "Text transforms that can be performed on data before training  a m
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
-ms.service: ""
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (MicrosoftML), stopwordsDefault, featurizeText, stopwordsCustom, termDictionary, transform
+keywords:
+  - (MicrosoftML)
+  - stopwordsDefault
+  - featurizeText
+  - stopwordsCustom
+  - termDictionary
+  - transform
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 

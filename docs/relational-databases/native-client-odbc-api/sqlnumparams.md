@@ -1,15 +1,12 @@
 ---
+title: "SQLNumParams"
 description: "SQLNumParams"
-title: "SQLNumParams | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLNumParams

@@ -4,9 +4,8 @@ description: sys.stats_columns (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "stats_columns_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.stats_columns catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.stats_columns (Transact-SQL)

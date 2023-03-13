@@ -4,12 +4,11 @@ description: Learn how to work with assemblies hosted on SQL Server, including h
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "assemblies [CLR integration], implementing"
-ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 ---
 # Assemblies - Implementing
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

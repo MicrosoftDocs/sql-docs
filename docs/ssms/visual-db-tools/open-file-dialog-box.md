@@ -1,18 +1,14 @@
 ---
-description: "Open File Dialog Box"
 title: Open File Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vs.openfile"
-ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
+description: "Open File Dialog Box"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vs.openfile"
 ---
 # Open File Dialog Box
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

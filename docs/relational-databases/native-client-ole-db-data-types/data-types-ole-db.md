@@ -1,21 +1,17 @@
 ---
+title: "Data types (Native Client OLE DB provider)"
 description: "SQL Server Native Client Data Types (OLE DB)"
-title: "Data types (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "mapping data types [OLE DB]"
   - "SQL Server Native Client OLE DB provider, data types"
   - "data types [OLE DB]"
   - "OLE DB, data types"
-ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Data Types (OLE DB)

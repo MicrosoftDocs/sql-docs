@@ -1,22 +1,16 @@
 ---
+title: "Disconnecting from an Instance of SQL Server"
 description: "Disconnecting from an Instance of SQL Server"
-title: "Disconnecting from an Instance of SQL Server | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Objects, disconnecting"
   - "SMO [SQL Server], disconnecting"
   - "instances of SQL Server, disconnecting"
   - "disconnecting [SMO]"
-ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disconnecting from an Instance of SQL Server

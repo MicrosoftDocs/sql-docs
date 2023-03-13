@@ -4,8 +4,8 @@ description: For SQL Server CLR integration, CLR supports code access security f
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "UNSAFE assemblies"
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "SAFE assemblies"
   - "code access security [CLR integration]"
   - "EXTERNAL_ACCESS assemblies"
-ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 ---
 # CLR Integration Code Access Security
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

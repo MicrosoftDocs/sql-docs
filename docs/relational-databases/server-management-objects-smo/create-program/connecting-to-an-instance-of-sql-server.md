@@ -1,22 +1,16 @@
 ---
+title: "Connecting to an Instance of SQL Server"
 description: "Connecting to an Instance of SQL Server"
-title: "Connecting to an Instance of SQL Server | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Objects, connections"
   - "connections [SMO]"
   - "instances of SQL Server, connections"
   - "SMO [SQL Server], connections"
-ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Connecting to an Instance of SQL Server

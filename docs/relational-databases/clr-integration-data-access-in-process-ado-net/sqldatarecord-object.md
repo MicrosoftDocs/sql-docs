@@ -4,14 +4,12 @@ description: In SQL Server CLR integration, stored procedures can use the SqlDat
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "SqlDataRecord object"
   - "custom result sets [CLR integration]"
-ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 ---
 # SqlDataRecord Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

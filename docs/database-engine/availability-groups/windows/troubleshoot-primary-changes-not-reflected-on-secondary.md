@@ -4,10 +4,9 @@ description: Learn how to determine why changes on a primary replica are not ref
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "06/13/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: troubleshooting
-ms.custom: seo-lt-2019
 ---
 # Determine why changes from primary replica are not reflected on secondary replica for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

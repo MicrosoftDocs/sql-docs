@@ -1,30 +1,26 @@
 ---
+title: "sp_add_data_file_recover_suspect_db (Transact-SQL)"
 description: "sp_add_data_file_recover_suspect_db (Transact-SQL)"
-title: "sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_data_file_recover_suspect_db"
-  - "sp_add_data_file_recover_suspect_db_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_data_file_recover_suspect_db"
-ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_data_file_recover_suspect_db"
+  - "sp_add_data_file_recover_suspect_db_TSQL"
+helpviewer_keywords:
+  - "sp_add_data_file_recover_suspect_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a data file to a filegroup when recovery cannot complete on a database due to insufficient space on the file group (error 1105). After the file is added, this stored procedure turns off the suspect setting and completes the recovery of the database. The parameters are the same as those for ALTER DATABASE *database_name* ADD FILE.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

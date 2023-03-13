@@ -1,18 +1,14 @@
 ---
-title: "Reporting Services Reports | Microsoft Docs"
+title: "Reporting Services Reports"
 description: Learn details about Reporting Services reports, including the benefits of the reports, how to create paginated reports, and how to view reports.
-ms.date: 06/19/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reports
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Reporting Services, report creation"
-ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/19/2019
+ms.service: reporting-services
+ms.subservice: reports
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Reporting Services, report creation"
 ---
 # Reporting Services Reports (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports are XML-based report definitions that include report data and report layout elements. On a client file system, report definitions have the file extension .rdl. After you publish a paginated report, it is a report item stored on the report server or SharePoint site. Paginated reports are one part of the server-based reporting platform provided by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You can also [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  

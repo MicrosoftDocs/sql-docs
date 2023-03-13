@@ -4,14 +4,12 @@ description: Use the memory optimization advisor in SQL Server Management Studio
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 f1_keywords:
   - "swb.memoryoptimizationwizard.f1"
   - "sql13.swb.memoryoptimizationwizard.f1"
-ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Optimization Advisor

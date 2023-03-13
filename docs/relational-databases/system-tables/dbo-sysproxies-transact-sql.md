@@ -4,9 +4,8 @@ description: dbo.sysproxies (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.sysproxies_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sysproxies system table"
 dev_langs:
   - "TSQL"
-ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 ---
 # dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

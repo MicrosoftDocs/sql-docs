@@ -1,18 +1,14 @@
 ---
-description: "Options (SQL Server Object Explorer - Commands)"
 title: "Options (SQL Server Object Explorer - Commands)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands"
-ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
+description: "Options (SQL Server Object Explorer - Commands)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands"
 ---
 # Options (SQL Server Object Explorer - Commands)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

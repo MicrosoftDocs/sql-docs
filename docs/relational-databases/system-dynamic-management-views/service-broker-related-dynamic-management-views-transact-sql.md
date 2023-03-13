@@ -4,8 +4,8 @@ description: Service Broker Related Dynamic Management Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "dynamic management objects [SQL Server], Service Broker"
@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "dynamic management views [SQL Server], Service Broker"
 dev_langs:
   - "TSQL"
-ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 ---
 # Service Broker Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

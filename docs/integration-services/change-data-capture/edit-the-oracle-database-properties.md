@@ -1,18 +1,14 @@
 ---
+title: "Edit the Oracle Database Properties"
 description: "Edit the Oracle Database Properties"
-title: "Edit the Oracle Database Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "oraProp"
-ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "oraProp"
 ---
 # Edit the Oracle Database Properties
 

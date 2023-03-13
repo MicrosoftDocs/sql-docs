@@ -1,14 +1,14 @@
 ---
-title: "Replication Publishing Model Overview | Microsoft Docs"
+title: "Replication Publishing Model Overview"
 description: Learn about the replication publishing model in SQL Server, including Publisher, Distributor, Subscribers, publications, articles, and subscriptions.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "09/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "replication [SQL Server], publishing model"
   - "subscriptions [SQL Server replication], about subscriptions"
   - "articles [SQL Server replication]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "articles [SQL Server replication], about articles"
   - "publications [SQL Server replication], about publications"
   - "Distributors [SQL Server replication]"
-ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Publishing Model Overview

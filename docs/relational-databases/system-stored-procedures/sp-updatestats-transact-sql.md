@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
 ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sp_updatestats_TSQL"
@@ -25,7 +25,7 @@ Runs `UPDATE STATISTICS` against all user-defined and internal tables in the cur
 
 For more information about `UPDATE STATISTICS`, see [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md). For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
 
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

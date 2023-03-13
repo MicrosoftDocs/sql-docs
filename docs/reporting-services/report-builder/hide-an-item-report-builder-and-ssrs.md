@@ -1,19 +1,15 @@
 ---
-title: "Hide an Item (Report Builder) | Microsoft Docs"
+title: "Hide an Item (Report Builder)"
 description: In Report Builder, you can set the visibility of a report item. You can specify a report parameter or other expression to conditionally hide an item.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.shared.visibility.f1"
-  - "10503"
-ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-builder
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.rtp.rptdesigner.shared.visibility.f1"
+  - "10503"
 ---
 # Hide an Item (Report Builder and SSRS)
   Set the visibility of a report item when you want to conditionally hide an item based on a report parameter or some other expression that you specify.  

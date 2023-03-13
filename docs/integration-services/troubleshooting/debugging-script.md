@@ -1,20 +1,16 @@
 ---
+title: "Debugging Script"
 description: "Debugging Script"
-title: "Debugging Script | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], debugging"
   - "debugging [Integration Services], scripts"
   - "scripts [Integration Services], debugging"
-ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-author: chugugrace
-ms.author: chugu
 ---
 # Debugging Script
 

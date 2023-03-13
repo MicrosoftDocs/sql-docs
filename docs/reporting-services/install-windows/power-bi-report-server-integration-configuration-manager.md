@@ -1,12 +1,11 @@
 ---
+title: "Power BI Report Server Integration (Configuration Manager)"
 description: "Power BI Report Server Integration (Configuration Manager)"
-title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.topic: conceptual
 ms.date: 09/17/2017
+ms.service: reporting-services
+ms.topic: conceptual
 ---
 
 # Power BI Report Server Integration (Configuration Manager)

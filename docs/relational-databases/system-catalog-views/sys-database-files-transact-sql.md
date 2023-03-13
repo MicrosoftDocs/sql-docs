@@ -4,9 +4,8 @@ description: sys.database_files (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 04/18/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.database_files"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_files catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_files (Transact-SQL)

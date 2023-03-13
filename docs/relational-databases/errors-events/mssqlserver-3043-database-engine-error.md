@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_3043"
 description: "MSSQLSERVER_3043"
-title: "MSSQLSERVER_3043 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3043 (Database Engine error)"
 author: Pijocoder
 ms.author: mathoma
+ms.date: "10/05/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3043 (Database Engine error)"
 ---
 # MSSQLSERVER_3043
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,16 @@
 ---
+title: "OGC Static Geometry Methods"
 description: "OGC Static Geometry Methods"
-title: "OGC Static Geometry Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "OGC Static Geometry Methods [SQL Server]"
-ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "OGC Static Geometry Methods [SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # OGC Static Geometry Methods
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

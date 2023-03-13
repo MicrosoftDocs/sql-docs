@@ -1,17 +1,11 @@
 ---
+title: "Overview (SMO)"
 description: "Overview (SMO)"
-title: "Overview (SMO) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Overview (SMO)
@@ -63,7 +57,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
 -   DDL triggers for adding functionality when DDL events occur. For more information, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- The SMO namespace is <xref:Microsoft.SqlServer.Management.Smo>. SMO is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. This means that the common language runtime from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0 must be installed before using the SMO objects. The SMO assemblies are installed by default into the Global Assembly Cache (GAC) with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK option. The assemblies are located in C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. For more information, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
+ The SMO namespace is <xref:Microsoft.SqlServer.Management.Smo>. SMO is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. This means that the common language runtime from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0 must be installed before using the SMO objects. The SMO assemblies are installed by default into the Global Assembly Cache (GAC) with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK option. The assemblies are located in C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. For more information, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
   
 ## SMO Classes  
  SMO classes include two categories: instance classes and utility classes.  

@@ -1,22 +1,18 @@
 ---
-title: "Native Error Numbers | Microsoft Docs"
+title: "Native Error Numbers"
 description: For errors, the SQL Server Native Client ODBC driver returns the native error number from SQL Server or, for errors detected by the driver, 0.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC error handling, native error numbers"
   - "SQL Server Native Client ODBC driver, errors"
   - "native error numbers [SQL Server Native Client]"
   - "messages [ODBC], native error numbers"
   - "errors [ODBC], native error numbers"
-ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Error Numbers

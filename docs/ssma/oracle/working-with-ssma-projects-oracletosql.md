@@ -1,19 +1,16 @@
 ---
-title: "Working with SSMA Projects (OracleToSQL) | Microsoft Docs"
+title: "Working with SSMA Projects (OracleToSQL)"
 description: Learn how to create an SSMA project that contains metadata for Oracle databases to migrate and SQL Server, along with settings and connection information.
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Customizing Project Settings"
-ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.oracle.workplacedialog.f1"
+helpviewer_keywords:
+  - "Customizing Project Settings"
 ---
 # Working with SSMA Projects (OracleToSQL)
 To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you first create an SSMA project. The project is a file that contains the following information:  

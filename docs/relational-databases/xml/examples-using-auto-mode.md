@@ -1,21 +1,19 @@
 ---
 title: "Examples: Using AUTO Mode"
 description: View examples of queries that use FOR XML AUTO mode.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "AUTO FOR XML mode, examples"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Examples: Using AUTO mode
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following examples illustrate the use of AUTO mode. Many of these queries are specified against bicycle manufacturing instructions XML documents that are stored in the Instructions column of the ProductModel table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.
 
@@ -131,7 +129,7 @@ FROM (SELECT FirstName+ ' '+LastName AS Name, C.PersonID, C.CustomerID
       WHERE C.PersonID = P.BusinessEntityID) AS IndividualCustomer
 LEFT OUTER JOIN  Sales.SalesOrderHeader AS SOH
    ON IndividualCustomer.CustomerID = SOH.CustomerID
-ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
+ORDER BY IndividualCustomer.CustomerID, SOH.CustomerID FOR XML AUTO;
 ```
 
 This is the partial result:

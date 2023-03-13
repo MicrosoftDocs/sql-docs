@@ -1,20 +1,16 @@
 ---
+title: "Installing the Software (ODBC)"
 description: "Installing the Software (ODBC)"
-title: "Installing the Software (ODBC) | Microsoft Docs"
-ms.custom:
-  - intro-installation
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
+ms.custom: intro-installation
 helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], installing"
   - "installing ODBC driver for Oracle [ODBC]"
-ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Installing the Software (ODBC)
 > [!IMPORTANT]  

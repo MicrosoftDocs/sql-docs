@@ -4,9 +4,8 @@ description: sys.xml_schema_elements (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.xml_schema_elements"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_schema_elements catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 ---
 # sys.xml_schema_elements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

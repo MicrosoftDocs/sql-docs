@@ -1,13 +1,12 @@
 ---
-title: "Branding the web portal | Microsoft Docs"
-ms.date: 11/23/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+title: "Branding the web portal"
 description: Learn to brand your web portal's appearance to your business through a brand package. The brand package is designed so that you don't need deep CSS knowledge.
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 11/23/2021
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
 ---
 
 # Branding the web portal

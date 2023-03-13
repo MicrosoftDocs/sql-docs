@@ -1,30 +1,26 @@
 ---
+title: "sp_add_agent_parameter (Transact-SQL)"
 description: "sp_add_agent_parameter (Transact-SQL)"
-title: "sp_add_agent_parameter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_add_agent_parameter_TSQL"
-  - "sp_add_agent_parameter"
-helpviewer_keywords: 
-  - "sp_add_agent_parameter"
-ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_agent_parameter_TSQL"
+  - "sp_add_agent_parameter"
+helpviewer_keywords:
+  - "sp_add_agent_parameter"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a new parameter and its value to an agent profile. This stored procedure is executed at the Distributor on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

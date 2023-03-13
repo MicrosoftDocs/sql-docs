@@ -1,16 +1,13 @@
 ---
-title: "Replication Views (Transact-SQL) | Microsoft Docs"
+title: "Replication Views (Transact-SQL)"
 description: Replication views contain information that is used by replication in SQL Server. The views enable easier access to data in replication system tables.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "distribution databases [SQL Server replication], system views"
   - "metadata [SQL Server], views"
   - "views [SQL Server], replication"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "replication metadata [SQL Server]"
   - "subscriptions [SQL Server replication], system views"
   - "system views [SQL Server], replication"
-ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # Replication Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

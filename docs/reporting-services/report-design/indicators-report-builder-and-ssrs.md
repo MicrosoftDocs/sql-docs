@@ -1,23 +1,19 @@
 ---
 title: "Indicators in a paginated report| Microsoft Docs"
-description: Learn about indicators, the small gauges that convey the state of a single data value in paginated reports in Report Builder. 
+description: Learn about indicators, the small gauges that convey the state of a single data value in paginated reports in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "10545"
   - "10547"
   - "sql13.rtp.rptdesigner.indicatorproperties.action.f1"
   - "10546"
   - "sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
   - "sql13.rtp.rptdesigner.indicatorproperties.general.f1"
-ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Indicators in a paginated report (Report Builder)
 

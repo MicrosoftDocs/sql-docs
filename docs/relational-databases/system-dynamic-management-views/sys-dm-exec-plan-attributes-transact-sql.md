@@ -3,9 +3,9 @@ title: "sys.dm_exec_plan_attributes (Transact-SQL)"
 description: sys.dm_exec_plan_attributes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/24/2021"
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_plan_attributes_TSQL"
@@ -82,6 +82,10 @@ From the above table, **attribute** can have the following values:
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.
 
 On Azure SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks  
   

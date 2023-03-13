@@ -4,9 +4,8 @@ description: Learn how srv_paramstatus returns the status of a particular remote
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_paramstatus"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_paramstatus
 apitype: "DLLExport"
-ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 ---
 # srv_paramstatus (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

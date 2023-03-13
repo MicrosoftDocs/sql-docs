@@ -1,20 +1,18 @@
 ---
 title: "Primary and Foreign Key Constraints"
 description: "Primary and Foreign Key Constraints"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "foreign keys [SQL Server], cascading referential integrity"
   - "FOREIGN KEY constraints"
   - "foreign keys [SQL Server]"
   - "foreign keys [SQL Server], about foreign key constraints"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.custom: FY22Q2Fresh
-ms.date: 07/25/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Primary and Foreign Key Constraints

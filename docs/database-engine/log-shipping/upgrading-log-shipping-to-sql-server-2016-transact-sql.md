@@ -4,10 +4,9 @@ description: Learn the appropriate order to preserve your log shipping disaster 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/01/2016"
-ms.prod: sql
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "log shipping [SQL Server], upgrading"
 ---

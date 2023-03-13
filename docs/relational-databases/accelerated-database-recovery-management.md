@@ -1,17 +1,16 @@
 ---
+title: "Manage accelerated database recovery"
 description: "Best practices for managing and configuring accelerated database recovery (ADR)."
-title: "Manage accelerated database recovery | Microsoft Docs"
-ms.date: 07/12/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "accelerated database recovery [SQL Server], recovery-only"
-  - "database recovery [SQL Server]"
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee, wiassaf
+ms.date: 07/12/2022
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+helpviewer_keywords:
+  - "accelerated database recovery [SQL Server], recovery-only"
+  - "database recovery [SQL Server]"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Manage accelerated database recovery

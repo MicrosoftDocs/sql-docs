@@ -1,16 +1,12 @@
 ---
+title: "catalog.deny_permission (SSISDB Database)"
 description: "catalog.deny_permission (SSISDB Database)"
-title: "catalog.deny_permission (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.deny_permission (SSISDB Database)
 

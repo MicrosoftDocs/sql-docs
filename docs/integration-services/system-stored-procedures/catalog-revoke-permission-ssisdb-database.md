@@ -1,19 +1,15 @@
 ---
+title: "catalog.revoke_permission (SSISDB Database)"
 description: "catalog.revoke_permission (SSISDB Database)"
-title: "catalog.revoke_permission (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "revoke_permission stored procedure [Integration Services]"
-  - "catalog.revoke_permission stored procedure [Integration Services]"
-ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "revoke_permission stored procedure [Integration Services]"
+  - "catalog.revoke_permission stored procedure [Integration Services]"
 ---
 # catalog.revoke_permission (SSISDB Database)
 

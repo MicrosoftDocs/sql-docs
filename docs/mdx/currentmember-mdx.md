@@ -1,14 +1,14 @@
 ---
+title: "CurrentMember (MDX)"
 description: "CurrentMember (MDX)"
-title: "CurrentMember (MDX) | Microsoft Docs"
-ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: mdx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 02/17/2022
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: mdx
 ---
 # CurrentMember (MDX)
 
@@ -34,59 +34,35 @@ Hierarchy_Expression.CurrentMember
   
 ## Examples  
  The following query shows how **Currentmember** can be used to find the current member from hierarchies on the Columns, Rows and slice axis:  
-  
- `WITH MEMBER MEASURES.CURRENTDATE AS`  
-  
- `[Date].[Calendar].CURRENTMEMBER.NAME`  
-  
- `MEMBER MEASURES.CURRENTPRODUCT AS`  
-  
- `[Product].[Product Categories].CURRENTMEMBER.NAME`  
-  
- `MEMBER MEASURES.CURRENTMEASURE AS`  
-  
- `MEASURES.CURRENTMEMBER.NAME`  
-  
- `MEMBER MEASURES.CURRENTCUSTOMER AS`  
-  
- `[Customer].[Customer Geography].CURRENTMEMBER.NAME`  
-  
- `SELECT`  
-  
- `[Product].[Product Categories].[Category].MEMBERS`  
-  
- `*`  
-  
- `{MEASURES.CURRENTDATE, MEASURES.CURRENTPRODUCT,MEASURES.CURRENTMEASURE, MEASURES.CURRENTCUSTOMER}`  
-  
- `ON 0,`  
-  
- `[Date].[Calendar].MEMBERS`  
-  
- `ON 1`  
-  
- `FROM [Adventure Works]`  
-  
- `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
+
+```
+WITH
+  MEMBER MEASURES.CURRENTDATE AS [Date].[Calendar].CURRENTMEMBER.NAME
+  MEMBER MEASURES.CURRENTPRODUCT AS [Product].[Product Categories].CURRENTMEMBER.NAME
+  MEMBER MEASURES.CURRENTMEASURE AS MEASURES.CURRENTMEMBER.NAME
+  MEMBER MEASURES.CURRENTCUSTOMER AS [Customer].[Customer Geography].CURRENTMEMBER.NAME
+SELECT
+ [Product].[Product Categories].[Category].MEMBERS *
+ {MEASURES.CURRENTDATE,
+    MEASURES.CURRENTPRODUCT,
+    MEASURES.CURRENTMEASURE,
+    MEASURES.CURRENTCUSTOMER} ON 0, 
+ [Date].[Calendar].MEMBERS ON 1  
+FROM [Adventure Works]
+WHERE ([Customer].[Customer Geography].[Country].&[Australia])
+```
   
  The current member changes on a hierarchy used on an axis in a query. Therefore, the current member on other hierarchies on the same dimension that are not used on an axis can also change; this behavior is called 'auto-exists' and more details can be found in [Key Concepts in MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). For example, the query below shows how the current member on the Calendar Year hierarchy of the Date dimension changes with the current member on the Calendar hierarchy, when the latter is displayed on the Rows axis:  
-  
- `WITH MEMBER MEASURES.CURRENTYEAR AS`  
-  
- `[Date].[Calendar Year].CURRENTMEMBER.NAME`  
-  
- `SELECT`  
-  
- `{MEASURES.CURRENTYEAR}`  
-  
- `ON 0,`  
-  
- `[Date].[Calendar].MEMBERS`  
-  
- `ON 1`  
-  
- `FROM [Adventure Works]`  
-  
+
+```
+WITH
+  MEMBER MEASURES.CURRENTYEAR AS [Date].[Calendar Year].CURRENTMEMBER.NAME
+SELECT
+ {MEASURES.CURRENTYEAR} ON 0,
+ [Date].[Calendar].MEMBERS ON 1  
+FROM [Adventure Works]
+```
+
  **CurrentMember** is very important for making calculations aware of the context of the query they are being used in. The following example returns the order quantity of each product and the percentage of order quantities by category and model, from the **Adventure Works** cube. The **CurrentMember** function identifies the product whose order quantity is to be used during calculation.  
   
 ```  

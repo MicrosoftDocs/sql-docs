@@ -1,19 +1,16 @@
 ---
-description: "Accelerated database recovery"
 title: "Accelerated database recovery"
-ms.date: 07/14/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-helpviewer_keywords: 
-  - "accelerated database recovery [SQL Server], recovery-only"
-  - "database recovery [SQL Server]"
+description: "Accelerated database recovery"
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee, wiassaf
+ms.date: 02/28/2023
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+helpviewer_keywords:
+  - "accelerated database recovery [SQL Server], recovery-only"
+  - "database recovery [SQL Server]"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Accelerated database recovery
@@ -106,7 +103,7 @@ The four key components of ADR are:
 
 - **Persisted version store (PVS)**
 
-  The persisted version store is a database engine mechanism for persisting the row versions generated in the database itself instead of the traditional `tempdb` version store. PVS enables resource isolation and improves availability of readable secondaries. There is one PVS thread per instance in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], there is one PVS cleaner thread per database.
+  The persisted version store is a database engine mechanism for persisting the row versions generated in the database itself instead of the traditional `tempdb` version store. PVS enables resource isolation and improves availability of readable secondaries. There is one PVS thread per instance in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], SQL Server has one PVS cleaner thread per database.
 
 - **Logical Revert**
 
@@ -153,23 +150,18 @@ There are several improvements to address persistent version store (PVS) storage
   This improvement allows ADR to clean up versions belonging to committed transactions independent of whether there are aborted transactions in the system. With this improvement persisted version store (PVS) pages can be deallocated, even if the cleanup cannot complete a successful sweep in order to trim the aborted transaction map. 
   
   The result of this improvement is reduced persisted version store (PVS) growth even if ADR cleanup is slow or fails.
- 
+
 - **Multi-threaded version cleanup**  
   
-  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. 
+  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance.
   
-  In [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], CTP 2.0, you can also enable multi-threaded version cleanup at the database level with trace flag 3515. This allows multiple threads for cleanup per database. This improvement is valuable when you have multiple large databases.
+  Beginning with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], this process uses multi-threaded version cleanup. This allows multiple databases in the same SQL Server instance to be cleaned in parallel. This improvement is valuable when you have multiple large databases.
 
-  To enable trace flag 3515 for the instance, run the following command:
+  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`. The thread count is capped at the number of cores for the instance.
 
-   ```sql
-   DBCC TRACEON(3515, -1)
-   GO 
-   ```
+  As a best practice, we recommend using the same number of ADR cleaner threads as the number of your databases. For instance, if you configure the `ADR Cleaner Thread Count` to be `4` on a SQL Server instance with two databases, the ADR cleaner will still only allocate one thread per database, leaving the remaining two threads idle.
 
-  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`.   
-
-  The example below changes the thread count to 4: 
+  The example below changes the thread count to `4`:
 
   ```sql
   EXEC sp_configure 'ADR Cleaner Thread Count', '4'

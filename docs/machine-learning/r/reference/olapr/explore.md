@@ -4,12 +4,12 @@ description: "Allows for exploration of cube metadata."
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
-ms.service: ""
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (olapR), explore
+keywords:
+  - (olapR)
+  - explore
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 

@@ -32,7 +32,7 @@ To learn more, see an overview of [FCI with SQL Server on Azure VMs](failover-cl
 
 Before you complete the instructions in this article, you should already have:
 
-- An Azure subscription. Get started for [free](https://azure.microsoft.com/free/). 
+- An Azure subscription. Get started with a [free Azure account](https://azure.microsoft.com/free/). 
 - [Two or more prepared Windows Azure virtual machines](failover-cluster-instance-prepare-vm.md) in an availability set, or availability zones. 
 - An account that has permissions to create objects on both Azure virtual machines and in Active Directory.
 - The latest version of [Azure PowerShell](/powershell/azure/install-az-ps). 
@@ -203,7 +203,7 @@ After you've configured the failover cluster and all cluster components, includi
 
 ## Register with SQL IaaS extension 
 
-To manage your SQL Server VM from the portal, register it with the SQL IaaS Agent extension in [lightweight management mode](sql-agent-extension-manually-register-single-vm.md#lightweight-mode), currently the only mode supported with FCI and SQL Server on Azure VMs. 
+To manage your SQL Server VM from the portal, register it with the SQL IaaS Agent extension in [lightweight management mode](sql-agent-extension-manually-register-single-vm.md#lightweight-mode), which is currently the only mode supported with a failover cluster instance (FCI) deployed to SQL Server on Azure VMs. 
 
 Register a SQL Server VM in lightweight mode with PowerShell (-LicenseType can be `PAYG` or `AHUB`):
 

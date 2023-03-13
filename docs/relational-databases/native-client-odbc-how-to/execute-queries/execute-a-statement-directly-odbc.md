@@ -1,18 +1,14 @@
 ---
+title: "Execute a Statement Directly (ODBC)"
 description: "Execute a Statement Directly (ODBC)"
-title: "Execute a Statement Directly (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "statement execution"
-ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "statement execution"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute a Statement Directly (ODBC)

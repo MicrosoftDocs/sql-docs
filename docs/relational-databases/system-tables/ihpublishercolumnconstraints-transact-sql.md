@@ -4,9 +4,8 @@ description: IHpublishercolumnconstraints (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "IHpublishercolumnconstraints"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "IHpublishercolumnconstraints system table"
 dev_langs:
   - "TSQL"
-ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 ---
 # IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

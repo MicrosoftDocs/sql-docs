@@ -1,22 +1,18 @@
 ---
-description: "Create DML Triggers to Handle Multiple Rows of Data"
 title: "Create DML Triggers to Handle Multiple Rows of Data"
-ms.custom: seo-dt-2019
+description: "Create DML Triggers to Handle Multiple Rows of Data"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiple row DML triggers"
   - "UPDATE statement [SQL Server], DML triggers"
   - "DELETE statement [SQL Server], DML triggers"
   - "multirow DML triggers [SQL Server]"
   - "INSERT statement [SQL Server], DML triggers"
   - "DML triggers, multirow"
-ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create DML Triggers to Handle Multiple Rows of Data

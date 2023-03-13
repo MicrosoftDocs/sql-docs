@@ -1,17 +1,14 @@
 ---
 title: New Job Step Properties (Advanced Page)
 description: "Job Step Properties - New Job Step (Advanced Page)"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.job.stepadvanced.f1"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.job.stepadvanced.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

@@ -4,8 +4,8 @@ description: For CLR integration and transactions, System.Transactions and ADO.N
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "ADO.NET [CLR integration]"
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], transactions"
   - "System.Transactions namespace"
   - "transactions [CLR integration]"
-ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 ---
 # CLR Integration and Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

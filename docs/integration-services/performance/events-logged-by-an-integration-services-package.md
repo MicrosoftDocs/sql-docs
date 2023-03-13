@@ -1,19 +1,16 @@
 ---
+title: "Events Logged by an Integration Services Package"
 description: "Events Logged by an Integration Services Package"
-title: "Events Logged by an Integration Services Package | Microsoft Docs"
-ms.custom: supportability
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "package [Integration Services], events"
-  - "events [Integration Services], package"
-ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: supportability
+helpviewer_keywords:
+  - "package [Integration Services], events"
+  - "events [Integration Services], package"
 ---
 # Events Logged by an Integration Services Package
 
@@ -41,7 +38,7 @@ ms.author: chugu
 |12290|DTS_MSG_PACKAGECANCEL|Package "%1!s!" has been cancelled.|The package is no longer running because the package was canceled.|  
 |12291|DTS_MSG_PACKAGEFAILURE|Package "" failed.|The package could not run successfully and stopped running.|  
   
- By default, in a new installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured not to log certain events that are related to the running of packages to the Application event log. This setting prevents too many event log entries when you use the Data Collector feature of the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The events that are not logged are EventID 12288, "Package started," and EventID 12289, "Package finished successfully." To log these events to the Application event log, open the registry for editing. Then in the registry, locate the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS node, and change the DWORD value of the LogPackageExecutionToEventLog setting from 0 to 1. However, in an upgrade insallation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured to log these two events. To disable logging, change the value of the LogPackageExecutionToEventLog setting from 1 to 0.  
+ By default, in a new installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured not to log certain events that are related to the running of packages to the Application event log. This setting prevents too many event log entries when you use the Data Collector feature of the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The events that are not logged are EventID 12288, "Package started," and EventID 12289, "Package finished successfully." To log these events to the Application event log, open the registry for editing. Then in the registry, locate the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS node, and change the DWORD value of the LogPackageExecutionToEventLog setting from 0 to 1. However, in an upgrade insallation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured to log these two events. To disable logging, change the value of the LogPackageExecutionToEventLog setting from 1 to 0.  
   
 ## Messages Associated with Package Logging  
  If you have enabled logging on the package, the Application event log is one of the destinations that is supported by the optional logging features in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. For more information, see [Integration Services \(SSIS\) Logging](../../integration-services/performance/integration-services-ssis-logging.md).  

@@ -4,9 +4,8 @@ description: Learn about srv_alloc in the Extended Stored Procedure API and how 
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_alloc"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_alloc
 apitype: "DLLExport"
-ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 ---
 # srv_alloc (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

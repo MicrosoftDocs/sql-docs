@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_17883"
 description: "MSSQLSERVER_17883"
-title: "MSSQLSERVER_17883 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "17883 (Database Engine error)"
-ms.assetid: adaf1c04-e397-4a69-90b8-9353a37277ea
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "17883 (Database Engine error)"
 ---
 # MSSQLSERVER_17883
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

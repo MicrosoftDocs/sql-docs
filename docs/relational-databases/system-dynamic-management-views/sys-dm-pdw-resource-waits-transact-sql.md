@@ -4,18 +4,17 @@ description: sys.dm_pdw_resource_waits (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "11/26/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Displays wait information for all resource types in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+  Displays wait information for all resource types in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  

@@ -1,16 +1,13 @@
 ---
+title: "Converting DB2 Schemas (DB2ToSQL)"
 description: "Converting DB2 Schemas (DB2ToSQL)"
-title: "Converting DB2 Schemas (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.db2.convert.f1"
 ---
 # Converting DB2 Schemas (DB2ToSQL)

@@ -1,20 +1,16 @@
 ---
-description: "Transactions in SQL Server Native Client"
 title: Transactions (Native Client OLE DB provider)
-ms.custom: ""
+description: "Transactions in SQL Server Native Client"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, transactions"
   - "transactions [OLE DB]"
   - "SQL Server Native Client OLE DB provider, transactions"
-ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transactions in SQL Server Native Client

@@ -1,22 +1,16 @@
 ---
+title: "Working with Data Types"
 description: "Working with Data Types"
-title: "Working with Data Types | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DataType object"
   - "SQL Server Management Objects, data types"
   - "data types [SMO]"
   - "SMO [SQL Server], data types"
-ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Data Types

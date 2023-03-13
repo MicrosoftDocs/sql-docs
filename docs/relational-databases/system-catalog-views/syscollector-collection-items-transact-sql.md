@@ -4,9 +4,8 @@ description: syscollector_collection_items (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "syscollector_collection_items_TSQL"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "add data collector view"
 dev_langs:
   - "TSQL"
-ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 ---
 # syscollector_collection_items (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

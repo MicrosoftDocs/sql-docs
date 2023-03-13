@@ -1,15 +1,13 @@
 ---
-title: "Schedule SSIS packages in Azure | Microsoft Docs"
+title: "Schedule SSIS packages in Azure"
 description: Provides an overview of the available methods for scheduling the execution of SSIS packages deployed to Azure SQL Database.
-ms.date: "05/29/2018"
-ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.custom: ""
-ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
+ms.date: 11/08/2022
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure
 
@@ -32,7 +30,7 @@ You can schedule the execution of SSIS packages deployed to the SSISDB Catalog o
 
 ## <a name="ssms"></a> Schedule a package with SSMS
 
-In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, SSISDB, and select **Schedule** to open the **New schedule** dialog box. For more info, see [Schedule SSIS packages in Azure with SSMS](ssis-azure-schedule-packages-ssms.md).
+In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, `SSISDB`, and select **Schedule** to open the **New schedule** dialog box. For more info, see [Schedule SSIS packages in Azure with SSMS](ssis-azure-schedule-packages-ssms.md).
 
 This feature requires SQL Server Management Studio version 17.7 or higher. To get the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -44,7 +42,7 @@ For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud
 
 Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB Catalog database on an Azure SQL Database server, you have to do the following things:
 
-1.  Install and configure the Elastic Database jobs components. For more info, see [Installing Elastic Database jobs overview](/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1. Install and configure the Elastic Database jobs components. For more info, see [Installing Elastic Database jobs overview](/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Create database-scoped credentials that jobs can use to send commands to the SSIS Catalog database. For more info, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -58,28 +56,28 @@ EXEC jobs.sp_add_target_group 'TargetGroup'
 
 -- Add Elastic Jobs target group member
 EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup',
-	@target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
-	@database_name='SSISDB' 
+    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB' 
 
 -- Add a job to schedule SSIS package execution
 EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
-	@schedule_interval_type='Minutes', @schedule_interval_count=60
+    @schedule_interval_type='Minutes', @schedule_interval_count=60
 
 -- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
 EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
-	@command=N'DECLARE @exe_id bigint 
-		EXEC [SSISDB].[catalog].[create_execution]
+    @command=N'DECLARE @exe_id bigint 
+        EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
             @runinscaleout=1, @useanyworker=1, 
-			@execution_id=@exe_id OUTPUT		 
-		EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
-	@credential_name='YourDBScopedCredentials', 
-	@target_group_name='TargetGroup' 
+            @execution_id=@exe_id OUTPUT         
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+    @credential_name='YourDBScopedCredentials', 
+    @target_group_name='TargetGroup' 
 
 -- Enable the job schedule 
 EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
-	@schedule_interval_type='Minutes', @schedule_interval_count=60 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
 ## <a name="agent"></a> Schedule a package with SQL Server Agent on premises
@@ -88,7 +86,7 @@ For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](.
 
 ### Prerequisite - Create a linked server
 
-Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server to your on-premises SQL Server as a linked server.
+Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server to your on-premises SQL Server as a linked server. The below example uses the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md).
 
 1.  **Set up the linked server**
 
@@ -97,7 +95,7 @@ Before you can use SQL Server Agent on premises to schedule execution of package
     EXEC sp_addlinkedserver
         @server='myLinkedServer', -- Name your linked server
         @srvproduct='',     
-        @provider='sqlncli', -- Use SQL Server native client
+        @provider='MSOLEDBSQL', -- Microsoft OLE DB Driver for SQL Server
         @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
         @location='',
         @provstr='',
@@ -139,7 +137,7 @@ To schedule a package with SQL Server Agent on premises, create a job with a job
 
     ```sql
     -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
-    DECLARE	@return_value int, @exe_id bigint 
+    DECLARE    @return_value int, @exe_id bigint 
 
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
         @folder_name=N'folderName', @project_name=N'projectName', 

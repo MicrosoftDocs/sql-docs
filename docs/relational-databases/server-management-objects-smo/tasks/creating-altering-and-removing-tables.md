@@ -1,19 +1,13 @@
 ---
-description: "Creating, Altering, and Removing Tables"
 title: "Creating, Altering, and Removing Tables"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "tables [SMO]"
-ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
+description: "Creating, Altering, and Removing Tables"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "tables [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Tables

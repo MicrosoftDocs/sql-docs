@@ -4,17 +4,14 @@ description: Learn about the client-side and server-side XML formatting of docum
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "formats [SQLXML]"
   - "formatting XML documents [SQLXML]"
   - "XML formatting [SQLXML]"
   - "SQLXML, formats"
-ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Client-side and Server-side Formatting (SQLXML 4.0)

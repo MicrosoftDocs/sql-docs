@@ -1,18 +1,15 @@
 ---
+title: "Subscription Type"
 description: "Subscription Type"
-title: "Subscription Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.subscriptiontype.f1"
-ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.subscriptiontype.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Subscription Type

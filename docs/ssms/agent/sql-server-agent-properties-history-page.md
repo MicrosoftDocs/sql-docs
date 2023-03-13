@@ -1,18 +1,14 @@
 ---
-description: "SQL Server Agent Properties (History Page)"
 title: "SQL Server Agent Properties (History Page)"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.agent.history.f1"
-ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
+description: "SQL Server Agent Properties (History Page)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.agent.history.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # SQL Server Agent Properties (History Page)

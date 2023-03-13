@@ -4,15 +4,13 @@ description: Learn how to use Event Tracing for Windows (ETW) as a target. Use E
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: conceptual
 helpviewer_keywords:
   - "event tracing for windows target"
   - "ETW target"
   - "targets [SQL Server extended events], event tracing for windows target"
-ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Event Tracing for Windows Target

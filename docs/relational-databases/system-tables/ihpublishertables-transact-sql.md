@@ -4,9 +4,8 @@ description: IHpublishertables (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "IHpublishertables"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "IHpublishertables system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 ---
 # IHpublishertables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

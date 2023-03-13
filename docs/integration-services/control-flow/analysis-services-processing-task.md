@@ -1,21 +1,19 @@
 ---
+title: "Analysis Services Processing Task"
 description: "Analysis Services Processing Task"
-title: "Analysis Services Processing Task | Microsoft Docs"
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.asprocessingtask.f1"
   - "sql13.dts.designer.asprocessingtask.general.f1"
   - "sql13.dts.designer.asprocessingtask.as.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Analysis Services Processing task"
   - "processing objects [Integration Services]"
-ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: chugugrace
-ms.author: chugu
 ---
 # Analysis Services Processing Task
 

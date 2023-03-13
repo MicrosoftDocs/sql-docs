@@ -1,21 +1,17 @@
 ---
+title: "OLE Automation Stored Procedures (Transact-SQL)"
 description: "OLE Automation Stored Procedures (Transact-SQL)"
-title: "OLE Automation Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "system stored procedures [SQL Server], OLE Automation"
-  - "OLE Automation [SQL Server], stored procedures"
-ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "system stored procedures [SQL Server], OLE Automation"
+  - "OLE Automation [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
 # OLE Automation Stored Procedures (Transact-SQL)
 

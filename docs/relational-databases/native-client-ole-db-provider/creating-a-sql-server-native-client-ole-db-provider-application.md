@@ -1,20 +1,16 @@
 ---
-description: "Creating a SQL Server Native Client OLE DB Provider Application"
 title: "Create an OLE DB App"
-ms.custom: ""
+description: "Creating a SQL Server Native Client OLE DB Provider Application"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, application creation"
   - "applications [SQL Server Native Client]"
   - "OLE DB, creating applications"
-ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a SQL Server Native Client OLE DB Provider Application

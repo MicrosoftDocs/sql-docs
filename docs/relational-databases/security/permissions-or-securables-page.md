@@ -1,22 +1,18 @@
 ---
-title: "Permissions or Securables Page | Microsoft Docs"
-description: Use the Permissions page or the Securables page to view or set the permissions for securables in SQL Server. 
-ms.custom: ""
+title: "Permissions or Securables Page"
+description: Use the Permissions page or the Securables page to view or set the permissions for securables in SQL Server.
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/07/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.common.permissions.f1"
   - "sql13.swb.SecurableAndEffectPermissions.f1"
   - "sql13.swb.common.columnperm.f1"
   - "sql13.swb.availabilitygroupproperties.permission.f1"
   - "sql13.swb.SecurableAndEffectivePermission.f1"
-ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Permissions or Securables Page

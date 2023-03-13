@@ -5,10 +5,9 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
 ms.date: 04/17/2018
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Managing permissions in Parallel Data Warehouse
@@ -23,7 +22,7 @@ Logins are individual user accounts for logging on to the SQL Server PDW. SQL Se
 Members of the **sysadmin** fixed server role (such as the **sa** login) can connect to a database without having being mapped to a database user. They are mapped to the **dbo** user. The owner of the database is also mapped as the **dbo** user.
 
 **Server Roles**
-There are four special server roles with a set of preconfigured roles that provide convenient group of server-level permissions. The **sysadmin**, **MediumRC**, **LargeRC**, and **XLargeRCfixed** server roles are the only server roles currently implemented in SQL Server PDW. The **sa** login is the only member of the **sysadmin** fixed server role, and additional logins cannot be added to the **sysadmin** role. Logins can be granted the **CONTROL SERVER** permission, which is similar, though not identical, to the **sysadmin** fixed server role. Use [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) to add members to the other server roles. SQL Server PDW does not support user-defined server roles.
+There are four special server roles with a set of preconfigured roles that provide convenient group of server-level permissions. The **sysadmin**, **MediumRC**, **LargeRC**, and **XLargeRC** fixed server roles are the only server roles currently implemented in SQL Server PDW. The **sa** login is the only member of the **sysadmin** fixed server role, and additional logins cannot be added to the **sysadmin** role. Logins can be granted the **CONTROL SERVER** permission, which is similar, though not identical, to the **sysadmin** fixed server role. Use [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) to add members to the other server roles. SQL Server PDW does not support user-defined server roles.
 
 **Database Users**
 Logins are granted access to a database by creating a database user in a database and mapping that database user to a login. Typically the database user name is the same as the login name, though it does not have to be the same. Each database user maps to a single login. A login can be mapped to only one user in a database, but can be mapped as a database user in several different databases.

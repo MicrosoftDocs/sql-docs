@@ -4,9 +4,8 @@ description: MSlogreader_agents (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSlogreader_agents_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSlogreader_agents system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 ---
 # MSlogreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

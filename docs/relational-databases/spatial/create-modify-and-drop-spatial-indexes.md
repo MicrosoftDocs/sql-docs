@@ -1,22 +1,18 @@
 ---
+title: "Create, Modify, and Drop Spatial Indexes"
 description: "Create, Modify, and Drop Spatial Indexes"
-title: "Create, Modify, and Drop Spatial Indexes | Microsoft Docs"
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "indexes [SQL Server], creating"
   - "spatial indexes [SQL Server], dropping"
   - "spatial indexes [SQL Server], creating"
   - "indexes [SQL Server], dropping"
   - "indexes [SQL Server], modifying"
   - "spatial indexes [SQL Server], modifying"
-ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: MladjoA
-ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Modify, and Drop Spatial Indexes
@@ -61,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
      When creating an index on a **geometry** type column, you must specify the **(**_X-min_**,**_Y-min_**)** and **(**_X-max_**,**_Y-max_**)** coordinates of the bounding box. For an index on a **geography** type column, the bounding-box fields become read-only after you specify the **Geography grid** tessellation scheme, because geography grid tessellation does not use a bounding box.  
   
-     Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or 8 for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+     Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or 8 for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
      You can select GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID for tessellation scheme in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID is selected, then Level 1, Level 2, Level 3, and Level 4 grid density options are disabled.  
   
@@ -146,7 +142,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  An index build can use available process parallelism.  
   
 ### Version Restrictions  
- Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. You must use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] databases is a requirement.  
+ Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. You must use [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] databases is a requirement.  
   
   
 ## See Also  

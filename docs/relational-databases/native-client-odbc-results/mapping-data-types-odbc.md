@@ -1,14 +1,13 @@
 ---
+title: "Mapping Data Types (ODBC)"
 description: "Mapping Data Types (ODBC)"
-title: "Mapping Data Types (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "mapping data types [ODBC]"
   - "result sets [ODBC], data types"
   - "ODBC data types, mapping"
@@ -17,9 +16,6 @@ helpviewer_keywords:
   - "data types [ODBC], mapping"
   - "sql_variant data type"
   - "SQL Server Native Client ODBC driver, data types"
-ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Mapping Data Types (ODBC)

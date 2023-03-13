@@ -1,14 +1,12 @@
 ---
+title: "Cursors (SQL Server)"
 description: "Cursors (SQL Server)"
-title: "Cursors (SQL Server) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 03/11/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "results [SQL Server], cursors"
   - "Transact-SQL cursors, about cursors"
   - "cursors [SQL Server]"
@@ -16,9 +14,6 @@ helpviewer_keywords:
   - "result sets [SQL Server], cursors"
   - "requesting cursors"
   - "cursors [SQL Server], about cursors"
-ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Cursors

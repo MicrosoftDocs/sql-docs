@@ -1,17 +1,15 @@
 ---
 title: "Specify a column with a wildcard character (SQLXML)"
 description: Learn how column names that are specified as a wildcard character affect the results of an XQuery.
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "names [SQL Server], columns with"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Columns with a name specified as a wildcard character
 

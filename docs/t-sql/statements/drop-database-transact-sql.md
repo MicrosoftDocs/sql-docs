@@ -5,9 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP DATABASE"
@@ -31,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Removes one or more user databases or database snapshots from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -58,7 +57,7 @@ Conditionally drops the database only if it already exists.
 Specifies the name of the database to be removed. To display a list of databases, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
 *database_snapshot_name*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 Specifies the name of a database snapshot to be removed.
 
@@ -111,7 +110,7 @@ You must be connected to the master database to drop a database.
 
  The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.
 
-### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+### [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 You must be connected to the master database to drop a database.
 
@@ -143,7 +142,7 @@ DROP DATABASE Sales;
 
 ### B. Dropping multiple databases
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 The following example removes each of the listed databases.
 
@@ -153,7 +152,7 @@ DROP DATABASE Sales, NewSales;
 
 ### C. Dropping a database snapshot
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 The following example removes a database snapshot, named `sales_snapshot0600`, without affecting the source database.
 

@@ -1,15 +1,13 @@
 ---
 title: Release notes for SQL Server Data Tools (SSDT) in VS2017
 description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2017 and earlier Visual Studio versions."
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssdt
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan, drskwier
-ms.custom: seo-lt-2019
 ms.date: 04/14/2022
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 

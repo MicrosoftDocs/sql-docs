@@ -1,16 +1,12 @@
 ---
-title: "Connect to Sybase (SybaseToSQL) | Microsoft Docs"
+title: "Connect to Sybase (SybaseToSQL)"
 description: Connect to the SAP ASE instance to begin migration using SSMA for Sybase (SAP ASE). Use the Connect to Sybase dialog box.
 author: cpichuka
-
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: ssma
-ms.topic: conceptual
-ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 ms.author: cpichuka
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssma
+ms.topic: conceptual
 ---
 
 # Connect to Sybase (SybaseToSQL)

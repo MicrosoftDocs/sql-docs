@@ -1,20 +1,18 @@
 ---
+title: How to Contribute to SQL Server Documentation
 description: "How to contribute to SQL Server Documentation"
-title: How to Contribute to SQL Server Documentation | Microsoft Docs
-ms.date: "08/13/2018"
-ms.prod: sql
-ms.technology: release-landing
-ms.reviewer: ""
-ms.custom: ""
-ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "08/13/2018"
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # How to contribute to SQL Server Documentation
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
 Anyone can contribute to SQL Server documentation. This includes correcting typos, suggesting better explanations, and improving technical accuracy. This article explains how to get started with content contributions and how the process works.
 
@@ -87,7 +85,7 @@ The [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository uses severa
 
 Each SQL Server article contains an **applies-to** include file after the title. This indicates what areas or versions of SQL Server the article applies to.
 
-Consider the following Markdown example that pulls in the **appliesto-ss-asdb-asdw-pdw-md.md** include file.
+Consider the following Markdown example that pulls in the **applies-to-version/sql-asdb-asa-pdw.md** include file.
 
 ```Markdown
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

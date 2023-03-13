@@ -1,18 +1,14 @@
 ---
-description: "OLE DB How-to Topics (Native Client OLE DB provider)"
 title: How-to topics (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "OLE DB, how-to topics"
-ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
+description: "OLE DB How-to Topics (Native Client OLE DB provider)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "OLE DB, how-to topics"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE DB How-to Topics (Native Client OLE DB provider)

@@ -1,13 +1,13 @@
 ---
-description: "Operators"
 title: "Operators"
-ms.custom: seo-lt-2019
+description: "Operators"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "operators (users) [Database Engine]"
   - "fail-safe operator [SQL Server]"
   - "aliases [SQL Server], operators"
@@ -20,10 +20,6 @@ helpviewer_keywords:
   - "operators (users) [Database Engine], defining"
   - "jobs [SQL Server Agent], operators"
   - "alerts [SQL Server], operators"
-ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Operators
@@ -48,7 +44,7 @@ Every operator must have a name. Operator names must be unique within the [!INCL
 An operator's contact information defines how the operator is notified. Operators can be notified by e-mail, pager, or through the **net send** command:  
   
 > [!IMPORTANT]
-> The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
+> The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
 -   **E-mail notification**  
   

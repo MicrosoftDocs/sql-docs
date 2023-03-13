@@ -4,9 +4,8 @@ description: Database Maintenance Plan Tables (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "database maintenance plans [SQL Server]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "system tables [SQL Server], database maintenance plans"
 dev_langs:
   - "TSQL"
-ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 ---
 # Database Maintenance Plan Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

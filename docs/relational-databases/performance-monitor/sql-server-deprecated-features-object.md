@@ -1,20 +1,17 @@
 ---
 title: "SQL Server, Deprecated Features object"
-description: Learn about the SQLServer:Deprecated Features object, which provides a counter to monitor the features designated as deprecated. 
-ms.custom: ""
+description: "Learn about the SQLServer:Deprecated Features object, which provides a counter to monitor the features designated as deprecated."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/13/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLServer:Deprecated Features"
   - "performance counters [SQL Server], deprecated features"
   - "deprecation [SQL Server], performance counters"
   - "Deprecated Features object"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Deprecated Features object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

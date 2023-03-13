@@ -4,12 +4,10 @@ description: "Identify waits associated with Always On availability groups using
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "06/13/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom:
-  - ag-guide
-  - seodec18
+ms.custom: ag-guide
 ---
 # Identify waits associated with availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

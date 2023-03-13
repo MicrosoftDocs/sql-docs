@@ -1,22 +1,18 @@
 ---
+title: "Creating a Destination with the Script Component"
 description: "Creating a Destination with the Script Component"
-title: "Creating a Destination with the Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script component [Integration Services], destination components"
   - "destinations [Integration Services], components"
   - "input columns [Integration Services]"
-ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Creating a Destination with the Script Component
 

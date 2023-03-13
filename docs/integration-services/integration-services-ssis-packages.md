@@ -1,14 +1,13 @@
 ---
+title: "Integration Services (SSIS) Packages"
 description: "Integration Services (SSIS) Packages"
-title: "Integration Services (SSIS) Packages | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "08/31/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services packages, about packages"
   - "packages [Integration Services], about packages"
   - "SSIS packages, about packages"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "packages [Integration Services]"
   - "Integration Services packages, about packages"
   - "Integration Services packages"
-ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Packages
 

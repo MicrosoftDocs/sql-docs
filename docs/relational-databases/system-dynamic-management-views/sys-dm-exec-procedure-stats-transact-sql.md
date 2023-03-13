@@ -3,10 +3,9 @@ title: "sys.dm_exec_procedure_stats (Transact-SQL)"
 description: sys.dm_exec_procedure_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/03/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_procedure_stats_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_procedure_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_procedure_stats (Transact-SQL)
@@ -29,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 > [!NOTE]
 > The results of **sys.dm_exec_procedure_stats**  may vary with each execution as the data only reflects finished queries, and not ones still in-flight.
-> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_exec_procedure_stats`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_exec_procedure_stats`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
   
 |Column name|Data type|Description|  
@@ -67,7 +65,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**last_spills**|**bigint**|The number of pages spilled the last time the stored procedure was executed.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|The minimum number of pages that this stored procedure has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|The maximum number of pages that this stored procedure has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|The total number of page server reads performed by executions of this stored procedure since it was compiled.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
 |**last_page_server_reads**|**bigint**|The number of page server reads performed the last time the stored procedure was executed.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
 |**min_page_server_reads**|**bigint**|The minimum number of page server reads that this stored procedure has ever performed during a single execution.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
@@ -81,6 +79,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
    
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  Statistics in the view are updated when a stored procedure execution completes.  
   

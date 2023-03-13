@@ -1,16 +1,12 @@
 ---
+title: "catalog.validate_project (SSISDB Database)"
 description: "catalog.validate_project (SSISDB Database)"
-title: "catalog.validate_project (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.validate_project (SSISDB Database)
 

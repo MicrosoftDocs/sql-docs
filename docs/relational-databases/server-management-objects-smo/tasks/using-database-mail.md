@@ -1,21 +1,15 @@
 ---
+title: "Using Database Mail"
 description: "Using Database Mail"
-title: "Using Database Mail | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "e-mail [SMO]"
   - "Database Mail [SMO]"
   - "mail [SMO]"
-ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Database Mail

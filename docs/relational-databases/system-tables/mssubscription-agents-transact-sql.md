@@ -4,9 +4,8 @@ description: MSsubscription_agents (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSsubscription_agents"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSsubscription_agents system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 ---
 # MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

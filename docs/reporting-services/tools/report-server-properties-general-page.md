@@ -1,18 +1,14 @@
 ---
-title: "Server Properties (General Page) | Microsoft Docs"
+title: "Server Properties (General Page)"
 description: Learn about the options on the Report Server Properties page.
-ms.date: 06/08/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.reportserver.serverproperties.general.f1"
-ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/08/2016
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.reportserver.serverproperties.general.f1"
 ---
 # Report Server Properties (General Page)
   Use this page to view or modify the title used in Report Manager, enable or disable My Reports, select a role definition for My Reports security, and enable or disable the client print control.  

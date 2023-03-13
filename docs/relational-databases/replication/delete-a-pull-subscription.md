@@ -1,21 +1,18 @@
 ---
+title: "Delete a Pull Subscription"
 description: "Delete a Pull Subscription"
-title: "Delete a Pull Subscription | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "removing subscriptions"
   - "deleting subscriptions"
   - "pull subscriptions [SQL Server replication], deleting"
   - "subscriptions [SQL Server replication], pull"
-ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Delete a Pull Subscription

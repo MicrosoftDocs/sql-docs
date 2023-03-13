@@ -5,8 +5,8 @@ author: thesqlsith
 ms.author: derekw
 ms.reviewer: randolphwest
 ms.date: 07/26/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "LEFT_SHIFT"
@@ -20,12 +20,13 @@ dev_langs:
 monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 # LEFT_SHIFT (Transact SQL)
+[!INCLUDE [SQL Server 2022, SQL Database, SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 LEFT_SHIFT takes two parameters, and returns the first parameter bit-shifted left by the number of bits specified in the second parameter.
 
 The LEFT_SHIFT function is also accessible through the `<<` operator.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 

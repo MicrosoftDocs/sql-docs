@@ -1,30 +1,26 @@
 ---
+title: "xp_cmdshell (Transact-SQL)"
 description: "xp_cmdshell (Transact-SQL)"
-title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/01/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_cmdshell"
-  - "xp_cmdshell_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_cmdshell"
-ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
+ms.date: "12/01/2019"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_cmdshell"
+  - "xp_cmdshell_TSQL"
+helpviewer_keywords:
+  - "xp_cmdshell"
+dev_langs:
+  - "TSQL"
 ---
 # xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Spawns a Windows command shell and passes in a string for execution. Any output is returned as rows of text.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

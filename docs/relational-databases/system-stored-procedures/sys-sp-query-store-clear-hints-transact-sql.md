@@ -1,26 +1,22 @@
 ---
-description: "The sp_query_store_clear_hints system stored procedure removes all Query Store hints for a given query."
 title: "sp_query_store_clear_hints (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: "The sp_query_store_clear_hints system stored procedure removes all Query Store hints for a given query."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "sp_query_store_clear_hints_TSQL"
   - "sys.sp_query_store_clear_hints_TSQL"
   - "sp_query_store_clear_hints"
   - "sys.sp_query_store_clear_hints"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_query_store_clear_hints"
   - "sp_query_store_clear_hints"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_clear_hints (Transact-SQL)
@@ -28,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 
   Removes all [Query Store hints](../performance/query-store-hints.md) for a given query_id.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

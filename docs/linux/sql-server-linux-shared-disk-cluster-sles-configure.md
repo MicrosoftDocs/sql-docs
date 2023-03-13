@@ -5,10 +5,9 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ---
 # Configure SLES shared disk cluster for SQL Server
 

@@ -1,20 +1,16 @@
 ---
+title: "Allocate Handles and Connect to SQL Server (ODBC)"
 description: "Allocate Handles and Connect to SQL Server (ODBC)"
-title: "Allocate Handles and Connect to SQL Server (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "handles [ODBC]"
   - "handles [ODBC], connection"
   - "handles [ODBC], about handles"
-ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Allocate Handles and Connect to SQL Server (ODBC)

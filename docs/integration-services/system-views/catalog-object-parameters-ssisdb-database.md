@@ -1,16 +1,17 @@
 ---
+title: "catalog.object_parameters (SSISDB Database)"
 description: "catalog.object_parameters (SSISDB Database)"
-title: "catalog.object_parameters (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+f1_keywords:
+  - "catalog.object_parameters_TSQL"
+  - "object_parameters"
+  - "catalog.object_parameters"
+  - "object_parameters_TSQL"
 ---
 # catalog.object_parameters (SSISDB Database)
 

@@ -4,9 +4,8 @@ description: MSpeer_lsns (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSpeer_lsns"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_lsns system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 ---
 # MSpeer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

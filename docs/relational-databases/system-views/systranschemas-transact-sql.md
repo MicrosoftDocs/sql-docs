@@ -1,23 +1,19 @@
 ---
+title: "systranschemas (Transact-SQL)"
 description: "systranschemas (Transact-SQL)"
-title: "systranschemas (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/13/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "systranschemas"
-  - "systranschemas_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "systranschemas system table"
-ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "09/13/2022"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "systranschemas"
+  - "systranschemas_TSQL"
+helpviewer_keywords:
+  - "systranschemas system table"
+dev_langs:
+  - "TSQL"
 ---
 # systranschemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,20 @@
 ---
 title: "PolyBase errors and possible solutions"
 description: PolyBase reference for errors and suggested solutions.
-ms.date: 03/22/2021
-ms.prod: sql
-ms.technology: polybase
-ms.topic: conceptual
-dev_langs: 
--  "TSQL"
--  "XML"
-f1_keywords: 
-   - "PolyBase, monitoring"
-   - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-   - "PolyBase, troubleshooting"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
+ms.date: 03/22/2021
+ms.service: sql
+ms.subservice: polybase
+ms.topic: conceptual
+f1_keywords:
+  - "PolyBase, monitoring"
+  - "PolyBase, performance monitoring"
+helpviewer_keywords:
+  - "PolyBase, troubleshooting"
+dev_langs:
+  - "TSQL"
+  - "XML"
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # PolyBase errors and possible solutions
@@ -83,6 +82,8 @@ Create External Table foo
 (col1 int) WITH (LOCATION = '/bar/', DATA_SOURCE…);
 ```
 
+> [!NOTE] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
 
 ### Kerberos support
 

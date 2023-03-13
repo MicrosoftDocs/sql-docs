@@ -4,14 +4,12 @@ description: Maintenance Plans Node (Object Explorer)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.maint.maintplanproperties.reporting.f1"
   - "sql13.swb.maint.maintplanproperties.completebackup.f1"
-ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 ---
 # Maintenance Plans Node (Object Explorer)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

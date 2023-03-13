@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_17832"
 description: "MSSQLSERVER_17832"
-title: "MSSQLSERVER_17832 | Microsoft Docs"
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "04/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "17828 (Database Engine error)"
   - "maxtokensize"
   - "17832 (Database Engine error)"
   - "login packet (bad)"
-ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
-author: MashaMSFT
-ms.author: mathoma
 ---
 # MSSQLSERVER_17832
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +38,7 @@ If the token was improperly created or damaged during transmission, [!INCLUDE[ss
 When the user is a member of many groups or has many policies, the token may grow larger than normal to list them all. If the token grows larger than the **MaxTokenSize** value of the server computer, the client fails to connect with a General Network Error (GNE) and error 17832 can occur. This problem may affect only some users: users with many groups or policies. When the problem is the **MaxTokenSize** value of the server computer, error 17832 in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log will be accompanied by an error with state 9. For additional details about the Kerberos and **MaxTokenSize**, see [KB327825](https://support.microsoft.com/kb/327825).  
   
 ## User Action  
-To resolve this problem, increase the **MaxTokenSize** value of the server computer, to a size large enough to contain the largest token of any user in your organization. To research the correct token size for your organization, consider using the **Tokensz** application.  
+To resolve this problem, increase the **MaxTokenSize** value of the server computer, to a size large enough to contain the largest token of any user in your organization. 
   
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  

@@ -1,26 +1,22 @@
 ---
+title: "sys.sysremotelogins (Transact-SQL)"
 description: "sys.sysremotelogins (Transact-SQL)"
-title: "sys.sysremotelogins (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysremotelogins"
   - "sysremotelogins_TSQL"
   - "sys.sysremotelogins"
   - "sys.sysremotelogins_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysremotelogins system table"
   - "sys.sysremotelogins compatibility view"
-ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysremotelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

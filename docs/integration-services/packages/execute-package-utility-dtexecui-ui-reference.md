@@ -1,14 +1,13 @@
 ---
+title: "Execute Package Utility (dtexecui)"
 description: "Execute Package Utility (dtexecui)"
-title: "Execute Package Utility (dtexecui) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.dtexecui.setvalues.f1"
   - "sql13.dts.dtexecui.reporting.f1"
   - "sql13.dts.dtexecui.datasources.f1"
@@ -19,11 +18,8 @@ f1_keywords:
   - "sql13.dts.dtexecui.executionoptions.f1"
   - "sql13.dts.dtexecui.commandline.f1"
   - "sql13.dts.dtexecui.configuration.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DTExecUI utility"
-ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: chugugrace
-ms.author: chugu
 ---
 # Execute Package Utility (dtexecui)
 

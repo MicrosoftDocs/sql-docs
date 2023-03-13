@@ -1,22 +1,16 @@
 ---
+title: "Handling SMO Events"
 description: "Handling SMO Events"
-title: "Handling SMO Events | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "events [SMO]"
   - "SQL Server Management Objects, events"
   - "SMO [SQL Server], events"
   - "events [SMO], about events"
-ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Handling SMO Events

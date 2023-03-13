@@ -1,18 +1,14 @@
 ---
-description: "Change a Version Flag Name (Master Data Services)"
 title: Change a Version Flag Name
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "version flags [Master Data Services], changing name"
-ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
+description: "Change a Version Flag Name (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "version flags [Master Data Services], changing name"
 ---
 # Change a Version Flag Name (Master Data Services)
 

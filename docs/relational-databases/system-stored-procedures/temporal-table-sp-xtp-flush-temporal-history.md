@@ -1,25 +1,21 @@
 ---
+title: "sp_xtp_flush_temporal_history"
 description: "sp_xtp_flush_temporal_history (Transact-SQL)"
-title: "sp_xtp_flush_temporal_history | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "02/21/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_xtp_flush_temporal_history"
   - "sp_xtp_flush_temporal_history_TSQL"
   - "sys.sp_xtp_flush_temporal_history"
   - "sys.sp_xtp_flush_temporal_history_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_xtp_flush_temporal_history"
-ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_xtp_flush_temporal_history (Transact-SQL)
@@ -28,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Invokes the data flush task to move all committed rows from in-memory staging table to the disk-based history table.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

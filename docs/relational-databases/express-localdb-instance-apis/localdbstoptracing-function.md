@@ -1,27 +1,20 @@
 ---
+title: "LocalDBStopTracing Function"
 description: "LocalDBStopTracing Function"
-title: "LocalDBStopTracing Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBStopTracing"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBStopTracing"
+apitype: "DLLExport"
 ---
 # LocalDBStopTracing Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Disables tracing of API calls for all the SQL Server Express LocalDB instances owned by the current Windows user.  
   
- **Header file:** sqlncli.h  
+ **Header file:** msoledbsql.h  
   
 ## Syntax  
   

@@ -1,14 +1,13 @@
 ---
-title: IClientVirtualDeviceSet2::GetBufferHandle
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IClientVirtualDeviceSet2::GetBufferHandle command.
-ms.date: 08/30/2019
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
-ms.topic: reference
+title: "IClientVirtualDeviceSet2::GetBufferHandle"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IClientVirtualDeviceSet2::GetBufferHandle command."
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 08/30/2019
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: reference
 ---
 
 # IClientVirtualDeviceSet2::GetBufferHandle (VDI)

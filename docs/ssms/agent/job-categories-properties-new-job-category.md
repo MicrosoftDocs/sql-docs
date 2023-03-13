@@ -1,18 +1,14 @@
 ---
-description: "Job Categories Properties - New Job Category"
 title: "Job Categories Properties - New Job Category"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.job.categoriesproperties"
-ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
+description: "Job Categories Properties - New Job Category"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.job.categoriesproperties"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Job Categories Properties - New Job Category

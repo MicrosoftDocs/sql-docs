@@ -4,9 +4,8 @@ description: Learn about maintenance plans, which create a workflow to ensure th
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.AG.MAINTPLAN.LEGACY.F1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], about database maintenance plans"
   - "maintenance plans [SQL Server], database compatibility level displayed in designer"
   - "maintenance plans [SQL Server]"
-ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 ---
 # Maintenance Plans
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

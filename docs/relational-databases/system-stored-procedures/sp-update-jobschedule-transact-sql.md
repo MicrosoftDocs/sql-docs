@@ -1,23 +1,19 @@
 ---
+title: "sp_update_jobschedule (Transact-SQL)"
 description: "sp_update_jobschedule (Transact-SQL)"
-title: "sp_update_jobschedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_jobschedule_TSQL"
-  - "sp_update_jobschedule"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_update_jobschedule"
-ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_jobschedule_TSQL"
+  - "sp_update_jobschedule"
+helpviewer_keywords:
+  - "sp_update_jobschedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

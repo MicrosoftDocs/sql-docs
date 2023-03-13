@@ -4,9 +4,8 @@ description: dbo.sysnotifications (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.sysnotifications_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sysnotifications system table"
 dev_langs:
   - "TSQL"
-ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 ---
 # dbo.sysnotifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

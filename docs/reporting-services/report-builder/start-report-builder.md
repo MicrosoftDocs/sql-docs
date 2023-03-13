@@ -1,22 +1,17 @@
 ---
-title: "Start Microsoft Report Builder | Microsoft Docs"
+title: "Start Microsoft Report Builder"
 description: Report Builder is a stand-alone report authoring environment. The first time you start it, Microsoft Download Center prompts you to download it.
-
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/15/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
-
-
+ms.service: reporting-services
+ms.subservice: report-builder
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Report Builder, launching"
   - "launching Report Builder"
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
-ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Start Microsoft Report Builder

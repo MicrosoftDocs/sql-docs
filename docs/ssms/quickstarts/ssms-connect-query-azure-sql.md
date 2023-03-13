@@ -1,16 +1,14 @@
 ---
 title: Connect and query an Azure SQL Database or an Azure Managed Instance using SQL Server Management Studio (SSMS)
 description: Connect to an Azure SQL Database or an Azure Managed Instance in SSMS. Create and query an Azure SQL Database or an Azure Managed Instance in SSMS running basic T-SQL queries.
-ms.prod: sql
-ms.technology: ssms
-ms.topic: quickstart
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom:
-  - contperf-fy21q2
-  - intro-quickstart
 ms.date: 12/15/2020
+ms.service: sql
+ms.subservice: ssms
+ms.topic: quickstart
+ms.custom: intro-quickstart
 ---
 
 # Quickstart: Connect and query an Azure SQL Database or an Azure Managed Instance using SQL Server Management Studio (SSMS)

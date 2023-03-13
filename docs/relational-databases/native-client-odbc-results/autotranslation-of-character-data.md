@@ -1,14 +1,13 @@
 ---
+title: "Autotranslation of Character Data"
 description: "Autotranslation of Character Data"
-title: "Autotranslation of Character Data | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "result sets [ODBC], autotranslating character data"
   - "data types [ODBC], autotranslating character data"
   - "ACPs"
@@ -20,9 +19,6 @@ helpviewer_keywords:
   - "autotranslating character data"
   - "SQL Server Native Client ODBC driver, data types"
   - "ODBC data types, autotranslating character data"
-ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Autotranslation of Character Data

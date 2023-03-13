@@ -1,13 +1,12 @@
 ---
 title: Create and run jobs for SQL Server on Linux
 description: Learn how to create a SQL Server Agent job on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ---
 # Create and run SQL Server Agent jobs on Linux
 

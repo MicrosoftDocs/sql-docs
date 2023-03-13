@@ -1,20 +1,16 @@
 ---
 title: "Online Restore: read-write file (full recovery model)"
 description: This example shows an online restore in SQL Server of a read-write file for a database using the full recovery model with multiple filegroups.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full recovery model [SQL Server], RESTORE example"
   - "online restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], online"
-ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Example: Online Restore of a Read-Write File (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

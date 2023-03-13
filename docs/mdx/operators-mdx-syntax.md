@@ -1,14 +1,14 @@
 ---
+title: "Operators (MDX Syntax)"
 description: "Operators (MDX Syntax)"
-title: "Operators (MDX Syntax) | Microsoft Docs"
-ms.date: 11/08/2021
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: mdx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 11/08/2021
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: mdx
 ---
 # Operators (MDX Syntax)
 

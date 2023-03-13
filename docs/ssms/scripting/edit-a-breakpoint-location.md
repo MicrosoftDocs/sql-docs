@@ -1,19 +1,15 @@
 ---
 title: Edit a Breakpoint Location
-description: Learn how to move a breakpoint in a Transact-SQL script file to another location in the script, or to a different script. 
 titleSuffix: T-SQL debugger
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Transact-SQL debugger, breakpoint location"
-ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
+description: Learn how to move a breakpoint in a Transact-SQL script file to another location in the script, or to a different script.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 12/04/2019
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Transact-SQL debugger, breakpoint location"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -1,17 +1,16 @@
 ---
-title: "Create a Database User | Microsoft Docs"
+title: "Create a database user"
 description: Learn how to create the most common types of database users by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.user.securables.f1"
   - "SQL13.SWB.DATABASEUSER.GENERAL.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database users, creating"
   - "creating users with Management Studio"
   - "mapping users"
@@ -21,12 +20,10 @@ helpviewer_keywords:
   - "CREATE USER [Management Studio]"
   - "users [SQL Server], adding"
   - "mapping database users"
-ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
----   
-# Create a Database User
+---
+# Create a database user
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes how to create the most common types of database users. There are eleven types of users. The complete list is provided in the topic [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). All varieties of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support database users, but not necessarily all types of users.  

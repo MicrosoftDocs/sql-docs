@@ -4,10 +4,9 @@ description: Query Store can be configured to monitor and tuning workloads on se
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-ms.custom: 
 helpviewer_keywords:
   - "Query Store secondary replicas"
 monikerRange: ">=sql-server-ver16"

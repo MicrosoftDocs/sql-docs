@@ -1,18 +1,14 @@
 ---
-description: "Proxy Editor - Add Principal"
 title: Proxy Editor - Add Principal
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.proxy.editor.f1"
-ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
+description: "Proxy Editor - Add Principal"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.proxy.editor.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

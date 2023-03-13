@@ -1,22 +1,18 @@
 ---
+title: "Debugging Data Flow"
 description: "Debugging Data Flow"
-title: "Debugging Data Flow | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "progress reporting [Integration Services]"
   - "data viewers [Integration Services]"
   - "data flow [Integration Services], debugging"
   - "debugging [Integration Services], data flow"
   - "counting rows"
-ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: chugugrace
-ms.author: chugu
 ---
 # Debugging Data Flow
 

@@ -4,11 +4,9 @@ description: Learn how restoring a database that uses memory-optimized tables in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/31/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 ---
 # Restore and recovery of memory-optimized tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

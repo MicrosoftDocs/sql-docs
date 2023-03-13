@@ -4,9 +4,8 @@ description: sys.resource_governor_workload_groups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.resource_governor_workload_groups"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.resource_governor_workload_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 ---
 # sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,14 @@
 ---
-description: "Color Dialog Box (Visual Database Tools)"
 title: Color Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptions.FontsAndColors.ColorPicker"
-ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
+description: "Color Dialog Box (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "VS.ToolsOptions.FontsAndColors.ColorPicker"
 ---
 # Color Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,16 +1,15 @@
 ---
-description: "Get Information About a View"
 title: "Get Information About a View"
-ms.custom: ""
+description: "Get Information About a View"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/19/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "views [SQL Server], status information"
   - "metadata [SQL Server], views"
   - "dependencies [SQL Server], views"
@@ -19,8 +18,6 @@ helpviewer_keywords:
   - "viewing view information"
   - "status information [SQL Server], views"
   - "view dependencies"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About a View

@@ -1,14 +1,13 @@
 ---
 title: "Plan Guides"
 description: Learn about plan guides, which let you optimize the performance of queries without directly changing the text of the query in SQL Server.
-ms.custom:
-- event-tier1-build-2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 08/01/2022
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TEMPLATE plan guide"
   - "SQL plan guides"
   - "OPTIMIZE FOR query hint"
@@ -18,8 +17,6 @@ helpviewer_keywords:
   - "OPTION clause"
   - "plan guides [SQL Server]"
   - "USE PLAN query hint"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Plan Guides
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

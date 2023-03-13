@@ -1,20 +1,25 @@
 ---
-title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
+title: "What's New in SSMA for MySQL (MySQLToSql)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for MySQL (MySQLToSQL) for each release.
 author: cpichuka
-ms.prod: sql
-ms.custom:
-  - intro-whats-new
-ms.date: "04/29/2021"
-ms.reviewer: ""
-ms.technology: ssma
-ms.topic: conceptual
-ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: cpichuka
+ms.date: "04/29/2021"
+ms.service: sql
+ms.subservice: ssma
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+
+## SSMA v9.3
+
+The v9.3 release of SSMA for MySQL contains the following changes:
+  * Add support for MySQL 8.X
+  * Add support for common table expressions
+  * Add support for SQL Server 2022 target
+  * Fix for precision loss of datetime datatype column migration
 
 ## SSMA v9.2
 
@@ -37,6 +42,7 @@ The v8.24 release of SSMA for MySQL contains the following changes:
 * Add support for YEAR datatype
 * Improve conversion of comment styles
 * Improve naming for "Save As" statements 
+* Fix issue 
 
 ## SSMA v8.23
 

@@ -4,8 +4,8 @@ description: Learn how to display column and catalog metadata for sparse columns
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Display Column and Catalog Metadata for Sparse Columns (OLE DB)
@@ -15,7 +15,7 @@ ms.topic: "reference"
 
   This sample creates a table with three columns: a sparse column, a column that is not a sparse column, and a columnset column. The sample then displays OLE DB flags showing the column and catalog metadata for the non-sparse column and the columnset column.  
   
- This sample works with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later. For more information about sparse columns, see [Sparse Columns Support in OLE DB Driver for SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ This sample works with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions. For more information about sparse columns, see [Sparse Columns Support in OLE DB Driver for SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  

@@ -4,12 +4,13 @@ description: "Combines several columns into a single vector-valued column (Micro
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
-ms.service: ""
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (MicrosoftML), concat, transform
+keywords:
+  - (MicrosoftML)
+  - concat
+  - transform
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 

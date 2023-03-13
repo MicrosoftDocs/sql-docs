@@ -4,11 +4,9 @@ description: Learn about security guidelines for using annotated schemas in SQLX
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "mapping schema [SQLXML], security"
   - "annotated XDR schemas, security"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "SQLXML, annotated XDR schemas"
   - "security [SQLXML], annotated schemas"
   - "XSD schemas [SQLXML], security"
-ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotated Schema Security Considerations (SQLXML 4.0)

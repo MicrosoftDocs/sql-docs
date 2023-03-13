@@ -1,15 +1,15 @@
 ---
 title: Azure Synapse Pathway behind the scenes.
-description: Technical deep dive into how Azure Synapse Pathway translates your code. 
-author: WilliamDAssafMSFT 
-ms.author: wiassaf 
-ms.prod: sql
-ms.technology: tools-other
-ms.topic: conceptual 
-ms.date: 02/11/2022
-monikerRange: "=azure-sqldw-latest"
-ms.custom: template-concept 
+description: Technical deep dive into how Azure Synapse Pathway translates your code.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: wiassaf
+ms.date: 02/11/2022
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+ms.custom: template-concept
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # Azure Synapse Pathway behind the scenes

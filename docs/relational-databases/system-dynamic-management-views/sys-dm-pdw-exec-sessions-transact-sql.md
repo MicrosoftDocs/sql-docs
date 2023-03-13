@@ -4,12 +4,11 @@ description: sys.dm_pdw_exec_sessions (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/22/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_sessions (Transact-SQL)

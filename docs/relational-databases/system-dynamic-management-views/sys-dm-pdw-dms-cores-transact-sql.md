@@ -4,12 +4,11 @@ description: sys.dm_pdw_dms_cores (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: b3f09b15-0863-4418-9347-a4f5fd2ab7c7
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_dms_cores (Transact-SQL)

@@ -1,21 +1,17 @@
 ---
-description: "Set job step success or failure flow"
 title: "Set job step success or failure flow with SQL Server Agent Jobs"
-ms.custom: seo-lt-2019
+description: "Set job step success or failure flow"
+author: markingmyname
+ms.author: maghan
 ms.date: 12/16/2021
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, action flow logic"
   - "successful jobs [SQL Server]"
   - "failed jobs [SQL Server]"
   - "jobs [SQL Server Agent], action flow logic"
-ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Set job step success or failure flow
@@ -63,7 +59,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To set job step success or failure flow  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, select **New Query**.  
   

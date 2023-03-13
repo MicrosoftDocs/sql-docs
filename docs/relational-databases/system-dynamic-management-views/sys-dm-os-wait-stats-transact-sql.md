@@ -4,11 +4,10 @@ description: Returns information about all the waits encountered by threads that
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
-ms.date: 10/31/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: contperf-fy21q3
 f1_keywords:
   - "dm_os_wait_stats_TSQL"
   - "dm_os_wait_stats"
@@ -27,7 +26,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 Returns information about all the waits encountered by threads that executed. You can use this aggregated view to diagnose performance issues with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and also with specific queries and batches. [sys.dm_exec_session_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) provides similar information by session.
 
 > [!NOTE]  
-> To call this from **[!INCLUDE [ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]**, use the name `sys.dm_pdw_nodes_os_wait_stats`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from **[!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]**, use the name `sys.dm_pdw_nodes_os_wait_stats`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -36,13 +35,17 @@ Returns information about all the waits encountered by threads that executed. Yo
 | wait_time_ms | **bigint** | Total wait time for this wait type in milliseconds. This time is inclusive of signal_wait_time_ms. |
 | max_wait_time_ms | **bigint** | Maximum wait time on this wait type. |
 | signal_wait_time_ms | **bigint** | Difference between the time that the waiting thread was signaled and when it started running. |
-| pdw_node_id | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] |
+| pdw_node_id | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] |
 
 ## Permissions
 
 On [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## <a id="WaitTypes"></a> Types of waits
 
@@ -267,6 +270,38 @@ GO
 | <a id="ft_comprowset_rwlock"></a>FT_COMPROWSET_RWLOCK | Full-text is waiting on fragment metadata operation. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="ft_ifts_rwlock"></a>FT_IFTS_RWLOCK | Full-text is waiting on internal synchronization. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="ft_ifts_scheduler_idle_wait"></a>FT_IFTS_SCHEDULER_IDLE_WAIT | Full-text scheduler sleep wait type. The scheduler is idle. |
+| <a id="ft_ifts_async_write_pipe"></a>FT_IFTS_ASYNC_WRITE_PIPE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_blob_hash"></a>FT_IFTS_BLOB_HASH|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_catealog_source"></a>FT_IFTS_CATEALOG_SOURCE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_chunk_buffer_client_manager"></a>FT_IFTS_CHUNK_BUFFER_CLIENT_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_chunk_buffer_proto_word_list"></a>FT_IFTS_CHUNK_BUFFER_PROTO_WORD_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_comp_desc_manager"></a>FT_IFTS_COMP_DESC_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_consumer_plugin"></a>FT_IFTS_CONSUMER_PLUGIN|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_crawl_batch_list"></a>FT_IFTS_CRAWL_BATCH_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_crawl_children"></a>FT_IFTS_CRAWL_CHILDREN|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_docid_interface_list"></a>FT_IFTS_DOCID_INTERFACE_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_docid_list"></a>FT_IFTS_DOCID_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_fp_info_list"></a>FT_IFTS_FP_INFO_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_host_controller"></a>FT_IFTS_HOST_CONTROLLER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_master_merge_task_list"></a>FT_IFTS_MASTER_MERGE_TASK_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_memregpool"></a>FT_IFTS_MEMREGPOOL|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_merge_fragment_sync"></a>FT_IFTS_MERGE_FRAGMENT_SYNC|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_noise_words_collection_cache"></a>FT_IFTS_NOISE_WORDS_COLLECTION_CACHE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_noise_words_resource"></a>FT_IFTS_NOISE_WORDS_RESOURCE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_occurrence_buffer_pool"></a>FT_IFTS_OCCURRENCE_BUFFER_POOL|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_pipeline"></a>FT_IFTS_PIPELINE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_pipeline_list"></a>FT_IFTS_PIPELINE_LIST|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_pipeline_manager"></a>FT_IFTS_PIPELINE_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_project_fd_info_map"></a>FT_IFTS_PROJECT_FD_INFO_MAP|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_scheduler"></a>FT_IFTS_SCHEDULER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_shared_memory"></a>FT_IFTS_SHARED_MEMORY|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_shutdown_pipe"></a>FT_IFTS_SHUTDOWN_PIPE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_srch_fd_manager"></a>FT_IFTS_SRCH_FD_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_srch_fd_service"></a>FT_IFTS_SRCH_FD_SERVICE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_stoplist_cache_manager"></a>FT_IFTS_STOPLIST_CACHE_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_thesaurus"></a>FT_IFTS_THESAURUS|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_version_manager"></a>FT_IFTS_VERSION_MANAGER|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
+| <a id="ft_ifts_work_queue"></a>FT_IFTS_WORK_QUEUE|Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL22-md](../../includes/sssql22-md.md)] CU 1 and later versions. |
 | <a id="ft_iftshc_mutex"></a>FT_IFTSHC_MUTEX | Full-text is waiting on an fdhost control operation. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="ft_iftsism_mutex"></a>FT_IFTSISM_MUTEX | Full-text is waiting on communication operation. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="ft_master_merge"></a>FT_MASTER_MERGE | Full-text is waiting on master merge operation. Documented for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
@@ -467,7 +502,7 @@ GO
 | <a id="md_lazycache_rwlock"></a>MD_LAZYCACHE_RWLOCK | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="memory_allocation_ext"></a>MEMORY_ALLOCATION_EXT | Occurs while allocating memory from either the internal [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] memory pool or the operation system.<br /><br />**Applies to**: [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)] and later versions. |
 | <a id="memory_grant_update"></a>MEMORY_GRANT_UPDATE | Internal use only.<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions. |
-| <a id="metadata_lazycache_rwlock"></a>METADATA_LAZYCACHE_RWLOCK | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="metadata_lazycache_rwlock"></a>METADATA_LAZYCACHE_RWLOCK | Internal use only.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="migrationbuffer"></a>MIGRATIONBUFFER | Internal use only.<br /><br />**Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions. |
 | <a id="miscellaneous"></a>MISCELLANEOUS | Identified for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="msql_dq"></a>MSQL_DQ | Occurs when a task is waiting for a distributed query operation to finish. This is used to detect potential Multiple Active Result Set (MARS) application deadlocks. The wait ends when the distributed query call finishes. |
@@ -504,8 +539,8 @@ GO
 | <a id="physical_seeding_dmv"></a>PHYSICAL_SEEDING_DMV | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
 | <a id="pool_log_rate_governor"></a>POOL_LOG_RATE_GOVERNOR | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)] and later versions. |
 | <a id="preemptive_abr"></a>PREEMPTIVE_ABR | Identified for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
-| <a id="preemptive_audit_access_eventlog"></a>PREEMPTIVE_AUDIT_ACCESS_EVENTLOG | Occurs when the [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] Operating System (SQLOS) scheduler switches to preemptive mode to write an audit event to the Windows event log.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
-| <a id="preemptive_audit_access_seclog"></a>PREEMPTIVE_AUDIT_ACCESS_SECLOG | Occurs when the SQLOS scheduler switches to preemptive mode to write an audit event to the Windows Security log.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="preemptive_audit_access_eventlog"></a>PREEMPTIVE_AUDIT_ACCESS_EVENTLOG | Occurs when the [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] Operating System (SQLOS) scheduler switches to preemptive mode to write an audit event to the Windows event log.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
+| <a id="preemptive_audit_access_seclog"></a>PREEMPTIVE_AUDIT_ACCESS_SECLOG | Occurs when the SQLOS scheduler switches to preemptive mode to write an audit event to the Windows Security log.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="preemptive_closebackupmedia"></a>PREEMPTIVE_CLOSEBACKUPMEDIA | Occurs when the SQLOS scheduler switches to preemptive mode to close backup media. |
 | <a id="preemptive_closebackuptape"></a>PREEMPTIVE_CLOSEBACKUPTAPE | Occurs when the SQLOS scheduler switches to preemptive mode to close a tape backup device. |
 | <a id="preemptive_closebackupvdidevice"></a>PREEMPTIVE_CLOSEBACKUPVDIDEVICE | Occurs when the SQLOS scheduler switches to preemptive mode to close a virtual backup device. |
@@ -662,7 +697,7 @@ GO
 | <a id="preemptive_os_setfilevaliddata"></a>PREEMPTIVE_OS_SETFILEVALIDDATA | Internal use only. |
 | <a id="preemptive_os_setnamedsecurityinfo"></a>PREEMPTIVE_OS_SETNAMEDSECURITYINFO | Internal use only. |
 | <a id="preemptive_os_sqlclrops"></a>PREEMPTIVE_OS_SQLCLROPS | Internal use only. |
-| <a id="preemptive_os_sqmlaunch"></a>PREEMPTIVE_OS_SQMLAUNCH | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] through [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)]. |
+| <a id="preemptive_os_sqmlaunch"></a>PREEMPTIVE_OS_SQMLAUNCH | Internal use only.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] through [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)]. |
 | <a id="preemptive_os_verifysignature"></a>PREEMPTIVE_OS_VERIFYSIGNATURE | Internal use only. |
 | <a id="preemptive_os_verifytrust"></a>PREEMPTIVE_OS_VERIFYTRUST | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)] and later versions. |
 | <a id="preemptive_os_vssops"></a>PREEMPTIVE_OS_VSSOPS | Internal use only. |
@@ -761,8 +796,8 @@ GO
 | <a id="qry_mem_grant_info_mutex"></a>QRY_MEM_GRANT_INFO_MUTEX | Occurs when Query Execution memory management tries to control access to static grant information list. This state lists information about the current granted and waiting memory requests. This state is a simple access control state. There should never be a long wait on this state. If this mutex isn't released, all new memory-using queries will stop responding. |
 | <a id="qry_parallel_thread_mutex"></a>QRY_PARALLEL_THREAD_MUTEX | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="qry_profile_list_mutex"></a>QRY_PROFILE_LIST_MUTEX | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)] and later versions. |
-| <a id="query_errhdl_service_done"></a>QUERY_ERRHDL_SERVICE_DONE | Identified for informational purposes only. Not supported.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
-| <a id="query_wait_errhdl_service"></a>QUERY_WAIT_ERRHDL_SERVICE | Identified for informational purposes only. Not supported.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="query_errhdl_service_done"></a>QUERY_ERRHDL_SERVICE_DONE | Identified for informational purposes only. Not supported.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
+| <a id="query_wait_errhdl_service"></a>QUERY_WAIT_ERRHDL_SERVICE | Identified for informational purposes only. Not supported.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="query_execution_index_sort_event_open"></a>QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN | Occurs in certain cases when offline create index build is run in parallel, and the different worker threads that are sorting synchronize access to the sort files. |
 | <a id="query_notification_mgr_mutex"></a>QUERY_NOTIFICATION_MGR_MUTEX | Occurs during synchronization of the garbage collection queue in the Query Notification Manager. |
 | <a id="query_notification_subscription_mutex"></a>QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX | Occurs during state synchronization for transactions in Query Notifications. |
@@ -800,7 +835,7 @@ GO
 | <a id="resource_semaphore"></a>RESOURCE_SEMAPHORE | Occurs when a query memory request during query execution can't be granted immediately due to other concurrent queries. High waits and wait times may indicate excessive number of concurrent queries, or excessive memory request amounts. Excessive waits of this type may raise SQL [error 8645](../errors-events/mssqlserver-8645-database-engine-error.md), "A time out occurred while waiting for memory resources to execute the query. Rerun the query."<br /><br />For detailed information and troubleshooting ideas on memory grant waits, see [Memory Grants: The mysterious SQL Server memory consumer with Many Names](https://techcommunity.microsoft.com/t5/sql-server-support/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994). |
 | <a id="resource_semaphore_mutex"></a>RESOURCE_SEMAPHORE_MUTEX | Occurs while a query waits for its request for a thread reservation to be fulfilled. It also occurs when synchronizing query compile and memory grant requests. |
 | <a id="resource_semaphore_query_compile"></a>RESOURCE_SEMAPHORE_QUERY_COMPILE | Occurs when the number of concurrent query compilations reaches a throttling limit. High waits and wait times may indicate excessive compilations, recompiles, or uncacheable plans. |
-| <a id="resource_semaphore_small_query"></a>RESOURCE_SEMAPHORE_SMALL_QUERY | Occurs when memory request by a small query can't be granted immediately due to other concurrent queries. Wait time shouldn't exceed more than a few seconds, because the server transfers the request to the main query memory pool if it fails to grant the requested memory within a few seconds. High waits may indicate an excessive number of concurrent small queries while the main memory pool is blocked by waiting queries.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="resource_semaphore_small_query"></a>RESOURCE_SEMAPHORE_SMALL_QUERY | Occurs when memory request by a small query can't be granted immediately due to other concurrent queries. Wait time shouldn't exceed more than a few seconds, because the server transfers the request to the main query memory pool if it fails to grant the requested memory within a few seconds. High waits may indicate an excessive number of concurrent small queries while the main memory pool is blocked by waiting queries.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="restore_filehandlecache_entrylock"></a>RESTORE_FILEHANDLECACHE_ENTRYLOCK | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)] and later versions. |
 | <a id="restore_filehandlecache_lock"></a>RESTORE_FILEHANDLECACHE_LOCK | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)] and later versions. |
 | <a id="rg_reconfig"></a>RG_RECONFIG | Internal use only. |
@@ -856,13 +891,13 @@ GO
 | <a id="socketduplicatequeue_cleanup"></a>SOCKETDUPLICATEQUEUE_CLEANUP | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL16-md](../../includes/sssql16-md.md)] and later versions. |
 | <a id="sos_callback_removal"></a>SOS_CALLBACK_REMOVAL | Occurs while performing synchronization on a callback list in order to remove a callback. It isn't expected for this counter to change after server initialization is completed. |
 | <a id="sos_dispatcher_mutex"></a>SOS_DISPATCHER_MUTEX | Occurs during internal synchronization of the dispatcher pool. This includes when the pool is being adjusted. |
-| <a id="sos_localallocatorlist"></a>SOS_LOCALALLOCATORLIST | Occurs during internal synchronization in the [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] memory manager.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="sos_localallocatorlist"></a>SOS_LOCALALLOCATORLIST | Occurs during internal synchronization in the [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)] memory manager.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="sos_memory_toplevelblockallocator"></a>SOS_MEMORY_TOPLEVELBLOCKALLOCATOR | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="sos_memory_usage_adjustment"></a>SOS_MEMORY_USAGE_ADJUSTMENT | Occurs when memory usage is being adjusted among pools. |
 | <a id="sos_object_store_destroy_mutex"></a>SOS_OBJECT_STORE_DESTROY_MUTEX | Occurs during internal synchronization in memory pools when destroying objects from the pool. |
 | <a id="sos_phys_page_cache"></a>SOS_PHYS_PAGE_CACHE | Accounts for the time a thread waits to acquire the mutex it must acquire before it allocates physical pages or before it returns those pages to the operating system. Waits on this type only appear if the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses AWE memory.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="sos_process_affinity_mutex"></a>SOS_PROCESS_AFFINITY_MUTEX | Occurs during synchronizing of access to process affinity settings. |
-| <a id="sos_reservedmemblocklist"></a>SOS_RESERVEDMEMBLOCKLIST | Occurs during internal synchronization in the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="sos_reservedmemblocklist"></a>SOS_RESERVEDMEMBLOCKLIST | Occurs during internal synchronization in the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="sos_scheduler_yield"></a>SOS_SCHEDULER_YIELD | Occurs when a task voluntarily yields the scheduler for other tasks to execute. During this wait, the task is waiting in a runnable queue for its quantum to be renewed, that is, waiting to be scheduled to run on the CPU again. Prolonged waits on this wait type most frequently indicate opportunities to optimize queries that perform index or table scans. Focus on plan regression, missing index, stats updates, and query rewrites. Optimizing runtimes reduces the need for tasks to be yielding multiple times. If query times for such CPU-consuming tasks are acceptable, then this wait type is expected and can be ignored. |
 | <a id="sos_small_page_alloc"></a>SOS_SMALL_PAGE_ALLOC | Occurs during the allocation and freeing of memory that is managed by some memory objects. |
 | <a id="sos_stackstore_init_mutex"></a>SOS_STACKSTORE_INIT_MUTEX | Occurs during synchronization of internal store initialization. |
@@ -886,12 +921,12 @@ GO
 | <a id="sqlclr_quantum_punishment"></a>SQLCLR_QUANTUM_PUNISHMENT | Occurs when a CLR task is throttled because it has exceeded its execution quantum. This throttling is done in order to reduce the effect of this resource-intensive task on other tasks. |
 | <a id="sqlsort_normmutex"></a>SQLSORT_NORMMUTEX | Occurs during internal synchronization, while initializing internal sorting structures. |
 | <a id="sqlsort_sortmutex"></a>SQLSORT_SORTMUTEX | Occurs during internal synchronization, while initializing internal sorting structures. |
-| <a id="sqltrace_buffer_flush"></a>SQLTRACE_BUFFER_FLUSH | Occurs when a task is waiting for a background task to flush trace buffers to disk every four seconds.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="sqltrace_buffer_flush"></a>SQLTRACE_BUFFER_FLUSH | Occurs when a task is waiting for a background task to flush trace buffers to disk every four seconds.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="sqltrace_file_buffer"></a>SQLTRACE_FILE_BUFFER | Occurs during synchronization on trace buffers during a file trace.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="sqltrace_file_read_io_completion"></a>SQLTRACE_FILE_READ_IO_COMPLETION | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="sqltrace_file_write_io_completion"></a>SQLTRACE_FILE_WRITE_IO_COMPLETION | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="sqltrace_incremental_flush_sleep"></a>SQLTRACE_INCREMENTAL_FLUSH_SLEEP | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
-| <a id="sqltrace_lock"></a>SQLTRACE_LOCK | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="sqltrace_lock"></a>SQLTRACE_LOCK | Internal use only.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="sqltrace_pending_buffer_writers"></a>SQLTRACE_PENDING_BUFFER_WRITERS | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="sqltrace_shutdown"></a>SQLTRACE_SHUTDOWN | Occurs while trace shutdown waits for outstanding trace events to complete. |
 | <a id="sqltrace_wait_entries"></a>SQLTRACE_WAIT_ENTRIES | Occurs while a SQL Trace event queue waits for packets to arrive on the queue. |
@@ -982,7 +1017,7 @@ GO
 | <a id="xe_live_target_tvf"></a>XE_LIVE_TARGET_TVF | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="xe_modulemgr_sync"></a>XE_MODULEMGR_SYNC | Identified for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
 | <a id="xe_ols_lock"></a>XE_OLS_LOCK | Identified for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
-| <a id="xe_package_lock_backoff"></a>XE_PACKAGE_LOCK_BACKOFF | Identified for informational purposes only. Not supported.<br /><br />**Applies to**: [!INCLUDE [ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |
+| <a id="xe_package_lock_backoff"></a>XE_PACKAGE_LOCK_BACKOFF | Identified for informational purposes only. Not supported.<br /><br />**Applies to**: [!INCLUDE [sql2008r2_md](../../includes/sql2008r2-md.md)] only. |
 | <a id="xe_services_eventmanual"></a>XE_SERVICES_EVENTMANUAL | Internal use only. |
 | <a id="xe_services_mutex"></a>XE_SERVICES_MUTEX | Internal use only. |
 | <a id="xe_services_rwlock"></a>XE_SERVICES_RWLOCK | Internal use only. |

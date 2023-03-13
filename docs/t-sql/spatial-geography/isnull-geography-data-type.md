@@ -1,22 +1,18 @@
 ---
+title: "IsNull (geography Data Type)"
 description: "IsNull (geography Data Type)"
-title: "IsNull (geography Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "IsNull (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "IsNull method"
-ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "IsNull (geography Data Type)"
+helpviewer_keywords:
+  - "IsNull method"
+dev_langs:
+  - "TSQL"
 ---
 # IsNull (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

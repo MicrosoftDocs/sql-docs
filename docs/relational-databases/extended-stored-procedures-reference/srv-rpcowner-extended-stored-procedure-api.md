@@ -4,9 +4,8 @@ description: Learn how srv_rpcowner in the Extended Stored Procedure API returns
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_rpcowner"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_rpcowner
 apitype: "DLLExport"
-ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 ---
 # srv_rpcowner (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

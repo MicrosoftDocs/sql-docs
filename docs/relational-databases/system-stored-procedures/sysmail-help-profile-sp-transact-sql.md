@@ -1,30 +1,26 @@
 ---
+title: "sysmail_help_profile_sp (Transact-SQL)"
 description: "sysmail_help_profile_sp (Transact-SQL)"
-title: "sysmail_help_profile_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_help_profile_sp_TSQL"
-  - "sysmail_help_profile_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_help_profile_sp"
-ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_help_profile_sp_TSQL"
+  - "sysmail_help_profile_sp"
+helpviewer_keywords:
+  - "sysmail_help_profile_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists information about one or more mail profiles.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

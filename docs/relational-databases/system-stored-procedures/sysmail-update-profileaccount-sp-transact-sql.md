@@ -1,30 +1,26 @@
 ---
+title: "sysmail_update_profileaccount_sp (Transact-SQL)"
 description: "sysmail_update_profileaccount_sp (Transact-SQL)"
-title: "sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_update_profileaccount_sp_TSQL"
-  - "sysmail_update_profileaccount_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_update_profileaccount_sp"
-ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_update_profileaccount_sp_TSQL"
+  - "sysmail_update_profileaccount_sp"
+helpviewer_keywords:
+  - "sysmail_update_profileaccount_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the sequence number of an account within a Database Mail profile.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

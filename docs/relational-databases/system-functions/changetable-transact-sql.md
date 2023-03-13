@@ -1,24 +1,20 @@
 ---
+title: "CHANGETABLE (Transact-SQL)"
 description: "CHANGETABLE (Transact-SQL)"
-title: "CHANGETABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "CHANGETABLE_TSQL"
-  - "CHANGETABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CHANGETABLE"
-  - "change tracking [SQL Server], CHANGETABLE"
-ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "02/12/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "CHANGETABLE_TSQL"
+  - "CHANGETABLE"
+helpviewer_keywords:
+  - "CHANGETABLE"
+  - "change tracking [SQL Server], CHANGETABLE"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGETABLE (Transact-SQL)
@@ -26,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Returns change tracking information for a table. You can use this statement to return all changes for a table or change tracking information for a specific row.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

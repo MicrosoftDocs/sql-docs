@@ -4,16 +4,14 @@ description: Scalar Types Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "scalar types catalog views"
   - "catalog views [SQL Server], scalar types"
 dev_langs:
   - "TSQL"
-ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 ---
 # Scalar Types Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

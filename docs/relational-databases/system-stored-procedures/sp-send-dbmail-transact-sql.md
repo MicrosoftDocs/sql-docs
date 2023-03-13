@@ -1,31 +1,27 @@
 ---
+title: "sp_send_dbmail (Transact-SQL)"
 description: "sp_send_dbmail (Transact-SQL)"
-title: "sp_send_dbmail (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "08/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sendmail_sp_TSQL"
   - "sendmail_sp"
   - "SP_SEND_DBMAIL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_send_dbmail"
-ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_send_dbmail (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Sends an e-mail message to the specified recipients. The message may include a query result set, file attachments, or both. When mail is successfully placed in the Database Mail queue, **sp_send_dbmail** returns the **mailitem_id** of the message. This stored procedure is in the **msdb** database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

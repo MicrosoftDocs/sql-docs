@@ -1,15 +1,12 @@
 ---
+title: "User Interface Reference (MySQLToSQL)"
 description: "User Interface Reference (MySQLToSQL)"
-title: "User Interface Reference (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # User Interface Reference (MySQLToSQL)
 This section includes Help topics for SQL Server Migration Assistant (SSMA) for MySQL.  

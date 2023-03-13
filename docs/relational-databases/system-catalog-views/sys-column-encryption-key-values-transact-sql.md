@@ -4,9 +4,8 @@ description: sys.column_encryption_key_values (Transact-SQL)
 author: jaszymas
 ms.author: jaszymas
 ms.date: "10/15/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "column_encryption_key_values"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.column_encryption_key_values catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_encryption_key_values (Transact-SQL)

@@ -1,18 +1,14 @@
 ---
-title: "SQL Server Certificates and Asymmetric Keys | Microsoft Docs"
+title: "SQL Server Certificates and Asymmetric Keys"
 description: Learn about certificates and asymmetric keys in SQL Server, including externally generated or SQL Server generated certificates, tools, and related tasks.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "security [SQL Server], certificates and asymmetric keys"
-ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "security [SQL Server], certificates and asymmetric keys"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Certificates and Asymmetric Keys

@@ -1,14 +1,13 @@
 ---
+title: "Set Package Properties"
 description: "Set Package Properties"
-title: "Set Package Properties | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, properties"
   - "properties [Integration Services]"
   - "checkpoints [Integration Services]"
@@ -23,9 +22,6 @@ helpviewer_keywords:
   - "security properties [Integration Services]"
   - "version properties [Integration Services]"
   - "SQL Server Integration Services packages, properties"
-ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: chugugrace
-ms.author: chugu
 ---
 # Set Package Properties
 

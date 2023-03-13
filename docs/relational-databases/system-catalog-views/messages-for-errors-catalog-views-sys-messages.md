@@ -4,9 +4,8 @@ description: Messages (for errors) Catalog Views - sys.messages
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "messages_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "error numbers [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 ---
 # Messages (for errors) Catalog Views - sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

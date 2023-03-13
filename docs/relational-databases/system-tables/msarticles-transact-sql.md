@@ -4,9 +4,8 @@ description: MSarticles (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSarticles"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSarticles system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 ---
 # MSarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

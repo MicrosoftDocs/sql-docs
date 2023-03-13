@@ -4,14 +4,13 @@ description: UDTs, written in .NET Framework CLR languages, allow a SQL Server d
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "ADO.NET [CLR integration]"
   - "UDTs [CLR integration], ADO.NET"
   - "user-defined types [CLR integration], ADO.NET"
-ms.assetid: 4b0d876c-8066-490e-8e18-327c0e942b19
 ---
 # Accessing User-Defined Types in ADO.NET
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

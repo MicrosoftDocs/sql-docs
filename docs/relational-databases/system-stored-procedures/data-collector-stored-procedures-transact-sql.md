@@ -1,22 +1,18 @@
 ---
+title: "Data Collector Stored Procedures (Transact-SQL)"
 description: "Data Collector Stored Procedures (Transact-SQL)"
-title: "Data Collector Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stored procedures [SQL Server], data collector"
   - "system stored procedures [SQL Server], data collector"
   - "data collector [SQL Server], stored procedures"
-ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # Data Collector Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

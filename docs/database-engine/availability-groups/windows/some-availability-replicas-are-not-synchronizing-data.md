@@ -4,10 +4,9 @@ description: "Possible causes and resolutions for when one or more availability 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.agdashboard.agp4synchronizing.issues.f1"
 helpviewer_keywords:

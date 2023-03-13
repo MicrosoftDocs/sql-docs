@@ -1,17 +1,15 @@
 ---
 title: "Columns with a name"
 description: Learn about columns with a name in SQL queries and the specific conditions in which rowset columns with a name are mapped to the resulting XML.
-ms.custom: "fresh2019may"
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "names [SQL Server], columns with"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Columns with a name
 

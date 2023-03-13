@@ -1,31 +1,27 @@
 ---
+title: "sp_syscollector_set_cache_directory (Transact-SQL)"
 description: "sp_syscollector_set_cache_directory (Transact-SQL)"
-title: "sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syscollector_set_cache_directory_TSQL"
-  - "sp_syscollector_set_cache_directory"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "data collector [SQL Server], stored procedures"
-  - "sp_syscollector_set_cache_directory stored procedure"
-ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syscollector_set_cache_directory_TSQL"
+  - "sp_syscollector_set_cache_directory"
+helpviewer_keywords:
+  - "data collector [SQL Server], stored procedures"
+  - "sp_syscollector_set_cache_directory stored procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies the directory where collected data is stored before it is uploaded to the management data warehouse.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

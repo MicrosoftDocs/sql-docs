@@ -1,20 +1,16 @@
 ---
+title: "ODBC Data Sources subkey"
 description: "ODBC Data Sources subkey"
-title: "ODBC Data Sources subkey | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "09/23/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "subkeys [ODBC], for data sources"
   - "data sources [ODBC], subkeys"
   - "registry entries for data sources [ODBC], subkeys"
-ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
-author: David-Engel
-ms.author: v-davidengel
 ---
 # ODBC Data Sources subkey
 

@@ -4,9 +4,8 @@ description: sys.synonyms (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.synonyms_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.synonyms catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d6e88ca6-6e3d-4f56-bd3e-d85e26be5499
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.synonyms (Transact-SQL)

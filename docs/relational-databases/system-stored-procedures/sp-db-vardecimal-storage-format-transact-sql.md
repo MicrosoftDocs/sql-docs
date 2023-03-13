@@ -1,33 +1,29 @@
 ---
+title: "sp_db_vardecimal_storage_format (Transact-SQL)"
 description: "sp_db_vardecimal_storage_format (Transact-SQL)"
-title: "sp_db_vardecimal_storage_format (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_db_vardecimal_storage_format"
   - "sp_db_vardecimal_storage_format_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_db_vardecimal_storage_format"
   - "decimal data type, compressing"
   - "compressing decimal data"
   - "numeric data type, compressing"
   - "database compression [SQL Server]"
   - "table compression [SQL Server]"
-ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns the current vardecimal storage format state of a database or enables a database for vardecimal storage format.  Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], user databases are always enabled. Enabling databases for the vardecimal storage format is only necessary in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+  Returns the current vardecimal storage format state of a database or enables a database for vardecimal storage format.  Starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], user databases are always enabled. Enabling databases for the vardecimal storage format is only necessary in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 > [!NOTE]  
 > [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] supports the vardecimal storage format; however, because row-level compression achieves the same goals, the vardecimal storage format is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
@@ -51,7 +47,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Specifies whether the vardecimal storage format is enabled. @vardecimal_storage_format can be ON or OFF. The parameter is **varchar(3)**, with no default. If a database name is provided but @vardecimal_storage_format is omitted, the current setting of the specified database is returned. 
  
  > [!IMPORTANT]
- > This argument has no effect on [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions.  
+ > This argument has no effect on [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later versions.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

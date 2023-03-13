@@ -4,8 +4,8 @@ description: CLR routines can access data from within a CLR database object by u
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], data access"
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "managed code [SQL Server], data access"
   - "SqlClient provider"
   - "in-process data access providers [CLR integration]"
-ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 ---
 # Data Access from CLR Database Objects
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

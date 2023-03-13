@@ -1,21 +1,17 @@
 ---
-title: "Deprecated features in SQL Server Reporting Services | Microsoft Docs"
-description: Learn about the deprecated features in the different versions of SQL Server Reporting Services. The features are still available in the release in which they are deprecated. 
+title: "Deprecated features in SQL Server Reporting Services"
+description: Learn about the deprecated features in the different versions of SQL Server Reporting Services. The features are still available in the release in which they are deprecated.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/2/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Reporting Services, backward compatibility"
   - "deprecated features [Reporting Services]"
   - "HTML OWC rendering extension [Reporting Services]"
   - "Report Server Web service, endpoints"
-ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Deprecated features in SQL Server Reporting Services

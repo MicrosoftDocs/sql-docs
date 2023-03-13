@@ -1,16 +1,12 @@
 ---
+title: "Working with the Oracle CDC Service"
 description: "Working with the Oracle CDC Service"
-title: "Working with the Oracle CDC Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Working with the Oracle CDC Service
 

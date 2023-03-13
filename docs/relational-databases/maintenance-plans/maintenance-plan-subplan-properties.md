@@ -4,14 +4,12 @@ description: Maintenance Plan (Subplan Properties)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.maint.maintplanproperties.general.f1"
   - "sql13.swb.maint.subplanproperties.f1"
-ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 ---
 # Maintenance Plan (Subplan Properties)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

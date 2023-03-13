@@ -1,15 +1,13 @@
 ---
 title: SQL Server PowerShell
 description: Learn about the two SQL Server PowerShell modules, SqlServer and SQLPS, which include PowerShell Providers and cmdlets.
-ms.prod: sql
-ms.technology: sql-server-powershell
-ms.topic: conceptual
-ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot
-ms.custom: ""
 ms.date: 06/11/2020
+ms.service: sql
+ms.subservice: sql-server-powershell
+ms.topic: conceptual
 ---
 
 # SQL Server PowerShell

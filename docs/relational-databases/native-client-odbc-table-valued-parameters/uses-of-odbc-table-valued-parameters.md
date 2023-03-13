@@ -1,19 +1,15 @@
 ---
+title: "Uses of ODBC Table-Valued Parameters"
 description: "Uses of ODBC Table-Valued Parameters"
-title: "Uses of ODBC Table-Valued Parameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters (ODBC), scenarios"
-  - "ODBC, table-valued parameters"
-ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters (ODBC), scenarios"
+  - "ODBC, table-valued parameters"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Uses of ODBC Table-Valued Parameters

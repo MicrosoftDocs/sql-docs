@@ -4,8 +4,8 @@ description: "This example should be considered a proof of concept showing how t
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "07/23/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
@@ -147,7 +147,7 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
     var TYPES = require('tedious').TYPES;  
   
     function executeStatement1() {  
-        request = new Request("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES (@Name, @Number, @Cost, @Price, CURRENT_TIMESTAMP);", function(err) {  
+        var request = new Request("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES (@Name, @Number, @Cost, @Price, CURRENT_TIMESTAMP);", function(err) {  
          if (err) {  
             console.log(err);}  
         });  

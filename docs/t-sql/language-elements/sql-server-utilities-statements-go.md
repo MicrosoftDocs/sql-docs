@@ -3,13 +3,10 @@ title: "SQL Server Utilities Statements - GO"
 description: "SQL Server Utilities Statements - GO"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "07/27/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "GO"
   - "GO_TSQL"
@@ -27,7 +24,7 @@ dev_langs:
   
   GO signals the end of a batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

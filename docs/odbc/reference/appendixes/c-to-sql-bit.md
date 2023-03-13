@@ -1,20 +1,16 @@
 ---
+title: "C to SQL: Bit"
 description: "C to SQL: Bit"
-title: "C to SQL: Bit | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "converting data from c to SQL types [ODBC], bit"
   - "bit data type [ODBC]"
   - "data conversions from C to SQL types [ODBC], bit"
-ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
-author: David-Engel
-ms.author: v-davidengel
 ---
 # C to SQL: Bit
 The identifier for the bit ODBC C data type is:  

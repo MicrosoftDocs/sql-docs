@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 09/16/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "access check cache option"
@@ -38,7 +38,7 @@ The default values of `0` indicate that [!INCLUDE[ssNoVersion](../../includes/ss
 |**Access check cache quota**|x64|1,024|
 |**Access check cache bucket count**|x64|256|
 
-#### [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] to [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)]
+#### [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] to [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)]
 
 | &nbsp; |Server architecture|Default number of entries|
 |---|---|---|

@@ -1,25 +1,25 @@
 ---
 title: "Update from MDAC"
 description: Upgrade from Windows Data Access Components to SQL Server Native Client, which exposes new features of SQL Server 2005 with backward compatibility.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MDAC [SQL Server]"
   - "SQLNCLI, vs. MDAC"
   - "SQL Server Native Client, vs. MDAC"
   - "data access [SQL Server Native Client], vs. MDAC"
   - "SQL Server Native Client, updating applications"
-ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating an Application to SQL Server Native Client from MDAC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   There are a number of differences between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and Microsoft Data Access Components (MDAC; starting with Windows Vista, the data access components are now called Windows Data Access Components, or Windows DAC). Although both provide native data access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client has been specifically designed to expose the new features of [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], while at the same time maintaining backward compatibility with earlier versions.  
   

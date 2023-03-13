@@ -4,15 +4,14 @@ description: In SQL Server CLR integration, a lightweight local transaction can 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "distributed transactions [CLR integration]"
   - "promoting transactions [CLR integration]"
   - "Enlist keyword"
   - "transaction promotion [CLR integration]"
-ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 ---
 # Transaction Promotion
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

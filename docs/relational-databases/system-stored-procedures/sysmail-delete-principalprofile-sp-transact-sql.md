@@ -1,30 +1,26 @@
 ---
+title: "sysmail_delete_principalprofile_sp (Transact-SQL)"
 description: "sysmail_delete_principalprofile_sp (Transact-SQL)"
-title: "sysmail_delete_principalprofile_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_delete_principalprofile_sp_TSQL"
-  - "sysmail_delete_principalprofile_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_delete_principalprofile_sp"
-ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_delete_principalprofile_sp_TSQL"
+  - "sysmail_delete_principalprofile_sp"
+helpviewer_keywords:
+  - "sysmail_delete_principalprofile_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes permission for a database user or role to use a public or private Database Mail profile.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,15 +1,13 @@
 ---
 title: Load data into Azure Synapse Analytics with SQL Server Integration Services (SSIS)
 description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources into a dedicated SQL pool in Azure Synapse Analytics.
-documentationcenter: NA
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.technology: integration-services
+author: chugugrace
+ms.author: chugu
+ms.date: 08/09/2018
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.custom: loading
-ms.date: 08/09/2018
-ms.author: chugu
-author: chugugrace
 ---
 # Load data into a dedicated SQL pool in Azure Synapse Analytics with SQL Server Integration Services (SSIS)
 

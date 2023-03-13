@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "catalog views [SQL Server], full-text search"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], catalog views"
 dev_langs:
   - "TSQL"
-ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 ---
 # Full-Text Search and Semantic Search Catalog Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

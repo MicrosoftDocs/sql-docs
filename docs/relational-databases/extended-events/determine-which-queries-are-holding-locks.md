@@ -4,9 +4,8 @@ description: This article shows a method of finding which query holds a lock. Da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/18/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 helpviewer_keywords:
   - "queries [SQL Server], extended events"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "xe"
   - "extended events [SQL Server], locks"
   - "extended events [SQL Server], holding locks"
-ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determine Which Queries Are Holding Locks

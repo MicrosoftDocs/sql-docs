@@ -1,19 +1,19 @@
 ---
 title: Troubleshoot SQL Server on Linux
-description: Troubleshoot SQL Server running on Linux or in a Docker container. Learn where to find information about supported features and known limitations.
-author: VanMSFT 
+description: Troubleshoot SQL Server running on Linux or in a Linux container. Learn where to find information about supported features and known limitations.
+author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 02/24/2022
+ms.service: sql
+ms.subservice: linux
 ms.topic: troubleshooting
-ms.prod: sql
-ms.technology: linux
 ---
 # Troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Docker container. When troubleshooting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes-2017.md).
+This article describes how to troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Linux container. When troubleshooting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes-2017.md).
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
@@ -74,7 +74,7 @@ You can stop or restart the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 ## Access the log files
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] logs to the `/var/opt/mssql/log/errorlog` file in both the Linux and Docker installations. You need to be in **superuser** mode to browse this directory.
+The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] logs to the `/var/opt/mssql/log/errorlog` file in both the Linux and container installations. You need to be in **superuser** mode to browse this directory.
 
 The installer logs here: `/var/opt/mssql/setup-<time stamp representing time of install>`
 You can browse the errorlog files with any UTF-16 compatible tool like **vim** or **cat** like this:

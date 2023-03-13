@@ -1,16 +1,14 @@
 ---
 title: "Grant Permissions on a Stored Procedure"
 description: Learn how to grant permissions on a stored procedure in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: FY22Q2Fresh
-ms.date: "10/21/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: stored-procedures
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "stored procedures [SQL Server], permissions"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "10/21/2021"
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: conceptual
+helpviewer_keywords:
+  - "stored procedures [SQL Server], permissions"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Grant Permissions on a Stored Procedure

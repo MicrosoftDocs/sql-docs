@@ -1,23 +1,19 @@
 ---
 title: Attributes
 description: Learn about attributes, which are objects in Master Data Services entities. Attribute values describe the members of the entity.
-ms.custom: ""
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "free-form attributes [Master Data Services]"
   - "attributes [Master Data Services], about attributes"
   - "attributes [Master Data Services], file attributes"
   - "file attributes [Master Data Services]"
   - "attributes [Master Data Services], free-form attributes"
   - "attributes [Master Data Services]"
-ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Attributes (Master Data Services)
 

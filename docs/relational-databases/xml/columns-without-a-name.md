@@ -1,17 +1,15 @@
 ---
 title: "Columns without a Name"
 description: Learn how SQL Server treats columns without a name when generating XML.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "names [SQL Server], columns without"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Columns without a Name
 

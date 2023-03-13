@@ -8,7 +8,6 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: overview
-ms.custom: seo-lt-2019
 editor: monicar
 tags: azure-service-management
 ---
@@ -106,6 +105,9 @@ For example, to explicitly connect using TCP/IP to the AG database AdventureWork
 
 ## Deployment options
 
+> [!TIP]
+> Eliminate the need for an Azure Load Balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+
 There are multiple options for deploying an availability group to SQL Server on Azure VMs, some with more automation than others. 
 
 The following table provides a comparison of the options available:
@@ -116,17 +118,17 @@ The following table provides a comparison of the options available:
 |**SQL Server edition** |Enterprise |Enterprise |Enterprise |Enterprise, Standard|Enterprise, Standard|
 |**Windows Server version**| 2016 + | 2016 + | 2016 + | All| All|
 |**Creates the cluster for you**|Yes|Yes | Yes |No| No| 
-|**Creates the availability group for you** |Yes |No|No|No| No| 
-|**Creates listener and load balancer independently** |No|No|No|Yes|N/A|
-|**Possible to create DNN listener using this method?**|No|No|No|Yes|N/A|
+|**Creates the availability group and listener for you** |Yes |No|No|No| No| 
+|**Creates listener and load balancer independently** |N/A|No|No|Yes|N/A|
+|**Possible to create DNN listener using this method?**|N/A|No|No|Yes|N/A|
 |**WSFC quorum configuration**|Cloud witness|Cloud witness|Cloud witness|All|All|
 |**DR with multiple regions** |No|No|No|Yes|Yes|
-|**Multisubnet support** |No|No|No|N/A|Yes|
+|**Multisubnet support** |Yes|No|No|N/A|Yes|
 |**Support for an existing AD**|Yes|Yes|Yes|Yes|Yes|
 |**DR with multizone in the same region**|Yes|Yes|Yes|Yes|Yes|
 |**Distributed AG with no AD**|No|No|No|Yes| Yes| 
 |**Distributed AG with no cluster** |No|No|No|Yes|Yes|
-|**Requires load balancer or DNN**| Yes | Yes | Yes | Yes | No|
+|**Requires load balancer or DNN**| No | Yes | Yes | Yes | No|
 
 ## Next steps
 

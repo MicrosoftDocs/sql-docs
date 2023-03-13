@@ -1,12 +1,11 @@
 ---
+title: "Graph edge constraints"
 description: "Graph edge constraints"
-title: "Graph edge constraints | Microsoft Docs"
-ms.custom: ""
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: 09/09/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "edge constraints [SQL Server]"
@@ -14,9 +13,7 @@ helpviewer_keywords:
   - "edge constraints [Azure SQL Database]"
   - "graph edge constraints"
   - "SQL Graph"
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
+monikerRange: ">sql-server-2017||>sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Edge constraints
 

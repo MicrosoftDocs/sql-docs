@@ -4,11 +4,9 @@ description: Learn about Save-SqlMigrationReport, which evaluates the migration 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "07/30/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PowerShell Cmdlet for Migration Evaluation

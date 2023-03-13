@@ -4,8 +4,8 @@ description: Find out how to use sp_configure to display or change global config
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "09/18/2022"
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: reference
 helpviewer_keywords:
   - "PolyBase"
@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 
   Displays or changes global configuration settings for PolyBase Hadoop and Microsoft Azure Blob Storage connectivity.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

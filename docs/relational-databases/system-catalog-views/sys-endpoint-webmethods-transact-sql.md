@@ -4,9 +4,8 @@ description: sys.endpoint_webmethods (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.endpoint_webmethods_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "sys.endpoint_webmethods catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 ---
 # sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

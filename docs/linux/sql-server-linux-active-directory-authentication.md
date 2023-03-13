@@ -2,14 +2,13 @@
 title: "Tutorial: Use Active Directory authentication for SQL Server on Linux"
 titleSuffix: SQL Server
 description: This tutorial provides the configuration steps for Active Directory authentication for SQL Server on Linux.
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 09/27/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: tutorial
-ms.custom: seodec18
 helpviewer_keywords:
   - "Linux, AD authentication"
   - "Linux, Active Directory authentication"
@@ -45,7 +44,7 @@ Before you configure Active Directory Authentication, you need to:
 
 Join your SQL Server Linux host with an Active Directory domain controller. For information on how to join an active directory domain, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
 
-## <a id="createuser"></a> Create Active Directory user (or MSA) for SQL Server and set SPN
+## <a id="createuser"></a> Create Active Directory user for SQL Server and set SPN
 
 > [!NOTE]  
 > The following steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
@@ -81,7 +80,7 @@ For more information, see [Register a Service Principal Name for Kerberos Connec
 
 ## <a id="configurekeytab"></a> Configure SQL Server service keytab
 
-Configuring Active Directory authentication for SQL Server on Linux requires an Active Directory account (MSA or an Active Directory user account) and the SPN created in the previous section.
+Configuring Active Directory authentication for SQL Server on Linux requires an Active Directory user account and the SPN created in the previous section.
 
 > [!IMPORTANT]  
 > If the password for the Active Directory account is changed or the password for the account that the SPNs are assigned to is changed, you must update the keytab with the new password and Key Version Number (KVNO). Some services might also rotate the passwords automatically. Review any password rotation policies for the accounts in question and align them with scheduled maintenance activities to avoid unexpected downtime.
@@ -103,7 +102,7 @@ Configuring Active Directory authentication for SQL Server on Linux requires an 
 
 1. Using [**ktpass**](/windows-server/administration/windows-commands/ktpass), add keytab entries for each SPN using the following commands on a Windows machine Command Prompt:
 
-    - `<DomainName>\<UserName>` - Could be an MSA or Active Directory user account
+    - `<DomainName>\<UserName>` - Active Directory user account
     - `@CONTOSO.COM` - Use your domain name
     - `/kvno <#>` - Replace `<#>` with the KVNO obtained in an earlier step
     - `<StrongPassword>` - Use a strong password

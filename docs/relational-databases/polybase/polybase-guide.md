@@ -1,10 +1,14 @@
 ---
 title: "Introducing data virtualization with PolyBase"
-description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure Blob Storage.
+description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Azure Blob Storage.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
 ms.date: 08/22/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: "overview"
+ms.custom: intro-overview
 f1_keywords:
   - "PolyBase"
   - "PolyBase, guide"
@@ -15,13 +19,6 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-ms.custom:
-- contperf-fy21q2
-- intro-overview
-- event-tier1-build-2022
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: hudequei
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 
@@ -43,17 +40,17 @@ PolyBase provides these same functionalities for the following SQL products from
 
 - [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions (Windows)
 - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Windows and Linux)
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[pdw](../../includes/sspdw-md.md)] (PDW), hosted in the Analytics Platform System (APS) 
-- [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[pdw](../../includes/sspdw-md.md)]
+- [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 > [!NOTE]
-> Data virtualization using PolyBase feature is available in preview for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
+> Data virtualization using PolyBase feature is available for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
 
 ### SQL Server 2022 PolyBase enhancements
 
 | New to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Details |
 | :-- | :-- |
-| S3-compatible object storage | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] adds new connector, S3-compatible object storage, using the S3 REST API. You can use both `OPENROWSET` and `EXTERNAL TABLES` to query data files in S3 compatible object storage. |
+| S3-compatible object storage | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] adds new connector, S3-compatible object storage, using the S3 REST API. You can use both `OPENROWSET` and `EXTERNAL TABLES` to query data files in S3-compatible object storage. |
 | Some connectors separate from PolyBase services | The S3-compatible object storage connector, as well as ADSL Gen2, and Azure Blob Storage, are no longer dependent of PolyBase services. PolyBase services must still run to support connectivity with Oracle, Teradata, MongoDB, and Generic ODBC. The PolyBase feature must still be installed on your SQL Server instance. |
 | Parquet file format | PolyBase is now capable of querying data from Parquet files stored on S3-compatible object storage. For more information, see to [Virtualize parquet file in a S3-compatible object storage with PolyBase](polybase-virtualize-parquet-file.md). |
 | Delta table format | PolyBase is now capable of querying (read-only) data from Delta Table format stored on S3-compatible object storage, Azure Storage Account V2, and Azure Data Lake Storage Gen2. For more information, see to [Virtualize Delta Table format](virtualize-delta.md)|
@@ -67,7 +64,7 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 
  The PolyBase feature provides connectivity to the following external data sources:
 
-| External data sources     | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] with PolyBase | APS PDW | [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] |
+| External data sources     | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] with PolyBase | APS PDW | [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
 |:---------------------------|:-------------|:--|:------------|:---------------|
 | Oracle, MongoDB, Teradata                                 | Read               | Read               | **No**     | **No**     |  
 | Generic ODBC                                              | Read (Windows Only)| Read (Windows Only)| **No**     | **No**     |  
@@ -79,7 +76,7 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 * [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] does not support Hadoop.
 * [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
-* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-Compliant Storage connector.
+* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-compatible storage connector.
 
 
  Examples of external connectors include:
@@ -101,11 +98,9 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md).
 1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md).
 
-
-
 ### Azure integration
 
-With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
+With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
 
 ## Why use PolyBase?
 
@@ -122,9 +117,9 @@ PolyBase does not require you to install additional software to your Hadoop envi
 
 PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-- **Query data stored in Hadoop from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or PDW.** Users are storing data in cost-effective distributed and scalable systems, such as Hadoop. PolyBase makes it easy to query the data by using T-SQL.
-
 - **Query data stored in Azure Blob Storage.** Azure Blob Storage is a convenient place to store data for use by Azure services. PolyBase makes it easy to access the data by using T-SQL.
+
+- **Query data stored in Hadoop from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or PDW.** Users are storing data in cost-effective distributed and scalable systems, such as Hadoop. PolyBase makes it easy to query the data by using T-SQL.
 
 - **Import data from Hadoop, Azure Blob Storage, or Azure Data Lake Store.** Leverage the speed of Microsoft SQL's columnstore technology and analysis capabilities by importing data from Hadoop, Azure Blob Storage, or Azure Data Lake Store into relational tables. There is no need for a separate ETL or import tool.
 
@@ -142,14 +137,14 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 ## Upgrading to SQL Server 2022
 
-Starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Hadoop is no longer supported. Azure Storage connectors must be changed based on the reference table below:
+Starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH) are no longer supported. Due to these changes, it is required to manually drop PolyBase external data sources created on previous versions of SQL Server that use `TYPE = HADOOP` or Azure Storage before migrating to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Dropping external data sources also requires dropping the associated database objects, such as database scoped credentials and external tables.
+
+Azure Storage connectors must be changed based on the reference table below:
 
 | External Data Source | From | To |
 |:--|:--|:--|
 | Azure Blob Storage | wasb[s] | abs |
 | ADLS Gen 2 | abfs[s] | adls |
-
-Due to these changes, it is required to manually drop PolyBase external data sources created on previous versions of SQL Server that use `TYPE = HADOOP` or Azure Storage before migrating to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Dropping external data sources also requires dropping the associated database objects, such as database scoped credentials and external tables.
 
 ## Next steps
 

@@ -1,15 +1,12 @@
 ---
+title: "Connect to the Teradata source"
 description: "Connect to the Teradata source"
-title: "Connect to the Teradata source | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "11/22/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Connect to the Teradata source
 

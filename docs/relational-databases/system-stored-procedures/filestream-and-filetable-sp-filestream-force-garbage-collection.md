@@ -1,24 +1,20 @@
 ---
+title: "sp_filestream_force_garbage_collection (Transact-SQL)"
 description: "sp_filestream_force_garbage_collection (Transact-SQL)"
-title: "sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_filestream_force_garbage_collection"
-  - "sp_filestream_force_garbage_collection_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server]"
-  - "sp_filestream_force_garbage_collection"
-ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: markingmyname
 ms.author: maghan
+ms.date: "07/22/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_filestream_force_garbage_collection"
+  - "sp_filestream_force_garbage_collection_TSQL"
+helpviewer_keywords:
+  - "FILESTREAM [SQL Server]"
+  - "sp_filestream_force_garbage_collection"
+dev_langs:
+  - "TSQL"
 ---
 # sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

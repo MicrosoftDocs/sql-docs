@@ -1,30 +1,26 @@
 ---
+title: "sp_changedistributor_password (Transact-SQL)"
 description: "sp_changedistributor_password (Transact-SQL)"
-title: "sp_changedistributor_password (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changedistributor_password"
-  - "sp_changedistributor_password_TSQL"
-helpviewer_keywords: 
-  - "sp_changedistributor_password"
-ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changedistributor_password"
+  - "sp_changedistributor_password_TSQL"
+helpviewer_keywords:
+  - "sp_changedistributor_password"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changedistributor_password (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the password for a Distributor. This stored procedure is executed at the Distributor on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

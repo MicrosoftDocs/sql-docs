@@ -1,14 +1,12 @@
 ---
-description: "Use the Copy Database Wizard"
 title: "Use the Copy Database Wizard"
-ms.custom: ""
+description: "Use the Copy Database Wizard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.cdw.packageconfiguration.f1"
   - "sql13.swb.cdw.schedule.f1"
   - "sql13.swb.cdw.transfermethod.f1"
@@ -20,11 +18,9 @@ f1_keywords:
   - "sql13.swb.cdw.selectdatabaseobjects.f1"
   - "sql13.swb.cdw.complete.f1"
   - "sql13.swb.cdw.welcome.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Copy Database Wizard"
   - "starting Copy Database Wizard"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Use the Copy Database Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

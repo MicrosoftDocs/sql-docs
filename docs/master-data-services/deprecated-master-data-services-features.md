@@ -1,16 +1,12 @@
 ---
-description: "Deprecated Master Data Services Features"
 title: Deprecated Master Data Services Features
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
+description: "Deprecated Master Data Services Features"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Deprecated Master Data Services Features
 

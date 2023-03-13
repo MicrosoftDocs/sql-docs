@@ -1,21 +1,17 @@
 ---
+title: "Bulk copy data using IRowsetFastLoad (Native Client OLE DB provider)"
 description: "Bulk Copy Data Using IRowsetFastLoad (OLE DB) in  SQL Server Native Client"
-title: "Bulk copy data using IRowsetFastLoad (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [ODBC], text data"
   - "bulk copy [ODBC]"
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
-ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB) in  SQL Server Native Client

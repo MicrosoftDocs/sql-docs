@@ -1,24 +1,20 @@
 ---
+title: "ROUTINES (Transact-SQL)"
 description: "ROUTINES (Transact-SQL)"
-title: "ROUTINES (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "ROUTINES_TSQL"
-  - "ROUTINES"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ROUTINES view"
-  - "INFORMATION_SCHEMA.ROUTINES view"
-ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "ROUTINES_TSQL"
+  - "ROUTINES"
+helpviewer_keywords:
+  - "ROUTINES view"
+  - "INFORMATION_SCHEMA.ROUTINES view"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUTINES (Transact-SQL)

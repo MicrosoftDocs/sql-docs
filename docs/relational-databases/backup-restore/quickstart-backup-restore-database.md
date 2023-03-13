@@ -5,12 +5,10 @@ description: In this article, learn how to create a new database, take a backup 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.custom: seo-lt-2019
 ms.date: 03/03/2022
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: backup-restore
-ms.prod_service: backup-restore
 ---
 # Quickstart: Backup and restore a SQL Server database on-premises
 

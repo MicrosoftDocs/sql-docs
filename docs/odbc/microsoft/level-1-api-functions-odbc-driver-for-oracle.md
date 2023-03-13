@@ -1,22 +1,18 @@
 ---
+title: "Level 1 API Functions (ODBC Driver for Oracle)"
 description: "Level 1 API Functions (ODBC Driver for Oracle)"
-title: "Level 1 API Functions (ODBC Driver for Oracle) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "functions [ODBC], ODBC driver for Oracle"
   - "ODBC level 1 API functions [ODBC]"
   - "ODBC driver for Oracle [ODBC], functions"
   - "level 1 API functions [ODBC]"
   - "API functions [ODBC]"
-ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Level 1 API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

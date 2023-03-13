@@ -1,22 +1,18 @@
 ---
-description: "Delete One or More Jobs"
 title: "Delete One or More Jobs"
-ms.custom: seo-lt-2019
+description: "Delete One or More Jobs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, deleting"
   - "dropping jobs"
   - "jobs [SQL Server Agent], deleting"
   - "deleting jobs"
   - "removing jobs"
-ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Delete One or More Jobs
@@ -58,7 +54,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only dele
   
 #### To delete a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

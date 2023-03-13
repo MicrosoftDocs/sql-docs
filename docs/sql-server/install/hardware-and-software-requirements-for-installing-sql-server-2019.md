@@ -1,13 +1,13 @@
 ---
 title: "SQL Server 2019: Hardware & software requirements"
-description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2019. 
-ms.custom: sqlfreshmay19
+description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2019.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 09/16/2021
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Setup [SQL Server], software"
   - "software [SQL Server]"
   - "installing SQL Server, software"
@@ -42,8 +42,6 @@ helpviewer_keywords:
   - "cross-language support"
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
-ms.author: mikeray
-author: MikeRayMSFT
 ---
 # SQL Server 2019: Hardware and software requirements
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -103,6 +101,7 @@ The following table shows which editions of [!INCLUDE [sssql19-md](../../include
 | Windows Server 2022 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2022 Datacenter: Azure Edition|    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2022 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
@@ -144,6 +143,8 @@ Installing [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Server Core 
 
 For more information on installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Server Core, see [Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
+> [!NOTE]  
+> Installing SQL Server on a Windows OS on which case sensitivity is enabled is not supported. For more information review [SQL Server is not supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled)
 
 ##  <a name="CrossLanguageSupport"></a> Cross-language support  
  For more information about cross-language support and considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in localized languages, see [Local Language Versions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](../../sql-server/install/local-language-versions-in-sql-server.md).  
@@ -202,7 +203,7 @@ For more information on installing [!INCLUDE[ssNoVersion](../../includes/ssnover
 You can get relevant installation media from the following locations: 
   
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
-- [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Most recent cumulative updates](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 Alternatively, you can create an [Azure virtual machine already running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart) though [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on a virtual machine will be slower than running natively because of the overhead of virtualization.
 

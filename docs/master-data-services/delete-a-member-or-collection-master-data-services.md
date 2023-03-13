@@ -1,22 +1,18 @@
 ---
-description: "Delete a Member or Collection (Master Data Services)"
 title: Delete a Member or Collection
-ms.custom: ""
+description: "Delete a Member or Collection (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "collections [Master Data Services], deleting"
   - "leaf members [Master Data Services], deleting"
   - "deleting members [Master Data Services]"
   - "members [Master Data Services], deleting"
   - "consolidated members [Master Data Services], deleting"
-ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Delete a Member or Collection (Master Data Services)
 

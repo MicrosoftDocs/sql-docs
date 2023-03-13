@@ -1,22 +1,18 @@
 ---
+title: "SMO Connection Manager"
 description: "SMO Connection Manager"
-title: "SMO Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.smoconnection.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], SMO"
   - "SMO connection manager"
   - "connection managers [Integration Services], SMO"
-ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-author: chugugrace
-ms.author: chugu
 ---
 # SMO Connection Manager
 

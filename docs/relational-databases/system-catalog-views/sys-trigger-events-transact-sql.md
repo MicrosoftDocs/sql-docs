@@ -4,9 +4,8 @@ description: sys.trigger_events (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "trigger_events_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.trigger_events catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trigger_events (Transact-SQL)

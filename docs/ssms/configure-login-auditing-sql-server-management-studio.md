@@ -1,20 +1,16 @@
 ---
-description: "Configure Login Auditing (SQL Server Management Studio)"
 title: "Configure Login Auditing (SQL Server Management Studio)"
-ms.custom: seo-lt-2019
+description: "Configure Login Auditing (SQL Server Management Studio)"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "auditing [SQL Server]"
   - "audits [SQL Server], logins"
   - "logins [SQL Server], auditing"
-ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Configure Login Auditing (SQL Server Management Studio)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

@@ -4,9 +4,8 @@ description: Learn how to execute SQLXML 4.0 queries in a COM-based application 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 12/15/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "query testers [SQLXML]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "ADO [SQLXML]"
   - "queries [SQLXML], ADO"
   - "SQLXML, ADO"
-ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using ADO to Execute SQLXML 4.0 Queries

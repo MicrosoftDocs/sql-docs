@@ -1,25 +1,24 @@
 ---
+title: "Stored Procedures"
 description: "Stored Procedures in SQL Server Native Client"
-title: "Stored Procedures | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, stored procedures"
   - "stored procedures [OLE DB]"
   - "SQL Server Native Client OLE DB provider, stored procedures"
   - "stored procedures [OLE DB], about OLE DB stored procedures"
-ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
 
   A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports:  
   

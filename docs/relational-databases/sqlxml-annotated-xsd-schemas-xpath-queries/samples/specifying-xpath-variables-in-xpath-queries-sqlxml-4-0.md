@@ -4,15 +4,12 @@ description: View examples of how to specify XPath variables in SQLXML 4.0 XPath
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath queries [SQLXML], XPath variables"
   - "XPath variables [SQLXML]"
-ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying XPath Variables in XPath Queries (SQLXML 4.0)

@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: quickstart
 ms.custom: intro-quickstart
 helpviewer_keywords:
@@ -172,7 +172,7 @@ The first permission listed above (`GRANT SELECT ON OBJECT::Region TO Jae;`) is 
 
 ## Diagram of permissions
 
-[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+[!INCLUDE[database-engine-permissions](../../includes/database-engine-permissions.md)]
 
 For a graphic showing the relationships among the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] principals and server and database objects, see [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).
 

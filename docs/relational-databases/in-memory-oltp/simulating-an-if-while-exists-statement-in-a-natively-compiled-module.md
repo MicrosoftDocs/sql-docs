@@ -4,12 +4,9 @@ description: Learn how to simulate the EXISTS clause in conditional statements, 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Simulating an IF-WHILE EXISTS Statement in a Natively Compiled Module

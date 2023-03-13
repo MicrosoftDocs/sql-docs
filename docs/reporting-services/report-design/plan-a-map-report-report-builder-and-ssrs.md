@@ -1,16 +1,12 @@
 ---
-title: "Plan a map paginated report | Microsoft Docs"
-description: Inspire action and insight with presentation of analytical data against a geographic background by using a map in your paginated reports in Report Builder. 
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
+title: "Plan a map paginated report"
+description: Inspire action and insight with presentation of analytical data against a geographic background by using a map in your paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
 ---
 # Plan a map paginated report (Report Builder)
 

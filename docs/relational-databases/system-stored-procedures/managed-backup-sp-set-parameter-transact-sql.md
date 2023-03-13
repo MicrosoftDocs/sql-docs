@@ -1,26 +1,22 @@
 ---
+title: "managed_backup.sp_set_parameter (Transact-SQL)"
 description: "managed_backup.sp_set_parameter (Transact-SQL)"
-title: "managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_set_parameter_TSQL"
   - "sp_set_parameter"
   - "smart_admin.sp_set_parameter"
   - "smart_admin.sp_set_parameter_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_set_parameter"
   - "smart_admin.sp_set_parameter"
-ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +26,7 @@ ms.author: maghan
  The available parameters are related to [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] . These parameters are used to set the email notifications, enable specific extended events, and enable user set policy based management policies. You must specify the parameter name and the parameter value pairs..  
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

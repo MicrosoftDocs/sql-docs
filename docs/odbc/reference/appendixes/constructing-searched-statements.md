@@ -1,14 +1,13 @@
 ---
+title: "Constructing Searched Statements"
 description: "Constructing Searched Statements"
-title: "Constructing Searched Statements | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "searched statements [ODBC]"
   - "ODBC cursor library [ODBC], statement processing"
   - "ODBC cursor library [ODBC], searched statements"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "cursor library [ODBC], statement processing"
   - "cursor library [ODBC], searched statements"
   - "SQL statements [ODBC], searched statements"
-ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Constructing Searched Statements
 > [!IMPORTANT]  

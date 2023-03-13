@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2570"
 description: "MSSQLSERVER_2570"
-title: "MSSQLSERVER_2570 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2570 (Database Engine error)"
-ms.assetid: 29800aa9-81aa-4371-992c-487dbb617f46
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2570 (Database Engine error)"
 ---
 # MSSQLSERVER_2570
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

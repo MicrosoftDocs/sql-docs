@@ -1,23 +1,19 @@
 ---
+title: "Database Mail Stored Procedures (Transact-SQL)"
 description: "Database Mail Stored Procedures (Transact-SQL)"
-title: "Database Mail Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Mail [SQL Server], stored procedures"
   - "mail [SQL Server], stored procedures"
   - "e-mail [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], mail"
-ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # Database Mail Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

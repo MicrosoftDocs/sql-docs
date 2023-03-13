@@ -4,14 +4,12 @@ description: Learn how to use the Native Compilation Advisor to migrate an inter
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.nativecompilationwizard.f1"
   - "swb.nativecompilationwizard.f1"
-ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Compilation Advisor

@@ -5,10 +5,9 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 ---
 

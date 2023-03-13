@@ -1,16 +1,12 @@
 ---
+title: "catalog.set_folder_description (SSISDB Database)"
 description: "catalog.set_folder_description (SSISDB Database)"
-title: "catalog.set_folder_description (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.set_folder_description (SSISDB Database)
 

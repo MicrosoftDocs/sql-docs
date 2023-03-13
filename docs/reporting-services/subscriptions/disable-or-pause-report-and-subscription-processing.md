@@ -1,14 +1,13 @@
 ---
-title: "Disable or Pause Report and Subscription Processing | Microsoft Docs"
+title: "Disable or Pause Report and Subscription Processing"
 description: Manage subscriptions, pause shared schedules, disable shared data sources, block report access, manage subscription permissions, & remove delivery extensions.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/19/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "pausing schedules"
   - "subscriptions [Reporting Services], pausing"
   - "report processing [Reporting Services], pausing"
@@ -19,9 +18,6 @@ helpviewer_keywords:
   - "disabling shared data sources"
   - "roles [Reporting Services], modifying"
   - "shared schedules [Reporting Services], pausing"
-ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Disable or Pause Report and Subscription Processing  
 There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this article range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes. The following table summarizes the methods and supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes:  

@@ -1,20 +1,16 @@
 ---
+title: "Restart Packages by Using Checkpoints"
 description: "Restart Packages by Using Checkpoints"
-title: "Restart Packages by Using Checkpoints | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "checkpoints [Integration Services]"
   - "restarting packages"
   - "starting packages"
-ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: chugugrace
-ms.author: chugu
 ---
 # Restart Packages by Using Checkpoints
 

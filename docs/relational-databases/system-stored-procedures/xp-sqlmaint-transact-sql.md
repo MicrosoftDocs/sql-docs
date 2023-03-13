@@ -1,23 +1,19 @@
 ---
+title: "xp_sqlmaint (Transact-SQL)"
 description: "xp_sqlmaint (Transact-SQL)"
-title: "xp_sqlmaint (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_sqlmaint"
-  - "xp_sqlmaint_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_sqlmaint"
-ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_sqlmaint"
+  - "xp_sqlmaint_TSQL"
+helpviewer_keywords:
+  - "xp_sqlmaint"
+dev_langs:
+  - "TSQL"
 ---
 # xp_sqlmaint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +23,7 @@ ms.author: mathoma
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,18 +1,15 @@
 ---
-description: "Find Key Phrases in Documents with Semantic Search"
 title: "Find key phrases in documents with semantic search"
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "semantic search [SQL Server], key phrase queries"
-ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
+description: "Find Key Phrases in Documents with Semantic Search"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.custom: "seo-lt-2019"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: search
+ms.topic: conceptual
+helpviewer_keywords:
+  - "semantic search [SQL Server], key phrase queries"
 ---
 # Find Key Phrases in Documents with Semantic Search
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

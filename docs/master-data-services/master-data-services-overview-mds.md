@@ -1,21 +1,16 @@
 ---
 title: Overview
 description: Learn about the key data organization and management features of Master Data Services. Master Data Services enables you to manage a master set of your data.
-ms.custom: ""
-ms.date: "02/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-keywords: 
-  - "what is master data"
-helpviewer_keywords: 
-  - "Master Data Services, overview"
-  - "Master Data Services"
-ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "02/14/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Master Data Services, overview"
+  - "Master Data Services"
+keywords: what is master data
 ---
 # Master Data Services Overview (MDS)
 

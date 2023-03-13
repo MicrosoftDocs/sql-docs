@@ -3,13 +3,10 @@ title: "PERCENT_RANK (Transact-SQL)"
 description: "PERCENT_RANK (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "10/20/2015"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "PERCENT_RANK_TSQL"
   - "PERCENT_RANK"

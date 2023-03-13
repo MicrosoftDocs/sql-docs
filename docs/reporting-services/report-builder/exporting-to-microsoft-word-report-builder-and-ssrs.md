@@ -1,15 +1,12 @@
 ---
-title: "Export a paginated report to Microsoft Word (Report Builder) | Microsoft Docs"
-ms.date: 09/02/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
+title: "Export a paginated report to Microsoft Word (Report Builder)"
 description: The Word rendering extension renders paginated reports to the Microsoft Word format (.docx). The format is Office Open XML.
-ms.custom: seodec18
-ms.topic: conceptual
-ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/02/2021
+ms.service: reporting-services
+ms.subservice: report-builder
+ms.topic: conceptual
 ---
 
 # Export a paginated report to Microsoft Word (Report Builder)

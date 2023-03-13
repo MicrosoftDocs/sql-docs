@@ -1,11 +1,11 @@
 ---
-title: "SqlClient troubleshooting guide"
-description: "Page that provides resolutions to commonly observed problems."
+title: SqlClient troubleshooting guide
+description: Page that provides resolutions to commonly observed problems.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "03/03/2021"
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 03/06/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"
@@ -19,7 +19,7 @@ dev_langs:
 
 There are various reasons why connection can fail to be established. Below are some troubleshooting tips that can be used as a guide to analyze and solve many of the problems.
 
-### Unable to load native SNI (Server Name Indication) library
+### Unable to load native SNI (Server Network Interface) library
 
 #### Issues in .NET Framework applications
 

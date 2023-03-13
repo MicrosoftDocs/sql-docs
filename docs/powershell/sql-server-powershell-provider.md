@@ -1,21 +1,20 @@
 ---
 title: SQL Server PowerShell Provider
 description: Learn about the SQL Server provider for Windows PowerShell, which provides access to SQL Server objects by means of paths similar to file system paths.
-ms.prod: sql
-ms.technology: sql-server-powershell
+author: markingmyname
+ms.author: maghan
+ms.reviewer: matteot, drskwier
+ms.date: "07/31/2019"
+ms.service: sql
+ms.subservice: sql-server-powershell
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PowerShell [SQL Server], provider"
   - "PowerShell [SQL Server], SQL Server PowerShell Provider"
   - "Providers [PowerShell]"
   - "SMO [SQL Server], PowerShell"
   - "PowerShell [SQL Server], SMO"
   - "SQL Server Management Objects, PowerShell"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: matteot, drskwier
-ms.custom: ""
-ms.date: "07/31/2019"
 ---
 
 # SQL Server PowerShell Provider

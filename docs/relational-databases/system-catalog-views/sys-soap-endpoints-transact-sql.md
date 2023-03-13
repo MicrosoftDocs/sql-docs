@@ -4,9 +4,8 @@ description: sys.soap_endpoints (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "soap_endpoints_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.soap_endpoints catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 ---
 # sys.soap_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

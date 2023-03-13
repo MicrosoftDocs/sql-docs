@@ -4,9 +4,8 @@ description: sys.xml_indexes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.xml_indexes_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_indexes catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
 ---
 # sys.xml_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

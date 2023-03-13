@@ -1,20 +1,17 @@
 ---
-description: "Configure and Manage Thesaurus Files for Full-Text Search"
 title: "Configure & manage thesaurus files for Full-Text Search"
-ms.date: 07/01/2020
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "full-text indexes [SQL Server], thesaurus files"
-  - "thesaurus [full-text search], configuring"
-  - "thesaurus [full-text search]"
-ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
+description: "Configure and Manage Thesaurus Files for Full-Text Search"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.custom: "seo-lt-2019"
+ms.date: 07/01/2020
+ms.service: sql
+ms.subservice: search
+ms.topic: conceptual
+helpviewer_keywords:
+  - "full-text indexes [SQL Server], thesaurus files"
+  - "thesaurus [full-text search], configuring"
+  - "thesaurus [full-text search]"
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

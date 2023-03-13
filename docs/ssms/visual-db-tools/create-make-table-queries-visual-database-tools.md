@@ -1,23 +1,18 @@
 ---
-description: "Create Make Table Queries (Visual Database Tools)"
 title: Create Make Table Queries
-ms.custom: seo-lt-2019
+description: "Create Make Table Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], types"
   - "table creation [SQL Server], Make Table query"
   - "inserting tables"
   - "Make Table query"
   - "adding tables"
-ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Make Table Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

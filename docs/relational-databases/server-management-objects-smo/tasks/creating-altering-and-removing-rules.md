@@ -1,19 +1,13 @@
 ---
-description: "Creating, Altering, and Removing Rules"
 title: "Creating, Altering, and Removing Rules"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "rules [SMO]"
-ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
+description: "Creating, Altering, and Removing Rules"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "rules [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Rules

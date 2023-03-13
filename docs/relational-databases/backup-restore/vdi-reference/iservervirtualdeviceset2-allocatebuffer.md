@@ -1,14 +1,13 @@
 ---
-title: IServerVirtualDeviceSet2::AllocateBuffer
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IServerVirtualDeviceSet2::AllocateBuffer command.
-ms.date: 08/30/2019
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
-ms.topic: reference
+title: "IServerVirtualDeviceSet2::AllocateBuffer"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IServerVirtualDeviceSet2::AllocateBuffer command."
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 08/30/2019
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: reference
 ---
 
 # IServerVirtualDeviceSet2::AllocateBuffer (VDI)

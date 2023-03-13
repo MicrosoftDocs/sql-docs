@@ -1,21 +1,17 @@
 ---
-description: "View a Job"
 title: "View a Job"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "View a Job"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], viewing"
   - "viewing jobs"
   - "SQL Server Agent jobs, viewing"
   - "displaying jobs"
-ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -47,7 +43,7 @@ You can only view jobs that you own, unless you are a member of the **sysadmin**
   
 #### To view a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

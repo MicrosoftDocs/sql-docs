@@ -1,15 +1,12 @@
 ---
 title: Select an Account for the SQL Server Agent Service
 description: Select an Account for the SQL Server Agent Service
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 11/11/2021
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

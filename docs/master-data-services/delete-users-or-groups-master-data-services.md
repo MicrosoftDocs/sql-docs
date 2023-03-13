@@ -1,21 +1,17 @@
 ---
-description: "Delete Users or Groups (Master Data Services)"
 title: Delete Users or Groups
-ms.custom: ""
+description: "Delete Users or Groups (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting groups [Master Data Services]"
   - "groups [Master Data Services], deleting"
   - "users [Master Data Services], deleting"
   - "deleting users [Master Data Services]"
-ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Delete Users or Groups (Master Data Services)
 

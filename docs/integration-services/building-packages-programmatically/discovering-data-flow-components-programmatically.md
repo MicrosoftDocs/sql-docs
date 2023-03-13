@@ -1,25 +1,21 @@
 ---
+title: "Discovering Data Flow Components Programmatically"
 description: "Discovering Data Flow Components Programmatically"
-title: "Discovering Data Flow Components Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services 
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PipelineComponentInfos collection"
   - "data flow task [Integration Services], components"
   - "discovering data flow components"
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
-ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Discovering Data Flow Components Programmatically
 

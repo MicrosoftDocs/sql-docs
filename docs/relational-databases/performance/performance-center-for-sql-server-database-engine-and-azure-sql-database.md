@@ -1,25 +1,22 @@
 ---
 title: "Performance Center"
 description: Find the information that you need about performance in the SQL Server Database Engine and Azure SQL Database.
-ms.custom: seo-dt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/08/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "Performance (SQL Server)"
   - "Performance (SQL Database)"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server, performance"
   - "performance (SQL Server)"
   - "database performance (SQL Server)"
   - "SQL Database (Performance)"
   - "performance (SQL Database)"
   - "database performance (SQL Database)"
-ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

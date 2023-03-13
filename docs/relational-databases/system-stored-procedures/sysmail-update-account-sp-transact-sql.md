@@ -1,23 +1,19 @@
 ---
+title: "sysmail_update_account_sp (Transact-SQL)"
 description: "sysmail_update_account_sp (Transact-SQL)"
-title: "sysmail_update_account_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_update_account_sp"
-  - "sysmail_update_account_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_update_account_sp"
-ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
+ms.date: "11/17/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_update_account_sp"
+  - "sysmail_update_account_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_update_account_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +21,7 @@ ms.author: vanto
   Changes the information in an existing Database Mail account.  
  
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

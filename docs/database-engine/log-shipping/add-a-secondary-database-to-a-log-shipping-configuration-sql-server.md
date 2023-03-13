@@ -4,10 +4,9 @@ description: Describes how to add a secondary database to an existing log shippi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "adding secondary databases"
   - "secondary databases [SQL Server], in log shipping"

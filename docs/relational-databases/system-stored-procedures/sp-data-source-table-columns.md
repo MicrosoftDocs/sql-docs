@@ -1,24 +1,21 @@
 ---
 title: sp_data_source_table_columns
 description: sp_data_source_table_columns (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
-ms.topic: conceptual
-f1_keywords: 
-  - sp_data_source_table_columns_TSQL
-  - sys.sp_data_source_table_columns_TSQL
-  - sp_data_source_table_columns
-  - sys.sp_data_source_table_columns
-dev_langs:
-  - TSQL
-helpviewer_keywords: 
-  - "PolyBase"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: 
-ms.custom: ""
 ms.date: "1/7/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: conceptual
+f1_keywords:
+  - "sp_data_source_table_columns_TSQL"
+  - "sys.sp_data_source_table_columns_TSQL"
+  - "sp_data_source_table_columns"
+  - "sys.sp_data_source_table_columns"
+helpviewer_keywords:
+  - "PolyBase"
+dev_langs:
+  - TSQL
 ---
 
 # sp_data_source_table_columns (Transact-SQL)
@@ -30,7 +27,7 @@ Returns list of columns in external data source table.
 > [!NOTE]
 > This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-cumulative-updates-history.md#cu5).
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

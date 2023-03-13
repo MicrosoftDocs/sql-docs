@@ -1,11 +1,11 @@
 ---
 title: "sp_invoke_external_rest_endpoint (Transact-SQL)"
-description: "The sp_invoke_erver/azure-arcexternal_rest_endpoint stored procedure invokes an HTTPS REST endpoint."
+description: The sp_invoke_external_rest_endpoint stored procedure invokes an HTTPS REST endpoint.
 author: yorek
 ms.author: damauri
 ms.reviewer: randolphwest
-ms.date: 10/21/2022
-ms.prod: sql
+ms.date: 12/14/2022
+ms.service: sql
 ms.topic: "reference"
 f1_keywords:
   - "sp_invoke_external_rest_endpoint_TSQL"
@@ -29,7 +29,7 @@ The `sp_invoke_external_rest_endpoint` stored procedure invokes an HTTPS REST en
 
 ## Syntax
 
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
 EXEC @returnValue = sp_invoke_external_rest_endpoint
@@ -54,8 +54,8 @@ Unicode string in a JSON format that contains the payload to send to the HTTPS R
 
 #### [ @headers = N'headers' ]
 
-Headers that must be sent as part of the request to the HTTPS REST endpoint. Headers must be specified using a flat JSON (a JSON document without nested structures) format. Headers defined in the [Forbidden headers name](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name) list will be ignored even if explicitity passed in the *headers* parameter; their values will be discarded or replaced with system-supplied values when starting the HTTPS request.
- 
+Headers that must be sent as part of the request to the HTTPS REST endpoint. Headers must be specified using a flat JSON (a JSON document without nested structures) format. Headers defined in the [Forbidden headers name](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name) list will be ignored even if explicitly passed in the *headers* parameter; their values will be discarded or replaced with system-supplied values when starting the HTTPS request.
+
  The *headers* parameter is **nvarchar(4000)** with no default.
 
 #### [ @method = N'method' ]
@@ -153,6 +153,8 @@ Microsoft Graph | graph.microsoft.com
 Analysis Services | *.asazure.windows.net
 IoT Central | *.azureiotcentral.com
 API Management| *.azure-api.net
+
+[Outbound Firewall Rules](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 
 > [!NOTE]  
 > If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make it available to `sp_invoke_external_rest_endpoint`.
@@ -265,7 +267,7 @@ As there's a collation rule set at the database level, the following logic will 
 1. Check if the URL and credential match using the RFC, which means:
    - Check the scheme and host using a case-insensitive collation (`Latin1_General_100_CI_AS_KS_WS_SC`)
    - Check all other segments of the URL are compared in a case-sensitive collation (`Latin1_General_100_BIN2`)
-1. Check that the URL and credential match using the database collation rules (and without doing any URL encoding). 
+1. Check that the URL and credential match using the database collation rules (and without doing any URL encoding).
 
 ### Grant permissions to use credential
 
@@ -309,6 +311,10 @@ If the same headers are also specified via the *@headers* parameter, the system-
 ### Incorrect response headers
 
 The presence of the tilde (`~`) character in either a response header's key or value, will prevent that header key and value to be returned correctly.
+
+### DNS resolution fails with Windows Socket Error 11003 or 11004
+
+On some Azure SQL databases, calling an external REST endpoint may fail due to a Windows Socket Error 11003 or 11004. If you encounter this error, use API Management to call the REST endpoint.
 
 ## Best practices
 

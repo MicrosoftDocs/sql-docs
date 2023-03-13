@@ -1,22 +1,20 @@
 ---
 title: "Create XML Indexes"
 description: Learn how to create primary and secondary XML indexes in SQL Server.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "indexes [XML in SQL Server]"
   - "XML indexes [SQL Server], creating"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Create XML indexes
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how to create primary and secondary XML indexes.
 
@@ -51,7 +49,7 @@ Note the following when you're creating an XML index:
     > [!NOTE]
     > Information about an XML index can be found in catalog views. However, **sp_helpindex** isn't supported. Examples provided later in this topic show how to query the catalog views to find XML index information.
 
-When creating or recreating a primary XML index on an **xml** data type column that contains values of the XML Schema types `xs:date` or `xs:dateTime` (or any subtypes of these types) that have a year of less than 1, the index creation will fail in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] allowed these values, so this problem can occur when creating indexes in a database generated in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
+When creating or recreating a primary XML index on an **xml** data type column that contains values of the XML Schema types `xs:date` or `xs:dateTime` (or any subtypes of these types) that have a year of less than 1, the index creation will fail in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] allowed these values, so this problem can occur when creating indexes in a database generated in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
 
 ### Example: Create a primary XML index
 

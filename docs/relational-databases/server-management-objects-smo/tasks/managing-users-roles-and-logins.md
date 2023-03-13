@@ -1,21 +1,15 @@
 ---
-description: "Managing Users, Roles, and Logins"
 title: "Managing Users, Roles, and Logins"
-ms.custom: seo-dt-2019
+description: "Managing Users, Roles, and Logins"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logins [SMO]"
   - "roles [SMO]"
   - "users [SMO]"
-ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Users, Roles, and Logins

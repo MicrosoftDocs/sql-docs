@@ -4,9 +4,8 @@ description: sys.dm_exec_dms_workers (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/04/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "SYS.DM_EXEC_DMS_WORKERS_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_exec_dms_workers management view"
 dev_langs:
   - "TSQL"
-ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_dms_workers (Transact-SQL)

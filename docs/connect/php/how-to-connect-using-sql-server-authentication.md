@@ -4,8 +4,8 @@ description: "Learn important considerations when using SQL Server Authenticatio
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "connecting to the server, SQL Server Authentication"

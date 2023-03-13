@@ -1,19 +1,16 @@
 ---
+title: "Manage Oracle Tablespaces"
 description: "Manage Oracle Tablespaces"
-title: "Manage Oracle Tablespaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Oracle publishing [SQL Server replication], managing tablespaces"
-  - "tablespaces [SQL Server replication]"
-ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Oracle publishing [SQL Server replication], managing tablespaces"
+  - "tablespaces [SQL Server replication]"
 ---
 # Manage Oracle Tablespaces
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

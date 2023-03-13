@@ -1,19 +1,15 @@
 ---
-description: "Add a Group (Master Data Services)"
 title: Add a Group
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "groups [Master Data Services], adding"
-  - "adding groups [Master Data Services]"
-ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
+description: "Add a Group (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "groups [Master Data Services], adding"
+  - "adding groups [Master Data Services]"
 ---
 # Add a Group (Master Data Services)
 

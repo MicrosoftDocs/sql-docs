@@ -4,15 +4,13 @@ description: Create Extended Stored Procedures
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "warnings [SQL Server]"
   - "extended stored procedures [SQL Server], debugging"
   - "extended stored procedures [SQL Server], creating"
   - "messages [SQL Server], extended stored procedures"
-ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 ---
 # Create Extended Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

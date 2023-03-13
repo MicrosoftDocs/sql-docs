@@ -4,8 +4,8 @@ description: Get started with the Microsoft JDBC Driver for SQL Server and learn
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Programming guide for JDBC SQL driver

@@ -4,12 +4,15 @@ description: "Machine Learning One Class Support Vector Machines (MicrosoftML)."
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
-ms.service: ""
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (MicrosoftML), rxOneClassSvm, anomaly, detection, models
+keywords:
+  - (MicrosoftML)
+  - rxOneClassSvm
+  - anomaly
+  - detection
+  - models
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 

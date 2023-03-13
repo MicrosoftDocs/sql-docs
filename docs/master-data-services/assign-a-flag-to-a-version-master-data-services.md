@@ -1,19 +1,15 @@
 ---
-description: "Assign a Flag to a Version (Master Data Services)"
 title: Assign a Flag to a Version
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "version flags [Master Data Services], assigning flags"
-  - "versions [Master Data Services], assigning flags"
-ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
+description: "Assign a Flag to a Version (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "version flags [Master Data Services], assigning flags"
+  - "versions [Master Data Services], assigning flags"
 ---
 # Assign a Flag to a Version (Master Data Services)
 

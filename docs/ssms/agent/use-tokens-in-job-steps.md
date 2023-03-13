@@ -1,22 +1,18 @@
 ---
-description: "Use Tokens in Job Steps"
 title: "Use Tokens in Job Steps"
-ms.custom: seo-lt-2019
+description: "Use Tokens in Job Steps"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "job steps [SQL Server Agent]"
   - "security [SQL Server Agent], enabling alert job step tokens"
   - "SQL Server Agent jobs, job steps"
   - "tokens [SQL Server]"
   - "escape macros [SQL Server Agent]"
-ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Use Tokens in Job Steps

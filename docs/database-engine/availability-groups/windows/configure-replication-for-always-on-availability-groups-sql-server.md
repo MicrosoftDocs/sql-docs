@@ -4,10 +4,9 @@ description: "Learn the detailed process required to configure SQL Server replic
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "01/25/2019"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"

@@ -4,9 +4,8 @@ description: sys.server_sql_modules (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.server_sql_modules"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "sys.server_sql_modules catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 ---
 # sys.server_sql_modules (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains the set of SQL modules for server-level triggers of type TR. You can join this relation to sys.server_triggers. The tuple (object_id) is the key of the relation.  
   

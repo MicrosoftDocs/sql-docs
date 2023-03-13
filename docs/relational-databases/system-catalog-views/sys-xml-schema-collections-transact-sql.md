@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.xml_schema_collections_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.xml_schema_collections catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.xml_schema_collections (Transact-SQL)

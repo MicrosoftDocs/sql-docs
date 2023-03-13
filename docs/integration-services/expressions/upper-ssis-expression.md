@@ -1,21 +1,17 @@
 ---
+title: "UPPER (SSIS Expression)"
 description: "UPPER (SSIS Expression)"
-title: "UPPER (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UPPER function"
   - "converting lowercase to uppercase"
   - "uppercase characters [Integration Services]"
   - "lowercase characters"
-ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-author: chugugrace
-ms.author: chugu
 ---
 # UPPER (SSIS Expression)
 

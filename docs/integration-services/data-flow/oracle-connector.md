@@ -1,15 +1,12 @@
 ---
+title: "Microsoft Connector for Oracle"
 description: "Microsoft Connector for Oracle"
-title: "Microsoft Connector for Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/14/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "08/14/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Microsoft Connector for Oracle
 
@@ -22,8 +19,9 @@ Microsoft Connector for Oracle enables the ability to export data from and load 
 The following Microsoft SQL Server products are supported by Microsoft Connector for Oracle:
 
 - Since SQL Server 2019 CU1
-- SQL Server Data Tools (SSDT) 15.9.3 or later for Visual Studio 2017
-- Microsoft SQL Server Data Tools (SSDT) for Visual Studio 2019
+- Microsoft SQL Server 2022
+- SQL Server Integration Services Projects for Visual Studio 2019
+- SQL Server Integration Services Projects for Visual Studio 2022
 
 The following Oracle database versions of data source are supported:
 
@@ -34,15 +32,18 @@ The following Oracle database versions of data source are supported:
 - Oracle 19c (without Windows Authentication support)
 
 The Oracle database is supported on all operating systems and platforms.
-> [!NOTE]
->
-> Oracle client is not required for Microsoft Connector for Oracle database in SQL Server 2019.
 
 ## Installation
 
 To install the connector for Oracle database, download and run the installer from [the latest version of Microsoft connector for Oracle](https://aka.ms/SSISMSOracleConnector). Then follow the directions in the installation wizard.
 
 After you install the Connector, you must restart the SQL Server Integration Service to be sure that the Oracle source and destination can work correctly.
+
+> [!NOTE]
+>
+> To design packages with SQL Server Integration Services Projects, you will need to install the connector for both the target and the latest SQL Server version.
+> 
+> For example, if you upgrade to Visual Studio 2022, latest SQL server supported is SQL 2022, you need to install MicrosoftSSISOracleConnector-SQL22 and connector for target SQL Server verion. 
 
 To execute SSIS package targeting SQL Server 2017 and below, in addition to **Microsoft Connector for Oracle**, you will need to install **Oracle client** and **Microsoft Connector for Oracle by Attunity** with corresponding version from below links:
 

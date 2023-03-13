@@ -1,23 +1,21 @@
 ---
 title: "Execute a Stored Procedure"
 description: Learn how to execute a stored procedure by using SQL Server Management Studio or Transact-SQL.
-ms.custom: FY22Q2Fresh
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/11/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.executeprocedure.general.f1"
   - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stored procedures [SQL Server], parameters"
   - "extended stored procedures [SQL Server], executing"
   - "system stored procedures [SQL Server], executing"
   - "stored procedures [SQL Server], executing"
   - "user-defined stored procedures [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute a stored procedure

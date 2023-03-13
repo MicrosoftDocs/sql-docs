@@ -1,14 +1,13 @@
 ---
-description: "Files That Manage Solutions and Projects"
 title: "Files That Manage Solutions and Projects"
-ms.custom: seo-lt-2019
+description: "Files That Manage Solutions and Projects"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "projects [SQL Server Management Studio], files"
   - ".ssmssln files"
   - ".ssmsmobileproj files"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - ".ssmssqlproj files"
   - ".sqlsuo files"
   - "files [SQL Server Management Studio], projects"
-ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Files That Manage Solutions and Projects
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +34,7 @@ In the same way that solutions contain solution files that manage objects in a s
 |Extension|Project template|  
 |-------------|--------------------|  
 |.ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Scripts Project|  
-|.ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Scripts Project|  
+|.ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripts Project|  
    
 ## Location of Solution-Level Files  
 By default, solution-level files are created in the physical directory of the first project that is created with the solution. You can specify a directory for the solution by creating a solution, or you can specify the directory when you create a new project.  

@@ -3,13 +3,10 @@ title: "Logical Operators (Transact-SQL)"
 description: "Logical Operators (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "operators [Transact-SQL], logical"
   - "testing truth"

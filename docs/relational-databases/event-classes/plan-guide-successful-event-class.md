@@ -1,16 +1,14 @@
 ---
-description: "Plan Guide Successful Event Class"
 title: "Plan Guide Successful Event Class"
-ms.custom: ""
-ms.date: "06/22/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Plan Guide Successful event class"
+description: "Plan Guide Successful Event Class"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "06/22/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Plan Guide Successful event class"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan Guide Successful Event Class

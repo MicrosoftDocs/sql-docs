@@ -1,21 +1,18 @@
 ---
-description: "Deprecated Full-Text Search features in SQL Server 2016"
 title: "Deprecated Full-Text Search features in SQL Server 2016"
-ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "deprecated features [full-text search]"
-  - "full-text search [SQL Server], deprecated features"
-  - "full-text queries [SQL Server], proximity"
-ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
+description: "Deprecated Full-Text Search features in SQL Server 2016"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
+ms.date: "08/19/2016"
+ms.service: sql
+ms.subservice: search
+ms.topic: conceptual
+helpviewer_keywords:
+  - "deprecated features [full-text search]"
+  - "full-text search [SQL Server], deprecated features"
+  - "full-text queries [SQL Server], proximity"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Deprecated Full-Text Search features in SQL Server 2016
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

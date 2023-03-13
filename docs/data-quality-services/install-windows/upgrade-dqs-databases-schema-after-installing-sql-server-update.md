@@ -4,10 +4,9 @@ description: Learn how to upgrade the Data Quality Services (DQS) instance using
 author: swinarko
 ms.author: sawinark
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Upgrade DQS databases schema after installing SQL Server update
 

@@ -6,13 +6,12 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 04/12/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 dev_langs:
   - "yaml"
   - "console"
-ms.metadata: seo-lt-2019
 ---
 
 # Introducing app deployment in [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]

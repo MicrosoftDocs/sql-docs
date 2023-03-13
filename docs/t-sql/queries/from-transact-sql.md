@@ -1,12 +1,13 @@
 ---
 title: FROM clause plus JOIN, APPLY, PIVOT (T-SQL)
 description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+author: VanMSFT
+ms.author: vanto
+ms.date: "06/01/2019"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "JOIN"
   - "FROM_TSQL"
   - "FROM"
@@ -17,9 +18,7 @@ f1_keywords:
   - "CROSS_APPLY_TSQL"
   - "APPLY_TSQL"
   - "CROSS_JOIN_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OUTER APPLY operator"
   - "hints [SQL Server], FROM clause"
   - "SELECT statement [SQL Server], FROM clause"
@@ -31,11 +30,8 @@ helpviewer_keywords:
   - "joins [SQL Server], FROM clause"
   - "UPDATE statement [SQL Server], FROM clause"
   - "derived tables"
-ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: VanMSFT
-ms.author: vanto
-ms.custom: ""
-ms.date: "06/01/2019"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -57,7 +53,7 @@ This article also discusses the following keywords that can be used on the FROM 
 - APPLY
 - [PIVOT](from-using-pivot-and-unpivot.md)
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax  
   
@@ -189,7 +185,7 @@ FROM { <table_source> [ ,...n ] }
  If the table or view exists outside the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, use a four-part name in the form *linked_server*.*catalog*.*schema*.*object*. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). A four-part name that is constructed by using the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server part of the name can also be used to specify the remote table source. When OPENDATASOURCE is specified, *database_name* and *schema_name* may not apply to all data sources and is subject to the capabilities of the OLE DB provider that accesses the remote object.  
   
  [AS] *table_alias*  
- Is an alias for *table_source* that can be used either for convenience or to distinguish a table or view in a self-join or subquery. An alias is frequently a shortened table name used to refer to specific columns of the tables in a join. If the same column name exists in more than one table in the join, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that the column name be qualified by a table name, view name, or alias. The table name cannot be used if an alias is defined.  
+ Is an alias for *table_source* that can be used either for convenience or to distinguish a table or view in a self-join or subquery. An alias is frequently a shortened table name used to refer to specific columns of the tables in a join. If the same column name exists in more than one table in the join, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may require that the column name be qualified by a table name, view name, or alias to distinguish these columns. The table name cannot be used if an alias is defined.  
   
  When a derived table, rowset or table-valued function, or operator clause (such as PIVOT or UNPIVOT) is used, the required *table_alias* at the end of the clause is the associated table name for all columns, including grouping columns, returned.  
   
@@ -197,13 +193,13 @@ FROM { <table_source> [ ,...n ] }
  Specifies that the query optimizer use an optimization or locking strategy with this table and for this statement. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 *rowset_function*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Specifies one of the rowset functions, such as OPENROWSET, that returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions &#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md).  
   
  Using the OPENROWSET and OPENQUERY functions to specify a remote object depends on the capabilities of the OLE DB provider that accesses the object.  
   
  *bulk_column_alias*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
  Is an optional alias to replace a column name in the result set. Column aliases are allowed only in SELECT statements that use the OPENROWSET function with the BULK option. When you use *bulk_column_alias*, specify an alias for every table column in the same order as the columns in the file.  
   
 > [!NOTE]  
@@ -213,7 +209,7 @@ Specifies one of the rowset functions, such as OPENROWSET, that returns an objec
  Specifies a table-valued function.  
   
 OPENXML \<openxml_clause>  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Provides a rowset view over an XML document. For more information, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
  *derived_table*  
@@ -254,12 +250,12 @@ Specifies that a sample of data from the table is returned. The sample may be ap
  Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
   
 ### Tablesample clause
-**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
  Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT or UPDATE statement. TABLESAMPLE cannot be specified with views. 
 
  PERCENT  
- Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] returns an approximate of the percent specified. When PERCENT is specified, the *sample_number* expression must evaluate to a value from 0 to 100.  
+ Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] returns an approximate of the percent specified. When PERCENT is specified, the *sample_number* expression must evaluate to a value from 0 to 100.  
 
 
 ### Joined table 
@@ -283,7 +279,7 @@ Specifies the type of join operation.
 ### Join hint  
 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer use one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
- For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], these join hints apply to INNER joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. The allowable join hints for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] are as follows:  
+ For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], these join hints apply to INNER joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. The allowable join hints for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] are as follows:  
   
  REDUCE  
  Reduces the number of rows to be moved for the table on the right side of the join in order to make two distribution incompatible tables compatible. The REDUCE hint is also called a semi-join hint.  
@@ -671,7 +667,7 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### N. Using the INNER JOIN syntax  
  The following example returns the `SalesOrderNumber`, `ProductKey`, and `EnglishProductName` columns from the `FactInternetSales` and `DimProduct` tables where the join key, `ProductKey`, matches in both tables. The `SalesOrderNumber` and `EnglishProductName` columns each exist in one of the tables only, so it is not necessary to specify the table alias with these columns, as is shown; these aliases are included for readability. The word **AS** before an alias name is not required but is recommended for readability and to conform to the ANSI standard.  

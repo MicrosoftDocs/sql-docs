@@ -1,22 +1,18 @@
 ---
+title: "Establish connection to data source (Native Client OLE DB provider)"
 description: "Establish connection to data source (Native Client OLE DB provider)"
-title: "Establish connection to data source (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data sources [SQL Server Native Client]"
   - "connections [SQL Server Native Client]"
   - "SQL Server Native Client OLE DB provider, data source connections"
   - "CoCreateInstance method"
   - "OLE DB data sources [SQL Server Native Client]"
-ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Establishing a Connection to a SQL Server Native Client Data Source

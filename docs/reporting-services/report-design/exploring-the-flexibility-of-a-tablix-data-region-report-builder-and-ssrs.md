@@ -1,16 +1,12 @@
 ---
-title: "Exploring the flexibility of a tablix data region in a paginated report | Microsoft Docs"
+title: "Exploring the flexibility of a tablix data region in a paginated report"
 description: Discover the flexibility of a paginated report in Report Builder when you add a table, matrix, or list data region.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
 ---
 # Exploring the flexibility of a tablix data region in a paginated report (Report Builder)
 

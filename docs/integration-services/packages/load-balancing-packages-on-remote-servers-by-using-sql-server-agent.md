@@ -1,20 +1,16 @@
 ---
+title: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent"
 description: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent"
-title: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "load-balancing [Integration Services]"
   - "parent packages [Integration Services]"
   - "SQL Server Agent [Integration Services]"
-ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-author: chugugrace
-ms.author: chugu
 ---
 # Load-Balancing Packages on Remote Servers by Using SQL Server Agent
 

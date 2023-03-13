@@ -1,15 +1,12 @@
 ---
-title: "SQL Server Migration Assistant | Microsoft Docs"
+title: "SQL Server Migration Assistant"
 description: Learn about SQL Server Migration Assistant, a tool that automates database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "10/10/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # SQL Server Migration Assistant
 
@@ -66,7 +63,7 @@ The following target versions are supported for SSMA.
     
 - **Premier support** - If you have a Premier Contract, you can get Premier support on the [Premier Online portal](https://premier.microsoft.com/).  
   
-- **Consulting services** - For partner assisted migrations, go the [Azure Database Migration Guide](https://datamigration.microsoft.com/).
+- **Consulting services** - For partner assisted migrations, go the [Azure Database Migration Guide](/data-migration/).
   
 ## Legal Notice (SSMA)
 

@@ -1,30 +1,26 @@
 ---
+title: "xp_enumgroups (Transact-SQL)"
 description: "xp_enumgroups (Transact-SQL)"
-title: "xp_enumgroups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_enumgroups_TSQL"
-  - "xp_enumgroups"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_enumgroups"
-ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_enumgroups_TSQL"
+  - "xp_enumgroups"
+helpviewer_keywords:
+  - "xp_enumgroups"
+dev_langs:
+  - "TSQL"
 ---
 # xp_enumgroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides a list of local Microsoft Windows groups or a list of global groups that are defined in a specified Windows domain.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -4,10 +4,9 @@ description: Learn how to start data movement for a secondary database participa
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 ---

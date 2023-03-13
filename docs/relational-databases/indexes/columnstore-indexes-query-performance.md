@@ -4,8 +4,8 @@ description: "Columnstore index query performance recommendations for achieving 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -177,7 +177,7 @@ Segment elimination does not apply to LOB data types, such as the (max) data typ
 
 Currently, only [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later supports clustered columnstore rowgroup elimination for the prefix of `LIKE` predicates, for example `column LIKE 'string%'`. Segment elimination is not supported for non-prefix use of `LIKE`, such as `column LIKE '%string'`.
 
-In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can create ordered clustered columnstore indexes, which allow for ordering by columns to aid segment elimination, especially for string columns. In ordered clustered columnstore indexes, segment elimination on the first column in the index key is most effective, because it is sorted. Performance gains due to segment elimination on other columns in the table will be less predictable. For more on ordered clustered columnstore indexes, see [Use an ordered clustered columnstore index for large data warehouse tables](columnstore-indexes-design-guidance.md#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables).
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can create ordered clustered columnstore indexes, which allow for ordering by columns to aid segment elimination, especially for string columns. In ordered clustered columnstore indexes, segment elimination on the first column in the index key is most effective, because it is sorted. Performance gains due to segment elimination on other columns in the table will be less predictable. For more on ordered clustered columnstore indexes, see [Use an ordered clustered columnstore index for large data warehouse tables](columnstore-indexes-design-guidance.md#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables).
 
 Using the query connection option [SET STATISTICS IO](../../t-sql/statements/set-statistics-io-transact-sql.md), you can view segment elimination in action. Look for output such as the following to indicate that segment elimination has occurred. Row groups are made up of column segments, so this may indicate segment elimination. The below SET STATISTICS IO output example of a query, roughly 83% data was skipped by the query:
 

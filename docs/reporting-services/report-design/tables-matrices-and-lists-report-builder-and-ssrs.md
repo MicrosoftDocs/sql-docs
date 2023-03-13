@@ -1,14 +1,13 @@
 ---
-title: "Tables, matrices, and lists in paginated reports | Microsoft Docs"
+title: "Tables, matrices, and lists in paginated reports"
 description: Learn about tables, matrices, and lists, the tablix data regions that display paginated report data organized into rows and columns in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.rtp.rptdesigner.tablixgroup.f1"
   - "10045"
   - "sql13.rtp.rptdesigner.tablix.visibility.f1"
@@ -33,9 +32,6 @@ f1_keywords:
   - "10103"
   - "10043"
   - "sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1"
-ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Tables, matrices, and lists in paginated reports (Report Builder)
 

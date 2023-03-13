@@ -4,16 +4,16 @@ description: How to use Query Plan Viewer to view and analyze plans in Azure Dat
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 10/26/2022
-ms.prod: azure-data-studio
+ms.date: 11/22/2022
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 
-# Query Plan Viewer in Azure Data Studio (Preview)
+# Query Plan Viewer in Azure Data Studio
 
-Azure Data Studio supports capturing both estimated and actual query plans (currently in preview).  Query plans provide a graphical display of the data retrieval (or modification) method chosen by the SQL Server Query Optimizer.  This visual approach helps understand the performance characteristics of a query.
+[!INCLUDE [sql-asdb-asdbmi](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-[!INCLUDE [azure-data-studio-preview](../includes/azure-data-studio-preview.md)]
+Azure Data Studio supports capturing both estimated and actual query plans.  Query plans provide a graphical display of the data retrieval (or modification) method chosen by the SQL Server Query Optimizer.  This visual approach helps understand the performance characteristics of a query.
 
 ## Display - estimated plan
 
@@ -30,17 +30,17 @@ To view the Actual Plan for any query in the editor, select the Enable Actual Pl
 
 ## Output
 
-When viewing an estimated or actual plan, three tabs are available in addition to the Results and Messages tab.  These tabs are Query Plan (Preview), Plan Tree (Preview), and Top Operations (Preview).  The Query Plan tab displays the plan(s) and provides multiple menu options, available on the right side menu bar and via the right-click menu.  The Plan Tree displays the plan in text format, including sortable columns.  The Top Operations pane lists the operators in the plan, and sorting is available to identify the most expensive operators based on different attributes.
+When viewing an estimated or actual plan, three tabs are available in addition to the Results and Messages tab.  These tabs are Query Plan, Plan Tree, and Top Operations.  The Query Plan tab displays the plan(s) and provides multiple menu options, available on the right side menu bar and via the right-click menu.  The Plan Tree displays the plan in text format, including sortable columns.  The Top Operations pane lists the operators in the plan, and sorting is available to identify the most expensive operators based on different attributes.
 
 ## Query plan menu options
 
 From the context of a query plan there are multiple options available for further analysis of a plan.  These options are accessed by right-clicking anywhere in the plan, or from the right menu bar.
 
    | Icon       | Option     | Description |
-   | ------------ | ------------------ | ------------------------------------------------- |
+   | ---------- | ---------- | ----------- |
    | :::image type="content" source="media/query-plan-viewer/save-button-icon.png" alt-text="Screenshot of a Screenshot of a Save plan icon."::: | Save Plan File | Save the query plan as a .sqlplan file |
    | :::image type="content" source="media/query-plan-viewer/show-xml-icon.png" alt-text="Screenshot of a Show query plan XML icon."::: | Show Query Plan XML | View the query plan in XML format in a new window |
-   | :::image type="content" source="media/query-plan-viewer/open-query-icon.png" alt-text="Screenshot of a Open query icon."::: | Open Query | Open the plan's query in a new window |
+   | :::image type="content" source="media/query-plan-viewer/open-query-icon.png" alt-text="Screenshot of the Open query icon."::: | Open Query | Open the plan's query in a new window |
    | :::image type="content" source="media/query-plan-viewer/zoom-in-icon.png" alt-text="Screenshot of a Zoom in icon."::: | Zoom In | Zoom in within plan |
    | :::image type="content" source="media/query-plan-viewer/zoom-out-icon.png" alt-text="Screenshot of a Zoom out icon."::: | Zoom Out | Zoom out within the plan |
    | :::image type="content" source="media/query-plan-viewer/zoom-to-fit-icon.png" alt-text="Screenshot of a Zoom to fit icon."::: | Zoom to fit | Size the plan to that of the window |

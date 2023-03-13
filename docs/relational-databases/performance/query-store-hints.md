@@ -1,19 +1,16 @@
 ---
 title: "Query Store hints"
 description: "Learn about the Query Store hints feature, which can be used to shape query plans without changing application code."
-ms.custom:
-- event-tier1-build-2022
-ms.date: 10/11/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Query Store hints"
-dev_langs:
- - "TSQL"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 10/11/2022
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Query Store hints"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 

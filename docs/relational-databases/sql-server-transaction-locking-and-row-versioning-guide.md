@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/10/2023
+ms.date: 03/13/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -30,7 +30,7 @@ In any database, mismanagement of transactions often leads to contention and per
 > - To determine if optimized locking is enabled on your database, see [Is optimized locking enabled?](performance/optimized-locking.md#is-optimized-locking-enabled).
 >
 > Optimized locking has significantly updated some sections of this article, including:
-> - [Locking in the Database Engine](#lock_engine)
+> - [Locking in the Database Engine](#Lock_Engine)
 > - [Delete operation](#delete-operation)
 > - [Insert operation](#insert-operation)
 > - [Lock escalation](#lock-escalation)

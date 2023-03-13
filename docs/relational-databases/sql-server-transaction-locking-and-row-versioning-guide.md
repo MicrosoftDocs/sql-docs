@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Transaction locking and row versioning guide
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes the locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
+In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
 
 > [!NOTE]
 > **Optimized locking** is a Database Engine feature introduced in 2023 that drastically reduces lock memory and the number of locks concurrently required for writes. Optimized locking reduces lock memory and the number of locks required for concurrent writes. This article has been updated to describe [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] with and without optimized locking.
@@ -765,7 +765,7 @@ If an instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] generates a lo
     > [!NOTE]
     > Changing the isolation level affects all tables on the instance of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)].
 
-- When optimized locking is not enabled, use the PAGLOCK or TABLOCK table hints to have the Database Engine use page, heap, or index locks instead of ow locks. Using this option, however, increases the problems of users blocking other users attempting to access the same data and should not be used in systems with more than a few concurrent users.
+- When optimized locking is not enabled, use the PAGLOCK or TABLOCK table hints to have the Database Engine use page, heap, or index locks instead of of locks. Using this option, however, increases the problems of users blocking other users attempting to access the same data and should not be used in systems with more than a few concurrent users.
 
 - When optimized locking is not enabled, for partitioned tables, use the LOCK_ESCALATION option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) to escalate locks to the HoBT level instead of the table or to disable lock escalation.
 
@@ -1041,7 +1041,7 @@ Transactions running under snapshot isolation take an optimistic approach to dat
 
 With optimized locking enabled, readers don't take any locks, and writers take short duration low-level locks, instead of locks that expire at the end of the transaction. 
 
-The READ_COMMITTED_SNAPSHOT isolation level is recommended for most effficieny with optimized locking. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
+The READ_COMMITTED_SNAPSHOT isolation level is recommended for most efficiency with optimized locking. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
 With RCSI enabled, and when using read committed isolation level, writers qualify rows per the predicate based on the latest committed version of the row, without acquiring U locks. A query will wait only if the row qualifies and there is an active write transaction on that row or page. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
 
@@ -1123,7 +1123,7 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] supports six data
   
 As new large values are added to a database, they are allocated using a maximum of 8040 bytes of data per fragment. Earlier versions of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] stored up to 8080 bytes of `ntext`, `text`, or `image` data per fragment.  
   
-Existing `ntext`, `text`, and `image` large object (LOB) data is not updated to make space for the row versioning information when a database is upgraded to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, the first time the LOB data is modified, it is dynamically upgraded to enable storage of versioning information. This will happen even if row versions are not generated. After the LOB data is upgraded, the maximum number of bytes stored per fragment is reduced from 8080 bytes to 8040 bytes. The upgrade process is equivalent to deleting the LOB value and reinserting the same value. The LOB data is upgraded even if only one byte is modified. This is a one-time operation for each `ntext`, `text`, or `image` column, but each operation may generate a large amount of page allocations and I/O activity depending upon the size of the LOB data. It may also generate a large amount of logging activity if the modification is fully logged. WRITETEXT and UPDATETEXT operations are minimally logged if database recovery mode is not set to FULL.  
+Existing `ntext`, `text`, and `image` large object (LOB) data is not updated to make space for the row versioning information when a database is upgraded to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, the first time the LOB data is modified, it is dynamically upgraded to enable storage of versioning information. This will happen even if row versions are not generated. After the LOB data is upgraded, the maximum number of bytes stored per fragment is reduced from 8080 bytes to 8040 bytes. The upgrade process is equivalent to deleting the LOB value and reinserting the same value. The LOB data is upgraded even if only 1 byte is modified. This is a one-time operation for each `ntext`, `text`, or `image` column, but each operation may generate a large amount of page allocations and I/O activity depending upon the size of the LOB data. It may also generate a large amount of logging activity if the modification is fully logged. WRITETEXT and UPDATETEXT operations are minimally logged if database recovery mode is not set to FULL.  
   
 The `nvarchar(max)`, `varchar(max)`, and `varbinary(max)` data types are not available in earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Therefore, they have no upgrade issues.  
   
@@ -1150,8 +1150,8 @@ The following DMVs provide information about the current system state of `tempdb
 - **sys.dm_tran_version_store_space_usage**. Returns a virtual table that displays the total space in `tempdb` used by version store records for each database. For more information, see [sys.dm_tran_version_store_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md).  
 
     > [!NOTE]  
-    > sys.dm_tran_top_version_generators and sys.dm_tran_version_store are potentially very expensive functions to run, since both query the entire version store, which could be very large.  
-    > sys.dm_tran_version_store_space_usage is efficient and not expensive to run, as it does not navigate through individual version store records and returns aggregated version store space consumed in `tempdb` per database
+    > The system objects `sys.dm_tran_top_version_generators` and `sys.dm_tran_version_store` are potentially very expensive functions to run, since both query the entire version store, which could be very large.  
+    > While `sys.dm_tran_version_store_space_usage` is efficient and not expensive to run because it does not navigate through individual version store records, and instead returns aggregated version store space consumed in `tempdb` per database.
       
 - **sys.dm_tran_active_snapshot_database_transactions**. Returns a virtual table for all active transactions in all databases within the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that use row versioning. System transactions do not appear in this DMV. For more information, see [sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
   
@@ -1159,7 +1159,7 @@ The following DMVs provide information about the current system state of `tempdb
   
 - **sys.dm_tran_current_transaction**. Returns a single row that displays row versioning-related state information of the transaction in the current session. For more information, see [sys.dm_tran_current_transaction (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).  
   
-- **sys.dm_tran_current_snapshot**. Returns a virtual table that displays all active transactions at the time the current snapshot isolation transaction starts. If the current transaction is using snapshot isolation, this function returns no rows. sys.dm_tran_current_snapshot is similar to sys.dm_tran_transactions_snapshot, except that it returns only the active transactions for the current snapshot. For more information, see [sys.dm_tran_current_snapshot (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md).  
+- **sys.dm_tran_current_snapshot**. Returns a virtual table that displays all active transactions at the time the current snapshot isolation transaction starts. If the current transaction is using snapshot isolation, this function returns no rows. The DMV `sys.dm_tran_current_snapshot` is similar to `sys.dm_tran_transactions_snapshot`, except that it returns only the active transactions for the current snapshot. For more information, see [sys.dm_tran_current_snapshot (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md).  
   
 ##### Performance counters
 
@@ -1525,7 +1525,7 @@ Consider the following limitations when working with row versioning-based isolat
 When an instance of the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cannot grant a lock to a transaction because another transaction already owns a conflicting lock on the resource, the first transaction becomes blocked waiting for the existing lock to be released. By default, there is no mandatory time-out period and no way to test whether a resource is locked before locking it, except to attempt to access the data (and potentially get blocked indefinitely).  
   
 > [!NOTE]  
-> In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the `sys.dm_os_waiting_tasks` dynamic management view to determine whether a process is being blocked and who is blocking it. In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the `sp_who` system stored procedure. For more guidance and examples, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking).
+> In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the `sys.dm_os_waiting_tasks` dynamic management view to determine whether a process is being blocked and who is blocking it. In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the `sp_who` system stored procedure. For more information and examples, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking).
   
 The `LOCK_TIMEOUT` setting allows an application to set a maximum time that a statement waits on a blocked resource. When a statement has waited longer than the LOCK_TIMEOUT setting, the blocked statement is canceled automatically, and error message 1222 (`Lock request time-out period exceeded`) is returned to the application. Any transaction containing the statement, however, is not rolled back or canceled by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Therefore, the application must have an error handler that can trap error message 1222. If an application does not trap the error, the application can proceed unaware that an individual statement within a transaction has been canceled, and errors can occur because statements later in the transaction might depend on the statement that was never executed.  
   
@@ -1785,7 +1785,7 @@ These are guidelines for coding efficient transactions:
     Implicit transactions can introduce unpredictable behavior due to their nature. See [Implicit Transactions and concurrency problems](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)
 
 -   Design indexes with a reduced [fill factor](indexes/specify-fill-factor-for-an-index.md)
-    Decreasing the fill factor may help you prevent or decrease fragmentation of index pages and thus reduce index seek times especially when retrieved from disk. To view fragmentation information for the data and indexes of a table or view, you can usesys.dm_db_index_physical_stats. 
+    Decreasing the fill factor may help you prevent or decrease fragmentation of index pages and thus reduce index seek times especially when retrieved from disk. To view fragmentation information for the data and indexes of a table or view, you can use `sys.dm_db_index_physical_stats`. 
   
 #### Implicit transactions and avoiding concurrency and resource problems
 

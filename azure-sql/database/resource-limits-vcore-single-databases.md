@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/26/2022
+ms.date: 03/13/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -276,7 +276,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
 |Tempdb max data size (GB)|64|128|192|256|320|
 |Max local SSD IOPS <sup>1</sup>|8,000|16,000|24,000|32,000|40,000|
-|Max log rate (MBps)|105 |105 |105 |105 |105 |
+|Max log rate (MBps)|100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
@@ -313,7 +313,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
 |Tempdb max data size (GB)|384|448|512|576|640|
 |Max local SSD IOPS <sup>1</sup>|48,000|56,000|64,000|72,000|80,000|
-|Max log rate (MBps)|105 |105 |105 |105 |105 |
+|Max log rate (MBps)|100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
@@ -348,7 +348,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
 |Tempdb max data size (GB)|768|1024|1280|2560|4096|
 |Max local SSD IOPS <sup>1</sup>|96,000|128,000|160,000|320,000|327,680|
-|Max log rate (MBps)|105 |105 |105 |105 |105|
+|Max log rate (MBps)|100 |100 |100 |100 |100|
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
@@ -385,7 +385,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
 |Tempdb max data size (GB)|64|128|192|256|320|
 |Max local SSD IOPS <sup>1</sup>|10,240|20,480|30,720|40,960|51,200|
-|Max log rate (MBps)|105 |105 |105 |105 |105 |
+|Max log rate (MBps)|100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
@@ -422,7 +422,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
 |Tempdb max data size (GB)|384|448|512|576|640|
 |Max local SSD IOPS <sup>1</sup>|61,440|71,680|81,920|92,160|102,400|
-|Max log rate (MBps)|105 |105 |105 |105 |105 |
+|Max log rate (MBps)|100 |100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
@@ -458,7 +458,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |
 |Tempdb max data size (GB)|768|1024|1280|2560|
 |Max local SSD IOPS <sup>1</sup>|122,880|163,840|204,800|327,680|
-|Max log rate (MBps)|105 |105 |105 |105 |
+|Max log rate (MBps)|100 |100 |100 |100 |
 |Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|
 |Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|

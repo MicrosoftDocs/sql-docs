@@ -1,29 +1,26 @@
 ---
-title: "sp_addsubscription (Transact-SQL) | Microsoft Docs"
+title: "sp_addsubscription (Transact-SQL)"
 description: Adds a subscription to a publication and sets the Subscriber status. This stored procedure runs at the Publisher on the publication database.
-ms.date: "03/29/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.custom: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addsubscription"
-  - "sp_addsubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_addsubscription"
-ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/29/2021"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addsubscription"
+  - "sp_addsubscription_TSQL"
+helpviewer_keywords:
+  - "sp_addsubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Adds a subscription to a publication and sets the Subscriber status. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,29 +1,26 @@
 ---
+title: "sp_addmergepartition (Transact-SQL)"
 description: "sp_addmergepartition (Transact-SQL)"
-title: "sp_addmergepartition (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergepartition"
-  - "sp_addmergepartition_TSQL"
-helpviewer_keywords: 
-  - "sp_addmergepartition"
-ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergepartition"
+  - "sp_addmergepartition_TSQL"
+helpviewer_keywords:
+  - "sp_addmergepartition"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a dynamically filtered partition for a subscription that is filtered by the values of [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) or [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) at the Subscriber. This stored procedure is executed at the Publisher on the database that is being published, and is used to manually generate partitions.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

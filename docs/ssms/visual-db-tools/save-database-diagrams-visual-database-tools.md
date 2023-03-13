@@ -1,20 +1,16 @@
 ---
-description: "Save Database Diagrams (Visual Database Tools)"
 title: Save Database Diagrams
-ms.custom: seo-lt-2019
+description: "Save Database Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "saving database diagrams"
   - "database diagrams [SQL Server], saving"
   - "diagrams [SQL Server], saving"
-ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Save Database Diagrams (Visual Database Tools)
 

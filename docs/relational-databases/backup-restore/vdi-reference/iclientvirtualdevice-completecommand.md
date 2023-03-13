@@ -1,13 +1,13 @@
 ---
-title: IClientVirtualDevice::CompleteCommand
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IClientVirtualDevice::CompleteCommand command.
+title: "IClientVirtualDevice::CompleteCommand"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IClientVirtualDevice::CompleteCommand command."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 08/30/2019
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: reference
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # IClientVirtualDevice::CompleteCommand (VDI)

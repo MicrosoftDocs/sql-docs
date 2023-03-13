@@ -1,20 +1,17 @@
 ---
+title: "Creating a Custom Log Provider"
 description: "Creating a Custom Log Provider"
-title: "Creating a Custom Log Provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "custom log providers [Integration Services], creating"
-ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom log providers [Integration Services], creating"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Creating a Custom Log Provider
 

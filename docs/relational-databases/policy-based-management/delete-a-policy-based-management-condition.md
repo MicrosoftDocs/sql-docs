@@ -1,17 +1,14 @@
 ---
+title: "Delete a Policy-Based Management Condition"
 description: "Delete a Policy-Based Management Condition"
-title: "Delete a Policy-Based Management Condition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, delete policy conditions"
-ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, delete policy conditions"
 ---
 # Delete a Policy-Based Management Condition
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

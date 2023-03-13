@@ -2,8 +2,8 @@
 title: How to set up Windows Authentication for Azure Active Directory with the incoming trust-based flow
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows authentication for Azure Active Directory with the incoming trust-based flow.
-author: srdan-bozovic-msft
-ms.author: srbozovi
+author: sravanisaluru
+ms.author: srsaluru
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
 ms.service: sql-managed-instance
@@ -155,10 +155,7 @@ Install-Module -Name AzureADHybridAuthenticationManagement -AllowClobber
     Run the [Set-AzureAdKerberosServer PowerShell cmdlet](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises#create-a-kerberos-server-object) to add the Trusted Domain Object. Be sure to include `-SetupCloudTrust` parameter. If there is no Azure AD service account, this command will create a new Azure AD service account. If there is an Azure AD service account already, this command will only create the requested Trusted Domain object.
 
     ```powershell
-    Set-AzureAdKerberosServer -Domain $domain ` 
-       -DomainCredential $domainCred ` 
-       -UserPrincipalName $cloudUserName ` 
-       -SetupCloudTrust 
+         Set-AzureADKerberosServer -Domain $domain -CloudCredential $cloudCred -DomainCredential $domainCred -RotateServerKey
     ```
 
     After creating the Trusted Domain Object, you can check the updated Kerberos Settings using the `Get-AzureAdKerberosServer` PowerShell cmdlet, as shown in the previous step. If the `Set-AzureAdKerberosServer` cmdlet has been run successfully with the `-SetupCloudTrust` parameter, the `CloudTrustDisplay` field should now return `Microsoft.AzureAD.Kdc.Service.TrustDisplay`, as in the following sample output:

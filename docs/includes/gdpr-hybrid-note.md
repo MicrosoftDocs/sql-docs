@@ -4,8 +4,7 @@ description: include file
 author: eross-msft
 ms.author: lizross
 ms.date: 05/01/2018
-ms.prod: reporting-services
-ms.service:
+ms.service: reporting-services
 ms.topic: include
 ms.custom: include file
 ---

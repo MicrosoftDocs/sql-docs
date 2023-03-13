@@ -1,11 +1,13 @@
 ---
 title: "View list of databases on SQL Server"
 description: Learn how to view a list of databases on an instance of SQL Server by using SQL Server Management Studio or Transact-SQL.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "12/16/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "current databases"
   - "databases currently on server [SQL Server]"
   - "database list [SQL Server]"
@@ -14,10 +16,6 @@ helpviewer_keywords:
   - "databases [SQL Server], viewing"
   - "servers [SQL Server], databases listed on"
   - "listing databases"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: "seo-lt-2019, FY22Q2Fresh"
-ms.date: "12/16/2022"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

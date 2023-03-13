@@ -1,29 +1,26 @@
 ---
+title: "sp_changesubscriber_schedule (Transact-SQL)"
 description: "sp_changesubscriber_schedule (Transact-SQL)"
-title: "sp_changesubscriber_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changesubscriber_schedule"
-  - "sp_changesubscriber_schedule_TSQL"
-helpviewer_keywords: 
-  - "sp_changesubscriber_schedule"
-ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changesubscriber_schedule"
+  - "sp_changesubscriber_schedule_TSQL"
+helpviewer_keywords:
+  - "sp_changesubscriber_schedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the Distribution Agent or Merge Agent schedule for a subscriber. This stored procedure is executed at the Publisher on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,17 +1,14 @@
 ---
+title: "Evaluate a Policy-Based Management Policy on a Schedule"
 description: "Evaluate a Policy-Based Management Policy on a Schedule"
-title: "Evaluate a Policy-Based Management Policy on a Schedule | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, evaluate policy"
-ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, evaluate policy"
 ---
 # Evaluate a Policy-Based Management Policy on a Schedule
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

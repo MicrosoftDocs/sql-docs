@@ -91,7 +91,7 @@ To learn more about configuring the network for auto-failover groups, review [En
 
 Instances running on Gen4 hardware must be upgraded to newer hardware since Gen4 is being retired. Upgrading hardware and moving to another subnet can be performed in one operation.
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+[!INCLUDE[azure-sql-gen4-hardware-retirement-sql-managed-instance](../includes/azure-sql-gen4-hardware-retirement-sql-managed-instance.md)]
 
 ## Operation steps
 

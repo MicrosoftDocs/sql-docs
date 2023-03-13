@@ -1,21 +1,19 @@
 ---
-title: "Peer-to-Peer Transactional Replication | Microsoft Docs"
+title: "Peer-to-Peer Transactional Replication"
 description: In SQL Server, peer-to-peer replication provides a scale-out and high-availability solution by maintaining copies of data across multiple server instances.
-ms.custom: ""
-ms.date: 10/05/2021
+author: "MashaMSFT"
+ms.author: "mathoma"
+ms.date: 01/05/2023
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "bidirectional replication"
   - "transactional replication, bidirectional replication"
   - "bidirectional transactional replication"
   - "transactional replication, peer-to-peer replication"
   - "peer-to-peer transactional replication"
-ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Peer-to-Peer - Transactional Replication
 
@@ -50,11 +48,11 @@ Consider a web application. This can benefit from peer-to-peer replication in th
 
 ![Peer-to-peer replication, two nodes](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "Peer-to-peer replication, two nodes")  
   
-Both of the preceding illustrations show two participating databases, with user traffic directed to the databases through an application server. This configuration can be used for a variety of applications, from Web sites to workgroup applications, and provides the following benefits:  
+Both of the preceding illustrations show two participating databases, with user traffic directed to the databases through an application server. This configuration can be used for a number of applications, from Web sites to workgroup applications, and provides the following benefits:  
   
 - Improved read performance, because reads are spread out over two servers.  
   
-- Higher availability if maintenance is required or in case of failure at one node.  
+- Higher availability if maintenance is required or of failure at one node.  
   
  In both illustrations, read activity is load-balanced between the participating databases, but updates are handled differently:  
   
@@ -68,11 +66,11 @@ Peer-to-peer replication can support either approach, but the central update exa
 
 ![Peer-to-peer replication to dispersed locations](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "Peer-to-peer replication to dispersed locations")  
   
-The preceding illustration shows three participating databases that provide data for a worldwide software support organization, with offices in Los Angeles, London, and Taipei. The support engineers at each office take customer calls and enter and update information about each customer call. The time zones for the three offices are eight hours apart, so there is no overlap in the workday. As the Taipei office closes, the London office is opening for the day. If a call is still in progress as one office is closing, the call is transferred to a representative at the next office to open.  
+The preceding illustration shows three participating databases that provide data for a worldwide software support organization, with offices in Los Angeles, London, and Taipei. The support engineers at each office take customer calls and enter and update information about each customer call. The time zones for the three offices are eight hours apart, so there's no overlap in the workday. As the Taipei office closes, the London office is opening for the day. If a call is still in progress as one office is closing, the call is transferred to a representative at the next office to open.  
   
 Each location has a database and an application server, which are used by the support engineers as they enter and update information about customer calls. The topology is partitioned by time. Therefore, updates occur only at the node that is currently open for business, and then the updates flow to the other participating databases. This topology provides the following benefits:  
   
-- Independence without isolation: Each office can insert, update, or delete data independently but can also share the data because it is replicated to all other participating databases.  
+- Independence without isolation: Each office can insert, update, or delete data independently but can also share the data because it's replicated to all other participating databases.  
   
 - Higher availability in case of failure or to allow maintenance at one or more of the participating databases.  
   
@@ -82,13 +80,13 @@ Each location has a database and an application server, which are used by the su
   
 - Because another office is opened.  
   
-- To provide higher availability to support maintenance or increase fault tolerance if a disk failure or other major failure occurs.  
+- To provide higher availability to support maintenance or increase fault tolerance if a disk failure, or other major failure occurs.  
   
- Notice that in both the three- and four-node topologies, all databases publish and subscribe to all other databases. This provides maximum availability in case of maintenance needs or failure of one or more nodes. As nodes are added, you must balance availability and scalability needs against performance and the complexity of deployment and administration.  
+ Notice that in both the three- and four-node topologies, all databases publish and subscribe to all other databases. This provides maximum availability if there are maintenance needs or failures of one or more nodes. As nodes are added, you must balance availability and scalability needs against performance and the complexity of deployment and administration.  
   
 ## Configuring Peer-to-Peer Replication  
 
-Configuring a peer-to-peer replication topology is very similar to configuring a series of standard transactional publications and subscriptions. The steps described in the following topics show the configuration of a three-node system, similar to the configuration shown on the left in the previous illustration that shows peer-to-peer topology.  
+Configuring a peer-to-peer replication topology is similar to configuring a series of standard transactional publications and subscriptions. The steps described in the following articles show the configuration of a three-node system, similar to the configuration shown on the left in the previous illustration that shows peer-to-peer topology.  
   
 ## Considerations for Using Peer-to-Peer Replication  
 
@@ -104,21 +102,21 @@ This section provides information and guidelines to consider when you use peer-t
   
   - Publications must allow schema changes to be replicated. (This is a setting of **1** for the publication property **replicate_ddl**, which is the default setting.) For more information, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-  - Row and column filtering are not supported.  
+  - Row and column filtering aren't supported.  
   
 - Each node should use its own distribution database. This eliminates the potential of having a single point of failure.  
   
-- Tables and other objects cannot be included in multiple peer-to-peer publications in a single publication database.  
+- Tables and other objects can't be included in multiple peer-to-peer publications in a single publication database.  
   
 - A publication must be enabled for peer-to-peer replication before any subscriptions are created.  
   
 - Subscriptions must be initialized by using a backup or with the `replication support only` option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-- Do not use identity columns. When using identities, you must manually manage the ranges assigned to the tables at each participating database. For more information, see [Assigning ranges for manual identity range management](../publish/replicate-identity-columns.md#assigning-ranges-for-manual-identity-range-management).  
+- Don't use identity columns. When using identities, you must manually manage the ranges assigned to the tables at each participating database. For more information, see [Assigning ranges for manual identity range management](../publish/replicate-identity-columns.md#assigning-ranges-for-manual-identity-range-management).  
   
 ### Feature Restrictions
 
-Peer-to-peer replication supports the core features of transactional replication, but does not support the following options:  
+Peer-to-peer replication supports the core features of transactional replication, but doesn't support the following options:  
   
 - Initialization and reinitialization with a snapshot.  
   
@@ -142,7 +140,9 @@ Peer-to-peer replication supports the core features of transactional replication
   
 - The article properties `@destination_owner` and `@destination_table`.
 
-- Peer-to-Peer transactional replication does not support creating a one-way transactional subscription to a Peer-to-Peer publication
+- Peer-to-Peer transactional replication doesn't support creating a one-way transactional subscription to a Peer-to-Peer publication
+
+- Peer-to-Peer transactional replication doesn't support publishing tables with computed columns as part of their primary key.
   
 The following properties have special considerations:  
   
@@ -150,7 +150,7 @@ The following properties have special considerations:
   
 - The article property `@replicate_ddl` requires a value of **true**; `@identityrangemanagementoption` requires a value of **manual**; and `@status` requires that option **24** is set.  
   
-- The value for article properties `@ins_cmd`, `@del_cmd`, and `@upd_cmd` cannot be set to **SQL**.  
+- The value for article properties `@ins_cmd`, `@del_cmd`, and `@upd_cmd` can't be set to **SQL**.  
   
 - The subscription property `@sync_type` requires a value of **none** or **automatic**.  
 
@@ -179,7 +179,7 @@ The following properties have special considerations:
   
 - If you add a new node to a peer-to-peer topology, you should restore only from backups that were created after the new node was added.  
   
-- You cannot reinitialize subscriptions in a peer-to-peer topology. If you have to ensure that a node has a new copy of the data, restore a backup at the node.  
+- You can't reinitialize subscriptions in a peer-to-peer topology. If you have to ensure that a node has a new copy of the data, restore a backup at the node.  
   
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

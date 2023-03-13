@@ -1,29 +1,26 @@
 ---
+title: "sp_remove_job_from_targets (Transact-SQL)"
 description: "sp_remove_job_from_targets (Transact-SQL)"
-title: "sp_remove_job_from_targets (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_remove_job_from_targets_TSQL"
-  - "sp_remove_job_from_targets"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_remove_job_from_targets"
-ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_remove_job_from_targets_TSQL"
+  - "sp_remove_job_from_targets"
+helpviewer_keywords:
+  - "sp_remove_job_from_targets"
+dev_langs:
+  - "TSQL"
 ---
 # sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the specified job from the given target servers or target server groups.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

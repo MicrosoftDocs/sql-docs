@@ -3,7 +3,7 @@ title: "sys.dm_xe_session_targets (Transact-SQL)"
 description: sys.dm_xe_session_targets (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/30/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
 dev_langs:
   - "TSQL"
-ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 ---
 # sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +39,11 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 
 Requires VIEW SERVER STATE permission on the server.  
   
-### Relationship cardinalities  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  

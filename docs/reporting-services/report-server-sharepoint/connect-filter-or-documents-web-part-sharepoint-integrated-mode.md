@@ -1,14 +1,12 @@
 ---
-title: "Connect Filter or Documents web part with a Reporting Services Report Viewer web part | Microsoft Docs"
+title: "Connect Filter or Documents web part with a Reporting Services Report Viewer web part"
 description: For a SharePoint product, learn to create a dashboard or web part Page that includes a Filter web part or Documents web part and a Report Viewer web part.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/26/2018
 ms.service: reporting-services
 ms.subservice: report-server-sharepoint
-
-
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Connect Filter or Documents web part with a Reporting Services Report Viewer web part
 

@@ -1,13 +1,13 @@
 ---
 title: "Metadata Visibility Configuration"
 description: Learn how to configure metadata visibility for securables that a user owns or has been granted permission to in SQL Server.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/19/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "subcomponents visibility [SQL Server]"
   - "metadata [SQL Server], visibility"
   - "permissions [SQL Server], metadata access"
@@ -16,8 +16,6 @@ helpviewer_keywords:
   - "displaying metadata"
   - "database metadata [SQL Server]"
   - "metadata [SQL Server], permissions"
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata Visibility Configuration

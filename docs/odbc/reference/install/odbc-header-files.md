@@ -1,19 +1,16 @@
 ---
+title: "ODBC Header Files"
 description: "ODBC Header Files"
-title: "ODBC Header Files | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "installing ODBC components [ODBC], application files"
   - "header files [ODBC]"
   - "application files [ODBC]"
-ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
-author: David-Engel
-ms.author: v-davidengel
 ---
 # ODBC Header Files
 > [!NOTE]  

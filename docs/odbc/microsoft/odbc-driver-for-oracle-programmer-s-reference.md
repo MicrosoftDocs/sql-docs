@@ -1,15 +1,12 @@
 ---
+title: "ODBC Driver for Oracle Programmer's Reference"
 description: "ODBC Driver for Oracle Programmer's Reference"
-title: "ODBC Driver for Oracle Programmer's Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # ODBC Driver for Oracle Programmer's Reference
 > [!IMPORTANT]  

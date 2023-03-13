@@ -7,14 +7,12 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "absolute location path"
   - "node-set [SQLXML]"
   - "XPath queries [SQLXML], location paths"
   - "relative location path [SQLXML]"
   - "location path for XPath query"
-ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Location Path (SQLXML 4.0)

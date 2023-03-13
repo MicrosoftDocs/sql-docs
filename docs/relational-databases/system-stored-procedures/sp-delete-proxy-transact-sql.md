@@ -1,30 +1,27 @@
 ---
+title: "sp_delete_proxy (Transact-SQL)"
 description: "sp_delete_proxy (Transact-SQL)"
-title: "sp_delete_proxy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_proxy"
-  - "sp_delete_proxy_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_proxy"
-  - "DROP PROXY statement"
-ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_proxy"
+  - "sp_delete_proxy_TSQL"
+helpviewer_keywords:
+  - "sp_delete_proxy"
+  - "DROP PROXY statement"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the specified proxy.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

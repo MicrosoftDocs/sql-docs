@@ -1,19 +1,16 @@
 ---
+title: "ODBC Visual FoxPro Setup Dialog Box"
 description: "ODBC Visual FoxPro Setup Dialog Box"
-title: "ODBC Visual FoxPro Setup Dialog Box | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "installing Visual FoxPro ODBC driver [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], installing"
   - "FoxPro ODBC driver [ODBC], installing"
-ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-author: David-Engel
-ms.author: v-davidengel
 ---
 # ODBC Visual FoxPro Setup Dialog Box
 The **ODBC Visual FoxPro Setup** dialog box enables you to add or change a Visual FoxPro data source.  

@@ -7,7 +7,6 @@ ms.date: "10/16/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "AVAILABILITY GROUP"
   - "CREATE_AVAILABILITY_TSQL"
@@ -33,7 +32,7 @@ Creates a new availability group, if the instance of [!INCLUDE[ssNoVersion](../.
 > [!IMPORTANT]  
 >  Execute CREATE AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you intend to use as the initial primary replica of your new availability group. This server instance must reside on a Windows Server Failover Clustering (WSFC) node.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -219,7 +218,7 @@ Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Sets a mini
 
 REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on synchronous replicas commit to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceeds. When the unresponsive database comes back online it will be in a "not synced" state and the replica is marked as unhealthy until the primary can synchronize it again. This setting guarantees that the primary replica does not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available, then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
 
-Not supported for CREATE AVAILABILITY GROUP. However, beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can use ALTER AVAILABILITY GROUP to set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. See [ALTER AVAILABILITY GROUP (Transact-SQL)](alter-availability-group-transact-sql.md).
+Not supported for CREATE AVAILABILITY GROUP. Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can use ALTER AVAILABILITY GROUP to set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT on a distributed availability group. See [ALTER AVAILABILITY GROUP (Transact-SQL)](alter-availability-group-transact-sql.md).
 
 #### CLUSTER_TYPE
 

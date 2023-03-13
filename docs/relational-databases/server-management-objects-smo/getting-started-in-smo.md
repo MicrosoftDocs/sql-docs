@@ -1,19 +1,15 @@
 ---
+title: "Getting Started in SMO"
 description: "Getting Started in SMO"
-title: "Getting Started in SMO | Microsoft Docs"
-ms.custom:
-  - intro-get-started
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
+ms.custom: intro-get-started
 helpviewer_keywords:
   - "SQL Server Management Objects, about SQL Server Management Objects"
   - "SMO [SQL Server], about SQL Server Management Objects"
-ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Started in SMO

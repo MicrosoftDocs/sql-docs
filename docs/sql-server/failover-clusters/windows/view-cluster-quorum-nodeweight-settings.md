@@ -1,19 +1,16 @@
 ---
-title: "View Cluster Quorum NodeWeight Settings | Microsoft Docs"
+title: "View Cluster Quorum NodeWeight Settings"
 description: Learn how to view NodeWeight settings for each member node in a Windows Server Failover Clustering cluster. These settings are used during quorum voting.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
   - "quorum [SQL Server], Always On and WSFC quorum"
-ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
-author: MashaMSFT
-ms.author: mathoma
 ---
 # View Cluster Quorum NodeWeight Settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

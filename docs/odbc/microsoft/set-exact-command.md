@@ -1,17 +1,14 @@
 ---
+title: "SET EXACT Command"
 description: "SET EXACT Command"
-title: "SET EXACT Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SET EXACT command [ODBC]"
-ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SET EXACT command [ODBC]"
 ---
 # SET EXACT Command
 Specifies the rules for comparing two strings of different lengths.  

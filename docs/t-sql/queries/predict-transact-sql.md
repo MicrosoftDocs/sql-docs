@@ -1,22 +1,20 @@
 ---
-description: "PREDICT (Transact-SQL)"
 title: "PREDICT (Transact-SQL)"
 titleSuffix: SQL machine learning
-ms.custom: ""
-ms.date: "04/18/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: machine-learning
-ms.topic: reference
-f1_keywords: 
-  - "PREDICT"
-  - "PREDICT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "PREDICT clause"
+description: "PREDICT (Transact-SQL)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "04/18/2022"
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: reference
+f1_keywords:
+  - "PREDICT"
+  - "PREDICT_TSQL"
+helpviewer_keywords:
+  - "PREDICT clause"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest"
 ---
 # PREDICT (Transact-SQL)
@@ -24,9 +22,6 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
-
-> [!IMPORTANT]
-> Support for `PREDICT` is in Preview in Azure SQL Managed Instance.
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
@@ -169,7 +164,7 @@ The `MODEL` parameter is used to specify the model used for scoring or predictio
 In Azure SQL Managed Instance, `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) and [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) packages.
 
 > [!IMPORTANT]
-> Support for `PREDICT` is in Preview in Azure SQL Managed Instance.
+> Support for ONNX in `PREDICT` is in preview in Azure SQL Managed Instance.
 
 ::: moniker-end
 
@@ -186,7 +181,7 @@ The DATA parameter is used to specify the data used for scoring or prediction. D
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> The `RUNTIME = ONNX` argument is only available in [Azure SQL Edge](/azure/sql-database-edge/onnx-overview), [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is), and is in Preview in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+> The `RUNTIME = ONNX` argument is only available in [Azure SQL Edge](/azure/sql-database-edge/onnx-overview), [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is), and is in preview in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`. The parameter is required for Azure SQL Edge and Azure Synapse Analytics. On Azure SQL Managed Instance (in Preview), the parameter is optional and only used when using ONNX models.
 
@@ -259,7 +254,7 @@ FROM PREDICT(MODEL = @model,
 
 The alias **d** specified for table source in the `DATA` parameter is used to reference the columns belonging to `dbo.mytable`. The alias **p** specified for the `PREDICT` function is used to reference the columns returned by the `PREDICT` function.
 
-- The model is stored as `varbinary(max)` column in table call **Models**. Additional information such as **ID** and **description** is saved in the table to identify the mode.
+- The model is stored as `varbinary(max)` column in table called `Models`. Additional information such as `ID` and `description` is saved in the table to identify the model.
 - The alias **d** specified for table source in the `DATA` parameter is used to reference the columns belonging to `dbo.mytable`. The input data column names should match the name of inputs for the model.
 - The alias **p** specified for the `PREDICT` function is used to reference the predicted column returned by the `PREDICT` function. The column name should have the same name as the output name for the model.
 - All input data columns and the predicted columns are available to display in the SELECT statement.
@@ -306,8 +301,8 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score
 
 :::moniker-end
 
-- The results of `PREDICT` are stored in a table called PredictionResults. 
-- The model is stored as `varbinary(max)` column in table call **Models**. Additional information such as ID and description can be saved in the table to identify the model.
+- The results of `PREDICT` are stored in a table called `PredictionResults`. 
+- The model is stored as `varbinary(max)` column in table called `Models`. Additional information such as ID and description can be saved in the table to identify the model.
 - The alias **d** specified for table source in the `DATA` parameter is used to reference the columns in `dbo.mytable`. The input data column names should match the name of inputs for the model.
 - The alias **p** specified for the `PREDICT` function is used to reference the predicted column returned by the `PREDICT` function. The column name should have the same name as the output name for the model.
 - All input columns and the predicted column are available to display in the SELECT statement.

@@ -1,24 +1,21 @@
 ---
+title: "Merge Join Transformation"
 description: "Merge Join Transformation"
-title: "Merge Join Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.mergejointrans.f1"
   - "sql13.dts.designer.mergejointransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "datasets [Integration Services]"
   - "Merge Join transformation"
   - "datasets [Integration Services], joining"
   - "joining datasets [Integration Services]"
   - "joins [SQL Server], SSIS"
-ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: chugugrace
-ms.author: chugu
 ---
 # Merge Join Transformation
 

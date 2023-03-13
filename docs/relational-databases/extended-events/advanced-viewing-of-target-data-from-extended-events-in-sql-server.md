@@ -7,8 +7,6 @@ ms.date: "05/24/2019"
 ms.service: sql
 ms.subservice: xevents
 ms.topic: tutorial
-ms.custom: seo-lt-2019
-ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Advanced Viewing of Target Data from Extended Events in SQL Server

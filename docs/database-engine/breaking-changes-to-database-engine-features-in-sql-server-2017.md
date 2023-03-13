@@ -5,11 +5,10 @@ description: "Learn about changes that might break applications, scripts, or fun
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 07/25/2022
+ms.date: 12/30/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "breaking changes 2017 [SQL Server]"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
@@ -20,7 +19,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 
 This article describes breaking changes in the [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.
 
-## Breaking changes in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]
+## Breaking changes in SQL Server 2017 Database Engine
 
 - CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. Beginning with [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. clr strict security is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` CLR assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this isn't recommended. When `clr strict security` is disabled, a CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire **sysadmin** privileges. After enabling strict security, any assemblies that aren't signed will fail to load. Also, if a database has `SAFE` or `EXTERNAL_ACCESS` assemblies, `RESTORE` or `ATTACH DATABASE` statements can complete, but the assemblies may fail to load.
 
@@ -36,11 +35,11 @@ This article describes breaking changes in the [!INCLUDE[sssql17-md](../includes
 
 #### Archived documentation for old versions of SQL Server
 
-[!INCLUDE[Archived documentation for old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+[!INCLUDE[previous-versions-archive-documentation-sql-server](includes/previous-versions-archive-documentation-sql-server.md)]
 
 ## See also
 
 - [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
 - [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)
 - [SQL Server Database Engine Backward Compatibility](./discontinued-database-engine-functionality-in-sql-server.md)
-- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+- [ALTER DATABASE Compatibility Level (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

@@ -1,19 +1,16 @@
 ---
+title: "Pattern Value Arguments"
 description: "Pattern Value Arguments"
-title: "Pattern Value Arguments | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "catalog functions [ODBC], arguments"
   - "arguments in catalog functions [ODBC], pattern value"
   - "pattern value arguments [ODBC]"
-ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Pattern Value Arguments
 Some arguments in the catalog functions, such as the *TableName* argument in **SQLTables**, accept search patterns. These arguments accept search patterns if the SQL_ATTR_METADATA_ID statement attribute is set to SQL_FALSE; they are identifier arguments that do not accept a search pattern if this attribute is set to SQL_TRUE.  

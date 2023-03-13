@@ -1,20 +1,17 @@
 ---
-title: "Uninstall Power Pivot for SharePoint | Microsoft Docs"
+title: "Uninstall Power Pivot for SharePoint"
 description: This article describes how to uninstall a Power Pivot for SharePoint installation, which is a multi-step operation.
-ms.custom: ""
+author: maggiesMSFT
+ms.author: maggies
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: install
 ms.topic: conceptual
-ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-author: maggiesMSFT 
-ms.author: maggies
 ---
 # Uninstall Power Pivot for SharePoint
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-  Uninstalling a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation is a multi-step operation that includes preparing for uninstall, removing features and solutions from the farm, and removing program files and registry settings.  
+  Uninstalling a [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] installation is a multi-step operation that includes preparing for uninstall, removing features and solutions from the farm, and removing program files and registry settings.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
@@ -40,27 +37,27 @@ ms.author: maggies
   
 -   You must be a SQL Server System Administrator and a member of the local Administrators group if you are also uninstalling the Database Engine.  
   
--   You must be an Analysis Services System Administrator and a member of the local Administrators group to uninstall Analysis Services and [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   You must be an Analysis Services System Administrator and a member of the local Administrators group to uninstall Analysis Services and [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)].  
   
 ##  <a name="bkmk_before"></a> Step 1: Pre-Uninstall Checklist  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access will be disabled once the software that supports query and data processing is removed from the farm. As a first step, you should preemptively delete files and libraries that will no longer be operational. This lets you address any questions or concerns about 'missing data' before you uninstall the software.  
+ [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data access will be disabled once the software that supports query and data processing is removed from the farm. As a first step, you should preemptively delete files and libraries that will no longer be operational. This lets you address any questions or concerns about 'missing data' before you uninstall the software.  
   
-1.  Delete all [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks, documents, and libraries that are associated with a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installation. Neither the libraries nor the documents will function once the software is uninstalled.  
+1.  Delete all [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbooks, documents, and libraries that are associated with a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint installation. Neither the libraries nor the documents will function once the software is uninstalled.  
   
     -   [Delete Power Pivot Gallery](/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
     -   [Delete a Power Pivot Data Feed Library](/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
-2.  Delete Excel workbooks or Reporting Services reports in other libraries that contain or reference [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.  
+2.  Delete Excel workbooks or Reporting Services reports in other libraries that contain or reference [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data.  
   
-3.  Remove any web part in a PerformancePoint dashboard that references [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.  
+3.  Remove any web part in a PerformancePoint dashboard that references [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data.  
   
-4.  Review SharePoint permissions on existing sites and libraries to determine whether you need to change them. Some [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access scenarios, particularly secondary data access via a URL connection string to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data in another workbook, require Read permissions, which is higher than the View permissions that are typically assigned to SharePoint users who only visit a site. If you no longer require Read permissions, you can reduce permissions accordingly.  
+4.  Review SharePoint permissions on existing sites and libraries to determine whether you need to change them. Some [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data access scenarios, particularly secondary data access via a URL connection string to [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data in another workbook, require Read permissions, which is higher than the View permissions that are typically assigned to SharePoint users who only visit a site. If you no longer require Read permissions, you can reduce permissions accordingly.  
   
 5.  Optionally, stop the services and wait several days before uninstalling the software. This step is not necessary for uninstall, but it gives you the option of temporarily resuming the service while you work out any data migration or technology substitution issues that you might have missed.  
   
 ##  <a name="bkmk_remove"></a> Step 2: Remove Features and Solutions from SharePoint  
- Use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool to remove [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] services and applications from SharePoint.  
+ Use the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration Tool to remove [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] services and applications from SharePoint.  
   
 -   You must be a farm administrator, a server administrator on the Analysis Services instance, and **db_owner** on the farm's configuration database.  
   
@@ -68,11 +65,11 @@ ms.author: maggies
   
 -   Verify that the SharePoint Administration service is running.  
   
-1.  **Run the Configuration tool:** Note the configuration tools are only listed only when [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is installed on the local server.On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click one of the following:  
+1.  **Run the Configuration tool:** Note the configuration tools are only listed only when [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] is installed on the local server. On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click one of the following:  
   
-    -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration**  
+    -   **[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint 2013 Configuration**  
   
-    -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool**  
+    -   **[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Configuration Tool**  
   
 2.  Select **Remove Features, Services, Applications, and Solutions** and then click **OK**.  
   
@@ -80,9 +77,9 @@ ms.author: maggies
   
 4.  Review each action in the task list to understand what each one does.  
   
-     In **Remove [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Applications**, you are given the option of deleting application data associated with the service application. The application data is a SQL Server database that was created with the service application for the purpose of storing data refresh schedules, database instance information, usage data, and other data used by [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. It does not store user files, such as [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks. Unless you have a specific reason to keep the application data (for example, if you have data retention policies related to data refresh or data access) you can delete the application database without removing any files that were created or saved by SharePoint users.  
+     In **Remove [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Service Applications**, you are given the option of deleting application data associated with the service application. The application data is a SQL Server database that was created with the service application for the purpose of storing data refresh schedules, database instance information, usage data, and other data used by [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint. It does not store user files, such as [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbooks. Unless you have a specific reason to keep the application data (for example, if you have data retention policies related to data refresh or data access) you can delete the application database without removing any files that were created or saved by SharePoint users.  
   
-     To delete the database, select **Remove [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Applications** and then select the **Delete application data associated with this service application**.  
+     To delete the database, select **Remove [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Service Applications** and then select the **Delete application data associated with this service application**.  
   
 5.  Optionally, review detailed information in the **Output** tab or **Script** tab.  
   
@@ -118,7 +115,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.  
   
-4.  For deployments or retractions related to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
+4.  For deployments or retractions related to [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
   
     ```  
     Stsadm -o canceldeployment -id "<GUID>"  
@@ -129,9 +126,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
  Alternatively, you can use PowerShell to remove features and solutions from the farm. For more information, see [PowerShell Reference for Power Pivot for SharePoint](/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
 ##  <a name="bkmk_uninstall"></a> Step 3: Run SQL Server Setup to Remove Programs from the Local Computer  
- Deleting program files requires that you run SQL Server Setup to uninstall the software. Uninstall removes both files and the registry entries that were created by Setup. You can use the Programs and Features page to uninstall the software. An installation of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is part of a SQL Server installation.  
+ Deleting program files requires that you run SQL Server Setup to uninstall the software. Uninstall removes both files and the registry entries that were created by Setup. You can use the Programs and Features page to uninstall the software. An installation of [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] is part of a SQL Server installation.  
   
- You can uninstall part of an installation without impacting other SQL Server instances (or features in the same instance) that are already installed. For example, you can uninstall [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint while leaving other components, such as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or the Database Engine, installed.  
+ You can uninstall part of an installation without impacting other SQL Server instances (or features in the same instance) that are already installed. For example, you can uninstall [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint while leaving other components, such as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or the Database Engine, installed.  
   
 1.  Select **Microsoft SQL Server 2014 (64-bit)** from the program list.  
   
@@ -139,49 +136,49 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  Click **Remove**. This starts SQL Server Setup.  
   
-     From Setup, you can select the **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** instance, and then select **Analysis Services** and **Analysis Services SharePoint Integration** to remove just that feature, leaving everything else in place.  
+     From Setup, you can select the **[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]** instance, and then select **Analysis Services** and **Analysis Services SharePoint Integration** to remove just that feature, leaving everything else in place.  
   
 ##  <a name="bkmk_addin"></a> Step 4: Uninstall the Power Pivot for SharePoint add-in  
- If your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment has two or more servers and you installed the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Add-in, then uninstall the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] add-in from each server where it was installed to completely uninstall all [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] files. For more information, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+ If your [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] deployment has two or more servers and you installed the [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] Add-in, then uninstall the [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] add-in from each server where it was installed to completely uninstall all [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] files. For more information, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 ##  <a name="verify"></a> Step 5: Verify Uninstall  
   
-1.  In Central Administration, in **Manage services on server**, connect to the server from which you uninstalled [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.  
+1.  In Central Administration, in **Manage services on server**, connect to the server from which you uninstalled [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint.  
   
-2.  -   If you uninstalled [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, verify that **SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service** no longer appear in the list.  
+2.  -   If you uninstalled [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] 2013, verify that **SQL Server [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] System Service** no longer appear in the list.  
   
-    -   If you uninstalled [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, verify that **SQL Server Analysis Services** and **SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service** no longer appear in the list.  
+    -   If you uninstalled [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] 2010, verify that **SQL Server Analysis Services** and **SQL Server [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] System Service** no longer appear in the list.  
   
-3.  After you uninstall the last [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint server in the farm, do the following:  
+3.  After you uninstall the last [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint server in the farm, do the following:  
   
-    1.  In Application Management, in **Manage service applications**, verify that [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application no longer appears in the list.  
+    1.  In Application Management, in **Manage service applications**, verify that [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Service Application no longer appears in the list.  
   
-    2.  In System Settings, in **Manage farm features**, verify that [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Integration Feature is no longer on the page. In **Manage farm solutions**, verify that the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solutions no longer appear on the page.  
+    2.  In System Settings, in **Manage farm features**, verify that [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Integration Feature is no longer on the page. In **Manage farm solutions**, verify that the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] solutions no longer appear on the page.  
   
-    3.  In Monitoring, in **Configure diagnostic logging** and in **Configure usage and health data collection**, verify that [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] events and event categories no longer appear.  
+    3.  In Monitoring, in **Configure diagnostic logging** and in **Configure usage and health data collection**, verify that [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] events and event categories no longer appear.  
   
-    4.  In General Application Settings, verify that **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard** is no longer on the page.  
+    4.  In General Application Settings, verify that **[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] Management Dashboard** is no longer on the page.  
   
 ##  <a name="bkmk_post"></a> Step 6: Post-Uninstall Checklist  
  Use the following list to remove software and files that were not deleted during uninstall.  
   
 1.  Delete all data files and subfolders from `C:\Program Files\Microsoft SQL Server\MSAS13.PowerPivot`, and then delete the folder. This step also deletes previously cached files in the DATA directory.  
   
-2.  Delete all [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks, documents, and libraries if you have not already done so.  
+2.  Delete all [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] workbooks, documents, and libraries if you have not already done so.  
   
     -   [Delete Power Pivot Gallery](/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
     -   [Delete a Power Pivot Data Feed Library](/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
-3.  In Secure Store Service, delete any target applications that contain stored credentials used by [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Some, but not all, entries in Secure Store Service are deleted when you uninstall [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Target applications created for the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] unattended data refresh account plus any target applications you created for data refresh still exist and must be deleted manually.  
+3.  In Secure Store Service, delete any target applications that contain stored credentials used by [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint. Some, but not all, entries in Secure Store Service are deleted when you uninstall [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint. Target applications created for the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] unattended data refresh account plus any target applications you created for data refresh still exist and must be deleted manually.  
   
-     In contrast, individual target applications that were auto-generated by the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service are deleted automatically when [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] is uninstalled.  
+     In contrast, individual target applications that were auto-generated by the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] System Service are deleted automatically when [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] is uninstalled.  
   
-4.  In Control Panel, click **Programs**, and then click **Uninstall a program.** Uninstall any Analysis Services client libraries that are no longer used. Analysis Services ADOMD.NET and Microsoft SQL Server Analysis Management Objects are not removed when you uninstall [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Because the libraries might be used by other programs that use Analysis Services data, SQL Server Setup does not uninstall them automatically. You must uninstall these client libraries individually if you no longer need them.  
+4.  In Control Panel, click **Programs**, and then click **Uninstall a program.** Uninstall any Analysis Services client libraries that are no longer used. Analysis Services ADOMD.NET and Microsoft SQL Server Analysis Management Objects are not removed when you uninstall [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint. Because the libraries might be used by other programs that use Analysis Services data, SQL Server Setup does not uninstall them automatically. You must uninstall these client libraries individually if you no longer need them.  
   
      Do not uninstall the SQL Server Reporting Services SharePoint 2010 Add-in unless you are following troubleshooting or installation instructions that specifically direct you to uninstall it. The Reporting Services Add-in is used by Access Services. It is installed by the SharePoint Products Preparation tool and should remain on the system to support functionality required by SharePoint.  
   
-     Do not uninstall the Analysis Services OLE DB provider. SharePoint installs the OLE DB provider as a prerequisite for Excel workbooks that connect to Analysis Services databases. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installs a newer version, but this version is backwards compatible so you should leave it on the system to avoid data connection problems later.  
+     Do not uninstall the Analysis Services OLE DB provider. SharePoint installs the OLE DB provider as a prerequisite for Excel workbooks that connect to Analysis Services databases. [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)] installs a newer version, but this version is backwards compatible so you should leave it on the system to avoid data connection problems later.  
   
 ## See Also  
  [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   

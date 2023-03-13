@@ -1,17 +1,16 @@
 ---
-title: "CONTAINS (Transact-SQL) | Microsoft Docs"
+title: "CONTAINS (Transact-SQL)"
 description: "Transact-SQL reference for the CONTAINS language element. Used to search for words or phrases within another expression."
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/23/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CONTAINS_TSQL"
   - "CONTAINS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "precise or fuzzy (less precise) matches [full-text search]"
   - "CONTAINS predicate (Transact-SQL)"
   - "conditions [SQL Server], CONTAINS"
@@ -30,9 +29,8 @@ helpviewer_keywords:
   - "property searching [SQL Server], searching on a property"
   - "inflectional forms [full-text search]"
   - "prefix searches [full-text search]"
-ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 
 # CONTAINS (Transact-SQL)
@@ -55,7 +53,7 @@ ms.author: vanto
   
  For information about the forms of full-text searches that are supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

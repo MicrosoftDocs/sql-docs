@@ -1,20 +1,17 @@
 ---
+title: "Translator Specification Subkeys"
 description: "Translator Specification Subkeys"
-title: "Translator Specification Subkeys | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "translator subkey [ODBC]"
   - "registry entries for components [ODBC], translator specification subkeys"
   - "translator specification subkeys [ODBC]"
   - "subkeys [ODBC], translator specification subkeys"
-ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Translator Specification Subkeys
 Each translator listed in the ODBC Translators subkey has a subkey of its own. This subkey has the same name as the corresponding value under the ODBC Translators subkey. The values under this subkey list the full paths of the translator and translator setup DLLs and the usage count. The formats of the values are as shown in the following table.  

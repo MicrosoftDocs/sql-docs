@@ -7,9 +7,7 @@ ms.date: 06/23/2022
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: troubleshooting
-ms.custom:
-  - seo-dt-2019
-  - kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment
 ---
 
 # Admin Console alerts in Analytics Platform System

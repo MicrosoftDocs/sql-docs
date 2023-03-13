@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "dbo.cdc_jobs"
 dev_langs:
   - "TSQL"
-ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 ---
 # dbo.cdc_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

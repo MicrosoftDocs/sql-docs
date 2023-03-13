@@ -1,21 +1,18 @@
 ---
+title: "FTP Connection Manager"
 description: "FTP Connection Manager"
-title: "FTP Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.ftpconnectionmanager.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FTP connection manager"
   - "connections [Integration Services], FTP"
   - "connection managers [Integration Services], FTP"
-ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: chugugrace
-ms.author: chugu
 ---
 # FTP Connection Manager
 

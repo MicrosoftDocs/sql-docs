@@ -1,19 +1,16 @@
 ---
 title: "Find Results Windows"
 description: There are two Find Results windows to hold matches found by Find in Files and Replace in Files operations. Learn how to display these windows, and how to display the code file and line corresponding to a match.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords:
   - "vs.findresults2"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Find Results Windows dialog box"
-ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find Results windows

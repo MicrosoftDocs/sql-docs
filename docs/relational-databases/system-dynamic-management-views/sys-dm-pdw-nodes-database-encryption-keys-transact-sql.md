@@ -7,10 +7,8 @@ ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -59,7 +57,7 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
 
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] 
 
 ```sql
 --Query provides underlying distribution encryption status

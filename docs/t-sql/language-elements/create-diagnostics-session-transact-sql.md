@@ -3,12 +3,10 @@ title: "CREATE DIAGNOSTICS SESSION (Transact-SQL)"
 description: "CREATE DIAGNOSTICS SESSION (Transact-SQL)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 dev_langs:
   - "TSQL"
 monikerRange: ">= aps-pdw-2016"

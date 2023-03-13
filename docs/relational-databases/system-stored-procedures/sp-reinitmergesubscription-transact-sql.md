@@ -1,29 +1,26 @@
 ---
+title: "sp_reinitmergesubscription (Transact-SQL)"
 description: "sp_reinitmergesubscription (Transact-SQL)"
-title: "sp_reinitmergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_reinitmergesubscription_TSQL"
-  - "sp_reinitmergesubscription"
-helpviewer_keywords: 
-  - "sp_reinitmergesubscription"
-ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_reinitmergesubscription_TSQL"
+  - "sp_reinitmergesubscription"
+helpviewer_keywords:
+  - "sp_reinitmergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Marks a merge subscription for reinitialization the next time the Merge Agent runs. This stored procedure is executed at the Publisher in the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

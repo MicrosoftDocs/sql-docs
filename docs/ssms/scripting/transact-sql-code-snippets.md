@@ -1,15 +1,12 @@
 ---
 title: Transact-SQL Code Snippets
 description: You can use Transact-SQL code snippets to aid your code writing. Look here for a list of snippet tasks with links to articles that describe them.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/16/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/16/2017
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

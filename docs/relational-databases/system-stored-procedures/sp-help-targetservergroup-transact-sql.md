@@ -1,29 +1,26 @@
 ---
+title: "sp_help_targetservergroup (Transact-SQL)"
 description: "sp_help_targetservergroup (Transact-SQL)"
-title: "sp_help_targetservergroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_targetservergroup_TSQL"
-  - "sp_help_targetservergroup"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_targetservergroup"
-ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_targetservergroup_TSQL"
+  - "sp_help_targetservergroup"
+helpviewer_keywords:
+  - "sp_help_targetservergroup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists all target servers in the specified group. If no group is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns information about all target server groups.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

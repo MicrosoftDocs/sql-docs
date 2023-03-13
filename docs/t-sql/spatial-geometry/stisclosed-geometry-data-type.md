@@ -1,22 +1,19 @@
 ---
+title: "STIsClosed (geometry Data Type)"
 description: "STIsClosed (geometry Data Type)"
-title: "STIsClosed (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STIsClosed_TSQL"
   - "STIsClosed (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STIsClosed (geometry Data Type)"
-ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STIsClosed (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

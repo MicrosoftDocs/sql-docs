@@ -1,22 +1,19 @@
 ---
 title: "View backup contents (file or tape)"
 description: This article shows you how to view the content of a backup tape or file in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup devices [SQL Server], tapes"
   - "displaying backup content"
   - "viewing backup content"
   - "tape backup devices, viewing contents"
   - "database backups [SQL Server], viewing content"
   - "backing up databases [SQL Server], viewing content"
-ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
-author: MashaMSFT
-ms.author: mathoma
 ---
 # View the contents of a backup tape or file (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,14 @@
 ---
+title: "Revert a Database to a Database Snapshot"
 description: "Revert a Database to a Database Snapshot"
-title: "Revert a Database to a Database Snapshot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database snapshots [SQL Server], reverting to"
-  - "reverting databases"
-ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/09/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database snapshots [SQL Server], reverting to"
+  - "reverting databases"
 ---
 # Revert a Database to a Database Snapshot
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

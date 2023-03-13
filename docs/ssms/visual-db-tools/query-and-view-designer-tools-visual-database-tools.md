@@ -1,25 +1,23 @@
 ---
 title: Query and View Designer Tools
 description: "Query and View Designer Tools (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.querydesigner"
   - "vdt.pane.diagram"
   - "vdt.pane.grid"
   - "vdt.dlgbox.querybuilder"
   - "vdt.pane.sql"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Designer [SQL Server], panes"
   - "View Designer, panes"
   - "Query Designer [SQL Server], components"
   - "View Designer, components"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 # Query and View Designer Tools (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -2,14 +2,12 @@
 title: "R tutorial: Predict NYC taxi fares with binary classification"
 titleSuffix: SQL machine learning
 description: In this five-part tutorial series, you'll learn how to embed R code in SQL Server stored procedures and T-SQL functions with SQL machine learning to predict NYC taxi fares using binary classification.
-ms.service: sql
-ms.subservice: machine-learning
-
-ms.date: 10/15/2020
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 10/15/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
 

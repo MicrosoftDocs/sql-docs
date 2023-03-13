@@ -1,15 +1,12 @@
 ---
-description: "Import JSON documents into SQL Server"
 title: "Import JSON documents"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
+description: "Import JSON documents into SQL Server"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import JSON documents into SQL Server

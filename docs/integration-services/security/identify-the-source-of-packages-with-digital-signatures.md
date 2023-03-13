@@ -1,23 +1,21 @@
 ---
+title: "Identify the Source of Packages with Digital Signatures"
 description: "Identify the Source of Packages with Digital Signatures"
-title: "Identify the Source of Packages with Digital Signatures | Microsoft Docs"
-ms.custom: security
+author: chugugrace
+ms.author: chugu
 ms.date: "08/24/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: security
+f1_keywords:
   - "sql13.dts.digitalsigning.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "signing packages [Integration Services]"
   - "certificates [Integration Services]"
   - "packages [Integration Services], security"
   - "security [Integration Services], certificates"
   - "signing policies [Integration Services]"
-ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: chugugrace
-ms.author: chugu
 ---
 # Identify the Source of Packages with Digital Signatures
 

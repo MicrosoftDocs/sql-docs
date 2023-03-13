@@ -1,21 +1,18 @@
 ---
+title: "Create SQL Server indexes (Native Client OLE DB provider)"
 description: "Create SQL Server indexes (Native Client OLE DB provider)"
-title: "Create SQL Server indexes (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CreateIndex function"
   - "constraints [OLE DB]"
   - "SQL Server Native Client OLE DB provider, indexes"
   - "indexes [OLE DB]"
   - "adding indexes"
-ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating SQL Server Native Client Indexes

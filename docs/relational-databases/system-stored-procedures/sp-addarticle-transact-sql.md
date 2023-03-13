@@ -1,29 +1,26 @@
 ---
-title: "sp_addarticle (Transact-SQL) | Microsoft Docs"
+title: "sp_addarticle (Transact-SQL)"
 description: Creates an article and adds it to a publication. This stored procedure runs at the Publisher on the publication database.
-ms.custom: ""
-ms.date: "10/28/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addarticle"
-  - "sp_addarticle_TSQL"
-helpviewer_keywords: 
-  - "sp_addarticle"
-ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
+ms.date: "10/28/2015"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addarticle"
+  - "sp_addarticle_TSQL"
+helpviewer_keywords:
+  - "sp_addarticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates an article and adds it to a publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

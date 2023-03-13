@@ -1,19 +1,17 @@
 ---
+title: "Replication Programming Concepts"
 description: "Replication Programming Concepts"
-title: "Replication Programming Concepts | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "replication [SQL Server], planning"
   - "programming [SQL Server replication], planning"
   - "programming [SQL Server replication]"
-ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Programming Concepts

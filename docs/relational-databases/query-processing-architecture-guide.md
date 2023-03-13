@@ -7,7 +7,6 @@ ms.reviewer: maghan, randolphwest, wiassaf
 ms.date: 09/01/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "guide, query processing architecture"
   - "query processing architecture guide"
@@ -17,7 +16,7 @@ helpviewer_keywords:
 
 # Query processing architecture guide
 
-[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following sections cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
@@ -1062,7 +1061,7 @@ Parameter values are sniffed during compilation or recompilation for the followi
 For more information on troubleshooting bad parameter sniffing issues, see:
 - [Investigate and resolve parameter-sensitive issues](/troubleshoot/sql/performance/troubleshoot-high-cpu-usage-issues#step-5-investigate-and-resolve-parameter-sensitive-issues)
 - [Parameters and Execution Plan Reuse](#parameters-and-execution-plan-reuse)
-- [Parameter Sensitive Plan optimization](performance/parameter-sensitivity-plan-optimization.md)
+- [Parameter Sensitive Plan optimization](./performance/parameter-sensitive-plan-optimization.md)
 - [Troubleshoot queries with parameter sensitive query execution plan issues in Azure SQL Database](/azure/azure-sql/database/identify-query-performance-issues#parameter-sensitivity)
 - [Troubleshoot queries with parameter sensitive query execution plan issues in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues#parameter-sensitivity)
 
@@ -1128,9 +1127,12 @@ Degree of parallelism (DOP) determines the maximum number of CPUs that are being
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn't use a parallel execution plan for a query if any one of the following conditions is true:
 
-- The serial execution cost of the query isn't high enough to consider an alternative, parallel execution plan.
-- A serial execution plan is considered faster than any possible parallel execution plan for the particular query.
+- The serial execution plan is trivial, or does not exceed the cost threshold for parallelism setting.
+- The serial execution plan has a lower total estimated subtree cost than any parallel execution plan explored by the optimizer.
 - The query contains scalar or relational operators that can't be run in parallel. Certain operators can cause a section of the query plan to run in serial mode, or the whole plan to run in serial mode.
+
+> [!NOTE]  
+> The total estimated subtree cost of a parallel plan may be lower than the cost threshold for parallelism setting. This indicates that the total estimated subtree cost of the serial plan exceeded it, and the query plan with the lower total estimated subtree cost was chosen.
 
 ### Degree of parallelism (DOP)
 <a id="DOP"></a>

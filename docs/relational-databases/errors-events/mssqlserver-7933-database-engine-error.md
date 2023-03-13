@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7933"
 description: "MSSQLSERVER_7933"
-title: "MSSQLSERVER_7933 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7933 (Database Engine error)"
-ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7933 (Database Engine error)"
 ---
 # MSSQLSERVER_7933
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

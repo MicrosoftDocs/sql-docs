@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSpublicationthresholds system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 ---
 # MSpublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

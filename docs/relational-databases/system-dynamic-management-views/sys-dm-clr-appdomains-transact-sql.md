@@ -3,7 +3,7 @@ title: "sys.dm_clr_appdomains (Transact-SQL)"
 description: sys.dm_clr_appdomains (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/14/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,14 +16,13 @@ helpviewer_keywords:
   - "sys.dm_clr_appdomains dynamic management dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 ---
 # sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each application domain in the server. Application domain (**AppDomain**) is a construct in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that is the unit of isolation for an application. You can use this view to understand and troubleshoot CLR integration objects that are executing in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- There are several types of CLR integration managed database objects. For general information about these objects, see [Building Database Objects with Common Language Runtime (CLR) Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Whenever these objects are executed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an **AppDomain** under which it can load and execute the required code. The isolation level for an **AppDomain** is one **AppDomain** per database per owner. That is, all CLR objects owned by a user are always executed in the same **AppDomain** per-database (if a user registers CLR database objects in different databases, the CLR database objects will run in different application domains). An **AppDomain** is not destroyed after the code finishes execution. Instead, it is cached in memory for future executions. This improves performance.  
+ There are several types of CLR integration managed database objects. For general information about these objects, see [Building Database Objects with Common Language Runtime (CLR) Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Whenever these objects are executed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an **AppDomain** under which it can load and execute the required code. The isolation level for an **AppDomain** is one **AppDomain** per database per owner. That is, all CLR objects owned by a user are always executed in the same **AppDomain** per-database (if a user registers CLR database objects in different databases, the CLR database objects will run in different application domains). An **AppDomain** isn't destroyed after the code finishes execution. Instead, it's cached in memory for future executions. This improves performance.  
   
  For more information, see [Application Domains](../../sql-server/what-s-new-in-sql-server-2016.md).  
   
@@ -32,11 +31,11 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 |**appdomain_address**|**varbinary(8)**|Address of the **AppDomain**. All managed database objects owned by a user are always loaded in the same **AppDomain**. You can use this column to look up all the assemblies currently loaded in this **AppDomain** in **sys.dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|ID of the **AppDomain**. Each **AppDomain** has a unique ID.|  
 |**appdomain_name**|**varchar(386)**|Name of the **AppDomain** as assigned by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**creation_time**|**datetime**|Time when the **AppDomain** was created. Because **AppDomains** are cached and reused for better performance, **creation_time** is not necessarily the time when the code was executed.|  
-|**db_id**|**int**|ID of the database in which this **AppDomain** was created. Code stored in two different databases cannot share one **AppDomain**.|  
+|**creation_time**|**datetime**|Time when the **AppDomain** was created. Because **AppDomains** are cached and reused for better performance, **creation_time** isn't necessarily the time when the code was executed.|  
+|**db_id**|**int**|ID of the database in which this **AppDomain** was created. Code stored in two different databases can't share one **AppDomain**.|  
 |**user_id**|**int**|ID of the user whose objects can execute in this **AppDomain**.|  
-|**state**|**nvarchar(128)**|A descriptor for the current state of the **AppDomain**. An AppDomain can be in different states from creation to deletion. See the Remarks section of this topic for more information.|  
-|**strong_refcount**|**int**|Number of strong references to this **AppDomain**. This reflects the number of currently executing batches that use this **AppDomain**. Note that execution of this view will create a **strong refcount**; even if is no code currently executing, **strong_refcount** will have a value of 1.|  
+|**state**|**nvarchar(128)**|A descriptor for the current state of the **AppDomain**. An AppDomain can be in different states from creation to deletion. See the Remarks section of this article for more information.|  
+|**strong_refcount**|**int**|Number of strong references to this **AppDomain**. This reflects the number of currently executing batches that use this **AppDomain**. Execution of this view will create a **strong refcount**; even if is no code currently executing, **strong_refcount** will have a value of 1.|  
 |**weak_refcount**|**int**|Number of weak references to this **AppDomain**. This indicates how many objects inside the **AppDomain** are cached. When you execute a managed database object, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caches it inside the **AppDomain** for future reuse. This improves performance.|  
 |**cost**|**int**|Cost of the **AppDomain**. The higher the cost, the more likely this **AppDomain** is to be unloaded under memory pressure. Cost usually depends on how much memory is required to re-create this **AppDomain**.|  
 |**value**|**int**|Value of the **AppDomain**. The lower the value, the more likely this **AppDomain** is to be unloaded under memory pressure. Value usually depends on how many connections or batches are using this **AppDomain**.|  
@@ -45,9 +44,9 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 |**survived_memory_kb**|**bigint**|Number of kilobytes that survived the last full, blocking collection and that are known to be referenced by the current application domain. This is equivalent to **System.AppDomain.MonitoringSurvivedMemorySize**.|  
   
 ## Remarks  
- There is a one-to-may relationship between **dm_clr_appdomains.appdomain_address** and **dm_clr_loaded_assemblies.appdomain_address**.  
+ There's a one-to-many relationship between **dm_clr_appdomains.appdomain_address** and **dm_clr_loaded_assemblies.appdomain_address**.  
   
- The following tables list possible **state** values, their descriptions, and when they occur in the **AppDomain** lifecycle. You can use this information to follow the lifecyle of an **AppDomain** and to watch for suspicious or repetitive **AppDomain** instances unloading, without having to parse the Windows Event Log.  
+ The following tables list possible **state** values, their descriptions, and when they occur in the **AppDomain** lifecycle. You can use this information to follow the lifecycle of an **AppDomain** and to watch for suspicious or repetitive **AppDomain** instances unloading, without having to parse the Windows Event Log.  
   
 ## AppDomain Initialization  
   
@@ -76,6 +75,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 ## Permissions  
  Requires VIEW SERVER STATE permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example shows how to view the details of an **AppDomain** for a given assembly:  
   

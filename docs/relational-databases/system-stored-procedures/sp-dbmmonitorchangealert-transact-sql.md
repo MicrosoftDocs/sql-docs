@@ -1,23 +1,20 @@
 ---
+title: "sp_dbmmonitorchangealert (Transact-SQL)"
 description: "sp_dbmmonitorchangealert (Transact-SQL)"
-title: "sp_dbmmonitorchangealert (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbmmonitorchangealert_TSQL"
-  - "sp_dbmmonitorchangealert"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbmmonitorchangealert"
-  - "database mirroring [SQL Server], monitoring"
-ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbmmonitorchangealert_TSQL"
+  - "sp_dbmmonitorchangealert"
+helpviewer_keywords:
+  - "sp_dbmmonitorchangealert"
+  - "database mirroring [SQL Server], monitoring"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 
   
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

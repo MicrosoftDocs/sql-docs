@@ -2,11 +2,9 @@
 metadata:
   title: "Frequently asked questions for replication administrators"
   description: A list of frequently asked questions relevant to replication administrators for SQL Server.
-  ms.custom: seo-lt-2019
   ms.date: "03/14/2017"
   ms.service: sql
   ms.prod_service: "database-engine"
-  ms.reviewer: ""
   ms.subservice: replication
   ms.topic: conceptual
   helpviewer_keywords: 

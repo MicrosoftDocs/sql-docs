@@ -8,7 +8,6 @@ ms.date: 05/09/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "DATE_BUCKET"
   - "DATE_BUCKET_TSQL"
@@ -26,7 +25,7 @@ This function returns the date-time value corresponding to the start of each dat
 
 See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all Transact-SQL date and time data types and functions.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

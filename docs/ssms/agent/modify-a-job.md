@@ -1,21 +1,18 @@
 ---
-description: "Modify a Job"
 title: "Modify a Job"
-ms.service: sql
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "jobs [SQL Server Agent], modifying"
-  - "modifying jobs"
-  - "SQL Server Agent jobs, modifying"
-ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
+description: "Modify a Job"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: "mikeray"
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "jobs [SQL Server Agent], modifying"
+  - "modifying jobs"
+  - "SQL Server Agent jobs, modifying"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
-
 ---
 # Modify a Job
 

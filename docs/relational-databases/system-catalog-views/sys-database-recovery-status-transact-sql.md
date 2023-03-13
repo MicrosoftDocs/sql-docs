@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_recovery_status catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 ---
 # sys.database_recovery_status (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

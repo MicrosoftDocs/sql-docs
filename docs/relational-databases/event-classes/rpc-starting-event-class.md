@@ -1,17 +1,14 @@
 ---
+title: "RPC:Starting Event Class"
 description: "RPC:Starting Event Class"
-title: "RPC:Starting Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "RPC:Starting event class"
-ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "RPC:Starting event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RPC:Starting Event Class

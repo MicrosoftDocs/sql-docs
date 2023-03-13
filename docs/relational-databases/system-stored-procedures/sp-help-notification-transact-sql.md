@@ -1,29 +1,26 @@
 ---
+title: "sp_help_notification (Transact-SQL)"
 description: "sp_help_notification (Transact-SQL)"
-title: "sp_help_notification (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_notification"
-  - "sp_help_notification_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_notification"
-ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_notification"
+  - "sp_help_notification_TSQL"
+helpviewer_keywords:
+  - "sp_help_notification"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports a list of alerts for a given operator or a list of operators for a given alert.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

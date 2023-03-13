@@ -1,15 +1,12 @@
 ---
 title: "View Spatial Data in Object Explorer"
 description: Learn how to use the visual mapping tools of the Query Editor Spatial results window to view spatial data results (either geometric or geographic).
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Spatial Data in Object Explorer

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7907"
 description: "MSSQLSERVER_7907"
-title: "MSSQLSERVER_7907 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7907 (Database Engine error)"
-ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7907 (Database Engine error)"
 ---
 # MSSQLSERVER_7907
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

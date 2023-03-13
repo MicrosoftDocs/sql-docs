@@ -1,14 +1,13 @@
 ---
 title: "Lesson 1: Connecting to the Database Engine"
 description: "Lesson 1: Connecting to the Database Engine"
+author: MashaMSFT
+ms.author: mathoma
+ms.date: "12/16/2021"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: ""
-ms.custom: intro-quickstart, FY22Q2Fresh
-ms.date: "12/16/2021"
+ms.custom: intro-quickstart
 ---
 
 # Lesson 1: Connecting to the Database Engine

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_request system table"
 dev_langs:
   - "TSQL"
-ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 ---
 # MSpeer_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

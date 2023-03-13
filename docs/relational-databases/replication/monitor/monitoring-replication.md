@@ -1,13 +1,14 @@
 ---
-title: "Monitoring (Replication) | Microsoft Docs"
+title: "Monitoring (Replication)"
 description: Learn about the monitoring tools used to track activity and status of replication in SQL Server replication topology.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "monitoring performance [SQL Server replication], about monitoring replication"
   - "transactional replication, monitoring"
   - "monitoring [SQL Server replication]"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], monitoring"
   - "replication [SQL Server], monitoring"
   - "administering replication, monitoring"
-ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Monitoring (Replication)

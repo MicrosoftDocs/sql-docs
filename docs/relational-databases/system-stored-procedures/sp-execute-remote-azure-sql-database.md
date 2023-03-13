@@ -1,22 +1,19 @@
 ---
+title: "sp_execute_remote (Azure SQL Database)"
 description: "sp_execute_remote (Azure SQL Database)"
-title: "sp_execute_remote (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2022"
-ms.service: sql-database
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_execute_remote"
-  - "sp_execute_remote_TSQL"
-helpviewer_keywords: 
-  - "remote execution"
-  - "queries, remote execution"
-ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
+ms.date: "02/01/2022"
+ms.service: sql-database
+ms.topic: conceptual
+f1_keywords:
+  - "sp_execute_remote"
+  - "sp_execute_remote_TSQL"
+helpviewer_keywords:
+  - "remote execution"
+  - "queries, remote execution"
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current"
 ---
 # sp_execute_remote (Azure SQL Database)
@@ -26,7 +23,7 @@ monikerRange: "= azuresqldb-current"
   
  The stored procedure is part of the elastic query feature.  See [Azure SQL Database elastic database query overview](/azure/azure-sql/database/elastic-query-overview) and [Elastic database queries for sharding (horizontal partitioning)](/azure/azure-sql/database/elastic-query-horizontal-partitioning).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

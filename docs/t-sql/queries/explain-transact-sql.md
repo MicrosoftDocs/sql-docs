@@ -1,24 +1,23 @@
 ---
-description: "EXPLAIN returns the query plan for a Microsoft Azure Synapse Analytics SQL statement without running the statement."
 title: "EXPLAIN (Transact-SQL)"
-ms.custom: ""
-ms.date: 07/25/2022
-ms.service: sql
-ms.reviewer: wiassaf
-ms.subservice: data-warehouse
-ms.topic: conceptual
+description: "EXPLAIN returns the query plan for a Microsoft Azure Synapse Analytics SQL statement without running the statement."
 author: mstehrani
 ms.author: emtehran
+ms.reviewer: wiassaf
+ms.date: 03/01/2023
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 monikerRange: "= azure-sqldw-latest"
 ---
-# EXPLAIN (Transact-SQL) 
+# EXPLAIN (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa dedicated sql pool only](../../includes/applies-to-version/asa-dedicated-sqlpool-only.md)]
 
-  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
-  
-## Syntax  
-  
+  Returns the query plan for an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+
+## Syntax
+
 ```syntaxsql
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
@@ -26,27 +25,29 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-  
+
 ## Arguments
 
-#### *SQL_statement*  
+#### *SQL_statement*
 
- The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which EXPLAIN will run. *SQL_statement* can be any of these commands: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
+ The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which EXPLAIN will run. *SQL_statement* can be any of these commands: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE TABLE AS SELECT`, `CREATE REMOTE TABLE`.
 
-#### *WITH_RECOMMENDATIONS* 
+#### *WITH_RECOMMENDATIONS*
 
 Return the query plan with recommendations to optimize the SQL statement performance.  
-  
+
 ## Permissions
 
- Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE &#40;Azure Synapse Analytics, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
-  
+ Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+
 ## Return Value
 
- The return value from the **EXPLAIN** command is an XML document with the structure shown below. This XML document lists all operations in the query plan for the given query, each enclosed by the `<dsql_operation>` tag. The return value is of type **nvarchar(max)**.  
-  
- The returned query plan depicts sequential SQL statements; when the query runs it may involve parallelized operations, so some of the sequential statements shown may run at the same time.  
-  
+ The return value from the **EXPLAIN** command is an XML document. This XML document lists all operations in the query plan for the given query, each enclosed by the `<dsql_operation>` tag. The return value is of type **nvarchar(max)**.  
+
+ The returned query plan depicts sequential SQL statements; when the query runs it may involve parallelized operations, so some of the sequential statements shown may run at the same time. 
+
+ The structure of the return value XML looks like this:
+
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 <dsql_query>  
@@ -60,39 +61,41 @@ Return the query plan with recommendations to optimize the SQL statement perform
   <dsql_operations>  
 </dsql_query>  
 ```  
-  
+
  The XML tags contain this information:  
-  
+
 |XML Tag|Summary, Attributes, and Content|  
 |-------------|--------------------------------------|  
 |\<dsql_query>|Top level/document element.|
 |\<sql>|Echoes *SQL_statement*.|  
 |\<params>|This tag is not used at this time.|
 |\<materialized_view_candidates> (preview)|Contains the CREATE statement of the recommended materialized view for the SQL statement's better performance.| 
-|\<dsql_operations>|Summarizes and contains the query steps, and includes cost information for the query. Also contains all of the `<dsql_operation>` blocks. This tag contains count information for the entire query:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* is the total estimated time for the query to run, in ms.<br /><br /> *total_number_operations* is the total number of operations for the query. An operation that will be parallelized and run on multiple nodes is counted as a single operation.|  
-|\<dsql_operation>|Describes a single operation within the query plan. The \<dsql_operation> tag contains the operation type as an attribute:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* is one of the values found in [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> The content in the `\<dsql_operation>` block is dependent on the operation type.<br /><br /> See the table below.|  
-  
+|\<dsql_operations>|Summarizes and contains the query steps, and includes cost information for the query. Also contains all of the `<dsql_operation>` blocks. This tag contains count information for the entire query:<br /><br />`<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br />*total_cost* is the total estimated time for the query to run, in ms.<br /><br />*total_number_operations* is the total number of operations for the query. An operation that will be parallelized and run on multiple nodes is counted as a single operation.|  
+|\<dsql_operation>|Describes a single operation within the query plan. The \<dsql_operation> tag contains the operation type as an attribute:<br /><br />`<dsql_operation operation_type=operation_type>`<br /><br />*operation_type* is one of the values found in [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br />The content in the `\<dsql_operation>` block is dependent on the operation type.<br /><br />See the following table.|  
+
 |Operation Type|Content|Example|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE, and TRIM_MOVE|`<operation_cost>` element, with these attributes. Values reflect only the local operation:<br /><br /> -   *cost* is the local operator cost and shows the estimated time for the operation to run, in ms.<br />-   *accumulative_cost* is the sum of all seen operations in the plan including summed values for parallel operations, in ms.<br />-   *average_rowsize* is the estimated average row size (in bytes) of rows retrieved and passed during the operation.<br />-   *output_rows* is the output (node) cardinality and shows the number of output rows.<br /><br /> `<location>`: The nodes or distributions where the operation will occur. Options are: "Control", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Distribution", and "SubsetNodes".<br /><br /> `<source_statement>`: The source data for the shuffle move.<br /><br /> `<destination_table>`: The internal temporary table the data will be moved into.<br /><br /> `<shuffle_columns>`: (Applicable only to SHUFFLE_MOVE operations). One or more columns that will be used as the distribution columns for the temporary table.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`<br /><br /> `<shuffle_columns>Email;Date;</shuffle_columns>`|   
-|MetaDataCreate_Operation|`<source_table>`: The source table for the operation.<br /><br /> `<destination_table>`: The destination table for the operation.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`: See `<location>` above.<br /><br /> `<sql_operation>`: Identifies the SQL command that will be performed on a node.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`: The destination catalog.<br /><br /> `<DestinationSchema>`: The destination schema in DestinationCatalog.<br /><br /> `<DestinationTableName>`: Name of the destination table or "TableName".<br /><br /> `<DestinationDatasource>`: Name of the destination datasource.<br /><br /> `<Username>` and `<Password>`: These fields indicate that a username and password for the destination may be required.<br /><br /> `<CreateStatement>`: The table creation statement for the destination database.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE, and TRIM_MOVE|`<operation_cost>` element, with these attributes. Values reflect only the local operation:<br /><br />-   *cost* is the local operator cost and shows the estimated time for the operation to run, in ms.<br />-   *accumulative_cost* is the sum of all seen operations in the plan including summed values for parallel operations, in ms.<br />-   *average_rowsize* is the estimated average row size (in bytes) of rows retrieved and passed during the operation.<br />-   *output_rows* is the output (node) cardinality and shows the number of output rows.<br /><br />`<location>`: The nodes or distributions where the operation will occur. Options are: "Control", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Distribution", and "SubsetNodes".<br /><br />`<source_statement>`: The source data for the shuffle move.<br /><br />`<destination_table>`: The internal temporary table the data will be moved into.<br /><br />`<shuffle_columns>`: (Applicable only to SHUFFLE_MOVE operations). One or more columns that will be used as the distribution columns for the temporary table.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br />`<location distribution="AllDistributions" />`<br /><br />`<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br />`<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br />`<shuffle_columns>dist_date;</shuffle_columns>`<br /><br />`<shuffle_columns>Email;Date;</shuffle_columns>`|   
+|MetaDataCreate_Operation|`<source_table>`: The source table for the operation.<br /><br />`<destination_table>`: The destination table for the operation.|`<source_table>databases</source_table>`<br /><br />`<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
+|ON|`<location>`: See `<location>`.<br /><br />`<sql_operation>`: Identifies the SQL command that will be performed on a node.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br />`<sql_operation type="statement">CREATE TABLE [`tempdb`].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`: The destination catalog.<br /><br />`<DestinationSchema>`: The destination schema in DestinationCatalog.<br /><br />`<DestinationTableName>`: Name of the destination table or "TableName".<br /><br />`<DestinationDatasource>`: Name of the destination datasource.<br /><br />`<Username>` and `<Password>`: These fields indicate that a username and password for the destination may be required.<br /><br />`<CreateStatement>`: The table creation statement for the destination database.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br />`<DestinationSchema>dbo</DestinationSchema>`<br /><br />`<DestinationTableName>TableName</DestinationTableName>`<br /><br />`<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br />`<Username>...</Username>`<br /><br />`<Password>...</Password>`<br /><br />`<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
 |RETURN|`<resultset>`: The identifier for the result set.|`<resultset>RS_19</resultset>`|  
 |RND_ID|`<identifier>`: The identifier for the object created.|`<identifier>TEMP_ID_260</identifier>`|  
-  
-## Limitations and Restrictions  
- **EXPLAIN** can be applied to *optimizable* queries only, which are queries that can be improved or modified based on the results of an **EXPLAIN** command. The supported **EXPLAIN** commands are listed above. Attempting to use **EXPLAIN** with an unsupported query type will either return an error or echo the query.  
-  
+
+## Limitations and Restrictions
+
+ **EXPLAIN** can be applied to *optimizable* queries only, which are queries that can be improved or modified based on the results of an **EXPLAIN** command. The supported **EXPLAIN** commands are provided in the previous section. Attempting to use **EXPLAIN** with an unsupported query type will either return an error or echo the query.  
+
  **EXPLAIN** is not supported in a user transaction.  
-  
-## Examples  
+
+## Examples
+
  The following example shows an **EXPLAIN** command run on a **SELECT** statement, and the XML result.  
-  
+
  **Submitting an EXPLAIN statement**  
-  
+
  The submitted command for this example is:  
-  
+
 ```sql  
 -- Uses AdventureWorks  
   
@@ -113,23 +116,23 @@ EXPLAIN
     ORDER BY AVG(YearlyIncome) DESC;  
 GO  
 ```  
-  
+
  After executing the statement using the **EXPLAIN** option, the message tab presents a single line titled **explain**, and starting with the XML text `\<?xml version="1.0" encoding="utf-8"?>` Select the XML to open the entire text in an XML window. To better understand the following comments, you should turn on the display of line numbers in SSDT.  
-  
-#### To turn on line numbers  
-  
-1.  With the output appearing in the **explain** tab SSDT, on the **TOOLS** menu, select **Options**.  
-  
-2.  Expand the **Text Editor** section, expand **XML**, and then select **General**.  
-  
-3.  In the **Display** area, check **Line numbers**.  
-  
-4.  Select **OK**.  
-  
+
+#### Turn on line numbers
+
+1. With the output appearing in the **explain** tab SSDT, on the **TOOLS** menu, select **Options**.  
+
+1. Expand the **Text Editor** section, expand **XML**, and then select **General**.  
+
+1. In the **Display** area, check **Line numbers**.  
+
+1. Select **OK**.  
+
  **Example EXPLAIN output**  
-  
+
  The XML result of the **EXPLAIN** command with row numbers turned on is:  
-  
+
 ```xml  
 1  \<?xml version="1.0" encoding="utf-8"?>  
 2  <dsql_query>  
@@ -275,34 +278,33 @@ GO
 142      </dsql_operation>  
 143    </dsql_operations>  
 144  </dsql_query>  
-  
 ```  
-  
+
  **Meaning of the EXPLAIN output**
-  
- The output above contains 144 numbered lines. Your output from this query may differ slightly. The following list describes significant sections.  
-  
+
+ The output in the previous code block contains 144 numbered lines. Your output from this query may differ slightly. The following list describes significant sections.  
+
 -   Lines 3 through 16 provide a description of the query that is being analyzed.  
-  
+
 -   Line 17, specifies that the total number of operations will be 9. You can find the start of each operation, by looking for the words **dsql_operation**.  
-  
--   Line 18 starts operation 1. Lines 18 and 19 indicate that a **RND_ID** operation will create a random ID number that will be used for an object description. The object described in the output above is **TEMP_ID_16893**. Your number will be different.  
-  
--   Line 20 starts operation 2. Lines 21 through 25: On all compute nodes, create a temporary table named **TEMP_ID_16893**.  
-  
--   Line 26 starts operation 3. Lines 27 through 37: Move data to **TEMP_ID_16893** by using a broadcast move. The query sent to each compute node is provided. Line 37 specifies the destination table is **TEMP_ID_16893**.  
-  
--   Line 38 starts operation 4. Lines 39 through 40: Create a random ID for a table. **TEMP_ID_16894** is the ID number in the example above. Your number will be different.  
-  
--   Line 41 starts operation 5. Lines 42 through 46: On all nodes, create a temporary table named **TEMP_ID_16894**.  
-  
--   Line 47 starts operation 6. Lines 48 through 91: Move data from various tables (including **TEMP_ID_16893**) to table **TEMP_ID_16894**, by using a shuffle move operation. The query sent to each compute node is provided. Line 90 specifies the destination table as **TEMP_ID_16894**. Line 91 specifies the columns.  
-  
--   Line 92 starts operation 7. Lines 93 through 97: On all compute nodes, drop temporary table **TEMP_ID_16893**.  
-  
+
+-   Line 18 starts operation 1. Lines 18 and 19 indicate that a **RND_ID** operation will create a random ID number that will be used for an object description. The object described in the sample output is **TEMP_ID_16893**. Your number will be different.  
+
+-   Line 20 starts operation 2. Lines 21 through 25: On all compute nodes, create a temporary table named `TEMP_ID_16893`.  
+
+-   Line 26 starts operation 3. Lines 27 through 37: Move data to `TEMP_ID_16893` by using a broadcast move. The query sent to each compute node is provided. Line 37 specifies the destination table is `TEMP_ID_16893`.  
+
+-   Line 38 starts operation 4. Lines 39 through 40: Create a random ID for a table. **TEMP_ID_16894** is the ID number in the example. Your number will be different.  
+
+-   Line 41 starts operation 5. Lines 42 through 46: On all nodes, create a temporary table named `TEMP_ID_16894`.  
+
+-   Line 47 starts operation 6. Lines 48 through 91: Move data from various tables (including `TEMP_ID_16893`) to table `TEMP_ID_16893`, by using a shuffle move operation. The query sent to each compute node is provided. Line 90 specifies the destination table as `TEMP_ID_16894`. Line 91 specifies the columns.  
+
+-   Line 92 starts operation 7. Lines 93 through 97: On all compute nodes, drop temporary table `TEMP_ID_16893`.  
+
 -   Line 98 starts operation 8. Lines 99 through 135: Return results to the client. Uses the query provided to get the results.  
-  
--   Line 136 starts operation 9. Lines 137 through 140: On all nodes, drop temporary table **TEMP_ID_16894**.  
+
+-   Line 136 starts operation 9. Lines 137 through 140: On all nodes, drop temporary table `TEMP_ID_16894`.  
 
 **Submitting an EXPLAIN statement WITH_RECOMMENDATIONS**
 
@@ -325,7 +327,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 
 **Example output for EXPLAIN WITH_RECOMMENDATIONS**  
 
-The output below includes the creation of a recommended materialized view called View1.  
+The following sample output includes the creation of a recommended materialized view called `View1`.  
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -611,15 +613,18 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 ```
 
 ## See also
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+
+- [sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [sys.pdw_materialized_view_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [sys.pdw_materialized_view_mappings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)
+- [T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
 
 ## Next steps
 
-[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](../statements/alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
-[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)   
+- [CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [ALTER MATERIALIZED VIEW (Transact-SQL)](../statements/alter-materialized-view-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+- [Monitor your Azure Synapse Analytics dedicated SQL pool workload using DMVs](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-manage-monitor#monitor-query-execution).
+- [Display the Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)

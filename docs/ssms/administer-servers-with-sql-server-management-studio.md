@@ -1,18 +1,15 @@
 ---
 title: "Administer Servers with SQL Server Management Studio"
 description: "Administer Servers with SQL Server Management Studio"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], servers"
   - "servers [SQL Server], administering"
-ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Administer Servers with SQL Server Management Studio
@@ -24,7 +21,7 @@ ms.date: "01/19/2017"
 The tool components of  Management Studio include Registered Servers, Object Explorer, Solution Explorer, Template Explorer, the Object Explorer Details page, and the document window. To display a tool, on the **View** menu, click the tool name. To display the Query Editor tool, click the **New Query** button on the toolbar.  
   
 > [!IMPORTANT]  
-> Network traffic between  Management Studio and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is unencrypted by default. Do not work with sensitive data (including passwords) in  Management Studio unless you have established an encrypted connection. For more information, see [How to: Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> Network traffic between  Management Studio and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is unencrypted by default. Do not work with sensitive data (including passwords) in  Management Studio unless you have established an encrypted connection. For more information, see [How to: Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
 Use  Management Studio to:  
   
@@ -59,4 +56,4 @@ To start and stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or [!IN
 ## See Also
 
 [Use SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
-[How to: View server properties (SQL Server Management Studio)](../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
+[How to: View server properties (SQL Server Management Studio)](../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)

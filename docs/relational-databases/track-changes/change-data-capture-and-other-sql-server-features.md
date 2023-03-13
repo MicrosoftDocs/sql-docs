@@ -1,17 +1,13 @@
 ---
-description: "Learn how change data capture and functions with other features such as change tracking and database mirroring."
 title: "Change data capture and Other Features"
-ms.custom: seo-dt-2019
-ms.date: "01/02/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "change data capture, other features and"
-ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
+description: "Learn how change data capture and functions with other features such as change tracking and database mirroring."
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "01/02/2019"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "change data capture, other features and"
 ---
 # Change data capture and other features
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

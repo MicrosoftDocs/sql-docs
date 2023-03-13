@@ -1,25 +1,22 @@
 ---
+title: "core.sp_remove_collector_type (Transact-SQL)"
 description: "core.sp_remove_collector_type (Transact-SQL)"
-title: "core.sp_remove_collector_type (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_remove_collector_type"
   - "sp_remove_collector_type_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "core.sp_remove_collector_type stored procedure"
   - "management data warehouse, data collector stored procedures"
   - "sp_remove_collector_type"
   - "data collector [SQL Server], stored procedures"
-ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +25,7 @@ ms.author: maghan
   
  The core.supported_collector_types view shows the registered collector types that can upload data to the management data warehouse.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

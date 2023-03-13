@@ -1,29 +1,26 @@
 ---
+title: "sp_addpublication (Transact-SQL)"
 description: "sp_addpublication (Transact-SQL)"
-title: "sp_addpublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/05/2021
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addpublication_TSQL"
-  - "sp_addpublication"
-helpviewer_keywords: 
-  - "sp_addpublication"
-ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: markingmyname
 ms.author: maghan
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addpublication_TSQL"
+  - "sp_addpublication"
+helpviewer_keywords:
+  - "sp_addpublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addpublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a snapshot or transactional publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

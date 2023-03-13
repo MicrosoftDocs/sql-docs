@@ -1,15 +1,12 @@
 ---
+title: "Troubleshooting (MySQLToSQL)"
 description: "Troubleshooting (MySQLToSQL)"
-title: "Troubleshooting (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Troubleshooting (MySQLToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

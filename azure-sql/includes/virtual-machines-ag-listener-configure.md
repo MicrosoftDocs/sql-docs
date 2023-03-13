@@ -76,9 +76,13 @@ The availability group listener is an IP address and network name that the SQL S
 
    a. Copy the following PowerShell script to one of your SQL Server instances. Update the variables for your environment.
 
-   - `$ListenerILBIP` is the IP address that you created on the Azure load balancer for the availability group listener.
-    
-   - `$ListenerProbePort` is the port that you configured on the Azure load balancer for the availability group listener.
+   - `$ClusterNetworkName` find the name in the **Failover Cluster Manager** by selecting **Networks**, right-click the network and select **Properties**. The **$ClusterNetworkName** is under **Name** on the General tab.
+
+   - `$IPResourceName` is the name given to the IP Address resource in the **Failover Cluster Manager**. This is found in the **Failover Cluster Manager** by selecting **Roles**, select the **SQL Server AG or FCI name**, select the **Resources** tab under **Server Name**, right-click the IP address resource and select **Properties**. The correct value is under **Name** on the General tab.
+
+   - `$ListenerILBIP` is the IP address that you created on the Azure load balancer for the availability group listener. Find the **$ListenerILBIP** in the **Failover Cluster Manager** on the same properties page as the SQL Server AG/FCI Listener Resource Name.
+
+   - `$ListenerProbePort` is the port that you configured on the Azure load balancer for the availability group listener, such as 59999. Any unused TCP port is valid.
 
    ```powershell
    $ClusterNetworkName = "<MyClusterNetworkName>" # The cluster network name. Use Get-ClusterNetwork on Windows Server 2012 or later to find the name.

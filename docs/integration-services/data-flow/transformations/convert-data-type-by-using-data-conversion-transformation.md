@@ -1,19 +1,16 @@
 ---
+title: "Convert Data Type with Data Conversion Transformation"
 description: "Convert Data Type with Data Conversion Transformation"
-title: "Convert Data Type with Data Conversion Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "converting data types [Integration Services]"
   - "Data Conversion transformation"
   - "data types [Integration Services], converting"
-ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-author: chugugrace
-ms.author: chugu
 ---
 # Convert Data Type with Data Conversion Transformation
 

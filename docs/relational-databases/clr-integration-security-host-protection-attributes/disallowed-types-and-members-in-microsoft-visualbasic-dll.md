@@ -7,11 +7,9 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: clr
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "host protection attributes [CLR integration]"
   - "common language runtime [SQL Server], host protection attributes"
-ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 ---
 # Disallowed Types and Members in Microsoft.VisualBasic.dll
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

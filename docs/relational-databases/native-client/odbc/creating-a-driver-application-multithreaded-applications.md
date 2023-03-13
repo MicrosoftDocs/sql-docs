@@ -1,21 +1,18 @@
 ---
+title: "Multithreaded Applications"
 description: "Creating a Driver Application - Multithreaded Applications"
-title: "Multithreaded Applications | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "threads [SQL Server], multithreaded applications"
   - "ODBC applications, multithreaded applications"
   - "asynchronous operations [SQL Server Native Client]"
   - "SQL Server Native Client ODBC driver, multithreaded applications"
   - "multithreaded applications [SQL Server Native Client]"
-ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Driver Application - Multithreaded Applications

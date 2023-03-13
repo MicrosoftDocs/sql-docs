@@ -1,22 +1,19 @@
 ---
+title: "STExteriorRing (geometry Data Type)"
 description: "STExteriorRing (geometry Data Type)"
-title: "STExteriorRing (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STExteriorRing_TSQL"
   - "STExteriorRing (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STExteriorRing (geometry Data Type)"
-ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STExteriorRing (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

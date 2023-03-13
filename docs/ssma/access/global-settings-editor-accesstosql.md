@@ -1,18 +1,14 @@
 ---
+title: "Global Settings (Editor) (AccessToSQL)"
 description: "Global Settings (Editor) (AccessToSQL)"
-title: "Global Settings (Editor) (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.access.globalsettingseditor.f1"
-
 ---
 # Global Settings (Editor) (AccessToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

@@ -7,7 +7,6 @@ ms.date: 07/22/2020
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
@@ -265,7 +264,9 @@ helpviewer_keywords:
   
     -   Do not change any availability group properties, such as the possible owners.  
   
-    -   Do not use the Failover Cluster Manager to fail over availability groups. You must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+    -   Do not use the Failover Cluster Manager to fail over availability groups. You must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].
+
+-   **Do not add resources or alter dependencies associated to availability group role**. We do not recommend placing any additional resources (including user or third-party) into the availability group role or altering the role dependencies as these changes can negatively impact failover performance.
   
 ###  <a name="RequirementsAG"></a> Prerequisites (Availability Groups)  
  When creating or reconfiguring an availability group configuration, ensure that you adhere to the following requirements.  

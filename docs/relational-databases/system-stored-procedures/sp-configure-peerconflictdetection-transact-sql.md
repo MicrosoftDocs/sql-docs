@@ -1,22 +1,19 @@
 ---
+title: "sp_configure_peerconflictdetection (Transact-SQL)"
 description: "sp_configure_peerconflictdetection (Transact-SQL)"
-title: "sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/05/2021
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_configure_peerconflictdetection_TSQL"
-  - "sp_configure_peerconflictdetection"
-helpviewer_keywords: 
-  - "sp_configure_peerconflictdetection"
-ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: markingmyname
 ms.author: maghan
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_configure_peerconflictdetection_TSQL"
+  - "sp_configure_peerconflictdetection"
+helpviewer_keywords:
+  - "sp_configure_peerconflictdetection"
+dev_langs:
+  - "TSQL"
 ---
 # sp_configure_peerconflictdetection (Transact-SQL)
 
@@ -27,7 +24,7 @@ ms.author: maghan
 > [!IMPORTANT]
 > You can't use `sp_configure_peerconflictdetection` to enable `lastwriter`. To change the conflict resolution of an existing replication topology, drop the publication and recreate it.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

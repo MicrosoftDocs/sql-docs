@@ -1,23 +1,21 @@
 ---
-title: "Analyze an Actual Execution Plan | Microsoft Docs"
+title: "Analyze an Actual Execution Plan"
 description: Learn how to analyze actual graphical execution plans, which contain runtime information, by using SQL Server Management Studio Plan Analysis feature.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf
 ms.date: 10/11/2019
 ms.service: sql
-ms.reviewer: wiassaf
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "analyzing execution plans"
   - "analyzing actual execution plans"
   - "execution plans [SQL Server], analyzing"
-ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Analyze an Actual Execution Plan
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how you can analyze actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan Analysis feature. This feature is available starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4. We generally recommend that you [install the latest version of SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 

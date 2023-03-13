@@ -8,7 +8,6 @@ ms.date: 10/12/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "STATISTICS"
   - "STATISTICS_TSQL"
@@ -35,7 +34,7 @@ Creates query optimization statistics on one or more columns of a table, an inde
 
 To learn more, see [Statistics](../../relational-databases/statistics/statistics.md).
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

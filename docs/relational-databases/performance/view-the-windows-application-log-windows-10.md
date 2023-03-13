@@ -1,13 +1,13 @@
 ---
-title: "View the Windows application log (Windows) | Microsoft Docs"
+title: "View the Windows application log (Windows)"
 description: When SQL Server is configured to use the Windows application log, each session writes events to that log. Learn how to view the Windows application log.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 12/13/2021
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing logs"
   - "application logs [SQL Server]"
   - "logs [SQL Server], application"
@@ -16,8 +16,6 @@ helpviewer_keywords:
   - "displaying logs"
   - "monitoring [SQL Server], events"
   - "logs [SQL Server], viewing"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # View the Windows application log
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

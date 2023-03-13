@@ -1,15 +1,12 @@
 ---
+title: "Prepare SQL Server for Oracle CDC-View Script"
 description: "Prepare SQL Server for Oracle CDC-View Script"
-title: "Prepare SQL Server for Oracle CDC-View Script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Prepare SQL Server for Oracle CDC-View Script
 

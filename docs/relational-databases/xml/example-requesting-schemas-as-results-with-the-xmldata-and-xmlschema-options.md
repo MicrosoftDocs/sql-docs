@@ -1,17 +1,16 @@
 ---
 title: "Request schemas as results with XMLDATA & XMLSCHEMA"
 description: Learn how to use the XMLDATA and XMLSCHEMA options in RAW mode with the FOR XML clause to request an XML-DATA schema or an XSD schema in the query result.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "RAW mode, requesting schema example"
   - "RAW mode, with XMLDATA and XMLSCHEMA"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Request schemas as results with XMLDATA and XMLSCHEMA
 

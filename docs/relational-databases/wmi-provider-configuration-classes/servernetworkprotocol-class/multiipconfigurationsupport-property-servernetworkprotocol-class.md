@@ -1,22 +1,17 @@
 ---
-description: "MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)"
 title: "MultiIpConfigurationSupport Property (ServerNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "MultiIpConfigurationSupport Property (ServerNetworkProtocol"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "MultiIpConfigurationSupport property"
-ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
+description: "MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "MultiIpConfigurationSupport property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "MultiIpConfigurationSupport Property (ServerNetworkProtocol"
+apitype: "MOFDef"
 ---
 # MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

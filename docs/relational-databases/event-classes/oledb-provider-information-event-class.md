@@ -1,17 +1,14 @@
 ---
+title: "OLEDB Provider Information Event Class"
 description: "OLEDB Provider Information Event Class"
-title: "OLEDB Provider Information Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "OLEDB Provider Information event class"
-ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "OLEDB Provider Information event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Provider Information Event Class

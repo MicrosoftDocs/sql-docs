@@ -1,30 +1,27 @@
 ---
+title: "sp_dbmmonitordropmonitoring (Transact-SQL)"
 description: "sp_dbmmonitordropmonitoring (Transact-SQL)"
-title: "sp_dbmmonitordropmonitoring (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbmmonitordropmonitoring_TSQL"
-  - "sp_dbmmonitordropmonitoring"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbmmonitordropmonitoring"
-  - "database mirroring [SQL Server], monitoring"
-ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbmmonitordropmonitoring_TSQL"
+  - "sp_dbmmonitordropmonitoring"
+helpviewer_keywords:
+  - "sp_dbmmonitordropmonitoring"
+  - "database mirroring [SQL Server], monitoring"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbmmonitordropmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stops and deletes the mirroring monitor job for all the databases on the server instance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

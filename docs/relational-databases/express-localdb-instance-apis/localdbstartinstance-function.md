@@ -1,20 +1,14 @@
 ---
+title: "LocalDBStartInstance Function"
 description: "LocalDBStartInstance Function"
-title: "LocalDBStartInstance Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "reference"
-apiname: 
-  - "LocalDBStartInstance"
-apilocation: 
-  - "sqluserinstance.dll"
-apitype: "DLLExport"
-ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
+apiname: "LocalDBStartInstance"
+apitype: "DLLExport"
 ---
 # LocalDBStartInstance Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

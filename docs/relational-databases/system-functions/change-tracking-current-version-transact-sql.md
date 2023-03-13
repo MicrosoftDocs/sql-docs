@@ -1,23 +1,20 @@
 ---
+title: "CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)"
 description: "CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)"
-title: "CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "CHANGE_TRACKING_CURRENT_VERSION_TSQL"
-  - "CHANGE_TRACKING_CURRENT_VERSION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "change tracking [SQL Server], CHANGE_TRACKING_CURRENT_VERSION"
-  - "CHANGE_TRACKING_CURRENT_VERSION"
-ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "08/08/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "CHANGE_TRACKING_CURRENT_VERSION_TSQL"
+  - "CHANGE_TRACKING_CURRENT_VERSION"
+helpviewer_keywords:
+  - "change tracking [SQL Server], CHANGE_TRACKING_CURRENT_VERSION"
+  - "CHANGE_TRACKING_CURRENT_VERSION"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
@@ -25,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Returns a version that is associated with the last committed transaction. This version can be used when you enumerate changes by using [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

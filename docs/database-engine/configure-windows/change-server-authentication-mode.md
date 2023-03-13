@@ -7,7 +7,6 @@ ms.date: 11/17/2021
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "sa account"
   - "authentication [SQL Server], changing modes"

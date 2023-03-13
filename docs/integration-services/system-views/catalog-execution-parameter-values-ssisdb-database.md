@@ -1,15 +1,12 @@
 ---
+title: "catalog.execution_parameter_values (SSISDB Database)"
 description: "catalog.execution_parameter_values (SSISDB Database)"
-title: "catalog.execution_parameter_values (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.execution_parameter_values (SSISDB Database)
 

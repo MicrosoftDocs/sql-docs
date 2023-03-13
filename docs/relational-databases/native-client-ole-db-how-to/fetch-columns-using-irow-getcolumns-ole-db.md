@@ -1,17 +1,14 @@
 ---
+title: "Fetch columns using IRow::GetColumns (Native Client OLE DB provider)"
 description: "Fetch Columns in SQL Server Native Client Using IRow::GetColumns (OLE DB)"
-title: "Fetch columns using IRow::GetColumns (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IRow interface"
-ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "IRow interface"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch Columns in SQL Server Native Client Using IRow::GetColumns (OLE DB)

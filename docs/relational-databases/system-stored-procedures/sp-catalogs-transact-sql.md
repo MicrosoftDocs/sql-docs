@@ -1,29 +1,26 @@
 ---
+title: "sp_catalogs (Transact-SQL)"
 description: "sp_catalogs (Transact-SQL)"
-title: "sp_catalogs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_catalogs_TSQL"
-  - "sp_catalogs"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_catalogs"
-ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_catalogs_TSQL"
+  - "sp_catalogs"
+helpviewer_keywords:
+  - "sp_catalogs"
+dev_langs:
+  - "TSQL"
 ---
 # sp_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the list of catalogs in the specified linked server. This is equivalent to databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

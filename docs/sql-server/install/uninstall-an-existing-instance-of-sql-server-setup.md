@@ -7,7 +7,6 @@ ms.date: 12/20/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "removing instances of SQL Server"
   - "uninstalling instances of SQL Server"

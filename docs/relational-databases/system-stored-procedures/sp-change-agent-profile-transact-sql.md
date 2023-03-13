@@ -1,29 +1,26 @@
 ---
+title: "sp_change_agent_profile (Transact-SQL)"
 description: "sp_change_agent_profile (Transact-SQL)"
-title: "sp_change_agent_profile (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_change_agent_profile"
-  - "sp_change_agent_profile_TSQL"
-helpviewer_keywords: 
-  - "sp_change_agent_profile"
-ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_agent_profile"
+  - "sp_change_agent_profile_TSQL"
+helpviewer_keywords:
+  - "sp_change_agent_profile"
+dev_langs:
+  - "TSQL"
 ---
 # sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes a parameter of a replication agent profile stored in the [MSagent_profiles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) table. This stored procedure is executed at the Distributor on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

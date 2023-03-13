@@ -1,18 +1,16 @@
 ---
+title: "Filter Published Data for Merge Replication"
 description: "Filter Published Data for Merge Replication"
-title: "Filter Published Data for Merge Replication | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "merge replication [SQL Server replication], filtering published data"
-  - "replication [SQL Server], filtering published data"
-ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "merge replication [SQL Server replication], filtering published data"
+  - "replication [SQL Server], filtering published data"
 ---
 # Filter Published Data for Merge Replication
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

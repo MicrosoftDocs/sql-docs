@@ -1,29 +1,26 @@
 ---
+title: "sp_msx_set_account (Transact-SQL)"
 description: "sp_msx_set_account (Transact-SQL)"
-title: "sp_msx_set_account (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_msx_set_account"
-  - "sp_msx_set_account_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_msx_set_account"
-ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_msx_set_account"
+  - "sp_msx_set_account_TSQL"
+helpviewer_keywords:
+  - "sp_msx_set_account"
+dev_langs:
+  - "TSQL"
 ---
 # sp_msx_set_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master server account name and password on the target server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

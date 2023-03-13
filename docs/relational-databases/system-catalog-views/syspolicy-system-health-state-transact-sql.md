@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "syspolicy_system_health_state view"
 dev_langs:
   - "TSQL"
-ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
 ---
 # syspolicy_system_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

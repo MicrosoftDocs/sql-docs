@@ -9,9 +9,9 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 ---
 # Tutorial: Implement a geo-distributed database (Azure SQL Database)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

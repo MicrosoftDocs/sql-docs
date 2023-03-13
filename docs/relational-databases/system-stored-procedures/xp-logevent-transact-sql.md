@@ -1,29 +1,26 @@
 ---
+title: "xp_logevent (Transact-SQL)"
 description: "xp_logevent (Transact-SQL)"
-title: "xp_logevent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_logevent"
-  - "xp_logevent_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_logevent"
-ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_logevent"
+  - "xp_logevent_TSQL"
+helpviewer_keywords:
+  - "xp_logevent"
+dev_langs:
+  - "TSQL"
 ---
 # xp_logevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Logs a user-defined message in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file and in the Windows Event Viewer. xp_logevent can be used to send an alert without sending a message to the client.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

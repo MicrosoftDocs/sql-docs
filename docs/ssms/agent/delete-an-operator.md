@@ -1,12 +1,13 @@
 ---
-description: "Delete an Operator"
 title: "Delete an Operator"
-ms.custom: seo-lt-2019
+description: "Delete an Operator"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, operators"
   - "canceling operators"
   - "removing operators"
@@ -14,10 +15,6 @@ helpviewer_keywords:
   - "dropping operators"
   - "jobs [SQL Server Agent], operators"
   - "operators (users) [Database Engine], deleting with Management Studio"
-ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Delete an Operator

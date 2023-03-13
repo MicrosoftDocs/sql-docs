@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_12303"
 description: "MSSQLSERVER_12303"
-title: "MSSQLSERVER_12303 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "12303 (Database Engine error)"
-ms.assetid: d7972592-72a5-4e84-b9d5-54324d430dcb
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "12303 (Database Engine error)"
 ---
 # MSSQLSERVER_12303
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

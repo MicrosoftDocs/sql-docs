@@ -1,19 +1,16 @@
 ---
+title: "Loading and Running a Remote Package Programmatically"
 description: "Loading and Running a Remote Package Programmatically"
-title: "Loading and Running a Remote Package Programmatically | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, running"
   - "packages [Integration Services], running"
   - "remote packages [Integration Services]"
-ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: chugugrace
-ms.author: chugu
 ---
 # Loading and Running a Remote Package Programmatically
 

@@ -1,18 +1,14 @@
 ---
+title: "Migrate to a Partially Contained Database"
 description: "Migrate to a Partially Contained Database"
-title: "Migrate to a Partially Contained Database | Microsoft Docs"
-ms.custom:
-  - intro-migration
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords:
-  - "contained database, migrating to"
-ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+ms.custom: intro-migration
+helpviewer_keywords:
+  - "contained database, migrating to"
 ---
 # Migrate to a Partially Contained Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

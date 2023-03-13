@@ -14,7 +14,6 @@ dev_langs:
   - "TSQL"
   - "VB"
   - "CSharp"
-ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 ---
 # CLR Scalar-Valued Functions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,23 @@
 ---
-description: "The sys.fn_xe_file_target_read_file system function reads files that are created by the Extended Events asynchronous file target."
 title: "sys.fn_xe_file_target_read_file (Transact-SQL)"
-ms.custom: ""
+description: "The sys.fn_xe_file_target_read_file system function reads files that are created by the Extended Events asynchronous file target."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/21/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_xe_file_target_read_file_TSQL"
   - "fn_xe_file_target_read_file"
   - "sys.fn_xe_file_target_read_file_TSQL"
   - "sys.fn_xe_file_target_read_file"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extended events [SQL Server], functions"
   - "fn_xe_file_target_read_file function"
   - "sys.fn_xe_file_target_read_file function"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -29,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   The Extended Events `event_file` target stores the data it receives in a binary format that is not human readable. Read the contents of the `.xel` file with the `sys.fn_xe_file_target_read_file` function. These files can also be read from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For a walkthrough, see [Quickstart: Extended events in SQL Server](../extended-events/quick-start-extended-events-in-sql-server.md).
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -4,11 +4,10 @@ description: Find information about SQL Server 2022 (16.x) limitations, known is
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 12/07/2022
+ms.date: 02/09/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-ms.custom: event-tier1-build-2022
 monikerRange: "= sql-server-ver16"
 ---
 
@@ -96,6 +95,10 @@ To work around this issue, you can use Trace Flag 12324 as either as startup tra
 ### SQL Server services are set to Automatic (Delayed Start) start mode
 
 In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], setting the **Start Mode** for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service to *Automatic* in Configuration Manager, will configure that service to start in *Automatic (Delayed Start)* mode instead, even though the **Start Mode** shows as *Automatic*.
+
+### MSOLEDBSQL19 and linked servers
+
+Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
 
 ## Build number
 

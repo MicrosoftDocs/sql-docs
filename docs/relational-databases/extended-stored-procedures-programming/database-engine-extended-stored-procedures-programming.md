@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], about extended stored procedures"
   - "Open Data Services [SQL Server]"
   - "ODS [SQL Server]"
-ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 ---
 # Database Engine Extended Stored Procedures - Programming
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

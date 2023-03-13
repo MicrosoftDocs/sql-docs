@@ -7,7 +7,6 @@ ms.date: 01/11/2019
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "namespaces [SQLXML], annotated XSD schemas"
   - "mapping schema [SQLXML], about mapping schema"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "minimum XSD schema"
   - "annotated XSD schemas, examples"
   - "XML views [SQLXML]"
-ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)

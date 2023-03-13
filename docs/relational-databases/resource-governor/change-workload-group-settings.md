@@ -1,18 +1,15 @@
 ---
-title: "Change Workload Group Settings | Microsoft Docs"
+title: "Change Workload Group Settings"
 description: Learn how to change workload group settings of the default and user-defined workload groups by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "workload groups [SQL Server], alter"
-  - "Resource Governor, workload group alter"
-ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "workload groups [SQL Server], alter"
+  - "Resource Governor, workload group alter"
 ---
 # Change Workload Group Settings
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

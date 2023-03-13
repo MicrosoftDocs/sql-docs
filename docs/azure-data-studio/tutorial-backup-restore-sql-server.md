@@ -7,7 +7,7 @@ ms.reviewer: alayu
 ms.date: 11/04/2019
 ms.service: azure-data-studio
 ms.topic: tutorial
-ms.custom: seodec18
+ms.custom: updatefrequency5
 ---
 
 # Tutorial: Back up and restore databases using Azure Data Studio

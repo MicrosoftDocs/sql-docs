@@ -8,7 +8,7 @@ ms.date: 03/13/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: troubleshooting
-ms.custom: seo-lt-2019 sqldbrb=1
+ms.custom: sqldbrb=1
 ---
 
 # SQL Hyperscale performance troubleshooting diagnostics

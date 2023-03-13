@@ -1,29 +1,26 @@
 ---
+title: "sysmail_add_profileaccount_sp (Transact-SQL)"
 description: "sysmail_add_profileaccount_sp (Transact-SQL)"
-title: "sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_add_profileaccount_sp"
-  - "sysmail_add_profileaccount_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_add_profileaccount_sp"
-ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_add_profileaccount_sp"
+  - "sysmail_add_profileaccount_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_add_profileaccount_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a Database Mail account to a Database Mail profile. Execute **sysmail_add_profileaccount_sp** after a Database Account is created with [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md), and a Database Profile is created with [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

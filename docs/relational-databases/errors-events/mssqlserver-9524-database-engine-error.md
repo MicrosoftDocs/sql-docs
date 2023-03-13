@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_9524"
 description: "MSSQLSERVER_9524"
-title: "MSSQLSERVER_9524 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "9524 (Database Engine error)"
-ms.assetid: 12da7931-e124-4466-889c-046f1b7b7bfd
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "9524 (Database Engine error)"
 ---
 # MSSQLSERVER_9524
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

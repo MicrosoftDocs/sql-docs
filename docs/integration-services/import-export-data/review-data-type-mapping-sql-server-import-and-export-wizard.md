@@ -1,18 +1,14 @@
 ---
+title: "Review Data Type Mapping (SQL Server Import and Export Wizard)"
 description: "Review Data Type Mapping (SQL Server Import and Export Wizard)"
-title: "Review Data Type Mapping (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.reviewissues.f1"
-ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.reviewissues.f1"
 ---
 # Review Data Type Mapping (SQL Server Import and Export Wizard)
 

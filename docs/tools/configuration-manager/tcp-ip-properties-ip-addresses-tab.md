@@ -1,18 +1,15 @@
 ---
 title: "TCP/IP Properties (IP Addresses Tab)"
 description: Learn how to use the IP Addresses tab of the TCP/IP Properties dialog box to configure the TCP/IP protocol options for a specific IP address in SQL Server.
-ms.custom: seo-lt-2019
-ms.date: "08/24/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ports [SQL Server], listening on"
-  - "listening [SQL Server], on ports"
-ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
+ms.date: "08/24/2016"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ports [SQL Server], listening on"
+  - "listening [SQL Server], on ports"
 ---
 # TCP/IP Properties (IP Addresses Tab)
 [!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seodec18
 f1_keywords:
   - "VS.ToolsOptionsPages.Alwayson.Dashboard"
 ---

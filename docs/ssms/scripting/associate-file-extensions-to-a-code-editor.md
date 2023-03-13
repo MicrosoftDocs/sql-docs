@@ -1,19 +1,16 @@
 ---
 title: "Associate File Extensions to a Code Editor"
 description: Learn how to associate a file extension to a specific code editor so that when you double-click a file with the extension it is opened by the associated editor.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
-ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "file extensions [SQL Server]"
   - "associating file extensions [SQL Server]"
   - "Query Editor [SQL Server Management Studio], associating file extensions"
-ms.assetid: 193630f4-93de-4950-8f36-68702531f925
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Associate File Extensions to a Code Editor

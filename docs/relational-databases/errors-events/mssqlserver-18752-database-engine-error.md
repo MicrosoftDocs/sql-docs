@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_18752"
 description: "MSSQLSERVER_18752"
-title: "MSSQLSERVER_18752 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "18752 (Database Engine error)"
-ms.assetid: 234c58d8-7a1e-4b07-a64b-32a311527980
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "18752 (Database Engine error)"
 ---
 # MSSQLSERVER_18752
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

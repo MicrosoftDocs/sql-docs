@@ -1,19 +1,17 @@
 ---
+title: "Secure the Subscriber"
 description: "Secure the Subscriber"
-title: "Secure the Subscriber | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [SQL Server replication], security"
   - "Subscribers [SQL Server replication], security"
   - "security [SQL Server replication], Subscribers"
-ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Secure the Subscriber
@@ -72,8 +70,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
      For more information, see How to: Create an Updating Subscription to a Transactional Publication (SQL Server Management Studio) and [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## See Also  
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
-  
-  

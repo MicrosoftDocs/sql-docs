@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.event_notification_event_types catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 73dae456-7044-4b00-b0bd-990ef810b356
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.event_notification_event_types (Transact-SQL)

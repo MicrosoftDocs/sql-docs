@@ -1,29 +1,26 @@
 ---
+title: "sp_deletemergeconflictrow (Transact-SQL)"
 description: "sp_deletemergeconflictrow (Transact-SQL)"
-title: "sp_deletemergeconflictrow (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_deletemergeconflictrow"
-  - "sp_deletemergeconflictrow_TSQL"
-helpviewer_keywords: 
-  - "sp_deletemergeconflictrow"
-ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_deletemergeconflictrow"
+  - "sp_deletemergeconflictrow_TSQL"
+helpviewer_keywords:
+  - "sp_deletemergeconflictrow"
+dev_langs:
+  - "TSQL"
 ---
 # sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes rows from a conflict table or the [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) table. This stored procedure is executed at the computer where the conflict table is stored, in any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

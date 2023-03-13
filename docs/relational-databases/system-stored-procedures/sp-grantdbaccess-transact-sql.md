@@ -1,22 +1,19 @@
 ---
+title: "sp_grantdbaccess (Transact-SQL)"
 description: "sp_grantdbaccess (Transact-SQL)"
-title: "sp_grantdbaccess (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_grantdbaccess"
   - "sp_grantdbaccess_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_grantdbaccess"
-ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_grantdbaccess (Transact-SQL)
 
@@ -27,7 +24,7 @@ author: VanMSFT
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

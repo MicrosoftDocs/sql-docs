@@ -1,20 +1,18 @@
 ---
 title: "Installation Wizard Help"
 description: Specify whether to create a default instance or a named instance of SQL Server by using Instance Configuration in the SQL Server Installation Wizard.
-ms.custom:
-  - intro-installation
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 08/16/2019
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: install
 ms.topic: conceptual
+ms.custom: intro-installation
 f1_keywords:
   - "instance configuration, Setup"
 helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"
-author: rwestMSFT
-ms.author: randolphwest
 ---
 
 # Installation Wizard help
@@ -64,7 +62,7 @@ minimizes conflicts when multiple applications are installed on the same compute
   
 * If you specify MSSQLSERVER for the instance name, a default instance is created.  
   
-* An installation of [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] is always installed as a named instance of "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]". You can't specify a different instance name for this feature role.  
+* An installation of [!INCLUDE[power-pivot-2016-sharepoint-md](../../includes/power-pivot-2016-sharepoint-md.md)] is always installed as a named instance of "[!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)]". You can't specify a different instance name for this feature role.  
   
 * Instance names are limited to 16 characters.  
   
@@ -105,7 +103,7 @@ All components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that
   
 Use this page to set the server mode and to grant administrative permissions to users or services that require unrestricted access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Setup doesn't automatically add the local Windows group BUILTIN\Administrators to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server administrator role of the instance you're installing. If you want to add the local Administrators group to the server administrator role, you must explicitly specify that group.  
   
-If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], be sure to grant administrative permissions to SharePoint farm administrators or service administrators who are responsible for a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server deployment in a [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm.  
+If you're installing [!INCLUDE[power-pivot-sharepoint-md](../../includes/power-pivot-sharepoint-md.md)], be sure to grant administrative permissions to SharePoint farm administrators or service administrators who are responsible for a [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] server deployment in a [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm.  
   
 ### Options
 
@@ -132,7 +130,7 @@ The default directories in the following table are user-configurable during [!IN
 |**Data root directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest-performing storage that is attached to the system. For failover cluster installations, ensure that data directories are placed on the shared disk.|  
 |**Log file directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight recorder duration, ensure that the log directory has adequate space.|  
 |**Temp directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |Place the Temp directory on a high-performance storage subsystem.|  
-|**Backup directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, this directory is also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
+|**Backup directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint installations, this directory is also where the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] System Services caches [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
   
 ### Considerations  
   
@@ -165,7 +163,7 @@ The default directories in the following table are user-configurable during [!IN
 |**Data root directory** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest-performing storage that's attached to the system. For failover cluster installations, ensure that the data directories are placed on the shared disk.|  
 |**Log file directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight-recorder duration, ensure that the log directory has adequate space.|  
 |**Temp directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Place the Temp directory on a high-performance storage subsystem.|  
-|**Backup directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it's also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
+|**Backup directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint installations, it's also where the [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] System Services caches [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
   
 #### Considerations
   

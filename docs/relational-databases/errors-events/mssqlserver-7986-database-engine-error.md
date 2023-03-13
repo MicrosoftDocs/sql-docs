@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7986"
 description: "MSSQLSERVER_7986"
-title: "MSSQLSERVER_7986 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7986 (Database Engine error)"
-ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7986 (Database Engine error)"
 ---
 # MSSQLSERVER_7986
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -6,12 +6,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: dakryze
 ms.date: 05/12/2021
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
+ms.topic: conceptual
+ms.custom: intro-installation
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
-ms.custom:
-  - intro-installation
 ---
 # Install PolyBase on Linux
 

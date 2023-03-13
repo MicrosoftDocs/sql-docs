@@ -1,19 +1,16 @@
 ---
 title: "Upgrade a failover cluster instance"
-description: "Steps to upgrade a SQL Server Always On failover cluster instance using the installation media. Learn about rolling upgrades and upgrading a multi-subnet cluster." 
-ms.custom: "seo-lt-2019"
+description: "Steps to upgrade a SQL Server Always On failover cluster instance using the installation media. Learn about rolling upgrades and upgrading a multi-subnet cluster."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "11/21/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "upgrading failover cluster instances"
   - "clusters [SQL Server], upgrading"
   - "failover clustering [SQL Server], upgrading"
-ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # Upgrade a failover cluster instance 

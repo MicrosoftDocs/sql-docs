@@ -1,17 +1,15 @@
 ---
+title: "Publisher Information, Subscription Watch List (Transactional)"
 description: "Publisher Information, Subscription Watch List (Transactional)"
-title: "Publisher Information, Subscription Watch List (Transactional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.subscriptionssummary.tran.f1"
-ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publisherinfo.subscriptionssummary.tran.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publisher Information, Subscription Watch List (Transactional)

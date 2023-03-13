@@ -1,20 +1,17 @@
 ---
+title: "Appendix F: ODBC Cursor Library"
 description: "Appendix F: ODBC Cursor Library"
-title: "Appendix F: ODBC Cursor Library | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC cursor library [ODBC], about cursor library"
   - "ODBC cursor library [ODBC]"
   - "cursor library [ODBC], about cursor library"
   - "cursor library [ODBC]"
-ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Appendix F: ODBC Cursor Library
 > [!IMPORTANT]  

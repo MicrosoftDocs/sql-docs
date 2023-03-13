@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: data-movement
 ms.topic: sample
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ms.devlang: PowerShell
 ---
 # Use PowerShell to copy a database to a new server

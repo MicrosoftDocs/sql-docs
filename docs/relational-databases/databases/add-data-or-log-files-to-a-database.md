@@ -1,13 +1,13 @@
 ---
-title: "Add Data or Log Files to a Database | Microsoft Docs"
+title: "Add Data or Log Files to a Database"
 description: "Learn how to add data or log files to a database in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL."
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logs [SQL Server], files"
   - "adding data files"
   - "adding files"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "file additions [SQL Server], steps"
   - "files [SQL Server], adding"
   - "data additions [SQL Server]"
-ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Add Data or Log Files to a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

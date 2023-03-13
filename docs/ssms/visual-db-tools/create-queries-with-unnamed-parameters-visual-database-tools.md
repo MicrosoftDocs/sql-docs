@@ -1,19 +1,15 @@
 ---
-description: "Create Queries with Unnamed Parameters (Visual Database Tools)"
 title: Create Queries with Unnamed Parameters
-ms.custom: seo-lt-2019
+description: "Create Queries with Unnamed Parameters (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "unnamed parameters"
   - "parameters [SQL Server], unnamed"
-ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Queries with Unnamed Parameters (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

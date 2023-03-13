@@ -1,21 +1,19 @@
 ---
 title: "Measure latency & validate connections (Transactional)"
 description: Learn how to measure the latency and validate connections for a Transaction Publication in SQL Server using Replication Monitor in SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or Replication Management Objects (RMO).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Replication Monitor, performance"
   - "tracer tokens [SQL Server replication]"
   - "latency [SQL Server replication]"
   - "transactional replication, tracer tokens"
   - "monitoring performance [SQL Server replication], tracer tokens"
-ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Measure Latency and Validate Connections for Transactional Replication

@@ -1,29 +1,26 @@
 ---
+title: "sp_update_targetservergroup (Transact-SQL)"
 description: "sp_update_targetservergroup (Transact-SQL)"
-title: "sp_update_targetservergroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_targetservergroup_TSQL"
-  - "sp_update_targetservergroup"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_update_targetservergroup"
-ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_targetservergroup_TSQL"
+  - "sp_update_targetservergroup"
+helpviewer_keywords:
+  - "sp_update_targetservergroup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the name of the specified target server group.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

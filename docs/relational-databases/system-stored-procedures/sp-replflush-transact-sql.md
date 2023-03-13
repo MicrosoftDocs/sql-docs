@@ -1,22 +1,19 @@
 ---
+title: "sp_replflush (Transact-SQL)"
 description: "sp_replflush (Transact-SQL)"
-title: "sp_replflush (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replflush"
-  - "sp_replflush_TSQL"
-helpviewer_keywords: 
-  - "sp_replflush"
-ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replflush"
+  - "sp_replflush_TSQL"
+helpviewer_keywords:
+  - "sp_replflush"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replflush (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  You should not have to execute this procedure manually. **sp_replflush** should only be used for troubleshooting replication as directed by an experienced replication support professional.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

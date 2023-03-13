@@ -1,22 +1,19 @@
 ---
+title: "sp_msx_enlist (Transact-SQL)"
 description: "sp_msx_enlist (Transact-SQL)"
-title: "sp_msx_enlist (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_msx_enlist_TSQL"
-  - "sp_msx_enlist"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_msx_enlist"
-ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_msx_enlist_TSQL"
+  - "sp_msx_enlist"
+helpviewer_keywords:
+  - "sp_msx_enlist"
+dev_langs:
+  - "TSQL"
 ---
 # sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!CAUTION]  
 >  The **sp_msx_enlist** stored procedure edits the registry. Manual editing of the registry is not recommended because inappropriate or incorrect changes can cause serious configuration problems for your system. Therefore, only experienced users should use the Registry Editor program to edit the registry. For more information, see the Microsoft Windows documentation.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

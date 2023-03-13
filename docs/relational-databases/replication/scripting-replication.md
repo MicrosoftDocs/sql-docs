@@ -1,22 +1,20 @@
 ---
-title: "Scripting Replication | Microsoft Docs"
+title: "Scripting Replication"
 description: A script contains Transact-SQL system stored procedures necessary to implement the SQL Server replication components, such as a publication or subscription.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "scripts [SQL Server replication], replication objects"
   - "merge replication scripting [SQL Server replication]"
   - "replication [SQL Server], scripting"
   - "snapshot replication [SQL Server], scripting"
   - "scripts [SQL Server replication]"
   - "transactional replication, scripting"
-ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Scripting Replication

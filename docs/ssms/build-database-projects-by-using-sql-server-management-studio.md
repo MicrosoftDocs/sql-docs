@@ -1,20 +1,17 @@
 ---
-description: "Build Database Projects by Using SQL Server Management Studio"
 title: Build Database Projects
+description: "Build Database Projects by Using SQL Server Management Studio"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scripts [SQL Server], database projects"
   - "database projects [SQL Server]"
   - "projects [SQL Server Management Studio], about projects"
   - "projects [SQL Server Management Studio]"
-ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Build Database Projects by Using SQL Server Management Studio

@@ -1,17 +1,14 @@
 ---
-title: "Audit Login Event Class | Microsoft Docs"
+title: "Audit Login Event Class"
 description: The Audit Login event class indicates that a user has successfully logged in to Microsoft SQL Server.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Login event class"
-ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Login event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Login Event Class

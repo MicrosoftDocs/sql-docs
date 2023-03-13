@@ -1,19 +1,16 @@
 ---
+title: "Deleting a Visual FoxPro Data Source"
 description: "Deleting a Visual FoxPro Data Source"
-title: "Deleting a Visual FoxPro Data Source | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing data sources [ODBC], Visual FoxPro"
   - "Visual FoxPro data source [ODBC], deleting"
   - "deleting data sources [ODBC], Visual FoxPro"
-ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Deleting a Visual FoxPro Data Source
 ### To delete a Visual FoxPro data source  

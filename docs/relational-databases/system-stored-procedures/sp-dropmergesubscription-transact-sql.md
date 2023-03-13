@@ -1,29 +1,26 @@
 ---
+title: "sp_dropmergesubscription (Transact-SQL)"
 description: "sp_dropmergesubscription (Transact-SQL)"
-title: "sp_dropmergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_dropmergesubscription_TSQL"
-  - "sp_dropmergesubscription"
-helpviewer_keywords: 
-  - "sp_dropmergesubscription"
-ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropmergesubscription_TSQL"
+  - "sp_dropmergesubscription"
+helpviewer_keywords:
+  - "sp_dropmergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a subscription to a merge publication and its associated Merge Agent. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

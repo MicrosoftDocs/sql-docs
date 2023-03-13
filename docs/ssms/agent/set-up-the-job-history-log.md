@@ -1,20 +1,17 @@
 ---
-description: "Set Up the Job History Log"
 title: "Set Up the Job History Log"
-ms.custom: seo-lt-2019
+description: "Set Up the Job History Log"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], history"
   - "logs [SQL Server], jobs"
   - "SQL Server Agent jobs, history"
   - "historical information [SQL Server], jobs"
-ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Set Up the Job History Log

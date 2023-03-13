@@ -1,13 +1,12 @@
 ---
+title: "Creating a Memory-Optimized System-Versioned Temporal Table"
 description: "Creating a Memory-Optimized System-Versioned Temporal Table"
-title: "Creating a Memory-Optimized System-Versioned Temporal Table | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 03/04/2022
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Memory-Optimized System-Versioned Temporal Table

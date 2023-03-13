@@ -1,25 +1,22 @@
 ---
+title: "sys.fn_servershareddrives (Transact-SQL)"
 description: "sys.fn_servershareddrives (Transact-SQL)"
-title: "sys.fn_servershareddrives (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_servershareddrives"
   - "fn_servershareddrives_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_servershareddrives function"
   - "shared drives [SQL Server]"
   - "names [SQL Server], shared drives"
   - "sys.fn_serversharedrives function"
-ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +26,7 @@ ms.author: randolphwest
 > [!IMPORTANT]  
 >  This  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system function is included for backward compatibility. We recommend that you use [sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

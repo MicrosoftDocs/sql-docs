@@ -1,17 +1,14 @@
 ---
-description: "Windows Dialog Box (Microsoft Document Explorer Help)"
 title: "Windows Dialog Box (Microsoft Document Explorer Help)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-helpviewer_keywords: 
-  - "Windows dialog box"
-ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
+description: "Windows Dialog Box (Microsoft Document Explorer Help)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+helpviewer_keywords:
+  - "Windows dialog box"
 ---
 # Windows Dialog Box (Microsoft Document Explorer Help)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

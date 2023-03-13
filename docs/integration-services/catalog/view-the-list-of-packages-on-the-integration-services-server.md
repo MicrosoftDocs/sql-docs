@@ -1,15 +1,12 @@
 ---
+title: "View the List of Packages on the Integration Services Server"
 description: "View the List of Packages on the Integration Services Server"
-title: "View the List of Packages on the Integration Services Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # View the List of Packages on the Integration Services Server
 

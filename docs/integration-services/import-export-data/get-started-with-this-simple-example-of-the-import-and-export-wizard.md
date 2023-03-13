@@ -1,16 +1,13 @@
 ---
+title: "Get started with this simple example of the Import and Export Wizard"
 description: "Get started with this simple example of the Import and Export Wizard"
-title: "Get started with this simple example of the Import and Export Wizard | Microsoft Docs"
-ms.custom:
-  - intro-quickstart
-ms.date: "02/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: quickstart
-ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
+ms.date: "02/15/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: quickstart
+ms.custom: intro-quickstart
 ---
 # Get started with this simple example of the Import and Export Wizard
 

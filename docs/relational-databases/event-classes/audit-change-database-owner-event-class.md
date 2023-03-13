@@ -1,17 +1,14 @@
 ---
+title: "Audit Change Database Owner Event Class"
 description: "Audit Change Database Owner Event Class"
-title: "Audit Change Database Owner Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Change Database Owner event class"
-ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Change Database Owner event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Change Database Owner Event Class

@@ -1,29 +1,26 @@
 ---
+title: "sp_dropmessage (Transact-SQL)"
 description: "sp_dropmessage (Transact-SQL)"
-title: "sp_dropmessage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dropmessage_TSQL"
-  - "sp_dropmessage"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dropmessage"
-ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropmessage_TSQL"
+  - "sp_dropmessage"
+helpviewer_keywords:
+  - "sp_dropmessage"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a specified user-defined error message from an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. User-defined messages can be viewed using the **sys.messages** catalog view.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

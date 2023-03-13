@@ -1,17 +1,14 @@
 ---
+title: "Select Source Tables and Views (SQL Server Import and Export Wizard)"
 description: "Select Source Tables and Views (SQL Server Import and Export Wizard)"
-title: "Select Source Tables and Views (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/02/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.selectsourcetablesandviews.f1"
-ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
+ms.date: "04/02/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.selectsourcetablesandviews.f1"
 ---
 # Select Source Tables and Views (SQL Server Import and Export Wizard)
 

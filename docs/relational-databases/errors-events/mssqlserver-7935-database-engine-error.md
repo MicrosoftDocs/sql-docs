@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7935"
 description: "MSSQLSERVER_7935"
-title: "MSSQLSERVER_7935 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7935 (Database Engine error)"
-ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7935 (Database Engine error)"
 ---
 # MSSQLSERVER_7935
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

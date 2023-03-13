@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - "seo-dt-2019"
-  - "sqldbrb=1"
+  - seo-dt-2019
+  - sqldbrb=1
 ---
 # Configure Advanced Threat Protection for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

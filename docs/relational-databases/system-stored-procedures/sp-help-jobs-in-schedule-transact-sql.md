@@ -1,29 +1,26 @@
 ---
+title: "sp_help_jobs_in_schedule (Transact-SQL)"
 description: "sp_help_jobs_in_schedule (Transact-SQL)"
-title: "sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobs_in_schedule_TSQL"
-  - "sp_help_jobs_in_schedule"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobs_in_schedule"
-ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobs_in_schedule_TSQL"
+  - "sp_help_jobs_in_schedule"
+helpviewer_keywords:
+  - "sp_help_jobs_in_schedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the jobs that a particular schedule is attached to.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

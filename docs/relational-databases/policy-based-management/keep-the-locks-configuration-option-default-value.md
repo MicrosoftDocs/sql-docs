@@ -1,17 +1,14 @@
 ---
+title: "Keep the Locks Configuration Option Default Value"
 description: "Keep the Locks Configuration Option Default Value"
-title: "Keep the Locks Configuration Option Default Value | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/13/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Keep the Locks Configuration Option Default Value
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

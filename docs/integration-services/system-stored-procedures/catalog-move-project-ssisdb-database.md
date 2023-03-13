@@ -1,15 +1,12 @@
 ---
+title: "catalog.move_project (SSISDB Database)"
 description: "catalog.move_project (SSISDB Database)"
-title: "catalog.move_project (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.move_project - SSISDB Database
 

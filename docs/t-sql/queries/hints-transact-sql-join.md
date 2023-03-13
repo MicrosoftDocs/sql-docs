@@ -1,27 +1,24 @@
 ---
+title: "Join Hints (Transact-SQL)"
 description: "Hints (Transact-SQL) - Join"
-title: "Join Hints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Join Hint"
   - "Join_Hint_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HASH join hint"
   - "REMOTE join hint"
   - "LOOP join hint"
   - "join hints"
   - "MERGE join hint"
   - "hints [SQL Server], join"
-ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # Hints (Transact-SQL) - Join
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +36,7 @@ ms.author: vanto
   
 - [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

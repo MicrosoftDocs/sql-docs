@@ -1,29 +1,26 @@
 ---
+title: "sp_table_validation (Transact-SQL)"
 description: "sp_table_validation (Transact-SQL)"
-title: "sp_table_validation (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_table_validation_TSQL"
-  - "sp_table_validation"
-helpviewer_keywords: 
-  - "sp_table_validation"
-ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: markingmyname
 ms.author: maghan
+ms.date: "03/08/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_table_validation_TSQL"
+  - "sp_table_validation"
+helpviewer_keywords:
+  - "sp_table_validation"
+dev_langs:
+  - "TSQL"
 ---
 # sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Either returns rowcount or checksum information on a table or indexed view, or compares the provided rowcount or checksum information with the specified table or indexed view. This stored procedure is executed at the Publisher on the publication database and at the Subscriber on the subscription database. *Not supported for Oracle Publishers*.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

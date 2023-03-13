@@ -1,26 +1,23 @@
 ---
-title: "Report Design View (Report Builder) | Microsoft Docs"
+title: "Report Design View (Report Builder)"
 description: This article describes the controls in the Report Builder window used to add, select, and organize your report resources, and change report item properties.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-builder
-
-
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "10440"
   - "10426"
   - "10439"
   - "10434"
   - "10438"
   - "10436"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reports, creating"
   - "user interface"
   - "overview of Report Builder"
-ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Design View (Report Builder)
   The Report Builder window is designed to help you easily organize your report resources and quickly build the paginated reports you need. The design surface is at the center of the window, with the ribbon and the panes around it. The design surface is where you add and organize your report items. This article explains the panes you use to add, select, and organize your report resources, and change report item properties.  

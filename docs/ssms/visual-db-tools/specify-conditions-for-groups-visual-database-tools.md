@@ -1,19 +1,15 @@
 ---
-description: "Specify Conditions for Groups (Visual Database Tools)"
 title: Specify Conditions for Groups
-ms.custom: seo-lt-2019
+description: "Specify Conditions for Groups (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HAVING clause, query groups"
   - "group query conditions [SQL Server]"
-ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Specify Conditions for Groups (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

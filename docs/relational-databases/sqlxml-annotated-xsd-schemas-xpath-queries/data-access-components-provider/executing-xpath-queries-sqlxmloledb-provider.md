@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "Base Path property"
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "Mapping Schema property"
-ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)

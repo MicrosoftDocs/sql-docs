@@ -1,22 +1,17 @@
 ---
-description: "Version Property (ClientNetLibInfo Class)"
 title: "Version Property (ClientNetLibInfo)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "Version Property (ClientNetLibInfo Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "Version property"
-ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
+description: "Version Property (ClientNetLibInfo Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Version property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "Version Property (ClientNetLibInfo Class)"
+apitype: "MOFDef"
 ---
 # Version Property (ClientNetLibInfo Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,16 @@
 ---
+title: "Configure IIS 7 for Web Synchronization"
 description: "Configure IIS 7 for Web Synchronization"
-title: "Configure IIS 7 for Web Synchronization | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "IIS 7 server configuration [SQL Server replication]"
-  - "Web synchronization, IIS 7 servers"
-ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "09/12/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "IIS 7 server configuration [SQL Server replication]"
+  - "Web synchronization, IIS 7 servers"
 ---
 # Configure IIS 7 for Web Synchronization
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

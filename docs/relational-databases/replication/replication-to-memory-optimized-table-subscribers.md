@@ -1,15 +1,13 @@
 ---
+title: "Replication to Memory-Optimized Table Subscribers"
 description: "Replication to Memory-Optimized Table Subscribers"
-title: "Replication to Memory-Optimized Table Subscribers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "11/21/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication to Memory-Optimized Table Subscribers

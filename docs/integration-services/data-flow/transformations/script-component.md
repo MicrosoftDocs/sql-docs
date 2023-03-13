@@ -1,27 +1,24 @@
 ---
+title: "Script Component"
 description: "Script Component"
-title: "Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.scriptcomponentdetails.f1"
   - "sql13.dts.designer.scriptcomponent.f1"
   - "sql13.dts.designer.scriptcomponent.connections.f1"
   - "sql13.dts.designer.scriptcomponent.inputcolumn.f1"
   - "sql13.dts.designer.scriptcomponent.columnproperties.f1"
   - "sql13.dts.designer.scriptcomponent.script.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script transformation"
   - "scripts [Integration Services], transformations"
   - "Script component [Integration Services], about Script component"
   - "Script component [Integration Services]"
-ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: chugugrace
-ms.author: chugu
 ---
 # Script Component
 

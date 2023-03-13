@@ -1,23 +1,16 @@
 ---
-description: "SecurityCertificate Class"
 title: "SecurityCertificate Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "SecurityCertificate Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SecurityCertificate class"
-ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
+description: "SecurityCertificate Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SecurityCertificate class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SecurityCertificate Class"
+apitype: "MOFDef"
 ---
 # SecurityCertificate Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

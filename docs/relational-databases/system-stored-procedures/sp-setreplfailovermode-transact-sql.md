@@ -1,29 +1,26 @@
 ---
+title: "sp_setreplfailovermode (Transact-SQL)"
 description: "sp_setreplfailovermode (Transact-SQL)"
-title: "sp_setreplfailovermode (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_setreplfailovermode"
-  - "sp_setreplfailovermode_TSQL"
-helpviewer_keywords: 
-  - "sp_setreplfailovermode"
-ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_setreplfailovermode"
+  - "sp_setreplfailovermode_TSQL"
+helpviewer_keywords:
+  - "sp_setreplfailovermode"
+dev_langs:
+  - "TSQL"
 ---
 # sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Allows you to set the failover operation mode for subscriptions enabled for immediate updating with queued updating as failover. This stored procedure is executed at the Subscriber on the subscription database. For more information about failover modes, see [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

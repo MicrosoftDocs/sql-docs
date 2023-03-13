@@ -34,7 +34,7 @@ Displays fragmentation information for the data and indexes of the specified tab
 
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

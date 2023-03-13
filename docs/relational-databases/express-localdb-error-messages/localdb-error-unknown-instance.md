@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_UNKNOWN_INSTANCE"
 description: "LOCALDB_ERROR_UNKNOWN_INSTANCE"
-title: "LOCALDB_ERROR_UNKNOWN_INSTANCE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: 67bca4f1-915d-46d4-9293-3742c16930a1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_UNKNOWN_INSTANCE
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

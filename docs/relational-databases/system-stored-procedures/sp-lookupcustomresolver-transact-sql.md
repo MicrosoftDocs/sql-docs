@@ -1,29 +1,26 @@
 ---
+title: "sp_lookupcustomresolver (Transact-SQL)"
 description: "sp_lookupcustomresolver (Transact-SQL)"
-title: "sp_lookupcustomresolver (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_lookupcustomresolver_TSQL"
-  - "sp_lookupcustomresolver"
-helpviewer_keywords: 
-  - "sp_lookupcustomresolver"
-ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_lookupcustomresolver_TSQL"
+  - "sp_lookupcustomresolver"
+helpviewer_keywords:
+  - "sp_lookupcustomresolver"
+dev_langs:
+  - "TSQL"
 ---
 # sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the information on a business logic handler or the class identifier (CLSID) value of a COM-based custom resolver component that is registered at the Distributor. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,29 +1,26 @@
 ---
+title: "sp_helpreplicationdboption (Transact-SQL)"
 description: "sp_helpreplicationdboption (Transact-SQL)"
-title: "sp_helpreplicationdboption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpreplicationdboption_TSQL"
-  - "sp_helpreplicationdboption"
-helpviewer_keywords: 
-  - "sp_helpreplicationdboption"
-ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpreplicationdboption_TSQL"
+  - "sp_helpreplicationdboption"
+helpviewer_keywords:
+  - "sp_helpreplicationdboption"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Shows whether databases at the Publisher are enabled for replication. This stored procedure is executed at the Publisher on any database. *Not supported for Oracle Publishers.*  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

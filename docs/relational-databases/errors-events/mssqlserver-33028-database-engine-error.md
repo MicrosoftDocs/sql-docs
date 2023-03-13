@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_33028"
 description: "MSSQLSERVER_33028"
-title: "MSSQLSERVER_33028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "33028 (Database Engine error)"
-ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "33028 (Database Engine error)"
 ---
 # MSSQLSERVER_33028
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,15 +1,16 @@
 ---
-description: "Design Queries and Views How-to Topics (Visual Database Tools)"
 title: Design Queries and Views How-to Topics
-ms.custom: seo-lt-2019
+description: "Design Queries and Views How-to Topics (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "• vs.solutionexplorer.file.query"
   - "vs.solutionexplorer.file.query"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [Visual Database Tools]"
   - "View Designer, about View Designer"
   - "View Designer, designing views"
@@ -17,11 +18,6 @@ helpviewer_keywords:
   - "views [SQL Server], Visual Database Tools"
   - "Query Designer [SQL Server], about Query Designer"
   - "Visual Database Tools [SQL Server], queries"
-ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

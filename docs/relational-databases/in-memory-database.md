@@ -1,12 +1,12 @@
 ---
-description: "In-memory database systems and technologies"
 title: "In-memory database systems features and technologies"
+description: "In-memory database systems and technologies"
+author: "briancarrig"
+ms.author: "brcarrig"
 ms.date: 10/30/2019
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "in-memory systems"
   - "in-memory technologies"
   - "in-memory features"
@@ -14,9 +14,6 @@ helpviewer_keywords:
   - "system, in-memory system"
   - "features, in-memory features"
   - "in-memory"
-ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-author: "briancarrig"
-ms.author: "brcarrig"
 ---
 
 # In-memory database systems and technologies

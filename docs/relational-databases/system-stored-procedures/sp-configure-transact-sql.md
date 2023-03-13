@@ -1,22 +1,19 @@
 ---
+title: "sp_configure (Transact-SQL)"
 description: "sp_configure (Transact-SQL)"
-title: "sp_configure (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 11/04/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_configure"
-  - "sp_configure_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_configure"
-ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
+ms.date: 11/04/2019
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_configure"
+  - "sp_configure_TSQL"
+helpviewer_keywords:
+  - "sp_configure"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sp_configure (Transact-SQL)
@@ -27,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-
 > [!NOTE]  
 > For database-level configuration options, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). To configure Soft-NUMA, see [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -158,7 +155,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- The result returns the option name followed by the minimum and maximum values for the option. The **config_value** is the value that [!INCLUDE[ssDW](../../includes/ssdw-md.md)] will use when reconfiguration is complete. The **run_value** is the value that is currently being used. The **config_value** and **run_value** are usually the same unless the value is in the process of being changed.  
+ The result returns the option name followed by the minimum and maximum values for the option. The **config_value** is the value that [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] will use when reconfiguration is complete. The **run_value** is the value that is currently being used. The **config_value** and **run_value** are usually the same unless the value is in the process of being changed.  
   
 ### D. List the configuration settings for one configuration name  
   

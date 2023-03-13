@@ -1,22 +1,17 @@
 ---
-description: "InstanceName Property (ServerSettingsGeneralFlag Class)"
 title: "InstanceName Property (ServerSettingsGeneralFlag)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "InstanceName Property (ServerSettingsGeneralFlag Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "InstanceName property"
-ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
+description: "InstanceName Property (ServerSettingsGeneralFlag Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "InstanceName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "InstanceName Property (ServerSettingsGeneralFlag Class)"
+apitype: "MOFDef"
 ---
 # InstanceName Property (ServerSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

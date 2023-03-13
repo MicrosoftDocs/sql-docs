@@ -8,7 +8,6 @@ ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "language-reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
 monikerRange: "= azure-sqldw-latest"
@@ -18,9 +17,9 @@ monikerRange: "= azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Displays the number of incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
+Displays the number of incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

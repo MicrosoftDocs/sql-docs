@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5228"
 description: "MSSQLSERVER_5228"
-title: "MSSQLSERVER_5228 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5228 (Database Engine error)"
-ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5228 (Database Engine error)"
 ---
 # MSSQLSERVER_5228
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

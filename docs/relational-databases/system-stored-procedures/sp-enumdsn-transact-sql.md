@@ -1,29 +1,26 @@
 ---
+title: "sp_enumdsn (Transact-SQL)"
 description: "sp_enumdsn (Transact-SQL)"
-title: "sp_enumdsn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_enumdsn"
-  - "sp_enumdsn_TSQL"
-helpviewer_keywords: 
-  - "sp_enumdsn"
-ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_enumdsn"
+  - "sp_enumdsn_TSQL"
+helpviewer_keywords:
+  - "sp_enumdsn"
+dev_langs:
+  - "TSQL"
 ---
 # sp_enumdsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of all defined ODBC and OLE DB data source names for a server running under a specific [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user account. This stored procedure is executed at the Publisher on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

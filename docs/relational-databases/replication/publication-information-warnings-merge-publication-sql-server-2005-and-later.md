@@ -1,17 +1,15 @@
 ---
 title: "Warnings (Merge Publication Information)"
-description: Describes the 'Warnings' tab of the Merge Replication Publication Information page within SQL Server Management Studio on SQL Server 2005 and later. 
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.warningsandagents.merge.f1"
-ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
+description: Describes the 'Warnings' tab of the Merge Replication Publication Information page within SQL Server Management Studio on SQL Server 2005 and later.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.warningsandagents.merge.f1"
 ---
 # Publication Information, Warnings (Merge Publication, SQL Server 2005 and Later)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

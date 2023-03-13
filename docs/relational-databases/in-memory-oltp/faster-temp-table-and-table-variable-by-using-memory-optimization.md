@@ -7,8 +7,6 @@ ms.date: "06/01/2018"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Faster temp table and table variable by using memory optimization

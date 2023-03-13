@@ -1,29 +1,26 @@
 ---
+title: "sp_validate_redirected_publisher (Transact-SQL)"
 description: "sp_validate_redirected_publisher (Transact-SQL)"
-title: "sp_validate_redirected_publisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_validate_redirected_publisher"
-  - "sp_validate_redirected_publisher_TSQL"
-helpviewer_keywords: 
-  - "sp_validate_redirected_publisher"
-ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_validate_redirected_publisher"
+  - "sp_validate_redirected_publisher_TSQL"
+helpviewer_keywords:
+  - "sp_validate_redirected_publisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifies that the current host for the publishing database is capable of supporting replication. Must be run from a distribution database. This procedure is called by **sp_get_redirected_publisher**.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

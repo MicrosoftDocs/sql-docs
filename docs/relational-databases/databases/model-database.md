@@ -1,19 +1,15 @@
 ---
+title: "model Database"
 description: "model Database"
-title: "model Database | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/22/2020
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "template databases [SQL Server]"
   - "model database [SQL Server], about model databases"
   - "model database [SQL Server]"
-ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # model Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

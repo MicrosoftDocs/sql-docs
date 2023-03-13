@@ -3,7 +3,7 @@ title: "sys.dm_xe_session_event_actions (Transact-SQL)"
 description: sys.dm_xe_session_event_actions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "3/30/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_xe_session_event_actions dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 ---
 # sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +37,11 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 
 Requires VIEW SERVER STATE permission on the server.  
   
-### Relationship cardinalities  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  

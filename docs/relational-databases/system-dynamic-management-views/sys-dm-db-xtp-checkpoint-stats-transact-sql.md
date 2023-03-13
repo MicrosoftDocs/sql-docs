@@ -3,7 +3,7 @@ title: "sys.dm_db_xtp_checkpoint_stats (Transact-SQL)"
 description: sys.dm_db_xtp_checkpoint_stats returns statistics about the In-Memory OLTP checkpoint operations in the current database. Learn how this view differs for versions of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: "reference"
@@ -96,8 +96,12 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |task_address|**varbinary(8)**|The address of the SOS_Task. Join to `sys.dm_os_tasks` to find additional information.|  
   
 ## Permissions  
- Requires `VIEW DATABASE STATE` permission on the server.  
+ Requires `VIEW DATABASE STATE` permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## See also
 
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)

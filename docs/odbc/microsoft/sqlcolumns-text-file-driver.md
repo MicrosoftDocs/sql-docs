@@ -1,18 +1,15 @@
 ---
+title: "SQLColumns (Text File Driver)"
 description: "SQLColumns (Text File Driver)"
-title: "SQLColumns (Text File Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "text file driver [ODBC], SQLColumns"
-  - "SQLColumns function [ODBC], Text File Driver"
-ms.assetid: c99e5f8d-4e43-48f8-9e0e-086707b411f5
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "text file driver [ODBC], SQLColumns"
+  - "SQLColumns function [ODBC], Text File Driver"
 ---
 # SQLColumns (Text File Driver)
 > [!NOTE]  

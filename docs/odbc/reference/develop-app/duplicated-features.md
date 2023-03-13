@@ -1,21 +1,18 @@
 ---
+title: "Duplicated Features"
 description: "Duplicated Features"
-title: "Duplicated Features | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "duplicated functions [ODBC]"
   - "compatibility [ODBC], duplicated functions"
   - "ODBC drivers [ODBC], backward compatibility"
   - "functions [ODBC], duplicated functions"
   - "backward compatibility [ODBC], duplicated functions"
-ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Duplicated Features
 The following ODBC *2.x* functions have been duplicated by ODBC *3.x* functions. As a result, the ODBC *2.x* functions are deprecated in ODBC *3.x*. The ODBC *3.x* functions are referred to as replacement functions.  

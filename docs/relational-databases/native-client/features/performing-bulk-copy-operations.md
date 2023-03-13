@@ -1,20 +1,17 @@
 ---
+title: "Performing Bulk Copy Operations"
 description: "Performing Bulk Copy Operations in SQL Server Native Client"
-title: "Performing Bulk Copy Operations | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [SQL Server Native Client]"
   - "data access [SQL Server Native Client], bulk copy operations"
   - "SQL Server Native Client, bulk copy operations"
   - "SQLNCLI, bulk copy operations"
-ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Bulk Copy Operations in SQL Server Native Client 

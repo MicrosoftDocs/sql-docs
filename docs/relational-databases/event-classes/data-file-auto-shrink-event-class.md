@@ -1,17 +1,14 @@
 ---
+title: "Data File Auto Shrink Event Class"
 description: "Data File Auto Shrink Event Class"
-title: "Data File Auto Shrink Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Data File Auto Shrink event class"
-ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Data File Auto Shrink event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data File Auto Shrink Event Class

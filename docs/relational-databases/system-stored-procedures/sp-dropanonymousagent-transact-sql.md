@@ -1,22 +1,19 @@
 ---
+title: "sp_dropanonymousagent (Transact-SQL)"
 description: "sp_dropanonymousagent (Transact-SQL)"
-title: "sp_dropanonymousagent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_dropanonymousagent"
   - "sp_dropanonymousagent_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_dropanonymousagent"
-ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropanonymousagent (Transact-SQL)
 
@@ -24,7 +21,7 @@ author: VanMSFT
 
   Drops an anonymous agent for replication monitoring at the distributor from the Publisher. This stored procedure is executed at the Publisher on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

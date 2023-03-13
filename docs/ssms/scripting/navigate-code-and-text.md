@@ -1,10 +1,13 @@
 ---
 title: "Navigate Code and Text"
 description: "Learn how to navigate through a document with various techniques: set a bookmark for a location to make it easy to return to that location; search incrementally; use mouse and keyboard; and, use the Go To command to go to a line by specifying its line number."
+author: markingmyname
+ms.author: maghan
+ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "searches [SQL Server Management Studio], incremental"
   - "mouse [SQL Server Management Studio]"
   - "bookmarks [SQL Server Management Studio]"
@@ -15,12 +18,6 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], mouse"
   - "navigating code"
   - "Go To command"
-ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -1,15 +1,13 @@
 ---
-title: "SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
+title: "SQL Server Integration Services (SSIS) Scale Out"
 description: "This article provides an overview of the SQL Server Integration Services (SSIS) Scale Out feature, which provides high-performance execution of SSIS packages"
-ms.custom: performance
-ms.date: "12/13/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: chugugrace
 ms.author: chugu
+ms.date: "12/13/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: performance
 ---
 # Integration Services (SSIS) Scale Out
 

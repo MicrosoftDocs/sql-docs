@@ -1,29 +1,26 @@
 ---
+title: "sp_helpsubscription_properties (Transact-SQL)"
 description: "sp_helpsubscription_properties (Transact-SQL)"
-title: "sp_helpsubscription_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpsubscription_properties"
-  - "sp_helpsubscription_properties_TSQL"
-helpviewer_keywords: 
-  - "sp_helpsubscription_properties"
-ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpsubscription_properties"
+  - "sp_helpsubscription_properties_TSQL"
+helpviewer_keywords:
+  - "sp_helpsubscription_properties"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retrieves security information from the [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) table. This stored procedure is executed at the Subscriber.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

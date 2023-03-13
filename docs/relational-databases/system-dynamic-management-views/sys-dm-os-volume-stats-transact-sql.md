@@ -3,7 +3,7 @@ title: "sys.dm_os_volume_stats (Transact-SQL)"
 description: sys.dm_os_volume_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "09/03/2020"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_os_volume_stats dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 ---
 # sys.dm_os_volume_stats (Transact-SQL)
 
@@ -24,7 +23,7 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 
   Returns information about the operating system volume (directory) on which the specified databases and files are stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this dynamic management function to check the attributes of the physical disk drive or return available free space information about the directory.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,6 +62,10 @@ sys.dm_os_volume_stats (database_id, file_id)
 ### Permissions  
  Requires `VIEW SERVER STATE` permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Return total space and available space for all database files  
@@ -83,7 +86,7 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## See Also  
+## See also  
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   

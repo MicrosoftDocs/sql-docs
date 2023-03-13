@@ -1,17 +1,14 @@
 ---
+title: "Coding a Custom Foreach Enumerator"
 description: "Coding a Custom Foreach Enumerator"
-title: "Coding a Custom Foreach Enumerator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom foreach enumerators [Integration Services], coding"
-ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom foreach enumerators [Integration Services], coding"
 ---
 # Coding a Custom Foreach Enumerator
 

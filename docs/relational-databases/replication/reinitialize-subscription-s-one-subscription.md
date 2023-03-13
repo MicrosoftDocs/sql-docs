@@ -1,19 +1,17 @@
 ---
+title: "Reinitialize Subscription(s) - One Subscription"
 description: "Reinitialize Subscription(s) - One Subscription"
-title: "Reinitialize Subscription(s) - One Subscription | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.reinit.single.f1"
-helpviewer_keywords: 
-  - "Reinitialize Subscription(s) dialog box"
-ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.reinit.single.f1"
+helpviewer_keywords:
+  - "Reinitialize Subscription(s) dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Reinitialize Subscription(s) - One Subscription

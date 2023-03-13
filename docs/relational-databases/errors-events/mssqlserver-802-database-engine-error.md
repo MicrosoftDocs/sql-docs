@@ -1,16 +1,15 @@
 ---
-description: "MSSQLSERVER_802 - Database Engine error"
 title: "MSSQLSERVER_802 - Database Engine error"
-ms.custom: ""
+description: "MSSQLSERVER_802 - Database Engine error"
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: wiassaf
 ms.date: "11/04/2021"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "802 (Database Engine error)"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: wiassaf
 ---
 # MSSQLSERVER_802 - Database Engine error
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

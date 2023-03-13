@@ -3,11 +3,10 @@ title: "sys.dm_cdc_errors (Transact-SQL)"
 description: The Change Data Capture DMV sys.dm_cdc_errors returns one row for each error encountered during the change data capture log scan session.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/10/2022
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "dm_cdc_errors_TSQL"
   - "dm_cdc_errors"
@@ -44,6 +43,10 @@ The DMV `sys.dm_cdc_errors` contains error information for the previous 32 sessi
 ## Permissions  
  Requires VIEW DATABASE STATE permission to query the `sys.dm_cdc_errors` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Next steps
  
  - [sys.dm_cdc_log_scan_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   

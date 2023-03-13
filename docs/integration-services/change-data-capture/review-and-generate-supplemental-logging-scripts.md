@@ -1,17 +1,14 @@
 ---
+title: "Review and Generate Supplemental Logging Scripts"
 description: "Review and Generate Supplemental Logging Scripts"
-title: "Review and Generate Supplemental Logging Scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "scripts"
-ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "scripts"
 ---
 # Review and Generate Supplemental Logging Scripts
 

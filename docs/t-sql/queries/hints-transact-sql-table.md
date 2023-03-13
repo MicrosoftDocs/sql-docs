@@ -52,7 +52,7 @@ Table hints are used to override the default behavior of the query optimizer dur
 - [UPDATE](../../t-sql/queries/update-transact-sql.md)
 - [MERGE](../../t-sql/statements/merge-transact-sql.md)
 
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -321,7 +321,7 @@ You can minimize locking contention while protecting transactions from dirty rea
 For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).
 
 > [!NOTE]  
-> If you receive the [error message 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-0-to-999) when `READUNCOMMITTED` is specified, resolve it as you would a deadlock error ([error message 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)), and retry your statement.
+> If you receive the [error message 601](../../relational-databases/errors-events/database-engine-events-and-errors-0-to-999.md) when `READUNCOMMITTED` is specified, resolve it as you would a deadlock error ([error message 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)), and retry your statement.
 
 #### REPEATABLEREAD
 
@@ -329,7 +329,7 @@ Specifies that a scan is performed with the same locking semantics as a transact
 
 #### ROWLOCK
 
-Specifies that row locks are taken when page or table locks are ordinarily taken. When specified in transactions operating at the `SNAPSHOT` isolation level, row locks aren't taken unless `ROWLOCK` is combined with other table hints that require locks, such as `UPDLOCK` and `HOLDLOCK`. `ROWLOCK` can't be used with a table that has a clustered columnstore index. The following example returns [error 651](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-0-to-999) to the application.
+Specifies that row locks are taken when page or table locks are ordinarily taken. When specified in transactions operating at the `SNAPSHOT` isolation level, row locks aren't taken unless `ROWLOCK` is combined with other table hints that require locks, such as `UPDLOCK` and `HOLDLOCK`. `ROWLOCK` can't be used with a table that has a clustered columnstore index. The following example returns [error 651](../../relational-databases/errors-events/database-engine-events-and-errors-0-to-999.md) to the application.
 
 ```sql
 UPDATE [dbo].[FactResellerSalesXL_CCI] WITH (ROWLOCK)

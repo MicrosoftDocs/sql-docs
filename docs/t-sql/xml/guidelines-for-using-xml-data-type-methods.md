@@ -1,20 +1,17 @@
 ---
-description: "Guidelines for Using xml Data Type Methods"
 title: Guidelines for Using xml Data Type Methods
-ms.custom: ""
+description: "Guidelines for Using xml Data Type Methods"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "xml data type [SQL Server], methods"
   - "methods [XML in SQL Server]"
-ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 
 # Guidelines for Using xml Data Type Methods

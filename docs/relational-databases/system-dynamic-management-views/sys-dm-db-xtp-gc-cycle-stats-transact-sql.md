@@ -3,7 +3,7 @@ title: "sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)"
 description: sys.dm_db_xtp_gc_cycle_stats returns the current state of committed transactions that have deleted one or more rows for In-Memory OLTP tables.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,8 +44,12 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Number of transactions in each generation.|  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission on the server.  
+ Requires VIEW DATABASE STATE permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Usage Scenario  
  Here is a sample output with a subset of columns, showing 27 generations:  
   

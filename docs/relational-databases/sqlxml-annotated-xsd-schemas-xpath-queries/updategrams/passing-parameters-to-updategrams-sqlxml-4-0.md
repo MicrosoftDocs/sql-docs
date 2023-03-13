@@ -7,14 +7,12 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "nullvalue attribute"
   - "passing parameters [SQLXML]"
   - "parameters [SQLXML]"
   - "updategrams [SQLXML], passing parameters"
   - "null values [SQLXML]"
-ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Passing Parameters to Updategrams (SQLXML 4.0)

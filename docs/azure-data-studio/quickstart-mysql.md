@@ -7,7 +7,7 @@ ms.reviewer: erinstellato
 ms.date: 10/12/2022
 ms.service: azure-data-studio
 ms.topic: quickstart
-ms.custom: intro-quickstart, ignite-2022
+ms.custom: intro-quickstart
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query MySQL (Preview)

@@ -1,19 +1,16 @@
 ---
+title: "Object Hierarchy Syntax (Transact-SQL)"
 description: "Object Hierarchy Syntax (Transact-SQL)"
-title: "Object Hierarchy Syntax (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "objects [SQL Server], hierarchy syntax"
-ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "objects [SQL Server], hierarchy syntax"
+dev_langs:
+  - "TSQL"
 ---
 # Object Hierarchy Syntax (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

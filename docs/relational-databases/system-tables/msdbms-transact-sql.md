@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSdbms system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
 ---
 # MSdbms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

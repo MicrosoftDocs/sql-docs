@@ -1,17 +1,14 @@
 ---
+title: "INSERT - SQL Command"
 description: "INSERT - SQL Command"
-title: "INSERT - SQL Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "INSERT [ODBC]"
-ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "INSERT [ODBC]"
 ---
 # INSERT - SQL Command
 Appends a record to the end of a table that contains the specified field values.  

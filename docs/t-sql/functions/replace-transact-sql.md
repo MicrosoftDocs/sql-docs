@@ -3,7 +3,6 @@ title: "REPLACE (Transact-SQL)"
 description: "Transact-SQL reference for the REPLACE function, which replaces all occurrences of a specified string value with another string value."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "08/23/2017"
 ms.service: sql
 ms.subservice: t-sql
@@ -26,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 Replaces all occurrences of a specified string value with another string value.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,24 +1,19 @@
 ---
+title: "SQLInstallDriverEx Function"
 description: "SQLInstallDriverEx Function"
-title: "SQLInstallDriverEx Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLInstallDriverEx"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLInstallDriverEx"
-helpviewer_keywords: 
-  - "SQLInstallDriverEx function [ODBC]"
-ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLInstallDriverEx"
+helpviewer_keywords:
+  - "SQLInstallDriverEx function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLInstallDriverEx"
+apitype: "dllExport"
 ---
 # SQLInstallDriverEx Function
 **Conformance**  

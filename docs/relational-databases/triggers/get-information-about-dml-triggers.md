@@ -1,22 +1,18 @@
 ---
+title: "Get Information About DML Triggers"
 description: "Get Information About DML Triggers"
-title: "Get Information About DML Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice:
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "metadata [SQL Server], triggers"
   - "viewing DML triggers"
   - "DML triggers, metadata"
   - "displaying DML triggers"
   - "status information [SQL Server], triggers"
   - "DML triggers, viewing"
-ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DML Triggers

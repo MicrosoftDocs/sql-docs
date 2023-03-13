@@ -1,29 +1,26 @@
 ---
+title: "sp_validatemergesubscription (Transact-SQL)"
 description: "sp_validatemergesubscription (Transact-SQL)"
-title: "sp_validatemergesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_validatemergesubscription"
-  - "sp_validatemergesubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_validatemergesubscription"
-ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_validatemergesubscription"
+  - "sp_validatemergesubscription_TSQL"
+helpviewer_keywords:
+  - "sp_validatemergesubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Performs a validation for the specified subscription. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

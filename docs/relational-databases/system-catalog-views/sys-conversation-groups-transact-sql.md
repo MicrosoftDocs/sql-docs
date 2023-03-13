@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.conversation_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 ---
 # sys.conversation_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,15 @@
 ---
+title: "Publishers"
 description: "Publishers"
-title: "Publishers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.configuredistributionwizard.enablepublishers.f1"
-ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.configuredistributionwizard.enablepublishers.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publishers

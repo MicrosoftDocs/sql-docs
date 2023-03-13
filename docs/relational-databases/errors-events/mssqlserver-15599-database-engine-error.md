@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_15599"
 description: "MSSQLSERVER_15599"
-title: "MSSQLSERVER_15599 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "15599 (Database Engine error)"
-ms.assetid: 97e427a9-8587-46ea-954b-974b5df9c223
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "15599 (Database Engine error)"
 ---
 # MSSQLSERVER_15599
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

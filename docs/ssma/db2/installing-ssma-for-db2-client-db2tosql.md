@@ -1,16 +1,13 @@
 ---
-title: "Installing SSMA for DB2 client (DB2ToSQL) | Microsoft Docs"
+title: "Installing SSMA for DB2 client (DB2ToSQL)"
 description: Learn about installation prerequisites for the SQL Server Migration Assistant (SSMA) for DB2 client and how to install.
-ms.service: sql
-ms.custom:
-  - intro-installation
+author: cpichuka
+ms.author: cpichuka
 ms.date: "07/14/2020"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
-author: cpichuka 
-ms.author: cpichuka 
+ms.custom: intro-installation
 ---
 
 # Installing SSMA for DB2 client (DB2ToSQL)

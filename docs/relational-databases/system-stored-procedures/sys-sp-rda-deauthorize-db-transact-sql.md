@@ -1,22 +1,20 @@
 ---
-title: "sys.sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs"
+title: "sys.sp_rda_deauthorize_db (Transact-SQL)"
 description: Learn how to use sys.sp_rda_deauthorize_db to remove authenticated connections between local Stretch-enabled databases and remote Azure databases.
-ms.custom: ""
-ms.date: 07/25/2022
-ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice: stored-procedures
-ms.topic: "reference"
-f1_keywords: 
-  - "sys.sp_rda_deauthorize_db"
-  - "sys.sp_rda_deauthorize_db_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sys.sp_rda_deauthorize_db stored procedure"
-ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 author: markingmyname
 ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: "reference"
+f1_keywords:
+  - "sys.sp_rda_deauthorize_db"
+  - "sys.sp_rda_deauthorize_db_TSQL"
+helpviewer_keywords:
+  - "sys.sp_rda_deauthorize_db stored procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +24,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

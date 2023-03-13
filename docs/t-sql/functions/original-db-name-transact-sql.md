@@ -22,7 +22,7 @@ dev_langs:
   
  This database is different from the default user database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -36,8 +36,6 @@ ORIGINAL_DB_NAME ()
  If the initial database isn't specified, the function returns an empty string.  
   
 ## See Also  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)   
  [osql Utility](../../tools/osql-utility.md)   
  [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
-  

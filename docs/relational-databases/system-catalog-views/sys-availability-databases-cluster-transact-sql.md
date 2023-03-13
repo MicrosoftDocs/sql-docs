@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 dev_langs:
   - "TSQL"
-ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 ---
 # sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

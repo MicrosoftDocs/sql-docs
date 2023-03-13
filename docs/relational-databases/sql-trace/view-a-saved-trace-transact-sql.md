@@ -1,19 +1,15 @@
 ---
+title: "View a Saved Trace (Transact-SQL)"
 description: "View a Saved Trace (Transact-SQL)"
-title: "View a Saved Trace (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "traces [SQL Server], viewing"
   - "displaying traces"
   - "viewing traces"
-ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # View a Saved Trace (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

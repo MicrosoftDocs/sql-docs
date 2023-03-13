@@ -1,22 +1,20 @@
 ---
 title: COLUMNS (Transact-SQL)
 description: "COLUMNS (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "COLUMNS"
   - "COLUMNS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "COLUMNS view"
   - "INFORMATION_SCHEMA.COLUMNS view"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/15/2017"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -1,25 +1,22 @@
 ---
+title: "sys.syspermissions (Transact-SQL)"
 description: "sys.syspermissions (Transact-SQL)"
-title: "sys.syspermissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.syspermissions_TSQL"
   - "syspermissions_TSQL"
   - "sys.syspermissions"
   - "syspermissions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syspermissions system table"
   - "sys.syspermissions compatibility view"
-ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.syspermissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

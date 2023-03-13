@@ -1,15 +1,12 @@
 ---
-title: "Finding and Viewing Reports with a Browser (Report Builder) | Microsoft Docs"
+title: "Finding and Viewing Reports with a Browser (Report Builder)"
 description: You can view a report with a Web browser with a direct connection to a report server. The report includes the report toolbar, so you can navigate and search.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: report-builder
-
-
 ms.topic: conceptual
-ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Finding and Viewing Reports with a Browser (Report Builder and SSRS)
   You can use any supported Web browser to view a report through a direct connection to a report server. Every report has a URL address on a report server. You can enter the Web address of a report to open it in a browser window independently of a Web application. The report opens in HTML format and includes the report toolbar so that you can navigate pages or search on data values within the report. You can set parameters on the URL to hide the toolbar or select the output format of the report.  

@@ -1,22 +1,19 @@
 ---
+title: "sp_helptracertokens (Transact-SQL)"
 description: "sp_helptracertokens (Transact-SQL)"
-title: "sp_helptracertokens (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helptracertokens"
-  - "sp_helptracertokens_TSQL"
-helpviewer_keywords: 
-  - "sp_helptracertokens"
-ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helptracertokens"
+  - "sp_helptracertokens_TSQL"
+helpviewer_keywords:
+  - "sp_helptracertokens"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helptracertokens (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

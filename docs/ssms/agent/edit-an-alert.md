@@ -1,19 +1,16 @@
 ---
-description: "Edit an Alert"
 title: "Edit an Alert"
-ms.custom: seo-lt-2019
+description: "Edit an Alert"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], modifying"
   - "modifying alerts"
-ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Edit an Alert

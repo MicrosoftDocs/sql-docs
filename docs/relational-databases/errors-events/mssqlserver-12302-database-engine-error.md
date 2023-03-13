@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_12302"
 description: "MSSQLSERVER_12302"
-title: "MSSQLSERVER_12302 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "12302 (Database Engine error)"
-ms.assetid: c1ab574c-c277-4ba7-ab82-f0d09f54a5d0
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "12302 (Database Engine error)"
 ---
 # MSSQLSERVER_12302
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,15 +1,12 @@
 ---
+title: "Viewing Test Case Reports (OracleToSQL)"
 description: "Viewing Test Case Reports (OracleToSQL)"
-title: "Viewing Test Case Reports (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Viewing Test Case Reports (OracleToSQL)
 The Test Case Report shows the test verification results and general test information. In case of a test failure, information about any mismatched data in verified objects is also displayed.  

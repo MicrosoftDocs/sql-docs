@@ -1,20 +1,16 @@
 ---
-description: "Discard Changes Made to Queries (Visual Database Tools)"
 title: Discard Changes Made to Queries
-ms.custom: seo-lt-2019
+description: "Discard Changes Made to Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reverting queries"
   - "queries [SQL Server], discarding changes"
   - "discarding query changes"
-ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Discard Changes Made to Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

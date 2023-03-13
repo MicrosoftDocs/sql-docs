@@ -1,18 +1,15 @@
 ---
-description: "Add Existing Items to a Project"
 title: "Add Existing Items to a Project"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "projects [SQL Server Management Studio], item additions"
-  - "adding project items"
-ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
+description: "Add Existing Items to a Project"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "projects [SQL Server Management Studio], item additions"
+  - "adding project items"
 ---
 # Add Existing Items to a Project
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

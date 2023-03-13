@@ -1,19 +1,15 @@
 ---
-description: "SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)"
 title: SQL Syntax Errors Encountered Dialog Box
-ms.custom: seo-lt-2019
+description: "SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.sqlsyntaxerrorsencountered"
   - "vdtsql.chm:69641"
-ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

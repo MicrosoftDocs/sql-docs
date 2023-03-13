@@ -1,19 +1,16 @@
 ---
 title: Deploying Models
 description: Deploy model packages to move copies of models from one Master Data Services environment to another or to create new models in your environment.
-ms.custom:
-  - intro-deployment
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: master-data-services
 ms.topic: conceptual
+ms.custom: intro-deployment
 helpviewer_keywords:
   - "deployment packages [Master Data Services], about deployment packages"
   - "deployment packages [Master Data Services]"
-ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Deploying Models (Master Data Services)
 

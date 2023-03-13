@@ -3,12 +3,10 @@ title: "BREAK (Transact-SQL)"
 description: "BREAK (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "11/19/2018"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "BREAK"
   - "BREAK_TSQL"

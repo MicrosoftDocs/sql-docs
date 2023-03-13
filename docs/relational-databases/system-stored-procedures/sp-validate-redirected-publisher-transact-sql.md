@@ -1,22 +1,19 @@
 ---
+title: "sp_validate_redirected_publisher (Transact-SQL)"
 description: "sp_validate_redirected_publisher (Transact-SQL)"
-title: "sp_validate_redirected_publisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_validate_redirected_publisher"
-  - "sp_validate_redirected_publisher_TSQL"
-helpviewer_keywords: 
-  - "sp_validate_redirected_publisher"
-ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_validate_redirected_publisher"
+  - "sp_validate_redirected_publisher_TSQL"
+helpviewer_keywords:
+  - "sp_validate_redirected_publisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

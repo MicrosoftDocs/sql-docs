@@ -8,7 +8,6 @@ ms.date: 09/06/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "FILESTREAM_TSQL"
   - "TABLE"

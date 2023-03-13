@@ -1,22 +1,19 @@
 ---
+title: "sp_resetsnapshotdeliveryprogress (Transact-SQL)"
 description: "sp_resetsnapshotdeliveryprogress (Transact-SQL)"
-title: "sp_resetsnapshotdeliveryprogress (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_resetsnapshotdeliveryprogress"
-  - "sp_resetsnapshotdeliveryprogress_TSQL"
-helpviewer_keywords: 
-  - "sp_resetsnapshotdeliveryprogress"
-ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_resetsnapshotdeliveryprogress"
+  - "sp_resetsnapshotdeliveryprogress_TSQL"
+helpviewer_keywords:
+  - "sp_resetsnapshotdeliveryprogress"
+dev_langs:
+  - "TSQL"
 ---
 # sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

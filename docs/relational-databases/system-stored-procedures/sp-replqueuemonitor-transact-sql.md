@@ -1,22 +1,19 @@
 ---
+title: "sp_replqueuemonitor (Transact-SQL)"
 description: "sp_replqueuemonitor (Transact-SQL)"
-title: "sp_replqueuemonitor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replqueuemonitor"
-  - "sp_replqueuemonitor_TSQL"
-helpviewer_keywords: 
-  - "sp_replqueuemonitor"
-ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replqueuemonitor"
+  - "sp_replqueuemonitor_TSQL"
+helpviewer_keywords:
+  - "sp_replqueuemonitor"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

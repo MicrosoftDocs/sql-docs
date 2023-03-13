@@ -7,13 +7,11 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "applying XSL transformations [SQLXML]"
   - "Managed Classes [SQLXML], applying XSL transformations"
   - "SQLXML Managed Classes, applying XSL transformations"
   - "XSL Transformations [SQLXML]"
-ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)

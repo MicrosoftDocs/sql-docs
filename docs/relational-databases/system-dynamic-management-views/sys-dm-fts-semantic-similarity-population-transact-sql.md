@@ -4,7 +4,7 @@ description: sys.dm_fts_semantic_similarity_population (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.date: "06/10/2016"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_fts_semantic_similarity_population dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +48,12 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
   
 ## Security  
   
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
+  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.  
   
 ## Examples  
  The following example shows how to query the status of document similarity index populations for all tables that have an associated semantic index:  
@@ -59,8 +62,8 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 SELECT * FROM sys.dm_fts_semantic_similarity_population;  
 GO  
 ```  
-  
-## See Also  
+
+## See also  
  [Manage and Monitor Semantic Search](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

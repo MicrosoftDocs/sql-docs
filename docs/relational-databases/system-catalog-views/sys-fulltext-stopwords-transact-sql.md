@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 dev_langs:
   - "TSQL"
-ms.assetid: 79787bb7-d729-448e-b56a-0a467bbb304f
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_stopwords (Transact-SQL)

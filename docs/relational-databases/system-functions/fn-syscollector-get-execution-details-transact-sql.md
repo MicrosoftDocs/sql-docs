@@ -1,22 +1,19 @@
 ---
+title: "fn_syscollector_get_execution_details (Transact-SQL)"
 description: "fn_syscollector_get_execution_details (Transact-SQL)"
-title: "fn_syscollector_get_execution_details (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "fn_syscollector_get_execution_details_TSQL"
-  - "fn_syscollector_get_execution_details"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "fn_syscollector_get_execution_details function"
-ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "fn_syscollector_get_execution_details_TSQL"
+  - "fn_syscollector_get_execution_details"
+helpviewer_keywords:
+  - "fn_syscollector_get_execution_details function"
+dev_langs:
+  - "TSQL"
 ---
 # fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

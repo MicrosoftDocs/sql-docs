@@ -1,15 +1,12 @@
 ---
-title: "Line charts in a paginated report | Microsoft Docs"
+title: "Line charts in a paginated report"
 description: Use line charts in a paginated report to represent large amounts of data that occur over a period of time in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Line charts in a paginated report (Report Builder)
 

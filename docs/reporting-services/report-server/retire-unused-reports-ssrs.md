@@ -1,13 +1,12 @@
 ---
-title: "Find and retire unused reports | Microsoft Docs"
+title: "Find and retire unused reports"
 description: You don't want to migrate unused reports to the Power BI service. As you plan for a migration to the cloud, we suggest doing some housekeeping to get rid of unused SSRS reports.
-ms.date: 11/21/2022
-ms.service: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.subservice: report-server
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 11/21/2022
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
 ---
 
 # Find and retire unused reports (SSRS)

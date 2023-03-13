@@ -1,11 +1,13 @@
 ---
 title: FROM clause plus JOIN, APPLY, PIVOT (T-SQL)
 description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: "06/01/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "JOIN"
   - "FROM_TSQL"
   - "FROM"
@@ -16,9 +18,7 @@ f1_keywords:
   - "CROSS_APPLY_TSQL"
   - "APPLY_TSQL"
   - "CROSS_JOIN_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OUTER APPLY operator"
   - "hints [SQL Server], FROM clause"
   - "SELECT statement [SQL Server], FROM clause"
@@ -30,11 +30,8 @@ helpviewer_keywords:
   - "joins [SQL Server], FROM clause"
   - "UPDATE statement [SQL Server], FROM clause"
   - "derived tables"
-ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: VanMSFT
-ms.author: vanto
-ms.custom: ""
-ms.date: "06/01/2019"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -188,7 +185,7 @@ FROM { <table_source> [ ,...n ] }
  If the table or view exists outside the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, use a four-part name in the form *linked_server*.*catalog*.*schema*.*object*. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). A four-part name that is constructed by using the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server part of the name can also be used to specify the remote table source. When OPENDATASOURCE is specified, *database_name* and *schema_name* may not apply to all data sources and is subject to the capabilities of the OLE DB provider that accesses the remote object.  
   
  [AS] *table_alias*  
- Is an alias for *table_source* that can be used either for convenience or to distinguish a table or view in a self-join or subquery. An alias is frequently a shortened table name used to refer to specific columns of the tables in a join. If the same column name exists in more than one table in the join, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that the column name be qualified by a table name, view name, or alias. The table name cannot be used if an alias is defined.  
+ Is an alias for *table_source* that can be used either for convenience or to distinguish a table or view in a self-join or subquery. An alias is frequently a shortened table name used to refer to specific columns of the tables in a join. If the same column name exists in more than one table in the join, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may require that the column name be qualified by a table name, view name, or alias to distinguish these columns. The table name cannot be used if an alias is defined.  
   
  When a derived table, rowset or table-valued function, or operator clause (such as PIVOT or UNPIVOT) is used, the required *table_alias* at the end of the clause is the associated table name for all columns, including grouping columns, returned.  
   

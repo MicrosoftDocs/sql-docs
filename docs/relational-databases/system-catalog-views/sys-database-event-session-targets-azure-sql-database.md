@@ -10,7 +10,6 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)

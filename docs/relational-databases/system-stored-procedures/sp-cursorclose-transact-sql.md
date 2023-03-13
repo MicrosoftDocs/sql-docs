@@ -1,22 +1,19 @@
 ---
+title: "sp_cursorclose (Transact-SQL)"
 description: "sp_cursorclose (Transact-SQL)"
-title: "sp_cursorclose (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursor_close_TSQL"
-  - "sp_cursor_close"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursorclose"
-ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursor_close_TSQL"
+  - "sp_cursor_close"
+helpviewer_keywords:
+  - "sp_cursorclose"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursorclose (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

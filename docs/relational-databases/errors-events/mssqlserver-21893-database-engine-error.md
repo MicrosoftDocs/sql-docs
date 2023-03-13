@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_21893"
 description: "MSSQLSERVER_21893"
-title: "MSSQLSERVER_21893 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "21893 (Database Engine error)"
-ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "21893 (Database Engine error)"
 ---
 # MSSQLSERVER_21893
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

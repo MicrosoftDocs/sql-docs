@@ -1,17 +1,14 @@
 ---
+title: "Value Inclusion Profile Request Options (Data Profiling Task)"
 description: "Value Inclusion Profile Request Options (Data Profiling Task)"
-title: "Value Inclusion Profile Request Options (Data Profiling Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Data Profiling Task Editor"
-ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Profiling Task Editor"
 ---
 # Value Inclusion Profile Request Options (Data Profiling Task)
 

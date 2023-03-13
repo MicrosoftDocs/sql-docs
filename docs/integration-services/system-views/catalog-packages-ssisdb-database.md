@@ -1,18 +1,15 @@
 ---
+title: "catalog.packages (SSISDB Database)"
 description: "catalog.packages (SSISDB Database)"
-title: "catalog.packages (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "packages view [Integration Services]"
-  - "catalog.packages view [Integration Services]"
-ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "packages view [Integration Services]"
+  - "catalog.packages view [Integration Services]"
 ---
 # catalog.packages (SSISDB Database)
 

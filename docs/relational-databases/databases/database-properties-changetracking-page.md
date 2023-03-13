@@ -1,17 +1,14 @@
 ---
-title: "Database Properties (ChangeTracking Page) | Microsoft Docs"
+title: "Database Properties (ChangeTracking Page)"
 description: "Learn how to use the ChangeTracking tab in the Database Properties dialog box to view or modify change-tracking settings for a database."
-ms.custom: ""
-ms.date: "01/07/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.databaseproperties.changetracking.f1"
-ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "01/07/2016"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.databaseproperties.changetracking.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Properties (ChangeTracking Page)

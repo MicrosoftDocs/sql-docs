@@ -1,17 +1,14 @@
 ---
+title: "Generate and Run the Supplemental Logging Script"
 description: "Generate and Run the Supplemental Logging Script"
-title: "Generate and Run the Supplemental Logging Script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "supLog"
-ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "supLog"
 ---
 # Generate and Run the Supplemental Logging Script
 

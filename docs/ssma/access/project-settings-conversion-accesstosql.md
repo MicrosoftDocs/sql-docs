@@ -1,21 +1,17 @@
 ---
+title: "Project Settings (Conversion) (AccessToSQL)"
 description: "Project Settings (Conversion) (AccessToSQL)"
-title: "Project Settings (Conversion) (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+f1_keywords:
+  - "ssma.access.projectsettingsconversion.f1"
+helpviewer_keywords:
   - "conversion, options described"
   - "Project Settings dialog box, Conversion"
-ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-  - "ssma.access.projectsettingsconversion.f1"
-
 ---
 # Project Settings (Conversion) (AccessToSQL)
 The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects.  

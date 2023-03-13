@@ -9,7 +9,6 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 ---
 # Server dynamic management views and functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

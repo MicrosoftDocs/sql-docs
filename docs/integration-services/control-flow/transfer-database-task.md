@@ -1,23 +1,20 @@
 ---
+title: "Transfer Database Task"
 description: "Transfer Database Task"
-title: "Transfer Database Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.transferdatabasetask.f1"
   - "sql13.dts.designer.transferdatabasetask.general.f1"
   - "sql13.dts.designer.transferdatabasetask.database.f1"
   - "sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1"
   - "sql13.dts.designer.transferdatabasetask.destdbfiles.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transfer Database task [Integration Services]"
-ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: chugugrace
-ms.author: chugu
 ---
 # Transfer Database Task
 

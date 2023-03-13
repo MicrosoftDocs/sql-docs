@@ -1,20 +1,17 @@
 ---
-description: "Implement Jobs"
 title: "Implement Jobs"
-ms.custom: seo-lt-2019
+description: "Implement Jobs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent]"
   - "SQL Server Agent jobs"
   - "SQL Server Agent jobs, about jobs"
   - "jobs [SQL Server Agent], about jobs"
-ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Implement Jobs

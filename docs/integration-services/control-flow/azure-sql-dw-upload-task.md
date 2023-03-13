@@ -1,18 +1,15 @@
 ---
+title: "Azure SQL DW Upload Task"
 description: "Azure SQL DW Upload Task"
-title: "Azure SQL DW Upload Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.DTS.DESIGNER.AFPDWUPTASK.F1"
-  - "sql14.dts.designer.afpdwuptask.f1"
-ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: "Lingxi-Li"
 ms.author: "lingxl"
+ms.date: "12/16/2016"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.DTS.DESIGNER.AFPDWUPTASK.F1"
+  - "sql14.dts.designer.afpdwuptask.f1"
 ---
 # Azure Synapse Analytics Task
 

@@ -1,19 +1,16 @@
 ---
+title: "CurveToLineWithTolerance (geometry Data Type)"
 description: "CurveToLineWithTolerance (geometry Data Type)"
-title: "CurveToLineWithTolerance (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CurveToLineWithTolerance method (geometry)"
-ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # CurveToLineWithTolerance (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

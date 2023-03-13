@@ -1,20 +1,17 @@
 ---
+title: "Using Length and Indicator Values"
 description: "Using Length and Indicator Values"
-title: "Using Length and Indicator Values | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data buffers [ODBC], length"
   - "length/indicator buffers [ODBC]"
   - "length of data buffers [ODBC]"
   - "buffers [ODBC], length"
-ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using Length and Indicator Values
 The length/indicator buffer is used to pass the byte length of the data in the data buffer or a special indicator such as SQL_NULL_DATA, which indicates that the data is NULL. Depending on the function in which it is used, a length/indicator buffer is defined to be an SQLINTEGER or an SQLSMALLINT. Therefore, a single argument is needed to describe it. If the data buffer is a nondeferred input buffer, this argument contains the byte length of the data itself or an indicator value. It is often named *StrLen_or_Ind* or a similar name. For example, the following code calls **SQLPutData** to pass a buffer full of data; the byte length (*ValueLen*) is passed directly because the data buffer (*ValuePtr*) is an input buffer.  

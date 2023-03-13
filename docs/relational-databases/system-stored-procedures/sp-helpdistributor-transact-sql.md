@@ -1,22 +1,19 @@
 ---
+title: "sp_helpdistributor (Transact-SQL)"
 description: "sp_helpdistributor (Transact-SQL)"
-title: "sp_helpdistributor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpdistributor_TSQL"
-  - "sp_helpdistributor"
-helpviewer_keywords: 
-  - "sp_helpdistributor"
-ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpdistributor_TSQL"
+  - "sp_helpdistributor"
+helpviewer_keywords:
+  - "sp_helpdistributor"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

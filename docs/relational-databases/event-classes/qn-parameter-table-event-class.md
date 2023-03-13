@@ -1,17 +1,14 @@
 ---
+title: "QN:Parameter Table Event Class"
 description: "QN:Parameter Table Event Class"
-title: "QN:Parameter Table Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "event classes [SQL Server], QN:Parameter Table"
-ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "event classes [SQL Server], QN:Parameter Table"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QN:Parameter Table Event Class

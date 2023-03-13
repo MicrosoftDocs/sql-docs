@@ -1,15 +1,13 @@
 ---
-title: "FLWOR Statement and Iteration (XQuery) | Microsoft Docs"
+title: "FLWOR Statement and Iteration (XQuery)"
 description: Learn about the for, let, where, order by, and return clauses that make up the FLOWR iteration syntax in XQuery.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "return clause"
   - "FLWOR statement"
   - "effective Boolean value [XQuery]"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "iterations [XQuery]"
   - "XQuery, FLWOR statement"
   - "EBV"
-ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # FLWOR Statement and Iteration (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

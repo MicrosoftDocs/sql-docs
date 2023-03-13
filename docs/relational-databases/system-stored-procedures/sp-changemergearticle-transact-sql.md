@@ -1,22 +1,19 @@
 ---
+title: "sp_changemergearticle (Transact-SQL)"
 description: "sp_changemergearticle (Transact-SQL)"
-title: "sp_changemergearticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/09/2015"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changemergearticle_TSQL"
-  - "sp_changemergearticle"
-helpviewer_keywords: 
-  - "sp_changemergearticle"
-ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: markingmyname
 ms.author: maghan
+ms.date: "11/09/2015"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changemergearticle_TSQL"
+  - "sp_changemergearticle"
+helpviewer_keywords:
+  - "sp_changemergearticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

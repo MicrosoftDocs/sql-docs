@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG018456"
 description: "MSSQL_ENG018456"
-title: "MSSQL_ENG018456 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG018456 error"
-ms.assetid: 3daa8144-d81f-445a-b6c3-4bb3e9fd1526
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG018456 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG018456

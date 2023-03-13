@@ -109,6 +109,8 @@ items:
           href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
         - name: To a mirrored media set
           href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
+        - name: Schedule database backups
+          href: relational-databases/backup-restore/schedule-database-backup-operation-ssms.md
       - name: Restore
         items:
         - name: Use SQL Server Management Studio (SSMS)
@@ -589,7 +591,7 @@ items:
             href: database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md
         - name: Encrypted databases
           href: database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md
-        - name: Failover cluster instances
+        - name: SQL Server Analysis Services (SSAS)
           href: database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md
         - name: FILESTREAM & FileTable
           href: database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md
@@ -6758,7 +6760,7 @@ items:
     items:
     - name: Concepts
       items:
-      - name: Automatic Tuning
+      - name: Automatic tuning
         href: relational-databases/automatic-tuning/automatic-tuning.md
       - name: Cardinality estimation
         href: relational-databases/performance/cardinality-estimation-sql-server.md
@@ -7852,6 +7854,8 @@ items:
             items:
               - name: Set up SQL Server
                 items:
+                  - name: Without attestation
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-no-attestation-plan.md
                   - name: Plan for Host Guardian Service attestation
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
                   - name: Deploy the Host Guardian Service
@@ -8022,7 +8026,11 @@ items:
         - name: Always Encrypted cryptography
           href: relational-databases/security/encryption/always-encrypted-cryptography.md
       - name: Always Encrypted with secure enclaves
-        href: relational-databases/security/encryption/always-encrypted-enclaves.md
+        items:
+        - name: Always Encrypted with secure enclaves documentation
+          href: /azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
+        - name: Always Encrypted with secure enclaves overview
+          href: relational-databases/security/encryption/always-encrypted-enclaves.md
       - name: Encryption keys
         href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
         items:
@@ -8071,9 +8079,11 @@ items:
         href: relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md
     - name: Always Encrypted with secure enclaves
       items:
-      - name: Getting started with Always Encrypted with secure enclaves in SQL Server
+      - name: Always Encrypted with secure enclaves in SQL Server
         href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-      - name: Getting started with Always Encrypted with secure enclaves in Azure SQL Database >
+      - name: Always Encrypted with secure enclaves in SQL Server using HGS
+        href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves-hgs.md
+      - name: Getting started using Always Encrypted with secure enclaves in Azure SQL Database >
         href: /azure/azure-sql/database/always-encrypted-enclaves-getting-started
       - name: Create and use indexes on Always Encrypted with secure enclaves columns
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
@@ -10049,7 +10059,7 @@ items:
       href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
       href: relational-databases/tutorial-ownership-chains-and-context-switching.md
-    - name: Using Azure Blob Storage with SQL Server 2016 databases
+    - name: Use Azure Blob Storage with SQL Server databases
       href: relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
   - name: Writing T-SQL Statements
     href: t-sql/tutorial-writing-transact-sql-statements.md
@@ -10082,11 +10092,11 @@ items:
     - name: Release history
       items:
       - name: SQL Server 2022
-        href: linux/sql-server-linux-release-history-2022.md
+        href: /troubleshoot/sql/linux/release-history-2022?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: SQL Server 2019
-        href: linux/sql-server-linux-release-history-2019.md
+        href: /troubleshoot/sql/linux/release-history-2019?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: SQL Server 2017
-        href: linux/sql-server-linux-release-history-2017.md
+        href: /troubleshoot/sql/linux/release-history-2017?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
     - name: Editions & Features
       items:
       - name: SQL Server 2022
@@ -10938,8 +10948,9 @@ items:
     - name: All GitHub Samples >>
       href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
   - name: Errors & events
-    href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
     items:
+    - name: Overview
+      href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
     - name: Understanding Database Engine errors
       href: relational-databases/errors-events/understanding-database-engine-errors.md
     - name: Database Engine error severities
@@ -10950,6 +10961,8 @@ items:
         href: relational-databases/errors-events/database-engine-events-and-errors.md
       - name: Errors 0 to 999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-0-to-999.md
         - name: 102
           href: relational-databases/errors-events/mssqlserver-102-database-engine-error.md
         - name: 107
@@ -11022,6 +11035,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-948-database-engine-error.md
       - name: Errors 1,000 to 1,999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-1000-to-1999.md
         - name: 1101
           href: relational-databases/errors-events/mssqlserver-1101-database-engine-error.md
         - name: 1105
@@ -11062,6 +11077,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-1904-database-engine-error.md
       - name: Errors 2,000 to 2,999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-2000-to-2999.md
         - name: 2020
           href: relational-databases/errors-events/mssqlserver-2020-database-engine-error.md
         - name: 2501
@@ -11122,8 +11139,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-2596-database-engine-error.md
         - name: 2814
           href: relational-databases/errors-events/mssqlserver-2814-database-engine-error.md
-      - name: Errors 3,000 to 4,999
+      - name: Errors 3,000 to 3,999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-3000-to-3999.md
         - name: 3013
           href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
         - name: 3023
@@ -11188,6 +11207,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-3988-database-engine-error.md
         - name: 3989
           href: relational-databases/errors-events/mssqlserver-3989-database-engine-error.md
+      - name: Errors 4,000 to 4,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-4000-to-4999.md
         - name: 4064
           href: relational-databases/errors-events/mssqlserver-4064-database-engine-error.md
         - name: 4104
@@ -11198,8 +11221,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-4214-database-engine-error.md
         - name: 4846
           href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
-      - name: Errors 5,000 to 7,999
+      - name: Errors 5,000 to 5,999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-5000-to-5999.md
         - name: 5009
           href: relational-databases/errors-events/mssqlserver-5009-database-engine-error.md
         - name: 5120
@@ -11234,10 +11259,18 @@ items:
           href: relational-databases/errors-events/mssqlserver-5515-database-engine-error.md
         - name: 5554
           href: relational-databases/errors-events/mssqlserver-5554-database-engine-error.md
+      - name: Errors 6,000 to 6,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-6000-to-6999.md
         - name: 6522
           href: relational-databases/errors-events/mssqlserver-6522-database-engine-error.md
         - name: 6602
           href: relational-databases/errors-events/mssqlserver-6602-database-engine-error.md
+      - name: Errors 7,000 to 7,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-7000-to-7999.md
         - name: 7105
           href: relational-databases/errors-events/mssqlserver-7105-database-engine-error.md
         - name: 7308
@@ -11300,8 +11333,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-7988-database-engine-error.md
         - name: 7995
           href: relational-databases/errors-events/mssqlserver-7995-database-engine-error.md
-      - name: Errors 8,000 to 9,999
+      - name: Errors 8,000 to 8,999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-8000-to-8999.md
         - name: 8443
           href: relational-databases/errors-events/mssqlserver-8443-database-engine-error.md
         - name: 8525
@@ -11344,6 +11379,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-8994-database-engine-error.md
         - name: 8996
           href: relational-databases/errors-events/mssqlserver-8996-database-engine-error.md
+      - name: Errors 9,000 to 9,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-9000-to-9999.md
         - name: 9001
           href: relational-databases/errors-events/mssqlserver-9001-database-engine-error.md
         - name: 9002
@@ -11364,8 +11403,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-9790-database-engine-error.md
         - name: 9955
           href: relational-databases/errors-events/mssqlserver-9955-database-engine-error.md
-      - name: Errors 10,000 to 11,999
+      - name: Errors 10,000 to 10,999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-10000-to-10999.md
         - name: 10001
           href: relational-databases/errors-events/mssqlserver-10001-database-engine-error.md
         - name: 10003
@@ -11420,6 +11461,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-10787-database-engine-error.md
         - name: 10794
           href: relational-databases/errors-events/mssqlserver-10794-database-engine-error.md
+      - name: Errors 11,000 to 12,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-11000-to-12999.md
         - name: 11001
           href: relational-databases/errors-events/mssqlserver-11001-database-engine-error.md
         - name: 11409
@@ -11446,12 +11491,24 @@ items:
           href: relational-databases/errors-events/mssqlserver-12308-database-engine-error.md
         - name: 12329
           href: relational-databases/errors-events/mssqlserver-12329-database-engine-error.md
+      - name: Errors 13,000 to 13,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-13000-to-13999.md
+      - name: Errors 14,000 to 14,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-14000-to-14999.md
         - name: 14265
           href: relational-databases/errors-events/mssqlserver-14265-database-engine-error.md
         - name: 14420
           href: relational-databases/errors-events/mssqlserver-14420-database-engine-error.md
         - name: 14421
           href: relational-databases/errors-events/mssqlserver-14421-database-engine-error.md
+      - name: Errors 15,000 to 15,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-15000-to-15999.md
         - name: 15401
           href: relational-databases/errors-events/mssqlserver-15401-database-engine-error.md
         - name: 15404
@@ -11464,6 +11521,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-15599-database-engine-error.md
         - name: 15661
           href: relational-databases/errors-events/mssqlserver-15661-database-engine-error.md
+      - name: Errors 16,000 to 17,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-16000-to-17999.md
         - name: 16591
           href: relational-databases/errors-events/mssqlserver-16591-database-engine-error.md
         - name: 16594
@@ -11532,6 +11593,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-17890-database-engine-error.md
         - name: 17892
           href: relational-databases/errors-events/mssqlserver-17892-database-engine-error.md
+      - name: Errors 18,000 to 18,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-18000-to-18999.md
         - name: 18210
           href: relational-databases/errors-events/mssqlserver-18210-database-engine-error.md
         - name: 18264
@@ -11546,8 +11611,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-18483-database-engine-error.md
         - name: 18752
           href: relational-databases/errors-events/mssqlserver-18752-database-engine-error.md
-      - name: Errors 19,000 to 19,999
+      - name: Errors 19,000 to 20,999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-19000-to-20999.md
         - name: 19407
           href: relational-databases/errors-events/mssqlserver-19407-database-engine-error.md
         - name: 19419
@@ -11562,6 +11629,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-20572-database-engine-error.md
         - name: 20574
           href: relational-databases/errors-events/mssqlserver-20574-database-engine-error.md
+      - name: Errors 21,000 to 21,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-21000-to-21999.md
         - name: 21862
           href: relational-databases/errors-events/mssqlserver-21862-database-engine-error.md
         - name: 21871
@@ -11578,14 +11649,34 @@ items:
           href: relational-databases/errors-events/mssqlserver-21898-database-engine-error.md
         - name: 21899
           href: relational-databases/errors-events/mssqlserver-21899-database-engine-error.md
+      - name: Errors 22,000 to 22,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-22000-to-22999.md
+      - name: Errors 23,000 to 25,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-23000-to-25999.md
+      - name: Errors 26,000 to 27,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-26000-to-27999.md
         - name: 26013
           href: relational-databases/errors-events/mssqlserver-26013-database-engine-error.md
         - name: 26014
           href: relational-databases/errors-events/mssqlserver-26014-database-engine-error.md
+      - name: Errors 28,000 to 30,999
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-28000-to-30999.md
         - name: 30053
           href: relational-databases/errors-events/mssqlserver-30053-database-engine-error.md
         - name: 30089
           href: relational-databases/errors-events/mssqlserver-30089-database-engine-error.md
+      - name: Errors 31,000 to 41,399
+        items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-31000-to-41399.md
         - name: 32040
           href: relational-databases/errors-events/mssqlserver-32040-database-engine-error.md
         - name: 32042
@@ -11610,6 +11701,8 @@ items:
         items:
         - name: 35250
           href: relational-databases/errors-events/mssqlserver-35250-database-engine-error.md
+        - name: 35267
+          href: relational-databases/errors-events/mssqlserver-35267-database-engine-error.md
       - name: Errors 41,000 to 41,399
         items:
         - name: 41030
@@ -11644,8 +11737,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-41396-database-engine-error.md
         - name: 41399
           href: relational-databases/errors-events/mssqlserver-41399-database-engine-error.md
-      - name: Errors 41,400 to 41,209
+      - name: Errors 41,400 to 42,999
         items:
+        - name: Overview
+          href: relational-databases/errors-events/database-engine-events-and-errors-41400-to-42999.md
         - name: 42108
           href: relational-databases/errors-events/mssqlserver-42108-database-engine-error.md
         - name: 42109
@@ -13328,6 +13423,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql.md
       - name: sys.dm_database_encryption_keys
         href: relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md
+      - name: sys.dm_external_provider_certificate_info
+        href: relational-databases/system-dynamic-management-views/sys-dm-external-provider-certificate-info-transact-sql.md
     - name: Server-Related
       href: relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md
       items:
@@ -13511,6 +13608,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md
       - name: sys.dm_tran_database_transactions
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md
+      - name: sys.dm_tran_distributed_transaction_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md
       - name: sys.dm_tran_locks
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md
       - name: sys.dm_tran_session_transactions
@@ -14123,6 +14222,8 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md
       - name: sys.sp_xtp_control_query_exec_stats
         href: relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md
+      - name: sys.sp_xtp_force_gc
+        href: relational-databases/system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md
       - name: sys.sp_xtp_merge_checkpoint_files
         href: relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md
       - name: sys.sp_xtp_unbind_db_resource_pool
@@ -14482,7 +14583,15 @@ items:
         href: relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
       - name: sp_query_store_clear_message_queues
         href: relational-databases/system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md   
-        
+
+    - name: MSDTC
+      href: relational-databases/system-stored-procedures/msdtc-stored-procedures-transact-sql.md
+      items:
+      - name: sp_manage_distributed_transaction
+        href: relational-databases/system-stored-procedures/sys-sp-manage-distributed-transaction.md
+      - name: sp_reset_dtc_log
+        href: relational-databases/system-stored-procedures/sp-reset-dtc-log.md
+
     - name: Replication
       href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md
       items:
@@ -15098,6 +15207,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
       - name: sp_help_change_feed
         href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_help_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
       - name: sp_change_feed_configure_parameters
         href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
       - name: sp_change_feed_create_table_group
@@ -15106,8 +15217,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
       - name: sp_change_feed_enable_table
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
-      - name: sp_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-table.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:

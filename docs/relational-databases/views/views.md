@@ -1,17 +1,14 @@
 ---
+title: "Views"
 description: "Views"
-title: "Views | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "views [SQL Server], about views"
-ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "views [SQL Server], about views"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Views

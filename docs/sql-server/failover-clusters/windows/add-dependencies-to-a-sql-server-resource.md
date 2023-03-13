@@ -1,21 +1,17 @@
 ---
-description: "Add Dependencies to a SQL Server Resource"
 title: "Add dependencies to a SQL Server FCI resource"
-descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager. 
-ms.custom: "seo-lt-2019"
+description: "Add Dependencies to a SQL Server Resource"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "resource dependencies [SQL Server]"
   - "failover clustering [SQL Server], dependencies"
   - "clusters [SQL Server], dependencies"
   - "dependencies [SQL Server], clustering"
-ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Add Dependencies to a SQL Server Resource
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

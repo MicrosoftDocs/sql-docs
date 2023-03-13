@@ -1,22 +1,19 @@
 ---
+title: "sp_table_privileges (Transact-SQL)"
 description: "sp_table_privileges (Transact-SQL)"
-title: "sp_table_privileges (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_table_privileges"
-  - "sp_table_privileges_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_table_privileges"
-ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_table_privileges"
+  - "sp_table_privileges_TSQL"
+helpviewer_keywords:
+  - "sp_table_privileges"
+dev_langs:
+  - "TSQL"
 ---
 # sp_table_privileges (Transact-SQL)
 

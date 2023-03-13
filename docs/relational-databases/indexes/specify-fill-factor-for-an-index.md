@@ -10,7 +10,6 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "fill factor [SQL Server]"
   - "page splits [SQL Server]"
-ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Specify Fill Factor for an Index

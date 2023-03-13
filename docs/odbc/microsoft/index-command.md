@@ -1,17 +1,14 @@
 ---
+title: "INDEX Command"
 description: "INDEX Command"
-title: "INDEX Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "index command [ODBC]"
-ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "index command [ODBC]"
 ---
 # INDEX Command
 Creates an index file to display and access table records in a logical order.  

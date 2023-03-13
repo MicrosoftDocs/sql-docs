@@ -1,19 +1,16 @@
 ---
-description: "Pick Schedule for Job"
 title: "Pick Schedule for Job"
-ms.custom: seo-lt-2019
+description: "Pick Schedule for Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.job.pickscheduleforjob.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Pick Schedule for Job dialog box"
-ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Pick Schedule for Job

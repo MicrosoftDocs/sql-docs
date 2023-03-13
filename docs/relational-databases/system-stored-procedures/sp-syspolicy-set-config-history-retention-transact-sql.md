@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_set_config_history_retention (Transact-SQL)"
 description: "sp_syspolicy_set_config_history_retention (Transact-SQL)"
-title: "sp_syspolicy_set_config_history_retention (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_set_config_history_retention_TSQL"
-  - "sp_syspolicy_set_config_history_retention"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_set_config_history_retention"
-ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_set_config_history_retention_TSQL"
+  - "sp_syspolicy_set_config_history_retention"
+helpviewer_keywords:
+  - "sp_syspolicy_set_config_history_retention"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_set_config_history_retention (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

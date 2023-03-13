@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.symmetric_keys catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.symmetric_keys (Transact-SQL)

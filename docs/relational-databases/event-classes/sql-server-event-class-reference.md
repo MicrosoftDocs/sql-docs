@@ -1,21 +1,18 @@
 ---
-title: "SQL Server Event Class Reference | Microsoft Docs"
+title: "SQL Server Event Class Reference"
 description: Record events as they occur in an instance of SQL Server Database Engine by using the SQL Server Profiler.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "events [SQL Server], event classes"
   - "event classes [SQL Server], listed"
   - "event classes [SQL Server]"
   - "SQL Server event classes, listed"
   - "SQL Server event classes"
-ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Event Class Reference

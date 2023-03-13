@@ -1,22 +1,19 @@
 ---
+title: "sp_replmonitorhelpmergesession (Transact-SQL)"
 description: "sp_replmonitorhelpmergesession (Transact-SQL)"
-title: "sp_replmonitorhelpmergesession (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_replmonitorhelpmergesession_TSQL"
-  - "sp_replmonitorhelpmergesession"
-helpviewer_keywords: 
-  - "sp_replmonitorhelpmergesession"
-ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_replmonitorhelpmergesession_TSQL"
+  - "sp_replmonitorhelpmergesession"
+helpviewer_keywords:
+  - "sp_replmonitorhelpmergesession"
+dev_langs:
+  - "TSQL"
 ---
 # sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

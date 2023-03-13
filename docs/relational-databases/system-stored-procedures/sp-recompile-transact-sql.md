@@ -1,21 +1,20 @@
 ---
-description: "The sp_recompile system stored procedure causes stored procedures, triggers, and user-defined functions to be recompiled the next time that they are run."
 title: "sp_recompile (Transact-SQL)"
-ms.custom: ""
+description: "The sp_recompile system stored procedure causes stored procedures, triggers, and user-defined functions to be recompiled the next time that they are run."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: wiassaf
 ms.date: "08/01/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_recompile_TSQL"
   - "sp_recompile"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_recompile"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_recompile (Transact-SQL)

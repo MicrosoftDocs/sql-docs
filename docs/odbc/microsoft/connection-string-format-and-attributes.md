@@ -1,18 +1,15 @@
 ---
+title: "Connection String Format and Attributes"
 description: "Connection String Format and Attributes"
-title: "Connection String Format and Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "connection strings [ODBC], ODBC driver for Oracle"
-  - "ODBC driver for Oracle [ODBC], connection strings"
-ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "connection strings [ODBC], ODBC driver for Oracle"
+  - "ODBC driver for Oracle [ODBC], connection strings"
 ---
 # Connection String Format and Attributes
 > [!IMPORTANT]  

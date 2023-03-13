@@ -1,13 +1,13 @@
 ---
+title: "Applications"
 description: "Applications"
-title: "Applications | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "off-the-shelf applications [ODBC]"
   - "ODBC architecture [ODBC], applications"
   - "shrink-wrapped applications [ODBC]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "custom applications [ODBC]"
   - "virtual applications [ODBC]"
   - "generic applications [ODBC]"
-ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Applications
 An *application* is a program that calls the ODBC API to access data. Although many types of applications are possible, most fall into three categories, which are used as examples throughout this guide.  

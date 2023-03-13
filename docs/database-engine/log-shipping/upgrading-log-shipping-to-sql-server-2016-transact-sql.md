@@ -7,7 +7,6 @@ ms.date: "02/01/2016"
 ms.service: sql
 ms.subservice: log-shipping
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "log shipping [SQL Server], upgrading"
 ---

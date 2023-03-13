@@ -1,20 +1,17 @@
 ---
+title: "Descriptor Field Conformance"
 description: "Descriptor Field Conformance"
-title: "Descriptor Field Conformance | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "descriptor field conformance levels [ODBC]"
   - "conformance levels [ODBC], descriptor field"
   - "data sources [ODBC], conformance levels"
   - "ODBC drivers [ODBC], conformance levels"
-ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Descriptor Field Conformance
 The following table indicates the conformance level of each ODBC descriptor header field, where this is well defined.  

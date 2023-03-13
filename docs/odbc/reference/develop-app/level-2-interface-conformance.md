@@ -1,19 +1,16 @@
 ---
+title: "Level 2 Interface Conformance"
 description: "Level 2 Interface Conformance"
-title: "Level 2 Interface Conformance | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "interface conformance levels [ODBC]"
   - "level 2 interface conformance levels [ODBC]"
   - "conformance levels [ODBC], interface"
-ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Level 2 Interface Conformance
 The Level 2 interface conformance level includes the Level 1 interface conformance-level functionality plus the following features:  

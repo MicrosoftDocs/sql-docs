@@ -1,15 +1,12 @@
 ---
+title: "User Interface Reference (SybaseToSQL)"
 description: "User Interface Reference (SybaseToSQL)"
-title: "User Interface Reference (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # User Interface Reference (SybaseToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Sybase.  

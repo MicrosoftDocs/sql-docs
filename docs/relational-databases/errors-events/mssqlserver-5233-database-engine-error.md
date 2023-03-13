@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5233"
 description: "MSSQLSERVER_5233"
-title: "MSSQLSERVER_5233 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5233 (Database Engine error)"
-ms.assetid: 7a855afa-2d3b-49b7-adef-197b99fc98b1
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5233 (Database Engine error)"
 ---
 # MSSQLSERVER_5233
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,16 +1,13 @@
 ---
 title: "Manage Azure Synapse Link for SQL Server and Azure SQL Database"
 description: Learn about managing the Azure Synapse Link change feed with T-SQL.
-ms.date: 05/24/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: data-movement
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: data-movement
+ms.topic: conceptual
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
-ms.custom:
-- event-tier1-build-2022
 ---
 
 # Manage Azure Synapse Link for SQL Server and Azure SQL Database

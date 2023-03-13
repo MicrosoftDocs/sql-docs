@@ -1,20 +1,16 @@
 ---
-description: "Create Full-Text Search Queries (Visual Database Tools)"
 title: Create Full-Text Search Queries
-ms.custom: seo-lt-2019
+description: "Create Full-Text Search Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CONTAINS predicate (Transact-SQL)"
   - "queries [full-text search], creating"
   - "full-text queries [SQL Server], creating"
-ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Full-Text Search Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,17 @@
 ---
-description: "SetCurrentCertificate Method (SInstance Class)"
 title: "SetCurrentCertificate Method (SInstance)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetCurrentCertificate Method (SInstance Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetCurrentCertificate method"
-ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
+description: "SetCurrentCertificate Method (SInstance Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetCurrentCertificate method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetCurrentCertificate Method (SInstance Class)"
+apitype: "MOFDef"
 ---
 # SetCurrentCertificate Method (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

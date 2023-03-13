@@ -1,22 +1,19 @@
 ---
+title: "sp_help_spatial_geography_index_xml (Transact-SQL)"
 description: "sp_help_spatial_geography_index_xml (Transact-SQL)"
-title: "sp_help_spatial_geography_index_xml (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_spatial_geography_index_xml_TSQL"
-  - "sp_help_spatial_geography_index_xml"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_spatial_geography_index_xml procedure"
-ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_spatial_geography_index_xml_TSQL"
+  - "sp_help_spatial_geography_index_xml"
+helpviewer_keywords:
+  - "sp_help_spatial_geography_index_xml procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

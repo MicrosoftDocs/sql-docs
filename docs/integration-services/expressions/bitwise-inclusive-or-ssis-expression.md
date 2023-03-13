@@ -1,18 +1,15 @@
 ---
+title: "| (Bitwise Inclusive OR) (SSIS Expression)"
 description: "| (Bitwise Inclusive OR) (SSIS Expression)"
-title: "| (Bitwise Inclusive OR) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "| (bitwise inclusive OR)"
-  - "bitwise inclusive OR (|)"
-ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "| (bitwise inclusive OR)"
+  - "bitwise inclusive OR (|)"
 ---
 # | (Bitwise Inclusive OR) (SSIS Expression)
 

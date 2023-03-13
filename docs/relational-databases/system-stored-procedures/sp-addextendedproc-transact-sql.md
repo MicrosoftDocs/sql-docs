@@ -1,22 +1,19 @@
 ---
+title: "sp_addextendedproc (Transact-SQL)"
 description: "sp_addextendedproc (Transact-SQL)"
-title: "sp_addextendedproc (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addextendedproc_TSQL"
-  - "sp_addextendedproc"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addextendedproc"
-ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addextendedproc_TSQL"
+  - "sp_addextendedproc"
+helpviewer_keywords:
+  - "sp_addextendedproc"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

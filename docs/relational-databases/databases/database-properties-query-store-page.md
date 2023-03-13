@@ -1,16 +1,14 @@
 ---
 title: "Database Properties (Query Store Page)"
 description: "Learn how to use the Query Store tab in the Database Properties dialog box to configure query store modes, intervals, thresholds, and other properties."
-ms.custom: ""
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.databaseproperties.querystore.f1"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "01/25/2021"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.databaseproperties.querystore.f1"
 ---
 # Database Properties (Query Store Page)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]

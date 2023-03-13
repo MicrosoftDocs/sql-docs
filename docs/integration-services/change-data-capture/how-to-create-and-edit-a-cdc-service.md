@@ -1,15 +1,12 @@
 ---
+title: "How to Create and Edit a CDC Service"
 description: "How to Create and Edit a CDC Service"
-title: "How to Create and Edit a CDC Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: chugugrace
 ms.author: chugu
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # How to Create and Edit a CDC Service
 

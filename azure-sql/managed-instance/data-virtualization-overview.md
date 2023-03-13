@@ -5,7 +5,7 @@ description: Learn about data virtualization capabilities of Azure SQL Managed I
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, wiassaf
-ms.date: 01/31/2023
+ms.date: 02/22/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -83,8 +83,8 @@ A **managed identity** is a feature of Azure Active Directory (Azure AD) that pr
 Before accessing the data, the Azure storage administrator must grant permissions to managed identity to access the data. Granting permissions to the system assigned managed identity of the managed instance is done the same way as granting permission to any other Azure AD user. For example:
 
 1. In the Azure portal, in the **Access Control (IAM)** page of a storage account, select **Add role assignment**.  
-1. Choose the **Storage Blob Data Contributor** built-in Azure RBAC role. This will provide read access to the managed identity for the necessary Azure Blob Storage containers.
-    - Instead of granting the managed identity the **Storage Blob Data Contributor** Azure RBAC role, you can also grant more granular permissions on a subset of files. All users who need access to **Read** individual files some data in this container also must have **Execute** permission on all parent folders up to the root (the container). Learn more about how to [set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl). Currently, data virtualization with Azure SQL Managed Instance is read-only.
+1. Choose the **Storage Blob Data Reader** built-in Azure RBAC role. This will provide read access to the managed identity for the necessary Azure Blob Storage containers.
+    - Instead of granting the managed identity the **Storage Blob Data Reader** Azure RBAC role, you can also grant more granular permissions on a subset of files. All users who need access to **Read** individual files some data in this container also must have **Execute** permission on all parent folders up to the root (the container). Learn more about how to [set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl). Currently, data virtualization with Azure SQL Managed Instance is read-only.
 1. On the next page, select **Assign access to** **Managed identity**. **+ Select members**, and under the **Managed identity** drop-down list, select the desired managed identity. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 1. Then, creating the database scoped credential for managed identity authentication is simple. Note in the following example that `'Managed Identity'` is a hard-coded string.
 
@@ -357,7 +357,7 @@ CREATE EXTERNAL TABLE tbl_TaxiRides(
 WITH (
  LOCATION = 'yellow/puYear=*/puMonth=*/*.parquet',
  DATA_SOURCE = NYCTaxiExternalDataSource,
- FILE_FORMAT = MyFileFormat
+ FILE_FORMAT = DemoFileFormat
 );
 GO
 ```
@@ -448,7 +448,7 @@ The syntax for creating statistics on external tables resembles the one used for
 
 ```sql
 CREATE STATISTICS sVendor
-ON tbl_TaxiRides (vendor_id)
+ON tbl_TaxiRides (vendorID)
 WITH FULLSCAN, NORECOMPUTE;
 ```
 
@@ -468,8 +468,8 @@ Issues with query execution are typically caused by managed instance not being a
 
 ## Limitations
 
-- [Row level security](https://learn.microsoft.com/sql/relational-databases/security/row-level-security) feature is not supported with external tables.
-- [Dynamic data masking](https://learn.microsoft.com/sql/relational-databases/security/dynamic-data-masking) rule can't be defined for a column in an external table.
+- [Row level security](/sql/relational-databases/security/row-level-security) feature is not supported with external tables.
+- [Dynamic data masking](/sql/relational-databases/security/dynamic-data-masking) rule can't be defined for a column in an external table.
 
 ## Known issues
 

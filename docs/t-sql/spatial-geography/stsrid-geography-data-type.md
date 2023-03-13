@@ -1,22 +1,19 @@
 ---
+title: "STSrid (geography Data Type)"
 description: "STSrid (geography Data Type)"
-title: "STSrid (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STSrid (geography Data Type)"
   - "STSrid_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STSrid method"
-ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STSrid (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

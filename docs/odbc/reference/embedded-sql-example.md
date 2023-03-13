@@ -1,19 +1,16 @@
 ---
+title: "Embedded SQL Example"
 description: "Embedded SQL Example"
-title: "Embedded SQL Example | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL [ODBC], embedded SQL"
   - "SQL statements [ODBC], embedded SQL"
   - "embedded SQL [ODBC]"
-ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Embedded SQL Example
 The following code is a simple embedded SQL program, written in C. The program illustrates many, but not all, of the embedded SQL techniques. The program prompts the user for an order number, retrieves the customer number, salesperson, and status of the order, and displays the retrieved information on the screen.  

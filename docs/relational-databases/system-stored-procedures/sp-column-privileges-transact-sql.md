@@ -1,22 +1,19 @@
 ---
+title: "sp_column_privileges (Transact-SQL)"
 description: "sp_column_privileges (Transact-SQL)"
-title: "sp_column_privileges (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_column_privileges_TSQL"
-  - "sp_column_privileges"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_column_privileges"
-ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_column_privileges_TSQL"
+  - "sp_column_privileges"
+helpviewer_keywords:
+  - "sp_column_privileges"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_column_privileges (Transact-SQL)

@@ -1,15 +1,14 @@
 ---
 title: Copy or move a database (preview)
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to perform an online move or copy operation of your database across instances for Azure SQL Managed Instance. 
-author: sasapopo 
+description: Learn how to perform an online move or copy operation of your database across instances for Azure SQL Managed Instance.
+author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
-ms.custom: 
 ---
 # Copy or move a database (preview) - Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

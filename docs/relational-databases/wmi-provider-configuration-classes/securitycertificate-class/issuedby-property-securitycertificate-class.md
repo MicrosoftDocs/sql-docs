@@ -1,22 +1,17 @@
 ---
-description: "IssuedBy Property (SecurityCertificate Class)"
 title: "IssuedBy Property (SecurityCertificate)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "IssuedBy Property (SecurityCertificate Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "IssuedBy property"
-ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
+description: "IssuedBy Property (SecurityCertificate Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "IssuedBy property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "IssuedBy Property (SecurityCertificate Class)"
+apitype: "MOFDef"
 ---
 # IssuedBy Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

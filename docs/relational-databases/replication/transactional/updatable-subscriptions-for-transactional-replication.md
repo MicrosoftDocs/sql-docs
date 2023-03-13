@@ -1,22 +1,20 @@
 ---
 title: "Updatable Subscriptions (Transactional)"
 description: Describes the Updatable Subscriptions feature available for Transactional Replication in SQL Server.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "07/21/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "transactional replication, updatable subscriptions"
   - "updatable subscriptions, about updatable subscriptions"
   - "queued updating subscriptions [SQL Server replication]"
   - "immediate updating subscriptions"
   - "subscriptions [SQL Server replication], updatable"
   - "updatable subscriptions"
-ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Updatable Subscriptions - For Transactional Replication
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_dropsrvrolemember (Transact-SQL)"
 description: "sp_dropsrvrolemember (Transact-SQL)"
-title: "sp_dropsrvrolemember (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/20/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_dropsrvrolemember"
   - "sp_dropsrvrolemember_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_dropsrvrolemember"
-ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropsrvrolemember (Transact-SQL)
 

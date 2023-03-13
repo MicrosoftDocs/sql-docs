@@ -1,17 +1,16 @@
 ---
 title: "Example: Specifying the ID and IDREF Directives"
 description: View an example of how to specify the ID and IDREF directives in an SQL query.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "IDREF directive"
   - "ID directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Specify the ID and IDREF directives
 

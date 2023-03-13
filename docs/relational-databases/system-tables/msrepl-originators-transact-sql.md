@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSrepl_originators system table"
 dev_langs:
   - "TSQL"
-ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 ---
 # MSrepl_originators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

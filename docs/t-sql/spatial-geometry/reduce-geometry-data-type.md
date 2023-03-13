@@ -1,22 +1,19 @@
 ---
+title: "Reduce (geometry Data Type)"
 description: "Reduce (geometry Data Type)"
-title: "Reduce (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Reduce_TSQL"
   - "Reduce"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Reduce method"
-ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Reduce (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

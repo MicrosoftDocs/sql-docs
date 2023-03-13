@@ -1,19 +1,17 @@
 ---
 title: "Complete Word (IntelliSense)"
-description: The Microsoft IntelliSense Complete Word feature can complete what you are typing once you have typed enough to uniquely identify it, or it can provide a list of possibilities for you to choose from. Learn the four ways to invoke this feature.  
+description: The Microsoft IntelliSense Complete Word feature can complete what you are typing once you have typed enough to uniquely identify it, or it can provide a list of possibilities for you to choose from. Learn the four ways to invoke this feature.
+author: markingmyname
+ms.author: maghan
+ms.date: "01/25/2022"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "word completion [IntelliSense]"
   - "IntelliSense [SQL Server], Complete Word option"
   - "text completion [IntelliSense]"
   - "Complete Word option [IntelliSense]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/25/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

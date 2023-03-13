@@ -1,17 +1,15 @@
 ---
 title: "Run replication maintenance jobs (SSMS)"
 description: Learn how to start and stop replication maintenance jobs in SQL Server management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "jobs [SQL Server replication]"
-ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "jobs [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Run Replication Maintenance Jobs (SQL Server Management Studio)

@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: sample
 ms.custom:
-  - "load & move data"
-  - "devx-track-azurecli"
+  - load & move data
+  - devx-track-azurecli
 ms.devlang: azurecli
 ---
 

@@ -1,18 +1,15 @@
 ---
+title: "Debug a Script by Setting Breakpoints in a Script Task and Script Component"
 description: "Debug a Script by Setting Breakpoints in a Script Task and Script Component"
-title: "Debug a Script by Setting Breakpoints in a Script Task and Script Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "breakpoints [Integration Services]"
-  - "scripts [Integration Services], breakpoints"
-ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "breakpoints [Integration Services]"
+  - "scripts [Integration Services], breakpoints"
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component
 

@@ -1,19 +1,17 @@
 ---
 title: "Optimize parameterized filters with precomputed partitions (Merge)"
-description: Learn how to use precomputed partitions to optimize the performance of parameterized filters for Merge Publications. 
-ms.custom: seo-lt-2019
+description: Learn how to use precomputed partitions to optimize the performance of parameterized filters for Merge Publications.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "precomputed partitions [SQL Server replication]"
   - "merge replication precomputed partitions [SQL Server replication]"
   - "merge replication precomputed partitions [SQL Server replication], about precomputed partitions"
-ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Parameterized Filters - Optimize for Precomputed Partitions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

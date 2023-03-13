@@ -1,17 +1,14 @@
 ---
+title: "Column Value Distribution Profile Request Options (Data Profiling Task)"
 description: "Column Value Distribution Profile Request Options (Data Profiling Task)"
-title: "Column Value Distribution Profile Request Options (Data Profiling Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Data Profiling Task Editor"
-ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Profiling Task Editor"
 ---
 # Column Value Distribution Profile Request Options (Data Profiling Task)
 

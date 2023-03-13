@@ -1,16 +1,15 @@
 ---
 title: "The &lt;xsd:redefine&gt; Element"
 description: Learn about support for the W3C XSD redefine element and how to update an XML schema or its components.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "xsd:redefine element"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # The &lt;xsd:redefine&gt; element
 

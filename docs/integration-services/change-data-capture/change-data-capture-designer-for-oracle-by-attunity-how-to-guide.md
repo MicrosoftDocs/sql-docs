@@ -1,15 +1,12 @@
 ---
+title: "Change Data Capture Designer for Oracle by Attunity How to Guide"
 description: "Change Data Capture Designer for Oracle by Attunity How to Guide"
-title: "Change Data Capture Designer for Oracle by Attunity How to Guide | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Change Data Capture Designer for Oracle by Attunity How to Guide
 

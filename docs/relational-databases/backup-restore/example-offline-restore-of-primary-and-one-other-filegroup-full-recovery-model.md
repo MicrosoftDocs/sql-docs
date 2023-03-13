@@ -1,19 +1,16 @@
 ---
 title: "Offline restore: primary and 1 filegroup"
 description: This example shows an offline restore in SQL Server of a primary and one other filegroup for a database using the full recovery model with multiple filegroups.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full recovery model [SQL Server], RESTORE example"
   - "offline restores [SQL Server]"
   - "restore sequences [SQL Server], offline"
-ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Example: Offline restore of primary and 1 other filegroup (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

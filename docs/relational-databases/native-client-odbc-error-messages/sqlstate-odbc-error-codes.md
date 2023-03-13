@@ -1,21 +1,18 @@
 ---
-title: "SQLSTATE (ODBC Error Codes) | Microsoft Docs"
+title: "SQLSTATE (ODBC Error Codes)"
 description: When SQL Server ODBC driver runs stored procedures as remote stored procedures, the procedure can have integer return codes and output parameters.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, errors"
   - "ODBC error handling, cause information"
   - "messages [ODBC], cause information"
   - "SQLSTATEs"
   - "errors [ODBC], cause information"
-ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSTATE (ODBC Error Codes)

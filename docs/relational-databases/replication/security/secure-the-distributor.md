@@ -1,18 +1,16 @@
 ---
+title: "Secure the Distributor"
 description: "Secure the Distributor"
-title: "Secure the Distributor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "security [SQL Server replication], Distributors"
-  - "Distributors [SQL Server replication], security"
-ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "security [SQL Server replication], Distributors"
+  - "Distributors [SQL Server replication], security"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Secure the Distributor

@@ -1,18 +1,15 @@
 ---
-description: "View Project Properties"
 title: "View Project Properties"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "projects [SQL Server Management Studio], viewing properties"
-  - "viewing project properties"
-ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
+description: "View Project Properties"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "projects [SQL Server Management Studio], viewing properties"
+  - "viewing project properties"
 ---
 # View Project Properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

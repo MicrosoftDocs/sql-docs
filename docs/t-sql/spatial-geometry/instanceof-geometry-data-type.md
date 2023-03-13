@@ -1,22 +1,19 @@
 ---
+title: "InstanceOf (geometry Data Type)"
 description: "InstanceOf (geometry Data Type)"
-title: "InstanceOf (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "InstanceOf"
   - "InstanceOf_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "InstanceOf (geometry Data Type)"
-ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # InstanceOf (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

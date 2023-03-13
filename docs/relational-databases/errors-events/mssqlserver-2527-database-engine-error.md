@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2527"
 description: "MSSQLSERVER_2527"
-title: "MSSQLSERVER_2527 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2527 (Database Engine error)"
-ms.assetid: 1cef90ef-9c39-44e6-bc7f-316c8f53c10c
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2527 (Database Engine error)"
 ---
 # MSSQLSERVER_2527
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

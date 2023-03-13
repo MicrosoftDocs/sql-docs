@@ -1,17 +1,14 @@
 ---
-title: "Create a Table for Storing FILESTREAM Data | Microsoft Docs"
+title: "Create a Table for Storing FILESTREAM Data"
 description: Learn how to create a table for storing FILESTREAM data in SQL Server. See which columns and attributes to use in the Transact-SQL code.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], table storage"
-ms.assetid: 029c3059-5c83-43e2-a859-9027031b7de1
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FILESTREAM [SQL Server], table storage"
 ---
 # Create a Table for Storing FILESTREAM Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

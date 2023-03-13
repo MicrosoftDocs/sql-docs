@@ -5,10 +5,10 @@ author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: randolphwest
 ms.date: 03/07/2022
-ms.topic: tutorial
 ms.service: sql
 ms.subservice: linux
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+ms.topic: tutorial
+monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux containers
@@ -42,11 +42,11 @@ To set up your container, you'll need to know in advance the port that will be u
 
 When registering Service Principal Names (SPN), you can use the hostname of the machine or the name of the container, but you should set it up according to what you'd like to see when you connect to the container externally.
 
-Make sure there's a forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL Server container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my SQL Server container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to `sql1.contoso.com`, it reaches the right host.
+Make sure there's a forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL Server container. In this tutorial, the IP address of `sql1` host machine is `10.0.0.10`, and my SQL Server container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to `sql1.contoso.com`, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-containers-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
-For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the Windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts the SQL Server containers. All machines have been joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
+For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the Windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `sql1`, which hosts the SQL Server containers. All machines have been joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
 
 > [!NOTE]
 > Joining the host container machine to the domain is not mandatory, as you can see later in this article.

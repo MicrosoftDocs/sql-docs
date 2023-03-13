@@ -1,29 +1,19 @@
---- 
- 
-# required metadata 
-title: "smoothed_hinge_loss: smoothed_hinge_loss" 
-description: "Smoothed Hinge loss." 
-keywords: "loss, smooth, hinge" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "smoothed_hinge_loss: smoothed_hinge_loss"
+description: "Smoothed Hinge loss."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - loss
+  - smooth
+  - hinge
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.smoothed_hinge_loss*: Smoothed hinge loss function
 
 

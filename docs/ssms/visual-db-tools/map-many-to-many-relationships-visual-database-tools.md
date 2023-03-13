@@ -1,22 +1,18 @@
 ---
-description: "Map Many-to-Many Relationships (Visual Database Tools)"
 title: Map Many-to-Many Relationships
-ms.custom: seo-lt-2019
+description: "Map Many-to-Many Relationships (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "relationships [SQL Server], many-to-many"
   - "junction tables [SQL Server]"
   - "many-to-many relationships [SQL Server]"
   - "mapping many-to-many relationships [SQL Server]"
   - "database diagrams [SQL Server], relationships"
-ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Map Many-to-Many Relationships (Visual Database Tools)
 

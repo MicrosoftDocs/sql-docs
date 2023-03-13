@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom:
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 monikerRange: "= azuresql || = azuresql-db"
 ---
 

@@ -1,12 +1,13 @@
 ---
-description: "Change an Operator's Availability"
 title: "Change an Operator's Availability"
-ms.custom: seo-lt-2019
+description: "Change an Operator's Availability"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, operators"
   - "canceling operators"
   - "reactivating operators"
@@ -18,10 +19,6 @@ helpviewer_keywords:
   - "notifications [SQL Server], job status"
   - "disabling operators"
   - "operators (users) [Database Engine], changing availability with Management Studio"
-ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Change an Operator's Availability

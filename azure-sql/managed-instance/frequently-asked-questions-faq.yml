@@ -43,7 +43,7 @@ sections:
           
           ### What service tier am I eligible for?
           
-          Any customer is eligible for any service tier. However, if you want to exchange your existing licenses for discounted rates on Azure SQL Managed Instance by using [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/), bear in mind that SQL Server Enterprise Edition customers with Software Assurance are eligible for the [General Purpose](../database/service-tier-general-purpose.md) or [Business Critical](../database/service-tier-business-critical.md) performance tiers and SQL Server Standard Edition customers with Software Assurance are eligible for the General Purpose performance tier only. For more information, see [Specific rights of the AHB](../azure-hybrid-benefit.md?tabs=azure-powershell#what-are-the-specific-rights-of-the-azure-hybrid-benefit-for-sql-server).
+          Any customer is eligible for any service tier. Both Standard and Enterprise editions covered with Software Assurance can be exchanged by using the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) for the General Purpose or Business Critical service tier using the following exchange ratios:  1 Standard edition = 1 General Purpose, 1 Enterprise edition = 1 Business Critical, 1 Enterprise edition = 4 General Purpose, and 4 General Purpose = 1 Enterprise Edition. For more information, see [Specific rights of the AHB](../azure-hybrid-benefit.md?tabs=azure-powershell#what-are-the-specific-rights-of-the-azure-hybrid-benefit-for-sql-server).
           
           ### What subscription types are supported for SQL Managed Instance?
           
@@ -175,7 +175,7 @@ sections:
           
           ### How can I migrate from other platforms to SQL Managed Instance?
           
-          For migration information about migrating from other platforms, see [Azure Database Migration Guide](https://datamigration.microsoft.com/).
+          For migration information about migrating from other platforms, see [Azure Database Migration Guide](/data-migration/).
           
       - question: |
           Switch hardware configuration

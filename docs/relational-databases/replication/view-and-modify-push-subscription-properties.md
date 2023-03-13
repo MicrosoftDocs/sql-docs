@@ -1,22 +1,20 @@
 ---
+title: "View and Modify Push Subscription Properties"
 description: "View and Modify Push Subscription Properties"
-title: "View and Modify Push Subscription Properties | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "viewing replication properties"
   - "push subscriptions [SQL Server replication], properties"
   - "subscriptions [SQL Server replication], push"
   - "push subscriptions [SQL Server replication], modifying"
   - "modifying replication properties, push subscriptions"
   - "modifying subscriptions, SQL Server Management Studio"
-ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # View and Modify Push Subscription Properties

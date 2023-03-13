@@ -1,23 +1,20 @@
 ---
+title: "Coding a Custom Task"
 description: "Coding a Custom Task"
-title: "Coding a Custom Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Validate method"
   - "custom tasks [Integration Services], validating"
   - "validation [Integration Services], design-time tasks"
   - "SSIS custom tasks, validating"
-ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Coding a Custom Task
 

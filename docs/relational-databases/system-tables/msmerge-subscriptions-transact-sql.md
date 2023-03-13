@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_subscriptions system table"
 dev_langs:
   - "TSQL"
-ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 ---
 # MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

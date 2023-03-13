@@ -3,7 +3,7 @@ title: "SET SHOWPLAN_ALL (Transact-SQL)"
 description: SET SHOWPLAN_ALL (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 04/16/2020
+ms.date: 03/10/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,7 +27,7 @@ dev_langs:
 # SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
-  Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns detailed information about how the statements are executed and provides estimates of the resource requirements for the statements.  
+  Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns detailed information about how the statements would be executed (a query plan) and provides estimates of the resource requirements for the statements and expected rows (cardinality estimation).  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

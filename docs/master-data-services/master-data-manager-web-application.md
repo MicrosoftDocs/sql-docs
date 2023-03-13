@@ -1,15 +1,12 @@
 ---
 title: Master Data Manager Web Application
 description: Learn how to use the Master Data Manager web application to perform administrative tasks for Master Data Services.
-ms.custom: ""
-ms.date: "12/20/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "12/20/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Master Data Manager Web Application
 

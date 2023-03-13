@@ -1,22 +1,19 @@
 ---
+title: "sp_help_jobschedule (Transact-SQL)"
 description: "sp_help_jobschedule (Transact-SQL)"
-title: "sp_help_jobschedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobschedule"
-  - "sp_help_jobschedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobschedule"
-ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobschedule"
+  - "sp_help_jobschedule_TSQL"
+helpviewer_keywords:
+  - "sp_help_jobschedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

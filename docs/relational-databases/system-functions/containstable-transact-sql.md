@@ -1,18 +1,16 @@
 ---
+title: "CONTAINSTABLE (Transact-SQL)"
 description: "CONTAINSTABLE (Transact-SQL)"
-title: "CONTAINSTABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/24/2015"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "CONTAINSTABLE"
   - "CONTAINSTABLE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "precise or fuzzy (less precise) matches [full-text search]"
   - "fuzzy (less precise) word or phrase search [full-text search]"
   - "word searches [full-text search]"
@@ -29,9 +27,8 @@ helpviewer_keywords:
   - "ranked results [full-text search]"
   - "rankings [full-text search]"
   - "less precise (fuzzy) searches [full-text search]"
-ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONTAINSTABLE (Transact-SQL)

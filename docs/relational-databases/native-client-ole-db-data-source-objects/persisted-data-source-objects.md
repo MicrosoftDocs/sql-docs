@@ -1,20 +1,17 @@
 ---
-description: "Persisted Data Source Objects in SQL Server Native Client"
 title: Persisted data source objects (Native Client OLE DB provider)
-ms.custom: ""
+description: "Persisted Data Source Objects in SQL Server Native Client"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB data source objects [SQL Server Native Client]"
   - "data source objects [OLE DB]"
   - "SQL Server Native Client OLE DB provider, persisted data source objects"
   - "persisted data source objects"
-ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Persisted Data Source Objects in SQL Server Native Client 

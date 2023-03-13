@@ -5,12 +5,11 @@ description: Java Language Extension is a feature of SQL Server used for executi
 author: rothja
 ms.author: jroth
 ms.date: 11/10/2020
-ms.topic: overview
 ms.service: sql
 ms.subservice: language-extensions
+ms.topic: overview
+ms.custom: intro-overview
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
-ms.custom:
-  - intro-overview
 ---
 # What is Java Language Extension?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]

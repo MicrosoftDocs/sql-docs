@@ -8,7 +8,6 @@ ms.date: 01/10/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "statements [SQL Server], command prompt"
   - "QUIT command"

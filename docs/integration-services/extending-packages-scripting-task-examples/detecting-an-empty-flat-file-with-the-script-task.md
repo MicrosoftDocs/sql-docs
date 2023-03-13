@@ -1,20 +1,17 @@
 ---
+title: "Detecting an Empty Flat File with the Script Task"
 description: "Detecting an Empty Flat File with the Script Task"
-title: "Detecting an Empty Flat File with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "flat files"
   - "Script task [Integration Services], empty flat files"
   - "SSIS Script task, empty flat files"
   - "Script task [Integration Services], examples"
-ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-author: chugugrace
-ms.author: chugu
 ---
 # Detecting an Empty Flat File with the Script Task
 

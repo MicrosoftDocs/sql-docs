@@ -1,20 +1,17 @@
 ---
-description: "Add Columns to Queries (Visual Database Tools)"
 title: Add Columns to Queries
+description: "Add Columns to Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inserting columns"
   - "columns [SQL Server], adding"
   - "queries [SQL Server], columns"
   - "adding columns"
-ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Add Columns to Queries (Visual Database Tools)

@@ -1,12 +1,11 @@
 ---
+title: "Backup and Restore Operations for Reporting Services"
 description: "Backup and Restore Operations for Reporting Services"
-title: "Backup and Restore Operations for Reporting Services | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/08/2021
 ms.service: reporting-services
 ms.topic: conceptual
-ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-ms.date: 12/08/2021
 ---
 
 # Backup and Restore Operations for Reporting Services

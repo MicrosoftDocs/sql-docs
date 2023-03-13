@@ -1,21 +1,18 @@
 ---
-description: "Solutions (SQL Server Management Studio)"
 title: "Solutions (SQL Server Management Studio)"
-ms.custom: seo-lt-2019
+description: "Solutions (SQL Server Management Studio)"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "solutions [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], solutions"
   - "projects [SQL Server Management Studio], about projects"
   - "SQL Server Management Studio [SQL Server], projects"
   - "scripts [SQL Server], SQL Server Management Studio"
-ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Solutions (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "catalog views [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 ---
 # Resource Governor Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

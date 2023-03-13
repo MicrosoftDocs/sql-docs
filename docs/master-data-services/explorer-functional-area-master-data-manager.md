@@ -1,15 +1,12 @@
 ---
-description: "Explorer Functional Area (Master Data Manager)"
 title: Explorer Functional Area
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
+description: "Explorer Functional Area (Master Data Manager)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Explorer Functional Area (Master Data Manager)
 

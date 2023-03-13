@@ -1,16 +1,14 @@
 ---
 title: Install SQL Server documentation to view offline
 description: Learn how to install offline documentation for SQL Server 2019, 2017, 2016, 2014, and 2012. Use SQL Server Management Studio (SSMS) to view the offline content.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/08/2022
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-author: markingmyname
-ms.author: maghan
-ms.date: 11/15/2022
+ms.custom: intro-installation
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
-ms.custom:
-  - intro-installation
 ---
 
 # Install SQL Server documentation to view offline in SSMS
@@ -57,7 +55,18 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-offline-documentation/sql-2016-content.png)
    
-5. (Optional) To move the content to an offline system, go to the **Local store path** where the files were installed, and move them to the offline system. Next, use the SSMS UI to install the content again, but this time choose **Disk** as the **Installation source** and provide the location where you saved the files after moving them. 
+5. (Optional) To move the content to an offline system, go to the **Local store path** (mentioned in step 2) where the files were installed.  Copy the ContentStore and IndexStore folders to **new** folder in another location.  After copying, zip up the folders and their contents, then copy them to the offline system.
+
+6. On the offline system, open SSMS, select **Add and Remove Help Content** on the Help menu.  Go to the **Manage Content** tab and note the location for the Local store path.  Close SSMS.
+
+7. Extract the contents of the zip file.  Copy the contents of the ContentStore folder into the ContentStore folder within the Local store path.
+
+   > [!NOTE]
+   > The installedBooks.*.xml file should be larger than 1KB.  If there are two files with the same names, rename the smaller file to .old (change the file extension).
+
+8. Copy the contents of the IndexStore folder into the IndexStore folder within the local store path.
+
+9. Open SSMS, select **Add and Remove Help Content** on the Help menu to view the documentation. 
 
 ## SQL Server 2014 offline content
 

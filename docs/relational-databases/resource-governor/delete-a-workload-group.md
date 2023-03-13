@@ -1,18 +1,15 @@
 ---
-title: "Delete a Workload Group | Microsoft Docs"
+title: "Delete a Workload Group"
 description: Learn how to delete a workload group or resource pool by using either SQL Server Management Studio or Transact-SQL. You must have the CONTROL SERVER permission.
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "workload groups [SQL Server], delete"
-  - "Resource Governor, workload group delete"
-ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "workload groups [SQL Server], delete"
+  - "Resource Governor, workload group delete"
 ---
 # Delete a Workload Group
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

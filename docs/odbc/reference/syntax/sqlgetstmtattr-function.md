@@ -1,24 +1,19 @@
 ---
+title: "SQLGetStmtAttr Function"
 description: "SQLGetStmtAttr Function"
-title: "SQLGetStmtAttr Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetStmtAttr"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetStmtAttr"
-helpviewer_keywords: 
-  - "SQLGetStmtAttr function [ODBC]"
-ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetStmtAttr"
+helpviewer_keywords:
+  - "SQLGetStmtAttr function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetStmtAttr"
+apitype: "dllExport"
 ---
 # SQLGetStmtAttr Function
 **Conformance**  

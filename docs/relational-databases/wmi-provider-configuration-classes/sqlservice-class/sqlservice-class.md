@@ -1,23 +1,16 @@
 ---
-description: "SqlService Class"
 title: "SqlService Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "SqlService Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SqlService class"
-ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
+description: "SqlService Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SqlService class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SqlService Class"
+apitype: "MOFDef"
 ---
 # SqlService Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

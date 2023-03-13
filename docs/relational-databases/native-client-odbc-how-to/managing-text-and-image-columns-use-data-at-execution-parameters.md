@@ -1,17 +1,14 @@
 ---
+title: "Use Data-at-Execution Parameters (ODBC)"
 description: "Managing text and image Columns - Use Data-at-Execution Parameters"
-title: "Use Data-at-Execution Parameters (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "data-at-execution"
-ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "data-at-execution"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing text and image Columns - Use Data-at-Execution Parameters

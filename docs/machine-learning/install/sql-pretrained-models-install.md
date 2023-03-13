@@ -1,16 +1,13 @@
 ---
 title: Install pre-trained models
 description: Add pre-trained models for sentiment analysis and image featurization to SQL Server Machine Learning Services (R or Python) or SQL Server R Services.
-ms.service: sql
-ms.subservice: machine-learning-services
-ms.date: 05/24/2022
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom:
-- seo-lt-2019
-- intro-installation
-- event-tier1-build-2022
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
+ms.custom: intro-installation
 monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install pre-trained machine learning models on SQL Server

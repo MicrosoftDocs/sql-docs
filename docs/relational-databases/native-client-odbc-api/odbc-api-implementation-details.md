@@ -1,20 +1,17 @@
 ---
+title: "ODBC API Implementation Details"
 description: "ODBC API Implementation Details"
-title: "ODBC API Implementation Details | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC, functions"
   - "SQL Server Native Client ODBC driver, SQL Server-specific behaviors"
   - "ODBC, SQL Server-specific behaviors"
   - "functions [ODBC]"
-ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC API Implementation Details

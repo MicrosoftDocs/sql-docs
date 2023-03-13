@@ -1,17 +1,14 @@
 ---
+title: "Audit Server Starts and Stops Event Class"
 description: "Audit Server Starts and Stops Event Class"
-title: "Audit Server Starts and Stops Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Server Starts and Stops event class"
-ms.assetid: 8ddb55af-c77b-4d07-b803-a97320c0804e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Server Starts and Stops event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Starts and Stops Event Class

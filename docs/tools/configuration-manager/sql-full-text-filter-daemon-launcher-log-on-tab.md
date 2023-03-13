@@ -1,15 +1,12 @@
 ---
 title: "SQL Full-text Filter Daemon Launcher (Log On Tab)"
 description: Find out about the SQL Full-text Filter Daemon Launcher, which SQL Server full-text search uses. Learn about the Log On tab of its Properties dialog box.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Full-text Filter Daemon Launcher (Log On Tab)

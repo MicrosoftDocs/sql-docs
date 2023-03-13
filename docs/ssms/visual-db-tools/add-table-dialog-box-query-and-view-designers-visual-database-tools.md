@@ -1,18 +1,15 @@
 ---
-description: "Add Table Dialog Box (Query and View Designers) (Visual Database Tools)"
 title: Add Table Dialog Box (Query and View Designers)
+description: "Add Table Dialog Box (Query and View Designers) (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.query.addtable"
   - "vdtsql.chm:65565"
-ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)

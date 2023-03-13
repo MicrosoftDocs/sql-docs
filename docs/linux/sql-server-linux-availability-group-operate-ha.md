@@ -5,10 +5,9 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/01/2018
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.assetid: 
+ms.topic: conceptual
 ---
 # Operate Always On Availability Groups on Linux
 

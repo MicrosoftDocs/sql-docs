@@ -1,17 +1,14 @@
 ---
+title: "New Project (SSMA) (MySQLToSQL)"
 description: "New Project (SSMA) (MySQLToSQL)"
-title: "New Project (SSMA) (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.workspacedialog.f1"
+f1_keywords:
+  - "ssma.mysql.workspacedialog.f1"
 ---
 # New Project (SSMA) (MySQLToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

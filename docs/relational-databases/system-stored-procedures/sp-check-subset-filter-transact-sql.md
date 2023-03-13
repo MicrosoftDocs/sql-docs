@@ -1,21 +1,19 @@
 ---
 title: sp_check_subset_filter (Transact-SQL)
 description: "sp_check_subset_filter (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_check_subset_filter"
   - "sp_check_subset_filter_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_check_subset_filter"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/06/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # sp_check_subset_filter (Transact-SQL)

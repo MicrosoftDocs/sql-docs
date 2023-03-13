@@ -1,17 +1,14 @@
 ---
+title: "SQLSetStmtOption (Desktop Database Drivers)"
 description: "SQLSetStmtOption (Desktop Database Drivers)"
-title: "SQLSetStmtOption (Desktop Database Drivers) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLSetStmtOption function [ODBC], Desktop Database Drivers"
-ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLSetStmtOption function [ODBC], Desktop Database Drivers"
 ---
 # SQLSetStmtOption (Desktop Database Drivers)
 

@@ -1,17 +1,15 @@
 ---
+title: "MSSQL_ENG014114"
 description: "MSSQL_ENG014114"
-title: "MSSQL_ENG014114 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG014114 error"
-ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "08/26/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG014114 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014114

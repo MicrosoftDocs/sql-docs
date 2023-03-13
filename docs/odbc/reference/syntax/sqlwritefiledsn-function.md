@@ -1,24 +1,19 @@
 ---
+title: "SQLWriteFileDSN Function"
 description: "SQLWriteFileDSN Function"
-title: "SQLWriteFileDSN Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLWriteFileDSN"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLWriteFileDSN"
-helpviewer_keywords: 
-  - "SQLWriteFileDSN [ODBC]"
-ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLWriteFileDSN"
+helpviewer_keywords:
+  - "SQLWriteFileDSN [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLWriteFileDSN"
+apitype: "dllExport"
 ---
 # SQLWriteFileDSN Function
 **Conformance**  

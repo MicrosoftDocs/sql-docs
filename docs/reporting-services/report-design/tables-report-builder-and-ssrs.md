@@ -1,15 +1,12 @@
 ---
-title: "Tables in paginated reports | Microsoft Docs"
+title: "Tables in paginated reports"
 description: Display detail data or grouped data by using a single field or multiple fields, or by writing your own expression in a paginated report in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Tables in paginated reports (Report Builder)
 

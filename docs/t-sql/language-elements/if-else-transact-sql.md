@@ -3,7 +3,6 @@ title: "IF...ELSE (Transact-SQL)"
 description: "Transact-SQl language reference for IF-ELSE statements to provide control flow in Transact-SQL statements."
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "07/11/2016"
 ms.service: sql
 ms.subservice: t-sql

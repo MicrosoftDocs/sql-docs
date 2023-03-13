@@ -1,17 +1,14 @@
 ---
 title: "Monitor & enforce best practices using Policy-Based Management"
-description: Policy-based management provides a set of policy files you can import as best practice policies and then  evaluate the policies against a target set that includes instances, objects, databases, or database objects. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
+description: Policy-based management provides a set of policy files you can import as best practice policies and then  evaluate the policies against a target set that includes instances, objects, databases, or database objects.
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Monitor and Enforce Best Practices by Using Policy-Based Management
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

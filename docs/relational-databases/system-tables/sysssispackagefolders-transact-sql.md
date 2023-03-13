@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysssispackagefolders system table"
 dev_langs:
   - "TSQL"
-ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
 ---
 # sysssispackagefolders (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

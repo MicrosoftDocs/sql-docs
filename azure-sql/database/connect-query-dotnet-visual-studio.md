@@ -10,9 +10,9 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "devx-track-csharp"
-  - "sqldbrb=2"
-  - "mode-ui"
+  - devx-track-csharp
+  - sqldbrb=2
+  - mode-ui
 ms.devlang: csharp
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

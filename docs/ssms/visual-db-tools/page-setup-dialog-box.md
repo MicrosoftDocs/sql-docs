@@ -1,18 +1,14 @@
 ---
-description: "Page Setup Dialog Box"
 title: Page Setup Dialog Box
-ms.custom: seo-lt-2019
+description: "Page Setup Dialog Box"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vs.PageSetup"
-ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Page Setup Dialog Box
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

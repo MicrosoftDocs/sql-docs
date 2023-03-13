@@ -1,15 +1,12 @@
 ---
-description: "Projects (SQL Server Management Studio)"
 title: "Projects (SQL Server Management Studio)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
+description: "Projects (SQL Server Management Studio)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ---
 # Projects (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

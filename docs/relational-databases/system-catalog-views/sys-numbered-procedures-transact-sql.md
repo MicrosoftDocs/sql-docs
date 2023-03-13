@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.numbered_procedures catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.numbered_procedures (Transact-SQL)

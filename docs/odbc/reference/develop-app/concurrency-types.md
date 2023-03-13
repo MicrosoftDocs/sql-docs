@@ -1,21 +1,18 @@
 ---
+title: "Concurrency Types"
 description: "Concurrency Types"
-title: "Concurrency Types | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transactions [ODBC], concurrency control"
   - "concurrency control [ODBC]"
   - "locking concurrency control [ODBC]"
   - "optimistic concurrency [ODBC]"
   - "read-only concurrency control [ODBC]"
-ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Concurrency Types
 To solve the problem of reduced concurrency in cursors, ODBC exposes four different types of cursor concurrency:  

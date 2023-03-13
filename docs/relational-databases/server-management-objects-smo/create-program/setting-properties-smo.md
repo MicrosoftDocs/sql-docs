@@ -1,20 +1,15 @@
 ---
+title: "Setting Properties - SMO"
 description: "Setting Properties - SMO"
-title: "Setting Properties - SMO | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SMO [SQL Server], properties"
   - "SQL Server Management Objects, properties"
   - "properties [SMO]"
-ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Setting Properties - SMO

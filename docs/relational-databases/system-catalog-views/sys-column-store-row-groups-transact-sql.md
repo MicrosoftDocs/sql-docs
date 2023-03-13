@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.column_store_row_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 ---
 # sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[SQL Server 2012 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2012-asdbmi.md)]

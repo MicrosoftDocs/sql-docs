@@ -1,21 +1,19 @@
 ---
+title: "Replicate Partitioned Tables and Indexes"
 description: "Replicate Partitioned Tables and Indexes"
-title: "Replicate Partitioned Tables and Indexes | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "09/10/2015"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "partitioned indexes [SQL Server], replicating"
   - "partitioned tables [SQL Server], replicating"
   - "replication [SQL Server], partitioned tables"
   - "publishing [SQL Server replication], partitioned tables"
   - "transactional replication, partitioned tables"
-ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replicate Partitioned Tables and Indexes

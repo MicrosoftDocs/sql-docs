@@ -1,20 +1,17 @@
 ---
+title: "Assessment Report (AccessToSQL)"
 description: "Assessment Report (AccessToSQL)"
-title: "Assessment Report (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+f1_keywords:
+  - "ssma.access.assessmentreport.f1"
+helpviewer_keywords:
   - "Assessment Report dialog box"
   - "Conversion Report dialog box"
-ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-  - "ssma.access.assessmentreport.f1"
 ---
 # Assessment Report (AccessToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

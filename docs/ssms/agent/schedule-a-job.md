@@ -1,19 +1,16 @@
 ---
-description: "Schedule a Job"
 title: "Schedule a Job"
-ms.custom: seo-lt-2019
+description: "Schedule a Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scheduling jobs [SQL Server]"
   - "SQL Server Agent jobs, scheduling"
   - "jobs [SQL Server Agent], scheduling"
-ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Schedule a Job

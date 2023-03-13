@@ -1,15 +1,12 @@
 ---
+title: "Global Settings (Output Window) (MySQLToSQL)"
 description: "Global Settings (Output Window) (MySQLToSQL)"
-title: "Global Settings (Output Window) (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Global Settings (Output Window) (MySQLToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

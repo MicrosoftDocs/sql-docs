@@ -7,7 +7,6 @@ ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"

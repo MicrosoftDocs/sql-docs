@@ -1,22 +1,19 @@
 ---
+title: "sp_altermessage (Transact-SQL)"
 description: "sp_altermessage (Transact-SQL)"
-title: "sp_altermessage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_altermessage_TSQL"
-  - "sp_altermessage"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_altermessage"
-ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_altermessage_TSQL"
+  - "sp_altermessage"
+helpviewer_keywords:
+  - "sp_altermessage"
+dev_langs:
+  - "TSQL"
 ---
 # sp_altermessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -8,7 +8,6 @@ ms.date: 01/24/2020
 ms.service: sql
 ms.subservice: dea
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Configure Distributed Replay for Database Experimentation Assistant

@@ -1,18 +1,15 @@
 ---
+title: "BETWEEN Predicate"
 description: "BETWEEN Predicate"
-title: "BETWEEN Predicate | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "BETWEEN predicate [ODBC]"
-  - "SQL grammar [ODBC], between predicate"
-ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "BETWEEN predicate [ODBC]"
+  - "SQL grammar [ODBC], between predicate"
 ---
 # BETWEEN Predicate
 The syntax:  

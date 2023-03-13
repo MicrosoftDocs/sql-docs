@@ -1,24 +1,21 @@
 ---
+title: "Data Mining Model Training Destination"
 description: "Data Mining Model Training Destination"
-title: "Data Mining Model Training Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataminingmodeltrainingdest.f1"
   - "sql13.dts.designer.dmmtrainingtransformation.connection.f1"
   - "sql13.dts.designer.dmmtrainingtransformation.columns.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "destinations [Integration Services], Data Mining Model Training"
   - "Data Mining Model Training destination"
   - "mining models [Analysis Services], training"
   - "training mining models"
-ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: chugugrace
-ms.author: chugu
 ---
 # Data Mining Model Training Destination
 

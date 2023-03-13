@@ -1,17 +1,14 @@
 ---
+title: "DROP TABLE Command"
 description: "DROP TABLE Command"
-title: "DROP TABLE Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "drop table command [ODBC]"
-ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "drop table command [ODBC]"
 ---
 # DROP TABLE Command
 Removes a table from the database specified with the data source and deletes it from disk.  

@@ -1,20 +1,17 @@
 ---
-description: "Security Audit Event Category (SQL Server Profiler)"
 title: "Security Audit Event Category - Profiler"
+description: "Security Audit Event Category (SQL Server Profiler)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/03/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Security Audit event category [SQL Server]"
   - "event classes [SQL Server], Security Audit event category"
   - "SQL Server event classes, Security Audit event category"
-ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Security Audit Event Category (SQL Server Profiler)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

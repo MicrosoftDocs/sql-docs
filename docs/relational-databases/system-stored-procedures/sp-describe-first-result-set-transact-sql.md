@@ -1,22 +1,19 @@
 ---
+title: "sp_describe_first_result_set (Transact-SQL)"
 description: "sp_describe_first_result_set (Transact-SQL)"
-title: "sp_describe_first_result_set (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_describe_first_result_set"
-  - "sp_describe_first_result_set_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_describe_first_result_set"
-ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
+ms.date: "03/17/2018"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_describe_first_result_set"
+  - "sp_describe_first_result_set_TSQL"
+helpviewer_keywords:
+  - "sp_describe_first_result_set"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_first_result_set (Transact-SQL)

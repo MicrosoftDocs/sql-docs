@@ -1,19 +1,17 @@
 ---
 title: "Configure snapshot properties (Replication SP)"
-description: Use replication stored procedures to configure snapshot properties for Snapshot or Transactional publications. 
-ms.custom: seo-lt-2019
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "snapshots [SQL Server replication], properties"
-ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
+description: Use replication stored procedures to configure snapshot properties for Snapshot or Transactional publications.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "snapshots [SQL Server replication], properties"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Configure Snapshot Properties (Replication Transact-SQL Programming)

@@ -8,7 +8,6 @@ ms.date: 02/02/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 keywords:
   - "install ssms, download ssms, latest ssms"
   - "SQL Server Management Studio"

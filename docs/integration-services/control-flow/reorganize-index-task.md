@@ -1,21 +1,18 @@
 ---
+title: "Reorganize Index Task"
 description: "Reorganize Index Task"
-title: "Reorganize Index Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.reorganizeindextask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reorganizing indexes"
   - "Reorganize Index task [Integration Services]"
   - "indexes [Integration Services]"
-ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
-author: chugugrace
-ms.author: chugu
 ---
 # Reorganize Index Task
 

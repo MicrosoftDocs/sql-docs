@@ -1,17 +1,14 @@
 ---
-description: "Delete Operator"
 title: "Delete Operator"
-ms.custom: seo-lt-2019
+description: "Delete Operator"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.operator.delete.f1"
-ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Delete Operator

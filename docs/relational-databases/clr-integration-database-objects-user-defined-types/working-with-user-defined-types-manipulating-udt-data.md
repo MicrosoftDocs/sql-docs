@@ -26,7 +26,6 @@ helpviewer_keywords:
   - "inserting data"
 dev_langs:
   - "TSQL"
-ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 ---
 # Working with User-Defined Types - Manipulating UDT Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

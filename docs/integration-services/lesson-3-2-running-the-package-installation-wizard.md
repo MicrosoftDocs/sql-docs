@@ -1,15 +1,12 @@
 ---
+title: "Step 2: Running the Package Installation Wizard"
 description: "Lesson 3-2 - Running the Package Installation Wizard"
-title: "Step 2: Running the Package Installation Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 3-2 - Running the Package Installation Wizard
 

@@ -1,17 +1,14 @@
 ---
-description: "Use OPENJSON with an Explicit Schema (SQL Server)"
 title: "Use OPENJSON with an Explicit Schema"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "OPENJSON, with explicit schema"
-ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
+description: "Use OPENJSON with an Explicit Schema (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "OPENJSON, with explicit schema"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)

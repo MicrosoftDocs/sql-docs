@@ -1,18 +1,15 @@
 ---
+title: "Cursor Library Code Example"
 description: "Cursor Library Code Example"
-title: "Cursor Library Code Example | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "ODBC cursor library [ODBC], examples"
-  - "cursor library [ODBC], examples"
-ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "ODBC cursor library [ODBC], examples"
+  - "cursor library [ODBC], examples"
 ---
 # Cursor Library Code Example
 > [!IMPORTANT]  

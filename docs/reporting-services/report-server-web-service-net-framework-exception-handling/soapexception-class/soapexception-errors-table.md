@@ -1,17 +1,14 @@
 ---
-title: "SoapException Errors Table | Microsoft Docs"
+title: "SoapException Errors Table"
 description: Learn about the errors that are accessible from methods through a SoapException in the Report Server Web service.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/16/2017
 ms.service: reporting-services
 ms.subservice: report-server-web-service
-
-
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SoapException class"
-ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # SoapException Errors Table
   The report server generates errors and error messages in the SOAP exception based on errors that occur in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The following table shows the errors that are accessible from methods through a **SoapException** in the Report Server Web service. It is organized by the method or methods that throw the exception.  

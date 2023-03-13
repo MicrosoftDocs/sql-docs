@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_844"
 description: "MSSQLSERVER_844"
-title: "MSSQLSERVER_844 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "844 (Database Engine error)"
-ms.assetid: 2060c886-1226-4066-bc0c-de90a1cfb82b
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "844 (Database Engine error)"
 ---
 # MSSQLSERVER_844
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,13 @@
 ---
-description: "Implementing Endpoints"
 title: "Implementing Endpoints"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "endpoints [SMO]"
-ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
+description: "Implementing Endpoints"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "endpoints [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing Endpoints

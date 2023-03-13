@@ -1,24 +1,19 @@
 ---
+title: "SQLConfigDriver Function"
 description: "SQLConfigDriver Function"
-title: "SQLConfigDriver Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLConfigDriver"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLConfigDriver"
-helpviewer_keywords: 
-  - "SQLConfigDriver function [ODBC]"
-ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLConfigDriver"
+helpviewer_keywords:
+  - "SQLConfigDriver function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLConfigDriver"
+apitype: "dllExport"
 ---
 # SQLConfigDriver Function
 **Conformance**  

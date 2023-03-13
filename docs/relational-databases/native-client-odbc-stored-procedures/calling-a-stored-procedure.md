@@ -1,13 +1,13 @@
 ---
-title: "Calling a Stored Procedure | Microsoft Docs"
+title: "Calling a Stored Procedure"
 description: Learn about the ODBC CALL escape sequence, the preferred method for running stored procedures. The Native Client ODBC driver also supports Transact-SQLEXECUTE.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "calling stored procedures"
   - "ODBC, stored procedures"
   - "stored procedures [ODBC], calling"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "ODBC CALL escape sequence"
   - "escape sequences [SQL Server]"
   - "CALL statement"
-ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Calling a Stored Procedure

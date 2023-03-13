@@ -1,25 +1,22 @@
 ---
+title: "sys.sysdevices (Transact-SQL)"
 description: "sys.sysdevices (Transact-SQL)"
-title: "sys.sysdevices (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdevices"
   - "sysdevices_TSQL"
   - "sys.sysdevices"
   - "sys.sysdevices_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sysdevices compatibility view"
   - "sysdevices system table"
-ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysdevices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
-title: "Validate Plan Guides After Upgrade | Microsoft Docs"
+title: "Validate Plan Guides After Upgrade"
 description: When you upgrade your application to a new release of SQL Server, we recommend that you re-evaluate and test plan guide definitions.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "plan guides [SQL Server], validating after upgrade"
-ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "plan guides [SQL Server], validating after upgrade"
 ---
 # Validate plan guides after upgrade
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

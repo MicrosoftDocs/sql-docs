@@ -1,14 +1,13 @@
 ---
+title: "Deploy an SSIS project with Transact-SQL (SSMS)"
 description: "Deploy an SSIS project from SSMS with Transact-SQL"
-title: "Deploy an SSIS project with Transact-SQL (SSMS) | Microsoft Docs"
-ms.date: "05/21/2018"
-ms.topic: quickstart
-ms.service: sql
-ms.custom:
-  - intro-quickstart
-ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "05/21/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: quickstart
+ms.custom: intro-quickstart
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
 

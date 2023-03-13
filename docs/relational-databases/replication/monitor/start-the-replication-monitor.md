@@ -1,17 +1,15 @@
 ---
+title: "Start the Replication Monitor"
 description: "Start the Replication Monitor"
-title: "Start the Replication Monitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Replication Monitor, starting"
-ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Replication Monitor, starting"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Start the Replication Monitor

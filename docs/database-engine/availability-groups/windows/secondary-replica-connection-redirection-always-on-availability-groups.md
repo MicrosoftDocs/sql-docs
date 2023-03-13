@@ -7,7 +7,6 @@ ms.date: 01/09/2019
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: "article"
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "connection access to availability replicas"
   - "Availability Groups [SQL Server], availability replicas"

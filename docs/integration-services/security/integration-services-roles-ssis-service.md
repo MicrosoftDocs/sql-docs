@@ -1,15 +1,16 @@
 ---
+title: "Integration Services Roles (SSIS Service)"
 description: "Integration Services Roles (SSIS Service)"
-title: "Integration Services Roles (SSIS Service) | Microsoft Docs"
-ms.custom: security
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: security
+f1_keywords:
   - "sql13.dts.dtsserver.packageroles.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "security [Integration Services], roles"
   - "db_ssisoperator role"
   - "db_ssisadmin role"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "packages [Integration Services], security"
   - "roles [Integration Services]"
   - "db_ssisltduser role"
-ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Roles (SSIS Service)
 

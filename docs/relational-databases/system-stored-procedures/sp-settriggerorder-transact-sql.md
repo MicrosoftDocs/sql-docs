@@ -1,22 +1,19 @@
 ---
+title: "sp_settriggerorder (Transact-SQL)"
 description: "sp_settriggerorder (Transact-SQL)"
-title: "sp_settriggerorder (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_settriggerorder"
-  - "sp_settriggerorder_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_settriggerorder"
-ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_settriggerorder"
+  - "sp_settriggerorder_TSQL"
+helpviewer_keywords:
+  - "sp_settriggerorder"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_settriggerorder (Transact-SQL)

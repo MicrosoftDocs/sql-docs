@@ -1,20 +1,18 @@
 ---
 title: "Compare differences between replicated tables (Replication SP)"
-description: Use replication stored procedures to compare the differences between replicated tables on the Publisher and the Subscriber. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "tablediff utility"
-  - "comparing replicated tables"
-ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
+description: Use replication stored procedures to compare the differences between replicated tables on the Publisher and the Subscriber.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "tablediff utility"
+  - "comparing replicated tables"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Compare differences between replicated tables (Replication Programming)

@@ -1,13 +1,13 @@
 ---
-description: ODBC Test is an ODBC-enabled application that you can use to test ODBC drivers and the ODBC Driver Manager.
 title: ODBC Test
-ms.custom: ""
+description: ODBC Test is an ODBC-enabled application that you can use to test ODBC drivers and the ODBC Driver Manager.
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 09/01/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC test [ODBC]"
   - "ODBC drivers [ODBC], testing"
   - "gtrtst32.dll"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "odbct32w.exe [ODBC]"
   - "odbcte32.exe [ODBC]"
   - "testing ODBC drivers [ODBC]"
-ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
-author: David-Engel
-ms.author: v-davidengel
 ---
 
 # ODBC Test

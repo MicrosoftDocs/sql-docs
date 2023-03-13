@@ -7,7 +7,6 @@ ms.date: "02/27/2020"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: contperf-fy21q1
 helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"

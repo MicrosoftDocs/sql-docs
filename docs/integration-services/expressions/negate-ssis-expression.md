@@ -1,18 +1,15 @@
 ---
+title: "- (Negate) (SSIS Expression)"
 description: "- (Negate) (SSIS Expression)"
-title: "- (Negate) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "- (negative)"
-  - "negative operator (-)"
-ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "- (negative)"
+  - "negative operator (-)"
 ---
 # - (Negate) (SSIS Expression)
 

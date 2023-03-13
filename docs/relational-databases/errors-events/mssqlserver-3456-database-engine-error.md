@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3456"
 description: "MSSQLSERVER_3456"
-title: "MSSQLSERVER_3456 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3456 (Database Engine error)"
-ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3456 (Database Engine error)"
 ---
 # MSSQLSERVER_3456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

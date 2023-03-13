@@ -1,17 +1,14 @@
 ---
-title: "rsModelGenerationError - Reporting Services Error | Microsoft Docs"
+title: "rsModelGenerationError - Reporting Services Error"
 description: "In this error reference page, learn about event ID 'rsModelGenerationError': An error occurred while generating model."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
 ms.service: reporting-services
 ms.subservice: troubleshooting
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rsModelGenerationError"
-ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
-author: maggiesMSFT
-ms.author: maggies
 ---
 # rsModelGenerationError - Reporting Services Error
     

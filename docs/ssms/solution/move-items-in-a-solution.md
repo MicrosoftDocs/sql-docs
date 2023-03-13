@@ -1,19 +1,16 @@
 ---
-description: "Move Items in a Solution"
 title: "Move Items in a Solution"
-ms.custom: seo-lt-2019
+description: "Move Items in a Solution"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "moving items"
   - "solutions [SQL Server Management Studio], item relocation"
   - "relocating items"
-ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Move Items in a Solution
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

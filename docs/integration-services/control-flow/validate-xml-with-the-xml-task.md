@@ -1,18 +1,15 @@
 ---
+title: "Validate XML with the XML Task"
 description: "Validate XML with the XML Task"
-title: "Validate XML with the XML Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/08/2020"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "XML validation"
-  - "XML, validating"
-ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
+ms.date: "09/08/2020"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "XML validation"
+  - "XML, validating"
 ---
 # Validate XML with the XML Task
 

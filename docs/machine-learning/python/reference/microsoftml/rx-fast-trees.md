@@ -1,29 +1,19 @@
---- 
- 
-# required metadata 
-title: "rx_fast_trees: Fast Tree" 
-description: "Machine Learning Fast Tree" 
-keywords: "models, classification, regression" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "rx_fast_trees: Fast Tree"
+description: "Machine Learning Fast Tree"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - models
+  - classification
+  - regression
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.rx_fast_trees*: Boosted Trees
 
 

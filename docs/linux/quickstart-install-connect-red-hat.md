@@ -9,9 +9,7 @@ ms.date: 10/20/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 ---
 # Quickstart: Install SQL Server and create a database on Red Hat
 

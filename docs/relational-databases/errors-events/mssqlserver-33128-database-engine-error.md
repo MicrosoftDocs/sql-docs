@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_33128"
 description: "MSSQLSERVER_33128"
-title: "MSSQLSERVER_33128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "33128 (Database Engine error)"
-ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "33128 (Database Engine error)"
 ---
 # MSSQLSERVER_33128
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

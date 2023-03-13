@@ -1,20 +1,17 @@
 ---
+title: "The Driver Manager"
 description: "The Driver Manager"
-title: "The Driver Manager | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "driver manager [ODBC]"
   - "ODBC architecture [ODBC], driver manager"
   - "driver manager [ODBC], about driver manager"
   - "ODBC driver manager [ODBC]"
-ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
-author: David-Engel
-ms.author: v-davidengel
 ---
 # The Driver Manager
 The *Driver Manager* is a library that manages communication between applications and drivers. For example, on Microsoft® Windows® platforms, the Driver Manager is a dynamic-link library (DLL) that is written by Microsoft and can be redistributed by users of the redistributable MDAC 2.8 SP1 SDK.  

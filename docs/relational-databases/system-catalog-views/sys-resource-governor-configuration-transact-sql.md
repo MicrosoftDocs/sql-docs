@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.resource_governor_configuration catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 ---
 # sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

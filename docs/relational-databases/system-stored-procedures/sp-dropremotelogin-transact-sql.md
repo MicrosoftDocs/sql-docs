@@ -1,22 +1,19 @@
 ---
+title: "sp_dropremotelogin (Transact-SQL)"
 description: "sp_dropremotelogin (Transact-SQL)"
-title: "sp_dropremotelogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_dropremotelogin"
   - "sp_dropremotelogin_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_dropremotelogin"
-ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropremotelogin (Transact-SQL)
 

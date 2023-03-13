@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.asymmetric_keys catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.asymmetric_keys (Transact-SQL)

@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "user_token catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # sys.user_token (Transact-SQL)

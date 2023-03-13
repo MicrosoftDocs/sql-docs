@@ -1,15 +1,12 @@
 ---
-description: "Business Rule Conditions (Master Data Services)"
 title: Business Rule Conditions
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
+description: "Business Rule Conditions (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Business Rule Conditions (Master Data Services)
 

@@ -1,18 +1,15 @@
 ---
-description: "Retrieve Rows Using Bookmarks (Native Client OLE DB provider)"
 title: Retrieve rows using bookmarks (Native Client OLE DB provider)
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "bookmarks [OLE DB]"
-  - "rows [OLE DB]"
-ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
+description: "Retrieve Rows Using Bookmarks (Native Client OLE DB provider)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "bookmarks [OLE DB]"
+  - "rows [OLE DB]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Retrieve Rows Using Bookmarks (Native Client OLE DB provider)

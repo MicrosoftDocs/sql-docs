@@ -1,20 +1,16 @@
 ---
+title: "Assessing Oracle Schemas for Conversion (OracleToSQL)"
 description: "Assessing Oracle Schemas for Conversion (OracleToSQL)"
-title: "Assessing Oracle Schemas for Conversion (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Analyzing Conversion Problems"
-ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.oracle.assessmentreport.f1"
-
+helpviewer_keywords:
+  - "Analyzing Conversion Problems"
 ---
 # Assessing Oracle Schemas for Conversion (OracleToSQL)
 Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you should determine how complex the migration will be and how much time the migration will take. SSMA can create an assessment report that shows the percentage of objects that will be successfully converted. SSMA also lets you view the specific issues that cause conversion failures.  

@@ -1,25 +1,19 @@
 ---
+title: "SQLBrowseConnect Function"
 description: "SQLBrowseConnect Function"
-title: "SQLBrowseConnect Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLBrowseConnect"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll" 
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLBrowseConnect"
-helpviewer_keywords: 
-  - "SQLBrowseConnect function [ODBC]"
-ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLBrowseConnect"
+helpviewer_keywords:
+  - "SQLBrowseConnect function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLBrowseConnect"
+apitype: "dllExport"
 ---
 # SQLBrowseConnect Function
 **Conformance**  

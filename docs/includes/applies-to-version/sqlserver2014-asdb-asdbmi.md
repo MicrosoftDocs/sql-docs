@@ -1,7 +1,6 @@
 ---
 author: nneugebauer
 ms.author: nneugebauer
-ms.reviewer: 
 ms.date: 12/12/2022
 ms.service: sql
 ms.topic: include

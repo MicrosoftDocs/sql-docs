@@ -1,22 +1,17 @@
 ---
+title: "IsInitialized Property (WMI MSReportServer_ConfigurationSetting)"
 description: "IsInitialized Property (WMI MSReportServer_ConfigurationSetting)"
-title: "IsInitialized Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "IsInitialized"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IsInitialized property"
-ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "IsInitialized"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - IsInitialized
   Indicates whether the report server instance is initialized. Read-only.  

@@ -1,22 +1,19 @@
 ---
+title: "sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)"
 description: "sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)"
-title: "sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_fulltext_semantic_unregister_language_statistics_db_TSQL"
-  - "sp_fulltext_semantic_unregister_language_statistics_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_fulltext_semantic_unregister_language_statistics_db"
-ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_fulltext_semantic_unregister_language_statistics_db_TSQL"
+  - "sp_fulltext_semantic_unregister_language_statistics_db"
+helpviewer_keywords:
+  - "sp_fulltext_semantic_unregister_language_statistics_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

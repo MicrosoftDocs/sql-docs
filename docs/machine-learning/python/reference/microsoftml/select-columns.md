@@ -1,29 +1,18 @@
---- 
- 
-# required metadata 
-title: "select_columns: Selects a set of columns and drops all others" 
-description: "Selects a set of columns to retrain, dropping all others." 
-keywords: "transform, schema" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "select_columns: Selects a set of columns and drops all others"
+description: "Selects a set of columns to retrain, dropping all others."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - transform
+  - schema
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.select_columns*: Retains columns of a dataset
 
 

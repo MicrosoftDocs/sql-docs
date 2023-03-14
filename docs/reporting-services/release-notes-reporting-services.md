@@ -170,7 +170,19 @@ Initial release.
 
 ## SQL Server 2017 Reporting Services
 
-## 14.0.600.1860, 2022/04/26 
+## 14.0.601.20, 2023/02/14
+*(Product Version: 14.0.601.20)*
+
+- New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed issue with RTL alignment of toggles in RDL reports.  | &nbsp; |
+| Fixed formatting loss of empty cells exported to Word.  | &nbsp; |
+| Changes to telemetry configuration and logging.  | &nbsp; |
+| Security fixes.  | &nbsp; |
+
+## 14.0.600.1860, 2022/04/26
 *(Product Version: 14.0.600.1860)*
 
 | Fixed issue | Details |

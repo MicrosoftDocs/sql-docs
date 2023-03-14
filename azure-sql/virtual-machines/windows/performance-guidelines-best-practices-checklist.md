@@ -43,14 +43,14 @@ There's typically a trade-off between optimizing for costs and optimizing for pe
 
 The following is a quick checklist of VM size best practices for running your SQL Server on Azure VM:
 
+- Collect the target workload's performance characteristics and use them to determine the appropriate VM size for your business. If you are planning to migrate to Azure VM, make sure to look at [SKU recommendation](/sql/dma/dma-sku-recommend-sql-db) tool to find the right VM size for your existing SQL Server workload.
+- Leverage Azure Marketplace images to deploy your SQL Server Virtual Machines as the SQL Server settings and storage options are configured for optimal performance. 
 - The new [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) provides the highest I/O throughput-to-vCore ratio in Azure along with a memory-to-vCore ratio of 8. This series offers the best price-performance for SQL Server workloads on Azure VMs. Consider this series first for most SQL Server workloads.
 - Use VM sizes with 4 or more vCPUs like the [E4ds_v5](/azure/virtual-machines/edv5-edsv5-series#edsv5-series) or higher.
 - Use [memory optimized](/azure/virtual-machines/sizes-memory) virtual machine sizes for the best performance of SQL Server workloads. 
 - The [Edsv5](/azure/virtual-machines/edv5-edsv5-series#edsv5-series) series, the [M-](/azure/virtual-machines/m-series), and the [Mv2-](/azure/virtual-machines/mv2-series) series offer the optimal memory-to-vCore ratio required for OLTP workloads. 
 - The M series VMs offer the highest memory-to-vCore ratio in Azure. Consider these VMs for mission critical and data warehouse workloads.
-- Leverage Azure Marketplace images to deploy your SQL Server Virtual Machines as the SQL Server settings and storage options are configured for optimal performance. 
-- Collect the target workload's performance characteristics and use them to determine the appropriate VM size for your business.
-- Use the [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) [SKU recommendation](/sql/dma/dma-sku-recommend-sql-db) tool to find the right VM size for your existing SQL Server workload.
+- Use [Azure Data Studio](https://learn.microsoft.com/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads) or [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) to migrate to Azure
 
 To learn more, see the comprehensive [VM size best practices](performance-guidelines-best-practices-vm-size.md). 
 
@@ -59,7 +59,6 @@ To learn more, see the comprehensive [VM size best practices](performance-guidel
 The following is a quick checklist of storage configuration best practices for running your SQL Server on Azure VM: 
 
 - Monitor the application and [determine storage bandwidth and latency requirements](/azure/virtual-machines/premium-storage-performance#counters-to-measure-application-performance-requirements) for SQL Server data, log, and `tempdb` files before choosing the disk type. 
-- To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping/throttling](/azure/virtual-machines/premium-storage-performance#throttling).
 - Place data, log, and `tempdb` files on separate drives.
     - For the data drive, use [premium P30 and P40 or smaller disks](/azure/virtual-machines/disks-types#premium-ssds) to ensure the availability of cache support
     - For the log drive plan for capacity and test performance versus cost while evaluating the [premium P30 - P80 disks](/azure/virtual-machines/disks-types#premium-ssds).
@@ -75,11 +74,18 @@ The following is a quick checklist of storage configuration best practices for r
     - Don't enable read/write caching on disks that contain SQL Server data or log files. 
     - Always stop the SQL Server service before changing the cache settings of your disk.
 - For development and test workloads consider using standard storage. It isn't recommended to use Standard HDD/SDD for production workloads.
+
 - [Credit-based Disk Bursting](/azure/virtual-machines/disk-bursting#credit-based-bursting) (P1-P20) should only be considered for smaller dev/test workloads and departmental systems.
+- To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping/throttling](/azure/virtual-machines/premium-storage-performance#throttling).
+- Format your data disk to use 64-KB allocation unit size for all data files placed on a drive other than the temporary `D:\` drive (which has a default of 4 KB). SQL Server VMs deployed through Azure Marketplace come with data disks formatted with allocation unit size and interleave for the storage pool set to 64 KB. 
 - Provision the storage account in the same region as the SQL Server VM. 
 - Disable Azure geo-redundant storage (geo-replication) and use LRS (local redundant storage) on the storage account.
-- Format your data disk to use 64-KB allocation unit size for all data files placed on a drive other than the temporary `D:\` drive (which has a default of 4 KB). SQL Server VMs deployed through Azure Marketplace come with data disks formatted with allocation unit size and interleave for the storage pool set to 64 KB. 
 
+### Monitoring SQL and Storage Performance
+
+- Enable [SQL Best Practices Assessment](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-assessment-for-sql-vm?view=azuresql&tabs=azure-portal) to identify possible performance issues and evaluate that your SQL Server on Azure Virtual Machines (VMs) is configured to follow best practices.
+- Review and Monitor Disk and VM limits using [Storage IO utilization metrics](https://learn.microsoft.com/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics)
+- Monitor [Disk IO, throughput, bursting and queue depth metrics ](https://learn.microsoft.com/azure/virtual-machines/disks-metrics#storage-io-utilization-metrics) for your VM which can affect SQL Server performance.
 
 To learn more, see the comprehensive [Storage best practices](performance-guidelines-best-practices-storage.md). 
 
@@ -108,6 +114,7 @@ The following is a quick checklist of best practices for SQL Server configuratio
 - Monitor and manage the health and size of the SQL Server [transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file#Recommendations).
 - Take advantage of any new [SQL Server features](/sql/sql-server/what-s-new-in-sql-server-ver15) available for the version being used.
 - Be aware of the differences in [supported features](/sql/sql-server/editions-and-components-of-sql-server-version-15) between the editions you're considering deploying.
+- [Exclude SQL Server files](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b) being scanned by Antivirus
 
 ## Azure features
 
@@ -130,7 +137,7 @@ High availability and disaster recovery (HADR) features, such as the [Always On 
 
 For your Windows cluster, consider these best practices: 
 
-* Deploy your SQL Server VMs to multiple subnets whenever possible to avoid the dependency on an Azure Load Balancer or a distributed network name (DNN) to route traffic to your HADR solution. 
+* Deploy your SQL Server VMs to multiple subnets whenever possible to avoid the dependency on an Azure Load Balancer or a distributed network name (DNN) to route traffic to your HADR solution. Review the various ways to deploy [Availability Group](https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-overview?view=azuresql#deployment-options) on Azure.
 * Change the cluster to less aggressive parameters to avoid unexpected outages from transient network failures or Azure platform maintenance. To learn more, see [heartbeat and threshold settings](hadr-cluster-best-practices.md#heartbeat-and-threshold). For Windows Server 2012 and later, use the following recommended values: 
    - **SameSubnetDelay**:  1 second
    - **SameSubnetThreshold**: 40 heartbeats

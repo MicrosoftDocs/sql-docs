@@ -42,7 +42,7 @@ Resource group or Subscription of Arc Machine.
 
     Users can be assigned to built-in roles such as Contributor or Owner. These roles have sufficient permissions. For more information, review [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
-- The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances deployed on the Server. 
+- The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine. 
 - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs from target SQL Server machine, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
 
   - `global.handler.control.monitor.azure.com`
@@ -72,7 +72,7 @@ Resource group or Subscription of Arc Machine.
 
 1. > [!NOTE]
    >    After you enable the assessment, setup and configuration can take a few minutes.
-   >    The Best practices assessment is enabled for all SQL Server instances deployed on the Server and assess the SQL Server host comprehensively. 
+   >    The Best practices assessment is enabled for all SQL Server instances running on the machine and assess the SQL Server host comprehensively. 
    > 
    
 1. Upon successful best practices assessment deployment, the assessment is scheduled to run every Sunday 12:00 AM local time by default.
@@ -125,6 +125,7 @@ If there are multiple runs in a single day, only the latest run is included in t
 
 - Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 - It may take a few seconds to populate the history of the previous execution of the assessments on the best practices home page.
+- A failure on one or more SQL Server instances, mark the assessment failure for all SQL Server instances running on the same machine.  You can view the assessment results for successful SQL Server instances by directly querying the log analytical workspaces.  You can find a few sample queries [here](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
    
 ## Next steps
 

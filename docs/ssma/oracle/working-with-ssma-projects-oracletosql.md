@@ -72,6 +72,10 @@ To migrate data from Oracle databases to [!INCLUDE[ssNoVersion](../../includes/s
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
+    
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017  
+    
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019  
   
     -   Azure SQL Database  
   

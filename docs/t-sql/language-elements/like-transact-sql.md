@@ -65,7 +65,7 @@ Any valid [expression](../language-elements/expressions-transact-sql.md) of char
 
 The specific string of characters to search for in *match_expression*, and can include valid wildcard characters in the following table. *pattern* can be a maximum of 8,000 bytes.
 
-*match_expression* needs to be a higher precedence data type than *pattern*, and *pattern* should be a length greater than *match_expression*. If either of these conditions aren't met, an error occurs.
+If *match_expression* is a higher precedence data type than *pattern*, and the *pattern* length is greater than *match_expression*, you will get a truncation error during the implicit conversion of *pattern* value to *match_expression* type.
 
 | Wildcard character | Description | Example |
 | --- | --- | --- |

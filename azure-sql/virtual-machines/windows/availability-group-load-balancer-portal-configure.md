@@ -35,15 +35,15 @@ By walking through this article, you create and configure a load balancer in the
 
 ## Need for Load balancer on Azure Single Subnet
 
-In regular WSFC (Windows server failover cluster) on-premise setup, when AG listener is created, it will create a DNS record for AG listener with the IP(s) provided. This IP address has to map now to MAC address of the current Primary node in ARP tables of switches/routers in the network.
+In regular WSFC (Windows server failover cluster) on-premises setup, when AG listener is created, it will create a DNS record for AG listener with the IP(s) provided. This IP address has to map now to MAC address of the current Primary node in ARP tables of switches/routers in the network.
 
 The cluster does this by using Gratuitous ARP (GARP) where it will broadcast to the network the latest IP-to-MAC mapping whenever a new Primary is elected after failover. Here, the IP is listener’s and MAC is of current Primary.
 
-This GARP should force an update on ARP table entries for the switches/routers and to a user connection to the listener IP address seamlessly goes to the current Primary.  GARP (even ARP) is not supported on any public clouds (Azure, GCP and AWS, I believe as well) due to security reasons.
+This GARP should force an update on ARP table entries for the switches/routers and to a user connection to the listener IP address seamlessly goes to the current Primary.  GARP (even ARP) is not supported on any public clouds (Azure, GCP, and AWS) due to security reasons.
 
-In short, any kind of broadcast is not supported on cloud setup.  So, in public cloud’s network infrastructure, load balancers provide traffic routing. In short, the load balancers are setup with a frontend IP, corresponding to the listener, and a probe port is assigned where Load Balancer will periodically poll for status.
+In short, any kind of broadcast is not supported on cloud setup.  So, in public cloud’s network infrastructure, load balancers provide traffic routing. In short, the load balancers are set up with a frontend IP, corresponding to the listener, and a probe port is assigned where Load Balancer will periodically poll for status.
 
-The VM which responds successfully to probe on this port will be forwarded incoming traffic. At one time only one SQL VM (Primary) will respond for this TCP probe. There is also configuration made at WSFC level, where corresponding probe port is setup at cluster IP resource level, thereby ensuring that Primary node does respond to TCP probe.
+The VM which responds successfully to probe on this port will be forwarded incoming traffic. At one time only one SQL VM (Primary) will respond for this TCP probe. There is also configuration made at WSFC level, where corresponding probe port is set up at cluster IP resource level, thereby ensuring that Primary node does respond to TCP probe.
 
 ## Create & configure load balancer
 

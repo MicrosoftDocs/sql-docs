@@ -7,7 +7,6 @@ ms.date: "2/2/2022"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "compatibility levels [SQL Server], viewing"
   - "compatibility [SQL Server], databases"

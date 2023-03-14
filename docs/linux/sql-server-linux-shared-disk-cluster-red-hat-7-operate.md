@@ -8,7 +8,6 @@ ms.date: 03/17/2017
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Operate RHEL failover cluster instance (FCI) for SQL Server
 

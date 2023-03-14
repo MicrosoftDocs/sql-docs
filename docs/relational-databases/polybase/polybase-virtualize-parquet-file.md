@@ -8,7 +8,6 @@ ms.date: 05/10/2022
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 

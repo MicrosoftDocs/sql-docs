@@ -5,12 +5,11 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
-ms.date: 02/27/2023
+ms.date: 03/14/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom:
-  - references_regions
+ms.custom: references_regions
 ---
 # What's new in Azure SQL Managed Instance?
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -27,11 +26,10 @@ This article summarizes the documentation changes associated with new features a
 The following table lists the features of Azure SQL Managed Instance that are currently in preview.
 
 > [!NOTE]  
-> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure Synapse Analytics provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
+> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure SQL Managed Instance provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 | Feature | Details |
 | ---| --- |
-|[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. |
 |[Database copy and move](database-copy-move-how-to.md) | Perform an online database copy or move operation across managed instances. | 
 |[Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  | 
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
@@ -53,6 +51,8 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Shrink Database](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-current&preserve-view=true) and [Shrink File with Low Priority](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true) | March 2023 | This feature solves the concurrency issues that can arise from shrink database and shrink file commands, especially during active maintenance or on busy OLTP environments. In WAIT_AT_LOW_PRIORITY mode, necessary tasks to shrink database files can be completed without negatively affecting application query performance. |
+|[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql)| March 2023 | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
 |[Backup transparency](backup-transparency.md) | November 2022 |  Query the `msdb` database to explore your backup history. | 
 |[Cross-subscription PITR](point-in-time-restore.md) | November 2022 | Restore your database to an instance in a different subscription than your original managed instance by using point-in-time restore (PITR) . 
 |[Migrate to SQL MI with Log Replay Service](log-replay-service-migrate.md) | November 2022 |  Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service. |
@@ -70,13 +70,6 @@ The following table lists the new generally available (GA) features of Azure SQL
 |[Query Store hints](/sql/relational-databases/performance/query-store-hints?view=azuresqldb-mi-current&preserve-view=true) | August 2022 | Use query hints to optimize your query execution via the OPTION clause. |
 |[Premium-series hardware](resource-limits.md#service-tier-characteristics) | July 2022 | Deploy your SQL Managed Instance to the new premium-series hardware to take advantage of the latest Intel Ice Lake CPUs.  | 
 |[Maintenance window](../database/maintenance-window.md)| March 2022 | The maintenance window feature allows you to configure maintenance schedule for your Azure SQL Managed Instance. [Maintenance window advance notifications](../database/advance-notifications.md), however, are in preview for Azure SQL Managed Instance.|
-|[16-TB support in General Purpose](resource-limits.md)| November 2021 |  Support for allocation up to 16 TB of space on SQL Managed Instance in the General Purpose service tier. |
-[Azure Active Directory-only authentication](../database/authentication-azure-ad-only-authentication.md) | November 2021 |  It's now possible to restrict authentication to your Azure SQL Managed Instance only to Azure Active Directory users. |
-|[Distributed transactions](../database/elastic-transactions-overview.md) | November 2021 | Distributed database transactions for Azure SQL Managed Instance allow you to run distributed transactions that span several databases across instances. | 
-|[Linked server - managed identity Azure AD authentication](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql#h-create-sql-managed-instance-linked-server-with-managed-identity-azure-ad-authentication) |November 2021 | Create a linked server with managed identity authentication for your Azure SQL Managed Instance.|
-|[Linked server - pass-through Azure AD authentication](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql#i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication) |November 2021 | Create a linked server with pass-through Azure AD authentication for your Azure SQL Managed Instance. |
-|[Long-term backup retention](long-term-backup-retention-configure.md) |November 2021 | Store full backups for a specific database with configured redundancy for up to 10 years in Azure Blob storage, restoring the database as a new database. |
-|[Move instance to different subnet](vnet-subnet-move-instance.md)| November 2021 | Move SQL Managed Instance to a different subnet using the Azure portal, Azure PowerShell or the Azure CLI.  |
 
 
 
@@ -91,8 +84,14 @@ Eligible existing instances created prior to November 2022 can enroll into the f
 
 ## Documentation changes
 
-Learn about significant changes to the Azure SQL Managed Instance documentation.
+Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+### March 2023
+
+| Changes | Details |
+| --- | --- |
+| **Shrink Database / Shrink File with Low Priority GA** | This feature solves the concurrency issues that can arise from shrink database and shrink file commands, especially during active maintenance or on busy OLTP environments. In WAIT_AT_LOW_PRIORITY mode, necessary tasks to shrink database files can be completed without negatively affecting application query performance. Review [Shrink Database](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-current&preserve-view=true) and [Shrink File with Low Priority](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true). |
+|**Approximate Percentile GA** | Support has been added to quickly compute percentiles using approximate percentile aggregate functions for large datasets with acceptable rank-based error bounds. This feature is GA now. To learn more, review [Approx_Percentile_Cont](/sql/t-sql/functions/approx-percentile-cont-transact-sql) and [Approx_Percentile_Disc](/sql/t-sql/functions/approx-percentile-disc-transact-sql). | 
 
 ### 2022
 

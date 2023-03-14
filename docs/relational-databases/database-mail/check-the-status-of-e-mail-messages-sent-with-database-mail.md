@@ -6,7 +6,6 @@ ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "e-mail [SQL Server], status information"
   - "mail [SQL Server], status information"

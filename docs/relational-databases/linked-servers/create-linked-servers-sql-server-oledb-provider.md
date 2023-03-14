@@ -7,7 +7,6 @@ ms.reviewer: "MikeRayMSFT"
 ms.date: "07/01/2019"
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Microsoft SQL Server Distributed Queries: OLE DB Connectivity

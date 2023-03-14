@@ -7,7 +7,6 @@ ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "namespaces [SQLXML], annotated XSD schemas"
   - "targetNamespace attribute"

@@ -8,10 +8,7 @@ ms.date: 08/22/2022
 ms.service: sql
 ms.subservice: polybase
 ms.topic: "overview"
-ms.custom:
-  - contperf-fy21q2
-  - intro-overview
-  - event-tier1-build-2022
+ms.custom: intro-overview
 f1_keywords:
   - "PolyBase"
   - "PolyBase, guide"

@@ -7,7 +7,6 @@ ms.date: 10/25/2021
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "query optimizer [SQL Server], index usage"
   - "index concepts [SQL Server]"

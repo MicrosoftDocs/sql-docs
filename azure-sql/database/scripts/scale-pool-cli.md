@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: sample
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ms.devlang: azurecli
 ---
 

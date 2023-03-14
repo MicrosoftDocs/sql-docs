@@ -7,7 +7,6 @@ ms.date: "09/14/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 # SQL Server In-Memory OLTP Internals for SQL Server 2016
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

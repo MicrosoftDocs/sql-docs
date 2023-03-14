@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "Master Data Services, overview"
   - "Master Data Services"
-keywords: "what is master data"
+keywords: what is master data
 ---
 # Master Data Services Overview (MDS)
 

@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "contperf-fy21q3"
+  - sqldbrb=1
+  - contperf-fy21q3
 dev_langs:
   - "TSQL"
 ---

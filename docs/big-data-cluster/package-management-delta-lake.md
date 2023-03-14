@@ -9,7 +9,6 @@ ms.date: 10/06/2021
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ---
 
 # Delta Lake on SQL Server Big Data Clusters

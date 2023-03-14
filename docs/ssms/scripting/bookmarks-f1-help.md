@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: "reference"
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], Help"
   - "bookmarks [SQL Server Management Studio]"

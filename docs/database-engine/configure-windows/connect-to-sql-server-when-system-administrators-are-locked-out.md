@@ -7,7 +7,6 @@ ms.date: 07/14/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-ms.custom: contperf-fy20q4
 helpviewer_keywords:
   - "sa account"
   - "connecting when locked out [SQL Server]"

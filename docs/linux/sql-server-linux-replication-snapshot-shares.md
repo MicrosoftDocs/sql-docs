@@ -9,7 +9,6 @@ ms.date: 09/24/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: article
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure replication snapshot folder with shares

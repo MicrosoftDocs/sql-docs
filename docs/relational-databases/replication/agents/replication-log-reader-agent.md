@@ -7,6 +7,7 @@ ms.date: "10/29/2018"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Log Reader Agent, executables"
   - "Log Reader Agent, parameter reference"

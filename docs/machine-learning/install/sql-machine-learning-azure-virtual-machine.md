@@ -7,9 +7,7 @@ ms.date: 01/02/2020
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # Install SQL Server Machine Learning Services with Python and R on an Azure virtual machine

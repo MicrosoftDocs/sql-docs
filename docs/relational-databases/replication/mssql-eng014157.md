@@ -7,6 +7,7 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "MSSQL_ENG014157 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"

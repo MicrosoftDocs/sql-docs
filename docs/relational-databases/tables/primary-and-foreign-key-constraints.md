@@ -8,7 +8,6 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "foreign keys [SQL Server], cascading referential integrity"
   - "FOREIGN KEY constraints"

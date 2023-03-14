@@ -7,7 +7,6 @@ ms.date: "05/18/2019"
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
 ---

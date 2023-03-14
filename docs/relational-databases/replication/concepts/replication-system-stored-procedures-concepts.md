@@ -7,6 +7,7 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "stored procedures [SQL Server replication], programming"
   - "programming [SQL Server replication], system stored procedures"

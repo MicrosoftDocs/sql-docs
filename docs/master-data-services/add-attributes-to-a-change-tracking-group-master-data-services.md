@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "change tracking groups [Master Data Services]"
   - "attributes [Master Data Services], change tracking groups"

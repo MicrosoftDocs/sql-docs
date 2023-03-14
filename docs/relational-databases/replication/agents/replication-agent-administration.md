@@ -7,6 +7,7 @@ ms.date: "08/24/2016"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "Snapshot Agent, administering"
   - "Log Reader Agent, administering"

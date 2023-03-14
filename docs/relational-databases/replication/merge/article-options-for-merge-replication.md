@@ -7,6 +7,7 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "merge replication [SQL Server replication], article options"
   - "articles [SQL Server replication], merge replication options"

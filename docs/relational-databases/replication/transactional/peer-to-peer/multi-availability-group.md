@@ -6,7 +6,9 @@ ms.author: mikeray
 ms.date: 10/05/2021
 ms.service: sql
 ms.topic: how-to
-ms.custom: template-how-to
+ms.custom:
+  - template-how-to
+  - updatefrequency5
 ---
 
 # Configure both peers in availability groups

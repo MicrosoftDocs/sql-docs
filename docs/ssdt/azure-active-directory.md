@@ -7,7 +7,6 @@ ms.date: 10/28/2019
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 

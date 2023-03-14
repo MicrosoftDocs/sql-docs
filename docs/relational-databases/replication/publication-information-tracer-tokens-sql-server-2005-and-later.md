@@ -7,7 +7,7 @@ ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom: updatefrequency5
 f1_keywords:
   - "sql13.rep.monitor.publicationinfo.tracertokens.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"

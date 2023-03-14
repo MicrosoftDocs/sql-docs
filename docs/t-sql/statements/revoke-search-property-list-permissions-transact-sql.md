@@ -8,7 +8,6 @@ ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "full-text search [SQL Server], permissions"
   - "search property lists [SQL Server], permissions"

@@ -109,7 +109,7 @@ items:
           href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
         - name: To a mirrored media set
           href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
-        - name: Schedule Database Backups
+        - name: Schedule database backups
           href: relational-databases/backup-restore/schedule-database-backup-operation-ssms.md
       - name: Restore
         items:
@@ -10059,7 +10059,7 @@ items:
       href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
       href: relational-databases/tutorial-ownership-chains-and-context-switching.md
-    - name: Using Azure Blob Storage with SQL Server 2016 databases
+    - name: Use Azure Blob Storage with SQL Server databases
       href: relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
   - name: Writing T-SQL Statements
     href: t-sql/tutorial-writing-transact-sql-statements.md
@@ -10443,6 +10443,8 @@ items:
         href: sql-server/azure-arc/delete-from-azure-arc.md
       - name: Manage SQL Server license and billing options
         href: sql-server/azure-arc/manage-license-type.md
+      - name: Configure automated patching
+        href: sql-server/azure-arc/patch.md
     - name: Secure
       items:
       - name: Configure advanced data Security
@@ -10469,6 +10471,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 19
+          href: big-data-cluster/release-notes-cumulative-update-19.md
         - name: Cumulative Update 18
           href: big-data-cluster/release-notes-cumulative-update-18.md
         - name: Cumulative Update 17
@@ -15207,6 +15211,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
       - name: sp_help_change_feed
         href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_help_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
       - name: sp_change_feed_configure_parameters
         href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
       - name: sp_change_feed_create_table_group
@@ -15215,8 +15221,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
       - name: sp_change_feed_enable_table
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
-      - name: sp_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-table.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:

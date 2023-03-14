@@ -7,7 +7,6 @@ ms.date: 01/19/2019
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "AlwaysOn"
   - "DB_FAILOVER"

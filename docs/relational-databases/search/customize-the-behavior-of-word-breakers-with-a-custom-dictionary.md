@@ -8,7 +8,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Customize behavior of word breakers with a custom dictionary (SQL Server Search)

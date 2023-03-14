@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 02/27/2023
+ms.date: 03/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -28,13 +28,12 @@ This article summarizes the documentation changes associated with new features a
 The following table lists the features of Azure SQL Database that are currently in preview.
 
 > [!NOTE]  
-> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure Synapse Analytics provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
+> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 | Feature | Details |
 | ---| --- |
 | [128 vCore](resource-limits-vcore-single-databases.md#general-purpose---provisioned-compute---gen5) | Provision your Azure SQL Database with up to 128 virtual cores (vCores). | 
 | [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) | Take advantage of rich confidential queries and in-place cryptographic operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. | 
-| [Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
 | [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md) | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. |
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
@@ -61,6 +60,8 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Shrink Database](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-current&preserve-view=true) and [Shrink File with Low Priority](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true) | March 2023 | This feature solves the concurrency issues that can arise from shrink database and shrink file commands, especially during active maintenance or on busy OLTP environments. In WAIT_AT_LOW_PRIORITY mode, necessary tasks to shrink database files can be completed without negatively affecting application query performance. |
+| [Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | March 2023 | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. |
 | [Optimized locking](/sql/relational-databases/performance/optimized-locking) | February 2023 | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Currently, optimized locking is available only in select regions.|
 | [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) | November 2022|  Azure Synapse Link for SQL enables near real time analytics over operational data in Azure SQL Database or SQL Server 2022. |
 | [Restore progress](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) |November 2022 | Restore progress tracked in the `percent_complete` column sys.dm_operation_status. | 
@@ -81,13 +82,20 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 ## Documentation changes
 
-Learn about significant changes to the Azure SQL Database documentation.
+Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
+### March 2023
+
+| Changes | Details |
+| --- | --- |
+| **Approximate Percentile GA** | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate. This feature is generally available now. Review  [Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) to learn more.  | 
+| **Shrink Database / Shrink File with Low Priority GA** | This feature solves the concurrency issues that can arise from shrink database and shrink file commands, especially during active maintenance or on busy OLTP environments. In WAIT_AT_LOW_PRIORITY mode, necessary tasks to shrink database files can be completed without negatively affecting application query performance. Review [Shrink Database](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=azuresqldb-current&preserve-view=true) and [Shrink File with Low Priority](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql?view=azuresqldb-current&preserve-view=true). |
 
 ### February 2023
 
 | Changes | Details |
 | --- | --- |
+| **Azure SQL Database high availability and disaster recovery checklist** | [This guide provides a detailed review of proactive steps you can take](high-availability-disaster-recovery-checklist.md) to maximize availability, ensure recovery, and prepare for Azure outages. |
 | **Always Encrypted with VBS enclaves preview** | Take advantage of rich confidential queries and in-place cryptographic operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. This feature is currently in preview. Review [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) to learn more.  | 
 | **Optimized locking GA** | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking amongst concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Currently, optimized locking is available only in select regions. This feature is generally available. Review [Optimized locking](/sql/relational-databases/performance/optimized-locking) to learn more. |
 |**Cross-tenant CMK with TDE preview** | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. This feature is currently in preview. Review [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md) to learn more. 

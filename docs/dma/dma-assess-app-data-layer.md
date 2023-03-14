@@ -7,9 +7,7 @@ ms.date: 05/18/2022
 ms.service: sql
 ms.subservice: dma
 ms.topic: how-to
-ms.custom:
-  - "seo-lt-2019"
-  - kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment
 helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ---

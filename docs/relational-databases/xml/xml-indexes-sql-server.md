@@ -8,7 +8,6 @@ ms.date: 05/09/2022
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "removing indexes"
   - "deleting indexes"

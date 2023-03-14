@@ -7,6 +7,7 @@ ms.date: "01/10/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 f1_keywords:
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"

@@ -8,10 +8,7 @@ ms.date: 05/24/2022
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: quickstart
-ms.custom:
-  - contperf-fy21q1
-  - intro-quickstart
-  - event-tier1-build-2022
+ms.custom: intro-quickstart
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

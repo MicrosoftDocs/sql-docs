@@ -8,9 +8,7 @@ ms.date: 09/28/2020
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: quickstart
-ms.custom:
-  - seo-lt-2019
-  - intro-quickstart
+ms.custom: intro-quickstart
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Quickstart: Data structures and objects using Python with SQL machine learning

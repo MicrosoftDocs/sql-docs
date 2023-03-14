@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "clusters [SQL Server], recovery from failure"
   - "failover clustering [SQL Server], recovery from failure"

@@ -7,6 +7,7 @@ ms.date: "03/02/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "non-SQL Server Subscribers, IBM DB2"
   - "data types [SQL Server replication], non-SQL Server Subscribers"

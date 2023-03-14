@@ -8,7 +8,6 @@ ms.date: 12/04/2019
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Transact-SQL debugger, Locals Window"
   - "Transact-SQL debugger, Watch Window"

@@ -7,7 +7,6 @@ ms.date: 03/07/2022
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "Query Store, usage scenarios"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"

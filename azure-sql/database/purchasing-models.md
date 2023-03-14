@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "azure-sql-split"
+  - sqldbrb=1
+  - azure-sql-split
 ---
 # Compare vCore and DTU-based purchasing models of Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

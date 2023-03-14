@@ -1,12 +1,12 @@
 ---
-title: 'Quickstart: Create managed instance with Terraform'
+title: "Quickstart: Create managed instance with Terraform"
 description: Learn how to create and deploy SQL Managed Instance with Terraform
-ms.topic: quickstart
-ms.date: 12/06/2022
-ms.custom: devx-track-terraform
 author: urosran
 ms.author: urandjelovic
+ms.date: 12/06/2022
 ms.service: sql-managed-instance
+ms.topic: quickstart
+ms.custom: devx-track-terraform
 ---
 
 # Quickstart: Create instance with Terraform - Azure SQL Managed Instance

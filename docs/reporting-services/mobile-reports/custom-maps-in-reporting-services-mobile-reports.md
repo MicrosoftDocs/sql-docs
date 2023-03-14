@@ -7,7 +7,6 @@ ms.date: 07/21/2022
 ms.service: reporting-services
 ms.subservice: mobile-reports
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 # Custom maps in Reporting Services mobile reports
 

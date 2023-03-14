@@ -7,9 +7,7 @@ ms.date: "04/04/2018"
 ms.service: sql
 ms.subservice: samples
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 ---
 # Installation and configuration
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

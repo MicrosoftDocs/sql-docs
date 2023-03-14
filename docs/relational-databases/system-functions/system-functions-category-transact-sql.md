@@ -7,7 +7,6 @@ ms.date: "11/02/2016"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "system stored functions [SQL Server]"
 dev_langs:

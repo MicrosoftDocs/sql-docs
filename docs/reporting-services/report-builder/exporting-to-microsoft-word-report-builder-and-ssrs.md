@@ -7,7 +7,6 @@ ms.date: 09/02/2021
 ms.service: reporting-services
 ms.subservice: report-builder
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 
 # Export a paginated report to Microsoft Word (Report Builder)

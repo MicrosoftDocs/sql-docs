@@ -7,9 +7,6 @@ ms.date: 08/11/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Set up a data science client for Python development on SQL Server Machine Learning Services

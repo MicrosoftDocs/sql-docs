@@ -7,7 +7,7 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "history retention periods [SQL Server replication]"
   - "retention periods [SQL Server replication]"

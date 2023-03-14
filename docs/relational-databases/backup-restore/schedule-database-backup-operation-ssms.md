@@ -7,7 +7,7 @@ ms.reviewer: ramakoni1
 ms.date: "02/23/2023"
 ms.service: sql
 ms.subservice: backup-restore
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # How to schedule a database backup operation by using SQL Server Management Studio

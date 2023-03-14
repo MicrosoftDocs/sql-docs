@@ -7,7 +7,6 @@ ms.date: "01/25/2022"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Options [SQL Server Management Studio], IntelliSense"
   - "modifying IntelliSense options"

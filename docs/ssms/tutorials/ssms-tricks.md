@@ -7,7 +7,6 @@ ms.date: 03/13/2018
 ms.service: sql
 ms.subservice: ssms
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "source controls [SQL Server Management Studio], tutorials"
   - "Help [SQL Server], SQL Server Management Studio"
@@ -220,7 +219,7 @@ The path for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erro
 
     ![Error log](media/ssms-tricks/errorlog.png)
 
-    There are several error log files in this location. The file name that ends with *.log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
+    There are several error log files in this location. The file name that ends with *log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
 
 6. Open the errorlog.log file in Notepad.
 

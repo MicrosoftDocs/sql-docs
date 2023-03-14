@@ -7,9 +7,7 @@ ms.date: 09/01/2020
 ms.service: reporting-services
 ms.subservice: application-integration
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-get-started
+ms.custom: intro-get-started
 ---
 # Integrate Reporting Services Using the Report Viewer Controls - Get Started
 

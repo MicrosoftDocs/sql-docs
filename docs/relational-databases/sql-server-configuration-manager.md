@@ -6,7 +6,6 @@ ms.author: "maghan"
 ms.date: 07/25/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "protocols [SQL Server], managing"
   - "network protocols [SQL Server], managing"

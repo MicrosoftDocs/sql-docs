@@ -7,7 +7,10 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: "machine-learning-services"
 ms.topic: "reference"
-keywords: models, classification, regression
+keywords:
+  - models
+  - classification
+  - regression
 ms.devlang: Python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
@@ -165,7 +168,7 @@ value is 0.
 ### gain_conf_level
 
 Tree fitting gain confidence requirement (should be in
-the range [0,1) ). The default value is 0.
+the range `[0,1]`). The default value is 0.
 
 
 ### train_threads

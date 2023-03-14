@@ -18,7 +18,7 @@ tags: azure-resource-manager
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
-> Eliminate the need for an Azure load balancer for your Always On availability group by creating your SQL Server virtual machines (VMs) in multiple subnets within the same Azure virtual network.
+> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
 
 This article describes how to use the [Azure portal](https://portal.azure.com) to configure an availability group for SQL Server on Azure VMs in multiple subnets by creating:
 
@@ -51,9 +51,9 @@ To configure an Always On availability group by using the Azure portal, you must
 
 - The following account permissions:
 
-  - A domain admin user account that has **Create Computer Object** permissions in the domain. This user will create the cluster and availability group, and will install SQL Server. 
+  - A domain user account that has **Create Computer Object** permissions in the domain. This user will create the cluster and availability group, and will install SQL Server.
   
-    For example, a domain admin account (`account@domain.com`) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
+    For example, a domain user account (`account@domain.com`) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
 
   - A domain SQL Server service account to control SQL Server. This should be the same account for every SQL Server VM that you want to add to the availability group.
 
@@ -152,8 +152,6 @@ For the deployment to work, all the accounts need to already be present in Activ
    - For **Domain join user name** and **Domain join password**, enter the credentials for the account that creates the Windows Server failover cluster name in Active Directory and joins the VMs to the domain. *This account must have Create Computer Objects permissions*.
 
    - For **Domain FQDN**, enter a fully qualified domain name, such as **contoso.com**.
-
-   - For **Ou path**, enter an organizational unit (OU) path for Active Directory if you're using one.
 
     :::image type="content" source="./media/availability-group-az-portal-configure/windows-ad-domain.png" alt-text="Screenshot of the Azure portal that shows Windows Active Directory domain details.":::
 

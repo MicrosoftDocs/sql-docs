@@ -8,7 +8,6 @@ ms.date: 12/13/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "bcp utility [SQL Server]"
   - "exporting data"

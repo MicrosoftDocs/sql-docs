@@ -7,7 +7,6 @@ ms.date: "03/20/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.mds.configmanager.createapp.f1"
 ---

@@ -6,7 +6,9 @@ ms.author: mikeray
 ms.date: 11/1/2021
 ms.service: sql
 ms.topic: how-to
-ms.custom: template-how-to
+ms.custom:
+  - template-how-to
+  - updatefrequency5
 ---
 
 # Configure last writer conflict detection & resolution

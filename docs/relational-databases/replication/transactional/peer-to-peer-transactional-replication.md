@@ -7,6 +7,7 @@ ms.date: 01/05/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "bidirectional replication"
   - "transactional replication, bidirectional replication"

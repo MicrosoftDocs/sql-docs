@@ -7,7 +7,6 @@ ms.date: "01/28/2019"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "contained database, users"
   - "user [SQL Server], about contained database users"

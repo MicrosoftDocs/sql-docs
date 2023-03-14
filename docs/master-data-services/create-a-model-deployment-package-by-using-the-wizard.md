@@ -7,7 +7,6 @@ ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: master-data-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "deployment packages [Master Data Services], creating"
   - "models [Master Data Services], creating a deployment package"

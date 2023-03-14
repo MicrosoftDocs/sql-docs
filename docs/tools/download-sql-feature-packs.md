@@ -8,7 +8,6 @@ ms.date: 09/17/2021
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 keywords: feature pack
 ---
 # Download SQL Server extended features and tools

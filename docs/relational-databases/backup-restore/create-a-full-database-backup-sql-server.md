@@ -7,7 +7,6 @@ ms.date: "05/12/2021"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: contperf-fy21q4-portal
 helpviewer_keywords:
   - "backing up databases [SQL Server], full backups"
   - "backing up databases [SQL Server], SQL Server Management Studio"

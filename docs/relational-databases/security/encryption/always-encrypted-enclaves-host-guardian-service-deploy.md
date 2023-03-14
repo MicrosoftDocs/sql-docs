@@ -8,9 +8,7 @@ ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom:
-  - intro-deployment
-  - event-tier1-build-2022
+ms.custom: intro-deployment
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

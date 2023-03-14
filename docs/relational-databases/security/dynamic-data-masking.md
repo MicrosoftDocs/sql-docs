@@ -7,7 +7,6 @@ ms.date: "09/27/2022"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Dynamic Data Masking

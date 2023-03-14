@@ -1,6 +1,6 @@
 ---
-title: "EnvelopeCenter (geography Data Type )"
-description: "EnvelopeCenter (geography Data Type )"
+title: "EnvelopeCenter (geography Data Type)"
+description: "EnvelopeCenter (geography Data Type)"
 author: MladjoA
 ms.author: mlandzic
 ms.date: "03/14/2017"

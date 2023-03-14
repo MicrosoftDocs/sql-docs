@@ -8,7 +8,6 @@ ms.date: "11/04/2015"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Always Encrypted, bulk import"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

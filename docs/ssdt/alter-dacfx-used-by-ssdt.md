@@ -8,7 +8,6 @@ ms.date: 01/07/2022
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 keywords: ssdt dacfx
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---

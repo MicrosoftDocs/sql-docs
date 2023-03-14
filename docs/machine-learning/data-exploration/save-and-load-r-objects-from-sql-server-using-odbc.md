@@ -7,7 +7,6 @@ ms.date: 04/27/2021
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: contperf-fy21q4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Use ODBC to save and load R objects in SQL Server Machine Learning Services

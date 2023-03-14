@@ -10,7 +10,7 @@ ms.subservice:
 ms.topic: conceptual 
 ---
 
-# Configure automated patching for Arc-enabled SQL Servers (preview)
+# Configure automated patching for Arc-enabled SQL Servers preview
 
 You can configure automated patching for Azure Arc-enabled SQL Servers
 

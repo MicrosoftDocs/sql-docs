@@ -70,9 +70,11 @@ Resource group or Subscription of Arc Machine.
 
    :::image type="content" source="media/assess/click-on-enable.png" alt-text="Screenshot showing the enable best practices assessment screen of an Arc-enabled SQL Server resource.":::
 
-   > [!NOTE]
-   > After you enable the assessment, setup and configuration can take a few minutes.
-
+1. > [!NOTE]
+   >    After you enable the assessment, setup and configuration can take a few minutes.
+   >    The Best practices assessment is enabled for all SQL Server instances deployed on the Server and assess the SQL Server host comprehensively. 
+   > 
+   
 1. Upon successful best practices assessment deployment, the assessment is scheduled to run every Sunday 12:00 AM local time by default.
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-enabled.png" alt-text="Screenshot showing the successful enablement of best practices assessment of an Arc-enabled SQL Server resource.":::

@@ -31,8 +31,7 @@ The Environment Health assessment is replaced with a much richer best practices 
   > [!NOTE]
   > Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
-- Make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServerI`) is "**1.1.2202.47**" or above. Learn how to [check the **Azure Extension for SQL Server** version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
-
+- If SQL Server is hosting a single SQL Server instance make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is "**1.1.2202.47**" or above.  In the case of SQL Server hosting multiple SQL Server instances, make sure that the version of Azure Extension for SQL Server (`WindowsAgent.SqlServer`) is greater than "**1.1.2231.59".** Learn how to [check the ](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[Azure Extension for SQL Server](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)**[ version and update to the latest.](/azure/azure-arc/servers/manage-vm-extensions-portal#upgrade-extensions)
 - [A Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal) in the same subscription as your Arc-enabled SQL Server resource to upload assessment results to.
 - The user configuring SQL BPA must have following permissions.
 
@@ -43,8 +42,7 @@ Resource group or Subscription of Arc Machine.
 
     Users can be assigned to built-in roles such as Contributor or Owner. These roles have sufficient permissions. For more information, review [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
-- The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role. 
-
+- The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine. 
 - If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs from target SQL Server machine, make sure the URLs listed below allowed access to Azure Arc over TCP port 443.
 
   - `global.handler.control.monitor.azure.com`
@@ -72,9 +70,11 @@ Resource group or Subscription of Arc Machine.
 
    :::image type="content" source="media/assess/click-on-enable.png" alt-text="Screenshot showing the enable best practices assessment screen of an Arc-enabled SQL Server resource.":::
 
-   > [!NOTE]
-   > After you enable the assessment, setup and configuration can take a few minutes.
-
+1. > [!NOTE]
+   >    After you enable the assessment, setup and configuration can take a few minutes.
+   >    The Best practices assessment is enabled for all SQL Server instances running on the machine and assess the SQL Server host comprehensively. 
+   > 
+   
 1. Upon successful best practices assessment deployment, the assessment is scheduled to run every Sunday 12:00 AM local time by default.
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-enabled.png" alt-text="Screenshot showing the successful enablement of best practices assessment of an Arc-enabled SQL Server resource.":::
@@ -87,28 +87,27 @@ If an instance of SQL Server is configured with a license only type of license, 
 
 ## Manage best practices assessment
 
-After you have enabled best practices assessment, you can do the following additional tasks:
+After you have enabled the best practices assessment, you can do the following additional tasks:
 
-- To run assessment on-demand, select **Run Assessment**.
+
+> [!NOTE]
+> Performing any of the tasks below on a specific SQL Server instance will be applied to all SQL Server instances running on the machine.
+
+- To run the assessment on-demand, select **Run Assessment**.  
 - To change the default schedule, select **Configuration** and **Schedule assessment**.
 
-   :::image type="content" source="media/assess/sql-best-practices-assessment-change-schedule.png" alt-text="Screenshot showing how to change the schedule of best practices assessment and scheduled screen of an Arc-enabled SQL Server resource.":::
-
 - To disable an assessment select **Configuration** and **Disable assessment**.
-
-   :::image type="content" source="media/assess/sql-best-practices-assessment-disable.png" alt-text="Screenshot showing how to disable the best practices assessment of an Arc-enabled SQL Server resource.":::
-
 ## View best practices assessment results
 
-- On the **Best practices assessment** pane, select the **View assessment results** button.
+- - On the **Best practices assessment** pane, select the **View assessment results** button.
 
-  The **View assessment results** button remains disabled until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
+     The **View assessment results** button remains disabled until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
 
-  :::image type="content" source="media/assess/sql-best-practices-assessment-view.png" alt-text="Screenshot showing the View Assessment results.":::
+     :::image type="content" source="media/assess/sql-best-practices-assessment-view.png" alt-text="Screenshot showing the View Assessment results.":::
 
 ## Results page
 
-The **Results** page reports all the issues categorized based on their severity. The recommendations are organized into **All**, **New** and **Resolved** tabs. The tabs can be used to view all the recommendations from the currently selected run, the newer recommendations compared to the previous run, and the resolved recommendations from the previous runs respectively. The tabs help to keep track of the progress between the runs. The **Insights** tab identifies the most recurring issues and the databases with the maximum number of issues.
+The **Results** page reports all the issues categorized based on their severity for all the SQL Server instances running on the machine.  You can switch the results view between the SQL Server instances running on the machine and assessment execution times  using the top-down menus "Instance name" and "Collected at" respectively.  The recommendations are organized into **All**, **New,** and **Resolved** tabs. The tabs can be used to view all the recommendations from the currently selected run, the newer recommendations compared to the previous run, and the resolved recommendations from the previous runs respectively. The tabs help to keep track of the progress between the runs. The **Insights** tab identifies the most recurring issues and the databases with the maximum number of issues.
 
 The graph groups assessment results in different categories of severity - high, medium, low, and information. Select each category to see the list of recommendations, or search for key phrases in the search box. It's best to start with the most severe recommendations and go down the list.
 The first grid shows each recommendation and the affected instances in the environment with the reported issues. When a row is selected in the first grid, the second grid lists all the affected instances for that particular recommendation. If no recommendation is selected, then the second grid shows all the recommendations. In case of a large number of reported recommendations, the results can be filtered using the drop-downs above the grid, namely **Name, Severity, Tags, and Check Id**. The **Export to Excel** and **Open the last run query in the Logs view** options at the top right of the grid can also be used to download the results and open the results in the Log Analytics workspace blade respectively.
@@ -118,15 +117,16 @@ View detailed information for each recommendation by selecting the **Message** f
 
 ## Trends page
 
-There are three charts on the **Trends** page to show changes over time: all issues, new issues, and resolved issues. The charts help you see your progress. Ideally, the number of recommendations should go down while the number of resolved issues goes up. The legend shows the average number of issues for each severity level. Hover over the bars to see the individual vales for each run.
+There are three charts on the **Trends** page to show changes over time: all issues, new issues, and resolved issues. The charts help you see your progress. Ideally, the number of recommendations should decrease while the number of resolved issues increases. The legend shows the average number of issues for each severity level. Hover over the bars to see the individual values for each run.
 
 If there are multiple runs in a single day, only the latest run is included in the graphs on the **Trends** page.
 
 ## Known issues
 
 - Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
-- It may take a few seconds to populate the history of the previous execution of the assessments on best practices home page.
-
+- It may take a few seconds to populate the history of the previous execution of the assessments on the best practices home page.
+- A failure on one or more SQL Server instances, mark the assessment failure for all SQL Server instances running on the same machine.  You can view the assessment results for successful SQL Server instances by directly querying the log analytical workspaces.  You can find a few sample queries [here](https://techcommunity.microsoft.com/t5/sql-server-blog/best-practices-assessment-arc-enabled-sql-server/ba-p/3715776).
+   
 ## Next steps
 
 - [Connect your SQL Server to Azure Arc](connect.md).

@@ -4,7 +4,7 @@ description: "Transaction locking and row versioning guide"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/13/2023
+ms.date: 03/14/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -24,10 +24,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
 
 > [!NOTE]
-> **Optimized locking** is a Database Engine feature introduced in 2023 that drastically reduces lock memory and the number of locks concurrently required for writes. Optimized locking reduces lock memory and the number of locks required for concurrent writes. This article has been updated to describe [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] with and without optimized locking.
+> **Optimized locking** is a Database Engine feature introduced in 2023 that drastically reduces lock memory and the number of locks concurrently required for writes. Optimized locking reduces lock memory and the number of locks required for concurrent writes. This article has been updated to describe [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] with and without optimized locking. **Currently, optimized locking is available in Azure SQL Database only.**
 > 
 > - For more information and to learn where optimized locking is available, see [Optimized locking](performance/optimized-locking.md). 
-> - To determine if optimized locking is enabled on your database, see [Is optimized locking enabled?](performance/optimized-locking.md#is-optimized-locking-enabled).
+> - To determine if optimized locking is enabled on your database, see [Is optimized locking enabled?](performance/optimized-locking.md#is-optimized-locking-enabled)
 >
 > Optimized locking has significantly updated some sections of this article, including:
 > - [Locking in the Database Engine](#Lock_Engine)
@@ -369,9 +369,9 @@ Before a transaction acquires a dependency on the current state of a piece of da
 
 When a transaction modifies a piece of data, it holds certain locks protecting the modification until the end of the transaction. How long a transaction holds the locks acquired to protect read operations depends on the transaction isolation level setting and whether or not [optimized locking is enabled](performance/optimized-locking.md#is-optimized-locking-enabled).
 
-- When optimized locking is not enabled, row and page locks necessary for writes are held until the end of the transaction.
+- When optimized locking is not enabled, row and page locks necessary for writes are held until the end of the transaction. 
 
-- When optimized locking is enabled, data consistency is still achieved by short-duration row and page locks. Transactions will not hold row and page locks necessary for writes until the end of the transaction, instead, one rowlock is taken at a time, then released. Only a Transaction ID (TID) lock is held for the duration of the transaction, improving the concurrency of write operations. Further, when optimized locking is enabled, the lock after qualification (LAQ) optimization evaluates predicates of a query on the latest committed version of the row without acquiring a lock, further improving concurrency.
+- When optimized locking is enabled, only a Transaction ID (TID) lock is held for the duration of the transaction. Under the default isolation level, transactions will not hold row and page locks necessary for writes until the end of the transaction. This reduces lock memory required and reduces the need for lock escalation. Further, when optimized locking is enabled, the lock after qualification (LAQ) optimization evaluates predicates of a query on the latest committed version of the row without acquiring a lock, improving concurrency.
 
 All locks held by a transaction are released when the transaction completes (either commits or rolls back).
 
@@ -611,7 +611,7 @@ DELETE mytable
 WHERE name = 'Bob';  
 ```  
   
- An exclusive (X) lock is placed on the index entry corresponding to the name `Bob`. Other transactions can insert or delete values before or after the deleted value `Bob`. However, any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back.  
+ An exclusive (X) lock is placed on the index entry corresponding to the name `Bob`. Other transactions can insert or delete values before or after the deleted value `Bob`. However, any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (Certain isolation levels like READ_COMMITTED_SNAPSHOT and SNAPSHOT may allow reads from a row-version of the previously-committed state.)
   
  Range delete can be executed using three basic lock modes: row, page, or table lock. The row, page, or table locking strategy is decided by Query Optimizer or can be specified by the user through Query Optimizer hints such as ROWLOCK, PAGLOCK, or TABLOCK. When PAGLOCK or TABLOCK is used, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] immediately deallocates an index page if all rows are deleted from this page. In contrast, when ROWLOCK is used, all deleted rows are marked only as deleted; they are removed from the index page later using a background task.  
   
@@ -623,11 +623,11 @@ WHERE name = 'Bob';
 DELETE mytable  
 WHERE name = 'Bob';  
 ```  
-  
- A TID lock is placed on all the modified rows for the duration of the transaction. A lock is taken on the TID of the index entries corresponding to the name `Bob`. With TID locking, page and row locks continue to be taken for updates, but each page and row lock is released as soon as each row is updated. Other transactions can write to the same rows, even those including `Bob`, by referencing the previously committed row version of the rows. In the case of update conflicts, optimized locking provide a mechanism to automatically retry the update.
-  
- It is not recommended to use query hints like PAGLOCK or TABLOCK when optimized locking is enabled, as they reduce the benefit of optimized locking. For more information, see [Avoid locking hints in Optimized Locking](performance/optimized-locking.md#avoid-locking-hints).
 
+ A TID lock is placed on all the modified rows for the duration of the transaction. A lock is taken on the TID of the index entries corresponding to the name `Bob`. With optimized locking, page and row locks continue to be taken for updates, but each page and row lock is released as soon as each row is updated. The TID lock protects the rows from being updated until the transaction is complete. Any transaction that attempts to read, insert, or delete the value `Bob` will be blocked until the deleting transaction either commits or rolls back. (Certain isolation levels like READ_COMMITTED_SNAPSHOT and SNAPSHOT may allow reads from a row-version of the previously-committed state.)
+
+ Otherwise, the locking mechanics of a delete operation are the same as without optimized locking.
+   
 #### <a id="insert-operation"></a> Insert operation without optimized locking
 
  When inserting a value within a transaction, the range the value falls into does not have to be locked for the duration of the transaction performing the insert operation. Locking the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:  

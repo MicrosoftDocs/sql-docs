@@ -74,7 +74,6 @@ The following is a quick checklist of storage configuration best practices for r
     - Don't enable read/write caching on disks that contain SQL Server data or log files. 
     - Always stop the SQL Server service before changing the cache settings of your disk.
 - For development and test workloads consider using standard storage. It isn't recommended to use Standard HDD/SDD for production workloads.
-
 - [Credit-based Disk Bursting](/azure/virtual-machines/disk-bursting#credit-based-bursting) (P1-P20) should only be considered for smaller dev/test workloads and departmental systems.
 - To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping/throttling](/azure/virtual-machines/premium-storage-performance#throttling).
 - Format your data disk to use 64-KB allocation unit size for all data files placed on a drive other than the temporary `D:\` drive (which has a default of 4 KB). SQL Server VMs deployed through Azure Marketplace come with data disks formatted with allocation unit size and interleave for the storage pool set to 64 KB. 

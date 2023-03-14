@@ -15,8 +15,7 @@ ms.topic: how-to
 This article provides an overview of the private endpoint for Azure SQL Managed Instance, as well as steps to configuring it. Private endpoints establish secure, isolated connectivity between a service and multiple virtual networks without exposing your service's entire network infrastructure.
 
 > [!NOTE]
-> Private Link for Azure SQL Managed Instance is currently in preview. 
-
+> Private Link for Azure SQL Managed Instance is currently in preview. While in preview, private endpoints to instances enrolled in the November 2022 Feature wave may experience transient loss of connectivity. Private endpoints to instances not enrolled in the November 2022 Feature wave are not affected.
 
 ## Overview
 

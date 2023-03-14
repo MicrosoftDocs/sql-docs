@@ -102,7 +102,7 @@ To see the available SQL Server on Linux virtual machine images, see [Overview o
 
 ### <a id="BYOL"></a> Bring your own license
 
-You can also bring your own license (BYOL). In this scenario, you only pay for the VM without any additional charges for SQL Server licensing.  Bringing your own license can save you money over time for continuous production workloads. For requirements to use this option, see [Pricing guidance for SQL Server Azure VMs](pricing-guidance.md#byol).
+You can also bring your own license (BYOL). In this scenario, you only pay for the VM without any additional charges for SQL Server licensing.  Bringing your own license can save you money over time for continuous production workloads. For requirements to use this option, see [Pricing guidance for SQL Server Azure VMs](pricing-guidance.md#byol). To deploy BYOL images, you will need [Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise?rtc=1&activetab=enterprise-tab:primaryr3) with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?rtc=3#tab=1).
 
 To bring your own license, you can either convert an existing pay-per-usage SQL Server VM, or you can deploy an image with the prefixed **{BYOL}**. For more information about switching your licensing model between pay-per-usage and BYOL, see [How to change the licensing model for a SQL Server VM](licensing-model-azure-hybrid-benefit-ahb-change.md). 
 
@@ -122,6 +122,8 @@ It is possible to deploy an older image of SQL Server that is not available in t
 
 For more information about deploying SQL Server VMs using PowerShell, view [How to provision SQL Server virtual machines with Azure PowerShell](create-sql-vm-powershell.md).
 
+> [!NOTE]
+> Old Images might be outdated as they are pulled from archive. Please make sure to apply all SQL Server and Windows Patches before you start using them for production.
 
 
 ## Customer experience improvement program (CEIP)

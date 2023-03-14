@@ -1,14 +1,12 @@
 ---
 title: Run SQL Server Unit Tests
 description: Find out how to run SQL Server unit tests. See steps for running tests from various windows and tools in different versions of Visual Studio.
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Run SQL Server Unit Tests

@@ -1,18 +1,15 @@
 ---
-description: "Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)"
 title: "Bulk Copying, SQL Server ODBC Driver"
-ms.custom: ""
-ms.date: 12/18/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "bulk copy [ODBC]"
-  - "bulk copy [ODBC], about bulk copy"
-ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
+description: "Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)"
 author: markingmyname
 ms.author: maghan
+ms.date: 12/18/2019
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "bulk copy [ODBC]"
+  - "bulk copy [ODBC], about bulk copy"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)

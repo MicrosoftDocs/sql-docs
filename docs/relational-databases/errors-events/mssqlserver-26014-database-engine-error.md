@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_26014"
 description: "MSSQLSERVER_26014"
-title: "MSSQLSERVER_26014 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "26014 (Database Engine error)"
-ms.assetid: e2b0dfc7-0681-4e5d-8875-1d5f63534086
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "26014 (Database Engine error)"
 ---
 # MSSQLSERVER_26014
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

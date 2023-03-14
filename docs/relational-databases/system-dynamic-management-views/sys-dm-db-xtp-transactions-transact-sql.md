@@ -3,7 +3,7 @@ title: "sys.dm_db_xtp_transactions (Transact-SQL)"
 description: sys.dm_db_xtp_transactions reports the active transactions in the In-Memory OLTP database engine.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/02/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -66,8 +66,12 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |dependent_8_address|**varbinary(8)**|Internal use only|  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission on the server.  
+ Requires VIEW DATABASE STATE permission on the database.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## See also
 
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)

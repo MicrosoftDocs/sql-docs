@@ -1,18 +1,15 @@
 ---
+title: "SQLConfigDataSource (Paradox Driver)"
 description: "SQLConfigDataSource (Paradox Driver)"
-title: "SQLConfigDataSource (Paradox Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLConfigDataSource function [ODBC], Paradox Driver"
-  - "Paradox driver [ODBC], SQLConfigDataSource"
-ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLConfigDataSource function [ODBC], Paradox Driver"
+  - "Paradox driver [ODBC], SQLConfigDataSource"
 ---
 # SQLConfigDataSource (Paradox Driver)
 > [!NOTE]  

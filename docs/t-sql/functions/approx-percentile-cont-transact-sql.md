@@ -25,7 +25,7 @@ monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-20
 
 This function returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. The percentile value returned by this function is based on a continuous distribution of the column values and the result would be interpolated. Due to this, the output might not be one of values in the data set. One of the common use cases for this function is to avoid the data outliers. This function can be used as an alternative to PERCENTILE_CONT for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 
-[Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+[Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 

@@ -1,17 +1,14 @@
 ---
+title: "Prepare SQL Server for CDC"
 description: "Prepare SQL Server for CDC"
-title: "Prepare SQL Server for CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "prepSqlSrv"
-ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "prepSqlSrv"
 ---
 # Prepare SQL Server for CDC
 

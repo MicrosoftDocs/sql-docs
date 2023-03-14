@@ -1,21 +1,19 @@
 ---
+title: "MSSQLSERVER_1204"
 description: "MSSQLSERVER_1204"
-title: "MSSQLSERVER_1204 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ramakoni
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1204 (Database Engine error)"
-ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: ramakoni
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1204 (Database Engine error)"
 ---
 # MSSQLSERVER_1204
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   

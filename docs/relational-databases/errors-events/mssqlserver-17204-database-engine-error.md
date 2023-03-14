@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_17204"
 description: "MSSQLSERVER_17204"
-title: "MSSQLSERVER_17204 | Microsoft Docs"
-ms.custom: ""
-ms.date: 07/25/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "17204 (Database Engine error)"
-ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 07/25/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "17204 (Database Engine error)"
 ---
 # MSSQLSERVER_17204
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

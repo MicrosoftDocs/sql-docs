@@ -1,19 +1,16 @@
 ---
+title: "Expressions Page"
 description: "Expressions Page"
-title: "Expressions Page | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.expressionspage.f1"
-helpviewer_keywords: 
-  - "Expressions Page dialog box"
-ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.expressionspage.f1"
+helpviewer_keywords:
+  - "Expressions Page dialog box"
 ---
 # Expressions Page
 

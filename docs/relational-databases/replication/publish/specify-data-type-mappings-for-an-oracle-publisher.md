@@ -1,19 +1,17 @@
 ---
 title: "Data type mappings for an Oracle Publisher"
 description: Describes how to specify data type mappings for an Oracle Publisher in SQL Server using SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], data type mapping"
   - "data types [SQL Server replication], Oracle publishing"
   - "mapping data types [SQL Server replication]"
-ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Specify Data Type Mappings for an Oracle Publisher
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

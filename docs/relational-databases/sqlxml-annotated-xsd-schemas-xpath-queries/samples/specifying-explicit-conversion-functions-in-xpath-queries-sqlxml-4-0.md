@@ -7,13 +7,11 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "explicit conversion functions [SQLXML]"
   - "string function"
   - "number function"
   - "XPath queries [SQLXML], explicit conversion functions"
-ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Explicit Conversion Functions in XPath Queries (SQLXML 4.0)

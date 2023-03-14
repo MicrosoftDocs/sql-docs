@@ -1,29 +1,26 @@
 ---
+title: "sp_helpmergepublication (Transact-SQL)"
 description: "sp_helpmergepublication (Transact-SQL)"
-title: "sp_helpmergepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergepublication"
-  - "sp_helpmergepublication_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergepublication"
-ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergepublication"
+  - "sp_helpmergepublication_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

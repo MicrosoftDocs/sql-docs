@@ -1,13 +1,12 @@
 ---
 title: Create a login for SQLRUserGroup
-description: Create a login in SQL Server for SQLRUserGroup,  using implied authentication to log in to the server, for identity conversion back to the calling user.
-ms.service: sql
-ms.subservice: machine-learning-services
-
-ms.date: 01/25/2019  
-ms.topic: how-to
+description: Create a login in SQL Server for SQLRUserGroup, using implied authentication to log in to the server, for identity conversion back to the calling user.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 01/25/2019
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Create a login for SQLRUserGroup
@@ -17,7 +16,7 @@ Create a [login in SQL Server](../../relational-databases/security/authenticatio
 
 Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current Windows user has a login. For external processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts do not have a login by default.
 
-You can work around the connection error by creating a login for  **SQLServerRUserGroup**. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
+You can work around the connection error by creating a login for  **SQLRUserGroup**. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
 
 > [!Note]
 > Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but some organizations stricter group policies might disable this right.

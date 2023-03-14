@@ -1,21 +1,18 @@
 ---
 title: "Limit CPU load: Use resource governor for backup compression"
 description: You can classify the sessions of a SQL Server user by mapping them to a Resource Governor workload group that limits CPU usage for backing up with compression.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup compression [SQL Server], Resource Governor"
   - "backup compression [SQL Server], CPU usage"
   - "compression [SQL Server], backup compression"
   - "backups [SQL Server], compression"
   - "Resource Governor, backup compression"
-ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

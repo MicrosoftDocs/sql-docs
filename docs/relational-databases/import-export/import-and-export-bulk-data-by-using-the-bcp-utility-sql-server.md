@@ -7,7 +7,6 @@ ms.date: "09/28/2016"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "bulk exporting [SQL Server], bcp utility"
   - "bulk importing [SQL Server], bcp utility"

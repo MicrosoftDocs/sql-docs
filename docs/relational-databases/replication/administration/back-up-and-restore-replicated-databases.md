@@ -1,13 +1,14 @@
 ---
-title: "Back Up and Restore Replicated Databases | Microsoft Docs"
+title: "Back Up and Restore Replicated Databases"
 description: Review overview information and links to additional information about backup and restore strategies for each type of replication in SQL Server.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "backups [SQL Server replication]"
   - "administering replication, restoring"
   - "backing up replicated databases"
@@ -22,9 +23,6 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication], backing up"
   - "restoring [SQL Server replication]"
   - "administering replication, backing up"
-ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Back Up and Restore Replicated Databases

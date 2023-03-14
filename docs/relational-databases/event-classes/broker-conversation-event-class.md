@@ -1,17 +1,14 @@
 ---
+title: "Broker:Conversation Event Class"
 description: "Broker:Conversation Event Class"
-title: "Broker:Conversation Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Broker:Conversation event class"
-ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "05/24/2019"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Broker:Conversation event class"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Conversation Event Class

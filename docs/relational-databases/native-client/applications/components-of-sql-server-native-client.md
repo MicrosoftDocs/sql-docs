@@ -1,20 +1,17 @@
 ---
 title: "Components"
 description: Learn about components of the SQL Server Native Client such as sqlncli11.dll, sqlnclir11.rll, sqlncli.h, and sqlncli11.lib.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, about SQL Server Native Client ODBC driver"
   - "data access [SQL Server Native Client], components"
   - "components [SQL Server Native Client]"
   - "SQLNCLI, about SQL Server Native Client"
-ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Components of SQL Server Native Client

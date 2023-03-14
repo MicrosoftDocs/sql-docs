@@ -1,20 +1,16 @@
 ---
+title: "IBCPSession::BCPWriteFmt (Native Client OLE DB provider)"
 description: "IBCPSession::BCPWriteFmt (Native Client OLE DB provider)"
-title: "IBCPSession::BCPWriteFmt (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apiname: 
-  - "IBCPSession::BCPWriteFmt (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPWriteFmt method"
-ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "BCPWriteFmt method"
+apiname: "IBCPSession::BCPWriteFmt (OLE DB)"
+apitype: "COM"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IBCPSession::BCPWriteFmt (Native Client OLE DB Provider)

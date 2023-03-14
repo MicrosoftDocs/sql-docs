@@ -1,20 +1,15 @@
 ---
+title: "Using Collections"
 description: "Using Collections"
-title: "Using Collections | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Objects, collections"
   - "SMO [SQL Server], collections"
   - "collections [SMO]"
-ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Collections

@@ -4,7 +4,7 @@ description: This article discusses the Transact-SQL (T-SQL) differences between
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, bonova, danil
-ms.date: 08/15/2022
+ms.date: 02/17/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -142,10 +142,7 @@ SQL Managed Instance can't access files, so cryptographic providers can't be cre
 - Windows logins created with the `CREATE LOGIN ... FROM WINDOWS` syntax aren't supported. Use Azure Active Directory logins and users.
 - The Azure AD admin for the instance has [unrestricted admin privileges](../database/logins-create-manage.md).
 - Non-administrator Azure AD database-level users can be created by using the `CREATE USER ... FROM EXTERNAL PROVIDER` syntax. See [CREATE USER ... FROM EXTERNAL PROVIDER](../database/authentication-aad-configure.md#create-contained-users-mapped-to-azure-ad-identities).
-- Azure AD server principals (logins) support SQL features within one SQL Managed Instance only. Features that require cross-instance interaction, no matter whether they're within the same Azure AD tenant or different tenants, aren't supported for Azure AD users. Examples of such features are:
-
-  - SQL transactional replication.
-  - Link server.
+- Some features do not support usage of Azure AD server principals (logins) in cross-instance interaction, but within one SQL Managed Instance only. Example of such a feature is SQL replication. Linked server feature though supports cross-instance authentication using Azure AD server principals (logins).
 
 - Setting an Azure AD login mapped to an Azure AD group as the database owner isn't supported. A member of the Azure AD group can be a database owner, even if the login hasn't been created in the database.
 - Impersonation of Azure AD server-level principals by using other Azure AD principals is supported, such as the [EXECUTE AS](/sql/t-sql/statements/execute-as-transact-sql) clause. EXECUTE AS limitations are:
@@ -158,7 +155,7 @@ SQL Managed Instance can't access files, so cryptographic providers can't be cre
 
   - To impersonate a user with EXECUTE AS statement the user needs to be mapped directly to Azure AD server principal (login). Users that are members of Azure AD groups mapped into Azure AD server principals cannot effectively be impersonated with EXECUTE AS statement, even though the caller has the impersonate permissions on the specified user name.
 
-- Database export/import using bacpac files are supported for Azure AD users in SQL Managed Instance using either [SSMS V18.4 or later](/sql/ssms/download-sql-server-management-studio-ssms), or [SQLPackage.exe](/sql/tools/sqlpackage-download).
+- Database export/import using bacpac files are supported for Azure AD users in SQL Managed Instance using either [SSMS V18.4 or later](/sql/ssms/download-sql-server-management-studio-ssms), or [SqlPackage](/sql/tools/sqlpackage-download).
   - The following configurations are supported using database bacpac file: 
     - Export/import a database between different manage instances within the same Azure AD domain.
     - Export a database from SQL Managed Instance and import to SQL Database within the same Azure AD domain. 
@@ -198,9 +195,9 @@ The default instance collation is `SQL_Latin1_General_CP1_CI_AS` and can be spec
 
 ### Compatibility levels
 
-- Supported compatibility levels are 100, 110, 120, 130, 140 and 150.
+- Supported compatibility levels are 100, 110, 120, 130, 140, 150 and 160.
 - Compatibility levels below 100 aren't supported.
-- The default compatibility level for new databases is 140. For restored databases, the compatibility level remains unchanged if it was 100 and above.
+- The default compatibility level for new databases is 150. For restored databases, the compatibility level remains unchanged if it was 100 and above.
 
 See [ALTER DATABASE Compatibility Level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
@@ -350,11 +347,8 @@ Undocumented DBCC statements that are enabled in SQL Server aren't supported in 
 
 ### Distributed transactions
 
-Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is generally available. Distributed transactions are supported under following conditions (all of them must be met):
-* all transaction participants are Azure SQL Managed Instances that are part of the [Server trust group](./server-trust-group-overview.md).
-* transactions are initiated either from .NET (TransactionScope class) or Transact-SQL.
-
-Azure SQL Managed Instance currently does not support other scenarios that are regularly supported by MSDTC on-premises or in Azure Virtual Machines.
+[T-SQL and .NET based distributed transactions across managed instances](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance) are generally available.
+Additional scenarios, such as XA transactions, distributed transactions between managed instances and other participants and more, are supported with [DTC for Azure SQL Managed Instance](./distributed-transaction-coordinator-dtc.md), which is available in public preview.
 
 ### Extended Events
 
@@ -391,12 +385,10 @@ For more information, see [FILESTREAM](/sql/relational-databases/blob/filestream
 [Linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) in SQL Managed Instance support a limited number of targets:
 
 - Supported targets are SQL Managed Instance, SQL Database, Azure Synapse SQL [serverless](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/) and dedicated pools, and SQL Server instances. 
-- Distributed writable transactions are possible only among SQL Managed Instances. For more information, see [Distributed Transactions](../database/elastic-transactions-overview.md). However, MS DTC is not supported.
 - Targets that aren't supported are files, Analysis Services, and other RDBMS. Try to use native CSV import from Azure Blob Storage using `BULK INSERT` or `OPENROWSET` as an alternative for file import, or load files using a [serverless SQL pool in Azure Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/).
 
 Operations: 
 
-- [Cross-instance](../database/elastic-transactions-overview.md) write transactions are supported only for SQL Managed Instances.
 - `sp_dropserver` is supported for dropping a linked server. See [sp_dropserver](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).
 - The `OPENROWSET` function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. See [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql).
 - The [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. An example is `SELECT * FROM OPENDATASOURCE('SQLNCLI', '...').AdventureWorks2012.HumanResources.Employee`. Only the `SQLNCLI`, `SQLNCLI11`, `SQLOLEDB`, and `MSOLEDBSQL` values are supported as a provider. The [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client) (often abbreviated SNAC) has been removed from SQL Server 2022 and SQL Server Management Studio 19 (SSMS). The SQL Server Native Client (SQLNCLI or SQLNCLI11) and the legacy Microsoft OLE DB Provider for SQL Server (SQLOLEDB) are not recommended for new development. Switch to the new [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) or the latest [Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server) going forward.
@@ -413,7 +405,7 @@ Linked servers on Azure SQL Managed Instance support SQL authentication and [Azu
 - Snapshot and Bi-directional replication types are supported. Merge replication, Peer-to-peer replication, and updatable subscriptions are not supported.
 - [Transactional Replication](replication-transactional-overview.md) is available for SQL Managed Instance with some constraints:
     - All types of replication participants (Publisher, Distributor, Pull Subscriber, and Push Subscriber) can be placed on SQL Managed Instance, but the publisher and the distributor must be either both in the cloud or both on-premises.
-    - SQL Managed Instance can communicate with the recent versions of SQL Server. See the [supported versions matrix](replication-transactional-overview.md#supportability-matrix) for more information.
+    - SQL Managed Instance can communicate with the recent versions of SQL Server. For more information see [supported versions matrix](replication-transactional-overview.md#supportability-matrix).
     - Transactional Replication has some [additional networking requirements](replication-transactional-overview.md#requirements).
 
 For more information about configuring transactional replication, see the following tutorials:

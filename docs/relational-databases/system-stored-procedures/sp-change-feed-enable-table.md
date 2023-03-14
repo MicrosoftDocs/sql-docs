@@ -1,19 +1,19 @@
 ---
-description: "The sp_change_feed_enable_table system stored procedure enables the creation of a new Azure Synapse Link table to an existing Azure Synapse Link table group."
 title: "sp_change_feed_enable_table (Transact-SQL)"
-ms.date: 11/09/2022
-ms.service: synapse-analytics
-ms.reviewer: wiassaf
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_feed_enable_table_TSQL"
-  - "sp_change_feed_enable_table_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_feed_enable_table"
+description: "The sp_change_feed_enable_table system stored procedure enables the creation of a new Azure Synapse Link table to an existing Azure Synapse Link table group."
 author: IdrisMotiwala
 ms.author: imotiwala
+ms.reviewer: wiassaf
+ms.date: 02/03/2023
+ms.service: synapse-analytics
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_feed_enable_table_TSQL"
+  - "sp_change_feed_enable_table_db"
+helpviewer_keywords:
+  - "sp_change_feed_enable_table"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 # sp_change_feed_enable_table (Transact-SQL)
@@ -26,7 +26,7 @@ Stored procedure to enable the creation of a new [Azure Synapse Link for SQL](/a
 
 ## Syntax  
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ```syntaxsql  
 EXECUTE sys.sp_change_feed_enable_table
@@ -57,7 +57,7 @@ The source table name.
 
 ## Permissions  
 
- Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
+ Currently, a user with [CONTROL database permissions](../security/permissions-database-engine.md), db_owner database role membership, or sysadmin server role membership can execute this procedure.
 
 ## See also  
 

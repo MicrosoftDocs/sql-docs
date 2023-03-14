@@ -8,7 +8,6 @@ ms.date: 10/19/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "restoring tables [SQL Server]"
   - "backups [SQL Server], restore scenarios"

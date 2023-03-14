@@ -1,14 +1,13 @@
 ---
 title: Run Windows PowerShell Steps in SQL Server Agent
-description: Learn how to run Windows PowerShell steps in a SQL Server Agent job. 
-ms.service: sql
-ms.subservice: sql-server-powershell
-ms.topic: conceptual
+description: Learn how to run Windows PowerShell steps in a SQL Server Agent job.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
-ms.custom: seo-lt-2019
 ms.date: 11/19/2021
+ms.service: sql
+ms.subservice: sql-server-powershell
+ms.topic: conceptual
 ---
 
 # Run Windows PowerShell Steps in SQL Server Agent

@@ -1,24 +1,21 @@
 ---
+title: "sp_execute_external_script (Transact-SQL)"
 description: "sp_execute_external_script (Transact-SQL)"
-title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 08/06/2020
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: machine-learning-services
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_execute_external_script_TSQL"
   - "sys.sp_execute_external_script"
   - "sys.sp_execute_external_script_TSQL"
   - "sp_execute_external_script"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_execute_external_script"
-ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)
@@ -56,7 +53,7 @@ For Machine Learning Services, [Python](../../machine-learning/concepts/extensio
 To execute **sp_execute_external_script**, you must first enable Machine Learning Services. For more information, see the [Machine Learning Services in Azure SQL Managed Instance documentation](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ## Syntax

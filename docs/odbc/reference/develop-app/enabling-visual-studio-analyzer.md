@@ -1,17 +1,14 @@
 ---
+title: "Enabling Visual Studio Analyzer"
 description: "Enabling Visual Studio Analyzer"
-title: "Enabling Visual Studio Analyzer | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Visual Studio Analyzer [ODBC], enabling"
-ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Visual Studio Analyzer [ODBC], enabling"
 ---
 # Enabling Visual Studio Analyzer
 > [!IMPORTANT]  

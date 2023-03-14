@@ -7,7 +7,6 @@ ms.date: 10/12/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "RESTORE DATABASE"
   - "RESTORE_TSQL"
@@ -45,7 +44,7 @@ Restores SQL database backups taken using the [BACKUP](backup-transact-sql.md) c
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -1019,8 +1018,8 @@ Requires the `CREATE ANY DATABASE` permission.
 Requires a Windows account that has permission to access and read from the backup directory. You must also store the Windows account name and password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 - To verify the credentials are already there, use [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
-- To add or update the credentials, use [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
-- To remove credentials from [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
+- To add or update the credentials, use [sp_pdw_add_network_credentials - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+- To remove credentials from [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_pdw_remove_network_credentials - [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
 ## Error Handling
 
@@ -1043,7 +1042,7 @@ After a restore, the user database will have database compatibility level 120. T
 
 ## Restore to an appliance with a larger number of compute nodes
 
-Run [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) after restoring a database from a smaller to larger appliance since redistribution will increase transaction log.
+Run [DBCC SHRINKLOG ([!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) after restoring a database from a smaller to larger appliance since redistribution will increase transaction log.
 
 Restoring a backup to an appliance with a larger number of Compute nodes grows the allocated database size in proportion to the number of Compute nodes.
 

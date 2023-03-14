@@ -1,15 +1,13 @@
 ---
+title: "Using Variables in the Script Task"
 description: "Using Variables in the Script Task"
-title: "Using Variables in the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Foreach Loop containers"
   - "Script task [Integration Services], variables"
   - "scripts [Integration Services], variables"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "Variable object"
   - "SSIS Script task, variables"
   - "variables [Integration Services], Script task"
-ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Using Variables in the Script Task
 

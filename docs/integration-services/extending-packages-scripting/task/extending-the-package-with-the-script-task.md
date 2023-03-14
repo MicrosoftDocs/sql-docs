@@ -1,24 +1,21 @@
 ---
+title: "Extending the Package with the Script Task"
 description: "Extending the Package with the Script Task"
-title: "Extending the Package with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scripts [Integration Services]"
   - "SSIS Script task"
   - "tasks [Integration Services], scripts"
   - "Script task [Integration Services], about Script task"
   - "scripts [Integration Services], about Script task with packages"
   - "SSIS Script task, about Script task"
-ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Extending the Package with the Script Task
 

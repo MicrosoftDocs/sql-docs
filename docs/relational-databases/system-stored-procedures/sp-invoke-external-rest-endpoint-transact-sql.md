@@ -29,7 +29,7 @@ The `sp_invoke_external_rest_endpoint` stored procedure invokes an HTTPS REST en
 
 ## Syntax
 
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
 EXEC @returnValue = sp_invoke_external_rest_endpoint
@@ -153,6 +153,8 @@ Microsoft Graph | graph.microsoft.com
 Analysis Services | *.asazure.windows.net
 IoT Central | *.azureiotcentral.com
 API Management| *.azure-api.net
+
+[Outbound Firewall Rules](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 
 > [!NOTE]  
 > If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make it available to `sp_invoke_external_rest_endpoint`.

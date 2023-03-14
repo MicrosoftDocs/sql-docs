@@ -7,16 +7,14 @@ ms.date: 08/05/2020
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.pdw_nodes_column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
+  Provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.pdw_nodes_column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -30,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |**total_rows**|**bigint**|Total rows physically stored in the row group. Some may have been deleted but they are still stored. The maximum number of rows in a row group is 1,048,576 (hexadecimal FFFFF).|  
 |**deleted_rows**|**bigint**|Number of rows physically stored in the row group that are marked for deletion.<br /><br /> Always 0 for DELTA row groups.|  
 |**size_in_bytes**|**int**|Combined size, in bytes, of all the pages in this row group. This size does not include the size required to store metadata or shared dictionaries.|  
-|**pdw_node_id**|**int**|Unique ID of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
+|**pdw_node_id**|**int**|Unique ID of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node.|  
 |**distribution_id**|**int**|Unique ID of the distribution.|
   
 ## Remarks  
@@ -47,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ## Permissions  
  Requires **VIEW SERVER STATE** permission.  
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example joins the **sys.pdw_nodes_column_store_row_groups** table to other system tables to return information about specific tables. The calculated `PercentFull` column is an estimate of the efficiency of the row group. To find information on a single table remove the comment hyphens in front of the WHERE clause and provide a table name.  
   
 ```sql
@@ -76,7 +74,7 @@ WHERE total_rows > 0
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-The following [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] example counts the rows per partition for clustered column stores as well as how many rows are in Open, Closed, or Compressed Row groups:  
+The following [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] example counts the rows per partition for clustered column stores as well as how many rows are in Open, Closed, or Compressed Row groups:  
 
 ```sql
 SELECT

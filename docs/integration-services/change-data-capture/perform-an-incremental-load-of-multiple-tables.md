@@ -1,17 +1,14 @@
 ---
+title: "Perform an Incremental Load of Multiple Tables"
 description: "Perform an Incremental Load of Multiple Tables"
-title: "Perform an Incremental Load of Multiple Tables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "incremental load [Integration Services],multiple tables"
-ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "incremental load [Integration Services],multiple tables"
 ---
 # Perform an Incremental Load of Multiple Tables
 

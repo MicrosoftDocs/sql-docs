@@ -1,22 +1,19 @@
 ---
+title: "sp_trace_generateevent (Transact-SQL)"
 description: "sp_trace_generateevent (Transact-SQL)"
-title: "sp_trace_generateevent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_trace_generateevent_TSQL"
-  - "sp_trace_generateevent"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_trace_generateevent"
-ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_trace_generateevent_TSQL"
+  - "sp_trace_generateevent"
+helpviewer_keywords:
+  - "sp_trace_generateevent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +24,7 @@ ms.author: maghan
 > This stored procedure is **not** deprecated. All other trace-related stored procedures are deprecated.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

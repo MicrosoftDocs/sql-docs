@@ -1,20 +1,18 @@
 ---
 title: Rename and Refactoring to Make Changes to your Database Objects
 description: Learn about the Rename and Refactor menus in the Transact-SQL Editor. See how to rename types, switch object schemas, expand wildcards, and fully qualify names.
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.dbrefactoring.previewdialog"
   - "sql.data.tools.editor.howto.refactoring"
   - "sql.data.tools.dbrefactoring.renamedialog"
   - "sql.data.tools.dbrefactoring.moveschemadialog"
   - "sql.data.tools.dbrefactoring.renameserverdatabasedialog"
-ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Use Rename and Refactoring to Make Changes to your Database Objects

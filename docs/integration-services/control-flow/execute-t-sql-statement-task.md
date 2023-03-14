@@ -1,21 +1,18 @@
 ---
+title: "Execute T-SQL Statement Task"
 description: "Execute T-SQL Statement Task"
-title: "Execute T-SQL Statement Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/13/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.executetsqlstatementtask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL statements, SSIS"
   - "statements [Integration Services]"
   - "Execute T-SQL Statement task [Integration Services]"
-ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: chugugrace
-ms.author: chugu
 ---
 # Execute T-SQL Statement Task
 

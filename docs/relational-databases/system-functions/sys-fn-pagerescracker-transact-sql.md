@@ -1,35 +1,33 @@
 ---
-title: "sys.fn_PageResCracker (Transact-SQL) | Microsoft Docs"
+title: "sys.fn_PageResCracker (Transact-SQL)"
 description: Learn about the sys.fn_PageResCracker system function. See examples and view additional available resources.
-ms.custom: ""
+author: "bluefooted"
+ms.author: "pamela"
 ms.date: "09/18/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_PageResCracker"
   - "sys.fn_PageResCracker_TSQL"
   - "fn_PageResCracker_TSQL"
   - "sys.fn_PageResCracker"
   - "sys.dm_db_page_info"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_PageResCracker function"
   - "page_resource"
   - "sys.fn_PageResCracker function"
   - "sys.dm_db_page_info"
   - "page info"
-author: "bluefooted"
-ms.author: "pamela"
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Returns the `db_id`, `file_id`, and `page_id` for the given `page_resource` value. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 ```  

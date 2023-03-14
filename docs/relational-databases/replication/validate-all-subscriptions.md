@@ -1,19 +1,17 @@
 ---
+title: "Validate All Subscriptions"
 description: "Validate All Subscriptions"
-title: "Validate All Subscriptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.validate.allsubscriptions.f1"
-helpviewer_keywords: 
-  - "Validate All Subscriptions dialog box"
-ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.validate.allsubscriptions.f1"
+helpviewer_keywords:
+  - "Validate All Subscriptions dialog box"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Validate All Subscriptions

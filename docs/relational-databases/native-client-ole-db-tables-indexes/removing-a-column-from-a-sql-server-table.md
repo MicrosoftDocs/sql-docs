@@ -1,20 +1,17 @@
 ---
-description: "Removing a Column from a SQL Server Table (Native Client OLE DB provider)"
 title: Remove column from SQL Server table (Native Client OLE DB provider)
-ms.custom: ""
+description: "Removing a Column from a SQL Server Table (Native Client OLE DB provider)"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [OLE DB]"
   - "removing columns"
   - "DropColumn function"
   - "SQL Server Native Client OLE DB provider, columns"
-ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Removing a Column from a SQL Server Table (Native Client OLE DB provider)

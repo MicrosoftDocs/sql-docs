@@ -1,20 +1,18 @@
 ---
-title: "Delete a Publication | Microsoft Docs"
+title: "Delete a Publication"
 description: Learn how to delete a publication in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "removing publications"
   - "publications [SQL Server replication], deleting"
   - "articles [SQL Server replication], deleting"
   - "deleting publications"
-ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Delete a Publication

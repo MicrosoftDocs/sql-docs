@@ -1,18 +1,15 @@
 ---
+title: "catalog.grant_permission (SSISDB Database)"
 description: "catalog.grant_permission (SSISDB Database)"
-title: "catalog.grant_permission (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "grant_permission stored procedure [Integration Services]"
-  - "catalog.grant_permission stored procedure [Integration Services]"
-ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "grant_permission stored procedure [Integration Services]"
+  - "catalog.grant_permission stored procedure [Integration Services]"
 ---
 # catalog.grant_permission (SSISDB Database)
 

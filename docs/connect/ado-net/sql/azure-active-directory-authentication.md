@@ -1,10 +1,10 @@
 ---
-title: Using Azure Active Directory authentication with SqlClient
+title: Connect to Azure SQL with Azure AD authentication and SqlClient
 description: Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 12/14/2021
+ms.date: 01/27/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -12,13 +12,16 @@ dev_langs:
   - "csharp"
 ---
 
-# Using Azure Active Directory authentication with SqlClient
+# Connect to Azure SQL with Azure AD authentication and SqlClient
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 [!INCLUDE [Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 This article describes how to connect to Azure SQL data sources by using Azure Active Directory (Azure AD) authentication from a .NET application with SqlClient.
+
+
+## Overview
 
 Azure AD authentication uses identities in Azure AD to access Azure SQL data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The **Microsoft.Data.SqlClient** namespace allows client applications to specify Azure AD credentials in different authentication modes when they're connecting to Azure SQL Database. To use Azure AD authentication, you must configure your Azure SQL data source. For more information, see [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
@@ -137,9 +140,12 @@ When this mode is in use, you can't set the `Credential` property of `SqlConnect
 
 The following code snippet is an example of using `Active Directory Device Code Flow` authentication.
 
+> [!NOTE]
+> The timeout for `Active Directory Device Code Flow` defaults to the connection's `Connect Timeout` setting. Make sure to specify a `Connect Timeout` that provides enough time to go through the device code flow authentication process.
+
 ```cs
-// Use your own server and database.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Device Code Flow; Encrypt=True; Database=testdb";
+// Use your own server and database and increase Connect Timeout as needed for device code flow.
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Device Code Flow; Encrypt=True; Database=testdb; Connect Timeout=180;";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();

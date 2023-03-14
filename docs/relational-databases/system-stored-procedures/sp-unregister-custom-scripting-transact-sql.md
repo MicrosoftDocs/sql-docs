@@ -1,29 +1,26 @@
 ---
+title: "sp_unregister_custom_scripting (Transact-SQL)"
 description: "sp_unregister_custom_scripting (Transact-SQL)"
-title: "sp_unregister_custom_scripting (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_unregister_custom_scripting_TSQL"
-  - "sp_unregister_custom_scripting"
-helpviewer_keywords: 
-  - "sp_unregister_custom_scripting"
-ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_unregister_custom_scripting_TSQL"
+  - "sp_unregister_custom_scripting"
+helpviewer_keywords:
+  - "sp_unregister_custom_scripting"
+dev_langs:
+  - "TSQL"
 ---
 # sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure removes a user-defined custom stored procedure or [!INCLUDE[tsql](../../includes/tsql-md.md)] script file that was registered by executing [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

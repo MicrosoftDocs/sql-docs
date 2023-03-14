@@ -1,13 +1,13 @@
 ---
+title: "SSIS Package Upgrade Wizard F1 Help"
 description: "SSIS Package Upgrade Wizard F1 Help"
-title: "SSIS Package Upgrade Wizard F1 Help | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql13.is.upgradewizard.ssisupgradewizard.f1"
   - "sql13.is.upgradewizard.selectsourcelocation.f1"
   - "sql13.is.upgradewizard.selectdestinationlocation.f1"
@@ -15,9 +15,6 @@ f1_keywords:
   - "sql13.is.upgradewizard.selectpackages.f1"
   - "sql13.is.upgradewizard.completewizard.f1"
   - "sql13.is.upgradewizard.upgradingpackage.f1"
-ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: chugugrace
-ms.author: chugu
 ---
 # SSIS Package Upgrade Wizard F1 Help
 

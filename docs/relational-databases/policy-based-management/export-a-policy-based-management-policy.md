@@ -1,17 +1,14 @@
 ---
+title: "Export a Policy-Based Management Policy"
 description: "Export a Policy-Based Management Policy"
-title: "Export a Policy-Based Management Policy | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Policy-Based Management, export policy"
-ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Policy-Based Management, export policy"
 ---
 # Export a Policy-Based Management Policy
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

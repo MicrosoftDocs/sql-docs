@@ -1,21 +1,18 @@
 ---
+title: "Loading the Output of a Local Package"
 description: "Loading the Output of a Local Package"
-title: "Loading the Output of a Local Package | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "data flow [Integration Services], loading results"
-  - "loading data flow results"
-ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "data flow [Integration Services], loading results"
+  - "loading data flow results"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Loading the Output of a Local Package
 

@@ -101,7 +101,7 @@ Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], the SPN for
 
 When an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts, SQL Server tries to register the SPN for the SQL Server service. When the instance is stopped, SQL Server tries to unregister the SPN. For a TCP/IP connection, the SPN is registered in the format *MSSQLSvc/\<FQDN>*:*\<tcpport>*.Both named instances and the default instance are registered as *MSSQLSvc*, relying on the *\<tcpport>* value to differentiate the instances.  
   
-For other connections that support Kerberos the SPN is registered in the format *MSSQLSvc/\<FQDN>*/*\<instancename>* for a named instance. The format for registering the default instance is *MSSQLSvc/\<FQDN>*.  
+For other connections that support Kerberos the SPN is registered in the format *MSSQLSvc/\<FQDN>*:*\<instancename>* for a named instance. The format for registering the default instance is *MSSQLSvc/\<FQDN>*.  
 
 To give permissions to SQL Server startup account to register and modify SPN do the following:
 
@@ -155,7 +155,9 @@ For a named instance, use:
 ```  
 setspn -S MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
-  
+
+For more information about Always On availability group configurations, see [Listeners and Kerberos (SPNs)](../availability-groups/windows/listeners-client-connectivity-application-failover.md#SPNs).
+
 ##  <a name="Client"></a> Client Connections  
 
 User-specified SPNs are supported in client drivers. However, if an SPN isn't provided, it will be generated automatically based on the type of a client connection. For a TCP connection, an SPN in the format *MSSQLSvc*/*FQDN*:[*port*] is used for both the named and default instances.  

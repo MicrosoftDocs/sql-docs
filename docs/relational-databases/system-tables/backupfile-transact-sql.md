@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "backupfile system table"
 dev_langs:
   - "TSQL"
-ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 ---
 # backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

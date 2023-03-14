@@ -7,7 +7,6 @@ ms.date: "10/24/2016"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "field terminators [SQL Server]"
   - "bulk importing [SQL Server], data formats"

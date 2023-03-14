@@ -33,7 +33,7 @@ In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], two types of forma
 >  XML format files offer several advantages over non-XML format files. For more information, see [XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
 
 > [!NOTE]  
-> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE[Use ADF or PolyBase instead of Synapse Bulk Insert](../../includes/paragraph-content/bulk-insert-synapse.md)]
+> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE [Use ADF or PolyBase instead of Synapse Bulk Insert](includes/bulk-insert-synapse.md)]
 
 ## <a id="Structure"></a> Structure of Non-XML Format Files
 

@@ -9,9 +9,9 @@ ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - "active directory"
-  - "has-adal-ref"
-  - "sqldbrb=1"
+  - active directory
+  - has-adal-ref
+  - sqldbrb=1
 ---
 # Connect to Azure SQL Database with Azure AD Multi-Factor Authentication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -1,18 +1,15 @@
 ---
-description: "Create a Job"
 title: "Create a Job"
-ms.custom: seo-lt-2019
+description: "Create a Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], creating"
   - "SQL Server Agent jobs, creating"
-ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a Job

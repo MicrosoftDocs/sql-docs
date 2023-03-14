@@ -4,7 +4,7 @@ description: This article describes the different types of secondary replicas av
 author: yorek
 ms.author: damauri
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/04/2022
+ms.date: 02/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: overview
@@ -25,7 +25,7 @@ Secondary replicas are always read-only, and can be of three different types:
 - Geo-replica
 - Named replica
 
-Each type has a different architecture, feature set, purpose, and cost. Based on the features you need, you may use just one or even all of the three together.
+Each type has a different architecture, feature set, purpose, and cost. Based on the features you need, you may use just one or even all of the three together. Secondary replicas are supported by both [serverless](serverless-tier-overview.md) and provisioned compute tiers.
 
 ## High Availability replica
 
@@ -201,7 +201,7 @@ Geo-replication for Hyperscale database has following current limitations:
 
 - Only one geo-replica can be created (in the same or different region).
 - Point in time restore of the geo-replica is not supported.
-- Secondary of a secondary (also known as "geo-replica chaining") is not supported.
+- Creating geo-replica of a geo-replica (also known as "geo-replica chaining") is not supported.
 
 ## Next steps
 

@@ -7,10 +7,7 @@ ms.reviewer: alayu
 ms.date: 05/14/2019
 ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom:
-  - seodec18
-  - sqlfreshmay19
-  - seo-lt-2019
+ms.custom: updatefrequency5
 ---
 
 # Manage servers and databases with Insight widgets in Azure Data Studio

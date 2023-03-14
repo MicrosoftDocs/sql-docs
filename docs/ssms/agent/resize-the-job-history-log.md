@@ -1,22 +1,20 @@
 ---
-description: "Resize the Job History Log"
 title: Resize the Job History Log
+description: "Resize the Job History Log"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 05/09/2022
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], history"
   - "resizing job history log"
   - "size [SQL Server], job history log"
   - "logs [SQL Server], jobs"
   - "SQL Server Agent jobs, history"
   - "historical information [SQL Server], jobs"
-ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
-ms.custom: seo-lt-2019
-ms.date: 05/09/2022
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

@@ -1,29 +1,26 @@
 ---
+title: "sp_cleanup_log_shipping_history (Transact-SQL)"
 description: "sp_cleanup_log_shipping_history (Transact-SQL)"
-title: "sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cleanup_log_shipping_history_TSQL"
-  - "sp_cleanup_log_shipping_history"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cleanup_log_shipping_history"
-ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cleanup_log_shipping_history_TSQL"
+  - "sp_cleanup_log_shipping_history"
+helpviewer_keywords:
+  - "sp_cleanup_log_shipping_history"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure cleans up history locally and on the monitor server based on retention period.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

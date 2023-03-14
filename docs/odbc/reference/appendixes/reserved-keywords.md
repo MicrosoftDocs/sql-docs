@@ -1,18 +1,15 @@
 ---
+title: "Reserved Keywords"
 description: "Reserved Keywords"
-title: "Reserved Keywords | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "ODBC function call reserved words [ODBC]"
-  - "reserved keywords [ODBC]"
-ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "ODBC function call reserved words [ODBC]"
+  - "reserved keywords [ODBC]"
 ---
 # Reserved Keywords
 The following words are reserved for use in ODBC function calls. These words do not constrain the minimum SQL grammar; however, to ensure compatibility with drivers that support the core SQL grammar, applications should avoid using any of these keywords. The #**define** value SQL_ODBC_KEYWORDS contains a comma-separated list of these keywords.  

@@ -1,21 +1,39 @@
 ---
-title: Troubleshooting Active Directory authentication for SQL Server on Linux and containers
+title: Troubleshoot Active Directory authentication for SQL Server on Linux and containers
 description: Troubleshoot Active Directory authentication issues with SQL Server on Linux and containers, configuration tips, common errors. Includes Kerberos, keytabs and DNS.
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: randolphwest
-ms.date: 09/27/2022
+ms.date: 02/21/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
 monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 
-# Troubleshoot Active Directory authentication for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux and containers
+# Troubleshoot Active Directory authentication for SQL Server on Linux and containers
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article helps you troubleshoot Active Directory authentication issues with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux and containers. It includes prerequisite checks and tips for a successful Active Directory configuration, and a list of common errors and troubleshooting steps.
+This article helps you troubleshoot Active Directory Domain Services authentication issues with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux and containers. It includes prerequisite checks and tips for a successful Active Directory configuration, and a list of common errors and troubleshooting steps.
+
+## Validate current configuration
+
+Before you begin troubleshooting, you must validate the current user, `mssql.conf`, Service Principal Name (SPN), and realm settings.
+
+1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using `kinit`:
+
+   ```bash
+   kinit privilegeduser@CONTOSO.COM
+   ```
+
+2. Run the following command, making sure that the user under which you're running this command has access to the `mssql.keytab`:
+
+   ```bash
+   /opt/mssql/bin/mssql-conf validate-ad-config /var/opt/mssql/secrets/mssql.keytab
+   ```
+
+   For more information about the `validate-ad-config` command, view the help using `/opt/mssql/bin/mssql-conf validate-ad-config --help` command.
 
 ## DNS and reverse DNS lookups
 
@@ -36,21 +54,21 @@ This article helps you troubleshoot Active Directory authentication issues with 
 
    All should return `<hostname>.contoso.com`. If that isn't the case, check the PTR (pointer) records that are created in Active Directory.
 
-   You may have to work with your domain administrator to get rDNS working. If you can't add PTR entries for all the IP addresses returned, you can also [limit SQL Server to a subset of domain controllers](#validate-realm-information-in-krb5conf). This change will affect any other services using `krb5.conf` on the host.
+   You may have to work with your domain administrator to get rDNS working. If you can't add PTR entries for all the IP addresses returned, you can also [limit SQL Server to a subset of domain controllers](#validate-realm-information-in-krb5conf). This change affects any other services using `krb5.conf` on the host.
 
    For more information about reverse DNS, see [What is reverse DNS?](/azure/dns/dns-reverse-dns-overview#what-is-reverse-dns)
 
 ## Check keytab file and permissions
 
-1. Check that you've created the keytab (key table) file, and that **mssql-conf** is configured to use the correct file with appropriate permissions. The keytab must be accessible to the `mssql` user account. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file) for more information.
+1. Check that you've created the keytab (key table) file, and that **mssql-conf** is configured to use the correct file with appropriate permissions. The keytab must be accessible to the `mssql` user account. For more information, see [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file-using-mssql-conf).
 
-1. Make sure that you can list the contents of the keytab, and that you've added the correct Service Principal Names (SPNs), port, encryption type, and user account. If you don't type the passwords correctly when creating the SPNs and keytab entries, you'll encounter errors when attempting to sign in using Active Directory authentication.
+1. Make sure that you can list the contents of the keytab, and that you've added the correct SPNs, port, encryption type, and user account. If you don't type the passwords correctly when creating the SPNs and keytab entries, you'll encounter errors when attempting to sign in using Active Directory authentication.
 
    ```bash
    klist -kte /var/opt/mssql/secrets/mssql.keytab
    ```
 
-   An example of a working keytab is below. The example uses two encryption types, but you can use just one or more depending on the encryption types supported in your environment. In the example below, `sqluser@CONTOSO.COM` is the privileged account (which matches the **network.privilegedadaccount** setting in **mssql-conf**), and the host name for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is `sqllinux.contoso.com` listening on the default port **1433**.
+   An example of a working keytab follows. The example uses two encryption types, but you can use just one or more depending on the encryption types supported in your environment. In the example, `sqluser@CONTOSO.COM` is the privileged account (which matches the **network.privilegedadaccount** setting in **mssql-conf**), and the host name for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is `sqllinux.contoso.com` listening on the default port **1433**.
 
    ```bash
    $ kinit privilegeduser@CONTOSO.COM
@@ -81,7 +99,7 @@ This article helps you troubleshoot Active Directory authentication issues with 
 
 ## Validate realm information in `krb5.conf`
 
-1. In `krb5.conf` (located at `/etc/krb5.conf`), check that you have provided values for the default realm, realm information, and domain to realm mapping. A sample `krb5.conf` file is provided below. For more information, see [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md).
+1. In `krb5.conf` (located at `/etc/krb5.conf`), check that you have provided values for the default realm, realm information, and domain to realm mapping. The following example is a sample `krb5.conf` file. For more information, see [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md).
 
    ```ini
    [libdefaults]
@@ -99,7 +117,7 @@ This article helps you troubleshoot Active Directory authentication issues with 
    contoso.com = CONTOSO.COM
    ```
 
-1. You can restrict [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to contact a subset of domain controllers, which is useful if your DNS configuration returns more domain controllers than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] needs to contact. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux allows you to specify a list of domain controllers that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will contact in a round-robin fashion when performing an LDAP lookup.
+1. You can restrict [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to contact a subset of domain controllers, which is useful if your DNS configuration returns more domain controllers than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] needs to contact. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux allows you to specify a list of domain controllers that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contacts in a round-robin fashion when performing an LDAP lookup.
 
    There are two steps you need to complete. First, modify `krb5.conf` by adding any number of domain controllers that you need, prefixed with `kdc =`.
 
@@ -124,17 +142,17 @@ This article helps you troubleshoot Active Directory authentication issues with 
 
 ## Troubleshoot Kerberos
 
-See the details below to assist you in troubleshooting Active Directory authentication issues and identifying specific error messages.
+See the following details to assist you in troubleshooting Active Directory authentication issues and identifying specific error messages.
 
 ### Trace Kerberos
 
-After you create the user, SPNs, and keytabs, and configure **mssql-conf** to see that the Active Directory configuration for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux is correct, you can display the Kerberos trace messages to the console (`stdout`) when attempting to obtain or renew the Kerberos TGT (ticket-granting ticket) with the privileged account, using this command:
+After you create the user, SPNs, and keytabs, and configure **mssql-conf** to see that the Active Directory configuration for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux is correct, you can display the Kerberos trace messages to the console (`stdout`) when attempting to obtain or renew the Kerberos TGT with the privileged account, using this command:
 
 ```bash
 root@sqllinux mssql# KRB5_TRACE=/dev/stdout kinit -kt /var/opt/mssql/secrets/mssql.keytab sqluser
 ```
 
-If there aren't any problems, you should see output similar to the sample below. If not, the trace will provide context about which steps you should review.
+If there aren't any problems, you should see output similar to the following sample. If not, the trace provides context about which steps you should review.
 
 ```output
 3791545 1640722276.100275: Getting initial credentials for sqluser@CONTOSO.COM
@@ -182,7 +200,7 @@ renew until 01/04/2022 20:11:16
 
 ### Enable Kerberos and security-based PAL logging
 
-You can enable `security.kerberos` and `security.ldap` logging to identify specific error messages in the PAL (Platform Abstraction Layer). Create a `logger.ini` file with the content shown below at `/var/opt/mssql/`, restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then reproduce the failure. The PAL's Active Directory error and debug messages will be logged to `/var/opt/mssql/log/security.log`.
+You can enable `security.kerberos` and `security.ldap` logging to identify specific error messages in the PAL (Platform Abstraction Layer). Create a `logger.ini` file with the following content at `/var/opt/mssql/`, restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then reproduce the failure. The PAL's Active Directory error and debug messages will be logged to `/var/opt/mssql/log/security.log`.
 
 ```ini
 [Output:security]
@@ -200,7 +218,7 @@ Outputs = security
 
 You don't need to restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for the logger changes to be picked up from `logger.ini`, but failures can occur during Active Directory service initialization on during [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] startup that would otherwise go unnoticed. Restarting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ensures all the error messages are captured.
 
-Note that the security log will continue to write to the drive until you remove the changes in `logger.ini`. Remember to disable `security.kerberos` and `security.ldap` logging once you've identified and resolved the problem to prevent running out of space on the drive.
+The security log continues to write to the drive until you remove the changes in `logger.ini`. Remember to disable `security.kerberos` and `security.ldap` logging once you've identified and resolved the problem to prevent running out of space on the drive.
 
 The PAL logger generates log files in the following format:
 
@@ -208,13 +226,13 @@ The PAL logger generates log files in the following format:
 <DATETIME> <Log level> [<logger>] <<process/thread identifier>> <message>
 ```
 
-For example, a sample line from the log is shown below:
+For example, a sample line from the log follows:
 
 ```output
 12/28/2021 13:56:31.609453055 Error [security.kerberos] <0003753757/0x00000324> Request ticket server MSSQLSvc/sql.contoso.com:1433@CONTOSO.COM kvno 3 enctype aes256-cts found in keytab but cannot decrypt ticket
 ```
 
-Once you have PAL logging enabled and you reproduce the issue, look for the first message with a log-level of `Error`, then use the table below to find the error and follow the guidance and recommendation to troubleshoot and resolve the issue.
+Once you have PAL logging enabled and you reproduce the issue, look for the first message with a log-level of `Error`, then use the following table to find the error and follow the guidance and recommendation to troubleshoot and resolve the issue.
 
 ## Common error messages
 
@@ -251,7 +269,7 @@ You can refer to this list of common errors to identify the possible cause for e
 
 #### Guidance
 
-To validate the issue, please follow the guidance as documented for "Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication. (Microsoft SQL Server, Error: 18452)" [enable PAL logging](#enable-kerberos-and-security-based-pal-logging) to identify the specific error, and troubleshoot accordingly.
+To validate the issue, please follow the guidance as documented for "Login failed. The login is from an untrusted domain and can't be used with Integrated authentication. (Microsoft SQL Server, Error: 18452)" [enable PAL logging](#enable-kerberos-and-security-based-pal-logging) to identify the specific error, and troubleshoot accordingly.
 
 ### <a id="error-short-domain-name"></a> Error message: "Could not look up short domain name due to error"
 
@@ -306,13 +324,13 @@ Here is one such example of the error message:
 
 - **No credentials**
 
-  Other error messages are thrown first if credentials can't be loaded for LDAP connections. You should [enable PAL logging](#enable-kerberos-and-security-based-pal-logging) check the error log for error messages before this one. If there aren't any other errors, it's most likely not a credentials issue. If one is found, then work on fixing the error message that you see. In most cases it will be one of the error messages covered in this article.
+  Other error messages are thrown first if credentials won't load for LDAP connections. You should [enable PAL logging](#enable-kerberos-and-security-based-pal-logging) and check the error log for error messages before this one. If there aren't any other errors, it's most likely not a credentials issue. If one is found, then work on fixing the error message that you see. In most cases, it will be one of the error messages covered in this article.
 
 - **rDNS problems**
 
   Check the [DNS and reverse DNS lookups](#dns-and-reverse-dns-lookups).
 
-  When the OpenLDAP library connects to a domain controller, either the domain FQDN (`contoso.com`) or the DC's FQDN (`kdc1.contoso.com`) is provided. Once the connection is made (but before returning success to the caller), the OpenLDAP library checks the IP of the server it connected to. It will then perform a reverse DNS lookup and check that the name of the server connected to (`kdc1.contoso.com`) matches the domain that the connection was requested for (`contoso.com`). If this doesn't match, the OpenLDAP library will fail the connection as a security feature. This is part of why the rDNS settings are so important for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux and have been in focus for this documentation.
+  When the OpenLDAP library connects to a domain controller, either the domain FQDN (`contoso.com`) or the DC's FQDN (`kdc1.contoso.com`) is provided. Once the connection is made (but before returning success to the caller), the OpenLDAP library checks the IP of the server it connected to. It will then perform a reverse DNS lookup and check that the name of the server connected to (`kdc1.contoso.com`) matches the domain that the connection was requested for (`contoso.com`). If this doesn't match, the OpenLDAP library fails the connection as a security feature. This is part of why the rDNS settings are so important for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux and have been in focus for this documentation.
 
 ### <a id="error-key-table-entry-not-found"></a> Error message: "Key table entry not found"
 
@@ -335,7 +353,7 @@ sudo chown mssql /var/opt/mssql/secrets/mssql.keytab
 sudo chmod 440 /var/opt/mssql/secrets/mssql.keytab
 ```
 
-For more details on listing the keytab entries and setting the correct permissions, refer to the [Check keytab file and permissions](#check-keytab-file-and-permissions) section above.  If any of the conditions mentioned in the said section aren't met, you'll see this or equivalent error: `"Key table entry not found"`.
+For more details on listing the keytab entries and setting the correct permissions, see the previous [Check keytab file and permissions](#check-keytab-file-and-permissions) section. If any of the conditions in that section aren't met, you'll see this or equivalent error: `"Key table entry not found"`.
 
 ### <a id="error-no-key-table-entry-found"></a> Error message: "No key table entry found for \<principal\>"
 
@@ -345,7 +363,7 @@ When attempting to retrieve the credentials of `<principal>` from the keytab, no
 
 #### Guidance
 
-Follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. Make sure that `<principal>` is present. The principal account here is usually the **network.privilegedadaccount** to which the SPNs are registered. If it isn't, then add it using the **adutil** command. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file) for more information.
+Follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. Make sure that `<principal>` is present. In this case, the principal account is usually the **network.privilegedadaccount** to which the SPNs are registered. If it isn't, then add it using the **adutil** command. For more information, see [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file-using-mssql-conf).
 
 ### <a id="error-request-ticket-server-not-found-kvno"></a> Error message: "Request ticket server \<principal\> not found in keytab (ticket kvno \<KVNO\>)"
 
@@ -357,7 +375,7 @@ This error indicates that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. If you can't find an error message that matches the `<principal>` and KVNO, add this entry by updating the keytab file using the steps mentioned in that section.
 
-You can also run the following command to get the latest KVNO from the DC. Before you run this command, you need to obtain or renew the Kerberos TGT (ticket-granting ticket) using the **kinit** command. See [Use adutil to create an Active Directory user for SQL Server and set the Service Principal Name (SPN)](sql-server-linux-ad-auth-adutil-tutorial.md#adutil-spn) for more information.
+You can also run the following command to get the latest KVNO from the DC. Before you run this command, you need to obtain or renew the Kerberos TGT using the **kinit** command. For more information, see [Use adutil to create an Active Directory user for SQL Server and set the Service Principal Name (SPN)](sql-server-linux-ad-auth-adutil-tutorial.md#adutil-spn).
 
 ```bash
 kvno MSSQLSvc/<hostname>
@@ -373,7 +391,7 @@ This error means that the encryption type requested by the client wasn't present
 
 To validate, follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. If you can't find an error message that matches the principal, KVNO, and encryption type, add this entry by updating the keytab file using the steps mentioned in that section.
 
-### <a id="error-request-ticket-server-not-found-decrypt"></a> Error message: "Request ticket server \<principal\> kvno \<KVNO\> enctype \<encryption type\> found in keytab but cannot decrypt ticket"
+### <a id="error-request-ticket-server-not-found-decrypt"></a> Error message: "Request ticket server \<principal\> kvno \<KVNO\> enctype \<encryption type\> found in keytab but can't decrypt ticket"
 
 #### Possible cause
 

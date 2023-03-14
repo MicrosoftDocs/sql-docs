@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "syssubsystems system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 ---
 # dbo.syssubsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

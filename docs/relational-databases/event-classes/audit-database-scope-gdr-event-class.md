@@ -1,17 +1,14 @@
 ---
+title: "Audit Database Scope GDR Event Class"
 description: "Audit Database Scope GDR Event Class"
-title: "Audit Database Scope GDR Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Database Scope GDR event class"
-ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Database Scope GDR event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Scope GDR Event Class

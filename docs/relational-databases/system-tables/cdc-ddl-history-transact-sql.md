@@ -3,7 +3,7 @@ title: "cdc.ddl_history (Transact-SQL)"
 description: cdc.ddl_history (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "06/10/2016"
+ms.date: "02/22/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -14,14 +14,13 @@ helpviewer_keywords:
   - "cdc.ddl_history"
 dev_langs:
   - "TSQL"
-ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 ---
 # cdc.ddl_history (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns one row for each data definition language (DDL) change made to tables that are enabled for change data capture. You can use this table to determine when a DDL change occurred on a source table and what the change was. Source tables that have not had DDL changes will not have entries in this table.  
+  Returns one row for each data definition language (DDL) change made to tables that are enabled for change data capture. You can use this table to determine when a DDL change occurred on a source table and what the change was. Source tables that haven't had DDL changes won't have entries in this table.  
   
- We recommend that you do not query the system tables directly. Instead, execute the [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) stored procedure.  
+ We recommend that you don't query the system tables directly. Instead, execute the [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) stored procedure.  
    
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

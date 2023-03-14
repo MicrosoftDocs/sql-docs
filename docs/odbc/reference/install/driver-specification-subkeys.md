@@ -1,20 +1,17 @@
 ---
+title: "Driver Specification Subkeys"
 description: "Driver Specification Subkeys"
-title: "Driver Specification Subkeys | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "subkeys [ODBC], driver specification subkeys"
   - "driver specification subkeys [ODBC]"
   - "registry entries for components [ODBC], driver specification subkeys"
   - "drivers subkey [ODBC]"
-ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Driver Specification Subkeys
 Each driver listed in the ODBC Drivers subkey has a subkey of its own. This subkey has the same name as the corresponding value under the ODBC Drivers subkey. The values under this subkey list the full paths of the driver and driver setup DLLs, the values of the driver keywords returned by **SQLDrivers**, and the usage count. The formats of the values are as shown in the following table.  

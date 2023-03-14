@@ -1,29 +1,26 @@
 ---
+title: "fn_syscollector_get_execution_details (Transact-SQL)"
 description: "fn_syscollector_get_execution_details (Transact-SQL)"
-title: "fn_syscollector_get_execution_details (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "fn_syscollector_get_execution_details_TSQL"
-  - "fn_syscollector_get_execution_details"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "fn_syscollector_get_execution_details function"
-ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "fn_syscollector_get_execution_details_TSQL"
+  - "fn_syscollector_get_execution_details"
+helpviewer_keywords:
+  - "fn_syscollector_get_execution_details function"
+dev_langs:
+  - "TSQL"
 ---
 # fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a portion of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] log (sysssislog) matching the package_execution_id for the given package. The table contains one row for each logging entry that is generated at run time by packages or their tasks and containers.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

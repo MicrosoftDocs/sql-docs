@@ -8,7 +8,6 @@ ms.date: 10/25/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
@@ -172,11 +171,14 @@ Select the newly created application, and on the left side menu, select **API Pe
 After the Azure Arc agent on the SQL Server host has completed its operation, the admin account selected in the **Azure Active Directory** pane in the portal will be a `sysadmin` on the SQL Server instance. To sign in, use any SQL Server client like [SSMS](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 > [!NOTE]  
-> All connections to SQL Server that are done with Azure AD authentication require an encrypted connection. If the Database Administrator (DBA) has not set up a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain was issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client or select **trust server certificate** in the advanced connection properties. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+> All connections to SQL Server that are done with Azure AD authentication require an encrypted connection. If the Database Administrator (DBA) has not set up a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain was issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client or select **trust server certificate** in the advanced connection properties. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/configure-sql-server-encryption.md).
 
 ### Create login syntax
 
-The same syntax that is used for creating Azure AD logins and users on Azure SQL Database and Azure SQL Managed Instance can now be used on SQL Server. However, on SQL Server this can be done by any account that has the `ALTER ANY LOGIN` or `ALTER ANY USER` permission. Any account with either of these permissions can create a login or user respectively. They don't need to be an Azure AD login.
+The same syntax that is used for creating Azure AD logins and users on Azure SQL Database and Azure SQL Managed Instance can now be used on SQL Server. 
+> [!NOTE]  
+> 
+On SQL Server, any account that has the `ALTER ANY LOGIN` or `ALTER ANY USER` permission can create Azure AD logins respectively users. The account doesn't need to be an Azure AD login.
 
 To create a login for an Azure AD account, execute the T-SQL command below in the `master` database:
 
@@ -203,7 +205,8 @@ GO
 To list the Azure AD logins in `master` database, execute the T-SQL command:
 
 ```sql
-SELECT * FROM sys.server_principals;
+SELECT * FROM sys.server_principals
+WHERE type IN ('E', 'X');
 ```
 
 To grant an Azure AD user membership to the `sysadmin` role (for example `admin@contoso.com`), execute the following commands in `master` database:
@@ -211,7 +214,8 @@ To grant an Azure AD user membership to the `sysadmin` role (for example `admin@
 ```sql
 CREATE LOGIN [admin@contoso.com] FROM EXTERNAL PROVIDER; 
 GO
-EXEC sp_addsrvrolemember @loginame='admin@contoso.com', @rolename='sysadmin';
+ALTER ROLE sysadmin
+ADD MEMBER [admin@contoso.com];
 GO
 ```
 

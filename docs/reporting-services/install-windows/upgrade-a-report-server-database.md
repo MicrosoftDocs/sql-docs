@@ -1,18 +1,15 @@
 ---
+title: "Upgrade a Report Server Database"
 description: "Upgrade a Report Server Database"
-title: "Upgrade a Report Server Database | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/17/2018
 ms.service: reporting-services
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "upgrading databases"
   - "report server database"
   - "upgrading Reporting Services"
-ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Upgrade a Report Server Database

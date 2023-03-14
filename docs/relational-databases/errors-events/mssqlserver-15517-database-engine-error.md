@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_15517"
 description: "MSSQLSERVER_15517"
-title: "MSSQLSERVER_15517 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "15517 (Database Engine error)"
-ms.assetid: f94287f5-129f-4c52-9d34-62b996088001
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "15517 (Database Engine error)"
 ---
 # MSSQLSERVER_15517
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

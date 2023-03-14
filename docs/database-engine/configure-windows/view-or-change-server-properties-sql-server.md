@@ -7,7 +7,6 @@ ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-ms.custom: contperf-fy20q4
 f1_keywords:
   - "sql13.swb.connectionproperties.f1"
 helpviewer_keywords:

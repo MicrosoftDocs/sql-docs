@@ -1,16 +1,13 @@
 ---
-description: "sp_special_columns_100 (Azure Synapse Analytics)"
 title: "sp_special_columns_100 (Azure Synapse Analytics)"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
+description: "sp_special_columns_100 (Azure Synapse Analytics)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sp_special_columns_100 (Azure Synapse Analytics)
@@ -18,7 +15,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
   Returns the optimal set of columns that uniquely identify a row in the table. Also returns columns automatically updated when any value in the row is updated by a transaction.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -84,7 +81,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## Permissions  
  Requires SELECT permission on the schema.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns information about the column that uniquely identifies rows in the `FactFinance` table.  
   
 ```sql  

@@ -1,29 +1,26 @@
 ---
+title: "sp_help_spatial_geography_index (Transact-SQL)"
 description: "sp_help_spatial_geography_index (Transact-SQL)"
-title: "sp_help_spatial_geography_index (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_spatial_geography_index"
-  - "sp_help_spatial_geography_index_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_spatial_geography_index procedure"
-ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: markingmyname
 ms.author: maghan
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_spatial_geography_index"
+  - "sp_help_spatial_geography_index_TSQL"
+helpviewer_keywords:
+  - "sp_help_spatial_geography_index procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the names and values for a specified set of properties about a **geography** spatial index. The result is returned in a table format. You can choose to return a core set of properties or all properties of the index.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

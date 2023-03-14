@@ -1,29 +1,26 @@
 ---
+title: "sp_helpsubscriberinfo (Transact-SQL)"
 description: "sp_helpsubscriberinfo (Transact-SQL)"
-title: "sp_helpsubscriberinfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpsubscriberinfo"
-  - "sp_helpsubscriberinfo_TSQL"
-helpviewer_keywords: 
-  - "sp_helpsubscriberinfo"
-ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpsubscriberinfo"
+  - "sp_helpsubscriberinfo_TSQL"
+helpviewer_keywords:
+  - "sp_helpsubscriberinfo"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Displays information about a Subscriber. This stored procedure is executed at the Publisher on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

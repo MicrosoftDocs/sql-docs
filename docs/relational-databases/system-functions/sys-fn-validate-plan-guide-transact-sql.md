@@ -1,24 +1,22 @@
 ---
-description: "sys.fn_validate_plan_guide (Transact-SQL)"
 title: "sys.fn_validate_plan_guide (Transact-SQL)"
-ms.custom: ""
+description: "sys.fn_validate_plan_guide (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/22/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_validate_plan_guide"
   - "sys.fn_validate_plan_guide_TSQL"
   - "fn_validate_plan_guide"
   - "fn_validate_plan_guide_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_validate_plan_guide function"
   - "sys.fn_validate_plan_guide function"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +25,7 @@ ms.author: randolphwest
   
  By validating a plan guide, you can determine whether the guide can be used by the optimizer without modification. Based on the results of the function, you can decide to drop the plan guide and retune the query or modify the database design, for example, by re-creating the index specified in the plan guide.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

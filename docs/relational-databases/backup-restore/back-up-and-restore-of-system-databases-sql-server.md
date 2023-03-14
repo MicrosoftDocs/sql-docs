@@ -1,21 +1,18 @@
 ---
 title: "Backup & restore: system databases"
 description: SQL Server maintains system databases essential for operation of a server instance. Several system databases must be backed up after every significant update.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system databases [SQL Server], backing up and restoring"
   - "restoring system databases [SQL Server]"
   - "backing up [SQL Server], system databases"
   - "database backups [SQL Server], system databases"
   - "servers [SQL Server], backup"
-ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Backup & restore: system databases (SQL Server)
 

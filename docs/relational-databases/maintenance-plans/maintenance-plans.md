@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], about database maintenance plans"
   - "maintenance plans [SQL Server], database compatibility level displayed in designer"
   - "maintenance plans [SQL Server]"
-ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 ---
 # Maintenance Plans
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

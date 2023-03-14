@@ -1,22 +1,19 @@
 ---
+title: "sp_xml_removedocument (Transact-SQL)"
 description: "sp_xml_removedocument (Transact-SQL)"
-title: "sp_xml_removedocument (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_xml_removedocument_TSQL"
-  - "sp_xml_removedocument"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_xml_removedocument"
-ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_xml_removedocument_TSQL"
+  - "sp_xml_removedocument"
+helpviewer_keywords:
+  - "sp_xml_removedocument"
+dev_langs:
+  - "TSQL"
 ---
 # sp_xml_removedocument (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!NOTE]  
 >  A parsed document is stored in the internal cache of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The MSXML parser (Msxmlsql.dll) uses one-eighth the total memory available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To avoid running out of memory, run **sp_xml_removedocument** to free up the memory.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

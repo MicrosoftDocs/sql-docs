@@ -1,19 +1,15 @@
 ---
-description: "Graph processing with SQL Server and Azure SQL Database"
 title: "Graph processing"
-titleSuffix:  SQL Server and Azure SQL Database
-ms.date: "06/26/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "SQL graph"
-  - "SQL graph, overview"
-ms.assetid: 
+titleSuffix: SQL Server and Azure SQL Database
+description: "Graph processing with SQL Server and Azure SQL Database"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.custom: seo-dt-2019
+ms.date: "06/26/2019"
+ms.service: sql
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "SQL graph"
+  - "SQL graph, overview"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Graph processing with SQL Server and Azure SQL Database

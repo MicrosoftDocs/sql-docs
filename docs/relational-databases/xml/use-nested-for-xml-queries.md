@@ -1,18 +1,17 @@
 ---
 title: "Use Nested FOR XML Queries"
 description: Learn how to use nested FOR XML queries.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML clause, nested FOR XML queries"
   - "queries [XML in SQL Server], nested FOR XML"
   - "nested FOR XML queries"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use nested FOR XML queries
 

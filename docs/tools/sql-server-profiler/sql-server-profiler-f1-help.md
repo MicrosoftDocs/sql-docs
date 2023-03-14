@@ -2,20 +2,17 @@
 title: SQL Server Profiler dialog boxes
 titleSuffix: SQL Server Profiler
 description: Explore the commands and settings that are available in SQL Server Profiler for use in traces, templates, files, tables, performance counters, and replays.
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: profiler
-ms.topic: "reference"
-ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 07/07/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: "reference"
 ---
 
 # SQL Server Profiler dialog boxes
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a tool that captures [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events from a server. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem. The following are the commands and settings available in the dialog boxes of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## Trace properties

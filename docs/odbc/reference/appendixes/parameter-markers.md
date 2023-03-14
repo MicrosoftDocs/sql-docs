@@ -1,19 +1,16 @@
 ---
+title: "Parameter Markers"
 description: "Parameter Markers"
-title: "Parameter Markers | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "minimum SQL syntax supported [ODBC]"
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
   - "parameter markers [ODBC]"
-ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
-author: David-Engel
-ms.author: v-davidengel
-ms.reviewer: ""
 ---
 # Parameter Markers
 In accordance with the SQL-92 specification, an application cannot place parameter markers in the following locations. For a more comprehensive list, see the SQL-92 specification.  

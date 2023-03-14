@@ -1,19 +1,16 @@
 ---
+title: "Understanding the Script Component Object Model"
 description: "Understanding the Script Component Object Model"
-title: "Understanding the Script Component Object Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Script component [Integration Services], object model"
-ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script component [Integration Services], object model"
+dev_langs:
+  - "VB"
 ---
 # Understanding the Script Component Object Model
 

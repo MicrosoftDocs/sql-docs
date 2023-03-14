@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom:
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
@@ -29,7 +29,7 @@ An active Azure subscription.
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE[azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 # [PowerShell](#tab/powershell)
 

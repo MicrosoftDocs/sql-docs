@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.partition_range_values catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_range_values (Transact-SQL)

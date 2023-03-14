@@ -1,29 +1,26 @@
 ---
+title: "sp_droparticle (Transact-SQL)"
 description: "sp_droparticle (Transact-SQL)"
-title: "sp_droparticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_droparticle_TSQL"
-  - "sp_droparticle"
-helpviewer_keywords: 
-  - "sp_droparticle"
-ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_droparticle_TSQL"
+  - "sp_droparticle"
+helpviewer_keywords:
+  - "sp_droparticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_droparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops an article from a snapshot or transactional publication. An article cannot be removed if one or more subscriptions to it exist. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

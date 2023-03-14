@@ -1,22 +1,17 @@
 ---
-description: "PropertyIdx Property (ClientNetworkProtocolProperty Class)"
 title: "PropertyIdx Property (ClientNetworkProtocolProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "PropertyIdx Property (ClientNetworkProtocolProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "PropertyIdx property"
-ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
+description: "PropertyIdx Property (ClientNetworkProtocolProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "PropertyIdx property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "PropertyIdx Property (ClientNetworkProtocolProperty Class)"
+apitype: "MOFDef"
 ---
 # PropertyIdx Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

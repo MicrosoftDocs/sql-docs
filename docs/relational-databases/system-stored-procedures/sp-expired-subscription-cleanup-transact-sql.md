@@ -1,29 +1,26 @@
 ---
+title: "sp_expired_subscription_cleanup (Transact-SQL)"
 description: "sp_expired_subscription_cleanup (Transact-SQL)"
-title: "sp_expired_subscription_cleanup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_expired_subscription_cleanup"
-  - "SP_EXPIRED_SUBSCRIPTION_CLEANUP_TSQL"
-helpviewer_keywords: 
-  - "sp_expired_subscription_cleanup"
-ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_expired_subscription_cleanup"
+  - "SP_EXPIRED_SUBSCRIPTION_CLEANUP_TSQL"
+helpviewer_keywords:
+  - "sp_expired_subscription_cleanup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Checks the status of all the subscriptions of every publication and drops those that have expired. This stored procedure is executed at the Publisher on any database or at the Distributor on the distribution database for a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

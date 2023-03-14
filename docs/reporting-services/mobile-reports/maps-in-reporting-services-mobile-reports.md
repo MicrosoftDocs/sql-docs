@@ -1,14 +1,12 @@
 ---
-title: "Maps in Reporting Services mobile reports | Microsoft Docs"
+title: "Maps in Reporting Services mobile reports"
 description: SQL Server Mobile Report Publisher provides three types of map visualization, and built-in maps for continents and a number of individual countries/regions.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 07/21/2022
 ms.service: reporting-services
 ms.subservice: mobile-reports
-
 ms.topic: conceptual
-ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Maps in Reporting Services mobile reports
 

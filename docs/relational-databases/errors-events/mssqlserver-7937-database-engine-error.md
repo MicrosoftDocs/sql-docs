@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_7937"
 description: "MSSQLSERVER_7937"
-title: "MSSQLSERVER_7937 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "7937 (Database Engine error)"
-ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "7937 (Database Engine error)"
 ---
 # MSSQLSERVER_7937
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

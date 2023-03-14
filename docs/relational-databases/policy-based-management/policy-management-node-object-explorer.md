@@ -1,15 +1,12 @@
 ---
+title: "Policy Management Node (Object Explorer)"
 description: "Policy Management Node (Object Explorer)"
-title: "Policy Management Node (Object Explorer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 ---
 # Policy Management Node (Object Explorer)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

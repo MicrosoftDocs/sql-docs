@@ -1,19 +1,16 @@
 ---
+title: "Control Flow"
 description: "Control Flow"
-title: "Control Flow | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "control flow [Integration Services], elements"
   - "SSIS control flow elements"
   - "SQL Server Integration Services control flow elements"
-ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-author: chugugrace
-ms.author: chugu
 ---
 # Control Flow
 

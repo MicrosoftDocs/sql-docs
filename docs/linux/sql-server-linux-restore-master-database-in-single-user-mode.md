@@ -7,14 +7,14 @@ ms.date: 08/09/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
+ms.custom: template-how-to
 helpviewer_keywords:
   - "starting SQL Server on Linux, single-user mode"
   - "single-user mode [SQL Server] Linux"
-ms.custom: template-how-to
 ---
 # Restore the master database on Linux in single-user mode
 
-[!INCLUDE [sql-linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Under certain circumstances, you may need to restore the `master` database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode on Linux. Scenarios include migrating to a new instance, or recovering from inconsistencies.
 

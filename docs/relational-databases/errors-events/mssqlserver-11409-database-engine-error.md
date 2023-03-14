@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_11409"
 description: "MSSQLSERVER_11409"
-title: "MSSQLSERVER_11409 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "11409 (Database Engine error)"
-ms.assetid: 99b71a1c-a72d-4ca9-9d00-4230c9042ba5
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "11409 (Database Engine error)"
 ---
 # MSSQLSERVER_11409
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   
@@ -25,7 +22,7 @@ ms.author: mathoma
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|ALTERCOL_COLSET_DROP|  
-|Message Text|Cannot drop column set '%.*ls' in table '%.\*ls' because the table contains more than 1025 columns.|  
+|Message Text|Cannot remove column set '%.*ls' in table '%.\*ls' because the table contains more than 1025 columns.|  
   
 ## Explanation  
 Tables can contain a maximum of 1024 columns that are not designated as sparse, or computed. When sparse columns cause the table to exceed 1024 columns, a column set must be defined for the table. The table referenced has more than 1024 columns and you have attempted to remove the column set.  

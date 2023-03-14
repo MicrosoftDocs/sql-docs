@@ -1,29 +1,26 @@
 ---
+title: "sp_addmergearticle (Transact-SQL)"
 description: "sp_addmergearticle (Transact-SQL)"
-title: "sp_addmergearticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergearticle"
-  - "sp_addmergearticle_TSQL"
-helpviewer_keywords: 
-  - "sp_addmergearticle"
-ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergearticle"
+  - "sp_addmergearticle_TSQL"
+helpviewer_keywords:
+  - "sp_addmergearticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds an article to an existing merge publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,17 +1,14 @@
 ---
+title: "Broker:Forwarded Message Dropped Event Class"
 description: "Broker:Forwarded Message Dropped Event Class"
-title: "Broker:Forwarded Message Dropped Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Dropped event class"
-ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "05/24/2019"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Broker:Forwarded Message Dropped event class"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Forwarded Message Dropped Event Class

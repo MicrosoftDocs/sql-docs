@@ -1,29 +1,26 @@
 ---
+title: "sp_cursorfetch (Transact-SQL)"
 description: "sp_cursorfetch (Transact-SQL)"
-title: "sp_cursorfetch (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursorfetch"
-  - "sp_cursorfetch_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursorfetch"
-ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursorfetch"
+  - "sp_cursorfetch_TSQL"
+helpviewer_keywords:
+  - "sp_cursorfetch"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fetches a buffer of one or more rows from the database. The group of rows in this buffer is called the cursor's *fetch buffer*. sp_cursorfetch is invoked by specifying ID = 7 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

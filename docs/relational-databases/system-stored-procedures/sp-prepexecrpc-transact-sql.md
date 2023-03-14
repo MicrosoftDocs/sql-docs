@@ -1,29 +1,26 @@
 ---
+title: "sp_prepexecrpc (Transact-SQL)"
 description: "sp_prepexecrpc (Transact-SQL)"
-title: "sp_prepexecrpc (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursor_prepexecrpc"
-  - "sp_cursor_prepexecrpc_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_prepexecrpc"
-ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: markingmyname
 ms.author: maghan
+ms.date: "06/02/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursor_prepexecrpc"
+  - "sp_cursor_prepexecrpc_TSQL"
+helpviewer_keywords:
+  - "sp_prepexecrpc"
+dev_langs:
+  - "TSQL"
 ---
 # sp_prepexecrpc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Prepares and executes a parameterized stored procedure call that has been specified using an RPC identifier. sp_prepexecrpc is invoked by ID = 14 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

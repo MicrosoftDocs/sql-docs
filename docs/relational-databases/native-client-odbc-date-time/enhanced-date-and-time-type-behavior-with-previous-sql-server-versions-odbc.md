@@ -1,17 +1,14 @@
 ---
-description: "Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)"
 title: "Date Time in SQL versions (ODBC)"
-ms.custom: ""
-ms.date: 12/18/2019
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "date/time [ODBC], enhanced behavior with earlier SQL Server versions"
-ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
+description: "Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)"
 author: markingmyname
 ms.author: maghan
+ms.date: 12/18/2019
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "date/time [ODBC], enhanced behavior with earlier SQL Server versions"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)

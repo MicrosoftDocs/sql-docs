@@ -1,29 +1,26 @@
 ---
+title: "sysmail_help_account_sp (Transact-SQL)"
 description: "sysmail_help_account_sp (Transact-SQL)"
-title: "sysmail_help_account_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_help_account_sp_TSQL"
-  - "sysmail_help_account_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_help_account_sp"
-ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_help_account_sp_TSQL"
+  - "sysmail_help_account_sp"
+helpviewer_keywords:
+  - "sysmail_help_account_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists information (except passwords) about Database Mail accounts.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

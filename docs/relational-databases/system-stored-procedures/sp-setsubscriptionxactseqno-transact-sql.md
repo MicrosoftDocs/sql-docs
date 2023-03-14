@@ -1,22 +1,19 @@
 ---
+title: "sp_setsubscriptionxactseqno (Transact-SQL)"
 description: "sp_setsubscriptionxactseqno (Transact-SQL)"
-title: "sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_setsubscriptionxactseqno"
-  - "sp_setsubscriptionxactseqno_TSQL"
-helpviewer_keywords: 
-  - "sp_setsubscriptionxactseqno"
-ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_setsubscriptionxactseqno"
+  - "sp_setsubscriptionxactseqno_TSQL"
+helpviewer_keywords:
+  - "sp_setsubscriptionxactseqno"
+dev_langs:
+  - "TSQL"
 ---
 # sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!CAUTION]  
 >  Using this stored procedure incorrectly or specifying an incorrect LSN value can cause the Distribution Agent to revert changes that were already applied at the Subscriber or skip over all remaining changes.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

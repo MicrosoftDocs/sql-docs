@@ -1,29 +1,26 @@
 ---
+title: "sp_describe_cursor_tables (Transact-SQL)"
 description: "sp_describe_cursor_tables (Transact-SQL)"
-title: "sp_describe_cursor_tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_describe_cursor_tables_TSQL"
-  - "sp_describe_cursor_tables"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_describe_cursor_tables"
-ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_describe_cursor_tables_TSQL"
+  - "sp_describe_cursor_tables"
+helpviewer_keywords:
+  - "sp_describe_cursor_tables"
+dev_langs:
+  - "TSQL"
 ---
 # sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports the objects or base tables referenced by a server cursor.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,20 +1,17 @@
 ---
+title: "Cursor Type and Concurrency Combinations"
 description: "Cursor Type and Concurrency Combinations"
-title: "Cursor Type and Concurrency Combinations | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], concurrency options"
   - "cursors [ODBC], ODBC driver for Oracle"
   - "concurrency options [ODBC]"
   - "ODBC driver for Oracle [ODBC], cursor options"
-ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Cursor Type and Concurrency Combinations
 > [!IMPORTANT]  

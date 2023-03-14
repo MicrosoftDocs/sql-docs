@@ -1,29 +1,26 @@
 ---
+title: "sp_OACreate (Transact-SQL)"
 description: "sp_OACreate (Transact-SQL)"
-title: "sp_OACreate (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_OACreate"
-  - "sp_OACreate_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_OACreate"
-ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_OACreate"
+  - "sp_OACreate_TSQL"
+helpviewer_keywords:
+  - "sp_OACreate"
+dev_langs:
+  - "TSQL"
 ---
 # sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates an instance of an OLE object.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

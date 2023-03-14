@@ -1,20 +1,19 @@
 ---
+title: "Upgrade Full-Text Search"
 description: "Upgrade Full-Text Search"
-title: "Upgrade Full-Text Search | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], installing"
   - "migrating full-text indexes [SQL Server]"
   - "upgrading Full-Text Search"
   - "installing Full-Text Search"
   - "full-text search [SQL Server], upgrading"
-ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Upgrade Full-Text Search

@@ -1,20 +1,18 @@
 ---
+title: "Join Filters"
 description: "Join Filters"
-title: "Join Filters | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "filters [SQL Server replication], join"
   - "publications [SQL Server replication], join filters"
   - "merge replication join filters [SQL Server replication]"
   - "join filters"
-ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Join Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

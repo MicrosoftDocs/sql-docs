@@ -1,14 +1,12 @@
 ---
+title: "Teradata destination"
 description: "Teradata destination"
-title: "Teradata destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "11/22/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 
 # Teradata destination

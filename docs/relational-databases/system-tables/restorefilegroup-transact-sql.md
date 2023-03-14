@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "restorefilegroup system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 ---
 # restorefilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

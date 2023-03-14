@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_wsendmsg
 apitype: "DLLExport"
-ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 ---
 # srv_wsendmsg (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,17 @@
 ---
-title: "Using Abbreviated Syntax in a Path Expression | Microsoft Docs"
+title: "Using Abbreviated Syntax in a Path Expression"
 description: Learn how to use abbreviated syntax in XQuery path expressions.
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "axis step [XQuery]"
-  - "abbreviated syntax [XQuery]"
-ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "axis step [XQuery]"
+  - "abbreviated syntax [XQuery]"
+dev_langs:
+  - "XML"
 ---
 # Path Expressions - Using Abbreviated Syntax
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

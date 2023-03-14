@@ -1,17 +1,16 @@
 ---
-title: "OVER Clause (Transact-SQL) | Microsoft Docs"
+title: "OVER Clause (Transact-SQL)"
 description: "Transact-SQL reference for the OVER clause, which defines a user-specified set of rows within a query result set."
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/11/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OVER_TSQL"
   - "OVER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "order of rowsets [SQL Server]"
   - "rowsets [SQL Server], windowing"
   - "window function"
@@ -20,9 +19,8 @@ helpviewer_keywords:
   - "rowsets [SQL Server], partitioning"
   - "rowsets [SQL Server], ordering"
   - "OVER clause"
-ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - OVER Clause (Transact-SQL)
@@ -38,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   [NEXT VALUE FOR function](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

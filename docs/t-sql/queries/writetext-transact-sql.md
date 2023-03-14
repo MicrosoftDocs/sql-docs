@@ -1,18 +1,16 @@
 ---
+title: "WRITETEXT (Transact-SQL)"
 description: "WRITETEXT (Transact-SQL)"
-title: "WRITETEXT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/23/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WRITETEXT_TSQL"
   - "WRITETEXT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "replacing data"
   - "WRITETEXT statement"
   - "updating data [SQL Server]"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "minimally logged updating [SQL Server]"
   - "overwriting data"
   - "data updates [SQL Server], WRITETEXT statement"
-ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +29,7 @@ ms.author: vanto
 > [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use the large-value data types and the **.WRITE** clause of the [UPDATE](../../t-sql/queries/update-transact-sql.md) statement instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

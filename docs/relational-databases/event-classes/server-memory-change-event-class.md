@@ -1,17 +1,14 @@
 ---
+title: "Server Memory Change Event Class"
 description: "Server Memory Change Event Class"
-title: "Server Memory Change Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Server Memory Change event class"
-ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Server Memory Change event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server Memory Change Event Class

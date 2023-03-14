@@ -1,22 +1,17 @@
 ---
-description: "ServiceName Property (SqlServiceAdvancedProperty Class)"
 title: "ServiceName Property (SqlServiceAdvancedProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ServiceName Property (SqlServiceAdvancedProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ServiceName property"
-ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
+description: "ServiceName Property (SqlServiceAdvancedProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ServiceName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ServiceName Property (SqlServiceAdvancedProperty Class)"
+apitype: "MOFDef"
 ---
 # ServiceName Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

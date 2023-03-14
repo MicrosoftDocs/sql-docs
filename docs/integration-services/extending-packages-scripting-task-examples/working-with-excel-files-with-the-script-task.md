@@ -1,21 +1,18 @@
 ---
+title: "Working with Excel Files with the Script Task"
 description: "Working with Excel Files with the Script Task"
-title: "Working with Excel Files with the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "05/15/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], Excel files"
   - "Script task [Integration Services], examples"
   - "Excel [Integration Services]"
-ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Working with Excel Files with the Script Task
 

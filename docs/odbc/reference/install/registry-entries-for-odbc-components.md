@@ -1,21 +1,18 @@
 ---
+title: "Registry Entries for ODBC Components"
 description: "Registry Entries for ODBC Components"
-title: "Registry Entries for ODBC Components | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "subkeys [ODBC]"
   - "installing ODBC components [ODBC], registry entries"
   - "registry entries for components [ODBC]"
   - "subkeys [ODBC], for components"
   - "registry entries for components [ODBC], about registry entries"
-ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Registry Entries for ODBC Components
 > [!NOTE]  

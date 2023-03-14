@@ -44,7 +44,7 @@ Logon triggers fire in response to the LOGON event that's raised when a user's s
 > [!NOTE]  
 >  The integration of .NET Framework CLR into SQL Server is discussed in this article. CLR integration does not apply to Azure SQL Database.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## SQL Server Syntax  
   

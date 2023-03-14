@@ -1,17 +1,14 @@
 ---
-description: "Target Servers (Download Instructions Tab)"
 title: "Target Servers (Download Instructions Tab)"
-ms.custom: seo-lt-2019
+description: "Target Servers (Download Instructions Tab)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.target.download.f1"
-ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Target Servers (Download Instructions Tab)

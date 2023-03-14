@@ -1,29 +1,26 @@
 ---
+title: "sp_helpmergeconflictrows (Transact-SQL)"
 description: "sp_helpmergeconflictrows (Transact-SQL)"
-title: "sp_helpmergeconflictrows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergeconflictrows_TSQL"
-  - "sp_helpmergeconflictrows"
-helpviewer_keywords: 
-  - "sp_helpmergeconflictrows"
-ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergeconflictrows_TSQL"
+  - "sp_helpmergeconflictrows"
+helpviewer_keywords:
+  - "sp_helpmergeconflictrows"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the rows in the specified conflict table. This stored procedure is run on the computer where the conflict table is stored.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

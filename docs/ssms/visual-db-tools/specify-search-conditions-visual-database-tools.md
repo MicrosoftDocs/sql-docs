@@ -1,20 +1,16 @@
 ---
-description: "Specify Search Conditions (Visual Database Tools)"
 title: Specify Search Conditions
-ms.custom: seo-lt-2019
+description: "Specify Search Conditions (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "choosing search criteria"
   - "search conditions [SQL Server], specifying"
   - "search criteria [SQL Server], specifying conditions"
-ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Specify Search Conditions (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

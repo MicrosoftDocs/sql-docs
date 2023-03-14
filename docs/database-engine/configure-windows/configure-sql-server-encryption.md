@@ -4,12 +4,11 @@ description: This article describes how to configure a SQL Server instance to en
 author: sevend2
 ms.author: v-sidong
 ms.reviewer: ramakoni1, randolphwest
-ms.date: 12/08/2022
+ms.date: 03/13/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
 ---
-
 # Configure SQL Server Database Engine for encrypting connections
 
 You can encrypt all incoming connections to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or enable encryption for just a specific set of clients. For either of these scenarios, you first have to configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to use a certificate that meets [Certificate requirements for SQL Server](certificate-requirements.md) before taking additional steps on the server computer or client computers to encrypt data.
@@ -61,7 +60,7 @@ The certificate used by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.x\MSSQLServer\SuperSocketNetLib\Certificate`
 
-This key contains a property of the certificate known as a thumbprint, which identifies each certificate in the server. In a clustered environment, this key will be set to `Null` even though the correct certificate exists in the store. To resolve this issue, you must take these extra steps on each of your cluster nodes after you install the certificate to each node:
+This key contains a property of the certificate known as a thumbprint, which identifies each certificate in the server. In a clustered environment, this key is set to `Null` even though the correct certificate exists in the store. To resolve this issue, you must take these extra steps on each of your cluster nodes after you install the certificate to each node:
 
 1. Navigate to the certificate store where the FQDN certificate is stored. On the properties page for the certificate, go to the **Details** tab and copy the thumbprint value of the certificate to a **Notepad** window.
 1. Remove the spaces between the hex characters in the thumbprint value in **Notepad**.
@@ -76,7 +75,7 @@ This key contains a property of the certificate known as a thumbprint, which ide
 > Incorrectly editing the registry can severely damage your system. Before making changes to the registry, we recommend you back up any valued data on the computer.
 
 > [!NOTE]  
-> [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] and [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) and [Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server). Other clients might not support wildcard certificates.
+> [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] and [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates.
 
 Wildcard certificate can't be selected by using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.
 
@@ -100,23 +99,23 @@ The following steps are only required if you want to force encrypted communicati
 
 ### Login packet encryption vs. data packet encryption
 
-At a high level, there are two types of packets in the network traffic between a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] client application and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]: credential packets (login packets) and data packets. When you configure encryption (either server-side or client-side), both these packet types are always encrypted. But, even when you don't configure encryption, the credentials (in the login packet) that are transmitted when a client application connects to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] are always encrypted. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] will use a certificate that meets the certificate requirements from a trusted certification authority if available. This certificate can either be manually configured by the system administrator by using one of the procedures previously discussed in the article or present in the certificate store on the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] computer.
+At a high level, there are two types of packets in the network traffic between a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] client application and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]: credential packets (login packets) and data packets. When you configure encryption (either server-side or client-side), both these packet types are always encrypted. But, even when you don't configure encryption, the credentials (in the login packet) that are transmitted when a client application connects to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] are always encrypted. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses a certificate that meets the certificate requirements from a trusted certification authority if available. This certificate is either manually configured by the system administrator, using one of the procedures previously discussed in the article, or present in the certificate store on the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] computer.
 
 ### SQL Server-generated self-signed certificates
 
-[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] will use a certificate from a trusted certification authority if available for encrypting login packets. If a trusted certificate isn't installed, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] will generate a self-signed certificate (fallback certificate) during startup and use that self-signed certificate to encrypt the credentials. This self-signed certificate helps increase security, but it doesn't protect against identity spoofing by the server. If the self-signed certificate is used, and the value of the **ForceEncryption** option is set to **Yes**, all data transmitted across a network between [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and the client application will be encrypted by using the self-signed certificate.
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] will use a certificate from a trusted certification authority if available for encrypting login packets. If a trusted certificate isn't installed, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] generates a self-signed certificate (fallback certificate) during startup and use that self-signed certificate to encrypt the credentials. This self-signed certificate helps increase security, but it doesn't protect against identity spoofing by the server. If the self-signed certificate is used, and the value of the **ForceEncryption** option is set to **Yes**, all data transmitted across a network between [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and the client application is encrypted using the self-signed certificate.
 
-When using self-signed certificate, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] logs the following message to the error log:
+When using a self-signed certificate, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] logs the following message to the error log:
 
 > A self-generated certificate was successfully loaded for encryption.
 
-[!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and earlier versions use the SHA1 algorithm. However, the SHA1 algorithm and many older algorithms have been deprecated beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. See [Deprecated Database Engine features in SQL Server 2016](/sql/database-engine/deprecated-database-engine-features-in-sql-server-2016) for more information.
+[!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and earlier versions use the SHA1 algorithm. However, the SHA1 algorithm and many older algorithms have been deprecated beginning with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. See [Deprecated Database Engine features in SQL Server 2016](../deprecated-database-engine-features-in-sql-server-2016.md) for more information.
 
-In these environments, if you're using the automatically generated self-signed certificate generated by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], either just for the pre-login handshake or for encrypting all server-client communications, your vulnerability detection software or security software or company policies may flag this use as a security issue. You have the following options for these scenarios:
+In these environments, if you're using the automatically generated self-signed certificate generated by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], either just for the prelogin handshake or for encrypting all server-client communications, your vulnerability detection software or security software or company policies may flag this use as a security issue. You have the following options for these scenarios:
 
-- Provision a new self-signed certificate or a third-party certificate that uses stronger encryption algorithms and configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to use this new certificate.
+- Create a new self-signed certificate or a third-party certificate that uses stronger encryption algorithms and configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to use this new certificate.
 - Since you now understand the reason for the flag, you can ignore the message (not recommended).
-- Upgrade to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] or a later version, that uses a stronger hash algorithm (SHA256) for self-signed certificates.
+- Upgrade to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] or a later version that uses a stronger hash algorithm (SHA256) for self-signed certificates.
 
 ### PowerShell script to create self-signed certificate for SQL Server
 
@@ -128,4 +127,16 @@ New-SelfSignedCertificate -Type SSLServerAuthentication -Subject "CN=$env:COMPUT
 -KeyAlgorithm "RSA" -KeyLength 2048 -HashAlgorithm "SHA256" -TextExtension "2.5.29.37={text}1.3.6.1.5.5.7.3.1" `
 -NotAfter (Get-Date).AddMonths(36) -KeySpec KeyExchange -Provider "Microsoft RSA SChannel Cryptographic Provider" `
 -CertStoreLocation "cert:\LocalMachine\My"
+```
+
+### Verify network encryption
+
+To verify that network encryption is configured and enabled successfully, run the following Transact-SQL query:
+
+```sql
+USE [master]
+GO
+SELECT DISTINCT (encrypt_option)
+FROM sys.dm_exec_connections;
+GO
 ```

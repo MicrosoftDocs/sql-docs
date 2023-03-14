@@ -1,29 +1,26 @@
 ---
+title: "sysmail_delete_account_sp (Transact-SQL)"
 description: "sysmail_delete_account_sp (Transact-SQL)"
-title: "sysmail_delete_account_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_delete_account_sp"
-  - "sysmail_delete_account_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_delete_account_sp"
-ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_delete_account_sp"
+  - "sysmail_delete_account_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_delete_account_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Deletes a Database Mail SMTP account. You can also use the Database Mail Configuration Wizard to delete an account.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

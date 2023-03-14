@@ -1,13 +1,13 @@
 ---
+title: "Integration Services Tasks"
 description: "Integration Services Tasks"
-title: "Integration Services Tasks | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scripts [Integration Services], tasks"
   - "files [Integration Services], task options"
   - "workflow tasks [Integration Services]"
@@ -23,9 +23,6 @@ helpviewer_keywords:
   - "SQL Server Integration Services tasks"
   - "data preparation tasks [Integration Services]"
   - "directory operations [Integration Services]"
-ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Tasks
 

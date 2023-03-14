@@ -1,21 +1,18 @@
 ---
+title: "Cursor Stored Procedures (Transact-SQL)"
 description: "Cursor Stored Procedures (Transact-SQL)"
-title: "Cursor Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursors [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], cursors"
   - "server cursors [SQL Server]"
-ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # Cursor Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

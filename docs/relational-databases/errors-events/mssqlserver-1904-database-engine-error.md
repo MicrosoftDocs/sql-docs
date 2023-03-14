@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_1904"
 description: "MSSQLSERVER_1904"
-title: "MSSQLSERVER_1904 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1904 (Database Engine error)"
-ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1904 (Database Engine error)"
 ---
 # MSSQLSERVER_1904
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_3413"
 description: "MSSQLSERVER_3413"
-title: "MSSQLSERVER_3413 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3413 (Database Engine error)"
-ms.assetid: 3fa07637-ba93-4633-aaf2-ade7d18bc487
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3413 (Database Engine error)"
 ---
 # MSSQLSERVER_3413
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

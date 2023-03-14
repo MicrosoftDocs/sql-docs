@@ -1,17 +1,15 @@
 ---
 title: "Arguments for External Tools"
 description: "Arguments for External Tools"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "arguments [SQL Server Management Studio]"
-  - "external tools [SQL Server Management Studio]"
 author: "markingmyname"
 ms.author: "maghan"
-ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "arguments [SQL Server Management Studio]"
+  - "external tools [SQL Server Management Studio]"
 ---
 
 # Arguments for External Tools

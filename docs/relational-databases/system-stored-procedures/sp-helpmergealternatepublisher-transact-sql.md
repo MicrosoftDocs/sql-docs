@@ -1,29 +1,26 @@
 ---
+title: "sp_helpmergealternatepublisher (Transact-SQL)"
 description: "sp_helpmergealternatepublisher (Transact-SQL)"
-title: "sp_helpmergealternatepublisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergealternatepublisher_TSQL"
-  - "sp_helpmergealternatepublisher"
-helpviewer_keywords: 
-  - "sp_helpmergealternatepublisher"
-ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergealternatepublisher_TSQL"
+  - "sp_helpmergealternatepublisher"
+helpviewer_keywords:
+  - "sp_helpmergealternatepublisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of all servers enabled as alternate Publishers for merge publications. This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

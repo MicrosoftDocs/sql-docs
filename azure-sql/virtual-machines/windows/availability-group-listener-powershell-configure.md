@@ -8,9 +8,7 @@ ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell
 editor: monicar
 ---
 # Configure one or more Always On availability group listeners
@@ -55,10 +53,7 @@ If you are restricting access with an Azure Network Security Group, ensure that 
 
 ## Determine the load balancer SKU required
 
-[Azure load balancer](/azure/load-balancer/load-balancer-overview) is available in two SKUs: Basic & Standard. The standard load balancer is recommended. If the virtual machines are in an availability set, basic load balancer is permitted. If the virtual machines are in an availability zone, a standard load balancer is required. Standard load balancer requires that all VM IP addresses use standard IP addresses.
-
-> [!IMPORTANT]
-> On September 30, 2025, the Basic SKU for the Azure Load Balancer will be retired. For more information, see the [official announcement](https://azure.microsoft.com/updates/azure-basic-load-balancer-will-be-retired-on-30-september-2025-upgrade-to-standard-load-balancer/). If you're currently using Basic Load Balancer, upgrade to Standard Load Balancer prior to the retirement date.  For guidance, review [upgrade load balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance).
+[Azure load balancer](/azure/load-balancer/load-balancer-overview) is available in two SKUs: Basic & Standard. The standard load balancer is recommended as the  Basic SKU is scheduled to be [retired on September 30, 2025](https://azure.microsoft.com/updates/azure-basic-load-balancer-will-be-retired-on-30-september-2025-upgrade-to-standard-load-balancer/). The standard load balancer is required for virtual machines in an availability zone.  Standard load balancer requires that all VM IP addresses use standard IP addresses.
 
 The current [Microsoft template](./availability-group-quickstart-template-configure.md) for an availability group uses a basic load balancer with basic IP addresses.
 

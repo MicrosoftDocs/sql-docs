@@ -7,7 +7,6 @@ ms.date: 05/24/2018
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 ---
 # Configure read-scale for an Always On availability group
 

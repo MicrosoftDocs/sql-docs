@@ -1,29 +1,26 @@
 ---
+title: "xp_logininfo (Transact-SQL)"
 description: "xp_logininfo (Transact-SQL)"
-title: "xp_logininfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "xp_logininfo_TSQL"
-  - "xp_logininfo"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_logininfo"
-ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "xp_logininfo_TSQL"
+  - "xp_logininfo"
+helpviewer_keywords:
+  - "xp_logininfo"
+dev_langs:
+  - "TSQL"
 ---
 # xp_logininfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about Windows users and Windows groups.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

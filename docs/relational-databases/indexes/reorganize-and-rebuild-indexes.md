@@ -36,7 +36,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||
 This article helps you decide when and how to perform index maintenance. It covers concepts such as index fragmentation and page density, and their impact on query performance and resource consumption. It describes index maintenance methods, [reorganizing an index](#reorganize-an-index) and [rebuilding an index](#rebuild-an-index), and suggests an index maintenance strategy that balances potential performance improvements against resource consumption required for maintenance.
 
 > [!Note]
-> The information in this article does not apply to a dedicated SQL pool in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]. For information on index maintenance for a dedicated SQL pool in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], see [Indexing dedicated SQL pool tables in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
+> The information in this article does not apply to a dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. For information on index maintenance for a dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], see [Indexing dedicated SQL pool tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
 
 ## Concepts: index fragmentation and page density
 
@@ -275,9 +275,9 @@ Up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], rebuilding a clustered 
 > Creating and rebuilding nonaligned indexes on a table with more than 1,000 partitions is possible, but is not supported. Doing so may cause degraded performance or excessive memory consumption during these operations. Microsoft recommends using only [aligned indexes](../partitions/partitioned-tables-and-indexes.md#aligned-index) when the number of partitions exceeds 1,000.
 
 <!--
-For an [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REBUILD` will re-sort the data using tempdb. Monitor tempdb during rebuild operations. If you need more tempdb space, scale up the data warehouse. Scale back down once the index rebuild is complete.
+For an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REBUILD` will re-sort the data using tempdb. Monitor tempdb during rebuild operations. If you need more tempdb space, scale up the data warehouse. Scale back down once the index rebuild is complete.
 
-For an [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort data, use `ALTER INDEX REBUILD`.
+For an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort data, use `ALTER INDEX REBUILD`.
 -->
 
 ### Statistics limitations

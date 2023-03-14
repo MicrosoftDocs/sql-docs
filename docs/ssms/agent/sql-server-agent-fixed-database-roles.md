@@ -1,12 +1,13 @@
 ---
-description: "SQL Server Agent Fixed Database Roles"
 title: "SQL Server Agent Fixed Database Roles"
-ms.custom: seo-lt-2019
+description: "SQL Server Agent Fixed Database Roles"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "roles [SQL Server], SQL Server Agent"
   - "SQL Server Agent, roles"
   - "SQLAgentUserRole database role"
@@ -15,10 +16,6 @@ helpviewer_keywords:
   - "security [SQL Server Agent], fixed database roles"
   - "fixed database roles [SQL Server]"
   - "SQLAgentOperatorRole database role"
-ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # SQL Server Agent Fixed Database Roles

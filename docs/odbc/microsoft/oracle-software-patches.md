@@ -1,18 +1,15 @@
 ---
+title: "Oracle Software Patches"
 description: "Oracle Software Patches"
-title: "Oracle Software Patches | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC driver for Oracle [ODBC], Oraclesoftware patches"
-  - "Oracle software patches [ODBC]"
-ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC driver for Oracle [ODBC], Oraclesoftware patches"
+  - "Oracle software patches [ODBC]"
 ---
 # Oracle Software Patches
 > [!IMPORTANT]  

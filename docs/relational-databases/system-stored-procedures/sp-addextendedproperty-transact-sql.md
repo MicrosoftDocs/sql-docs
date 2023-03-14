@@ -1,37 +1,27 @@
 ---
+title: "sp_addextendedproperty (Transact-SQL)"
 description: "sp_addextendedproperty (Transact-SQL)"
-title: "sp_addextendedproperty (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addextendedproperty"
-  - "sp_addextendedproperty_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addextendedproperty"
-ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: markingmyname
 ms.author: maghan
+ms.date: "01/11/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addextendedproperty"
+  - "sp_addextendedproperty_TSQL"
+helpviewer_keywords:
+  - "sp_addextendedproperty"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_addextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Adds a new extended property to a database object.  
-  Security
-
-
-    
-                  
-    
-
           
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

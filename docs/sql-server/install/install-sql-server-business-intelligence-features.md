@@ -1,17 +1,13 @@
 ---
 title: "Install Business Intelligence Features"
 description: This article provides links to information to install SQL Server features that are part of the Microsoft Business Intelligence platform.
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
-ms.date: "12/13/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: install
-ms.topic: conceptual
-ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: maggiesMSFT
 ms.author: maggies
+ms.date: "12/13/2019"
+ms.service: sql
+ms.subservice: install
+ms.topic: conceptual
+ms.custom: intro-installation
 ---
 
 # Install SQL Server Business Intelligence Features
@@ -20,7 +16,7 @@ ms.author: maggies
 
   SQL Server features that are part of the Microsoft Business Intelligence platform include [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and several client applications used for creating or working with analytical data. This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install these features.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be installed as standalone servers, in scale-out configurations, or as shared service applications in a SharePoint farm. Installing the services in a farm enables BI features that are only available in SharePoint, including [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint and Power View, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ad hoc interactive report designer that runs on [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] or [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] tabular model databases. 
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be installed as standalone servers, in scale-out configurations, or as shared service applications in a SharePoint farm. Installing the services in a farm enables BI features that are only available in SharePoint, including [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] for SharePoint and Power View, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ad hoc interactive report designer that runs on [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] or [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] tabular model databases. 
 
  > [!NOTE]
  > Reporting Services integration with SharePoint is no longer available after SQL Server 2016. Power View support is no longer available after SQL Server 2017.

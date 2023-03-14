@@ -1,23 +1,20 @@
 ---
+title: "sys.sp_cleanup_temporal_history"
 description: "sys.sp_cleanup_temporal_history (Transact-SQL)"
-title: "sys.sp_cleanup_temporal_history | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql-database
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql-database
+ms.topic: conceptual
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current"
 ---
 # sys.sp_cleanup_temporal_history (Transact-SQL)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 Removes all rows from temporal history table that match configured HISTORY_RETENTION PERIOD within a single transaction.
 

@@ -1,29 +1,26 @@
 ---
+title: "sp_enumeratependingschemachanges (Transact-SQL)"
 description: "sp_enumeratependingschemachanges (Transact-SQL)"
-title: "sp_enumeratependingschemachanges (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_enumeratependingschemachanges"
-  - "sp_enumeratependingschemachanges_TSQL"
-helpviewer_keywords: 
-  - "sp_enumeratependingschemachanges"
-ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_enumeratependingschemachanges"
+  - "sp_enumeratependingschemachanges_TSQL"
+helpviewer_keywords:
+  - "sp_enumeratependingschemachanges"
+dev_langs:
+  - "TSQL"
 ---
 # sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of all pending schema changes. This stored procedure can be used with [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), which enables an administrator to skip selected pending schema changes so that they are not replicated. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

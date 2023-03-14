@@ -1,19 +1,17 @@
 ---
+title: "Distribution Agent Security"
 description: "Distribution Agent Security"
-title: "Distribution Agent Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.security.DA.f1"
-helpviewer_keywords: 
-  - "Distribution Agent Security dialog box"
-ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.security.DA.f1"
+helpviewer_keywords:
+  - "Distribution Agent Security dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Distribution Agent Security

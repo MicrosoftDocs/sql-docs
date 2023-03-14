@@ -1,22 +1,19 @@
 ---
+title: "STLineFromWKB (geometry Data Type)"
 description: "STLineFromWKB (geometry Data Type)"
-title: "STLineFromWKB (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STLineFromWKB (geometry Data Type)"
   - "STLineFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STLineFromWKB (geometry Data Type)"
-ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STLineFromWKB (geometry Data Type)

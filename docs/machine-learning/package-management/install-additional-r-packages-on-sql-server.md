@@ -1,15 +1,13 @@
 ---
 title: Install R packages with sqlmlutils
 description: Learn how to use sqlmlutils to install new R packages to an instance of SQL Server Machine Learning Services.
-ms.service: sql
-ms.subservice: machine-learning
-ms.date: 12/15/2020
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.date: 12/15/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: how-to
+ms.custom: intro-installation
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

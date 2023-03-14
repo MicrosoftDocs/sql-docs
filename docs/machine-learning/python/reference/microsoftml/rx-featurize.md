@@ -1,29 +1,18 @@
---- 
- 
-# required metadata 
-title: "rx_featurize: Data Transformation for revoscalepy data sources" 
-description: "Transforms data from an input data set to an output data set." 
-keywords: "transform, featurizer" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "rx_featurize: Data Transformation for revoscalepy data sources"
+description: "Transforms data from an input data set to an output data set."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - transform
+  - featurizer
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.rx_featurize*: Data transformation for data sources
 
 

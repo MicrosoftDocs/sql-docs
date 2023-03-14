@@ -1,17 +1,14 @@
 ---
+title: "SET UNIQUE Command"
 description: "SET UNIQUE Command"
-title: "SET UNIQUE Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SET UNIQUE command [ODBC]"
-ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SET UNIQUE command [ODBC]"
 ---
 # SET UNIQUE Command
 Specifies whether records with duplicate index key values are maintained in an index file.  

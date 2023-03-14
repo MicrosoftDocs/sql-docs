@@ -4,7 +4,7 @@ description: This page contains a listing of bugs fixed in each release, startin
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 11/28/2022
+ms.date: 01/31/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -14,6 +14,20 @@ helpviewer_keywords:
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix VBS-NONE enclave attestation protocol
+- Fix error when retrieving numeric column with Regional=Yes
+- Fix intermittent lack of error when server is stopped during bcp out operation
+- Fix error when stored procedure call contains unquoted string parameter
+- Fix a memory leak upon reconnect
+- Fix a crash when receiving invalid data from server
+- Correct error message when Dedicated Administrative Connections (DAC) fail
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.3 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Correct error message when Dedicated Administrative Connections (DAC) fail
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.1.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

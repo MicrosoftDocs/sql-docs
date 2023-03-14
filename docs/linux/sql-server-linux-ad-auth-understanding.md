@@ -39,7 +39,7 @@ When you work in a heterogeneous (mixed) environment where you have Windows and 
 
 Server processes on Linux or Unix systems can't be configured to run processes with a Windows service account. When you want a Linux or Unix system to automatically log into Active Directory on startup, you must use a *keytab* file.
 
-A keytab is a cryptographic file containing a representation of a Kerberos-protected service and its long-term *key* of its associated service principal name in the Key Distribution Center (KDC). The key is not the password itself.
+A keytab is a cryptographic file containing a representation of a Kerberos-protected service and its long-term *key* of its associated service principal name in the Key Distribution Center (KDC). The key isn't the password itself.
 
 Keytabs are used to either:
 
@@ -50,7 +50,7 @@ For more information, see [Active Directory: Using Kerberos Keytabs to integrate
 
 ## What is a `krb5.conf` file?
 
-The `/etc/krb5.conf` file (which may also be called `krb5.ini`) provides configuration inputs for the Kerberos v5 (KRB5) and GNU Simple Authentication and Security Layer API (GSSAPI) libraries.
+The `/etc/krb5.conf` file (also called `krb5.ini`) provides configuration inputs for the Kerberos v5 (KRB5) and GNU Simple Authentication and Security Layer API (GSSAPI) libraries.
 
 This information includes the default domain, properties of each domain (such as Key Distribution Centers), and default Kerberos ticket lifetime.
 
@@ -130,7 +130,7 @@ For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] containers, you can c
 
 Because we are connecting to a container, the server name in the client connection may be different than just the hostname. It could be the hostname, the container name, or another alias. In addition, there is a good chance that the exposed port for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] won't be the default **1433**.
 
-You will need to use the SPN that is stored in `mssql.keytab` to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] container. For example, if the SPN in `mssql.keytab` is `MSSQLSvc/sqlcontainer.domain.com:8000`, you would use `sqlcontainer.domain.com,8000` as your connection string in the client (including **sqlcmd**, SQL Server Management Studio, and Azure Data Studio).
+You must use the SPN that is stored in `mssql.keytab` to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] container. For example, if the SPN in `mssql.keytab` is `MSSQLSvc/sqlcontainer.domain.com:8000`, you would use `sqlcontainer.domain.com,8000` as your connection string in the client (including **sqlcmd**, SQL Server Management Studio, and Azure Data Studio).
 
 :::image type="content" source="media/sql-server-linux-ad-auth-understanding/ad-auth-explained-container.svg" alt-text="Active Directory authentication for SQL Server Containers":::
 
@@ -142,9 +142,14 @@ Imagine you have a user *adUser*, which is a member of a group *adGroup*. If *ad
 
 We periodically run a process called *group refresh* to protect against a scenario where a connected user is no longer allowed to perform a privileged action (such as creating a login or altering a database).
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a privileged Active Directory account which it uses for group refresh. This account is either configured using **mssql-conf** with the **network.privilegedadaccount** setting, or defaults to the machine account of the host machine (`<hostname>$`).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a privileged Active Directory account that it uses for group refresh. This account is either configured using **mssql-conf** with the **network.privilegedadaccount** setting, or defaults to the machine account of the host machine (`<hostname>$`).
 
 The credentials for the privileged account in `mssql.keytab` are used to impersonate the client (*adUser* in this example). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does a Kerberos handshake with itself to identify the group membership information, and compares it with `sys.syslogins` to check if *adUser* still has the permissions necessary to connect and execute the requested Transact-SQL commands. If *adUser* has been removed from *adGroup*, the connection is terminated by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+
+Group refresh requires the following two conditions:
+
+- Network connectivity between the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance and the on-premises Active Directory domain.
+- Two-way trust between the domain that [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is connected to, and the on-premises Active Directory domain. For more information, see [Understanding Active Directory](/windows-server/identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview#understanding-active-directory).
 
 ## Next steps
 

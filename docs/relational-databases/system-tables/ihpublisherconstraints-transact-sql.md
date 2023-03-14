@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "IHpublisherconstraints system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 ---
 # IHpublisherconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

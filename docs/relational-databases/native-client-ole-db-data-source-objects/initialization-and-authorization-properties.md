@@ -1,21 +1,18 @@
 ---
+title: "Initialization and authorization properties (Native Client OLE DB provider)"
 description: "Initialization and authorization properties (Native Client OLE DB provider)"
-title: "Initialization and authorization properties (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "authorization [OLE DB]"
   - "properties [OLE DB]"
   - "SQL Server Native Client OLE DB provider, initialization properties"
   - "SQL Server Native Client OLE DB provider, authorization properties"
   - "initialization properties [OLE DB]"
-ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Initialization and Authorization Properties (Native Client OLE DB Provider)

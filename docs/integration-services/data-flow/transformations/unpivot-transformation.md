@@ -1,23 +1,20 @@
 ---
+title: "Unpivot Transformation"
 description: "Unpivot Transformation"
-title: "Unpivot Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.unpivottrans.f1"
   - "sql13.dts.designer.unpivottransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Unpivot transformation"
   - "more normalized data set [Integration Services]"
   - "normalized data [Integration Services]"
   - "datasets [Integration Services], normalized data"
-ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-author: chugugrace
-ms.author: chugu
 ---
 # Unpivot Transformation
 

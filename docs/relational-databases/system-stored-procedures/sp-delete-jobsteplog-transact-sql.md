@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_jobsteplog (Transact-SQL)"
 description: "sp_delete_jobsteplog (Transact-SQL)"
-title: "sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_jobsteplog"
-  - "sp_delete_jobsteplog_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_jobsteplog"
-ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_jobsteplog"
+  - "sp_delete_jobsteplog_TSQL"
+helpviewer_keywords:
+  - "sp_delete_jobsteplog"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +21,7 @@ ms.author: maghan
   Removes all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step logs that are specified with the arguments. Use this stored procedure to maintain the **sysjobstepslogs** table in the **msdb** database.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

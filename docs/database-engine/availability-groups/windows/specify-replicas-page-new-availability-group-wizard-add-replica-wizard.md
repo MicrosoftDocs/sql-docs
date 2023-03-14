@@ -7,7 +7,6 @@ ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 f1_keywords:
   - "sql13.swb.newagwizard.listeners.f1"
   - "sql13.swb.addreplicawizard.specifyreplicas.f1"
@@ -22,7 +21,8 @@ f1_keywords:
 |[Replicas](#ReplicasTab)|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host or currently hosts a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.<br /><br /> Finish specifying all the replicas on the **Replicas** tab before starting the other tabs.<br/><br/> Note **Automatic failover** is disabled if the cluster type is **NONE**. SQL Server only supports manual failover when an availability group is not in a cluster. <br/><br/> When cluster type is EXTERNAL, failover mode is **External**. <br/><br/> When you are adding a replica, all new replicas must be hosted on the same operating system type as the existing replicas. <br/><br/>When adding a replica, if the primary replica is on a WSFC, the secondary replicas must be in the same cluster.|
 |[Endpoints](#EndpointsTab)|Use this tab to verify any existing database mirroring endpoints and also, if this endpoint is lacking on a server instance whose service accounts use Windows Authentication, to create the endpoint automatically.|  
 |[Backup Preferences](#BackupPreferencesTab)|Use this tab to specify your backup preference for the availability group as a whole and your backup priorities for the individual availability replicas.|  
-|[Listener](#Listener)|Use this tab, if available, to create an availability group listener. By default, a listener is not created.<br /><br /> This tab is available only if you are running the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP is disabled when the cluster type is either EXTERNAL or NONE. |  
+|[Listener](#Listener)|Use this tab, if available, to create an availability group listener. By default, a listener is not created.<br /><br /> This tab is available only if you are running the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP is disabled when the cluster type is either EXTERNAL or NONE. |
+|[Read-Only Routing](#ReadOnlyRouting)|Use this tab to configure the ability to route qualifying read-only connection requests to a readable secondary replica. The availability group must have a listener to use read-only routing. |
   
 ##  <a name="ReplicasTab"></a> Replicas Tab  
  **Server Instance**  
@@ -130,7 +130,7 @@ f1_keywords:
  To prevent this availability replica from ever being be chosen for performing backups. This is useful, for example, for a remote availability replica to which you never want backups to fail over.  
   
 ##  <a name="Listener"></a> Listener Tab  
- Specify your preference for an[availability group listener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)that will provide a client connection point, one of:  
+ Specify your preference for an [availability group listener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) that will provide a client connection point, one of:  
   
  **Do not create an availability group listener now.**  
  Select to skip this step. You can create a listener later. For more information, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -186,6 +186,24 @@ f1_keywords:
 > 
 >  -   Ask your network administrator to reserve the listener's IP address for its exclusive use. Give the listener's DNS host name to application developers to use in connection strings when requesting client connections to this availability group.  
 > -   Give the listener's DNS host name to application developers to use in connection strings when requesting client connections to this availability group.  
+
+##  <a name="ReadOnlyRouting"></a> Read-Only Routing Tab
+
+For each server instance that will host an availability replica, the Read-Only Routing tab displays the values of the read-only routing URL, and the read-only routing list.
+
+**Read-only routing summary grid**
+
+ **Server Instance**  
+ Displays the name of the server instance that will host an availability replica.
+
+ **Read-Only Routing URL**  
+ Displays the actual or proposed URL for each replica. The URL takes effect when the local replica is running under the secondary role. For more information, see [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).
+
+ **Read-Only Routing List**  
+ Displays the list of replicas and the order in which the replicas would receive read-intent connections. The list takes effect when the local replica is running under the primary role. By selecting the replica in the summary table, the list of available replicas and the order of their preference can be adjusted in the lower grid.
+
+For more information, see [Configure read-only routing for an Always On availability group](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).
+
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

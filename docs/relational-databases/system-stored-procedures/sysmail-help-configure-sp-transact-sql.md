@@ -1,29 +1,26 @@
 ---
+title: "sysmail_help_configure_sp (Transact-SQL)"
 description: "sysmail_help_configure_sp (Transact-SQL)"
-title: "sysmail_help_configure_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_help_configure_sp"
-  - "sysmail_help_configure_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_help_configure_sp"
-ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_help_configure_sp"
+  - "sysmail_help_configure_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_help_configure_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays configuration settings for Database Mail.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

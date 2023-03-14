@@ -1,17 +1,15 @@
 ---
 title: "Bulk load encrypted data to columns using Always Encrypted"
 description: Learn how to bulk load data to columns using Always Encrypted with SQL Server.
-ms.custom: seo-lt-2019
-ms.date: "11/04/2015"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Always Encrypted, bulk import"
-ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "11/04/2015"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Always Encrypted, bulk import"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk load encrypted data to columns using Always Encrypted

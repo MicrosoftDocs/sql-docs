@@ -1,18 +1,19 @@
 ---
+title: "Integration Services (SSIS) Logging"
 description: "Integration Services (SSIS) Logging"
-title: "Integration Services (SSIS) Logging | Microsoft Docs"
-ms.custom: supportability
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: supportability
+f1_keywords:
   - "sql13.dts.designer.configuredtslogs.containers.f1"
   - "sql13.dts.designer.configuredtslogs.loggingdetails.f1"
   - "sql13.dts.designer.configuredtslogs.providersandlogs.f1"
   - "SQL13.SSIS.SSMS.ISMANAGECUSTOMIZEDLOGGINGLEVEL.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "containers [Integration Services], logs"
   - "Windows Event log provider [Integration Services]"
   - "XML File log provider [Integration Services]"
@@ -26,9 +27,6 @@ helpviewer_keywords:
   - "packages [Integration Services], logs"
   - "Text File log provider"
   - "SQL Server log provider"
-ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Logging
 
@@ -55,7 +53,8 @@ ms.author: chugu
     > [!NOTE]  
     >  You cannot use the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] log provider in a package that is running in 64-bit mode.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log provider, which writes log entries to the **sysssislog** table in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log provider, which writes log entries to the **sysssislog** table in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. You may experience decreased performance if you log to a system database such as master or msdb.
+A good practice is to create a separate database for Integration Services logging.  
   
 -   The Windows Event log provider, which writes entries to the Application log in the Windows Event log on the local computer.  
   

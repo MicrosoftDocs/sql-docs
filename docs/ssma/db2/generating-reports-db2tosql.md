@@ -1,15 +1,12 @@
 ---
+title: "Generating Reports (DB2ToSQL)"
 description: "Generating Reports (DB2ToSQL)"
-title: "Generating Reports (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Generating Reports (DB2ToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

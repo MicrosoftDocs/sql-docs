@@ -1,17 +1,15 @@
 ---
+title: "Agent Security (New Publication Wizard)"
 description: "Agent Security (New Publication Wizard)"
-title: "Agent Security (New Publication Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.agentsecurity.articles.f1"
-ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.agentsecurity.articles.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Agent Security (New Publication Wizard)

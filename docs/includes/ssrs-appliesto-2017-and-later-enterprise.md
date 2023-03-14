@@ -1,13 +1,9 @@
 ---
-title: include file
-description: include file
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 08/26/2021
-ms.service:
+ms.reviewer: randolphwest
+ms.date: 01/12/2023
+ms.service: reporting-services
 ms.topic: include
-ms.custom: include file
 ---
-
-
-✔️&nbsp;SQL&nbsp;Server&nbsp;Reporting&nbsp;Services Enterprise Edition (2017 and later)
+:::image type="icon" source="media/yes-icon.svg" border="false"::: SQL Server Reporting Services Enterprise edition (2017 and later)

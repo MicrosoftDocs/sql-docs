@@ -1,19 +1,15 @@
 ---
-description: "Issues of Database Evolution (Visual Database Tools)"
 title: Issues of Database Evolution
-ms.custom: seo-lt-2019
+description: "Issues of Database Evolution (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "compatibility [SQL Server], multuser database changes"
   - "database evolution [SQL Server]"
-ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Issues of Database Evolution (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

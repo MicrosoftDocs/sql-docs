@@ -1,22 +1,19 @@
 ---
-title: "String Search in XQuery | Microsoft Docs"
-description: Learn how to search text in XML documents by viewing an example of string search in XQuery. 
-ms.custom: ""
+title: "String Search in XQuery"
+description: Learn how to search text in XML documents by viewing an example of string search in XQuery.
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "strings [SQL Server], search"
   - "XML [SQL Server], searching text"
   - "searches [SQL Server], XML documents"
   - "XQuery, string search"
-ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # String Search in XQuery
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "DROP ASSEMBLY statement"
   - "assemblies [CLR integration], removing"
   - "dropping assemblies"
-ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 ---
 # Dropping an Assembly
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

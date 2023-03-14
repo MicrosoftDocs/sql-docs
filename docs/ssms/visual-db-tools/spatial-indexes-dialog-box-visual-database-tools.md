@@ -1,18 +1,14 @@
 ---
-description: "Spatial Indexes Dialog Box (Visual Database Tools)"
 title: Spatial Indexes Dialog Box
-ms.custom: seo-lt-2019
+description: "Spatial Indexes Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.spatialindexes"
-ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Spatial Indexes Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.function_order_columns catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 ---
 # sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

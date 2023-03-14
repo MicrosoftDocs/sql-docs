@@ -1,20 +1,18 @@
 ---
-description: "The sp_drop_openrowset_statistics system stored procedure removes column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources."
 title: "sp_drop_openrowset_statistics (Transact-SQL)"
-ms.custom: ""
-ms.date: "04/13/2022"
-ms.service: synapse-analytics
-ms.reviewer: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_drop_openrowset_statistics_TSQL"
-  - "sp_drop_openrowset_statistics"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_drop_openrowset_statistics"
+description: "The sp_drop_openrowset_statistics system stored procedure removes column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "04/13/2022"
+ms.service: synapse-analytics
+ms.topic: "reference"
+f1_keywords:
+  - "sp_drop_openrowset_statistics_TSQL"
+  - "sp_drop_openrowset_statistics"
+helpviewer_keywords:
+  - "sp_drop_openrowset_statistics"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # sp_drop_openrowset_statistics (Transact-SQL)
@@ -26,7 +24,7 @@ monikerRange: "=azure-sqldw-latest||=azuresqldb-mi-current"
 
  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

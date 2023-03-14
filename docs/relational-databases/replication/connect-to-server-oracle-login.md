@@ -1,19 +1,17 @@
 ---
+title: "Connect to Server (Oracle), Login"
 description: "Connect to Server (Oracle), Login"
-title: "Connect to Server (Oracle), Login | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.oracleconnection.login.f1"
-helpviewer_keywords: 
-  - "Connect to Server dialog box, replication"
-ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.oracleconnection.login.f1"
+helpviewer_keywords:
+  - "Connect to Server dialog box, replication"
 ---
 # Connect to Server (Oracle), Login
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,29 +1,26 @@
 ---
+title: "sp_scriptdynamicupdproc (Transact-SQL)"
 description: "sp_scriptdynamicupdproc (Transact-SQL)"
-title: "sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_scriptdynamicupdproc_TSQL"
-  - "sp_scriptdynamicupdproc"
-helpviewer_keywords: 
-  - "sp_scriptdynamicupdproc"
-ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_scriptdynamicupdproc_TSQL"
+  - "sp_scriptdynamicupdproc"
+helpviewer_keywords:
+  - "sp_scriptdynamicupdproc"
+dev_langs:
+  - "TSQL"
 ---
 # sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Generates the CREATE PROCEDURE statement that creates a dynamic update stored procedure. The UPDATE statement within the custom stored procedure is built dynamically based on the MCALL syntax that indicates which columns to change. Use this stored procedure if the number of indexes on the subscribing table is growing and the number of columns being changed is small. This stored procedure is run at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

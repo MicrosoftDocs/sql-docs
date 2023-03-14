@@ -9,7 +9,6 @@ ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "security [SQLXML], about security"
-ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Core SQLXML Security Considerations

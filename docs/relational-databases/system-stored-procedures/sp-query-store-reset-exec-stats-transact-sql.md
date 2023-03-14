@@ -7,7 +7,6 @@ ms.date: 10/14/2022
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "sp_query_store_reset_exec_stats_TSQL"
   - "sys.sp_query_store_reset_exec_stats_TSQL"
@@ -26,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Clears the runtime stats for a specific query plan from the Query Store. If you [enable Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md), `sp_query_store_reset_exec_stats` can only be executed against the primary replica. The procedure's scope applies to the entire replica set.
 
- :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

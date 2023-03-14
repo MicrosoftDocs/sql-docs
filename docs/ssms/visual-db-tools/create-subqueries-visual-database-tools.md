@@ -1,20 +1,16 @@
 ---
-description: "Create Subqueries (Visual Database Tools)"
 title: Create Subqueries
-ms.custom: seo-lt-2019
+description: "Create Subqueries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search criteria [SQL Server], subqueries"
   - "nested queries"
   - "subqueries [SQL Server], SQL pane"
-ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Subqueries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

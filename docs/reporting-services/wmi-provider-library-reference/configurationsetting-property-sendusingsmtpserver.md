@@ -1,22 +1,17 @@
 ---
+title: "SendUsingSMTPServer Property (WMI MSReportServer_ConfigurationSetting)"
 description: "SendUsingSMTPServer Property (WMI MSReportServer_ConfigurationSetting)"
-title: "SendUsingSMTPServer Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "SendUsingSMTPServer"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SendUsingSMTPServer property"
-ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "SendUsingSMTPServer"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - SendUsingSMTPServer
   Specifies whether the **SendUsing** element in the in the e-mail configuration for the report server is set to **true**.  

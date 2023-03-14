@@ -1,18 +1,15 @@
 ---
-description: "View collection set logs (SQL Server Management Studio)"
 title: "View collection set logs (SSMS)"
-ms.date: 06/03/2020
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "logs [SQL Server], viewing"
-  - "collection sets [SQL Server], viewing logs"
-ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
+description: "View collection set logs (SQL Server Management Studio)"
 author: MashaMSFT
 ms.author: mathoma
-ms.custom: "seo-lt-2019"
+ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+helpviewer_keywords:
+  - "logs [SQL Server], viewing"
+  - "collection sets [SQL Server], viewing logs"
 ---
 # View collection set logs (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,10 +1,13 @@
 ---
 title: Database Project Settings
 description: Learn about database project settings. See how to use these settings to control aspects of your database, debugging, and build configurations.
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.DebugProperties"
   - "sql.data.tools.dacsettings.dialog"
   - "sql.data.tools.dbsqlclrlanguagevb"
@@ -33,12 +36,8 @@ f1_keywords:
   - "sql.data.tools.csadvancedsettings.dialog"
   - "sql.data.tools.dbassemblyinfo"
   - "sql.data.tools.extendedpropertieseditor.dialog"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: markingmyname
-ms.author: maghan
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # Database Project Settings

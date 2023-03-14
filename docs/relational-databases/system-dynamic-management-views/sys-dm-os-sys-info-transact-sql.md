@@ -3,7 +3,7 @@ title: "sys.dm_os_sys_info (Transact-SQL)"
 description: sys.dm_os_sys_info (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "04/27/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
   Returns a miscellaneous set of useful information about the computer, and about the resources available to and consumed by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
-> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_os_sys_info`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+> To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_os_sys_info`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 |Column name|Data type|Description and version-specific notes |  
 |-----------------|---------------|-----------------|  
@@ -67,7 +67,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |**process_physical_affinity**|**nvarchar(3072)** |**Applies to:** Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />Information yet to come. |
 |**sql_memory_model**|**int**|**Applies to:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later.<br /><br />Specifies the memory model used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to allocate memory. Not nullable.<br /><br />1 = Conventional Memory Model<br />2 = Lock Pages in Memory<br /> 3 = Large Pages in Memory|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Applies to:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later.<br /><br />Specifies the memory model used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to allocate memory. Not nullable.<br /><br />**CONVENTIONAL** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using Conventional Memory model to allocate memory. This is default sql memory model when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account does not have Lock Pages in Memory privileges during startup.<br />**LOCK_PAGES** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using Lock Pages in Memory to allocate memory. This is the default sql memory manager when SQL Server service account possess Lock Pages in Memory privilege during SQL Server startup.<br /> **LARGE_PAGES** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using Large Pages in Memory to allocate memory. SQL Server uses Large Pages allocator to allocate memory only with Enterprise edition when SQL Server service account possess Lock Pages in Memory privilege during server startup and when Trace Flag 834 is turned ON.|
-|**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 |**socket_count** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of processor sockets available on the system. |  
 |**cores_per_socket** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of processors per socket available on the system. |  
 |**numa_node_count** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of NUMA nodes available on the system. This column includes physical NUMA nodes as well as soft NUMA nodes. |  
@@ -78,6 +78,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
 
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

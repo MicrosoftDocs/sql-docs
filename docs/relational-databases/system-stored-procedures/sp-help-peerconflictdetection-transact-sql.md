@@ -1,29 +1,26 @@
 ---
+title: "sp_help_peerconflictdetection (Transact-SQL)"
 description: "sp_help_peerconflictdetection (Transact-SQL)"
-title: "sp_help_peerconflictdetection (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_help_peerconflictdetection"
-  - "sp_help_peerconflictdetection_TSQL"
-helpviewer_keywords: 
-  - "sp_help_peerconflictdetection"
-ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_peerconflictdetection"
+  - "sp_help_peerconflictdetection_TSQL"
+helpviewer_keywords:
+  - "sp_help_peerconflictdetection"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the conflict detection settings for a publication that is involved in a peer-to-peer transactional replication topology.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,15 +1,12 @@
 ---
+title: "DQS Cleansing Connection Manager"
 description: "DQS Cleansing Connection Manager"
-title: "DQS Cleansing Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # DQS Cleansing Connection Manager
 

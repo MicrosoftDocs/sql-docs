@@ -3,7 +3,6 @@ title: "COALESCE (Transact-SQL)"
 description: "Transact-SQL reference for COALESCE, which returns the value of the first expression that does not evaluate to NULL."
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "08/30/2017"
 ms.service: sql
 ms.subservice: t-sql
@@ -25,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 Evaluates the arguments in order and returns the current value of the first expression that initially doesn't evaluate to `NULL`. For example, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` returns the third value because the third value is the first value that isn't null. 
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,25 +1,22 @@
 ---
+title: "sp_refresh_parameter_encryption (Transact-SQL)"
 description: "sp_refresh_parameter_encryption (Transact-SQL)"
-title: "sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "01/11/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_refresh_parameter_encryption"
   - "sp_refresh_parameter_encryption_TSQL"
   - "sys.sp_refresh_parameter_encryption"
   - "sys.sp_refresh_parameter_encryption_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_refresh_parameter_encryption"
   - "Always Encrypted, sp_refresh_parameter_encryption"
-ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)
@@ -28,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Updates the Always Encrypted metadata for the parameters of the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. 
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

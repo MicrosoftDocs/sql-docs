@@ -1,17 +1,15 @@
 ---
+title: "Snapshot Agent (New Publication Wizard)"
 description: "Snapshot Agent (New Publication Wizard)"
-title: "Snapshot Agent (New Publication Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.configuresnapshotagent.f1"
-ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.configuresnapshotagent.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Snapshot Agent (New Publication Wizard)

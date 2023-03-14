@@ -7,10 +7,8 @@ ms.date: "03/28/2018"
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)
@@ -37,9 +35,9 @@ Contains a row for each column in a columnstore index.
 | **max_data_id**             | **bigint** | Maximum data ID in the column segment.                       |
 | **null_value**              | **bigint** | Value used to represent nulls.                               |
 | **on_disk_size**            | **bigint** | Size of segment in bytes.                                    |
-| **pdw_node_id**             | **int**    | Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node. |
+| **pdw_node_id**             | **int**    | Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node. |
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Join sys.pdw_nodes_column_store_segments with other system tables to determine the number of columnstore segments per logical table.
 

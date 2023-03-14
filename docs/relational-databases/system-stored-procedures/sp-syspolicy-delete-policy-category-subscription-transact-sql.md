@@ -1,29 +1,26 @@
 ---
+title: "sp_syspolicy_delete_policy_category_subscription (Transact-SQL)"
 description: "sp_syspolicy_delete_policy_category_subscription (Transact-SQL)"
-title: "sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_delete_policy_category_subscription_TSQL"
-  - "sp_syspolicy_delete_policy_category_subscription"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_delete_policy_category_subscription"
-ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_delete_policy_category_subscription_TSQL"
+  - "sp_syspolicy_delete_policy_category_subscription"
+helpviewer_keywords:
+  - "sp_syspolicy_delete_policy_category_subscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes a policy category subscription for a specific database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

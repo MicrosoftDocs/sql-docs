@@ -1,15 +1,13 @@
 ---
-title: "Provision Always Encrypted keys using PowerShell | Microsoft Docs"
+title: "Provision Always Encrypted keys using PowerShell"
 description: Learn how to provision keys for Always Encrypted using the SqlServer PowerShell module to provide control access to the encryption keys and the database.
-ms.custom: ""
-ms.date: 04/15/2021
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 04/15/2021
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Provision Always Encrypted keys using PowerShell

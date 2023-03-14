@@ -1,17 +1,15 @@
 ---
+title: "Deprecated Features in SQL Server Replication"
 description: "Deprecated Features in SQL Server Replication"
-title: "Deprecated Features in SQL Server Replication | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "deprecated features [SQL Server replication]"
-ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "01/22/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "deprecated features [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Deprecated Features in SQL Server Replication

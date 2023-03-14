@@ -1,18 +1,15 @@
 ---
 title: "Tutorial: Managing servers using Policy-Based Management"
 description: This tutorial teaches you how to create and apply an off-by-default policy, and a naming-standards policy.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "tutorials [Policy-Based Management]"
-  - "Policy-Based Management, tutorials"
-ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "tutorials [Policy-Based Management]"
+  - "Policy-Based Management, tutorials"
 ---
 # Tutorial: Managing servers using Policy-Based Management
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

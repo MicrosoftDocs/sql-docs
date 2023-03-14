@@ -1,22 +1,19 @@
 ---
+title: "sp_adddynamicsnapshot_job (Transact-SQL)"
 description: "sp_adddynamicsnapshot_job (Transact-SQL)"
-title: "sp_adddynamicsnapshot_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_adddynamicsnapshot_job"
-  - "sp_adddynamicsnapshot_job_TSQL"
-helpviewer_keywords: 
-  - "sp_adddynamicsnapshot_job"
-ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_adddynamicsnapshot_job"
+  - "sp_adddynamicsnapshot_job_TSQL"
+helpviewer_keywords:
+  - "sp_adddynamicsnapshot_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +25,7 @@ ms.author: mathoma
   
  For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,18 +1,15 @@
 ---
+title: "SQLDriverConnect (dBASE Driver)"
 description: "SQLDriverConnect (dBASE Driver)"
-title: "SQLDriverConnect (dBASE Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "DBase driver [ODBC], SQLDriverConnect"
-  - "SQLDriverConnect function [ODBC], dBASE Driver"
-ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "DBase driver [ODBC], SQLDriverConnect"
+  - "SQLDriverConnect function [ODBC], dBASE Driver"
 ---
 # SQLDriverConnect (dBASE Driver)
 > [!NOTE]  

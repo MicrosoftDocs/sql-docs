@@ -1,21 +1,18 @@
 ---
+title: "Audit Transformation"
 description: "Audit Transformation"
-title: "Audit Transformation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.audittrans.f1"
-  - "sql13.dts.designer.audittransformation.f1"
-helpviewer_keywords: 
-  - "environment data in packages [Integration Services]"
-  - "Audit transformation"
-ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.audittrans.f1"
+  - "sql13.dts.designer.audittransformation.f1"
+helpviewer_keywords:
+  - "environment data in packages [Integration Services]"
+  - "Audit transformation"
 ---
 # Audit Transformation
 

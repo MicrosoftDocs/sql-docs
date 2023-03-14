@@ -7,8 +7,6 @@ ms.date: "08/31/2016"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 ---
 # High Availability Support for In-Memory OLTP databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,15 +1,12 @@
 ---
+title: "Create InfoCube for Transaction Data"
 description: "Create InfoCube for Transaction Data"
-title: "Create InfoCube for Transaction Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Create InfoCube for Transaction Data
 

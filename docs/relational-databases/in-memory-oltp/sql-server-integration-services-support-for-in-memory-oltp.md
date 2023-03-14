@@ -7,8 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Integration Services Support for In-Memory OLTP

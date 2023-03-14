@@ -1,20 +1,17 @@
 ---
+title: "File System Task"
 description: "File System Task"
-title: "File System Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.filesystemtask.f1"
-  - "sql13.dts.designer.filesystemtask.general.f1"
-helpviewer_keywords: 
-  - "File System task [Integration Services]"
-ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.filesystemtask.f1"
+  - "sql13.dts.designer.filesystemtask.general.f1"
+helpviewer_keywords:
+  - "File System task [Integration Services]"
 ---
 # File System Task
 

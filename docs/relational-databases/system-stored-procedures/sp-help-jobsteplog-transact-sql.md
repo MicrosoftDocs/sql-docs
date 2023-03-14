@@ -1,22 +1,19 @@
 ---
+title: "sp_help_jobsteplog (Transact-SQL)"
 description: "sp_help_jobsteplog (Transact-SQL)"
-title: "sp_help_jobsteplog (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobsteplog_TSQL"
-  - "sp_help_jobsteplog"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobsteplog"
-ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobsteplog_TSQL"
+  - "sp_help_jobsteplog"
+helpviewer_keywords:
+  - "sp_help_jobsteplog"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +21,7 @@ ms.author: maghan
   Returns metadata about a specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step log. **sp_help_jobsteplog** does not return the actual log.  
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

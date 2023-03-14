@@ -1,18 +1,16 @@
 ---
 title: DiagnosticInformation Element
 description: In SQL Server, the DiagnosticInformation element is the root element of a ssbdiagnostic XML output file.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML output file format [ssbdiagnose], diagnosticinformation element"
   - "diagnosticinformation element"
   - "ssbdiagnose"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ---
 
 # DiagnosticInformation Element (ssbdiagnose)

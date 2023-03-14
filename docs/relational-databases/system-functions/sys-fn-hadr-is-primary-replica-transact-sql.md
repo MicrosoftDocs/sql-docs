@@ -1,32 +1,29 @@
 ---
+title: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
 description: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
-title: "sys.fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_hadr_is_primary_replica"
   - "fn_hadr_is_primary_replica_TSQL"
   - "fn_hadr_is_primary_replica"
   - "sys.fn_hadr_is_primary_replica_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_hadr_is_primary_replica"
   - "sys.fn_hadr_is_primary_replica"
-ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Used to determine if the current replica is the primary replica.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

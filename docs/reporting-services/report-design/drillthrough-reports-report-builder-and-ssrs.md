@@ -1,15 +1,12 @@
 ---
-title: "Drillthrough reports in a paginated report | Microsoft Docs"
+title: "Drillthrough reports in a paginated report"
 description: Discover drillthrough reports, which open when you select a link in a paginated report to get details about an item in an original summary report in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
 ms.service: reporting-services
 ms.subservice: report-design
-
-
 ms.topic: conceptual
-ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Drillthrough reports in a paginated report (Report Builder)
 

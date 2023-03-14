@@ -1,29 +1,26 @@
 ---
+title: "sp_manage_jobs_by_login (Transact-SQL)"
 description: "sp_manage_jobs_by_login (Transact-SQL)"
-title: "sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_manage_jobs_by_login"
-  - "sp_manage_jobs_by_login_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_manage_jobs_by_login"
-ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_manage_jobs_by_login"
+  - "sp_manage_jobs_by_login_TSQL"
+helpviewer_keywords:
+  - "sp_manage_jobs_by_login"
+dev_langs:
+  - "TSQL"
 ---
 # sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes or reassigns jobs that belong to the specified login.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

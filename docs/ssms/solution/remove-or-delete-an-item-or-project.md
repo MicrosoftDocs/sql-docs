@@ -1,19 +1,16 @@
 ---
-description: "Remove or Delete an Item or Project"
 title: "Remove or Delete an Item or Project"
-ms.custom: seo-lt-2019
+description: "Remove or Delete an Item or Project"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting project items"
   - "projects [SQL Server Management Studio], item removal"
   - "removing project items"
-ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Remove or Delete an Item or Project
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

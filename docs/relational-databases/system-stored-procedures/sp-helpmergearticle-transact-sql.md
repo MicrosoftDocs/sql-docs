@@ -1,29 +1,26 @@
 ---
+title: "sp_helpmergearticle (Transact-SQL)"
 description: "sp_helpmergearticle (Transact-SQL)"
-title: "sp_helpmergearticle (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergearticle"
-  - "sp_helpmergearticle_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergearticle"
-ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergearticle"
+  - "sp_helpmergearticle_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergearticle"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about an article. This stored procedure is executed at the Publisher on the publication database or at a republishing Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

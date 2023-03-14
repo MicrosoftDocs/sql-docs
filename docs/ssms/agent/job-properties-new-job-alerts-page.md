@@ -1,17 +1,14 @@
 ---
-description: "Job Properties - New Job (Alerts Page)"
 title: "Job Properties - New Job (Alerts Page)"
-ms.custom: seo-lt-2019
+description: "Job Properties - New Job (Alerts Page)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.job.alerts.f1"
-ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Job Properties - New Job (Alerts Page)

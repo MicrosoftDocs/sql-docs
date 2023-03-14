@@ -1,20 +1,16 @@
 ---
+title: "Optimize SQL Trace"
 description: "Optimize SQL Trace"
-title: "Optimize SQL Trace | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], traces"
   - "SQL Trace, performance"
   - "traces [SQL Server], performance"
   - "performance [SQL Server], trace"
-ms.assetid: 50944218-925f-4576-aec8-4379846d7681
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Optimize SQL Trace
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

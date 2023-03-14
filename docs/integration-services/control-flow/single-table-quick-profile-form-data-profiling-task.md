@@ -1,19 +1,16 @@
 ---
+title: "Single Table Quick Profile Form (Data Profiling Task)"
 description: "Single Table Quick Profile Form (Data Profiling Task)"
-title: "Single Table Quick Profile Form (Data Profiling Task) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.quickprofile.f1"
-helpviewer_keywords: 
-  - "Data Profiling Task Editor"
-ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.dataprofilingtask.quickprofile.f1"
+helpviewer_keywords:
+  - "Data Profiling Task Editor"
 ---
 # Single Table Quick Profile Form (Data Profiling Task)
 

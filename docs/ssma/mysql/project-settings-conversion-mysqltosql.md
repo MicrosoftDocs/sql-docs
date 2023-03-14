@@ -1,17 +1,14 @@
 ---
+title: "Project Settings (Conversion) (MySQLToSQL)"
 description: "Project Settings (Conversion) (MySQLToSQL)"
-title: "Project Settings (Conversion) (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.projectsettingconversion.f1"
+f1_keywords:
+  - "ssma.mysql.projectsettingconversion.f1"
 ---
 # Project Settings (Conversion) (MySQLToSQL)
 The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts MySQL syntax to SQL Server or SQL Azure syntax.  

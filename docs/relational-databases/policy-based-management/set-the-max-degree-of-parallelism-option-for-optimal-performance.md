@@ -1,16 +1,14 @@
 ---
 title: "Max degree of parallelism & Policy-Based Management"
-description: Describes configuring a policy to verify the value of max degree of parallelism for Policy-Based Management for SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: 07/22/2022
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
+description: Describes configuring a policy to verify the value of max degree of parallelism for Policy-Based Management for SQL Server.
 author: VanMSFT
 ms.author: vanto
+ms.date: 07/22/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Set the Max Degree of Parallelism Option for Optimal Performance
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

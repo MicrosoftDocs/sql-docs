@@ -1,18 +1,15 @@
 ---
+title: "SQLSetConnectOption (dBASE Driver)"
 description: "SQLSetConnectOption (dBASE Driver)"
-title: "SQLSetConnectOption (dBASE Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "DBase driver [ODBC], SQLSetConnectOption"
-  - "SQLSetConnectOption function [ODBC], dBASE Driver"
-ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "DBase driver [ODBC], SQLSetConnectOption"
+  - "SQLSetConnectOption function [ODBC], dBASE Driver"
 ---
 # SQLSetConnectOption (dBASE Driver)
 > [!NOTE]  

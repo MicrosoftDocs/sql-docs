@@ -1,17 +1,14 @@
 ---
-description: "SQL Server Agent Properties (Advanced Page)"
 title: "SQL Server Agent Properties (Advanced Page)"
-ms.custom: seo-lt-2019
+description: "SQL Server Agent Properties (Advanced Page)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.agent.advanced.f1"
-ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # SQL Server Agent Properties (Advanced Page)

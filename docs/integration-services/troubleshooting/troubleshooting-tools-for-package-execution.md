@@ -1,21 +1,18 @@
 ---
+title: "Troubleshooting Tools for Package Execution"
 description: "Troubleshooting Tools for Package Execution"
-title: "Troubleshooting Tools for Package Execution | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "08/26/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services packages, troubleshooting"
   - "SSIS packages, troubleshooting"
   - "Integration Services, troubleshooting"
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
-ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: chugugrace
-ms.author: chugu
 ---
 # Troubleshooting Tools for Package Execution
 

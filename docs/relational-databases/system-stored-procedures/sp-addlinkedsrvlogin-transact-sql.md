@@ -1,29 +1,26 @@
 ---
+title: "sp_addlinkedsrvlogin (Transact-SQL)"
 description: "sp_addlinkedsrvlogin (Transact-SQL)"
-title: "sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addlinkedsrvlogin_TSQL"
-  - "sp_addlinkedsrvlogin"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addlinkedsrvlogin"
-ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addlinkedsrvlogin_TSQL"
+  - "sp_addlinkedsrvlogin"
+helpviewer_keywords:
+  - "sp_addlinkedsrvlogin"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates or updates a mapping between a login on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a security account on a remote server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

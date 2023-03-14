@@ -1,17 +1,14 @@
 ---
-description: "Create Database Mail Profile and Account Dialog Box"
 title: Create Database Mail Profile and Account Dialog Box
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.mds.configmanager.dbmailprofileacct.f1"
-ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
+description: "Create Database Mail Profile and Account Dialog Box"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.mds.configmanager.dbmailprofileacct.f1"
 ---
 # Create Database Mail Profile and Account Dialog Box
 

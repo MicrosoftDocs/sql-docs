@@ -1,19 +1,16 @@
 ---
+title: "Load Data by Using the OLE DB Destination"
 description: "Load Data by Using the OLE DB Destination"
-title: "Load Data by Using the OLE DB Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "loading data"
   - "OLE DB destination [Integration Services]"
   - "destinations [Integration Services], OLE DB"
-ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: chugugrace
-ms.author: chugu
 ---
 # Load Data by Using the OLE DB Destination
 

@@ -1,20 +1,18 @@
 ---
+title: "Optimize Parameterized Row Filters"
 description: "Optimize Parameterized Row Filters"
-title: "Optimize Parameterized Row Filters | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "precomputed partitions [SQL Server replication]"
   - "filters [SQL Server replication], parameterized"
   - "merge replication precomputed partitions [SQL Server replication], SQL Server Management Studio"
   - "parameterized filters [SQL Server replication], optimizing"
-ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Optimize Parameterized Row Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

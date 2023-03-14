@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "catalog views [SQL Server], Service Broker"
 dev_langs:
   - "TSQL"
-ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 ---
 # Service Broker Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

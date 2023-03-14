@@ -128,8 +128,7 @@ sections:
       - question: |
           Can CSP subscriptions activate the Azure Hybrid Benefit?
         answer: |
-             Yes, the Azure Hybrid Benefit is available for CSP subscriptions. CSP customers should first deploy a pay-as-you-go image, and then [change the licensing model](licensing-model-azure-hybrid-benefit-ahb-change.md) to bring-your-own-license.
-             
+             Yes, Azure Cloud Solution Provider (CSP) customers can use the Azure Hybrid Benefit by first deploying a pay-as-you-go VM and then converting it to [bring-your-own-license](licensing-model-azure-hybrid-benefit-ahb-change.md), if they have active Software Assurance.
            
       - question: |
           Do I have to pay to license SQL Server on an Azure VM if it is only being used for standby/failover?

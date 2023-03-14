@@ -3,7 +3,7 @@ title: "sys.dm_xe_object_columns (Transact-SQL)"
 description: sys.dm_xe_object_columns (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "3/30/2022"
+ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
 dev_langs:
   - "TSQL"
-ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 ---
 # sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL DB Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -45,6 +44,10 @@ Returns the schema information for all the objects.
 
 Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ### Relationship cardinalities  
   
 |From|To|Relationship|  

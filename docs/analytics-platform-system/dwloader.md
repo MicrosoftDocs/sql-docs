@@ -8,7 +8,6 @@ ms.date: 04/17/2018
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # dwloader Command-Line Loader for Parallel Data Warehouse
@@ -44,11 +43,6 @@ ms.custom: seo-dt-2019
   
     You can check the failed rows file (specified with -R) to see if any rows failed to load. If this file is empty, all rows loaded successfully. **dwloader** is transactional, so if any step fails (other than rejected rows), all steps will roll back to their initial state.  
   
-<!-- 
-![Topic link icon](media/topic-link.gif "Topic_Link")[Syntax Conventions](syntax-conventions-sql-server-pdw.md)  
--->  
-
-
 ## Syntax  
   
 ```  

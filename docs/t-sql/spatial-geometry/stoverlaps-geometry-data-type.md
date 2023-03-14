@@ -1,22 +1,19 @@
 ---
+title: "STOverlaps (geometry Data Type)"
 description: "STOverlaps (geometry Data Type)"
-title: "STOverlaps (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STOverlaps (geometry Data Type)"
   - "STOverlaps_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STOverlaps (geometry Data Type)"
-ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STOverlaps (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

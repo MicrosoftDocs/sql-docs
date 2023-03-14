@@ -1,18 +1,15 @@
 ---
+title: "~ (Bitwise Not) (SSIS Expression)"
 description: "~ (Bitwise Not) (SSIS Expression)"
-title: "~ (Bitwise Not) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "bitwise NOT (~)"
-  - "~ (bitwise NOT)"
-ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "bitwise NOT (~)"
+  - "~ (bitwise NOT)"
 ---
 # ~ (Bitwise Not) (SSIS Expression)
 

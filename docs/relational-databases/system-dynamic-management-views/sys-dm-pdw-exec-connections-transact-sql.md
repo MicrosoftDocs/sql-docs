@@ -9,13 +9,12 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Returns information about the connections established to this instance of [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and the details of each connection. 
+  Returns information about the connections established to this instance of [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and the details of each connection. 
 
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] For serverless SQL pool use [sys.dm_exec_connections (Transact-SQL)](sys-dm-exec-connections-transact-sql.md).
@@ -39,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 |dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections.session_id|One-to-one|  
 |dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections.connection_id|Many to one|  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Typical query to gather information about a queries own connection.  
   
 ```  

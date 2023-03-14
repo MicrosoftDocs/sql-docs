@@ -1,14 +1,12 @@
 ---
 title: "SQL Server Backup Applications - Volume Shadow Copy Service (VSS) and SQL writer"
-description: Describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. 
-ms.custom: "contperf-fy21q4-portal"
-ms.date: "06/16/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
+description: Describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/16/2021"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
 ---
 # SQL Server Backup Applications - Volume Shadow Copy Service (VSS) and SQL Writer
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

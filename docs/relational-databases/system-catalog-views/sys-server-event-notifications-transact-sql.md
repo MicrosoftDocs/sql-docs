@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_event_notifications catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 ---
 # sys.server_event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

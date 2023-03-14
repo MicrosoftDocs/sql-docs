@@ -1,22 +1,17 @@
 ---
-description: "SetStrValue Method (SqlServiceAdvancedProperty Class)"
 title: "SetStrValue Method (SqlServiceAdvancedProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetStrValue Method (SqlServiceAdvancedProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetStrValue method"
-ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
+description: "SetStrValue Method (SqlServiceAdvancedProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetStrValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetStrValue Method (SqlServiceAdvancedProperty Class)"
+apitype: "MOFDef"
 ---
 # SetStrValue Method (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

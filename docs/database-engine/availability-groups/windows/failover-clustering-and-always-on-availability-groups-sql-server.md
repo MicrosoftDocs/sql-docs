@@ -7,7 +7,6 @@ ms.date: "07/02/2017"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "clustering [SQL Server]"
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -82,7 +81,7 @@ monikerRange: ">=sql-server-2016"
   
  The following example scenario illustrates how this configuration could lead to problems:  
   
- Marcel configures two a WSFC with two nodes, `NODE01` and `NODE02`. He installs a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, `fciInstance1`, on both `NODE01` and `NODE02` where `NODE01` is the current owner for `fciInstance1`.  
+ Marcel configures a WSFC with two nodes, `NODE01` and `NODE02`. He installs a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, `fciInstance1`, on both `NODE01` and `NODE02` where `NODE01` is the current owner for `fciInstance1`.  
  On `NODE02`, Marcel installs another instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `Instance3`, which is a stand-alone instance.  
  On `NODE01`, Marcel enables fciInstance1 for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. On `NODE02`, he enables `Instance3` for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Then he sets up an availability group for which `fciInstance1` hosts the primary replica, and `Instance3` hosts the secondary replica.  
  At some point `fciInstance1` becomes unavailable on `NODE01`, and the WSFC causes a failover of `fciInstance1` to `NODE02`. After the failover, `fciInstance1` is a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-enabled instance running under the primary role on `NODE02`. However, `Instance3` now resides on the same WSFC node as `fciInstance1`. This violates the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] constraint.  

@@ -1,29 +1,26 @@
 ---
+title: "sysmail_add_principalprofile_sp (Transact-SQL)"
 description: "sysmail_add_principalprofile_sp (Transact-SQL)"
-title: "sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_add_principalprofile_sp_TSQL"
-  - "sysmail_add_principalprofile_sp"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_add_principalprofile_sp"
-ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_add_principalprofile_sp_TSQL"
+  - "sysmail_add_principalprofile_sp"
+helpviewer_keywords:
+  - "sysmail_add_principalprofile_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Grants permission for an msdb database principal to use a Database Mail profile. The database principal must map to a SQL Server authentication user, a Windows User, or a Windows Group. In Azure SQL Managed Instance and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the database principal can also map to an Azure Active Directory user.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -5,10 +5,9 @@ author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 10/05/2021
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
-ms.assetid: 
+ms.topic: conceptual
 ---
 # Always On Availability Group failover on Linux
 

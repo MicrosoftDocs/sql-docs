@@ -7,8 +7,15 @@ ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning
 ms.topic: "reference"
-ms.custom: ""
-keywords: (MicrosoftML), rxNeuralNet, classification, dnn, models, network, neural, regression
+keywords:
+  - (MicrosoftML)
+  - rxNeuralNet
+  - classification
+  - dnn
+  - models
+  - network
+  - neural
+  - regression
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 
@@ -92,8 +99,8 @@ multi-class classification.
 
  ### `acceleration`
  Specifies the type of hardware acceleration to use.  Possible values are "sse" and "gpu".  For GPU acceleration, it is recommended to use a miniBatchSize greater than one.  If you want to use the GPU acceleration, there are additional manual setup steps are required:    
-*  Download and install NVidia CUDA Toolkit 6.5  ([`CUDA Toolkit`](https://developer.nvidia.com/cuda-toolkit-65) ).  
-*  Download and install NVidia cuDNN v2 Library  ([`cudnn Library`](https://developer.nvidia.com/rdp/cudnn-archive) ).  
+*  Download and install NVidia CUDA Toolkit 6.5  ([`CUDA Toolkit`](https://developer.nvidia.com/cuda-toolkit-65)).  
+*  Download and install NVidia cuDNN v2 Library  ([`cudnn Library`](https://developer.nvidia.com/rdp/cudnn-archive)).  
 *  Find the libs directory of the MicrosoftRML package by calling `system.file("mxLibs/x64", package = "MicrosoftML")`.  
 *  Copy cublas64_65.dll, cudart64_65.dll and cusparse64_65.dll from the CUDA Toolkit 6.5 into the libs directory of the MicrosoftML package. 
 *  Copy cudnn64_65.dll from the cuDNN v2 Library into the libs directory of the MicrosoftML package. 

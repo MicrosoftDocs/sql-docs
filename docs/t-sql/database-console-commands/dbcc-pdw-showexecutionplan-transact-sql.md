@@ -16,11 +16,11 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-Displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execution plan for a query running on a specific [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Compute node or Control node. Use this to troubleshoot query performance problems while queries are running on the Compute nodes and Control node.
+Displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execution plan for a query running on a specific [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Compute node or Control node. Use this to troubleshoot query performance problems while queries are running on the Compute nodes and Control node.
 
 Once query performance problems are understood for SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queries running on the Compute nodes, there are several ways to improve performance. Possible ways to improve query performance on the Compute nodes include creating multi-column statistics, creating nonclustered indexes, or using query hints.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -45,7 +45,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id , spid )
 
 #### *distribution_id*
 
- Identifier for the distribution that is running the query plan. This is an integer and can't be `NULL`. Value must be between 1 and 60. Used when targeting [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+ Identifier for the distribution that is running the query plan. This is an integer and can't be `NULL`. Value must be between 1 and 60. Used when targeting [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 #### *pdw_node_id*
 
@@ -57,11 +57,11 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id , spid )
 
 ## Permissions
 
- Requires CONTROL permission on [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+ Requires CONTROL permission on [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 Requires **VIEW SERVER STATE** permission on the Appliance.
 
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### A. DBCC PDW_SHOWEXECUTIONPLAN basic syntax
 

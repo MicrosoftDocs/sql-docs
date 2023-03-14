@@ -1,22 +1,17 @@
 ---
-description: "SetNumericalValue Method (SqlServiceAdvancedProperty Class)"
 title: "SetNumericalValue Method (SqlServiceAdvancedProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetNumericalValue Method (SqlServiceAdvancedProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetNumericalValue method"
-ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
+description: "SetNumericalValue Method (SqlServiceAdvancedProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetNumericalValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetNumericalValue Method (SqlServiceAdvancedProperty Class)"
+apitype: "MOFDef"
 ---
 # SetNumericalValue Method (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

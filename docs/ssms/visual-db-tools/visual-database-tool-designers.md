@@ -1,12 +1,13 @@
 ---
-description: "Visual Database Tool Designers"
 title: Visual Database Tool Designers
-ms.custom: seo-lt-2019
+description: "Visual Database Tool Designers"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data sources [SQL Server]"
   - "View Designer"
   - "Visual Database Tools [SQL Server]"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "Table Designer"
   - "Visual Database Tools [SQL Server], designers"
   - "Properties window [Visual Database Tools]"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
 ---
 # Visual Database Tool Designers
 

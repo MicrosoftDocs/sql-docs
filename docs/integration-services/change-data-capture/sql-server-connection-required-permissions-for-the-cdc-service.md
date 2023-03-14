@@ -1,15 +1,12 @@
 ---
+title: "SQL Server Connection Required Permissions for the CDC Service"
 description: "SQL Server Connection Required Permissions for the CDC Service"
-title: "SQL Server Connection Required Permissions for the CDC Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # SQL Server Connection Required Permissions for the CDC Service
 

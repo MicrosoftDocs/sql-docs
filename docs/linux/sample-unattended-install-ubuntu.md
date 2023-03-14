@@ -6,9 +6,9 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
-ms.topic: conceptual
 ms.service: sql
 ms.subservice: linux
+ms.topic: conceptual
 ---
 # Sample: Unattended SQL Server installation script for Ubuntu
 
@@ -49,8 +49,8 @@ MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 # Defaults to developer
 MSSQL_PID='evaluation'
 
-# Install SQL Server Agent (recommended)
-SQL_INSTALL_AGENT='y'
+# Enable SQL Server Agent (recommended)
+SQL_ENABLE_AGENT='y'
 
 # Install SQL Server Full Text Search (optional)
 # SQL_INSTALL_FULLTEXT='y'
@@ -92,11 +92,11 @@ echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 
-# Optional SQL Server Agent installation:
-if [ ! -z $SQL_INSTALL_AGENT ]
+# Optional Enable SQL Server Agent:
+if [ ! -z $SQL_ENABLE_AGENT ]
 then
-  echo Installing SQL Server Agent...
-  sudo apt-get install -y mssql-server-agent
+  echo Enabling SQL Server Agent...
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 fi
 
 # Optional SQL Server Full Text Search installation:
@@ -195,7 +195,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 
-1. Install the SQL Server Agent if the scripting variable `SQL_INSTALL_AGENT` is set, on by default.
+1. Enable the SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set, on by default.
 
 1. Optionally install SQL Server Full-Text search, if the variable `SQL_INSTALL_FULLTEXT` is set.
 
@@ -217,10 +217,9 @@ Simplify multiple unattended installs and create a stand-alone bash script that 
 #!/bin/bash
 export MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 export MSSQL_PID='evaluation'
-export SQL_INSTALL_AGENT='y'
+export SQL_ENABLE_AGENT='y'
 export SQL_INSTALL_USER='<Username>'
 export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
-export SQL_INSTALL_AGENT='y'
 ```
 
 Then run the bash script as follows:

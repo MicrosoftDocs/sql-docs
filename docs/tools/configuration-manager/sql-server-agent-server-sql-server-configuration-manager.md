@@ -1,15 +1,12 @@
 ---
 title: "SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager)"
 description: Discover how to use SQL Server Configuration Manager to view the properties of the SQL Server Agent service.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: tools-other
-ms.topic: conceptual
-ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager)

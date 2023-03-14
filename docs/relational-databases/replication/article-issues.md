@@ -1,17 +1,15 @@
 ---
+title: "Article Issues"
 description: "Article Issues"
-title: "Article Issues | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.articleissues.f1"
-ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.articleissues.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Article Issues

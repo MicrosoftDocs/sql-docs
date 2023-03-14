@@ -1,29 +1,26 @@
 ---
+title: "sp_help_log_shipping_secondary_primary (Transact-SQL)"
 description: "sp_help_log_shipping_secondary_primary (Transact-SQL)"
-title: "sp_help_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_log_shipping_secondary_primary"
-  - "sp_help_log_shipping_secondary_primary_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_log_shipping_secondary_primary"
-ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_log_shipping_secondary_primary"
+  - "sp_help_log_shipping_secondary_primary_TSQL"
+helpviewer_keywords:
+  - "sp_help_log_shipping_secondary_primary"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure retrieves the settings for a given primary database on the secondary server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

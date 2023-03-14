@@ -1,21 +1,18 @@
 ---
-title: "Sequence Expressions (XQuery) | Microsoft Docs"
+title: "Sequence Expressions (XQuery)"
 description: Learn about XQuery sequence expressions that construct, filter, and combine a sequence of items.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "08/09/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sequence [XQuery]"
   - "expressions [XQuery], sequence"
   - "filtering sequences [XQuery]"
-ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Sequence Expressions (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

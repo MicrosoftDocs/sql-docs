@@ -12,7 +12,6 @@ f1_keywords:
   - "sql13.swb.maint.planeditor.f1"
   - "sql13.swb.maint.subplaneditor.f1"
   - "Task.FileExtension"
-ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 ---
 
 # Maintenance Plan (Design Tab)

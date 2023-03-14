@@ -1,14 +1,12 @@
 ---
+title: "Using Encryption"
 description: "Using Encryption"
-title: "Using Encryption | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database master key [SMO]"
   - "cryptography [SMO]"
   - "cryptography [SQL Server], SMO"
@@ -17,9 +15,6 @@ helpviewer_keywords:
   - "encryption [SMO]"
   - "certificates [SMO]"
   - "service master key [SMO]"
-ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Encryption

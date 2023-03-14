@@ -1,17 +1,14 @@
 ---
-title: "Avoid conflicts - FILESTREAM database operations | Microsoft Docs"
+title: "Avoid conflicts - FILESTREAM database operations"
 description: Applications that read or write FILESTREAM blob data can encounter conflict errors with Transact-SQL statements. Learn how to avoid these types of conflicts.
-ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts"
-ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "12/13/2019"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts"
 ---
 # Avoid conflicts with database operations in FILESTREAM applications
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

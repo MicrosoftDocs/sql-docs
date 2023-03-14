@@ -1,15 +1,12 @@
 ---
+title: "CDC Source Custom Properties"
 description: "CDC Source Custom Properties"
-title: "CDC Source Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # CDC Source Custom Properties
 

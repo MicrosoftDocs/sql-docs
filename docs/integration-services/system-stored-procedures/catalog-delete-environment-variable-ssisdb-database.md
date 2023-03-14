@@ -1,15 +1,12 @@
 ---
+title: "catalog.delete_environment_variable (SSISDB Database)"
 description: "catalog.delete_environment_variable (SSISDB Database)"
-title: "catalog.delete_environment_variable (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.delete_environment_variable (SSISDB Database)
 

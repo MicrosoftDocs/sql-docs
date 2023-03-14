@@ -1,20 +1,17 @@
 ---
+title: "Variables Window"
 description: "Variables Window"
-title: "Variables Window | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.variables.f1"
-  - "sql13.dts.designer.variableoptionswindow.f1"
-helpviewer_keywords: 
-  - "Variables Window dialog box"
-ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.variables.f1"
+  - "sql13.dts.designer.variableoptionswindow.f1"
+helpviewer_keywords:
+  - "Variables Window dialog box"
 ---
 # Variables Window
 

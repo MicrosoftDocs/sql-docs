@@ -1,24 +1,19 @@
 ---
+title: "SQLPrepare Function"
 description: "SQLPrepare Function"
-title: "SQLPrepare Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLPrepare"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLPrepare"
-helpviewer_keywords: 
-  - "SQLPrepare function [ODBC]"
-ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLPrepare"
+helpviewer_keywords:
+  - "SQLPrepare function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLPrepare"
+apitype: "dllExport"
 ---
 # SQLPrepare Function
 **Conformance**  

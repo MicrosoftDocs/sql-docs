@@ -1,20 +1,17 @@
 ---
+title: "Modify Check Constraints"
 description: "Modify Check Constraints"
-title: "Modify Check Constraints | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/28/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CHECK constraints, modifying"
   - "modifying constraints"
   - "constraints [SQL Server], check"
   - "constraints [SQL Server], modifying"
-ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Check Constraints

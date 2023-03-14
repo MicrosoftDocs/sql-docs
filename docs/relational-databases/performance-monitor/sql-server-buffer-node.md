@@ -1,17 +1,15 @@
 ---
 title: "SQL Server:Buffer Node object"
 description: Learn about the Buffer Node object, which provides counters to monitor the SQL Server buffer pool page distribution for each NUMA node.
-ms.custom: ""
-ms.date: "07/12/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:Buffer Node"
-  - "Buffer Node object"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/12/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:Buffer Node"
+  - "Buffer Node object"
 ---
 # SQL Server:Buffer Node object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

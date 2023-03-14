@@ -1,17 +1,15 @@
 ---
+title: "&lt;AgentName&gt; Agent Location"
 description: "&lt;AgentName&gt; Agent Location"
-title: "&lt;AgentName&gt; Agent Location | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.agentlocation.f1"
-ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.agentlocation.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # &lt;AgentName&gt; Agent Location

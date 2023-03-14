@@ -7,7 +7,6 @@ ms.date: "10/22/2018"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Altering Memory-Optimized Tables

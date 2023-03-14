@@ -1,29 +1,26 @@
 ---
+title: "sp_delete_targetsvrgrp_member (Transact-SQL)"
 description: "sp_delete_targetsvrgrp_member (Transact-SQL)"
-title: "sp_delete_targetsvrgrp_member (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_targetsvrgrp_member_TSQL"
-  - "sp_delete_targetsvrgrp_member"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_targetsvrgrp_member"
-ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_targetsvrgrp_member_TSQL"
+  - "sp_delete_targetsvrgrp_member"
+helpviewer_keywords:
+  - "sp_delete_targetsvrgrp_member"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a target server from a target server group.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

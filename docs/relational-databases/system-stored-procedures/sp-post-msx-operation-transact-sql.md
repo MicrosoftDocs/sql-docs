@@ -1,29 +1,26 @@
 ---
+title: "sp_post_msx_operation (Transact-SQL)"
 description: "sp_post_msx_operation (Transact-SQL)"
-title: "sp_post_msx_operation (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_post_msx_operation"
-  - "sp_post_msx_operation_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_post_msx_operation"
-ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_post_msx_operation"
+  - "sp_post_msx_operation_TSQL"
+helpviewer_keywords:
+  - "sp_post_msx_operation"
+dev_langs:
+  - "TSQL"
 ---
 # sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inserts operations (rows) into the **sysdownloadlist** system table for target servers to download and execute.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

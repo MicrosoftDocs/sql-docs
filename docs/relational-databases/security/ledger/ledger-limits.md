@@ -1,15 +1,13 @@
 ---
 title: "Ledger considerations and limitations"
 description: Limitations and considerations for the ledger feature
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: kendralittle, mathoma
 ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
-ms.custom:
-- event-tier1-build-2022
-ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
-author: VanMSFT
-ms.author: vanto
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
@@ -39,6 +37,7 @@ Consider the following when working with ledger.
 - In-memory tables aren't supported.
 - Sparse column sets aren't supported.
 - SWITCH IN/OUT partition isn't supported.
+- DBCC CLONEDATABASE isn't supported.
 - Ledger tables can't have full-text indexes.
 - Ledger tables can't be graph table.
 - Ledger tables can't be FileTables.

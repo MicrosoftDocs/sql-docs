@@ -7,7 +7,6 @@ ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: clr
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "routines [CLR integration]"
   - "database objects [CLR integration], building"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "managed code [SQL Server], database objects"
   - "building database objects [CLR integration]"
   - ".NET Framework routines [SQL Server]"
-ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 ---
 # Building Database Objects with Common Language Runtime (CLR) Integration
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

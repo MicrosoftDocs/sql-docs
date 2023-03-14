@@ -219,7 +219,7 @@ The path for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erro
 
     ![Error log](media/ssms-tricks/errorlog.png)
 
-    There are several error log files in this location. The file name that ends with *.log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
+    There are several error log files in this location. The file name that ends with *log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
 
 6. Open the errorlog.log file in Notepad.
 

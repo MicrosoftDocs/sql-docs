@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "edge constraints [Azure SQL Database]"
   - "graph edge constraints"
   - "SQL Graph"
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
+monikerRange: ">sql-server-2017||>sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Edge constraints
 

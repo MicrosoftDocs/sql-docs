@@ -1,20 +1,18 @@
 ---
+title: "InstallationID Property (WMI MSReportServer_ConfigurationSetting)"
 description: "InstallationID Property (WMI MSReportServer_ConfigurationSetting)"
-title: "InstallationID Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
-apiname: "InstallationID Property"
-apilocation: "reportingservices.mof"
-apitype: MOFDef
+ms.custom: intro-installation
 helpviewer_keywords:
   - "InstanceID property"
-ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
-author: maggiesMSFT
-ms.author: maggies
-ms.custom:
-  - intro-installation
+apilocation: "reportingservices.mof"
+apiname: "InstallationID Property"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - InstallationID
   This property returns a unique identifier for a specific report server instance.  

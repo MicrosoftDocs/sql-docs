@@ -1,19 +1,16 @@
 ---
-description: "Modify a SQL Server Agent Master Job"
 title: "Modify a SQL Server Agent Master Job"
-ms.custom: seo-lt-2019
+description: "Modify a SQL Server Agent Master Job"
+author: markingmyname
+ms.author: maghan
 ms.date: "02/28/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], modifying"
   - "jobs [SQL Server Agent], master jobs"
   - "master SQL Server Agent job [SQL Server]"
-ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Modify a SQL Server Agent Master Job

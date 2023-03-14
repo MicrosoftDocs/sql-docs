@@ -1,17 +1,14 @@
 ---
+title: "Showplan XML Event Class"
 description: "Showplan XML Event Class"
-title: "Showplan XML Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Showplan XML event class"
-ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Showplan XML event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan XML Event Class

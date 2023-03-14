@@ -1,18 +1,15 @@
 ---
+title: "SQUARE (SSIS Expression)"
 description: "SQUARE (SSIS Expression)"
-title: "SQUARE (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQUARE"
-  - "square values"
-ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQUARE"
+  - "square values"
 ---
 # SQUARE (SSIS Expression)
 

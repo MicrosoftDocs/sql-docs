@@ -1,19 +1,17 @@
 ---
 title: "Distributor Properties dialog box"
 description: Describe the different pages within the 'Distributor Properties' dialog box in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rep.configdistwizard.distdbproperties.f1"
   - "sql13.rep.configdistwizard.distproperties.general.f1"
   - "sql13.rep.configdistwizard.distproperties.publishers.f1"
-ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # SQL Server Replication Distributor Properties dialog box 

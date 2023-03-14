@@ -1,18 +1,15 @@
 ---
+title: "SQLConfigDataSource (Access Driver)"
 description: "SQLConfigDataSource (Access Driver)"
-title: "SQLConfigDataSource (Access Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLConfigDataSource function [ODBC], Access Driver"
-  - "Access driver [ODBC], SQLConfigDataSource"
-ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLConfigDataSource function [ODBC], Access Driver"
+  - "Access driver [ODBC], SQLConfigDataSource"
 ---
 # SQLConfigDataSource (Access Driver)
 > [!NOTE]  

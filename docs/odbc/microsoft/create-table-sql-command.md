@@ -1,17 +1,14 @@
 ---
+title: "CREATE TABLE - SQL Command"
 description: "CREATE TABLE - SQL Command"
-title: "CREATE TABLE - SQL Command | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "CREATE TABLE [ODBC]"
-ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "CREATE TABLE [ODBC]"
 ---
 # CREATE TABLE - SQL Command
 Creates a table having the specified fields.  

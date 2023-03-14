@@ -1,23 +1,20 @@
 ---
+title: "Row Count Transformation"
 description: "Row Count Transformation"
-title: "Row Count Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.rowcounttrans.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "updating variables"
   - "Row Count transformation"
   - "number of rows"
   - "variables [Integration Services], updating"
   - "counting rows"
-ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
-author: chugugrace
-ms.author: chugu
 ---
 # Row Count Transformation
 

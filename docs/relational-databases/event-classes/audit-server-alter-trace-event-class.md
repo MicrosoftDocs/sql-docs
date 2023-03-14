@@ -1,17 +1,14 @@
 ---
+title: "Audit Server Alter Trace Event Class"
 description: "Audit Server Alter Trace Event Class"
-title: "Audit Server Alter Trace Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Audit Server Alter Trace event class"
-ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Audit Server Alter Trace event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Alter Trace Event Class

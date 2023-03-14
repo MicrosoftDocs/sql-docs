@@ -1,14 +1,12 @@
 ---
 title: Custom R functions using rxExec
 description: "Learn to use simulated data to demonstrate execution of a custom R function that runs on a remote server."
-ms.service: sql
-ms.subservice: machine-learning-services
-
-ms.date: 11/27/2018  
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 11/27/2018
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: tutorial
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Run custom R functions on SQL Server using rxExec (SQL Server and RevoScaleR tutorial)

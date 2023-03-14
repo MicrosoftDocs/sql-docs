@@ -1,13 +1,14 @@
 ---
-title: "Replication Agents Overview | Microsoft Docs"
+title: "Replication Agents Overview"
 description: Learn about the agents that SQL Server replication uses to carry out tasks associated with tracking changes and distributing data.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Distribution Agent"
   - "agents [SQL Server replication]"
   - "Queue Reader Agent, about Queue Reader Agent"
@@ -21,9 +22,6 @@ helpviewer_keywords:
   - "Merge Agent"
   - "Snapshot Agent, about Snapshot Agent"
   - "Snapshot Agent"
-ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Agents Overview

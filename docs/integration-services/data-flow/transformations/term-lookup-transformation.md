@@ -1,18 +1,18 @@
 ---
+title: "Term Lookup Transformation"
 description: "Term Lookup Transformation"
-title: "Term Lookup Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.termlookuptrans.f1"
   - "sql13.dts.designer.termlookup.termlookup.f1"
   - "sql13.dts.designer.termlookup.referencetable.f1"
   - "sql13.dts.designer.termlookup.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extracting data [Integration Services]"
   - "match extracted terms [Integration Services]"
   - "text extraction [Integration Services]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "lookups [Integration Services]"
   - "counting extracted items"
   - "Term Lookup transformation"
-ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: chugugrace
-ms.author: chugu
 ---
 # Term Lookup Transformation
 

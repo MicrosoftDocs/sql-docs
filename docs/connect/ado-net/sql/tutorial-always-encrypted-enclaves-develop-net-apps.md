@@ -4,11 +4,10 @@ description: "Tutorial: Develop a .NET application using Always Encrypted with s
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 05/24/2022
+ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: tutorial
-ms.custom: event-tier1-build-2022
 ---
 
 # Tutorial: Develop a .NET application using Always Encrypted with secure enclaves
@@ -19,21 +18,15 @@ ms.custom: event-tier1-build-2022
 
 This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-> [!NOTE]
-> Always Encrypted with secure enclaves is only supported on Windows.
-
 ## Prerequisites
 
-Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
+Make sure you've completed one of the [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) tutorials before following the below steps in this tutorial.
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
-
-In addition, you need Visual Studio (version 2019 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development environment must use .NET Framework 4.6 or later or .NET Core 2.1 or later.
+In addition, you need Visual Studio (version 2022 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development environment must use .NET Framework 4.6.1 or later or .NET Core 3.1 or later.
 
 ## Step 1: Set up your Visual Studio Project
 
-To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application targets .NET Framework 4.6 or higher. To use Always Encrypted with secure enclaves in a .NET Core application, you need to make sure your application targets .NET Core 2.1 or higher.
+To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application targets .NET Framework 4.6.1 or higher. To use Always Encrypted with secure enclaves in a .NET Core application, you need to make sure your application targets .NET Core 3.1 or higher.
 
 In addition, if you store your column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider).
 
@@ -41,24 +34,24 @@ In addition, if you store your column master key in Azure Key Vault, you also ne
 
 2. Create a new C\# Console App (.NET Framework / Core) project.
 
-3. Make sure your project targets at least .NET Framework 4.6 or .NET Core 2.1. Right-click on the project in Solution Explorer, select **Properties** and set the Target framework.
+3. Make sure your project targets at least .NET Framework 4.6 or .NET Core 3.1. Right-click on the project in Solution Explorer, select **Properties** and set the Target framework.
 
 4. Install the following NuGet package by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
    ```powershell
-   Install-Package Microsoft.Data.SqlClient -Version 1.1.0
+   Install-Package Microsoft.Data.SqlClient -Version 5.0.1
    ```
 
 5. If you use Azure Key Vault for storing your column master keys, install the following NuGet packages by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
    ```powershell
-   Install-Package Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider -Version 1.0.0
+   Install-Package Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider -Version 3.0.0
    Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
    ```
 
 ## Step 2: Implement your application logic
 
-Your application will connect to the **ContosoHR** database from [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) and it will run a query that contains the `LIKE` predicate on the **SSN** column and a range comparison on the **Salary** column.
+Your application will connect to the **ContosoHR** database that was created in one of the tutorials, see [Prerequisites](#prerequisites) and it will run a query that contains the `LIKE` predicate on the **SSN** column and a range comparison on the **Salary** column.
 
 1. Replace the content of the Program.cs file (generated by Visual Studio) with the following code.
 
@@ -77,8 +70,11 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
                 // Connection string for SQL Server
                 string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Attestation Protocol = HGS; Enclave Attestation Url = http://hgs.bastion.local/Attestation; Integrated Security = true";
 
-                // Connection string for Azure SQL Database
+                // Connection string for Azure SQL Database with Intel SGX enclaves
                 //string connectionString = "Data Source = myserver.database.windows.net; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Attestation Protocol = AAS; Enclave Attestation Url = https://myattestationprovider.uks.attest.azure.net/attest/SgxEnclave; User ID=user; Password=password";
+
+                // Connection string for Azure SQL Database with VBS enclaves
+                //string connectionString = "Data Source = myserver.database.windows.net; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Attestation Protocol = None; User ID=user; Password=password";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -122,10 +118,7 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
 
 2. Update the database connection string.
     1. Set the valid server name and your database authentication settings.
-    2. Set the value of the `Attestation Protocol` keyword to:
-       - `HGS` - if you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS).
-       - `AAS` - if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation.
-    3. Set `Enclave Attestation URL` to an attestation URL for your environment.
+    2. If you're using attestation for your database, set Enclave Attestation Protocol to the correct value for your attestation service (`HGS` for Host Guardian Service or `AAS` for Microsoft Azure Attestation). Otherwise, set Enclave Attestation Protocol to `None`.
 
 3. Build and run the application.
 

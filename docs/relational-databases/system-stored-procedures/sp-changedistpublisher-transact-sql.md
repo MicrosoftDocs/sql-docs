@@ -1,22 +1,19 @@
 ---
+title: "sp_changedistpublisher (Transact-SQL)"
 description: "sp_changedistpublisher (Transact-SQL)"
-title: "sp_changedistpublisher (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changedistpublisher_TSQL"
-  - "sp_changedistpublisher"
-helpviewer_keywords: 
-  - "sp_changedistpublisher"
-ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changedistpublisher_TSQL"
+  - "sp_changedistpublisher"
+helpviewer_keywords:
+  - "sp_changedistpublisher"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -7,7 +7,6 @@ ms.date: "1/15/2020"
 ms.service: sql
 ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 ---
 # Configuring Storage for Memory-Optimized Tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

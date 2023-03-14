@@ -1,17 +1,14 @@
 ---
+title: "Item-Level Tasks"
 description: "Tasks and Permissions - Item-Level Tasks"
-title: "Item-Level Tasks | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 02/04/2021
 ms.service: reporting-services
 ms.subservice: security
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "item-level tasks [Reporting Services]"
-ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Tasks and Permissions - Item-Level Tasks
   

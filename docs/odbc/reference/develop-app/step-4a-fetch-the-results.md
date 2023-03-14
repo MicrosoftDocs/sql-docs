@@ -1,18 +1,15 @@
 ---
+title: "Step 4a: Fetch the Results"
 description: "Step 4a: Fetch the Results"
-title: "Step 4a: Fetch the Results | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "application process [ODBC], fetching results"
-  - "fetches [ODBC], fetching results"
-ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "application process [ODBC], fetching results"
+  - "fetches [ODBC], fetching results"
 ---
 # Step 4a: Fetch the Results
 The next step is to fetch the results, as shown in the following illustration.  

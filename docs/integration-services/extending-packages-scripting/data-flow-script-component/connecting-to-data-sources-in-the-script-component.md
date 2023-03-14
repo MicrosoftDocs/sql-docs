@@ -1,17 +1,14 @@
 ---
+title: "Connecting to Data Sources in the Script Component"
 description: "Connecting to Data Sources in the Script Component"
-title: "Connecting to Data Sources in the Script Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Script component [Integration Services], connecting to data sources"
-ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script component [Integration Services], connecting to data sources"
 ---
 # Connecting to Data Sources in the Script Component
 

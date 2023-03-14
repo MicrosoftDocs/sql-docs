@@ -1,15 +1,12 @@
 ---
+title: "Step 5: Testing the Updated Packages"
 description: "Lesson 1-5 - Testing the Updated Packages"
-title: "Step 5: Testing the Updated Packages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 1-5 - Testing the Updated Packages
 

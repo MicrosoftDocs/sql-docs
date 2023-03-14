@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_paramtype
 apitype: "DLLExport"
-ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 ---
 # srv_paramtype (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

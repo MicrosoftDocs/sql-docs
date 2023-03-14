@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY"
 description: "LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY"
-title: "LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: bb14e3c5-5349-47e8-8e6b-16ff26dfb368
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

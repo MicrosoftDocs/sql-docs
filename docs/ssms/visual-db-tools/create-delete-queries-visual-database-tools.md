@@ -1,12 +1,13 @@
 ---
-description: "Create Delete Queries (Visual Database Tools)"
 title: Create Delete Queries
-ms.custom: seo-lt-2019
+description: "Create Delete Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "row removal [SQL Server], Delete query"
   - "Delete query"
   - "queries [SQL Server], types"
@@ -15,11 +16,6 @@ helpviewer_keywords:
   - "data deletions [SQL Server]"
   - "deleting rows"
   - "deleting data"
-ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Delete Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_addqreader_agent (Transact-SQL)"
 description: "sp_addqreader_agent (Transact-SQL)"
-title: "sp_addqreader_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addqreader_agent_TSQL"
-  - "sp_addqreader_agent"
-helpviewer_keywords: 
-  - "sp_addqreader_agent"
-ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addqreader_agent_TSQL"
+  - "sp_addqreader_agent"
+helpviewer_keywords:
+  - "sp_addqreader_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

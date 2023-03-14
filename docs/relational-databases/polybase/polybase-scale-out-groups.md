@@ -1,19 +1,18 @@
 ---
-title: "PolyBase scale-out groups | Microsoft Docs"
+title: "PolyBase scale-out groups"
 description: Use the PolyBase Group feature to create a cluster of SQL Server instances. This improves query performance for large data sets from external sources.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 02/22/2022
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
 f1_keywords:
-  - sql13.swb.polybasescaleoutcluster.page.f1
-helpviewer_keywords: 
+  - "sql13.swb.polybasescaleoutcluster.page.f1"
+helpviewer_keywords:
   - "PolyBase"
   - "PolyBase, scale-out groups"
   - "scale-out PolyBase"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
 monikerRange: ">= sql-server-2016"
 ---
 # PolyBase scale-out groups

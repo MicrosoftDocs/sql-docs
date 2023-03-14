@@ -1,22 +1,17 @@
 ---
-description: "SetDisable Method (ServerNetworkProtocol Class)"
 title: "SetDisable Method (ServerNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SetDisable Method (ServerNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SetDisable method"
-ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
+description: "SetDisable Method (ServerNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetDisable method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SetDisable Method (ServerNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # SetDisable Method (ServerNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

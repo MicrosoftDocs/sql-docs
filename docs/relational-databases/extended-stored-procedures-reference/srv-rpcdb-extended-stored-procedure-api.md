@@ -14,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_rpcdb
 apitype: "DLLExport"
-ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
 ---
 # srv_rpcdb (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

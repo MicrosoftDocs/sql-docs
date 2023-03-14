@@ -1,17 +1,15 @@
 ---
+title: "Subscriber Types"
 description: "Subscriber Types"
-title: "Subscriber Types | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.subscribertypes.f1"
-ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.subscribertypes.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Subscriber Types

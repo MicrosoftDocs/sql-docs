@@ -1,21 +1,16 @@
 ---
-description: "AcceptStop Property (SqlService Class)"
 title: "AcceptStop Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "AcceptStop Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "AcceptStop property"
-ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
+description: "AcceptStop Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "AcceptStop property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "AcceptStop Property (SqlService Class)"
 ---
 # AcceptStop Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

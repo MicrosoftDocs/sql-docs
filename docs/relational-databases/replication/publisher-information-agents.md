@@ -1,17 +1,15 @@
 ---
+title: "Publisher Information, Agents"
 description: "Publisher Information, Agents"
-title: "Publisher Information, Agents | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
-ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publisher Information, Agents

@@ -1,18 +1,15 @@
 ---
+title: "Upgrade Integration Services Packages"
 description: "Upgrade Integration Services Packages"
-title: "Upgrade Integration Services Packages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Integration Services, migrating"
-  - "migrating packages [Integration Services]"
-ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: "MikeRayMSFT"
 ms.author: "mikeray"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Integration Services, migrating"
+  - "migrating packages [Integration Services]"
 ---
 # Upgrade Integration Services Packages
 

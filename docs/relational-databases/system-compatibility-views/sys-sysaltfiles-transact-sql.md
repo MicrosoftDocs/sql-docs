@@ -1,25 +1,22 @@
 ---
+title: "sys.sysaltfiles (Transact-SQL)"
 description: "sys.sysaltfiles (Transact-SQL)"
-title: "sys.sysaltfiles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sysaltfiles_TSQL"
   - "sys.sysaltfiles"
   - "sysaltfiles_TSQL"
   - "sysaltfiles"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysaltfiles system table"
   - "sys.sysaltfiles compatibility view"
-ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysaltfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

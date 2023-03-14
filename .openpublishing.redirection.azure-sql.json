@@ -481,6 +481,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/always-encrypted-enclaves-enable-sgx.md",
+      "redirect_url": "/azure/azure-sql/database/always-encrypted-enclaves-enable",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/database/machine-learning-services-add-r-packages.md",
       "redirect_url": "/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current",
       "redirect_document_id": false
@@ -577,17 +582,17 @@
     },
     {
       "source_path_from_root": "/azure-sql/database/service-tier-general-purpose.md",
-      "redirect_url": "/azure/azure-sql/service-tiers-sql-database-vcore",
+      "redirect_url": "/azure/azure-sql/database/service-tiers-sql-database-vcore",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/azure-sql/database/service-tier-business-critical.md",
-      "redirect_url": "/azure/azure-sql/service-tiers-sql-database-vcore",
+      "redirect_url": "/azure/azure-sql/database/service-tiers-sql-database-vcore",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/azure-sql/database/service-tiers-vcore.md",
-      "redirect_url": "/azure/azure-sql/service-tiers-sql-database-vcore",
+      "redirect_url": "/azure/azure-sql/database/service-tiers-sql-database-vcore",
       "redirect_document_id": false
     },    
     {

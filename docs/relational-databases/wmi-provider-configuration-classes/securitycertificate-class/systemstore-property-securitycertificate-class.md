@@ -1,22 +1,17 @@
 ---
-description: "SystemStore Property (SecurityCertificate Class)"
 title: "SystemStore Property (SecurityCertificate)"
-ms.custom: seo-lt-2019
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "SystemStore Property (SecurityCertificate Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "SystemStore property"
-ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
+description: "SystemStore Property (SecurityCertificate Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SystemStore property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "SystemStore Property (SecurityCertificate Class)"
+apitype: "MOFDef"
 ---
 # SystemStore Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

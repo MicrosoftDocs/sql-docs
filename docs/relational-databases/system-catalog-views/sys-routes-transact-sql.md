@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.routes catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sys.routes (Transact-SQL)

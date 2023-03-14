@@ -1,20 +1,16 @@
 ---
-description: "Stop a Query (Visual Database Tools)"
 title: Stop a Query
-ms.custom: seo-lt-2019
+description: "Stop a Query (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ending queries [SQL Server]"
   - "stopping queries"
   - "queries [SQL Server], stopping"
-ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Stop a Query (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

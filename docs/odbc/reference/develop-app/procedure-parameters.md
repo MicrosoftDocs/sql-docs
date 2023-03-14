@@ -1,17 +1,14 @@
 ---
+title: "Procedure Parameters"
 description: "Procedure Parameters"
-title: "Procedure Parameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "procedure parameters [ODBC]"
-ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "procedure parameters [ODBC]"
 ---
 # Procedure Parameters
 Parameters in procedure calls can be input, input/output, or output parameters. This is different from parameters in all other SQL statements, which are always input parameters.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], catalog views"
 dev_langs:
   - "TSQL"
-ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 ---
 # Full-Text Search and Semantic Search Catalog Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

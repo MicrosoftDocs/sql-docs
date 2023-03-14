@@ -1,17 +1,14 @@
 ---
+title: "Connect to SQL Server (DB2ToSQL)"
 description: "Connect to SQL Server (DB2ToSQL)"
-title: "Connect to SQL Server (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.connectmssqlform.f1"
+f1_keywords:
+  - "ssma.db2.connectmssqlform.f1"
 ---
 # Connect to SQL Server (DB2ToSQL)
 Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you want to migrate to. To access the **Connect to SQL Server** dialog box, on the **File** menu, click **Connect to SQL Server**.  

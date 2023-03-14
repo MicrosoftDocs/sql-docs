@@ -1,25 +1,22 @@
 ---
+title: "sys.syscurconfigs (Transact-SQL)"
 description: "sys.syscurconfigs (Transact-SQL)"
-title: "sys.syscurconfigs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.syscurconfigs"
   - "sys.syscurconfigs_TSQL"
   - "syscurconfigs"
   - "syscurconfigs_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.syscurconfigs compatibility view"
   - "syscurconfigs system table"
-ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.syscurconfigs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

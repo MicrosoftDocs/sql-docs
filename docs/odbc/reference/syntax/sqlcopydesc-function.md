@@ -1,29 +1,19 @@
 ---
+title: "SQLCopyDesc Function"
 description: "SQLCopyDesc Function"
-title: "SQLCopyDesc Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLCopyDesc"
-apilocation: 
-  - "sqlsrv32.dll"
-  - "odbc32.dll"
-  - "Msodbcsql11.dll"
-  - "Sqlncli10.dll"
-  - "Sqlncli11.dll"
-  - "Sqlncli11e.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLCopyDesc"
-helpviewer_keywords: 
-  - "SQLCopyDesc function [ODBC]"
-ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/18/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLCopyDesc"
+helpviewer_keywords:
+  - "SQLCopyDesc function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLCopyDesc"
+apitype: "dllExport"
 ---
 # SQLCopyDesc Function
 **Conformance**  

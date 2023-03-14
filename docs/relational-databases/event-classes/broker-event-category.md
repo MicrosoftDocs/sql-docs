@@ -1,19 +1,16 @@
 ---
+title: "Broker Event Category"
 description: "Broker Event Category"
-title: "Broker Event Category | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/24/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server event classes, Broker event category"
   - "Broker event category [SQL Server]"
   - "event classes [SQL Server], Broker event category"
-ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker Event Category

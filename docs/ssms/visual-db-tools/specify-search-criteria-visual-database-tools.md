@@ -1,12 +1,13 @@
 ---
-description: "Specify Search Criteria (Visual Database Tools)"
 title: Specify Search Criteria
-ms.custom: seo-lt-2019
+description: "Specify Search Criteria (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Designer [SQL Server], Criteria pane"
   - "queries [Visual Database Tools]"
   - "criteria for search conditions"
@@ -18,11 +19,6 @@ helpviewer_keywords:
   - "search criteria [SQL Server]"
   - "Visual Database Tools [SQL Server], queries"
   - "limiting rows returned"
-ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Specify Search Criteria (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

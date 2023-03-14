@@ -1,22 +1,19 @@
 ---
+title: "Batches of Statements"
 description: "Batches of Statements"
-title: "Batches of Statements | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "statements [ODBC], batches"
   - "batches [ODBC]"
   - "ODBC applications, statements"
   - "multiple statements, batches"
   - "SQLMoreResults function"
   - "SQLExecDirect function"
-ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Batches of Statements

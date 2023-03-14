@@ -1,22 +1,19 @@
 ---
+title: "sp_delete_notification (Transact-SQL)"
 description: "sp_delete_notification (Transact-SQL)"
-title: "sp_delete_notification (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_notification_TSQL"
-  - "sp_delete_notification"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_notification"
-ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_notification_TSQL"
+  - "sp_delete_notification"
+helpviewer_keywords:
+  - "sp_delete_notification"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

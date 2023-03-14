@@ -1,22 +1,17 @@
 ---
-description: "HostName Property (SqlService Class)"
 title: "HostName Property (SqlService)"
-ms.custom: seo-lt-2019
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "HostName Property (SqlService Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "HostName property"
-ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
+description: "HostName Property (SqlService Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "HostName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "HostName Property (SqlService Class)"
+apitype: "MOFDef"
 ---
 # HostName Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "Disconnecting from a Data Source or Driver"
 description: "Disconnecting from a Data Source or Driver"
-title: "Disconnecting from a Data Source or Driver | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disconnecting from driver [ODBC]"
   - "data sources [ODBC], disconnecting"
   - "disconnecting from data source [ODBC]"
   - "connecting to data source [ODBC], disconnecting"
   - "connecting to driver [ODBC], disconnecting"
   - "ODBC drivers [ODBC], disconnecting"
-ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Disconnecting from a Data Source or Driver
 When an application has finished using a data source, it calls **SQLDisconnect**. **SQLDisconnect** frees any statements that are allocated on the connection and disconnects the driver from the data source. It returns an error if a transaction is in process.  

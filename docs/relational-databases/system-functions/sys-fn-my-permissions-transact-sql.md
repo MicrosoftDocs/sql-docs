@@ -1,25 +1,22 @@
 ---
+title: "sys.fn_my_permissions (Transact-SQL)"
 description: "sys.fn_my_permissions (Transact-SQL)"
-title: "sys.fn_my_permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_my_permissions_TSQL"
   - "fn_my_permissions_TSQL"
   - "sys.fn_my_permissions"
   - "fn_my_permissions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_my_permissions function"
   - "sys.fn_my_permissions function"
-ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

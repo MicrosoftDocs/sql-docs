@@ -3,7 +3,7 @@ title: Install the Microsoft ODBC driver for SQL Server (macOS)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on macOS clients to enable database connectivity.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 09/20/2022
+ms.date: 03/06/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -19,8 +19,8 @@ This article explains how to install the Microsoft ODBC Driver for SQL Server on
 This article provides commands for installing the ODBC driver from the bash shell. If you want to download the packages directly, see [Download ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
 > [!Note]
-> The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture through version 17.7. Apple M1 (ARM64) support was added starting with version 17.8. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your command prompt is running in x64 emulation mode on the M1, the x64 package will be installed. If you're not running in emulation mode in your command prompt, the ARM64 package will be installed.
-> Additionally, the Homebrew default directory changed with the M1, to `/opt/homebrew`. The paths below use the x64 Homebrew paths, which default to `/usr/local`, so your file paths will vary accordingly.
+> The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture through version 17.7. Apple ARM64 support was added starting with version 17.8. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your command prompt is running in x64 emulation mode on ARM64, the x64 package will be installed. If you're not running in emulation mode in your command prompt, the ARM64 package will be installed.
+> Additionally, the Homebrew default directory changed with the ARM64 architecture, to `/opt/homebrew`. The paths in the [Driver files](#driver-files) section use the x64 Homebrew paths, which default to `/usr/local`, so your file paths will vary accordingly.
 
 ## Microsoft ODBC 18
 
@@ -77,7 +77,7 @@ The ODBC driver on macOS consists of the following components:
 
 ## Resource file loading
 
-The driver needs to load the resource file in order to function. This file is called `msodbcsqlr18.rll`, `msodbcsqlr17.rll`, or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the component table. As of version 17.1 the driver will also attempt to load the `.rll` from the default directory if loading from the relative path fails. The default resource file path on macOS is `/usr/local/share/msodbcsql18/resources/en_US/`
+The driver needs to load the resource file in order to function. This file is called `msodbcsqlr18.rll`, `msodbcsqlr17.rll`, or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the component table. As of version 17.1 the driver also attempts to load the `.rll` from the default directory if loading from the relative path fails. The default resource file path on macOS is `/usr/local/share/msodbcsql18/resources/en_US/`
 
 ## Troubleshooting
 
@@ -88,7 +88,7 @@ sudo ln -s /usr/local/etc/odbcinst.ini /etc/odbcinst.ini
 sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
 ```
 
-For additional cases where you're unable to make a connection to SQL Server using the ODBC driver, see the known issues article on [troubleshooting connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
+For other cases where you're unable to make a connection to SQL Server using the ODBC driver, see the known issues article on [troubleshooting connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
 
 If brew is having trouble finding the formulas, make sure you didn't skip the install step: `brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release`
 

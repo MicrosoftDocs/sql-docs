@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "IHindextypes system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 ---
 # IHindextypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

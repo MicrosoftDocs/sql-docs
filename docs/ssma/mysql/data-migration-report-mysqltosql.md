@@ -1,17 +1,14 @@
 ---
+title: "Data Migration Report  (MySQLToSQL)"
 description: "Data Migration Report  (MySQLToSQL)"
-title: "Data Migration Report  (MySQLToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.mysql.datamigrationreport.f1"
+f1_keywords:
+  - "ssma.mysql.datamigrationreport.f1"
 ---
 # Data Migration Report  (MySQLToSQL)
 The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

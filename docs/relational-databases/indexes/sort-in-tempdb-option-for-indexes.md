@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "tempdb database [SQL Server], indexes"
   - "indexes [SQL Server], tempdb database"
   - "index creation [SQL Server], tempdb database"
-ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SORT_IN_TEMPDB Option For Indexes

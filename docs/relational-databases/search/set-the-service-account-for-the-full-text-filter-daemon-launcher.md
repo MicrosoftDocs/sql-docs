@@ -1,19 +1,17 @@
 ---
-description: "Set the Service Account for the Full-text Filter Daemon Launcher"
 title: "Set service account for Full-text filter daemon launcher"
+description: "Set the Service Account for the Full-text Filter Daemon Launcher"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account"
   - "FDHOST Launcher (MSSQLFDLauncher) [SQL Server]"
-ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Set the Service Account for the Full-text Filter Daemon Launcher
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

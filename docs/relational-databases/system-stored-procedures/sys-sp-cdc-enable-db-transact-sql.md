@@ -1,26 +1,23 @@
 ---
+title: "sys.sp_cdc_enable_db (Transact-SQL)"
 description: "sys.sp_cdc_enable_db (Transact-SQL)"
-title: "sys.sp_cdc_enable_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cdc_enable_db_TSQL"
   - "sp_cdc_enable_db"
   - "sys.sp_cdc_enable_db"
   - "sys.sp_cdc_enable_db_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sp_cdc_enable_db"
   - "change data capture [SQL Server], enabling databases"
   - "sp_cdc_enable_db"
-ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

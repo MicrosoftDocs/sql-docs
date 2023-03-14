@@ -1,17 +1,14 @@
 ---
-description: "Recycle SQL Server Agent Error Logs"
 title: "Recycle SQL Server Agent Error Logs"
-ms.custom: seo-lt-2019
+description: "Recycle SQL Server Agent Error Logs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.errorlog.recyclesqlagenterrorlogs.f1"
-ms.assetid: 10bc2dd1-0505-4527-8ec7-d3b4e5d6352b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Recycle SQL Server Agent Error Logs

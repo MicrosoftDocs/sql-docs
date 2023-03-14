@@ -1,19 +1,15 @@
 ---
-description: "Rename Queries (Visual Database Tools)"
 title: Rename Queries
-ms.custom: seo-lt-2019
+description: "Rename Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "renaming queries"
   - "queries [SQL Server], names"
-ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Rename Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

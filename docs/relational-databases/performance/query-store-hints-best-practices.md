@@ -1,16 +1,14 @@
 ---
 title: "Query Store hints best practices"
 description: "Best practices for the Query Store hints feature, which helps you to shape query plans without changing application code."
-ms.custom:
-- event-tier1-build-2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 08/01/2022
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
 dev_langs:
- - "TSQL"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # Query Store hints best practices

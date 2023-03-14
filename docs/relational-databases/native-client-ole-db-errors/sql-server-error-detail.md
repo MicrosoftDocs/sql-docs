@@ -1,22 +1,19 @@
 ---
-description: "SQL Server Native Client Error Detail"
 title: SQL Server error detail (Native Client OLE DB provider)
-ms.custom: ""
+description: "SQL Server Native Client Error Detail"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, errors"
   - "errors [OLE DB], error details"
   - "IErrorRecords interface"
   - "IErrorInfo interface"
   - "OLE DB error handling, error details"
   - "ISQLServerErrorInfo interface"
-ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Error Detail

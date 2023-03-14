@@ -1,20 +1,17 @@
 ---
+title: "Setting Options Programmatically for the Excel Driver"
 description: "Setting Options Programmatically for the Excel Driver"
-title: "Setting Options Programmatically for the Excel Driver | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], Excel driver"
   - "desktop database drivers [ODBC], Excel driver"
   - "ODBC desktop database drivers [ODBC], Excel driver"
   - "Excel driver [ODBC], setting options programmatically"
-ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Setting Options Programmatically for the Excel Driver
 

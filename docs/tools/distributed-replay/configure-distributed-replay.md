@@ -2,14 +2,13 @@
 title: Configure distributed replay
 titleSuffix: SQL Server Distributed Replay
 description: This article describes product requirements to consider before you use the Distributed Replay feature of SQL Server.
-ms.service: sql
-ms.subservice: distributed-replay
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom: seo-lt-2019
 ms.date: 06/20/2022
+ms.service: sql
+ms.subservice: distributed-replay
+ms.topic: conceptual
 monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017"
 ---
 

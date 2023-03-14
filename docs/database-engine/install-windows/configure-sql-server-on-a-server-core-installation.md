@@ -7,7 +7,6 @@ ms.date: "09/15/2021"
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "IsHadrEnabled server property"
   - "Server Core Installation [SQL Server]"

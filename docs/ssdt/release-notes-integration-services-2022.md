@@ -1,14 +1,13 @@
 ---
 title: SSIS Projects extension for VS2022 troubleshooting guide
 description: "View the release notes for all versions of SSIS that work with Visual Studio 2022 and earlier Visual Studio versions."
-ms.service: sql
-ms.subservice: ssdt
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan, drskwier
-ms.custom: seo-lt-2022
 ms.date: 11/21/2022
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # SSIS Projects extension for VS2022 troubleshooting guide
@@ -21,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.
 
 ## Component Download
-- To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector](https://aka.ms/SSISMSOracleConnector) and [Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
+- To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL Server prior to SQL 2019, in addition to the [Microsoft Oracle Connector](https://aka.ms/SSISMSOracleConnector) and [Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
   - [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
   - [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)
   - [Microsoft Connector Version 3.0 for Oracle and Teradata by Attunity targeting SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)
@@ -40,6 +39,8 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
+- If Oracle, Teradata, or other OOB component is not found after upgrading SSDT, please make sure that the connector for latest SQL Server version is installed.
+
 ## Known issues
 **Version 0.3**
   1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
@@ -47,7 +48,6 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   3. Can't design DQS related component.
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   5. Localization and globalization aren't supported.
-  6. Oracle Connection Manager execute failed with error code 0x80004005 when targeting SQL Server 2017.
   
 **Version 0.2**
   1. Target sever versions supported: SQL server 2019 and SQL server 2022

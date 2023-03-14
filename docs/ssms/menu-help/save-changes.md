@@ -1,20 +1,17 @@
 ---
-description: "Save Changes"
 title: "Save Changes"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "sql13.swb.file.close.f1"
-  - "VS.SaveChangesDlg"
-helpviewer_keywords: 
-  - "Save Changes dialog box"
-ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
+description: "Save Changes"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "sql13.swb.file.close.f1"
+  - "VS.SaveChangesDlg"
+helpviewer_keywords:
+  - "Save Changes dialog box"
 ---
 # Save Changes
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

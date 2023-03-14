@@ -1,18 +1,15 @@
 ---
+title: "SQLSetConnectOption (Text File Driver)"
 description: "SQLSetConnectOption (Text File Driver)"
-title: "SQLSetConnectOption (Text File Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLSetConnectOption function [ODBC], Text File Driver"
-  - "text file driver [ODBC], SQLSetConnectOption"
-ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLSetConnectOption function [ODBC], Text File Driver"
+  - "text file driver [ODBC], SQLSetConnectOption"
 ---
 # SQLSetConnectOption (Text File Driver)
 > [!NOTE]  

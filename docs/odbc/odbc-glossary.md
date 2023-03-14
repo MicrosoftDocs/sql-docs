@@ -1,18 +1,15 @@
 ---
+title: "ODBC Glossary"
 description: "ODBC Glossary"
-title: "ODBC Glossary | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ODBC [ODBC], glossary"
-  - "glossary [ODBC]"
-ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ODBC [ODBC], glossary"
+  - "glossary [ODBC]"
 ---
 # ODBC Glossary
 ## A  

@@ -1,23 +1,20 @@
 ---
 title: "SQL Server Browser service"
 description: Learn how to use SQL Server Browser, a service that listens for requests for SQL Server resources and provides information about installed SQL Server instances.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "02/03/2022"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: tools-other
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.browseservers.local.f1"
   - "sql13.swb.browseservers.network.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "services [SQL Server], security"
   - "SQL Browser service (See SQL Server Browser Service)"
   - "Browser Service"
   - "SQL Server Browser service"
-ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 

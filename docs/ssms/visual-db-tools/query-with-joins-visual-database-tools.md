@@ -1,12 +1,13 @@
 ---
-description: "Query with Joins (Visual Database Tools)"
 title: Query with Joins
-ms.custom: seo-lt-2019
+description: "Query with Joins (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [Visual Database Tools]"
   - "View Designer, joins"
   - "table joins [SQL Server]"
@@ -14,11 +15,6 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
   - "Query Designer [SQL Server], joins"
   - "joins [SQL Server], queries"
-ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Query with Joins (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

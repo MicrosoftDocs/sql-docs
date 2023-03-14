@@ -1,23 +1,20 @@
 ---
+title: "Script Task"
 description: "Script Task"
-title: "Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.scripttask.f1"
   - "sql13.dts.designer.scripttask.general.f1"
   - "sql13.dts.designer.scripttask.script.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scripts [Integration Services], tasks"
   - "Script task [Integration Services], about Script task"
   - "Script task [Integration Services]"
-ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: chugugrace
-ms.author: chugu
 ---
 # Script Task
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_helpmergepartition (Transact-SQL)"
 description: "sp_helpmergepartition (Transact-SQL)"
-title: "sp_helpmergepartition (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_helpmergepartition"
-  - "sp_helpmergepartition_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergepartition"
-ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergepartition"
+  - "sp_helpmergepartition_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergepartition"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

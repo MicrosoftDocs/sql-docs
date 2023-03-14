@@ -1,25 +1,22 @@
 ---
+title: "UPDATETEXT (Transact-SQL)"
 description: "UPDATETEXT (Transact-SQL)"
-title: "UPDATETEXT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/23/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "UPDATETEXT"
   - "UPDATETEXT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text updates [SQL Server]"
   - "updating data [SQL Server]"
   - "data updates [SQL Server], UPDATETEXT statement"
   - "UPDATETEXT statement"
-ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # UPDATETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]

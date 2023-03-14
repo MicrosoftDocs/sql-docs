@@ -1,21 +1,18 @@
 ---
+title: "Other Driver Architectures"
 description: "Other Driver Architectures"
-title: "Other Driver Architectures | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "drivers [ODBC], heterogeneous join engines"
   - "drivers [ODBC], ODBC on the server"
   - "ODBC architecture [ODBC], drivers"
   - "heterogeneous join engines[ODBC]"
   - "drivers [ODBC], middle component"
-ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Other Driver Architectures
 Some ODBC drivers do not strictly conform to the architecture described previously. This might be because the drivers perform duties other than those of a traditional ODBC driver, or are not drivers in the normal sense.  

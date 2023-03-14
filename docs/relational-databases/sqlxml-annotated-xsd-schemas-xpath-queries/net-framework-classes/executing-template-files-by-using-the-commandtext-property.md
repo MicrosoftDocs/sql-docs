@@ -7,14 +7,12 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "Managed Classes [SQLXML], executing template files"
   - "SQLXML Managed Classes, executing template files"
   - "templates [SQLXML], SQLXML Managed Classes"
   - "executing template files [SQLXML]"
   - "CommandText property"
-ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandText Property

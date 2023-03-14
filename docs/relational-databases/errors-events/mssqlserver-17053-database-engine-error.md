@@ -99,7 +99,7 @@ The log for database 'SQLContoso' is not available. Check the operating system e
 If you encounter a similar scenario, address the underlying OS error. In this case work with your system administrator to ensure that the database and log files aren't locked by other programs. Most commonly anti-virus or host protection software, defragmentation software, or backup software that holds locks on the files for a long time may cause this OS error. Make sure to exclude database files from being scanned or used; see [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/en-us/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b).
 
 In WSFC (clustered) environments, if drives aren't properly configured on the back end they may lock database files when they aren't supposed to.
-For more information on storage for WSFC, see [Failover Clustering hardware solution](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering)
+For more information on storage for WSFC, see [Failover Clustering hardware solution](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)
 and [Failover cluster instances with SQL Server on Azure Virtual Machines - Storage](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-overview#storage)
 
 ### Example with SQL Server error 9002 and underlying OS error 112
@@ -119,4 +119,4 @@ MODIFY FILE encountered operating system error 112(There is not enough space on 
 
 **Resolution:**
 
-If you encounter a similar scenario, address the underlying OS 112 error. In this case work with your system administrator to free up disk space on the device and then attempt to address the full transaction log. For detailed steps on troubleshooting error 9002, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002).
+If you encounter a similar scenario, address the underlying OS 112 error. In this case work with your system administrator to free up disk space on the device and then attempt to address the full transaction log. For detailed steps on troubleshooting error 9002, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).

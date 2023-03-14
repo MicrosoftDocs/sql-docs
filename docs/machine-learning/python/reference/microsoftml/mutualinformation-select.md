@@ -1,29 +1,20 @@
---- 
- 
-# required metadata 
-title: "mutualinformation_select: Machine Learning Mutual Information Mode Feature Selection Transform" 
-description: "Selects the top k features across all specified columns ordered by their mutual information with the label column." 
-keywords: "feature, selection, mutual, information" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "mutualinformation_select: Machine Learning Mutual Information Mode Feature Selection Transform"
+description: "Selects the top k features across all specified columns ordered by their mutual information with the label column."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - feature
+  - selection
+  - mutual
+  - information
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.mutualinformation_select*: Feature selection based on mutual information
 
 

@@ -1,15 +1,12 @@
 ---
+title: "catalog.environment_references (SSISDB Database)"
 description: "catalog.environment_references (SSISDB Database)"
-title: "catalog.environment_references (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.environment_references (SSISDB Database)
 

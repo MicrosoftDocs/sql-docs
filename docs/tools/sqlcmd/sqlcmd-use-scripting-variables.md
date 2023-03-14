@@ -8,7 +8,6 @@ ms.date: 01/10/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "scripts [SQL Server], sqlcmd utility"
   - "variables [SQL Server], scripts"
@@ -32,7 +31,7 @@ This article also includes examples defining environmental variables at the Cmd.
 
 ## Set Scripting Variables by Using the setvar Command
 
- The **setvar** command is used to define scripting variables. Variables that are defined by using the **setvar** command are stored internally. Scripting variables should not be confused with environment variables that are defined at the command prompt by using **SET**. If a script references a variable that is not an environment variable or is not defined by using **setvar**, an error message is returned and the execution of the script will stop. For more information, see the **-b** option in [Sqlcmd utility](/sql/tools/sqlcmd/sqlcmd-utility).
+ The **setvar** command is used to define scripting variables. Variables that are defined by using the **setvar** command are stored internally. Scripting variables should not be confused with environment variables that are defined at the command prompt by using **SET**. If a script references a variable that is not an environment variable or is not defined by using **setvar**, an error message is returned and the execution of the script will stop. For more information, see the **-b** option in [Sqlcmd utility](./sqlcmd-utility.md).
 
 ## Variable Precedence (Low to High)
 

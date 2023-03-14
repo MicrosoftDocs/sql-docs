@@ -1,22 +1,19 @@
 ---
-description: "Create an Operator"
 title: "Create an Operator"
-ms.custom: seo-lt-2019
+description: "Create an Operator"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, operators"
   - "jobs [SQL Server Agent], notification options"
   - "operators (users) [Database Engine], creating with Management Studio"
   - "SQL Server Agent jobs, notification options"
   - "jobs [SQL Server Agent], operators"
   - "notifications [SQL Server], job status"
-ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create an Operator

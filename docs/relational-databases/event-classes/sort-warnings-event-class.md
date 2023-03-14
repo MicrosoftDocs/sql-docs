@@ -1,17 +1,14 @@
 ---
+title: "Sort Warnings Event Class"
 description: "Sort Warnings Event Class"
-title: "Sort Warnings Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Sort Warnings event class"
-ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Sort Warnings event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sort Warnings Event Class

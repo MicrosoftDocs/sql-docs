@@ -1,17 +1,14 @@
 ---
+title: "SQLCleanupConnectionPoolID Function"
 description: "SQLCleanupConnectionPoolID Function"
-title: "SQLCleanupConnectionPoolID Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLCleanupConnectionPoolID function [ODBC]"
-ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLCleanupConnectionPoolID function [ODBC]"
 ---
 # SQLCleanupConnectionPoolID Function
 **Conformance**  

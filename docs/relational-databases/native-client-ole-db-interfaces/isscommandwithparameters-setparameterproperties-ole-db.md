@@ -1,20 +1,16 @@
 ---
-description: "ISSCommandWithParameters::SetParameterProperties in SQL Server Native Client (OLE DB)"
 title: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-apiname: 
-  - "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "SetParameterProperties method"
-ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
+description: "ISSCommandWithParameters::SetParameterProperties in SQL Server Native Client (OLE DB)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SetParameterProperties method"
+apiname: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
+apitype: "COM"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISSCommandWithParameters::SetParameterProperties in SQL Server Native Client (OLE DB)

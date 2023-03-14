@@ -1,15 +1,12 @@
 ---
+title: "Step 3: Testing the Deployed Packages"
 description: "Lesson 3-3 - Testing the Deployed Packages"
-title: "Step 3: Testing the Deployed Packages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: tutorial
-ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 3-3 - Testing the Deployed Packages
 

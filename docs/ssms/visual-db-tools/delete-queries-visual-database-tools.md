@@ -1,21 +1,17 @@
 ---
-description: "Delete Queries (Visual Database Tools)"
 title: Delete Queries
-ms.custom: seo-lt-2019
+description: "Delete Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping queues"
   - "deleting queries"
   - "removing queries"
   - "queries [SQL Server], deleting"
-ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Delete Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

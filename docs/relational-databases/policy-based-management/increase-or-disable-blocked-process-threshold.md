@@ -1,17 +1,14 @@
 ---
+title: "Increase or Disable Blocked Process Threshold"
 description: "Increase or Disable Blocked Process Threshold"
-title: "Increase or Disable Blocked Process Threshold | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 71db8ef6-341b-4465-99db-5c63e48d4c7d
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Increase or Disable Blocked Process Threshold
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

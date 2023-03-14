@@ -1,17 +1,14 @@
 ---
-description: "Customize (Toolbars Page)"
 title: "Customize (Toolbars Page)"
-ms.custom: seo-lt-2019
+description: "Customize (Toolbars Page)"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.vs.customizetool.f1"
-ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Customize (Toolbars Page)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

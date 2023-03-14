@@ -7,9 +7,7 @@ ms.date: 05/06/2022
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: how-to
-ms.custom:
-  - seo-dt-2019
-  - kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment
 ---
 
 # Appliance time zone configuration in Analytics Platform System

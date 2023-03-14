@@ -1,15 +1,12 @@
 ---
+title: "Integration Services Features Supported by the Editions of SQL Server"
 description: "Integration Services Features Supported by the Editions of SQL Server"
-title: "Integration Services Features Supported by the Editions of SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
+ms.date: "07/26/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Integration Services features supported by the editions of SQL Server
 

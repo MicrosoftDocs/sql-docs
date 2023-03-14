@@ -1,22 +1,19 @@
 ---
+title: "sp_getsubscriptiondtspackagename (Transact-SQL)"
 description: "sp_getsubscriptiondtspackagename (Transact-SQL)"
-title: "sp_getsubscriptiondtspackagename (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_getsubscriptiondtspackagename"
-  - "sp_getsubscriptiondtspackagename_TSQL"
-helpviewer_keywords: 
-  - "sp_getsubscriptiondtspackagename"
-ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_getsubscriptiondtspackagename"
+  - "sp_getsubscriptiondtspackagename_TSQL"
+helpviewer_keywords:
+  - "sp_getsubscriptiondtspackagename"
+dev_langs:
+  - "TSQL"
 ---
 # sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

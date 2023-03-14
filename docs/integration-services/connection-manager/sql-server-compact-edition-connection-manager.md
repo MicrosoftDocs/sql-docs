@@ -1,22 +1,19 @@
 ---
+title: "SQL Server Compact Edition Connection Manager"
 description: "SQL Server Compact Edition Connection Manager"
-title: "SQL Server Compact Edition Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.sqlmobileconnection.connection.f1"
   - "sql13.dts.designer.sqlmobileconnection.all.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Compact, connection manager"
   - "connections [Integration Services], SQL Server Compact"
   - "connection managers [Integration Services], SQL Server Compact"
-ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-author: chugugrace
-ms.author: chugu
 ---
 # SQL Server Compact Edition Connection Manager
 

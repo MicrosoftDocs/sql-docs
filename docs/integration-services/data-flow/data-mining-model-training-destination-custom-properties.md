@@ -1,15 +1,12 @@
 ---
+title: "Data Mining Model Training Destination Custom Properties"
 description: "Data Mining Model Training Destination Custom Properties"
-title: "Data Mining Model Training Destination Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Data Mining Model Training Destination Custom Properties
 

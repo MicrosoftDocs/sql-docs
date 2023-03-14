@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2537"
 description: "MSSQLSERVER_2537"
-title: "MSSQLSERVER_2537 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2537 (Database Engine error)"
-ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2537 (Database Engine error)"
 ---
 # MSSQLSERVER_2537
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

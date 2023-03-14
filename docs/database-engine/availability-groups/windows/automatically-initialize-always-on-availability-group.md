@@ -8,7 +8,6 @@ ms.date: 04/11/2022
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 ---
 # Use automatic seeding to initialize an Always On availability group
 

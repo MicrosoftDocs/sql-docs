@@ -4,12 +4,10 @@ titleSuffix: SQL Server (Transact-SQL)
 description: Use a wildcard to match one or more characters.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "12/06/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
 f1_keywords:
   - "Match"
   - "wildcard"

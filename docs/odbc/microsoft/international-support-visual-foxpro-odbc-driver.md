@@ -1,13 +1,13 @@
 ---
+title: "International Support (Visual FoxPro ODBC Driver)"
 description: "International Support (Visual FoxPro ODBC Driver)"
-title: "International Support (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "double-byte character sets [ODBC]"
   - "FoxPro ODBC driver [ODBC], international support"
   - "DBCS [ODBC]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "sort order [ODBC]"
   - "collating sequences [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], international support"
-ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-author: David-Engel
-ms.author: v-davidengel
 ---
 # International Support (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports:  

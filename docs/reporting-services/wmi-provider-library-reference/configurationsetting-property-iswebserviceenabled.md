@@ -1,22 +1,17 @@
 ---
+title: "IsWebServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)"
 description: "IsWebServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)"
-title: "IsWebServiceEnabled Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
 ms.service: reporting-services
 ms.subservice: wmi-provider-library-reference
-
-
 ms.topic: conceptual
-apiname: 
-  - "IsWebServiceEnabled"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IsWebServiceEnabled property"
-ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
-author: maggiesMSFT
-ms.author: maggies
+apilocation: "reportingservices.mof"
+apiname: "IsWebServiceEnabled"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - IsWebServiceEnabled
   Indicates whether the Report Server Web service is enabled. Read-only.  

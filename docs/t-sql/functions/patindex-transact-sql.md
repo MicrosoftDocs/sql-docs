@@ -3,12 +3,10 @@ title: "PATINDEX (Transact-SQL)"
 description: "PATINDEX (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "07/19/2016"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "PATINDEX"
   - "PATINDEX_TSQL"

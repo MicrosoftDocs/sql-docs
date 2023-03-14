@@ -1,16 +1,14 @@
 ---
 title: "SQL Server, FileTable object"
-description: Learn about the SQLServer:FileTable performance object, which provides counters for statistics associated with FileTable and non-transacted access.
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:FileTable"
+description: "Learn about the SQLServer:FileTable performance object, which provides counters for statistics associated with FileTable and non-transacted access."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:FileTable"
 ---
 # SQL Server, FileTable object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,17 @@
 ---
+title: "Synchronize a Pull Subscription"
 description: "Synchronize a Pull Subscription"
-title: "Synchronize a Pull Subscription | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "pull subscriptions [SQL Server replication], synchronizing"
   - "synchronization [SQL Server replication], pull subscriptions"
   - "subscriptions [SQL Server replication], pull"
-ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Synchronize a Pull Subscription

@@ -1,15 +1,12 @@
 ---
+title: "LOCALDB_ERROR_WAIT_TIMEOUT"
 description: "LOCALDB_ERROR_WAIT_TIMEOUT"
-title: "LOCALDB_ERROR_WAIT_TIMEOUT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: "reference"
-ms.assetid: e5b55efa-daa1-4c39-aa71-eeb7707ed601
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: "reference"
 ---
 # LOCALDB_ERROR_WAIT_TIMEOUT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

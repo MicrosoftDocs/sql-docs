@@ -1,18 +1,15 @@
 ---
+title: "Error Messages (ODBC Driver for Oracle)"
 description: "Error Messages (ODBC Driver for Oracle)"
-title: "Error Messages (ODBC Driver for Oracle) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "error messages [ODBC], ODBC driver for Oracle"
-  - "ODBC driver for Oracle [ODBC], error messages"
-ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "error messages [ODBC], ODBC driver for Oracle"
+  - "ODBC driver for Oracle [ODBC], error messages"
 ---
 # Error Messages (ODBC Driver for Oracle)
 > [!IMPORTANT]  

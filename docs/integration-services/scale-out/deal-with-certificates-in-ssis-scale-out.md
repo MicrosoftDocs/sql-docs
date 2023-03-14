@@ -1,14 +1,13 @@
 ---
-title: "Manage certificates for Sql Server Integration Services Scale Out | Microsoft Docs"
+title: "Manage certificates for Sql Server Integration Services Scale Out"
 description: "This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers."
-ms.date: "12/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.custom: performance
-ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
+ms.date: "12/19/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: performance
 ---
 # Manage certificates for SQL Server Integration Services Scale Out
 

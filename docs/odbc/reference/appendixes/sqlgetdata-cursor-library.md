@@ -1,17 +1,14 @@
 ---
+title: "SQLGetData (Cursor Library)"
 description: "SQLGetData (Cursor Library)"
-title: "SQLGetData (Cursor Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLGetData function [ODBC], Cursor Library"
-ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLGetData function [ODBC], Cursor Library"
 ---
 # SQLGetData (Cursor Library)
 > [!IMPORTANT]  

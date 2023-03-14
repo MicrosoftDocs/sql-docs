@@ -7,9 +7,6 @@ ms.date: 09/21/2022
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - event-tier1-build-2022
 monikerRange: ">=sql-server-2016"
 ---
 # CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services
@@ -101,7 +98,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release  |Component | Download link  | Issues addressed |
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU29](https://support.microsoft.com//help/5010786/)** |  |  |  |
+|**[SQL Server 2017 CU29](https://support.microsoft.com//help/5010786/)-[CU31](https://support.microsoft.com//help/5016884/)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.1162_1033.cab](https://go.microsoft.com/fwlink/?linkid=2174362)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |

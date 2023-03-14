@@ -1,25 +1,22 @@
 ---
+title: "sys.sysservers (Transact-SQL)"
 description: "sys.sysservers (Transact-SQL)"
-title: "sys.sysservers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sysservers"
   - "sysservers_TSQL"
   - "sysservers"
   - "sys.sysservers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysservers system table"
   - "sys.sysservers compatibility view"
-ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

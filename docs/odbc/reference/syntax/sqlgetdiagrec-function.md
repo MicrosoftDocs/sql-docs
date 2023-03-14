@@ -1,24 +1,19 @@
 ---
+title: "SQLGetDiagRec Function"
 description: "SQLGetDiagRec Function"
-title: "SQLGetDiagRec Function | Microsoft Docs"
-ms.custom: ""
-ms.date: 12/08/2021
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLGetDiagRec"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLGetDiagRec"
-helpviewer_keywords: 
-  - "SQLGetDiagRec function [ODBC]"
-ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 12/08/2021
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLGetDiagRec"
+helpviewer_keywords:
+  - "SQLGetDiagRec function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLGetDiagRec"
+apitype: "dllExport"
 ---
 # SQLGetDiagRec Function
 **Conformance**  

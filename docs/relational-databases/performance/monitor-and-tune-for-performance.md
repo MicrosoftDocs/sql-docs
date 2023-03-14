@@ -1,13 +1,13 @@
 ---
-title: "Monitor and Tune for Performance | Microsoft Docs"
+title: "Monitor and Tune for Performance"
 description: Learn about monitoring databases to assess server performance, using periodic snapshots and gathering data continuously to track performance trends.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/18/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "instances of SQL Server, monitoring performance"
   - "monitoring server performance [SQL Server]"
   - "Database Engine [SQL Server], performance"
@@ -25,9 +25,6 @@ helpviewer_keywords:
   - "monitoring [SQL Server], server performance"
   - "database monitoring [SQL Server]"
   - "monitoring server performance [SQL Server], about monitoring server performance"
-ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor and Tune for Performance

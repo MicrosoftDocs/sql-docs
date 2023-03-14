@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], deploying"
   - "deploying assemblies [CLR integration]"
   - "deploying [CLR integration]"
-ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 ---
 # Deploying CLR Database Objects
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

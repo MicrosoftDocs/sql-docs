@@ -1,19 +1,16 @@
 ---
+title: "Table Column Properties (SQL Server Management Studio)"
 description: "Table Column Properties (SQL Server Management Studio)"
-title: "Table Column Properties (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/08/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:65558"
   - "vdtsql.chm:69657"
   - "vdt.ppg.columns"
-ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table Column Properties (SQL Server Management Studio)

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.resource_governor_resource_pools catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
 ---
 # sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

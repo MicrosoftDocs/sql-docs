@@ -1,17 +1,14 @@
 ---
+title: "Exec Prepared SQL Event Class"
 description: "Exec Prepared SQL Event Class"
-title: "Exec Prepared SQL Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Exec Prepared SQL event class"
-ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Exec Prepared SQL event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Exec Prepared SQL Event Class

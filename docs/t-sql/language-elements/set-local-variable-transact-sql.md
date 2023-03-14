@@ -3,12 +3,10 @@ title: "SET @local_variable (Transact-SQL)"
 description: "SET @local_variable (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "04/13/2022"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "SET @local_variable"
   - "variables [SQL Server], assigning"

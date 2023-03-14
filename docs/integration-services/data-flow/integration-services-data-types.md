@@ -1,13 +1,13 @@
 ---
+title: "Integration Services Data Types"
 description: "Integration Services Data Types"
-title: "Integration Services Data Types | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/16/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying data types"
   - "data types [Integration Services], listed"
   - "data types [Integration Services]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "SSIS, data types"
   - "Integration Services, data types"
   - "SQL Server Integration Services, data types"
-ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services Data Types
 

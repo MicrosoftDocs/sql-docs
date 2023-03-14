@@ -1,21 +1,18 @@
 ---
+title: "Database Maintenance Plan Stored Procedures (Transact-SQL)"
 description: "Database Maintenance Plan Stored Procedures (Transact-SQL)"
-title: "Database Maintenance Plan Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database maintenance plans [SQL Server]"
   - "system stored procedures [SQL Server], database maintenance plans"
   - "maintenance plans [SQL Server], stored procedures"
-ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
-author: MashaMSFT
-ms.author: mathoma
+dev_langs:
+  - "TSQL"
 ---
 # Database Maintenance Plan Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

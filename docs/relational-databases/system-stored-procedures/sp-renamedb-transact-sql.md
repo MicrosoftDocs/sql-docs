@@ -1,21 +1,19 @@
 ---
-description: "sp_renamedb (Transact-SQL)"
 title: "sp_renamedb (Transact-SQL)"
-ms.custom: ""
-ms.date: "04/06/2022"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_renamedb"
-  - "sp_renamedb_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_renamedb"
+description: "sp_renamedb (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.date: "04/06/2022"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_renamedb"
+  - "sp_renamedb_TSQL"
+helpviewer_keywords:
+  - "sp_renamedb"
+dev_langs:
+  - "TSQL"
 ---
 # sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,21 +1,18 @@
 ---
 title: "Restore database: differential"
 description: This article describes how to restore a differential database backup in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full differential backups [SQL Server]"
   - "restoring databases [SQL Server], full differential backups"
   - "database backups [SQL Server], full differential backups"
   - "database restores [SQL Server], full differential backups"
   - "backing up databases [SQL Server], full differential backups"
-ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Restore a differential database backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

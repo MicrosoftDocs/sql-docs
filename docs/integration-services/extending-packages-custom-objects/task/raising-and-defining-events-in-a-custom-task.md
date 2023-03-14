@@ -1,16 +1,13 @@
 ---
+title: "Raising and Defining Events in a Custom Task"
 description: "Raising and Defining Events in a Custom Task"
-title: "Raising and Defining Events in a Custom Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS events, custom"
   - "status information [SQL Server], task events"
   - "custom tasks [Integration Services], events"
@@ -21,9 +18,9 @@ helpviewer_keywords:
   - "custom events [Integration Services]"
   - "SSIS events, runtime"
   - "IDTSEvents interface"
-ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Raising and Defining Events in a Custom Task
 

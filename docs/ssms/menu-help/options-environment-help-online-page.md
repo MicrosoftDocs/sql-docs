@@ -1,17 +1,14 @@
 ---
-description: "Options (Environment - Help - Online Page)"
 title: "Options (Environment - Help - Online Page)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Environment.Help.Online"
-ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
+description: "Options (Environment - Help - Online Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "VS.ToolsOptionsPages.Environment.Help.Online"
 ---
 # Options (Environment - Help - Online Page)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

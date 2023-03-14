@@ -1,23 +1,20 @@
 ---
+title: "KEY_COLUMN_USAGE (Transact-SQL)"
 description: "KEY_COLUMN_USAGE (Transact-SQL)"
-title: "KEY_COLUMN_USAGE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "KEY_COLUMN_USAGE_TSQL"
-  - "KEY_COLUMN_USAGE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "INFORMATION_SCHEMA.KEY_COLUMN_USAGE view"
-  - "KEY_COLUMN_USAGE view"
-ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "KEY_COLUMN_USAGE_TSQL"
+  - "KEY_COLUMN_USAGE"
+helpviewer_keywords:
+  - "INFORMATION_SCHEMA.KEY_COLUMN_USAGE view"
+  - "KEY_COLUMN_USAGE view"
+dev_langs:
+  - "TSQL"
 ---
 # KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

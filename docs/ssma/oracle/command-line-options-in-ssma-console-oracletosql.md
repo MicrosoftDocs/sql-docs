@@ -1,20 +1,17 @@
 ---
+title: "Command Line Options in SSMA Console (OracleToSQL)"
 description: "Command Line Options in SSMA Console (OracleToSQL)"
-title: "Command Line Options in SSMA Console (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Command Line Options, Help Option"
   - "Command Line Options, SecurePassword Help Option"
   - "Command Line Options, Variable Value File Option"
   - "Command Line Options,Script File Option"
-ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Command Line Options in SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

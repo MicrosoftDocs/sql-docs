@@ -1,15 +1,12 @@
 ---
-description: "Version Management Functional Area (Master Data Manager)"
 title: Version Management Functional Area
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
+description: "Version Management Functional Area (Master Data Manager)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Version Management Functional Area (Master Data Manager)
 

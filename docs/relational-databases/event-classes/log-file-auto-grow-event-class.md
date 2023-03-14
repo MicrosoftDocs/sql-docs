@@ -1,17 +1,14 @@
 ---
+title: "Log File Auto Grow Event Class"
 description: "Log File Auto Grow Event Class"
-title: "Log File Auto Grow Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Log File Auto Grow event class"
-ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Log File Auto Grow event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Log File Auto Grow Event Class

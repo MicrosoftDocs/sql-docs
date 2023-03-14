@@ -1,20 +1,16 @@
 ---
-description: "View Join Properties (Visual Database Tools)"
 title: View Join Properties
-ms.custom: seo-lt-2019
+description: "View Join Properties (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "joins [SQL Server], properties"
   - "viewing join properties"
   - "displaying join properties"
-ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # View Join Properties (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

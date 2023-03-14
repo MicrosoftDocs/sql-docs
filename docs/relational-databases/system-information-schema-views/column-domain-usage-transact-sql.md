@@ -1,23 +1,20 @@
 ---
+title: "COLUMN_DOMAIN_USAGE (Transact-SQL)"
 description: "COLUMN_DOMAIN_USAGE (Transact-SQL)"
-title: "COLUMN_DOMAIN_USAGE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "COLUMN_DOMAIN_USAGE_TSQL"
-  - "COLUMN_DOMAIN_USAGE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "INFORMATION_SCHEMA.COLUMN_DOMAIN_USAGE view"
-  - "COLUMN_DOMAIN_USAGE view"
-ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 author: markingmyname
 ms.author: maghan
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "COLUMN_DOMAIN_USAGE_TSQL"
+  - "COLUMN_DOMAIN_USAGE"
+helpviewer_keywords:
+  - "INFORMATION_SCHEMA.COLUMN_DOMAIN_USAGE view"
+  - "COLUMN_DOMAIN_USAGE view"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COLUMN_DOMAIN_USAGE (Transact-SQL)

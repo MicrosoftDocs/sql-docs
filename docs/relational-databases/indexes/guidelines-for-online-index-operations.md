@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "disk space [SQL Server], indexes"
   - "nonclustered indexes [SQL Server], online operations"
   - "transaction logs [SQL Server], indexes"
-ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines for online index operations

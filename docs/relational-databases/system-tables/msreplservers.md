@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSreplservers system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 6d572526-b523-454c-bd20-9e7ae10c9191
 ---
 # MSreplservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

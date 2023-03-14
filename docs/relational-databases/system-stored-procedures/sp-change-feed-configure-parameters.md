@@ -1,19 +1,19 @@
 ---
-description: "The sp_change_feed_configure_parameters system stored procedure is used to reduce latency or reduce the cost by increasing the batch size with higher transactions"
 title: "sp_change_feed_configure_parameters (Transact-SQL)"
-ms.date: 02/03/2023
-ms.service: synapse-analytics
-ms.reviewer: wiassaf
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_feed_configure_parameters_TSQL"
-  - "sp_change_feed_configure_parameters"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_feed_configure_parameters"
+description: "The sp_change_feed_configure_parameters system stored procedure is used to reduce latency or reduce the cost by increasing the batch size with higher transactions"
 author: IdrisMotiwala
 ms.author: imotiwala
+ms.reviewer: wiassaf
+ms.date: 02/03/2023
+ms.service: synapse-analytics
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_feed_configure_parameters_TSQL"
+  - "sp_change_feed_configure_parameters"
+helpviewer_keywords:
+  - "sp_change_feed_configure_parameters"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---
 # sp_change_feed_configure_parameters (Transact-SQL)

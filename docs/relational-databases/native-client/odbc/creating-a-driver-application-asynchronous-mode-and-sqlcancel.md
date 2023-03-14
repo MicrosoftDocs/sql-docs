@@ -1,13 +1,13 @@
 ---
+title: "Asynchronous Mode and SQLCancel"
 description: "Creating a Driver Application - Asynchronous Mode and SQLCancel"
-title: "Asynchronous Mode and SQLCancel | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "asynchronous operations [SQL Server Native Client]"
   - "SQLCancel function"
   - "SQLSetConnectAttr function"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "ODBC functions"
   - "ODBC applications, asynchronous operations"
   - "SQL Server Native Client ODBC driver, asynchronous mode"
-ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Driver Application - Asynchronous Mode and SQLCancel

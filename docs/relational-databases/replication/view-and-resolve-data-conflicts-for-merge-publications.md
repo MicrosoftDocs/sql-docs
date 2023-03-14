@@ -1,19 +1,17 @@
 ---
 title: "View & resolve data conflicts (Merge)"
-description: Learn how to view and resolve data conflicts for a Merge Publication for SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to view and resolve data conflicts for a Merge Publication for SQL Server.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], viewing conflicts"
   - "viewing conflict information"
   - "conflict resolution [SQL Server replication], merge replication"
-ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Conflict resolution for Merge Replication
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

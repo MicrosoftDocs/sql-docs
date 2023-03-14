@@ -1,15 +1,12 @@
 ---
 title: Data Quality Services Features Support
 description: This article summarizes Master Data Services and Data Quality Services features support for the different editions of SQL Server.
-ms.custom: "seo-lt-2019"
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Master Data Services and Data Quality Services Features Support
 

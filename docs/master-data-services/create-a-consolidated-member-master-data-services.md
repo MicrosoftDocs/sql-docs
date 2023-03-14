@@ -1,19 +1,16 @@
 ---
-description: "Create a Consolidated Member (Master Data Services)"
 title: Create a Consolidated Member
-ms.custom: ""
+description: "Create a Consolidated Member (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "04/01/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "creating consolidated members [Master Data Services]"
   - "members [Master Data Services], creating consolidated members"
   - "consolidated members [Master Data Services], creating"
-ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Create a Consolidated Member (Master Data Services)
 

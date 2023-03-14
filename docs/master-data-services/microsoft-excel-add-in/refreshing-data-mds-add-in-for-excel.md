@@ -1,15 +1,13 @@
 ---
-description: "Refreshing Data (MDS Add-in for Excel)"
 title: Refreshing Data
-ms.custom: microsoft-excel-add-in
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
+description: "Refreshing Data (MDS Add-in for Excel)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Refreshing Data (MDS Add-in for Excel)
 

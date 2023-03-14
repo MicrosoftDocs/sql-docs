@@ -1,21 +1,18 @@
 ---
-title: "Using Cursors (ODBC) | Microsoft Docs"
+title: "Using Cursors (ODBC)"
 description: ODBC supports a cursor model that allows several types of cursors, scrolling/positioning within a cursor, several concurrency options, and positioned updates.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, cursors"
   - "ODBC cursors, about ODBC cursors"
   - "ODBC applications, cursors"
   - "cursors [ODBC]"
   - "ODBC cursors"
-ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Cursors (ODBC)

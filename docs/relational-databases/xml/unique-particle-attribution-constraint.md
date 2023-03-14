@@ -1,10 +1,11 @@
 ---
 title: "Unique Particle Attribution Constraint"
 description: Learn how the unique particle attribution (UPA) constraint rule rejects an XSD schema if it contains a type with a potentially ambiguous content model.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 f1_keywords:
@@ -14,8 +15,6 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server], unique particle attribution"
   - "UPA constraint rule"
   - "unique particle attribution constraint rule"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Unique particle attribution constraint
 

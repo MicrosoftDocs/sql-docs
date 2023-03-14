@@ -1,17 +1,14 @@
 ---
+title: "Generate Mirror Tables and CDC Capture Instances"
 description: "Generate Mirror Tables and CDC Capture Instances"
-title: "Generate Mirror Tables and CDC Capture Instances | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "mirTab"
-ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "mirTab"
 ---
 # Generate Mirror Tables and CDC Capture Instances
 

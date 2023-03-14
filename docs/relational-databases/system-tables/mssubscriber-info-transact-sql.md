@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "MSsubscriber_info system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 ---
 # MSsubscriber_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

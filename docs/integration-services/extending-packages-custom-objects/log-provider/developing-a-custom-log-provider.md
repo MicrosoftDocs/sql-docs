@@ -1,22 +1,19 @@
 ---
+title: "Developing a Custom Log Provider"
 description: "Developing a Custom Log Provider"
-title: "Developing a Custom Log Provider | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS packages, log providers"
   - "custom log providers [Integration Services]"
   - "SQL Server Integration Services packages, log providers"
   - "log providers [Integration Services]"
   - "packages [Integration Services], logs"
   - "Integration Services packages, log providers"
-ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-author: chugugrace
-ms.author: chugu
 ---
 # Developing a Custom Log Provider
 

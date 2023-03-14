@@ -1,24 +1,19 @@
 ---
+title: "SQLParamData Function"
 description: "SQLParamData Function"
-title: "SQLParamData Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLParamData"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLParamData"
-helpviewer_keywords: 
-  - "SQLParamData function [ODBC]"
-ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLParamData"
+helpviewer_keywords:
+  - "SQLParamData function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLParamData"
+apitype: "dllExport"
 ---
 # SQLParamData Function
 **Conformance**  

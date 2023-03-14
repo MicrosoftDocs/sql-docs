@@ -1,21 +1,18 @@
 ---
+title: "Null (geometry Data Type)"
 description: "Null (geometry Data Type)"
-title: "Null (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Null (geometry Data Type)"
-dev_langs: 
+helpviewer_keywords:
+  - "Null (geometry Data Type)"
+dev_langs:
   - "TSQL"
-helpviewer_keywords: 
-  - "Null (geometry Data Type)"
-ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
-author: MladjoA
-ms.author: mlandzic 
 ---
 # Null (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,15 +1,12 @@
 ---
+title: "Change Data Capture Service for Oracle by Attunity F1 Help"
 description: "Change Data Capture Service for Oracle by Attunity F1 Help"
-title: "Change Data Capture Service for Oracle by Attunity F1 Help | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: chugugrace
 ms.author: chugu
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
 ---
 # Change Data Capture Service for Oracle by Attunity F1 Help
 

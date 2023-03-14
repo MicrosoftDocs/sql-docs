@@ -1,22 +1,17 @@
 ---
-description: "GetNextOrderValue Method (ClientNetworkProtocol Class)"
 title: "GetNextOrderValue Method (ClientNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "GetNextOrderValue Method (ClientNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "GetNextOrderValue method"
-ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
+description: "GetNextOrderValue Method (ClientNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "GetNextOrderValue method"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "GetNextOrderValue Method (ClientNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

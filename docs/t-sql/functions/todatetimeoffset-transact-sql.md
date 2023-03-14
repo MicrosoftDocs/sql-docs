@@ -3,12 +3,10 @@ title: "TODATETIMEOFFSET (Transact-SQL)"
 description: "TODATETIMEOFFSET (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "04/22/2019"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "TO_DATETIMEOFFSET_TSQL"
   - "SWITCH_TZ_TSQL"

@@ -3,12 +3,10 @@ title: "SIGNBYASYMKEY (Transact-SQL)"
 description: "SIGNBYASYMKEY (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "SIGNBYASYMKEY_TSQL"
   - "SIGNBYASYMKEY"

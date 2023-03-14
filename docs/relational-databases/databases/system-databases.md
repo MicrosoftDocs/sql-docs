@@ -1,19 +1,16 @@
 ---
 title: System Databases
 description: System Databases
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "01/28/2019"
 ms.service: sql
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system databases [SQL Server]"
   - "displaying system database data"
   - "modifying system data"
   - "viewing system database data"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "01/28/2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -1,22 +1,19 @@
 ---
+title: "sysmergeextendedarticlesview (Transact-SQL)"
 description: "sysmergeextendedarticlesview (Transact-SQL)"
-title: "sysmergeextendedarticlesview (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmergeextendedarticlesview"
-  - "sysmergeextendedarticlesview_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmergeextendedarticlesview view"
-ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sysmergeextendedarticlesview"
+  - "sysmergeextendedarticlesview_TSQL"
+helpviewer_keywords:
+  - "sysmergeextendedarticlesview view"
+dev_langs:
+  - "TSQL"
 ---
 # sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

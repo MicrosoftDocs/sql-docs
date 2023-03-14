@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, Backup Device object"
 description: Learn about the Backup Device object, which provides counters to monitor Microsoft SQL Server backup devices used for backup and restore operations.
-ms.custom: ""
-ms.date: "07/12/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:Backup Device"
-  - "Backup Device object"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/12/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:Backup Device"
+  - "Backup Device object"
 ---
 # SQL Server, Backup Device object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

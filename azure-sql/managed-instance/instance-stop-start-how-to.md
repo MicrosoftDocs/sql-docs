@@ -1,6 +1,6 @@
 ---
 title: Stop and start an instance (preview)
-description: This article describes the stop and start feature of Azure SQL Managed Instance. 
+description: This article describes the stop and start feature of Azure SQL Managed Instance.
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
@@ -8,7 +8,6 @@ ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom:
 ---
 
 # Stop and start an instance (preview) - Azure SQL Managed Instance 

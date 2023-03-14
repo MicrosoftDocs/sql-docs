@@ -1,17 +1,14 @@
 ---
+title: "Global Settings (Logging) (DB2ToSQL)"
 description: "Global Settings (Logging) (DB2ToSQL)"
-title: "Global Settings (Logging) (DB2ToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
-    - "ssma.db2.globalsettinglogging.f1"
+f1_keywords:
+  - "ssma.db2.globalsettinglogging.f1"
 ---
 # Global Settings (Logging) (DB2ToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  

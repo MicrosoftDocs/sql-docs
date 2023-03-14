@@ -1,17 +1,14 @@
 ---
+title: "Edit the Advanced Properties"
 description: "Edit the Advanced Properties"
-title: "Edit the Advanced Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "advanced"
-ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "advanced"
 ---
 # Edit the Advanced Properties
 

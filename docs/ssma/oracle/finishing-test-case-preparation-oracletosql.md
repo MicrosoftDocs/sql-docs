@@ -1,15 +1,12 @@
 ---
+title: "Finishing Test Case Preparation (OracleToSQL)"
 description: "Finishing Test Case Preparation (OracleToSQL)"
-title: "Finishing Test Case Preparation (OracleToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Finishing Test Case Preparation (OracleToSQL)
 The wizard's final page displays the Test Case description and information about objects involved in the test. In addition, on this page you can set the test execution options.  

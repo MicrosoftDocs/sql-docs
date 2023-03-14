@@ -7,9 +7,6 @@ ms.reviewer: jroth, randolphwest
 ms.date: 08/09/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom:
-  - seo-dt-2019
-  - FY22Q2Fresh
 helpviewer_keywords:
   - "FOR JSON"
   - "JSON, exporting"

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.servers catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sys.servers (Transact-SQL)

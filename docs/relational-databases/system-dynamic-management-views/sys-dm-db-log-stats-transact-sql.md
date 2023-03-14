@@ -3,7 +3,7 @@ title: "sys.dm_db_log_stats (Transact-SQL)"
 description: sys.dm_db_log_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "05/17/2017"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -70,6 +70,10 @@ When running `sys.dm_db_log_stats` against a database that is participating in a
 ## Permissions  
 Requires the `VIEW SERVER STATE` permission in the database.   
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
 
 ### A. Determining databases in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with high number of VLFs   

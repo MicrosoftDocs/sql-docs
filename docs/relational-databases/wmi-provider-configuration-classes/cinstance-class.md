@@ -1,22 +1,15 @@
 ---
-description: "CInstance Class"
 title: "CInstance Class"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apiname: 
-  - "CInstance Class"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-helpviewer_keywords: 
-  - "CInstance class"
-ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
+description: "CInstance Class"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "CInstance class"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "CInstance Class"
 ---
 # CInstance Class
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

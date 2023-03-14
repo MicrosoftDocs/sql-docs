@@ -1,15 +1,13 @@
 ---
-description: "Create an Entity (MDS Add-in for Excel)"
 title: Create an Entity
-ms.custom: microsoft-excel-add-in
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
+description: "Create an Entity (MDS Add-in for Excel)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+ms.custom: microsoft-excel-add-in
 ---
 # Create an Entity (MDS Add-in for Excel)
 

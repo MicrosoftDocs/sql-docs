@@ -1,18 +1,13 @@
 ---
+title: "Using Synonyms"
 description: "Using Synonyms"
-title: "Using Synonyms | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "synonyms [SMO]"
-ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "synonyms [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Synonyms

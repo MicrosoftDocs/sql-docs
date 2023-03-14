@@ -1,16 +1,13 @@
 ---
+title: "Connecting to Data Sources in a Custom Task"
 description: "Connecting to Data Sources in a Custom Task"
-title: "Connecting to Data Sources in a Custom Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ConnectionManager objects"
   - "connection managers [Integration Services], external data sources"
   - "data sources [Integration Services], external"
@@ -18,9 +15,9 @@ helpviewer_keywords:
   - "external data sources [Integration Services]"
   - "connections [Integration Services], external data sources"
   - "SSIS custom tasks, external data sources"
-ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Connecting to Data Sources in a Custom Task
 

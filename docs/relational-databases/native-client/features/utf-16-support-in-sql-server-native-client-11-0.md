@@ -1,15 +1,12 @@
 ---
 title: "UTF-16 Support"
 description: Learn about support for UTF-16 in a fixed-length buffer in SQL Server Native Client, beginning with SQL Server 2012.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: native-client
-ms.topic: "reference"
-ms.assetid: f2520424-8ef4-409f-8147-d83da5076e96
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UTF-16 Support in SQL Server Native Client 11.0

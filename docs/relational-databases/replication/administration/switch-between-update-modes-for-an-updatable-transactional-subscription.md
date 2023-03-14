@@ -1,19 +1,17 @@
 ---
 title: "Switch between modes (Updatable Transactional)"
 description: Describes how to switch between update modes for an Updatable Transactional Publication by using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "transactional replication, updatable subscriptions"
   - "updatable subscriptions, update modes"
   - "subscriptions [SQL Server replication], updatable"
-ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Switch Between Update Modes for an Updatable Transactional Subscription
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

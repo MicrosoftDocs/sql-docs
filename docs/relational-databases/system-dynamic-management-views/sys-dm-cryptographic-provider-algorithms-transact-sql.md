@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_cryptographic_provider_algorithms dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 ---
 # sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

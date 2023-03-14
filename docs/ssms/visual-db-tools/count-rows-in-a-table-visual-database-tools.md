@@ -1,23 +1,19 @@
 ---
-description: "Count Rows in a Table (Visual Database Tools)"
 title: Count Rows in a Table
-ms.custom: seo-lt-2019
+description: "Count Rows in a Table (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "totals [SQL Server], row counts"
   - "row counts [SQL Server]"
   - "column values [SQL Server]"
   - "number of rows"
   - "number of values"
   - "counting rows"
-ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Count Rows in a Table (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

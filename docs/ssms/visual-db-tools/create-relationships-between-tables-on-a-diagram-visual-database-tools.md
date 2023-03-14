@@ -1,17 +1,14 @@
 ---
-description: "Create Relationships Between Tables on a Diagram (Visual Database Tools)"
 title: Create Relationships Between Tables on a Diagram
-ms.custom: seo-lt-2019
+description: "Create Relationships Between Tables on a Diagram (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagrams [SQL Server], designing"
-ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

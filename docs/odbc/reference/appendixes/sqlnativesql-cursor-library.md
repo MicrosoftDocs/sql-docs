@@ -1,17 +1,14 @@
 ---
+title: "SQLNativeSql (Cursor Library)"
 description: "SQLNativeSql (Cursor Library)"
-title: "SQLNativeSql (Cursor Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "SQLNativeSql function [ODBC], Cursor Library"
-ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "SQLNativeSql function [ODBC], Cursor Library"
 ---
 # SQLNativeSql (Cursor Library)
 > [!IMPORTANT]  

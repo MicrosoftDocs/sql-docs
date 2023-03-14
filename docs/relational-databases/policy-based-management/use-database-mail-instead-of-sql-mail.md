@@ -1,17 +1,14 @@
 ---
+title: "Use Database Mail Instead of SQL Mail"
 description: "Use Database Mail Instead of SQL Mail"
-title: "Use Database Mail Instead of SQL Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Use Database Mail Instead of SQL Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

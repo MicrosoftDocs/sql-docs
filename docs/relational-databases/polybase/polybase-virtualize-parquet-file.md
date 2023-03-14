@@ -5,13 +5,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 05/10/2022
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 ms.service: sql
 ms.subservice: polybase
+ms.topic: conceptual
 monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
-ms.metadata: 
 ---
 
 # Virtualize parquet file in a S3-compatible object storage with PolyBase

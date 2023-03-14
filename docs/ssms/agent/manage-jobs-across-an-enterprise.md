@@ -1,21 +1,18 @@
 ---
-description: "Manage Jobs Across an Enterprise"
 title: "Manage Jobs Across an Enterprise"
-ms.custom: seo-lt-2019
+description: "Manage Jobs Across an Enterprise"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiserver job management [SQL Server]"
   - "jobs [SQL Server Agent], modifying"
   - "modifying jobs"
   - "SQL Server Agent jobs, modifying"
   - "target servers [SQL Server], job changes"
-ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Manage Jobs Across an Enterprise

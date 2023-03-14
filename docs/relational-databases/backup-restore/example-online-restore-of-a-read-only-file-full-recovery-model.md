@@ -1,19 +1,16 @@
 ---
 title: "Online restore: read-only file (full recovery model)"
 description: This example shows an online restore in SQL Server of a read-only file for a database using the full recovery model with multiple filegroups.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full recovery model [SQL Server], RESTORE example"
   - "online restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], online"
-ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Example: Online Restore of a Read-Only File (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

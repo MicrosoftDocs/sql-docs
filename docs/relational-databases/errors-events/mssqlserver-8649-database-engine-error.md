@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_8649"
 description: "MSSQLSERVER_8649"
-title: "MSSQLSERVER_8649 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8649 (Database Engine error)"
-ms.assetid: 992dbc74-7c3a-498b-9f1b-b28387640677
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8649 (Database Engine error)"
 ---
 # MSSQLSERVER_8649
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

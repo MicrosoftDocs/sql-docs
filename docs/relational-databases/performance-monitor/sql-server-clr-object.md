@@ -1,17 +1,15 @@
 ---
 title: "SQL Server, CLR object"
-description: Learn about the SQLServer:CLR object, which provides counters to monitor common language runtime execution in Microsoft SQL Server.
-ms.custom: ""
-ms.date: "07/12/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLServer:CLR"
-  - "CLR object [SQL Server]"
+description: "Learn about the SQLServer:CLR object, which provides counters to monitor common language runtime execution in Microsoft SQL Server."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/12/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLServer:CLR"
+  - "CLR object [SQL Server]"
 ---
 # SQL Server, CLR object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,18 @@
 ---
-description: "Start the SQL Server Import and Export Wizard"
 title: Start the SQL Server Import and Export Wizard
 titleSuffix: Integration Services (SSIS)
+description: "Start the SQL Server Import and Export Wizard"
+author: chugugrace
+ms.author: chugu
+ms.date: 12/18/2021
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Import and Export Wizard"
   - "starting SQL Server Import and Export Wizard"
   - "Import and Export Wizard"
   - "starting Import and Export Wizard"
-ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: chugugrace
-ms.author: chugu
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
-ms.date: 12/18/2021
 ---
 
 # Start the SQL Server Import and Export Wizard

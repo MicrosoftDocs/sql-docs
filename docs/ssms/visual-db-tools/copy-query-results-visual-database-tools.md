@@ -1,18 +1,14 @@
 ---
-description: "Copy Query Results (Visual Database Tools)"
 title: Copy Query Results
-ms.custom: seo-lt-2019
+description: "Copy Query Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
-ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Copy Query Results (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,13 +1,13 @@
 ---
 title: SqlPackage for Azure Synapse Analytics
 description: Tips for using SqlPackage in Azure Synapse Analytics scenarios
-ms.custom: "tools|sos"
-ms.date: 2/13/2023
-ms.service: sql
-ms.reviewer: "llali"
-ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
+ms.reviewer: "llali"
+ms.date: 2/13/2023
+ms.service: sql
+ms.topic: conceptual
+ms.custom: tools|sos
 ---
 # SqlPackage for Azure Synapse Analytics
 
@@ -15,7 +15,7 @@ This article covers SqlPackage support for [Azure Synapse Analytics](/azure/syna
 - integration with Azure Blob Storage for accessing data in parquet files
 - support for serverless SQL pools
 
-Both dedicated and serverless SQL pools do not support the import/export actions in SqlPackage.  To import or export data from a dedicated SQL pool, you must use the publish or extract actions with data as detailed below.
+Both dedicated and serverless SQL pools do not support the import/export actions in SqlPackage or `.bacpac` files. SqlPackage supports Azure Synapse Analytics with `.dacpac` files and can read and write data in parquet format files in Azure Blog Storage.  To import or export data from a dedicated SQL pool, you must use the publish or extract actions with data as detailed below.
 
 ## Extract (export data)
 To export data from an Azure Synapse Analytics database to Azure Blob Storage, the SqlPackage [extract](sqlpackage-extract.md) action is used with following properties:

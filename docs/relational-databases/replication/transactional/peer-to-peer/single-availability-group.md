@@ -3,10 +3,12 @@ title: Configure peer-to-peer replication with one replica in an availability gr
 description: Describes how to configure a database in a SQL Server Always On availability group to participate in a peer-to-peer transactional replication topology.
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 10/05/2021
 ms.service: sql
 ms.topic: how-to
-ms.date: 10/05/2021
-ms.custom: template-how-to 
+ms.custom:
+  - template-how-to
+  - updatefrequency5
 ---
 
 # Configure one peer as part of availability group

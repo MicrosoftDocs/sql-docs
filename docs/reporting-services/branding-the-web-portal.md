@@ -1,12 +1,12 @@
 ---
-title: "Branding the web portal | Microsoft Docs"
+title: "Branding the web portal"
+description: Learn to brand your web portal's appearance to your business through a brand package. The brand package is designed so that you don't need deep CSS knowledge.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/23/2021
 ms.service: reporting-services
 ms.subservice: reporting-services
-description: Learn to brand your web portal's appearance to your business through a brand package. The brand package is designed so that you don't need deep CSS knowledge.
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Branding the web portal

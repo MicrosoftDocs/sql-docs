@@ -1,22 +1,19 @@
 ---
+title: "sp_mergecleanupmetadata (Transact-SQL)"
 description: "sp_mergecleanupmetadata (Transact-SQL)"
-title: "sp_mergecleanupmetadata (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_mergecleanupmetadata_TSQL"
-  - "sp_mergecleanupmetadata"
-helpviewer_keywords: 
-  - "sp_mergecleanupmetadata"
-ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_mergecleanupmetadata_TSQL"
+  - "sp_mergecleanupmetadata"
+helpviewer_keywords:
+  - "sp_mergecleanupmetadata"
+dev_langs:
+  - "TSQL"
 ---
 # sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

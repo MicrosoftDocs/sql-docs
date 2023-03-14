@@ -3,12 +3,10 @@ title: "Arithmetic Operators (Transact-SQL)"
 description: "Arithmetic Operators (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "07/06/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "operators [Transact-SQL], arithmetic"
   - "arithmetic operators"

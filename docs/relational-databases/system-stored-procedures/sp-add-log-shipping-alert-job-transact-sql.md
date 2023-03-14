@@ -1,22 +1,19 @@
 ---
+title: "sp_add_log_shipping_alert_job (Transact-SQL)"
 description: "sp_add_log_shipping_alert_job (Transact-SQL)"
-title: "sp_add_log_shipping_alert_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_log_shipping_alert_job_TSQL"
-  - "sp_add_log_shipping_alert_job"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_log_shipping_alert_job"
-ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_log_shipping_alert_job_TSQL"
+  - "sp_add_log_shipping_alert_job"
+helpviewer_keywords:
+  - "sp_add_log_shipping_alert_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

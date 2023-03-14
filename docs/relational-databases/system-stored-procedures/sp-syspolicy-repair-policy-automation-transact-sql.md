@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_repair_policy_automation (Transact-SQL)"
 description: "sp_syspolicy_repair_policy_automation (Transact-SQL)"
-title: "sp_syspolicy_repair_policy_automation (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_repair_policy_automation"
-  - "sp_syspolicy_repair_policy_automation_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_repair_policy_automation"
-ms.assetid: d81682e3-2444-4d66-ad00-1cf628632e8b
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_repair_policy_automation"
+  - "sp_syspolicy_repair_policy_automation_TSQL"
+helpviewer_keywords:
+  - "sp_syspolicy_repair_policy_automation"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_repair_policy_automation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

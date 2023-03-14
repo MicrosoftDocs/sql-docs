@@ -1,17 +1,14 @@
 ---
+title: "Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)"
 description: "Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)"
-title: "Select a Dimension Table and Keys (Slowly Changing Dimension Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.selecttableandkeys.f1"
-ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.loaddimwizard.selecttableandkeys.f1"
 ---
 # Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)
 

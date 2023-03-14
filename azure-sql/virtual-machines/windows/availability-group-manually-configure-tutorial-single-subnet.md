@@ -456,7 +456,7 @@ To configure the load balancer, you need to create a backend pool, create a prob
    | **Health Probe** |The name that you specified for the probe | **SQLAlwaysOnEndPointProbe** |
    | **Session Persistence** | Dropdown list | **None** |
    | **Idle Timeout** | Minutes to keep a TCP connection open | **4** |
-   | **Floating IP (direct server return)** | |**Enabled** |
+   | **Floating IP (direct server return)** |A flow topology and an IP address mapping scheme |**Enabled** |
 
    > [!WARNING]
    > Direct server return is set during creation. You can't change it.
@@ -497,7 +497,7 @@ The IP address for the Windows Server failover cluster also needs to be on the l
    | **Probe** |The name that you specified for the probe | **WSFCEndPointProbe** |
    | **Session Persistence** | Dropdown list | **None** |
    | **Idle Timeout** | Minutes to keep a TCP connection open | **4** |
-   | **Floating IP (direct server return)** | |**Enabled** |
+   | **Floating IP (direct server return)** |A flow topology and an IP address mapping scheme |**Enabled** |
 
    > [!WARNING]
    > Direct server return is set during creation. You can't change it.

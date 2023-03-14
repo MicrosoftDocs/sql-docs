@@ -16,7 +16,7 @@ tags: azure-service-management
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
-> Eliminate the need for an Azure Load Balancer for your Always On availability (AG) group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+> There are many [methods to deploy an availability group](availability-group-overview.md#deployment-options). Simplify your deployment and eliminate the need for an Azure load balancer or distributed network name (DNN) for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
 
 This tutorial shows how to create an Always On availability group for SQL Server on Azure Virtual Machines (VMs) within multiple subnets. The complete tutorial creates a Windows Server Failover Cluster, and an availability group with a two SQL Server replicas and a listener.
 

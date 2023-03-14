@@ -1,18 +1,15 @@
 ---
+title: "CODEPOINT (SSIS Expression)"
 description: "CODEPOINT (SSIS Expression)"
-title: "CODEPOINT (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "CODEPOINT function"
-  - "leftmost character of expression"
-ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "CODEPOINT function"
+  - "leftmost character of expression"
 ---
 # CODEPOINT (SSIS Expression)
 

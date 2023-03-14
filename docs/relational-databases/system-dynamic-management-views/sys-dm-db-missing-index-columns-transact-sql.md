@@ -3,7 +3,7 @@ title: "sys.dm_db_missing_index_columns (Transact-SQL)"
 description: The sys.dm_db_missing_index_columns dynamic management function returns information about database table columns that are missing an index.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/8/2022"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -56,6 +56,10 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## Permissions  
  Users must be granted the VIEW SERVER STATE permission or any permission that implies the VIEW SERVER STATE permission to query this dynamic management function.  
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
 ## Examples  
  The following example runs a query against the `Address` table and then runs a query using the `sys.dm_db_missing_index_columns` dynamic management view to return the table columns that are missing an index.  

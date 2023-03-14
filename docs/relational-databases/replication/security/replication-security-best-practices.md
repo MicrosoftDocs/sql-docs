@@ -1,20 +1,18 @@
 ---
-title: "Replication Security Best Practices | Microsoft Docs"
+title: "Replication Security Best Practices"
 description: Learn about the best approach for securing replication connections in SQL Server in a variety of different circumstances.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "security [SQL Server replication], best practices"
   - "security [SQL Server replication], between domains"
   - "authentication [SQL Server replication]"
   - "Internet [SQL Server replication], security"
-ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Replication Security Best Practices
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

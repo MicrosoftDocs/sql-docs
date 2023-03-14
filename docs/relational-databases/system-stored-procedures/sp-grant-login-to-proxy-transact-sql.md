@@ -1,22 +1,19 @@
 ---
+title: "sp_grant_login_to_proxy (Transact-SQL)"
 description: "sp_grant_login_to_proxy (Transact-SQL)"
-title: "sp_grant_login_to_proxy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_grant_login_to_proxy"
   - "sp_grant_login_to_proxy_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_grant_login_to_proxy"
-ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_grant_login_to_proxy (Transact-SQL)
 

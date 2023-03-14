@@ -1,19 +1,16 @@
 ---
 title: "Server Element (DTA)"
 description: In the dta utility, the Server element contains the identifying information for the server on which the databases reside that you want to tune.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Server element"
-ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+dev_langs:
+  - "XML"
 ---
 
 # Server Element (DTA)

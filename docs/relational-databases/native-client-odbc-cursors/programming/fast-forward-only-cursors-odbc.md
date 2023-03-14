@@ -1,20 +1,17 @@
 ---
+title: "Fast Forward-Only Cursors (ODBC)"
 description: "Fast Forward-Only Cursors (ODBC)"
-title: "Fast Forward-Only Cursors (ODBC) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fast forward-only cursors"
   - "forward-only cursors"
   - "cursors [ODBC], fast forward-only"
   - "ODBC cursors, fast forward-only"
-ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fast Forward-Only Cursors (ODBC)

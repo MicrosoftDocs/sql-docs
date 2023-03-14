@@ -1,18 +1,15 @@
 ---
+title: "Visual FoxPro Language Reference"
 description: "Visual FoxPro Language Reference"
-title: "Visual FoxPro Language Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "commands for FoxPro ODBC driver [ODBC]"
-  - "Visual FoxPro ODBC driver [ODBC], commands"
-ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "commands for FoxPro ODBC driver [ODBC]"
+  - "Visual FoxPro ODBC driver [ODBC], commands"
 ---
 # Visual FoxPro Language Reference
 This section contains the following topics.  

@@ -1,22 +1,19 @@
 ---
+title: "sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)"
 description: "sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)"
-title: "sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_syspolicy_unsubscribe_from_policy_category_TSQL"
-  - "sp_syspolicy_unsubscribe_from_policy_category"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_syspolicy_unsubscribe_from_policy_category"
-ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_syspolicy_unsubscribe_from_policy_category_TSQL"
+  - "sp_syspolicy_unsubscribe_from_policy_category"
+helpviewer_keywords:
+  - "sp_syspolicy_unsubscribe_from_policy_category"
+dev_langs:
+  - "TSQL"
 ---
 # sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

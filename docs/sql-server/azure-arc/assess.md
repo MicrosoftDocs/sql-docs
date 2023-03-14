@@ -4,12 +4,12 @@ description: Configure best practices assessment on an Azure Arc-enabled SQL Ser
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/12/2023
+ms.date: 03/03/2023
 ms.service: sql
 ms.topic: conceptual
 ---
 
-# Configure SQL best practices assessment 
+# Configure SQL best practices assessment
 
 Best practices assessment provides a mechanism to evaluate the configuration of your SQL Server. Once the best practices assessment feature is enabled, your SQL Server instance and databases are scanned to provide recommendations for things like SQL Server and database configurations, index management, deprecated features, enabled or missing trace flags, statistics, etc.
 
@@ -125,10 +125,8 @@ If there are multiple runs in a single day, only the latest run is included in t
 ## Known issues
 
 - Best practices assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
-
-- The assessment is enabled on a default instance if present, otherwise on the very first named instance in the registry. The assessment results of the instance where the assessment was enabled, are duplicated for every instance on that SQL Server resource.
 - It may take a few seconds to populate the history of the previous execution of the assessments on best practices home page.
-   
+
 ## Next steps
 
 - [Connect your SQL Server to Azure Arc](connect.md).

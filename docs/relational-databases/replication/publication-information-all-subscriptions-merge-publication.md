@@ -1,17 +1,15 @@
 ---
 title: "All Subscriptions (Merge - SSMS)"
-description: Desribes the 'All Subscriptions' tab of the selected Merge Publication in SQL Server Management Studio (SSMS). 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.allsubscriptions.merge.f1"
-ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
+description: Desribes the 'All Subscriptions' tab of the selected Merge Publication in SQL Server Management Studio (SSMS).
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.monitor.publicationinfo.allsubscriptions.merge.f1"
 ---
 # Publication Information, All Subscriptions (Merge Publication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

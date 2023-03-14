@@ -1,13 +1,13 @@
 ---
-title: "Password Policy | Microsoft Docs"
+title: "Password Policy"
 description: Windows password policy mechanisms apply to a login that uses SQL Server authentication and to a contained database user with a password.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/25/2023"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER LOGIN statement"
   - "passwords [SQL Server], policy enforcement"
   - "logins [SQL Server], passwords"
@@ -29,9 +29,6 @@ helpviewer_keywords:
   - "bad password counts"
   - "passwords [SQL Server], complexity"
   - "characters [SQL Server], password policies"
-ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
-author: VanMSFT
-ms.author: vanto
 ---
 # Password Policy
 

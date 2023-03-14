@@ -3,17 +3,14 @@ title: Notebooks with Kqlmagic (Kusto Query Language) in Azure Data Studio
 description: This tutorial shows how you can create and run Kqlmagic in an Azure Data Studio notebook.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: 12/07/2022
 ms.service: azure-data-studio
-ms.subservice: ""
-ms.custonm: ""
 ms.topic: how-to
 ---
 
 # Create and run a notebook with Kqlmagic
 
-**Kqlmagic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](./notebooks-guidance.md)**. You can combine Python and **[Kusto query language (KQL)](/azure/data-explorer/kusto/query)** to query and visualize data using rich Plot.ly library integrated with `render` commands. Kqlmagic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with Kqlmagic include **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)**, **[Application Insights](/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](/azure/azure-monitor/platform/data-platform-logs)**.
+**Kqlmagic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](./notebooks-guidance.md)**. You can combine Python and **[Kusto query language (KQL)](/azure/data-explorer/kusto/query)** to query and visualize data using rich Plotly library integrated with `render` commands. Kqlmagic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with Kqlmagic include **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)**, **[Application Insights](/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](/azure/azure-monitor/platform/data-platform-logs)**.
 
 This article shows you how to create and run a notebook in Azure Data Studio using the Kqlmagic extension for an Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
 
@@ -115,7 +112,7 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
 
 ### Query and visualize for Azure Data Explorer
 
-Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
+Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the plotly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. Analyze top 10 storm events by state and frequency:
 
@@ -138,15 +135,6 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
    :::image type="content" source="media/notebooks-kqlmagic/ade-visualize-timechart.png" alt-text="Screenshot of a time chart.":::
 
 3. Multiline Query sample using `%%kql`.
-
-   ```python
-   %%kql
-   StormEvents
-   | summarize count() by State
-   | sort by count_
-   | limit 10
-   | render columnchart title='Top 10 States by Storm Event count'
-   ```
 
    ```python
    %%kql
@@ -187,7 +175,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
    ```
 ### Query and visualize for Application Insights
 
-Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
+Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the plotly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. Show Page Views:
 
@@ -242,7 +230,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
 ### Query and visualize for Azure Monitor Logs
 
-Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
+Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the plotly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. View a timeline chart:
 

@@ -1,20 +1,17 @@
 ---
+title: "Identify Similar Data Rows with the Fuzzy Grouping Transformation"
 description: "Identify Similar Data Rows with the Fuzzy Grouping Transformation"
-title: "Identify Similar Data Rows with the Fuzzy Grouping Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Fuzzy Grouping transformation"
   - "match similar data [Integration Services]"
   - "similar data rows [Integration Services]"
   - "fuzzy matches"
-ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: chugugrace
-ms.author: chugu
 ---
 # Identify Similar Data Rows with the Fuzzy Grouping Transformation
 

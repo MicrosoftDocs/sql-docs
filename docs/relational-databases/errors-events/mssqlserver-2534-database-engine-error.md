@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2534"
 description: "MSSQLSERVER_2534"
-title: "MSSQLSERVER_2534 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2534 (Database Engine error)"
-ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2534 (Database Engine error)"
 ---
 # MSSQLSERVER_2534
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

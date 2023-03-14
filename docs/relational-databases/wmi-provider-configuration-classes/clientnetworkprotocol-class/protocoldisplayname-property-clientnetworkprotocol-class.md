@@ -1,22 +1,17 @@
 ---
-description: "ProtocolDisplayName Property (ClientNetworkProtocol Class)"
 title: "ProtocolDisplayName Property (ClientNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ProtocolDisplayName Property (ClientNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ProtocolDisplayName property"
-ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
+description: "ProtocolDisplayName Property (ClientNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ProtocolDisplayName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ProtocolDisplayName Property (ClientNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # ProtocolDisplayName Property (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

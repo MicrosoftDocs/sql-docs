@@ -1,22 +1,19 @@
 ---
-description: "Solution Explorer"
 title: "Solution Explorer"
+description: "Solution Explorer"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], solutions"
   - "projects [SQL Server Management Studio], about projects"
   - "SQL Server Management Studio [SQL Server], projects"
   - "solutions [SQL Server Management Studio], about solutions"
   - "SQL Server Management Studio [SQL Server], items"
   - "items [SQL Server]"
-ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Solution Explorer

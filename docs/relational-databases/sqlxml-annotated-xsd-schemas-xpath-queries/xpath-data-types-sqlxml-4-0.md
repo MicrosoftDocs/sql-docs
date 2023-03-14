@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "mapping XDR types to XPath types [SQLXML]"
   - "data types [XPath]"
@@ -25,7 +24,6 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], data types"
   - "XPath data types [SQLXML]"
   - "operators [SQLXML]"
-ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XPath Data Types (SQLXML 4.0)

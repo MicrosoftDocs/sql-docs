@@ -1,18 +1,16 @@
 ---
 title: "Replication conflict viewer & resolver"
-description: A reference for articles that explain the Microsoft Replication Conflict Viewer and Microsoft Replication Interactive Conflict Resolver for SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "replication conflict viewer [SQL Server]"
-  - "interactive resolver [SQL Server replication]"
-ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
+description: A reference for articles that explain the Microsoft Replication Conflict Viewer and Microsoft Replication Interactive Conflict Resolver for SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "replication conflict viewer [SQL Server]"
+  - "interactive resolver [SQL Server replication]"
 ---
 # Microsoft Replication Conflict Viewer and Interactive Resolver
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

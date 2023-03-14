@@ -1,20 +1,17 @@
 ---
+title: "Simulating an Error Output for the Script Component"
 description: "Simulating an Error Output for the Script Component"
-title: "Simulating an Error Output for the Script Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Script component [Integration Services], error output"
-  - "error outputs [Integration Services], Script component"
-ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Script component [Integration Services], error output"
+  - "error outputs [Integration Services], Script component"
+dev_langs:
+  - "VB"
 ---
 # Simulating an Error Output for the Script Component
 

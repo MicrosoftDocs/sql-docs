@@ -1,22 +1,19 @@
 ---
+title: "BufferWithTolerance (geography Data Type)"
 description: "BufferWithTolerance (geography Data Type)"
-title: "BufferWithTolerance (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "BufferWithTolerance_TSQL"
   - "BufferWithTolerance"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BefferWithTolerance method"
-ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # BufferWithTolerance (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

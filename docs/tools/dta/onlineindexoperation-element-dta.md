@@ -1,19 +1,16 @@
 ---
 title: "OnlineIndexOperation Element (DTA)"
 description: In the dta utility, the OnlineIndexOperation element specifies whether items that Database Engine Tuning Advisor recommends can be created online.
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OnlineIndexOperation element"
-ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+dev_langs:
+  - "XML"
 ---
 
 # OnlineIndexOperation Element (DTA)

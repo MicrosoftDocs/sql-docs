@@ -1,22 +1,19 @@
 ---
+title: "STPointFromWKB (geography Data Type)"
 description: "STPointFromWKB (geography Data Type)"
-title: "STPointFromWKB (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPointFromWKB_TSQL"
   - "STPointFromWKB (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPointFromWKB method"
-ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPointFromWKB (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

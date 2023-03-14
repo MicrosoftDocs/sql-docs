@@ -8,7 +8,6 @@ ms.date: 10/25/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
@@ -176,7 +175,10 @@ After the Azure Arc agent on the SQL Server host has completed its operation, th
 
 ### Create login syntax
 
-The same syntax that is used for creating Azure AD logins and users on Azure SQL Database and Azure SQL Managed Instance can now be used on SQL Server. However, on SQL Server this can be done by any account that has the `ALTER ANY LOGIN` or `ALTER ANY USER` permission. Any account with either of these permissions can create a login or user respectively. They don't need to be an Azure AD login.
+The same syntax that is used for creating Azure AD logins and users on Azure SQL Database and Azure SQL Managed Instance can now be used on SQL Server. 
+> [!NOTE]  
+> 
+On SQL Server, any account that has the `ALTER ANY LOGIN` or `ALTER ANY USER` permission can create Azure AD logins respectively users. The account doesn't need to be an Azure AD login.
 
 To create a login for an Azure AD account, execute the T-SQL command below in the `master` database:
 
@@ -203,7 +205,8 @@ GO
 To list the Azure AD logins in `master` database, execute the T-SQL command:
 
 ```sql
-SELECT * FROM sys.server_principals;
+SELECT * FROM sys.server_principals
+WHERE type IN ('E', 'X');
 ```
 
 To grant an Azure AD user membership to the `sysadmin` role (for example `admin@contoso.com`), execute the following commands in `master` database:
@@ -211,7 +214,8 @@ To grant an Azure AD user membership to the `sysadmin` role (for example `admin@
 ```sql
 CREATE LOGIN [admin@contoso.com] FROM EXTERNAL PROVIDER; 
 GO
-EXEC sp_addsrvrolemember @loginame='admin@contoso.com', @rolename='sysadmin';
+ALTER ROLE sysadmin
+ADD MEMBER [admin@contoso.com];
 GO
 ```
 

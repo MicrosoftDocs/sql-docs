@@ -7,7 +7,6 @@ ms.date: 04/23/2019
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seodec18
 helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
   - "secondary replicas, see Availability Groups [SQL Server]"

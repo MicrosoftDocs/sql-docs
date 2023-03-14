@@ -1,11 +1,14 @@
 ---
+title: "Limit Search Results with RANK"
 description: "Limit Search Results with RANK"
-title: "Limit Search Results with RANK | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "row ranking [full-text search]"
   - "relevance ranking values [full-text search]"
   - "full-text search [SQL Server], rankings"
@@ -13,10 +16,6 @@ helpviewer_keywords:
   - "ranked results [full-text search]"
   - "rankings [full-text search]"
   - "per-row rank values [full-text search]"
-ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Limit Search Results with RANK

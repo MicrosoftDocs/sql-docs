@@ -1,18 +1,15 @@
 ---
+title: "Azure HDInsight Pig Task"
 description: "Azure HDInsight Pig Task"
-title: "Azure HDInsight Pig Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.afppigtask.f1"
-  - "sql14.dts.designer.afppigtask.f1"
-ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: chugugrace
 ms.author: chugu
+ms.date: "02/28/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.afppigtask.f1"
+  - "sql14.dts.designer.afppigtask.f1"
 ---
 # Azure HDInsight Pig Task
 

@@ -7,7 +7,6 @@ ms.date: "09/24/2021"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 monikerRange: ">=sql-server-2016"
 ---
 # Create Clustered DTC resource for an Always On availability group

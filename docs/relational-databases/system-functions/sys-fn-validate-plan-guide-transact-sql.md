@@ -1,24 +1,22 @@
 ---
-description: "sys.fn_validate_plan_guide (Transact-SQL)"
 title: "sys.fn_validate_plan_guide (Transact-SQL)"
-ms.custom: ""
+description: "sys.fn_validate_plan_guide (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/22/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_validate_plan_guide"
   - "sys.fn_validate_plan_guide_TSQL"
   - "fn_validate_plan_guide"
   - "fn_validate_plan_guide_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_validate_plan_guide function"
   - "sys.fn_validate_plan_guide function"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

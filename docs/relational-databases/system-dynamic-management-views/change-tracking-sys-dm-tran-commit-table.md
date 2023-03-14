@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_tran_commit_table dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # Change Tracking - sys.dm_tran_commit_table

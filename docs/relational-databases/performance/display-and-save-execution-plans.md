@@ -1,22 +1,19 @@
 ---
-title: "Display and Save Execution Plans | Microsoft Docs"
+title: "Display and Save Execution Plans"
 description: Learn how to display execution plans and how to save execution plans to a file in XML format by using SQL Server Management Studio.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/21/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Showplan results"
   - "execution plans [SQL Server]"
   - "queries [SQL Server], tuning"
   - "execution plans [SQL Server], how-to topics"
   - "SQL Server Management Studio [SQL Server], execution plans"
   - "tuning queries [SQL Server]"
-ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Display and Save Execution Plans

@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "sys.availability_read_only_routing_lists dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
 ---
 # sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

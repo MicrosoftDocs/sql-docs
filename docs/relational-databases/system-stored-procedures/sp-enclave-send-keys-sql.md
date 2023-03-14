@@ -1,25 +1,22 @@
 ---
+title: "sp_enclave_send_keys (Transact-SQL)"
 description: "sp_enclave_send_keys (Transact-SQL)"
-title: "sp_enclave_send_keys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: jaszymas
+ms.author: jaszymas
+ms.reviewer: vanto
 ms.date: 10/19/2019
 ms.service: sql
-ms.reviewer: vanto
-ms.suite: "sql"
 ms.subservice: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
+f1_keywords:
   - "sp_enclave_send_keys"
   - "sp_enclave_send_keys_TSQL"
   - "sys.sp_enclave_send_keys"
   - "sys.sp_enclave_send_keys_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_enclave_send_keys"
-author: jaszymas
-ms.author: jaszymas
+dev_langs:
+  - "TSQL"
 monikerRange: ">= sql-server-ver15"
 ---
 # sp_enclave_send_keys (Transact-SQL)

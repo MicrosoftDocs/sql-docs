@@ -1,18 +1,14 @@
 ---
-description: "XML Indexes Dialog Box (Visual Database Tools)"
 title: XML Indexes Dialog Box
-ms.custom: seo-lt-2019
+description: "XML Indexes Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.xmlindexes"
-ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # XML Indexes Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

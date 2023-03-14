@@ -1,25 +1,22 @@
 ---
+title: "managed_backup.fn_backup_db_config (Transact-SQL)"
 description: "managed_backup.fn_backup_db_config (Transact-SQL)"
-title: "managed_backup.fn_backup_db_config (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/10/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "smart_admin.fn_backup_db_config"
   - "smart_admin.fn_backup_db_config_TSQL"
   - "fn_backup_db_config"
   - "fn_backup_db_config_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "smart_admin.fn_backup_db_config"
   - "fn_backup_db_config"
-ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

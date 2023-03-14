@@ -59611,6 +59611,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver--1-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/errors-events/mssqlserver-2-database-engine-error.md",
       "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
       "redirect_document_id": false
@@ -59642,6 +59647,26 @@
     {
       "source_path": "azure-sql/database/sql-azure-vulnerability-assessment-storage.md",
       "redirect_url": "azure-sql/database/sql-database-vulnerability-assessment-storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-history-2017.md",
+      "redirect_url": "/troubleshoot/sql/linux/release-history-2017?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-history-2019.md",
+      "redirect_url": "/troubleshoot/sql/linux/release-history-2019?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-history-2022.md",
+      "redirect_url": "/troubleshoot/sql/linux/release-history-2022?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/sp-change-feed-table.md",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-help-change-feed-table",
       "redirect_document_id": false
     }
   ]

@@ -1,19 +1,17 @@
 ---
 title: nodes() Method (xml Data Type)
 description: "nodes() Method (xml Data Type)"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "07/26/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "nodes() method"
   - "nodes method"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/26/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # nodes() Method (xml Data Type)

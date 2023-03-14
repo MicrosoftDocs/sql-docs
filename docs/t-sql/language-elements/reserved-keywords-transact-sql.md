@@ -3,12 +3,10 @@ title: "Reserved Keywords (Transact-SQL)"
 description: "Reserved Keywords (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "ODBC function calls"
   - "keywords [SQL Server], reserved"

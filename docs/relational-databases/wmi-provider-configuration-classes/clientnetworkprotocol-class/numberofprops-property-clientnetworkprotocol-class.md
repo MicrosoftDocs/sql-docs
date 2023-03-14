@@ -1,22 +1,17 @@
 ---
-description: "NumberOfProps Property (ClientNetworkProtocol Class)"
 title: "NumberOfProps Property (ClientNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "NumberOfProps Property (ClientNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "NumberOfProps property"
-ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
+description: "NumberOfProps Property (ClientNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "NumberOfProps property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "NumberOfProps Property (ClientNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # NumberOfProps Property (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

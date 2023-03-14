@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_1803"
 description: "MSSQLSERVER_1803"
-title: "MSSQLSERVER_1803 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1803 (Database Engine error)"
-ms.assetid: d4315390-82f1-4c4c-8d1b-1a4989537cca
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1803 (Database Engine error)"
 ---
 # MSSQLSERVER_1803
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

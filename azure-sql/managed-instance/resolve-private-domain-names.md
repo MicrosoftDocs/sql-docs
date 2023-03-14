@@ -1,17 +1,14 @@
 ---
 title: Resolve private domain names
-titleSuffix: Azure SQL Managed Instance 
+titleSuffix: Azure SQL Managed Instance
 description: This article describes how to configure Azure SQL Managed Instance to resolve private domain names.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: 
-ms.devlang: 
-ms.topic: conceptual
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, srbozovi
 ms.date: 09/16/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: conceptual
 ---
 # Resolve private domain names in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

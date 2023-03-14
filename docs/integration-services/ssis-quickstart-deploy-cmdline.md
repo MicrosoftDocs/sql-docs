@@ -1,14 +1,13 @@
 ---
+title: "Deploy an SSIS project from the command prompt"
 description: "Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe"
-title: "Deploy an SSIS project from the command prompt | Microsoft Docs"
-ms.date: "05/21/2018"
-ms.topic: conceptual
-ms.service: sql
-ms.custom:
-  - intro-deployment
-ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "05/21/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: intro-deployment
 ---
 # Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe
 

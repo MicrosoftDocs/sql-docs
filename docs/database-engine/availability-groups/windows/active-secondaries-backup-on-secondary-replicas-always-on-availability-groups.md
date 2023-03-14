@@ -7,7 +7,6 @@ ms.date: "09/01/2017"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "backup priority"
   - "backup on secondary replicas"

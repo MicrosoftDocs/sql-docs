@@ -1,22 +1,19 @@
 ---
+title: "sp_setreplfailovermode (Transact-SQL)"
 description: "sp_setreplfailovermode (Transact-SQL)"
-title: "sp_setreplfailovermode (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_setreplfailovermode"
-  - "sp_setreplfailovermode_TSQL"
-helpviewer_keywords: 
-  - "sp_setreplfailovermode"
-ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_setreplfailovermode"
+  - "sp_setreplfailovermode_TSQL"
+helpviewer_keywords:
+  - "sp_setreplfailovermode"
+dev_langs:
+  - "TSQL"
 ---
 # sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

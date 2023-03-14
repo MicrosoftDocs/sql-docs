@@ -3,12 +3,10 @@ title: "WHILE (Transact-SQL)"
 description: "WHILE (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "WHILE_TSQL"
   - "WHILE"

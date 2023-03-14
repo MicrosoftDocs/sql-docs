@@ -1,17 +1,15 @@
 ---
-description: "Index JSON data"
 title: "Index JSON data"
-ms.custom: ""
-ms.date: 11/29/2021
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "JSON, indexing JSON data"
-  - "indexing JSON data"
+description: "Index JSON data"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth, wiassaf
+ms.date: 11/29/2021
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "JSON, indexing JSON data"
+  - "indexing JSON data"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Index JSON data

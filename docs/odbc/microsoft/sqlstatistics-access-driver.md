@@ -1,18 +1,15 @@
 ---
+title: "SQLStatistics (Access Driver)"
 description: "SQLStatistics (Access Driver)"
-title: "SQLStatistics (Access Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Access driver [ODBC], SQLStatistics"
-  - "SQLStatistics function [ODBC], Access Driver"
-ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Access driver [ODBC], SQLStatistics"
+  - "SQLStatistics function [ODBC], Access Driver"
 ---
 # SQLStatistics (Access Driver)
 > [!NOTE]  

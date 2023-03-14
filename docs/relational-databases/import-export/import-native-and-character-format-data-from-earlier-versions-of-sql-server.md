@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "earlier versions [SQL Server], import and export data formats"
   - "-V switch"

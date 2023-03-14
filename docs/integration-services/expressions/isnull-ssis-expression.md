@@ -1,18 +1,15 @@
 ---
+title: "ISNULL (SSIS Expression)"
 description: "ISNULL (SSIS Expression)"
-title: "ISNULL (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "null values [Integration Services]"
-  - "ISNULL function"
-ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "null values [Integration Services]"
+  - "ISNULL function"
 ---
 # ISNULL (SSIS Expression)
 

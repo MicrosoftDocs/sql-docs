@@ -1,17 +1,14 @@
 ---
-description: "Proxy Account Properties - New Proxy Account (General Page)"
 title: Proxy Account Properties - New Proxy Account (General Page)
-ms.custom: seo-lt-2019
+description: "Proxy Account Properties - New Proxy Account (General Page)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.proxy.general.f1"
-ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Proxy Account Properties - New Proxy Account (General Page)

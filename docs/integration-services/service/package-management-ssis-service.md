@@ -1,16 +1,16 @@
 ---
+title: "Package Management (SSIS Service)"
 description: "Package Management (SSIS Service)"
-title: "Package Management (SSIS Service) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "11/16/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.dtsserver.importpackage.f1"
   - "sql13.dts.dtsserver.exportpackage.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services packages, managing"
   - "packages [Integration Services], managing"
   - "Integration Services packages, managing"
@@ -24,9 +24,6 @@ helpviewer_keywords:
   - "monitoring [Integration Services], packages"
   - "Integration Services service, package management"
   - "services [Integration Services], package management"
-ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: chugugrace
-ms.author: chugu
 ---
 # Package Management (SSIS Service)
 

@@ -7,7 +7,6 @@ ms.date: "03/05/2021"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Automatic seeding [SQL Server], secondary replica"
 ---

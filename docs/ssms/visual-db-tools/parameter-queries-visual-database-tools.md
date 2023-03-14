@@ -1,18 +1,14 @@
 ---
-description: "Parameter Queries (Visual Database Tools)"
 title: Parameter Queries
-ms.custom: seo-lt-2019
+description: "Parameter Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parameter queries [SQL Server]"
-ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Parameter Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,16 @@
 ---
+title: "Loop through Excel Files and Tables with a Foreach Loop Container"
 description: "Loop through Excel Files and Tables with a Foreach Loop Container"
-title: "Loop through Excel Files and Tables with a Foreach Loop Container | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "05/15/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [Integration Services], Excel"
   - "Excel [Integration Services]"
   - "connection managers [Integration Services], Excel"
-ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: chugugrace
-ms.author: chugu
 ---
 # Loop through Excel Files and Tables with a Foreach Loop Container
 

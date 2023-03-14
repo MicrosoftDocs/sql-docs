@@ -4,11 +4,11 @@ description: This article describes how to troubleshoot Hyperscale performance p
 author: denzilribeiro
 ms.author: denzilr
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/18/2019
+ms.date: 03/13/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: troubleshooting
-ms.custom: seo-lt-2019 sqldbrb=1
+ms.custom: sqldbrb=1
 ---
 
 # SQL Hyperscale performance troubleshooting diagnostics
@@ -18,7 +18,9 @@ To troubleshoot performance problems in a Hyperscale database, [general performa
 
 ## Log rate throttling waits
 
-Every Azure SQL Database service level has log generation rate limits enforced via [log rate governance](resource-limits-logical-server.md#transaction-log-rate-governance). In Hyperscale, the log generation limit is currently set to 100 MB/sec, regardless of the service level. However, there are times when the log generation rate on the primary compute replica has to be throttled to maintain recoverability SLAs. This throttling happens when a [page server or another compute replica](service-tier-hyperscale.md#distributed-functions-architecture) is significantly behind applying new log records from the log service.
+Every Azure SQL Database service objective has log generation rate limits enforced via [log rate governance](resource-limits-logical-server.md#transaction-log-rate-governance). In Hyperscale, the log governance limit is set to 105 MB/sec, regardless of the service level. This value is exposed in the `primary_max_log_rate` column in [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database/).
+
+However, there are times when the log generation rate on the primary compute replica has to be throttled to maintain recoverability SLAs. This throttling happens when a [page server or another compute replica](service-tier-hyperscale.md#distributed-functions-architecture) is significantly behind applying new log records from the log service. If no page servers or replicas are behind, the throttling mechanism allows log generation rate to reach 100 MB/s. This is the effective maximum log generation rate in all Hyperscale service objectives.
 
 The following wait types (in [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql/)) describe the reasons why log rate can be throttled on the primary compute replica:
 

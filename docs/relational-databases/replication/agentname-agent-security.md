@@ -1,17 +1,15 @@
 ---
+title: "&lt;AgentName&gt; Agent Security"
 description: "&lt;AgentName&gt; Agent Security"
-title: "&lt;AgentName&gt; Agent Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.agentnameagentsecurity.f1"
-ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.agentnameagentsecurity.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # &lt;AgentName&gt; Agent Security

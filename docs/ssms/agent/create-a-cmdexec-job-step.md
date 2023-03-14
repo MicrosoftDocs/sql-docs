@@ -1,17 +1,14 @@
 ---
-description: "Create a CmdExec Job Step"
 title: "Create a CmdExec Job Step"
-ms.custom: seo-lt-2019
+description: "Create a CmdExec Job Step"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CmdExec jobs"
-ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a CmdExec Job Step

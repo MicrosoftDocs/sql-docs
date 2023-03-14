@@ -1,17 +1,14 @@
 ---
+title: "Choose a Destination (SQL Server Import and Export Wizard)"
 description: "Choose a Destination (SQL Server Import and Export Wizard)"
-title: "Choose a Destination (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.chooseadestination.f1"
-ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.chooseadestination.f1"
 ---
 # Choose a Destination (SQL Server Import and Export Wizard)
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_changepublication (Transact-SQL)"
 description: "sp_changepublication (Transact-SQL)"
-title: "sp_changepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/05/2021
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changepublication"
-  - "sp_changepublication_TSQL"
-helpviewer_keywords: 
-  - "sp_changepublication"
-ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changepublication"
+  - "sp_changepublication_TSQL"
+helpviewer_keywords:
+  - "sp_changepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

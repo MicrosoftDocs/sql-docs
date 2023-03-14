@@ -1,18 +1,16 @@
 ---
-description: "Disable Foreign Key Constraints for Replication"
 title: "Disable Foreign Key Constraints for Replication"
-ms.custom: ""
+description: "Disable Foreign Key Constraints for Replication"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/21/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "constraints [SQL Server], foreign keys"
   - "foreign keys [SQL Server], disabling constraints"
   - "disabling constraints"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable foreign key constraints for replication

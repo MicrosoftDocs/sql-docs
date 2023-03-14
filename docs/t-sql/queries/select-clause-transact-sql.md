@@ -1,19 +1,17 @@
 ---
+title: "SELECT Clause (Transact-SQL)"
 description: "SELECT Clause (Transact-SQL)"
-title: "SELECT Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SELECT Clause"
   - "SELECT_Clause_TSQL"
   - "DISTINCT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parentheses [SQL Server]"
   - "identity columns [SQL Server], SELECT clause"
   - "SELECT clause"
@@ -23,9 +21,8 @@ helpviewer_keywords:
   - "clauses [SQL Server], SELECT"
   - "$ROWGUID keyword"
   - "queries [SQL Server], results"
-ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SELECT Clause (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

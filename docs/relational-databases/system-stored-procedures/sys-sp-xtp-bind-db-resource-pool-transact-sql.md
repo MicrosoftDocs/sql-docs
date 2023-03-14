@@ -1,25 +1,22 @@
 ---
+title: "sys.sp_xtp_bind_db_resource_pool (Transact-SQL)"
 description: "sys.sp_xtp_bind_db_resource_pool (Transact-SQL)"
-title: "sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "08/03/2016"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_xtp_bind_db_resource_pool_TSQL"
   - "sp_xtp_bind_db_resource_pool"
   - "sys.sp_xtp_bind_db_resource_pool_TSQL"
   - "sys.sp_xtp_bind_db_resource_pool"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_xtp_bind_db_resource_pool"
   - "sys.sp_xtp_bind_db_resource_pool"
-ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

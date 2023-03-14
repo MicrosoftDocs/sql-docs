@@ -7,7 +7,6 @@ ms.reviewer: randolphwest
 ms.date: 09/20/2022
 ms.service: sql
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 helpviewer_keywords:
   - "change data capture [SQL Server], compared to change tracking"
   - "change data capture vs. change tracking"

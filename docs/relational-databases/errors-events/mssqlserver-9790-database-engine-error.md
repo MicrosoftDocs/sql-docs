@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_9790"
 description: "MSSQLSERVER_9790"
-title: "MSSQLSERVER_9790 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "9790 (Database Engine error)"
-ms.assetid: 83fd379f-5deb-4f97-8cb4-282e3d3fed94
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "9790 (Database Engine error)"
 ---
 # MSSQLSERVER_9790
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

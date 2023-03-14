@@ -1,13 +1,13 @@
 ---
 title: "SQL Server 2016 & 2017: Hardware & software requirements"
-description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2016 and SQL Server 2017. 
-ms.custom: "seo-lt-2019"
+description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2016 and SQL Server 2017.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/16/2021"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: release-landing
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Setup [SQL Server], software"
   - "software [SQL Server]"
   - "installing SQL Server, software"
@@ -42,8 +42,6 @@ helpviewer_keywords:
   - "cross-language support"
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
-ms.author: mikeray
-author: MikeRayMSFT
 ---
 # SQL Server 2016 and 2017: Hardware and software requirements
 

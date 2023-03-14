@@ -1,19 +1,16 @@
 ---
-description: "Save As"
 title: "Save As"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "vs.saveas"
-helpviewer_keywords: 
-  - "Save As dialog box"
-ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
+description: "Save As"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "vs.saveas"
+helpviewer_keywords:
+  - "Save As dialog box"
 ---
 # Save As
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

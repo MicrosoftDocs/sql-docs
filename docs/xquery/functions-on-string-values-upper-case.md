@@ -1,20 +1,17 @@
 ---
-title: "upper-case  Function (XQuery) | Microsoft Docs"
+title: "upper-case  Function (XQuery)"
 description: Learn how to use the XQuery function upper-case(), that converts characters to their upper case equivalent.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "upper-case"
-  - "upper-case Function (XQuery)"
-ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "upper-case"
+  - "upper-case Function (XQuery)"
+dev_langs:
+  - "XML"
 ---
 # Functions on String Values - upper-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

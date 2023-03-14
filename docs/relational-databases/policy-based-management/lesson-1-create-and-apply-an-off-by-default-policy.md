@@ -1,15 +1,12 @@
 ---
 title: "Lesson 1: Create & Apply an off-by-default policy"
-description: Tutorial that teaches you to create and apply an off-by-default policy for Policy-Based Management in SQL Server. 
-ms.custom: seo-lt-2019
+description: Tutorial that teaches you to create and apply an off-by-default policy for Policy-Based Management in SQL Server.
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: security
-ms.reviewer: ""
 ms.topic: conceptual
-ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
-author: VanMSFT
-ms.author: vanto
 ---
 # Lesson 1: Create and Apply an Off By Default Policy
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

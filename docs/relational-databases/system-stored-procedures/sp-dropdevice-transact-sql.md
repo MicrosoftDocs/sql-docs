@@ -1,23 +1,20 @@
 ---
+title: "sp_dropdevice (Transact-SQL)"
 description: "sp_dropdevice (Transact-SQL)"
-title: "sp_dropdevice (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dropdevice_TSQL"
-  - "sp_dropdevice"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "backup devices [SQL Server], deleting"
-  - "sp_dropdevice"
-ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropdevice_TSQL"
+  - "sp_dropdevice"
+helpviewer_keywords:
+  - "backup devices [SQL Server], deleting"
+  - "sp_dropdevice"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

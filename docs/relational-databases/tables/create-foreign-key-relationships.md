@@ -1,16 +1,15 @@
 ---
 title: "Create Foreign Key Relationships"
 description: "Create Foreign Key Relationships"
-ms.service: sql
-ms.subservice: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "relationships [SQL Server], creating"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto, randolphwest
-ms.custom: FY22Q2Fresh
 ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "relationships [SQL Server], creating"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Foreign Key Relationships

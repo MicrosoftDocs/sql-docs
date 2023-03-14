@@ -1,22 +1,19 @@
 ---
+title: "sp_execute (Transact-SQL)"
 description: "sp_execute (Transact-SQL)"
-title: "sp_execute (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursor_execute"
-  - "sp_cursor_execute_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_execute"
-ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursor_execute"
+  - "sp_cursor_execute_TSQL"
+helpviewer_keywords:
+  - "sp_execute"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_execute (Transact-SQL)

@@ -1,13 +1,14 @@
 ---
+title: "Use Alerts for Replication Agent Events"
 description: "Use Alerts for Replication Agent Events"
-title: "Use Alerts for Replication Agent Events | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "viewing alerts"
   - "Queue Reader Agent, alerts"
   - "alerts [SQL Server replication]"
@@ -18,9 +19,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], alerts"
   - "displaying alerts"
   - "Snapshot Agent, alerts"
-ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Use Alerts for Replication Agent Events

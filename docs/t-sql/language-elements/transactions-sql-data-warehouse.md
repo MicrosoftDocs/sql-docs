@@ -3,12 +3,10 @@ title: Transactions (Azure Synapse Analytics)
 description: A transaction is a group of one or more database statements that are either wholly committed or wholly rolled back.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer:
 ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: language-reference
-ms.custom:
 dev_langs:
   - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"

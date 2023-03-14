@@ -1,20 +1,17 @@
 ---
+title: "How Cursors Are Implemented"
 description: "How Cursors Are Implemented"
-title: "How Cursors Are Implemented | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, cursors"
   - "ODBC cursors, about ODBC cursors"
   - "ODBC applications, cursors"
   - "cursors [ODBC], about ODBC cursors"
-ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How Cursors Are Implemented

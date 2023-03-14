@@ -1,22 +1,20 @@
 ---
 title: "View replicated commands & information in Distribution database"
-description: Learn how to view replicated commands and other replication related information in the Distribution database for SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to view replicated commands and other replication related information in the Distribution database for SQL Server.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/09/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "sp_browsereplcmds"
   - "transactional replication, monitoring"
   - "distribution databases [SQL Server replication], viewing replicated commands"
   - "viewing replicated commands"
-ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # View Replicated Commands and Information in Distribution Database

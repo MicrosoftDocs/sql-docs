@@ -1,22 +1,19 @@
 ---
+title: "Standard Gateway"
 description: "Standard Gateway"
-title: "Standard Gateway | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC [ODBC], database access"
   - "SQL [ODBC], database access"
   - "database access [ODBC]"
   - "standardizing database access [ODBC], gateways"
   - "standard gateways [ODBC]"
   - "gateways [ODBC]"
-ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Standard Gateway
 A *gateway* is a piece of software that causes one DBMS to look like another. That is, the gateway accepts the programming interface, SQL grammar, and data stream protocol of a single DBMS and translates it to the programming interface, SQL grammar, and data stream protocol of the hidden DBMS. For example, applications written to use Microsoft® SQL Server™ can also access DB2 data through the Micro Decisionware DB2 Gateway; this product causes DB2 to look like SQL Server. When gateways are used, a different gateway must be written for each target database.  

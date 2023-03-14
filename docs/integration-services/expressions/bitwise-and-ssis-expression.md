@@ -1,19 +1,16 @@
 ---
+title: "&amp; (Bitwise AND) (SSIS Expression)"
 description: "&amp; (Bitwise AND) (SSIS Expression)"
-title: "&amp; (Bitwise AND) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "AND, bitwise AND"
   - "& (bitwise AND)"
   - "bitwise AND (&)"
-ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
-author: chugugrace
-ms.author: chugu
 ---
 # &amp; (Bitwise AND) (SSIS Expression)
 

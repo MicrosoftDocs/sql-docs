@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.extended_procedures catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 ---
 # sys.extended_procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

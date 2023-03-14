@@ -1,17 +1,15 @@
 ---
+title: "Distributor Password"
 description: "Distributor Password"
-title: "Distributor Password | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.configuredistributionwizard.distributorpassword.f1"
-ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.configuredistributionwizard.distributorpassword.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Distributor Password

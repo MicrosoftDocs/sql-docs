@@ -1,22 +1,17 @@
 ---
-description: "PropertyType Property (ClientNetworkProtocolProperty Class)"
 title: "PropertyType Property (ClientNetworkProtocolProperty)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "PropertyType Property (ClientNetworkProtocolProperty Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "PropertyType property"
-ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
+description: "PropertyType Property (ClientNetworkProtocolProperty Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "PropertyType property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "PropertyType Property (ClientNetworkProtocolProperty Class)"
+apitype: "MOFDef"
 ---
 # PropertyType Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

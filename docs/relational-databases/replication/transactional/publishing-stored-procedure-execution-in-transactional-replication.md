@@ -1,19 +1,17 @@
 ---
 title: "Publishing stored procedure execution (Transactional)"
-description: Learn how to include stored procedures that execute at the Publisher and affect published tables in your Transactional publication as stored procedure execution articles. 
-ms.custom: seo-lt-2019
+description: Learn how to include stored procedures that execute at the Publisher and affect published tables in your Transactional publication as stored procedure execution articles.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "publishing [SQL Server replication], stored procedure execution"
   - "articles [SQL Server replication], stored procedures and"
   - "transactional replication, publishing stored procedure execution"
-ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publishing Stored Procedure Execution in Transactional Replication

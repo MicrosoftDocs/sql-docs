@@ -1,19 +1,16 @@
 ---
-description: "Give Others Ownership of a Job"
 title: "Give Others Ownership of a Job"
-ms.custom: seo-lt-2019
+description: "Give Others Ownership of a Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], owners"
   - "owners [SQL Server], jobs"
   - "SQL Server Agent jobs, owners"
-ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Give Others Ownership of a Job

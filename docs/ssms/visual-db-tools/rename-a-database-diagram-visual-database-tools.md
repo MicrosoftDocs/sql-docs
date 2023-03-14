@@ -1,21 +1,17 @@
 ---
-description: "Rename a Database Diagram (Visual Database Tools)"
 title: Rename a Database Diagram
-ms.custom: seo-lt-2019
+description: "Rename a Database Diagram (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "names [SQL Server], database diagrams"
   - "diagrams [SQL Server], renaming"
   - "renaming database diagrams"
   - "database diagrams [SQL Server], renaming"
-ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Rename a Database Diagram (Visual Database Tools)
 

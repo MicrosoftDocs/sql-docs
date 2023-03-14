@@ -109,6 +109,8 @@ items:
           href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
         - name: To a mirrored media set
           href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
+        - name: Schedule database backups
+          href: relational-databases/backup-restore/schedule-database-backup-operation-ssms.md
       - name: Restore
         items:
         - name: Use SQL Server Management Studio (SSMS)
@@ -6758,7 +6760,7 @@ items:
     items:
     - name: Concepts
       items:
-      - name: Automatic Tuning
+      - name: Automatic tuning
         href: relational-databases/automatic-tuning/automatic-tuning.md
       - name: Cardinality estimation
         href: relational-databases/performance/cardinality-estimation-sql-server.md
@@ -10057,7 +10059,7 @@ items:
       href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
       href: relational-databases/tutorial-ownership-chains-and-context-switching.md
-    - name: Using Azure Blob Storage with SQL Server 2016 databases
+    - name: Use Azure Blob Storage with SQL Server databases
       href: relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
   - name: Writing T-SQL Statements
     href: t-sql/tutorial-writing-transact-sql-statements.md
@@ -10090,11 +10092,11 @@ items:
     - name: Release history
       items:
       - name: SQL Server 2022
-        href: linux/sql-server-linux-release-history-2022.md
+        href: /troubleshoot/sql/linux/release-history-2022?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: SQL Server 2019
-        href: linux/sql-server-linux-release-history-2019.md
+        href: /troubleshoot/sql/linux/release-history-2019?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
       - name: SQL Server 2017
-        href: linux/sql-server-linux-release-history-2017.md
+        href: /troubleshoot/sql/linux/release-history-2017?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
     - name: Editions & Features
       items:
       - name: SQL Server 2022
@@ -10441,6 +10443,8 @@ items:
         href: sql-server/azure-arc/delete-from-azure-arc.md
       - name: Manage SQL Server license and billing options
         href: sql-server/azure-arc/manage-license-type.md
+      - name: Configure automated patching
+        href: sql-server/azure-arc/patch.md
     - name: Secure
       items:
       - name: Configure advanced data Security
@@ -13606,6 +13610,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md
       - name: sys.dm_tran_database_transactions
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md
+      - name: sys.dm_tran_distributed_transaction_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-distributed-transaction-stats.md
       - name: sys.dm_tran_locks
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md
       - name: sys.dm_tran_session_transactions
@@ -14218,6 +14224,8 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md
       - name: sys.sp_xtp_control_query_exec_stats
         href: relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md
+      - name: sys.sp_xtp_force_gc
+        href: relational-databases/system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md
       - name: sys.sp_xtp_merge_checkpoint_files
         href: relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md
       - name: sys.sp_xtp_unbind_db_resource_pool
@@ -14577,7 +14585,15 @@ items:
         href: relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
       - name: sp_query_store_clear_message_queues
         href: relational-databases/system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md   
-        
+
+    - name: MSDTC
+      href: relational-databases/system-stored-procedures/msdtc-stored-procedures-transact-sql.md
+      items:
+      - name: sp_manage_distributed_transaction
+        href: relational-databases/system-stored-procedures/sys-sp-manage-distributed-transaction.md
+      - name: sp_reset_dtc_log
+        href: relational-databases/system-stored-procedures/sp-reset-dtc-log.md
+
     - name: Replication
       href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md
       items:
@@ -15193,6 +15209,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
       - name: sp_help_change_feed
         href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_help_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-help-change-feed-table.md
       - name: sp_change_feed_configure_parameters
         href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
       - name: sp_change_feed_create_table_group
@@ -15201,8 +15219,6 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
       - name: sp_change_feed_enable_table
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
-      - name: sp_change_feed_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-table.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:

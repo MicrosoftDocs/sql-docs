@@ -1,20 +1,16 @@
 ---
+title: "Installing SMO"
 description: "Installing SMO"
-title: "Installing SMO | Microsoft Docs"
-ms.custom:
-  - intro-installation
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: "reference"
+ms.custom: intro-installation
 helpviewer_keywords:
   - "installing SMO"
   - "SMO [SQL Server], installing"
   - "SQL Server Management Objects, installing"
-ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

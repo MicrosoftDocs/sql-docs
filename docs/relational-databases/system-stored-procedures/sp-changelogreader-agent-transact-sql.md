@@ -1,22 +1,19 @@
 ---
+title: "sp_changelogreader_agent (Transact-SQL)"
 description: "sp_changelogreader_agent (Transact-SQL)"
-title: "sp_changelogreader_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changelogreader_agent"
-  - "sp_changelogreader_agent_TSQL"
-helpviewer_keywords: 
-  - "sp_changelogreader_agent"
-ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: markingmyname
 ms.author: maghan
+ms.date: "06/15/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changelogreader_agent"
+  - "sp_changelogreader_agent_TSQL"
+helpviewer_keywords:
+  - "sp_changelogreader_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

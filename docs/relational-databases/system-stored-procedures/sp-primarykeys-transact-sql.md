@@ -1,22 +1,19 @@
 ---
+title: "sp_primarykeys (Transact-SQL)"
 description: "sp_primarykeys (Transact-SQL)"
-title: "sp_primarykeys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_primarykeys_TSQL"
-  - "sp_primarykeys"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_primarykeys"
-ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_primarykeys_TSQL"
+  - "sp_primarykeys"
+helpviewer_keywords:
+  - "sp_primarykeys"
+dev_langs:
+  - "TSQL"
 ---
 # sp_primarykeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

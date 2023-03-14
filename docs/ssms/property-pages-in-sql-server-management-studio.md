@@ -1,16 +1,14 @@
 ---
 title: "Property Pages in SQL Server Management Studio"
 description: "Property Pages in SQL Server Management Studio"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: ui-reference
-helpviewer_keywords: 
-  - "property pages [SQL Server Management Studio]"
 author: "markingmyname"
 ms.author: "maghan"
-ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+helpviewer_keywords:
+  - "property pages [SQL Server Management Studio]"
 ---
 # Property Pages in SQL Server Management Studio
 

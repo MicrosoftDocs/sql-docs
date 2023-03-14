@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.spatial_index_tessellations catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 ---
 # sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

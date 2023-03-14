@@ -1,18 +1,15 @@
 ---
+title: "Azure Feature Pack for Integration Services (SSIS)"
 description: "Azure Feature Pack for Integration Services (SSIS)"
-title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/24/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.SSIS.AZURE.F1"
-  - "SQL14.SSIS.AZURE.F1"
-ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
+ms.date: "12/24/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.SSIS.AZURE.F1"
+  - "SQL14.SSIS.AZURE.F1"
 ---
 # Azure Feature Pack for Integration Services (SSIS)
 

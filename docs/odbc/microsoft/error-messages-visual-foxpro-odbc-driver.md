@@ -1,20 +1,17 @@
 ---
+title: "Error Messages (Visual FoxPro ODBC Driver)"
 description: "Error Messages (Visual FoxPro ODBC Driver)"
-title: "Error Messages (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "error messages [ODBC], Visual FoxPro ODBC driver"
   - "Visual FoxPro ODBC driver [ODBC], error messages"
   - "SQLSTATE [ODBC]"
   - "FoxPro ODBC driver [ODBC], error messages"
-ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Error Messages (Visual FoxPro ODBC Driver)
 When an error occurs, the Visual FoxPro driver returns the following information:  

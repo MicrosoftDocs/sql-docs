@@ -1,11 +1,14 @@
 ---
-description: "Configure & manage word breakers & stemmers for search (SQL Server)"
 title: "Configure & manage word breakers & stemmers for search"
+description: "Configure & manage word breakers & stemmers for search (SQL Server)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "languages [full-text search]"
   - "full-text search [SQL Server], stemmers"
   - "linguistic analysis [full-text search]"
@@ -15,12 +18,7 @@ helpviewer_keywords:
   - "stemmers [full-text search]"
   - "conjugating verbs [full-text search]"
   - "word breakers [full-text search]"
-ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Configure & manage word breakers & stemmers for search (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

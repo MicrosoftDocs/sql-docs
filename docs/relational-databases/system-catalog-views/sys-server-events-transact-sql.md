@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_events catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 ---
 # sys.server_events (Transact-SQL)
 [!INCLUDE [sqlserver-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]

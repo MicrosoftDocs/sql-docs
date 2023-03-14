@@ -8,9 +8,6 @@ ms.date: 08/23/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
-ms.custom:
-  - contperf-fy20q4
-  - event-tier1-build-2022
 helpviewer_keywords:
   - "parallel queries [SQL Server]"
   - "processors [SQL Server], parallel queries"

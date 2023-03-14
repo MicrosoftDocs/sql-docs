@@ -1,18 +1,12 @@
 ---
+title: "Command-Line Management Tool: SqlLocalDB.exe"
 description: "Command-Line Management Tool: SqlLocalDB.exe"
-title: "Command-Line Management Tool: SqlLocalDB.exe | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-apilocation: 
-  - "sqluserinstance.dll"
-ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.topic: "reference"
+apilocation: "sqluserinstance.dll"
 ---
 # Command-Line Management Tool: SqlLocalDB.exe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

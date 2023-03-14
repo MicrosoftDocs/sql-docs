@@ -1,18 +1,16 @@
 ---
+title: "Troubleshooting Oracle Publishers"
 description: "Troubleshooting Oracle Publishers"
-title: "Troubleshooting Oracle Publishers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Oracle publishing [SQL Server replication], troubleshooting"
-  - "troubleshooting [SQL Server replication], Oracle publishing"
-ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Oracle publishing [SQL Server replication], troubleshooting"
+  - "troubleshooting [SQL Server replication], Oracle publishing"
 ---
 # Troubleshooting Oracle Publishers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

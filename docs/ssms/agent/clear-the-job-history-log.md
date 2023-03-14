@@ -1,21 +1,18 @@
 ---
-description: "Clear the Job History Log"
 title: "Clear the Job History Log"
-ms.custom: seo-lt-2019
+description: "Clear the Job History Log"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], history"
   - "clearing job history log"
   - "logs [SQL Server], jobs"
   - "SQL Server Agent jobs, history"
   - "historical information [SQL Server], jobs"
-ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Clear the Job History Log

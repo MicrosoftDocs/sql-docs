@@ -1,19 +1,16 @@
 ---
-description: "Create an Analysis Services Job Step"
 title: "Create an Analysis Services Job Step"
+description: "Create an Analysis Services Job Step"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords:
-  - sql13.swb.asquery.execgeneral.f1
-helpviewer_keywords: 
+  - "sql13.swb.asquery.execgeneral.f1"
+helpviewer_keywords:
   - "job steps [Analysis Services]"
-ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

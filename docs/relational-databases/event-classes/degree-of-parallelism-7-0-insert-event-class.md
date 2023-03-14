@@ -1,17 +1,14 @@
 ---
+title: "Degree of Parallelism (7.0 Insert) Event Class"
 description: "Degree of Parallelism (7.0 Insert) Event Class"
-title: "Degree of Parallelism (7.0 Insert) Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: reference
-helpviewer_keywords: 
-  - "Degree of Parallelism event class"
-ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: reference
+helpviewer_keywords:
+  - "Degree of Parallelism event class"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Degree of Parallelism (7.0 Insert) Event Class

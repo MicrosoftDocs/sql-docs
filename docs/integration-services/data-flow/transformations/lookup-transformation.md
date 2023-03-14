@@ -1,28 +1,25 @@
 ---
+title: "Lookup Transformation"
 description: "Lookup Transformation"
-title: "Lookup Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.lookuptrans.f1"
   - "sql13.dts.designer.lookuptransformation.general.f1"
   - "sql13.dts.designer.lookuptransformation.referencetable.f1"
   - "sql13.dts.designer.lookuptransformation.columns.f1"
   - "sql13.dts.designer.lookuptransformation.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Lookup transformation"
   - "joining columns [Integration Services]"
   - "cache [Integration Services]"
   - "match exactly [Integration Services]"
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
-ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: chugugrace
-ms.author: chugu
 ---
 # Lookup Transformation
 

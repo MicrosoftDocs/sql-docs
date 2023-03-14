@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "replication [SQL Server], system tables"
 dev_langs:
   - "TSQL"
-ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 ---
 # Replication Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

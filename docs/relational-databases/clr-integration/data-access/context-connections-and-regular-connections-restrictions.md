@@ -10,7 +10,6 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "context connections [CLR integration]"
   - "regular connections [CLR integration]"
-ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 ---
 # Context Connections and Regular Connections - Restrictions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

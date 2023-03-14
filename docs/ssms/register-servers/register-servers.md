@@ -1,24 +1,21 @@
 ---
-description: "Register Servers"
 title: Register Servers
+description: "Register Servers"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.sqlserverregisteredserver.dhelp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [SQL Server], registered servers"
   - "registering servers"
   - "servers [SQL Server], registering"
   - "server management [SQL Server], registering servers"
   - "server registration [SQL Server]"
-ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: markingmyname
-ms.author: maghan
-ms.manageR: jroth
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ---
 
 # Register Servers

@@ -1,24 +1,19 @@
 ---
+title: "SQLAllocStmt Function"
 description: "SQLAllocStmt Function"
-title: "SQLAllocStmt Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLAllocStmt"
-apilocation: 
-  - "sqlsrv32.dll"
-apitype: "dllExport"
-f1_keywords: 
-  - "SQLAllocStmt"
-helpviewer_keywords: 
-  - "SQLAllocStmt function [ODBC]"
-ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: reference
+f1_keywords:
+  - "SQLAllocStmt"
+helpviewer_keywords:
+  - "SQLAllocStmt function [ODBC]"
+apilocation: "sqlsrv32.dll"
+apiname: "SQLAllocStmt"
+apitype: "dllExport"
 ---
 # SQLAllocStmt Function
 **Conformance**  

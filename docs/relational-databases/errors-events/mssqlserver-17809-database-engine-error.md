@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_17809"
 description: "MSSQLSERVER_17809"
-title: "MSSQLSERVER_17809 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "17809 (Database Engine error)"
-ms.assetid: d7f81e0a-13f7-42b2-bddf-1f6b95321fa7
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "17809 (Database Engine error)"
 ---
 # MSSQLSERVER_17809
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

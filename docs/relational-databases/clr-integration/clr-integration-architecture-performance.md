@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], performance"
   - "common language runtime [SQL Server], compilation process"
   - "performance [CLR integration]"
-ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 ---
 # CLR Integration Architecture  - Performance
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

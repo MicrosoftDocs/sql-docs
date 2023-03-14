@@ -10,10 +10,10 @@ ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - "azure-synapse"
-  - "has-adal-ref"
-  - "sqldbrb=2"
-  - "devx-track-azurepowershell"
+  - azure-synapse
+  - has-adal-ref
+  - sqldbrb=2
+  - devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

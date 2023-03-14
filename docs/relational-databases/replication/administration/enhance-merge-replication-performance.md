@@ -1,13 +1,14 @@
 ---
+title: "Enhance Merge Replication Performance"
 description: "Enhance Merge Replication Performance"
-title: "Enhance Merge Replication Performance | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "publications [SQL Server replication], design and performance"
   - "designing databases [SQL Server], replication performance"
   - "Merge Agent, performance"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], performance considerations"
   - "performance [SQL Server replication], merge replication"
   - "agents [SQL Server replication], performance"
-ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Enhance Merge Replication Performance
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

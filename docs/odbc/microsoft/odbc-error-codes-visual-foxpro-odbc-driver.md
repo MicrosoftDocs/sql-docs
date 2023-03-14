@@ -1,21 +1,18 @@
 ---
+title: "ODBC Error Codes (Visual FoxPro ODBC Driver)"
 description: "ODBC Error Codes (Visual FoxPro ODBC Driver)"
-title: "ODBC Error Codes (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], error codes"
   - "Visual FoxPro error codes"
   - "error messages [ODBC], Visual FoxPro ODBC driver"
   - "SQLSTATE [ODBC]"
   - "FoxPro ODBC driver [ODBC], error codes"
-ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-author: David-Engel
-ms.author: v-davidengel
 ---
 # ODBC Error Codes (Visual FoxPro ODBC Driver)
 The following table lists Visual FoxPro error codes mapped to ODBC Error Code SQLSTATE values. The mapped SQLSTATE values come from [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) and [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). No other SQLSTATE values from other ODBC API are mapped because **SQLExecDirect** and **SQLPrepare** are the only functions that access the Visual FoxPro engine.  

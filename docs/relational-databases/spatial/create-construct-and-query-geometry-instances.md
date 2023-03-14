@@ -1,17 +1,14 @@
 ---
+title: "Create, Construct, and Query geometry Instances"
 description: "Create, Construct, and Query geometry Instances"
-title: "Create, Construct, and Query geometry Instances | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "planar spatial data [SQL Server], getting started"
-  - "geometry data type [SQL Server], getting started"
-ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "planar spatial data [SQL Server], getting started"
+  - "geometry data type [SQL Server], getting started"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Construct, and Query geometry Instances

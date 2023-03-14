@@ -1,17 +1,14 @@
 ---
-description: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option"
 title: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option"
-ms.date: 06/03/2020
-ms.service: sql
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "INCLUDE_NULL_VALUES (FOR JSON)"
-ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
+description: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "INCLUDE_NULL_VALUES (FOR JSON)"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Include Null Values in JSON - INCLUDE_NULL_VALUES Option

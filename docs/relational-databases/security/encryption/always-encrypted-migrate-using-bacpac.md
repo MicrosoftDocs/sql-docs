@@ -1,18 +1,16 @@
 ---
+title: "Export and import databases using Always Encrypted"
 description: "Export and import databases using Always Encrypted"
-title: "Export and import databases using Always Encrypted  | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/30/2019
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Always Encrypted, configure with SSMS"
-ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current" 
+ms.reviewer: vanto
+ms.date: 10/30/2019
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Always Encrypted, configure with SSMS"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Export and import databases using Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]

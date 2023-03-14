@@ -1,20 +1,17 @@
 ---
-description: "Custom Reports in Management Studio"
 title: "Custom Reports in Management Studio"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.summary.new.custom.report.f1"
-  - "sql13.swb.summary.render.custom.report.f1"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], custom reports"
-ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
+description: "Custom Reports in Management Studio"
 author: "markingmyname"
 ms.author: "maghan"
-ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.summary.new.custom.report.f1"
+  - "sql13.swb.summary.render.custom.report.f1"
+helpviewer_keywords:
+  - "SQL Server Management Studio [SQL Server], custom reports"
 ---
 
 # Custom Reports in Management Studio

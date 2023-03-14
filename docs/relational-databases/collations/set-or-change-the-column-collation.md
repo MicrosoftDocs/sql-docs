@@ -1,18 +1,14 @@
 ---
+title: "Set or Change the Column Collation"
 description: "Set or Change the Column Collation"
-title: "Set or Change the Column Collation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2019"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "tempdb database [SQL Server], collations"
-  - "collations [SQL Server], column"
-ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "12/05/2019"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "tempdb database [SQL Server], collations"
+  - "collations [SQL Server], column"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set or Change the Column Collation

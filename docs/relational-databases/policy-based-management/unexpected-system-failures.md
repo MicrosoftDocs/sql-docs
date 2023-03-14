@@ -1,17 +1,14 @@
 ---
+title: "Unexpected System Failures"
 description: "Unexpected System Failures"
-title: "Unexpected System Failures | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 1679bf9e-a2ef-4f90-8907-a002f7341a7d
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Unexpected System Failures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,22 +1,19 @@
 ---
+title: "sp_add_job (Transact-SQL)"
 description: "sp_add_job (Transact-SQL)"
-title: "sp_add_job (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_add_job_TSQL"
-  - "sp_add_job"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_add_job"
-ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_add_job_TSQL"
+  - "sp_add_job"
+helpviewer_keywords:
+  - "sp_add_job"
+dev_langs:
+  - "TSQL"
 ---
 # sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

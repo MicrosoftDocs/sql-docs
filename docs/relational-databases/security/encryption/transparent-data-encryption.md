@@ -8,7 +8,6 @@ ms.date: 11/21/2022
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: FY22Q2Fresh
 helpviewer_keywords:
   - "Transparent data encryption"
   - "database encryption key, about"

@@ -1,18 +1,15 @@
 ---
-description: "Create an ActiveX Script Job Step"
 title: "Create an ActiveX Script Job Step"
-ms.custom: seo-lt-2019
+description: "Create an ActiveX Script Job Step"
+author: markingmyname
+ms.author: maghan
 ms.date: 10/06/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ActiveX scripting jobs [SQL Server]"
   - "job steps [Analysis Services]"
-ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "<= sql-server-2016"
 ---
 # Create an ActiveX script job step

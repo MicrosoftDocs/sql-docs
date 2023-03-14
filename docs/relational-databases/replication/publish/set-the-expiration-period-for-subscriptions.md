@@ -1,20 +1,18 @@
 ---
+title: "Set the Expiration Period for Subscriptions"
 description: "Set the Expiration Period for Subscriptions"
-title: "Set the Expiration Period for Subscriptions | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [SQL Server replication], expiration"
   - "expiration [SQL Server replication]"
   - "retention periods [SQL Server replication]"
   - "deactivating subscriptions"
-ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Set the Expiration Period for Subscriptions

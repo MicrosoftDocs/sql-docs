@@ -1,16 +1,13 @@
 ---
-title: "SQL Server Migration Assistant for Sybase (SybaseToSQL) | Microsoft Docs"
+title: "SQL Server Migration Assistant for Sybase (SybaseToSQL)"
 description: Learn about SSMA for Sybase and follow step-by-step instructions for migrating ASE databases to SQL Server or Azure SQL Database.
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "10/10/2019"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
-author: cpichuka 
-ms.author: cpichuka 
-f1_keywords: 
+f1_keywords:
   - "ssma.sybase.general.f1"
 ---
 # SQL Server Migration Assistant for Sybase (SybaseToSQL)

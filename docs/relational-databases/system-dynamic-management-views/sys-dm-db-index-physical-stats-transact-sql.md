@@ -3,7 +3,7 @@ title: "sys.dm_db_index_physical_stats (Transact-SQL)"
 description: sys.dm_db_index_physical_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "fragmentation [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)
@@ -227,9 +226,10 @@ GO
   
 -   CONTROL permission on the specified object within the database.  
   
--   VIEW DATABASE STATE permission to return information about all objects within the specified database, by using the object wildcard @*object_id*=NULL.  
+-   VIEW DATABASE STATE or VIEW DATABASE PERFORMANCE STATE (SQL Server 2022) permission to return information about all objects within the specified database, by using the object wildcard @*object_id*=NULL.  
   
--   VIEW SERVER STATE permission to return information about all databases, by using the database wildcard @*database_id* = NULL.  
+-   VIEW SERVER STATE or VIEW SERVER PERFORMANCE STATE (SQL Server 2022) permission to return information about all databases, by using the database wildcard @*database_id* = NULL.  
+
   
  Granting VIEW DATABASE STATE allows all objects in the database to be returned, regardless of any CONTROL permissions denied on specific objects.  
   

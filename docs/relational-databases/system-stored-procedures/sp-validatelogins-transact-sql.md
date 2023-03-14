@@ -1,22 +1,19 @@
 ---
+title: "sp_validatelogins (Transact-SQL)"
 description: "sp_validatelogins (Transact-SQL)"
-title: "sp_validatelogins (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_validatelogins"
-  - "sp_validatelogins_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_validatelogins"
-ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_validatelogins"
+  - "sp_validatelogins_TSQL"
+helpviewer_keywords:
+  - "sp_validatelogins"
+dev_langs:
+  - "TSQL"
 ---
 # sp_validatelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

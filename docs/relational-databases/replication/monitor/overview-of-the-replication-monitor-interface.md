@@ -1,18 +1,16 @@
 ---
+title: "Overview of the Replication Monitor Interface"
 description: "Overview of the Replication Monitor Interface"
-title: "Overview of the Replication Monitor Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Replication Monitor"
-  - "Replication Monitor, about Replication Monitor"
-ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Replication Monitor"
+  - "Replication Monitor, about Replication Monitor"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Overview of the Replication Monitor Interface

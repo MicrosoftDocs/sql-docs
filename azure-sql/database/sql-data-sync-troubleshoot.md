@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: troubleshooting
 ms.custom:
-  - "data sync"
-  - "sqldbrb=1"
+  - data sync
+  - sqldbrb=1
 ---
 # Troubleshoot issues with SQL Data Sync
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

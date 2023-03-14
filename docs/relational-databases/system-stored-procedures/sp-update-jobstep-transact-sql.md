@@ -1,22 +1,19 @@
 ---
+title: "sp_update_jobstep (Transact-SQL)"
 description: "sp_update_jobstep (Transact-SQL)"
-title: "sp_update_jobstep (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_jobstep"
-  - "sp_update_jobstep_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_update_jobstep"
-ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_jobstep"
+  - "sp_update_jobstep_TSQL"
+helpviewer_keywords:
+  - "sp_update_jobstep"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

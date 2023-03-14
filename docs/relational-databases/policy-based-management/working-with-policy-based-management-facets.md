@@ -1,20 +1,17 @@
 ---
+title: "Working with Policy-Based Management Facets"
 description: "Working with Policy-Based Management Facets"
-title: "Working with Policy-Based Management Facets | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing Policy-Based Management facets"
   - "facets [Policy-Based Management], copying"
   - "facets [Policy-Based Management], viewing"
   - "copying Policy-Based Management facets"
-ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
-author: VanMSFT
-ms.author: vanto
 ---
 # Working with Policy-Based Management Facets
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,13 +1,13 @@
 ---
+title: "Supported SET Commands (Visual FoxPro ODBC Driver)"
 description: "Supported SET Commands (Visual FoxPro ODBC Driver)"
-title: "Supported SET Commands (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "set commands [ODBC]"
   - "commands for FoxPro ODBC driver [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], set commands"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "functions [ODBC], Visual FoxPro"
   - "Visual FoxPro commands and functions"
   - "FoxPro ODBC driver [ODBC], SET commands"
-ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Supported SET Commands (Visual FoxPro ODBC Driver)
 Your application can send the following Visual FoxPro **SET** commands to a data source:  

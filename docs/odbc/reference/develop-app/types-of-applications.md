@@ -1,21 +1,18 @@
 ---
+title: "Types of Applications"
 description: "Types of Applications"
-title: "Types of Applications | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "upgrading applications [ODBC], application types"
   - "backward compatibility [ODBC], application and driver compatibility"
   - "compatibility [ODBC], application and driver compatibility"
   - "application upgrades [ODBC], application types"
   - "application compatibility issues [ODBC]"
-ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Types of Applications
 ODBC applications can be classified as follows:  

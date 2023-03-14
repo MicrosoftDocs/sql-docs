@@ -1,18 +1,13 @@
 ---
-description: "SQL Server Native Client Conversions Performed from Server to Client"
 title: "Conversions Performed from Server to Client"
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "conversions [OLE DB], server to client"
-ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
+description: "SQL Server Native Client Conversions Performed from Server to Client"
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-dt-2019
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "conversions [OLE DB], server to client"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client Conversions Performed from Server to Client

@@ -1,15 +1,12 @@
 ---
+title: "catalog.rename_environment (SSISDB Database)"
 description: "catalog.rename_environment (SSISDB Database)"
-title: "catalog.rename_environment (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: "language-reference"
-ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.rename_environment (SSISDB Database)
 

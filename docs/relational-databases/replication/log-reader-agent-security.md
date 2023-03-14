@@ -1,19 +1,17 @@
 ---
+title: "Log Reader Agent Security"
 description: "Log Reader Agent Security"
-title: "Log Reader Agent Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.security.LRA.f1"
-helpviewer_keywords: 
-  - "Log Reader Agent Security dialog box"
-ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.security.LRA.f1"
+helpviewer_keywords:
+  - "Log Reader Agent Security dialog box"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Log Reader Agent Security

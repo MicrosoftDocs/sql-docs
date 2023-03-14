@@ -1,22 +1,19 @@
 ---
 title: "Create a Database Schema"
 description: Learn how to create a schema in SQL Server by using SQL Server Management Studio or Transact-SQL, including limitations and restrictions.
-ms.custom: FY22Q2Fresh
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/25/2021
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.schemas.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "creating schemas with Management Studio"
   - "CREATE SCHEMA [Management Studio]"
   - "database schemas"
   - "schemas [SQL Server], creating"
-ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a database schema

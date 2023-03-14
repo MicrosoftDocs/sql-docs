@@ -1,19 +1,16 @@
 ---
+title: "Numeric Literal Syntax"
 description: "Numeric Literal Syntax"
-title: "Numeric Literal Syntax | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC literals [ODBC], numeric"
   - "numeric literals [ODBC]"
   - "literals [ODBC], numeric"
-ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Numeric Literal Syntax
 The following syntax is used for numeric literals in ODBC:  

@@ -1,15 +1,12 @@
 ---
-title: "Configure Health Policies (SQL Server Utility) | Microsoft Docs"
+title: "Configure Health Policies (SQL Server Utility)"
 description: Find out how to configure health policies involving processor utilization and file space for data-tier applications and managed instances of SQL Server.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: configuration
-ms.topic: conceptual
-ms.assetid: 030aac3b-8901-4c41-91ed-aba96420276c
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 # Configure Health Policies (SQL Server Utility)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

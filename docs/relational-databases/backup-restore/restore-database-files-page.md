@@ -1,18 +1,15 @@
 ---
-title: "Restore Database (Files Page) | Microsoft Docs"
+title: "Restore Database (Files Page)"
 description: While restoring a database in SQL Server, use the Files page of the Restore Database dialog box to manage specific files to restore within the database.
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: backup-restore
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.restoredb.files.f1"
-  - "sql13.swb.restoredb.files.f1 in the code"
-ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.restoredb.files.f1"
+  - "sql13.swb.restoredb.files.f1 in the code"
 ---
 # Restore Database (Files Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

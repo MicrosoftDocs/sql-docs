@@ -1,21 +1,17 @@
 ---
+title: "View Filter Information (Transact-SQL)"
 description: "View Filter Information (Transact-SQL)"
-title: "View Filter Information (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/06/2017"
 ms.service: sql
-ms.reviewer: ""
-ms.subservice: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "displaying filter information"
   - "filters [SQL Server], viewing"
   - "filters [SQL Server], traces"
   - "traces [SQL Server], filters"
   - "viewing filter information"
-ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # View Filter Information (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

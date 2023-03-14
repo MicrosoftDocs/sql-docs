@@ -1,22 +1,19 @@
 ---
+title: "sp_update_schedule (Transact-SQL)"
 description: "sp_update_schedule (Transact-SQL)"
-title: "sp_update_schedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_update_schedule"
-  - "sp_update_schedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_update_schedule"
-ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_update_schedule"
+  - "sp_update_schedule_TSQL"
+helpviewer_keywords:
+  - "sp_update_schedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_update_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

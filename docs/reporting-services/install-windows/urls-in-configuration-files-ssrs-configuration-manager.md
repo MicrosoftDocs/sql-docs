@@ -1,15 +1,13 @@
 ---
+title: "URLs in Configuration Files  (Configuration Manager)"
 description: "URLs in Configuration Files  (Report Server Configuration Manager)"
-title: "URLs in Configuration Files  (Configuration Manager) | Microsoft Docs"
-ms.date: 05/18/2016
-ms.service: reporting-services
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "URL configuration [Reporting Services]"
-ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/18/2016
+ms.service: reporting-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "URL configuration [Reporting Services]"
 ---
 # URLs in Configuration Files  (Report Server Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores application settings in a RSReportServer.config file. Within this file, there are configuration settings for both URLs and URL reservations. These configuration settings have very different purposes and rules for modification. If you are accustomed to modifying configuration files to tune a deployment, this topic can help you understand how each URL setting is used.  

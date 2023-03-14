@@ -1,17 +1,14 @@
 ---
+title: "SAP BW Source Editor (Error Output Page)"
 description: "SAP BW Source Editor (Error Output Page)"
-title: "SAP BW Source Editor (Error Output Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.erroroutput.f1"
-ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.sapbwsource.erroroutput.f1"
 ---
 # SAP BW Source Editor (Error Output Page)
 

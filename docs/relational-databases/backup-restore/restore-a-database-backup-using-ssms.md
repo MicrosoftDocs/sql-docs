@@ -8,7 +8,6 @@ ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: contperf-fy21q4-portal
 f1_keywords:
   - "sql13.swb.locatebackupfileazure.f1"
   - "sql13.swb.specifybackup.f1"

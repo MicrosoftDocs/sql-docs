@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_sql_modules catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 ---
 # sys.server_sql_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]

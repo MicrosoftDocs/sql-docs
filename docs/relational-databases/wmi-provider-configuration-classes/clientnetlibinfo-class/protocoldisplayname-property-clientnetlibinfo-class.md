@@ -1,22 +1,17 @@
 ---
-description: "ProtocolDisplayName Property (ClientNetLibInfo Class)"
 title: "ProtocolDisplayName Property (ClientNetLibInfo)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: wmi
-ms.topic: "reference"
-apiname: 
-  - "ProtocolDisplayName Property (ClientNetLibInfo Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ProtocolDisplayName property"
-ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
+description: "ProtocolDisplayName Property (ClientNetLibInfo Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ProtocolDisplayName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ProtocolDisplayName Property (ClientNetLibInfo Class)"
+apitype: "MOFDef"
 ---
 # ProtocolDisplayName Property (ClientNetLibInfo Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

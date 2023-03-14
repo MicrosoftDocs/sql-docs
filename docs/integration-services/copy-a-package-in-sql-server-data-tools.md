@@ -1,20 +1,17 @@
 ---
+title: "Copy a Package in SQL Server Data Tools"
 description: "Copy a Package in SQL Server Data Tools"
-title: "Copy a Package in SQL Server Data Tools | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "packages [Integration Services], copying"
   - "copying packages"
   - "regenerating package GUID"
   - "updating package properties"
-ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-author: chugugrace
-ms.author: chugu
 ---
 # Copy a Package in SQL Server Data Tools
 

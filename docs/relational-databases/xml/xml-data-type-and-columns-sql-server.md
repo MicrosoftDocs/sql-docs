@@ -1,14 +1,13 @@
 ---
 title: "xml data type and columns (SQL Server)"
 description: Learn about the advantages and limitations of the xml data type for storing XML data in SQL Server.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.service: sql
-ms.reviewer: randolphwest
-ms.subservice: xml
-ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
+ms.topic: conceptual
 ---
 # xml data type and columns (SQL Server)
 

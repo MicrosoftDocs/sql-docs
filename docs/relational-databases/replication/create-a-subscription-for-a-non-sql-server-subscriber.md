@@ -1,19 +1,17 @@
 ---
 title: "Create subscription for non-SQL Subscriber"
-description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
-ms.custom: seo-lt-2019
+description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
   - "Subscribers [SQL Server replication], non-SQL Server Subscribers"
   - "non-SQL Server Subscribers, subscriptions"
-ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

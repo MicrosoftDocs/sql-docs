@@ -1,18 +1,15 @@
 ---
+title: "Azure Blob Source"
 description: "Azure Blob Source"
-title: "Azure Blob Source | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/20/2018"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.afpblobsrc.f1"
-  - "sql14.dts.designer.afpblobsrc.f1"
-ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: chugugrace
 ms.author: chugu
+ms.date: "08/20/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.afpblobsrc.f1"
+  - "sql14.dts.designer.afpblobsrc.f1"
 ---
 # Azure Blob Source
 

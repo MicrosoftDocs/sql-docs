@@ -1,13 +1,11 @@
 ---
-title: "Configure a Report Server Database Connection (Configuration Manager) | Microsoft Docs"
+title: "Configure a Report Server Database Connection (Configuration Manager)"
 description: "Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server."
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 01/04/2020
 ms.service: reporting-services
 ms.topic: conceptual
-author: maggiesMSFT 
-ms.author: maggies
-ms.reviewer: ""
-ms.custom: seo-lt-2019​, seo-mmd-2019
-ms.date: 01/04/2020
 ---
 
 # Configure a Report Server Database Connection (Report Server Configuration Manager)

@@ -1,16 +1,13 @@
 ---
+title: "Validating a Data Flow Component"
 description: "Validating a Data Flow Component"
-title: "Validating a Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ReinitializeMetaData method"
   - "Validate method"
   - "component validation [Integration Services]"
@@ -18,9 +15,9 @@ helpviewer_keywords:
   - "validation [Integration Services], components"
   - "data flow components [Integration Services], validating"
   - "validation [Integration Services]"
-ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Validating a Data Flow Component
 

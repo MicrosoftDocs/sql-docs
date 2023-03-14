@@ -1,15 +1,12 @@
 ---
-description: "Integration Management Functional Area (Master Data Manager)"
 title: Integration Management Functional Area
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: master-data-services
-ms.topic: conceptual
-ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
+description: "Integration Management Functional Area (Master Data Manager)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "04/01/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Integration Management Functional Area (Master Data Manager)
 

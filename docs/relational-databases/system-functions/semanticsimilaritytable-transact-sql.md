@@ -1,22 +1,19 @@
 ---
+title: "semanticsimilaritytable (Transact-SQL)"
 description: "semanticsimilaritytable (Transact-SQL)"
-title: "semanticsimilaritytable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "semanticsimilaritytable"
-  - "semanticsimilaritytable_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "semanticsimilaritytable function"
-ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "semanticsimilaritytable"
+  - "semanticsimilaritytable_TSQL"
+helpviewer_keywords:
+  - "semanticsimilaritytable function"
+dev_langs:
+  - "TSQL"
 ---
 # semanticsimilaritytable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

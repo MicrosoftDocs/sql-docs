@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "security dynamic management views"
 dev_langs:
   - "TSQL"
-ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 ---
 # Security-Related Dynamic Management Views and Functions (Transact-SQL)
 

@@ -1,18 +1,15 @@
 ---
 title: "Administer Servers with SQL Server Management Studio"
 description: "Administer Servers with SQL Server Management Studio"
+author: "markingmyname"
+ms.author: "maghan"
+ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], servers"
   - "servers [SQL Server], administering"
-ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Administer Servers with SQL Server Management Studio

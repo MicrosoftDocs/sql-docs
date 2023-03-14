@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "sysmail_event_log database mail view"
 dev_langs:
   - "TSQL"
-ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 ---
 # sysmail_event_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

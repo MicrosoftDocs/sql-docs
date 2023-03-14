@@ -1,17 +1,14 @@
 ---
+title: "Historical Attribute Options (Slowly Changing Dimension Wizard)"
 description: "Historical Attribute Options (Slowly Changing Dimension Wizard)"
-title: "Historical Attribute Options (Slowly Changing Dimension Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.histattriboption.f1"
-ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.loaddimwizard.histattriboption.f1"
 ---
 # Historical Attribute Options (Slowly Changing Dimension Wizard)
 

@@ -1,22 +1,19 @@
 ---
+title: "sp_enumdsn (Transact-SQL)"
 description: "sp_enumdsn (Transact-SQL)"
-title: "sp_enumdsn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_enumdsn"
-  - "sp_enumdsn_TSQL"
-helpviewer_keywords: 
-  - "sp_enumdsn"
-ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_enumdsn"
+  - "sp_enumdsn_TSQL"
+helpviewer_keywords:
+  - "sp_enumdsn"
+dev_langs:
+  - "TSQL"
 ---
 # sp_enumdsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

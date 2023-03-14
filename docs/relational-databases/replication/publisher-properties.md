@@ -1,20 +1,18 @@
 ---
 title: "Publisher Properties dialog box (SSMS)"
 description: Describes the 'Publisher Properties' dialog box for a specific publication within SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "11/20/2018"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rep.configdistwizard.distpubproperties.f1"
   - "sql13.rep.configdistwizard.pubproperties.general.f1"
   - "sql13.rep.configdistwizard.pubproperties.pubdb.f1"
   - "sql13.rep.configdistwizard.pubproperties.subscribers.f1"
-ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # SQL Server Replication Publisher Properties dialog box

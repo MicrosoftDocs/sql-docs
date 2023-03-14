@@ -1,19 +1,15 @@
 ---
-description: "Data Type Change Required Dialog Box (Visual Database Tools)"
 title: Data Type Change Required Dialog Box
-ms.custom: seo-lt-2019
+description: "Data Type Change Required Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.dlgbox.datatypechangerequired"
   - "vdtsql.chm:65545"
-ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

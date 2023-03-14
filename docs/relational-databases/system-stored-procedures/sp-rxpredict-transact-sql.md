@@ -1,22 +1,19 @@
 ---
 title: "sp_rxPredict"
-description: sp_rxPredict generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database. 
-ms.date: "04/05/2021"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: machine-learning-services
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_rxPredict"
-  - "sp_rxPredict_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_rxPredict procedure"
+description: sp_rxPredict generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.custom: 
-# NOTE: sp_rxPredict is not supported on Linux.
+ms.date: "04/05/2021"
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: "reference"
+f1_keywords:
+  - "sp_rxPredict"
+  - "sp_rxPredict_TSQL"
+helpviewer_keywords:
+  - "sp_rxPredict procedure"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016"
 ---
 # sp_rxPredict  

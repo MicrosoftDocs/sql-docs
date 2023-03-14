@@ -1,20 +1,17 @@
 ---
+title: "Operators (SSIS Expression)"
 description: "Operators (SSIS Expression)"
-title: "Operators (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS, operators"
   - "SQL Server Integration Services, operators"
   - "operators [Integration Services]"
   - "expressions [Integration Services], operators"
-ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: chugugrace
-ms.author: chugu
 ---
 # Operators (SSIS Expression)
 

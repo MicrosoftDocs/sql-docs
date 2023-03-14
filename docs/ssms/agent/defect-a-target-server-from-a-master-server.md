@@ -1,21 +1,18 @@
 ---
-description: "Defect a Target Server from a Master Server"
 title: "Defect a Target Server from a Master Server"
-ms.custom: seo-lt-2019
+description: "Defect a Target Server from a Master Server"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], defecting"
   - "SQL Server Agent jobs, master servers"
   - "master servers [SQL Server], defecting target servers"
   - "defecting target servers"
-ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Defect a Target Server from a Master Server

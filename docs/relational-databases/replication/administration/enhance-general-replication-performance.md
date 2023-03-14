@@ -1,13 +1,14 @@
 ---
+title: "Enhance General Replication Performance"
 description: "Enhance General Replication Performance"
-title: "Enhance General Replication Performance | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "publications [SQL Server replication], design and performance"
   - "designing databases [SQL Server], replication performance"
   - "Snapshot Agent, performance"
@@ -18,9 +19,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], performance"
   - "performance [SQL Server replication], general considerations"
   - "transactional replication, performance"
-ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Enhance General Replication Performance

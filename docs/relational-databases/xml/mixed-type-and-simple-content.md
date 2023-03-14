@@ -1,16 +1,15 @@
 ---
 title: "Mixed Type and Simple Content"
 description: View an example showing that SQL Server doesn't support creating an XML schema that restricts a mixed type to a simple content.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
 ms.date: 05/05/2022
 ms.service: sql
-ms.reviewer: randolphwest
 ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "mixed types [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Mixed type and simple content
 

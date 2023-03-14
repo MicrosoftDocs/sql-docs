@@ -1,17 +1,14 @@
 ---
+title: "SQLFreeStmt (Visual FoxPro ODBC Driver)"
 description: "SQLFreeStmt (Visual FoxPro ODBC Driver)"
-title: "SQLFreeStmt (Visual FoxPro ODBC Driver) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQLFreeStmt function [ODBC], Visual FoxPro ODBC Driver"
-ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQLFreeStmt function [ODBC], Visual FoxPro ODBC Driver"
 ---
 # SQLFreeStmt (Visual FoxPro ODBC Driver)
 > [!NOTE]  

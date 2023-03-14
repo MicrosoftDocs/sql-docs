@@ -1,20 +1,18 @@
 ---
 title: "View & modify Distributor & Publisher properties"
-description: Learn how to modify the properties for the Distributor and Publisher using SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) or Replication Management Objects (RMO). 
-ms.custom: seo-lt-2019
+description: Learn how to modify the properties for the Distributor and Publisher using SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) or Replication Management Objects (RMO).
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "viewing replication properties"
   - "Distributors [SQL Server replication], modifying"
   - "modifying replication properties, Distributors"
   - "Distributors [SQL Server replication], properties"
-ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # View and Modify Distributor and Publisher Properties

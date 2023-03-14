@@ -1,18 +1,14 @@
 ---
-description: "Sort Multiple Columns in Queries (Visual Database Tools)"
 title: Sort Multiple Columns in Queries
-ms.custom: seo-lt-2019
+description: "Sort Multiple Columns in Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiple query columns"
-ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Sort Multiple Columns in Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

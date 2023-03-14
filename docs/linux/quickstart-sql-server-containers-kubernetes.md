@@ -3,13 +3,12 @@ title: "Quickstart: Deploy a SQL Server container with Azure Kubernetes Services
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Kubernetes Service.
 author: rwestMSFT
 ms.author: randolphwest
-ms.topic: quickstart
+ms.date: 08/18/2022
 ms.service: sql
 ms.subservice: linux
-ms.date: 08/18/2022
+ms.topic: quickstart
 ms.custom:
   - template-quickstart
-  - seo-lt-2019
   - intro-deployment
 ---
 # Quickstart: Deploy a SQL Server container with Azure Kubernetes Services (AKS)
@@ -18,7 +17,7 @@ ms.custom:
 
 This quickstart demonstrates how to configure a highly available SQL Server instance in a container on Azure Kubernetes Service (AKS), with persistent storage. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. Kubernetes also provides resiliency against a node failure.
 
-This quickstart uses [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) to manage the cluster.
+This quickstart uses [kubectl](https://kubernetes.io/docs/reference/kubectl/) to manage the cluster.
 
 ## Prerequisites
 

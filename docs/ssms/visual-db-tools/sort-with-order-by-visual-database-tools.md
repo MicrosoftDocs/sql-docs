@@ -1,18 +1,14 @@
 ---
-description: "Sort with ORDER BY (Visual Database Tools)"
 title: Sort with ORDER BY
-ms.custom: seo-lt-2019
+description: "Sort with ORDER BY (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ORDER BY clause [Visual Database Tools]"
-ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Sort with ORDER BY (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

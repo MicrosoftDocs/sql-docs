@@ -1,22 +1,19 @@
 ---
+title: "sysmail_help_queue_sp (Transact-SQL)"
 description: "sysmail_help_queue_sp (Transact-SQL)"
-title: "sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sysmail_help_queue_sp"
-  - "sysmail_help_queue_sp_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sysmail_help_queue_sp"
-ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sysmail_help_queue_sp"
+  - "sysmail_help_queue_sp_TSQL"
+helpviewer_keywords:
+  - "sysmail_help_queue_sp"
+dev_langs:
+  - "TSQL"
 ---
 # sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

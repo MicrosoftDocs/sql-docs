@@ -1,23 +1,20 @@
 ---
+title: "WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)"
 description: "WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)"
-title: "WITH CHANGE_TRACKING_CONTEXT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "WITH_CHANGE_TRACKING_CONTEXT_TSQL"
-  - "WITH CHANGE_TRACKING_CONTEXT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "WITH CHANGE_TRACKING_CONTEXT"
-  - "change tracking [SQL Server], WITH CHANGE_TRACKING_CONTEXT"
-ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "08/08/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "WITH_CHANGE_TRACKING_CONTEXT_TSQL"
+  - "WITH CHANGE_TRACKING_CONTEXT"
+helpviewer_keywords:
+  - "WITH CHANGE_TRACKING_CONTEXT"
+  - "change tracking [SQL Server], WITH CHANGE_TRACKING_CONTEXT"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)

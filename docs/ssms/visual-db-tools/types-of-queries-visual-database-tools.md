@@ -1,22 +1,18 @@
 ---
-description: "Types of Queries (Visual Database Tools)"
 title: Types of Queries
-ms.custom: seo-lt-2019
+description: "Types of Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [Visual Database Tools]"
   - "Query Designer [SQL Server], query creation"
   - "queries [SQL Server], creating"
   - "View Designer, query creation"
   - "Visual Database Tools [SQL Server], queries"
-ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Types of Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

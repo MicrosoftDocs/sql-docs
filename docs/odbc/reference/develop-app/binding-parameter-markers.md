@@ -1,18 +1,15 @@
 ---
+title: "Binding Parameter Markers"
 description: "Binding Parameter Markers"
-title: "Binding Parameter Markers | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "parameter markers [ODBC]"
-  - "binding parameter markers [ODBC]"
-ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "parameter markers [ODBC]"
+  - "binding parameter markers [ODBC]"
 ---
 # Binding Parameter Markers
 The application binds parameters by calling **SQLBindParameter**. **SQLBindParameter** binds one parameter at a time. With it, the application specifies the following:  

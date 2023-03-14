@@ -1,22 +1,19 @@
 ---
-description: "Automatically Delete a Job"
 title: "Automatically Delete a Job"
+description: "Automatically Delete a Job"
+author: markingmyname
+ms.author: maghan
+ms.date: 06/03/2020
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping jobs"
   - "SQL Server Agent jobs, removing"
   - "automatic job removal"
   - "jobs [SQL Server Agent], deleting"
   - "deleting jobs"
   - "removing jobs"
-ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 06/03/2020
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

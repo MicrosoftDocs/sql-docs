@@ -1,20 +1,16 @@
 ---
-description: "Collapse Groups of Rows (Visual Database Tools)"
 title: Collapse Groups of Rows
-ms.custom: seo-lt-2019
+description: "Collapse Groups of Rows (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "group collapsing [SQL Server]"
   - "collapsing rows"
   - "row collapsing [SQL Server]"
-ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Collapse Groups of Rows (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

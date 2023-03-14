@@ -1,17 +1,15 @@
 ---
 title: "Create identical symmetric keys on two servers"
 description: Learn how to create identical symmetric keys on two servers in SQL Server by using Transact-SQL. This supports encryption in separate databases or servers.
-ms.custom: ""
-ms.date: "12/16/2021"
-ms.service: sql
-ms.reviewer: vanto
-ms.subservice: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "symmetric keys [SQL Server], creating"
-ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "12/16/2021"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "symmetric keys [SQL Server], creating"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create identical symmetric keys on two servers
@@ -74,7 +72,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         DECRYPTION BY CERTIFICATE cert_keyProtection;  
     GO  
     DECLARE @blob varbinary(8000);  
-    SET @blob = SELECT CONVERT(varchar(8000), decryptbykey(@blob));  
+    SELECT CONVERT(varchar(8000), decryptbykey(@blob));  
     GO  
     ```  
   

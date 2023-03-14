@@ -1,15 +1,13 @@
 ---
+title: "Coding and Debugging the Script Component"
 description: "Coding and Debugging the Script Component"
-title: "Coding and Debugging the Script Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/17/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS Script task, development environment"
   - "Script component [Integration Services], debugging"
   - "Script component [Integration Services], coding"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "debugging [Integration Services], scripts"
   - "SSIS Script component, coding"
   - "VSTA"
-ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Coding and Debugging the Script Component
 

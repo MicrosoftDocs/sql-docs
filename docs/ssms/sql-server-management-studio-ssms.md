@@ -1,12 +1,13 @@
 ---
 title: SQL Server Management Studio (SSMS)
 description: Learn details about SQL Server Management Studio (SSMS) and what SMMS can do, including how to manage Analysis Services Solutions.
+author: markingmyname
+ms.author: maghan
+ms.date: 12/15/2021
 ms.service: sql
 ms.subservice: ssms
 ms.topic: overview
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
+ms.custom: intro-overview
 f1_keywords:
   - "sql13.ssms.viewhelp.f1"
 helpviewer_keywords:
@@ -14,9 +15,6 @@ helpviewer_keywords:
   - "SQL Server Management Studio for Integration Services"
   - "SQL Server Management Studio for Reporting Services"
   - "SQL Server Management Studio for Analysis Services"
-ms.custom: intro-overview, seo-lt-2019, FY22Q2Fresh
-ms.date: 12/15/2021
-#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users.
 ---
 
 # What is SQL Server Management Studio (SSMS)?

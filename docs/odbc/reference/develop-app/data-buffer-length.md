@@ -1,20 +1,17 @@
 ---
+title: "Data Buffer Length"
 description: "Data Buffer Length"
-title: "Data Buffer Length | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data buffers [ODBC], length"
   - "buffers [ODBC], data"
   - "length of data buffers [ODBC]"
   - "buffers [ODBC], length"
-ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Data Buffer Length
 The application passes the byte length of the data buffer to the driver in an argument, named *BufferLength* or a similar name. For example, in the following call to **SQLBindCol**, the application specifies the length of the *ValuePtr* buffer (**sizeof(***ValuePtr***)**):  

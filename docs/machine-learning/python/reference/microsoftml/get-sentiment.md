@@ -1,29 +1,20 @@
---- 
- 
-# required metadata 
-title: "get_sentiment: Machine Learning Sentiment Analyzer Transform" 
-description: "Scores natural language text and assesses the probability the sentiments are positive." 
-keywords: "transform, text, sentiment, nlp" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.service: sql
-ms.subservice: "machine-learning-services" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-ms.custom: "" 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "get_sentiment: Machine Learning Sentiment Analyzer Transform"
+description: "Scores natural language text and assesses the probability the sentiments are positive."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+keywords:
+  - transform
+  - text
+  - sentiment
+  - nlp
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # *microsoftml.get_sentiment*: Sentiment analysis
 
 

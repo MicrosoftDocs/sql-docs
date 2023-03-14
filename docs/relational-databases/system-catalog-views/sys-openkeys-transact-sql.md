@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.openkeys catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.openkeys (Transact-SQL)

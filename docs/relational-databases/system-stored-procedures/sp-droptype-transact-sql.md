@@ -1,22 +1,19 @@
 ---
+title: "sp_droptype (Transact-SQL)"
 description: "sp_droptype (Transact-SQL)"
-title: "sp_droptype (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_droptype_TSQL"
-  - "sp_droptype"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_droptype"
-ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_droptype_TSQL"
+  - "sp_droptype"
+helpviewer_keywords:
+  - "sp_droptype"
+dev_langs:
+  - "TSQL"
 ---
 # sp_droptype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,13 +1,13 @@
 ---
+title: "Migration Wizard (AccessToSQL)"
 description: "Migration Wizard (AccessToSQL)"
-title: "Migration Wizard (AccessToSQL) | Microsoft Docs"
-ms.service: sql
-ms.custom:
-  - intro-migration
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom: intro-migration
 helpviewer_keywords:
   - "Migration Wizard dialog box"
   - "Migration Wizard, adding Access databases"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "Migration Wizard, Migration status"
   - "Migration Wizard, New Project"
   - "Migration Wizard, Selecting objects to migrate"
-ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Migration Wizard (AccessToSQL)
 The Migration Wizard guides you through the migration of one or more databases from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure. By using the wizard, you will create a project, add databases to the project, select objects to migrate, and connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure. You will also convert, load, and migrate Access schemas and data. Optionally, you can link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure tables.  

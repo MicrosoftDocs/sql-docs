@@ -7,7 +7,6 @@ ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "providers [SQLXML], XML formatting architecture"
   - "SQLOLEDB provider"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "server-side XML formatting"
   - "SQL Server Native Client, XML"
   - "SQLXMLOLEDB Provider, XML formatting architecture"
-ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)

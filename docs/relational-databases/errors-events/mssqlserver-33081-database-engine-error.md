@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_33081"
 description: "MSSQLSERVER_33081"
-title: "MSSQLSERVER_33081 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.service: sql
-ms.reviewer: ""
-ms.subservice: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "33081 (Database Engine error)"
-ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "33081 (Database Engine error)"
 ---
 # MSSQLSERVER_33081
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

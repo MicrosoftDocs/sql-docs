@@ -1,21 +1,18 @@
 ---
+title: "Transfer SQL Server Objects Task"
 description: "Transfer SQL Server Objects Task"
-title: "Transfer SQL Server Objects Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
 ms.service: sql
-ms.reviewer: ""
 ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.transfersqlserverobjectstask.f1"
   - "sql13.dts.designer.transfersqlserverobjects.general.f1"
   - "sql13.dts.designer.transfersqlserverobjects.objects.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transfer SQL Server Objects task [Integration Services]"
-ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: chugugrace
-ms.author: chugu
 ---
 # Transfer SQL Server Objects Task
 

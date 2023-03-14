@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sysnotifications system table"
 dev_langs:
   - "TSQL"
-ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 ---
 # dbo.sysnotifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -65,16 +65,15 @@ Resource group or Subscription of Arc Machine.
 
    :::image type="content" source="media/assess/enable-log-analytics-workspace.png" alt-text="Screenshot showing how to specify the log analytics workspace for SQL Server best practices assessment.":::
 
-
 1. Select the  **Log Analytics Workspace** from the drop-down menu and select **Enable assessment**.
 
    :::image type="content" source="media/assess/click-on-enable.png" alt-text="Screenshot showing the enable best practices assessment screen of an Arc-enabled SQL Server resource.":::
 
-1. > [!NOTE]
-   >    After you enable the assessment, setup and configuration can take a few minutes.
-   >    The Best practices assessment is enabled for all SQL Server instances running on the machine and assess the SQL Server host comprehensively. 
-   > 
-   
+   > [!NOTE]
+   > After you enable the assessment, setup and configuration can take a few minutes.
+   >
+   > Best practices assessment is enabled for all SQL Server instances running on the machine and assess the SQL Server host comprehensively.
+
 1. Upon successful best practices assessment deployment, the assessment is scheduled to run every Sunday 12:00 AM local time by default.
 
    :::image type="content" source="media/assess/sql-best-practices-assessment-enabled.png" alt-text="Screenshot showing the successful enablement of best practices assessment of an Arc-enabled SQL Server resource.":::
@@ -89,7 +88,6 @@ If an instance of SQL Server is configured with a license only type of license, 
 
 After you have enabled the best practices assessment, you can do the following additional tasks:
 
-
 > [!NOTE]
 > Performing any of the tasks below on a specific SQL Server instance will be applied to all SQL Server instances running on the machine.
 
@@ -99,7 +97,7 @@ After you have enabled the best practices assessment, you can do the following a
 - To disable an assessment select **Configuration** and **Disable assessment**.
 ## View best practices assessment results
 
-- - On the **Best practices assessment** pane, select the **View assessment results** button.
+- On the **Best practices assessment** pane, select the **View assessment results** button.
 
      The **View assessment results** button remains disabled until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
 

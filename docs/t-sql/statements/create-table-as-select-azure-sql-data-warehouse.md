@@ -544,7 +544,7 @@ Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] a
 
 Merge statements can be replaced, at least in part, by using `CTAS`. You can consolidate the `INSERT` and the `UPDATE` into a single statement. Any deleted records would need to be closed off in a second statement.
 
-An example of an `UPSERT` is available below:
+An example of an `UPSERT` follows:
 
 ```sql
 CREATE TABLE dbo.[DimProduct_upsert]
@@ -633,11 +633,11 @@ The value stored for result is different. As the persisted value in the result c
 
 This is particularly important for data migrations. Even though the second query is arguably more accurate there is a problem. The data would be different compared to the source system and that leads to questions of integrity in the migration. This is one of those rare cases where the "wrong" answer is actually the right one!
 
-The reason we see this disparity between the two results is down to implicit type casting. In the first example, the table defines the column definition. When the row is inserted an implicit type conversion occurs. In the second example there is no implicit type conversion as the expression defines data type of the column. Notice also that the column in the second example has been defined as a NULLable column whereas in the first example it has not. When the table was created in the first example column nullability was explicitly defined. In the second example it was just left to the expression and by default this would result in a `NULL` definition.  
+The reason we see this disparity between the two results is down to implicit type casting. In the first example, the table defines the column definition. When the row is inserted an implicit type conversion occurs. In the second example there is no implicit type conversion as the expression defines data type of the column. Notice also that the column in the second example has been defined as a NULLable column whereas in the first example it has not. When the table was created in the first example column nullability was explicitly defined. In the second example, it was just left to the expression and by default this would result in a `NULL` definition.  
 
 To resolve these issues, you must explicitly set the type conversion and nullability in the `SELECT` portion of the `CTAS` statement. You cannot set these properties in the create table part.
 
-The example below demonstrates how to fix the code:
+This example demonstrates how to fix the code:
 
 ```sql
 DECLARE @d DECIMAL(7,2) = 85.455
@@ -649,11 +649,12 @@ AS
 SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 ```
 
-Note the following:
-- CAST or CONVERT could have been used
-- ISNULL is used to force NULLability not COALESCE
-- ISNULL is the outermost function
-- The second part of the ISNULL is a constant, `0`
+Note the following in the example:
+
+- CAST or CONVERT could have been used.
+- ISNULL is used to force NULLability not COALESCE.
+- ISNULL is the outermost function.
+- The second part of the ISNULL is a constant, `0`.
 
 > [!NOTE]
 > For the nullability to be correctly set it is vital to use `ISNULL` and not `COALESCE`. `COALESCE` is not a deterministic function and so the result of the expression will always be NULLable. `ISNULL` is different. It is deterministic. Therefore when the second part of the `ISNULL` function is a constant or a literal then the resulting value will be NOT NULL.

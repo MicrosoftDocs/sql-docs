@@ -99,16 +99,16 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ## Arguments
 
- *database_name*  
+#### *database_name*  
  The name of the database that will contain the new table. The default is the current database.  
   
- *schema_name*  
- The schema for the table. Specifying *schema* is optional. If blank, the default schema will be used.  
+#### *schema_name*  
+ The schema for the table. Specifying *schema* is optional. If blank, the default schema is used.  
   
- *table_name*  
+#### *table_name*  
  The name of the new table. To create a local temporary table, precede the table name with `#`.  For explanations and guidance on temporary tables, see [Temporary tables in dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-temporary). 
 
- *column_name*  
+#### *column_name*  
  The name of a table column.
 
 ### <a name="ColumnOptions"></a> Column options
@@ -146,7 +146,7 @@ Stores the table as a clustered columnstore index. The clustered columnstore ind
   
 ### <a name="TableDistributionOptions"></a> Table distribution options
 
-To understand how to choose the best distribution method and use distributed tables, see [Distributing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/). 
+To understand how to choose the best distribution method and use distributed tables, see [designing distributed tables using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute).
 
 For recommendations on the best distribution strategy to use based on your workloads, see the [Synapse SQL Distribution Advisor (Preview)](/azure/synapse-analytics/sql/distribution-advisor).
 
@@ -168,7 +168,7 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 `DISTRIBUTION = REPLICATE`
-Stores one copy of the table on each Compute node. For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Stores one copy of the table on each Compute node. For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
 For guidance on using table partitions, see [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
@@ -198,7 +198,7 @@ Check [Performance tuning with ordered clustered columnstore index](/azure/sql-d
 
 ### <a name="DataTypes"></a> Data type
 
-[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] supports the most commonly used data types. To better understand data types and how to use them, see [Data types for tables in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-data-types).
 
 >[!NOTE]
 >Similar to SQL Server, there is an 8060 byte per row limit. This may become a blocking issue for tables that have many columns, or columns with large data types, such as `nvarchar(max)` or `varbinary(max)`. Inserts or updates that violate the 8060 byte limit will result in error codes 511 or 611. For more information, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md?view=azure-sqldw-latest&preserve-view=true#row-overflow-considerations).
@@ -207,6 +207,8 @@ For a table of data type conversions, see the Implicit Conversions section, of [
 
 >[!NOTE]
 >See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md) for more details.
+
+The following is a list of the supported data types along with their details and storage bytes. 
 
 `datetimeoffset` [ ( *n* ) ]  
  The default value for *n* is 7.  
@@ -296,7 +298,7 @@ Same as `datetime`, except that you can specify the number of fractional seconds
  Fixed-length Unicode character data with a length of *n* characters. *n* must be a value from `1` through `4000`. The storage size is two times *n* bytes.  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].   
- Variable-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB).The storage size is the actual length of data entered + 2 bytes.  
+ Variable-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. `max` indicates that the maximum storage size is 2^31-1 bytes (2 GB). The storage size is the actual length of data entered + 2 bytes.  
   
  `char` [ ( *n* ) ]  
  Fixed-length, non-Unicode character data with a length of *n* bytes. *n* must be a value from `1` to `8000`. The storage size is *n* bytes. The default for *n* is `1`.  
@@ -437,7 +439,7 @@ WITH
 ## Examples for table structure
 
 ### <a name="ClusteredColumnstoreIndex"></a> D. Create a table with a clustered columnstore index  
- The following example creates a distributed table with a clustered columnstore index. Each distribution will be stored as a columnstore.  
+ The following example creates a distributed table with a clustered columnstore index. Each distribution is stored as a columnstore.  
   
  The clustered columnstore index doesn't affect how the data is distributed; data is always distributed by row. The clustered columnstore index affects how the data is stored within each distribution.  
   
